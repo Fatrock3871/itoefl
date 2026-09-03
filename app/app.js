@@ -702,8 +702,16 @@
     var box = document.getElementById("authBox");
     if(!box) return;
     var cfg = window.ITOEFL_SUPABASE;
-    if(!cfg || !cfg.url || !cfg.anonKey || !window.supabase || !window.supabase.createClient){
-      return; // não configurado ou lib não carregou → app segue offline
+    if(!cfg || !cfg.url || !cfg.anonKey) return; // não configurado → app segue offline
+    if(!window.supabase || !window.supabase.createClient){
+      // configurado, mas a biblioteca não carregou (CDN bloqueado/offline)
+      box.hidden = false;
+      document.getElementById("authSignIn").hidden = true;
+      var m = document.getElementById("authMsg");
+      m.textContent = "Biblioteca do Supabase não carregou (sem internet ou CDN bloqueado). App em modo offline.";
+      m.style.color = "var(--danger)";
+      m.hidden = false;
+      return;
     }
     box.hidden = false;
 
