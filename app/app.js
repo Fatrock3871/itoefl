@@ -447,4 +447,123 @@
       fileInput.value = "";
     });
   })();
+
+  // ---------- Flashcards com revisão espaçada (M6) ----------
+  Array.prototype.forEach.call(document.querySelectorAll(".srs"), function(root){
+    var deckId = root.dataset.srs;
+    var lsKey = "toefl_srs_" + deckId + "_v1";
+    var cards;
+    try { cards = JSON.parse(root.querySelector(".srs-data").textContent); }
+    catch(e){ return; }
+
+    var DAY = 86400000;
+    var INTERVAL_DAYS = [0, 1, 3, 7, 16, 30]; // por box (0..5)
+    var byWord = {};
+    cards.forEach(function(c){ byWord[c.w] = c; });
+
+    var state = {};
+    try { state = JSON.parse(safeGet(lsKey) || "{}"); } catch(e){ state = {}; }
+    function persist(){ safeSet(lsKey, JSON.stringify(state)); }
+
+    var cardEl = root.querySelector(".srs-card");
+    var frontEl = root.querySelector(".srs-front");
+    var backEl = root.querySelector(".srs-back");
+    var doneEl = root.querySelector(".srs-done");
+    var flipBtn = root.querySelector(".srs-flip");
+    var fWord = frontEl.querySelector(".srs-word");
+    var fCat = frontEl.querySelector(".srs-cat");
+    var bWord = backEl.querySelector(".srs-word");
+    var bPt = backEl.querySelector(".srs-pt");
+    var bSyn = backEl.querySelector(".srs-syn");
+    var bEx = backEl.querySelector(".srs-ex");
+    var elNew = root.querySelector(".srs-new");
+    var elDue = root.querySelector(".srs-due");
+    var elMastered = root.querySelector(".srs-mastered");
+    var elCount = root.querySelector(".srs-count");
+    var elQueued = root.querySelector(".srs-queued");
+    var doneMsg = root.querySelector(".srs-done-msg");
+
+    var queue = [], reviewed = 0;
+
+    function updateStats(){
+      var now = Date.now(), nw = 0, due = 0, mastered = 0;
+      cards.forEach(function(c){
+        var s = state[c.w];
+        if(!s){ nw++; return; }
+        if(s.box >= 4) mastered++;
+        if(s.due <= now) due++;
+      });
+      elNew.textContent = nw;
+      elDue.textContent = due;
+      elMastered.textContent = mastered;
+    }
+
+    function buildQueue(all){
+      var now = Date.now();
+      var dueCards = [], newCards = [];
+      cards.forEach(function(c){
+        var s = state[c.w];
+        if(!s) newCards.push(c);
+        else if(all || s.due <= now) dueCards.push(c);
+      });
+      dueCards.sort(function(a, b){ return (state[a.w].due) - (state[b.w].due); });
+      // intercala novas com revisões, começando pelas revisões
+      queue = dueCards.concat(newCards);
+    }
+
+    function showFront(){ frontEl.hidden = false; backEl.hidden = true; }
+    function showBack(){ frontEl.hidden = true; backEl.hidden = false; }
+
+    function renderCard(){
+      elCount.textContent = reviewed;
+      elQueued.textContent = reviewed + queue.length;
+      if(!queue.length){
+        cardEl.hidden = true;
+        doneEl.hidden = false;
+        doneMsg.innerHTML = reviewed
+          ? "Sessão concluída. <b>" + reviewed + "</b> cartões revisados."
+          : "Nada para revisar agora — tudo em dia!";
+        return;
+      }
+      cardEl.hidden = false;
+      doneEl.hidden = true;
+      var c = queue[0];
+      fWord.textContent = c.w; fCat.textContent = c.cat || "";
+      bWord.textContent = c.w;
+      bPt.textContent = c.pt;
+      bSyn.textContent = c.syn ? "≈ " + c.syn : "";
+      bEx.textContent = c.ex || "";
+      showFront();
+    }
+
+    function grade(g){
+      var c = queue.shift();
+      var s = state[c.w] || { box: 0, due: 0 };
+      if(g === 0) s.box = 0;
+      else if(g === 1) s.box = Math.max(1, s.box);
+      else s.box = Math.min(5, (s.box || 0) + 1);
+      var days = INTERVAL_DAYS[s.box];
+      s.due = Date.now() + days * DAY;
+      state[c.w] = s;
+      persist();
+      reviewed++;
+      if(g === 0) queue.push(c); // erra: volta ao fim da fila desta sessão
+      updateStats();
+      renderCard();
+    }
+
+    flipBtn.addEventListener("click", showBack);
+    Array.prototype.forEach.call(backEl.querySelectorAll(".srs-grades button"), function(b){
+      b.addEventListener("click", function(){ grade(parseInt(b.dataset.g, 10)); });
+    });
+    root.querySelector(".srs-restart").addEventListener("click", function(){
+      reviewed = 0;
+      buildQueue(true);
+      renderCard();
+    });
+
+    updateStats();
+    buildQueue(false);
+    renderCard();
+  });
 })();

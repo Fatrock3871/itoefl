@@ -48,6 +48,7 @@
 }
 
 *{box-sizing:border-box;}
+[hidden]{display:none !important;}
 body{margin:0;background:var(--bg);color:var(--ink);font-family:'Inter',system-ui,-apple-system,sans-serif;font-size:16px;line-height:1.6;}
 h1,h2,h3,h4{font-family:'Fraunces',Georgia,serif;font-weight:600;text-wrap:balance;letter-spacing:-0.01em;}
 a{color:var(--teal);}
@@ -211,6 +212,51 @@ main{padding:36px 40px 120px; min-width:0;}
 .quiz-retry:hover{background:var(--good); color:var(--surface); border-color:var(--good);}
 
 @media(max-width:640px){ main{padding:24px 18px 100px;} }
+
+/* flashcards SRS (M6) */
+.srs{margin:20px 0 34px;}
+.srs-stats{display:flex; flex-wrap:wrap; gap:14px; margin-bottom:6px;}
+.srs-stat{font-family:'IBM Plex Mono',monospace; font-size:11.5px; color:var(--ink-dim);}
+.srs-stat b{color:var(--ink); font-size:14px;}
+.srs-progress{font-family:'IBM Plex Mono',monospace; font-size:11.5px; color:var(--ink-dim); margin:0 0 14px !important;}
+.srs-progress b{color:var(--accent);}
+.srs-card{
+  background:var(--surface); border:1px solid var(--hair); border-radius:var(--radius);
+  box-shadow:var(--shadow); padding:32px 26px; min-height:220px;
+  display:flex; flex-direction:column; align-items:center; justify-content:center; text-align:center;
+}
+.srs-face{width:100%; display:flex; flex-direction:column; align-items:center; gap:10px;}
+.srs-word{font-family:'Fraunces',serif; font-size:28px; font-weight:600; color:var(--ink);}
+.srs-cat{font-family:'IBM Plex Mono',monospace; font-size:12px; color:var(--ink-dim);}
+.srs-flip{
+  margin-top:14px; padding:10px 20px; border-radius:9px; border:1px solid var(--hair);
+  background:var(--surface); font-family:inherit; font-weight:600; font-size:13px; color:var(--ink); cursor:pointer;
+}
+.srs-flip:hover{border-color:var(--accent);}
+.srs-back .srs-word{font-size:20px; margin-bottom:2px;}
+.srs-pt{font-size:15px !important; color:var(--ink) !important; margin:0 0 4px !important; max-width:520px;}
+.srs-syn{font-family:'IBM Plex Mono',monospace; font-size:12px !important; color:var(--teal) !important; margin:0 0 10px !important;}
+.srs-ex{font-size:13.5px !important; color:var(--ink-dim) !important; font-style:italic; margin:0 0 16px !important; max-width:520px;}
+.srs-grades{display:flex; gap:8px; flex-wrap:wrap; justify-content:center;}
+.srs-grades button{
+  padding:9px 18px; border-radius:9px; border:1px solid var(--hair); background:var(--surface);
+  font-family:inherit; font-weight:600; font-size:13px; color:var(--ink); cursor:pointer;
+}
+.srs-grades button:hover{filter:brightness(1.04);}
+.srs-g0{border-color:var(--danger) !important; color:var(--danger) !important;}
+.srs-g1{border-color:var(--hair) !important;}
+.srs-g2{background:var(--good) !important; color:#fff !important; border-color:var(--good) !important;}
+.srs-done{
+  background:var(--good-soft); border:1px solid var(--good); border-radius:var(--radius);
+  padding:24px; text-align:center;
+}
+.srs-done p{margin:0 0 14px !important;}
+.srs-restart{
+  padding:9px 18px; border-radius:9px; border:1px solid var(--good); background:var(--surface);
+  font-family:inherit; font-weight:600; font-size:13px; color:var(--ink); cursor:pointer;
+}
+.srs-restart:hover{background:var(--good); color:#fff;}
+.srs-data{display:none;}
 
 /* ferramentas flutuantes (cronômetro + gravador) */
 .float-tools{position:fixed; right:20px; bottom:20px; z-index:50; display:flex; align-items:flex-end; gap:12px;}

@@ -2,6 +2,7 @@ import json
 import re
 import markdown as md
 from render_quiz import render_quiz_drill
+from render_srs import render_srs
 from drills_data import MOD1_DRILLS, MOD2_DRILLS
 
 SRC = "../consolidated"
@@ -95,11 +96,22 @@ def build_mod2():
     return html_before + widgets + html_after
 
 
-# ---------- Módulos 3, 4, 7: plain markdown (no MC quiz — open-response content) ----------
+# ---------- Módulos 3, 4, 5, 7, 8, 9: plain markdown (no MC quiz) ----------
 def build_plain(path):
     raw = open(path, encoding="utf-8").read()
     raw = strip_title_banner(raw)
     return to_html(raw)
+
+
+# ---------- Módulo 6: markdown + widget de flashcards SRS ----------
+def build_mod6():
+    html_out = build_plain(f"{SRC}/modulo_6_vocabulary.md")
+    cards = json.load(open("vocab_kit.json", encoding="utf-8"))
+    widget = render_srs("kit50", cards)
+    idx = html_out.find("<h2>SEÇÃO 6")
+    if idx == -1:
+        return html_out + widget
+    return html_out[:idx] + widget + "\n" + html_out[idx:]
 
 
 def add_progress_hooks(html, modkey):
@@ -124,7 +136,7 @@ def main():
         "mod3": build_plain(f"{SRC}/modulo_3_speaking.md"),
         "mod4": build_plain(f"{SRC}/modulo_4_writing.md"),
         "mod5": build_plain(f"{SRC}/modulo_5_registro.md"),
-        "mod6": build_plain(f"{SRC}/modulo_6_vocabulary.md"),
+        "mod6": build_mod6(),
         "mod7": build_plain(f"{SRC}/modulo_7_simulados.md"),
         "mod8": build_plain(f"{SRC}/modulo_8_examday.md"),
         "mod9": build_plain(f"{SRC}/modulo_9_braziliantraps.md"),
