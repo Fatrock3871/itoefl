@@ -39,8 +39,9 @@ Próximo alvo: portar M6 (Vocabulary) para o pipeline no formato 2026.
 - [x] M5, M6, M8, M9 antigos copiados para `consolidated/_a-portar/`
 - [x] Build testada: `build_pipeline.py` + `build.py` geram `artifact/index.html`
 - [x] `CLAUDE.md` reescrito para o formato 2026 e a nova arquitetura
-- [ ] `git init` + commit inicial ← **em andamento**
-- [ ] Abrir `artifact/index.html` no navegador e validar visualmente
+- [x] `git init` + commit inicial (`a5efab0`) — gerados no `.gitignore`
+- [x] Smoke-test: HTTP 200, 6 painéis, 8 quiz-drills, 143 checkboxes, 0 placeholders
+- [ ] Usuário abrir `artifact/index.html` no navegador e validar visualmente
 
 ## Fase 2 — Auditar o que já veio pronto (M0–M4, M7)
 
