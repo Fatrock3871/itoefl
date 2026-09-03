@@ -3,9 +3,8 @@
 Memória entre sessões. Atualizar ao concluir cada etapa.
 
 **Última atualização:** 2026-09-02
-**Agora:** Fases 0–2 concluídas. M5 reescrito como "Registro & Sofisticação
-Retórica" e integrado ao build (7 módulos ativos: M0–M5, M7).
-Próximo alvo: portar M6 (Vocabulary) para o pipeline no formato 2026.
+**Agora:** Fases 0–2 concluídas. M5 reescrito, M6 portado. 8 módulos ativos
+(M0–M7). Próximo alvo: portar M9 (Brazilian Traps), depois M8 (Exam Day).
 
 ---
 
@@ -72,9 +71,14 @@ Ordem: M5 (feito) → M6 → M9 → M8.
       marcadores de alto impacto e os exemplos contrastivos; aplica às 3 tasks
       produtivas de 2026 (Take an Interview, Write an Email, Academic Discussion).
       Registrado em `build_pipeline.py` e `build.py`. Fragmento = 24.327 chars.
-- [ ] **M6 Vocabulary** — extrair o léxico de `_a-portar/modulo_6_vocabulary_ANTIGO.md`
-      (~228 linhas de tabela) para `consolidated/modulo_6_vocabulary.md` +
-      widget de flashcards. Registrar contagem: N palavras na origem → N no destino.
+- [x] **M6 Vocabulary** — portado para `consolidated/modulo_6_vocabulary.md`.
+      Contagem verificada: 144 linhas de tabela em negrito na origem → 144 no
+      destino (100 entradas de léxico por área + 15 verbos + 10 adjetivos + 8
+      collocations + tabelas de protocolo). Referências a "Speaking Task 1" →
+      "Take an Interview" e "Writing Task 2" → "Write for an Academic Discussion";
+      4 entradas duplicadas do arquivo antigo substituídas por termos novos
+      (incremental, acidification, redundancy). Fragmento = 67.351 chars.
+      **Pendente:** widget de flashcards + SRS — é item da Fase 4, não bloqueia.
 - [ ] **M9 Brazilian Traps** — falsos cognatos e substituições (format-agnostic);
       atualizar só a parte de SpeechRater/Speaking ao formato 2026. Referências
       a "templates do Módulo 5" precisam virar "Atlas Linguístico do Módulo 5".
@@ -115,9 +119,22 @@ Ordem: M5 (feito) → M6 → M9 → M8.
 - **`_archive/` e `_snapshots/`** devem entrar no `.gitignore`? Decidir no commit
   inicial. (Sugestão: versionar `_archive/` uma vez, ignorar `_snapshots/`.)
 
-## Baseline de contagem (2026-09-02, pós-M5)
+## Baseline de contagem (2026-09-02, pós-M6)
 
 Fragmentos: mod0=45.421, mod1=44.444, mod2=50.740, mod3=34.232, mod4=30.599,
-mod5=24.327, mod7=59.798 chars.
-`artifact/index.html` = 310.479 bytes. 7 módulos ativos, 162 checkboxes de progresso.
+mod5=24.327, mod6=67.351, mod7=59.798 chars.
+`artifact/index.html` = 378.067 bytes. 8 módulos ativos (M0–M7).
 Diagnóstico M0 = 10 questões. Drills = 3 (Reading) + 4 (Listening).
+
+## Observações visuais (2026-09-02, screenshots headless)
+
+- Look editorial: Fraunces (títulos) + Inter (corpo) + IBM Plex Mono (rótulos);
+  paleta creme/âmbar no claro, quase-preto no escuro. Limpo e legível.
+- Widgets de quiz/drill funcionam bem (card de passagem, contador, A/B/C/D,
+  confirmar→revelar→refazer).
+- **A ajustar:** rótulo "Prep oficial" na sidebar (soa como afiliação ETS —
+  trocar por "Preparação independente" antes de publicar); 1 checkbox de
+  progresso por h2 E h3 é excessivo (só h2 deveria contar); diagramas ASCII
+  em bloco mono são funcionais mas plainos.
+- Publicar como Artifact foi **bloqueado pelo classificador** (marca "TOEFL" +
+  "Prep oficial"). Preview local: `python scripts\serve.py`.

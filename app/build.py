@@ -9,6 +9,7 @@ MODS = [
     ("mod3","03","Speaking","modulo_3_speaking.md"),
     ("mod4","04","Writing","modulo_4_writing.md"),
     ("mod5","05","Registro & Retórica","modulo_5_registro.md"),
+    ("mod6","06","Vocabulário","modulo_6_vocabulary.md"),
     ("mod7","07","Simulados","modulo_7_simulados.md"),
 ]
 

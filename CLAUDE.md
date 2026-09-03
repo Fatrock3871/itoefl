@@ -118,7 +118,7 @@ Implicações que o conteúdo deve respeitar:
 | M3 | Speaking | ✅ formato 2026 |
 | M4 | Writing | ✅ formato 2026 |
 | M5 | Registro & Sofisticação Retórica | ✅ reescrito para 2026 — camada transversal de elevação de banda (Atlas Linguístico em bandas CEFR + 10 marcadores + aplicação por task) |
-| M6 | Vocabulário acadêmico | 🔴 só existe no formato antigo — portar |
+| M6 | Vocabulário acadêmico | ✅ portado para 2026 — 100 entradas de léxico + arsenal cross-temático + kit de 50 palavras |
 | M7 | Simulados progressivos | ✅ formato 2026 |
 | M8 | Exam Day Protocol | 🔴 portar (maior parte é format-agnostic) |
 | M9 | Brazilian Trap Library | 🔴 portar (falsos cognatos são format-agnostic) |

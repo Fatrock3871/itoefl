@@ -123,6 +123,7 @@ def main():
         "mod3": build_plain(f"{SRC}/modulo_3_speaking.md"),
         "mod4": build_plain(f"{SRC}/modulo_4_writing.md"),
         "mod5": build_plain(f"{SRC}/modulo_5_registro.md"),
+        "mod6": build_plain(f"{SRC}/modulo_6_vocabulary.md"),
         "mod7": build_plain(f"{SRC}/modulo_7_simulados.md"),
     }
     final = {k: add_progress_hooks(v, k) for k, v in frag.items()}
