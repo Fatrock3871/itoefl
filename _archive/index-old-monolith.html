@@ -1,0 +1,1754 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-theme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Plataforma iTOEFL</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@600;700;800&display=swap" rel="stylesheet">
+<style>
+/* ── RESET & BASE INDUSTRIAL HUMANIZADO ─────────────────────── */
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{font-size:13px;-webkit-font-smoothing:antialiased}
+body{font-family:'Inter', system-ui, sans-serif;line-height:1.5;overflow:hidden;background:var(--bg);color:var(--t1);transition: background 0.3s;}
+.font-data { font-family: 'JetBrains Mono', monospace; letter-spacing: -0.2px; }
+.hidden { display: none !important; }
+
+/* ── VARIÁVEIS DE TEMA PREMIUM (GRID-STYLE) ─────────────────── */
+:root, [data-theme="light"] {
+  --bg: #F8FAFC; --sf: #FFFFFF; --sf2: #F1F5F9;
+  --bd: #E2E8F0; --bd-heavy: #94A3B8;
+  --t1: #0F172A; --t2: #475569; --t3: #64748B;
+  --ac: #EA580C; --acbg: rgba(234,88,12,.04); --acbd: rgba(234,88,12,.15);
+  --ok: #15803D; --okbg: rgba(21,163,74,.06); --err: #B91C1C; --errbg: rgba(239,68,68,.06);
+  --sh: 0 1px 2px rgba(0,0,0,.03);
+}
+[data-theme="dark"] {
+  --bg: #05070F; --sf: #0C111D; --sf2: #080B14;
+  --bd: #1E293B; --bd-heavy: #475569;
+  --t1: #F8FAFC; --t2: #94A3B8; --t3: #475569;
+  --ac: #F97316; --acbg: rgba(249,115,22,.05); --acbd: rgba(249,115,22,.2);
+  --ok: #22C55E; --okbg: rgba(34,197,94,.08); --err: #EF4444; --errbg: rgba(239,68,68,.08);
+  --sh: 0 1px 3px rgba(0,0,0,.2);
+}
+
+/* ── INTERFACE E DISPOSIÇÃO EM GRADE DE LINHAS ──────────────── */
+#app { display:flex; height:100vh; background:var(--bg); width:100vw; overflow:hidden; }
+#sidebar { width:245px; flex-shrink:0; background:var(--sf); border-right:1px solid var(--bd); display:flex; flex-direction:column; transition: width 0.3s cubic-bezier(0.4, 0, 0.2, 1); overflow:hidden; }
+#content { flex:1; overflow-y:auto; background:var(--bg); display:flex; flex-direction:column; position:relative; }
+
+/* REGRAS DO MODO ZEN (FOCO DE ALTA PERFORMANCE) */
+body.zen-active #sidebar { width: 0px; border-right: none; }
+body.zen-active .panel { max-width: 740px; padding: 40px 20px; }
+
+/* ── SIDEBAR & ASSINATURA VISUAL TÁTICA ─────────────────────── */
+.s-hd { padding:18px 20px; border-bottom:1px solid var(--bd); display:flex; align-items:center; justify-content:space-between; background: var(--sf2); flex-shrink:0; }
+.logo-container { display: flex; align-items: center; gap: 2px; user-select: none; }
+.logo-box {
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 21px; height: 21px; border: 1.5px solid var(--ac); 
+  background-color: #FFFFFF; color: #000000; 
+  font-family: 'JetBrains Mono', monospace; font-weight: 800; font-size: 12px; border-radius: 3px;
+}
+.ib { border:1px solid var(--bd); border-radius:4px; background:var(--sf); cursor:pointer; padding: 4px 8px; font-size:10px; color:var(--t2); font-weight:bold; transition:all 0.15s; }
+.ib:hover { background:var(--acbg); color:var(--ac); border-color:var(--ac); }
+
+#snav { flex:1; overflow-y:auto; padding:12px 8px; }
+.nsl { font-size:9px; font-weight:800; letter-spacing:0.12em; text-transform:uppercase; color:var(--t3); padding:12px 10px 4px; }
+.ni { display:flex; align-items:center; padding:9px 12px; border-radius:5px; font-size:12px; font-weight:500; color:var(--t2); cursor:pointer; border:none; background:transparent; width:100%; text-align:left; margin-bottom:2px; transition: all 0.15s; font-family: 'JetBrains Mono', monospace; }
+.ni:hover:not(.lk) { background:var(--sf2); color:var(--t1); padding-left:16px; }
+.ni.act { background:var(--acbg); color:var(--ac); font-weight:700; border-left: 3px solid var(--ac); border-radius: 0 5px 5px 0; }
+.ni.lk { color:var(--t3); cursor:not-allowed; opacity: 0.4; }
+
+.s-ft { padding: 12px 15px; border-top: 1px solid var(--bd); background: var(--sf2); font-size: 10px; color: var(--t3); display: flex; justify-content: space-between; align-items: center; }
+
+/* ── BARRA SUPERIOR E METRICAS DE MONITORIZAÇÃO ────────────── */
+.topbar { padding: 12px 24px; border-bottom: 1px solid var(--bd); background: var(--sf); display: flex; justify-content: space-between; align-items: center; flex-shrink:0; }
+.kpi-group { display: flex; gap: 18px; align-items: center; }
+.kpi-item { font-size: 11px; font-weight: 600; color: var(--t2); text-transform: uppercase; letter-spacing: 0.5px; }
+.kpi-item span { color: var(--ac); margin-left: 4px; font-weight: 700; }
+.data-chip { background: var(--sf); border: 1.5px solid var(--ac); color: var(--t1); padding: 2px 6px; border-radius: 4px; font-weight: 800; font-family: 'JetBrains Mono', monospace; font-size: 11px; }
+
+/* ── PAINÉIS DE TRABALHO E ÁREA DE CONTEÚDO ─────────────────── */
+.panel { display:none; padding:24px; max-width: 1250px; margin: 0 auto; width: 100%; animation: thinFade 0.2s ease-out; }
+.panel.act { display:block; }
+@keyframes thinFade { from { opacity:0; transform:translateY(3px); } to { opacity:1; transform:none; } }
+
+.grid-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px; margin-bottom: 20px; }
+.card { background: var(--sf); border: 1px solid var(--bd); border-radius: 6px; padding: 16px; box-shadow: var(--sh); position: relative; }
+.card-label { font-size: 10px; font-weight: 800; letter-spacing: 0.8px; text-transform: uppercase; color: var(--t3); margin-bottom: 6px; }
+.card-val { font-size: 26px; font-weight: 700; color: var(--t1); line-height: 1.1; font-family: 'JetBrains Mono', monospace; }
+.card-val.highlight { color: var(--ac); }
+.card input[type="number"] { background: var(--sf2); border: 1px solid var(--bd); font-size: 18px; font-weight: 700; color: var(--t1); outline: none; padding: 4px 8px; border-radius: 4px; width: 75px; font-family: inherit; }
+
+.workspace-layout { display: grid; grid-template-columns: 1.62fr 1fr; gap: 20px; align-items: start; }
+@media (max-width: 1024px) { .workspace-layout { grid-template-columns: 1fr; } }
+
+/* ── COMPONENTES OPERACIONAIS ───────────────────────────────── */
+.section-title { font-size: 12px; font-weight: 800; color: var(--ac); margin-bottom: 16px; border-bottom: 1px solid var(--bd); padding-bottom: 6px; letter-spacing: 0.5px; text-transform: uppercase; }
+.btn { background: var(--ac); color: white; border: none; padding: 10px 16px; border-radius: 4px; font-weight: 700; font-size: 11px; cursor: pointer; transition: all 0.15s; width: 100%; font-family: 'JetBrains Mono', monospace; text-transform: uppercase;}
+.btn:hover { background: var(--t1); color: var(--sf); }
+
+.quiz-option { display: block; width: 100%; text-align: left; background: var(--sf2); border: 1px solid var(--bd); padding: 12px 14px; border-radius: 4px; margin-bottom: 6px; cursor: pointer; color: var(--t1); font-weight: 500; font-size: 12px; transition: all 0.15s; }
+.quiz-option:hover { border-color: var(--ac); background: var(--acbg); color: var(--ac); }
+.quiz-feedback { padding: 12px; border-radius: 4px; font-weight: 600; margin-top: 12px; font-size: 12px; line-height: 1.5; }
+.feedback-ok { background: var(--okbg); color: var(--ok); border: 1px solid var(--ok); }
+.feedback-err { background: var(--errbg); color: var(--err); border: 1px solid var(--err); }
+
+.calc-row { margin-bottom: 12px; background: var(--sf2); padding: 10px; border-radius: 4px; border: 1px solid var(--bd); }
+.calc-row label { display: flex; justify-content: space-between; font-size: 11px; font-weight: 700; color: var(--t2); margin-bottom: 6px; text-transform: uppercase; }
+.calc-row input[type="range"] { width: 100%; accent-color: var(--ac); cursor: pointer; }
+
+/* ── ESTRUTURAÇÃO DE DOCUMENTOS PREMIUM (HYBRID INFRA) ─────── */
+.content-wrapper { display: flex; flex-direction: column; gap: 24px; }
+.w-doc-section { border-left: 3px solid var(--bd); padding-left: 16px; margin: 14px 0; }
+.w-doc-section h3 { font-size: 14px; font-weight: 700; color: var(--t1); margin-bottom: 6px; font-family: 'JetBrains Mono', monospace; }
+.w-doc-section p { font-size: 13px; color: var(--t2); line-height: 1.6; margin-bottom: 8px; }
+
+.m4-textarea { width:100%; height:180px; background: var(--sf2); border:1px solid var(--bd); border-radius: 4px; padding:14px; color:var(--t1); font-family:inherit; font-size:13px; line-height: 1.6; resize:vertical; outline:none; transition: all 0.2s; }
+.m4-textarea:focus { border-color: var(--ac); background: var(--sf); }
+
+.badge-alert { background: var(--errbg); color: var(--err); border: 1px solid var(--err); padding: 12px 16px; border-radius: 4px; font-size: 12px; line-height: 1.6; margin: 16px 0; }
+.badge-hint { background: var(--acbg); color: var(--ac); border: 1px solid var(--acbd); padding: 12px 16px; border-radius: 4px; font-size: 12px; line-height: 1.6; margin: 16px 0; }
+
+.tier-tabs { display: flex; gap: 6px; margin-bottom: 16px; border-bottom: 1px solid var(--bd); padding-bottom: 10px; }
+.tier-btn { padding: 6px 12px; border: 1px solid var(--bd); background: var(--sf); color: var(--t2); border-radius: 4px; font-weight: 700; font-size: 11px; cursor: pointer; font-family: 'JetBrains Mono', monospace; transition:all 0.15s; }
+.tier-btn.act { background: var(--ac); color: white; border-color: var(--ac); }
+
+.vocab-table { width: 100%; border-collapse: collapse; background: var(--sf); border: 1px solid var(--bd); font-size: 12px; }
+.vocab-table th { background: var(--sf2); padding: 10px 14px; text-align: left; font-size: 10px; text-transform: uppercase; color: var(--t3); letter-spacing: 0.5px; border-bottom: 1px solid var(--bd); font-family: 'JetBrains Mono', monospace; }
+.vocab-table td { padding: 12px 14px; border-bottom: 1px solid var(--bd); color: var(--t1); font-weight: 500; }
+.vocab-row { cursor: pointer; transition: background 0.15s; }
+.vocab-row:hover { background: var(--acbg); }
+.vocab-meaning { padding: 14px; background: var(--sf2); font-size: 12px; color: var(--t2); border-bottom: 1px solid var(--bd); }
+.word-hlt { color: var(--ac); font-weight: 700; }
+.status-dot { width: 6px; height: 6px; background-color: var(--t3); border-radius: 50%; display: inline-block; margin-right: 6px; }
+.status-dot.active { background-color: #22C55E; }
+
+/* SCRATCHPAD UNIVERSAL PERSISTENTE */
+#scratchpad-panel { position: fixed; bottom: 20px; right: 20px; width: 320px; height: 260px; background: var(--sf); border: 1px solid var(--bd-heavy); border-radius: 6px; box-shadow: var(--sh); display: flex; flex-direction: column; z-index: 100; transition: transform 0.2s; }
+#scratchpad-panel.collapsed { transform: translateY(225px); }
+.sc-hd { padding: 10px 14px; background: var(--sf2); border-bottom: 1px solid var(--bd); display: flex; justify-content: space-between; align-items: center; font-size: 11px; font-weight: 700; cursor: pointer; }
+.sc-body { flex: 1; padding: 8px; background: var(--sf); }
+.sc-body textarea { width: 100%; height: 100%; border: none; resize: none; background: transparent; color: var(--t1); outline: none; font-size: 12px; font-family: inherit; }
+</style>
+</head>
+<body>
+
+<div id="app">
+  <aside id="sidebar">
+    <div class="s-hd">
+      <div class="logo-container">
+        <span class="logo-box">i</span>
+        <span class="logo-box">T</span>
+        <span class="logo-box">O</span>
+        <span class="logo-box">E</span>
+        <span class="logo-box">F</span>
+        <span class="logo-box">L</span>
+      </div>
+      <button class="ib font-data" onclick="app.toggleTheme()">[MODE]</button>
+    </div>
+    <nav id="snav">
+      <div class="nsl">CORE WORKSPACE</div>
+      <button class="ni act" onclick="app.switchTab('dashboard')" id="btn-dashboard">> M0: DASHBOARD</button>
+      <button class="ni" onclick="app.switchTab('m1')" id="btn-m1">> M1: READING</button>
+      <button class="ni" onclick="app.switchTab('m2')" id="btn-m2">> M2: LISTENING</button>
+      <button class="ni" onclick="app.switchTab('m3')" id="btn-m3">> M3: SPEAKING</button>
+      <button class="ni" onclick="app.switchTab('m4')" id="btn-m4">> M4: WRITING</button>
+      <button class="ni" onclick="app.switchTab('m5')" id="btn-m5">> M5: TEMPLATES</button>
+      <button class="ni" onclick="app.switchTab('m6')" id="btn-m6">> M6: VOCABULARY</button>
+      
+      <div class="nsl">🔒 ADVANCED LOCKER</div>
+      <button class="ni lk" onclick="app.switchTab('m7')" id="btn-m7">> M7: SIMULATIONS</button>
+      <button class="ni lk" onclick="app.switchTab('m8')" id="btn-m8">> M8: EXAM PROTOCOL</button>
+      <button class="ni lk" onclick="app.switchTab('m9')" id="btn-m9">> M9: BR TRAPS</button>
+    </nav>
+    <div class="s-ft font-data">
+      <span>SYSTEM COHESION</span>
+      <span style="cursor:pointer;" onclick="alert('iTOEFL Matrix Engine — Versão Estabilizada pós-Julho 2023.')">v1.5.0</span>
+    </div>
+  </aside>
+
+  <main id="content">
+    <div class="topbar">
+      <div class="kpi-group font-data">
+        <button class="ib" onclick="app.toggleZen()" style="margin-right: 4px;">[ZEN_MODE]</button>
+        <div class="kpi-item"><span class="status-dot active"></span>STREAK: <span id="ui-streak">1d</span></div>
+        <div class="kpi-item" style="color: var(--t3)">METRIC: <span>30D ELITE SYSTEM</span></div>
+      </div>
+      <div class="kpi-group font-data">
+        <div class="kpi-item">RAW_SCORE: <span id="ui-raw">0</span></div>
+        <div class="kpi-item">
+          <span class="data-chip" id="ui-scaled">000/120</span>
+        </div>
+      </div>
+    </div>
+
+    <section id="tab-dashboard" class="panel act">
+      <div class="grid-cards">
+        <div class="card">
+          <div class="card-label">Current Estimated Score</div>
+          <div class="card-val highlight font-data" id="card-current-score">000</div>
+        </div>
+        <div class="card">
+          <div class="card-label">Target Score Goal</div>
+          <div style="margin-top: 2px;"><input type="number" id="targetScoreInput" value="100" onchange="app.saveData()"></div>
+        </div>
+        <div class="card">
+          <div class="card-label">Diagnostic Accuracy</div>
+          <div class="card-val font-data" id="accuracy-text">0%</div>
+        </div>
+        <div class="card" style="justify-content: center;">
+          <button class="btn font-data" onclick="app.resetQuiz()">> ENTRAR NA ARENA</button>
+        </div>
+      </div>
+
+      <div class="workspace-layout">
+        <div class="card">
+          <div class="section-title font-data">> DIAGNOSTIC_EXPRESS_QUIZ <span id="quiz-progress" class="font-data" style="float:right; color:var(--t3); font-size:11px;">0/10</span></div>
+          <div id="quiz-container"></div>
+        </div>
+
+        <div class="card">
+          <div class="section-title font-data">> SIMULADOR DE CALIBRAGEM ETS</div>
+          <p style="font-size:11px; color:var(--t2); margin-bottom:15px; font-weight: 500;">Conversão algorítmica direta baseada nos thresholds oficiais da ETS (Raw to Scaled Score).</p>
+          
+          <div class="calc-row">
+            <label>READING RAW (0-20) <span id="out-r" class="font-data text-orange-600">0</span></label>
+            <input type="range" id="calc-r" min="0" max="20" value="0" oninput="app.calcScore()">
+          </div>
+          <div class="calc-row">
+            <label>LISTENING RAW (0-28) <span id="out-l" class="font-data text-orange-600">0</span></label>
+            <input type="range" id="calc-l" min="0" max="28" value="0" oninput="app.calcScore()">
+          </div>
+          <div class="calc-row">
+            <label>SPEAKING SUM (0-16) <span id="out-s" class="font-data text-orange-600">0</span></label>
+            <input type="range" id="calc-s" min="0" max="16" value="0" oninput="app.calcScore()">
+          </div>
+          <div class="calc-row">
+            <label>WRITING SUM (0-10) <span id="out-w" class="font-data text-orange-600">0</span></label>
+            <input type="range" id="calc-w" min="0" max="10" value="0" oninput="app.calcScore()">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="tab-m1" class="panel">
+     <div class="content-wrapper">
+  <div class="card" style="background: var(--acbg); border-color: var(--acbd);">
+    <h2 class="font-data" style="color:var(--ac); font-size: 18px; font-weight: 800; margin-bottom: 4px;">> MÓDULO 1: READING — THE FIRST PILLAR</h2>
+    <p style="color:var(--t1); font-weight: 600; font-size: 12px;">Compreensão cirúrgica de textos académicos de nível universitário sem saturação de memória de trabalho.</p>
+  </div>
+
+  <!-- ════════════ PARTE 1: THE GAME RULES ════════════ -->
+  <div class="card">
+    <div class="section-title font-data">PARTE 1 — THE GAME RULES (AS REGRAS DO JOGO)</div>
+
+    <div class="w-doc-section">
+      <h3>1.1 Radiografia Oficial da Seção</h3>
+      <p>O Reading é a <strong>primeira seção do TOEFL iBT</strong>. Toda resposta está dentro ou diretamente implicada pelo texto — nunca requer conhecimento prévio do tópico.</p>
+    </div>
+
+    <table class="vocab-table">
+      <thead><tr><th>Elemento</th><th>Dados Oficiais (Pós-Julho 2023)</th></tr></thead>
+      <tbody>
+        <tr><td>Posição no teste</td><td class="font-data">1ª seção (você começa descansado)</td></tr>
+        <tr><td>Tempo total</td><td class="font-data">35 minutos</td></tr>
+        <tr><td>Número de passagens</td><td class="font-data">2</td></tr>
+        <tr><td>Extensão de cada passagem</td><td class="font-data">~600–700 palavras</td></tr>
+        <tr><td>Questões por passagem</td><td class="font-data">~10 questões</td></tr>
+        <tr><td>Total de questões</td><td class="font-data">~20 questões</td></tr>
+        <tr><td>Pontuação scaled</td><td class="font-data">0–30 pontos</td></tr>
+        <tr><td>Penalidade por erro</td><td>Nenhuma — sempre responda todas as questões</td></tr>
+        <tr><td>Tempo médio por questão</td><td class="font-data">1 min 45 s</td></tr>
+        <tr><td>Tópicos típicos</td><td>Ciências naturais, sociais, história, humanidades, tecnologia</td></tr>
+      </tbody>
+    </table>
+
+    <div class="badge-hint">
+      <strong>📌 Princípio fundamental:</strong> O TOEFL Reading nunca testa conhecimento prévio. Toda resposta está dentro ou diretamente implicada pelo texto. Você não precisa saber nada sobre o tópico da passagem — precisa saber ler estrategicamente.
+    </div>
+
+    <div class="w-doc-section">
+      <h3>1.2 Os 10 Tipos de Questão — Mapa Completo de Frequência</h3>
+    </div>
+
+    <table class="vocab-table">
+      <thead><tr><th>#</th><th>Tipo de Questão</th><th>O que testa</th><th>Freq./Passagem</th><th>Pontuação</th></tr></thead>
+      <tbody>
+        <tr><td class="font-data">1</td><td class="word-hlt">Factual Information</td><td>Identificar informação explícita no texto</td><td class="font-data">3–4</td><td class="font-data">1 pt</td></tr>
+        <tr><td class="font-data">2</td><td class="word-hlt">Negative Factual Information</td><td>Identificar o que NÃO está no texto (NOT/EXCEPT)</td><td class="font-data">1–2</td><td class="font-data">1 pt</td></tr>
+        <tr><td class="font-data">3</td><td class="word-hlt">Vocabulary in Context</td><td>Significado de uma palavra no contexto da frase</td><td class="font-data">2–3</td><td class="font-data">1 pt</td></tr>
+        <tr><td class="font-data">4</td><td class="word-hlt">Inference</td><td>Deduzir informação implícita — mas não declarada</td><td class="font-data">1–2</td><td class="font-data">1 pt</td></tr>
+        <tr><td class="font-data">5</td><td class="word-hlt">Rhetorical Purpose</td><td>Por que o autor inclui uma informação/recurso retórico</td><td class="font-data">1</td><td class="font-data">1 pt</td></tr>
+        <tr><td class="font-data">6</td><td class="word-hlt">Reference</td><td>Referente de um pronome/expressão anafórica (it, they, this)</td><td class="font-data">0–1</td><td class="font-data">1 pt</td></tr>
+        <tr><td class="font-data">7</td><td class="word-hlt">Sentence Simplification</td><td>Paráfrase que preserva o significado essencial</td><td class="font-data">1</td><td class="font-data">1 pt</td></tr>
+        <tr><td class="font-data">8</td><td class="word-hlt">Insert Text</td><td>Posição correta para inserir uma nova frase</td><td class="font-data">1</td><td class="font-data">1 pt</td></tr>
+        <tr><td class="font-data">9</td><td class="word-hlt">Prose Summary</td><td>3 afirmações que melhor representam as ideias PRINCIPAIS</td><td class="font-data">1</td><td class="font-data" style="color:var(--ac); font-weight:800;">2 pts</td></tr>
+        <tr><td class="font-data">10</td><td class="word-hlt">Fill in a Table</td><td>Organizar informações contrastivas em tabela categórica</td><td class="font-data">Raro</td><td class="font-data" style="color:var(--ac); font-weight:800;">3–4 pts</td></tr>
+      </tbody>
+    </table>
+
+    <div class="badge-hint">
+      <strong>⚡ Prioridade estratégica:</strong> Questões do tipo 1, 3, 4 e 9 respondem por aproximadamente 70% da sua pontuação no Reading. Domine esses quatro primeiro.
+    </div>
+    <div class="badge-alert">
+      <strong>⚠️ Pontuação parcial na Prose Summary (Q9):</strong> 3 corretas = 2 pts; 2 corretas = 1 pt; 1 ou 0 corretas = 0 pts. Nunca deixe em branco — o risco de marcar é zero.
+    </div>
+
+    <div class="w-doc-section">
+      <h3>1.3 Gestão de Energia e Tempo: O Protocolo de 35 Minutos</h3>
+    </div>
+    <pre style="background:var(--sf2); border:1px solid var(--bd); border-radius:4px; padding:14px; font-size:11px; line-height:1.7; overflow-x:auto; color:var(--t2); font-family:'JetBrains Mono',monospace;">PASSAGEM 1 (Questões 1–10)                        ~17 minutos
+├── Skimming estratégico (Protocolo 5 Passos)       3–4 min
+├── Questões individuais (Q1–Q8/9)                 10–11 min
+├── Prose Summary (última questão da passagem)       2–3 min
+└── Buffer / revisão rápida de questões flagadas     1 min
+
+PASSAGEM 2 (Questões 11–20)                        ~17 minutos
+└── (mesma estrutura)
+
+BUFFER GERAL                                           1 min</pre>
+
+    <div class="badge-alert">
+      <strong>⚠️ Regra de ouro de pacing:</strong> Se você ultrapassar 90 segundos em qualquer questão individual, <strong>flag e siga em frente imediatamente.</strong> Questões "impossíveis" geralmente se resolvem quando você volta a elas após percorrer mais do texto através das outras questões.
+    </div>
+
+    <div class="w-doc-section">
+      <h3>Por que o Reading vem primeiro — e por que isso importa</h3>
+      <p>O Reading exige o maior nível de atenção sustentada do teste. Candidatos que treinam mal o pacing aqui chegam ao Speaking — que requer produção oral sob pressão — com energia cognitiva comprometida. Gerir o Reading com precisão não é apenas sobre Reading: é sobre preservar o desempenho nas três seções seguintes.</p>
+    </div>
+  </div>
+
+  <!-- ════════════ PARTE 2: THE AI HACK ════════════ -->
+  <div class="card">
+    <div class="section-title font-data">PARTE 2 — THE AI HACK (A ESTRATÉGIA)</div>
+
+    <div class="w-doc-section">
+      <h3>2.1 O Protocolo de Skimming em 5 Passos</h3>
+      <p>A maioria dos candidatos lê a passagem inteira antes de ver as questões — um erro estratégico grave. O protocolo correto é entrar no texto <strong>como um cirurgião</strong>, sabendo exatamente onde está cada estrutura antes de operar.</p>
+    </div>
+
+    <table class="vocab-table">
+      <thead><tr><th>Passo</th><th>Ação</th><th>Tempo Alvo</th><th>Objetivo</th></tr></thead>
+      <tbody>
+        <tr><td class="font-data">1</td><td>Leia o <strong>primeiro parágrafo completo</strong></td><td class="font-data">45–60s</td><td>Capturar tópico, argumento central e tom</td></tr>
+        <tr><td class="font-data">2</td><td>Leia apenas a <strong>primeira frase</strong> de cada parágrafo seguinte</td><td class="font-data">45–60s</td><td>Mapear estrutura: onde cada subtópico está</td></tr>
+        <tr><td class="font-data">3</td><td>Leia o <strong>último parágrafo completo</strong></td><td class="font-data">30–45s</td><td>Capturar conclusão ou contraponto final</td></tr>
+        <tr><td class="font-data">4</td><td>Construa o <strong>mapa mental</strong> antes das questões</td><td class="font-data">10–15s</td><td>"P2 = região X, P3 = comparação, P4 = crítica"</td></tr>
+        <tr><td class="font-data">5</td><td>Ao responder, <strong>retorne ao parágrafo específico</strong></td><td class="font-data">—</td><td>Velocidade + precisão cirúrgica</td></tr>
+      </tbody>
+    </table>
+
+    <div class="badge-hint">
+      <strong>Analogia operacional:</strong> Um radiologista não lê o prontuário inteiro antes de interpretar um exame. Ele sabe onde procurar porque foi treinado para reconhecer estruturas. Você faz o mesmo com a passagem do TOEFL.
+    </div>
+
+    <div class="w-doc-section">
+      <h3>2.2 Os 5 Padrões de Distratores da ETS — O DNA das Pegadinhas</h3>
+      <p>A ETS usa os mesmos 5 padrões em todas as formas do teste. Uma vez internalizados, os distratores deixam de ser perigosos e se tornam previsíveis — e descartáveis em segundos.</p>
+    </div>
+
+    <table class="vocab-table">
+      <thead><tr><th>#</th><th>Padrão</th><th>Definição</th><th>Sinal de Alerta</th></tr></thead>
+      <tbody>
+        <tr><td class="font-data">1</td><td class="word-hlt">TRUE BUT WRONG</td><td>A informação está na passagem, mas não responde <em>esta</em> questão</td><td>"Vi isso no texto... mas a questão pergunta outra coisa."</td></tr>
+        <tr><td class="font-data">2</td><td class="word-hlt">TOO EXTREME</td><td>Linguagem absoluta (always, never, all, only) vs. hedging do texto (often, most, tends to)</td><td>Palavras absolutas onde o texto usa moderação</td></tr>
+        <tr><td class="font-data">3</td><td class="word-hlt">OUT OF SCOPE</td><td>Soa académico e plausível, mas não pode ser rastreado ao texto</td><td>"Faz sentido no mundo real, mas onde está na passagem?"</td></tr>
+        <tr><td class="font-data">4</td><td class="word-hlt">OPPOSITE / REVERSAL</td><td>Inverte causa-efeito, usa antónimos ou nega o que o texto afirma</td><td>Relação causal invertida; sentido oposto</td></tr>
+        <tr><td class="font-data">5</td><td class="word-hlt">WRONG LOCATION</td><td>Informação real do texto, mas extraída de outro parágrafo</td><td>"Está na passagem... mas não naquele parágrafo."</td></tr>
+      </tbody>
+    </table>
+
+    <div class="badge-alert">
+      <strong>Exemplo prático — TRUE BUT WRONG:</strong> Texto: <em>"Agriculture first emerged in the Fertile Crescent, where emmer wheat was cultivated."</em> Questão: <em>"What was the PRIMARY cause of the Agricultural Revolution?"</em> Distrator: <em>"The cultivation of emmer wheat in the Fertile Crescent."</em> → TRUE (está no texto) — BUT WRONG (é um detalhe sobre <em>onde</em>, não sobre <em>causa</em>).
+    </div>
+
+    <div class="w-doc-section">
+      <h3>2.3 Hacks Cirúrgicos por Tipo de Questão</h3>
+
+      <p><strong>✂️ Vocabulary in Context</strong></p>
+      <ol>
+        <li>Encontre a palavra no texto.</li>
+        <li>Releia a frase que a contém + a frase anterior + a seguinte.</li>
+        <li>Substitua a palavra por cada alternativa na frase original.</li>
+        <li>Escolha a que preserva o sentido e o tom sem alterar a lógica.</li>
+        <li>⚠️ <strong>Trap:</strong> A alternativa "dicionário direto" NÃO é necessariamente a correta — o TOEFL testa significado <em>contextual</em>.</li>
+      </ol>
+
+      <p style="margin-top:12px;"><strong>✂️ Inference</strong></p>
+      <ul>
+        <li>A resposta correta é uma dedução <strong>suportada</strong> pelo texto — sem conhecimento externo ou múltiplos saltos lógicos.</li>
+        <li>Teste cada alternativa: "O texto fornece base direta suficiente para concluir isso?"</li>
+        <li>2+ saltos lógicos → inferência excessiva → alternativa errada.</li>
+        <li>⚠️ <strong>Trap:</strong> Alternativas "verdadeiras no mundo real" mas não mencionadas → OUT OF SCOPE.</li>
+      </ul>
+
+      <p style="margin-top:12px;"><strong>✂️ Prose Summary</strong></p>
+      <ul>
+        <li>As 3 corretas são <strong>ideias principais</strong> — cada uma representa o argumento central de pelo menos um parágrafo.</li>
+        <li>Elimine alternativas que sejam detalhes de 1–2 frases apenas.</li>
+        <li>Elimine alternativas que o texto apresenta como hipótese de terceiros, não como tese central.</li>
+        <li>⚠️ <strong>Trap:</strong> Alternativas verdadeiras que são apenas detalhes de apoio — estão no texto, mas não merecem lugar no resumo.</li>
+      </ul>
+
+      <p style="margin-top:12px;"><strong>✂️ Insert Text</strong></p>
+      <ul>
+        <li>A frase a inserir quase sempre tem um pronome anafórico (it, they, this, these) ou conector lógico (however, therefore, furthermore).</li>
+        <li>O pronome deve ter referente claro na frase <strong>imediatamente anterior</strong> ao ponto de inserção.</li>
+        <li>Verifique também a frase <strong>depois</strong> — deve conectar logicamente com a nova frase.</li>
+        <li>⚠️ <strong>Trap:</strong> Critério de desempate entre dois candidatos: o que vem depois faz sentido com a nova frase?</li>
+      </ul>
+
+      <p style="margin-top:12px;"><strong>✂️ Negative Factual (NOT/EXCEPT)</strong></p>
+      <ul>
+        <li>Reformule mentalmente: "Qual das quatro alternativas NÃO está no texto conforme descrito?"</li>
+        <li>Confirme as outras três no texto. O que sobrar é a resposta.</li>
+        <li>⚠️ <strong>Trap:</strong> A resposta correta frequentemente contém informação <em>semelhante</em> ao texto, mas com um detalhe crítico alterado.</li>
+      </ul>
+    </div>
+
+    <div class="w-doc-section">
+      <h3>2.4 As 5 Regras de Ouro do Pacing</h3>
+      <ol>
+        <li><strong>Nunca ultrapasse 90 segundos</strong> numa questão individual. Flag e avance.</li>
+        <li><strong>Prose Summary e Table: resolva por último</strong> dentro de cada passagem — você terá mais contexto.</li>
+        <li><strong>Não existe questão sem resposta no texto.</strong> Se não encontra, está no parágrafo errado.</li>
+        <li><strong>Sempre responda todas as questões.</strong> Sem penalidade — chute = 25% de chance; branco = 0%.</li>
+        <li><strong>Limite de questões flagadas: máx. 3.</strong> Mais do que isso = falha no skimming inicial.</li>
+      </ol>
+    </div>
+  </div>
+
+  <!-- ════════════ PARTE 3: ACTION DRILLS ════════════ -->
+  <div class="card">
+    <div class="section-title font-data">PARTE 3 — ACTION DRILLS (EXERCÍCIOS INTERATIVOS)</div>
+    <div class="badge-hint">
+      📌 Os drills abaixo seguem o protocolo oficial. Tente respondê-los mentalmente antes de abrir o Gabarito Comentado (Parte 4).
+    </div>
+
+    <div class="w-doc-section">
+      <h3>🏋️ Drill 1 — Skimming Sprint</h3>
+      <p><strong>Objetivo:</strong> Treinar a extração de informação estrutural sem leitura integral.<br>
+      <strong>Instrução:</strong> Leia SOMENTE o primeiro parágrafo completo, a primeira frase de cada parágrafo subsequente e o último parágrafo completo. Depois responda as 3 perguntas <strong>sem voltar ao texto.</strong></p>
+    </div>
+
+    <div class="card" style="background:var(--sf2); margin-bottom:14px;">
+      <p style="font-size:11px; font-weight:800; color:var(--ac); margin-bottom:8px;" class="font-data">TEXT: URBAN HEAT ISLANDS</p>
+      <p style="font-size:12px; line-height:1.7; margin-bottom:8px;">Urban areas consistently record higher temperatures than the surrounding rural landscapes — a phenomenon known as the urban heat island (UHI) effect. This temperature differential, which can range from 1 to 7 degrees Celsius depending on the size and density of the urban center, arises from several interconnected factors.</p>
+      <p style="font-size:12px; line-height:1.7; margin-bottom:8px;">The most significant contributor is the replacement of natural vegetation with impermeable surfaces such as concrete, asphalt, and brick. Unlike soil and plant matter, these materials absorb solar radiation throughout the day and release it slowly as heat during the night, preventing urban areas from cooling at the same rate as rural zones. The near-total absence of tree canopy in many city centers further compounds this effect, since trees would otherwise provide shade and release water vapor through transpiration, a natural cooling process.</p>
+      <p style="font-size:12px; line-height:1.7; margin-bottom:8px;">Human activity itself generates substantial quantities of heat in urban settings. Vehicles, air conditioning units, industrial facilities, and heating systems all release energy directly into the urban environment. Ironically, the very air conditioning systems installed to combat heat stress add thermal energy to the outdoor atmosphere.</p>
+      <p style="font-size:12px; line-height:1.7; margin-bottom:0;">The consequences of the UHI effect extend beyond simple discomfort. In temperate regions, elevated urban temperatures increase the frequency and severity of heat waves, which are among the deadliest of weather-related disasters. Urban residents — particularly the elderly, children, and those without access to climate control — are disproportionately affected. City planners and climate scientists are increasingly exploring mitigation strategies, including expanding urban green spaces, installing reflective "cool roofs," and redesigning street networks to improve airflow.</p>
+    </div>
+
+    <p style="font-size:12px; line-height:1.7; margin-bottom:6px;"><strong>A.</strong> Em uma frase, qual é o argumento central desta passagem?</p>
+    <p style="font-size:12px; line-height:1.7; margin-bottom:6px;"><strong>B.</strong> Para qual parágrafo você retornaria se a questão perguntasse sobre os efeitos do fenómeno na saúde humana?</p>
+    <p style="font-size:12px; line-height:1.7; margin-bottom:18px;"><strong>C.</strong> O texto apresenta soluções para o problema discutido? Se sim, em qual parágrafo?</p>
+
+    <div class="w-doc-section">
+      <h3>🏋️ Drill 2 — Vocabulary in Context: Isolamento da Habilidade</h3>
+      <p><strong>Instrução:</strong> Para cada questão, aplique o protocolo: leia a frase → identifique o contexto → substitua a palavra-alvo por cada alternativa → escolha a que melhor preserva o sentido original.</p>
+    </div>
+
+    <p style="font-size:12px; line-height:1.7; margin-bottom:4px;"><strong>2.1</strong> — "The historian's account of the battle was widely praised for its <em>impartiality</em>, offering readers a balanced perspective that neither glorified nor condemned either side of the conflict." The word <strong>"impartiality"</strong> is closest in meaning to:</p>
+    <p style="font-size:12px; margin-bottom:14px; padding-left:14px;" class="font-data">(A) thoroughness &nbsp;&nbsp; (B) inaccuracy &nbsp;&nbsp; (C) objectivity &nbsp;&nbsp; (D) generosity</p>
+
+    <p style="font-size:12px; line-height:1.7; margin-bottom:4px;"><strong>2.2</strong> — "The administration's decision to <em>curtail</em> funding for public libraries was met with fierce opposition from educators, community leaders, and local officials." The word <strong>"curtail"</strong> is closest in meaning to:</p>
+    <p style="font-size:12px; margin-bottom:14px; padding-left:14px;" class="font-data">(A) redirect &nbsp;&nbsp; (B) increase &nbsp;&nbsp; (C) justify &nbsp;&nbsp; (D) reduce</p>
+
+    <p style="font-size:12px; line-height:1.7; margin-bottom:4px;"><strong>2.3</strong> — "The biologist noted that the <em>proliferation</em> of invasive species along the coastal wetlands had fundamentally altered the region's ecological balance." The word <strong>"proliferation"</strong> is closest in meaning to:</p>
+    <p style="font-size:12px; margin-bottom:14px; padding-left:14px;" class="font-data">(A) migration &nbsp;&nbsp; (B) extinction &nbsp;&nbsp; (C) rapid spread &nbsp;&nbsp; (D) behavioral change</p>
+
+    <p style="font-size:12px; line-height:1.7; margin-bottom:4px;"><strong>2.4</strong> — "The committee's report was largely <em>laudatory</em>, commending the organization for its transparency and commitment to sustainable practices." The word <strong>"laudatory"</strong> is closest in meaning to:</p>
+    <p style="font-size:12px; margin-bottom:14px; padding-left:14px;" class="font-data">(A) preliminary &nbsp;&nbsp; (B) admiring &nbsp;&nbsp; (C) critical &nbsp;&nbsp; (D) conclusive</p>
+
+    <p style="font-size:12px; line-height:1.7; margin-bottom:4px;"><strong>2.5</strong> — "The early stages of the disease are often <em>insidious</em>, advancing without noticeable symptoms until significant internal damage has already occurred." The word <strong>"insidious"</strong> is closest in meaning to:</p>
+    <p style="font-size:12px; margin-bottom:18px; padding-left:14px;" class="font-data">(A) rapidly progressing &nbsp;&nbsp; (B) deceptively harmful &nbsp;&nbsp; (C) easily treatable &nbsp;&nbsp; (D) externally visible</p>
+
+    <div class="w-doc-section">
+      <h3>🏋️ Drill 3 — Full Passage Practice: 10 Questões</h3>
+      <p><strong>Instrução:</strong> Aplique o Protocolo de Skimming antes de responder. Gerencie o seu tempo: <strong>máximo de 18 minutos.</strong></p>
+      <p style="font-size:11px; color:var(--t3);">📌 Passagem com ~430 palavras — ligeiramente menor que as do exame real (600–700 palavras) para fins de prática progressiva.</p>
+    </div>
+
+    <div class="card" style="background:var(--sf2); margin-bottom:14px;">
+      <p style="font-size:11px; font-weight:800; color:var(--ac); margin-bottom:8px;" class="font-data">PASSAGE: THE AGRICULTURAL REVOLUTION AND THE ORIGINS OF PLANT DOMESTICATION</p>
+      <p style="font-size:12px; line-height:1.7; margin-bottom:8px;"><strong>[P1]</strong> For the vast majority of human prehistory, people subsisted as hunter-gatherers, relying on wild plants and animals for sustenance. This pattern changed dramatically roughly ten thousand years ago with the emergence of agriculture, a development so consequential that historians and archaeologists have termed it the "Agricultural Revolution" or, alternatively, the "Neolithic Revolution." Unlike a political revolution, however, this transformation unfolded gradually across multiple millennia and arose independently in several geographically distinct regions of the world.</p>
+      <p style="font-size:12px; line-height:1.7; margin-bottom:8px;"><strong>[P2]</strong> The domestication of plants — the process by which humans selectively cultivated wild species over successive generations, gradually altering their genetic composition to favor desirable traits — appears to have originated in several "cradles" of agriculture. The Fertile Crescent, a crescent-shaped region spanning parts of present-day Iraq, Syria, Turkey, and Jordan, is widely regarded as one of the earliest and most significant of these centers. Archaeological evidence indicates that by approximately 9500 BCE, the inhabitants of this region were cultivating emmer wheat, einkorn wheat, and barley — crops that would go on to form the foundation of Old World agriculture.</p>
+      <p style="font-size:12px; line-height:1.7; margin-bottom:8px;"><strong>[P3]</strong> Independently, and at roughly similar times, agriculture emerged in China, where millet and rice were among the first domesticated crops, and in Mesoamerica, where maize (corn), squash, and beans formed what indigenous agricultural societies later called the "Three Sisters." The near-simultaneous emergence of agriculture across such geographically distant regions has prompted scholars to question whether this development was primarily a response to environmental pressures — such as the climatic changes that accompanied the end of the last Ice Age — or whether it represented an inevitable outcome of a certain threshold of human cognitive and social complexity.</p>
+      <p style="font-size:12px; line-height:1.7; margin-bottom:8px;"><strong>[P4]</strong> The consequences of plant domestication extended far beyond mere changes in diet. As food production became more predictable and reliable, human populations could settle permanently in one location, giving rise to the first villages and, eventually, towns and cities. Sedentary lifestyles, in turn, enabled the accumulation of material possessions, the development of specialized labor, and the emergence of social hierarchies. Critics of this narrative, however, caution against viewing the transition to agriculture as an unambiguous advance. Skeletal evidence from early agricultural communities reveals a paradox: the first farmers were, in many respects, less healthy than their hunter-gatherer predecessors. Their diets, though more reliable, were also less varied, leading to nutritional deficiencies. Infectious diseases spread more easily in dense, sedentary populations. And the labor demands of early farming appear to have been substantially greater than those of a foraging lifestyle.</p>
+      <p style="font-size:12px; line-height:1.7; margin-bottom:0;"><strong>[P5]</strong> The domestication of plants thus set humanity on a trajectory that would eventually lead to the civilizations, technologies, and global population densities of the modern world — though whether this trajectory represented "progress" in any simple sense remains a question that continues to provoke scholarly debate.</p>
+    </div>
+
+    <div style="font-size:12px; line-height:1.8;">
+      <p style="margin-bottom:10px;"><strong>Q1 (Factual Information)</strong> — According to paragraph 1, which of the following is true about the emergence of agriculture?<br><span class="font-data" style="font-size:11px; color:var(--t2);">(A) Occurred suddenly &nbsp; (B) Triggered by political conflict &nbsp; (C) Arose independently in several regions &nbsp; (D) Began earlier in Mesoamerica</span></p>
+      <p style="margin-bottom:10px;"><strong>Q2 (Vocabulary in Context)</strong> — The word "subsisted" in paragraph 1 is closest in meaning to:<br><span class="font-data" style="font-size:11px; color:var(--t2);">(A) thrived &nbsp; (B) competed &nbsp; (C) survived &nbsp; (D) migrated</span></p>
+      <p style="margin-bottom:10px;"><strong>Q3 (Negative Factual Information)</strong> — Which was NOT among the first domesticated crops of the Fertile Crescent?<br><span class="font-data" style="font-size:11px; color:var(--t2);">(A) Emmer wheat &nbsp; (B) Barley &nbsp; (C) Maize &nbsp; (D) Einkorn wheat</span></p>
+      <p style="margin-bottom:10px;"><strong>Q4 (Inference)</strong> — It can be inferred from paragraph 3 that scholars who study the origins of agriculture:<br><span class="font-data" style="font-size:11px; color:var(--t2);">(A) Agree environment was primary &nbsp; (B) Are divided between environmental vs. internal factors &nbsp; (C) Believe cognition mattered in all cases &nbsp; (D) Consider it pure coincidence</span></p>
+      <p style="margin-bottom:10px;"><strong>Q5 (Rhetorical Purpose)</strong> — Why does the author discuss skeletal evidence in paragraph 4?<br><span class="font-data" style="font-size:11px; color:var(--t2);">(A) Prove farmers were always healthier &nbsp; (B) Support unambiguous advance &nbsp; (C) Introduce counterargument &nbsp; (D) Explain abandonment of sedentary life</span></p>
+      <p style="margin-bottom:10px;"><strong>Q6 (Reference)</strong> — The phrase "this development" in paragraph 3 refers to:<br><span class="font-data" style="font-size:11px; color:var(--t2);">(A) Domestication of Three Sisters &nbsp; (B) Climate changes/Ice Age &nbsp; (C) Independent emergence of agriculture across regions &nbsp; (D) Scholarly debate on origins</span></p>
+      <p style="margin-bottom:10px;"><strong>Q7 (Sentence Simplification)</strong> — "Sedentary lifestyles, in turn, enabled the accumulation of material possessions, the development of specialized labor, and the emergence of social hierarchies."<br><span class="font-data" style="font-size:11px; color:var(--t2);">(A) Settling forced abandonment of possessions &nbsp; (B) Living in fixed locations enabled social/economic complexity &nbsp; (C) Cities led communities to abandon farming &nbsp; (D) Hierarchies emerged from conflicts over possessions</span></p>
+      <p style="margin-bottom:10px;"><strong>Q8 (Inference)</strong> — The final paragraph suggests that the author:<br><span class="font-data" style="font-size:11px; color:var(--t2);">(A) Believes it was the most transformative event ever &nbsp; (B) Considers consequences entirely negative &nbsp; (C) Views "progress" as contested/unresolved &nbsp; (D) Argues for returning to hunter-gatherer practices</span></p>
+      <p style="margin-bottom:10px;"><strong>Q9 (Vocabulary in Context)</strong> — The word "sedentary" in paragraph 4 is closest in meaning to:<br><span class="font-data" style="font-size:11px; color:var(--t2);">(A) isolated &nbsp; (B) stationary &nbsp; (C) agricultural &nbsp; (D) communal</span></p>
+      <p style="margin-bottom:0;"><strong>Q10 (Prose Summary — 2pts)</strong> — Select THREE: "The domestication of plants approximately ten thousand years ago represents one of the most consequential transformations in human history."<br>
+      <span class="font-data" style="font-size:11px; color:var(--t2); display:block; line-height:1.8; margin-top:4px;">
+      (A) Agriculture emerged independently in several regions (Fertile Crescent, China, Mesoamerica)<br>
+      (B) The Three Sisters were important cultural symbols in Mesoamerica<br>
+      (C) Agriculture enabled permanent settlements and social/economic complexity<br>
+      (D) Emmer wheat, einkorn wheat and barley were the most nutritious crops<br>
+      (E) Agriculture also imposed significant health burdens on early farmers<br>
+      (F) Climatic changes were definitively proven as the primary cause worldwide
+      </span></p>
+    </div>
+  </div>
+
+  <!-- ════════════ PARTE 4: GABARITO ════════════ -->
+  <div class="card">
+    <div class="section-title font-data">PARTE 4 — GABARITO COMENTADO PROFISSIONAL</div>
+
+    <details style="margin-bottom:10px;">
+      <summary style="cursor:pointer; font-weight:800; font-size:12px; color:var(--ac); padding:8px 0;" class="font-data">▸ DRILL 1 — Skimming Sprint: Respostas e Avaliação</summary>
+      <div style="padding:12px 4px 0; font-size:12px; line-height:1.7;">
+        <p style="margin-bottom:8px;"><strong>A — Argumento central:</strong> O fenômeno do Urban Heat Island (UHI) — áreas urbanas registram temperaturas mais altas que as rurais vizinhas — é causado por múltiplos fatores interligados (superfícies impermeáveis, ausência de vegetação, calor antrópico) e tem consequências sérias para a saúde, especialmente de populações vulneráveis.</p>
+        <p style="margin-bottom:8px;"><strong>B — Parágrafo de saúde:</strong> Parágrafo 4 (último) — trata de "heat waves, which are among the deadliest of weather-related disasters" e menciona grupos vulneráveis (idosos, crianças).</p>
+        <p style="margin-bottom:8px;"><strong>C — Soluções apresentadas:</strong> Sim, no parágrafo 4 — "expanding urban green spaces, installing reflective 'cool roofs,' and redesigning street networks to improve airflow."</p>
+        <p style="margin-bottom:0;"><strong>Avaliação:</strong> 3/3 ✅ Protocolo executado com excelência → avance. 1–2 ⚠️ releia o Protocolo 2.1. 0 ❌ você está lendo, não skimming — releia apenas a 1ª frase de cada parágrafo.</p>
+      </div>
+    </details>
+
+    <details style="margin-bottom:10px;">
+      <summary style="cursor:pointer; font-weight:800; font-size:12px; color:var(--ac); padding:8px 0;" class="font-data">▸ DRILL 2 — Vocabulary in Context: Gabarito Completo</summary>
+      <table class="vocab-table" style="margin-top:10px;">
+        <thead><tr><th>Q</th><th>Resposta</th><th>Raciocínio de Confirmação</th><th>Por que os distratores falham</th></tr></thead>
+        <tbody>
+          <tr><td class="font-data">2.1</td><td class="word-hlt">(C) objectivity</td><td>"Balanced perspective that neither glorified nor condemned" = sem viés. Substitua: "praised for its objectivity" → sentido preservado.</td><td>(A) thoroughness = minúcia, campo semântico diferente; (B) inaccuracy = OPPOSITE; (D) generosity = sem relação</td></tr>
+          <tr><td class="font-data">2.2</td><td class="word-hlt">(D) reduce</td><td>"Met with fierce opposition" confirma ação restritiva. Substitua: "decision to reduce funding" → preservado.</td><td>(A) redirect ≠ cortar; (B) increase = OPPOSITE; (C) justify = campo diferente</td></tr>
+          <tr><td class="font-data">2.3</td><td class="word-hlt">(C) rapid spread</td><td>"Fundamentally altered the ecological balance" confirma crescimento descontrolado. Substitua: "rapid spread of invasive species" → preservado.</td><td>(A) migration ≠ multiplicação; (B) extinction = OPPOSITE; (D) behavioral change não mencionado</td></tr>
+          <tr><td class="font-data">2.4</td><td class="word-hlt">(B) admiring</td><td>"Commending the organization" na mesma frase = elogiar. "Laudatory" = louvor/admiração.</td><td>(A) preliminary = campo diferente; (C) critical = OPPOSITE; (D) conclusive = sobre lógica, não tom</td></tr>
+          <tr><td class="font-data">2.5</td><td class="word-hlt">(B) deceptively harmful</td><td>"Advancing without noticeable symptoms until significant internal damage" = dano dissimulado/gradual.</td><td>(A) rapidly progressing contradiz "without symptoms"; (C) easily treatable contradiz gravidade; (D) externally visible = OPPOSITE</td></tr>
+        </tbody>
+      </table>
+    </details>
+
+    <details style="margin-bottom:10px;">
+      <summary style="cursor:pointer; font-weight:800; font-size:12px; color:var(--ac); padding:8px 0;" class="font-data">▸ DRILL 3 — Full Passage: Gabarito Comentado (Q1–Q10)</summary>
+      <div style="padding:12px 4px 0; font-size:12px; line-height:1.75;">
+        <p style="margin-bottom:10px;"><strong>Q1 — (C).</strong> Parágrafo 1 afirma explicitamente "arose independently in several geographically distinct regions of the world." <br><span style="color:var(--t2);">(A) OPPOSITE — "unfolded gradually across multiple millennia"; (B) OUT OF SCOPE — comparação serve só para diferenciar; (D) OUT OF SCOPE + WRONG LOCATION — regiões emergiram "at roughly similar times".</span></p>
+        <p style="margin-bottom:10px;"><strong>Q2 — (C) survived.</strong> "Subsisted... relying on wild plants and animals for sustenance" = sobreviver dependendo do ambiente. <br><span style="color:var(--t2);">(A) thrived = TOO EXTREME + OPPOSITE; (B) competed = OUT OF SCOPE; (D) migrated = TRUE BUT WRONG (refere-se a sustento, não movimento).</span></p>
+        <p style="margin-bottom:10px;"><strong>Q3 — (C) Maize.</strong> Maize é cultura da Mesoamérica (parágrafo 3) — não do Crescente Fértil. Emmer wheat, einkorn wheat e barley estão no parágrafo 2. <br><span style="color:var(--t2);">(A),(B),(D) → WRONG LOCATION se escolhidas — são culturas reais do Crescente Fértil.</span></p>
+        <p style="margin-bottom:10px;"><strong>Q4 — (B).</strong> "...question whether this development was primarily a response to environmental pressures... or whether it represented an inevitable outcome of... human cognitive and social complexity" — estrutura "whether...or whether" = divisão/incerteza. <br><span style="color:var(--t2);">(A) OPPOSITE; (C) TOO EXTREME ("em todos os casos documentados"); (D) OUT OF SCOPE — coincidência nunca é mencionada.</span></p>
+        <p style="margin-bottom:10px;"><strong>Q5 — (C).</strong> A evidência esquelética surge após "Critics of this narrative, however, caution against viewing the transition to agriculture as an unambiguous advance" — "however" sinaliza propósito retórico de contraponto. <br><span style="color:var(--t2);">(A) TOO EXTREME ("in many respects" ≠ universalmente); (B) OPPOSITE — propósito é questionar, não confirmar; (D) OUT OF SCOPE.</span></p>
+        <p style="margin-bottom:10px;"><strong>Q6 — (C).</strong> "This development" = "The near-simultaneous emergence of agriculture across geographically distant regions" (anáfora do sujeito da frase). <br><span style="color:var(--t2);">(A) WRONG LOCATION — Three Sisters é um exemplo dentro da lista; (B) REVERSAL — clima é causa possível, não o "development"; (D) REVERSAL — o debate é o que "this development" causou.</span></p>
+        <p style="margin-bottom:10px;"><strong>Q7 — (B).</strong> Sedentarismo → acúmulo de posses + trabalho especializado + hierarquias = "crescimento de complexidade social e económica". Regra: preservar sujeito + relação causal + resultado, descartando enumerações. <br><span style="color:var(--t2);">(A) OPPOSITE (sedentarismo permitiu, não forçou abandono); (C) OUT OF SCOPE; (D) WRONG CAUSE-EFFECT.</span></p>
+        <p style="margin-bottom:10px;"><strong>Q8 — (C).</strong> "...whether this trajectory represented 'progress' in any simple sense remains a question that continues to provoke scholarly debate" — aspas + "in any simple sense" + "provoke debate" = questão contestada e não resolvida. <br><span style="color:var(--t2);">(A) TOO EXTREME; (B) OPPOSITE (texto apresenta benefícios e custos); (D) OUT OF SCOPE.</span></p>
+        <p style="margin-bottom:10px;"><strong>Q9 — (B) stationary.</strong> "Sedentary lifestyles" = "settle permanently in one location" — oposto de nomadismo. <br><span style="color:var(--t2);">(A) isolated = OUT OF SCOPE (formavam aldeias/cidades); (C) agricultural = TRUE BUT WRONG (descreve atividade, não fixação); (D) communal = OUT OF SCOPE.</span></p>
+        <p style="margin-bottom:0;"><strong>Q10 — (A), (C), (E).</strong> (A) cobre origens independentes (P2–3); (C) cobre sedentarismo → complexidade (1ª metade P4); (E) cobre custos de saúde + "progress" debatível (2ª metade P4–P5). <br><span style="color:var(--t2);">(B) DETAIL — Three Sisters é exemplo ilustrativo de uma frase; (D) DETAIL — nomes específicos de culturas; (F) DISTORTION — "definitively proven" inverte o tom especulativo ("scholars to question whether") do texto.</span></p>
+      </div>
+    </details>
+
+    <table class="vocab-table" style="margin-top:14px;">
+      <thead><tr><th>Acertos (Drill 3)</th><th>Score Estimado (Reading Scaled)</th><th>Diagnóstico</th></tr></thead>
+      <tbody>
+        <tr><td class="font-data">10/10</td><td class="font-data">28–30</td><td>🏆 Elite — Pronto para o Módulo 2</td></tr>
+        <tr><td class="font-data">8–9/10</td><td class="font-data">24–27</td><td>✅ High — Revise os erros e avance</td></tr>
+        <tr><td class="font-data">6–7/10</td><td class="font-data">18–23</td><td>🔵 Strong — Releia os hacks dos tipos errados</td></tr>
+        <tr><td class="font-data">4–5/10</td><td class="font-data">12–17</td><td>🟡 Developing — Repita os Drills 1 e 2</td></tr>
+        <tr><td class="font-data">≤3/10</td><td class="font-data">≤11</td><td>🔴 Basic — Volte ao Protocolo de Skimming</td></tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+    <section id="tab-m2" class="panel">
+      <div class="content-wrapper">
+  <div class="card" style="background: var(--acbg); border-color: var(--acbd);">
+    <h2 class="font-data" style="color:var(--ac); font-size: 18px; font-weight: 800; margin-bottom: 4px;">> MÓDULO 2: LISTENING — THE SECOND PILLAR</h2>
+    <p style="color:var(--t1); font-weight: 600; font-size: 12px;">Captura de dados em tempo real sob a infraestrutura do áudio único — sem segunda chance.</p>
+  </div>
+
+  <!-- ════════════ PARTE 1: THE GAME RULES ════════════ -->
+  <div class="card">
+    <div class="section-title font-data">PARTE 1 — THE GAME RULES (AS REGRAS DO JOGO)</div>
+
+    <div class="w-doc-section">
+      <h3>1.1 Radiografia Oficial da Seção</h3>
+      <p>O Listening é a <strong>segunda seção do TOEFL iBT</strong> e representa uma ruptura radical com a lógica do Reading. Aqui, não existe segunda chance: cada áudio toca <strong>uma única vez</strong> e as questões só aparecem depois que o áudio termina. Quem tenta ouvir sem anotar chega às questões com memória de trabalho saturada e detalhes cruciais perdidos.</p>
+    </div>
+
+    <table class="vocab-table">
+      <thead><tr><th>Elemento</th><th>Dados Oficiais (Pós-Julho 2023)</th></tr></thead>
+      <tbody>
+        <tr><td>Posição no teste</td><td class="font-data">2ª seção (após Reading; pausa de 10 min antes do Speaking)</td></tr>
+        <tr><td>Tempo total</td><td class="font-data">36 minutos</td></tr>
+        <tr><td>Estrutura dos áudios</td><td>2–3 conversas (5 questões cada) + 3–4 palestras (6 questões cada)</td></tr>
+        <tr><td>Total de questões</td><td class="font-data">~28 questões</td></tr>
+        <tr><td>Formato padrão</td><td class="font-data">2 conv. × 5 = 10 + 3 palestras × 6 = 18</td></tr>
+        <tr><td>Pontuação scaled</td><td class="font-data">0–30 pontos</td></tr>
+        <tr><td>Cada áudio toca</td><td style="color:var(--err); font-weight:700;">Uma única vez — sem repetição</td></tr>
+        <tr><td>Anotações permitidas</td><td>Sim — folha de rascunho fornecida pelo centro de testes</td></tr>
+        <tr><td>Penalidade por erro</td><td>Nenhuma</td></tr>
+      </tbody>
+    </table>
+
+    <div class="badge-alert">
+      <strong>⚠️ Diferença crítica em relação ao Reading:</strong> No Reading, o texto permanece na tela. No Listening, quando o áudio termina, ele some para sempre. Suas anotações são a única memória à qual você tem acesso ao responder as questões.
+    </div>
+
+    <div class="w-doc-section">
+      <h3>1.2 Os 8 Tipos de Questão do Listening — Mapa Completo</h3>
+    </div>
+
+    <table class="vocab-table">
+      <thead><tr><th>#</th><th>Tipo de Questão</th><th>O que testa</th><th>Freq./Áudio</th><th>Pontuação</th></tr></thead>
+      <tbody>
+        <tr><td class="font-data">1</td><td class="word-hlt">Gist-Content</td><td>Tópico principal ou propósito geral da palestra</td><td class="font-data">1 (palestras)</td><td class="font-data">1 pt</td></tr>
+        <tr><td class="font-data">2</td><td class="word-hlt">Gist-Purpose</td><td>Por que o estudante está conversando com o professor/funcionário?</td><td class="font-data">1 (conversas)</td><td class="font-data">1 pt</td></tr>
+        <tr><td class="font-data">3</td><td class="word-hlt">Detail</td><td>Fatos específicos mencionados no áudio</td><td class="font-data">3–4</td><td class="font-data">1 pt</td></tr>
+        <tr><td class="font-data">4</td><td class="word-hlt">Understanding the Function</td><td>Por que o locutor disse determinada coisa? Propósito pragmático?</td><td class="font-data">1</td><td class="font-data">1 pt</td></tr>
+        <tr><td class="font-data">5</td><td class="word-hlt">Understanding the Speaker's Attitude</td><td>Como o locutor se sente? Qual a sua postura?</td><td class="font-data">1</td><td class="font-data">1 pt</td></tr>
+        <tr><td class="font-data">6</td><td class="word-hlt">Understanding Organization</td><td>Como a informação está estruturada? Por que o professor menciona X?</td><td class="font-data">1 (palestras)</td><td class="font-data">1 pt</td></tr>
+        <tr><td class="font-data">7</td><td class="word-hlt">Connecting Information</td><td>Como as informações se relacionam? (tabelas, ordenação, categorização)</td><td class="font-data">0–1</td><td class="font-data" style="color:var(--ac); font-weight:800;">2 pts</td></tr>
+        <tr><td class="font-data">8</td><td class="word-hlt">Making Inferences</td><td>O que pode ser deduzido a partir do que o locutor disse?</td><td class="font-data">0–1</td><td class="font-data">1 pt</td></tr>
+      </tbody>
+    </table>
+
+    <div class="badge-hint">
+      <strong>⚡ Prioridade estratégica:</strong> Detail (3) + Gist (1 e 2) + Function (4) respondem por ~70% das questões. São os alvos primários do seu sistema de anotações.
+    </div>
+
+    <div class="w-doc-section">
+      <h3>1.3 A Anatomia dos Áudios: Conversas vs. Palestras</h3>
+    </div>
+
+    <div class="workspace-layout">
+      <div>
+        <p style="font-size:11px; font-weight:800; color:var(--ac); margin-bottom:6px;" class="font-data">CONVERSAS (Campus Conversations)</p>
+        <table class="vocab-table">
+          <thead><tr><th>Elemento</th><th>Descrição</th></tr></thead>
+          <tbody>
+            <tr><td>Duração</td><td class="font-data">~3–5 minutos</td></tr>
+            <tr><td>Participantes</td><td>Estudante + professor ou funcionário do campus</td></tr>
+            <tr><td>Estrutura</td><td>Problema + tentativa de resolução + desfecho</td></tr>
+            <tr><td>Tópicos frequentes</td><td>Prazos, revisão de nota, orientação, serviços do campus</td></tr>
+            <tr><td>Padrão de questões</td><td>1 Gist-Purpose + 3–4 Detail + 1 Function/Attitude</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div>
+        <p style="font-size:11px; font-weight:800; color:var(--ac); margin-bottom:6px;" class="font-data">PALESTRAS (Academic Lectures)</p>
+        <table class="vocab-table">
+          <thead><tr><th>Elemento</th><th>Descrição</th></tr></thead>
+          <tbody>
+            <tr><td>Duração</td><td class="font-data">~5–7 minutos</td></tr>
+            <tr><td>Participantes</td><td>Professor (com ou sem participação de alunos)</td></tr>
+            <tr><td>Estrutura</td><td>Introdução → Conceito central → Exemplos → Implicações</td></tr>
+            <tr><td>Tópicos frequentes</td><td>Ciências naturais/sociais, história, artes, linguística</td></tr>
+            <tr><td>Padrão de questões</td><td>1 Gist-Content + 3–4 Detail + 1 Organization + 1 Attitude/Inference</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="badge-hint" style="margin-top:14px;">
+      <strong>📌 Insight tático:</strong> Nas conversas, o propósito do estudante é quase sempre a primeira questão. Nas palestras, o que o professor enfatiza mais no meio do áudio (precedido por signpost language) é onde a maioria das questões de Detail se concentra.
+    </div>
+
+    <div class="w-doc-section">
+      <h3>1.4 Gestão de Energia e Tempo: O Protocolo de 36 Minutos</h3>
+    </div>
+
+    <pre style="background:var(--sf2); border:1px solid var(--bd); border-radius:4px; padding:14px; font-size:11px; line-height:1.7; overflow-x:auto; color:var(--t2); font-family:'JetBrains Mono',monospace;">CONVERSAS (2 × ~4 min áudio + ~3 min questões = ~7 min cada)
+├── Conversa 1: Áudio + 5 questões                  ~7 min
+└── Conversa 2: Áudio + 5 questões                  ~7 min
+
+PALESTRAS (3 × ~6 min áudio + ~4 min questões = ~10 min cada)
+├── Palestra 1: Áudio + 6 questões                 ~10 min
+├── Palestra 2: Áudio + 6 questões                 ~10 min
+└── Palestra 3: Áudio + 6 questões                 ~10 min
+
+TOTAL                                            ~36 minutos</pre>
+
+    <div class="badge-alert">
+      <strong>⚠️ Você NÃO controla o cronômetro durante os áudios.</strong> O tempo passa enquanto o áudio toca. O que você controla: (1) a qualidade das suas anotações e (2) a velocidade de resposta nas questões. Alvo: <strong>30–45 segundos por questão</strong> no Listening.
+    </div>
+
+    <div class="w-doc-section">
+      <h3>Use o Intervalo de 10 Minutos com Inteligência</h3>
+      <ul>
+        <li>Movimento físico breve (caminhada, alongamento)</li>
+        <li>Água e snack leve se permitido</li>
+        <li>Reset mental completo: Reading e Listening estão encerrados. Speaking e Writing exigem produção — mudança total de modo cognitivo.</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- ════════════ PARTE 2: THE AI HACK ════════════ -->
+  <div class="card">
+    <div class="section-title font-data">PARTE 2 — THE AI HACK (A ESTRATÉGIA)</div>
+
+    <div class="w-doc-section">
+      <h3>2.1 O Sistema de Anotações TOEFL-Optimized</h3>
+      <p>Suas anotações são sua única memória após o áudio. Um sistema ruim é tão prejudicial quanto não anotar nada — você acaba com uma folha de informações desordenadas impossível de consultar em 30 segundos sob pressão.</p>
+      <p style="margin-top:8px;"><strong>O Template de Três Zonas:</strong></p>
+    </div>
+
+    <pre style="background:var(--sf2); border:1px solid var(--bd); border-radius:4px; padding:14px; font-size:11px; line-height:1.7; overflow-x:auto; color:var(--t1); font-family:'JetBrains Mono',monospace;">┌─────────────────────────────────────────────────────────────┐
+│ ZONA TOPO                                                   │
+│ TIPO: CONV / LEC       TÓPICO: _________________________   │
+│ PROPÓSITO PRINCIPAL: ___________________________________    │
+├──────────────────────────┬──────────────────────────────────┤
+│ ZONA ESQUERDA            │ ZONA DIREITA                     │
+│ Estrutura e conteúdo     │ Relações e atitude               │
+│                          │                                  │
+│ Conceito principal:      │ CAUSA → EFEITO:                  │
+│  → detalhe               │                                  │
+│  → detalhe               │ CONTRASTE (≠ / !):               │
+│  eg: exemplo             │                                  │
+│                          │ ATITUDE (+/-/?):                 │
+│ Ponto 2:                 │                                  │
+│  → detalhe               │ * pontos enfatizados             │
+├──────────────────────────┴──────────────────────────────────┤
+│ ZONA BASE                                                   │
+│ CONCLUSÃO / TAKEAWAY: _________________________________     │
+│ POSTURA FINAL DO LOCUTOR:  + / - / ?                       │
+└─────────────────────────────────────────────────────────────┘</pre>
+
+    <div class="w-doc-section">
+      <h3>Sistema de Símbolos para Velocidade</h3>
+    </div>
+
+    <table class="vocab-table">
+      <thead><tr><th>Símbolo</th><th>Significado</th></tr></thead>
+      <tbody>
+        <tr><td class="font-data">→</td><td>leva a / causa / resulta em</td></tr>
+        <tr><td class="font-data">≠</td><td>contrasta com / diferente de</td></tr>
+        <tr><td class="font-data">!</td><td>ponto surpreendente / enfatizado</td></tr>
+        <tr><td class="font-data">*</td><td>provável questão — o professor repetiu ou enfatizou</td></tr>
+        <tr><td class="font-data">+ / -</td><td>positivo/benefício ou negativo/problema</td></tr>
+        <tr><td class="font-data">?</td><td>debatido / incerto / hipótese</td></tr>
+        <tr><td class="font-data">eg</td><td>exemplo (detalhe de apoio — indente abaixo do conceito)</td></tr>
+        <tr><td class="font-data">def</td><td>definição — escreva logo abaixo</td></tr>
+      </tbody>
+    </table>
+
+    <div class="w-doc-section" style="margin-top:14px;">
+      <h3>O que ESCREVER vs. o que IGNORAR</h3>
+    </div>
+
+    <table class="vocab-table">
+      <thead><tr><th>Escreva</th><th>Ignore (ou abrevia ao máximo)</th></tr></thead>
+      <tbody>
+        <tr><td>Tópico principal e propósito</td><td>Filler de transição ("um", "you know", "as I said")</td></tr>
+        <tr><td>Definições de termos-chave</td><td>Narrativas longas (escreva só o ponto que a narrativa ilustra)</td></tr>
+        <tr><td>Números, datas e estatísticas enfatizados</td><td>Detalhes técnicos não enfatizados</td></tr>
+        <tr><td>Relações causa-efeito</td><td>Repetições do que o professor já disse</td></tr>
+        <tr><td>Atitude do locutor (tópicos polêmicos)</td><td>Exemplos redundantes (se já anotou um, pule o segundo)</td></tr>
+        <tr><td>Qualquer coisa que o professor REPETE com signpost</td><td>A frase de abertura padrão do áudio (já está na tela)</td></tr>
+      </tbody>
+    </table>
+
+    <div class="w-doc-section" style="margin-top:14px;">
+      <h3>2.2 A Linguagem de Sinalização (Signpost Language) — Seu Sistema de Alerta Antecipado</h3>
+      <p>O signpost language é o que o professor/locutor diz <em>antes</em> de dar a informação importante. Reconhecer esses sinais em tempo real permite que você se prepare para escrever antes que a informação chegue.</p>
+    </div>
+
+    <table class="vocab-table">
+      <thead><tr><th>Categoria</th><th>Exemplos no Áudio</th><th>O que sinaliza</th><th>Ação nas Anotações</th></tr></thead>
+      <tbody>
+        <tr><td class="word-hlt">Introdução de tópico</td><td class="font-data" style="font-size:10px;">"Today we're going to...", "The subject of today's lecture is..."</td><td>Tópico principal começa</td><td>Escreva na ZONA TOPO</td></tr>
+        <tr><td class="word-hlt">Ênfase máxima</td><td class="font-data" style="font-size:10px;">"This is crucial", "Make sure you get this", "The key point here is"</td><td>Quase certamente será perguntado</td><td>Marque com * e escreva palavra por palavra</td></tr>
+        <tr><td class="word-hlt">Novo subtópico</td><td class="font-data" style="font-size:10px;">"Now, turning to...", "Moving on...", "Another important point is..."</td><td>Nova seção da palestra começa</td><td>Nova linha ou número na ZONA ESQUERDA</td></tr>
+        <tr><td class="word-hlt">Exemplo</td><td class="font-data" style="font-size:10px;">"For example", "To illustrate this", "Take the case of..."</td><td>Detalhe de apoio, não ideia principal</td><td>Indente como "eg:" abaixo do conceito</td></tr>
+        <tr><td class="word-hlt">Contraste / Surpresa</td><td class="font-data" style="font-size:10px;">"However", "Interestingly", "What's surprising is", "Actually, it turns out..."</td><td>Contradição ou surpresa — frequentemente testada</td><td>Marque com ≠ ou !</td></tr>
+        <tr><td class="word-hlt">Causa-efeito</td><td class="font-data" style="font-size:10px;">"As a result", "This led to", "Consequently", "This is why..."</td><td>Relação causal — frequente em Organization e Inference</td><td>Use → nas anotações</td></tr>
+        <tr><td class="word-hlt">Definição</td><td class="font-data" style="font-size:10px;">"What I mean by that is", "To put it simply", "In other words..."</td><td>Definição vem a seguir</td><td>Escreva "def:" antes da definição</td></tr>
+        <tr><td class="word-hlt">Conclusão</td><td class="font-data" style="font-size:10px;">"So, to sum up", "The takeaway here is", "In conclusion..."</td><td>Final de seção — <strong>altamente testável</strong></td><td>Escreva na ZONA BASE com *</td></tr>
+        <tr><td class="word-hlt">Atitude do locutor</td><td class="font-data" style="font-size:10px;">"Unfortunately", "Remarkably", "I find it particularly striking that..."</td><td>Opinião pessoal do professor</td><td>Marque com +/-/? na ZONA DIREITA</td></tr>
+      </tbody>
+    </table>
+
+    <div class="badge-hint" style="margin-top:14px;">
+      <strong>⚡ Regra de ouro do signpost:</strong> Qualquer vez que o professor <em>desacelera, pausa ou muda o tom de voz</em>, coloque o lápis no papel. É o equivalente auditivo do negrito num texto académico.
+    </div>
+
+    <div class="w-doc-section" style="margin-top:14px;">
+      <h3>2.3 Os 5 Padrões de Distratores da ETS no Listening</h3>
+      <p>Os mesmos padrões do Reading existem no Listening — mas são mais insidiosos porque você não pode reler. A alternativa errada soa mais plausível quando você confia apenas na memória.</p>
+    </div>
+
+    <table class="vocab-table">
+      <thead><tr><th>#</th><th>Padrão</th><th>Definição</th><th>Por que é mais perigoso no Listening</th></tr></thead>
+      <tbody>
+        <tr><td class="font-data">1</td><td class="word-hlt">CORRECT WORDS, WRONG MEANING</td><td>Usa palavras exatas do áudio, mas em contexto errado ou com sentido invertido</td><td>Você reconhece as palavras e sente confirmação falsa — o maior perigo</td></tr>
+        <tr><td class="font-data">2</td><td class="word-hlt">TOO SPECIFIC / WRONG FOCUS</td><td>Foca num detalhe menor ou anedota mencionada brevemente</td><td>Detalhes periféricos ficam mais salientes na memória auditiva</td></tr>
+        <tr><td class="font-data">3</td><td class="word-hlt">TRUE BUT NOT SAID</td><td>Verdadeiro no mundo real, mas não dito neste áudio específico</td><td>Sem texto para verificar, o candidato preenche lacunas com conhecimento prévio</td></tr>
+        <tr><td class="font-data">4</td><td class="word-hlt">CONFUSED REASONING</td><td>Inverte a relação lógica: o efeito vira causa, a causa vira efeito</td><td>Relações causais são mais difíceis de capturar no áudio que no texto</td></tr>
+        <tr><td class="font-data">5</td><td class="word-hlt">EXTREME INFERENCE</td><td>Vai além do que o locutor disse, adicionando conclusões não feitas</td><td>Na memória auditiva, a mente completa frases e expande significados automaticamente</td></tr>
+      </tbody>
+    </table>
+
+    <div class="badge-alert" style="margin-top:14px;">
+      <strong>Exemplo prático — CORRECT WORDS + CONFUSED REASONING:</strong> O professor diz: <em>"Plants provide up to 30 percent of their sugars to the fungal network in exchange for nutrients."</em> Distrator: <em>"Fungi provide up to 30 percent of their sugars to the plant root system."</em> → "30 percent", "sugars" e "root system" estão no áudio — mas a direção da troca foi invertida.
+    </div>
+
+    <div class="w-doc-section" style="margin-top:14px;">
+      <h3>2.4 Hacks Cirúrgicos por Tipo de Questão</h3>
+
+      <p><strong>🔊 Gist-Content e Gist-Purpose</strong></p>
+      <ul>
+        <li>A resposta correta é <strong>ampla o suficiente</strong> para cobrir o áudio inteiro — não apenas uma parte.</li>
+        <li>Elimine alternativas que descrevem apenas um segmento, um exemplo ou um detalhe.</li>
+        <li>Para Gist-Purpose em conversas: a resposta está quase sempre na <strong>primeira metade</strong>, quando o estudante explica por que está ali.</li>
+        <li>⚠️ <strong>Trap:</strong> Uma palestra sobre "fungos micorrízicos" pode ter um distrator que diz "o professor explica por que florestas estão sendo destruídas" — mencionado, mas não é o propósito central.</li>
+      </ul>
+
+      <p style="margin-top:12px;"><strong>🔊 Function (Understanding the Function)</strong></p>
+      <ul>
+        <li>Frequentemente incluem <strong>Replay</strong> — a ETS retoca um trecho de 15–30 segundos e pergunta o que o locutor quis dizer.</li>
+        <li>O significado PRAGMÁTICO (o que foi <em>intencionado</em>) é quase sempre diferente do significado LITERAL.</li>
+        <li><em>"That's one way to look at it"</em> → literalmente neutro. Pragmaticamente: ceticismo cortês.</li>
+        <li><em>"Well, I suppose that's true"</em> → literalmente: concordância. Pragmaticamente: concordância relutante.</li>
+        <li>⚠️ <strong>Trap:</strong> Escolher o significado literal quando o tom sugere o contrário.</li>
+      </ul>
+
+      <p style="margin-top:12px;"><strong>🔊 Attitude</strong></p>
+      <ul>
+        <li>Revelada por: <strong>vocabulário avaliativo + hedging + tom implícito.</strong></li>
+        <li>ENTUSIASMO: <em>remarkable, fascinating, groundbreaking, notably</em></li>
+        <li>CETICISMO: <em>it has been suggested, some argue, not all researchers agree</em></li>
+        <li>SURPRESA: <em>surprisingly, interestingly, contrary to expectations</em></li>
+        <li>PREOCUPAÇÃO: <em>unfortunately, problematically, this raises concerns about</em></li>
+        <li>⚠️ <strong>Trap:</strong> Confundir o tom do professor com a posição que ele está <em>descrevendo</em> (ele pode descrever a posição cética de <em>outros</em> com entusiasmo).</li>
+      </ul>
+
+      <p style="margin-top:12px;"><strong>🔊 Connecting Information (Tabelas e Categorias)</strong></p>
+      <ul>
+        <li>Valem <strong>2 pontos</strong> — não as negligencie.</li>
+        <li>Divida a ZONA ESQUERDA em duas colunas se o professor comparar dois conceitos.</li>
+        <li>Atenção especial a frases como "there are two main types", "let me compare", "on the other hand."</li>
+        <li>⚠️ <strong>Trap:</strong> Atribuir uma característica ao conceito errado quando os dois são similares.</li>
+      </ul>
+
+      <p style="margin-top:12px;"><strong>🔊 Making Inferences</strong></p>
+      <ul>
+        <li>A inferência deve ser <strong>suportada diretamente</strong> pelo áudio — sem saltos lógicos múltiplos.</li>
+        <li>A resposta correta é quase sempre uma paráfrase próxima de algo que o locutor disse + um passo lógico.</li>
+        <li>⚠️ <strong>Trap:</strong> Usar conhecimento de mundo para "completar" uma inferência que o áudio não suporta.</li>
+      </ul>
+    </div>
+
+    <div class="w-doc-section" style="margin-top:14px;">
+      <h3>2.5 Os 4 Níveis de Escuta Ativa — O Framework Completo</h3>
+      <p>Candidatos que só escutam no Nível 1 consistentemente erram questões de Function e Attitude. O objetivo é treinar todos os quatro níveis simultaneamente.</p>
+    </div>
+
+    <table class="vocab-table">
+      <thead><tr><th>Nível</th><th>O que você escuta</th><th>Questões que responde</th><th>Como capturar nas anotações</th></tr></thead>
+      <tbody>
+        <tr><td class="font-data">1. Superfície</td><td>O que o locutor <strong>DISSE</strong></td><td>Detail</td><td>Escreva os fatos diretamente</td></tr>
+        <tr><td class="font-data">2. Propósito</td><td>Por que o locutor disse <strong>AQUILO agora</strong></td><td>Function, Organization</td><td>Marque * e anote o propósito entre parênteses</td></tr>
+        <tr><td class="font-data">3. Atitude</td><td>Como o locutor <strong>SE SENTE</strong> sobre o que está dizendo</td><td>Attitude</td><td>Marque +/-/? na Zona Direita</td></tr>
+        <tr><td class="font-data">4. Estrutura</td><td>Como as informações se <strong>ENCAIXAM</strong> na lógica geral</td><td>Gist, Organization</td><td>Use números para seções; anote conclusão na Zona Base</td></tr>
+      </tbody>
+    </table>
+
+    <div class="w-doc-section" style="margin-top:14px;">
+      <h3>2.6 Regras de Ouro do Pacing no Listening</h3>
+      <ol>
+        <li><strong>Nunca deixe uma questão em branco.</strong> Sem penalidade — um chute é 25% de chance. Zero é zero.</li>
+        <li><strong>30–45 segundos por questão é o alvo.</strong> Você tem anotações — não precisa reconstruir o áudio da memória.</li>
+        <li><strong>Quando você perder um trecho do áudio:</strong> Não entre em pânico. Escreva ? no ponto perdido e continue anotando normalmente.</li>
+        <li><strong>Responda questões de Detail imediatamente</strong> — enquanto o áudio ainda está fresco.</li>
+        <li><strong>O silêncio entre áudios é precioso.</strong> Use para ler o prompt da próxima questão ou rever o topo das suas anotações.</li>
+      </ol>
+    </div>
+  </div>
+
+  <!-- ════════════ PARTE 3: ACTION DRILLS ════════════ -->
+  <div class="card">
+    <div class="section-title font-data">PARTE 3 — ACTION DRILLS (EXERCÍCIOS INTERATIVOS)</div>
+
+    <div class="badge-hint">
+      📌 Os Drills abaixo usam <strong>transcrições escritas</strong> como ponte pedagógica. No exame real, os áudios são falados — com hesitações naturais, ênfases e variações de tom. Use estes drills para treinar a estrutura de anotações e o reconhecimento de tipos de questão.
+    </div>
+
+    <div class="w-doc-section" style="margin-top:14px;">
+      <h3>🏋️ Drill 1 — Signpost Language Recognition</h3>
+      <p><strong>Objetivo:</strong> Identificar sinalizadores em tempo real e entender o que cada um indica sobre a estrutura da informação que vem a seguir.<br>
+      <strong>Instrução:</strong> Leia o trecho de palestra abaixo. Identifique as palavras de sinalização e responda as 3 perguntas no final.</p>
+    </div>
+
+    <div class="card" style="background:var(--sf2); margin-bottom:14px;">
+      <p style="font-size:11px; font-weight:800; color:var(--ac); margin-bottom:8px;" class="font-data">TRANSCRIPT — TRECHO DE PALESTRA</p>
+      <p style="font-size:12px; line-height:1.7; font-style:italic;">"Now, before we talk about the results of the study, I want to make sure we're all on the same page about the methodology. <strong>This is actually crucial, because</strong> some of the conclusions seem counterintuitive at first — and I don't want you to dismiss them before you understand how the data was collected.</p>
+      <p style="font-size:12px; line-height:1.7; font-style:italic;">So — the key point here is that the researchers used a longitudinal design spanning twenty years. This is important because most of the earlier studies in this field were cross-sectional. What's the difference? <strong>To put it simply:</strong> cross-sectional studies take a snapshot in time; longitudinal studies track the same individuals over years. And that distinction matters enormously when you're trying to make any kind of causal claim.</p>
+      <p style="font-size:12px; line-height:1.7; font-style:italic; margin-bottom:0;"><strong>Unfortunately,</strong> a lot of the earlier literature missed this, <strong>and as a result,</strong> many of the conclusions that were widely cited in the 1990s have since been called into question. Now, with that in mind, let's look at what this particular study actually found..."</p>
+    </div>
+
+    <p style="font-size:12px; line-height:1.7; margin-bottom:6px;"><strong>A.</strong> O professor diz: <em>"This is actually crucial, because..."</em> — Que tipo de informação está chegando a seguir? O que você deveria fazer nas suas anotações?</p>
+    <p style="font-size:12px; line-height:1.7; margin-bottom:6px;"><strong>B.</strong> O professor diz: <em>"To put it simply:"</em> — O que esse signpost indica? Como você registraria o que vem depois?</p>
+    <p style="font-size:12px; line-height:1.7; margin-bottom:18px;"><strong>C.</strong> <em>"Unfortunately, a lot of the earlier literature missed this, and as a result..."</em> — Identifique DOIS signposts nessa frase e explique o que cada um sinaliza.</p>
+
+    <div class="w-doc-section">
+      <h3>🏋️ Drill 2 — Sistema de Anotações: Prática de Note-Taking</h3>
+      <p><strong>Instrução:</strong></p>
+      <ol>
+        <li>Leia o trecho abaixo UMA única vez — sem pausas, sem reler.</li>
+        <li>Ao mesmo tempo, preencha o Template de Três Zonas.</li>
+        <li>Com o texto FECHADO (coberto), responda as 3 perguntas usando APENAS suas anotações.</li>
+      </ol>
+    </div>
+
+    <div class="card" style="background:var(--sf2); margin:14px 0;">
+      <p style="font-size:11px; font-weight:800; color:var(--ac); margin-bottom:8px;" class="font-data">TRANSCRIPT — THE PLACEBO EFFECT</p>
+      <p style="font-size:12px; line-height:1.7; font-style:italic; margin-bottom:8px;">"Today I want to talk briefly about the placebo effect — a phenomenon that has fascinated researchers for decades. A placebo is an inert substance or procedure with no active therapeutic ingredient — a sugar pill, for instance. But here's what's remarkable: patients who receive placebos often report genuine improvements in their symptoms. In some clinical trials, <strong>up to 30 percent of patients show measurable improvement</strong> after receiving a placebo.</p>
+      <p style="font-size:12px; line-height:1.7; font-style:italic; margin-bottom:8px;">Now, for a long time, researchers dismissed this as wishful thinking. But more recent neurological evidence suggests that something physiologically real is happening. When patients believe they're receiving treatment, the brain actually releases <strong>endorphins</strong> — natural pain-relieving chemicals. So the placebo effect isn't purely psychological — it has documented biological mechanisms.</p>
+      <p style="font-size:12px; line-height:1.7; font-style:italic; margin-bottom:0;">What makes this particularly clinically relevant is that the effect varies significantly depending on context. Studies have shown that larger pills produce stronger effects than smaller ones. Injections produce stronger effects than pills. And, interestingly, <strong>branded medications produce stronger placebo effects than generic ones</strong> — even when the active ingredient is completely identical. Researchers have called this phenomenon the 'dose of the context.'"</p>
+    </div>
+
+    <p style="font-size:12px; line-height:1.7; margin-bottom:6px;"><strong>A.</strong> Em alguns ensaios clínicos, qual percentagem de pacientes mostrou melhora mensurável após receber um placebo?</p>
+    <p style="font-size:12px; line-height:1.7; margin-bottom:6px;"><strong>B.</strong> Qual substância química o cérebro libera quando um paciente acredita estar recebendo tratamento?</p>
+    <p style="font-size:12px; line-height:1.7; margin-bottom:18px;"><strong>C.</strong> O que produz um efeito placebo mais forte: comprimidos de marca ou genéricos (com ingrediente ativo idêntico)?</p>
+
+    <div class="w-doc-section">
+      <h3>🏋️ Drill 3A — Conversation Simulation: Office Hours Request</h3>
+      <p><strong>Instrução:</strong> Leia a transcrição UMA ÚNICA VEZ, tomando notas no template. Depois responda as 5 questões.<br>
+      <strong>Tempo alvo: 7 minutos</strong> (4 min leitura + anotações / 3 min questões).</p>
+    </div>
+
+    <div class="card" style="background:var(--sf2); margin-bottom:14px;">
+      <p style="font-size:11px; font-weight:800; color:var(--ac); margin-bottom:8px;" class="font-data">TRANSCRIPT — OFFICE HOURS: RESEARCH PAPER EXTENSION</p>
+      <p style="font-size:11px; color:var(--t3); font-style:italic; margin-bottom:8px;">Narrator: Listen to a conversation between a student and a professor.</p>
+      <p style="font-size:12px; line-height:1.7; margin-bottom:6px;"><strong>Student:</strong> Excuse me, Professor Chen? Do you have a few minutes?</p>
+      <p style="font-size:12px; line-height:1.7; margin-bottom:6px;"><strong>Professor:</strong> Sure, come in. What can I do for you?</p>
+      <p style="font-size:12px; line-height:1.7; margin-bottom:6px;"><strong>Student:</strong> Um, I was wondering... I know the research paper is due on Friday, but I've had some really unexpected problems this week. My laptop's hard drive failed on Monday, and I lost a significant portion of my draft. I had about twelve pages done, and now I'm essentially starting over from my outline and bibliography.</p>
+      <p style="font-size:12px; line-height:1.7; margin-bottom:6px;"><strong>Professor:</strong> I see. That's certainly unfortunate. Did you have any backup copies anywhere?</p>
+      <p style="font-size:12px; line-height:1.7; margin-bottom:6px;"><strong>Student:</strong> I have some research notes saved in a cloud service, but the actual document file wasn't synced. I know I should have been more careful about that. I'm not trying to make excuses.</p>
+      <p style="font-size:12px; line-height:1.7; margin-bottom:6px;"><strong>Professor:</strong> Well, I appreciate your honesty about it. Let me ask — how far along is your actual research? Is it the writing itself that was lost, or were your notes and sources affected as well?</p>
+      <p style="font-size:12px; line-height:1.7; margin-bottom:6px;"><strong>Student:</strong> Just the writing. All my reading notes and sources are completely intact. It's really only the draft itself that's gone.</p>
+      <p style="font-size:12px; line-height:1.7; margin-bottom:6px;"><strong>Professor:</strong> In that case, I can offer you until Monday morning. That's an additional three days. But I do want to be clear — this is a one-time accommodation. The department's policy allows me to grant one extension per student per semester, so please don't make a habit of this.</p>
+      <p style="font-size:12px; line-height:1.7; margin-bottom:6px;"><strong>Student:</strong> Completely understood. Thank you so much, Professor. I genuinely appreciate it.</p>
+      <p style="font-size:12px; line-height:1.7; margin-bottom:6px;"><strong>Professor:</strong> Of course. And going forward — please, set up automatic backups. I'd be sorry to see this happen to you again.</p>
+      <p style="font-size:12px; line-height:1.7; margin-bottom:0;"><strong>Student:</strong> Absolutely. I've already set everything up. Lesson very much learned.</p>
+    </div>
+
+    <div style="font-size:12px; line-height:1.8; margin-bottom:18px;">
+      <p style="margin-bottom:8px;"><strong>Q1 (Gist-Purpose)</strong> — Why does the student visit the professor?<br><span class="font-data" style="font-size:11px; color:var(--t2);">(A) To dispute a grade &nbsp; (B) To request additional time for a paper &nbsp; (C) To report a technical problem with the course website &nbsp; (D) To change her paper topic</span></p>
+      <p style="margin-bottom:8px;"><strong>Q2 (Detail)</strong> — What technical problem did the student experience?<br><span class="font-data" style="font-size:11px; color:var(--t2);">(A) Internet failed while uploading &nbsp; (B) She accidentally deleted the document &nbsp; (C) Laptop's hard drive stopped working &nbsp; (D) Cloud service unexpectedly deleted her file</span></p>
+      <p style="margin-bottom:8px;"><strong>Q3 (Speaker's Attitude)</strong> — How would the professor's overall response best be described?<br><span class="font-data" style="font-size:11px; color:var(--t2);">(A) Skeptical &nbsp; (B) Sympathetic but firm &nbsp; (C) Reluctant — only agrees after documentation &nbsp; (D) Enthusiastic</span></p>
+      <p style="margin-bottom:8px;"><strong>Q4 (Detail)</strong> — What does the professor ultimately decide?<br><span class="font-data" style="font-size:11px; color:var(--t2);">(A) Refuses any extension &nbsp; (B) Grants three additional days until Monday morning &nbsp; (C) Offers one week with written documentation &nbsp; (D) Suggests contacting the department chair</span></p>
+      <p style="margin-bottom:0;"><strong>Q5 (Function)</strong> — Why does the professor say "I'd be sorry to see this happen to you again"?<br><span class="font-data" style="font-size:11px; color:var(--t2);">(A) To suggest no further extensions &nbsp; (B) To warn about grade penalties &nbsp; (C) To express genuine concern and emphasize backing up her work &nbsp; (D) To imply she was careless</span></p>
+    </div>
+
+    <div class="w-doc-section">
+      <h3>🏋️ Drill 3B — Lecture Simulation: Mycorrhizal Fungi</h3>
+      <p><strong>Instrução:</strong> Leia a transcrição UMA ÚNICA VEZ, tomando notas no template. Depois responda as 6 questões.<br>
+      <strong>Tempo alvo: 10 minutos</strong> (6 min leitura + anotações / 4 min questões).</p>
+    </div>
+
+    <div class="card" style="background:var(--sf2); margin-bottom:14px;">
+      <p style="font-size:11px; font-weight:800; color:var(--ac); margin-bottom:8px;" class="font-data">TRANSCRIPT — LECTURE: MYCORRHIZAL FUNGI AND PLANT SYMBIOSIS</p>
+      <p style="font-size:11px; color:var(--t3); font-style:italic; margin-bottom:8px;">Narrator: Listen to part of a lecture in a biology class.</p>
+      <p style="font-size:12px; line-height:1.7; margin-bottom:8px;"><strong>Professor:</strong> Alright, let's get started. Today we're looking at one of the most ecologically significant relationships in the plant world — the symbiosis between plants and mycorrhizal fungi. And I think once you understand how this relationship works, you'll never look at a forest the same way.</p>
+      <p style="font-size:12px; line-height:1.7; margin-bottom:8px;">So, first things first. What are mycorrhizal fungi? The word actually comes from the Greek — <em>"mykes,"</em> meaning fungus, and <em>"rhiza,"</em> meaning root. So, quite literally: fungus-root. These are fungi that form associations with the root systems of the vast majority of land plants — we're talking roughly 80 to 90 percent of all terrestrial plant species.</p>
+      <p style="font-size:12px; line-height:1.7; margin-bottom:8px;">Now, the relationship is what biologists call <em>mutualistic</em> — and this is important — meaning both partners benefit. Let me explain exactly how. The plant, through photosynthesis, produces sugars. It actually transfers a significant portion of those sugars — up to 30 percent in some cases — to the fungal partner. In exchange, the fungus dramatically extends the plant's ability to absorb water and nutrients from the soil, particularly phosphorus. The fungal filaments, called hyphae, can penetrate soil particles that plant roots simply cannot reach.</p>
+      <p style="font-size:12px; line-height:1.7; margin-bottom:8px;">Here's what I find particularly remarkable — and this is something that's relatively recent in the scientific literature — these fungal networks don't just connect one plant to one fungus. They can form what some researchers have called the "Wood Wide Web" — an interconnected underground network linking dozens of trees in a single forest. Through this network, nutrients and even chemical signals can travel between trees. Some studies suggest that established trees can support younger seedlings by sending them carbon through the fungal network. Whether this constitutes what we'd call <em>"altruistic"</em> behavior is, I'll admit, a loaded term — but it's provocative.</p>
+      <p style="font-size:12px; line-height:1.7; margin-bottom:0;">One important practical implication — and <strong>make sure you get this</strong> — when forests are clear-cut, these fungal networks are destroyed along with the trees. Replanting without the fungal community means slower growth rates and significantly higher mortality rates for seedlings. This is one of the key reasons why large-scale reforestation efforts sometimes underperform expectations — the below-ground ecosystem is consistently overlooked.</p>
+    </div>
+
+    <div style="font-size:12px; line-height:1.8;">
+      <p style="margin-bottom:8px;"><strong>Q6 (Gist-Content)</strong> — What is the main subject of this lecture?<br><span class="font-data" style="font-size:11px; color:var(--t2);">(A) Chemical processes in forest nutrient cycling through photosynthesis &nbsp; (B) A mutualistic biological relationship between land plants and underground fungi &nbsp; (C) The recent discovery of communication networks among forest trees &nbsp; (D) Negative consequences of deforestation on soil microorganism populations</span></p>
+      <p style="margin-bottom:8px;"><strong>Q7 (Detail)</strong> — What do mycorrhizal fungi provide to plants in exchange for sugars?<br><span class="font-data" style="font-size:11px; color:var(--t2);">(A) Chemical protection from soil-based pathogens &nbsp; (B) Enhanced capacity to absorb water and nutrients, especially phosphorus &nbsp; (C) Structural reinforcement for roots in compacted soils &nbsp; (D) Compounds that stimulate photosynthesis</span></p>
+      <p style="margin-bottom:8px;"><strong>Q8 (Organization)</strong> — Why does the professor explain the Greek origins of the word "mycorrhizal"?<br><span class="font-data" style="font-size:11px; color:var(--t2);">(A) To suggest research dates back to ancient Greece &nbsp; (B) To connect to a previous discussion of etymology &nbsp; (C) To help students understand and remember the term &nbsp; (D) To demonstrate complexity of scientific vocabulary</span></p>
+      <p style="margin-bottom:8px;"><strong>Q9 (Speaker's Attitude)</strong> — What is the professor's attitude toward describing tree behavior as "altruistic"?<br><span class="font-data" style="font-size:11px; color:var(--t2);">(A) Fully endorses it as most scientifically precise &nbsp; (B) Argues media irresponsibly exaggerated it &nbsp; (C) Finds it potentially problematic as a label but intellectually stimulating &nbsp; (D) Dismisses it entirely as inappropriate</span></p>
+      <p style="margin-bottom:8px;"><strong>Q10 (Making Inferences)</strong> — What can be inferred from the professor's comments about large-scale reforestation?<br><span class="font-data" style="font-size:11px; color:var(--t2);">(A) More successful in tropical regions than temperate &nbsp; (B) Planting trees without attention to fungal communities tends to produce disappointing results &nbsp; (C) Chemical fertilizers can fully replace mycorrhizal fungi &nbsp; (D) Only viable when replanted species are identical to originals</span></p>
+      <p style="margin-bottom:0;"><strong>Q11 (Function)</strong> — Why does the professor say "you'll never look at a forest the same way" at the beginning?<br><span class="font-data" style="font-size:11px; color:var(--t2);">(A) To warn material will require significant effort &nbsp; (B) To indicate personal significance for him as a researcher &nbsp; (C) To signal that understanding this will fundamentally change how students perceive forest ecosystems &nbsp; (D) To suggest the lecture will correct prior misunderstandings</span></p>
+    </div>
+  </div>
+
+  <!-- ════════════ PARTE 4: GABARITO ════════════ -->
+  <div class="card">
+    <div class="section-title font-data">PARTE 4 — GABARITO COMENTADO PROFISSIONAL</div>
+
+    <details style="margin-bottom:10px;">
+      <summary style="cursor:pointer; font-weight:800; font-size:12px; color:var(--ac); padding:8px 0;" class="font-data">▸ DRILL 1 — Signpost Language Recognition: Respostas</summary>
+      <div style="padding:12px 4px 0; font-size:12px; line-height:1.75;">
+        <p style="margin-bottom:10px;"><strong>A — "This is actually crucial, because..."</strong><br>Sinaliza: Ponto de máxima importância — o professor justificará por que a metodologia importa. Você <strong>deve</strong> anotar o que vem a seguir na íntegra, precedido por * nas suas notas. A palavra "actually" reforça que o ponto é contraintuitivo ou mais importante do que parece.</p>
+        <p style="margin-bottom:10px;"><strong>B — "To put it simply:"</strong><br>Sinaliza: Definição ou explicação simplificada de um conceito que o professor acabou de introduzir. Escreva <strong>def:</strong> antes do que vem após o sinal. Essas definições são frequentemente testadas em questões de Detail.</p>
+        <p style="margin-bottom:0;"><strong>C — Dois signposts:</strong><br>
+        • <em>"Unfortunately"</em> → sinaliza <strong>atitude negativa do professor</strong> em relação ao que está descrevendo (a literatura anterior que falhou). Marque com <strong>–</strong> na Zona Direita. Em questão de Attitude, "crítico/preocupado" seria a resposta certa.<br>
+        • <em>"...and as a result"</em> → sinaliza <strong>relação de causa-efeito</strong>: a falha metodológica da literatura anterior CAUSOU a contestação das conclusões dos anos 1990. Marque com <strong>→</strong> nas suas anotações.</p>
+      </div>
+    </details>
+
+    <details style="margin-bottom:10px;">
+      <summary style="cursor:pointer; font-weight:800; font-size:12px; color:var(--ac); padding:8px 0;" class="font-data">▸ DRILL 2 — Note-Taking Practice: The Placebo Effect (Respostas)</summary>
+      <div style="padding:12px 4px 0; font-size:12px; line-height:1.75;">
+        <p style="margin-bottom:8px;"><strong>A:</strong> Até <strong>30%</strong> dos pacientes mostraram melhora mensurável. (Parágrafo 1: "up to 30 percent of patients show measurable improvement")</p>
+        <p style="margin-bottom:8px;"><strong>B:</strong> O cérebro libera <strong>endorfinas</strong> — descritas como "natural pain-relieving chemicals." (Parágrafo 2: "the brain actually releases endorphins")</p>
+        <p style="margin-bottom:8px;"><strong>C:</strong> <strong>Medicamentos de marca</strong> produzem efeito placebo mais forte que os genéricos, mesmo com ingrediente ativo idêntico. (Parágrafo 3: "branded medications produce stronger placebo effects than generic ones")</p>
+        <p style="margin-bottom:0;"><strong>Avaliação:</strong> 3/3 ✅ Sistema de anotações funcional — avance. 1–2 ⚠️ Identifique qual informação ficou fora das suas notas e observe os signposts perdidos: "What makes this particularly clinically relevant is..." e "Interestingly." 0 ❌ Volte ao Template de Três Zonas e refaça pausando a cada parágrafo.</p>
+      </div>
+    </details>
+
+    <details style="margin-bottom:10px;">
+      <summary style="cursor:pointer; font-weight:800; font-size:12px; color:var(--ac); padding:8px 0;" class="font-data">▸ DRILL 3A — Conversation: Office Hours (Gabarito Q1–Q5)</summary>
+      <div style="padding:12px 4px 0; font-size:12px; line-height:1.75;">
+        <p style="margin-bottom:10px;"><strong>Q1 — (B).</strong> Propósito estabelecido nos primeiros 30 segundos: "I know the research paper is due on Friday, but I've had some really unexpected problems this week" + "I lost a significant portion of my draft." O pedido é de tempo adicional = extensão de prazo.<br><span style="color:var(--t2);">(A) OUT OF SCOPE — nenhuma menção a nota; (C) OUT OF SCOPE — o problema foi no laptop da estudante; (D) OUT OF SCOPE — o tópico nunca é questionado.</span></p>
+        <p style="margin-bottom:10px;"><strong>Q2 — (C).</strong> A estudante diz explicitamente: "My laptop's hard drive failed on Monday, and I lost a significant portion of my draft."<br><span style="color:var(--t2);">(A) CORRECT WORDS, WRONG MEANING — internet e uploads são mencionados no contexto do backup em nuvem; (B) CONFUSED REASONING — perdeu por falha de hardware, não por deleção; (D) CONFUSED REASONING — o serviço de nuvem não deletou nada, o arquivo simplesmente não havia sido sincronizado.</span></p>
+        <p style="margin-bottom:10px;"><strong>Q3 — (B).</strong> O professor combina dois tons: <strong>simpatia</strong> ("That's certainly unfortunate", "I appreciate your honesty", "Of course") + <strong>firmeza</strong> ("this is a one-time accommodation", "please don't make a habit of this").<br><span style="color:var(--t2);">(A) OPPOSITE — "I appreciate your honesty" ≠ desconfiança; (C) WRONG DETAIL — o professor não pede prova documentada; (D) TOO EXTREME — cordial e prestativo ≠ "enthusiastic."</span></p>
+        <p style="margin-bottom:10px;"><strong>Q4 — (B).</strong> "I can offer you until Monday morning. That's an additional three days." — direto, literal, sem ambiguidade.<br><span style="color:var(--t2);">(A) OPPOSITE — o professor concede, não recusa; (C) WRONG DETAIL — extensão é de três dias, não uma semana; (D) OUT OF SCOPE — departamento é referência de política, o professor resolve ele mesmo.</span></p>
+        <p style="margin-bottom:0;"><strong>Q5 — (C).</strong> Contexto imediato: "please, set up automatic backups" — conselho prático. "I'd be sorry to see this happen to you again" expressa <strong>preocupação genuína</strong> com o bem-estar da estudante, não uma ameaça. Tom paternal/cuidadoso.<br><span style="color:var(--t2);">(A) EXTREME INFERENCE — essa frase tem propósito diferente: cuidado, não política; (B) CONFUSED REASONING — notas nunca são mencionadas; (D) OPPOSITE — a estudante já reconheceu sua falha e o professor expressa empatia, não critica.</span></p>
+      </div>
+    </details>
+
+    <details style="margin-bottom:10px;">
+      <summary style="cursor:pointer; font-weight:800; font-size:12px; color:var(--ac); padding:8px 0;" class="font-data">▸ DRILL 3B — Lecture: Mycorrhizal Fungi (Gabarito Q6–Q11)</summary>
+      <div style="padding:12px 4px 0; font-size:12px; line-height:1.75;">
+        <p style="margin-bottom:10px;"><strong>Q6 — (B).</strong> A frase de abertura define o tópico: "the symbiosis between plants and mycorrhizal fungi." O restante — troca de nutrientes, Wood Wide Web, desmatamento — são todos aspectos desta relação central.<br><span style="color:var(--t2);">(A) TOO SPECIFIC — fotossíntese é um elemento dentro da palestra, não o tópico; (C) TOO SPECIFIC — "Wood Wide Web" é um ponto marcante, não o tema geral; (D) TOO SPECIFIC + WRONG FOCUS — desmatamento é mencionado apenas no último parágrafo.</span></p>
+        <p style="margin-bottom:10px;"><strong>Q7 — (B).</strong> O professor diz diretamente: "the fungus dramatically extends the plant's ability to absorb water and nutrients from the soil, particularly phosphorus."<br><span style="color:var(--t2);">(A) OUT OF SCOPE — proteção contra patógenos nunca é mencionada; (C) OUT OF SCOPE — suporte estrutural não é mencionado; (D) CONFUSED REASONING — os fungos NÃO estimulam a fotossíntese: eles recebem os produtos da fotossíntese como pagamento.</span></p>
+        <p style="margin-bottom:10px;"><strong>Q8 — (C).</strong> O professor conecta a etimologia a um significado prático: "'mykes,' meaning fungus, and 'rhiza,' meaning root. So, quite literally: fungus-root." Propósito é pedagógico — tornar o termo memorável.<br><span style="color:var(--t2);">(A) EXTREME INFERENCE — indica origem linguística, não que pesquisa data da Grécia Antiga; (B) OUT OF SCOPE — nenhuma referência a aula anterior; (D) OPPOSITE — intenção é simplificar, não demonstrar complexidade.</span></p>
+        <p style="margin-bottom:10px;"><strong>Q9 — (C).</strong> "Whether this constitutes what we'd call 'altruistic' behavior is, I'll admit, a loaded term — but it's provocative." Decomposição: "loaded term" = problemático como rótulo científico (cautela crítica), "but it's provocative" = intelectualmente estimulante (interesse genuíno).<br><span style="color:var(--t2);">(A) OPPOSITE — "loaded term" é o oposto de "mais preciso disponível"; (B) OUT OF SCOPE — a mídia não é mencionada; (D) TOO EXTREME — o professor não descarta, apenas qualifica com cautela.</span></p>
+        <p style="margin-bottom:10px;"><strong>Q10 — (B).</strong> "Replanting without the fungal community means slower growth rates and significantly higher mortality rates for seedlings. This is one of the key reasons why large-scale reforestation efforts sometimes underperform expectations." Inferência direta: ignorar os fungos → resultados aquém do esperado.<br><span style="color:var(--t2);">(A) OUT OF SCOPE — nenhuma comparação entre regiões; (C) OUT OF SCOPE + EXTREME INFERENCE — fertilizantes químicos nunca são mencionados; (D) OUT OF SCOPE — espécies idênticas não são mencionadas como condição.</span></p>
+        <p style="margin-bottom:0;"><strong>Q11 — (C).</strong> "You'll never look at a forest the same way" é um <strong>gancho retórico de abertura</strong> — técnica clássica para estabelecer relevância e capturar a atenção. Significado pragmático: "o que você vai aprender aqui vai mudar fundamentalmente a sua percepção de florestas."<br><span style="color:var(--t2);">(A) WRONG FOCUS — dificuldade do material nunca é mencionada; (B) EXTREME INFERENCE — entusiasmo ≠ "pessoalmente significativo para ele como pesquisador"; (D) OUT OF SCOPE — nenhuma referência a aulas anteriores.</span></p>
+      </div>
+    </details>
+
+    <table class="vocab-table" style="margin-top:14px;">
+      <thead><tr><th>Drill</th><th>Questões</th><th>Acertos</th><th>Score Estimado</th><th>Diagnóstico</th></tr></thead>
+      <tbody>
+        <tr><td class="font-data">Drill 1</td><td class="font-data">3</td><td class="font-data">3/3</td><td>Signpost: Elite</td><td>✅ Avance ao Drill 2</td></tr>
+        <tr><td class="font-data">Drill 2</td><td class="font-data">3</td><td class="font-data">3/3</td><td>Note-taking: Elite</td><td>✅ Avance ao Drill 3</td></tr>
+        <tr><td class="font-data">Drill 3A</td><td class="font-data">5</td><td class="font-data">5/5</td><td class="font-data">~28–30 pts</td><td>🏆 Elite</td></tr>
+        <tr><td class="font-data">Drill 3A</td><td class="font-data">5</td><td class="font-data">4/5</td><td class="font-data">~24–27 pts</td><td>✅ Revise o erro</td></tr>
+        <tr><td class="font-data">Drill 3A</td><td class="font-data">5</td><td class="font-data">≤3/5</td><td class="font-data">≤20 pts</td><td>⚠️ Refaça com foco no Hack do tipo errado</td></tr>
+        <tr><td class="font-data">Drill 3B</td><td class="font-data">6</td><td class="font-data">6/6</td><td class="font-data">~28–30 pts</td><td>🏆 Elite</td></tr>
+        <tr><td class="font-data">Drill 3B</td><td class="font-data">6</td><td class="font-data">5/6</td><td class="font-data">~24–27 pts</td><td>✅ Revise o erro</td></tr>
+        <tr><td class="font-data">Drill 3B</td><td class="font-data">6</td><td class="font-data">≤4/6</td><td class="font-data">≤20 pts</td><td>⚠️ Refaça com foco no Hack do tipo errado</td></tr>
+      </tbody>
+    </table>
+
+    <div class="badge-hint" style="margin-top:14px;">
+      <strong>📌 Próximo passo recomendado:</strong> Repita os Drills 3A e 3B <strong>sem ler a transcrição</strong> — apenas com as anotações que você tomou. Se a sua pontuação mantiver ou superar o resultado com a transcrição disponível, o seu sistema de anotações está funcionando em nível de exame real.
+    </div>
+  </div>
+</div>
+
+    <section id="tab-m3" class="panel">
+      <div class="content-wrapper">
+  <div class="card" style="background: var(--acbg); border-color: var(--acbd);">
+    <h2 class="font-data" style="color:var(--ac); font-size: 18px; font-weight: 800; margin-bottom: 4px;">> MÓDULO 3: SPEAKING — THE THIRD PILLAR</h2>
+    <p style="color:var(--t1); font-weight: 600; font-size: 12px;">Calibração psicomotora sob os parâmetros rígidos do SpeechRater™ — produção oral com precisão de elite.</p>
+  </div>
+
+  <!-- ════════════ PARTE 1: THE GAME RULES ════════════ -->
+  <div class="card">
+    <div class="section-title font-data">PARTE 1 — THE GAME RULES (AS REGRAS DO JOGO)</div>
+
+    <div class="w-doc-section">
+      <h3>1.1 Radiografia Oficial da Seção</h3>
+      <p>O Speaking é a <strong>terceira seção</strong> — após a pausa de 10 minutos que segue o Listening. Resposta oral gravada, cronometrada ao segundo, avaliada por IA antes mesmo do auditor humano.</p>
+    </div>
+
+    <table class="vocab-table">
+      <thead><tr><th>Task</th><th>Tipo</th><th>Preparação</th><th>Resposta</th><th>Score</th></tr></thead>
+      <tbody>
+        <tr><td><strong>Task 1</strong></td><td>Independent — opinião pessoal</td><td class="font-data">15 segundos</td><td class="font-data">45 segundos</td><td class="font-data">0–4</td></tr>
+        <tr><td><strong>Task 2</strong></td><td>Integrated — Campus Reading + Conversa</td><td class="font-data">30 segundos</td><td class="font-data">60 segundos</td><td class="font-data">0–4</td></tr>
+        <tr><td><strong>Task 3</strong></td><td>Integrated — Academic Reading + Palestra</td><td class="font-data">30 segundos</td><td class="font-data">60 segundos</td><td class="font-data">0–4</td></tr>
+        <tr><td><strong>Task 4</strong></td><td>Integrated — Palestra Académica</td><td class="font-data">20 segundos</td><td class="font-data">60 segundos</td><td class="font-data">0–4</td></tr>
+        <tr><td colspan="4"><strong>Score Total (scaled)</strong></td><td class="font-data" style="color:var(--ac); font-weight:800;">0–30</td></tr>
+      </tbody>
+    </table>
+
+    <div class="badge-hint">
+      <strong>📌 Pontuação scaled:</strong> Cada task é avaliada de 0–4. A soma dos 4 scores (0–16) é convertida para a escala 0–30 pela ETS. Score 4 em todas as tasks = 30/30.
+    </div>
+
+    <div class="w-doc-section">
+      <h3>1.2 O SpeechRater™ — As 3 Dimensões de Avaliação</h3>
+    </div>
+
+    <table class="vocab-table">
+      <thead><tr><th>Dimensão</th><th>O que o algoritmo mede</th><th>Score 4 (Elite)</th><th>Score 2–3 (Médio)</th></tr></thead>
+      <tbody>
+        <tr>
+          <td class="word-hlt">Delivery</td>
+          <td>Pronúncia, ritmo, fluência, pausas naturais vs. hesitações</td>
+          <td>Ritmo stress-timed, pausas deliberadas, 0 hesitações preenchidas</td>
+          <td>Ritmo syllable-timed, hesitações frequentes ("um", "uh"), velocidade irregular</td>
+        </tr>
+        <tr>
+          <td class="word-hlt">Language Use</td>
+          <td>Complexidade gramatical, variação sintática, precisão vocabular</td>
+          <td>Subordinação complexa, condicional, passiva de foco, vocab académico preciso</td>
+          <td>Estruturas simples repetidas, vocabulário básico, poucos conectores avançados</td>
+        </tr>
+        <tr>
+          <td class="word-hlt">Topic Development</td>
+          <td>Completude, clareza, links lógicos, relevância dos detalhes</td>
+          <td>Responde 100% do prompt, 2 pontos com suporte, conclusão clara, exemplos específicos</td>
+          <td>Responde parcialmente, faltam links lógicos, detalhes vagos ou genéricos</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="badge-alert">
+      <strong>⚠️ Score 0:</strong> Silêncio total, resposta em outra língua, ou resposta completamente fora do tópico = 0 automático. <strong>Nunca silencie.</strong> Um score 1 sempre vale mais que 0.
+    </div>
+
+    <div class="w-doc-section">
+      <h3>1.3 Uso do Tempo de Prep — Por Task</h3>
+    </div>
+
+    <table class="vocab-table">
+      <thead><tr><th>Task</th><th>Uso ideal do tempo de prep</th><th>Estrutura da Resposta</th></tr></thead>
+      <tbody>
+        <tr><td class="font-data">Task 1 (15s)</td><td>Anote 3 palavras: [POSIÇÃO] · [RAZÃO 1] · [RAZÃO 2]</td><td>Abertura → Razão 1 + detalhe → Razão 2 + detalhe → Conclusão</td></tr>
+        <tr><td class="font-data">Task 2 (30s)</td><td>Leia a posição do estudante → anote: quem + o quê + por quê</td><td>A estudante [posição] porque [razão 1] e porque [razão 2]</td></tr>
+        <tr><td class="font-data">Task 3 (30s)</td><td>Leia o conceito da passagem → note 2 exemplos da palestra</td><td>Conceito = [X] → ilustrado pelos exemplos 1 e 2 da palestra</td></tr>
+        <tr><td class="font-data">Task 4 (20s)</td><td>Anote 1 ponto central + 2 detalhes de suporte</td><td>Professor explica [tópico] → ponto 1 com detalhe → ponto 2 com detalhe</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- ════════════ PARTE 2: THE AI HACK ════════════ -->
+  <div class="card">
+    <div class="section-title font-data">PARTE 2 — THE AI HACK (A ESTRATÉGIA)</div>
+
+    <div class="w-doc-section">
+      <h3>2.1 Delivery Calibration Protocol</h3>
+    </div>
+
+    <div class="badge-alert">
+      <strong>⚠️ O TRAP DO RITMO BRASILEIRO:</strong> O português é <em>syllable-timed</em> — todas as sílabas têm duração aproximadamente igual. O inglês é <em>stress-timed</em> — sílabas tônicas são alongadas e as átonas comprimidas. Falar inglês com ritmo português é o sinal mais reconhecível de um candidato de baixo score para o SpeechRater™.
+    </div>
+
+    <table class="vocab-table">
+      <thead><tr><th>Problema de Delivery</th><th>Errado</th><th>Correto</th><th>Impacto no Score</th></tr></thead>
+      <tbody>
+        <tr><td class="word-hlt">Hesitações Preenchidas</td><td style="color:var(--err);">"I think um... the best uh... option is..."</td><td style="color:var(--ok);">"I think [pausa] the best option is..."</td><td>Cada "um"/"uh" penaliza o score de fluência</td></tr>
+        <tr><td class="word-hlt">Ritmo Syllable-Timed</td><td style="color:var(--err);">"the-pos-si-bi-li-ty-of" (sílabas iguais)</td><td style="color:var(--ok);">"the pos-SI-bi-li-ty of" (BI é alongado)</td><td>SpeechRater detecta ritmo não-nativo</td></tr>
+        <tr><td class="word-hlt">Velocidade Irregular</td><td style="color:var(--err);">Rápido quando confiante, lento quando incerto</td><td style="color:var(--ok);">Velocidade consistente com pausas deliberadas</td><td>Irregularidade sinaliza busca por palavras</td></tr>
+        <tr><td class="word-hlt">Início Prematuro</td><td style="color:var(--err);">Começar antes de ter o plano completo</td><td style="color:var(--ok);">Usar 100% do tempo de prep, começar com frase pronta</td><td>Resposta sem estrutura = Topic Dev. baixo</td></tr>
+      </tbody>
+    </table>
+
+    <div class="w-doc-section" style="margin-top:14px;">
+      <h3>2.2 Templates por Task — Plug-and-Play</h3>
+    </div>
+
+    <table class="vocab-table">
+      <thead><tr><th>Task</th><th>Frase de Abertura (Score 4)</th><th>Conectores Centrais</th><th>Frase de Fechamento</th></tr></thead>
+      <tbody>
+        <tr><td class="font-data">Task 1</td><td>"I strongly prefer [X], primarily because of [tema central]."</td><td>"To begin with, ... Furthermore, ... [exemplo específico]..."</td><td>"Given these reasons, [X] is clearly the more effective choice."</td></tr>
+        <tr><td class="font-data">Task 2</td><td>"The [man/woman] in the conversation [supports/opposes] the proposal that..."</td><td>"First, [he/she] argues that... Additionally, [he/she] mentions that..."</td><td>"These points explain why [he/she] [supports/opposes] the change."</td></tr>
+        <tr><td class="font-data">Task 3</td><td>"The reading introduces the concept of [X], which refers to..."</td><td>"In the lecture, the professor illustrates this by... Specifically, [example 1]... Furthermore, [example 2]..."</td><td>"Both examples demonstrate [concept] in action."</td></tr>
+        <tr><td class="font-data">Task 4</td><td>"In the lecture, the professor discusses [main topic] and explains..."</td><td>"First, [she/he] explains that... [detail]. Additionally, [she/he] notes that... [detail]."</td><td>"Together, these points illustrate [overarching concept]."</td></tr>
+      </tbody>
+    </table>
+
+    <div class="w-doc-section" style="margin-top:14px;">
+      <h3>2.3 Score 3 vs. Score 4 — A Diferença Crítica</h3>
+    </div>
+
+    <table class="vocab-table">
+      <thead><tr><th>Dimensão</th><th>Score 3 (Bom — ≈24 scaled)</th><th>Score 4 (Elite — ≈30 scaled)</th></tr></thead>
+      <tbody>
+        <tr><td class="word-hlt">Delivery</td><td>Geralmente fluente, ocasionais hesitações ou irregularidades de ritmo</td><td>Consistentemente fluente, ritmo stress-timed, pausas deliberadas apenas</td></tr>
+        <tr><td class="word-hlt">Language Use</td><td>Estruturas básicas a moderadas, vocabulário funcional mas previsível</td><td>Subordinação complexa, modalidade epistémica, vocabulário académico preciso</td></tr>
+        <tr><td class="word-hlt">Topic Development</td><td>Cobre o prompt, detalhes às vezes genéricos ou incompletos</td><td>Detalhes específicos e concretos, links lógicos explícitos, conclusão que sintetiza</td></tr>
+      </tbody>
+    </table>
+
+    <div class="badge-hint">
+      <strong>⚡ O alavancador de score mais rápido:</strong> Substituir detalhes vagos ("it is a good option") por detalhes específicos com números, nomes ou contextos reais. Especificidade é o sinal mais claro de Topic Development de Score 4.
+    </div>
+  </div>
+
+  <!-- ════════════ PARTE 3: ACTION DRILLS ════════════ -->
+  <div class="card">
+    <div class="section-title font-data">PARTE 3 — ACTION DRILLS (EXERCÍCIOS INTERATIVOS)</div>
+    <div class="badge-hint">📌 Grave a sua resposta em voz alta e ouça de volta. A auto-avaliação auditiva deteta padrões que a leitura silenciosa nunca deteta.</div>
+
+    <div class="w-doc-section" style="margin-top:14px;">
+      <h3>🏋️ Drill 1 — Task 1 (Independent): Tempo Real (15s prep / 45s resposta)</h3>
+    </div>
+
+    <div class="card" style="background:var(--sf2); margin-bottom:14px;">
+      <p style="font-size:11px; font-weight:800; color:var(--ac); margin-bottom:8px;" class="font-data">PROMPT — TASK 1:</p>
+      <p style="font-size:13px; font-weight:600; line-height:1.6; color:var(--t1);">Some people prefer to study alone in a quiet environment. Others prefer to study in groups with their peers. Which do you prefer and why? Include specific details and examples to support your response.</p>
+    </div>
+
+    <div class="w-doc-section">
+      <h3>Modelo de Resposta Score 4 (~115 palavras / 45 segundos):</h3>
+    </div>
+
+    <div class="card" style="background:var(--sf2); margin-bottom:14px;">
+      <p style="font-size:12px; line-height:1.7; font-style:italic; color:var(--t1);">"I strongly prefer studying alone, primarily because of the cognitive efficiency it provides. To begin with, solitary study eliminates the coordination overhead that inevitably comes with group work — managing dynamics, reconciling different approaches, and waiting for consensus all consume bandwidth that could otherwise be directed toward actual learning. Furthermore, working independently allows me to adapt my pace precisely to the material: I can accelerate through familiar content and slow considerably for complex concepts, which group dynamics simply cannot accommodate. A concrete example: during my preparation for a competitive entrance examination, the transition to solo study increased my retention rate measurably within two weeks. For these reasons, individual study is the clearly superior choice for my learning profile."</p>
+    </div>
+
+    <table class="vocab-table">
+      <thead><tr><th>Componente</th><th>O que o modelo demonstra</th><th>Score 4?</th></tr></thead>
+      <tbody>
+        <tr><td>Abertura</td><td>"I strongly prefer... primarily because of..." — posição clara + previewing temático</td><td style="color:var(--ok); font-weight:700;">✓ Delivery</td></tr>
+        <tr><td>Razão 1</td><td>"eliminates the coordination overhead" — vocabulário preciso, mecanismo explicado</td><td style="color:var(--ok); font-weight:700;">✓ Language Use</td></tr>
+        <tr><td>Razão 2</td><td>"adapt my pace precisely" com contraste explícito "cannot accommodate"</td><td style="color:var(--ok); font-weight:700;">✓ Topic Dev.</td></tr>
+        <tr><td>Exemplo</td><td>Específico: "competitive entrance examination", "measurably within two weeks"</td><td style="color:var(--ok); font-weight:700;">✓ Especificidade</td></tr>
+        <tr><td>Fechamento</td><td>Síntese com vocabulário novo ("superior choice for my learning profile")</td><td style="color:var(--ok); font-weight:700;">✓ Conclusão</td></tr>
+      </tbody>
+    </table>
+
+    <div class="w-doc-section" style="margin-top:18px;">
+      <h3>🏋️ Drill 2 — Task 4 (Lecture Summary): Tempo Real (20s prep / 60s resposta)</h3>
+      <p>Leia a transcrição UMA ÚNICA VEZ. Anote: [Tópico principal] · [Ponto 1 + detalhe] · [Ponto 2 + detalhe].</p>
+    </div>
+
+    <div class="card" style="background:var(--sf2); margin-bottom:14px;">
+      <p style="font-size:11px; font-weight:800; color:var(--ac); margin-bottom:8px;" class="font-data">TRANSCRIPT — TASK 4 (excerto de palestra):</p>
+      <p style="font-size:12px; line-height:1.7; font-style:italic; color:var(--t1);">"Today I want to discuss a concept from behavioral economics known as the 'default effect.' Research consistently shows that people tend to accept whatever option is presented to them as the default — the pre-selected choice — rather than actively choosing an alternative. The practical implications are substantial. In countries where organ donation is the default — meaning you're automatically enrolled unless you opt out — donation rates can exceed 90 percent. In contrast, opt-in countries, where donation requires an active choice, typically see rates below 20 percent. This single structural change, making donation automatic unless refused, increases participation dramatically without changing any laws or requiring any persuasion."</p>
+    </div>
+
+    <div class="w-doc-section">
+      <h3>Modelo de Resposta Score 4 (~130 palavras / 60 segundos):</h3>
+    </div>
+
+    <div class="card" style="background:var(--sf2);">
+      <p style="font-size:12px; line-height:1.7; font-style:italic; color:var(--t1);">"In the lecture, the professor discusses the default effect — a behavioral economics principle describing people's tendency to accept pre-selected options rather than making active choices. To illustrate this, the professor presents two contrasting examples. First, in countries where organ donation is the default — where people are automatically enrolled unless they explicitly opt out — participation rates exceed 90 percent. Second, and contrasting sharply, in countries where donation requires an active opt-in decision, rates typically fall below 20 percent. The professor's central argument is that this dramatic difference — from below 20 to above 90 percent — results entirely from a structural design choice, not from persuasion or legal requirements. The default framing alone determines the behavior of the vast majority of people."</p>
+    </div>
+  </div>
+
+  <!-- ════════════ PARTE 4: GABARITO ════════════ -->
+  <div class="card">
+    <div class="section-title font-data">PARTE 4 — GABARITO COMENTADO</div>
+
+    <details style="margin-bottom:10px;">
+      <summary style="cursor:pointer; font-weight:800; font-size:12px; color:var(--ac); padding:8px 0;" class="font-data">▸ DRILL 1 — Task 1: Análise do Modelo Score 4</summary>
+      <div style="padding:12px 4px 0; font-size:12px; line-height:1.75;">
+        <p style="margin-bottom:8px;"><strong>Delivery (Score 4):</strong> Calibrado para ~115 palavras em 45 segundos — ritmo de ~155 palavras por minuto, ideal para o SpeechRater™. Nenhuma hesitação preenchida.</p>
+        <p style="margin-bottom:8px;"><strong>Language Use (Score 4):</strong> "cognitive efficiency", "coordination overhead", "reconciling", "bandwidth", "retention rate measurably" — vocabulário académico de registo elevado. Subordinação: "eliminates the coordination overhead <em>that</em> inevitably comes with group work — managing dynamics... <em>all</em> consume bandwidth <em>that</em> could otherwise be directed."</p>
+        <p><strong>Topic Development (Score 4):</strong> Dois pontos distintos com mecanismo explicado. Exemplo concreto com especificidade ("competitive entrance examination", "measurably within two weeks"). Conclusão usa vocabulário novo — não repete a abertura.</p>
+      </div>
+    </details>
+
+    <details style="margin-bottom:10px;">
+      <summary style="cursor:pointer; font-weight:800; font-size:12px; color:var(--ac); padding:8px 0;" class="font-data">▸ DRILL 2 — Task 4: Análise do Modelo Score 4</summary>
+      <div style="padding:12px 4px 0; font-size:12px; line-height:1.75;">
+        <p style="margin-bottom:8px;"><strong>Estrutura:</strong> Abertura define tópico + conceito → Exemplo 1 (opt-out: 90%+) → Exemplo 2 (opt-in: &lt;20%) → Síntese do argumento central do professor. Quatro movimentos claros em 60 segundos.</p>
+        <p style="margin-bottom:8px;"><strong>O que elevou ao Score 4:</strong> A resposta identifica o argumento central ("design choice, not persuasion or legal requirements") — não apenas relata os fatos. Topic Development de Score 4 requer capturar a <em>lógica</em>, não apenas os dados.</p>
+        <p><strong>Armadilha de Score 2–3:</strong> "The professor talks about the default effect. Some countries have high rates and some have low. The difference is the default." Cobre os fatos mas não demonstra compreensão da estrutura lógica do argumento.</p>
+      </div>
+    </details>
+
+    <table class="vocab-table">
+      <thead><tr><th>Score Scaled</th><th>Média por Task (0–4)</th><th>Diagnóstico</th></tr></thead>
+      <tbody>
+        <tr><td class="font-data">28–30</td><td class="font-data">3.7–4.0</td><td>🏆 Elite — Continue para M4</td></tr>
+        <tr><td class="font-data">22–27</td><td class="font-data">3.0–3.5</td><td>✅ High — Drill as dimensões com score &lt;4</td></tr>
+        <tr><td class="font-data">16–21</td><td class="font-data">2.0–2.5</td><td>🔵 Strong — Revise templates e re-drill</td></tr>
+        <tr><td class="font-data">≤15</td><td class="font-data">≤2.0</td><td>🟡 Developing — Volte à calibração de Delivery</td></tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+    
+    <section id="tab-m4" class="panel">
+      <div class="content-wrapper">
+  <div class="card" style="background: var(--acbg); border-color: var(--acbd);">
+    <h2 class="font-data" style="color:var(--ac); font-size: 18px; font-weight: 800; margin-bottom: 4px;">> MÓDULO 4: WRITING — THE FOURTH PILLAR</h2>
+    <p style="color:var(--t1); font-weight: 600; font-size: 12px;">Engenharia tática focada na blindagem do e-rater™ e economia de energia cognitiva na última seção do teste.</p>
+  </div>
+
+  <div style="display: flex; flex-direction: column; gap: 16px;">
+    <!-- ════════════ PARTE 1: THE GAME RULES ════════════ -->
+    <div class="card">
+      <div class="section-title font-data">PARTE 1 — THE GAME RULES</div>
+
+      <div class="w-doc-section">
+        <h3>1.1 Radiografia Oficial da Seção (Pós-Julho 2023)</h3>
+        <p>O Writing é a <strong>última seção</strong> do teste. Candidatos chegam aqui após ~2 horas de Reading, Listening e Speaking. Ter templates internalizados não é conforto — é sobrevivência cognitiva.</p>
+      </div>
+
+      <table class="vocab-table" style="margin-bottom: 15px;">
+        <thead><tr><th>Elemento</th><th>Task 1: Integrated Writing</th><th>Task 2: Academic Discussion</th></tr></thead>
+        <tbody>
+          <tr><td>Tempo disponível</td><td class="font-data">20 minutos</td><td class="font-data">10 minutos</td></tr>
+          <tr><td>Extensão recomendada</td><td class="font-data">150–225 palavras</td><td class="font-data">100–150 palavras</td></tr>
+          <tr><td>Formato</td><td>Leitura (3 min) + Palestra (2 min) → Ensaio de síntese e contraste</td><td>Discussão académica virtual com 2 colegas (Alex e Maria)</td></tr>
+          <tr><td>Avaliadores</td><td colspan="2">e-rater™ (IA) + Auditor Humano ETS</td></tr>
+          <tr><td>Pontuação</td><td colspan="2" class="font-data">0–5 por task → convertido para 0–30 (scaled)</td></tr>
+        </tbody>
+      </table>
+
+      <div class="badge-alert">
+        <strong>🚨 CRITICAL UPDATE (Pós-Julho 2023):</strong> O antigo Independent Essay de 30 minutos foi permanentemente descontinuado. A nova Task 2 é a Academic Discussion — requer engajamento com os argumentos de dois "colegas" virtuais e adição de perspectiva própria. Não é um ensaio independente.
+      </div>
+
+      <div class="w-doc-section">
+        <h3>1.2 O e-rater™ — As 5 Dimensões de Avaliação</h3>
+      </div>
+
+      <table class="vocab-table">
+        <thead><tr><th>Dimensão</th><th>O que o algoritmo mede</th><th>Penalizações imediatas</th></tr></thead>
+        <tbody>
+          <tr><td class="word-hlt">Grammar</td><td>Precisão gramatical: concordância, artigos, tempos verbais</td><td>S-V mismatch, artigos errados, tenses inconsistentes</td></tr>
+          <tr><td class="word-hlt">Usage</td><td>Colocações correctas, falsos cognatos, preposições com verbos</td><td>"Make a research" (correto: "conduct research"); "assist to" (correto: "attend")</td></tr>
+          <tr><td class="word-hlt">Mechanics</td><td>Pontuação, maiúsculas, formatação de parágrafos</td><td>Falta de maiúscula em início de frase, pontuação incorreta</td></tr>
+          <tr><td class="word-hlt">Style</td><td>Variedade sintática, registo académico, ausência de repetição</td><td>Mesma estrutura repetida, vocabulário básico, coloquialismos</td></tr>
+          <tr><td class="word-hlt">Organization</td><td>Coesão paragráfica, conectores lógicos, progressão do argumento</td><td>Parágrafos sem ideia central, ausência de transições</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- ════════════ PARTE 2: THE AI HACK ════════════ -->
+    <div class="card">
+      <div class="section-title font-data">PARTE 2 — THE AI HACK (TEMPLATES OPERACIONAIS)</div>
+
+      <div class="w-doc-section">
+        <h3>2.1 Template Task 1: Integrated Writing (Score 4–5)</h3>
+        <p>A Task 1 NÃO pede a sua opinião. Pede que você <strong>contraste</strong> os pontos da palestra com os da leitura, demonstrando como um mina ou desafia o outro.</p>
+      </div>
+
+      <div class="card" style="background:var(--sf2); margin-bottom:12px;">
+        <p style="font-size:11px; font-weight:800; color:var(--ac); margin-bottom:8px;" class="font-data">TEMPLATE — INTEGRATED WRITING (TIER 25+):</p>
+        <p style="font-size:12px; line-height:1.8; color:var(--t1);">
+          <strong>§1 Introdução:</strong> "The reading passage argues that [tese da leitura]. However, the professor in the lecture directly challenges this view by presenting several counterarguments."<br><br>
+          <strong>§2 Ponto 1:</strong> "First, while the reading claims that [ponto da leitura], the professor contends that [contraponto]. Specifically, [detalhe concreto da palestra]."<br><br>
+          <strong>§3 Ponto 2:</strong> "Second, the reading asserts that [ponto 2]; however, the professor challenges this by arguing that [contraponto 2]. According to the lecture, [detalhe específico]."<br><br>
+          <strong>§4 Ponto 3:</strong> "Finally, the reading's claim that [ponto 3] is undermined by the professor's point that [contraponto 3]. The lecture's evidence suggests that [implicação]."
+        </p>
+      </div>
+
+      <div class="badge-hint"><strong>🎯 Regras de ouro da Task 1:</strong> (1) Nunca expresse a sua própria opinião — o e-rater™ penaliza subjetividade. (2) Use "the reading argues / the professor contends" — nunca "I think." (3) Cada parágrafo = 1 ponto de contraste. Mínimo 3 pontos.</div>
+
+      <div class="w-doc-section" style="margin-top:14px;">
+        <h3>2.2 Template Task 2: Academic Discussion (Score 4–5)</h3>
+        <p>A Task 2 requer: (1) responder à pergunta do professor, (2) <strong>mencionar um dos argumentos dos colegas</strong> pelo nome, e (3) adicionar perspectiva ou razão nova.</p>
+      </div>
+
+      <div class="card" style="background:var(--sf2); margin-bottom:12px;">
+        <p style="font-size:11px; font-weight:800; color:var(--ac); margin-bottom:8px;" class="font-data">TEMPLATE — ACADEMIC DISCUSSION (TIER 25+):</p>
+        <p style="font-size:12px; line-height:1.8; color:var(--t1);">
+          <strong>Abertura:</strong> "I agree with [Alex/Maria]'s point that [argumento do colega], and would add that [perspectiva nova]."<br><br>
+          <strong>Desenvolvimento:</strong> "To elaborate, [razão 1 com detalhe ou exemplo concreto]. Furthermore, [razão 2 ou implicação]. Consider, for instance, [exemplo específico — nome, dado, ou contexto real]."<br><br>
+          <strong>Fechamento:</strong> "For these reasons, I believe that [resposta clara à pergunta] represents the most [effective/sustainable/equitable] approach in this context."
+        </p>
+      </div>
+
+      <div class="badge-hint"><strong>🎯 Regras de ouro da Task 2:</strong> (1) Mencione sempre um colega pelo nome (Alex ou Maria). (2) Adicione pelo menos 1 exemplo concreto que eles NÃO mencionaram. (3) 100–150 palavras = score ideal. Abaixo de 80 = penalização automática.</div>
+
+      <div class="w-doc-section" style="margin-top:14px;">
+        <h3>2.3 e-rater™ Trap List — Erros Sistemáticos do Candidato Brasileiro</h3>
+      </div>
+
+      <table class="vocab-table">
+        <thead><tr><th>Erro</th><th>Errado</th><th>Correto</th><th>Dimensão</th></tr></thead>
+        <tbody>
+          <tr><td>Artigo com abstracto</td><td style="color:var(--err);">"The research shows" (genérico)</td><td style="color:var(--ok);">"Research shows" (genérico) / "The research shows" (específico)</td><td>Grammar</td></tr>
+          <tr><td>Falso cognato</td><td style="color:var(--err);">"Actually, the data..."</td><td style="color:var(--ok);">"Currently / At present, the data..." ("actually" = "na verdade")</td><td>Usage</td></tr>
+          <tr><td>Colocação verbal</td><td style="color:var(--err);">"Make a research on"</td><td style="color:var(--ok);">"Conduct research on / research [topic]"</td><td>Usage</td></tr>
+          <tr><td>Concordância data</td><td style="color:var(--err);">"The data is clear"</td><td style="color:var(--ok);">"The data are clear" (plural académico formal)</td><td>Grammar</td></tr>
+          <tr><td>Connective redundante</td><td style="color:var(--err);">"Despite the fact that although"</td><td style="color:var(--ok);">Use apenas um: "Despite [noun]" ou "Although [clause]"</td><td>Style</td></tr>
+          <tr><td>Colloquialism</td><td style="color:var(--err);">"A lot of people think" / "stuff"</td><td style="color:var(--ok);">"Many individuals argue" / "materials / factors"</td><td>Style</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="workspace-layout" style="margin-top:16px;">
+    <div style="display: flex; flex-direction: column; gap: 16px;">
+      <!-- ════════════ PARTE 3: ACTION DRILLS ════════════ -->
+      <div class="card">
+        <div class="section-title font-data">PARTE 3 — ACTION DRILLS</div>
+        <div class="badge-hint">📌 Use a Bancada de Escrita à direita para praticar. Task 1: máx. 20 min; Task 2: máx. 10 min.</div>
+
+        <div class="w-doc-section" style="margin-top:10px;">
+          <h3>🏋️ Drill 1 — Task 2: Academic Discussion</h3>
+          <p><strong>Cenário:</strong> O professor questiona qual modelo urbano é mais sustentável — verticalização espacial ou expansão horizontal?</p>
+          <p style="margin-top:6px; font-size:12px; color:var(--t3);">Alex diz: "I believe vertical expansion is more sustainable because it concentrates resources and reduces infrastructure costs per capita."</p>
+          <p style="font-size:12px; color:var(--t3);">Maria diz: "Horizontal expansion preserves biodiversity and reduces density-related stress on public services."</p>
+        </div>
+
+        <div class="badge-hint" style="margin-top:10px;"><strong>🎯 Critério de Score 5:</strong> Mencione Alex ou Maria pelo nome → adicione exemplo empírico específico (ex: Tóquio, Singapura, Brasília) → conclua com posição clara.</div>
+      </div>
+
+      <!-- ════════════ PARTE 4: GABARITO ════════════ -->
+      <div class="card">
+        <div class="section-title font-data">PARTE 4 — GABARITO</div>
+        <details>
+          <summary style="cursor:pointer; font-weight:800; font-size:12px; color:var(--ac); padding:8px 0;" class="font-data">▸ Drill 1 — Modelo Score 5 com Análise</summary>
+          <div style="padding:12px 4px 0; font-size:12px; line-height:1.75;">
+            <p style="font-style:italic; margin-bottom:10px; color:var(--t1);">"I agree with Alex that vertical expansion offers superior sustainability from a resource efficiency standpoint, and would add that the long-term infrastructure savings are particularly compelling. To elaborate, vertically organized cities like Tokyo demonstrate that concentrated populations reduce per-capita energy consumption for transportation infrastructure by a measurable margin — some urban planning studies cite figures between 25 and 40 percent lower than equivalent horizontal sprawl configurations. Furthermore, vertical models preserve surrounding agricultural land and natural ecosystems that horizontal expansion irreversibly converts. While Maria correctly raises concerns about service density — which is a real challenge — these are engineering problems with documented solutions, not inherent structural flaws. For these reasons, I believe vertical expansion represents the more sustainable long-term strategy for urban growth."</p>
+            <p><strong>Análise:</strong> (1) ✓ Menciona Alex pelo nome; (2) ✓ Exemplo específico: Tóquio + percentagem concreta; (3) ✓ Reconhece argumento de Maria e rebate; (4) ✓ Conclusão clara; (5) ✓ ~150 palavras — dentro do range ideal.</p>
+          </div>
+        </details>
+      </div>
+    </div>
+
+    <div class="card" style="height: 100%;">
+      <div class="section-title font-data">> SIMULATED_ACTION_WORKSPACE</div>
+      <p style="color:var(--t2); font-size:12px; margin-bottom:14px; line-height: 1.5;"><strong>Cenário:</strong> O professor questiona qual modelo urbano é mais sustentável: Verticalização espacial ou expansão horizontal?</p>
+      <div class="badge-hint">
+        <strong>🎯 INSIGHT ESPECÍFICO:</strong> Ative a nota máxima engajando com os argumentos dos colegas Maria e Alex e adicionando um exemplo empírico específico (Ex: Tokyo, Singapura, Brasília).
+      </div>
+      <div style="margin-top: 15px;">
+        <label class="font-data" style="display:block; font-size:11px; font-weight:700; color:var(--t1); margin-bottom:6px;">BANCADA DE ESCRITA COMPACTA:</label>
+        <textarea class="m4-textarea" id="m4-sandbox" placeholder="Both Alex and Maria raise compelling points, but I would argue that vertical expansion..."></textarea>
+        <div style="display:flex; justify-content:space-between; align-items:center; margin-top:8px;">
+          <span class="font-data" id="m4-counter" style="font-size:11px; color:var(--t2)">0 palavras</span>
+          <button class="btn font-data" style="width: auto; padding: 6px 14px;" onclick="alert('Rascunho retido localmente na sessão.')">Gravar Drill</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    <section id="tab-m5" class="panel">
+      <div class="section-title font-data">> THE ARSENAL OF TEMPLATES</div>
+      <div class="tier-tabs font-data">
+        <button class="tier-btn act" id="btn-tier-20" onclick="app.setTier('20')">TIER 20+ (Safe)</button>
+        <button class="tier-btn" id="btn-tier-25" onclick="app.setTier('25')">TIER 25+ (Controlled)</button>
+        <button class="tier-btn" id="btn-tier-28" onclick="app.setTier('28')">TIER 28+ (Precision)</button>
+      </div>
+      <div class="card" id="template-viewer" style="white-space: pre-line; line-height: 1.8; font-size: 13px; color: var(--t1); font-family: 'JetBrains Mono', monospace;">
+        Carregando arsenal...
+      </div>
+    </section>
+
+    <section id="tab-m6" class="panel">
+      <div class="section-title font-data">> VOCABULARY MATRIX (FLASHCARDS) <span style="float:right; font-size:10px; color:var(--t3);">CLIQUE NA LINHA PARA REVELAR CONTRASTES</span></div>
+      <table class="vocab-table">
+        <thead>
+          <tr>
+            <th>Palavra (Inglês)</th>
+            <th>Categoria</th>
+            <th style="text-align:right;">Ação</th>
+          </tr>
+        </thead>
+        <tbody id="vocab-body"></tbody>
+      </table>
+    </section>
+
+    <section id="tab-m7" class="panel font-panel">
+      <div class="card">
+        <div class="section-title font-data">> M7: JORNADA DE SIMULADOS PROGRESSIVOS</div>
+        <div class="w-doc-section">
+          <h3>A Lógica dos 4 Simulados</h3>
+          <p>O sistema baseia-se numa progressão tática: Simulado 1 (Diagnóstico no M0), Simulado 2 (Fixação com consulta livre aos templates), Simulado 3 (Tempo estrito com cronómetro) e Simulado 4 (Simulação em ambiente real).</p>
+        </div>
+        <div class="badge-hint">Execute a Taxonomia de Erros (C1, C2, P1, P2) na folha de rascunho imediatamente após cada ciclo para mapear os desvios antes do Exam Day.</div>
+      </div>
+    </section>
+
+    <section id="tab-m8" class="panel">
+      <div class="card">
+        <div class="section-title font-data">> M8: EXAM DAY PROTOCOL — O PROTOCOLO DOS CAMPEÕES</div>
+        <div class="w-doc-section">
+          <h3>O Protocolo de 7 Dias</h3>
+          <p>A semana do teste destina-se à consolidação biológica e mental, não à acumulação frenética de dados. D-3 e D-2 representam as noites mais críticas para a estabilização da memória procedimental.</p>
+        </div>
+        <table class="vocab-table">
+          <thead><tr><th>Fase</th><th>Ação Nutritiva e Mental</th></tr></thead>
+          <tbody>
+            <tr><td>Estabilidade Glicémica</td><td>Carboidratos complexos + proteínas limpas 2h antes (Evite picos de açúcar)</td></tr>
+            <tr><td>Ansiedade Aguda</td><td>Aplique o Suspiro Fisiológico (Duas inspirações rápidas pelo nariz + expiração longa)</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section id="tab-m9" class="panel">
+      <div class="card">
+        <div class="section-title font-data">> M9: THE BRAZILIAN TRAP LIBRARY — ERROS SISTEMÁTICOS MAPEADOS</div>
+        <div class="w-doc-section">
+          <h3>Interferência Linguística de Categoria Coletiva</h3>
+          <p>Candidatos brasileiros partilham desvios neurológicos idênticos induzidos pela transferência sintática do português para o inglês sob pressão de tempo.</p>
+        </div>
+        <table class="vocab-table">
+          <thead><tr><th>Falso Cognato Académico</th><th>O que o Candidato Pensa</th><th>Significado Real Prova</th></tr></thead>
+          <tbody>
+            <tr><td class="word-hlt">Actually</td><td>Atualmente</td><td>Na verdade / De facto</td></tr>
+            <tr><td class="word-hlt">Pretend</td><td>Pretender</td><td>Fingir / Simular</td></tr>
+            <tr><td class="word-hlt">Realize</td><td>Realizar (Fazer)</td><td>Perceber / Dar-se conta</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <div id="scratchpad-panel" class="collapsed">
+    <div class="sc-hd" onclick="app.toggleScratchpad()">
+      <span>> BANCADA_RASCUNHO_RAPIDO.TXT</span>
+      <span id="sc-indicator">[EXPANDIR]</span>
+    </div>
+    <div class="sc-body">
+      <textarea id="scratchpad-text" placeholder="Cole sinónimos, notas ou estruturas de speaking rápidas aqui. Gravação automática..." oninput="app.saveScratchpad()"></textarea>
+    </div>
+  </div>
+</div>
+
+<script>
+const modules = {
+  module0: {
+    quiz: [
+      { q: "________ the research institute to secure adequate funding, it could significantly accelerate the development...", options: ["(A) Should", "(B) Were", "(C) Had", "(D) Would"], answer: 1, exp: "Conditional invertido hipotético: 'Were + sujeito + to + verbo' (Nível C1)." },
+      { q: "The author's prose achieves its effect through ________, using only the words strictly necessary...", options: ["(A) brevity", "(B) economy", "(C) conciseness", "(D) parsimony"], answer: 1, exp: "'Economy of language' é a expressão acadêmica consagrada." },
+      { q: "The new pharmaceutical compound not only reduced systemic inflammation; ________, it appeared to stimulate...", options: ["(A) moreover", "(B) nonetheless", "(C) conversely", "(D) in contrast"], answer: 0, exp: "Conector aditivo-reforçativo: adiciona um benefício ao anterior." }
+    ]
+  },
+  module5: {
+    templates: {
+      "20": "🗣️ **SPEAKING TASK 1 (TIER 20+)**\n\"I prefer [X] because...\nFirst, [Reason 1]. [Elaboration].\nSecond, [Reason 2]. [Elaboration].\nFor these reasons, I believe [X] is the better option.\"\n\n✍️ **WRITING TASK 2 (TIER 20+)**\n\"I agree with [Student]. First, [Reason 1]. For example, [Detail]. Second, [Reason 2]. For these reasons, I believe this is the best approach.\"",
+      
+      "25": "🗣️ **SPEAKING TASK 1 (TIER 25+)**\n\"I strongly prefer [X], primarily for reasons related to focus and efficiency.\nTo begin with, [Reason 1 + consequence/mechanism].\nFurthermore, [Reason 2 + specific detail/example].\nGiven these considerations, [X] clearly aligns better with my goals.\"\n\n✍️ **WRITING TASK 2 (TIER 25+)**\n\"I strongly agree with Alex's position primarily because of its resource efficiency. To begin with, [Reason 1]. Furthermore, [Reason 2]. Ultimately, this model offers the most sustainable path forward.\"",
+      
+      "28": "🗣️ **SPEAKING TASK 1 (TIER 28+)**\n\"My preference for [X] is rooted in what I consider a prerequisite for genuine cognitive performance: sustained focus.\nWhat makes collaborative environments costly is the compounding coordination overhead. Not only does managing dynamics consume bandwidth, but consensus dilutes individual judgment.\nSolitude is not a preference — it is a strategic asset.\"\n\n✍️ **WRITING TASK 2 (TIER 28+)**\n\"The question of optimal strategy is fundamentally one of scalability under constraint — and on that dimension, [X] holds a decisive advantage. What makes this framework compelling is its compounding efficiency...\""
+    }
+  },
+  module6: {
+    vocabulary: [
+      { word: "underscore", cat: "Academic", pt: "Enfatizar; destacar importância", syn: "emphasize / highlight", ex: "The empirical findings underscore the critical role of early childhood intervention." },
+      { word: "posit", cat: "Academic", pt: "Postular; propor como verdadeiro", syn: "propose / assert", ex: "The professor posits that the urban phenomenon is driven by structural forces." },
+      { word: "contend", cat: "Academic", pt: "Argumentar; manter convicção", syn: "argue / maintain", ex: "Critics contend that the metric fails to account for socioeconomic parameters." },
+      { word: "exacerbate", cat: "Academic", pt: "Agravar; piorar uma crise", syn: "worsen / intensify", ex: "Habitat fragmentation drastically exacerbates biodiversity decline." }
+    ]
+  }
+};
+
+window.app = {
+  state: { theme: 'light', tab: 'dashboard', targetScore: 100, quizScore: 0, quizIndex: 0, quizActive: false, activeTier: '20', zen: false, quizDone: false },
+
+  init() {
+    this.loadData();
+    this.switchTab(this.state.tab);
+    this.calcScore();
+    this.renderQuiz();
+    this.setTier(this.state.activeTier);
+    this.renderVocab();
+    this.setupCounter();
+    this.loadScratchpad();
+    this.verifyLockState();
+  },
+
+  loadData() {
+    try {
+      const saved = localStorage.getItem('iTOEFL_state_m');
+      if(saved) {
+        const parsed = JSON.parse(saved);
+        this.state = { ...this.state, ...parsed };
+        document.documentElement.setAttribute('data-theme', this.state.theme);
+        const input = document.getElementById('targetScoreInput');
+        if (input) input.value = this.state.targetScore;
+      }
+    } catch(e) { console.warn("LocalStorage bloqueado."); }
+  },
+
+  saveData() {
+    try {
+      const input = document.getElementById('targetScoreInput');
+      if (input) this.state.targetScore = input.value;
+      localStorage.setItem('iTOEFL_state_m', JSON.stringify(this.state));
+    } catch(e) {}
+  },
+
+  toggleTheme() {
+    this.state.theme = this.state.theme === 'light' ? 'dark' : 'light';
+    document.documentElement.setAttribute('data-theme', this.state.theme);
+    this.saveData();
+  },
+
+  toggleZen() {
+    this.state.zen = !this.state.zen;
+    document.body.classList.toggle('zen-active', this.state.zen);
+  },
+
+  toggleScratchpad() {
+    const p = document.getElementById('scratchpad-panel');
+    const ind = document.getElementById('sc-indicator');
+    if(p) {
+      p.classList.toggle('collapsed');
+      ind.innerText = p.classList.contains('collapsed') ? '[EXPANDIR]' : '[RECOLHER]';
+    }
+  },
+
+  saveScratchpad() {
+    try { localStorage.setItem('iTOEFL_sc', document.getElementById('scratchpad-text').value); } catch(e) {}
+  },
+
+  loadScratchpad() {
+    try {
+      const val = localStorage.getItem('iTOEFL_sc');
+      if(val) document.getElementById('scratchpad-text').value = val;
+    } catch(e) {}
+  },
+
+  verifyLockState() {
+    if (this.state.quizDone) {
+      ['m7', 'm8', 'm9'].forEach(id => {
+        const btn = document.getElementById('btn-' + id);
+        if(btn) { btn.classList.remove('lk'); btn.removeAttribute('disabled'); }
+      });
+    }
+  },
+
+  switchTab(tabId) {
+    if (['m7', 'm8', 'm9'].includes(tabId) && !this.state.quizDone) {
+      alert("Acesso Bloqueado. Conclua o teste de nivelamento express (DIAGNOSTIC QUIZ) no Dashboard para libertar estes módulos avancados.");
+      return;
+    }
+    document.querySelectorAll('.panel').forEach(p => p.classList.remove('act'));
+    document.querySelectorAll('.ni').forEach(n => n.classList.remove('act'));
+    
+    const panel = document.getElementById('tab-' + tabId);
+    const btn = document.getElementById('btn-' + tabId);
+    
+    if (panel) panel.classList.add('act');
+    if (btn) btn.classList.add('act');
+    
+    this.state.tab = tabId;
+    this.saveData();
+  },
+
+  calcScore() {
+    const r = parseInt(document.getElementById('calc-r').value) || 0;
+    const l = parseInt(document.getElementById('calc-l').value) || 0;
+    const s = parseInt(document.getElementById('calc-s').value) || 0;
+    const w = parseInt(document.getElementById('calc-w').value) || 0;
+
+    document.getElementById('out-r').innerText = r;
+    document.getElementById('out-l').innerText = l;
+    document.getElementById('out-s').innerText = s;
+    document.getElementById('out-w').innerText = w;
+
+    const scaleR = Math.round((r/20)*30);
+    const scaleL = Math.round((l/28)*30);
+    const scaleS = Math.round((s/16)*30);
+    const scaleW = Math.round((w/10)*30);
+    const total = scaleR + scaleL + scaleS + scaleW;
+
+    document.getElementById('ui-raw').innerText = r+l+s+w;
+    document.getElementById('ui-scaled').innerText = String(total).padStart(3, '0') + "/120";
+    document.getElementById('card-current-score').innerText = String(total).padStart(3, '0');
+  },
+
+  renderQuiz() {
+    const container = document.getElementById('quiz-container');
+    if(!this.state.quizActive && this.state.quizIndex === 0) {
+      container.innerHTML = `<p style="margin-bottom:15px; color:var(--t2); font-weight:500;">Avaliação imediata padrão CEFR baseada nas regras de matriz de dados da ETS.</p><button class="btn font-data" onclick="app.startQuiz()">> ENTRAR NA ARENA</button>`;
+      return;
+    }
+
+    const q = modules.module0.quiz[this.state.quizIndex];
+    document.getElementById('quiz-progress').innerText = `${this.state.quizIndex + 1}/${modules.module0.quiz.length}`;
+    
+    let html = `<p style="font-weight:700; font-size:12px; margin-bottom:15px; line-height:1.5; color:var(--t1);">${q.q}</p>`;
+    q.options.forEach((opt, idx) => {
+      html += `<button class="quiz-option" onclick="app.answerQuiz(${idx})">${opt}</button>`;
+    });
+    html += `<div id="quiz-fb" class="quiz-feedback hidden"></div>`;
+    container.innerHTML = html;
+  },
+
+  startQuiz() {
+    this.state.quizActive = true;
+    this.state.quizIndex = 0;
+    this.state.quizScore = 0;
+    this.renderQuiz();
+  },
+
+  resetQuiz() { this.startQuiz(); },
+
+  answerQuiz(idx) {
+    const q = modules.module0.quiz[this.state.quizIndex];
+    const fb = document.getElementById('quiz-fb');
+    fb.classList.remove('hidden', 'feedback-ok', 'feedback-err');
+    
+    if(idx === q.answer) {
+      this.state.quizScore++;
+      fb.classList.add('feedback-ok');
+      fb.innerHTML = `<strong>✓ CORRECT:</strong> ${q.exp}`;
+    } else {
+      fb.classList.add('feedback-err');
+      fb.innerHTML = `<strong>✗ SYSTEM_ERROR:</strong> ${q.exp}`;
+    }
+
+    setTimeout(() => {
+      this.state.quizIndex++;
+      if(this.state.quizIndex < modules.module0.quiz.length) {
+        this.renderQuiz();
+      } else {
+        this.endQuiz();
+      }
+    }, 3000);
+  },
+
+  endQuiz() {
+    const pct = Math.round((this.state.quizScore / modules.module0.quiz.length) * 100);
+    this.state.quizActive = false;
+    this.state.quizIndex = 0;
+    this.state.quizDone = true;
+    document.getElementById('accuracy-text').innerText = pct + "%";
+    
+    let lvl = "B2"; if(pct >= 80) lvl = "C1"; else if(pct >= 50) lvl = "B2";
+    this.verifyLockState();
+    this.saveData();
+
+    document.getElementById('quiz-container').innerHTML = `
+      <div style="text-align:center; padding:15px 0;">
+        <div style="font-size:36px; font-weight:800; color:var(--ac); font-family:'JetBrains Mono',monospace;">${pct}%</div>
+        <p style="color:var(--t2); margin-top:6px; font-size:12px;">Matriz CEFR: <strong style="color:var(--t1); font-size:14px;">${lvl}</strong></p>
+        <p style="font-size:11px; color:#22C55E; font-weight:700; margin-top:5px;">✓ SISTEMAS AVANÇADOS LIBERTADOS NO MENU LATERAL</p>
+        <button class="btn font-data" style="margin-top:15px; width:auto;" onclick="app.resetQuiz()">> RE-RUN COMPILER</button>
+      </div>
+    `;
+  },
+
+  setTier(tier) {
+    document.querySelectorAll('.tier-btn').forEach(b => b.classList.remove('act'));
+    const btn = document.getElementById('btn-tier-' + tier);
+    if (btn) btn.classList.add('act');
+    
+    document.getElementById('template-viewer').innerHTML = modules.module5.templates[tier];
+    this.state.activeTier = tier;
+    this.saveData();
+  },
+
+  renderVocab() {
+    const tbody = document.getElementById('vocab-body');
+    let html = '';
+    modules.module6.vocabulary.forEach((v, idx) => {
+      html += `
+        <tr class="vocab-row" onclick="document.getElementById('v-det-${idx}').classList.toggle('hidden')">
+          <td class="word-hlt font-data">${v.word}</td>
+          <td>${v.cat}</td>
+          <td style="text-align:right; font-size:11px; color:var(--t3); font-family:'JetBrains Mono',monospace;">[VIEW_DATA]</td>
+        </tr>
+        <tr id="v-det-${idx}" class="hidden">
+          <td colspan="3" class="vocab-meaning">
+            <p style="margin-bottom:4px;"><strong>Tradução Semântica:</strong> ${v.pt} &nbsp;|&nbsp; <strong>Sinónimo Estrutural:</strong> ${v.syn}</p>
+            <p style="color:var(--ac); font-style:italic; font-weight:500;">" ${v.ex} "</p>
+          </td>
+        </tr>
+      `;
+    });
+    tbody.innerHTML = html;
+  },
+
+  setupCounter() {
+    const sandbox = document.getElementById('m4-sandbox');
+    const counter = document.getElementById('m4-counter');
+    if(sandbox && counter) {
+      sandbox.addEventListener('input', () => {
+        const text = sandbox.value.trim();
+        const words = text ? text.split(/\s+/).length : 0;
+        counter.innerText = `${words} palavras`;
+      });
+    }
+  }
+};
+
+document.addEventListener('DOMContentLoaded', () => window.app.init());
+</script>
+</body>
+</html>

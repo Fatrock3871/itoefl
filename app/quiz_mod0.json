@@ -1,0 +1,142 @@
+[
+  {
+    "num": 1,
+    "topic": "Gramática (verb tense/aspect)",
+    "prompt": "By the time the seminar starts next Monday, Dr. Alvarez ______ her final report for over three weeks.",
+    "options": {
+      "A": "writes",
+      "B": "has been writing",
+      "C": "will have been writing",
+      "D": "was writing"
+    },
+    "correct": "C",
+    "why_right": "Futuro perfeito contínuo: ação iniciada no passado, contínua até um ponto futuro específico (\"by the time... next Monday\"), com ênfase na duração (\"for over three weeks\").",
+    "why_wrong": "(A) presente simples ignora a duração; (B) presente perfeito contínuo não projeta para o futuro; (D) passado contínuo não conecta com o marco temporal futuro."
+  },
+  {
+    "num": 2,
+    "topic": "Conectivos (contraste)",
+    "prompt": "The new policy was designed to reduce administrative costs; ______, early data suggests it has increased them.",
+    "options": {
+      "A": "furthermore",
+      "B": "as a result",
+      "C": "paradoxically",
+      "D": "similarly"
+    },
+    "correct": "C",
+    "why_right": "O conector precisa sinalizar contraste + ironia entre a intenção da política (reduzir custos) e o resultado real (aumentou custos) — \"paradoxically\" captura essa contradição inesperada.",
+    "why_wrong": "(A) e (B) são de continuidade/consequência lógica, incompatíveis com contraste; (D) sinaliza semelhança, o oposto do que a frase exige."
+  },
+  {
+    "num": 3,
+    "topic": "Vocabulário acadêmico",
+    "prompt": "The committee's decision to postpone the vote was widely seen as an attempt to ______ growing public criticism.",
+    "options": {
+      "A": "defer",
+      "B": "exacerbate",
+      "C": "circumvent",
+      "D": "endorse"
+    },
+    "correct": "C",
+    "why_right": "\"Circumvent\" (contornar/evitar) encaixa com a lógica de adiar o voto para não enfrentar diretamente a crítica pública.",
+    "why_wrong": "(A) \"defer\" é próximo mas não captura a ideia de \"evitar/desviar\" a crítica em si — refere-se a adiar algo, não contornar algo; (B) significa piorar, sentido oposto; (D) significa endossar, sentido oposto."
+  },
+  {
+    "num": 4,
+    "topic": "Gramática (subjunctive/conditional)",
+    "prompt": "If the funding request ______ approved last quarter, the lab would already have hired two new researchers.",
+    "options": {
+      "A": "was",
+      "B": "were",
+      "C": "had been",
+      "D": "has been"
+    },
+    "correct": "C",
+    "why_right": "Condicional tipo 3 (passado hipotético): a oração principal usa \"would have hired\" implícito na lógica (\"would already have hired\"), exigindo past perfect na condicional (\"had been approved\").",
+    "why_wrong": "(A) e (B) são formas de passado simples/subjuntivo incompatíveis com a estrutura de tipo 3; (D) é present perfect, tempo errado para hipótese no passado."
+  },
+  {
+    "num": 5,
+    "topic": "Ordenação lexical (formato \"Complete the Words\")",
+    "prompt": "Choose the option that best completes the sentence with correct word order and meaning:\nDespite ______, the research team published their findings ahead of schedule.",
+    "options": {
+      "A": "numerous setbacks facing",
+      "B": "facing numerous setbacks",
+      "C": "setbacks numerous facing",
+      "D": "numerous facing setbacks"
+    },
+    "correct": "B",
+    "why_right": "Ordem correta: verbo no gerúndio + objeto (\"facing numerous setbacks\") após \"despite\", seguindo a estrutura padrão preposição + gerúndio + complemento.",
+    "why_wrong": "(A) inverte adjetivo e verbo de forma não natural; (C) e (D) quebram a ordem sintática do inglês (adjetivo deve preceder o substantivo, verbo deve preceder o objeto)."
+  },
+  {
+    "num": 6,
+    "topic": "Conectivos (causa/consequência lógica)",
+    "prompt": "Coral reefs are highly sensitive to temperature change; ______, even a one-degree rise can trigger mass bleaching events.",
+    "options": {
+      "A": "nevertheless",
+      "B": "in contrast",
+      "C": "accordingly",
+      "D": "meanwhile"
+    },
+    "correct": "C",
+    "why_right": "A segunda oração é uma consequência lógica direta da sensibilidade térmica mencionada na primeira — \"accordingly\" (consequentemente) é o conector de causa-efeito correto.",
+    "why_wrong": "(A) e (B) sinalizam contraste, incompatível com a relação de causa-efeito; (D) sinaliza simultaneidade, não consequência."
+  },
+  {
+    "num": 7,
+    "topic": "Vocabulário acadêmico (collocation)",
+    "prompt": "The professor asked students to ______ their arguments with at least two peer-reviewed sources.",
+    "options": {
+      "A": "substantiate",
+      "B": "fabricate",
+      "C": "alleviate",
+      "D": "diminish"
+    },
+    "correct": "A",
+    "why_right": "\"Substantiate an argument\" é a collocation acadêmica padrão para \"sustentar/comprovar um argumento com evidências\".",
+    "why_wrong": "(B) significa fabricar/inventar, sentido oposto ao contexto acadêmico legítimo; (C) significa aliviar, sem relação; (D) significa diminuir, sentido oposto."
+  },
+  {
+    "num": 8,
+    "topic": "Gramática (relative clauses / estrutura complexa — relevante para Listen and Repeat)",
+    "prompt": "The proposal, ______ implications had not been fully considered, was rejected by the board.",
+    "options": {
+      "A": "that its",
+      "B": "which its",
+      "C": "whose",
+      "D": "who's"
+    },
+    "correct": "C",
+    "why_right": "\"Whose\" é o pronome relativo possessivo correto para conectar \"the proposal\" a \"its implications\" sem repetir \"its\".",
+    "why_wrong": "(A) \"that its\" é gramaticalmente incorreto (that não aceita possessivo desta forma); (B) \"which its\" repete a posse de forma redundante e incorreta; (D) \"who's\" é contração de \"who is\", não um possessivo."
+  },
+  {
+    "num": 9,
+    "topic": "Registro e função comunicativa (relevante para Write an Email)",
+    "prompt": "Choose the sentence with the register most appropriate for a formal email to a university admissions office requesting a deadline extension:",
+    "options": {
+      "A": "Hey, just wondering if I could get a bit more time to send my stuff over?",
+      "B": "I am writing to respectfully request a short extension to the submission deadline due to a documented medical circumstance.",
+      "C": "Give me more time please, it's urgent and I really need it.",
+      "D": "So I was thinking maybe you guys could push the date back for me?"
+    },
+    "correct": "B",
+    "why_right": "Registro formal, verbos modais de cortesia (\"I am writing to respectfully request\"), justificativa objetiva — adequado para comunicação institucional, exatamente o padrão exigido em Write an Email.",
+    "why_wrong": "(A), (C) e (D) usam registro coloquial, contrações e informalidade excessiva (\"just wondering\", \"you guys\", \"please\" isolado) — inadequados para o contexto navegacional acadêmico formal."
+  },
+  {
+    "num": 10,
+    "topic": "Compreensão inferencial (relevante para Read an Academic Passage / Listen to an Academic Talk)",
+    "prompt": "\"Although the pilot program showed promising results in urban districts, researchers cautioned against broad conclusions, noting that participation rates in rural areas remained too low to generalize.\"\n\nWhat can be inferred from this statement?",
+    "options": {
+      "A": "The pilot program failed in urban districts.",
+      "B": "Rural areas were excluded from the pilot program entirely.",
+      "C": "The results may not represent the population as a whole.",
+      "D": "Researchers recommend canceling the program."
+    },
+    "correct": "C",
+    "why_right": "O texto explicitamente qualifica os resultados como não-generalizáveis devido à baixa participação rural — a inferência lógica direta é que os resultados podem não representar a população total.",
+    "why_wrong": "(A) contradiz o texto (resultados foram \"promissores\", não um fracasso); (B) exagera — \"baixa participação\" não é \"exclusão total\"; (D) é uma conclusão não sustentada pelo texto, que apenas pede cautela, não cancelamento."
+  }
+]

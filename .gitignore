@@ -1,0 +1,12 @@
+__pycache__/
+*.pyc
+.DS_Store
+desktop.ini
+
+# Cópias de segurança locais — não versionar
+_snapshots/
+
+# Saída do build — regenerável com `python app/build_pipeline.py && python app/build.py`
+app/module_fragments.json
+app/module_fragments_final.json
+artifact/index.html
