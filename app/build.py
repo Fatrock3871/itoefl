@@ -58,24 +58,40 @@ html = f'''<title>iTOEFL</title>
   </main>
 </div>
 
-<div id="secTimer" class="sec-timer collapsed">
-  <div class="st-panel">
-    <div class="st-display" id="stDisplay">28:00</div>
-    <div class="st-presets" id="stPresets">
-      <button type="button" data-min="28" class="active">Reading 28′</button>
-      <button type="button" data-min="18">Listening 18′</button>
-      <button type="button" data-min="8">Speaking 8′</button>
-      <button type="button" data-min="23">Writing 23′</button>
-      <button type="button" data-min="85">Prova completa 85′</button>
+<div class="float-tools">
+  <div id="micRec" class="mic-rec collapsed">
+    <div class="mr-panel">
+      <div class="mr-display" id="mrDisplay">00:00</div>
+      <div class="mr-status" id="mrStatus">Grave sua resposta e ouça de volta.</div>
+      <audio id="mrAudio" class="mr-audio" controls hidden></audio>
+      <div class="mr-controls">
+        <button type="button" id="mrToggleBtn" class="st-primary">● Gravar</button>
+        <button type="button" id="mrClear" hidden>Nova</button>
+      </div>
     </div>
-    <div class="st-controls">
-      <button type="button" id="stStart" class="st-primary">Iniciar</button>
-      <button type="button" id="stReset">Zerar</button>
-    </div>
+    <button class="st-toggle" id="mrToggle" type="button" aria-label="Gravador de voz">
+      <span>🎙</span>
+    </button>
   </div>
-  <button class="st-toggle" id="stToggle" type="button" aria-label="Cronômetro de seção">
-    <span id="stFace">⏱</span>
-  </button>
+  <div id="secTimer" class="sec-timer collapsed">
+    <div class="st-panel">
+      <div class="st-display" id="stDisplay">28:00</div>
+      <div class="st-presets" id="stPresets">
+        <button type="button" data-min="28" class="active">Reading 28′</button>
+        <button type="button" data-min="18">Listening 18′</button>
+        <button type="button" data-min="8">Speaking 8′</button>
+        <button type="button" data-min="23">Writing 23′</button>
+        <button type="button" data-min="85">Prova completa 85′</button>
+      </div>
+      <div class="st-controls">
+        <button type="button" id="stStart" class="st-primary">Iniciar</button>
+        <button type="button" id="stReset">Zerar</button>
+      </div>
+    </div>
+    <button class="st-toggle" id="stToggle" type="button" aria-label="Cronômetro de seção">
+      <span id="stFace">⏱</span>
+    </button>
+  </div>
 </div>
 
 <script>

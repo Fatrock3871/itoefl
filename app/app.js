@@ -298,4 +298,82 @@
     markPreset();
     render();
   })();
+
+  // ---------- Gravador de voz (Speaking) ----------
+  (function(){
+    var wrap = document.getElementById("micRec");
+    if(!wrap) return;
+    var display = document.getElementById("mrDisplay");
+    var statusEl = document.getElementById("mrStatus");
+    var audioEl = document.getElementById("mrAudio");
+    var recBtn = document.getElementById("mrToggleBtn");
+    var clearBtn = document.getElementById("mrClear");
+    var toggle = document.getElementById("mrToggle");
+
+    var rec = null, chunks = [], stream = null, elapsed = 0, tick = null, url = null;
+
+    if(!navigator.mediaDevices || !window.MediaRecorder){
+      recBtn.disabled = true;
+      statusEl.textContent = "Gravação não suportada neste navegador.";
+    }
+
+    function fmt(s){
+      var m = Math.floor(s / 60), r = s % 60;
+      return (m < 10 ? "0" : "") + m + ":" + (r < 10 ? "0" : "") + r;
+    }
+    function stopClock(){ if(tick){ clearInterval(tick); tick = null; } }
+    function releaseStream(){
+      if(stream){ stream.getTracks().forEach(function(t){ t.stop(); }); stream = null; }
+    }
+    function revoke(){ if(url){ URL.revokeObjectURL(url); url = null; } }
+
+    function startRec(){
+      navigator.mediaDevices.getUserMedia({ audio: true }).then(function(s){
+        stream = s;
+        revoke();
+        audioEl.hidden = true;
+        clearBtn.hidden = true;
+        chunks = [];
+        rec = new MediaRecorder(s);
+        rec.ondataavailable = function(e){ if(e.data && e.data.size) chunks.push(e.data); };
+        rec.onstop = function(){
+          var blob = new Blob(chunks, { type: chunks[0] ? chunks[0].type : "audio/webm" });
+          url = URL.createObjectURL(blob);
+          audioEl.src = url;
+          audioEl.hidden = false;
+          clearBtn.hidden = false;
+          statusEl.textContent = "Ouça e compare com o alvo.";
+          releaseStream();
+        };
+        rec.start();
+        elapsed = 0; display.textContent = "00:00";
+        wrap.classList.add("recording");
+        recBtn.textContent = "■ Parar";
+        statusEl.textContent = "Gravando…";
+        tick = setInterval(function(){ elapsed++; display.textContent = fmt(elapsed); }, 1000);
+      }).catch(function(){
+        statusEl.textContent = "Permissão de microfone negada.";
+      });
+    }
+    function stopRec(){
+      stopClock();
+      wrap.classList.remove("recording");
+      recBtn.textContent = "● Gravar";
+      if(rec && rec.state !== "inactive") rec.stop();
+      rec = null;
+    }
+    function clearRec(){
+      revoke();
+      audioEl.hidden = true; audioEl.removeAttribute("src");
+      clearBtn.hidden = true;
+      display.textContent = "00:00";
+      statusEl.textContent = "Grave sua resposta e ouça de volta.";
+    }
+
+    recBtn.addEventListener("click", function(){
+      if(wrap.classList.contains("recording")) stopRec(); else startRec();
+    });
+    clearBtn.addEventListener("click", clearRec);
+    toggle.addEventListener("click", function(){ wrap.classList.toggle("collapsed"); });
+  })();
 })();
