@@ -448,6 +448,118 @@
     });
   })();
 
+  // ---------- Build a Sentence — widget interativo (M4) ----------
+  Array.prototype.forEach.call(document.querySelectorAll(".bsq"), function(root){
+    var bsqId = root.dataset.bsq;
+    var lsKey = "toefl_bsq_" + bsqId + "_v1";
+    var cards = Array.prototype.slice.call(root.querySelectorAll(".bsq-card"));
+    var state = {};
+    try { state = JSON.parse(safeGet(lsKey) || "{}"); } catch(e){ state = {}; }
+    function persist(){ safeSet(lsKey, JSON.stringify(state)); }
+
+    function shuffle(nodes){
+      for(var i = nodes.length - 1; i > 0; i--){
+        var j = Math.floor(Math.random() * (i + 1));
+        nodes[i].parentNode.insertBefore(nodes[i], nodes[j]);
+      }
+    }
+    function frags(zone){
+      return Array.prototype.map.call(zone.querySelectorAll(".bsq-chip"),
+        function(c){ return c.dataset.frag; });
+    }
+
+    function renderSummary(){
+      var total = cards.length, checked = 0, right = 0;
+      cards.forEach(function(card){
+        var s = state[card.dataset.num];
+        if(s && s.checked){ checked++; if(s.ok) right++; }
+      });
+      var fill = root.querySelector(".quiz-bar-fill");
+      var score = root.querySelector(".quiz-score");
+      var summary = root.querySelector(".quiz-summary");
+      if(fill) fill.style.width = (total ? Math.round(100 * checked / total) : 0) + "%";
+      if(score) score.textContent = checked + " de " + total + " verificadas";
+      if(summary){
+        if(checked === total && total > 0){
+          summary.hidden = false;
+          summary.querySelector(".quiz-summary-text").textContent =
+            "Você montou " + right + " de " + total + " corretamente.";
+        }else{ summary.hidden = true; }
+      }
+    }
+
+    cards.forEach(function(card){
+      var num = card.dataset.num;
+      var correct;
+      try { correct = JSON.parse(card.dataset.answer); } catch(e){ correct = []; }
+      var build = card.querySelector('[data-role="build"]');
+      var bank = card.querySelector('[data-role="bank"]');
+      var checkBtn = card.querySelector(".bsq-check");
+      var fb = card.querySelector(".bsq-feedback");
+      var model = card.querySelector(".bsq-model");
+      var allChips = Array.prototype.slice.call(card.querySelectorAll(".bsq-chip"));
+
+      function updateCheckBtn(){
+        checkBtn.disabled = bank.querySelector(".bsq-chip") !== null;
+      }
+      function lock(){
+        allChips.forEach(function(c){ c.disabled = true; });
+        checkBtn.hidden = true;
+      }
+      function reveal(ok){
+        card.classList.add(ok ? "correct" : "wrong");
+        model.textContent = (ok ? "✓ " : "Resposta: ") + (card.dataset.sentence || correct.join(" "));
+        fb.hidden = false;
+        lock();
+      }
+
+      allChips.forEach(function(chip){
+        chip.addEventListener("click", function(){
+          if(chip.disabled) return;
+          if(chip.parentNode === bank) build.appendChild(chip);
+          else bank.appendChild(chip);
+          updateCheckBtn();
+          state[num] = { order: frags(build), checked: false };
+          persist();
+        });
+      });
+
+      checkBtn.addEventListener("click", function(){
+        var assembled = frags(build);
+        var ok = assembled.length === correct.length &&
+          assembled.every(function(f, i){ return f === correct[i]; });
+        state[num] = { order: assembled, checked: true, ok: ok };
+        persist();
+        reveal(ok);
+        renderSummary();
+      });
+
+      // restaura estado salvo
+      var s = state[num];
+      if(s && s.order && s.order.length){
+        var pool = allChips.slice();
+        s.order.forEach(function(f){
+          for(var k = 0; k < pool.length; k++){
+            if(pool[k].dataset.frag === f){ build.appendChild(pool[k]); pool.splice(k, 1); break; }
+          }
+        });
+        updateCheckBtn();
+        if(s.checked) reveal(!!s.ok);
+      }else{
+        shuffle(allChips);
+      }
+    });
+
+    var retry = root.querySelector(".quiz-retry");
+    if(retry){
+      retry.addEventListener("click", function(){
+        state = {}; persist();
+        location.reload();
+      });
+    }
+    renderSummary();
+  });
+
   // ---------- Flashcards com revisão espaçada (M6) ----------
   Array.prototype.forEach.call(document.querySelectorAll(".srs"), function(root){
     var deckId = root.dataset.srs;

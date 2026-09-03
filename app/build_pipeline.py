@@ -3,7 +3,9 @@ import re
 import markdown as md
 from render_quiz import render_quiz_drill
 from render_srs import render_srs
+from render_build import render_build_sentence
 from drills_data import MOD1_DRILLS, MOD2_DRILLS
+from build_sentence_data import BUILD_SENTENCE_ITEMS
 
 SRC = "../consolidated"
 MD_EXT = ["tables", "fenced_code", "sane_lists"]
@@ -103,6 +105,20 @@ def build_plain(path):
     return to_html(raw)
 
 
+# ---------- Módulo 4: markdown + widget interativo de Build a Sentence ----------
+def build_mod4():
+    html_out = build_plain(f"{SRC}/modulo_4_writing.md")
+    widget = render_build_sentence("m4build", BUILD_SENTENCE_ITEMS)
+    # injeta logo antes do heading "Drill 2 ... Write an Email"
+    idx = html_out.find("Drill 2")
+    if idx == -1:
+        return html_out + widget
+    h3 = html_out.rfind("<h3", 0, idx)
+    if h3 == -1:
+        h3 = idx
+    return html_out[:h3] + widget + "\n" + html_out[h3:]
+
+
 # ---------- Módulo 6: markdown + widget de flashcards SRS ----------
 def build_mod6():
     html_out = build_plain(f"{SRC}/modulo_6_vocabulary.md")
@@ -134,7 +150,7 @@ def main():
         "mod1": build_mod1(),
         "mod2": build_mod2(),
         "mod3": build_plain(f"{SRC}/modulo_3_speaking.md"),
-        "mod4": build_plain(f"{SRC}/modulo_4_writing.md"),
+        "mod4": build_mod4(),
         "mod5": build_plain(f"{SRC}/modulo_5_registro.md"),
         "mod6": build_mod6(),
         "mod7": build_plain(f"{SRC}/modulo_7_simulados.md"),
