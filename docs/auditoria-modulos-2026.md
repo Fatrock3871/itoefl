@@ -75,3 +75,31 @@ conversão bruto→banda. Tratado como aproximação pedagógica; não alterado.
 Fragmentos gerados: mod0=45.421, mod1=44.444, mod2=50.740, mod3=34.232,
 mod4=30.599, mod7=59.798 chars. `artifact/index.html` = 285.907 bytes.
 Build roda limpa; zero placeholders; zero artefatos de geração nos módulos ativos.
+
+---
+
+## Adendo — M5 reescrito (2026-09-02)
+
+Decisão do usuário: repropósito, não remoção. O M5 antigo (templates tierizados
+20+/25+/28+ para Speaking Task 1–4 e Integrated Writing) era ~80% conteúdo morto
+no formato 2026 — todas as tasks de Speaking longo e o Integrated Writing
+deixaram de existir.
+
+O que foi reaproveitado no novo `consolidated/modulo_5_registro.md`:
+- **Atlas Linguístico** (Seção 2 antiga): tabela de conectores, subordinação,
+  vocabulário, nominalizações, hedging e densidade — reancorada de 20+/25+/28+
+  para bandas CEFR B1 / B2 / C1–C2, com as linhas de "Speaking T1/T2–T4"
+  substituídas por "abertura de resposta oral / de parágrafo / de e-mail".
+- **Os 10 marcadores de maior impacto** (Seção 9 antiga): mantidos, rerotulados
+  como salto B2 → C1/C2.
+- **Exemplos contrastivos** (mesma ideia em 3 registros): reescritos do zero
+  para as 3 tasks produtivas de 2026 (Take an Interview, Write an Email,
+  Academic Discussion), já que os exemplos antigos eram de tasks extintas.
+
+Estrutura nova: 7 partes (Por que registro é ponto · Atlas Linguístico · 10
+marcadores · Aplicação por task · Drills de elevação · Guia de banda-alvo ·
+Checklist). Fragmento = 24.327 chars. `artifact/index.html` = 310.479 bytes,
+7 módulos ativos (M0–M5, M7).
+
+O original do M5 antigo continua em `_archive/content-old-format/`. A cópia de
+trabalho em `consolidated/_a-portar/` foi removida.

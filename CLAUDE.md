@@ -99,8 +99,10 @@ Tipos de item por seção:
 
 Implicações que o conteúdo deve respeitar:
 
-- Não há mais discurso longo estruturado no Speaking. **Templates longos de
-  Speaking (o antigo Módulo 5) estão obsoletos.**
+- Não há mais discurso longo estruturado no Speaking. Os templates longos de
+  Speaking do Módulo 5 antigo (Independent + 3 Integrated) e o template de
+  Integrated Writing estão **obsoletos** — o M5 foi reescrito como módulo de
+  registro/retórica, não de templates de task.
 - Writing são textos multi-frase objetivos, não redações longas.
 - O que pontua: precisão instantânea, prosódia natural, controle gramatical
   automático — vindo de repetição deliberada, não de scripts decorados.
@@ -115,7 +117,7 @@ Implicações que o conteúdo deve respeitar:
 | M2 | Listening | ✅ formato 2026, 4 drills |
 | M3 | Speaking | ✅ formato 2026 |
 | M4 | Writing | ✅ formato 2026 |
-| M5 | Templates | ⚠️ obsoleto no formato 2026 — decidir se vira "Frameworks de resposta rápida" ou sai |
+| M5 | Registro & Sofisticação Retórica | ✅ reescrito para 2026 — camada transversal de elevação de banda (Atlas Linguístico em bandas CEFR + 10 marcadores + aplicação por task) |
 | M6 | Vocabulário acadêmico | 🔴 só existe no formato antigo — portar |
 | M7 | Simulados progressivos | ✅ formato 2026 |
 | M8 | Exam Day Protocol | 🔴 portar (maior parte é format-agnostic) |

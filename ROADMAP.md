@@ -3,8 +3,9 @@
 Memória entre sessões. Atualizar ao concluir cada etapa.
 
 **Última atualização:** 2026-09-02
-**Agora:** Fases 0–2 concluídas (fundação, adoção do pacote, auditoria de M0–M4/M7).
-Próximo alvo: Fase 3 — portar M6 (Vocabulary) para o pipeline no formato 2026.
+**Agora:** Fases 0–2 concluídas. M5 reescrito como "Registro & Sofisticação
+Retórica" e integrado ao build (7 módulos ativos: M0–M5, M7).
+Próximo alvo: portar M6 (Vocabulary) para o pipeline no formato 2026.
 
 ---
 
@@ -55,27 +56,32 @@ Próximo alvo: Fase 3 — portar M6 (Vocabulary) para o pipeline no formato 2026
   interativo como M1/M2; M7 descreve o cronômetro mas não o implementa; a
   calculadora de score do M0 é tabela de referência, não um widget.
 
-### Pendências desta fase (dependem da decisão sobre o M5)
+### Pendência residual
 
 - [ ] M7 Parte 1: "Após Módulos 1–5 / Módulo 6" como pré-requisito dos simulados
-- [ ] Decidir destino do M5 (ver Fase 3)
+      — o "1–5" agora está coerente (M5 existe e é conteúdo de ensino); revisar
+      redação ao portar M6.
 
-## Fase 3 — Portar os 4 módulos que faltam
+## Fase 3 — Portar/reescrever os módulos que faltam
 
-Ordem: M6 → M9 → M8 → M5.
+Ordem: M5 (feito) → M6 → M9 → M8.
 
+- [x] **M5 → "Registro & Sofisticação Retórica"** — decisão do usuário
+      (2026-09-02): repropósito, não remoção. `consolidated/modulo_5_registro.md`
+      reaproveita o Atlas Linguístico (retiered para bandas CEFR), os 10
+      marcadores de alto impacto e os exemplos contrastivos; aplica às 3 tasks
+      produtivas de 2026 (Take an Interview, Write an Email, Academic Discussion).
+      Registrado em `build_pipeline.py` e `build.py`. Fragmento = 24.327 chars.
 - [ ] **M6 Vocabulary** — extrair o léxico de `_a-portar/modulo_6_vocabulary_ANTIGO.md`
       (~228 linhas de tabela) para `consolidated/modulo_6_vocabulary.md` +
       widget de flashcards. Registrar contagem: N palavras na origem → N no destino.
 - [ ] **M9 Brazilian Traps** — falsos cognatos e substituições (format-agnostic);
-      atualizar só a parte de SpeechRater/Speaking ao formato 2026.
+      atualizar só a parte de SpeechRater/Speaking ao formato 2026. Referências
+      a "templates do Módulo 5" precisam virar "Atlas Linguístico do Módulo 5".
 - [ ] **M8 Exam Day** — protocolo dos 7 dias, biohacking, logística
       (quase tudo format-agnostic); reescrever "durante o exame, seção a seção"
-      para as 4 seções novas.
-- [ ] **M5 Templates** — decidir: transformar em "Frameworks de resposta rápida"
-      para *Take an Interview* / *Write an Email* / *Academic Discussion*, ou
-      remover. Não portar templates de Speaking longo.
-- [ ] Registrar os 4 módulos novos em `app/build.py` (lista `MODS`)
+      para as 4 seções novas. Referências a "templates do Módulo 5" idem.
+- [ ] Registrar M6, M8, M9 em `app/build.py` (lista `MODS`) ao portar cada um
 
 ## Fase 4 — Produto
 
@@ -109,8 +115,9 @@ Ordem: M6 → M9 → M8 → M5.
 - **`_archive/` e `_snapshots/`** devem entrar no `.gitignore`? Decidir no commit
   inicial. (Sugestão: versionar `_archive/` uma vez, ignorar `_snapshots/`.)
 
-## Baseline de contagem (2026-09-02, pós-build)
+## Baseline de contagem (2026-09-02, pós-M5)
 
-Fragmentos gerados: mod0=45k, mod1=45k, mod2=51k, mod3=34k, mod4=31k, mod7=60k chars.
-`artifact/index.html` = 286.657 bytes.
+Fragmentos: mod0=45.421, mod1=44.444, mod2=50.740, mod3=34.232, mod4=30.599,
+mod5=24.327, mod7=59.798 chars.
+`artifact/index.html` = 310.479 bytes. 7 módulos ativos, 162 checkboxes de progresso.
 Diagnóstico M0 = 10 questões. Drills = 3 (Reading) + 4 (Listening).
