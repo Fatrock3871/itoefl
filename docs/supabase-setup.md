@@ -13,15 +13,21 @@ preset do cronômetro.
 ## Estado atual (2026-09-03)
 
 Projeto **ITOELF** já criado (ref `itfosjcymqfzjsftvjey`, região São Paulo).
-`app/supabase_config.json` já preenchido com a **legacy anon key** (JWT) —
-a app já builda com `supabase: configurado` e o botão "Entrar para sincronizar"
-aparece na sidebar. Falta confirmar que o schema rodou e testar o login real.
+`app/supabase_config.json` preenchido com a **publishable key**
+(`sb_publishable_...`) — o padrão novo do Supabase, seguro no navegador.
+A app builda com `supabase: configurado` e o botão "Entrar para sincronizar"
+aparece na sidebar (biblioteca `supabase-js@2` carrega e aceita a chave).
 
-> ⚠️ Este projeto está no **novo sistema de chaves** do Supabase (publishable /
-> secret). Usamos a *legacy anon key* porque é 100% compatível com o
-> `supabase-js@2`. **Não clique em "Disable JWT-based API keys"** — isso quebra
-> a app. Se um dia quiser migrar para a `sb_publishable_...`, é trocar uma linha
-> em `supabase_config.json` e rebuildar.
+**Pendências:**
+1. Confirmar que o schema (`supabase/schema.sql`) rodou no SQL Editor.
+2. Configurar Site URL / Redirect URLs (passo 3 abaixo).
+3. Testar o login real (e-mail + link).
+
+> 🔐 **Segurança — dois valores foram expostos numa conversa e devem ser
+> rotacionados:** a *secret key* `sb_secret_...` (API Keys → Publishable and
+> secret → rotacionar) e a *legacy service_role* (Reveal JWT secret →
+> "Generate a new JWT secret"). A publishable key que a app usa **não** é
+> afetada por rolar o JWT secret, então dá para rotacionar sem quebrar nada.
 
 ---
 
