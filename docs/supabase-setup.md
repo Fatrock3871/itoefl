@@ -10,7 +10,22 @@ preset do cronômetro.
 
 ---
 
-## 1. Criar o projeto Supabase (grátis)
+## Estado atual (2026-09-03)
+
+Projeto **ITOELF** já criado (ref `itfosjcymqfzjsftvjey`, região São Paulo).
+`app/supabase_config.json` já preenchido com a **legacy anon key** (JWT) —
+a app já builda com `supabase: configurado` e o botão "Entrar para sincronizar"
+aparece na sidebar. Falta confirmar que o schema rodou e testar o login real.
+
+> ⚠️ Este projeto está no **novo sistema de chaves** do Supabase (publishable /
+> secret). Usamos a *legacy anon key* porque é 100% compatível com o
+> `supabase-js@2`. **Não clique em "Disable JWT-based API keys"** — isso quebra
+> a app. Se um dia quiser migrar para a `sb_publishable_...`, é trocar uma linha
+> em `supabase_config.json` e rebuildar.
+
+---
+
+## 1. Criar o projeto Supabase (grátis) — *já feito*
 
 1. Entre em <https://supabase.com> e crie uma conta.
 2. **New project** → escolha um nome, uma senha de banco (guarde) e a região
