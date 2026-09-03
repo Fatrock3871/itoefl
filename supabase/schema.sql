@@ -31,10 +31,16 @@ create table if not exists user_state (
 alter table profiles enable row level security;
 alter table user_state enable row level security;
 
+drop policy if exists "profiles_select_own" on profiles;
+drop policy if exists "profiles_insert_own" on profiles;
+drop policy if exists "profiles_update_own" on profiles;
 create policy "profiles_select_own" on profiles for select using (auth.uid() = id);
 create policy "profiles_insert_own" on profiles for insert with check (auth.uid() = id);
 create policy "profiles_update_own" on profiles for update using (auth.uid() = id);
 
+drop policy if exists "user_state_select_own" on user_state;
+drop policy if exists "user_state_insert_own" on user_state;
+drop policy if exists "user_state_update_own" on user_state;
 create policy "user_state_select_own" on user_state for select using (auth.uid() = user_id);
 create policy "user_state_insert_own" on user_state for insert with check (auth.uid() = user_id);
 create policy "user_state_update_own" on user_state for update using (auth.uid() = user_id);
