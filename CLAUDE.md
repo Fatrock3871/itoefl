@@ -35,8 +35,10 @@ app/build.py              Monta artifact/index.html (nav + painéis + CSS + JS)
 app/quiz_mod0.json        As 10 questões do diagnóstico (M0)
 app/drills_data.py        Drills interativos de Reading (M1) e Listening (M2)
 app/vocab_kit.json        As 50 palavras do Kit de Emergência (flashcards SRS do M6)
+app/build_sentence_data.py  Itens do widget Build a Sentence (M4)
 app/render_quiz.py        Renderizador dos widgets de quiz/drill
 app/render_srs.py         Renderizador do widget de flashcards (M6)
+app/render_build.py       Renderizador do widget Build a Sentence (M4)
 app/app.js                Runtime: tema, abas, progresso (checkboxes + badges), quizzes
 app/styles.css            Estilo (tema claro/escuro/sistema)
 app/module_fragments*.json  Saída do pipeline (gerado; não editar)
@@ -54,8 +56,14 @@ _snapshots/               Cópias com timestamp antes de mudanças estruturais
 - **Texto corrido de um módulo** → editar o `.md` em `consolidated/`.
 - **Questões do diagnóstico** → `app/quiz_mod0.json`.
 - **Drills de Reading/Listening** → `app/drills_data.py`.
-- **Comportamento/interação** → `app/app.js` ou `app/render_quiz.py`.
+- **Itens de Build a Sentence (M4)** → `app/build_sentence_data.py`.
+- **Palavras dos flashcards (M6)** → `app/vocab_kit.json`.
+- **Comportamento/interação** → `app/app.js` e os `app/render_*.py`.
 - **Estilo** → `app/styles.css`.
+
+Os módulos M1, M2, M4 e M6 têm um `build_modN()` no pipeline que injeta o
+widget no fragmento; os demais usam `build_plain()`. Cronômetro, gravador e
+export/import ficam no shell (`build.py`) e valem para todas as abas.
 - Depois de qualquer edição de fonte, rodar as duas builds e conferir
   `artifact/index.html` no navegador.
 

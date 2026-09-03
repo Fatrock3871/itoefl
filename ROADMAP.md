@@ -3,10 +3,10 @@
 Memória entre sessões. Atualizar ao concluir cada etapa.
 
 **Última atualização:** 2026-09-03
-**Agora:** Fases 3 e quase toda a 4 concluídas. Os 10 módulos no formato 2026;
-cronômetro de seção, gravador de Speaking, export/import de progresso e
-flashcards SRS no M6, todos no ar. `artifact/index.html` ≈ 461 KB. Resta da
-Fase 4: widgets de drill para M4/M5. Depois, Fase 5 (Supabase).
+**Agora:** Fases 3 e 4 concluídas. Os 10 módulos no formato 2026; cronômetro de
+seção, gravador de Speaking, export/import de progresso, flashcards SRS (M6) e
+widget de Build a Sentence (M4), todos no ar. `artifact/index.html` ≈ 480 KB.
+Próximo: Fase 5 (backend Supabase) ou publicação (Fase 6).
 
 ---
 
@@ -97,7 +97,7 @@ Ordem: M5 → M6 → M9 → M8. Todos feitos.
 - [x] M5, M6, M8, M9 registrados em `build_pipeline.py` e `build.py`.
       `consolidated/_a-portar/` removido.
 
-## Fase 4 — Produto
+## Fase 4 — Produto ✅
 
 - [x] **Cronômetro por seção** — widget flutuante, presets Reading 28′ /
       Listening 18′ / Speaking 8′ / Writing 23′ / Prova 85′, beep ao zerar,
@@ -114,9 +114,12 @@ Ordem: M5 → M6 → M9 → M8. Todos feitos.
       `toefl_srs_kit50_v1`. Injetado no fragmento do M6 via `build_mod6`.
 - [x] **`[hidden]` global** no `styles.css` — necessário no serve local
       (a Artifact já injeta essa regra); corrige widgets que usam `hidden`.
-- [ ] Widgets de drill interativos para M4 (*Build a Sentence* — reordenar
-      fragmentos) e M5 (reescrita B1→C1). Único item de conteúdo interativo
-      que resta; M3 usa o gravador, M1/M2 têm quiz-drills, M6 tem os flashcards.
+- [x] **Widget de Build a Sentence (M4)** — 10 itens de reordenação pura,
+      clicar-para-montar, verificar → frase-modelo + nota. `build_sentence_data.py`
+      + `render_build.py` + motor em `app.js`, estado `toefl_bsq_m4build_v1`.
+- [~] M5 (reescrita B1→C1) — fica como exercício de texto guiado com
+      referência de correção; não se beneficia de widget (é produção livre
+      sem gabarito único). Fase 4 de conteúdo interativo considerada completa.
 
 ## Fase 5 — Backend Supabase
 
