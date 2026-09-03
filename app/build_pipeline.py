@@ -125,6 +125,8 @@ def main():
         "mod5": build_plain(f"{SRC}/modulo_5_registro.md"),
         "mod6": build_plain(f"{SRC}/modulo_6_vocabulary.md"),
         "mod7": build_plain(f"{SRC}/modulo_7_simulados.md"),
+        "mod8": build_plain(f"{SRC}/modulo_8_examday.md"),
+        "mod9": build_plain(f"{SRC}/modulo_9_braziliantraps.md"),
     }
     final = {k: add_progress_hooks(v, k) for k, v in frag.items()}
     json.dump(final, open("module_fragments_final.json", "w", encoding="utf-8"), ensure_ascii=False)

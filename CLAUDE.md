@@ -29,8 +29,7 @@ Editar sempre a fonte (`consolidated/`, `app/styles.css`, `app/app.js`,
 ## Arquitetura
 
 ```
-consolidated/*.md         Texto dos módulos — fonte da verdade do conteúdo corrido
-consolidated/_a-portar/   Módulos 5, 6, 8, 9 no formato ANTIGO, aguardando porte
+consolidated/*.md         Texto dos 10 módulos (M0–M9) — fonte da verdade do conteúdo
 app/build_pipeline.py     Monta os fragmentos HTML por módulo; injeta os widgets
 app/build.py              Monta artifact/index.html (nav + painéis + CSS + JS)
 app/quiz_mod0.json        As 10 questões do diagnóstico (M0)
@@ -120,8 +119,12 @@ Implicações que o conteúdo deve respeitar:
 | M5 | Registro & Sofisticação Retórica | ✅ reescrito para 2026 — camada transversal de elevação de banda (Atlas Linguístico em bandas CEFR + 10 marcadores + aplicação por task) |
 | M6 | Vocabulário acadêmico | ✅ portado para 2026 — 100 entradas de léxico + arsenal cross-temático + kit de 50 palavras |
 | M7 | Simulados progressivos | ✅ formato 2026 |
-| M8 | Exam Day Protocol | 🔴 portar (maior parte é format-agnostic) |
-| M9 | Brazilian Trap Library | 🔴 portar (falsos cognatos são format-agnostic) |
+| M8 | Exam Day Protocol | ✅ portado — Parte 6 (seção a seção) reescrita para as 4 seções de 2026 |
+| M9 | Brazilian Trap Library | ✅ portado — referências a tasks extintas atualizadas |
+
+**Todos os 10 módulos estão ativos no build.** `consolidated/_a-portar/` foi
+removido; os originais pré-2026 dos 10 módulos seguem em
+`_archive/content-old-format/`.
 
 ## Estado e progresso do usuário (runtime)
 

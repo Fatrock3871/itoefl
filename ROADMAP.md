@@ -2,9 +2,12 @@
 
 Memória entre sessões. Atualizar ao concluir cada etapa.
 
-**Última atualização:** 2026-09-02
-**Agora:** Fases 0–2 concluídas. M5 reescrito, M6 portado. 8 módulos ativos
-(M0–M7). Próximo alvo: portar M9 (Brazilian Traps), depois M8 (Exam Day).
+**Última atualização:** 2026-09-03
+**Agora:** Fase 3 concluída — **os 10 módulos (M0–M9) estão no formato 2026 e
+ativos no build.** `artifact/index.html` = 467 KB, 121 tabelas, 0 placeholders.
+Próximo: Fase 4 (produto — cronômetro, widgets de drill p/ M3/M4, SRS no M6,
+gravador de Speaking) ou Fase 5 (Supabase). Ajuste rápido pendente: rótulo
+"Prep oficial" → "Preparação independente"; 1 checkbox por h2 (não h3).
 
 ---
 
@@ -61,9 +64,9 @@ Memória entre sessões. Atualizar ao concluir cada etapa.
       — o "1–5" agora está coerente (M5 existe e é conteúdo de ensino); revisar
       redação ao portar M6.
 
-## Fase 3 — Portar/reescrever os módulos que faltam
+## Fase 3 — Portar/reescrever os módulos que faltam ✅
 
-Ordem: M5 (feito) → M6 → M9 → M8.
+Ordem: M5 → M6 → M9 → M8. Todos feitos.
 
 - [x] **M5 → "Registro & Sofisticação Retórica"** — decisão do usuário
       (2026-09-02): repropósito, não remoção. `consolidated/modulo_5_registro.md`
@@ -79,13 +82,21 @@ Ordem: M5 (feito) → M6 → M9 → M8.
       4 entradas duplicadas do arquivo antigo substituídas por termos novos
       (incremental, acidification, redundancy). Fragmento = 67.351 chars.
       **Pendente:** widget de flashcards + SRS — é item da Fase 4, não bloqueia.
-- [ ] **M9 Brazilian Traps** — falsos cognatos e substituições (format-agnostic);
-      atualizar só a parte de SpeechRater/Speaking ao formato 2026. Referências
-      a "templates do Módulo 5" precisam virar "Atlas Linguístico do Módulo 5".
-- [ ] **M8 Exam Day** — protocolo dos 7 dias, biohacking, logística
-      (quase tudo format-agnostic); reescrever "durante o exame, seção a seção"
-      para as 4 seções novas. Referências a "templates do Módulo 5" idem.
-- [ ] Registrar M6, M8, M9 em `app/build.py` (lista `MODS`) ao portar cada um
+- [x] **M9 Brazilian Traps** — `consolidated/modulo_9_braziliantraps.md`.
+      Conteúdo (falsos cognatos, preposições, fonemas) veio quase verbatim.
+      Mudanças 2026: "Speaking Task 1/2/3" → *Take an Interview* / *Listen and
+      Repeat*; "Writing Task 1/2" → *Write for an Academic Discussion*;
+      "corrector humano" removido (Speaking 100% IA); "score de Delivery" →
+      "inteligibilidade e prosódia". Fragmento = 42.877 chars.
+- [x] **M8 Exam Day** — `consolidated/modulo_8_examday.md`. Partes 2–5 e 7
+      (sono, nutrição, psicologia, logística) quase intactas. Reescritos:
+      Parte 1 (D-4/D-2 referenciavam os templates do M5 antigo), Parte 6 inteira
+      (Reading ~27–30min adaptativo, Listening ~18min, Speaking ~8min Listen and
+      Repeat + Take an Interview, Writing ~23min Build a Sentence + Email +
+      Academic Discussion), Parte 7 (cenários anti-colapso), Parte 8
+      ("avaliação humana" → correção por IA). Fragmento = 37.218 chars.
+- [x] M5, M6, M8, M9 registrados em `build_pipeline.py` e `build.py`.
+      `consolidated/_a-portar/` removido.
 
 ## Fase 4 — Produto
 
@@ -119,12 +130,13 @@ Ordem: M5 (feito) → M6 → M9 → M8.
 - **`_archive/` e `_snapshots/`** devem entrar no `.gitignore`? Decidir no commit
   inicial. (Sugestão: versionar `_archive/` uma vez, ignorar `_snapshots/`.)
 
-## Baseline de contagem (2026-09-02, pós-M6)
+## Baseline de contagem (2026-09-03, 10 módulos)
 
 Fragmentos: mod0=45.421, mod1=44.444, mod2=50.740, mod3=34.232, mod4=30.599,
-mod5=24.327, mod6=67.351, mod7=59.798 chars.
-`artifact/index.html` = 378.067 bytes. 8 módulos ativos (M0–M7).
-Diagnóstico M0 = 10 questões. Drills = 3 (Reading) + 4 (Listening).
+mod5=24.327, mod6=67.351, mod7=59.798, mod8=37.218, mod9=42.877 chars.
+`artifact/index.html` = 466.9 KB. **10 módulos ativos (M0–M9)**, 121 tabelas,
+0 placeholders. Diagnóstico M0 = 10 questões. Drills interativos = 3 (Reading)
++ 4 (Listening). M3/M4/M5/M6/M8/M9 são texto + drills em papel (sem widget).
 
 ## Observações visuais (2026-09-02, screenshots headless)
 

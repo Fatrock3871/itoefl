@@ -11,6 +11,8 @@ MODS = [
     ("mod5","05","Registro & Retórica","modulo_5_registro.md"),
     ("mod6","06","Vocabulário","modulo_6_vocabulary.md"),
     ("mod7","07","Simulados","modulo_7_simulados.md"),
+    ("mod8","08","Exam Day","modulo_8_examday.md"),
+    ("mod9","09","Brazilian Traps","modulo_9_braziliantraps.md"),
 ]
 
 nav_items = "\n".join(
