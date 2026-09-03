@@ -34,7 +34,9 @@ app/build_pipeline.py     Monta os fragmentos HTML por módulo; injeta os widget
 app/build.py              Monta artifact/index.html (nav + painéis + CSS + JS)
 app/quiz_mod0.json        As 10 questões do diagnóstico (M0)
 app/drills_data.py        Drills interativos de Reading (M1) e Listening (M2)
+app/vocab_kit.json        As 50 palavras do Kit de Emergência (flashcards SRS do M6)
 app/render_quiz.py        Renderizador dos widgets de quiz/drill
+app/render_srs.py         Renderizador do widget de flashcards (M6)
 app/app.js                Runtime: tema, abas, progresso (checkboxes + badges), quizzes
 app/styles.css            Estilo (tema claro/escuro/sistema)
 app/module_fragments*.json  Saída do pipeline (gerado; não editar)
@@ -129,8 +131,10 @@ removido; os originais pré-2026 dos 10 módulos seguem em
 ## Estado e progresso do usuário (runtime)
 
 `localStorage`, chaves com prefixo `toefl_`: `toefl_progress_v1` (checkboxes),
-`toefl_theme_v1`, `toefl_active_tab`, `toefl_quiz_<drillId>_v1`. Ao mudar o
-formato do estado, escrever migração — não descartar progresso salvo.
+`toefl_theme_v1`, `toefl_active_tab`, `toefl_quiz_<drillId>_v1`,
+`toefl_timer_preset`, `toefl_srs_kit50_v1`. Os botões Exportar/Importar na
+sidebar empacotam todas as chaves `toefl_*` em JSON. Ao mudar o formato do
+estado, escrever migração — não descartar progresso salvo.
 
 ## Onde estamos
 

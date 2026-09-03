@@ -3,10 +3,10 @@
 Memória entre sessões. Atualizar ao concluir cada etapa.
 
 **Última atualização:** 2026-09-03
-**Agora:** Fases 3 e boa parte da 4 concluídas. Os 10 módulos no formato 2026;
-cronômetro de seção, gravador de Speaking e export/import de progresso no ar.
-`artifact/index.html` ≈ 450 KB. Próximo: widgets de drill (M4/M5) + SRS no M6,
-ou Fase 5 (Supabase).
+**Agora:** Fases 3 e quase toda a 4 concluídas. Os 10 módulos no formato 2026;
+cronômetro de seção, gravador de Speaking, export/import de progresso e
+flashcards SRS no M6, todos no ar. `artifact/index.html` ≈ 461 KB. Resta da
+Fase 4: widgets de drill para M4/M5. Depois, Fase 5 (Supabase).
 
 ---
 
@@ -108,10 +108,15 @@ Ordem: M5 → M6 → M9 → M8. Todos feitos.
       `itoefl-progresso.json` + copia p/ clipboard; import mescla e recarrega.
 - [x] **Ajustes visuais** — "Prep oficial" → "Preparação independente" +
       disclaimer; marca de progresso só em h2 (61 checkboxes, não 162).
+- [x] **SRS no M6** — flashcards Leitner sobre as 50 palavras do Kit de
+      Emergência. `app/vocab_kit.json` + `app/render_srs.py` + motor em
+      `app.js`. Boxes 0–5, intervalos 0/1/3/7/16/30 dias, estado em
+      `toefl_srs_kit50_v1`. Injetado no fragmento do M6 via `build_mod6`.
+- [x] **`[hidden]` global** no `styles.css` — necessário no serve local
+      (a Artifact já injeta essa regra); corrige widgets que usam `hidden`.
 - [ ] Widgets de drill interativos para M4 (*Build a Sentence* — reordenar
-      fragmentos) e M5 (reescrita B1→C1). M3 usa o gravador; M6 abaixo.
-- [ ] Revisão espaçada (SRS) no M6 — widget de flashcards sobre as 50 palavras
-      do Kit de Emergência (`toefl_srs_*`).
+      fragmentos) e M5 (reescrita B1→C1). Único item de conteúdo interativo
+      que resta; M3 usa o gravador, M1/M2 têm quiz-drills, M6 tem os flashcards.
 
 ## Fase 5 — Backend Supabase
 
