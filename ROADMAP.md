@@ -3,11 +3,10 @@
 Memória entre sessões. Atualizar ao concluir cada etapa.
 
 **Última atualização:** 2026-09-03
-**Agora:** Fase 3 concluída — **os 10 módulos (M0–M9) estão no formato 2026 e
-ativos no build.** `artifact/index.html` = 467 KB, 121 tabelas, 0 placeholders.
-Próximo: Fase 4 (produto — cronômetro, widgets de drill p/ M3/M4, SRS no M6,
-gravador de Speaking) ou Fase 5 (Supabase). Ajuste rápido pendente: rótulo
-"Prep oficial" → "Preparação independente"; 1 checkbox por h2 (não h3).
+**Agora:** Fases 3 e boa parte da 4 concluídas. Os 10 módulos no formato 2026;
+cronômetro de seção, gravador de Speaking e export/import de progresso no ar.
+`artifact/index.html` ≈ 450 KB. Próximo: widgets de drill (M4/M5) + SRS no M6,
+ou Fase 5 (Supabase).
 
 ---
 
@@ -100,11 +99,19 @@ Ordem: M5 → M6 → M9 → M8. Todos feitos.
 
 ## Fase 4 — Produto
 
-- [ ] Cronômetro por seção no formato 2026 (Reading/Listening adaptativos)
-- [ ] Widgets de drill para M3/M4 se ainda não houver
-- [ ] Revisão espaçada (SRS) no M6
-- [ ] Gravador de Speaking para *Listen and Repeat* / *Take an Interview* (`MediaRecorder`)
-- [ ] Export/import do progresso em JSON
+- [x] **Cronômetro por seção** — widget flutuante, presets Reading 28′ /
+      Listening 18′ / Speaking 8′ / Writing 23′ / Prova 85′, beep ao zerar,
+      preset lembrado em `toefl_timer_preset`.
+- [x] **Gravador de Speaking** — widget flutuante, `getUserMedia` +
+      `MediaRecorder`, playback inline, trata permissão negada.
+- [x] **Export/import de progresso** — botões na sidebar; export baixa
+      `itoefl-progresso.json` + copia p/ clipboard; import mescla e recarrega.
+- [x] **Ajustes visuais** — "Prep oficial" → "Preparação independente" +
+      disclaimer; marca de progresso só em h2 (61 checkboxes, não 162).
+- [ ] Widgets de drill interativos para M4 (*Build a Sentence* — reordenar
+      fragmentos) e M5 (reescrita B1→C1). M3 usa o gravador; M6 abaixo.
+- [ ] Revisão espaçada (SRS) no M6 — widget de flashcards sobre as 50 palavras
+      do Kit de Emergência (`toefl_srs_*`).
 
 ## Fase 5 — Backend Supabase
 

@@ -376,4 +376,75 @@
     clearBtn.addEventListener("click", clearRec);
     toggle.addEventListener("click", function(){ wrap.classList.toggle("collapsed"); });
   })();
+
+  // ---------- Export / import de progresso ----------
+  (function(){
+    var expBtn = document.getElementById("dataExport");
+    var impBtn = document.getElementById("dataImport");
+    var fileInput = document.getElementById("dataFile");
+    var msg = document.getElementById("dataMsg");
+    if(!expBtn) return;
+
+    var PREFIX = "toefl_";
+    function flash(text, ok){
+      msg.textContent = text;
+      msg.style.color = ok === false ? "var(--danger)" : "var(--good)";
+      msg.hidden = false;
+      setTimeout(function(){ msg.hidden = true; }, 4000);
+    }
+    function collect(){
+      var out = {};
+      try{
+        for(var i = 0; i < localStorage.length; i++){
+          var k = localStorage.key(i);
+          if(k && k.indexOf(PREFIX) === 0) out[k] = localStorage.getItem(k);
+        }
+      }catch(e){}
+      return out;
+    }
+
+    expBtn.addEventListener("click", function(){
+      var payload = { app: "iTOEFL", exported: new Date().toISOString(), data: collect() };
+      var text = JSON.stringify(payload, null, 2);
+      try{
+        var blob = new Blob([text], { type: "application/json" });
+        var a = document.createElement("a");
+        a.href = URL.createObjectURL(blob);
+        a.download = "itoefl-progresso.json";
+        document.body.appendChild(a); a.click(); a.remove();
+        setTimeout(function(){ URL.revokeObjectURL(a.href); }, 1000);
+      }catch(e){}
+      if(navigator.clipboard){
+        navigator.clipboard.writeText(text).then(
+          function(){ flash("Baixado + copiado para a área de transferência."); },
+          function(){ flash("Arquivo baixado."); }
+        );
+      }else{
+        flash("Arquivo baixado.");
+      }
+    });
+
+    impBtn.addEventListener("click", function(){ fileInput.click(); });
+    fileInput.addEventListener("change", function(){
+      var f = fileInput.files && fileInput.files[0];
+      if(!f) return;
+      var reader = new FileReader();
+      reader.onload = function(){
+        try{
+          var parsed = JSON.parse(reader.result);
+          var data = parsed && parsed.data ? parsed.data : parsed;
+          var n = 0;
+          Object.keys(data).forEach(function(k){
+            if(k.indexOf(PREFIX) === 0){ localStorage.setItem(k, data[k]); n++; }
+          });
+          flash(n + " itens importados. Recarregando…");
+          setTimeout(function(){ location.reload(); }, 1200);
+        }catch(e){
+          flash("Arquivo inválido.", false);
+        }
+      };
+      reader.readAsText(f);
+      fileInput.value = "";
+    });
+  })();
 })();

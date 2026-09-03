@@ -50,6 +50,12 @@ html = f'''<title>iTOEFL</title>
     <button class="themetoggle" id="themeToggle" type="button" aria-label="Alternar tema">
       <span id="themeIcon">🌗</span><span id="themeLabel">Sistema</span>
     </button>
+    <div class="data-tools">
+      <button type="button" id="dataExport">↓ Exportar progresso</button>
+      <button type="button" id="dataImport">↑ Importar</button>
+      <input type="file" id="dataFile" accept="application/json,.json" hidden>
+      <span id="dataMsg" class="data-msg" hidden></span>
+    </div>
     <div class="foot-note">Preparação independente baseada nas especificações ETS vigentes desde 21/jan/2026. Não afiliada à ETS. Seu progresso é salvo neste navegador.</div>
   </aside>
 
