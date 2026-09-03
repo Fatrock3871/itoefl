@@ -203,3 +203,42 @@ main{padding:36px 40px 120px; min-width:0;}
 .quiz-retry:hover{background:var(--good); color:var(--surface); border-color:var(--good);}
 
 @media(max-width:640px){ main{padding:24px 18px 100px;} }
+
+/* cronômetro de seção (flutuante) */
+.sec-timer{position:fixed; right:20px; bottom:20px; z-index:50; display:flex; flex-direction:column; align-items:flex-end; gap:10px;}
+.st-toggle{
+  width:52px; height:52px; border-radius:50%; border:1px solid var(--hair);
+  background:var(--surface); box-shadow:var(--shadow); cursor:pointer; font-size:22px;
+  display:flex; align-items:center; justify-content:center; color:var(--ink); flex:none;
+}
+.st-toggle:hover{border-color:var(--accent);}
+.sec-timer.running .st-toggle{border-color:var(--accent); color:var(--accent);}
+.st-panel{
+  background:var(--surface); border:1px solid var(--hair); border-radius:var(--radius);
+  box-shadow:var(--shadow); padding:16px; width:240px; display:flex; flex-direction:column; gap:12px;
+}
+.sec-timer.collapsed .st-panel{display:none;}
+.st-display{
+  font-family:'IBM Plex Mono',monospace; font-size:34px; font-weight:600; text-align:center;
+  color:var(--ink); letter-spacing:0.02em; font-variant-numeric:tabular-nums;
+}
+.sec-timer.running .st-display{color:var(--accent);}
+.sec-timer.done .st-display{color:var(--danger); animation:st-flash .5s steps(1) infinite;}
+@keyframes st-flash{50%{opacity:.25;}}
+.st-presets{display:flex; flex-wrap:wrap; gap:6px;}
+.st-presets button{
+  padding:5px 9px; border-radius:8px; border:1px solid var(--hair); background:var(--surface);
+  font-family:'IBM Plex Mono',monospace; font-size:10.5px; color:var(--ink-dim); cursor:pointer;
+}
+.st-presets button:hover{border-color:var(--accent); color:var(--ink);}
+.st-presets button.active{background:var(--accent-soft); border-color:var(--accent); color:var(--ink); font-weight:600;}
+.st-controls{display:flex; gap:8px;}
+.st-controls button{
+  flex:1; padding:9px 0; border-radius:9px; border:1px solid var(--hair); background:var(--surface);
+  font-family:inherit; font-size:13px; font-weight:600; color:var(--ink); cursor:pointer;
+}
+.st-controls button:hover{border-color:var(--accent);}
+.st-primary{background:var(--accent) !important; color:var(--accent-ink) !important; border-color:var(--accent) !important;}
+.st-primary:hover{filter:brightness(1.06);}
+@media(max-width:640px){ .sec-timer{right:12px; bottom:12px;} .st-panel{width:200px;} }
+@media print{ .sec-timer{display:none;} }

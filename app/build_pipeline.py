@@ -112,7 +112,8 @@ def add_progress_hooks(html, modkey):
         return (f'<{tag} id="{pid}h" class="prog-head">'
                 f'<label class="prog-check"><input type="checkbox" data-pid="{pid}" class="pchk"><span class="box"></span></label>'
                 f'<span class="htext">{text}</span></{tag}>')
-    return re.sub(r"<(h2|h3)>(.*?)</\1>", repl, html)
+    # apenas h2 (uma marca de progresso por Parte/Seção, não por subseção)
+    return re.sub(r"<(h2)>(.*?)</\1>", repl, html)
 
 
 def main():

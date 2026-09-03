@@ -213,4 +213,89 @@
 
     renderSummary();
   });
+
+  // ---------- Cronômetro de seção ----------
+  (function(){
+    var wrap = document.getElementById("secTimer");
+    if(!wrap) return;
+    var display = document.getElementById("stDisplay");
+    var presets = document.getElementById("stPresets");
+    var startBtn = document.getElementById("stStart");
+    var resetBtn = document.getElementById("stReset");
+    var toggle = document.getElementById("stToggle");
+
+    var LS_PRESET = "toefl_timer_preset";
+    var minutes = parseInt(safeGet(LS_PRESET), 10);
+    if(!minutes || minutes < 1) minutes = 28;
+    var remaining = minutes * 60;   // segundos
+    var tick = null;
+
+    function fmt(s){
+      var m = Math.floor(s / 60), r = s % 60;
+      return (m < 10 ? "0" : "") + m + ":" + (r < 10 ? "0" : "") + r;
+    }
+    function render(){ display.textContent = fmt(Math.max(0, remaining)); }
+    function markPreset(){
+      Array.prototype.forEach.call(presets.children, function(b){
+        b.classList.toggle("active", parseInt(b.dataset.min, 10) === minutes);
+      });
+    }
+    function stop(){
+      if(tick){ clearInterval(tick); tick = null; }
+      wrap.classList.remove("running");
+      startBtn.textContent = "Iniciar";
+    }
+    function beep(){
+      try{
+        var Ctx = window.AudioContext || window.webkitAudioContext;
+        if(!Ctx) return;
+        var ac = new Ctx(), o = ac.createOscillator(), g = ac.createGain();
+        o.connect(g); g.connect(ac.destination);
+        o.type = "sine"; o.frequency.value = 880;
+        g.gain.setValueAtTime(0.001, ac.currentTime);
+        g.gain.exponentialRampToValueAtTime(0.2, ac.currentTime + 0.02);
+        g.gain.exponentialRampToValueAtTime(0.001, ac.currentTime + 0.6);
+        o.start(); o.stop(ac.currentTime + 0.6);
+      }catch(e){}
+    }
+    function finish(){
+      stop();
+      wrap.classList.add("done");
+      beep();
+      setTimeout(function(){ wrap.classList.remove("done"); }, 6000);
+    }
+    function start(){
+      if(tick) return;
+      if(remaining <= 0) remaining = minutes * 60;
+      wrap.classList.remove("done");
+      wrap.classList.add("running");
+      startBtn.textContent = "Pausar";
+      tick = setInterval(function(){
+        remaining--;
+        render();
+        if(remaining <= 0) finish();
+      }, 1000);
+    }
+    function reset(){
+      stop();
+      wrap.classList.remove("done");
+      remaining = minutes * 60;
+      render();
+    }
+
+    presets.addEventListener("click", function(e){
+      var b = e.target.closest("button[data-min]");
+      if(!b) return;
+      minutes = parseInt(b.dataset.min, 10);
+      safeSet(LS_PRESET, String(minutes));
+      markPreset();
+      reset();
+    });
+    startBtn.addEventListener("click", function(){ tick ? stop() : start(); });
+    resetBtn.addEventListener("click", reset);
+    toggle.addEventListener("click", function(){ wrap.classList.toggle("collapsed"); });
+
+    markPreset();
+    render();
+  })();
 })();

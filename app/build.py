@@ -37,7 +37,7 @@ html = f'''<title>iTOEFL</title>
 <div class="shell">
   <aside class="side">
     <div class="brand">
-      <span class="mark">Prep oficial</span>
+      <span class="mark">Preparação independente</span>
       <span class="name">iTOEFL</span>
     </div>
     <div class="overall-progress">
@@ -50,12 +50,32 @@ html = f'''<title>iTOEFL</title>
     <button class="themetoggle" id="themeToggle" type="button" aria-label="Alternar tema">
       <span id="themeIcon">🌗</span><span id="themeLabel">Sistema</span>
     </button>
-    <div class="foot-note">Reconstruído sobre as especificações ETS vigentes desde 21/jan/2026. Seu progresso é salvo neste navegador.</div>
+    <div class="foot-note">Preparação independente baseada nas especificações ETS vigentes desde 21/jan/2026. Não afiliada à ETS. Seu progresso é salvo neste navegador.</div>
   </aside>
 
   <main id="mainArea">
     {panels}
   </main>
+</div>
+
+<div id="secTimer" class="sec-timer collapsed">
+  <div class="st-panel">
+    <div class="st-display" id="stDisplay">28:00</div>
+    <div class="st-presets" id="stPresets">
+      <button type="button" data-min="28" class="active">Reading 28′</button>
+      <button type="button" data-min="18">Listening 18′</button>
+      <button type="button" data-min="8">Speaking 8′</button>
+      <button type="button" data-min="23">Writing 23′</button>
+      <button type="button" data-min="85">Prova completa 85′</button>
+    </div>
+    <div class="st-controls">
+      <button type="button" id="stStart" class="st-primary">Iniciar</button>
+      <button type="button" id="stReset">Zerar</button>
+    </div>
+  </div>
+  <button class="st-toggle" id="stToggle" type="button" aria-label="Cronômetro de seção">
+    <span id="stFace">⏱</span>
+  </button>
 </div>
 
 <script>
