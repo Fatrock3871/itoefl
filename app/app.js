@@ -12,8 +12,26 @@
   var LS_THEME = "toefl_theme_v1";
   var LS_QUIZ = "toefl_quiz_mod0_v1";
 
+  // chaves que sincronizam com o Supabase (progresso real do aluno).
+  // ficam de fora: toefl_theme_v1, toefl_active_tab, toefl_timer_preset, toefl_sync_*
+  var SYNC_PREFIXES = ["toefl_progress", "toefl_srs_", "toefl_bsq_", "toefl_quiz_"];
+  function isSyncedKey(key){
+    if(!key || key.indexOf("toefl_") !== 0) return false;
+    for(var i = 0; i < SYNC_PREFIXES.length; i++){
+      if(key.indexOf(SYNC_PREFIXES[i]) === 0) return true;
+    }
+    return false;
+  }
+  var onSyncedWrite = null; // atribuído pelo módulo de sync quando logado
+
   function safeGet(key){ try { return localStorage.getItem(key); } catch(e){ return null; } }
-  function safeSet(key, val){ try { localStorage.setItem(key, val); } catch(e){} }
+  function safeSet(key, val){
+    try { localStorage.setItem(key, val); } catch(e){}
+    if(isSyncedKey(key)){
+      try { localStorage.setItem("toefl_dirty", "1"); } catch(e){}
+      if(onSyncedWrite){ try { onSyncedWrite(); } catch(e){} }
+    }
+  }
 
   // ---------- Theme ----------
   var root = document.documentElement;
@@ -678,4 +696,138 @@
     buildQueue(false);
     renderCard();
   });
+
+  // ---------- Contas + sincronização (Supabase) ----------
+  (function(){
+    var box = document.getElementById("authBox");
+    if(!box) return;
+    var cfg = window.ITOEFL_SUPABASE;
+    if(!cfg || !cfg.url || !cfg.anonKey || !window.supabase || !window.supabase.createClient){
+      return; // não configurado ou lib não carregou → app segue offline
+    }
+    box.hidden = false;
+
+    var signInBtn = document.getElementById("authSignIn");
+    var signedIn = document.getElementById("authIn");
+    var emailEl = document.getElementById("authEmail");
+    var signOutBtn = document.getElementById("authSignOut");
+    var msgEl = document.getElementById("authMsg");
+
+    var client = window.supabase.createClient(cfg.url, cfg.anonKey);
+    var uid = null, pushTimer = null;
+
+    function msg(text, kind){
+      msgEl.textContent = text;
+      msgEl.style.color = kind === "err" ? "var(--danger)"
+        : kind === "ok" ? "var(--good)" : "var(--ink-dim)";
+      msgEl.hidden = false;
+      if(kind === "ok"){ setTimeout(function(){ msgEl.hidden = true; }, 3500); }
+    }
+
+    function collectSynced(){
+      var out = {};
+      try{
+        for(var i = 0; i < localStorage.length; i++){
+          var k = localStorage.key(i);
+          if(isSyncedKey(k)) out[k] = localStorage.getItem(k);
+        }
+      }catch(e){}
+      return out;
+    }
+    function applyBundle(bundle){
+      var changed = 0;
+      Object.keys(bundle || {}).forEach(function(k){
+        if(!isSyncedKey(k)) return;
+        if(localStorage.getItem(k) !== bundle[k]){
+          try { localStorage.setItem(k, bundle[k]); changed++; } catch(e){}
+        }
+      });
+      return changed;
+    }
+
+    function push(){
+      if(!uid) return;
+      var bundle = collectSynced();
+      var stamp = new Date().toISOString();
+      client.from("user_state")
+        .upsert({ user_id: uid, state: bundle, updated_at: stamp }, { onConflict: "user_id" })
+        .select("updated_at").single()
+        .then(function(res){
+          if(res.error){ msg("Falha ao salvar na nuvem.", "err"); return; }
+          try {
+            localStorage.setItem("toefl_sync_at", res.data.updated_at);
+            localStorage.removeItem("toefl_dirty");
+          } catch(e){}
+          msg("Sincronizado.", "ok");
+        });
+    }
+    function schedulePush(){
+      if(pushTimer) clearTimeout(pushTimer);
+      pushTimer = setTimeout(push, 2500);
+    }
+
+    function pull(){
+      client.from("user_state").select("state, updated_at").eq("user_id", uid).maybeSingle()
+        .then(function(res){
+          if(res.error){ msg("Erro ao sincronizar.", "err"); return; }
+          var dirty = safeGet("toefl_dirty") === "1";
+          if(!res.data){
+            push(); // nada na nuvem ainda → envia o que há neste dispositivo
+            return;
+          }
+          var syncAt = safeGet("toefl_sync_at");
+          if(dirty){
+            // edições locais não enviadas ganham; mescla o resto da nuvem
+            var merged = res.data.state || {};
+            var local = collectSynced();
+            Object.keys(local).forEach(function(k){ merged[k] = local[k]; });
+            if(applyBundle(merged)){ /* nada visual — vamos empurrar merged */ }
+            push();
+          }else if(!syncAt || res.data.updated_at > syncAt){
+            // nuvem mais recente que este dispositivo → aplica e recarrega
+            var n = applyBundle(res.data.state || {});
+            try { localStorage.setItem("toefl_sync_at", res.data.updated_at); } catch(e){}
+            if(n > 0) location.reload();
+          }
+          // senão: já está em dia
+        });
+    }
+
+    function goOnline(session){
+      uid = session.user.id;
+      emailEl.textContent = session.user.email || "conectado";
+      signInBtn.hidden = true;
+      signedIn.hidden = false;
+      onSyncedWrite = schedulePush;
+      pull();
+    }
+    function goOffline(){
+      uid = null;
+      onSyncedWrite = null;
+      signInBtn.hidden = false;
+      signedIn.hidden = true;
+    }
+
+    signInBtn.addEventListener("click", function(){
+      var email = window.prompt("Seu e-mail — enviaremos um link de acesso:");
+      if(!email) return;
+      var redirect = location.href.split("#")[0].split("?")[0];
+      client.auth.signInWithOtp({ email: email.trim(), options: { emailRedirectTo: redirect } })
+        .then(function(res){
+          msg(res.error ? ("Erro: " + res.error.message) : "Link enviado — confira seu e-mail.",
+              res.error ? "err" : "ok");
+        });
+    });
+    signOutBtn.addEventListener("click", function(){
+      client.auth.signOut().then(goOffline);
+    });
+
+    client.auth.onAuthStateChange(function(event, session){
+      if(session && session.user) goOnline(session);
+      else goOffline();
+    });
+    client.auth.getSession().then(function(res){
+      if(res.data && res.data.session) goOnline(res.data.session);
+    });
+  })();
 })();

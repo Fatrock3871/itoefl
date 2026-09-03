@@ -43,8 +43,10 @@ app/app.js                Runtime: tema, abas, progresso (checkboxes + badges), 
 app/styles.css            Estilo (tema claro/escuro/sistema)
 app/module_fragments*.json  Saída do pipeline (gerado; não editar)
 artifact/index.html       Site final (gerado; não editar)
-supabase/schema.sql       Backend planejado: conteúdo público + progresso por aluno (RLS)
-supabase/quiz_export.json Dados de quiz/drill prontos para popular o banco
+supabase/schema.sql       Backend (MVP): profiles + user_state (jsonb) com RLS
+supabase/schema-content-optional.sql   Tabelas de conteúdo — só se um dia servir do banco
+supabase/content-seed-optional.json    Seed das tabelas de conteúdo (opcional)
+app/supabase_config.json  Credenciais (gitignored; .example commitado). Sem ele → modo offline
 scripts/serve.py          Servidor local
 docs/                     Análises e notas de decisão
 _archive/                 Versão pré-2026: index.html monolítico + os 10 .md antigos
@@ -140,9 +142,17 @@ removido; os originais pré-2026 dos 10 módulos seguem em
 
 `localStorage`, chaves com prefixo `toefl_`: `toefl_progress_v1` (checkboxes),
 `toefl_theme_v1`, `toefl_active_tab`, `toefl_quiz_<drillId>_v1`,
-`toefl_timer_preset`, `toefl_srs_kit50_v1`. Os botões Exportar/Importar na
-sidebar empacotam todas as chaves `toefl_*` em JSON. Ao mudar o formato do
-estado, escrever migração — não descartar progresso salvo.
+`toefl_timer_preset`, `toefl_srs_kit50_v1`, `toefl_bsq_m4build_v1`.
+
+**Sincronização:** quando o Supabase está configurado e o aluno logado, as chaves
+que casam com `SYNC_PREFIXES` em `app.js` (`toefl_progress`, `toefl_srs_`,
+`toefl_bsq_`, `toefl_quiz_`) são empacotadas num blob e salvas em
+`user_state.state`. `safeSet` marca `toefl_dirty` e agenda um push debounced.
+`toefl_theme_v1`, `toefl_active_tab`, `toefl_timer_preset` ficam sempre locais.
+`toefl_sync_at` / `toefl_dirty` são internos do sync. Setup: `docs/supabase-setup.md`.
+
+Os botões Exportar/Importar na sidebar empacotam todas as chaves `toefl_*` em
+JSON. Ao mudar o formato do estado, escrever migração — não descartar progresso.
 
 ## Onde estamos
 

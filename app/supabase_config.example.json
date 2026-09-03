@@ -1,0 +1,5 @@
+{
+  "_comment": "Copie este arquivo para app/supabase_config.json e preencha com os dados do seu projeto Supabase (Dashboard > Project Settings > API). O arquivo real fica no .gitignore. Sem ele, o app funciona normalmente em modo offline (localStorage).",
+  "url": "https://SEU-PROJETO.supabase.co",
+  "anonKey": "SUA-ANON-KEY-PUBLICA"
+}

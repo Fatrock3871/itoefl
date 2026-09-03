@@ -29,6 +29,30 @@ panels = "\n".join(
 CSS = open("styles.css", encoding="utf-8").read()
 JS = open("app.js", encoding="utf-8").read()
 
+# ---- Supabase (opcional): só entra se app/supabase_config.json existir e estiver preenchido ----
+supa_url = supa_key = ""
+try:
+    with open("supabase_config.json", encoding="utf-8-sig") as _f:
+        _cfg = json.load(_f)
+    supa_url = (_cfg.get("url") or "").strip()
+    supa_key = (_cfg.get("anonKey") or "").strip()
+    if "SEU-PROJETO" in supa_url or "SUA-ANON" in supa_key:
+        supa_url = supa_key = ""
+except FileNotFoundError:
+    pass
+except (json.JSONDecodeError, OSError) as _e:
+    print(f"supabase: config invalida ({_e}) — seguindo offline")
+
+SUPA_HEAD = ""
+if supa_url and supa_key:
+    SUPA_HEAD = (
+        f'<script>window.ITOEFL_SUPABASE={json.dumps({"url": supa_url, "anonKey": supa_key})};</script>\n'
+        '<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.js"></script>'
+    )
+    print("supabase: configurado")
+else:
+    print("supabase: nao configurado (modo offline)")
+
 html = f'''<title>iTOEFL</title>
 <style>
 {CSS}
@@ -50,6 +74,14 @@ html = f'''<title>iTOEFL</title>
     <button class="themetoggle" id="themeToggle" type="button" aria-label="Alternar tema">
       <span id="themeIcon">🌗</span><span id="themeLabel">Sistema</span>
     </button>
+    <div class="auth-box" id="authBox" hidden>
+      <button type="button" id="authSignIn">Entrar para sincronizar</button>
+      <div id="authIn" hidden>
+        <span id="authEmail" class="auth-email"></span>
+        <button type="button" id="authSignOut">Sair</button>
+      </div>
+      <span id="authMsg" class="auth-msg" hidden></span>
+    </div>
     <div class="data-tools">
       <button type="button" id="dataExport">↓ Exportar progresso</button>
       <button type="button" id="dataImport">↑ Importar</button>
@@ -100,6 +132,7 @@ html = f'''<title>iTOEFL</title>
   </div>
 </div>
 
+{SUPA_HEAD}
 <script>
 {JS}
 </script>

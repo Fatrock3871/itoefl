@@ -3,10 +3,11 @@
 Memória entre sessões. Atualizar ao concluir cada etapa.
 
 **Última atualização:** 2026-09-03
-**Agora:** Fases 3 e 4 concluídas. Os 10 módulos no formato 2026; cronômetro de
-seção, gravador de Speaking, export/import de progresso, flashcards SRS (M6) e
-widget de Build a Sentence (M4), todos no ar. `artifact/index.html` ≈ 480 KB.
-Próximo: Fase 5 (backend Supabase) ou publicação (Fase 6).
+**Agora:** Fases 3, 4 e o código da 5 concluídos. Os 10 módulos no formato 2026;
+todos os widgets no ar; auth + sync Supabase implementados no `app.js` (dormem
+até o usuário preencher `app/supabase_config.json` — ver `docs/supabase-setup.md`).
+`artifact/index.html` ≈ 488 KB. Próximo: usuário provisiona o Supabase, depois
+Fase 6 (publicação).
 
 ---
 
@@ -121,13 +122,31 @@ Ordem: M5 → M6 → M9 → M8. Todos feitos.
       referência de correção; não se beneficia de widget (é produção livre
       sem gabarito único). Fase 4 de conteúdo interativo considerada completa.
 
-## Fase 5 — Backend Supabase
+## Fase 5 — Backend Supabase (código pronto; falta o usuário provisionar)
 
-- [ ] Usuário cria projeto Supabase e passa URL + anon key
-- [ ] Aplicar `supabase/schema.sql`
-- [ ] Popular tabelas de conteúdo com `quiz_export.json` + os módulos
-- [ ] Login (magic link) no `app.js`; migrar progresso de localStorage → banco
-- [ ] Fallback para localStorage quando deslogado
+Toda a parte de código foi feita. O que resta é operação (passos em
+`docs/supabase-setup.md`).
+
+- [x] **Schema simplificado** — `supabase/schema.sql` reescrito: `profiles` +
+      `user_state` (jsonb, uma linha por usuário) + RLS + gatilho de perfil no
+      signup. As tabelas de conteúdo e o seed viraram
+      `supabase/schema-content-optional.sql` / `content-seed-optional.json`
+      (só se um dia servir conteúdo do banco).
+- [x] **Login (magic link) + sync no `app.js`** — módulo de auth na sidebar
+      (`authBox`, oculto se não configurado). `signInWithOtp` por e-mail,
+      `onAuthStateChange`, pull no login (recarrega se a nuvem for mais nova),
+      push debounced (2,5 s) a cada escrita de chave sincronizável.
+- [x] **Merge offline** — `toefl_dirty` marca edições não enviadas; no pull,
+      edições locais ganham e o resto da nuvem é mesclado.
+- [x] **Fallback offline** — sem config ou deslogado, o app é exatamente o de
+      antes (localStorage puro). `build.py` tolera config ausente/BOM/inválida.
+- [x] **`app/supabase_config.example.json`** commitado; `.json` real gitignored.
+- [x] **`docs/supabase-setup.md`** — passo a passo (criar projeto, rodar schema,
+      URLs de auth, preencher config, rebuild, troubleshooting).
+- [ ] **Usuário:** criar o projeto Supabase, rodar o schema, preencher
+      `app/supabase_config.json`, rebuildar. Testar o fluxo de login.
+- [ ] Testar sync real com 2 dispositivos/navegadores (só possível após o passo
+      acima).
 
 ## Fase 6 — Publicação
 
