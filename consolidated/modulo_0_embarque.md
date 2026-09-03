@@ -303,8 +303,8 @@ Preencha este quadro toda semana, sempre no mesmo dia, para visualizar tendênci
 | Sinal | O que indica | Ação recomendada |
 |---|---|---|
 | Queda de % acerto após módulo teoricamente dominado | Fadiga ou falta de prática espaçada | Revisão espaçada (spaced repetition) do módulo |
-| Nota qualitativa de Writing/Speaking estagnada apesar de mais prática | Prática sem feedback corretivo | Buscar correção externa ou usar rubricas oficiais do Módulo 3/4 |
-| % de fidelidade em Listen and Repeat abaixo de 70% | Déficit de escuta ativa e memória de curto prazo para estruturas complexas | Intensificar drills de shadowing (Módulo 4) |
+| Nota qualitativa de Writing/Speaking estagnada apesar de mais prática | Prática sem feedback corretivo | Buscar correção externa ou usar rubricas oficiais dos Módulos 3 e 4 |
+| % de fidelidade em Listen and Repeat abaixo de 70% | Déficit de escuta ativa e memória de curto prazo para estruturas complexas | Intensificar drills de shadowing (Módulo 3 — Speaking) |
 | Banda geral estagnada por 3+ semanas | Plano de estudo desalinhado com o nível real | Reexecutar o Teste de Nivelamento e recalibrar cronograma |
 
 ---
@@ -318,9 +318,9 @@ Preencha este quadro toda semana, sempre no mesmo dia, para visualizar tendênci
 | Semana | Foco principal | Módulos | Entregável da semana |
 |---|---|---|---|
 | 1 | Diagnóstico + Reading (Complete the Words, Read Academic Passage) | Módulo 0 + Módulo 1 | Simulado de Reading cronometrado |
-| 2 | Listening (todos os 4 tipos de task) + Build a Sentence | Módulo 2 + parte do Módulo 3 | Simulado de Listening + drill de Build a Sentence |
-| 3 | Write an Email + Write for an Academic Discussion + Listen and Repeat | Módulo 3 + Módulo 4 | 5 e-mails e 5 parágrafos corrigidos; 20 repetições gravadas |
-| 4 | Take an Interview + simulado completo + revisão de erros recorrentes | Módulo 4 + Módulo 7 | Simulado completo cronometrado (1h23–1h29min) |
+| 2 | Listening (todos os 4 tipos de task) + Build a Sentence | Módulo 2 + parte do Módulo 4 | Simulado de Listening + drill de Build a Sentence |
+| 3 | Write an Email + Write for an Academic Discussion + Listen and Repeat | Módulo 4 + Módulo 3 | 5 e-mails e 5 parágrafos corrigidos; 20 repetições gravadas |
+| 4 | Take an Interview + simulado completo + revisão de erros recorrentes | Módulo 3 + Módulo 7 | Simulado completo cronometrado (1h23–1h29min) |
 
 ### 6.2 Standard — 60 Dias (recomendado para a maioria dos candidatos)
 
@@ -328,8 +328,8 @@ Preencha este quadro toda semana, sempre no mesmo dia, para visualizar tendênci
 |---|---|---|---|
 | 1–2 | Diagnóstico, fundamentos gramaticais/lexicais, Reading completo | Módulo 0 + Módulo 1 | Banda estimada de Reading estabilizada |
 | 3–4 | Listening completo (router + módulos inferior/superior) | Módulo 2 | Banda estimada de Listening estabilizada |
-| 5–6 | Writing completo (Build a Sentence, Write an Email, Write for an Academic Discussion) | Módulo 3 | 10 textos corrigidos com rubrica oficial |
-| 7 | Speaking completo (Listen and Repeat, Take an Interview) | Módulo 4 | % de fidelidade e nota qualitativa estabilizadas |
+| 5–6 | Writing completo (Build a Sentence, Write an Email, Write for an Academic Discussion) | Módulo 4 | 10 textos corrigidos com rubrica oficial |
+| 7 | Speaking completo (Listen and Repeat, Take an Interview) | Módulo 3 | % de fidelidade e nota qualitativa estabilizadas |
 | 8 | Simulados completos + revisão integrada + ajuste fino | Módulo 7 | 2 simulados completos cronometrados |
 
 ### 6.3 Premium — 90 Dias (recomendado para quem parte de B1 ou tem meta C1/C2)
@@ -339,8 +339,8 @@ Preencha este quadro toda semana, sempre no mesmo dia, para visualizar tendênci
 | 1–3 | Fundamentos intensivos: gramática, vocabulário acadêmico, conectivos | Módulo 0 | Reteste do Nivelamento Express — meta: +2 questões |
 | 4–6 | Reading completo + reforço de vocabulário de alta frequência | Módulo 1 | Banda 4.0+ em simulados de Reading |
 | 7–9 | Listening completo + treino de discurso conectado/idiomático | Módulo 2 | Banda 4.0+ em simulados de Listening |
-| 10–11 | Writing completo com ciclos de correção e reescrita | Módulo 3 | Nota qualitativa 4.5+ consistente |
-| 12 | Speaking completo com foco em prosódia e fidelidade | Módulo 4 | % fidelidade 85%+ em Listen and Repeat |
+| 10–11 | Writing completo com ciclos de correção e reescrita | Módulo 4 | Nota qualitativa 4.5+ consistente |
+| 12 | Speaking completo com foco em prosódia e fidelidade | Módulo 3 | % fidelidade 85%+ em Listen and Repeat |
 | 13 | Simulados completos + polimento final + gestão de ansiedade de prova | Módulo 7 | 3 simulados completos, banda geral estável na meta |
 
 > 📌 Semanas 13 do Premium equivalem à semana final de qualquer cronograma — sempre termine com simulados completos cronometrados, nunca apenas prática isolada por task.
@@ -361,10 +361,10 @@ Ative este protocolo se: (a) você está a menos de 7 dias da prova e está atr�
 
 | # | Alavancador | Onde ganhar pontos rápido | Módulo de referência |
 |---|---|---|---|
-| **1** | **Templates de Write an Email** | Estruturas prontas de abertura/pedido/fechamento formal cobrem a maioria das situações navegacionais — decore 3 esqueletos e adapte | Módulo 3 |
-| **2** | **Frameworks de resposta para Take an Interview** | Estrutura fixa de resposta curta (posição + razão + exemplo rápido) elimina hesitação e maximiza clareza nos 4 itens | Módulo 4 |
-| **3** | **Precisão gramatical em Build a Sentence** | 10 itens, 1 ponto cada, corrigidos por máquina — são os pontos "mais baratos" de garantir com prática de estrutura de frase | Módulo 3 |
-| **4** | **Drills de Listen and Repeat (prosódia + fidelidade)** | 7 itens valendo 5 pontos cada (35 pontos brutos só aqui) — o maior bloco de pontos concentrado do Speaking | Módulo 4 |
+| **1** | **Templates de Write an Email** | Estruturas prontas de abertura/pedido/fechamento formal cobrem a maioria das situações navegacionais — decore 3 esqueletos e adapte | Módulo 4 |
+| **2** | **Frameworks de resposta para Take an Interview** | Estrutura fixa de resposta curta (posição + razão + exemplo rápido) elimina hesitação e maximiza clareza nos 4 itens | Módulo 3 |
+| **3** | **Precisão gramatical em Build a Sentence** | 10 itens, 1 ponto cada, corrigidos por máquina — são os pontos "mais baratos" de garantir com prática de estrutura de frase | Módulo 4 |
+| **4** | **Drills de Listen and Repeat (prosódia + fidelidade)** | 7 itens valendo 5 pontos cada (35 pontos brutos só aqui) — o maior bloco de pontos concentrado do Speaking | Módulo 3 |
 | **5** | **Protocolo de Complete the Words** | 30 itens no Reading (o maior bloco de itens pontuados do exame) — domínio do padrão de ordenação lexical rende ganho de banda desproporcional | Módulo 1 |
 
 ### 7.4 Protocolo de Recuperação de 7 Dias
@@ -374,9 +374,9 @@ Ative este protocolo se: (a) você está a menos de 7 dias da prova e está atr�
 | **1** | Reteste do Nivelamento Express + revisão do gabarito comentado (Parte 3) |
 | **2** | Sessão intensiva: Complete the Words (Módulo 1) — 3 sets cronometrados |
 | **3** | Sessão intensiva: Listen and Choose a Response + Listen to Academic Talk (Módulo 2) |
-| **4** | Sessão intensiva: Build a Sentence + Write an Email (Módulo 3) — 5 e-mails com correção |
-| **5** | Sessão intensiva: Listen and Repeat (Módulo 4) — 15 repetições gravadas e revisadas |
-| **6** | Sessão intensiva: Take an Interview (Módulo 4) — 8 perguntas simuladas |
+| **4** | Sessão intensiva: Build a Sentence + Write an Email (Módulo 4) — 5 e-mails com correção |
+| **5** | Sessão intensiva: Listen and Repeat (Módulo 3) — 15 repetições gravadas e revisadas |
+| **6** | Sessão intensiva: Take an Interview (Módulo 3) — 8 perguntas simuladas |
 | **7** | Simulado completo cronometrado (1h23–1h29min) + registro no Dashboard |
 
 > ⚠️ **Regra do plano de emergência:** nunca pule o simulado final do Dia 7, mesmo que o tempo esteja curtíssimo. Familiaridade com o timing real do exame adaptativo é, por si, um ganho de pontos.

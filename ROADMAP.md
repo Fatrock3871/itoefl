@@ -3,8 +3,8 @@
 Memória entre sessões. Atualizar ao concluir cada etapa.
 
 **Última atualização:** 2026-09-02
-**Agora:** Fundação + reestruturação concluídas. Build roda ponta a ponta.
-Próximo alvo: portar M6 (Vocabulary) para o pipeline no formato 2026.
+**Agora:** Fases 0–2 concluídas (fundação, adoção do pacote, auditoria de M0–M4/M7).
+Próximo alvo: Fase 3 — portar M6 (Vocabulary) para o pipeline no formato 2026.
 
 ---
 
@@ -43,12 +43,22 @@ Próximo alvo: portar M6 (Vocabulary) para o pipeline no formato 2026.
 - [x] Smoke-test: HTTP 200, 6 painéis, 8 quiz-drills, 143 checkboxes, 0 placeholders
 - [ ] Usuário abrir `artifact/index.html` no navegador e validar visualmente
 
-## Fase 2 — Auditar o que já veio pronto (M0–M4, M7)
+## Fase 2 — Auditar o que já veio pronto (M0–M4, M7) ✅
 
-- [ ] Ler cada `consolidated/*.md` e conferir contra o formato 2026 do `CLAUDE.md`
-- [ ] Conferir os 7 drills (3 Reading + 4 Listening) — respostas e explicações
-- [ ] Conferir a calculadora de score do M0 (bandas CEFR)
-- [ ] Listar lacunas: M3/M4 têm drills interativos? M7 tem cronômetro?
+- [x] Formato 2026 verificado contra fontes públicas — material da consolidação confiável
+- [x] Lidos os 6 módulos (`modulo_0,1,2,3,4,7`) — todos no formato 2026, qualidade alta
+- [x] Corrigido: mapa de módulos trocado no M0 (M3=Speaking, M4=Writing) — ~15 refs
+- [x] Corrigido: refs a "Módulo 5/6" no M7 → reapontadas para M3/M4/M1
+- [x] Corrigido: artefatos "Digite MÓDULO N" removidos de M1/M2/M7 + `</content>` solto no M1
+- [x] Rebuild limpa; relatório em `docs/auditoria-modulos-2026.md`
+- Lacunas observadas (não bloqueiam): M3/M4 são texto+drills em papel, sem widget
+  interativo como M1/M2; M7 descreve o cronômetro mas não o implementa; a
+  calculadora de score do M0 é tabela de referência, não um widget.
+
+### Pendências desta fase (dependem da decisão sobre o M5)
+
+- [ ] M7 Parte 1: "Após Módulos 1–5 / Módulo 6" como pré-requisito dos simulados
+- [ ] Decidir destino do M5 (ver Fase 3)
 
 ## Fase 3 — Portar os 4 módulos que faltam
 

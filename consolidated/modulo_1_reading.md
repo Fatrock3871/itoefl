@@ -452,9 +452,4 @@ A frase é seguida imediatamente por: *"...bioluminescence is considered one of 
 
 ---
 
----
-
 *✅ Módulo 1 concluído — formato 2026 (Router + Complete the Words + Read in Daily Life + Read an Academic Passage).*
-
-*Digite **"MÓDULO 2"** para gerar o conteúdo completo do **Módulo 2: Listening — The Second Pillar**, no formato adaptativo 2026, incluindo Game Rules, AI Hack, Action Drills e Gabarito Comentado Profissional.*
-</content>

@@ -586,8 +586,4 @@ O professor afirma: *"a complete absence of options is its own problem."* Isso i
 
 ---
 
----
-
 *✅ Módulo 2 concluído.*
-
-*Digite **"MÓDULO 3"** para gerar o conteúdo completo do **Módulo 3: Speaking — The Third Pillar**, incluindo Game Rules, AI Hack (como o SpeechRater™ da ETS avalia Listen and Repeat e Take an Interview), Action Drills e Gabarito Comentado.*

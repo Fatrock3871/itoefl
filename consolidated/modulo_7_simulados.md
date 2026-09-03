@@ -70,7 +70,7 @@ READING                                  LISTENING
 | **1** | Realize cada simulado em sessão única e ininterrupta | O teste real dura ~1h23–1h29min sem pausas longas entre a maioria das seções — fragmentar o treino elimina o efeito de foco sustentado que você está calibrando |
 | **2** | Trate cada item do **módulo router** (Reading e Listening) com o mesmo cuidado que um item de alto peso | O router decide sua rota de dificuldade — um erro por pressa no início pode rebaixar o teto de banda disponível no restante da seção |
 | **3** | Use papel para anotações de Listening e Speaking (não digite no computador) | Simula o material físico do centro de testes |
-| **4** | No Simulado 2: consulte templates e frameworks do Módulo 5/6 abertamente | A fixação de estrutura é o objetivo — não há mérito em travar sem referência nesta fase |
+| **4** | No Simulado 2: consulte os frameworks de Speaking (Módulo 3) e os templates de Writing (Módulo 4) abertamente | A fixação de estrutura é o objetivo — não há mérito em travar sem referência nesta fase |
 | **5** | No Simulado 3 e 4: nenhuma consulta a qualquer material | A pressão real — e o comportamento do router sob pressão — só aparece sem rede de segurança |
 | **6** | Grave TODAS as respostas de Speaking (app de gravação no celular) | Speaking agora é 100% corrigido por IA (SpeechRater) com foco em fidelidade e elaboração — sem gravação, sua auto-avaliação é sistematicamente otimista |
 | **7** | Preencha o Protocolo de Análise de Erros (Parte 6) imediatamente após | Análise fria e imediata é mais precisa do que retrospectiva de dois dias depois |
@@ -108,7 +108,7 @@ READING                                  LISTENING
 
 ## PARTE 3: SIMULADO 2 — INTERMEDIÁRIO (Sem Cronômetro, Fixação de Template)
 
-> **Objetivo:** Fixar a mecânica de cada tipo de item novo do formato 2026 sem a pressão do cronômetro. Consulte frameworks do Módulo 5/6 abertamente durante Speaking e Writing. Para Reading e Listening, não consulte materiais — mas releia o gabarito imediatamente após cada seção. Este é um conjunto **abreviado** (amostra representativa de cada tipo de item, não a seção completa).
+> **Objetivo:** Fixar a mecânica de cada tipo de item novo do formato 2026 sem a pressão do cronômetro. Consulte os frameworks de Speaking (Módulo 3) e de Writing (Módulo 4) abertamente durante essas seções. Para Reading e Listening, não consulte materiais — mas releia o gabarito imediatamente após cada seção. Este é um conjunto **abreviado** (amostra representativa de cada tipo de item, não a seção completa).
 
 ---
 
@@ -132,7 +132,7 @@ READING                                  LISTENING
 
 **Gabarito:** 1-B (declínio combina com "despite success"); 2-B (contexto: "touch and manipulate" = interativo); 3-B (contexto: descoberta inesperada); 4-A (contexto: "every member voted in favor" = unânime)
 
-> 💡 No teste real, este tipo de item costuma pedir a digitação das letras faltantes dentro de um texto corrido (formato C-test), não múltipla escolha. Praticamos aqui em MC para fins de treino de reconhecimento de padrão — mas no Módulo 6 você trabalha a versão de digitação livre.
+> 💡 No teste real, este tipo de item costuma pedir a digitação das letras faltantes dentro de um texto corrido (formato C-test), não múltipla escolha. Praticamos aqui em MC para fins de treino de reconhecimento de padrão — a versão de digitação livre é trabalhada no Módulo 1 (Reading).
 
 #### Bloco B — Read in Daily Life
 
@@ -247,7 +247,7 @@ Coral reefs, despite occupying less than one percent of the ocean floor, support
 
 ### ✍️ WRITING — SIMULADO 2
 
-**Condição:** Consulte os frameworks do Módulo 5/6 abertamente. Sem cronômetro nesta fase — mas anote o tempo gasto.
+**Condição:** Consulte os templates e frameworks do Módulo 4 (Writing) abertamente. Sem cronômetro nesta fase — mas anote o tempo gasto.
 
 #### Build a Sentence (exemplos)
 
@@ -267,7 +267,7 @@ Reordene os fragmentos para formar uma frase gramaticalmente correta e natural.
 **PROMPT:**
 > You registered for a study-abroad information session, but you have just learned of a scheduling conflict with a required lab session. Write an email to the study-abroad office explaining the situation and requesting either a different session time or alternative materials.
 
-**Resposta modelo (esqueleto orientador — desenvolva no Módulo 5):**
+**Resposta modelo (esqueleto orientador — desenvolva com o template do Módulo 4):**
 > Subject: Scheduling Conflict — Study Abroad Info Session
 >
 > Dear Study Abroad Office,
@@ -292,7 +292,7 @@ Reordene os fragmentos para formar uma frase gramaticalmente correta e natural.
 
 ### 🎤 SPEAKING — SIMULADO 2
 
-**Condição:** Grave todas as respostas. Consulte o Módulo 6 (frameworks de fluência e elaboração) antes de começar.
+**Condição:** Grave todas as respostas. Consulte os frameworks do Módulo 3 (Speaking — esqueletos de resposta por função discursiva) antes de começar.
 
 #### Listen and Repeat (progressão de complexidade)
 
@@ -733,8 +733,4 @@ Ouça sua gravação item a item e marque:
 
 ---
 
----
-
 *Módulo 7 concluído.*
-
-*Digite **"MÓDULO 8"** para gerar o conteúdo completo do **Módulo 8: Exam Day Protocol — O Comportamento dos Campeões**, incluindo o plano de ação dos 7 dias antes da prova, as últimas 24 horas, biohacking acadêmico e gestão psicológica completa para a sequência de ~1h23–1h29min do exame real.*
