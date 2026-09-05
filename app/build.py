@@ -53,11 +53,17 @@ if supa_url and supa_key:
 else:
     print("supabase: nao configurado (modo offline)")
 
-html = f'''<title>iTOEFL</title>
+html = f'''<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>iTOEFL</title>
 <style>
 {CSS}
 </style>
-
+</head>
+<body>
 <div class="shell">
   <aside class="side">
     <div class="brand">
@@ -136,6 +142,8 @@ html = f'''<title>iTOEFL</title>
 <script>
 {JS}
 </script>
+</body>
+</html>
 '''
 
 open("../artifact/index.html", "w", encoding="utf-8").write(html)

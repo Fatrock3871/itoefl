@@ -24,6 +24,14 @@ class Handler(http.server.SimpleHTTPRequestHandler):
         self.send_header("Cache-Control", "no-store, must-revalidate")
         super().end_headers()
 
+    def guess_type(self, path):
+        # declara UTF-8 explicitamente para texto — sem isso o navegador
+        # adivinha a codificacao e pode renderizar acentos errados
+        ctype = super().guess_type(path)
+        if ctype.startswith("text/") or ctype in ("application/javascript", "application/json"):
+            return f"{ctype}; charset=utf-8"
+        return ctype
+
     def log_message(self, fmt, *args):
         sys.stderr.write("  %s\n" % (fmt % args))
 
