@@ -2,12 +2,11 @@
 
 Memória entre sessões. Atualizar ao concluir cada etapa.
 
-**Última atualização:** 2026-09-03
-**Agora:** Fases 3, 4 e o código da 5 concluídos. Os 10 módulos no formato 2026;
-todos os widgets no ar; auth + sync Supabase implementados no `app.js` (dormem
-até o usuário preencher `app/supabase_config.json` — ver `docs/supabase-setup.md`).
-`artifact/index.html` ≈ 488 KB. Próximo: usuário provisiona o Supabase, depois
-Fase 6 (publicação).
+**Última atualização:** 2026-09-04
+**Agora:** Fases 0–5 concluídas. Os 10 módulos no formato 2026; todos os
+widgets no ar; login por e-mail + sincronização de progresso via Supabase
+testados e funcionando. `artifact/index.html` ≈ 488 KB. Próximo: Fase 6
+(publicação — testar no celular e colocar no ar).
 
 ---
 
@@ -122,7 +121,7 @@ Ordem: M5 → M6 → M9 → M8. Todos feitos.
       referência de correção; não se beneficia de widget (é produção livre
       sem gabarito único). Fase 4 de conteúdo interativo considerada completa.
 
-## Fase 5 — Backend Supabase (código pronto; falta o usuário provisionar)
+## Fase 5 — Backend Supabase ✅
 
 Toda a parte de código foi feita. O que resta é operação (passos em
 `docs/supabase-setup.md`).
@@ -143,10 +142,20 @@ Toda a parte de código foi feita. O que resta é operação (passos em
 - [x] **`app/supabase_config.example.json`** commitado; `.json` real gitignored.
 - [x] **`docs/supabase-setup.md`** — passo a passo (criar projeto, rodar schema,
       URLs de auth, preencher config, rebuild, troubleshooting).
-- [ ] **Usuário:** criar o projeto Supabase, rodar o schema, preencher
-      `app/supabase_config.json`, rebuildar. Testar o fluxo de login.
-- [ ] Testar sync real com 2 dispositivos/navegadores (só possível após o passo
-      acima).
+- [x] **Usuário:** projeto Supabase criado ("ITOELF", ref `itfosjcymqfzjsftvjey`,
+      São Paulo), schema rodado, `app/supabase_config.json` preenchido com a
+      **publishable key** (`sb_publishable_...`), site/redirect URLs configuradas
+      para `http://localhost:8000`. Verificado via API: tabelas `profiles` e
+      `user_state` existem, RLS ativa, email auth habilitado.
+- [x] **Login testado pelo usuário** (2026-09-04) — magic link funcionou,
+      e-mail e botão "Sair" aparecem na sidebar após o login.
+- [ ] Testar sync real com 2 dispositivos/navegadores (opcional, quando quiser).
+
+**Nota de segurança:** durante a configuração, uma `sb_secret_...` key e a
+legacy `service_role` JWT foram coladas na conversa por engano. Orientei o
+usuário a rotacioná-las; a `publishable key` que o app usa não é afetada por
+essa rotação. Confirmar que a rotação foi feita antes de considerar o projeto
+Supabase "limpo" para uso continuado.
 
 ## Fase 6 — Publicação
 
