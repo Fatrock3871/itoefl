@@ -2,11 +2,12 @@
 
 Memória entre sessões. Atualizar ao concluir cada etapa.
 
-**Última atualização:** 2026-09-04
-**Agora:** Fases 0–5 concluídas. Os 10 módulos no formato 2026; todos os
-widgets no ar; login por e-mail + sincronização de progresso via Supabase
-testados e funcionando. `artifact/index.html` ≈ 488 KB. Próximo: Fase 6
-(publicação — testar no celular e colocar no ar).
+**Última atualização:** 2026-09-07
+**Agora:** Fases 0–5 concluídas + redesenho e progressão sequencial (a pedido
+do usuário, com pesquisa de referência em Khan Academy / Busuu / Babbel /
+Memrise). Os 10 módulos no formato 2026; widgets no ar; Supabase funcionando.
+Módulos agora **destravam em sequência** (N-1 a 100% libera N). Conteúdo em
+cards por seção. `artifact/index.html` ≈ 494 KB. Próximo: Fase 6 (publicação).
 
 ---
 
@@ -157,10 +158,23 @@ usuário a rotacioná-las; a `publishable key` que o app usa não é afetada por
 essa rotação. Confirmar que a rotação foi feita antes de considerar o projeto
 Supabase "limpo" para uso continuado.
 
+## Fase 5.5 — Redesenho + progressão sequencial ✅ (2026-09-07)
+
+- [x] Pesquisa de referência (Khan Academy, Busuu, Babbel, Memrise via
+      screenshots headless).
+- [x] Progressão sequencial: módulo N destrava com N-1 a 100%. Selo por módulo
+      (número / ✓ / 🔒), aviso ao clicar em bloqueado, contador "N de 10".
+- [x] Conteúdo em `.section-card` por seção (padrão "unit card").
+- [x] Botões CTA em pill; H2 com borda de destaque.
+- [x] `.side` com `min-width:0` (proteção grid). Confirmado sem overflow
+      horizontal em 360–768 px.
+- Documentado em `CLAUDE.md` (seções "Progressão sequencial" e "Camadas visuais").
+
 ## Fase 6 — Publicação
 
-- [ ] Testar em tela de celular
-- [ ] Publicar (GitHub Pages ou Artifact)
+- [ ] Publicar (GitHub Pages — o app é estático e autocontido)
+- [ ] Trocar Site URL / Redirect URLs do Supabase para o endereço publicado
+- [ ] Testar login e sync no endereço final, inclusive no celular
 
 ---
 

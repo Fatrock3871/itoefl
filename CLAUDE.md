@@ -138,6 +138,24 @@ Implicações que o conteúdo deve respeitar:
 removido; os originais pré-2026 dos 10 módulos seguem em
 `_archive/content-old-format/`.
 
+## Progressão sequencial (bloqueio de módulos)
+
+O app é um **curso guiado**, não uma referência de navegação livre. O módulo N
+só desbloqueia quando o módulo N-1 está 100% (todos os checkboxes de progresso
+`.pchk` daquele módulo marcados). M0 sempre aberto. A ordem de desbloqueio é a
+ordem dos botões na sidebar (= ordem de `MODS` em `build.py`); o JS a deriva do
+DOM (`modOrder` em `app.js`), sem duplicar a lista. Lógica em `updateBadges()` +
+`isUnlocked()` + `showLockMessage()`. Restaurar a última aba na carga **ignora**
+o bloqueio de propósito (não prender quem já tinha o módulo aberto); só o clique
+do usuário é barrado. Selo circular por módulo: número (aberto) / ✓ (concluído)
+/ 🔒 (bloqueado).
+
+## Camadas visuais (runtime, montadas no `app.js`)
+
+Passes de DOM na carga, antes de qualquer widget: (1) `.table-wrap` em toda
+`.panel table`; (2) `.section-card` — agrupa o conteúdo de cada `<h2>` até o
+próximo `<h2>` num card, estilo "unit card". Não tocam nos `.md`.
+
 ## Estado e progresso do usuário (runtime)
 
 `localStorage`, chaves com prefixo `toefl_`: `toefl_progress_v1` (checkboxes),
