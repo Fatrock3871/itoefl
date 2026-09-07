@@ -16,7 +16,10 @@ MODS = [
 ]
 
 nav_items = "\n".join(
-    f'<button class="tabbtn" data-tab="{k}"><span class="num">{n}</span>{t}<span class="pbadge" id="badge-{k}"></span></button>'
+    f'<button class="tabbtn" data-tab="{k}" data-title="{t}">'
+    f'<span class="num-badge" data-n="{n}">{n}</span>'
+    f'<span class="lbl">{t}</span>'
+    f'<span class="pbadge" id="badge-{k}"></span></button>'
     for k, n, t, _ in MODS
 )
 
@@ -73,10 +76,12 @@ html = f'''<!DOCTYPE html>
     <div class="overall-progress">
       <div class="op-label"><span>Progresso geral</span><span id="opPct">0%</span></div>
       <div class="op-bar"><div class="op-fill" id="opFill"></div></div>
+      <div class="op-count" id="opCount"></div>
     </div>
     <nav class="modnav" id="modnav">
       {nav_items}
     </nav>
+    <div class="lock-msg" id="lockMsg" hidden></div>
     <button class="themetoggle" id="themeToggle" type="button" aria-label="Alternar tema">
       <span id="themeIcon">🌗</span><span id="themeLabel">Sistema</span>
     </button>

@@ -8,6 +8,28 @@
     wrap.appendChild(t);
   });
 
+  // agrupa o conteudo de cada modulo em cards por secao (um card por H2),
+  // ao estilo "unit card" de plataformas de curso, em vez de texto corrido
+  Array.prototype.forEach.call(document.querySelectorAll(".panel-inner"), function(container){
+    var kids = Array.prototype.slice.call(container.children);
+    var frag = document.createDocumentFragment();
+    var current = null;
+    kids.forEach(function(node){
+      if(node.tagName === "H2"){
+        current = document.createElement("div");
+        current.className = "section-card";
+        frag.appendChild(current);
+        current.appendChild(node);
+      } else if(current){
+        current.appendChild(node);
+      } else {
+        frag.appendChild(node); // conteudo raro antes do primeiro H2
+      }
+    });
+    container.innerHTML = "";
+    container.appendChild(frag);
+  });
+
   var LS_PROGRESS = "toefl_progress_v1";
   var LS_THEME = "toefl_theme_v1";
   var LS_QUIZ = "toefl_quiz_mod0_v1";
@@ -57,17 +79,45 @@
     applyTheme(next);
   });
 
-  // ---------- Tabs ----------
+  // ---------- Tabs + progressão sequencial ----------
+  // A ordem de desbloqueio segue a ordem em que os botões aparecem na sidebar
+  // (a mesma ordem em que app/build.py monta MODS) — sem duplicar a lista aqui.
   var tabBtns = Array.prototype.slice.call(document.querySelectorAll(".tabbtn"));
   var panels = Array.prototype.slice.call(document.querySelectorAll(".panel"));
+  var modOrder = tabBtns.map(function(b){ return b.dataset.tab; });
+  var modPct = {}; // preenchido por updateBadges()
+  var lockMsgEl = document.getElementById("lockMsg");
+  var lockMsgTimer = null;
+
+  function isUnlocked(key){
+    var idx = modOrder.indexOf(key);
+    if(idx <= 0) return true;
+    return (modPct[modOrder[idx - 1]] || 0) >= 100;
+  }
+
+  function showLockMessage(key){
+    if(!lockMsgEl) return;
+    var idx = modOrder.indexOf(key);
+    var prevBtn = idx > 0 ? tabBtns[idx - 1] : null;
+    var prevTitle = prevBtn ? prevBtn.dataset.title : "o módulo anterior";
+    lockMsgEl.textContent = "Complete \"" + prevTitle + "\" (marque todos os checkboxes de progresso) para desbloquear este módulo.";
+    lockMsgEl.hidden = false;
+    if(lockMsgTimer) clearTimeout(lockMsgTimer);
+    lockMsgTimer = setTimeout(function(){ lockMsgEl.hidden = true; }, 5000);
+  }
+
   function showTab(key){
     tabBtns.forEach(function(b){ b.classList.toggle("active", b.dataset.tab === key); });
     panels.forEach(function(p){ p.hidden = p.dataset.panel !== key; });
     document.getElementById("mainArea").scrollTop = 0;
     safeSet("toefl_active_tab", key);
+    if(lockMsgEl) lockMsgEl.hidden = true;
   }
   tabBtns.forEach(function(b){
-    b.addEventListener("click", function(){ showTab(b.dataset.tab); });
+    b.addEventListener("click", function(){
+      if(!isUnlocked(b.dataset.tab)){ showLockMessage(b.dataset.tab); return; }
+      showTab(b.dataset.tab);
+    });
   });
   var initialTab = safeGet("toefl_active_tab");
   if(initialTab && document.querySelector('.panel[data-panel="'+initialTab+'"]')){
@@ -91,16 +141,34 @@
       byMod[mod].total++;
       if(progressState[c.dataset.pid]) byMod[mod].done++;
     });
-    var totalAll = 0, doneAll = 0;
+    var totalAll = 0, doneAll = 0, modsDone = 0;
     Object.keys(byMod).forEach(function(mod){
       var b = byMod[mod];
       totalAll += b.total; doneAll += b.done;
+      var pctMod = b.total ? Math.round(100 * b.done / b.total) : 0;
+      modPct[mod] = pctMod;
+      if(pctMod >= 100) modsDone++;
       var badgeEl = document.getElementById("badge-"+mod);
-      if(badgeEl) badgeEl.textContent = b.total ? Math.round(100*b.done/b.total)+"%" : "";
+      if(badgeEl) badgeEl.textContent = b.total ? pctMod+"%" : "";
     });
     var pct = totalAll ? Math.round(100*doneAll/totalAll) : 0;
     document.getElementById("opPct").textContent = pct + "%";
     document.getElementById("opFill").style.width = pct + "%";
+    var opCount = document.getElementById("opCount");
+    if(opCount) opCount.innerHTML = "<b>" + modsDone + "</b> de " + modOrder.length + " módulos concluídos";
+
+    // reflete no estado visual da sidebar: concluído (✓), atual, ou bloqueado (🔒)
+    tabBtns.forEach(function(b){
+      var key = b.dataset.tab;
+      var badgeEl = b.querySelector(".num-badge");
+      var done = (modPct[key] || 0) >= 100;
+      var unlocked = isUnlocked(key);
+      b.classList.toggle("done", done);
+      b.classList.toggle("locked", !unlocked);
+      if(badgeEl){
+        badgeEl.textContent = done ? "✓" : (unlocked ? badgeEl.dataset.n : "🔒");
+      }
+    });
   }
 
   allChecks.forEach(function(c){
