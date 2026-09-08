@@ -3,11 +3,11 @@
 Memória entre sessões. Atualizar ao concluir cada etapa.
 
 **Última atualização:** 2026-09-07
-**Agora:** Fases 0–5 concluídas + redesenho e progressão sequencial (a pedido
-do usuário, com pesquisa de referência em Khan Academy / Busuu / Babbel /
-Memrise). Os 10 módulos no formato 2026; widgets no ar; Supabase funcionando.
-Módulos agora **destravam em sequência** (N-1 a 100% libera N). Conteúdo em
-cards por seção. `artifact/index.html` ≈ 494 KB. Próximo: Fase 6 (publicação).
+**Agora:** Fases 0–5 + redesenho/progressão sequencial concluídos. Formato 2026
+verificado contra o blueprint oficial da ETS (núcleo correto; correções
+pontuais aplicadas). **Próximo:** Fase 7 — expansão do conteúdo, começando
+pelo M1 Reading. Publicação (Fase 6) fica para depois da expansão.
+`artifact/index.html` ≈ 494 KB.
 
 ---
 
@@ -169,6 +169,25 @@ Supabase "limpo" para uso continuado.
 - [x] `.side` com `min-width:0` (proteção grid). Confirmado sem overflow
       horizontal em 360–768 px.
 - Documentado em `CLAUDE.md` (seções "Progressão sequencial" e "Camadas visuais").
+
+## Fase 7 — Expansão do conteúdo (decisão do usuário, 2026-09-07)
+
+O currículo (~50k palavras) é um bom esqueleto de estratégia, mas fino em
+prática, ensino de língua e exemplos resolvidos. Plano: expandir **módulo por
+módulo, um por sessão**, dobrando o tamanho. Ordem por impacto:
+M1 → M2 → M4 + M3 → M6 → M9 → M0/M5/M7/M8.
+
+- [x] **Verificação do formato contra a ETS** — baixado o blueprint oficial
+      2026. Nosso núcleo confere. Correções pontuais aplicadas (pontos brutos
+      145 não 120; itens pontuados). `docs/ets-blueprint-2026.md`.
+- [ ] **M1 Reading** — próximo. Adicionar: referência de gramática/collocations
+      que Complete the Words cobra; exemplo resolvido narrado; 6–10 textos de
+      CTW; 6–8 de Read in Daily Life (todos os formatos: placa, cardápio,
+      e-mail, formulário, aviso, post); 5–6 passagens acadêmicas de áreas
+      variadas com TODOS os tipos de questão (incluir sentence simplification,
+      insert text, prose summary); dificuldade graduada A2→C1; protocolo de
+      erros de Reading.
+- [ ] M2, M3, M4, M5, M6, M7, M8, M9 — idem, um por vez.
 
 ## Fase 6 — Publicação
 
