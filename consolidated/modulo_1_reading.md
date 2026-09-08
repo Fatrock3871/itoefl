@@ -19,8 +19,8 @@ O Reading é a **primeira seção do TOEFL iBT**. Ele funciona como um **sistema
 | **Posição no teste** | 1ª seção |
 | **Tempo total** | ~18–21 minutos de módulo + ~9 minutos de router = **~27–30 min** |
 | **Design** | **Adaptativo em dois estágios**: Router → Módulo Inferior OU Módulo Superior |
-| **Total de itens** | 50 itens (30 pontuados + itens-piloto não pontuados, indistinguíveis entre si) |
-| **Pontuação bruta** | 35 pontos brutos → convertidos em banda **1–6** (com meios pontos), alinhada ao CEFR |
+| **Total de itens** | 50 itens (~35 pontuados + ~15 itens-piloto não pontuados, indistinguíveis entre si) |
+| **Pontuação bruta** | 35 pontos brutos (máx. 1 pt por item) → convertidos em banda **1–6** (com meios pontos), alinhada ao CEFR |
 | **Penalidade por erro** | Nenhuma — sempre responda a todos os itens |
 | **Tipos de item** | 3 (Complete the Words / Read in Daily Life / Read an Academic Passage) |
 
@@ -65,7 +65,7 @@ Nunca "chute rápido e mal" para ganhar tempo nos primeiros itens, e nunca desac
 | Tipo de Item | O que exige | Itens na seção | Pontos | Faixa CEFR |
 |---|---|---|---|---|
 | **Complete the Words** | Reconstruir um texto coeso usando regras de ordenação de palavras + conhecimento lexical + compreensão leitora | **30 itens** (a maioria da seção) | 1 pt cada | B1–C1+ |
-| **Read in Daily Life** | Compreender textos curtos, não-acadêmicos, do cotidiano (placas, cardápios, e-mails, posts de redes sociais, avisos) | 5–15 itens | 1 pt cada | A1–C1 |
+| **Read in Daily Life** (em conjuntos de 2 e de 3 itens) | Compreender textos curtos, não-acadêmicos, do cotidiano (placas, cardápios, e-mails, posts de redes sociais, avisos) | 5–15 itens | 1 pt cada | A1–C1 |
 | **Read an Academic Passage** | Identificar ideia principal, detalhes-chave, sentidos inferidos, relações entre ideias e estrutura retórica em um texto acadêmico | 5–15 itens | 1 pt cada | B1–C2 |
 
 **Leitura estratégica desta tabela:**
