@@ -235,7 +235,7 @@ M1 → M2 → M4 + M3 → M6 → M9 → M0/M5/M7/M8.
       espelha 1-a-1 os protocolos R/L/S/W/V/RG dos módulos (SR-*→M1, SL-*→M2,
       SS-*→M3, SW-*→M4) com código de reparo exato + consolidação entre 2
       simulados, Parte 9 nova (calendário de 8 semanas). `build_plain`.
-      `commit ` a preencher.
+      `commit 4a50fab`.
 - [ ] **M8 Exam Day Protocol** — próximo.
 - [ ] M9 — idem.
 
