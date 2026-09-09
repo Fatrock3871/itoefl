@@ -3,8 +3,8 @@
 Memória entre sessões. Atualizar ao concluir cada etapa.
 
 **Última atualização:** 2026-09-09
-**Agora:** Fase 7 (expansão do conteúdo). **M1, M2 e M4 feitos.** Próximo:
-**M3 Speaking**. `artifact/index.html` ≈ 590 KB.
+**Agora:** Fase 7 (expansão do conteúdo). **M1, M2, M4 e M3 feitos.** Próximo:
+**M5 Registro**. `artifact/index.html` ≈ 612 KB.
 
 ---
 
@@ -195,11 +195,18 @@ M1 → M2 → M4 + M3 → M6 → M9 → M0/M5/M7/M8.
       Parte 4 (Email + Discussion escritos ao vivo), 30 Build a Sentence
       graduados + 6 prompts de Email + 6 de Discussion, respostas-modelo por
       banda (3/5/6), Parte 7 (W1–W6 + revisão dos 60–90 s). `build_plain`.
-- [ ] **M3 Speaking** — próximo. Adicionar: laboratório de fonética/prosódia
-      para o SpeechRater, banco de frases de Listen and Repeat graduado, banco
-      de perguntas de Take an Interview por função discursiva, respostas-modelo
-      por banda, protocolo de erros. (M3 já é o mais completo — retoque + volume.)
-- [ ] M5, M6, M7, M8, M9 — idem, um por vez.
+- [x] **M3 Speaking** (2026-09-09) — 4,3k → 7,2k palavras. Parte 1.4 (blueprint:
+      ~45s, sem preparo, cenário texto+áudio), Parte 2.1 (features do SpeechRater),
+      Parte 3 (**Laboratório de Fala** — 12 fonemas críticos com IPA, -ED, word
+      stress, ritmo/tapping, entonação, weak forms, gestão de hesitação, 40
+      frases, rubrica de auto-gravação /12), Parte 4 (Listen and Repeat + Take an
+      Interview ao vivo), Grupo A (5 sets Listen and Repeat A1→C2) + Grupo B (48
+      perguntas de Take an Interview por 6 funções + B7/B8) + Grupo C (shadowing),
+      Parte 6 (gabarito de função + respostas-modelo banda 3/5/6), Parte 7
+      (S1–S6). Também: correção de renderização de listas markdown em M2 e M3.
+      `build_plain`. `commit 51876d0`.
+- [ ] **M5 Registro & Sofisticação** — próximo.
+- [ ] M6, M7, M8, M9 — idem, um por vez.
 
 ## Fase 6 — Publicação
 
