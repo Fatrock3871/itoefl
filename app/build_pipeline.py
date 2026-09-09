@@ -151,7 +151,7 @@ def main():
         "mod2": build_plain(f"{SRC}/modulo_2_listening.md"),  # expandido: drills em texto + gabarito
         # (build_mod1 / build_mod2 continuam definidos mas não usados — ver histórico)
         "mod3": build_plain(f"{SRC}/modulo_3_speaking.md"),
-        "mod4": build_mod4(),
+        "mod4": build_plain(f"{SRC}/modulo_4_writing.md"),  # expandido: 30 Build a Sentence em texto + gabarito
         "mod5": build_plain(f"{SRC}/modulo_5_registro.md"),
         "mod6": build_mod6(),
         "mod7": build_plain(f"{SRC}/modulo_7_simulados.md"),

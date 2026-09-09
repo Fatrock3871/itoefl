@@ -3,9 +3,8 @@
 Memória entre sessões. Atualizar ao concluir cada etapa.
 
 **Última atualização:** 2026-09-09
-**Agora:** Fase 7 em curso (expansão do conteúdo, módulo por módulo).
-**M1 Reading e M2 Listening feitos** (5k → ~11k palavras cada). Próximo:
-**M4 Writing**. `artifact/index.html` ≈ 565 KB.
+**Agora:** Fase 7 (expansão do conteúdo). **M1, M2 e M4 feitos.** Próximo:
+**M3 Speaking**. `artifact/index.html` ≈ 590 KB.
 
 ---
 
@@ -189,11 +188,18 @@ M1 → M2 → M4 + M3 → M6 → M9 → M0/M5/M7/M8.
       contrações, números, 40 termos de campus, 30 idioms, linguagem funcional,
       símbolos de anotação), Parte 4 (exemplo narrado), 21 drills graduados
       (era 4), gabarito dos 51 itens, Parte 7 (protocolo L1–L6). `build_plain`.
-- [ ] **M4 Writing** — próximo (Writing e Speaking são onde a nota é feita).
-      Adicionar: laboratório de erros gramaticais de produção, bancos de prompts
-      de Build a Sentence / Email / Academic Discussion, mais respostas-modelo
-      anotadas por banda, checklist de revisão, protocolo de erros.
-- [ ] M3, M5, M6, M7, M8, M9 — idem, um por vez.
+- [x] **M4 Writing** (2026-09-09) — 3,9k → 8,8k palavras. Parte 1.4 (como o
+      e-rater corrige), Parte 3 (**Laboratório de Produção Escrita** — tipos de
+      frase, run-on/comma splice, tempos, word forms, pontuação, registro +
+      as 11 famílias de estrutura do Build a Sentence com 22 mini-drills),
+      Parte 4 (Email + Discussion escritos ao vivo), 30 Build a Sentence
+      graduados + 6 prompts de Email + 6 de Discussion, respostas-modelo por
+      banda (3/5/6), Parte 7 (W1–W6 + revisão dos 60–90 s). `build_plain`.
+- [ ] **M3 Speaking** — próximo. Adicionar: laboratório de fonética/prosódia
+      para o SpeechRater, banco de frases de Listen and Repeat graduado, banco
+      de perguntas de Take an Interview por função discursiva, respostas-modelo
+      por banda, protocolo de erros. (M3 já é o mais completo — retoque + volume.)
+- [ ] M5, M6, M7, M8, M9 — idem, um por vez.
 
 ## Fase 6 — Publicação
 
