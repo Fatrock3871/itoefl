@@ -228,9 +228,9 @@ erros (Parte 7) apontar um padrão.
 | Tipo | Estrutura | Exemplo |
 |---|---|---|
 | **Simples** | 1 oração independente | *The deadline is Friday.* |
-| **Composta** | 2 independentes ligadas por `, + conjunção coordenativa` (*and, but, or, so, yet, for, nor*) **ou** por `;` | *The deadline is Friday**, so** I started early.* / *The deadline is Friday**;** I started early.* |
-| **Complexa** | 1 independente + 1+ subordinada (*because, although, when, if, that, which, who...*) | ***Because** the deadline is Friday,* I started early. |
-| **Composta-complexa** | 2+ independentes + 1+ subordinada | ***Although** the deadline is Friday,* I started early**, and** I finished ahead of time. |
+| **Composta** | 2 independentes ligadas por `, + conjunção coordenativa` (*and, but, or, so, yet, for, nor*) **ou** por `;` | "The deadline is Friday, **so** I started early." / "The deadline is Friday **;** I started early." |
+| **Complexa** | 1 independente + 1+ subordinada (*because, although, when, if, that, which, who...*) | "**Because** the deadline is Friday, I started early." |
+| **Composta-complexa** | 2+ independentes + 1+ subordinada | "**Although** the deadline is Friday, I started early, **and** I finished ahead of time." |
 
 **Os dois erros fatais:**
 
@@ -275,7 +275,7 @@ gramatical**.
 |---|---|
 | *She likes reading, to write, and discussion.* | *She likes **reading**, **writing**, and **discussing**.* |
 | *The course improves grammar and how to write.* | *The course improves grammar and **writing**.* / *...how to use grammar and how to write.* |
-| *not only cheaper but also it is faster* | *not only **cheaper** but also **faster*** |
+| *not only cheaper but also it is faster* | "not only **cheaper** but also **faster**" |
 | *Students want feedback that is fast and which is detailed.* | *Students want feedback that is **fast** and **detailed**.* |
 
 ### 3.4 Consistência e uso de tempos verbais

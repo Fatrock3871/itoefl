@@ -283,8 +283,8 @@ inglês e é a que o falante de português mais esquece.
 |---|---|---|
 | Advérbio de frequência (*always, usually, often, never, rarely*) | Sujeito + **ADV** + verbo principal | *"She goes always"* → *She **always goes***; *"never I have seen"* → *I have **never** seen* |
 | Adjetivos em série | opinião → tamanho → idade → forma → cor → origem → material + substantivo | *"a red big house"* → *a **big red** house*; *"the wooden old chair"* → *the **old wooden** chair* |
-| Objeto direto + indireto | V + Obj. indireto + Obj. direto, **OU** V + Obj. direto + *to/for* + Obj. indireto | *"gave to me the book"* → *gave **me the book*** / *gave **the book to me*** |
-| Pergunta indireta (dentro de outra frase) | *...where the library **is***, **não** *...where **is** the library* | *"Could you tell me where is the office?"* → *...where the office **is***? |
+| Objeto direto + indireto | V + Obj. indireto + Obj. direto, **OU** V + Obj. direto + *to/for* + Obj. indireto | *"gave to me the book"* → *"gave me the book"* / *"gave the book to me"* |
+| Pergunta indireta (dentro de outra frase) | ordem afirmativa: *"...where the library is"* — **não** *"...where is the library"* | *"Could you tell me where is the office?"* → *"...where the office is?"* |
 | Phrasal verb separável + pronome | V + **pronome** + partícula | *"turn off it"* → *turn **it** off* |
 | Oração subordinada antes da principal | Conjunção + subordinada **, vírgula ,** principal | *"If it rains we stay"* → *If it rains**,** we stay* |
 | Inversão após negativo no início (C1+) | Advérbio negativo + **auxiliar** + sujeito + verbo | *Rarely **does** one see such dedication.* · *Not only **did** he arrive late, but...* |

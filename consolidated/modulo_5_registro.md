@@ -542,7 +542,7 @@ colocações sinalizam fluência acadêmica genuína.
 
 **Substantivo + preposição (o que o brasileiro erra):**
 
-- *an increase **in** (não "of"), the impact **on**, a solution **to**, the reason **for**, a demand **for**, research **on/into**, an effect **on**, insight **into**, a basis **for**, concern **about/over**, an alternative **to**, a distinction **between**, dependence **on**, an emphasis **on***
+- an increase **in** (não "of") · the impact **on** · a solution **to** · the reason **for** · a demand **for** · research **on / into** · an effect **on** · insight **into** · a basis **for** · concern **about / over** · an alternative **to** · a distinction **between** · dependence **on** · an emphasis **on**
 
 ---
 
