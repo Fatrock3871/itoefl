@@ -235,6 +235,17 @@ no Speaking e Writing. Memorize-os como substitutos dos equivalentes simples.
 | **delineate** | outline / describe | *"The reading passage delineates three distinct theories of prehistoric human migration, each supported by a different strand of archaeological evidence."* |
 | **extrapolate** | extend / project | *"Extrapolating current trends without accounting for technological disruption routinely produces forecasts that prove dramatically inaccurate within a decade."* |
 | **precipitate** | cause suddenly / trigger | *"The currency devaluation precipitated a wave of corporate defaults that cascaded through the financial system far more rapidly than regulators had anticipated."* |
+| **undermine** | weaken / damage | *"Repeated failures to replicate the original result have steadily undermined confidence in the entire research program."* |
+| **underpin** | support / be the basis of | *"A shared set of methodological standards underpins the credibility of any empirical discipline."* |
+| **bolster** | strengthen / reinforce | *"The second experiment bolsters the reading's argument by supplying the causal evidence the first study lacked."* |
+| **warrant** | justify / call for | *"The magnitude of the projected losses warrants immediate policy intervention rather than continued observation."* |
+| **illuminate** | make clear / shed light on | *"The case study illuminates a dynamic that aggregate statistics had obscured for decades."* |
+| **reconcile** | make compatible / resolve a conflict between | *"The challenge is to reconcile the demand for rapid innovation with the need for rigorous safety testing."* |
+| **encompass** | include / cover | *"A comprehensive assessment of the policy must encompass its indirect effects on adjacent sectors, not only its stated targets."* |
+| **hinder** | slow down / obstruct | *"Fragmented data-sharing agreements continue to hinder coordinated responses to cross-border public health threats."* |
+| **attribute (to)** | credit / assign a cause to | *"The lecturer attributes the decline not to a single cause but to the convergence of several long-term trends."* |
+| **entail** | involve / require as a consequence | *"Any transition to renewable energy entails significant upfront investment in transmission infrastructure."* |
+| **hinge on** | depend critically on | *"Whether the model's predictions hold hinges on an assumption about consumer behavior that the data only weakly support."* |
 
 ### ⚡ Adjetivos acadêmicos de alto registro (universais)
 
@@ -250,6 +261,14 @@ no Speaking e Writing. Memorize-os como substitutos dos equivalentes simples.
 | **inherent** | inerente; parte fundamental e inseparável de algo | built-in / fundamental | *"The inherent tension between innovation and stability is not a flaw to be resolved but a productive dynamic to be managed."* |
 | **systemic** | sistêmico; que afeta ou é causado pelo sistema como um todo | widespread / structural | *"Addressing poverty requires systemic reform rather than isolated interventions, because its drivers are embedded in institutional structures, not individual behaviors."* |
 | **ostensible** | aparente; que parece verdadeiro mas pode não ser | apparent / supposed | *"The ostensible simplicity of the professor's argument conceals a web of empirical assumptions that the reading passage explicitly challenges."* |
+| **salient** | mais notável, que se destaca | important / prominent | *"The most salient difference between the two accounts is not what they explain but what they choose to leave unexplained."* |
+| **negligible** | tão pequeno que não importa | insignificant / tiny | *"Once the confounding variable is controlled for, the effect the reading emphasizes becomes statistically negligible."* |
+| **compelling** | convincente, difícil de refutar | strong / persuasive | *"The lecture offers a more compelling account precisely because it identifies a mechanism, not merely a correlation."* |
+| **plausible** | que parece razoável e possível | believable / credible | *"The hypothesis is plausible, but plausibility is not evidence, and the passage never moves beyond it."* |
+| **arbitrary** | sem base ou critério claro | random / unprincipled | *"The threshold the policy sets is essentially arbitrary: nothing in the data marks that particular figure as meaningful."* |
+| **coherent** | logicamente consistente e bem articulado | consistent / unified | *"What the field lacks is not data but a coherent framework capable of integrating the findings it already has."* |
+| **tangible** | concreto, perceptível, mensurável | real / measurable | *"For the investment to be politically sustainable, communities need to see tangible benefits within a single electoral cycle."* |
+| **marginal** | pequeno, secundário, no limite | slight / peripheral | *"The upgrade delivers only a marginal improvement in efficiency at a substantial increase in cost."* |
 
 ### ⚡ Collocations estratégicas — combinações de alto impacto
 
@@ -266,10 +285,221 @@ corretamente é um forte sinal de proficiência para o e-rater.
 | **challenge** | *challenge a claim / an assumption / a notion / conventional wisdom / a paradigm* | *"The lecture directly challenges the assumption that urban green spaces produce unambiguous benefits for air quality."* |
 | **demonstrate** | *demonstrate effectiveness / a correlation / causation / a pattern / feasibility* | *"The second study demonstrates a causal — not merely correlational — relationship between X and Y."* |
 | **account for** | *account for a phenomenon / differences / variation / failures / omissions* | *"The reading's optimistic assessment fails to account for the significant implementation costs that similar programs have historically incurred."* |
+| **provide** | *provide evidence / insight / a basis / support / a framework / an account* | *"The lecture provides a basis for rejecting the reading's central assumption."* |
+| **address** | *address an issue / a concern / a problem / a question / a gap / a need* | *"The proposal addresses the symptom but leaves the underlying cause untouched."* |
+| **exert** | *exert influence / pressure / control / an effect / authority* | *"Peer groups exert a stronger influence on adolescent behavior than most parents assume."* |
+| **gain** | *gain insight / traction / acceptance / an advantage / prominence / momentum* | *"The theory gained acceptance only after a second, independent team reproduced the result."* |
+| **reach** | *reach a conclusion / a consensus / a threshold / an agreement / a verdict* | *"The committee reached no consensus, which itself signals how contested the evidence remains."* |
+| **meet** | *meet a need / a demand / a standard / a requirement / a target / a deadline* | *"Renewable capacity is not yet sufficient to meet peak demand without fossil backup."* |
+| **play** | *play a role / a part / a function* | *"Chance plays a larger role in the outcome than the confident narrative acknowledges."* |
+| **bear** | *bear the cost / responsibility / the burden / a resemblance / on a question* | *"Society bears the cost of the externality while the firm retains the profit."* |
+| **lend** | *lend support / credibility / weight / itself to* | *"The replication lends considerable weight to what had been a speculative claim."* |
+| **shed** | *shed light on* | *"The fossil record sheds light on a transition that living species can only hint at."* |
+| **impose** | *impose a limit / a cost / a constraint / a requirement / order* | *"The regulation imposes a compliance cost that falls disproportionately on small firms."* |
+| **undergo** | *undergo change / a transformation / a process / scrutiny / testing* | *"Any drug must undergo years of trials before it can be approved for general use."* |
 
 ---
 
-## SEÇÃO 5: O KIT DE EMERGÊNCIA — AS 50 PALAVRAS DE MAIOR ROI
+## SEÇÃO 5: FAMÍLIAS DE PALAVRAS E MORFOLOGIA
+
+> Esta seção é o motor de duas coisas: acertar *Complete the Words* (que testa a
+> forma exata) e adivinhar palavras desconhecidas em *Read an Academic Passage*
+> pela estrutura. Aprender **uma família inteira** de cada vez rende mais do que
+> aprender palavras soltas.
+
+### 5.1 Por que a família importa mais que a palavra
+
+O item *Complete the Words* dá a você uma frase com uma palavra parcialmente
+apagada (as primeiras letras aparecem) e cobra a **forma gramatical correta**.
+Saber *analyze* não basta — a lacuna pode pedir *analysis*, *analytical*,
+*analyst* ou *analytically*. A regra: identifique a **função sintática** da
+lacuna (sujeito? verbo? adjetivo antes de substantivo? advérbio?) e escolha a
+forma correspondente.
+
+| Raiz (verbo) | Substantivo (coisa/processo) | Substantivo (pessoa) | Adjetivo | Advérbio |
+|---|---|---|---|---|
+| analyze | analysis | analyst | analytical | analytically |
+| create | creation / creativity | creator | creative | creatively |
+| develop | development | developer | developmental | — |
+| economize | economy / economics | economist | economic / economical | economically |
+| specify | specification | — | specific | specifically |
+| signify | significance | — | significant | significantly |
+| compete | competition | competitor | competitive | competitively |
+| respond | response | respondent | responsive | responsively |
+| persist | persistence | — | persistent | persistently |
+| prove | proof | — | provable / proven | — |
+| conclude | conclusion | — | conclusive | conclusively |
+| assume | assumption | — | assumed | presumably |
+| sustain | sustainability | — | sustainable | sustainably |
+| vary | variation / variety / variable | — | various / variable | variously |
+| distinguish | distinction | — | distinct / distinctive | distinctly |
+
+### 5.2 Prefixos que mudam o sentido (para adivinhar em Reading)
+
+| Prefixo | Sentido | Exemplos |
+|---|---|---|
+| **un- / in- / im- / il- / ir-** | negação | *unfounded, inconclusive, implausible, illogical, irreversible* |
+| **mis-** | erro | *misinterpret, misconception, misallocate* |
+| **over- / under-** | excesso / falta | *overestimate, oversimplify, underreport, underdeveloped* |
+| **re-** | de novo / de volta | *reassess, reconfigure, replicate, reinstate* |
+| **dis-** | reverter / remover | *disprove, disregard, disaggregate, disincentive* |
+| **counter- / contra-** | contra | *counterargument, counterproductive, counterintuitive* |
+| **inter-** | entre | *interdependent, interdisciplinary, interoperability* |
+| **pre- / post-** | antes / depois | *predate, precondition, post-industrial, postpone* |
+| **sub-** | abaixo / parte de | *subset, subsequent, substandard, subsidiary* |
+| **co- / con-** | junto | *coexist, coherent, converge, collaborate* |
+
+### 5.3 Sufixos que definem a classe da palavra (para *Complete the Words*)
+
+| Sufixo | Classe | Exemplos |
+|---|---|---|
+| **-tion / -sion / -ment / -ance / -ence / -ity / -ness** | substantivo | *evaluation, provision, assessment, reliance, coherence, complexity, robustness* |
+| **-er / -or / -ist / -ant** | pessoa/agente | *researcher, investigator, economist, respondent* |
+| **-ize / -ify / -ate / -en** | verbo | *prioritize, clarify, differentiate, strengthen* |
+| **-ous / -ive / -al / -ic / -able / -ent** | adjetivo | *ambiguous, decisive, marginal, systemic, measurable, prevalent* |
+| **-ly** | advérbio | *substantially, markedly, arguably, consistently* |
+| **-ism** | doutrina/sistema | *empiricism, determinism, protectionism* |
+
+> ⚠️ Cuidado com pares onde o sufixo muda o sentido, não só a classe:
+> *economic* (relativo à economia) ≠ *economical* (que gasta pouco);
+> *historic* (importante na história) ≠ *historical* (relativo ao passado);
+> *classic* (exemplar) ≠ *classical* (da antiguidade / da música erudita).
+
+---
+
+## SEÇÃO 6: NUANCE E PRECISÃO — PARES QUE O BRASILEIRO CONFUNDE
+
+> Estes erros não são de vocabulário "difícil" — são de precisão. Cada um custa
+> ponto de *language use* no e-rater e de *lexical resource* no SpeechRater
+> porque sinaliza controle incompleto.
+
+### 6.1 Pares de sentido próximo
+
+| Par | Diferença | Uso correto |
+|---|---|---|
+| **affect / effect** | *affect* = verbo (influenciar); *effect* = substantivo (resultado) — *effect* como verbo = "causar/implementar", raro | *"The policy **affected** enrollment"; "the **effect** on enrollment was small"* |
+| **imply / infer** | quem fala **implies** (sugere); quem ouve **infers** (deduz) | *"The author implies X; from this the reader infers Y."* |
+| **comprise / compose / constitute** | o todo **comprises** as partes; as partes **compose/constitute** o todo | *"The report comprises four sections"; "four sections constitute the report"* — nunca *"is comprised of"* em registro alto |
+| **among / between** | *between* = 2 (ou relações par-a-par); *among* = grupo indistinto | *"a distinction between the two"; "common among students"* |
+| **fewer / less** | *fewer* = contável; *less* = incontável | *"fewer errors", "less variation"* |
+| **amount / number** | *amount* = incontável; *number* = contável | *"the amount of data", "the number of participants"* |
+| **affect / impact (v.)** | *impact* como verbo soa jornalístico; em registro alto prefira *affect* ou *have an impact on* | *"factors that affect outcomes"* / *"a measurable impact on outcomes"* |
+| **compare to / compare with** | *to* = mostrar semelhança; *with* = examinar semelhanças e diferenças | *"He compared the brain to a computer"; "compared with the control group"* |
+| **ensure / insure / assure** | *ensure* = garantir que; *insure* = fazer seguro; *assure* = tranquilizar alguém | *"steps to ensure accuracy"* |
+| **principal / principle** | *principal* = principal (adj.) ou diretor; *principle* = princípio | *"the principal cause"; "a founding principle"* |
+| **precede / proceed** | *precede* = vir antes; *proceed* = prosseguir | *"the events that preceded the crisis"; "the study then proceeds to..."* |
+| **elicit / illicit** | *elicit* = provocar (uma resposta); *illicit* = ilegal | *"designed to elicit an honest answer"* |
+
+### 6.2 Falsos cognatos de registro acadêmico
+
+O Módulo 9 cobre os falsos cognatos de fala cotidiana. Estes são os que mais
+aparecem em contexto acadêmico e que o brasileiro erra por semelhança com o
+português.
+
+| Inglês | NÃO significa | Significa | Palavra PT correspondente |
+|---|---|---|---|
+| **eventually** | eventualmente (às vezes) | no fim, mais cedo ou mais tarde | *finally, in the end* |
+| **actually** | atualmente | na verdade, de fato | *in fact* |
+| **currently** | — | atualmente, no momento | (esta sim = "atualmente") |
+| **comprehensive** | compreensivo | abrangente, completo | *thorough, wide-ranging* |
+| **sensible** | sensível | sensato, com bom senso | (*sensitive* = sensível) |
+| **pretend** | pretender | fingir | (*intend to* = pretender) |
+| **realize** | realizar (fazer) | perceber, dar-se conta | (*carry out* = realizar) |
+| **eventual** | eventual | final, resultante | *possible, occasional* |
+| **exit** | êxito | saída | (*success* = êxito) |
+| **notice** | notícia | aviso; perceber | (*news* = notícia) |
+| **argument** | (só) discussão hostil | argumento, linha de raciocínio | (também "briga", mas em acadêmico = raciocínio) |
+| **evidence** | evidência (o óbvio) | provas, indícios | *proof, indication* |
+| **support** | (só) apoiar emocionalmente | sustentar (uma tese), corroborar | *back up, substantiate* |
+| **matriculate** | matricular-se (comum) | ingressar formalmente numa universidade (raro/formal) | *enrol / register* |
+
+### 6.3 Verbos de reporte e a postura que carregam
+
+Ao relatar o que um autor, palestrante ou colega diz, o verbo escolhido revela
+**a sua leitura da postura dele**. Errar isso muda o sentido da sua resposta em
+Reading (perguntas de atitude do autor) e enfraquece a Academic Discussion.
+
+| Verbo | Postura que sinaliza |
+|---|---|
+| **state / note / observe / report** | neutro — apenas registra o que foi dito |
+| **argue / contend / maintain / hold** | defende uma posição, possivelmente contestável |
+| **claim / assert / allege** | afirma sem prova suficiente (ceticismo implícito) |
+| **acknowledge / concede / admit** | reconhece um ponto contrário à própria posição |
+| **suggest / imply / hint** | não diz diretamente; deixa deduzir |
+| **demonstrate / show / establish** | prova com evidência (você endossa) |
+| **emphasize / stress / underscore** | dá peso especial a um ponto |
+| **dismiss / reject / refute** | descarta uma posição oposta |
+| **question / challenge / dispute** | põe em dúvida sem necessariamente refutar |
+
+> Exemplo do peso: *"The author **claims** that X"* (você duvida) vs. *"The author
+> **demonstrates** that X"* (você aceita) vs. *"The author **argues** that X"*
+> (neutro-analítico). Numa pergunta de atitude do autor em Reading, escolher o
+> verbo errado na sua cabeça leva à alternativa errada.
+
+---
+
+## SEÇÃO 7: VOCABULÁRIO FUNCIONAL PARA LISTENING
+
+> Em *Listen to an Academic Talk* e *Listen to a Conversation*, certas palavras
+> não carregam o conteúdo — elas **sinalizam a estrutura**. Reconhecê-las na hora
+> diz onde anotar e o que vai cair na pergunta.
+
+### 7.1 Sinalizadores de estrutura em palestras
+
+| Função | O palestrante diz... | O que significa para a sua anotação |
+|---|---|---|
+| Anunciar o tema | *"Today I want to focus on... / Let's turn to..."* | título do bloco |
+| Listar | *"There are three main... / First... / Another..."* | numere — a pergunta vai cobrar "quantos / quais" |
+| Definir | *"By X, I mean... / X refers to... / X, that is,..."* | definição = provável pergunta de detalhe |
+| Exemplificar | *"For instance... / To illustrate... / Take the case of..."* | exemplo apoia o ponto anterior — ligue os dois |
+| Contrastar | *"However... / On the other hand... / Whereas... / Unlike..."* | ponto de virada — quase sempre cai na pergunta |
+| Causa/efeito | *"As a result... / This leads to... / Consequently... / because of this..."* | relação causal = pergunta de "por quê" |
+| Enfatizar | *"The key point is... / What matters here is... / I can't stress enough..."* | ideia principal — sublinhe |
+| Corrigir/reformular | *"Or rather... / Actually... / Let me put that differently..."* | a segunda versão é a que vale |
+| Digressão | *"By the way... / As an aside... / This is a bit of a tangent..."* | **não** vai cair — não gaste anotação |
+| Retomar | *"Getting back to... / As I was saying... / To return to the main point..."* | fim da digressão |
+| Concluir | *"So to sum up... / The upshot is... / In short..."* | resumo da ideia principal — pergunta de *gist* |
+
+### 7.2 Phrasal verbs frequentes em conversas de campus
+
+O Listening usa muito phrasal verb onde o brasileiro espera o verbo latino.
+Reconhecimento imediato é obrigatório.
+
+| Phrasal | Sentido | Equivalente latino |
+|---|---|---|
+| *drop by / stop by* | passar rapidamente (num lugar) | visit briefly |
+| *sign up for* | inscrever-se em | enrol in / register for |
+| *drop / add a class* | trancar / incluir uma disciplina | withdraw from / enrol in |
+| *catch up on* | pôr em dia | review what was missed |
+| *put off* | adiar | postpone |
+| *turn in / hand in* | entregar (trabalho) | submit |
+| *look over / go over* | revisar | review, examine |
+| *figure out* | descobrir, entender | determine, work out |
+| *run into* | encontrar por acaso | encounter unexpectedly |
+| *fill out* | preencher (formulário) | complete |
+| *back up* | apoiar; fazer backup | support; save a copy |
+| *bring up* | mencionar | raise, mention |
+| *point out* | destacar | note, indicate |
+| *set up* | organizar, marcar | arrange, schedule |
+| *work on* | trabalhar em | develop, refine |
+| *come up with* | inventar, propor | devise, propose |
+| *cut back on* | reduzir | reduce, curtail |
+| *end up* | acabar (fazendo/sendo) | eventually be/do |
+
+### 7.3 Linguagem de conversa transacional (student ↔ staff)
+
+| O aluno quer... | Ouça por... |
+|---|---|
+| Marcar horário | *"Could I set up a time to...", "Are you available...", "office hours"* |
+| Pedir extensão | *"an extension", "push back the deadline", "a few more days"* |
+| Reclamar / relatar problema | *"I'm having trouble with...", "there seems to be an issue...", "it's not working"* |
+| Pedir esclarecimento | *"I'm a little confused about...", "could you clarify...", "what exactly..."* |
+| Aceitar / concordar | *"that works for me", "sounds good", "I'd appreciate that"* |
+| Recusar educadamente (staff) | *"I'm afraid that's not possible", "unfortunately", "the policy is..."* |
+
+---
+
+## SEÇÃO 8: O KIT DE EMERGÊNCIA — AS 50 PALAVRAS DE MAIOR ROI
 
 > Para quem tem pouco tempo: as 50 palavras com maior retorno por hora de estudo
 > — combinando frequência no exame e impacto na pontuação quando usadas por você.
@@ -330,7 +560,178 @@ corretamente é um forte sinal de proficiência para o e-rater.
 
 ---
 
-## SEÇÃO 6: PROTOCOLO DE ATIVAÇÃO — DE RECONHECER A USAR
+## SEÇÃO 9: DRILLS DE VOCABULÁRIO
+
+> As tabelas acima são reconhecimento. Estes drills forçam **produção**. Faça-os
+> com papel e caneta, sem consultar, e só depois confira o gabarito.
+
+### DRILL 1 — Complete the Words (forma exata)
+
+Complete a palavra. As primeiras letras são dadas; a frase determina a forma.
+
+1. "The committee will *ass___* the proposal before the vote." → *(verbo)*
+2. "A thorough *ass___* of the risks is still pending." → *(substantivo)*
+3. "The results were *stat___* significant." → *(advérbio)*
+4. "Researchers must control for every *conf___* variable." → *(adjetivo)*
+5. "The two theories offer *comp___* explanations of the same data." → *(adjetivo = 'concorrentes/rivais')*
+6. "Her argument rests on a questionable *assum___*." → *(substantivo)*
+7. "The city failed to *pri___* infrastructure spending." → *(verbo)*
+8. "The evidence is far from *concl___*." → *(adjetivo)*
+9. "The lecture *elab___* on a point the reading only mentions." → *(verbo, 3ª pessoa)*
+10. "Such policies tend to *perp___* existing inequalities." → *(verbo)*
+11. "The findings were later *corr___* by an independent team." → *(verbo, particípio)*
+12. "There is considerable *var___* between the regions." → *(substantivo)*
+13. "The professor's account is more *nu___* than the textbook's." → *(adjetivo)*
+14. "This raises an important *episte___* question about how we know what we claim to know." → *(adjetivo)*
+15. "The intervention produced only a *marg___* improvement." → *(adjetivo)*
+
+**Gabarito:** 1 assess · 2 assessment · 3 statistically · 4 confounding · 5 competing · 6 assumption · 7 prioritize · 8 conclusive · 9 elaborates · 10 perpetuate · 11 corroborated · 12 variation · 13 nuanced · 14 epistemic · 15 marginal
+
+### DRILL 2 — Forma da palavra (word form)
+
+Coloque a forma correta da raiz entre parênteses.
+
+1. "The study's methodological ___ (ROBUST) has been widely praised."
+2. "These findings ___ (SUBSTANTIAL) the earlier hypothesis."
+3. "The two accounts differ ___ (SIGNIFICANT) in their conclusions."
+4. "A ___ (PERSIST) gap remains between policy and practice."
+5. "The data must be interpreted with ___ (CAUTION)."
+6. "The model ___ (SIMPLE) a process that is in fact highly complex." *(over-...)*
+7. "Their ___ (RELY) on a single data source weakens the argument."
+8. "The phenomenon has been documented ___ (EXTENSIVE)."
+9. "The committee reached a ___ (CONCLUDE) after months of review."
+10. "The reform was ___ (TRANSFORM) rather than incremental."
+11. "The claim is ___ (DEMONSTRATE) false." *(advérbio)*
+12. "Such ___ (VARY) is expected in samples of this size."
+
+**Gabarito:** 1 robustness · 2 substantiate · 3 significantly · 4 persistent · 5 caution · 6 oversimplifies · 7 reliance · 8 extensively · 9 conclusion · 10 transformative · 11 demonstrably · 12 variation (ou variability)
+
+### DRILL 3 — Collocation (verbo âncora)
+
+Escolha o verbo que colca: *conduct · draw · raise · pose · yield · challenge · account for · reach*
+
+1. "The researchers ___ a longitudinal study over fifteen years."
+2. "It is too early to ___ firm conclusions."
+3. "The lecture ___ a serious objection to the reading's assumption."
+4. "Algorithmic bias ___ a direct threat to fair hiring."
+5. "Early education programs ___ large long-term returns."
+6. "The new evidence ___ the conventional explanation."
+7. "The reading fails to ___ the implementation costs."
+8. "After long debate, the panel ___ a consensus."
+
+**Gabarito:** 1 conducted · 2 draw · 3 raises · 4 poses · 5 yield · 6 challenges · 7 account for · 8 reached
+
+### DRILL 4 — Sinônimo preciso (registro acadêmico)
+
+Substitua a palavra simples pela acadêmica que melhor se encaixa. Mais de uma
+pode servir; escolha a mais precisa.
+
+1. "The policy made the problem **worse**." → ___
+2. "This shows the importance of early action." → ___
+3. "The two studies **agree with** each other." → ___
+4. "The theory is **weak** and easily challenged." → ___
+5. "Green spaces can **reduce** urban heat." → ___
+6. "The professor **says** the cause is economic." → ___ *(neutro)*
+7. "Critics **say** the model ignores regional gaps." → ___ *(defendem uma posição)*
+8. "The result was **surprising** given common sense." → ___
+9. "The influence of social media is **everywhere**." → ___
+10. "The finding held up across many **strong** studies." → ___
+
+**Gabarito (uma opção):** 1 exacerbated · 2 underscores · 3 corroborate one another · 4 tenuous · 5 mitigate · 6 posits · 7 contend · 8 counterintuitive · 9 pervasive · 10 robust
+
+### DRILL 5 — Pares de nuance
+
+Escolha a palavra certa.
+
+1. "The new rule will (affect / effect) attendance."
+2. "The (affect / effect) on attendance was minimal."
+3. "The author (implies / infers) that the data are unreliable."
+4. "From the tone, we (imply / infer) skepticism."
+5. "The report (comprises / is comprised of) five chapters."
+6. "There were (fewer / less) objections than expected."
+7. "The (amount / number) of participants was small."
+8. "Compared (to / with) the control group, the treatment group improved."
+9. "The (principal / principle) reason is cost."
+10. "The measures are (sensible / sensitive) given the uncertainty."
+11. "The scandal (preceded / proceeded) the resignation."
+12. "The survey was designed to (elicit / illicit) candid responses."
+
+**Gabarito:** 1 affect · 2 effect · 3 implies · 4 infer · 5 comprises · 6 fewer · 7 number · 8 with · 9 principal · 10 sensible · 11 preceded · 12 elicit
+
+### DRILL 6 — Gap-fill em contexto acadêmico
+
+Complete com: *empirical · mechanism · extrapolate · confounding · replicate · tenuous · anthropogenic · mitigation · correlation · robust*
+
+> "The paper reports a strong ___(1) between screen time and poor sleep in
+> teenagers. But ___(2) is not causation, and the study does not identify the
+> ___(3) by which screens would disrupt sleep. A likely ___(4) variable is
+> simply that anxious teenagers both sleep poorly and use phones more. Until an
+> independent team can ___(5) the result under controlled conditions, the causal
+> claim remains ___(6). The authors are right, however, that the broader trend
+> is real and that its drivers are largely ___(7) — a product of how devices and
+> apps are designed. Any ___(8) strategy should therefore target design, not
+> just individual willpower. The ___(9) evidence we do have supports modest
+> limits; it does not support the alarmist framing that lets commentators
+> ___(10) from a small effect to a generational crisis."
+
+**Gabarito:** 1 correlation · 2 correlation *(→ na verdade a frase quer "correlation is not causation"; aceite)* · 3 mechanism · 4 confounding · 5 replicate · 6 tenuous · 7 anthropogenic *(aqui no sentido "de origem humana/deliberada" — design humano)* · 8 mitigation · 9 empirical · 10 extrapolate
+
+> Nota: o item 7 é um uso esticado de *anthropogenic* (normalmente clima). O
+> ponto do drill é a forma; num texto real você usaria *by design* ou
+> *human-engineered*.
+
+### DRILL 7 — Verbo de reporte + postura
+
+Para cada frase, escolha o verbo que combina com a postura indicada entre
+colchetes: *acknowledges · claims · demonstrates · disputes · notes · concedes*
+
+1. "The author ___ that the sample was small. [reconhece uma fraqueza própria]"
+2. "The lecturer ___, with new data, that the reading's model is wrong. [prova]"
+3. "The reading ___ that the method is flawless, but offers no support. [afirma sem prova]"
+4. "The professor ___ the reading's central assumption. [contesta]"
+5. "The passage ___ that enrollment rose in 2024. [registra um fato, neutro]"
+6. "While she ___ the cost is real, she argues the benefit is larger. [admite o contra]"
+
+**Gabarito:** 1 acknowledges · 2 demonstrates · 3 claims · 4 disputes · 5 notes · 6 concedes
+
+### DRILL 8 — Ativação (inserção no início da frase)
+
+Para cada palavra, escreva **uma** frase própria em que ela apareça **nas
+primeiras 4 palavras**. Cronometre: 15 segundos por frase. Se passar disso, a
+palavra ainda é passiva — mantenha-a só no Writing.
+
+*proliferation · counterintuitive · exacerbate · pervasive · underscore · viable · systemic · inherent*
+
+**Modelo (proliferation):** *"The proliferation of streaming services has fragmented an audience that cable once held together."*
+
+### DRILL 9 — Caça ao erro
+
+Cada frase tem **um** erro de vocabulário (forma, colocação, falso cognato ou
+nuance). Encontre e corrija.
+
+1. "Eventually, the study has three limitations that the authors admit."
+2. "The data is comprised of responses from 400 students."
+3. "This raises a concern about if the method is valid."
+4. "The professor pretends that the effect is purely cultural."
+5. "The two results corroborate to each other."
+6. "The policy had a big affect on rural clinics."
+7. "The evidence for this connection is very strong and robusts."
+8. "The lecture makes an emphasis on the second mechanism."
+
+**Gabarito:**
+
+1. *Eventually* → **"The study has three limitations..."** (falso cognato; queria dizer "na verdade/de fato" ou nada)
+2. *is comprised of* → **"comprises"** ou **"is composed of"**
+3. *about if* → **"about whether"**
+4. *pretends* → **"claims"** ou **"argues"** (falso cognato: *pretend* = fingir)
+5. *corroborate to each other* → **"corroborate each other"** (sem preposição)
+6. *affect* → **"effect"** (aqui é substantivo)
+7. *robusts* → **"robust"** (adjetivo não flexiona)
+8. *makes an emphasis on* → **"emphasizes"** ou **"places emphasis on"**
+
+---
+
+## SEÇÃO 10: PROTOCOLO DE ATIVAÇÃO — DE RECONHECER A USAR
 
 ### Plano de 30 dias para ativar as 50 palavras
 
@@ -358,7 +759,7 @@ A frase começa **com** a palavra de impacto — não termina nela.
   Reconhecimento lento = pontos perdidos em *Read an Academic Passage* e *Listen
   to an Academic Talk*, além de dificuldade em *Complete the Words*.
 - **Take an Interview:** a rubrica premia **variedade lexical** — 2 a 3 palavras
-  da Seção 3/5 por resposta, inseridas no começo da frase, elevam a banda sem
+  da Seção 3/8 por resposta, inseridas no começo da frase, elevam a banda sem
   custar fluência.
 - **Write an Email:** vocabulário navegacional preciso (*request an extension,
   clarify the requirements, reschedule*), não termos acadêmicos raros.
@@ -367,16 +768,50 @@ A frase começa **com** a palavra de impacto — não termina nela.
 
 ---
 
-## SEÇÃO 7: CHECKLIST DE SAÍDA DO MÓDULO 6
+## SEÇÃO 11: PROTOCOLO DE ANÁLISE DE ERROS DE VOCABULÁRIO
+
+Depois de cada drill de produção (Speaking/Writing), classifique cada erro
+lexical numa das seis categorias. O padrão diz onde focar.
+
+| Código | Erro | Sinal | Correção | Onde revisar |
+|---|---|---|---|---|
+| **V1** | Forma errada da palavra | usou *analyze* onde a lacuna pedia *analysis*; *robusts*, *an emphasis on* | identificar a função sintática antes de escolher a forma | Seção 5.1, Drills 1–2 |
+| **V2** | Colocação errada | *do a research*, *corroborate to*, *make an emphasis* | banco de collocations por verbo âncora | Seção 4, Drills 3, 9 |
+| **V3** | Falso cognato | *eventually* = "eventualmente"; *pretend* = "pretender"; *realize* = "realizar" | lista da Seção 6.2; ao ver um cognato "óbvio", desconfiar | Seção 6.2, Módulo 9 |
+| **V4** | Registro trocado | latinismo raro num e-mail; phrasal informal na Academic Discussion; palavra de impacto onde a simples bastava | escolher o registro da task antes de escrever | Seção 6, Módulo 5 |
+| **V5** | Overreach (usou palavra que não controla) | a palavra sofisticada está no lugar errado da frase, ou com sentido aproximado, ou trava a fala | rebaixar para a palavra simples e correta até a sofisticada passar no teste dos 3 segundos | Seção 1 (regra de ativação), Drill 8 |
+| **V6** | Sinônimo impreciso | *say* → *claim* quando o autor prova; *big* → *pervasive* quando era só *large* | escolher o sinônimo pela **nuance**, não pelo tamanho | Seção 6.3, Drill 4 |
+
+### Registro semanal
+
+| Semana | Drills feitos | V mais frequente | Palavras que "vazaram" para passivo de novo | Ação |
+|---|---|---|---|---|
+| | | | | |
+| | | | | |
+| | | | | |
+
+> Se **V5** domina, você está tentando ativar palavras cedo demais — recue para
+> menos palavras, mais repetição. Se **V1/V2** dominam, o problema é forma e
+> colocação, não repertório: foque as Seções 4 e 5, não em aprender palavras novas.
+
+---
+
+## SEÇÃO 12: CHECKLIST DE SAÍDA DO MÓDULO 6
 
 - [ ] Entendi a diferença entre vocabulário de **reconhecimento** (Seção 2) e de **produção** (Seção 3)
 - [ ] Sei que uma palavra só entra no *Take an Interview* quando sai em menos de 3 segundos
+- [ ] Sei aprender por **família de palavras**, não por palavra solta, e identificar a forma pela função sintática
+- [ ] Conheço os prefixos/sufixos que me deixam adivinhar palavras novas em Reading
+- [ ] Não caio mais nos falsos cognatos acadêmicos (*eventually, actually, pretend, realize, comprehensive, sensible*)
+- [ ] Sei que o verbo de reporte (*claim / argue / demonstrate / concede*) carrega postura — e escolho o certo
+- [ ] Reconheço os sinalizadores de estrutura em palestras e os phrasal verbs de conversas de campus
 - [ ] Escolhi as 50 palavras do Kit de Emergência como prioridade
 - [ ] Comecei o plano de 30 dias de ativação
 - [ ] Sei inserir a palavra de impacto **no início** da frase, não no fim
-- [ ] Memorizei os 15 verbos e 10 adjetivos universais da Seção 4 como substitutos diretos
+- [ ] Memorizei os verbos e adjetivos universais da Seção 4 como substitutos diretos
+- [ ] Fiz os 9 drills da Seção 9 e tenho um registro de erros V1–V6 em andamento
 
 ---
 
 ✅ Módulo 6 concluído. As tabelas ficam como banco de consulta permanente durante
-todos os drills.
+todos os drills. Refaça os drills da Seção 9 depois de cada simulado do Módulo 7.

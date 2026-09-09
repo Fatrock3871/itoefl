@@ -3,8 +3,8 @@
 Memória entre sessões. Atualizar ao concluir cada etapa.
 
 **Última atualização:** 2026-09-09
-**Agora:** Fase 7 (expansão do conteúdo). **M1, M2, M4, M3 e M5 feitos.** Próximo:
-**M6 Vocabulário**. `artifact/index.html` ≈ 665 KB.
+**Agora:** Fase 7 (expansão do conteúdo). **M1, M2, M4, M3, M5 e M6 feitos.** Próximo:
+**M7 Simulados**. `artifact/index.html` ≈ 706 KB.
 
 ---
 
@@ -215,8 +215,18 @@ M1 → M2 → M4 + M3 → M6 → M9 → M0/M5/M7/M8.
       com exemplos extras por função, Parte 6 (elevação narrada frase a frase),
       Parte 7 (6 → 14 drills, todos com gabarito), Parte 9 (protocolo RG1–RG6).
       `build_plain`. `commit 6c6e084`.
-- [ ] **M6 Vocabulário** — próximo.
-- [ ] M7, M8, M9 — idem, um por vez.
+- [x] **M6 Vocabulário** (2026-09-09) — ~5k → ~9k palavras. As 120 palavras de
+      referência (Seções 2–3) ficaram intactas; a lacuna era a ausência de
+      exercícios. Seção 4 expandida (27 verbos / 19 adjetivos / 21 collocations),
+      Seção 5 nova (**famílias de palavras + morfologia** para Complete the
+      Words), Seção 6 nova (**nuance e precisão** — pares confundidos + falsos
+      cognatos acadêmicos + verbos de reporte com postura), Seção 7 nova
+      (**vocabulário funcional para Listening** — sinalizadores de palestra +
+      phrasal verbs de campus), Seção 9 nova (**9 drills com gabarito**), Seção
+      11 nova (protocolo V1–V6). Seções renumeradas (Kit 5→8, ativação 6→10,
+      checklist 7→12). Widget SRS reancorado para `<h2>SEÇÃO 9`. `commit ` a preencher.
+- [ ] **M7 Simulados progressivos** — próximo.
+- [ ] M8, M9 — idem, um por vez.
 
 ## Fase 6 — Publicação
 

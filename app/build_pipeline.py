@@ -124,7 +124,9 @@ def build_mod6():
     html_out = build_plain(f"{SRC}/modulo_6_vocabulary.md")
     cards = json.load(open("vocab_kit.json", encoding="utf-8"))
     widget = render_srs("kit50", cards)
-    idx = html_out.find("<h2>SEÇÃO 6")
+    # injeta o widget de flashcards logo após o Kit de 50 palavras (Seção 8),
+    # antes dos drills de vocabulário (Seção 9)
+    idx = html_out.find("<h2>SEÇÃO 9")
     if idx == -1:
         return html_out + widget
     return html_out[:idx] + widget + "\n" + html_out[idx:]
