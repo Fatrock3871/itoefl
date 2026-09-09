@@ -441,10 +441,11 @@ Anotar palavra por palavra é lento demais. Use símbolos.
 **Fala:** *"You're not seriously thinking of driving downtown on game day, are you?"*
 
 **Opções:**
-(A) *"The game starts at seven, I think."*
-(B) *"Good point — I'll take the train instead."*
-(C) *"I drove downtown last weekend."*
-(D) *"I don't really follow that team."*
+
+- (A) *"The game starts at seven, I think."*
+- (B) *"Good point — I'll take the train instead."*
+- (C) *"I drove downtown last weekend."*
+- (D) *"I don't really follow that team."*
 
 > **Passo 1 — o que é isto?** Uma **pergunta retórica negativa** (*"You're not
 > ... are you?"*). Não é um pedido de informação — é um **alerta educado**: "isso
@@ -454,6 +455,7 @@ Anotar palavra por palavra é lento demais. Use símbolos.
 > plano. É exatamente **(B)**: *"Good point — I'll take the train instead."*
 >
 > **Passo 3 — por que as outras falham:**
+>
 > - (A) responde a uma pergunta que **não foi feita** (o horário do jogo).
 >   **WRONG FOCUS.**
 > - (C) usa as palavras *"drove downtown"* do original, mas não responde ao
