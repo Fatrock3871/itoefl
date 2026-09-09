@@ -147,8 +147,9 @@ def add_progress_hooks(html, modkey):
 def main():
     frag = {
         "mod0": build_mod0(),
-        "mod1": build_plain(f"{SRC}/modulo_1_reading.md"),  # expandido: drills em texto + gabarito (Parte 6)
-        "mod2": build_mod2(),
+        "mod1": build_plain(f"{SRC}/modulo_1_reading.md"),  # expandido: drills em texto + gabarito
+        "mod2": build_plain(f"{SRC}/modulo_2_listening.md"),  # expandido: drills em texto + gabarito
+        # (build_mod1 / build_mod2 continuam definidos mas não usados — ver histórico)
         "mod3": build_plain(f"{SRC}/modulo_3_speaking.md"),
         "mod4": build_mod4(),
         "mod5": build_plain(f"{SRC}/modulo_5_registro.md"),

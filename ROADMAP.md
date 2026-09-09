@@ -2,11 +2,10 @@
 
 Memória entre sessões. Atualizar ao concluir cada etapa.
 
-**Última atualização:** 2026-09-08
-**Agora:** Fases 0–5 + redesenho + verificação ETS concluídos. **Fase 7 em
-curso** — expansão do conteúdo, módulo por módulo. **M1 Reading feito**
-(5,3k → 11,5k palavras). Próximo: **M2 Listening**.
-`artifact/index.html` ≈ 536 KB.
+**Última atualização:** 2026-09-09
+**Agora:** Fase 7 em curso (expansão do conteúdo, módulo por módulo).
+**M1 Reading e M2 Listening feitos** (5k → ~11k palavras cada). Próximo:
+**M4 Writing**. `artifact/index.html` ≈ 565 KB.
 
 ---
 
@@ -185,11 +184,16 @@ M1 → M2 → M4 + M3 → M6 → M9 → M0/M5/M7/M8.
       resolvido narrado), 13 drills graduados (era 3) cobrindo todos os
       formatos e tipos de questão, gabarito dos 67 itens, Parte 7 (protocolo
       de erros R1–R6). M1 agora usa `build_plain`. `commit 0bb2738`.
-- [ ] **M2 Listening** — próximo. Mesmo tratamento: laboratório de escuta
-      (redução, discurso conectado, sinais de discurso), exemplo resolvido,
-      muito mais áudio-script (todos os 4 tipos), dificuldade graduada,
-      protocolo de erros.
-- [ ] M3, M4, M5, M6, M7, M8, M9 — idem, um por vez.
+- [x] **M2 Listening** (2026-09-09) — 5,7k → 10,5k palavras. Parte 1.4 (9 tipos
+      de pergunta), Parte 3 (**Laboratório de Escuta** — reduções, linking,
+      contrações, números, 40 termos de campus, 30 idioms, linguagem funcional,
+      símbolos de anotação), Parte 4 (exemplo narrado), 21 drills graduados
+      (era 4), gabarito dos 51 itens, Parte 7 (protocolo L1–L6). `build_plain`.
+- [ ] **M4 Writing** — próximo (Writing e Speaking são onde a nota é feita).
+      Adicionar: laboratório de erros gramaticais de produção, bancos de prompts
+      de Build a Sentence / Email / Academic Discussion, mais respostas-modelo
+      anotadas por banda, checklist de revisão, protocolo de erros.
+- [ ] M3, M5, M6, M7, M8, M9 — idem, um por vez.
 
 ## Fase 6 — Publicação
 
