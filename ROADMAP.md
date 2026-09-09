@@ -214,7 +214,7 @@ M1 → M2 → M4 + M3 → M6 → M9 → M0/M5/M7/M8.
       conectores, escala de formalidade lexical, colocações acadêmicas), Parte 5
       com exemplos extras por função, Parte 6 (elevação narrada frase a frase),
       Parte 7 (6 → 14 drills, todos com gabarito), Parte 9 (protocolo RG1–RG6).
-      `build_plain`. `commit ` a preencher.
+      `build_plain`. `commit 6c6e084`.
 - [ ] **M6 Vocabulário** — próximo.
 - [ ] M7, M8, M9 — idem, um por vez.
 
