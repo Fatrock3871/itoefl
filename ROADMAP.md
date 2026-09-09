@@ -3,8 +3,8 @@
 Memória entre sessões. Atualizar ao concluir cada etapa.
 
 **Última atualização:** 2026-09-09
-**Agora:** Fase 7 (expansão do conteúdo). **M1, M2, M4 e M3 feitos.** Próximo:
-**M5 Registro**. `artifact/index.html` ≈ 612 KB.
+**Agora:** Fase 7 (expansão do conteúdo). **M1, M2, M4, M3 e M5 feitos.** Próximo:
+**M6 Vocabulário**. `artifact/index.html` ≈ 665 KB.
 
 ---
 
@@ -205,8 +205,18 @@ M1 → M2 → M4 + M3 → M6 → M9 → M0/M5/M7/M8.
       Parte 6 (gabarito de função + respostas-modelo banda 3/5/6), Parte 7
       (S1–S6). Também: correção de renderização de listas markdown em M2 e M3.
       `build_plain`. `commit 51876d0`.
-- [ ] **M5 Registro & Sofisticação** — próximo.
-- [ ] M6, M7, M8, M9 — idem, um por vez.
+- [x] **M5 Registro & Sofisticação** (2026-09-09) — 2,9k → ~10k palavras.
+      Parte 1.4 (a rubrica CEFR em números) + 1.5 (as 3 "vozes"), Parte 2.1
+      (bancos de frases por função retórica), os 10 marcadores expandidos
+      (função + antes/depois + uso indevido + quando não usar), Parte 4
+      (**Laboratório de Registro** — nominalização, hedging calibrado, densidade
+      por combinação de orações, cleft/fronting/inversão, coesão além de
+      conectores, escala de formalidade lexical, colocações acadêmicas), Parte 5
+      com exemplos extras por função, Parte 6 (elevação narrada frase a frase),
+      Parte 7 (6 → 14 drills, todos com gabarito), Parte 9 (protocolo RG1–RG6).
+      `build_plain`. `commit ` a preencher.
+- [ ] **M6 Vocabulário** — próximo.
+- [ ] M7, M8, M9 — idem, um por vez.
 
 ## Fase 6 — Publicação
 
