@@ -3,8 +3,8 @@
 Memória entre sessões. Atualizar ao concluir cada etapa.
 
 **Última atualização:** 2026-09-09
-**Agora:** Fase 7 (expansão do conteúdo). **M1, M2, M4, M3, M5 e M6 feitos.** Próximo:
-**M7 Simulados**. `artifact/index.html` ≈ 706 KB.
+**Agora:** Fase 7 (expansão do conteúdo). **M1, M2, M4, M3, M5, M6 e M7 feitos.** Próximo:
+**M8 Exam Day**. `artifact/index.html` ≈ 737 KB.
 
 ---
 
@@ -225,8 +225,19 @@ M1 → M2 → M4 + M3 → M6 → M9 → M0/M5/M7/M8.
       phrasal verbs de campus), Seção 9 nova (**9 drills com gabarito**), Seção
       11 nova (protocolo V1–V6). Seções renumeradas (Kit 5→8, ativação 6→10,
       checklist 7→12). Widget SRS reancorado para `<h2>SEÇÃO 9`. `commit 791d2c0`.
-- [ ] **M7 Simulados progressivos** — próximo.
-- [ ] M8, M9 — idem, um por vez.
+- [x] **M7 Simulados progressivos** (2026-09-09) — ~4k → ~7,5k palavras. A
+      estrutura de 4 simulados já batia com o formato 2026. Adicionado:
+      pré-requisitos por simulado + conversão banda CEFR↔0–120 (Parte 1),
+      template da semana entre simulados (Parte 2), Simulado 2 muito expandido
+      (CtW 4→12 c/ formato C-test, +texto Daily Life, +Academic Passage,
+      Listening 4→10 itens, Build a Sentence 3→8, respostas-modelo banda 3/5),
+      Simulado 3 (CtW 3→8), **Parte 6 reescrita** — a taxonomia de triagem agora
+      espelha 1-a-1 os protocolos R/L/S/W/V/RG dos módulos (SR-*→M1, SL-*→M2,
+      SS-*→M3, SW-*→M4) com código de reparo exato + consolidação entre 2
+      simulados, Parte 9 nova (calendário de 8 semanas). `build_plain`.
+      `commit ` a preencher.
+- [ ] **M8 Exam Day Protocol** — próximo.
+- [ ] M9 — idem.
 
 ## Fase 6 — Publicação
 
