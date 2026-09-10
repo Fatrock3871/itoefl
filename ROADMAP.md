@@ -245,7 +245,7 @@ M1 → M2 → M4 + M3 → M6 → M9 → M0/M5/M7/M8.
       regras de ambiente, quadro branco no lugar de papel, checklist próprio);
       ensaio dos protocolos nos Simulados 3–4; +8 cenários anti-colapso; regras
       de reteste (3 dias, validade 2 anos, MyBest); Parte 9 nova (**cola mental**
-      de uma página). `build_plain`. `commit ` a preencher.
+      de uma página). `build_plain`. `commit 0bacb28`.
 - [ ] **M9 Brazilian Trap Library** — próximo (último).
 
 ## Fase 6 — Publicação
