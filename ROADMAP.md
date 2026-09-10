@@ -3,8 +3,8 @@
 Memória entre sessões. Atualizar ao concluir cada etapa.
 
 **Última atualização:** 2026-09-09
-**Agora:** Fase 7 (expansão do conteúdo). **M1, M2, M4, M3, M5, M6 e M7 feitos.** Próximo:
-**M8 Exam Day**. `artifact/index.html` ≈ 737 KB.
+**Agora:** Fase 7 (expansão do conteúdo). **M1–M8 feitos** (falta só M9). Próximo:
+**M9 Brazilian Traps**. `artifact/index.html` ≈ 751 KB.
 
 ---
 
@@ -236,8 +236,17 @@ M1 → M2 → M4 + M3 → M6 → M9 → M0/M5/M7/M8.
       SS-*→M3, SW-*→M4) com código de reparo exato + consolidação entre 2
       simulados, Parte 9 nova (calendário de 8 semanas). `build_plain`.
       `commit 4a50fab`.
-- [ ] **M8 Exam Day Protocol** — próximo.
-- [ ] M9 — idem.
+- [x] **M8 Exam Day Protocol** (2026-09-09) — ~4,3k → ~6,4k palavras. Corrigida a
+      inconsistência de ordem das seções (Parte 6 tinha R→L→Speaking→Writing;
+      unificado com M7/CLAUDE.md para **R→L→[pausa]→Writing→Speaking** + aviso de
+      que W↔S varia por centro/modalidade — **confirmar na inscrição ETS**).
+      Adicionado: micro-orçamento de tempo por seção + cross-links aos códigos de
+      triagem do M7; subseção **TOEFL iBT Home Edition** (requisitos técnicos,
+      regras de ambiente, quadro branco no lugar de papel, checklist próprio);
+      ensaio dos protocolos nos Simulados 3–4; +8 cenários anti-colapso; regras
+      de reteste (3 dias, validade 2 anos, MyBest); Parte 9 nova (**cola mental**
+      de uma página). `build_plain`. `commit ` a preencher.
+- [ ] **M9 Brazilian Trap Library** — próximo (último).
 
 ## Fase 6 — Publicação
 
