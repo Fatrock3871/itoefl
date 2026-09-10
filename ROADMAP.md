@@ -256,7 +256,7 @@ M1 → M2 → M4 + M3 → M6 → M9 → M0/M5/M7/M8.
       mini-banco de frases de e-mail (cross-ref M5 corrigida 4.2→5.2). Parte 7
       glossário 30→~50. **Parte 8 nova** (mapa reverso código M7 → trecho do
       módulo). **Parte 9 nova** (sprint de eliminação de 2 semanas).
-      `build_plain`. `commit ` a preencher.
+      `build_plain`. `commit 4c1e6df`.
 
 **Fase 7 concluída.** Fragmentos finais: mod0=42k, mod1=84k, mod2=77k, mod3=54k,
 mod4=66k, mod5=75k, mod6=118k, mod7=86k, mod8=45k, mod9=68k. `artifact` ≈ 777 KB.
