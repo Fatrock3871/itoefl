@@ -24,20 +24,20 @@ Conversa pulou entre três assuntos. Estado de cada um:
     remover de vez (+ limpar refs) OU fundir o útil em M1/M3/M4 OU manter.
   - Nada foi removido ainda.
 
-### 2. Design / front-end (EM ANDAMENTO)
-- Usuário: site "feio e com cara de IA". Referência: `rep12doses-webpage.vercel.app`
-  (bold, whitespace, cards, tags em pill, tipografia pesada). Paleta pedida:
-  **laranja + branco**.
-- **Feito:** `app/styles.css` reescrito — paleta laranja/branco, sidebar escuro
-  (rail), fonte Archivo (display) + Inter (corpo), menos mono, blockquote laranja,
-  botões pill, `.panel-head` por módulo (número grande + título + tagline).
-- **A fazer:** `build.py` (taglines + `.panel-head`), rebuild, screenshots,
-  ajuste fino, dark mode.
+### 2. Design / front-end (v1 FEITO — commit 7fcdd49)
+- Usuário: site "feio e com cara de IA". Referência: `rep12doses-webpage.vercel.app`.
+  Paleta pedida: **laranja + branco**.
+- **Feito:** `styles.css` reescrito (laranja #e8641c + branco quente, sidebar =
+  rail escuro, fonte Archivo+Inter, blockquote laranja, botões pill, cards
+  definidos, H2 com espinha laranja). `build.py` = `.panel-head` por módulo
+  (número + título + tagline; MODS ganhou 5º campo). Dark mode retunado.
+  Verificado por screenshot em claro e escuro.
+- **Pendente:** feedback do usuário (ver `scratchpad`: v2_m0_light, v2_m1_light,
+  v2_m0_dark). Ajuste fino conforme reação. Testar mobile (430px).
 
-### 3. Estrutura / navegação linear
-- Usuário: quer avançar de módulo ao concluir **70%** do anterior (hoje é 100%).
-- **A fazer:** trocar o limiar em `app/app.js` (`isUnlocked`, msg de bloqueio).
-  Manter módulos bloqueados **visíveis** na sidebar (preview da jornada).
+### 3. Estrutura / navegação linear (FEITO — commit 7fcdd49)
+- `app.js`: `UNLOCK_PCT = 70` (era 100). Módulo N libera com 70% do N-1.
+  Mensagem de bloqueio mostra o % atual. Bloqueados seguem visíveis na sidebar.
 
 ---
 
