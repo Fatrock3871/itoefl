@@ -33,6 +33,19 @@ avançado — e dá a correção cirúrgica para cada um.
 | ✍️ | Risco primário no Writing (e-rater — *Write an Email* e *Write for an Academic Discussion*) |
 | 🎤✍️ | Risco nas duas seções |
 
+**Onde cada trap "cai" nos protocolos de erro:** cada armadilha deste módulo
+corresponde a um código de erro dos outros módulos. A **Parte 8** traz o mapa
+completo. Resumo:
+
+| Tipo de trap | Código de reparo | Onde na análise pós-simulado (M7) |
+|---|---|---|
+| Preposição / artigo / word form | **M4 → W3**, **M1 → R4** | `SW-form`, `SR-lex` |
+| 3ª pessoa -s, tempo verbal, incontáveis | **M4 → W2**, **M3 → S5** | `SW-verb`, `SS-gram` |
+| Estrutura de frase (word order, run-on) | **M4 → W1** | `SW-synt` |
+| Falso cognato (sentido trocado) | **M6 → V3** | `SR-lex`, `SW-lex` |
+| Fonema / ritmo / -ED | **M3 → S1 / S3** | `SS-phon`, `SS-rhythm` |
+| Over-formality / registro no e-mail | **M4 → W4**, **M5 → RG1 / RG2** | `SW-reg` |
+
 ---
 
 ## PARTE 2: TRANSFERÊNCIA LINGUÍSTICA FATAL
@@ -59,10 +72,24 @@ Inglês e português raramente concordam em qual preposição usar com o mesmo v
 | *"the reason **of** my choice"* | a razão **da** minha escolha | **the reason for** my choice | 🎤✍️ |
 | *"married **with** her"* | casou **com** ela | **married her** / **got married to her** | ✍️ |
 | *"agree **with** the policy"* | concordar **com** | **agree with** (correto ✅) — mas *"agree **to** a proposal"* (aceitar) | ✍️ |
+| *"responsible **of**"* | responsável **por** | **responsible for** | 🎤✍️ |
+| *"interested **on** the topic"* | interessado **em** | **interested in** | 🎤✍️ |
+| *"good **in** math"* | bom **em** | **good at** math | 🎤 |
+| *"different **of/than**"* | diferente **de** | **different from** (US) | 🎤✍️ |
+| *"similar **with**"* | parecido **com** | **similar to** | ✍️ |
+| *"worried **with**"* | preocupado **com** | **worried about** | 🎤✍️ |
+| *"focus **in**"* | focar **em** | **focus on** | ✍️ |
+| *"based **in** the data"* | baseado **em** | **based on** the data | ✍️ |
+| *"benefit **of** the program"* (querendo "beneficiar-se") | beneficiar-se **de** | **benefit from** the program | ✍️ |
+| *"prevent someone **of**"* | impedir alguém **de** | **prevent someone from** | ✍️ |
+| *"succeed **to** do"* | conseguir fazer | **succeed in** doing / **manage to** do | ✍️ |
+| *"contribute **for**"* | contribuir **para** | **contribute to** | ✍️ |
+| *"access **to** the internet"* (subst.) ✅ — mas *"**to access** the site"* sem "to the" | acessar **a** | verbo **access** não leva preposição | ✍️ |
 
 > **Drill de fixação:** escreva 5 frases usando "depend on", "consist of",
-> "arrive at/in" e "insist on" sobre tópicos do TOEFL (educação, tecnologia,
-> meio ambiente). Releia em voz alta. Repita até saírem automaticamente.
+> "arrive at/in", "insist on", "responsible for" e "based on" sobre tópicos do
+> TOEFL (educação, tecnologia, meio ambiente). Releia em voz alta. Repita até
+> saírem automaticamente. Erro aqui = código **SW-form** → **M4 W3**.
 
 ### 2.2 Expressões idiomáticas de risco fatal
 
@@ -83,6 +110,14 @@ pragmaticamente incompreensível.
 | *"pass by a difficult situation"* | passar por uma situação difícil | **go through a difficult situation** | *Take an Interview* (narração) |
 | *"I am with X years"* | estou com X anos | **I am X years old** | *Take an Interview* |
 | *"it's all right"* | tudo certo | ✅ ok — mas *"everything is all right"* é mais formal | ✍️ |
+| *"take a decision"* | tomar uma decisão | **make a decision** | 🎤✍️ |
+| *"win money / win a good salary"* | ganhar dinheiro | **earn money / make money** (*win* só em competição/sorte) | 🎤 |
+| *"lose the bus / lose the class"* | perder o ônibus/aula | **miss the bus / miss class** | 🎤 |
+| *"know a place"* (visitar) | conhecer um lugar | **visit / go to / see** a place | *Take an Interview* (narração) |
+| *"since a long time"* | há muito tempo | **for a long time** | 🎤✍️ |
+| *"nowadays" no início repetido* | hoje em dia | ok uma vez; variar com *"today", "at present", "increasingly"* | ✍️ |
+| *"how it works" como pergunta indireta com ordem de pergunta* | como funciona | *"how it works"* (ordem afirmativa) | 🎤✍️ |
+| *"more and more people"* ✅ — mas *"each time more people"* | cada vez mais | **more and more / an increasing number of** | 🎤✍️ |
 
 ### 2.3 Estruturas gramaticais de transferência
 
@@ -145,6 +180,77 @@ O português usa reflexivos em contextos onde o inglês não usa.
 | *"I remember **myself** of"* | *"I remember"* (sem reflexivo + preposição) |
 | *"The situation **revealed itself** complex"* | *"The situation **proved** complex"* / *"was complex"* |
 
+**E. Substantivos incontáveis (o erro que o e-rater sempre pega):**
+
+O português pluraliza livremente; muitos desses substantivos são **incontáveis**
+em inglês — sem `-s`, sem `a/an`, com verbo no singular.
+
+| Errado | Correto |
+|---|---|
+| *"informations", "an information"* | *"information"* / *"a piece of information"* |
+| *"advices", "an advice"* | *"advice"* / *"a piece of advice"* |
+| *"researches", "a research"* | *"research"* / *"a study"* |
+| *"feedbacks"* | *"feedback"* |
+| *"knowledges", "a knowledge"* | *"knowledge"* |
+| *"an equipment", "equipments"* | *"equipment"* / *"a piece of equipment"* |
+| *"furnitures"* | *"furniture"* |
+| *"a progress", "progresses"* | *"progress"* |
+| *"homeworks"* | *"homework"* / *"an assignment"* |
+| *"vocabularies"* | *"vocabulary"* |
+| *"evidences"* | *"evidence"* (incontável no sentido de "provas") |
+
+> 🔴 *"These informations are..."* dispara **dois** erros de gramática no
+> e-rater (plural indevido + concordância). Código **SW-verb** → **M4 W2**.
+
+**F. Artigo indefinido omitido + `a` vs `an` + instituições:**
+
+O português dispensa o artigo indefinido onde o inglês o exige.
+
+| Errado | Correto |
+|---|---|
+| *"He is engineer"* | *"He is **an** engineer"* |
+| *"as student, I..."* | *"**as a** student, I..."* |
+| *"It is **an** useful tool"* | *"It is **a** useful tool"* (som /j/, não vogal) |
+| *"in **a** hour"* | *"in **an** hour"* (h mudo) |
+| *"such **a** important issue"* | *"such **an** important issue"* |
+| *"go to **the** university / **the** school"* (genérico) | *"go to university / go to school"* (sem artigo, quando é a atividade) |
+| *"go to **the** bed", "go to **the** work"* | *"go to bed", "go to work"* |
+
+**G. Ordem das palavras:**
+
+| Errado | Correto | Regra |
+|---|---|---|
+| *"Explain me the rule"* | *"Explain the rule **to me**"* | *explain / describe / suggest / say* não levam objeto indireto sem *to* |
+| *"I like very much this book"* | *"I like this book **very much**"* | advérbio de intensidade não separa verbo e objeto |
+| *"I always am late"* / *"I am late always"* | *"I **am always** late"* / *"I **always** arrive late"* | advérbio de frequência: depois de *to be*, antes dos outros verbos |
+| *"differents ideas"*, *"importants points"* | *"**different** ideas"*, *"**important** points"* | adjetivo **não** concorda em número |
+| *"a car red"*, *"the house big"* | *"a **red** car"*, *"the **big** house"* | adjetivo antes do substantivo |
+| *"My father, he works a lot"* | *"My father works a lot"* | sem sujeito duplo (pronome retomando o sujeito) |
+| *"I don't know what **is** the answer"* | *"I don't know what **the answer is**"* | pergunta indireta = ordem afirmativa |
+
+**H. Present perfect vs. passado simples (+ `since` / `for`):**
+
+O português usa o presente para situações que começaram no passado e continuam
+("Moro aqui **desde** 2020" / "**há** cinco anos").
+
+| Errado | Correto |
+|---|---|
+| *"I **live** here since 2020"* | *"I **have lived** here since 2020"* |
+| *"She **works** there for five years"* | *"She **has worked** there for five years"* |
+| *"since five years"* | *"**for** five years"* (*since* + ponto no tempo; *for* + duração) |
+| *"I **am knowing** him for a long time"* | *"I **have known** him for a long time"* (*know* é estativo — não vai no contínuo) |
+| *"I **have gone** to Rio last year"* | *"I **went** to Rio last year"* (tempo definido no passado = passado simples) |
+
+**I. Plural e concordância de número:**
+
+| Errado | Correto |
+|---|---|
+| *"one of the **reason**"* | *"one of the **reasons**"* (*one of the* + plural) |
+| *"20 **years old** man"* | *"a 20-**year**-old man"* (substantivo composto = singular) |
+| *"**peoples**"* (querendo "pessoas") | *"people"* (já é plural; *peoples* = povos) |
+| *"The **majority of students** **is**..."* | *"The majority of students **are**..."* |
+| *"**a** two-hour**s** exam"* | *"a two-**hour** exam"* |
+
 ---
 
 ## PARTE 3: FALSOS COGNATOS EM CONTEXTO ACADÊMICO — OS MAIS PERIGOSOS
@@ -178,6 +284,19 @@ O português usa reflexivos em contextos onde o inglês não usa.
 | **graduate** | graduado (bacharel) | pós-graduado / mestre / doutor | undergraduate |
 | **resume** | resumo (summary) | currículo (profissional) | summary / abstract |
 | **argument** | argumento (discussão/briga) | raciocínio / tese / ponto de vista | disagreement / debate / fight |
+| **policy** | polícia | política (diretriz, plano de ação) | police |
+| **politics** | políticas (planos) | política (atividade partidária) | policies |
+| **economic** | econômico (barato) | relativo à economia | economical / cheap / affordable |
+| **notice** | notícia | aviso; reparar/perceber | news / a news story |
+| **support** | suportar (tolerar) | apoiar / sustentar (uma tese) | tolerate / put up with / stand |
+| **push / pull** | puxar / empurrar (invertidos!) | *push* = empurrar; *pull* = puxar | — |
+| **parents** | parentes | pais (mãe e pai) | relatives |
+| **lecture** | leitura | palestra / aula expositiva | reading |
+| **propaganda** | propaganda (comercial) | propaganda (política, pejorativo) | advertising / an ad / a commercial |
+| **individual** (subst.) | indivíduo (pejorativo em PT) | pessoa (neutro, formal) | person |
+| **particular** | particular (privado) | específico / determinado | private |
+| **journal** | jornal | revista científica / diário | newspaper |
+| **costume** | costume (hábito) | fantasia / traje | custom / habit |
 
 ### Os 5 falsos cognatos mais custosos (com exemplos em contexto)
 
@@ -313,6 +432,54 @@ tocar o palato, mesmo sem chegar completamente.
 **indicated** that the results **showed** a pattern."* — "argued/conducted/
 indicated" = 3 sílabas extra; "showed" = sem vogal extra.
 
+**FONEMA 7 — /ɪ/ vs. /iː/ (o par que muda a palavra)**
+
+| O que é | Como brasileiros produzem | Pares mínimos de alto risco |
+|---|---|---|
+| /ɪ/ = curto e relaxado (*bit*); /iː/ = longo e tenso (*beat*) | tudo vira /i/ do português (só o longo) | **live**/leave · **it**/eat · **sit**/seat · **bit**/beat · **fill**/feel · **this**/these · **rich**/reach · **ship**/sheep |
+
+**Por que penaliza:** *"I want to live"* vs. *"I want to leave"* — sentidos
+opostos. Em *Listen and Repeat*, o SpeechRater compara com o alvo; trocar /ɪ/
+por /iː/ conta como palavra errada.
+
+**FONEMA 8 — /ʌ/ (o "u" de *but*)**
+
+| O que é | Como brasileiros produzem | Palavras de alto risco |
+|---|---|---|
+| Vogal central e curta em *but, cut, much, must, understand, result, study, discussion, culture, function* | /a/ ("bat") ou /u/ ("boot") | **but, much, result, study, discussion, function, culture, understand, subject, structure, currently** |
+
+**FONEMA 9 — clusters iniciais com S (a vogal epentética no começo)**
+
+| O que é | Como ocorre | Exemplos |
+|---|---|---|
+| O português não começa palavra com s+consoante — o cérebro adiciona um "e" antes | *student → "estudent"*, *speak → "espeak"* | **student, speak, study, Spanish, special, state, structure, strategy, specific, school** |
+
+**Como praticar:** comece a palavra **direto no /s/**, prolongando-o: "ssspeak",
+"ssstudent". Nunca "eh-speak".
+
+### 4.1b Acento de palavra em cognatos — a tônica que migra
+
+Cognatos português↔inglês quase sempre têm a **sílaba tônica em posição
+diferente**. Errar a tônica de uma palavra que o avaliador espera ouvir
+(código **SS-gram/SS-phon** → M3 S2) é um dos sinais mais fortes de sotaque.
+
+| Palavra | ❌ tônica PT | ✅ tônica EN |
+|---|---|---|
+| **develop / development** | de-ve-LO-pe | de-**VE**-lop |
+| **comfortable** | com-for-TÁ-vel | **COM**-for-ta-ble (3 síl.) |
+| **economy / economic** | e-co-no-MI-a | e-**CO**-no-my / e-co-**NO**-mic |
+| **technology** | tec-no-lo-GI-a | tech-**NO**-lo-gy |
+| **hierarchy** | hi-e-rar-QUI-a | **HI**-e-rar-chy |
+| **democracy** | de-mo-cra-CI-a | de-**MO**-cra-cy |
+| **photograph / photography** | fo-to-GRA-fi-a | **PHO**-to-graph / pho-**TO**-gra-phy |
+| **industry / industrial** | in-DÚS-tria | **IN**-dus-try / in-**DUS**-trial |
+| **adolescent** | a-do-les-CEN-te | a-do-**LES**-cent |
+| **preferable** | pre-fe-RÍ-vel | **PRE**-fe-ra-ble |
+| **admirable** | ad-mi-RÁ-vel | **AD**-mi-ra-ble |
+| **colleague** | col-LE-ga | **COL**-league |
+| **percent** | POR-cen-to | per-**CENT** |
+| **hotel / event** | (varia) | ho-**TEL** / e-**VENT** (tônica final) |
+
 ### 4.2 Os 3 padrões de ritmo e entonação
 
 **PADRÃO 1 — ritmo silábico vs. stress-timed (o problema raiz)**
@@ -413,11 +580,35 @@ Aplicam-se principalmente a *Write for an Academic Discussion* (e alguns ao
 | *"In function of"* | em função de | **Due to / As a result of / In terms of** |
 | *"Problematic"* (como substantivo) | problemática | "Problematic" em inglês é adjetivo ("problematic situation"), não substantivo |
 | *"Diverse"* (= vários) | diverso | **Various / Several / Multiple** — "diverse" = culturalmente variado |
+| *"Nowadays society"* (sem verbo) | hoje a sociedade | **Today's society / Society today** |
+| *"Since the text says X, so Y"* | já que... então | use **um**: "Since X, Y" OU "X; therefore, Y" |
+| *"I totally agree"* / *"I completely disagree"* | concordo totalmente | prefira **"I largely agree" / "I am not persuaded"** — hedging soa mais maduro |
+| *"more and more important"* repetido | cada vez mais | varie: **"increasingly important", "of growing importance"** |
+| *"a big problem", "a lot of people"* | um grande problema | **"a significant problem", "many people / a substantial number"** |
+| *"etc." / "and so on"* numa lista | etc. | feche a lista ou use **"among others"** |
+| *"In the actual context"* | no contexto atual | **"In the current context" / "Today"** |
 
 > **No *Write an Email*:** a armadilha inversa também vale — excesso de
 > formalidade e rodeios ("I would like to take this opportunity to humbly
 > request if it would perhaps be possible...") não é registro alto, é ruído.
-> C1 no e-mail é **direto e educado**. Ver Módulo 5, Parte 4.2.
+> C1 no e-mail é **direto e educado**. Ver Módulo 5, Parte 5.2 (código **SW-reg**).
+
+### 5.1 Mini-banco de frases seguras para o e-mail
+
+Frases prontas, de registro certo, para cada movimento do *Write an Email* —
+evitam tanto a tradução literal quanto a cerimônia excessiva.
+
+| Movimento | Frase segura |
+|---|---|
+| Contexto | *"I am a student in your [course] class."* / *"I am writing regarding [topic]."* |
+| Propósito | *"I am writing to ask whether..."* / *"I would like to request..."* / *"Could you let me know..."* |
+| Justificativa | *"I was unwell last week."* / *"I have a scheduling conflict with..."* |
+| Pedido | *"Would it be possible to...?"* / *"Could I...?"* / *"I would appreciate it if you could..."* |
+| Fechamento | *"Thank you for your time."* / *"I look forward to your reply."* / *"Best regards, [Name]"* |
+
+> **Nunca** no e-mail: *"Dear Sir or Madam"* quando você sabe o nome ·
+> *"I hope this email finds you well"* (clichê) · contrações (*I'm, don't*) ·
+> *"ASAP"* · mais de **um** pedido.
 
 ---
 
@@ -429,10 +620,16 @@ Aplicam-se principalmente a *Write for an Academic Discussion* (e alguns ao
 
 **Transferência linguística — meus erros recorrentes:**
 ```
-☐ Preposições (especifique quais): _______________________
-☐ Gerúndio vs. infinitivo (verbos): _______________________
-☐ Artigo definido com substantivos abstratos
-☐ Terceira pessoa do singular -s
+☐ Preposições (especifique quais): _______________________      → W3 / SW-form
+☐ Gerúndio vs. infinitivo (verbos): _______________________     → W2 / SW-verb
+☐ Artigo definido com substantivos abstratos ("the education")  → W3 / SW-form
+☐ Artigo indefinido omitido ("he is engineer") / a vs an        → W3 / SW-form
+☐ Terceira pessoa do singular -s                                → W2 / SW-verb
+☐ Substantivos incontáveis ("informations", "an advice")        → W2 / SW-verb
+☐ Present perfect vs. passado + since/for                       → W2 / SW-verb
+☐ Ordem das palavras ("explain me", "I like very much X")       → W1 / SW-synt
+☐ Sujeito duplo ("my father he works")                          → W1 / SW-synt
+☐ Adjetivo no plural ("differents ideas")                       → W1 / SW-synt
 ☐ Reflexivos desnecessários
 ☐ Expressões idiomáticas (especifique): _______________________
 ```
@@ -450,9 +647,13 @@ Aplicam-se principalmente a *Write for an Academic Discussion* (e alguns ao
 ☐ /θ/ (th surdo — think, hypothesis, throughout)
 ☐ /ð/ (th sonoro — the, this, that, although)
 ☐ /æ/ (short a — can, that, academic, challenge)
-☐ Vogais epentéticas (speak-i, last-i, work-i)
+☐ /ɪ/ vs /iː/ (live/leave, it/eat, ship/sheep)
+☐ /ʌ/ (but, much, result, study, discussion)
+☐ Vogais epentéticas no fim (speak-i, last-i, work-i)
+☐ Vogal epentética no início com S (e-student, e-speak)
 ☐ L final vocalizado (social, political, special)
 ☐ Terminações -ED (regra das 3 pronúncias)
+☐ Acento de palavra em cognatos (deVElop, ecoNOmic, hoTEL)
 ☐ Entonação descendente em declarações
 ☐ Entonação descendente em perguntas indiretas
 ☐ Ritmo stress-timed (sílabas tônicas mais longas)
@@ -515,8 +716,69 @@ Para uso imediato, antes de qualquer outro estudo deste módulo.
 | resume (= resumo) | **summary / abstract** | ✍️ |
 | data (= data do calendário) | **date** | 🎤✍️ |
 | in function of | **due to / as a result of** | ✍️ |
+| informations / advices | **information / advice** (incontável) | ✍️ |
+| a research (= uma pesquisa) | **a study / research** (incontável) | ✍️ |
+| take a decision | **make a decision** | 🎤✍️ |
+| win money | **earn money / make money** | 🎤 |
+| lose the bus | **miss the bus** | 🎤 |
+| explain me | **explain to me** | 🎤✍️ |
+| I live here since 2020 | **I have lived here since 2020** | 🎤✍️ |
+| since five years | **for five years** | 🎤✍️ |
+| he is engineer | **he is an engineer** | 🎤✍️ |
+| responsible of | **responsible for** | 🎤✍️ |
+| interested on | **interested in** | 🎤✍️ |
+| different than / of | **different from** | 🎤✍️ |
+| policy (= polícia) | **police** | ✍️ |
+| support (= tolerar) | **tolerate / put up with** | 🎤✍️ |
+| lecture (= leitura) | **reading** (*lecture* = palestra) | ✍️ |
+| parents (= parentes) | **relatives** | 🎤 |
+| economic (= barato) | **economical / affordable** | ✍️ |
+
+---
+
+## PARTE 8: MAPA — ONDE CADA TRAP TE PEGA NOS PROTOCOLOS DE ERRO
+
+Depois de um simulado, quando você classificar um erro com um código de triagem
+do Módulo 7, use este mapa reverso para vir direto ao trecho deste módulo que
+corrige aquele padrão.
+
+| Código (M7) | Protocolo do módulo | Traps deste módulo | Onde reparar aqui |
+|---|---|---|---|
+| **SW-form** | M4 → W3 | preposições assassinas; artigo com abstratos; `a`/`an`; artigo com instituições; word form | Parte 2.1, Parte 2.3-A, Parte 2.3-F |
+| **SW-verb** | M4 → W2 | 3ª pessoa -s; incontáveis; present perfect × passado; gerúndio × infinitivo | Parte 2.3-B, C, E, H |
+| **SW-synt** | M4 → W1 | ordem das palavras; sujeito duplo; adjetivo no plural; *since... so* | Parte 2.3-G, I; Parte 5 |
+| **SW-reg** | M4 → W4 + M5 → RG1/RG2 | over-formality no e-mail; *"in my opinion, I think"*; *"as we can see"* | Parte 5, Parte 5.1 |
+| **SW-lex** / **SR-lex** | M6 → V3/V6 | falsos cognatos (sentido trocado); *diverse* = vários; *consistent* = substancial | Parte 3 |
+| **SS-phon** | M3 → S1 | /θ/, /ð/, /æ/, /ɪ/–/iː/, /ʌ/, L final, epêntese, -ED | Parte 4.1 |
+| **SS-rhythm** | M3 → S3 | ritmo silábico; entonação ascendente em declarações | Parte 4.2 |
+| **SS-gram** | M3 → S5 | acento de palavra em cognatos; 3ª pessoa -s sob pressão | Parte 4.1b, Parte 2.3-C |
+| **SL-vocab** | M2 → L5 | falsos cognatos ouvidos ao contrário (*actually*, *eventually*, *library*) | Parte 3 |
+
+---
+
+## PARTE 9: SPRINT DE ELIMINAÇÃO — 2 SEMANAS
+
+Este módulo tem material demais para "estudar de uma vez". O que funciona é um
+sprint focado nos **seus** traps (Parte 6), rodado uma vez, e depois monitoramento
+nos simulados.
+
+| Dia | Foco | Ação concreta |
+|---|---|---|
+| **1** | Diagnóstico | Preencha a Parte 6 inteira. Conte quantos itens marcou por categoria. |
+| **2–3** | Preposições + artigos (se marcados) | 10 frases próprias por dia com as formas certas; leia em voz alta |
+| **4–5** | 3ª pessoa -s + incontáveis + tempos verbais | Reescreva um parágrafo antigo seu caçando só esses 3 erros |
+| **6–7** | Falsos cognatos (seus 5 piores) | Flashcard: PT → forma errada tentadora → forma certa. 3 frases com a certa. |
+| **8–9** | Fonemas (seus 3 piores) | 20 repetições isoladas → em palavras → nas frases-drill da Parte 4.4. Grave e compare. |
+| **10** | Ritmo + entonação | Shadowing de 1 áudio (M2), focando tônicas longas e queda final |
+| **11** | E-mail | Escreva 2 e-mails usando só o banco da Parte 5.1; caçe cerimônia e contração |
+| **12–13** | Simulado parcial | Speaking + Writing de um simulado do M7; classifique cada erro com código |
+| **14** | Revisão | Os traps que ainda apareceram no dia 12–13 → lista curta para os dias finais |
+
+> Depois do sprint, você **não** relê este módulo inteiro de novo. Você monitora
+> a sua lista curta em cada simulado e, no dia D, roda só a Parte 6 marcada.
 
 ---
 
 ✅ Módulo 9 concluído. A Brazilian Trap Library está mapeada e pronta para
-eliminação — priorize a Parte 6 nos dias finais antes da prova.
+eliminação — rode o sprint da Parte 9 uma vez e priorize a sua Parte 6 marcada
+nos dias finais antes da prova.

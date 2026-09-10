@@ -2,9 +2,10 @@
 
 Memória entre sessões. Atualizar ao concluir cada etapa.
 
-**Última atualização:** 2026-09-09
-**Agora:** Fase 7 (expansão do conteúdo). **M1–M8 feitos** (falta só M9). Próximo:
-**M9 Brazilian Traps**. `artifact/index.html` ≈ 751 KB.
+**Última atualização:** 2026-09-10
+**Agora:** **Fase 7 COMPLETA — todos os 10 módulos expandidos.** Próximo:
+**Fase 6 — publicação** (GitHub Pages + trocar URLs do Supabase).
+`artifact/index.html` ≈ 777 KB.
 
 ---
 
@@ -246,7 +247,22 @@ M1 → M2 → M4 + M3 → M6 → M9 → M0/M5/M7/M8.
       ensaio dos protocolos nos Simulados 3–4; +8 cenários anti-colapso; regras
       de reteste (3 dias, validade 2 anos, MyBest); Parte 9 nova (**cola mental**
       de uma página). `build_plain`. `commit 0bacb28`.
-- [ ] **M9 Brazilian Trap Library** — próximo (último).
+- [x] **M9 Brazilian Trap Library** (2026-09-10) — ~4,3k → ~7,5k palavras.
+      Parte 1 liga cada trap ao código de reparo. Parte 2.1 preposições +14;
+      Parte 2.3 ganhou 5 subseções novas (incontáveis, artigo indefinido/a-an,
+      ordem das palavras, present perfect × passado, plural/concordância de
+      número). Parte 3 falsos cognatos +16. Parte 4: FONEMA 7–9 (/ɪ/–/iː/, /ʌ/,
+      epêntese inicial com S) + 4.1b acento de palavra em cognatos. Parte 5 +8 +
+      mini-banco de frases de e-mail (cross-ref M5 corrigida 4.2→5.2). Parte 7
+      glossário 30→~50. **Parte 8 nova** (mapa reverso código M7 → trecho do
+      módulo). **Parte 9 nova** (sprint de eliminação de 2 semanas).
+      `build_plain`. `commit ` a preencher.
+
+**Fase 7 concluída.** Fragmentos finais: mod0=42k, mod1=84k, mod2=77k, mod3=54k,
+mod4=66k, mod5=75k, mod6=118k, mod7=86k, mod8=45k, mod9=68k. `artifact` ≈ 777 KB.
+Currículo passou de ~50k para ~110k palavras. Todos os módulos com protocolo de
+erros próprio, drills com gabarito, exemplos resolvidos; M7 e M9 amarram os
+códigos de erro entre si.
 
 ## Fase 6 — Publicação
 
