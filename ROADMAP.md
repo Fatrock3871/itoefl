@@ -3,9 +3,41 @@
 Memória entre sessões. Atualizar ao concluir cada etapa.
 
 **Última atualização:** 2026-09-10
-**Agora:** **Fase 7 COMPLETA — todos os 10 módulos expandidos.** Próximo:
-**Fase 6 — publicação** (GitHub Pages + trocar URLs do Supabase).
+**Agora:** Fase 7 (conteúdo) concluída. **3 frentes abertas em paralelo** (ver abaixo).
 `artifact/index.html` ≈ 777 KB.
+
+---
+
+## Frentes abertas (2026-09-10) — não misturar
+
+Conversa pulou entre três assuntos. Estado de cada um:
+
+### 1. Conteúdo / lista de módulos
+- **Fase 7 concluída:** todos os 10 módulos (M0–M9) expandidos e commitados.
+- **PENDENTE — decisão do usuário:**
+  - **M0:** o usuário achou que "sumiu". Esclarecido que **não sumiu** (é a 1ª aba,
+    sempre aberta, tem o diagnóstico de 10 questões). Falta ele dizer se quer o M0
+    **expandido como introdução** ou deixar como está.
+  - **M9 (Brazilian Traps):** usuário pediu para **remover**. Sinalizei que M9 é
+    conteúdo original (não fui eu que adicionei) e que M1/M4/M7/M8 hoje têm
+    referências a ele (sistema de códigos de erro). Falta ele confirmar:
+    remover de vez (+ limpar refs) OU fundir o útil em M1/M3/M4 OU manter.
+  - Nada foi removido ainda.
+
+### 2. Design / front-end (EM ANDAMENTO)
+- Usuário: site "feio e com cara de IA". Referência: `rep12doses-webpage.vercel.app`
+  (bold, whitespace, cards, tags em pill, tipografia pesada). Paleta pedida:
+  **laranja + branco**.
+- **Feito:** `app/styles.css` reescrito — paleta laranja/branco, sidebar escuro
+  (rail), fonte Archivo (display) + Inter (corpo), menos mono, blockquote laranja,
+  botões pill, `.panel-head` por módulo (número grande + título + tagline).
+- **A fazer:** `build.py` (taglines + `.panel-head`), rebuild, screenshots,
+  ajuste fino, dark mode.
+
+### 3. Estrutura / navegação linear
+- Usuário: quer avançar de módulo ao concluir **70%** do anterior (hoje é 100%).
+- **A fazer:** trocar o limiar em `app/app.js` (`isUnlocked`, msg de bloqueio).
+  Manter módulos bloqueados **visíveis** na sidebar (preview da jornada).
 
 ---
 

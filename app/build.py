@@ -3,16 +3,26 @@ import json
 frag = json.load(open("module_fragments_final.json", encoding="utf-8"))
 
 MODS = [
-    ("mod0","00","Embarque & Diagnóstico","modulo_0_embarque.md"),
-    ("mod1","01","Reading","modulo_1_reading.md"),
-    ("mod2","02","Listening","modulo_2_listening.md"),
-    ("mod3","03","Speaking","modulo_3_speaking.md"),
-    ("mod4","04","Writing","modulo_4_writing.md"),
-    ("mod5","05","Registro & Retórica","modulo_5_registro.md"),
-    ("mod6","06","Vocabulário","modulo_6_vocabulary.md"),
-    ("mod7","07","Simulados","modulo_7_simulados.md"),
-    ("mod8","08","Exam Day","modulo_8_examday.md"),
-    ("mod9","09","Brazilian Traps","modulo_9_braziliantraps.md"),
+    ("mod0","00","Embarque & Diagnóstico","modulo_0_embarque.md",
+     "Onde você está e para onde vai. Comece pelo diagnóstico de nivelamento."),
+    ("mod1","01","Reading","modulo_1_reading.md",
+     "Ler rápido e decidir item a item — o formato adaptativo de Reading."),
+    ("mod2","02","Listening","modulo_2_listening.md",
+     "Decodificar o áudio na primeira passada: escuta ativa e anotação."),
+    ("mod3","03","Speaking","modulo_3_speaking.md",
+     "Fonética, prosódia e respostas por função para o SpeechRater."),
+    ("mod4","04","Writing","modulo_4_writing.md",
+     "Frases precisas, e-mail navegacional e discussão acadêmica."),
+    ("mod5","05","Registro & Retórica","modulo_5_registro.md",
+     "A camada que separa 'correto' de 'banda alta': registro e densidade."),
+    ("mod6","06","Vocabulário","modulo_6_vocabulary.md",
+     "Reconhecer para ler; ativar para falar e escrever sob pressão."),
+    ("mod7","07","Simulados","modulo_7_simulados.md",
+     "Quatro simulados progressivos e a análise de erros que liga tudo."),
+    ("mod8","08","Exam Day","modulo_8_examday.md",
+     "As 24 horas antes e o protocolo seção a seção no dia da prova."),
+    ("mod9","09","Brazilian Traps","modulo_9_braziliantraps.md",
+     "O padrão de erro do brasileiro — mapeado e eliminado."),
 ]
 
 nav_items = "\n".join(
@@ -20,13 +30,16 @@ nav_items = "\n".join(
     f'<span class="num-badge" data-n="{n}">{n}</span>'
     f'<span class="lbl">{t}</span>'
     f'<span class="pbadge" id="badge-{k}"></span></button>'
-    for k, n, t, _ in MODS
+    for k, n, t, _, _tag in MODS
 )
 
 panels = "\n".join(
     f'<section class="panel" data-panel="{k}" id="panel-{k}" {"hidden" if k != "mod0" else ""}>'
-    f'<div class="panel-inner">{frag[k]}</div></section>'
-    for k, n, t, _ in MODS
+    f'<div class="panel-inner">'
+    f'<header class="panel-head"><span class="ph-num">{n}</span>'
+    f'<span class="ph-text"><h1>{t}</h1><p>{tag}</p></span></header>'
+    f'{frag[k]}</div></section>'
+    for k, n, t, _, tag in MODS
 )
 
 CSS = open("styles.css", encoding="utf-8").read()

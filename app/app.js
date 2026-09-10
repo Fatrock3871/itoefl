@@ -89,10 +89,12 @@
   var lockMsgEl = document.getElementById("lockMsg");
   var lockMsgTimer = null;
 
+  var UNLOCK_PCT = 70; // % do módulo anterior necessário para liberar o próximo
+
   function isUnlocked(key){
     var idx = modOrder.indexOf(key);
     if(idx <= 0) return true;
-    return (modPct[modOrder[idx - 1]] || 0) >= 100;
+    return (modPct[modOrder[idx - 1]] || 0) >= UNLOCK_PCT;
   }
 
   function showLockMessage(key){
@@ -100,7 +102,9 @@
     var idx = modOrder.indexOf(key);
     var prevBtn = idx > 0 ? tabBtns[idx - 1] : null;
     var prevTitle = prevBtn ? prevBtn.dataset.title : "o módulo anterior";
-    lockMsgEl.textContent = "Complete \"" + prevTitle + "\" (marque todos os checkboxes de progresso) para desbloquear este módulo.";
+    var prevPct = idx > 0 ? (modPct[modOrder[idx - 1]] || 0) : 0;
+    lockMsgEl.textContent = "Conclua pelo menos " + UNLOCK_PCT + "% de \"" + prevTitle +
+      "\" para desbloquear este módulo (você está em " + prevPct + "%).";
     lockMsgEl.hidden = false;
     if(lockMsgTimer) clearTimeout(lockMsgTimer);
     lockMsgTimer = setTimeout(function(){ lockMsgEl.hidden = true; }, 5000);
