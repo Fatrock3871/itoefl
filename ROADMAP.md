@@ -41,7 +41,26 @@ Conversa pulou entre três assuntos. Estado de cada um:
 - Ajuste fino: tirei sombra repetida das tabelas (pesado com muitas na
   página), afinei borda do blockquote, suavizei o marca-texto do negrito.
 - Verificado em claro/escuro, M0/M1, screenshot headless. Sem mudança de conteúdo.
-- **Pendente:** feedback do usuário sobre o v2. Testar mobile (430px) se aprovado.
+- **v3 (commits 1ce190a, 4c5b34f, 3b482d2):** feedback do usuário no v2 — sidebar
+  "feia", queria só o ícone de 3 barrinhas, conteúdo mais bem distribuído,
+  fontes padronizadas ("Strong" pros títulos, "Integral CF bold" pro texto),
+  tirar as `<hr>` no meio do texto.
+  - Sidebar virou **menu-gaveta**: fora da tela por padrão (só o hamburger na
+    barra da jornada), abre por cima do conteúdo com backdrop, fecha ao
+    navegar/clicar fora/Esc. `.shell` perdeu o grid de 2 colunas.
+  - `main`/`.panel-inner` centralizados num container mais largo (1220px/840px)
+    — usa o espaço que a sidebar fixa ocupava.
+  - `<hr>` no meio do texto virou só espaçamento (sem linha visível).
+  - **Fontes:** "Integral CF" é grátis só para uso pessoal (licença paga pra
+    uso público) — sinalizado ao usuário, que optou por trocar por
+    alternativa aberta. "Strong" era o estilo de texto do Instagram (negrito +
+    itálico + caixa alta), não uma fonte — confirmado com o usuário.
+    Corpo passou de Inter para **Plus Jakarta Sans** (Google Fonts, OFL);
+    título do módulo + "PARTE N" de cada card ganharam o tratamento
+    negrito+itálico+caixa-alta (não aplicado em h3/h4 — usados demais,
+    atrapalharia a escaneabilidade). Mono removido de badges/rótulos
+    decorativos, mantido só em `<code>`/`<pre>` e nos 2 cronômetros.
+- **Pendente:** feedback do usuário sobre o v3. Testar mobile (430px) se aprovado.
 
 ### 3. Estrutura / navegação linear (FEITO — commit 7fcdd49)
 - `app.js`: `UNLOCK_PCT = 70` (era 100). Módulo N libera com 70% do N-1.
