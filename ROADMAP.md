@@ -24,16 +24,24 @@ Conversa pulou entre três assuntos. Estado de cada um:
     remover de vez (+ limpar refs) OU fundir o útil em M1/M3/M4 OU manter.
   - Nada foi removido ainda.
 
-### 2. Design / front-end (v1 FEITO — commit 7fcdd49)
-- Usuário: site "feio e com cara de IA". Referência: `rep12doses-webpage.vercel.app`.
-  Paleta pedida: **laranja + branco**.
-- **Feito:** `styles.css` reescrito (laranja #e8641c + branco quente, sidebar =
-  rail escuro, fonte Archivo+Inter, blockquote laranja, botões pill, cards
-  definidos, H2 com espinha laranja). `build.py` = `.panel-head` por módulo
-  (número + título + tagline; MODS ganhou 5º campo). Dark mode retunado.
-  Verificado por screenshot em claro e escuro.
-- **Pendente:** feedback do usuário (ver `scratchpad`: v2_m0_light, v2_m1_light,
-  v2_m0_dark). Ajuste fino conforme reação. Testar mobile (430px).
+### 2. Design / front-end (v2 FEITO — commit ff24901)
+- Usuário achou o v1 raso ("só mudou as cores, cara de IA"). Pediu mapa da
+  jornada no topo + inspiração em design diferente/inovador (Pinterest).
+- Pesquisei tendência 2026 (movimento "anti-IA": tipografia com personalidade,
+  anti-grid, brutalismo tátil, textura) e apliquei uma direção **editorial-
+  brutalista**: fonte Bricolage Grotesque + Inter; cards/tabelas/pre/botões com
+  borda preta 2px + sombra "carimbada" 4px 4px 0; textura de papel sutil (SVG
+  noise); logo mark; abertura de módulo com número gigante contornado (efeito
+  capa de revista); H2 com espinha laranja; tabelas com cabeçalho preto sólido
+  + zebra; bullets seta laranja; negrito com marca-texto sutil.
+- **Mapa da jornada** (o pedido central): nav fixo no topo do conteúdo com os
+  10 módulos como estações conectadas por trilha — atual destacado, concluído
+  ✓, bloqueado 🔒, clicável (mesmo lock de 70%). `build.py` monta o markup,
+  `app.js` sincroniza estado em `updateBadges()`/`showTab()`.
+- Ajuste fino: tirei sombra repetida das tabelas (pesado com muitas na
+  página), afinei borda do blockquote, suavizei o marca-texto do negrito.
+- Verificado em claro/escuro, M0/M1, screenshot headless. Sem mudança de conteúdo.
+- **Pendente:** feedback do usuário sobre o v2. Testar mobile (430px) se aprovado.
 
 ### 3. Estrutura / navegação linear (FEITO — commit 7fcdd49)
 - `app.js`: `UNLOCK_PCT = 70` (era 100). Módulo N libera com 70% do N-1.
