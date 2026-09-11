@@ -72,10 +72,19 @@ Conversa pulou entre três assuntos. Estado de cada um:
   **e** todas as questões dos widgets interativos confirmadas
   (`moduleQuizPct()`) — só vale pra M0 (quiz) e M4 (Build a Sentence), que são
   os únicos módulos com widget de questão clicável hoje.
-- **Pendente:** feedback do usuário sobre o v4. Testar mobile (430px) se
-  aprovado. Decidir se quer os travessões removidos do texto dos 10 módulos
-  (tarefa grande, separada). Decidir se quer widgets de questão adicionados a
-  mais módulos (hoje só M0/M4 travam o avanço por questão).
+- **v5 (commit ab5736e):** travessões removidos também do **texto dos 10
+  módulos** (não só da UI), a pedido do usuário ("pode tomar a frente
+  primeiro"). Script de reflow + substituição com várias camadas de proteção
+  (tabelas por célula, pseudo-listas em negrito reconhecidas pelo dígito,
+  pareamento só quando curto/sem cruzar frase, fences intocados). Processo
+  encontrou e corrigiu 2 bugs reais antes de commitar (ver histórico do
+  commit para detalhe). Verificado: parênteses/aspas balanceados nos 10
+  arquivos, 225 tabelas renderizando ok, 0 mojibake. Sobram ~24 travessões
+  dentro de blocos de código (ASCII/checklist) e ~19 células de tabela "—"
+  (convenção de vazio/N-A) — deliberadamente preservados.
+- **Pendente:** feedback do usuário sobre o v4/v5. Testar mobile (430px) se
+  aprovado. Decidir se quer widgets de questão adicionados a mais módulos
+  (hoje só M0/M4 travam o avanço por questão).
 
 ### 3. Estrutura / navegação linear (FEITO — commit 7fcdd49)
 - `app.js`: `UNLOCK_PCT = 70` (era 100). Módulo N libera com 70% do N-1.
