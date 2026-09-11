@@ -79,6 +79,30 @@
     applyTheme(next);
   });
 
+  // ---------- Barra lateral: minimizar/expandir ----------
+  var LS_SIDEBAR = "toefl_sidebar_v1"; // preferência de UI, sempre local (não sincroniza)
+  var sideRail = document.getElementById("sideRail");
+  var sideToggleBtn = document.getElementById("sideToggle");
+  var sideToggleIcon = document.getElementById("sideToggleIcon");
+  function applySidebar(collapsed){
+    if(sideRail) sideRail.classList.toggle("collapsed", collapsed);
+    document.body.classList.toggle("sidebar-collapsed", collapsed);
+    if(sideToggleIcon) sideToggleIcon.textContent = collapsed ? "›" : "‹";
+    if(sideToggleBtn){
+      sideToggleBtn.setAttribute("aria-expanded", collapsed ? "false" : "true");
+      sideToggleBtn.setAttribute("aria-label", collapsed ? "Expandir barra lateral" : "Minimizar barra lateral");
+    }
+  }
+  var savedSidebar = safeGet(LS_SIDEBAR) === "1";
+  applySidebar(savedSidebar);
+  if(sideToggleBtn){
+    sideToggleBtn.addEventListener("click", function(){
+      var next = !(sideRail && sideRail.classList.contains("collapsed"));
+      try { localStorage.setItem(LS_SIDEBAR, next ? "1" : "0"); } catch(e){}
+      applySidebar(next);
+    });
+  }
+
   // ---------- Tabs + progressão sequencial ----------
   // A ordem de desbloqueio segue a ordem em que os botões aparecem na sidebar
   // (a mesma ordem em que app/build.py monta MODS) — sem duplicar a lista aqui.

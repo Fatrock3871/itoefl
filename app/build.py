@@ -47,8 +47,20 @@ journey_nodes = "\n".join(
 )
 journey = (
     '<nav class="journey" id="journey" aria-label="Mapa da jornada">'
+    '<div class="journey-row">'
     '<p class="journey-title">Sua jornada — conclua 70% para avançar</p>'
-    f'<div class="jtrack">{journey_nodes}</div></nav>'
+    '<div class="journey-tools">'
+    '<button class="themetoggle" id="themeToggle" type="button" aria-label="Alternar tema">'
+    '<span id="themeIcon">🌗</span><span id="themeLabel">Sistema</span></button>'
+    '<div class="auth-box" id="authBox" hidden>'
+    '<button type="button" id="authSignIn">Entrar para sincronizar</button>'
+    '<div id="authIn" hidden>'
+    '<span id="authEmail" class="auth-email"></span>'
+    '<button type="button" id="authSignOut">Sair</button></div>'
+    '<span id="authMsg" class="auth-msg" hidden></span></div>'
+    '</div></div>'
+    f'<div class="jtrack-wrap"><div class="jtrack">{journey_nodes}</div></div>'
+    '</nav>'
 )
 
 panels = "\n".join(
@@ -99,13 +111,18 @@ html = f'''<!DOCTYPE html>
 </head>
 <body>
 <div class="shell">
-  <aside class="side">
-    <div class="brand">
-      <span class="logo">iT</span>
-      <span class="btxt">
-        <span class="name">iTOEFL</span>
-        <span class="mark">Preparação independente</span>
-      </span>
+  <aside class="side" id="sideRail">
+    <div class="side-top">
+      <button class="side-toggle" id="sideToggle" type="button" aria-label="Minimizar barra lateral" aria-expanded="true">
+        <span id="sideToggleIcon">‹</span>
+      </button>
+      <div class="brand">
+        <span class="logo">iT</span>
+        <span class="btxt">
+          <span class="name">iTOEFL</span>
+          <span class="mark">Preparação independente</span>
+        </span>
+      </div>
     </div>
     <div class="overall-progress">
       <div class="op-label"><span>Progresso geral</span><span id="opPct">0%</span></div>
@@ -116,17 +133,6 @@ html = f'''<!DOCTYPE html>
       {nav_items}
     </nav>
     <div class="lock-msg" id="lockMsg" hidden></div>
-    <button class="themetoggle" id="themeToggle" type="button" aria-label="Alternar tema">
-      <span id="themeIcon">🌗</span><span id="themeLabel">Sistema</span>
-    </button>
-    <div class="auth-box" id="authBox" hidden>
-      <button type="button" id="authSignIn">Entrar para sincronizar</button>
-      <div id="authIn" hidden>
-        <span id="authEmail" class="auth-email"></span>
-        <button type="button" id="authSignOut">Sair</button>
-      </div>
-      <span id="authMsg" class="auth-msg" hidden></span>
-    </div>
     <div class="data-tools">
       <button type="button" id="dataExport">↓ Exportar progresso</button>
       <button type="button" id="dataImport">↑ Importar</button>
