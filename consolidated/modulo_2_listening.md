@@ -1,10 +1,10 @@
-# MÓDULO 2 — LISTENING
+# MÓDULO 2: LISTENING
 
 > **iTOEFL | Formato TOEFL iBT vigente desde 21/jan/2026**
 >
 > Cobre o Listening no blueprint oficial da ETS 2026 (`docs/ets-blueprint-2026.md`).
 > Sete partes: as regras, a estratégia, o **Laboratório de Escuta** (o inglês
-> falado de verdade — o que o texto não te ensina), um exemplo resolvido, os
+> falado de verdade: o que o texto não te ensina), um exemplo resolvido, os
 > drills, o gabarito e o protocolo de erros.
 >
 > ⚠️ Os drills usam **transcrições**. No exame o áudio é falado, com entonação,
@@ -19,9 +19,7 @@
 
 ### 1.1 Radiografia oficial da seção
 
-O Listening é a **segunda seção** e usa **design adaptativo em dois estágios**,
-como o Reading: a dificuldade dos itens muda em tempo real conforme seu
-desempenho.
+O Listening é a **segunda seção** e usa **design adaptativo em dois estágios**, como o Reading: a dificuldade dos itens muda em tempo real conforme seu desempenho.
 
 | Elemento | Dado oficial (ETS 2026) |
 |---|---|
@@ -29,16 +27,12 @@ desempenho.
 | **Tempo** | Router + módulo inferior ~7 min **ou** superior ~11 min ≈ **~18 min** |
 | **Total de itens** | 47 (~35 pontuados + ~12 itens-piloto, indistinguíveis) |
 | **Pontuação bruta** | 35 pontos (máx. **1 pt por item**) → banda **1–6** (CEFR) |
-| **Cada áudio toca** | **Uma vez** — sem repetição (salvo replays embutidos em certos itens) |
+| **Cada áudio toca** | **Uma vez**: sem repetição (salvo replays embutidos em certos itens) |
 | **Duração dos áudios** | De enunciados curtos (≤ 6 sílabas tônicas) a monólogos de **até 250 palavras**; intermediários 35–100 palavras |
 | **Vozes** | **Áudio gerado por IA + às vezes atores humanos.** Sotaques: EUA/Canadá, Austrália, Reino Unido |
 | **Apoio visual** | Cada áudio traz uma **imagem do(s) falante(s)** na tela |
 
-O ponto central: o Listening **não** é "ouça um áudio longo e responda um bloco
-de questões". É um **fluxo contínuo de itens majoritariamente curtos**, e cada
-resposta pode influenciar a dificuldade do próximo bloco. Memória de longo prazo
-importa menos; **velocidade de processamento e precisão item a item** importam
-mais.
+O ponto central: o Listening **não** é "ouça um áudio longo e responda um bloco de questões". É um **fluxo contínuo de itens majoritariamente curtos**, e cada resposta pode influenciar a dificuldade do próximo bloco. Memória de longo prazo importa menos; **velocidade de processamento e precisão item a item** importam mais.
 
 ---
 
@@ -56,10 +50,7 @@ ESTÁGIO 2A — MÓDULO INFERIOR (~7 min)     ESTÁGIO 2B — MÓDULO SUPERIOR (
 └── confirma a banda inferior              └── distingue as bandas C1/C2
 ```
 
-Errar demais nos primeiros itens — mesmo os "fáceis" e curtos — pode te colocar
-no módulo inferior, cujo teto é estruturalmente mais baixo, ainda que você
-acertasse itens do superior. **Não existe "aquecer aos poucos" no Listening.**
-Pico de atenção desde o item 1.
+Errar demais nos primeiros itens (mesmo os "fáceis" e curtos) pode te colocar no módulo inferior, cujo teto é estruturalmente mais baixo, ainda que você acertasse itens do superior. **Não existe "aquecer aos poucos" no Listening.** Pico de atenção desde o item 1.
 
 ---
 
@@ -72,40 +63,35 @@ Pico de atenção desde o item 1.
 | 3 | **Listen to an Announcement** | Detalhe factual (data, local, ação, exceção) num anúncio | 6–10 | A2–C1 | monólogo informativo curto |
 | 4 | **Listen to an Academic Talk** | Ideia principal, apoio, inferência, organização, **vocabulário idiomático** | 8–16 | A2–C2 | monólogo acadêmico, até 250 palavras |
 
-Leia como uma escada de complexidade: da troca de uma frase (**Choose a
-Response**) ao monólogo acadêmico (**Academic Talk**). O router mistura os
-quatro; os módulos concentram volume proporcional à tabela.
+Leia como uma escada de complexidade: da troca de uma frase (**Choose a Response**) ao monólogo acadêmico (**Academic Talk**). O router mistura os quatro; os módulos concentram volume proporcional à tabela.
 
 ---
 
 ### 1.4 Os tipos de PERGUNTA
 
-Cada item testa uma habilidade específica. Reconhecer o tipo pelo enunciado
-**antes** de olhar as opções já resolve metade.
+Cada item testa uma habilidade específica. Reconhecer o tipo pelo enunciado **antes** de olhar as opções já resolve metade.
 
 | Tipo | Enunciado típico | O que a resposta certa faz |
 |---|---|---|
 | **Gist-content** | *"What is the talk mainly about?"* | Sintetiza o áudio inteiro; não é um detalhe |
 | **Gist-purpose** | *"Why does the student go to see the advisor?"* | Diz o **objetivo** da conversa, não o assunto de fundo |
 | **Detail** | *"According to the speaker, when...?"* | Está **explícita** no áudio, geralmente parafraseada |
-| **Function / "Why does the speaker say X?"** | *"Why does the woman say: [replay]?"* | Descreve a **intenção** por trás da fala (concordar, discordar, ironizar, corrigir, dar exemplo) — o sentido **literal** não é a resposta |
+| **Function / "Why does the speaker say X?"** | *"Why does the woman say: [replay]?"* | Descreve a **intenção** por trás da fala (concordar, discordar, ironizar, corrigir, dar exemplo): o sentido **literal** não é a resposta |
 | **Attitude / stance** | *"What is the professor's opinion of...?"* / *"How does the man feel about...?"* | Capta o **tom** (aprova / duvida / se surpreende / minimiza) a partir de escolha de palavras e entonação |
 | **Organization** | *"Why does the professor mention X?"* / *"How does the professor introduce the topic?"* | Diz a **função estrutural** do trecho (exemplo de apoio, contraste, digressão, transição) |
-| **Inference** | *"What can be inferred about...?"* / *"What does the professor imply?"* | Um passo lógico além do dito — nunca dois; alternativas com *always/never/only/impossible* quase sempre saem |
+| **Inference** | *"What can be inferred about...?"* / *"What does the professor imply?"* | Um passo lógico além do dito: nunca dois; alternativas com *always/never/only/impossible* quase sempre saem |
 | **Connecting content** | *"What is the likely outcome of...?"* / arrasta itens numa tabela | Junta duas informações ditas em pontos diferentes do áudio |
-| **Vocabulary / idiom in context** | *"What does the speaker mean by 'X'?"* | O sentido **daquela expressão naquele contexto** — o literal é distrator |
+| **Vocabulary / idiom in context** | *"What does the speaker mean by 'X'?"* | O sentido **daquela expressão naquele contexto**: o literal é distrator |
 
 ---
 
 ### 1.5 Gestão de tempo
 
-Com 47 itens em ~18 min, sua margem média por item (áudio + resposta) gira em
-torno de **20–25 segundos**. Não há conversa longa para se situar aos poucos — é
-sprint constante.
+Com 47 itens em ~18 min, sua margem média por item (áudio + resposta) gira em torno de **20–25 segundos**. Não há conversa longa para se situar aos poucos: é sprint constante.
 
 - Menos tempo total = menos margem para recuperar um lapso de atenção.
 - Itens curtos = decisão rápida, com menos anotação e mais **processamento
-  auditivo automático** (é o que a Parte 3 treina).
+auditivo automático** (é o que a Parte 3 treina).
 - O Academic Talk ainda pede nota estruturada, mas em escala reduzida.
 
 ---
@@ -114,24 +100,19 @@ sprint constante.
 
 ### 2.1 Por que anotar tudo não funciona
 
-A maioria dos itens (Choose a Response, boa parte de Conversation e Announcement)
-tem áudio curto o suficiente para caber na memória de trabalho — **se você
-estiver em atenção plena**. Um sistema de note-taking para palestras longas não
-se aplica.
+A maioria dos itens (Choose a Response, boa parte de Conversation e Announcement) tem áudio curto o suficiente para caber na memória de trabalho: **se você estiver em atenção plena**. Um sistema de note-taking para palestras longas não se aplica.
 
-A habilidade central não é "tomar notas robustas" — é **triagem instantânea**:
-decidir, nos primeiros segundos, se o item pede memória bruta (não anotar) ou
-estrutura (anotar rápido e seletivo).
+A habilidade central não é "tomar notas robustas": é **triagem instantânea**: decidir, nos primeiros segundos, se o item pede memória bruta (não anotar) ou estrutura (anotar rápido e seletivo).
 
 ### 2.2 O sistema de anotações escalonado
 
 | Escala | Quando | Task types | O que fazer |
 |---|---|---|---|
-| **0 — Sem anotação** | fala isolada | Choose a Response | Nada escrito. Concentre-se só em **tom, registro e intenção**. Cada segundo escrevendo é atenção roubada. |
-| **1 — Nota mínima (3–5 palavras)** | diálogo curto / anúncio | Conversation, Announcement | Só o essencial: **QUEM + O QUÊ + AÇÃO/PRAZO**. Ex.: `"Sara → sala trocada, B204, seg"`. Nunca frases completas. |
-| **2 — Template de duas zonas** | monólogo acadêmico | Academic Talk | Versão compacta do template clássico, dimensionada para ~150–250 palavras. |
+| **0: Sem anotação** | fala isolada | Choose a Response | Nada escrito. Concentre-se só em **tom, registro e intenção**. Cada segundo escrevendo é atenção roubada. |
+| **1: Nota mínima (3–5 palavras)** | diálogo curto / anúncio | Conversation, Announcement | Só o essencial: **QUEM + O QUÊ + AÇÃO/PRAZO**. Ex.: `"Sara → sala trocada, B204, seg"`. Nunca frases completas. |
+| **2: Template de duas zonas** | monólogo acadêmico | Academic Talk | Versão compacta do template clássico, dimensionada para ~150–250 palavras. |
 
-**Template — Escala 2 (Academic Talk):**
+**Template · Escala 2 (Academic Talk):**
 
 ```
 TÓPICO: ______________     IDEIA PRINCIPAL: ______________
@@ -142,49 +123,39 @@ PONTO 2: __________        ATITUDE DO PROFESSOR ( + / − / ? ):
 EXPRESSÃO IDIOMÁTICA/CHAVE: _______  (sentido em contexto: _______)
 ```
 
-O campo de expressão idiomática existe porque o blueprint **destaca
-explicitamente** vocabulário idiomático como alvo em Academic Talk. Sempre que
-ouvir algo não-literal (*"that's a stretch"*, *"the jury's still out"*), anote a
-expressão e o contexto — é candidata quase certa a questão.
+O campo de expressão idiomática existe porque o blueprint **destaca explicitamente** vocabulário idiomático como alvo em Academic Talk. Sempre que ouvir algo não-literal (*"that's a stretch"*, *"the jury's still out"*), anote a expressão e o contexto: é candidata quase certa a questão.
 
-### 2.3 Discourse markers — o sinal aponta direto para a resposta
+### 2.3 Discourse markers: o sinal aponta direto para a resposta
 
-Em áudio curto, o marcador aponta para a **própria resposta**, não para uma
-seção futura. Perder um marcador = perder o item.
+Em áudio curto, o marcador aponta para a **própria resposta**, não para uma seção futura. Perder um marcador = perder o item.
 
 | Função | Marcadores | Ação |
 |---|---|---|
 | **Correção / mudança de posição** | *"Actually...", "Wait, I mean...", "On second thought...", "Come to think of it..."* | A resposta reflete a versão **corrigida**, não a inicial |
-| **Tom pragmático** | *"I guess...", "Sure, if you say so...", "Well, technically...", "I suppose so"* | Sinaliza relutância, ironia, concordância parcial — não tome ao pé da letra |
-| **Instrução / ação requerida** | *"Please make sure to...", "Don't forget...", "You'll need to...", "Be sure to..."* | Fato de altíssima chance de ser testado — é o "core" do anúncio |
+| **Tom pragmático** | *"I guess...", "Sure, if you say so...", "Well, technically...", "I suppose so"* | Sinaliza relutância, ironia, concordância parcial, não tome ao pé da letra |
+| **Instrução / ação requerida** | *"Please make sure to...", "Don't forget...", "You'll need to...", "Be sure to..."* | Fato de altíssima chance de ser testado: é o "core" do anúncio |
 | **Ênfase** | *"The key thing is...", "What matters here is...", "This is important:"* | Marque mentalmente ou em 2–3 palavras |
-| **Contraste rápido** | *"but", "though", "except that", "having said that"* | Um único *"but"* pode inverter o item inteiro — não relaxe perto do fim |
-| **Concessão + retorno à tese** | *"Sure, X — but the point is Y"* | A resposta é **Y**, não X |
+| **Contraste rápido** | *"but", "though", "except that", "having said that"* | Um único *"but"* pode inverter o item inteiro, não relaxe perto do fim |
+| **Concessão + retorno à tese** | *"Sure, X: but the point is Y"* | A resposta é **Y**, não X |
 | **Exemplificação** | *"Take X, for instance", "Here's a case:", "Say you..."* | O que vem a seguir é exemplo de apoio, não ideia nova |
 | **Digressão e volta** | *"Anyway...", "Where was I?", "Getting back to..."* | O que veio no meio é secundário; a linha principal retoma aqui |
 | **Idiomatismo** | *"back to square one", "a long shot", "let's not get ahead of ourselves"* | Pare o piloto automático e traduza o sentido figurado |
 
 ### 2.4 Estratégia por task type
 
-**Choose a Response** — você testa **pragmática**, não conteúdo. A pergunta real:
-"o que uma pessoa fluente responderia aqui, naturalmente?"
+**Choose a Response**: você testa **pragmática**, não conteúdo. A pergunta real: "o que uma pessoa fluente responderia aqui, naturalmente?"
 - Descarte respostas gramaticalmente corretas mas **socialmente estranhas**.
 - Cheque o **registro** (gíria com um professor = descartável).
 - **Trap:** resposta que repete palavras do áudio mas não responde à intenção
-  (a fala era um convite; a resposta trata como pergunta factual).
+(a fala era um convite; a resposta trata como pergunta factual).
 
-**Conversation** — identifique em 1–2 s: **quem fala com quem, sobre o quê, qual
-é o obstáculo/pedido**. A "virada" (resolução/decisão) costuma vir na segunda
-metade — atenção redobrada ali. Escala 1 de anotação.
+**Conversation** · identifique em 1–2 s: **quem fala com quem, sobre o quê, qual é o obstáculo/pedido**. A "virada" (resolução/decisão) costuma vir na segunda metade · atenção redobrada ali. Escala 1 de anotação.
 
-**Announcement** — trate como **checklist auditiva**: data · local · ação
-requerida · exceção/condição. Estrutura típica: contexto → informação principal
-→ instrução prática → (às vezes) contato/prazo.
+**Announcement**: trate como **checklist auditiva**: data · local · ação requerida · exceção/condição. Estrutura típica: contexto → informação principal → instrução prática → (às vezes) contato/prazo.
 - **Trap:** o anúncio menciona duas datas ou dois locais (o antigo e o novo); o
-  distrator usa o **desatualizado**.
+distrator usa o **desatualizado**.
 
-**Academic Talk** — único task type onde a Escala 2 se justifica. Escute em 4
-níveis, versão compacta:
+**Academic Talk**: único task type onde a Escala 2 se justifica. Escute em 4 níveis, versão compacta:
 
 | Nível | O que escutar | Onde anotar |
 |---|---|---|
@@ -193,18 +164,17 @@ níveis, versão compacta:
 | Atitude | tom sobre o tema | campo "Atitude" ( + / − / ? ) |
 | Estrutura | como as ideias se conectam | setas ( → / ≠ ) |
 
-### 2.5 Fase router — os primeiros itens decidem tudo
+### 2.5 Fase router: os primeiros itens decidem tudo
 
-O router é a fase **mais curta e mais decisiva**. É quase todo composto de itens
-curtos (Choose a Response). Erro comum: subestimá-los.
+O router é a fase **mais curta e mais decisiva**. É quase todo composto de itens curtos (Choose a Response). Erro comum: subestimá-los.
 
 1. **Trate cada item do router como se já valesse o módulo superior.**
 2. **Não acelere nos itens curtos.** Gaste 2–3 s a mais para confirmar a
-   intenção pragmática antes de marcar.
-3. **Não entre em pânico** com um item difícil cedo — pode ser calibração.
-   Mantenha o ritmo.
+intenção pragmática antes de marcar.
+3. **Não entre em pânico** com um item difícil cedo: pode ser calibração.
+Mantenha o ritmo.
 4. **Consistência > heroísmo.** Um padrão estável de acertos nos itens curtos
-   pesa mais que acertar um item difícil isolado e errar fáceis por pressa.
+pesa mais que acertar um item difícil isolado e errar fáceis por pressa.
 
 ### 2.6 Os 6 padrões de distrator da ETS
 
@@ -219,29 +189,24 @@ curtos (Choose a Response). Erro comum: subestimá-los.
 
 ### 2.7 Regras de ouro do pacing
 
-1. **Nunca deixe item em branco.** Sem penalidade — chute > zero.
+1. **Nunca deixe item em branco.** Sem penalidade: chute > zero.
 2. **Sprint, não maratona.** ~20–25 s por item; confie no primeiro processamento
-   correto.
+correto.
 3. **Router = atenção máxima desde o item 1.**
-4. **Escale a anotação ao task type** — não anote por hábito.
+4. **Escale a anotação ao task type**, não anote por hábito.
 5. **Idiomatismo é alvo prioritário no Academic Talk.**
-6. **Não relaxe no fim do áudio** — a informação decisiva (um *but*, uma
-   correção, uma instrução) costuma vir nas últimas palavras.
+6. **Não relaxe no fim do áudio**: a informação decisiva (um *but*, uma
+correção, uma instrução) costuma vir nas últimas palavras.
 
 ---
 
-## PARTE 3: LABORATÓRIO DE ESCUTA — O INGLÊS FALADO DE VERDADE
+## PARTE 3: LABORATÓRIO DE ESCUTA · O INGLÊS FALADO DE VERDADE
 
-O maior obstáculo do brasileiro no Listening **não** é vocabulário — é que o
-inglês falado **não soa como o inglês escrito**. Palavras se colam, sons somem,
-formas se reduzem. Esta parte treina o que você precisa **reconhecer de
-ouvido**. Leia em voz alta, exagerando as reduções, até elas soarem naturais.
+O maior obstáculo do brasileiro no Listening **não** é vocabulário: é que o inglês falado **não soa como o inglês escrito**. Palavras se colam, sons somem, formas se reduzem. Esta parte treina o que você precisa **reconhecer de ouvido**. Leia em voz alta, exagerando as reduções, até elas soarem naturais.
 
-### 3.1 Formas fracas e reduções — o que o áudio realmente "diz"
+### 3.1 Formas fracas e reduções: o que o áudio realmente "diz"
 
-Palavras de função (auxiliares, preposições, artigos, pronomes) são ditas
-**rápido, curto e sem tônica**. Se você espera ouvi-las "por extenso", você não
-as ouve — e perde a estrutura da frase.
+Palavras de função (auxiliares, preposições, artigos, pronomes) são ditas **rápido, curto e sem tônica**. Se você espera ouvi-las "por extenso", você não as ouve: e perde a estrutura da frase.
 
 | Escrito | Falado (o que você ouve) | Exemplo |
 |---|---|---|
@@ -265,12 +230,9 @@ as ouve — e perde a estrutura da frase.
 | and | **/ən/** or **/n/** | *"bread and butter"* → *"bread /n/ butter"* |
 | for | **/fər/** (átono) | *"This is for you."* |
 | him / her / them | **/əm/ /ər/ /əm/** (após consoante) | *"tell him"* → *"tell /əm/"*; *"ask her"* → *"ask /ər/"* |
-| can (afirmativo) | **/kən/** (átono, curto) — vs. **can't** /kænt/ (tônico, longo) | *"I /kən/ do it"* vs. *"I **can't** do it"* |
+| can (afirmativo) | **/kən/** (átono, curto): vs. **can't** /kænt/ (tônico, longo) | *"I /kən/ do it"* vs. *"I **can't** do it"* |
 
-> ⚠️ **A confusão can / can't:** no inglês americano, a diferença muitas vezes
-> **não** é o /t/ (que quase some) — é que *can't* é **tônico e a vogal é
-> longa/clara** (/æ/), enquanto *can* afirmativo é **átono e reduzido** (/kən/).
-> Se a vogal soou forte, provavelmente é *can't*.
+> ⚠️ **A confusão can / can't:** no inglês americano, a diferença muitas vezes **não** é o /t/ (que quase some) · é que *can't* é **tônico e a vogal é longa/clara** (/æ/), enquanto *can* afirmativo é **átono e reduzido** (/kən/). Se a vogal soou forte, provavelmente é *can't*.
 
 ### 3.2 Linking e sons que somem
 
@@ -283,8 +245,7 @@ as ouve — e perde a estrutura da frase.
 | **vogal + vogal** ganha um /w/ ou /j/ de ligação | *"go on"* → *"gowon"*; *"I asked"* → *"I-yasked"* | |
 | **"n't" some quase todo** | *"I don't think so"* → *"I dun think so"*; *"couldn't"* → *"kudn"* | |
 
-**Treino:** ouça um trecho de podcast 3×. Na 1ª, só sinta o ritmo. Na 2ª,
-marque onde as palavras se colam. Na 3ª, tente repetir colando igual.
+**Treino:** ouça um trecho de podcast 3×. Na 1ª, só sinta o ritmo. Na 2ª, marque onde as palavras se colam. Na 3ª, tente repetir colando igual.
 
 ### 3.3 Contrações e homófonos traiçoeiros
 
@@ -293,7 +254,7 @@ marque onde as palavras se colam. Na 3ª, tente repetir colando igual.
 | *"he'd"* | he **had** ou he **would** | pelo verbo seguinte: *"he'd **left**"* (had) vs. *"he'd **leave**"* (would) |
 | *"she's"* | she **is** ou she **has** | *"she's **tired**"* (is) vs. *"she's **gone**"* (has) |
 | *"there's"* | there **is** (e no inglês falado, informalmente, também com plural) | contexto |
-| *"that'll / it'll / this'll"* | that will / it will | quase inaudível — espere um verbo base depois |
+| *"that'll / it'll / this'll"* | that will / it will | quase inaudível: espere um verbo base depois |
 | *"who's"* vs. *"whose"* | who is/has vs. de quem | *"Who's coming?"* vs. *"Whose book is this?"* |
 | *"'til / till"* | until | *"Wait till Monday."* |
 | *"'cause"* | because | *"'Cause I was busy."* |
@@ -316,8 +277,7 @@ marque onde as palavras se colam. Na 3ª, tente repetir colando igual.
 
 ### 3.5 Vocabulário de campus (os 40 termos que o teste usa)
 
-Conversation e Announcement acontecem quase sempre num contexto universitário
-americano. Não saber esses termos = perder o item.
+Conversation e Announcement acontecem quase sempre num contexto universitário americano. Não saber esses termos = perder o item.
 
 | Termo | Significado |
 |---|---|
@@ -332,7 +292,7 @@ americano. Não saber esses termos = perder o item.
 | **major / minor** | curso principal / segunda ênfase |
 | **declare a major** | oficializar o curso escolhido |
 | **the dean** | diretor(a) de faculdade |
-| **faculty** | corpo docente (não "faculdade" — isso é *college/school*) |
+| **faculty** | corpo docente (não "faculdade": isso é *college/school*) |
 | **(academic) advisor** | orientador acadêmico |
 | **TA (teaching assistant)** | monitor / assistente de ensino |
 | **orientation** | recepção de calouros |
@@ -365,8 +325,7 @@ americano. Não saber esses termos = perder o item.
 
 ### 3.6 Idioms e phrasal verbs que o teste adora (30)
 
-Alvo direto de questões de vocabulário/idiom in context no Academic Talk e, às
-vezes, na Conversation.
+Alvo direto de questões de vocabulário/idiom in context no Academic Talk e, às vezes, na Conversation.
 
 | Expressão | Sentido |
 |---|---|
@@ -401,7 +360,7 @@ vezes, na Conversation.
 | **a mixed bag** | uma coisa com prós e contras |
 | **par for the course** | dentro do esperado (geralmente algo chato) |
 
-### 3.7 Linguagem funcional — como o inglês concorda, discorda, hesita, se corrige
+### 3.7 Linguagem funcional: como o inglês concorda, discorda, hesita, se corrige
 
 Itens de *function* e *attitude* dependem de você reconhecer estas fórmulas.
 
@@ -411,9 +370,9 @@ Itens de *function* e *attitude* dependem de você reconhecer estas fórmulas.
 | **Concordar com ressalva** | *"I see your point, but...", "True, though...", "Fair enough, still..."* |
 | **Discordar educadamente** | *"I'm not so sure.", "I see it a little differently.", "That's one way to look at it.", "I'd push back on that a bit."* |
 | **Hesitar / suavizar** | *"sort of", "kind of", "I guess", "more or less", "if that makes sense", "I mean..."* |
-| **Corrigir-se** | *"Actually, no —", "Wait, I mean...", "Scratch that.", "Let me rephrase."* |
-| **Expressar relutância** | *"I suppose so.", "If you say so.", "I don't see why not.", "Well... okay."* — o tom carrega mais sentido que as palavras |
-| **Surpresa / interesse** | *"No way!", "Really?", "Huh — I hadn't thought of that.", "That's interesting."* |
+| **Corrigir-se** | *"Actually, no: ", "Wait, I mean...", "Scratch that.", "Let me rephrase."* |
+| **Expressar relutância** | *"I suppose so.", "If you say so.", "I don't see why not.", "Well... okay."*: o tom carrega mais sentido que as palavras |
+| **Surpresa / interesse** | *"No way!", "Really?", "Huh: I hadn't thought of that.", "That's interesting."* |
 | **Duvidar / minimizar** | *"That's a stretch.", "I'll believe it when I see it.", "We'll see.", "Take it with a grain of salt."* |
 | **Introduzir uma sugestão** | *"Have you considered...?", "What if you...?", "You might want to...", "It couldn't hurt to..."* |
 | **Sinalizar que vai ao ponto** | *"The bottom line is...", "Long story short...", "In a nutshell..."* |
@@ -436,30 +395,30 @@ Anotar palavra por palavra é lento demais. Use símbolos.
 
 ## PARTE 4: EXEMPLO RESOLVIDO
 
-### 4.1 Listen and Choose a Response — o raciocínio narrado
+### 4.1 Listen and Choose a Response: o raciocínio narrado
 
 **Fala:** *"You're not seriously thinking of driving downtown on game day, are you?"*
 
 **Opções:**
 
 - (A) *"The game starts at seven, I think."*
-- (B) *"Good point — I'll take the train instead."*
+- (B) *"Good point: I'll take the train instead."*
 - (C) *"I drove downtown last weekend."*
 - (D) *"I don't really follow that team."*
 
-> **Passo 1 — o que é isto?** Uma **pergunta retórica negativa** (*"You're not
-> ... are you?"*). Não é um pedido de informação — é um **alerta educado**: "isso
+> **Passo 1: o que é isto?** Uma **pergunta retórica negativa** (*"You're not
+> ... are you?"*). Não é um pedido de informação · é um **alerta educado**: "isso
 > é má ideia por causa do trânsito no dia do jogo".
 >
-> **Passo 2 — qual seria a resposta natural?** Reconhecer o alerta e ajustar o
-> plano. É exatamente **(B)**: *"Good point — I'll take the train instead."*
+> **Passo 2: qual seria a resposta natural?** Reconhecer o alerta e ajustar o
+> plano. É exatamente **(B)**: *"Good point · I'll take the train instead."*
 >
-> **Passo 3 — por que as outras falham:**
+> **Passo 3 · por que as outras falham:**
 >
 > - (A) responde a uma pergunta que **não foi feita** (o horário do jogo).
 >   **WRONG FOCUS.**
 > - (C) usa as palavras *"drove downtown"* do original, mas não responde ao
->   alerta — reforça o comportamento problemático. **CORRECT WORDS, WRONG
+>   alerta: reforça o comportamento problemático. **CORRECT WORDS, WRONG
 >   MEANING.**
 > - (D) muda de assunto para gosto por futebol. **OUT OF SCOPE.**
 >
@@ -467,608 +426,292 @@ Anotar palavra por palavra é lento demais. Use símbolos.
 > downtown"* e escolher (C) por reconhecimento de palavras, sem processar que a
 > frase era um **alerta**, não uma pergunta.
 
-### 4.2 Academic Talk — 3 tipos de questão narrados
+### 4.2 Academic Talk: 3 tipos de questão narrados
 
-**Trecho:** *"...and here's where it gets interesting. You'd expect the older,
-more established firms to adopt the new technology first — they have the money,
-after all. But study after study finds the opposite: it's the smaller, newer
-companies that move first, and the big firms follow only once the technology is
-proven. Why? Part of it is that a large firm has more to lose. Its existing
-operations already work; a failed experiment disrupts something profitable.
-A startup, by contrast, has little to disrupt."*
+**Trecho:** *"...and here's where it gets interesting. You'd expect the older, more established firms to adopt the new technology first · they have the money, after all. But study after study finds the opposite: it's the smaller, newer companies that move first, and the big firms follow only once the technology is proven. Why? Part of it is that a large firm has more to lose. Its existing operations already work; a failed experiment disrupts something profitable. A startup, by contrast, has little to disrupt."*
 
-**Pergunta A — Detail:** *"According to the professor, which firms typically
-adopt a new technology first?"*
-(A) Older, more established firms, because they have more money.
-(B) Smaller, newer firms.
-(C) Firms of all sizes at roughly the same time.
-(D) Only firms that have already failed once.
+**Pergunta A · Detail:** *"According to the professor, which firms typically adopt a new technology first?"* (A) Older, more established firms, because they have more money. (B) Smaller, newer firms. (C) Firms of all sizes at roughly the same time. (D) Only firms that have already failed once.
 
-> O professor diz explicitamente: *"it's the smaller, newer companies that move
-> first."* → **(B)**. (A) é o que você *"esperaria"* — e o professor usa isso
-> como contraste (*"You'd expect... But..."*). **OPPOSITE.** Cuidado com
-> distratores que repetem a parte "esperada" da frase.
+> O professor diz explicitamente: *"it's the smaller, newer companies that move first."* → **(B)**. (A) é o que você *"esperaria"* · e o professor usa isso como contraste (*"You'd expect... But..."*). **OPPOSITE.** Cuidado com distratores que repetem a parte "esperada" da frase.
 
-**Pergunta B — Organization:** *"Why does the professor say that a large firm
-'has more to lose'?"*
-(A) To criticize large firms for being too cautious.
-(B) To explain **why** established firms adopt new technology later.
-(C) To introduce a new, unrelated topic about company finances.
-(D) To argue that startups always outperform large firms.
+**Pergunta B · Organization:** *"Why does the professor say that a large firm 'has more to lose'?"* (A) To criticize large firms for being too cautious. (B) To explain **why** established firms adopt new technology later. (C) To introduce a new, unrelated topic about company finances. (D) To argue that startups always outperform large firms.
 
-> A frase vem logo depois de *"Why?"* — é a **explicação** do padrão que ele
-> acabou de descrever. Função estrutural = dar a causa. → **(B)**. (A) confunde
-> explicar com criticar; (D) é **EXTREME** (*always*).
+> A frase vem logo depois de *"Why?"*: é a **explicação** do padrão que ele acabou de descrever. Função estrutural = dar a causa. → **(B)**. (A) confunde explicar com criticar; (D) é **EXTREME** (*always*).
 
-**Pergunta C — Inference:** *"What can be inferred about a startup's decision to
-adopt an unproven technology?"*
-(A) It is guaranteed to succeed.
-(B) It carries less risk to existing operations than the same decision would for a large firm.
-(C) It is never influenced by cost.
-(D) Startups are legally required to innovate.
+**Pergunta C · Inference:** *"What can be inferred about a startup's decision to adopt an unproven technology?"* (A) It is guaranteed to succeed. (B) It carries less risk to existing operations than the same decision would for a large firm. (C) It is never influenced by cost. (D) Startups are legally required to innovate.
 
-> O professor diz que a startup *"has little to disrupt."* Um passo lógico: para
-> a startup, o mesmo movimento arriscado **ameaça menos** o que já existe. →
-> **(B)**. (A) e (C) são **EXTREME**; (D) é **OUT OF SCOPE**.
+> O professor diz que a startup *"has little to disrupt."* Um passo lógico: para a startup, o mesmo movimento arriscado **ameaça menos** o que já existe. → **(B)**. (A) e (C) são **EXTREME**; (D) é **OUT OF SCOPE**.
 
 ---
 
 ## PARTE 5: ACTION DRILLS
 
-> Cronometre. Responda **antes** do gabarito (Parte 6). Para máximo efeito,
-> peça a alguém para ler as transcrições em voz alta, ou use um leitor
-> texto-para-fala — ouvir, não ler.
+> Cronometre. Responda **antes** do gabarito (Parte 6). Para máximo efeito, peça a alguém para ler as transcrições em voz alta, ou use um leitor texto-para-fala: ouvir, não ler.
 
 ---
 
-### GRUPO A — LISTEN AND CHOOSE A RESPONSE (12 itens · alvo: 12 s/item)
+### GRUPO A: LISTEN AND CHOOSE A RESPONSE (12 itens · alvo: 12 s/item)
 
 *Escolha a resposta mais natural e pragmaticamente adequada.*
 
-**A1.** *"I was going to grab lunch before the seminar, but there's no time now."*
-(A) "That's fine, I had a big breakfast."
-(B) "Yeah, let's just head straight there."
-(C) "The seminar was really interesting."
-(D) "I ate there last week too."
+**A1.** *"I was going to grab lunch before the seminar, but there's no time now."* (A) "That's fine, I had a big breakfast." (B) "Yeah, let's just head straight there." (C) "The seminar was really interesting." (D) "I ate there last week too."
 
-**A2.** *"Do you mind if I borrow your notes from Tuesday? I was out sick."*
-(A) "Sure — I'll send them over tonight."
-(B) "I hope you feel better soon."
-(C) "Tuesday's class was canceled, actually."
-(D) "I wasn't there either, unfortunately."
+**A2.** *"Do you mind if I borrow your notes from Tuesday? I was out sick."* (A) "Sure: I'll send them over tonight." (B) "I hope you feel better soon." (C) "Tuesday's class was canceled, actually." (D) "I wasn't there either, unfortunately."
 
-**A3.** *"Honestly, I'm not sure this draft is ready to submit."*
-(A) "The deadline's not until Friday, right?"
-(B) "What do you think it still needs?"
-(C) "I submitted mine yesterday."
-(D) "That's a great title."
+**A3.** *"Honestly, I'm not sure this draft is ready to submit."* (A) "The deadline's not until Friday, right?" (B) "What do you think it still needs?" (C) "I submitted mine yesterday." (D) "That's a great title."
 
-**A4.** *"You're not still planning to walk in this weather, are you?"*
-(A) "No, I'll catch the bus instead."
-(B) "Campus is only ten minutes away."
-(C) "I walked there yesterday."
-(D) "It rained a lot last semester too."
+**A4.** *"You're not still planning to walk in this weather, are you?"* (A) "No, I'll catch the bus instead." (B) "Campus is only ten minutes away." (C) "I walked there yesterday." (D) "It rained a lot last semester too."
 
-**A5.** *"I heard the registrar's office changed their hours."*
-(A) "I registered for four classes this term."
-(B) "Really? Do you know the new schedule?"
-(C) "The office is on the second floor."
-(D) "I haven't registered for anything yet."
+**A5.** *"I heard the registrar's office changed their hours."* (A) "I registered for four classes this term." (B) "Really? Do you know the new schedule?" (C) "The office is on the second floor." (D) "I haven't registered for anything yet."
 
-**A6.** *"Could you run your presentation by me before the meeting?"*
-(A) "I ran three miles this morning."
-(B) "Sure — are you free around four?"
-(C) "The meeting's been moved to Thursday."
-(D) "I've given that presentation twice already."
+**A6.** *"Could you run your presentation by me before the meeting?"* (A) "I ran three miles this morning." (B) "Sure: are you free around four?" (C) "The meeting's been moved to Thursday." (D) "I've given that presentation twice already."
 
-**A7.** *"I thought the lab report was due next week, not tomorrow."*
-(A) "So did I — let me double-check the syllabus."
-(B) "The lab is on the ground floor."
-(C) "I finished my report last month."
-(D) "Next week works better for me too."
+**A7.** *"I thought the lab report was due next week, not tomorrow."* (A) "So did I: let me double-check the syllabus." (B) "The lab is on the ground floor." (C) "I finished my report last month." (D) "Next week works better for me too."
 
-**A8.** *"Would you rather present first or last?"*
-(A) "I presented last time."
-(B) "Last, if that's an option — I need time to prepare."
-(C) "The presentation is worth 20% of the grade."
-(D) "First place goes to the best presentation."
+**A8.** *"Would you rather present first or last?"* (A) "I presented last time." (B) "Last, if that's an option: I need time to prepare." (C) "The presentation is worth 20% of the grade." (D) "First place goes to the best presentation."
 
-**A9.** *"This bus is taking forever. We should've left earlier."*
-(A) "The bus stop is right over there."
-(B) "Tell me about it — I hate cutting it this close."
-(C) "I take this bus every day."
-(D) "We left at eight, same as always."
+**A9.** *"This bus is taking forever. We should've left earlier."* (A) "The bus stop is right over there." (B) "Tell me about it: I hate cutting it this close." (C) "I take this bus every day." (D) "We left at eight, same as always."
 
-**A10.** *"Professor Lin said she might cancel Friday's class."*
-(A) "She's a great lecturer, isn't she?"
-(B) "Did she say why, or was it just a maybe?"
-(C) "Friday's class is in the east building."
-(D) "I've never had a class canceled before."
+**A10.** *"Professor Lin said she might cancel Friday's class."* (A) "She's a great lecturer, isn't she?" (B) "Did she say why, or was it just a maybe?" (C) "Friday's class is in the east building." (D) "I've never had a class canceled before."
 
-**A11.** *"I've been meaning to ask — how did the interview go?"*
-(A) "It's at two o'clock on Thursday."
-(B) "Better than I expected, actually. They said they'd call by Friday."
-(C) "I've had a lot of interviews lately."
-(D) "The company is downtown, near the station."
+**A11.** *"I've been meaning to ask: how did the interview go?"* (A) "It's at two o'clock on Thursday." (B) "Better than I expected, actually. They said they'd call by Friday." (C) "I've had a lot of interviews lately." (D) "The company is downtown, near the station."
 
-**A12.** *"Do you think it's worth applying? I doubt I'd get in."*
-(A) "The application fee is fifty dollars."
-(B) "You never know unless you try — I'd go for it."
-(C) "I applied there two years ago."
-(D) "It's a very competitive program."
+**A12.** *"Do you think it's worth applying? I doubt I'd get in."* (A) "The application fee is fifty dollars." (B) "You never know unless you try: I'd go for it." (C) "I applied there two years ago." (D) "It's a very competitive program."
 
 ---
 
-### GRUPO B — LISTEN TO A CONVERSATION (3 diálogos · Escala 1)
+### GRUPO B: LISTEN TO A CONVERSATION (3 diálogos · Escala 1)
 
 ---
 
-#### 🏋️ DRILL B1 — Advising Office · alvo: 3 min
+#### 🏋️ DRILL B1 · Advising Office · alvo: 3 min
 
 *Narrator: Listen to a conversation between a student and an academic advisor.*
 
-**Student:** Hi, I wanted to ask about switching one of my electives. I'm in
-Intro to Statistics, but I'd rather take Data Visualization instead.
+**Student:** Hi, I wanted to ask about switching one of my electives. I'm in Intro to Statistics, but I'd rather take Data Visualization instead.
 
-**Advisor:** Let me check... okay, Data Visualization has space. But it has
-Statistics as a prerequisite — have you completed that?
+**Advisor:** Let me check... okay, Data Visualization has space. But it has Statistics as a prerequisite · have you completed that?
 
-**Student:** No, that's why I wanted to switch — I was hoping to take Data
-Visualization first and Statistics later.
+**Student:** No, that's why I wanted to switch · I was hoping to take Data Visualization first and Statistics later.
 
-**Advisor:** Ah. Unfortunately that's not possible; the prerequisite is enforced
-by the system. You'd need to finish Statistics first, or get a written waiver
-from the Data Visualization instructor.
+**Advisor:** Ah. Unfortunately that's not possible; the prerequisite is enforced by the system. You'd need to finish Statistics first, or get a written waiver from the Data Visualization instructor.
 
 **Student:** Is it worth asking her directly, or is that rarely approved?
 
-**Advisor:** It's approved sometimes, especially if you have relevant
-experience — a coding background, say. Do you have any?
+**Advisor:** It's approved sometimes, especially if you have relevant experience · a coding background, say. Do you have any?
 
-**Student:** I do, actually — I took two programming courses last year.
+**Student:** I do, actually · I took two programming courses last year.
 
-**Advisor:** Then it's worth emailing her. I'll send you her contact
-information now.
+**Advisor:** Then it's worth emailing her. I'll send you her contact information now.
 
-**B1.1 — Gist-purpose.** Why does the student visit the advising office?
-(A) To complain about a scheduling conflict between two required courses
-(B) To request a change from one elective to another
-(C) To register for classes for the first time
-(D) To find out why she was removed from a course
+**B1.1: Gist-purpose.** Why does the student visit the advising office? (A) To complain about a scheduling conflict between two required courses (B) To request a change from one elective to another (C) To register for classes for the first time (D) To find out why she was removed from a course
 
-**B1.2 — Detail.** What problem does the advisor identify?
-(A) Data Visualization is already full
-(B) The student failed Statistics once already
-(C) Data Visualization requires Statistics, which the student hasn't taken
-(D) The student can't take electives outside her major
+**B1.2: Detail.** What problem does the advisor identify? (A) Data Visualization is already full (B) The student failed Statistics once already (C) Data Visualization requires Statistics, which the student hasn't taken (D) The student can't take electives outside her major
 
-**B1.3 — Function.** Why does the advisor ask whether the student has a coding background?
-(A) To check whether she qualifies for a scholarship
-(B) To suggest she switch majors
-(C) To assess whether the instructor might realistically grant a waiver
-(D) To recommend a different course
+**B1.3: Function.** Why does the advisor ask whether the student has a coding background? (A) To check whether she qualifies for a scholarship (B) To suggest she switch majors (C) To assess whether the instructor might realistically grant a waiver (D) To recommend a different course
 
-**B1.4 — Detail.** What does the advisor do at the end?
-(A) Enrolls the student in Data Visualization
-(B) Gives the student the instructor's contact information
-(C) Schedules a follow-up meeting
-(D) Tells the student to wait until next semester
+**B1.4: Detail.** What does the advisor do at the end? (A) Enrolls the student in Data Visualization (B) Gives the student the instructor's contact information (C) Schedules a follow-up meeting (D) Tells the student to wait until next semester
 
 ---
 
-#### 🏋️ DRILL B2 — Library Reserve Desk · alvo: 3 min
+#### 🏋️ DRILL B2: Library Reserve Desk · alvo: 3 min
 
 *Narrator: Listen to a conversation between a student and a librarian.*
 
-**Student:** Hi — I'm looking for a book my professor put on reserve for the
-history seminar. It's *The Making of the Atlantic World*.
+**Student:** Hi · I'm looking for a book my professor put on reserve for the history seminar. It's *The Making of the Atlantic World*.
 
-**Librarian:** Let me look... yes, we have two copies on reserve. Reserve items
-are two-hour loans, in-library use only. You can't take them out of the
-building.
+**Librarian:** Let me look... yes, we have two copies on reserve. Reserve items are two-hour loans, in-library use only. You can't take them out of the building.
 
-**Student:** Oh. I was hoping to take it home for the weekend — the essay's due
-Monday.
+**Student:** Oh. I was hoping to take it home for the weekend · the essay's due Monday.
 
-**Librarian:** For reserve items, no, sorry. But here's an option: there's a
-circulating copy in the stacks, on the fourth floor. That one you *can* take
-out, for three weeks.
+**Librarian:** For reserve items, no, sorry. But here's an option: there's a circulating copy in the stacks, on the fourth floor. That one you *can* take out, for three weeks.
 
 **Student:** Great, I'll grab that instead. Is it available right now?
 
-**Librarian:** The catalog says one copy is in. If it's not on the shelf, come
-back and I'll place a hold on the reserve copy for you to use here.
+**Librarian:** The catalog says one copy is in. If it's not on the shelf, come back and I'll place a hold on the reserve copy for you to use here.
 
-**Student:** Thanks — I'll check the stacks first.
+**Student:** Thanks · I'll check the stacks first.
 
-**B2.1 — Gist-purpose.** What is the student trying to do?
-(A) Return an overdue book
-(B) Get a book she needs for an essay due Monday
-(C) Renew a book she already borrowed
-(D) Report that a reserve book is missing
+**B2.1: Gist-purpose.** What is the student trying to do? (A) Return an overdue book (B) Get a book she needs for an essay due Monday (C) Renew a book she already borrowed (D) Report that a reserve book is missing
 
-**B2.2 — Detail.** What is the rule for reserve items?
-(A) They can be borrowed for three weeks
-(B) They are two-hour loans, for use inside the library only
-(C) They cannot be used by undergraduates
-(D) They must be requested 24 hours in advance
+**B2.2: Detail.** What is the rule for reserve items? (A) They can be borrowed for three weeks (B) They are two-hour loans, for use inside the library only (C) They cannot be used by undergraduates (D) They must be requested 24 hours in advance
 
-**B2.3 — Detail.** What does the librarian suggest instead?
-(A) Buying the book at the campus bookstore
-(B) Borrowing the circulating copy from the fourth-floor stacks
-(C) Asking the professor for a personal copy
-(D) Waiting until Monday when more copies arrive
+**B2.3: Detail.** What does the librarian suggest instead? (A) Buying the book at the campus bookstore (B) Borrowing the circulating copy from the fourth-floor stacks (C) Asking the professor for a personal copy (D) Waiting until Monday when more copies arrive
 
-**B2.4 — Inference.** What will the student probably do next?
-(A) Place a hold on the reserve copy immediately
-(B) Go to the fourth floor to look for the circulating copy
-(C) Leave the library without the book
-(D) Ask the professor to extend the deadline
+**B2.4: Inference.** What will the student probably do next? (A) Place a hold on the reserve copy immediately (B) Go to the fourth floor to look for the circulating copy (C) Leave the library without the book (D) Ask the professor to extend the deadline
 
 ---
 
-#### 🏋️ DRILL B3 — After Class · alvo: 3 min
+#### 🏋️ DRILL B3 · After Class · alvo: 3 min
 
 *Narrator: Listen to a conversation between a student and a professor.*
 
-**Student:** Professor, do you have a minute? I'm a bit lost on the second essay
-prompt.
+**Student:** Professor, do you have a minute? I'm a bit lost on the second essay prompt.
 
 **Professor:** Of course. Which part?
 
-**Student:** It asks us to "evaluate" the argument, and I'm not sure if that
-means summarize it or agree or disagree with it.
+**Student:** It asks us to "evaluate" the argument, and I'm not sure if that means summarize it or agree or disagree with it.
 
-**Professor:** Good question — "evaluate" means neither, exactly. It means weigh
-the argument: where is it strong, where is it weak, and does the evidence
-actually support the conclusion? You can end up agreeing or disagreeing, but
-the point is the *weighing*, not the verdict.
+**Professor:** Good question · "evaluate" means neither, exactly. It means weigh the argument: where is it strong, where is it weak, and does the evidence actually support the conclusion? You can end up agreeing or disagreeing, but the point is the *weighing*, not the verdict.
 
 **Student:** Okay, that helps. So a summary alone wouldn't be enough.
 
-**Professor:** Right. A summary shows you understood it. Evaluation shows you can
-think about it. Aim for maybe a third summary, two-thirds evaluation.
+**Professor:** Right. A summary shows you understood it. Evaluation shows you can think about it. Aim for maybe a third summary, two-thirds evaluation.
 
-**Student:** Got it. And length — still fifteen hundred words?
+**Student:** Got it. And length · still fifteen hundred words?
 
 **Professor:** Fifteen hundred, give or take a hundred. Don't pad it.
 
-**B3.1 — Gist-purpose.** Why does the student talk to the professor?
-(A) To ask for an extension on the essay
-(B) To clarify what the essay prompt is asking for
-(C) To dispute a grade on the first essay
-(D) To request a different topic
+**B3.1: Gist-purpose.** Why does the student talk to the professor? (A) To ask for an extension on the essay (B) To clarify what the essay prompt is asking for (C) To dispute a grade on the first essay (D) To request a different topic
 
-**B3.2 — Detail.** According to the professor, what does "evaluate" mean here?
-(A) Summarize the argument accurately
-(B) Simply agree or disagree with the argument
-(C) Weigh the argument's strengths, weaknesses, and use of evidence
-(D) Compare the argument with another author's
+**B3.2: Detail.** According to the professor, what does "evaluate" mean here? (A) Summarize the argument accurately (B) Simply agree or disagree with the argument (C) Weigh the argument's strengths, weaknesses, and use of evidence (D) Compare the argument with another author's
 
-**B3.3 — Detail.** What balance between summary and evaluation does the professor recommend?
-(A) Half summary, half evaluation
-(B) All evaluation, no summary
-(C) About one-third summary, two-thirds evaluation
-(D) A brief summary followed by a personal opinion
+**B3.3: Detail.** What balance between summary and evaluation does the professor recommend? (A) Half summary, half evaluation (B) All evaluation, no summary (C) About one-third summary, two-thirds evaluation (D) A brief summary followed by a personal opinion
 
-**B3.4 — Attitude.** What does the professor mean by "Don't pad it"?
-(A) Write more than 1,500 words to be safe
-(B) Don't add filler just to reach the word count
-(C) Use larger margins and spacing
-(D) Include as many quotations as possible
+**B3.4: Attitude.** What does the professor mean by "Don't pad it"? (A) Write more than 1,500 words to be safe (B) Don't add filler just to reach the word count (C) Use larger margins and spacing (D) Include as many quotations as possible
 
 ---
 
-### GRUPO C — LISTEN TO AN ANNOUNCEMENT (3 anúncios · checklist auditiva)
+### GRUPO C: LISTEN TO AN ANNOUNCEMENT (3 anúncios · checklist auditiva)
 
 ---
 
-#### 🏋️ DRILL C1 — Library Services · alvo: 2 min
+#### 🏋️ DRILL C1 · Library Services · alvo: 2 min
 
 *Narrator: Listen to an announcement about a change to library services.*
 
-**Speaker:** Attention, students. Starting next Monday, the Main Library's
-third-floor reading room will be closed for renovation through the end of the
-month. During this period you can use the East Wing reading room instead, which
-keeps its regular hours. Reserved study rooms originally booked for the third
-floor have already been transferred automatically to the East Wing — you don't
-need to rebook. However, if your reservation was for a room with audiovisual
-equipment, please double-check availability, since not all East Wing rooms are
-equipped. Questions go to the circulation desk.
+**Speaker:** Attention, students. Starting next Monday, the Main Library's third-floor reading room will be closed for renovation through the end of the month. During this period you can use the East Wing reading room instead, which keeps its regular hours. Reserved study rooms originally booked for the third floor have already been transferred automatically to the East Wing · you don't need to rebook. However, if your reservation was for a room with audiovisual equipment, please double-check availability, since not all East Wing rooms are equipped. Questions go to the circulation desk.
 
-**C1.1 — Detail.** When does the closure begin?
-(A) Today  (B) Next Monday  (C) At the end of the month  (D) Next semester
+**C1.1: Detail.** When does the closure begin? (A) Today  (B) Next Monday  (C) At the end of the month  (D) Next semester
 
-**C1.2 — Detail.** What happens to previously reserved study rooms?
-(A) They are canceled and must be rebooked
-(B) They are automatically transferred to the East Wing
-(C) They stay on the third floor
-(D) They are honored only if confirmed by email
+**C1.2: Detail.** What happens to previously reserved study rooms? (A) They are canceled and must be rebooked (B) They are automatically transferred to the East Wing (C) They stay on the third floor (D) They are honored only if confirmed by email
 
-**C1.3 — Function.** Why does the speaker mention audiovisual equipment?
-(A) To announce that all AV equipment is being removed
-(B) To tell students to avoid using AV equipment during renovations
-(C) To warn that not every transferred room has the same equipment as before
-(D) To advertise a new AV rental service
+**C1.3: Function.** Why does the speaker mention audiovisual equipment? (A) To announce that all AV equipment is being removed (B) To tell students to avoid using AV equipment during renovations (C) To warn that not every transferred room has the same equipment as before (D) To advertise a new AV rental service
 
 ---
 
-#### 🏋️ DRILL C2 — Course Registration · alvo: 2 min
+#### 🏋️ DRILL C2: Course Registration · alvo: 2 min
 
 *Narrator: Listen to an announcement about course registration.*
 
-**Speaker:** A reminder to all second-year students: registration for spring
-courses opens this Thursday at 8 a.m. and closes the following Wednesday at
-midnight. Register early — popular courses fill within hours. If a course you
-need is full, add yourself to the waitlist rather than emailing the instructor;
-the system releases spots automatically as students drop, and it works strictly
-in waitlist order. One change this year: the add/drop period after classes begin
-has been shortened from two weeks to one, so finalize your schedule before the
-term starts, not after.
+**Speaker:** A reminder to all second-year students: registration for spring courses opens this Thursday at 8 a.m. and closes the following Wednesday at midnight. Register early · popular courses fill within hours. If a course you need is full, add yourself to the waitlist rather than emailing the instructor; the system releases spots automatically as students drop, and it works strictly in waitlist order. One change this year: the add/drop period after classes begin has been shortened from two weeks to one, so finalize your schedule before the term starts, not after.
 
-**C2.1 — Detail.** When does registration close?
-(A) Thursday at 8 a.m.
-(B) The following Wednesday at midnight
-(C) One week after classes begin
-(D) Two weeks after classes begin
+**C2.1: Detail.** When does registration close? (A) Thursday at 8 a.m. (B) The following Wednesday at midnight (C) One week after classes begin (D) Two weeks after classes begin
 
-**C2.2 — Detail.** What should a student do if a course is full?
-(A) Email the instructor to ask for a spot
-(B) Register for a different course permanently
-(C) Add themselves to the waitlist
-(D) Wait until the add/drop period
+**C2.2: Detail.** What should a student do if a course is full? (A) Email the instructor to ask for a spot (B) Register for a different course permanently (C) Add themselves to the waitlist (D) Wait until the add/drop period
 
-**C2.3 — Connecting content.** What has changed this year?
-(A) Registration now opens earlier in the day
-(B) The add/drop period has been shortened from two weeks to one
-(C) Waitlists are no longer used
-(D) Second-year students register last
+**C2.3: Connecting content.** What has changed this year? (A) Registration now opens earlier in the day (B) The add/drop period has been shortened from two weeks to one (C) Waitlists are no longer used (D) Second-year students register last
 
-**C2.4 — Inference.** Why does the speaker emphasize finalizing the schedule before the term?
-(A) Because instructors will not answer email during the term
-(B) Because there will be less time to change courses once classes start
-(C) Because spring courses are harder than fall courses
-(D) Because registration reopens midway through the term
+**C2.4: Inference.** Why does the speaker emphasize finalizing the schedule before the term? (A) Because instructors will not answer email during the term (B) Because there will be less time to change courses once classes start (C) Because spring courses are harder than fall courses (D) Because registration reopens midway through the term
 
 ---
 
-#### 🏋️ DRILL C3 — Campus Event · alvo: 2 min
+#### 🏋️ DRILL C3 · Campus Event · alvo: 2 min
 
 *Narrator: Listen to an announcement about a career event.*
 
-**Speaker:** The annual Career Fair takes place next Wednesday from 10 to 4 in
-the main gymnasium. Over eighty employers will attend, mostly in engineering,
-healthcare, and education. A few reminders. Bring several printed copies of your
-résumé — most recruiters still expect a paper copy. Business-casual dress is
-recommended, not required. The résumé-review station near the entrance will be
-open from 9, an hour before the fair, and it operates first-come, first-served,
-so arrive early if you want feedback before talking to employers. Finally, the
-9:30 workshop on interview skills is now full; a recording will be posted next
-week for those who missed it.
+**Speaker:** The annual Career Fair takes place next Wednesday from 10 to 4 in the main gymnasium. Over eighty employers will attend, mostly in engineering, healthcare, and education. A few reminders. Bring several printed copies of your résumé · most recruiters still expect a paper copy. Business-casual dress is recommended, not required. The résumé-review station near the entrance will be open from 9, an hour before the fair, and it operates first-come, first-served, so arrive early if you want feedback before talking to employers. Finally, the 9:30 workshop on interview skills is now full; a recording will be posted next week for those who missed it.
 
-**C3.1 — Detail.** What time does the Career Fair itself begin?
-(A) 9 a.m.  (B) 9:30 a.m.  (C) 10 a.m.  (D) 4 p.m.
+**C3.1: Detail.** What time does the Career Fair itself begin? (A) 9 a.m.  (B) 9:30 a.m.  (C) 10 a.m.  (D) 4 p.m.
 
-**C3.2 — Detail.** What does the speaker say about dress?
-(A) Business formal is required
-(B) Business-casual is recommended but not required
-(C) There is no dress guidance
-(D) Recruiters will provide name tags and jackets
+**C3.2: Detail.** What does the speaker say about dress? (A) Business formal is required (B) Business-casual is recommended but not required (C) There is no dress guidance (D) Recruiters will provide name tags and jackets
 
-**C3.3 — Connecting content.** A student wants résumé feedback before speaking to
-employers. What should they do?
-(A) Attend the 9:30 workshop
-(B) Arrive at the résumé-review station around 9, since it is first-come, first-served
-(C) Email their résumé to a recruiter in advance
-(D) Wait until after 4 p.m.
+**C3.3: Connecting content.** A student wants résumé feedback before speaking to employers. What should they do? (A) Attend the 9:30 workshop (B) Arrive at the résumé-review station around 9, since it is first-come, first-served (C) Email their résumé to a recruiter in advance (D) Wait until after 4 p.m.
 
-**C3.4 — Detail.** What is true of the 9:30 interview-skills workshop?
-(A) It has open spots
-(B) It is full, but a recording will be posted next week
-(C) It has been moved to next Wednesday
-(D) It requires advance payment
+**C3.4: Detail.** What is true of the 9:30 interview-skills workshop? (A) It has open spots (B) It is full, but a recording will be posted next week (C) It has been moved to next Wednesday (D) It requires advance payment
 
 ---
 
-### GRUPO D — LISTEN TO AN ACADEMIC TALK (3 palestras · Escala 2)
+### GRUPO D: LISTEN TO AN ACADEMIC TALK (3 palestras · Escala 2)
 
 ---
 
-#### 🏋️ DRILL D1 — Psicologia · alvo: 4 min
+#### 🏋️ DRILL D1 · Psicologia · alvo: 4 min
 
 *Narrator: Listen to part of a talk in a psychology class.*
 
-**Professor:** We've been discussing decision-making, and today I want to bring
-up something researchers call the paradox of choice. The idea is
-counterintuitive: you'd think more options would always make us happier, but
-past a certain point it does the opposite.
+**Professor:** We've been discussing decision-making, and today I want to bring up something researchers call the paradox of choice. The idea is counterintuitive: you'd think more options would always make us happier, but past a certain point it does the opposite.
 
-A classic example. In one well-known study, researchers set up a tasting table
-in a grocery store — first with six varieties of jam, then with twenty-four.
-You'd expect the bigger display to sell more. Actually, the smaller display
-generated significantly more purchases. The larger one attracted more browsers,
-but far fewer of them bought anything.
+A classic example. In one well-known study, researchers set up a tasting table in a grocery store: first with six varieties of jam, then with twenty-four. You'd expect the bigger display to sell more. Actually, the smaller display generated significantly more purchases. The larger one attracted more browsers, but far fewer of them bought anything.
 
-Why? Two things: decision fatigue and anticipated regret. With more options,
-comparing them mentally becomes exhausting — that's the fatigue. And once you
-pick, you start second-guessing whether one of the other twenty-three would've
-been better — that's the regret. Ironically, more choices can leave people
-feeling back to square one, unable to commit at all.
+Why? Two things: decision fatigue and anticipated regret. With more options, comparing them mentally becomes exhausting · that's the fatigue. And once you pick, you start second-guessing whether one of the other twenty-three would've been better · that's the regret. Ironically, more choices can leave people feeling back to square one, unable to commit at all.
 
-Now, this doesn't mean choice is bad — a complete absence of options is its own
-problem. The point is there's a sweet spot, and past it, additional options stop
-helping and start working against us.
+Now, this doesn't mean choice is bad: a complete absence of options is its own problem. The point is there's a sweet spot, and past it, additional options stop helping and start working against us.
 
-**D1.1 — Gist-content.** What is the talk mainly about?
-(A) Grocery stores should minimize the products they display
-(B) Beyond a point, more options can reduce satisfaction and hinder decisions
-(C) Consumers always prefer smaller displays
-(D) Decision fatigue affects only in-store shoppers
+**D1.1: Gist-content.** What is the talk mainly about? (A) Grocery stores should minimize the products they display (B) Beyond a point, more options can reduce satisfaction and hinder decisions (C) Consumers always prefer smaller displays (D) Decision fatigue affects only in-store shoppers
 
-**D1.2 — Detail.** What happened with the 24-variety display?
-(A) It attracted more browsers but produced fewer purchases
-(B) It produced both more browsers and more purchases
-(C) It was removed for low interest
-(D) It produced identical sales to the smaller display
+**D1.2: Detail.** What happened with the 24-variety display? (A) It attracted more browsers but produced fewer purchases (B) It produced both more browsers and more purchases (C) It was removed for low interest (D) It produced identical sales to the smaller display
 
-**D1.3 — Organization.** Why does the professor describe the grocery store study in detail?
-(A) To criticize the researchers' methodology
-(B) To give concrete evidence for the paradox of choice
-(C) To introduce an unrelated topic about marketing
-(D) To explain how stores design displays
+**D1.3: Organization.** Why does the professor describe the grocery store study in detail? (A) To criticize the researchers' methodology (B) To give concrete evidence for the paradox of choice (C) To introduce an unrelated topic about marketing (D) To explain how stores design displays
 
-**D1.4 — Inference.** What is the professor's view on having zero options?
-(A) It is preferable to having too many
-(B) It is also a problem, just as too many options are
-(C) It has never been studied
-(D) It applies only to grocery shopping
+**D1.4: Inference.** What is the professor's view on having zero options? (A) It is preferable to having too many (B) It is also a problem, just as too many options are (C) It has never been studied (D) It applies only to grocery shopping
 
-**D1.5 — Idiom in context.** What does *"back to square one"* mean here?
-(A) Making a confident final decision
-(B) Returning to a starting point without real progress
-(C) Choosing the first option presented
-(D) Comparing two options systematically
+**D1.5: Idiom in context.** What does *"back to square one"* mean here? (A) Making a confident final decision (B) Returning to a starting point without real progress (C) Choosing the first option presented (D) Comparing two options systematically
 
 ---
 
-#### 🏋️ DRILL D2 — Biologia · alvo: 4 min
+#### 🏋️ DRILL D2 · Biologia · alvo: 4 min
 
 *Narrator: Listen to part of a talk in a biology class.*
 
-**Professor:** When we picture a forest, we tend to see individual trees
-competing — for light, for water, for space. And that's real. But over the last
-thirty years, research has revealed something the old picture missed: the trees
-are also **connected**, underground, through fungi.
+**Professor:** When we picture a forest, we tend to see individual trees competing · for light, for water, for space. And that's real. But over the last thirty years, research has revealed something the old picture missed: the trees are also **connected**, underground, through fungi.
 
-Here's how. The roots of most trees are wrapped in a network of fungal threads
-called mycorrhizae. The fungi pull in water and minerals the tree's roots can't
-reach efficiently, and hand them to the tree. In return, the tree gives the
-fungi sugars it makes through photosynthesis. So far, a simple trade.
+Here's how. The roots of most trees are wrapped in a network of fungal threads called mycorrhizae. The fungi pull in water and minerals the tree's roots can't reach efficiently, and hand them to the tree. In return, the tree gives the fungi sugars it makes through photosynthesis. So far, a simple trade.
 
-The surprising part is that a single fungal network can link **many** trees at
-once — even trees of different species. And things move along those links.
-Experiments using radioactive tracers have shown carbon flowing from a tree
-standing in full sun to a shaded seedling of another species nearby. Some
-researchers describe old, well-connected trees as "hub trees" that support
-younger ones around them.
+The surprising part is that a single fungal network can link **many** trees at once: even trees of different species. And things move along those links. Experiments using radioactive tracers have shown carbon flowing from a tree standing in full sun to a shaded seedling of another species nearby. Some researchers describe old, well-connected trees as "hub trees" that support younger ones around them.
 
-Now, a word of caution. This work has captured the public imagination, and some
-popular accounts overstate it — talking about forests as single cooperative
-organisms. The jury's still out on how deliberate or widespread the sharing
-really is. What's solid is that the connections exist and that resources can
-move through them. How much that reshapes our model of the forest is still being
-worked out.
+Now, a word of caution. This work has captured the public imagination, and some popular accounts overstate it: talking about forests as single cooperative organisms. The jury's still out on how deliberate or widespread the sharing really is. What's solid is that the connections exist and that resources can move through them. How much that reshapes our model of the forest is still being worked out.
 
-**D2.1 — Gist-content.** What is the main point of the talk?
-(A) Trees in a forest only compete, never cooperate
-(B) Trees are connected underground through fungal networks, and resources can move between them
-(C) Mycorrhizal fungi are harmful to most trees
-(D) Forests are single cooperative organisms
+**D2.1: Gist-content.** What is the main point of the talk? (A) Trees in a forest only compete, never cooperate (B) Trees are connected underground through fungal networks, and resources can move between them (C) Mycorrhizal fungi are harmful to most trees (D) Forests are single cooperative organisms
 
-**D2.2 — Detail.** What does the tree give the fungi in the relationship?
-(A) Water it pulls from deep soil
-(B) Minerals from its leaves
-(C) Sugars made through photosynthesis
-(D) Nothing — the relationship is one-directional
+**D2.2: Detail.** What does the tree give the fungi in the relationship? (A) Water it pulls from deep soil (B) Minerals from its leaves (C) Sugars made through photosynthesis (D) Nothing · the relationship is one-directional
 
-**D2.3 — Detail.** What did the radioactive-tracer experiments show?
-(A) That fungi kill shaded seedlings
-(B) That carbon can flow from a sunlit tree to a shaded seedling of another species
-(C) That only trees of the same species can be connected
-(D) That the networks do not actually transfer anything
+**D2.3: Detail.** What did the radioactive-tracer experiments show? (A) That fungi kill shaded seedlings (B) That carbon can flow from a sunlit tree to a shaded seedling of another species (C) That only trees of the same species can be connected (D) That the networks do not actually transfer anything
 
-**D2.4 — Attitude / Organization.** Why does the professor add "a word of caution" near the end?
-(A) To retract everything said earlier in the talk
-(B) To distinguish what the evidence firmly supports from claims that popular accounts exaggerate
-(C) To argue that the research is worthless
-(D) To introduce a completely different topic
+**D2.4: Attitude / Organization.** Why does the professor add "a word of caution" near the end? (A) To retract everything said earlier in the talk (B) To distinguish what the evidence firmly supports from claims that popular accounts exaggerate (C) To argue that the research is worthless (D) To introduce a completely different topic
 
-**D2.5 — Idiom in context.** What does the professor mean by *"the jury's still out"*?
-(A) The question has been definitively settled
-(B) There is not yet a firm conclusion on the matter
-(C) A court case is involved in the research
-(D) The researchers have stopped studying it
+**D2.5: Idiom in context.** What does the professor mean by *"the jury's still out"*? (A) The question has been definitively settled (B) There is not yet a firm conclusion on the matter (C) A court case is involved in the research (D) The researchers have stopped studying it
 
 ---
 
-#### 🏋️ DRILL D3 — História da tecnologia · alvo: 4 min
+#### 🏋️ DRILL D3: História da tecnologia · alvo: 4 min
 
 *Narrator: Listen to part of a talk in a history of technology class.*
 
-**Professor:** Look at your keyboard. The top row of letters spells Q-W-E-R-T-Y.
-It's an odd arrangement — the most common letters aren't under your strongest
-fingers. So why has it survived, essentially unchanged, for a hundred and fifty
-years?
+**Professor:** Look at your keyboard. The top row of letters spells Q-W-E-R-T-Y. It's an odd arrangement · the most common letters aren't under your strongest fingers. So why has it survived, essentially unchanged, for a hundred and fifty years?
 
-The layout dates from the 1870s, from early mechanical typewriters. The common
-story is that QWERTY was designed to *slow typists down* so the metal type-bars
-wouldn't jam. That's probably an oversimplification — the real design pressures
-were more mixed — but the key point is that the layout was shaped by the
-constraints of 1870s **machinery**, constraints that vanished decades ago.
+The layout dates from the 1870s, from early mechanical typewriters. The common story is that QWERTY was designed to *slow typists down* so the metal type-bars wouldn't jam. That's probably an oversimplification (the real design pressures were more mixed) but the key point is that the layout was shaped by the constraints of 1870s **machinery**, constraints that vanished decades ago.
 
-Better layouts have been proposed. The best known, Dvorak, was patented in 1936
-and, in some studies, allows modestly faster and more comfortable typing. Yet it
-never caught on. Why not?
+Better layouts have been proposed. The best known, Dvorak, was patented in 1936 and, in some studies, allows modestly faster and more comfortable typing. Yet it never caught on. Why not?
 
-This is a textbook case of what economists call **path dependence**, or
-sometimes "lock-in." Once QWERTY became the standard, everything organized
-itself around that standard: typewriters were built for it, typing was taught on
-it, and every new typist learned it because that's what the machines used — and
-machines used it because that's what typists knew. To switch, a single person
-gains little unless nearly everyone switches at once. The cost of coordinating
-that switch is enormous, and no one bears it. So an arrangement that made sense
-only for 1870s hardware is still, quietly, on every device you own.
+This is a textbook case of what economists call **path dependence**, or sometimes "lock-in." Once QWERTY became the standard, everything organized itself around that standard: typewriters were built for it, typing was taught on it, and every new typist learned it because that's what the machines used · and machines used it because that's what typists knew. To switch, a single person gains little unless nearly everyone switches at once. The cost of coordinating that switch is enormous, and no one bears it. So an arrangement that made sense only for 1870s hardware is still, quietly, on every device you own.
 
-**D3.1 — Gist-content.** What is the talk mainly about?
-(A) How to type faster using the Dvorak layout
-(B) Why an outdated keyboard layout has persisted, as an example of path dependence
-(C) The mechanical design of 19th-century typewriters
-(D) Why Dvorak is objectively the best possible layout
+**D3.1: Gist-content.** What is the talk mainly about? (A) How to type faster using the Dvorak layout (B) Why an outdated keyboard layout has persisted, as an example of path dependence (C) The mechanical design of 19th-century typewriters (D) Why Dvorak is objectively the best possible layout
 
-**D3.2 — Detail.** What does the professor say about the "common story" that QWERTY was designed to slow typists down?
-(A) It is completely accurate
-(B) It is probably an oversimplification, though the layout was shaped by 1870s machinery
-(C) It was invented by economists
-(D) It explains why Dvorak succeeded
+**D3.2: Detail.** What does the professor say about the "common story" that QWERTY was designed to slow typists down? (A) It is completely accurate (B) It is probably an oversimplification, though the layout was shaped by 1870s machinery (C) It was invented by economists (D) It explains why Dvorak succeeded
 
-**D3.3 — Detail.** According to the talk, what happened to the Dvorak layout?
-(A) It became the new standard in the 1940s
-(B) It was patented in 1936 but never caught on
-(C) It was proven to be slower than QWERTY
-(D) It is now used on most smartphones
+**D3.3: Detail.** According to the talk, what happened to the Dvorak layout? (A) It became the new standard in the 1940s (B) It was patented in 1936 but never caught on (C) It was proven to be slower than QWERTY (D) It is now used on most smartphones
 
-**D3.4 — Organization.** Why does the professor describe the cycle of "typists learned QWERTY because machines used it, and machines used it because typists knew it"?
-(A) To illustrate how lock-in makes a standard self-reinforcing and hard to change
-(B) To criticize typewriter manufacturers
-(C) To explain how mechanical type-bars work
-(D) To argue that QWERTY is actually well designed
+**D3.4: Organization.** Why does the professor describe the cycle of "typists learned QWERTY because machines used it, and machines used it because typists knew it"? (A) To illustrate how lock-in makes a standard self-reinforcing and hard to change (B) To criticize typewriter manufacturers (C) To explain how mechanical type-bars work (D) To argue that QWERTY is actually well designed
 
-**D3.5 — Inference.** What can be inferred about why an individual rarely switches to Dvorak?
-(A) Dvorak keyboards are illegal in most countries
-(B) The benefit to one person is small unless almost everyone switches together
-(C) Dvorak is much harder to learn than any other layout
-(D) Employers forbid it
+**D3.5: Inference.** What can be inferred about why an individual rarely switches to Dvorak? (A) Dvorak keyboards are illegal in most countries (B) The benefit to one person is small unless almost everyone switches together (C) Dvorak is much harder to learn than any other layout (D) Employers forbid it
 
-**D3.6 — Idiom in context.** When the professor says the old arrangement is "still, quietly, on every device you own," the word *"quietly"* suggests that:
-(A) keyboards make no sound
-(B) most people use QWERTY without noticing that it is an outdated design
-(C) the layout is a secret
-(D) typing should be done silently
+**D3.6: Idiom in context.** When the professor says the old arrangement is "still, quietly, on every device you own," the word *"quietly"* suggests that: (A) keyboards make no sound (B) most people use QWERTY without noticing that it is an outdated design (C) the layout is a secret (D) typing should be done silently
 
 ---
 
 ## PARTE 6: GABARITO COMENTADO
 
-### GRUPO A — Listen and Choose a Response
+### GRUPO A: Listen and Choose a Response
 
 | Item | Resp. | Por quê / padrão do distrator |
 |---|---|---|
-| A1 | **B** | O falante sinaliza falta de tempo; a resposta natural propõe a ação consequente. (A)(C)(D) ignoram a urgência — **WRONG FOCUS**. |
+| A1 | **B** | O falante sinaliza falta de tempo; a resposta natural propõe a ação consequente. (A)(C)(D) ignoram a urgência: **WRONG FOCUS**. |
 | A2 | **A** | Pedido direto → resposta direta de concessão + plano. (B) é gentil mas não responde ao pedido; (C)(D) mudam de assunto. |
 | A3 | **B** | Insegurança sobre o rascunho → resposta busca o problema específico. (A) muda para prazo; (C)(D) ignoram a preocupação. |
-| A4 | **A** | Pergunta retórica = alerta educado sobre andar na chuva. Resposta natural revisa o plano. (B)(C) reforçam o plano problemático — **CONFUSED REASONING**. |
-| A5 | **B** | Informação nova (mudança de horário) → interesse + pedido de detalhe. (A)(D) confundem *register* (matricular-se) com *hours* — **CORRECT WORDS, WRONG MEANING**. (C) é **TRUE BUT NOT SAID**. |
-| A6 | **B** | *"run X by me"* = me mostrar antes. Resposta natural marca um horário. (A) toma *"run"* ao pé da letra — **CORRECT WORDS, WRONG MEANING**. (C) muda o foco; (D) ignora o pedido. |
+| A4 | **A** | Pergunta retórica = alerta educado sobre andar na chuva. Resposta natural revisa o plano. (B)(C) reforçam o plano problemático: **CONFUSED REASONING**. |
+| A5 | **B** | Informação nova (mudança de horário) → interesse + pedido de detalhe. (A)(D) confundem *register* (matricular-se) com *hours*: **CORRECT WORDS, WRONG MEANING**. (C) é **TRUE BUT NOT SAID**. |
+| A6 | **B** | *"run X by me"* = me mostrar antes. Resposta natural marca um horário. (A) toma *"run"* ao pé da letra: **CORRECT WORDS, WRONG MEANING**. (C) muda o foco; (D) ignora o pedido. |
 | A7 | **A** | Divergência sobre a data → confirmar juntos, checar o syllabus. (B) muda o foco (localização); (C)(D) ignoram a divergência. |
 | A8 | **B** | Pergunta de preferência (primeiro ou último) → escolher e justificar. (A)(C)(D) não respondem à escolha oferecida. |
 | A9 | **B** | Reclamação sobre a demora → *"Tell me about it"* concorda enfaticamente + acrescenta. (A)(C)(D) mudam o foco. |
@@ -1076,104 +719,65 @@ only for 1870s hardware is still, quietly, on every device you own.
 | A11 | **B** | Pergunta sobre como foi a entrevista → dar o resultado + próximo passo. (A) responde sobre horário; (C)(D) generalizam/desviam. |
 | A12 | **B** | Dúvida + autodepreciação → encorajamento. (A)(C)(D) desviam para custo, experiência passada, competitividade. |
 
-### GRUPO B — Listen to a Conversation
+### GRUPO B: Listen to a Conversation
 
-**B1.1 — (B).** A estudante quer *"switch one of my electives"*. (A) sem conflito
-de horário; (C) já está matriculada; (D) **OUT OF SCOPE**.
-**B1.2 — (C).** *"it has Statistics as a prerequisite... you'd need to complete
-Statistics first."* (A) o oposto (há vaga); (B)(D) não ditos.
-**B1.3 — (C).** A pergunta avalia se a professora poderia dar um *waiver*. (A)(B)(D) sem base.
-**B1.4 — (B).** *"I'll send you her contact information now."* (A) a matrícula não
-é feita aqui; (C)(D) não ditos.
+**B1.1: (B).** A estudante quer *"switch one of my electives"*. (A) sem conflito de horário; (C) já está matriculada; (D) **OUT OF SCOPE**.
+**B1.2: (C).** *"it has Statistics as a prerequisite... you'd need to complete Statistics first."* (A) o oposto (há vaga); (B)(D) não ditos.
+**B1.3: (C).** A pergunta avalia se a professora poderia dar um *waiver*. (A)(B)(D) sem base.
+**B1.4: (B).** *"I'll send you her contact information now."* (A) a matrícula não é feita aqui; (C)(D) não ditos.
 
-**B2.1 — (B).** Ela quer um livro para um ensaio com prazo na segunda. (A) não é
-devolução; (C) não é renovação; (D) o livro não está perdido.
-**B2.2 — (B).** *"two-hour loans, in-library use only... can't take them out of
-the building."* (A) descreve o exemplar da circulação; (C)(D) não ditos.
-**B2.3 — (B).** *"there's a circulating copy in the stacks, on the fourth floor.
-That one you can take out."* (A)(C)(D) não sugeridos.
-**B2.4 — (B).** *"I'll check the stacks first."* Inferência direta. (A) só se não
-achar; (C)(D) contradizem a intenção declarada.
+**B2.1: (B).** Ela quer um livro para um ensaio com prazo na segunda. (A) não é devolução; (C) não é renovação; (D) o livro não está perdido.
+**B2.2: (B).** *"two-hour loans, in-library use only... can't take them out of the building."* (A) descreve o exemplar da circulação; (C)(D) não ditos.
+**B2.3: (B).** *"there's a circulating copy in the stacks, on the fourth floor. That one you can take out."* (A)(C)(D) não sugeridos.
+**B2.4: (B).** *"I'll check the stacks first."* Inferência direta. (A) só se não achar; (C)(D) contradizem a intenção declarada.
 
-**B3.1 — (B).** *"I'm a bit lost on the second essay prompt."* (A) não pede
-prazo; (C) não é sobre nota; (D) não pede outro tema.
-**B3.2 — (C).** *"weigh the argument: where is it strong, where is it weak, and
-does the evidence support the conclusion?"* (A)(B) o professor diz que
-*"evaluate"* é **nenhum** dos dois; (D) não dito.
-**B3.3 — (C).** *"maybe a third summary, two-thirds evaluation."*
-**B3.4 — (B).** *"Don't pad it"* = não encher linguiça para bater a contagem de
-palavras. (A) o oposto; (C)(D) **OUT OF SCOPE**.
+**B3.1: (B).** *"I'm a bit lost on the second essay prompt."* (A) não pede prazo; (C) não é sobre nota; (D) não pede outro tema.
+**B3.2: (C).** *"weigh the argument: where is it strong, where is it weak, and does the evidence support the conclusion?"* (A)(B) o professor diz que *"evaluate"* é **nenhum** dos dois; (D) não dito.
+**B3.3: (C).** *"maybe a third summary, two-thirds evaluation."*
+**B3.4: (B).** *"Don't pad it"* = não encher linguiça para bater a contagem de palavras. (A) o oposto; (C)(D) **OUT OF SCOPE**.
 
-### GRUPO C — Listen to an Announcement
+### GRUPO C: Listen to an Announcement
 
-**C1.1 — (B).** *"Starting next Monday..."* (C) confunde início com fim do
-período — **CONFUSED REASONING**.
-**C1.2 — (B).** *"transferred automatically to the East Wing — you don't need to
-rebook."* (A) o oposto; (D) adiciona condição não dita.
-**C1.3 — (C).** Aviso prático de que *"not all East Wing rooms are equipped"*.
-(A)(D) **EXTREME**; (B) **OUT OF SCOPE**.
+**C1.1: (B).** *"Starting next Monday..."* (C) confunde início com fim do período · **CONFUSED REASONING**.
+**C1.2: (B).** *"transferred automatically to the East Wing · you don't need to rebook."* (A) o oposto; (D) adiciona condição não dita.
+**C1.3: (C).** Aviso prático de que *"not all East Wing rooms are equipped"*. (A)(D) **EXTREME**; (B) **OUT OF SCOPE**.
 
-**C2.1 — (B).** *"closes the following Wednesday at midnight."* (A) é a abertura;
-(C)(D) confundem com o add/drop.
-**C2.2 — (C).** *"add yourself to the waitlist rather than emailing the
-instructor."* (A) explicitamente desaconselhado.
-**C2.3 — (B).** *"the add/drop period... has been shortened from two weeks to
-one."* (A)(C)(D) não ditos.
-**C2.4 — (B).** Add/drop mais curto → menos tempo para ajustar depois que as
-aulas começam. (A) **TRUE BUT NOT SAID**; (C)(D) sem base.
+**C2.1: (B).** *"closes the following Wednesday at midnight."* (A) é a abertura; (C)(D) confundem com o add/drop.
+**C2.2: (C).** *"add yourself to the waitlist rather than emailing the instructor."* (A) explicitamente desaconselhado.
+**C2.3: (B).** *"the add/drop period... has been shortened from two weeks to one."* (A)(C)(D) não ditos.
+**C2.4: (B).** Add/drop mais curto → menos tempo para ajustar depois que as aulas começam. (A) **TRUE BUT NOT SAID**; (C)(D) sem base.
 
-**C3.1 — (C).** *"from 10 to 4."* (A) é a abertura da estação de revisão de
-currículo; (B) é o workshop.
-**C3.2 — (B).** *"Business-casual dress is recommended, not required."*
-**C3.3 — (B).** A estação abre às 9, é *first-come, first-served* → chegar cedo.
-(A) o workshop é de habilidades de entrevista, não revisão de currículo; (C)(D) não sugeridos.
-**C3.4 — (B).** *"the 9:30 workshop... is now full; a recording will be posted
-next week."*
+**C3.1: (C).** *"from 10 to 4."* (A) é a abertura da estação de revisão de currículo; (B) é o workshop.
+**C3.2: (B).** *"Business-casual dress is recommended, not required."*
+**C3.3: (B).** A estação abre às 9, é *first-come, first-served* → chegar cedo. (A) o workshop é de habilidades de entrevista, não revisão de currículo; (C)(D) não sugeridos.
+**C3.4 · (B).** *"the 9:30 workshop... is now full; a recording will be posted next week."*
 
-### GRUPO D — Listen to an Academic Talk
+### GRUPO D: Listen to an Academic Talk
 
-**D1.1 — (B).** Tese anunciada no início e no fechamento. (A) **EXTREME**; (C)
-*"always"* nunca dito; (D) **OUT OF SCOPE**.
-**D1.2 — (A).** *"attracted more browsers, but far fewer of them bought
-anything."* (B) o oposto — **OPPOSITE**.
-**D1.3 — (B).** Exemplo empírico logo após o conceito abstrato. (A)(C)(D) sem base.
-**D1.4 — (B).** *"a complete absence of options is its own problem."* (A) inverte.
-**D1.5 — (B).** *"back to square one"* = voltar ao ponto de partida sem progresso.
-(A) o oposto; (C)(D) distorcem.
+**D1.1: (B).** Tese anunciada no início e no fechamento. (A) **EXTREME**; (C) *"always"* nunca dito; (D) **OUT OF SCOPE**.
+**D1.2: (A).** *"attracted more browsers, but far fewer of them bought anything."* (B) o oposto · **OPPOSITE**.
+**D1.3: (B).** Exemplo empírico logo após o conceito abstrato. (A)(C)(D) sem base.
+**D1.4: (B).** *"a complete absence of options is its own problem."* (A) inverte.
+**D1.5: (B).** *"back to square one"* = voltar ao ponto de partida sem progresso. (A) o oposto; (C)(D) distorcem.
 
-**D2.1 — (B).** *"the trees are also connected, underground, through fungi... and
-things move along those links."* (A) o professor admite competição **mas**
-acrescenta a conexão; (C) o oposto (a relação é benéfica); (D) é exatamente o
-exagero que ele critica no fim.
-**D2.2 — (C).** *"the tree gives the fungi sugars it makes through
-photosynthesis."* (A)(B) são o que os fungos fazem pela árvore; (D) o oposto.
-**D2.3 — (B).** *"carbon flowing from a tree standing in full sun to a shaded
-seedling of another species."*
-**D2.4 — (B).** Ele separa o que a evidência sustenta firmemente do que relatos
-populares exageram (*"forests as single cooperative organisms"*). (A)(C)
-**EXTREME**; (D) **OUT OF SCOPE**.
-**D2.5 — (B).** *"the jury's still out"* = ainda não há conclusão firme. (A) o
-oposto; (C) literal demais; (D) não dito.
+**D2.1: (B).** *"the trees are also connected, underground, through fungi... and things move along those links."* (A) o professor admite competição **mas** acrescenta a conexão; (C) o oposto (a relação é benéfica); (D) é exatamente o exagero que ele critica no fim.
+**D2.2: (C).** *"the tree gives the fungi sugars it makes through photosynthesis."* (A)(B) são o que os fungos fazem pela árvore; (D) o oposto.
+**D2.3: (B).** *"carbon flowing from a tree standing in full sun to a shaded seedling of another species."*
+**D2.4: (B).** Ele separa o que a evidência sustenta firmemente do que relatos populares exageram (*"forests as single cooperative organisms"*). (A)(C) **EXTREME**; (D) **OUT OF SCOPE**.
+**D2.5: (B).** *"the jury's still out"* = ainda não há conclusão firme. (A) o oposto; (C) literal demais; (D) não dito.
 
-**D3.1 — (B).** A pergunta central é por que um layout ultrapassado sobreviveu —
-e a resposta é *path dependence*. (A)(D) **WRONG FOCUS / EXTREME**; (C) é
-contexto, não o tema.
-**D3.2 — (B).** *"That's probably an oversimplification... but the layout was
-shaped by 1870s machinery."*
-**D3.3 — (B).** *"patented in 1936... Yet it never caught on."* (A)(C)(D) contradizem.
-**D3.4 — (A).** O ciclo ilustra como o padrão se auto-reforça (lock-in). (B)(C)(D) sem base.
-**D3.5 — (B).** *"a single person gains little unless nearly everyone switches at
-once."* (A)(C)(D) **EXTREME / não ditos**.
-**D3.6 — (B).** *"quietly"* sugere que as pessoas usam QWERTY sem perceber que é
-um design obsoleto. (A)(C)(D) tomam a palavra ao pé da letra ou fora de
-contexto.
+**D3.1: (B).** A pergunta central é por que um layout ultrapassado sobreviveu · e a resposta é *path dependence*. (A)(D) **WRONG FOCUS / EXTREME**; (C) é contexto, não o tema.
+**D3.2: (B).** *"That's probably an oversimplification... but the layout was shaped by 1870s machinery."*
+**D3.3: (B).** *"patented in 1936... Yet it never caught on."* (A)(C)(D) contradizem.
+**D3.4: (A).** O ciclo ilustra como o padrão se auto-reforça (lock-in). (B)(C)(D) sem base.
+**D3.5: (B).** *"a single person gains little unless nearly everyone switches at once."* (A)(C)(D) **EXTREME / não ditos**.
+**D3.6: (B).** *"quietly"* sugere que as pessoas usam QWERTY sem perceber que é um design obsoleto. (A)(C)(D) tomam a palavra ao pé da letra ou fora de contexto.
 
 ---
 
 ### 📊 SCORE CONSOLIDADO
 
-Some: Grupo A (**12**), Grupo B (**12**), Grupo C (**11**), Grupo D (**16**).
-Total: **51 itens**.
+Some: Grupo A (**12**), Grupo B (**12**), Grupo C (**11**), Grupo D (**16**). Total: **51 itens**.
 
 | % de acerto | Banda CEFR estimada (Listening) | Ação |
 |---|---|---|
@@ -1207,12 +811,8 @@ Padrão dominante desta semana: _______________________
 Ação para a próxima sessão: __________________________
 ```
 
-> **L1 é a prioridade nº 1 se aparecer 3+ vezes.** Nenhum aumento de volume de
-> prática compensa não conseguir decodificar o inglês falado — é o Laboratório
-> de Escuta (Parte 3) que resolve, ouvindo material real todo dia.
+> **L1 é a prioridade nº 1 se aparecer 3+ vezes.** Nenhum aumento de volume de prática compensa não conseguir decodificar o inglês falado: é o Laboratório de Escuta (Parte 3) que resolve, ouvindo material real todo dia.
 
 ---
 
-✅ Módulo 2 concluído — Listening no formato 2026 (Router + Choose a Response +
-Conversation + Announcement + Academic Talk), com Laboratório de Escuta, exemplo
-resolvido e protocolo de erros.
+✅ Módulo 2 concluído: Listening no formato 2026 (Router + Choose a Response + Conversation + Announcement + Academic Talk), com Laboratório de Escuta, exemplo resolvido e protocolo de erros.
