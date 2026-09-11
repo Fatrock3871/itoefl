@@ -110,18 +110,30 @@
     lockMsgTimer = setTimeout(function(){ lockMsgEl.hidden = true; }, 5000);
   }
 
+  var journeyNodes = Array.prototype.slice.call(document.querySelectorAll(".jnode"));
+
   function showTab(key){
     tabBtns.forEach(function(b){ b.classList.toggle("active", b.dataset.tab === key); });
+    journeyNodes.forEach(function(j){
+      var on = j.dataset.tab === key;
+      j.classList.toggle("current", on);
+      if(on && j.scrollIntoView){ j.scrollIntoView({inline:"center", block:"nearest"}); }
+    });
     panels.forEach(function(p){ p.hidden = p.dataset.panel !== key; });
-    document.getElementById("mainArea").scrollTop = 0;
+    window.scrollTo(0, 0);
+    var ma = document.getElementById("mainArea"); if(ma) ma.scrollTop = 0;
     safeSet("toefl_active_tab", key);
     if(lockMsgEl) lockMsgEl.hidden = true;
   }
+  function navTo(key){
+    if(!isUnlocked(key)){ showLockMessage(key); return; }
+    showTab(key);
+  }
   tabBtns.forEach(function(b){
-    b.addEventListener("click", function(){
-      if(!isUnlocked(b.dataset.tab)){ showLockMessage(b.dataset.tab); return; }
-      showTab(b.dataset.tab);
-    });
+    b.addEventListener("click", function(){ navTo(b.dataset.tab); });
+  });
+  journeyNodes.forEach(function(j){
+    j.addEventListener("click", function(){ navTo(j.dataset.tab); });
   });
   var initialTab = safeGet("toefl_active_tab");
   if(initialTab && document.querySelector('.panel[data-panel="'+initialTab+'"]')){
@@ -172,6 +184,17 @@
       if(badgeEl){
         badgeEl.textContent = done ? "✓" : (unlocked ? badgeEl.dataset.n : "🔒");
       }
+    });
+    // mapa da jornada: done (✓) / reached (linha preenchida) / locked (🔒)
+    journeyNodes.forEach(function(j){
+      var key = j.dataset.tab;
+      var done = (modPct[key] || 0) >= 100;
+      var unlocked = isUnlocked(key);
+      j.classList.toggle("done", done);
+      j.classList.toggle("reached", unlocked);
+      j.classList.toggle("locked", !unlocked);
+      var dot = j.querySelector(".jdot");
+      if(dot) dot.textContent = done ? "✓" : (unlocked ? dot.dataset.n : "🔒");
     });
   }
 

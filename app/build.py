@@ -33,6 +33,24 @@ nav_items = "\n".join(
     for k, n, t, _, _tag in MODS
 )
 
+# mapa da jornada (roadmap fixo no topo do conteúdo)
+JOURNEY_SHORT = {
+    "mod0": "Embarque", "mod1": "Reading", "mod2": "Listening", "mod3": "Speaking",
+    "mod4": "Writing", "mod5": "Registro", "mod6": "Vocabulário", "mod7": "Simulados",
+    "mod8": "Exam Day", "mod9": "Traps",
+}
+journey_nodes = "\n".join(
+    f'<button class="jnode" data-tab="{k}" data-title="{t}">'
+    f'<span class="jdot" data-n="{n}">{n}</span>'
+    f'<span class="jlbl">{JOURNEY_SHORT[k]}</span></button>'
+    for k, n, t, _, _tag in MODS
+)
+journey = (
+    '<nav class="journey" id="journey" aria-label="Mapa da jornada">'
+    '<p class="journey-title">Sua jornada — conclua 70% para avançar</p>'
+    f'<div class="jtrack">{journey_nodes}</div></nav>'
+)
+
 panels = "\n".join(
     f'<section class="panel" data-panel="{k}" id="panel-{k}" {"hidden" if k != "mod0" else ""}>'
     f'<div class="panel-inner">'
@@ -83,8 +101,11 @@ html = f'''<!DOCTYPE html>
 <div class="shell">
   <aside class="side">
     <div class="brand">
-      <span class="mark">Preparação independente</span>
-      <span class="name">iTOEFL</span>
+      <span class="logo">iT</span>
+      <span class="btxt">
+        <span class="name">iTOEFL</span>
+        <span class="mark">Preparação independente</span>
+      </span>
     </div>
     <div class="overall-progress">
       <div class="op-label"><span>Progresso geral</span><span id="opPct">0%</span></div>
@@ -116,6 +137,7 @@ html = f'''<!DOCTYPE html>
   </aside>
 
   <main id="mainArea">
+    {journey}
     {panels}
   </main>
 </div>
