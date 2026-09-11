@@ -48,7 +48,11 @@ journey_nodes = "\n".join(
 journey = (
     '<nav class="journey" id="journey" aria-label="Mapa da jornada">'
     '<div class="journey-row">'
+    '<div class="journey-left">'
+    '<button class="hamburger" id="sideToggle" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="sideRail">'
+    '<span></span><span></span><span></span></button>'
     '<p class="journey-title">Sua jornada — conclua 70% para avançar</p>'
+    '</div>'
     '<div class="journey-tools">'
     '<button class="themetoggle" id="themeToggle" type="button" aria-label="Alternar tema">'
     '<span id="themeIcon">🌗</span><span id="themeLabel">Sistema</span></button>'
@@ -111,11 +115,9 @@ html = f'''<!DOCTYPE html>
 </head>
 <body>
 <div class="shell">
+  <div class="side-backdrop" id="sideBackdrop"></div>
   <aside class="side" id="sideRail">
     <div class="side-top">
-      <button class="side-toggle" id="sideToggle" type="button" aria-label="Minimizar barra lateral" aria-expanded="true">
-        <span id="sideToggleIcon">‹</span>
-      </button>
       <div class="brand">
         <span class="logo">iT</span>
         <span class="btxt">
@@ -123,6 +125,7 @@ html = f'''<!DOCTYPE html>
           <span class="mark">Preparação independente</span>
         </span>
       </div>
+      <button class="side-close" id="sideClose" type="button" aria-label="Fechar menu">✕</button>
     </div>
     <div class="overall-progress">
       <div class="op-label"><span>Progresso geral</span><span id="opPct">0%</span></div>

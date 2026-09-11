@@ -65,30 +65,49 @@ a{color:var(--accent-strong); text-decoration-thickness:2px; text-underline-offs
 ::selection{background:var(--accent); color:#fff;}
 :focus-visible{outline:2px solid var(--accent); outline-offset:3px;}
 
-.shell{display:grid; grid-template-columns:272px 1fr; max-width:1320px; margin:0 auto; min-height:100vh; transition:grid-template-columns .18s ease;}
-@media (max-width:960px){ .shell{grid-template-columns:1fr;} }
-body.sidebar-collapsed .shell{grid-template-columns:76px 1fr;}
-@media (max-width:960px){ body.sidebar-collapsed .shell{grid-template-columns:1fr;} }
+.shell{max-width:1320px; margin:0 auto; min-height:100vh;}
+body.menu-open{overflow:hidden;}
 
-/* ================= Sidebar (rail escuro) ================= */
+/* ================= Sidebar: menu em gaveta (drawer) ================= */
+/* Por padrão a barra lateral fica FORA da tela — só existe como o botão de
+   3 traços (.hamburger) no canto superior esquerdo da barra da jornada. */
 .side{
-  position:sticky; top:0; align-self:start; height:100vh; overflow-y:auto; overflow-x:hidden;
-  min-width:0;
-  padding:16px 16px 22px 22px; display:flex; flex-direction:column; gap:18px;
+  position:fixed; top:0; left:0; height:100vh; width:280px; max-width:86vw; z-index:95;
+  overflow-y:auto; overflow-x:hidden;
+  padding:18px 16px 20px 20px; display:flex; flex-direction:column; gap:18px;
   background:var(--rail); color:var(--rail-ink); border-right:2px solid var(--edge);
-  transition:padding .18s ease;
+  transform:translateX(-100%); transition:transform .22s ease;
+  box-shadow:8px 0 28px rgba(0,0,0,0.18);
 }
-@media (max-width:960px){ .side{position:relative; height:auto;} }
+.side.open{transform:translateX(0);}
 .side::-webkit-scrollbar{width:8px;}
 .side::-webkit-scrollbar-thumb{background:rgba(255,255,255,0.14); border-radius:99px;}
 
-.side-top{display:flex; align-items:center; gap:6px;}
-.side-toggle{
+.side-backdrop{
+  position:fixed; inset:0; z-index:90; background:rgba(15,11,8,0.45);
+  opacity:0; pointer-events:none; transition:opacity .2s ease;
+}
+.side-backdrop.show{opacity:1; pointer-events:auto;}
+
+.side-top{display:flex; align-items:center; justify-content:space-between; gap:10px;}
+.side-close{
   flex:none; width:30px; height:30px; border-radius:50%; border:1.5px solid var(--rail-line);
-  background:rgba(255,255,255,0.05); color:var(--rail-dim); font-size:15px; line-height:1; cursor:pointer;
+  background:rgba(255,255,255,0.05); color:var(--rail-dim); font-size:13px; line-height:1; cursor:pointer;
   display:flex; align-items:center; justify-content:center; transition:.12s;
 }
-.side-toggle:hover{color:#fff; border-color:var(--accent); background:rgba(255,255,255,0.09);}
+.side-close:hover{color:#fff; border-color:var(--accent); background:rgba(255,255,255,0.09);}
+
+/* --- O botão hamburger (fica na barra da jornada, sempre visível) --- */
+.hamburger{
+  flex:none; width:34px; height:34px; border-radius:8px; border:2px solid var(--edge);
+  background:var(--paper); cursor:pointer; box-shadow:var(--shadow-hard);
+  display:flex; flex-direction:column; align-items:center; justify-content:center; gap:4px; transition:.12s;
+}
+.hamburger span{display:block; width:15px; height:2px; background:var(--ink); border-radius:2px; transition:.2s;}
+.hamburger:hover{background:var(--accent-wash);}
+.hamburger[aria-expanded="true"] span:nth-child(1){transform:translateY(6px) rotate(45deg);}
+.hamburger[aria-expanded="true"] span:nth-child(2){opacity:0;}
+.hamburger[aria-expanded="true"] span:nth-child(3){transform:translateY(-6px) rotate(-45deg);}
 
 .brand{display:flex; align-items:center; gap:10px; padding:2px 2px 4px; min-width:0; overflow:hidden;}
 .brand .logo{
@@ -100,16 +119,6 @@ body.sidebar-collapsed .shell{grid-template-columns:76px 1fr;}
 .brand .btxt{display:flex; flex-direction:column; line-height:1.1; white-space:nowrap;}
 .brand .name{font-family:'Bricolage Grotesque',sans-serif; font-size:20px; font-weight:800; letter-spacing:-0.03em; color:#fff;}
 .brand .mark{font-size:9.5px; letter-spacing:0.16em; text-transform:uppercase; color:var(--accent-2); font-weight:700;}
-
-/* --- Estado minimizado: só ícones --- */
-.side.collapsed{padding-left:14px; padding-right:14px;}
-.side.collapsed .side-top{justify-content:center;}
-.side.collapsed .brand{display:none;}
-.side.collapsed .overall-progress{display:none;}
-.side.collapsed .tabbtn{justify-content:center; padding:9px 0;}
-.side.collapsed .tabbtn .lbl, .side.collapsed .tabbtn .pbadge{display:none;}
-.side.collapsed .data-tools, .side.collapsed .foot-note{display:none;}
-.side.collapsed .lock-msg{position:fixed; left:82px; bottom:18px; width:230px; z-index:70; box-shadow:var(--shadow-hard);}
 
 .overall-progress{
   background:rgba(255,255,255,0.05); border:1px solid var(--rail-line); border-radius:10px; padding:13px 13px 12px;
@@ -177,15 +186,19 @@ nav.modnav{display:flex; flex-direction:column; gap:1px;}
 .foot-note{margin-top:auto; font-size:10.5px; color:var(--rail-dim); line-height:1.55; padding:0 2px;}
 
 /* ================= Área principal ================= */
-main{padding:0 0 120px; min-width:0;}
+/* Sem barra lateral fixa ocupando coluna: o conteúdo usa a largura toda,
+   centrado num container confortável — a barra vira menu-gaveta (acima). */
+main{max-width:1220px; margin:0 auto; padding:0 30px 120px; min-width:0;}
+@media(max-width:640px){ main{padding:0 16px 100px;} }
 
 /* --- Mapa da jornada (roadmap no topo) --- */
 .journey{
   position:sticky; top:0; z-index:30;
   background:var(--bg); border-bottom:2px solid var(--edge);
-  padding:14px 20px 12px;
+  padding:14px 0 12px;
 }
 .journey-row{display:flex; align-items:center; justify-content:space-between; gap:14px; margin-bottom:12px; flex-wrap:wrap;}
+.journey-left{display:flex; align-items:center; gap:12px; min-width:0;}
 .journey-title{
   font-family:'Bricolage Grotesque',sans-serif; font-size:10.5px; font-weight:800; letter-spacing:0.14em;
   text-transform:uppercase; color:var(--ink-2); margin:0;
@@ -224,8 +237,8 @@ main{padding:0 0 120px; min-width:0;}
 .jnode.locked .jlbl{opacity:0.5;}
 
 /* --- Abertura de módulo (chapter opener, quebra de grade) --- */
-.panel-inner{max-width:800px; padding:40px 44px 0;}
-@media(max-width:640px){ .panel-inner{padding:24px 18px 0;} }
+.panel-inner{max-width:840px; margin:0 auto; padding:40px 0 0;}
+@media(max-width:640px){ .panel-inner{padding:24px 0 0;} }
 .panel-inner > *:first-child{margin-top:0;}
 
 .panel-head{position:relative; margin:6px 0 34px; padding-bottom:26px; border-bottom:2px solid var(--edge);}
@@ -275,7 +288,7 @@ main{padding:0 0 120px; min-width:0;}
 .panel ol li::marker{color:var(--accent); font-weight:700;}
 .panel strong{color:var(--ink); font-weight:700;}
 .panel p > strong{background:linear-gradient(transparent 68%, var(--accent-wash) 68%);}
-.panel hr{border:none; border-top:2px dashed var(--hair); margin:32px 0;}
+.panel hr{border:none; margin:26px 0 0; height:0;}
 .panel code{background:var(--sand); padding:1px 6px; border-radius:4px; font-family:var(--mono); font-size:13px; border:1px solid var(--hair);}
 .panel pre{background:var(--ink); color:#f4eadd; padding:15px 17px; border-radius:6px; overflow-x:auto; font-family:var(--mono); font-size:12.5px; line-height:1.55; border:2px solid var(--edge); box-shadow:var(--shadow-hard);}
 .panel pre code{background:none; border:none; color:inherit; padding:0;}

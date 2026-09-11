@@ -79,29 +79,29 @@
     applyTheme(next);
   });
 
-  // ---------- Barra lateral: minimizar/expandir ----------
-  var LS_SIDEBAR = "toefl_sidebar_v1"; // preferência de UI, sempre local (não sincroniza)
+  // ---------- Barra lateral: menu em gaveta (aberta sob demanda) ----------
+  // Por padrão fica fechada (só o botão de 3 traços aparece) — não ocupa espaço.
   var sideRail = document.getElementById("sideRail");
-  var sideToggleBtn = document.getElementById("sideToggle");
-  var sideToggleIcon = document.getElementById("sideToggleIcon");
-  function applySidebar(collapsed){
-    if(sideRail) sideRail.classList.toggle("collapsed", collapsed);
-    document.body.classList.toggle("sidebar-collapsed", collapsed);
-    if(sideToggleIcon) sideToggleIcon.textContent = collapsed ? "›" : "‹";
-    if(sideToggleBtn){
-      sideToggleBtn.setAttribute("aria-expanded", collapsed ? "false" : "true");
-      sideToggleBtn.setAttribute("aria-label", collapsed ? "Expandir barra lateral" : "Minimizar barra lateral");
-    }
+  var sideBackdrop = document.getElementById("sideBackdrop");
+  var hamburgerBtn = document.getElementById("sideToggle");
+  var sideCloseBtn = document.getElementById("sideClose");
+
+  function setSidebarOpen(open){
+    if(sideRail) sideRail.classList.toggle("open", open);
+    if(sideBackdrop) sideBackdrop.classList.toggle("show", open);
+    if(hamburgerBtn) hamburgerBtn.setAttribute("aria-expanded", open ? "true" : "false");
+    document.body.classList.toggle("menu-open", open);
   }
-  var savedSidebar = safeGet(LS_SIDEBAR) === "1";
-  applySidebar(savedSidebar);
-  if(sideToggleBtn){
-    sideToggleBtn.addEventListener("click", function(){
-      var next = !(sideRail && sideRail.classList.contains("collapsed"));
-      try { localStorage.setItem(LS_SIDEBAR, next ? "1" : "0"); } catch(e){}
-      applySidebar(next);
+  if(hamburgerBtn){
+    hamburgerBtn.addEventListener("click", function(){
+      setSidebarOpen(!(sideRail && sideRail.classList.contains("open")));
     });
   }
+  if(sideCloseBtn){ sideCloseBtn.addEventListener("click", function(){ setSidebarOpen(false); }); }
+  if(sideBackdrop){ sideBackdrop.addEventListener("click", function(){ setSidebarOpen(false); }); }
+  document.addEventListener("keydown", function(e){
+    if(e.key === "Escape") setSidebarOpen(false);
+  });
 
   // ---------- Tabs + progressão sequencial ----------
   // A ordem de desbloqueio segue a ordem em que os botões aparecem na sidebar
@@ -148,6 +148,7 @@
     var ma = document.getElementById("mainArea"); if(ma) ma.scrollTop = 0;
     safeSet("toefl_active_tab", key);
     if(lockMsgEl) lockMsgEl.hidden = true;
+    setSidebarOpen(false); // navegar fecha a gaveta — ela não deve ocupar espaço
   }
   function navTo(key){
     if(!isUnlocked(key)){ showLockMessage(key); return; }
