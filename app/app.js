@@ -9,16 +9,40 @@
   });
 
   // agrupa o conteudo de cada modulo em cards por secao (um card por H2),
-  // ao estilo "unit card" de plataformas de curso, em vez de texto corrido
+  // ao estilo "unit card" de plataformas de curso, em vez de texto corrido.
+  // O check de "concluir" sai do topo do H2 e vai para o fim do card: só faz
+  // sentido marcar como lido depois de ler, não antes de começar.
   Array.prototype.forEach.call(document.querySelectorAll(".panel-inner"), function(container){
     var kids = Array.prototype.slice.call(container.children);
     var frag = document.createDocumentFragment();
     var current = null;
+    var pendingCheck = null;
+
+    function finalizeSection(){
+      if(current && pendingCheck){
+        var wrap = document.createElement("div");
+        wrap.className = "mark-done";
+        var labelSpan = document.createElement("span");
+        labelSpan.className = "mark-done-label";
+        labelSpan.textContent = "Marcar esta parte como concluída";
+        wrap.appendChild(pendingCheck);
+        wrap.appendChild(labelSpan);
+        current.appendChild(wrap);
+      }
+      pendingCheck = null;
+    }
+
     kids.forEach(function(node){
       if(node.tagName === "H2"){
+        finalizeSection();
         current = document.createElement("div");
         current.className = "section-card";
         frag.appendChild(current);
+        var checkLabel = node.querySelector(".prog-check");
+        if(checkLabel){
+          checkLabel.parentNode.removeChild(checkLabel);
+          pendingCheck = checkLabel;
+        }
         current.appendChild(node);
       } else if(current){
         current.appendChild(node);
@@ -26,6 +50,7 @@
         frag.appendChild(node); // conteudo raro antes do primeiro H2
       }
     });
+    finalizeSection();
     container.innerHTML = "";
     container.appendChild(frag);
   });
@@ -115,10 +140,40 @@
 
   var UNLOCK_PCT = 70; // % do módulo anterior necessário para liberar o próximo
 
+  // % de questões respondidas nos widgets interativos do módulo (quiz e
+  // Build a Sentence). Módulo sem widget de questão retorna 100 (não bloqueia
+  // por essa via; só o checklist de 70% vale nesse caso).
+  function moduleQuizPct(key){
+    var panel = document.querySelector('.panel[data-panel="' + key + '"]');
+    if(!panel) return 100;
+    var total = 0, done = 0;
+    Array.prototype.forEach.call(panel.querySelectorAll(".quiz-drill"), function(d){
+      var st = {};
+      try { st = JSON.parse(safeGet("toefl_quiz_" + d.dataset.drill + "_v1") || "{}"); } catch(e){}
+      var cards = d.querySelectorAll(".qcard");
+      total += cards.length;
+      Array.prototype.forEach.call(cards, function(c){
+        if(st[c.dataset.num] && st[c.dataset.num].confirmed) done++;
+      });
+    });
+    Array.prototype.forEach.call(panel.querySelectorAll(".bsq"), function(b){
+      var st = {};
+      try { st = JSON.parse(safeGet("toefl_bsq_" + b.dataset.bsq + "_v1") || "{}"); } catch(e){}
+      var cards = b.querySelectorAll(".bsq-card");
+      total += cards.length;
+      Array.prototype.forEach.call(cards, function(c){
+        if(st[c.dataset.num] && st[c.dataset.num].checked) done++;
+      });
+    });
+    if(!total) return 100; // este módulo não tem widget de questão
+    return Math.round(100 * done / total);
+  }
+
   function isUnlocked(key){
     var idx = modOrder.indexOf(key);
     if(idx <= 0) return true;
-    return (modPct[modOrder[idx - 1]] || 0) >= UNLOCK_PCT;
+    var prev = modOrder[idx - 1];
+    return (modPct[prev] || 0) >= UNLOCK_PCT && moduleQuizPct(prev) >= 100;
   }
 
   function showLockMessage(key){
@@ -126,15 +181,41 @@
     var idx = modOrder.indexOf(key);
     var prevBtn = idx > 0 ? tabBtns[idx - 1] : null;
     var prevTitle = prevBtn ? prevBtn.dataset.title : "o módulo anterior";
-    var prevPct = idx > 0 ? (modPct[modOrder[idx - 1]] || 0) : 0;
-    lockMsgEl.textContent = "Conclua pelo menos " + UNLOCK_PCT + "% de \"" + prevTitle +
-      "\" para desbloquear este módulo (você está em " + prevPct + "%).";
+    var prev = idx > 0 ? modOrder[idx - 1] : null;
+    var prevPct = prev ? (modPct[prev] || 0) : 0;
+    var quizPct = prev ? moduleQuizPct(prev) : 100;
+    var msg = "Conclua pelo menos " + UNLOCK_PCT + "% de \"" + prevTitle + "\" (você está em " + prevPct + "%).";
+    if(quizPct < 100){
+      msg += " Falta responder todas as questões dos exercícios interativos (" + quizPct + "% feito).";
+    }
+    lockMsgEl.textContent = msg;
     lockMsgEl.hidden = false;
     if(lockMsgTimer) clearTimeout(lockMsgTimer);
-    lockMsgTimer = setTimeout(function(){ lockMsgEl.hidden = true; }, 5000);
+    lockMsgTimer = setTimeout(function(){ lockMsgEl.hidden = true; }, 6000);
   }
 
   var journeyNodes = Array.prototype.slice.call(document.querySelectorAll(".jnode"));
+
+  // ---------- Índice lateral ("Nesta parte") ----------
+  var railToc = document.getElementById("railToc");
+  function populateRailToc(key){
+    if(!railToc) return;
+    railToc.innerHTML = "";
+    var panel = document.querySelector('.panel[data-panel="' + key + '"]');
+    if(!panel) return;
+    var heads = Array.prototype.slice.call(panel.querySelectorAll("h2[id]"));
+    heads.forEach(function(h){
+      var label = h.querySelector(".htext");
+      var a = document.createElement("a");
+      a.href = "#" + h.id;
+      a.textContent = label ? label.textContent : h.textContent;
+      a.addEventListener("click", function(e){
+        e.preventDefault();
+        h.scrollIntoView({behavior:"smooth", block:"start"});
+      });
+      railToc.appendChild(a);
+    });
+  }
 
   function showTab(key){
     tabBtns.forEach(function(b){ b.classList.toggle("active", b.dataset.tab === key); });
@@ -148,7 +229,8 @@
     var ma = document.getElementById("mainArea"); if(ma) ma.scrollTop = 0;
     safeSet("toefl_active_tab", key);
     if(lockMsgEl) lockMsgEl.hidden = true;
-    setSidebarOpen(false); // navegar fecha a gaveta — ela não deve ocupar espaço
+    setSidebarOpen(false); // navegar fecha a gaveta, que não deve ocupar espaço
+    populateRailToc(key);
   }
   function navTo(key){
     if(!isUnlocked(key)){ showLockMessage(key); return; }
@@ -227,11 +309,18 @@
     var pid = c.dataset.pid;
     if(progressState[pid]){
       c.checked = true;
-      c.closest(".prog-head").classList.add("done");
+      var doneCard = c.closest(".section-card");
+      if(doneCard) doneCard.classList.add("done");
     }
     c.addEventListener("change", function(){
       progressState[pid] = c.checked;
-      c.closest(".prog-head").classList.toggle("done", c.checked);
+      var card = c.closest(".section-card");
+      if(card) card.classList.toggle("done", c.checked);
+      var lbl = c.closest(".mark-done");
+      if(lbl){
+        var t = lbl.querySelector(".mark-done-label");
+        if(t) t.textContent = c.checked ? "Parte concluída" : "Marcar esta parte como concluída";
+      }
       safeSet(LS_PROGRESS, JSON.stringify(progressState));
       updateBadges();
     });
@@ -772,7 +861,7 @@
         doneEl.hidden = false;
         doneMsg.innerHTML = reviewed
           ? "Sessão concluída. <b>" + reviewed + "</b> cartões revisados."
-          : "Nada para revisar agora — tudo em dia!";
+          : "Nada para revisar agora. Tudo em dia!";
         return;
       }
       cardEl.hidden = false;
@@ -838,6 +927,7 @@
     var signInBtn = document.getElementById("authSignIn");
     var signedIn = document.getElementById("authIn");
     var emailEl = document.getElementById("authEmail");
+    var avatarEl = document.getElementById("authAvatar");
     var signOutBtn = document.getElementById("authSignOut");
     var msgEl = document.getElementById("authMsg");
 
@@ -924,6 +1014,7 @@
     function goOnline(session){
       uid = session.user.id;
       emailEl.textContent = session.user.email || "conectado";
+      if(avatarEl){ avatarEl.textContent = (session.user.email || "?").trim().charAt(0).toUpperCase(); }
       signInBtn.hidden = true;
       signedIn.hidden = false;
       onSyncedWrite = schedulePush;
@@ -937,12 +1028,12 @@
     }
 
     signInBtn.addEventListener("click", function(){
-      var email = window.prompt("Seu e-mail — enviaremos um link de acesso:");
+      var email = window.prompt("Seu e-mail. Enviaremos um link de acesso:");
       if(!email) return;
       var redirect = location.href.split("#")[0].split("?")[0];
       client.auth.signInWithOtp({ email: email.trim(), options: { emailRedirectTo: redirect } })
         .then(function(res){
-          msg(res.error ? ("Erro: " + res.error.message) : "Link enviado — confira seu e-mail.",
+          msg(res.error ? ("Erro: " + res.error.message) : "Link enviado. Confira seu e-mail.",
               res.error ? "err" : "ok");
         });
     });

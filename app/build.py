@@ -6,7 +6,7 @@ MODS = [
     ("mod0","00","Embarque & Diagnóstico","modulo_0_embarque.md",
      "Onde você está e para onde vai. Comece pelo diagnóstico de nivelamento."),
     ("mod1","01","Reading","modulo_1_reading.md",
-     "Ler rápido e decidir item a item — o formato adaptativo de Reading."),
+     "Ler rápido e decidir item a item no formato adaptativo de Reading."),
     ("mod2","02","Listening","modulo_2_listening.md",
      "Decodificar o áudio na primeira passada: escuta ativa e anotação."),
     ("mod3","03","Speaking","modulo_3_speaking.md",
@@ -22,7 +22,7 @@ MODS = [
     ("mod8","08","Exam Day","modulo_8_examday.md",
      "As 24 horas antes e o protocolo seção a seção no dia da prova."),
     ("mod9","09","Brazilian Traps","modulo_9_braziliantraps.md",
-     "O padrão de erro do brasileiro — mapeado e eliminado."),
+     "O padrão de erro do brasileiro, mapeado e eliminado."),
 ]
 
 nav_items = "\n".join(
@@ -51,7 +51,7 @@ journey = (
     '<div class="journey-left">'
     '<button class="hamburger" id="sideToggle" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="sideRail">'
     '<span></span><span></span><span></span></button>'
-    '<p class="journey-title">Sua jornada — conclua 70% para avançar</p>'
+    '<p class="journey-title">Sua jornada: conclua 70% para avançar</p>'
     '</div>'
     '<div class="journey-tools">'
     '<button class="themetoggle" id="themeToggle" type="button" aria-label="Alternar tema">'
@@ -59,6 +59,7 @@ journey = (
     '<div class="auth-box" id="authBox" hidden>'
     '<button type="button" id="authSignIn">Entrar para sincronizar</button>'
     '<div id="authIn" hidden>'
+    '<span class="auth-avatar" id="authAvatar" aria-hidden="true"></span>'
     '<span id="authEmail" class="auth-email"></span>'
     '<button type="button" id="authSignOut">Sair</button></div>'
     '<span id="authMsg" class="auth-msg" hidden></span></div>'
@@ -147,7 +148,13 @@ html = f'''<!DOCTYPE html>
 
   <main id="mainArea">
     {journey}
-    {panels}
+    <div class="content-grid">
+      <div class="content-col">{panels}</div>
+      <aside class="rail" id="rail">
+        <p class="rail-title">Nesta parte</p>
+        <nav class="rail-toc" id="railToc"></nav>
+      </aside>
+    </div>
   </main>
 </div>
 
