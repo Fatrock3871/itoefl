@@ -60,7 +60,22 @@ Conversa pulou entre três assuntos. Estado de cada um:
     negrito+itálico+caixa-alta (não aplicado em h3/h4 — usados demais,
     atrapalharia a escaneabilidade). Mono removido de badges/rótulos
     decorativos, mantido só em `<code>`/`<pre>` e nos 2 cronômetros.
-- **Pendente:** feedback do usuário sobre o v3. Testar mobile (430px) se aprovado.
+- **v4 (commit 06897ff):** avatar do usuário (inicial do e-mail, placeholder —
+  sem upload real, login é magic link sem perfil); bug de corte corrigido
+  (`.journey` era `sticky`, cortava o conteúdo ao rolar — virou estático);
+  coluna direita `.rail` com índice "Nesta parte" (links pros H2 do módulo
+  atual) pra não deixar tudo num bloco central único, some abaixo de 1080px;
+  travessões tirados de todo texto de interface que eu gero (não dos 10
+  módulos de conteúdo — isso é tarefa separada, pendente de confirmação);
+  checkbox de "concluir" movido do início do H2 pro fim do card
+  (`finalizeSection()` em app.js); desbloqueio agora exige 70% dos checkboxes
+  **e** todas as questões dos widgets interativos confirmadas
+  (`moduleQuizPct()`) — só vale pra M0 (quiz) e M4 (Build a Sentence), que são
+  os únicos módulos com widget de questão clicável hoje.
+- **Pendente:** feedback do usuário sobre o v4. Testar mobile (430px) se
+  aprovado. Decidir se quer os travessões removidos do texto dos 10 módulos
+  (tarefa grande, separada). Decidir se quer widgets de questão adicionados a
+  mais módulos (hoje só M0/M4 travam o avanço por questão).
 
 ### 3. Estrutura / navegação linear (FEITO — commit 7fcdd49)
 - `app.js`: `UNLOCK_PCT = 70` (era 100). Módulo N libera com 70% do N-1.
