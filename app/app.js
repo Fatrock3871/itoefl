@@ -61,7 +61,7 @@
 
   // chaves que sincronizam com o Supabase (progresso real do aluno).
   // ficam de fora: toefl_theme_v1, toefl_active_tab, toefl_timer_preset, toefl_sync_*
-  var SYNC_PREFIXES = ["toefl_progress", "toefl_srs_", "toefl_bsq_", "toefl_quiz_"];
+  var SYNC_PREFIXES = ["toefl_progress", "toefl_srs_", "toefl_bsq_", "toefl_quiz_", "toefl_avatar"];
   function isSyncedKey(key){
     if(!key || key.indexOf("toefl_") !== 0) return false;
     for(var i = 0; i < SYNC_PREFIXES.length; i++){
@@ -961,8 +961,65 @@
     var signedIn = document.getElementById("authIn");
     var emailEl = document.getElementById("authEmail");
     var avatarEl = document.getElementById("authAvatar");
+    var avatarImgEl = document.getElementById("authAvatarImg");
+    var avatarLetterEl = document.getElementById("authAvatarLetter");
+    var avatarFileEl = document.getElementById("authAvatarFile");
+    var avatarRemoveEl = document.getElementById("authAvatarRemove");
     var signOutBtn = document.getElementById("authSignOut");
     var msgEl = document.getElementById("authMsg");
+
+    var AVATAR_KEY = "toefl_avatar_v1";
+    function renderAvatar(email){
+      if(avatarLetterEl) avatarLetterEl.textContent = (email || "?").trim().charAt(0).toUpperCase();
+      var data = safeGet(AVATAR_KEY);
+      var hasPhoto = !!data;
+      if(avatarImgEl){
+        if(hasPhoto){ avatarImgEl.src = data; }
+        avatarImgEl.hidden = !hasPhoto;
+      }
+      if(avatarLetterEl) avatarLetterEl.hidden = hasPhoto;
+      if(avatarRemoveEl) avatarRemoveEl.hidden = !hasPhoto;
+    }
+    function resizeAvatar(file, cb){
+      var reader = new FileReader();
+      reader.onload = function(){
+        var img = new Image();
+        img.onload = function(){
+          var SIZE = 160;
+          var canvas = document.createElement("canvas");
+          canvas.width = SIZE; canvas.height = SIZE;
+          var ctx = canvas.getContext("2d");
+          var side = Math.min(img.width, img.height);
+          var sx = (img.width - side) / 2, sy = (img.height - side) / 2;
+          ctx.drawImage(img, sx, sy, side, side, 0, 0, SIZE, SIZE);
+          cb(canvas.toDataURL("image/jpeg", 0.82));
+        };
+        img.onerror = function(){ cb(null); };
+        img.src = reader.result;
+      };
+      reader.onerror = function(){ cb(null); };
+      reader.readAsDataURL(file);
+    }
+    if(avatarEl && avatarFileEl){
+      avatarEl.addEventListener("click", function(){ avatarFileEl.click(); });
+      avatarFileEl.addEventListener("change", function(){
+        var file = avatarFileEl.files && avatarFileEl.files[0];
+        avatarFileEl.value = "";
+        if(!file || file.type.indexOf("image/") !== 0) return;
+        resizeAvatar(file, function(dataUrl){
+          if(!dataUrl) return;
+          safeSet(AVATAR_KEY, dataUrl);
+          renderAvatar(emailEl.textContent);
+        });
+      });
+    }
+    if(avatarRemoveEl){
+      avatarRemoveEl.addEventListener("click", function(e){
+        e.stopPropagation();
+        safeSet(AVATAR_KEY, "");
+        renderAvatar(emailEl.textContent);
+      });
+    }
 
     var client = window.supabase.createClient(cfg.url, cfg.anonKey);
     var uid = null, pushTimer = null;
@@ -1047,7 +1104,7 @@
     function goOnline(session){
       uid = session.user.id;
       emailEl.textContent = session.user.email || "conectado";
-      if(avatarEl){ avatarEl.textContent = (session.user.email || "?").trim().charAt(0).toUpperCase(); }
+      renderAvatar(session.user.email);
       signInBtn.hidden = true;
       signedIn.hidden = false;
       onSyncedWrite = schedulePush;
