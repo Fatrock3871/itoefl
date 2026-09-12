@@ -13,8 +13,6 @@
   --accent-strong:#c9430f;
   --accent-wash:#fbe4d1;
   --accent-ink:#fff8f2;
-  --good:#1c7a4f;
-  --good-wash:#dcefe2;
   --danger:#bd3722;
   --danger-wash:#f8e0d9;
   --rail:#241d16;
@@ -31,7 +29,7 @@
     --bg:#16110d; --paper:#1f1811; --sand:#291f16; --ink:#f4eadd; --ink-2:#ab9d8b;
     --hair:#392c1f; --edge:#000000;
     --accent:#f97a3d; --accent-2:#f7b733; --accent-strong:#ff9256; --accent-wash:#3a2414; --accent-ink:#160f09;
-    --good:#5cc088; --good-wash:#16271d; --danger:#e07d67; --danger-wash:#301711;
+    --danger:#e07d67; --danger-wash:#301711;
     --rail:#0f0b08; --rail-ink:#f4eadd; --rail-dim:rgba(244,234,221,0.5); --rail-line:rgba(255,255,255,0.08);
     --shadow-hard:4px 4px 0 var(--accent); --shadow-soft:0 2px 4px rgba(0,0,0,0.4), 0 20px 44px -22px rgba(0,0,0,0.7);
   }
@@ -40,9 +38,9 @@
   --bg:#16110d; --paper:#1f1811; --sand:#291f16; --ink:#f4eadd; --ink-2:#ab9d8b;
   --hair:#392c1f; --edge:#000000;
   --accent:#f97a3d; --accent-2:#f7b733; --accent-strong:#ff9256; --accent-wash:#3a2414; --accent-ink:#160f09;
-  --good:#5cc088; --good-wash:#16271d; --danger:#e07d67; --danger-wash:#301711;
+  --danger:#e07d67; --danger-wash:#301711;
   --rail:#0f0b08; --rail-ink:#f4eadd; --rail-dim:rgba(244,234,221,0.5); --rail-line:rgba(255,255,255,0.08);
-  --shadow-hard:4px 4px 0 #000; --shadow-soft:0 2px 4px rgba(0,0,0,0.4), 0 20px 44px -22px rgba(0,0,0,0.7);
+  --shadow-hard:4px 4px 0 var(--accent); --shadow-soft:0 2px 4px rgba(0,0,0,0.4), 0 20px 44px -22px rgba(0,0,0,0.7);
 }
 
 *{box-sizing:border-box;}
@@ -195,7 +193,7 @@ nav.modnav{display:flex; flex-direction:column; gap:1px;}
   font-family:inherit; font-size:10.5px; font-weight:600; color:var(--rail-dim); cursor:pointer;
 }
 .data-tools button:hover{border-color:var(--accent); color:var(--rail-ink);}
-.data-msg{font-size:10.5px; color:#7fd6a6; width:100%;}
+.data-msg{font-size:10.5px; color:var(--accent-2); width:100%;}
 .foot-note{margin-top:auto; font-size:10.5px; color:var(--rail-dim); line-height:1.55; padding:0 2px;}
 
 /* ================= Área principal ================= */

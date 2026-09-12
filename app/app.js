@@ -648,7 +648,7 @@
     var PREFIX = "toefl_";
     function flash(text, ok){
       msg.textContent = text;
-      msg.style.color = ok === false ? "var(--danger)" : "var(--good)";
+      msg.style.color = ok === false ? "var(--danger)" : "var(--accent)";
       msg.hidden = false;
       setTimeout(function(){ msg.hidden = true; }, 4000);
     }
@@ -970,7 +970,7 @@
     function msg(text, kind){
       msgEl.textContent = text;
       msgEl.style.color = kind === "err" ? "var(--danger)"
-        : kind === "ok" ? "var(--good)" : "var(--ink-dim)";
+        : kind === "ok" ? "var(--accent)" : "var(--ink-2)";
       msgEl.hidden = false;
       if(kind === "ok"){ setTimeout(function(){ msgEl.hidden = true; }, 3500); }
     }
