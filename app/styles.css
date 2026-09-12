@@ -267,7 +267,7 @@ main{max-width:1320px; margin:0 auto; padding:0 30px 120px; min-width:0;}
 .jnode.locked .jlbl{opacity:0.5;}
 
 /* --- Abertura de módulo (chapter opener, quebra de grade) --- */
-.panel-inner{max-width:800px; padding:40px 0 0;}
+.panel-inner{max-width:960px; padding:40px 0 0;}
 @media(max-width:1080px){ .panel-inner{max-width:800px; margin:0 auto;} }
 @media(max-width:640px){ .panel-inner{padding:24px 0 0;} }
 .panel-inner > *:first-child{margin-top:0;}
@@ -369,7 +369,7 @@ main{max-width:1320px; margin:0 auto; padding:0 30px 120px; min-width:0;}
 }
 .mark-done .prog-check{padding-top:0;}
 .mark-done-label{font-size:14px; font-weight:700; color:var(--ink-2);}
-.section-card.done .mark-done-label{color:var(--good);}
+.section-card.done .mark-done-label{color:var(--accent-strong);}
 .section-card.done{border-color:var(--accent);}
 
 /* ================= Quiz widget ================= */
@@ -397,8 +397,8 @@ main{max-width:1320px; margin:0 auto; padding:0 30px 120px; min-width:0;}
 }
 .opt.picked{border-color:var(--edge); background:var(--accent-wash);}
 .opt.picked .oletter{background:var(--accent); color:#fff; border-color:var(--edge);}
-.opt.correct{background:var(--good-wash); border-color:var(--good);}
-.opt.correct .oletter{background:var(--good); color:#fff; border-color:var(--good);}
+.opt.correct{background:var(--accent-wash); border-color:var(--accent);}
+.opt.correct .oletter{background:var(--accent); color:#fff; border-color:var(--accent);}
 .opt.wrong{background:var(--danger-wash); border-color:var(--danger);}
 .opt.wrong .oletter{background:var(--danger); color:#fff; border-color:var(--danger);}
 .qfeedback{margin-top:14px; padding-top:14px; border-top:2px dashed var(--hair);}
@@ -422,12 +422,12 @@ main{max-width:1320px; margin:0 auto; padding:0 30px 120px; min-width:0;}
 .quiz-passage blockquote{margin:0;}
 .quiz-objective{font-size:13.5px; color:var(--ink-2); margin:0 0 14px !important; font-style:italic;}
 .quiz-summary{
-  margin-top:16px; padding:14px 18px; border-radius:7px; background:var(--good-wash);
-  border:2px solid var(--good); display:flex; align-items:center; justify-content:space-between; gap:12px; flex-wrap:wrap;
+  margin-top:16px; padding:14px 18px; border-radius:7px; background:var(--accent-wash);
+  border:2px solid var(--accent); display:flex; align-items:center; justify-content:space-between; gap:12px; flex-wrap:wrap;
 }
 .quiz-summary-text{font-weight:700; color:var(--ink); font-size:14px;}
-.quiz-retry{padding:9px 18px; border-radius:99px; border:2px solid var(--good); background:var(--paper); color:var(--ink); font-size:13px;}
-.quiz-retry:hover{background:var(--good); color:#fff;}
+.quiz-retry{padding:9px 18px; border-radius:99px; border:2px solid var(--accent); background:var(--paper); color:var(--ink); font-size:13px;}
+.quiz-retry:hover{background:var(--accent); color:#fff;}
 
 /* ================= Build a Sentence (M4) ================= */
 .bsq{margin:16px 0 34px;}
@@ -448,14 +448,14 @@ main{max-width:1320px; margin:0 auto; padding:0 30px 120px; min-width:0;}
 .bsq-chip:hover:not(:disabled){border-color:var(--edge);}
 .bsq-build .bsq-chip{background:var(--accent-wash); border-color:var(--edge);}
 .bsq-chip:disabled{cursor:default; opacity:.9;}
-.bsq-card.correct .bsq-build{border-style:solid; border-color:var(--good); background:var(--good-wash);}
+.bsq-card.correct .bsq-build{border-style:solid; border-color:var(--accent); background:var(--accent-wash);}
 .bsq-card.wrong .bsq-build{border-style:solid; border-color:var(--danger); background:var(--danger-wash);}
 .bsq-check{padding:11px 24px; border-radius:99px; border:2px solid var(--edge); background:var(--accent); color:#fff; font-size:13.5px; box-shadow:var(--shadow-hard);}
 .bsq-check:disabled{opacity:.35; cursor:not-allowed; box-shadow:none;}
 .bsq-check:not(:disabled):hover{transform:translate(-2px,-2px); box-shadow:6px 6px 0 var(--edge);}
 .bsq-feedback{margin-top:14px; padding-top:14px; border-top:2px dashed var(--hair);}
 .bsq-model{font-size:14px !important; font-weight:700; margin:0 0 6px !important;}
-.bsq-card.correct .bsq-model{color:var(--good);}
+.bsq-card.correct .bsq-model{color:var(--accent-strong);}
 .bsq-card.wrong .bsq-model{color:var(--ink);}
 .bsq-note{font-size:13px !important; color:var(--ink-2) !important; margin:0 !important;}
 
@@ -483,11 +483,11 @@ main{max-width:1320px; margin:0 auto; padding:0 30px 120px; min-width:0;}
 .srs-grades button{padding:9px 18px; border-radius:99px; border:2px solid var(--hair); background:var(--paper); font-size:13px; color:var(--ink);}
 .srs-grades button:hover{border-color:var(--edge);}
 .srs-g0{border-color:var(--danger) !important; color:var(--danger) !important;}
-.srs-g2{background:var(--good) !important; color:#fff !important; border-color:var(--good) !important;}
-.srs-done{background:var(--good-wash); border:2px solid var(--good); border-radius:var(--radius); padding:24px; text-align:center;}
+.srs-g2{background:var(--accent) !important; color:#fff !important; border-color:var(--accent) !important;}
+.srs-done{background:var(--accent-wash); border:2px solid var(--accent); border-radius:var(--radius); padding:24px; text-align:center;}
 .srs-done p{margin:0 0 14px !important;}
-.srs-restart{padding:9px 18px; border-radius:99px; border:2px solid var(--good); background:var(--paper); font-size:13px; color:var(--ink);}
-.srs-restart:hover{background:var(--good); color:#fff;}
+.srs-restart{padding:9px 18px; border-radius:99px; border:2px solid var(--accent); background:var(--paper); font-size:13px; color:var(--ink);}
+.srs-restart:hover{background:var(--accent); color:#fff;}
 .srs-data{display:none;}
 
 /* ================= Ferramentas flutuantes ================= */
