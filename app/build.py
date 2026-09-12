@@ -133,6 +133,11 @@ html = f'''<!DOCTYPE html>
       <div class="op-bar"><div class="op-fill" id="opFill"></div></div>
       <div class="op-count" id="opCount"></div>
     </div>
+    <div class="level-badge" id="levelBadge" hidden>
+      <span class="level-badge-tag">Nível estimado (diagnóstico)</span>
+      <span class="level-badge-band" id="levelBadgeBand"></span>
+      <span class="level-badge-sched" id="levelBadgeSched"></span>
+    </div>
     <nav class="modnav" id="modnav">
       {nav_items}
     </nav>

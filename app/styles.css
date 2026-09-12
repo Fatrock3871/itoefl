@@ -21,7 +21,7 @@
   --rail-ink:#f6eee2;
   --rail-dim:rgba(246,238,226,0.52);
   --rail-line:rgba(255,255,255,0.10);
-  --shadow-hard:4px 4px 0 var(--edge);
+  --shadow-hard:4px 4px 0 var(--accent);
   --shadow-soft:0 2px 3px rgba(28,23,18,0.05), 0 18px 34px -22px rgba(28,23,18,0.30);
   --radius:8px;
   --mono:ui-monospace,'SF Mono','Cascadia Mono',Menlo,Consolas,monospace;
@@ -33,7 +33,7 @@
     --accent:#f97a3d; --accent-2:#f7b733; --accent-strong:#ff9256; --accent-wash:#3a2414; --accent-ink:#160f09;
     --good:#5cc088; --good-wash:#16271d; --danger:#e07d67; --danger-wash:#301711;
     --rail:#0f0b08; --rail-ink:#f4eadd; --rail-dim:rgba(244,234,221,0.5); --rail-line:rgba(255,255,255,0.08);
-    --shadow-hard:4px 4px 0 #000; --shadow-soft:0 2px 4px rgba(0,0,0,0.4), 0 20px 44px -22px rgba(0,0,0,0.7);
+    --shadow-hard:4px 4px 0 var(--accent); --shadow-soft:0 2px 4px rgba(0,0,0,0.4), 0 20px 44px -22px rgba(0,0,0,0.7);
   }
 }
 :root[data-theme="dark"]{
@@ -129,6 +129,14 @@ body.menu-open{overflow:hidden;}
 .op-fill{height:100%; width:0%; background:var(--accent); border-radius:99px; transition:width .4s ease;}
 .op-count{margin-top:9px; font-size:11px; color:var(--rail-dim);}
 .op-count b{color:var(--rail-ink); font-weight:800;}
+
+.level-badge{
+  display:flex; flex-direction:column; gap:3px; background:var(--accent-wash);
+  border:1.5px solid var(--accent); border-radius:10px; padding:11px 13px;
+}
+.level-badge-tag{font-size:9.5px; font-weight:800; letter-spacing:0.08em; text-transform:uppercase; color:var(--accent-2);}
+.level-badge-band{font-family:'Bricolage Grotesque',sans-serif; font-size:16px; font-weight:800; color:#fff;}
+.level-badge-sched{font-size:11px; color:var(--rail-dim);}
 
 nav.modnav{display:flex; flex-direction:column; gap:1px;}
 .tabbtn{

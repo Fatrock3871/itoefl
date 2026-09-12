@@ -327,6 +327,36 @@
   });
   updateBadges();
 
+  // ---------- Nivelamento: o diagnóstico (M0) calibra o resto do curso ----------
+  // Mesma tabela % -> banda CEFR do Módulo 0, Parte 4.2. O gate de avanço do
+  // diagnóstico exige só responder as 10 (ver isUnlocked/moduleQuizPct) --
+  // nunca um mínimo de acertos. O que os acertos FAZEM é isto aqui: estimar
+  // a banda de entrada e recomendar um dos 3 cronogramas do Módulo 0, Parte 6.
+  function cefrBandFromPct(pct){
+    if(pct <= 20) return {code:"1–1.5", label:"A1", desc:"fundamentos ausentes"};
+    if(pct <= 40) return {code:"2–2.5", label:"A2", desc:"fundamentos parciais"};
+    if(pct <= 55) return {code:"3–3.5", label:"B1", desc:"base funcional, muitos gaps de precisão"};
+    if(pct <= 70) return {code:"4–4.5", label:"B2", desc:"consistência intermediária-avançada"};
+    if(pct <= 85) return {code:"5–5.5", label:"C1", desc:"alta consistência, poucos erros sistemáticos"};
+    return {code:"6", label:"C2", desc:"domínio quase completo"};
+  }
+  function scheduleFromPct(pct){
+    if(pct <= 55) return "Cronograma Premium (90 dias) · Módulo 0, Parte 6.3";
+    if(pct <= 70) return "Cronograma Standard (60 dias) · Módulo 0, Parte 6.2";
+    return "Cronograma Sprint (30 dias) · Módulo 0, Parte 6.1";
+  }
+  function updateLevelBadge(correct, total){
+    var badge = document.getElementById("levelBadge");
+    var bandEl = document.getElementById("levelBadgeBand");
+    var schedEl = document.getElementById("levelBadgeSched");
+    if(!badge || !total) return;
+    var pct = Math.round(100 * correct / total);
+    var band = cefrBandFromPct(pct);
+    if(bandEl) bandEl.textContent = "Banda " + band.code + " (" + band.label + ") · " + correct + "/" + total + " acertos";
+    if(schedEl) schedEl.textContent = scheduleFromPct(pct);
+    badge.hidden = false;
+  }
+
   // ---------- Quiz widgets (select -> confirm -> reveal -> retry) ----------
   // Each .quiz-drill has data-drill="<id>" and its own localStorage key.
   var quizDrills = Array.prototype.slice.call(document.querySelectorAll(".quiz-drill"));
@@ -364,6 +394,9 @@
         } else {
           summary.hidden = true;
         }
+      }
+      if(drillId === "mod0-diag" && confirmed === total && total > 0){
+        updateLevelBadge(correct, total);
       }
     }
 
