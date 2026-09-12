@@ -24,7 +24,7 @@ As três tasks produtivas do TOEFL 2026 corrigidas por IA: **Take an Interview**
 | **Desenvolvimento de ideia** | Presença de exemplo concreto / mecanismo / consequência após cada afirmação | Afirmação genérica isolada = banda baixa; afirmação + camada específica = banda alta |
 | **Controle de registro** | Adequação do tom à situação (formal navegacional, acadêmico, conversacional) | Registro trocado (gíria em e-mail formal; ou pomposidade forçada) penaliza nas duas direções |
 
-### 1.2 A diferença entre as bandas não é gramática: é densidade
+### 1.2 O que separa as bandas: densidade, não gramática
 
 Um candidato B1 e um candidato C1 podem escrever frases igualmente **corretas**. A diferença está em quanto cada frase **carrega**:
 
@@ -55,7 +55,7 @@ A IA não lê sentido: lê **sinais mensuráveis** e os agrega. Saber quais são
 
 ### 1.5 A escala de formalidade: as três "vozes" do TOEFL 2026
 
-Registro não é "formal vs. informal": é escolher a voz certa para a situação. O TOEFL 2026 cobra três:
+Registro é escolher a voz certa para a situação, não uma escala fixa de "formal vs. informal". O TOEFL 2026 cobra três:
 
 | Voz | Onde aparece | Marca registrada | Erro típico do brasileiro |
 |---|---|---|---|
@@ -470,7 +470,7 @@ Trocar palavra de alta frequência por equivalente de registro acadêmico é o a
 
 ### 4.7 Colocações de registro acadêmico
 
-Registro alto não é só palavra difícil: é a **combinação** certa. Estas colocações sinalizam fluência acadêmica genuína.
+Registro alto depende da **combinação** certa entre as palavras, muito mais do que de palavras difíceis isoladas. Estas colocações sinalizam fluência acadêmica genuína.
 
 **Verbo + substantivo abstrato:**
 
@@ -552,7 +552,7 @@ O e-mail navegacional acadêmico é curto (4–8 frases). Aqui, sofisticação =
 
 *O registro se mantém firme mas educado: descreve o fato sem acusar, mostra que já tentou resolver, propõe uma solução concreta, pede uma ação específica. "It is not fair" (emocional, B1) sai.*
 
-> ⚠️ **A armadilha do brasileiro no e-mail:** excesso de formalidade e rodeios ("I would like to take this opportunity to humbly request if it would perhaps be possible..."). Isso não é C1 · é ruído. C1 no e-mail é **direto e educado**, não cerimonioso. Ver Módulo 9.
+> ⚠️ **A armadilha do brasileiro no e-mail:** excesso de formalidade e rodeios ("I would like to take this opportunity to humbly request if it would perhaps be possible..."). Isso é ruído, não C1. C1 no e-mail é **direto e educado**, não cerimonioso. Ver Módulo 9.
 
 ### 5.3 Write for an Academic Discussion: onde a densidade retórica mais rende
 
@@ -640,7 +640,7 @@ work, alone every time."*
 
 ## PARTE 7: DRILLS DE ELEVAÇÃO
 
-> Todos os drills são de reescrita. O objetivo não é criar conteúdo novo: é pegar uma ideia já formada e elevá-la de banda com controle. Introduza os marcadores da Parte 3 **um por semana**.
+> Todos os drills são de reescrita: o objetivo é pegar uma ideia já formada e elevá-la de banda com controle, não criar conteúdo novo. Introduza os marcadores da Parte 3 **um por semana**.
 
 ### DRILL 1: Elevação de frase B1 → B2 → C1
 
@@ -890,7 +890,7 @@ Depois de cada drill de Speaking/Writing, classifique cada falha de registro num
 
 ## PARTE 10: CHECKLIST DE SAÍDA DO MÓDULO 5
 
-- [ ] Entendi que banda não é acerto: é densidade retórica e controle de registro
+- [ ] Entendi que banda vem de densidade retórica e controle de registro, não de acerto isolado
 - [ ] Sei identificar em qual linha do Atlas Linguístico (B1 / B2 / C1–C2) estou operando
 - [ ] Sei qual das três "vozes" (conversacional / navegacional / acadêmica) cada task exige
 - [ ] Memorizei os 10 marcadores de maior impacto e sei quais marcadores B2 cada um substitui

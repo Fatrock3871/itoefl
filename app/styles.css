@@ -370,7 +370,7 @@ main{max-width:1320px; margin:0 auto; padding:0 30px 120px; min-width:0;}
 .mark-done .prog-check{padding-top:0;}
 .mark-done-label{font-size:14px; font-weight:700; color:var(--ink-2);}
 .section-card.done .mark-done-label{color:var(--good);}
-.section-card.done{border-color:var(--good);}
+.section-card.done{border-color:var(--accent);}
 
 /* ================= Quiz widget ================= */
 .quiz-widget{margin:20px 0 30px;}

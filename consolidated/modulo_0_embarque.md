@@ -107,7 +107,7 @@ O Speaking tem apenas 2 formatos de item (Listen and Repeat e Take an Interview)
 ### 2.4 A Lógica do Speaking e Writing
 
 Entender essa lógica muda como você treina:
-- **Listen and Repeat** não é sobre "ter algo a dizer": é sobre **fidelidade acústica e gramatical exata** ao que você ouviu. Não há espaço para parafrasear ou improvisar.
+- Em **Listen and Repeat**, o que pontua é **fidelidade acústica e gramatical exata** ao que você ouviu, não "ter algo a dizer". Não há espaço para parafrasear ou improvisar.
 - **Take an Interview** exige respostas **curtas, diretas e imediatamente coerentes**, não discursos longos com introdução/corpo/conclusão.
 - **Write an Email** e **Write for an Academic Discussion** são textos multi-frase objetivos, não redações longas com desenvolvimento estendido.
 - **Build a Sentence** testa domínio gramatical puro e imediato: cada erro de estrutura custa pontos diretamente.

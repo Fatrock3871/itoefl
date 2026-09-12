@@ -102,7 +102,7 @@ auditivo automático** (é o que a Parte 3 treina).
 
 A maioria dos itens (Choose a Response, boa parte de Conversation e Announcement) tem áudio curto o suficiente para caber na memória de trabalho: **se você estiver em atenção plena**. Um sistema de note-taking para palestras longas não se aplica.
 
-A habilidade central não é "tomar notas robustas": é **triagem instantânea**: decidir, nos primeiros segundos, se o item pede memória bruta (não anotar) ou estrutura (anotar rápido e seletivo).
+A habilidade central é **triagem instantânea**: decidir, nos primeiros segundos, se o item pede memória bruta (não anotar) ou estrutura (anotar rápido e seletivo). "Tomar notas" bem feitas é consequência disso, não o objetivo em si.
 
 ### 2.2 O sistema de anotações escalonado
 
@@ -407,8 +407,8 @@ Anotar palavra por palavra é lento demais. Use símbolos.
 - (D) *"I don't really follow that team."*
 
 > **Passo 1: o que é isto?** Uma **pergunta retórica negativa** (*"You're not
-> ... are you?"*). Não é um pedido de informação · é um **alerta educado**: "isso
-> é má ideia por causa do trânsito no dia do jogo".
+> ... are you?"*), que funciona como um **alerta educado**, não um pedido de
+> informação: "isso é má ideia por causa do trânsito no dia do jogo".
 >
 > **Passo 2: qual seria a resposta natural?** Reconhecer o alerta e ajustar o
 > plano. É exatamente **(B)**: *"Good point · I'll take the train instead."*

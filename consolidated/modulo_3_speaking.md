@@ -83,7 +83,7 @@ sons "certos" mas no ritmo errado soa não-nativa para a IA: prosódia é parâm
 3. **Entonação de acordo com a função**: sobe em perguntas, desce em
 declarações, ênfase em palavras de conteúdo.
 
-**Técnica do "chunking sintático":** repetir uma frase de 20+ palavras ouvida uma vez não é teste de audição · é teste de **memória de trabalho fonológica**. Em vez de memorizar palavra por palavra, treine-se a reter **blocos sintáticos** (grupo sujeito / sintagma verbal / oração subordinada) como unidades únicas. *"The company that was founded in 1998"* vira um único bloco mental, não sete palavras soltas. É assim que nativos processam fala.
+**Técnica do "chunking sintático":** repetir uma frase de 20+ palavras ouvida uma vez testa **memória de trabalho fonológica**, mais do que audição pura. Em vez de memorizar palavra por palavra, treine-se a reter **blocos sintáticos** (grupo sujeito / sintagma verbal / oração subordinada) como unidades únicas. *"The company that was founded in 1998"* vira um único bloco mental, não sete palavras soltas. É assim que nativos processam fala.
 
 **Protocolo de shadowing progressivo (15 min/dia):**
 
@@ -111,12 +111,12 @@ Quatro perguntas, cada uma pedindo uma resposta **imediata, coerente e elaborada
 
 Cada esqueleto força naturalmente o uso de **conectores e subordinação** (*because, although, if, after, unless*): exatamente os marcadores de complexidade que a IA detecta.
 
-**Regra de ouro: elaborar sem enrolar.** "Elaboração clara e coerente" não é falar mais tempo · é **adicionar uma camada de especificidade** a cada afirmação genérica.
+**Regra de ouro: elaborar sem enrolar.** "Elaboração clara e coerente" significa **adicionar uma camada de especificidade** a cada afirmação genérica, não simplesmente falar mais tempo.
 - ❌ Genérico: *"I think technology is good because it helps people communicate."*
 - ✅ Elaborado: *"I think technology is good because it helps people communicate · 
 for example, my grandmother, who lives in another city, can video-call us every week, which she couldn't do ten years ago."*
 
-A segunda versão não é mais longa por enrolação: é mais longa porque tem um **exemplo concreto**, que é o que eleva a coerência aos olhos da IA.
+A segunda versão é mais longa porque tem um **exemplo concreto**, não porque enrola: é esse exemplo que eleva a coerência aos olhos da IA.
 
 ### 2.4 O erro estrutural do falante de português: ritmo silábico
 
@@ -231,7 +231,7 @@ Reconhecer é o Módulo 2. Aqui você **produz**, para soar natural e bater o ri
 
 ### 3.6 Fluência: como lidar com a hesitação
 
-A IA penaliza *"uh"*, *"um"*, repetições e falsos começos. Mas silêncio total também penaliza. A solução não é falar rápido demais: é **encher as pausas com propósito**.
+A IA penaliza *"uh"*, *"um"*, repetições e falsos começos. Mas silêncio total também penaliza. A solução está em **encher as pausas com propósito**, não em acelerar a fala.
 
 | Em vez de... | Use... |
 |---|---|

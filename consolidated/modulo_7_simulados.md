@@ -21,9 +21,9 @@ A lógica de progressão dos 4 simulados existe para treinar precisão desde o p
 - **Speaking tem 11 itens curtos**: repetição fiel e entrevista: o que conta é precisão e fidelidade imediatas, não "encher o tempo" com conteúdo.
 - **Writing inclui um componente 100% gramatical** (Build a Sentence), além de e-mail e discussão acadêmica: 12 itens ao todo.
 
-A conclusão estratégica é direta: **o TOEFL pune começos fracos com mais severidade e recompensa consistência item a item mais do que resistência de maratona.** A Jornada de 4 Simulados existe para treinar exatamente isso.
+A conclusão estratégica é direta: **o TOEFL pune começos fracos com mais severidade e recompensa consistência item a item mais do que resistência de maratona.** A sequência de 4 simulados existe para treinar exatamente isso.
 
-### A Jornada em 4 Etapas
+### A Sequência em 4 Etapas
 
 | Simulado | Nome | Foco Principal | Condição de Tempo | Momento Ideal |
 |---|---|---|---|---|
@@ -141,7 +141,7 @@ Um simulado só rende se a semana seguinte for de reparo direcionado. Não faça
 | **D+6** | Mini-simulado do tipo de item que mais falhou (2–3 blocos, cronometrado). | Confirmação de que o reparo pegou |
 | **D+7** | Descanso ou revisão leve (flashcards do M6, releitura do M5). | Mente fresca para o próximo simulado |
 
-> ⚠️ Se o mesmo código de erro sobrevive a **dois** ciclos de reparo, o problema não é falta de prática: é uma lacuna estrutural. Volte ao texto do módulo correspondente, não aos drills.
+> ⚠️ Se o mesmo código de erro sobrevive a **dois** ciclos de reparo, o problema é uma lacuna estrutural, não falta de prática. Volte ao texto do módulo correspondente, não aos drills.
 
 ---
 
@@ -572,7 +572,7 @@ Responda em ~40 segundos cada, sem preparo. Grave todas.
 
 ## PARTE 4: SIMULADO 3 · AVANÇADO (Timing Estrito, Formato Adaptativo Real)
 
-> **Objetivo:** Replicar a dinâmica adaptativa real do exame sob pressão de tempo genuína. Nenhuma consulta. Nenhuma pausa não oficial. O objetivo não é só obter um bom score · é descobrir o que falha quando o router está ativo e o relógio corre de verdade.
+> **Objetivo:** Replicar a dinâmica adaptativa real do exame sob pressão de tempo genuína. Nenhuma consulta. Nenhuma pausa não oficial. O objetivo vai além de obter um bom score: é descobrir o que falha quando o router está ativo e o relógio corre de verdade.
 
 **Condições obrigatórias:**
 - Timer visível para cada seção, seguindo os alvos da Parte 2

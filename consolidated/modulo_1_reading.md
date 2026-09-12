@@ -61,7 +61,7 @@ qual item ainda é router. Trate **cada item, do primeiro ao último, com o mesm
 - **Não "aqueça" e não "economize".** Chutar rápido no início para ganhar tempo
 te roteia para baixo. Desacelerar de propósito "para controlar o ritmo" não ajuda: o sistema recompensa acurácia consistente sob o tempo dado, não cautela artificial.
 
-> Pense no router como a fase de classificação de uma competição: não é "aquecimento", é o que define contra quem você compete na fase seguinte.
+> Pense no router como a fase de classificação de uma competição: longe de ser "aquecimento", ele define contra quem você compete na fase seguinte.
 
 ---
 
@@ -104,7 +104,7 @@ Cada passagem acadêmica traz uma combinação destes tipos. Reconhecer o tipo *
 
 ### 1.5 Por que o Reading vem primeiro
 
-Você enfrenta o Reading no pico de energia cognitiva: essa é sua vantagem. Como a seção é adaptativa e curta, a pressão de tempo por item já é alta no router. Gerenciar ansiedade nos primeiros minutos não é desejável: é **estruturalmente decisivo** para o seu teto.
+Você enfrenta o Reading no pico de energia cognitiva: essa é sua vantagem. Como a seção é adaptativa e curta, a pressão de tempo por item já é alta no router. Gerenciar ansiedade nos primeiros minutos é **estruturalmente decisivo** para o seu teto, não um simples "seria bom".
 
 ---
 

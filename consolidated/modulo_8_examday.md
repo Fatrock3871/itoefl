@@ -9,7 +9,7 @@
 
 ## PARTE 1: OS 7 DIAS ANTES · PLANO DE AÇÃO MILIMÉTRICO
 
-> **Princípio:** nos 7 dias antes da prova, o objetivo não é aprender conteúdo novo · é **consolidar o que você já sabe** e chegar ao dia D no pico físico e mental. Quem estuda exaustivamente na semana da prova chega cansado, ansioso e com estruturas comprometidas pela fadiga. Quem gerencia os 7 dias finais estrategicamente chega afiado.
+> **Princípio:** nos 7 dias antes da prova, o objetivo é **consolidar o que você já sabe** e chegar ao dia D no pico físico e mental, não aprender conteúdo novo. Quem estuda exaustivamente na semana da prova chega cansado, ansioso e com estruturas comprometidas pela fadiga. Quem gerencia os 7 dias finais estrategicamente chega afiado.
 
 ### D-7: o último simulado
 
@@ -197,7 +197,7 @@ Se o centro permitir (verifique as regras do seu centro):
 
 ### O modelo de performance sob pressão
 
-A ansiedade pré-prova é fisiológica: o sistema nervoso simpático é ativado por ameaças percebidas, e uma avaliação de alto impacto qualifica como ameaça. O problema não é a ansiedade · é não ter protocolos para redirecioná-la.
+A ansiedade pré-prova é fisiológica: o sistema nervoso simpático é ativado por ameaças percebidas, e uma avaliação de alto impacto qualifica como ameaça. O problema real é não ter protocolos para redirecionar essa ansiedade.
 
 Atletas de elite não tentam eliminar a ansiedade antes da competição: eles a *interpretam como ativação*. A mesma resposta fisiológica (coração acelerado, atenção aguçada, adrenalina) pode ser lida como "estou com medo" ou como "estou pronto". O treinamento é a origem da confiança · e você treinou.
 
@@ -506,7 +506,7 @@ MINUTO 9–10: Retorne à estação. Anchor Phrase. "[Próxima seção] mode: ON
 
 ## PARTE 7: O PLANO ANTI-COLAPSO · SE ALGO DER ERRADO
 
-> A maioria dos erros de prova não é cognitiva: é resposta de pânico a situações inesperadas. Protocolos pré-definidos transformam improviso em execução.
+> A maioria dos erros de prova é resposta de pânico a situações inesperadas, não falha cognitiva de verdade. Protocolos pré-definidos transformam improviso em execução.
 
 | Cenário | O que fazer |
 |---|---|

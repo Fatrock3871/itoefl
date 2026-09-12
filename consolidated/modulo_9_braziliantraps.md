@@ -523,7 +523,7 @@ Além da transferência oral, o Writing tem seus próprios padrões de interfer�
 | *"etc." / "and so on"* numa lista | etc. | feche a lista ou use **"among others"** |
 | *"In the actual context"* | no contexto atual | **"In the current context" / "Today"** |
 
-> **No *Write an Email*:** a armadilha inversa também vale · excesso de formalidade e rodeios ("I would like to take this opportunity to humbly request if it would perhaps be possible...") não é registro alto, é ruído. C1 no e-mail é **direto e educado**. Ver Módulo 5, Parte 5.2 (código **SW-reg**).
+> **No *Write an Email*:** a armadilha inversa também vale · excesso de formalidade e rodeios ("I would like to take this opportunity to humbly request if it would perhaps be possible...") soam como ruído, não registro alto. C1 no e-mail é **direto e educado**. Ver Módulo 5, Parte 5.2 (código **SW-reg**).
 
 ### 5.1 Mini-banco de frases seguras para o e-mail
 

@@ -46,12 +46,12 @@ journey_nodes = "\n".join(
     for k, n, t, _, _tag in MODS
 )
 journey = (
-    '<nav class="journey" id="journey" aria-label="Mapa da jornada">'
+    '<nav class="journey" id="journey" aria-label="Mapa do curso">'
     '<div class="journey-row">'
     '<div class="journey-left">'
     '<button class="hamburger" id="sideToggle" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="sideRail">'
     '<span></span><span></span><span></span></button>'
-    '<p class="journey-title">Sua jornada: conclua 70% para avançar</p>'
+    '<p class="journey-title">Seu progresso: conclua 70% para avançar</p>'
     '</div>'
     '<div class="journey-tools">'
     '<button class="themetoggle" id="themeToggle" type="button" aria-label="Alternar tema">'
