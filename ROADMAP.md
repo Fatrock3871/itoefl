@@ -4,7 +4,7 @@ Memória entre sessões. Atualizar ao concluir cada etapa.
 
 **Última atualização:** 2026-09-12
 **Agora:** Fase 7 (conteúdo) concluída. **3 frentes abertas em paralelo** (ver abaixo).
-`artifact/index.html` ≈ 781 KB.
+`artifact/index.html` ≈ 785 KB.
 
 ---
 
@@ -129,6 +129,21 @@ Conversa pulou entre três assuntos. Estado de cada um:
     listados e conferidos manualmente — sobra só preto/marrom (tinta/fundo) e
     laranja/âmbar/terracota (accent/danger). Zero verde em qualquer forma
     (variável, classe ou inline).
+- **v8 (commits 0d39225, adbea34):**
+  - **Foto de perfil:** avatar do usuário logado (círculo com a inicial) agora
+    é clicável — abre seletor de arquivo, redimensiona no navegador (canvas,
+    crop quadrado 160×160, JPEG 0.82) e mostra a foto; "×" no canto remove.
+    Guardada em `toefl_avatar_v1`, entrou em `SYNC_PREFIXES` — sincroniza pelo
+    `user_state` jsonb existente, sem bucket de storage novo.
+  - **"Textos pesados":** causa raiz era o próprio alargamento de
+    `.panel-inner` (800px→960px, feito a pedido nesta sessão) sem dar a
+    parágrafo/lista/blockquote um `max-width` próprio — linha de texto tinha
+    virado 110–130+ caracteres, bem acima da faixa confortável (~65–75).
+    Agora `max-width:68ch` nesses elementos (card e tabela continuam largos,
+    só o texto corrido ganha coluna de leitura estreita); mais respiro
+    (margem 14px/7px→18px/9px, fonte 15.5px→16px). Contraste card/fundo no
+    tema escuro aumentado (`--paper`/`--bg` estavam quase idênticos) e
+    textura de ruído global reduzida (opacity 0.38/0.35→0.22/0.18).
 - **Pendente:** feedback do usuário sobre tudo isso. Decidir se quer widgets
   de questão adicionados a mais módulos (hoje só M0/M4 travam o avanço por
   questão). Fase 6 (publicar no GitHub Pages) segue depois da aprovação do
