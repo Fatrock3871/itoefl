@@ -2,9 +2,9 @@
 
 Memória entre sessões. Atualizar ao concluir cada etapa.
 
-**Última atualização:** 2026-09-10
+**Última atualização:** 2026-09-12
 **Agora:** Fase 7 (conteúdo) concluída. **3 frentes abertas em paralelo** (ver abaixo).
-`artifact/index.html` ≈ 777 KB.
+`artifact/index.html` ≈ 781 KB.
 
 ---
 
@@ -104,6 +104,31 @@ Conversa pulou entre três assuntos. Estado de cada um:
     "fundamental" no M6 são o próprio vocabulário sendo ensinado; os 636 `;`
     do corpus são majoritariamente gabaritos de questão em formato compacto
     (uso apropriado ao gênero), não "padding" de IA.
+- **v7 (commit 507af44):** usuário reportou verde residual 3 vezes seguidas,
+  cada uma apontando pra um lugar diferente — cada "achei e corrigi" anterior
+  só pegava parte do problema:
+  1. `.section-card.done` (borda) → laranja.
+  2. Todo `var(--good)`/`--good-wash` em CSS (`.opt.correct`, `.quiz-summary`,
+     `.bsq-card.correct`, `.srs-g2`/`.srs-done`/`.srs-restart`) → laranja.
+  3. A causa raiz de verdade: **inline styles em `app.js`**, que sobrescrevem
+     CSS/classe e por isso nenhuma busca em `styles.css` achava. Duas
+     mensagens de feedback (flash de export/import e mensagem de auth do
+     Supabase) faziam `el.style.color = "var(--good)"` direto no JS pro caso
+     "sucesso" — trocado pra `var(--accent)`. De bônus: `--ink-dim` (usado no
+     caso neutro da msg de auth) nunca existiu no `styles.css`, virava cor
+     herdada silenciosamente; trocado pro token real `--ink-2`.
+  - `--good`/`--good-wash` **removidos das 3 paletas** (claro, escuro por
+    sistema, escuro forçado) — sem definição, não tem como reaparecer verde
+    por acidente de novo.
+  - Achado de brinde na varredura: `--shadow-hard` no bloco
+    `:root[data-theme="dark"]` (tema escuro escolhido manualmente, diferente
+    do `prefers-color-scheme`) ainda estava `#000` — o fix da sombra preta→
+    laranja do v6 só tinha coberto o bloco de sistema. Agora laranja nos 3
+    lugares.
+  - Verificação final: todos os hex de 6 dígitos do `artifact/index.html`
+    listados e conferidos manualmente — sobra só preto/marrom (tinta/fundo) e
+    laranja/âmbar/terracota (accent/danger). Zero verde em qualquer forma
+    (variável, classe ou inline).
 - **Pendente:** feedback do usuário sobre tudo isso. Decidir se quer widgets
   de questão adicionados a mais módulos (hoje só M0/M4 travam o avanço por
   questão). Fase 6 (publicar no GitHub Pages) segue depois da aprovação do
