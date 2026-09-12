@@ -86,8 +86,26 @@ Conversa pulou entre três assuntos. Estado de cada um:
   (`scrollWidth <= innerWidth`, checado via probe JS injetado + headless
   Chrome); `.rail` corretamente some abaixo de 1080px; tabelas largas rolam
   dentro do próprio `.table-wrap`, não vazam pra página. Nada quebrado.
-- **Pendente:** feedback do usuário sobre o v4/v5. Decidir se quer widgets de
-  questão adicionados a mais módulos (hoje só M0/M4 travam o avanço por
+- **v6 (commits 760642d, 5aa6df5):**
+  - **Nivelamento de verdade:** confirmado que `isUnlocked()` nunca exigiu
+    acerto mínimo no diagnóstico (M0), só responder as 10 — usuário achou que
+    havia um "limite de acertos" e pediu confirmação + que o resultado
+    passasse a fazer algo. Agora `updateLevelBadge()` calcula a banda CEFR
+    (mesma tabela do M0 Parte 4.2) e recomenda um dos 3 cronogramas (Parte
+    6.1–6.3) assim que as 10 são confirmadas; fica num badge fixo na sidebar.
+  - **Cores:** `--shadow-hard` (a sombra "carimbada" de todo card/botão)
+    trocada de preta pra laranja; borda de `.section-card.done` (verde) também
+    virou laranja.
+  - **Vícios de linguagem de IA:** pesquisei a lista mais documentada de 2026
+    (fontes na resposta) e cruzei com o corpus. Real e corrigido: construção
+    "não é X, é Y" (25 ocorrências, ~18 reescritas com variação); "jornada"
+    trocado por "progresso"/"sequência" nos rótulos visíveis. Checado e
+    **descartado** (não é vício aqui, é conteúdo correto): "robust"/
+    "fundamental" no M6 são o próprio vocabulário sendo ensinado; os 636 `;`
+    do corpus são majoritariamente gabaritos de questão em formato compacto
+    (uso apropriado ao gênero), não "padding" de IA.
+- **Pendente:** feedback do usuário sobre tudo isso. Decidir se quer widgets
+  de questão adicionados a mais módulos (hoje só M0/M4 travam o avanço por
   questão). Fase 6 (publicar no GitHub Pages) segue depois da aprovação do
   usuário — é ação pública/difícil de reverter, não faço sem confirmar.
 
