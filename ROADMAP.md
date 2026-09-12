@@ -82,9 +82,14 @@ Conversa pulou entre três assuntos. Estado de cada um:
   arquivos, 225 tabelas renderizando ok, 0 mojibake. Sobram ~24 travessões
   dentro de blocos de código (ASCII/checklist) e ~19 células de tabela "—"
   (convenção de vazio/N-A) — deliberadamente preservados.
-- **Pendente:** feedback do usuário sobre o v4/v5. Testar mobile (430px) se
-  aprovado. Decidir se quer widgets de questão adicionados a mais módulos
-  (hoje só M0/M4 travam o avanço por questão).
+- **Mobile testado (390–504px):** sem overflow horizontal de página
+  (`scrollWidth <= innerWidth`, checado via probe JS injetado + headless
+  Chrome); `.rail` corretamente some abaixo de 1080px; tabelas largas rolam
+  dentro do próprio `.table-wrap`, não vazam pra página. Nada quebrado.
+- **Pendente:** feedback do usuário sobre o v4/v5. Decidir se quer widgets de
+  questão adicionados a mais módulos (hoje só M0/M4 travam o avanço por
+  questão). Fase 6 (publicar no GitHub Pages) segue depois da aprovação do
+  usuário — é ação pública/difícil de reverter, não faço sem confirmar.
 
 ### 3. Estrutura / navegação linear (FEITO — commit 7fcdd49)
 - `app.js`: `UNLOCK_PCT = 70` (era 100). Módulo N libera com 70% do N-1.
