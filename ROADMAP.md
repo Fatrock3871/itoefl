@@ -4,7 +4,9 @@ Memória entre sessões. Atualizar ao concluir cada etapa.
 
 **Última atualização:** 2026-09-14
 **Agora:** Fase 7 (conteúdo) concluída. **3 frentes abertas em paralelo** (ver abaixo).
-`artifact/index.html` ≈ 788 KB.
+`artifact/index.html` ≈ 792 KB. Login agora obrigatório quando o Supabase
+está configurado (ver v11) — isso muda o comportamento em produção depois da
+Fase 6, não só em dev.
 
 ---
 
@@ -184,6 +186,19 @@ Conversa pulou entre três assuntos. Estado de cada um:
   - **"Seu progresso: conclua 70%":** saiu da barra fixa do topo (ao lado do
     hamburger) e foi para baixo do `<h1>` de cada módulo (`.ph-progress-hint`),
     a pedido do usuário.
+- **v11 (commits e757f1d, 5c2c479 [ver acima], 8d8ef2e, da717a5):**
+  - **Hamburger:** vivia dentro da coluna centralizada (`main`, max-width
+    1320px + padding) — em tela larga ficava longe da borda real. Virou
+    `position:fixed; top/left:16px`, ancorado na quina de verdade da viewport.
+  - **Login obrigatório:** decisão do usuário (2026-09-14) — o app não pode
+    mais abrir direto no conteúdo quando o Supabase está configurado. Nova
+    tela `#authGate` (overlay full-screen, Google + e-mail) bloqueia tudo até
+    logar; some com `goOnline()`. **Só existe se `supabase_config.json`
+    estiver preenchido** — sem config, app continua 100% offline como sempre
+    (decidido em `build.py` na hora do build). Falha ao carregar a lib do
+    Supabase (CDN bloqueado) libera o conteúdo mesmo assim, pra não trancar o
+    aluno fora do material por causa de rede. `docs/supabase-setup.md`
+    atualizado pra refletir esse comportamento nos dois casos.
 - **Pendente:** feedback do usuário sobre tudo isso. Decidir se quer widgets
   de questão adicionados a mais módulos (hoje só M0/M4 travam o avanço por
   questão). Fase 6 (publicar no GitHub Pages) segue depois da aprovação do
