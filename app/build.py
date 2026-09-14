@@ -47,11 +47,9 @@ journey_nodes = "\n".join(
 )
 journey = (
     '<nav class="journey" id="journey" aria-label="Mapa do curso">'
-    '<div class="journey-row">'
-    '<div class="journey-left">'
     '<button class="hamburger" id="sideToggle" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="sideRail">'
     '<span></span><span></span><span></span></button>'
-    '</div>'
+    '<div class="journey-row">'
     '<div class="journey-tools">'
     '<button class="themetoggle" id="themeToggle" type="button" aria-label="Alternar tema">'
     '<span id="themeIcon">🌗</span><span id="themeLabel">Sistema</span></button>'
