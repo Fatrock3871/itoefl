@@ -2,9 +2,9 @@
 
 Memória entre sessões. Atualizar ao concluir cada etapa.
 
-**Última atualização:** 2026-09-12
+**Última atualização:** 2026-09-14
 **Agora:** Fase 7 (conteúdo) concluída. **3 frentes abertas em paralelo** (ver abaixo).
-`artifact/index.html` ≈ 785 KB.
+`artifact/index.html` ≈ 787 KB.
 
 ---
 
@@ -144,6 +144,22 @@ Conversa pulou entre três assuntos. Estado de cada um:
     (margem 14px/7px→18px/9px, fonte 15.5px→16px). Contraste card/fundo no
     tema escuro aumentado (`--paper`/`--bg` estavam quase idênticos) e
     textura de ruído global reduzida (opacity 0.38/0.35→0.22/0.18).
+- **v9 (commits abddfcf, b3414c6, c16f019):**
+  - **Foto de perfil não aparecia:** todo caminho de erro do upload manual
+    falhava calado (MIME type não confiável em alguns navegadores/SO, cota do
+    `localStorage` sem aviso). Endurecido + mensagens de erro/sucesso visíveis;
+    avatar de 26px→34px. Segue sem confirmação de que resolveu.
+  - **Login com Google:** usuário preferiu trocar de abordagem — em vez de só
+    upload manual, logar com Google e puxar a foto do perfil Google
+    automaticamente (`user_metadata.avatar_url`/`.picture` da sessão). Upload
+    manual continua existindo como override. **Pendente do usuário:** ativar
+    o provedor Google no painel do Supabase + Google Cloud Console — passo a
+    passo em `docs/supabase-setup.md` §3.1; eu não tenho como fazer essa parte
+    (exige as contas do próprio usuário).
+  - **Roadmap do topo:** usuário não gostou da trilha de módulos fixa acima
+    do conteúdo — movida para dentro do menu hamburger (topo da sidebar,
+    acima de "Progresso geral"), com cores próprias pro tema sempre-escuro da
+    rail. Barra do topo agora só tem hamburger + tema + login/avatar.
 - **Pendente:** feedback do usuário sobre tudo isso. Decidir se quer widgets
   de questão adicionados a mais módulos (hoje só M0/M4 travam o avanço por
   questão). Fase 6 (publicar no GitHub Pages) segue depois da aprovação do
