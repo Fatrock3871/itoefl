@@ -1,9 +1,14 @@
 # Configurar o Supabase (contas + progresso sincronizado)
 
-O app funciona 100% sem isto — o progresso fica no `localStorage` do navegador.
-O Supabase adiciona **login e sincronização entre dispositivos**: o aluno entra
-com um link enviado por e-mail e o progresso (checkboxes, flashcards SRS, quiz,
-Build a Sentence) passa a acompanhar a conta.
+Sem este arquivo configurado, o app funciona 100% sem login — o progresso fica
+no `localStorage` do navegador, sem tela de entrada. **Com ele configurado**,
+o app passa a exigir login antes de liberar o conteúdo (tela `#authGate`,
+decisão do usuário em 2026-09-14): o aluno entra por e-mail (link) ou Google,
+e o progresso (checkboxes, flashcards SRS, quiz, Build a Sentence) passa a
+acompanhar a conta e sincronizar entre dispositivos. Uma falha ao carregar a
+biblioteca do Supabase (CDN bloqueado/sem internet) libera o conteúdo mesmo
+assim — só a ausência de configuração ou uma falha de rede evita o bloqueio,
+nunca um bug trava o aluno pra fora do próprio material.
 
 O que **não** sincroniza (fica sempre local por dispositivo): tema, aba ativa,
 preset do cronômetro.
@@ -113,19 +118,25 @@ sempre tem prioridade sobre a do Google, caso queira usar outra.
    python build.py
    ```
    O `build.py` deve imprimir `supabase: configurado`.
-4. `python scripts\serve.py` e abra o app. Na barra lateral aparece
-   **"Entrar para sincronizar"**.
+4. `python scripts\serve.py` e abra o app. A tela de login (`#authGate`)
+   aparece antes de qualquer conteúdo, com **"Entrar com Google"** e
+   **"Entrar com e-mail"**.
 
 ## 5. Como funciona no uso
 
-- **Entrar:** clique no botão, digite o e-mail, confira a caixa de entrada e
-  clique no link. Ao voltar, o app mostra o e-mail e um botão **Sair**.
+- **Entrar:** na tela de login, "Entrar com Google" loga direto; "Entrar com
+  e-mail" pede o endereço, envia um link e some assim que ele é clicado. Ao
+  voltar, o app libera o conteúdo e mostra o e-mail/avatar e um botão **Sair**.
 - **Primeiro login num dispositivo novo:** o app baixa o progresso da nuvem e
   recarrega a página.
 - **Edições:** cada mudança de progresso é enviada para a nuvem ~2,5 s depois
   (com um aviso "Sincronizado.").
-- **Offline / deslogado:** tudo continua no `localStorage`; ao entrar de novo,
-  as edições feitas offline têm prioridade e são mescladas com a nuvem.
+- **Deslogado:** a tela de login cobre o conteúdo — não dá pra navegar os
+  módulos sem entrar (só quando o Supabase está configurado; sem ele o app
+  segue offline sem tela nenhuma). Uma vez logado, o progresso volta a viver
+  no `localStorage` do navegador entre visitas; ao entrar de novo depois de
+  editar offline (ex.: sem internet), essas edições têm prioridade e são
+  mescladas com a nuvem.
 - **Conflito entre dispositivos:** a regra é simples — o dispositivo com edições
   não enviadas ganha na hora de mesclar. Não é um merge campo a campo; para uso
   de uma pessoa só, é suficiente.
