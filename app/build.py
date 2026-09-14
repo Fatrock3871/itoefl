@@ -51,7 +51,6 @@ journey = (
     '<div class="journey-left">'
     '<button class="hamburger" id="sideToggle" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="sideRail">'
     '<span></span><span></span><span></span></button>'
-    '<p class="journey-title">Seu progresso: conclua 70% para avançar</p>'
     '</div>'
     '<div class="journey-tools">'
     '<button class="themetoggle" id="themeToggle" type="button" aria-label="Alternar tema">'
@@ -83,7 +82,9 @@ panels = "\n".join(
     f'<section class="panel" data-panel="{k}" id="panel-{k}" {"hidden" if k != "mod0" else ""}>'
     f'<div class="panel-inner">'
     f'<header class="panel-head"><span class="ph-num">{n}</span>'
-    f'<span class="ph-text"><h1>{t}</h1><p>{tag}</p></span></header>'
+    f'<span class="ph-text"><h1>{t}</h1>'
+    '<p class="ph-progress-hint">Seu progresso: conclua 70% para avançar</p>'
+    f'<p>{tag}</p></span></header>'
     f'{frag[k]}</div></section>'
     for k, n, t, _, tag in MODS
 )
