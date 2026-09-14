@@ -54,8 +54,6 @@ journey = (
     '<button class="themetoggle" id="themeToggle" type="button" aria-label="Alternar tema">'
     '<span id="themeIcon">🌗</span><span id="themeLabel">Sistema</span></button>'
     '<div class="auth-box" id="authBox" hidden>'
-    '<button type="button" id="authSignIn">Entrar com e-mail</button>'
-    '<button type="button" id="authSignInGoogle">Entrar com Google</button>'
     '<div id="authIn" hidden>'
     '<span class="auth-avatar-wrap">'
     '<button type="button" class="auth-avatar" id="authAvatar" aria-label="Alterar foto de perfil" title="Alterar foto de perfil">'
@@ -114,6 +112,24 @@ if supa_url and supa_key:
 else:
     print("supabase: nao configurado (modo offline)")
 
+# gate de login: só bloqueia o conteúdo se houver como logar (Supabase
+# configurado). Sem config, o app segue 100% offline como antes.
+gate_hidden = "" if (supa_url and supa_key) else "hidden"
+gate = (
+    f'<div class="auth-gate" id="authGate" {gate_hidden}>'
+    '<div class="auth-gate-card">'
+    '<span class="auth-gate-logo">iT</span>'
+    '<h2>Entre para continuar</h2>'
+    '<p>Seu progresso fica salvo na sua conta e sincroniza entre dispositivos.</p>'
+    '<div class="auth-gate-actions">'
+    '<button type="button" id="authSignInGoogle">Entrar com Google</button>'
+    '<button type="button" id="authSignIn">Entrar com e-mail</button>'
+    '</div>'
+    '<span id="authGateMsg" class="auth-gate-msg" hidden></span>'
+    '</div>'
+    '</div>'
+)
+
 html = f'''<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -125,6 +141,7 @@ html = f'''<!DOCTYPE html>
 </style>
 </head>
 <body>
+{gate}
 <div class="shell">
   <div class="side-backdrop" id="sideBackdrop"></div>
   <aside class="side" id="sideRail">

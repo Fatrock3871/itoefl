@@ -942,11 +942,14 @@
   // ---------- Contas + sincronização (Supabase) ----------
   (function(){
     var box = document.getElementById("authBox");
+    var gateEl = document.getElementById("authGate");
     if(!box) return;
     var cfg = window.ITOEFL_SUPABASE;
-    if(!cfg || !cfg.url || !cfg.anonKey) return; // não configurado → app segue offline
+    if(!cfg || !cfg.url || !cfg.anonKey) return; // não configurado → app segue offline (gate já vem hidden do build)
     if(!window.supabase || !window.supabase.createClient){
-      // configurado, mas a biblioteca não carregou (CDN bloqueado/offline)
+      // configurado, mas a biblioteca não carregou (CDN bloqueado/offline) —
+      // uma falha de rede não pode trancar o aluno fora do próprio conteúdo
+      if(gateEl) gateEl.hidden = true;
       box.hidden = false;
       document.getElementById("authSignIn").hidden = true;
       var m = document.getElementById("authMsg");
@@ -956,6 +959,14 @@
       return;
     }
     box.hidden = false;
+
+    var gateMsgEl = document.getElementById("authGateMsg");
+    function gateMsg(text, kind){
+      if(!gateMsgEl) return;
+      gateMsgEl.textContent = text;
+      gateMsgEl.style.color = kind === "err" ? "var(--danger)" : "var(--ink-2)";
+      gateMsgEl.hidden = false;
+    }
 
     var signInBtn = document.getElementById("authSignIn");
     var googleBtn = document.getElementById("authSignInGoogle");
@@ -1133,6 +1144,7 @@
       signInBtn.hidden = true;
       if(googleBtn) googleBtn.hidden = true;
       signedIn.hidden = false;
+      if(gateEl) gateEl.hidden = true;
       onSyncedWrite = schedulePush;
       pull();
     }
@@ -1143,6 +1155,7 @@
       signInBtn.hidden = false;
       if(googleBtn) googleBtn.hidden = false;
       signedIn.hidden = true;
+      if(gateEl) gateEl.hidden = false;
     }
 
     signInBtn.addEventListener("click", function(){
@@ -1151,7 +1164,7 @@
       var redirect = location.href.split("#")[0].split("?")[0];
       client.auth.signInWithOtp({ email: email.trim(), options: { emailRedirectTo: redirect } })
         .then(function(res){
-          msg(res.error ? ("Erro: " + res.error.message) : "Link enviado. Confira seu e-mail.",
+          gateMsg(res.error ? ("Erro: " + res.error.message) : "Link enviado. Confira seu e-mail.",
               res.error ? "err" : "ok");
         });
     });
@@ -1161,7 +1174,7 @@
         client.auth.signInWithOAuth({ provider: "google", options: { redirectTo: redirect } })
           .then(function(res){
             // sucesso: o navegador é redirecionado pro Google, não sobra nada pra fazer aqui
-            if(res.error) msg("Erro: " + res.error.message, "err");
+            if(res.error) gateMsg("Erro: " + res.error.message, "err");
           });
       });
     }

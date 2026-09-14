@@ -202,6 +202,38 @@ nav.modnav{display:flex; flex-direction:column; gap:1px;}
 #authIn button{flex:none;}
 .auth-msg{font-size:11px; font-family:'Plus Jakarta Sans',sans-serif; line-height:1.4; color:var(--ink-2);}
 
+/* tela de login obrigatória antes do conteúdo (só existe se o Supabase
+   estiver configurado — sem ele o app segue 100% offline como sempre) */
+.auth-gate{
+  position:fixed; inset:0; z-index:300; background:var(--bg);
+  display:flex; align-items:center; justify-content:center; padding:20px;
+}
+.auth-gate-card{
+  max-width:380px; width:100%; background:var(--paper); border:2px solid var(--edge);
+  border-radius:var(--radius); box-shadow:var(--shadow-hard); padding:34px 30px; text-align:center;
+}
+.auth-gate-logo{
+  display:inline-flex; align-items:center; justify-content:center; width:44px; height:44px;
+  border-radius:11px; background:var(--accent); border:2px solid var(--edge); box-shadow:3px 3px 0 var(--edge);
+  font-family:'Bricolage Grotesque',sans-serif; font-weight:800; font-size:18px; color:#fff; margin-bottom:18px;
+}
+.auth-gate-card h2{
+  font-size:22px; font-weight:800; font-style:italic; text-transform:uppercase;
+  letter-spacing:-0.01em; margin:0 0 10px;
+}
+.auth-gate-card > p{color:var(--ink-2); font-size:14px; line-height:1.55; margin:0 0 26px;}
+.auth-gate-actions{display:flex; flex-direction:column; gap:10px;}
+.auth-gate-actions button{
+  padding:13px 16px; border-radius:8px; border:2px solid var(--edge);
+  font-family:'Bricolage Grotesque',sans-serif; font-size:14px; font-weight:800; cursor:pointer;
+  background:var(--paper); color:var(--ink);
+}
+.auth-gate-actions button:hover{background:var(--accent-wash);}
+.auth-gate-actions #authSignInGoogle{background:var(--accent); color:#fff;}
+.auth-gate-actions #authSignInGoogle:hover{background:var(--accent-strong);}
+.auth-gate-msg{display:block; margin-top:16px; font-size:12.5px; line-height:1.4; color:var(--ink-2);}
+@media(max-width:480px){ .auth-gate-card{padding:28px 22px;} }
+
 .data-tools{display:flex; flex-wrap:wrap; gap:6px; align-items:center;}
 .data-tools button{
   padding:7px 10px; border-radius:7px; border:1px solid var(--rail-line); background:rgba(255,255,255,0.04);
