@@ -4,7 +4,7 @@ Memória entre sessões. Atualizar ao concluir cada etapa.
 
 **Última atualização:** 2026-09-14
 **Agora:** Fase 7 (conteúdo) concluída. **3 frentes abertas em paralelo** (ver abaixo).
-`artifact/index.html` ≈ 787 KB.
+`artifact/index.html` ≈ 788 KB.
 
 ---
 
@@ -160,6 +160,30 @@ Conversa pulou entre três assuntos. Estado de cada um:
     do conteúdo — movida para dentro do menu hamburger (topo da sidebar,
     acima de "Progresso geral"), com cores próprias pro tema sempre-escuro da
     rail. Barra do topo agora só tem hamburger + tema + login/avatar.
+- **v10 (commits 3445e39, c0243e4, de96df9, 5c2c479):**
+  - **Avatar:** foto não preenchia o círculo — `<img>` dentro de flex container
+    não esticava direito; virou `position:absolute; inset:0` (não depende mais
+    do flexbox pra se esticar). Foto do Google vinha em baixa resolução
+    (`=s96-c`); forçado `=s256-c`. Círculo 34px→44px.
+  - **Títulos h3** (subtítulos de parte/drill) de preto → `var(--accent-strong)`
+    (mesmo tratamento que h4 já tinha).
+  - **Cabeçalho de tabela:** usava `background:var(--ink)`, que inverte
+    direção errada no escuro (vira quase-branco + texto branco = ilegível).
+    Token novo `--th-bg` (laranja no claro, preto no escuro — direção que o
+    usuário pediu). Mesmo bug achado e corrigido em `.panel pre` (bloco de
+    código: fundo e texto ficavam idênticos no escuro).
+  - **Achado de brinde:** `:root[data-theme="dark"]` (tema escuro manual,
+    diferente de "seguir o sistema") tinha ficado com `--bg`/`--paper`/`--hair`
+    desatualizados desde o fix de contraste 2 rodadas atrás — um `replace_all`
+    só pegou o bloco do `@media` por indentação diferente (2 vs 4 espaços) e
+    passou batido. Sincronizado. **Lição de processo:** ao editar os dois
+    blocos de tema escuro juntos, sempre `Grep` a variável depois do
+    `replace_all` pra confirmar 2 ocorrências, nunca confiar só na mensagem
+    de sucesso da ferramenta — a indentação diferente entre os dois blocos já
+    causou esse mesmo silêncio duas vezes.
+  - **"Seu progresso: conclua 70%":** saiu da barra fixa do topo (ao lado do
+    hamburger) e foi para baixo do `<h1>` de cada módulo (`.ph-progress-hint`),
+    a pedido do usuário.
 - **Pendente:** feedback do usuário sobre tudo isso. Decidir se quer widgets
   de questão adicionados a mais módulos (hoje só M0/M4 travam o avanço por
   questão). Fase 6 (publicar no GitHub Pages) segue depois da aprovação do
