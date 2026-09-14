@@ -973,7 +973,15 @@
     var googleAvatarUrl = null; // foto da conta Google logada (se veio por esse provedor)
     function extractGoogleAvatar(session){
       var meta = (session && session.user && session.user.user_metadata) || {};
-      return meta.avatar_url || meta.picture || null;
+      var url = meta.avatar_url || meta.picture || null;
+      if(!url) return null;
+      // o Google costuma devolver uma miniatura pequena (ex.: "=s96-c" no
+      // fim da URL) — pede uma versão maior pra não borrar/encolher dentro
+      // do avatar do site, que é bem maior que 96px
+      if(/googleusercontent\.com/.test(url)){
+        url = /=s\d+-c$/.test(url) ? url.replace(/=s\d+-c$/, "=s256-c") : url + "=s256-c";
+      }
+      return url;
     }
     function renderAvatar(email){
       if(avatarLetterEl) avatarLetterEl.textContent = (email || "?").trim().charAt(0).toUpperCase();
