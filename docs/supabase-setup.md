@@ -60,6 +60,38 @@ aparece na sidebar (biblioteca `supabase-js@2` carrega e aceita a chave).
    baixo de mensagens por hora — suficiente para uso pessoal. Para volume maior,
    configure um SMTP próprio em **Authentication → Emails**.
 
+## 3.1 Login com Google (foto de perfil automática)
+
+O app já tem o botão **"Entrar com Google"** pronto no código — falta só ligar
+o provedor no painel do Supabase (isso **eu não consigo fazer por você**: exige
+a sua conta do Google Cloud e o seu painel do Supabase).
+
+1. **Google Cloud Console** (<https://console.cloud.google.com>):
+   - Crie um projeto (ou use um existente) → **APIs & Services** →
+     **OAuth consent screen**: tipo *External*, preencha nome do app e e-mail
+     de suporte. Não precisa publicar (pode ficar em "Testing" com o seu
+     e-mail na lista de testadores, suficiente para uso pessoal).
+   - **APIs & Services → Credentials → Create Credentials → OAuth client ID**:
+     tipo **Web application**.
+   - Em **Authorized redirect URIs**, adicione a URL de callback do Supabase:
+     `https://itfosjcymqfzjsftvjey.supabase.co/auth/v1/callback`
+     (troque `itfosjcymqfzjsftvjey` pela ref do seu projeto, em Project
+     Settings → General; é a mesma que já está em `app/supabase_config.json`).
+   - Copie o **Client ID** e o **Client Secret** gerados.
+2. **Supabase → Authentication → Providers → Google**: ative o toggle, cole o
+   Client ID e o Client Secret, salve.
+3. Confirme que **Authentication → URL Configuration** já tem
+   `http://localhost:8000` (ou o endereço que você usa) em Site URL /
+   Redirect URLs — é o mesmo ajuste do passo 3 acima, vale para os dois
+   provedores.
+4. Rebuild não é necessário para isso (é config do Supabase, não do app) —
+   só recarregue a página e teste o botão "Entrar com Google".
+
+**Sobre a foto de perfil:** ao entrar com Google, o avatar do site passa a
+usar automaticamente a foto da conta Google (vem no `user_metadata` da sessão,
+sem passo extra nenhum). Uma foto enviada manualmente pelo botão do avatar
+sempre tem prioridade sobre a do Google, caso queira usar outra.
+
 ## 4. Ligar o app às credenciais
 
 1. No painel: **Project Settings** → **API**. Copie:

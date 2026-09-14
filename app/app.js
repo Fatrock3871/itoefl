@@ -958,6 +958,7 @@
     box.hidden = false;
 
     var signInBtn = document.getElementById("authSignIn");
+    var googleBtn = document.getElementById("authSignInGoogle");
     var signedIn = document.getElementById("authIn");
     var emailEl = document.getElementById("authEmail");
     var avatarEl = document.getElementById("authAvatar");
@@ -969,16 +970,24 @@
     var msgEl = document.getElementById("authMsg");
 
     var AVATAR_KEY = "toefl_avatar_v1";
+    var googleAvatarUrl = null; // foto da conta Google logada (se veio por esse provedor)
+    function extractGoogleAvatar(session){
+      var meta = (session && session.user && session.user.user_metadata) || {};
+      return meta.avatar_url || meta.picture || null;
+    }
     function renderAvatar(email){
       if(avatarLetterEl) avatarLetterEl.textContent = (email || "?").trim().charAt(0).toUpperCase();
-      var data = safeGet(AVATAR_KEY);
-      var hasPhoto = !!data;
+      var custom = safeGet(AVATAR_KEY);
+      var src = custom || googleAvatarUrl || null;
+      var hasPhoto = !!src;
       if(avatarImgEl){
-        if(hasPhoto){ avatarImgEl.src = data; }
+        if(hasPhoto){ avatarImgEl.src = src; }
         avatarImgEl.hidden = !hasPhoto;
       }
       if(avatarLetterEl) avatarLetterEl.hidden = hasPhoto;
-      if(avatarRemoveEl) avatarRemoveEl.hidden = !hasPhoto;
+      // o "x" só remove a foto enviada manualmente — a do Google volta a
+      // aparecer sozinha (não tem o que "remover" nela por aqui)
+      if(avatarRemoveEl) avatarRemoveEl.hidden = !custom;
     }
     function resizeAvatar(file, cb){
       var reader = new FileReader();
@@ -1111,16 +1120,20 @@
     function goOnline(session){
       uid = session.user.id;
       emailEl.textContent = session.user.email || "conectado";
+      googleAvatarUrl = extractGoogleAvatar(session);
       renderAvatar(session.user.email);
       signInBtn.hidden = true;
+      if(googleBtn) googleBtn.hidden = true;
       signedIn.hidden = false;
       onSyncedWrite = schedulePush;
       pull();
     }
     function goOffline(){
       uid = null;
+      googleAvatarUrl = null;
       onSyncedWrite = null;
       signInBtn.hidden = false;
+      if(googleBtn) googleBtn.hidden = false;
       signedIn.hidden = true;
     }
 
@@ -1134,6 +1147,16 @@
               res.error ? "err" : "ok");
         });
     });
+    if(googleBtn){
+      googleBtn.addEventListener("click", function(){
+        var redirect = location.href.split("#")[0].split("?")[0];
+        client.auth.signInWithOAuth({ provider: "google", options: { redirectTo: redirect } })
+          .then(function(res){
+            // sucesso: o navegador é redirecionado pro Google, não sobra nada pra fazer aqui
+            if(res.error) msg("Erro: " + res.error.message, "err");
+          });
+      });
+    }
     signOutBtn.addEventListener("click", function(){
       client.auth.signOut().then(goOffline);
     });
