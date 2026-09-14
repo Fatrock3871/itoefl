@@ -72,8 +72,11 @@ journey = (
     '<button type="button" id="authSignOut">Sair</button></div>'
     '<span id="authMsg" class="auth-msg" hidden></span></div>'
     '</div></div>'
-    f'<div class="jtrack-wrap"><div class="jtrack">{journey_nodes}</div></div>'
     '</nav>'
+)
+side_jtrack = (
+    '<p class="side-section-label">Mapa do curso</p>'
+    f'<div class="jtrack-wrap"><div class="jtrack">{journey_nodes}</div></div>'
 )
 
 panels = "\n".join(
@@ -136,6 +139,7 @@ html = f'''<!DOCTYPE html>
       </div>
       <button class="side-close" id="sideClose" type="button" aria-label="Fechar menu">✕</button>
     </div>
+    {side_jtrack}
     <div class="overall-progress">
       <div class="op-label"><span>Progresso geral</span><span id="opPct">0%</span></div>
       <div class="op-bar"><div class="op-fill" id="opFill"></div></div>

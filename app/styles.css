@@ -233,9 +233,9 @@ main{max-width:1320px; margin:0 auto; padding:0 30px 120px; min-width:0;}
 /* --- Mapa da jornada (roadmap no topo) --- */
 .journey{
   background:var(--bg); border-bottom:2px solid var(--edge);
-  padding:14px 0 18px; margin-bottom:6px;
+  padding:14px 0; margin-bottom:6px;
 }
-.journey-row{display:flex; align-items:center; justify-content:space-between; gap:14px; margin-bottom:12px; flex-wrap:wrap;}
+.journey-row{display:flex; align-items:center; justify-content:space-between; gap:14px; flex-wrap:wrap;}
 .journey-left{display:flex; align-items:center; gap:12px; min-width:0;}
 .journey-title{
   font-family:'Bricolage Grotesque',sans-serif; font-size:10.5px; font-weight:800; letter-spacing:0.14em;
@@ -273,6 +273,27 @@ main{max-width:1320px; margin:0 auto; padding:0 30px 120px; min-width:0;}
 }
 .jnode.current .jlbl{color:var(--accent-strong); font-weight:800;}
 .jnode.locked .jlbl{opacity:0.5;}
+
+/* mapa do curso dentro da sidebar (sempre no tema escuro da rail,
+   independente do tema claro/escuro do site) */
+.side-section-label{
+  font-family:'Bricolage Grotesque',sans-serif; font-size:10.5px; font-weight:800; letter-spacing:0.14em;
+  text-transform:uppercase; color:var(--rail-dim); margin:2px 0 10px;
+}
+.side .jtrack-wrap{margin-bottom:18px;}
+.side .jtrack-wrap::-webkit-scrollbar-thumb{background:var(--rail-line);}
+.side .jnode + .jnode::before{background:var(--rail-line);}
+.side .jnode.reached::before, .side .jnode.reached.dot-first::before{background:var(--accent);}
+.side .jdot{background:rgba(255,255,255,0.06); border-color:var(--rail-line); color:var(--rail-dim);}
+.side .jnode.done .jdot{background:var(--accent-2); color:var(--edge); border-color:var(--accent-2);}
+.side .jnode.current .jdot{
+  background:var(--accent); color:#fff; border-color:var(--accent);
+  box-shadow:0 0 0 4px rgba(249,122,61,0.22); transform:scale(1.12);
+}
+.side .jnode.locked .jdot{background:rgba(255,255,255,0.03); border-color:var(--rail-line); color:var(--rail-line);}
+.side .jlbl{color:var(--rail-dim);}
+.side .jnode.current .jlbl{color:#fff; font-weight:800;}
+.side .jnode.locked .jlbl{opacity:0.45;}
 
 /* --- Abertura de módulo (chapter opener, quebra de grade) --- */
 .panel-inner{max-width:960px; padding:40px 0 0;}
