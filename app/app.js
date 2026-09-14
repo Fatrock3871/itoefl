@@ -1005,11 +1005,18 @@
       avatarFileEl.addEventListener("change", function(){
         var file = avatarFileEl.files && avatarFileEl.files[0];
         avatarFileEl.value = "";
-        if(!file || file.type.indexOf("image/") !== 0) return;
+        if(!file) return;
+        // não barra por file.type (alguns navegadores/SO não preenchem o MIME
+        // corretamente) — deixa o próprio <img> decidir se consegue decodificar
         resizeAvatar(file, function(dataUrl){
-          if(!dataUrl) return;
+          if(!dataUrl){ msg("Não consegui ler essa imagem. Tente um JPG ou PNG.", "err"); return; }
           safeSet(AVATAR_KEY, dataUrl);
+          if(safeGet(AVATAR_KEY) !== dataUrl){
+            msg("Não consegui salvar a foto (armazenamento cheio ou bloqueado).", "err");
+            return;
+          }
           renderAvatar(emailEl.textContent);
+          msg("Foto atualizada.", "ok");
         });
       });
     }
