@@ -217,8 +217,15 @@
     });
   }
 
+  // gravador e cronômetro só fazem sentido nos módulos de prática cronometrada
+  // (Reading/Listening/Speaking/Writing/Simulados) — em módulos de referência
+  // (registro, vocabulário, exam day, traps) e no diagnóstico eles só distraem
+  var PRACTICE_MODULES = {mod1:1, mod2:1, mod3:1, mod4:1, mod7:1};
+  var floatTools = document.querySelector(".float-tools");
+
   function showTab(key){
     tabBtns.forEach(function(b){ b.classList.toggle("active", b.dataset.tab === key); });
+    if(floatTools) floatTools.hidden = !PRACTICE_MODULES[key];
     journeyNodes.forEach(function(j){
       var on = j.dataset.tab === key;
       j.classList.toggle("current", on);
@@ -271,8 +278,6 @@
       var pctMod = b.total ? Math.round(100 * b.done / b.total) : 0;
       modPct[mod] = pctMod;
       if(pctMod >= 100) modsDone++;
-      var badgeEl = document.getElementById("badge-"+mod);
-      if(badgeEl) badgeEl.textContent = b.total ? pctMod+"%" : "";
     });
     var pct = totalAll ? Math.round(100*doneAll/totalAll) : 0;
     document.getElementById("opPct").textContent = pct + "%";
@@ -280,19 +285,28 @@
     var opCount = document.getElementById("opCount");
     if(opCount) opCount.innerHTML = "<b>" + modsDone + "</b> de " + modOrder.length + " módulos concluídos";
 
-    // reflete no estado visual da sidebar: concluído (✓), atual, ou bloqueado (🔒)
+    // reflete no estado visual da sidebar: concluído (✓), atual, ou bloqueado (🔒).
+    // o número do módulo fica sempre visível (mesmo bloqueado — o texto dos
+    // módulos referencia "Módulo N" e precisa bater com o que aparece aqui);
+    // só o "%" de progresso é escondido quando bloqueado, pra não parecer que
+    // dá pra entrar só porque já tem progresso ali.
     tabBtns.forEach(function(b){
       var key = b.dataset.tab;
       var badgeEl = b.querySelector(".num-badge");
+      var pbadgeEl = document.getElementById("badge-"+key);
       var done = (modPct[key] || 0) >= 100;
       var unlocked = isUnlocked(key);
       b.classList.toggle("done", done);
       b.classList.toggle("locked", !unlocked);
       if(badgeEl){
-        badgeEl.textContent = done ? "✓" : (unlocked ? badgeEl.dataset.n : "🔒");
+        badgeEl.textContent = done ? "✓" : badgeEl.dataset.n;
+      }
+      if(pbadgeEl){
+        pbadgeEl.textContent = (unlocked && byMod[key] && byMod[key].total) ? modPct[key] + "%" : "";
       }
     });
-    // mapa da jornada: done (✓) / reached (linha preenchida) / locked (🔒)
+    // mapa da jornada: done (✓) / reached (linha preenchida) / locked (🔒, mas
+    // com o número sempre visível — mesma lógica da sidebar acima)
     journeyNodes.forEach(function(j){
       var key = j.dataset.tab;
       var done = (modPct[key] || 0) >= 100;
@@ -301,7 +315,7 @@
       j.classList.toggle("reached", unlocked);
       j.classList.toggle("locked", !unlocked);
       var dot = j.querySelector(".jdot");
-      if(dot) dot.textContent = done ? "✓" : (unlocked ? dot.dataset.n : "🔒");
+      if(dot) dot.textContent = done ? "✓" : dot.dataset.n;
     });
   }
 
