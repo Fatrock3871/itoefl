@@ -2,7 +2,7 @@
 
 Memória entre sessões. Atualizar ao concluir cada etapa.
 
-**Última atualização:** 2026-09-14
+**Última atualização:** 2026-09-15
 **Agora:** Fase 7 (conteúdo) concluída. **3 frentes abertas em paralelo** (ver abaixo).
 `artifact/index.html` ≈ 792 KB. Login agora obrigatório quando o Supabase
 está configurado (ver v11) — isso muda o comportamento em produção depois da
@@ -199,9 +199,24 @@ Conversa pulou entre três assuntos. Estado de cada um:
     Supabase (CDN bloqueado) libera o conteúdo mesmo assim, pra não trancar o
     aluno fora do material por causa de rede. `docs/supabase-setup.md`
     atualizado pra refletir esse comportamento nos dois casos.
-- **Pendente:** feedback do usuário sobre tudo isso. Decidir se quer widgets
-  de questão adicionados a mais módulos (hoje só M0/M4 travam o avanço por
-  questão). Fase 6 (publicar no GitHub Pages) segue depois da aprovação do
+- **v12 (commit ddc4c4c) — review externa de UX do M0:** usuário trouxe uma
+  revisão de produto com 6 pontos; escolheu começar pelos 3 rápidos (dos
+  outros 3 — calculadora de score interativa, dashboard semanal preenchível/
+  persistente, reestruturação do M0 com resumo executivo — nenhum foi
+  iniciado, ficam para quando o usuário priorizar):
+  1. `.pbadge` (o "%") aparecia em módulo travado sem checar `isUnlocked()` —
+     só o `.num-badge` respeitava o bloqueio, os dois se contradiziam.
+  2. `.num-badge` virava só "🔒" quando travado, escondendo o número em 8 dos
+     10 módulos — o conteúdo referencia "Módulo 0, 1, 4, 7..." por número, e
+     não tinha como achar isso na sidebar. Número agora sempre visível; o
+     bloqueio continua claro pela classe `.locked` (opacidade + borda
+     tracejada), não pelo texto do badge.
+  3. Gravador/cronômetro flutuantes apareciam em toda aba, inclusive nas de
+     referência pura. Agora só em mod1/2/3/4/7 (`PRACTICE_MODULES`).
+  Verificado ao vivo via Chrome headless com progresso semeado no
+  `localStorage` (headless funcionou desta vez — user-data-dir isolado evita
+  o Chrome do usuário "engolir" o comando quando já está aberto).
+- **Pendente:** Fase 6 (publicar no GitHub Pages) segue depois da aprovação do
   usuário — é ação pública/difícil de reverter, não faço sem confirmar.
 
 ### 3. Estrutura / navegação linear (FEITO — commit 7fcdd49)
