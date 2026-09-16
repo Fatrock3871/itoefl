@@ -4,7 +4,7 @@ Memória entre sessões. Atualizar ao concluir cada etapa.
 
 **Última atualização:** 2026-09-16 (v15)
 **Agora:** Fase 7 (conteúdo) concluída. **3 frentes abertas em paralelo** (ver abaixo).
-`artifact/index.html` ≈ 877 KB. Login agora obrigatório quando o Supabase
+`artifact/index.html` ≈ 881 KB. Login agora obrigatório quando o Supabase
 está configurado (ver v11) — isso muda o comportamento em produção depois da
 Fase 6, não só em dev.
 
@@ -286,15 +286,36 @@ Conversa pulou entre três assuntos. Estado de cada um:
   - **Item 5 (persistência) já estava resolvido** antes desta lista sequer
     existir — o login com Supabase (v11) já sincroniza checkboxes, SRS, Build
     a Sentence e agora os quizzes de M1/M2/M0 entre dispositivos.
-  - **Pendente da lista original de 12 (numeração dela, não a interna daqui):**
-    M7 (item 1 pra esse módulo — decisão de design à parte, simulado completo
-    não deve ter feedback item a item), item 4 (nomenclatura M6 — já feito,
-    v13), item 6 (destaque do Simulado 1 em M7 — já feito, v13), item 7
-    (cronômetro carregando o alvo do drill), item 8 (link drill↔gabarito —
-    parcialmente obsoleto, o gabarito virou inline nos widgets de M1/M2), item
-    9 (accordion em blocos densos), item 10 (registro de erros como
-    formulário), item 11 (painel de progresso consolidado — parcialmente
-    coberto pelo painel do item 3), item 12 (teste de responsividade mobile).
+  - **Item 7 (commit af69cc7):** cada Action Drill com "alvo: N min" no
+    título ganha um botão "⏱ Iniciar cronômetro (N min)" que carrega esse
+    valor no widget de cronômetro flutuante existente (nova
+    `setDrillTimerMinutes`, exposta pela IIFE do cronômetro). Lê o alvo do
+    próprio texto que o conteúdo já tinha, não duplicou em lugar nenhum.
+    Drills sem alvo em minutos (ex.: `mod2-a`, ritmo por item em segundos)
+    ficam de fora de propósito. Testado ao vivo: 22 botões injetados (13 M1 +
+    9 M2, bate exato), clique carrega "04:00" corretamente, `mod2-a`
+    confirmado sem botão.
+  - **Item 9 (commit 9c6677e):** todo h3 de conteúdo (fora os títulos dos
+    próprios widgets — `Drill .../Grupo ...`, que ficam sempre visíveis) virou
+    clicável, recolhendo/expandindo o que vem depois até o próximo h3. Nada
+    começa escondido. Implementado como a **última** IIFE do `app.js` de
+    propósito — outras partes (botão de cronômetro, índice lateral) dependem
+    da posição original dos elementos em relação aos h3/h2, então essa
+    reestruturação de DOM só podia rodar depois de tudo que já conta com essa
+    estrutura. Testado ao vivo: 274 subseções viraram accordion; 29 títulos de
+    widget confirmados fora; ciclo completo de clique (visível→escondido→
+    visível, `display:none` computado de verdade); botão de cronômetro e quiz
+    confirmados funcionando normalmente depois da reestruturação.
+  - **Item 8 considerado obsoleto pra M1/M2** — não existe mais Gabarito
+    separado pra navegar até (virou inline nos widgets); não se aplica a
+    outros módulos, que não tinham esse par drill/gabarito.
+  - **Pendente da lista original de 12:** M7 (decisão de design à parte —
+    simulado completo não deveria ter feedback item a item), item 10 (registro
+    de erros como formulário — depende de decidir onde persistir: local vs.
+    Supabase), item 11 (painel de progresso consolidado — parcialmente coberto
+    pelo painel do item 3, falta estender pra outros módulos/tipos de item),
+    item 12 (teste de responsividade mobile, nunca feito em viewport real
+    nesta leva de mudanças).
 - **Pendente:** Fase 6 (publicar no GitHub Pages) segue depois da aprovação do
   usuário — é ação pública/difícil de reverter, não faço sem confirmar.
 
