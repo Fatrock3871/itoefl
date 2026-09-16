@@ -2,9 +2,9 @@
 
 Memória entre sessões. Atualizar ao concluir cada etapa.
 
-**Última atualização:** 2026-09-16
+**Última atualização:** 2026-09-16 (v14)
 **Agora:** Fase 7 (conteúdo) concluída. **3 frentes abertas em paralelo** (ver abaixo).
-`artifact/index.html` ≈ 792 KB. Login agora obrigatório quando o Supabase
+`artifact/index.html` ≈ 810 KB. Login agora obrigatório quando o Supabase
 está configurado (ver v11) — isso muda o comportamento em produção depois da
 Fase 6, não só em dev.
 
@@ -234,6 +234,34 @@ Conversa pulou entre três assuntos. Estado de cada um:
     validar os números oficiais linha a linha contra o PDF real da ETS
     ("TOEFL iBT Test: 2026 Update Test Blueprint and Specifications
     Document") — é pesquisa externa, não edição de código.
+- **v14 (commit 8aa3911) — lista de 12 pontos, item 1 (prioridade máxima),
+  fatia 1/3:** usuário trouxe uma lista de 12 ações estruturais/interatividade
+  (fonte externa, "pronta pra colar"), pediu pra seguir em ordem com aviso
+  antes de cada bloco. Item 1 = tornar os Action Drills interativos.
+  - **Escopo real corrigido em 2 rodadas:** não é "todos os módulos" (só M1/M2
+    têm esse formato; M3/M4/M5/M6/M8/M9 não usam múltipla escolha estática; M7
+    tem formato parecido mas em escala de simulado completo, decisão à parte).
+    Contagem real de M1: **67 itens** (não 41 — a primeira contagem só pegou
+    o Grupo C; Grupos A e B usam rótulos diferentes). Usuário escolheu fatiar
+    por grupo, Grupo A primeiro.
+  - **Achado técnico que mudou a abordagem:** `build_mod1()`/`build_mod2()`
+    (o código que injetaria o widget) existiam mas **não eram chamados** —
+    `main()` usava `build_plain()` pros dois desde que os módulos foram
+    "expandidos" (comentário no próprio código). E a `build_mod1()` antiga
+    fatiava num marcador (`"PARTE 3: ACTION DRILLS"`) que não existe mais —
+    o módulo foi renumerado pra 7 partes, Action Drills é Parte 5 agora.
+    Reescrita do zero pra estrutura atual, não reaproveitamento de código morto.
+  - **Entregue:** Grupo A (Complete the Words, 32 itens/5 textos) — nova
+    `MOD1_ACTION_DRILLS_A` em `drills_data.py`, `build_mod1()` reescrita fatia
+    a Parte 5/Grupo A e troca pelo widget (mesmo motor do M0), remove a tabela
+    de gabarito redundante do Grupo A na Parte 6. Verificado: 42 qcards no
+    site (10 M0 + 32 novos), zero id duplicado, estático antigo confirmado
+    removido, Grupos B/C e M2 intactos.
+  - **Pendente:** Grupo B (14 itens), Grupo C (21 itens — inclui `C3.7`,
+    "marque 3 de 6", precisa de modo multi-seleção novo no `render_quiz.py`,
+    usuário já aprovou implementar), depois M2 (formato igual, 21 itens),
+    depois decidir M7 separadamente. Itens 2–12 da lista original nem
+    começaram.
 - **Pendente:** Fase 6 (publicar no GitHub Pages) segue depois da aprovação do
   usuário — é ação pública/difícil de reverter, não faço sem confirmar.
 
