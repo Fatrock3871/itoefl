@@ -4,7 +4,7 @@ import markdown as md
 from render_quiz import render_quiz_drill
 from render_srs import render_srs
 from render_build import render_build_sentence
-from drills_data import MOD1_DRILLS, MOD2_DRILLS
+from drills_data import MOD1_DRILLS, MOD2_DRILLS, MOD1_ACTION_DRILLS_A
 from build_sentence_data import BUILD_SENTENCE_ITEMS
 
 SRC = "../consolidated"
@@ -57,26 +57,31 @@ def build_mod0():
 
 
 # ---------- Módulo 1: Reading drills ----------
+# NOTA (2026-09-16): build_mod1() foi reescrita pra estrutura atual do módulo
+# (7 partes, "PARTE 5: ACTION DRILLS"). A versão anterior fatiava em
+# "PARTE 3: ACTION DRILLS", um marcador que não existe mais desde que o
+# módulo foi renumerado/expandido — main() usava build_plain() nesse meio
+# tempo, então nada disso rodava. Primeira fatia convertida: Grupo A
+# (Complete the Words, 32 itens). Grupos B e C seguem estáticos por ora.
 def build_mod1():
     raw = open(f"{SRC}/modulo_1_reading.md", encoding="utf-8").read()
     raw = strip_title_banner(raw)
-    before, after = slice_lines(raw, "## PARTE 3: ACTION DRILLS", "### 📊 SCORE ESTIMADO")
-    # keep the Parte 3 heading line itself, drop the rest of that section (raw drill text)
-    before_lines = before.split("\n")
-    heading_line = before_lines[-1] if before_lines and before_lines[-1].startswith("## PARTE 3") else "## PARTE 3: ACTION DRILLS — EXERCÍCIOS INTERATIVOS"
-    if before_lines and before_lines[-1].startswith("## PARTE 3"):
-        before = "\n".join(before_lines[:-1])
-    html_before = to_html(before) + f"<h2>{heading_line.split(':',1)[-1].strip()}</h2>"
 
-    # after starts at "### 📊 SCORE ESTIMADO..." -- drop the old "## PARTE 4: GABARITO..." (not present here,
-    # already excluded since we cut straight to score table)
-    html_after = to_html(after)
-
-    widgets = "".join(
+    # PARTE 5, Grupo A: troca o texto estático das 5 lacunas pelos widgets
+    before_a, after_a = slice_lines(raw, "### GRUPO A: COMPLETE THE WORDS", "### GRUPO B: READ IN DAILY LIFE")
+    widgets_a = "".join(
         render_quiz_drill(d["id"], d["title"], d["objective"], d.get("passage_html"), d["items"])
-        for d in MOD1_DRILLS
+        for d in MOD1_ACTION_DRILLS_A
     )
-    return html_before + widgets + html_after
+    html_a = to_html(before_a) + "<h3>Grupo A: Complete the Words — exercícios interativos</h3>" + widgets_a
+
+    # PARTE 6, Grupo A: a tabela de gabarito fica redundante (a explicação já
+    # aparece inline no widget acima) -- remove só essa subseção, mantém as
+    # de Grupo B/C intactas (ainda estáticas)
+    before_g, after_g = slice_lines(after_a, "### GRUPO A: Complete the Words", "### GRUPO B: Read in Daily Life")
+    html_rest = to_html(before_g) + to_html(after_g)
+
+    return html_a + html_rest
 
 
 # ---------- Módulo 2: Listening drills ----------
@@ -149,9 +154,9 @@ def add_progress_hooks(html, modkey):
 def main():
     frag = {
         "mod0": build_mod0(),
-        "mod1": build_plain(f"{SRC}/modulo_1_reading.md"),  # expandido: drills em texto + gabarito
+        "mod1": build_mod1(),  # Grupo A (Complete the Words) interativo; B/C ainda estáticos
         "mod2": build_plain(f"{SRC}/modulo_2_listening.md"),  # expandido: drills em texto + gabarito
-        # (build_mod1 / build_mod2 continuam definidos mas não usados — ver histórico)
+        # (build_mod2 continua definida mas não usada até M2 ser convertido — ver histórico)
         "mod3": build_plain(f"{SRC}/modulo_3_speaking.md"),
         "mod4": build_plain(f"{SRC}/modulo_4_writing.md"),  # expandido: 30 Build a Sentence em texto + gabarito
         "mod5": build_plain(f"{SRC}/modulo_5_registro.md"),

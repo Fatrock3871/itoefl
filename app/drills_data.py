@@ -87,6 +87,131 @@ MOD1_DRILLS = [
     },
 ]
 
+# PARTE 5 (Action Drills) do M1, Grupo A: Complete the Words — 5 textos,
+# 32 itens ao todo. Fonte: consolidated/modulo_1_reading.md PARTE 5/PARTE 6.
+MOD1_ACTION_DRILLS_A = [
+    {
+        "id": "mod1-a1",
+        "title": "Drill A1 · nível A2–B1 · alvo: 4 min",
+        "objective": "Leia o texto e escolha a opção que completa cada lacuna corretamente. Tempo alvo: 4 minutos.",
+        "passage_html": """<p><strong>TEXT: A message to a friend</strong></p>
+<p>Hi Marco,</p>
+<p>I'm really sorry, but I have to (1)_____ our plans for Saturday. My sister (2)_____ from Recife that morning and I have to pick her up at the airport. I know we (3)_____ this dinner for weeks, and I feel terrible about it.</p>
+<p>Would Sunday afternoon (4)_____ instead? There's a new place near the park that everyone (5)_____ about. If Sunday doesn't work for you, just let me (6)_____ and we'll find another day.</p>
+<p>Again, I'm sorry for the short notice.</p>
+<p>Talk soon, Lia</p>""",
+        "items": [
+            {"num": "1", "prompt": "Lacuna (1)", "options": {"A": "cancel", "B": "canceling", "C": "to cancel", "D": "cancelled"},
+             "correct": "A", "explanation": "\"Have to\" + <strong>verbo base</strong>. As opções (B) <em>canceling</em>, (C) <em>to cancel</em> e (D) <em>cancelled</em> quebram a estrutura \"have to + base\"."},
+            {"num": "2", "prompt": "Lacuna (2)", "options": {"A": "arrive", "B": "arrives", "C": "arriving", "D": "is arriving"},
+             "correct": "D", "explanation": "Compromisso futuro já combinado (\"that morning\") → <strong>presente contínuo com valor de futuro</strong>. (A)/(B) presente simples não expressam plano; (C) <em>arriving</em> sozinho não tem auxiliar."},
+            {"num": "3", "prompt": "Lacuna (3)", "options": {"A": "plan", "B": "planned", "C": "have been planning", "D": "are planning"},
+             "correct": "C", "explanation": "\"For weeks\" + ação iniciada no passado e ainda em curso → <strong>presente perfeito contínuo</strong>. (D) <em>are planning</em> ignora o \"for weeks\"; (A)/(B) não conectam passado e presente."},
+            {"num": "4", "prompt": "Lacuna (4)", "options": {"A": "work", "B": "works", "C": "working", "D": "worked"},
+             "correct": "A", "explanation": "Depois do modal <em>would</em> → <strong>base</strong>. \"Would Sunday afternoon work?\""},
+            {"num": "5", "prompt": "Lacuna (5)", "options": {"A": "talk", "B": "talks", "C": "talking", "D": "talked"},
+             "correct": "B", "explanation": "<em>Everyone</em> = <strong>singular</strong> → verbo + -s. \"Everyone talks about...\""},
+            {"num": "6", "prompt": "Lacuna (6)", "options": {"A": "know", "B": "known", "C": "knowing", "D": "to know"},
+             "correct": "A", "explanation": "<em>Let</em> + objeto + <strong>base</strong> (\"let me know\": fórmula fixa). (D) \"let me to know\" é agramatical."},
+        ],
+    },
+    {
+        "id": "mod1-a2",
+        "title": "Drill A2 · nível B1 · alvo: 4 min",
+        "objective": "Leia o texto e escolha a opção que completa cada lacuna corretamente. Tempo alvo: 4 minutos.",
+        "passage_html": """<p><strong>TEXT: Notice at a community pool</strong></p>
+<p>Starting Monday, the main pool (1)_____ closed for its annual maintenance. We expect the work (2)_____ completed by Friday afternoon. During this period, members (3)_____ still use the smaller training pool, which (4)_____ open at its usual hours.</p>
+<p>We apologize for any (5)_____ this may cause. If you have questions about your membership or class schedule, please (6)_____ to speak with the front desk staff, who will be happy to help.</p>""",
+        "items": [
+            {"num": "1", "prompt": "Lacuna (1)", "options": {"A": "is", "B": "be", "C": "being", "D": "been"},
+             "correct": "A", "explanation": "\"The main pool ___ closed\": voz passiva no presente: <strong>is</strong> + particípio (<em>closed</em>)."},
+            {"num": "2", "prompt": "Lacuna (2)", "options": {"A": "is", "B": "to be", "C": "being", "D": "be"},
+             "correct": "B", "explanation": "\"We expect the work ___ completed\": <em>expect</em> + objeto + <strong>to + infinitivo</strong> (aqui infinitivo passivo <em>to be completed</em>)."},
+            {"num": "3", "prompt": "Lacuna (3)", "options": {"A": "may", "B": "may to", "C": "maying", "D": "mays"},
+             "correct": "A", "explanation": "Modal simples; \"members may still use\". (B) \"may to\" é agramatical: modal nunca leva <em>to</em>."},
+            {"num": "4", "prompt": "Lacuna (4)", "options": {"A": "remain", "B": "remains", "C": "remaining", "D": "to remain"},
+             "correct": "B", "explanation": "Sujeito <em>which</em> retoma <em>the smaller training pool</em> (singular) → <strong>+ -s</strong>."},
+            {"num": "5", "prompt": "Lacuna (5)", "options": {"A": "inconvenient", "B": "inconveniently", "C": "inconvenience", "D": "inconvenienced"},
+             "correct": "C", "explanation": "Depois de <em>any</em>, a lacuna é <strong>substantivo</strong>: \"any inconvenience this may cause\"."},
+            {"num": "6", "prompt": "Lacuna (6)", "options": {"A": "hesitate", "B": "not hesitate", "C": "don't hesitate", "D": "hesitating"},
+             "correct": "C", "explanation": "Fórmula fixa: \"please don't hesitate to...\". (B) \"not hesitate\" sem auxiliar é agramatical num pedido; (A) sozinho inverteria o sentido."},
+        ],
+    },
+    {
+        "id": "mod1-a3",
+        "title": "Drill A3 · nível B2 · alvo: 5 min",
+        "objective": "Leia o texto e escolha a opção que completa cada lacuna corretamente. Tempo alvo: 5 minutos.",
+        "passage_html": """<p><strong>TEXT: A message from the office manager</strong></p>
+<p>Hi team,</p>
+<p>I wanted to send a quick note before the long weekend. As most of you already (1)_____, the building's heating system will be shut down for scheduled maintenance from Friday evening through Monday morning. Please make sure you (2)_____ any equipment that shouldn't be left running unattended, and take home anything that might be sensitive to temperature changes over the weekend.</p>
+<p>The maintenance crew has assured us that the work will be (3)_____ before Monday, so there shouldn't be any disruption when everyone (4)_____ back to the office. However, if the weather turns unexpectedly cold, the building may take a little longer than usual to (5)_____ up again — so please dress in layers just in case.</p>
+<p>If you have any questions or concerns, don't (6)_____ to reach out to facilities directly. We'd rather you ask a question that turns out to be unnecessary than (7)_____ a real problem over the weekend.</p>
+<p>Thanks for your patience, and enjoy the (8)_____ time off!</p>""",
+        "items": [
+            {"num": "1", "prompt": "Lacuna (1)", "options": {"A": "know", "B": "knows", "C": "known", "D": "knowing"},
+             "correct": "A", "explanation": "\"As most of you already know\" pede presente simples na 3ª pessoa do plural (forma base, sem -s). (B) quebra a concordância; (C) exigiria auxiliar (\"have known\"); (D) não completa o tempo verbal."},
+            {"num": "2", "prompt": "Lacuna (2)", "options": {"A": "turn off", "B": "turn down", "C": "turn out", "D": "turn over"},
+             "correct": "A", "explanation": "\"Turn off equipment\" = desligar equipamento. (B) = diminuir intensidade; (C) = revelar-se/comparecer; (D) = virar/entregar."},
+            {"num": "3", "prompt": "Lacuna (3)", "options": {"A": "complete", "B": "completing", "C": "completed", "D": "completes"},
+             "correct": "C", "explanation": "\"Will be _____\" pede particípio passado para a voz passiva. As outras formas quebram a estrutura \"be + particípio\"."},
+            {"num": "4", "prompt": "Lacuna (4)", "options": {"A": "come", "B": "comes", "C": "coming", "D": "will comes"},
+             "correct": "B", "explanation": "\"Everyone\" é gramaticalmente singular → 3ª pessoa do singular: \"comes back\". (D) é agramatical (\"will\" nunca é seguido de verbo com -s)."},
+            {"num": "5", "prompt": "Lacuna (5)", "options": {"A": "warm", "B": "warms", "C": "warmly", "D": "warmth"},
+             "correct": "A", "explanation": "\"To _____ up again\" pede o infinitivo (verbo base) após \"to\". \"Warm up\" é o phrasal verb certo para um ambiente recuperando temperatura."},
+            {"num": "6", "prompt": "Lacuna (6)", "options": {"A": "hesitate", "B": "hesitating", "C": "hesitation", "D": "hesitated"},
+             "correct": "A", "explanation": "\"Don't _____ to reach out\" pede verbo base após o imperativo negativo \"don't\". \"Don't hesitate to + verbo\" é expressão fixa."},
+            {"num": "7", "prompt": "Lacuna (7)", "options": {"A": "miss", "B": "lose", "C": "waste", "D": "fail"},
+             "correct": "B", "explanation": "Estrutura paralela \"ask a question... than _____ a real problem\" pede verbo base após \"than\". \"Lose\" mantém o contraste lógico entre perguntar à toa e deixar um problema real sem solução."},
+            {"num": "8", "prompt": "Lacuna (8)", "options": {"A": "extend", "B": "extending", "C": "extended", "D": "extension"},
+             "correct": "C", "explanation": "\"The _____ time off\" pede um particípio-adjetivo antes do substantivo. \"Extended time off\" = folga prolongada."},
+        ],
+    },
+    {
+        "id": "mod1-a4",
+        "title": "Drill A4 · nível B2–C1 · alvo: 5 min",
+        "objective": "Leia o texto e escolha a opção que completa cada lacuna corretamente. Tempo alvo: 5 minutos.",
+        "passage_html": """<p><strong>TEXT: Museum exhibit information card</strong></p>
+<p>This exhibit brings together more than two hundred objects (1)_____ over four decades of fieldwork in the region. Many of them (2)_____ never been displayed publicly before. Together, they offer a rare (3)_____ into daily life in a community that written records largely overlooked.</p>
+<p>Visitors are (4)_____ to move through the rooms in order, since the layout follows a rough chronology. Labels have been kept deliberately brief; those who wish to (5)_____ deeper into any single object will find extended notes on the tablets provided at the entrance. Photography without flash (6)_____ permitted throughout, except in the final room, where the light-sensitive textiles require complete darkness.</p>""",
+        "items": [
+            {"num": "1", "prompt": "Lacuna (1)", "options": {"A": "collect", "B": "collected", "C": "collecting", "D": "collection"},
+             "correct": "B", "explanation": "\"Objects ___ over four decades\": particípio reduzido de \"objects <strong>that were collected</strong>\"."},
+            {"num": "2", "prompt": "Lacuna (2)", "options": {"A": "has", "B": "have", "C": "had", "D": "having"},
+             "correct": "B", "explanation": "Sujeito <em>Many of them</em> (plural) + presente perfeito → \"have never been displayed\". (A) quebra a concordância; (C) mudaria para passado perfeito sem marco; (D) não fecha o tempo."},
+            {"num": "3", "prompt": "Lacuna (3)", "options": {"A": "window", "B": "door", "C": "mirror", "D": "bridge"},
+             "correct": "A", "explanation": "\"A rare ___ into daily life\": collocation fixa — <em>a window into/onto</em> = uma janela para (uma visão de). As outras opções não colocam com \"into daily life\" nesse sentido."},
+            {"num": "4", "prompt": "Lacuna (4)", "options": {"A": "encourage", "B": "encouraged", "C": "encouraging", "D": "encouragement"},
+             "correct": "B", "explanation": "\"Visitors are ___ to move\": voz passiva — <em>are encouraged to</em>. (C) mudaria o sujeito; (A)/(D) não formam o passivo."},
+            {"num": "5", "prompt": "Lacuna (5)", "options": {"A": "delve", "B": "fall", "C": "drop", "D": "sink"},
+             "correct": "A", "explanation": "\"Wish to ___ deeper into any single object\": <em>delve into</em> = aprofundar-se em. As outras opções não colocam com \"deeper into [um tema]\" no sentido de investigar."},
+            {"num": "6", "prompt": "Lacuna (6)", "options": {"A": "is", "B": "are", "C": "being", "D": "be"},
+             "correct": "A", "explanation": "\"Photography without flash ___ permitted\": sujeito <em>Photography</em> (incontável, singular) → <strong>is</strong>."},
+        ],
+    },
+    {
+        "id": "mod1-a5",
+        "title": "Drill A5 · nível C1 · alvo: 5 min",
+        "objective": "Leia o texto e escolha a opção que completa cada lacuna corretamente. Tempo alvo: 5 minutos.",
+        "passage_html": """<p><strong>TEXT: Excerpt from an editorial</strong></p>
+<p>For decades, the standard response to traffic congestion (1)_____ been to add lanes. The logic seems sound. Yet a growing body of research points to the opposite (2)_____: added lanes tend to attract additional drivers until, within a few years, traffic returns to its former level — a phenomenon known as induced demand. Rarely (3)_____ a policy so intuitive prove so consistently ineffective.</p>
+<p>This does not mean nothing (4)_____ be done. It means the solution lies elsewhere: in reliable public transit, in pricing that reflects the true cost of road use, and in land-use decisions that reduce the (5)_____ to drive in the first place. None of these is as politically straightforward as pouring concrete, which is (6)_____ they are so often postponed.</p>""",
+        "items": [
+            {"num": "1", "prompt": "Lacuna (1)", "options": {"A": "has", "B": "have", "C": "had", "D": "having"},
+             "correct": "A", "explanation": "Sujeito \"the standard response\" = <strong>singular</strong> → \"has been\" (presente perfeito: \"For decades... has been\"). (B) quebra a concordância; (C) pediria um marco no passado; (D) não fecha o tempo."},
+            {"num": "2", "prompt": "Lacuna (2)", "options": {"A": "conclusion", "B": "decision", "C": "opinion", "D": "suggestion"},
+             "correct": "A", "explanation": "\"Points to the opposite ___\": <em>point to a conclusion</em> é a collocation. As outras opções não colocam com \"research points to the opposite ___\"."},
+            {"num": "3", "prompt": "Lacuna (3)", "options": {"A": "does", "B": "do", "C": "is", "D": "has"},
+             "correct": "A", "explanation": "Inversão após <em>Rarely</em> no início da frase → auxiliar <strong>does</strong> + sujeito + base (<em>prove</em>). \"Rarely does a policy... prove...\""},
+            {"num": "4", "prompt": "Lacuna (4)", "options": {"A": "can", "B": "can't", "C": "must", "D": "should"},
+             "correct": "A", "explanation": "\"This does not mean nothing ___ be done\": dupla negação lógica — \"não significa que nada pode ser feito\". (B) inverteria o sentido; (C)/(D) mudam para obrigação/recomendação, não cabimento."},
+            {"num": "5", "prompt": "Lacuna (5)", "options": {"A": "need", "B": "want", "C": "wish", "D": "hope"},
+             "correct": "A", "explanation": "\"Reduce the ___ to drive\": <em>the need to (do something)</em> = a necessidade de. As outras opções não colocam com essa estrutura."},
+            {"num": "6", "prompt": "Lacuna (6)", "options": {"A": "why", "B": "because", "C": "how", "D": "what"},
+             "correct": "A", "explanation": "\"Which is ___ they are so often postponed\": \"which is why...\" = \"razão pela qual\". (B) precisaria de outra estrutura; (C)/(D) não fecham a relativa."},
+        ],
+    },
+]
+
 MOD2_DRILLS = [
     {
         "id": "mod2-d1",
