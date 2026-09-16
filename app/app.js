@@ -1316,4 +1316,41 @@
       if(res.data && res.data.session) goOnline(res.data.session);
     });
   })();
+
+  // ---------- Accordion por subseção (h3) dentro de cada parte ----------
+  // Cada h3 de conteúdo (não os títulos dos próprios drills/widgets
+  // interativos, que ficam sempre visíveis) vira clicável pra esconder/
+  // mostrar o que vem depois dele, até o próximo h3. Nada fica escondido
+  // por padrão — só dá a opção de recolher o que já foi lido; ajuda em
+  // partes longas (Laboratório de Língua, Gabaritos extensos) e em telas
+  // pequenas. Roda por último de propósito: outros passes (botão de
+  // cronômetro por drill, índice "Nesta parte") contam com a posição
+  // original dos elementos em relação aos h3/h2.
+  (function(){
+    var cards = Array.prototype.slice.call(document.querySelectorAll(".section-card"));
+    cards.forEach(function(card){
+      var h3s = Array.prototype.slice.call(card.children).filter(function(n){ return n.tagName === "H3"; });
+      h3s.forEach(function(h3){
+        var nodes = [];
+        var node = h3.nextSibling;
+        while(node && !(node.nodeType === 1 && node.tagName === "H3")){
+          nodes.push(node);
+          node = node.nextSibling;
+        }
+        var hasWidget = nodes.some(function(n){
+          return n.nodeType === 1 && (n.classList.contains("quiz-drill") || n.classList.contains("bsq") || n.querySelector(".quiz-drill, .bsq"));
+        });
+        if(hasWidget || !nodes.length) return;
+        var body = document.createElement("div");
+        body.className = "h3-body";
+        nodes.forEach(function(n){ body.appendChild(n); });
+        h3.parentNode.insertBefore(body, node);
+        h3.classList.add("h3-toggle");
+        h3.addEventListener("click", function(){
+          h3.classList.toggle("collapsed");
+          body.classList.toggle("h3-collapsed");
+        });
+      });
+    });
+  })();
 })();
