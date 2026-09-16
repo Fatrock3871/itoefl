@@ -2,9 +2,9 @@
 
 Memória entre sessões. Atualizar ao concluir cada etapa.
 
-**Última atualização:** 2026-09-16 (v14)
+**Última atualização:** 2026-09-16 (v15)
 **Agora:** Fase 7 (conteúdo) concluída. **3 frentes abertas em paralelo** (ver abaixo).
-`artifact/index.html` ≈ 810 KB. Login agora obrigatório quando o Supabase
+`artifact/index.html` ≈ 873 KB. Login agora obrigatório quando o Supabase
 está configurado (ver v11) — isso muda o comportamento em produção depois da
 Fase 6, não só em dev.
 
@@ -257,11 +257,28 @@ Conversa pulou entre três assuntos. Estado de cada um:
     de gabarito redundante do Grupo A na Parte 6. Verificado: 42 qcards no
     site (10 M0 + 32 novos), zero id duplicado, estático antigo confirmado
     removido, Grupos B/C e M2 intactos.
-  - **Pendente:** Grupo B (14 itens), Grupo C (21 itens — inclui `C3.7`,
-    "marque 3 de 6", precisa de modo multi-seleção novo no `render_quiz.py`,
-    usuário já aprovou implementar), depois M2 (formato igual, 21 itens),
-    depois decidir M7 separadamente. Itens 2–12 da lista original nem
-    começaram.
+  - **v15 (commits 685fddc, 7e257e6, 4974909) — item 1 completo pra M1+M2:**
+    usuário autorizou seguir sem pausa entre blocos ("continue até o final").
+    Grupo B do M1 (14 itens) e Grupo C do M1 (21 itens, inclui `C3.7` —
+    implementado suporte a múltipla seleção em `render_quiz.py`/`app.js`,
+    `data-multi="N"` no `.qcard`, testado ao vivo via clique simulado em
+    Chrome headless: limite de N marcações respeitado, correção por conjunto
+    funcionando). Depois M2 inteiro (51 itens, 4 grupos — Listen and Choose
+    a Response/Conversation/Announcement/Academic Talk), mesma reescrita de
+    `build_modN()` que M1 precisou (marcador antigo não existia mais).
+    **Total: 118 itens novos interativos, 128 no site inteiro (+ M0).**
+    Verificado a cada fatia: contagem de `qcard` bate exato, zero id
+    duplicado, estático antigo removido, gabarito redundante removido mantendo
+    Score Consolidado, módulos vizinhos intocados.
+  - **Item 2 da lista (botão "Corrigir")** já sai satisfeito de graça: o
+    próprio widget reaproveitado (M0) sempre teve "Confirmar resposta" +
+    feedback inline, sem precisar navegar até o Gabarito.
+  - **Pendente:** M7 (formato de simulado completo — decisão de design à
+    parte, ver nota anterior) e os itens 3–12 da lista original (contagem
+    em tempo real na Calculadora de Score, persistência já resolvida via
+    Supabase existente, cronômetro por drill, navegação drill↔gabarito,
+    accordion em blocos densos, registro de erros como formulário, painel
+    de progresso consolidado, teste de responsividade mobile).
 - **Pendente:** Fase 6 (publicar no GitHub Pages) segue depois da aprovação do
   usuário — é ação pública/difícil de reverter, não faço sem confirmar.
 
