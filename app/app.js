@@ -385,6 +385,19 @@
 
     function saveState(){ safeSet(lsKey, JSON.stringify(state)); }
 
+    // itens de múltipla seleção (data-multi="N" no .qcard): picked vira um
+    // array de letras em vez de uma letra só; acerta se o CONJUNTO bate,
+    // independente da ordem em que foram marcadas
+    function isMultiCard(card){ return !!card.dataset.multi; }
+    function isCardCorrect(card, picked){
+      if(isMultiCard(card)){
+        var want = card.dataset.correct.split(",").map(function(s){ return s.trim(); }).sort();
+        var got = (picked || []).slice().sort();
+        return want.length === got.length && want.every(function(L, i){ return L === got[i]; });
+      }
+      return picked === card.dataset.correct;
+    }
+
     function renderSummary(){
       var total = qcards.length, confirmed = 0, correct = 0;
       qcards.forEach(function(card){
@@ -392,7 +405,7 @@
         var s = state[num];
         if(s && s.confirmed){
           confirmed++;
-          if(s.picked === card.dataset.correct) correct++;
+          if(isCardCorrect(card, s.picked)) correct++;
         }
       });
       var bar = drillEl.querySelector(".quiz-bar-fill");
@@ -417,6 +430,8 @@
     function applyCardState(card){
       var num = card.dataset.num;
       var s = state[num];
+      var multi = isMultiCard(card);
+      var need = multi ? parseInt(card.dataset.multi, 10) : 1;
       var opts = Array.prototype.slice.call(card.querySelectorAll(".opt"));
       var confirmBtn = card.querySelector(".qconfirm");
       var fb = card.querySelector(".qfeedback");
@@ -427,19 +442,22 @@
         return;
       }
       if(!s.confirmed){
+        var pickedList = multi ? (s.picked || []) : (s.picked ? [s.picked] : []);
         opts.forEach(function(o){
           o.disabled = false;
-          o.classList.toggle("picked", o.dataset.letter === s.picked);
+          o.classList.toggle("picked", pickedList.indexOf(o.dataset.letter) !== -1);
         });
-        if(confirmBtn){ confirmBtn.hidden = false; confirmBtn.disabled = !s.picked; }
+        if(confirmBtn){ confirmBtn.hidden = false; confirmBtn.disabled = pickedList.length !== need; }
         if(fb) fb.hidden = true;
       } else {
-        var correct = card.dataset.correct;
+        var wantSet = multi ? card.dataset.correct.split(",").map(function(x){ return x.trim(); }) : [card.dataset.correct];
+        var gotSet = multi ? (s.picked || []) : [s.picked];
         opts.forEach(function(o){
           o.disabled = true;
           o.classList.remove("picked");
-          if(o.dataset.letter === correct) o.classList.add("correct");
-          else if(o.dataset.letter === s.picked) o.classList.add("wrong");
+          var L = o.dataset.letter;
+          if(wantSet.indexOf(L) !== -1) o.classList.add("correct");
+          else if(gotSet.indexOf(L) !== -1) o.classList.add("wrong");
         });
         if(confirmBtn){ confirmBtn.hidden = true; }
         if(fb) fb.hidden = false;
@@ -448,6 +466,8 @@
 
     qcards.forEach(function(card){
       var num = card.dataset.num;
+      var multi = isMultiCard(card);
+      var need = multi ? parseInt(card.dataset.multi, 10) : 1;
       var opts = Array.prototype.slice.call(card.querySelectorAll(".opt"));
       var confirmBtn = card.querySelector(".qconfirm");
 
@@ -455,7 +475,16 @@
         o.addEventListener("click", function(){
           var s = state[num];
           if(s && s.confirmed) return; // already revealed, locked
-          state[num] = { picked: o.dataset.letter, confirmed: false };
+          if(multi){
+            var cur = (state[num] && state[num].picked) || [];
+            var L = o.dataset.letter;
+            var idx = cur.indexOf(L);
+            if(idx !== -1){ cur = cur.slice(0, idx).concat(cur.slice(idx + 1)); }
+            else if(cur.length < need){ cur = cur.concat([L]); }
+            state[num] = { picked: cur, confirmed: false };
+          } else {
+            state[num] = { picked: o.dataset.letter, confirmed: false };
+          }
           saveState();
           applyCardState(card);
         });
@@ -464,7 +493,8 @@
       if(confirmBtn){
         confirmBtn.addEventListener("click", function(){
           var s = state[num];
-          if(!s || !s.picked) return;
+          var pickedCount = s ? (multi ? (s.picked || []).length : (s.picked ? 1 : 0)) : 0;
+          if(pickedCount !== need) return;
           s.confirmed = true;
           saveState();
           applyCardState(card);

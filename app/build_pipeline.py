@@ -4,7 +4,10 @@ import markdown as md
 from render_quiz import render_quiz_drill
 from render_srs import render_srs
 from render_build import render_build_sentence
-from drills_data import MOD1_DRILLS, MOD2_DRILLS, MOD1_ACTION_DRILLS_A, MOD1_ACTION_DRILLS_B
+from drills_data import (
+    MOD1_DRILLS, MOD2_DRILLS,
+    MOD1_ACTION_DRILLS_A, MOD1_ACTION_DRILLS_B, MOD1_ACTION_DRILLS_C,
+)
 from build_sentence_data import BUILD_SENTENCE_ITEMS
 
 SRC = "../consolidated"
@@ -83,13 +86,23 @@ def build_mod1():
     )
     html_b = to_html(before_b) + "<h3>Grupo B: Read in Daily Life — exercícios interativos</h3>" + widgets_b
 
-    # PARTE 6: remove as tabelas de gabarito redundantes de A e B (a explicação
-    # já aparece inline nos widgets acima); Grupo C segue estático por ora
+    # PARTE 5, Grupo C: troca as 3 passagens acadêmicas pelos widgets
+    # (C3.7 é múltipla seleção — "multi": 3 no item, suportado pelo widget)
+    before_c, rest = slice_lines(rest, "### GRUPO C: READ AN ACADEMIC PASSAGE", "## PARTE 6: GABARITO COMENTADO")
+    widgets_c = "".join(
+        render_quiz_drill(d["id"], d["title"], d["objective"], d.get("passage_html"), d["items"])
+        for d in MOD1_ACTION_DRILLS_C
+    )
+    html_c = to_html(before_c) + "<h3>Grupo C: Read an Academic Passage — exercícios interativos</h3>" + widgets_c
+
+    # PARTE 6: remove as 3 tabelas de gabarito redundantes (a explicação já
+    # aparece inline em cada widget acima); mantém o Score Consolidado
     before_g, rest = slice_lines(rest, "### GRUPO A: Complete the Words", "### GRUPO B: Read in Daily Life")
     _, rest = slice_lines(rest, "### GRUPO B: Read in Daily Life", "### GRUPO C: Read an Academic Passage")
+    _, rest = slice_lines(rest, "### GRUPO C: Read an Academic Passage", "### 📊 SCORE CONSOLIDADO DOS DRILLS")
     html_rest = to_html(before_g) + to_html(rest)
 
-    return html_a + html_b + html_rest
+    return html_a + html_b + html_c + html_rest
 
 
 # ---------- Módulo 2: Listening drills ----------

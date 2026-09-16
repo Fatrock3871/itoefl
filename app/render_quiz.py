@@ -9,8 +9,9 @@ def render_quiz_drill(drill_id, title, objective, passage_html, items):
             f'<span class="oletter">{L}</span><span class="otext">{txt}</span></button>'
             for L, txt in it["options"].items()
         )
+        multi_attr = f' data-multi="{it["multi"]}"' if it.get("multi") else ""
         cards.append(f'''
-<div class="qcard" data-correct="{it['correct']}" data-num="{it['num']}">
+<div class="qcard" data-correct="{it['correct']}" data-num="{it['num']}"{multi_attr}>
   <div class="qhead"><span class="qnum">{it['num']}</span></div>
   <p class="qprompt">{it['prompt']}</p>
   <div class="qopts">{opts}</div>
