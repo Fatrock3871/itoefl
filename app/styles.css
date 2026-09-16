@@ -486,6 +486,12 @@ main{max-width:1320px; margin:0 auto; padding:0 30px 120px; min-width:0;}
 .quiz-passage p:last-child{margin-bottom:0 !important;}
 .quiz-passage blockquote{margin:0;}
 .quiz-objective{font-size:13.5px; color:var(--ink-2); margin:0 0 14px !important; font-style:italic;}
+.drill-timer-btn{
+  display:inline-flex; align-items:center; gap:6px; margin:0 0 12px; padding:7px 14px;
+  border-radius:99px; border:1.5px solid var(--accent); background:var(--accent-wash); color:var(--accent-strong);
+  font-family:'Bricolage Grotesque',sans-serif; font-size:12.5px; font-weight:700; cursor:pointer;
+}
+.drill-timer-btn:hover{background:var(--accent); color:#fff;}
 .quiz-summary{
   margin-top:16px; padding:14px 18px; border-radius:7px; background:var(--accent-wash);
   border:2px solid var(--accent); display:flex; align-items:center; justify-content:space-between; gap:12px; flex-wrap:wrap;

@@ -565,6 +565,10 @@
   });
 
   // ---------- Cronômetro de seção ----------
+  // setDrillTimerMinutes fica exposta fora da IIFE pro botão "iniciar
+  // cronômetro" de cada Action Drill (mais abaixo) poder carregar o alvo
+  // específico daquele drill, sem duplicar a lógica do widget.
+  var setDrillTimerMinutes = null;
   (function(){
     var wrap = document.getElementById("secTimer");
     if(!wrap) return;
@@ -645,8 +649,40 @@
     resetBtn.addEventListener("click", reset);
     toggle.addEventListener("click", function(){ wrap.classList.toggle("collapsed"); });
 
+    setDrillTimerMinutes = function(mins){
+      minutes = mins;
+      safeSet(LS_PRESET, String(mins));
+      markPreset(); // nenhum preset padrão bate com o alvo do drill — fica sem destaque, esperado
+      reset();
+      wrap.classList.remove("collapsed");
+      if(wrap.scrollIntoView) wrap.scrollIntoView({behavior:"smooth", block:"nearest"});
+    };
+
     markPreset();
     render();
+  })();
+
+  // ---------- Botão "iniciar cronômetro" em cada Action Drill ----------
+  // Lê o "alvo: N min" que já existe no título do drill (mesmo texto que o
+  // conteúdo sempre teve) e carrega esse valor no cronômetro flutuante —
+  // sem duplicar o alvo em nenhum lugar novo.
+  (function(){
+    if(!setDrillTimerMinutes) return;
+    Array.prototype.forEach.call(document.querySelectorAll(".quiz-drill"), function(drillEl){
+      var node = drillEl.previousElementSibling;
+      while(node && node.tagName !== "H3"){ node = node.previousElementSibling; }
+      if(!node) return;
+      var m = node.textContent.match(/alvo:\s*(\d+)\s*min/i);
+      if(!m) return;
+      var mins = parseInt(m[1], 10);
+      if(!mins) return;
+      var btn = document.createElement("button");
+      btn.type = "button";
+      btn.className = "drill-timer-btn";
+      btn.textContent = "⏱ Iniciar cronômetro (" + mins + " min)";
+      btn.addEventListener("click", function(){ setDrillTimerMinutes(mins); });
+      node.parentNode.insertBefore(btn, node.nextSibling);
+    });
   })();
 
   // ---------- Gravador de voz (Speaking) ----------
