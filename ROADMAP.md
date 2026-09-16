@@ -4,7 +4,7 @@ Memória entre sessões. Atualizar ao concluir cada etapa.
 
 **Última atualização:** 2026-09-16 (v15)
 **Agora:** Fase 7 (conteúdo) concluída. **3 frentes abertas em paralelo** (ver abaixo).
-`artifact/index.html` ≈ 873 KB. Login agora obrigatório quando o Supabase
+`artifact/index.html` ≈ 877 KB. Login agora obrigatório quando o Supabase
 está configurado (ver v11) — isso muda o comportamento em produção depois da
 Fase 6, não só em dev.
 
@@ -273,12 +273,28 @@ Conversa pulou entre três assuntos. Estado de cada um:
   - **Item 2 da lista (botão "Corrigir")** já sai satisfeito de graça: o
     próprio widget reaproveitado (M0) sempre teve "Confirmar resposta" +
     feedback inline, sem precisar navegar até o Gabarito.
-  - **Pendente:** M7 (formato de simulado completo — decisão de design à
-    parte, ver nota anterior) e os itens 3–12 da lista original (contagem
-    em tempo real na Calculadora de Score, persistência já resolvida via
-    Supabase existente, cronômetro por drill, navegação drill↔gabarito,
-    accordion em blocos densos, registro de erros como formulário, painel
-    de progresso consolidado, teste de responsividade mobile).
+  - **Item 3 (commit 916e70e):** painel novo "Seu desempenho real até agora"
+    (M0, Parte 4, depois de 4.3) soma automaticamente os acertos confirmados
+    em todos os Action Drills de M1+M2 (via `computeQuizAccuracy()`, novo em
+    `app.js`, prefixo `mod1-`/`mod2-` no id do drill) e mostra a banda CEFR
+    (reaproveita `cefrBandFromPct`, a mesma tabela do diagnóstico) — zero
+    input manual, atualiza sozinho a cada "Confirmar resposta" em qualquer
+    aba. `isMultiCard`/`isCardCorrect` saíram do closure por-drill pra escopo
+    compartilhado nesse processo. Testado ao vivo via headless com respostas
+    seedadas no localStorage: 4/6 certas → 67%/B2; 12/12 → 100%/C2, ambos
+    batendo a tabela da Parte 4.2.
+  - **Item 5 (persistência) já estava resolvido** antes desta lista sequer
+    existir — o login com Supabase (v11) já sincroniza checkboxes, SRS, Build
+    a Sentence e agora os quizzes de M1/M2/M0 entre dispositivos.
+  - **Pendente da lista original de 12 (numeração dela, não a interna daqui):**
+    M7 (item 1 pra esse módulo — decisão de design à parte, simulado completo
+    não deve ter feedback item a item), item 4 (nomenclatura M6 — já feito,
+    v13), item 6 (destaque do Simulado 1 em M7 — já feito, v13), item 7
+    (cronômetro carregando o alvo do drill), item 8 (link drill↔gabarito —
+    parcialmente obsoleto, o gabarito virou inline nos widgets de M1/M2), item
+    9 (accordion em blocos densos), item 10 (registro de erros como
+    formulário), item 11 (painel de progresso consolidado — parcialmente
+    coberto pelo painel do item 3), item 12 (teste de responsividade mobile).
 - **Pendente:** Fase 6 (publicar no GitHub Pages) segue depois da aprovação do
   usuário — é ação pública/difícil de reverter, não faço sem confirmar.
 
