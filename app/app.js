@@ -61,7 +61,7 @@
 
   // chaves que sincronizam com o Supabase (progresso real do aluno).
   // ficam de fora: toefl_theme_v1, toefl_active_tab, toefl_timer_preset, toefl_sync_*
-  var SYNC_PREFIXES = ["toefl_progress", "toefl_srs_", "toefl_bsq_", "toefl_quiz_", "toefl_avatar"];
+  var SYNC_PREFIXES = ["toefl_progress", "toefl_srs_", "toefl_bsq_", "toefl_quiz_", "toefl_avatar", "toefl_errlog_"];
   function isSyncedKey(key){
     if(!key || key.indexOf("toefl_") !== 0) return false;
     for(var i = 0; i < SYNC_PREFIXES.length; i++){
@@ -1314,6 +1314,84 @@
     });
     client.auth.getSession().then(function(res){
       if(res.data && res.data.session) goOnline(res.data.session);
+    });
+  })();
+
+  // ---------- Registro de erros (formulário por módulo) ----------
+  // Cada .errlog guarda um histórico em toefl_errlog_<mod>_v1 (sincroniza
+  // como o resto do progresso). Substitui o template de texto antigo
+  // ("preencha à mão em outro lugar") por um formulário que já soma
+  // frequência por código — o mesmo aviso que o conteúdo já dava ("código
+  // que aparece 3+ vezes é prioridade") passa a ser calculado, não lido.
+  (function(){
+    var panels = Array.prototype.slice.call(document.querySelectorAll(".errlog"));
+    panels.forEach(function(panel){
+      var modKey = panel.dataset.errlog;
+      var lsKey = "toefl_errlog_" + modKey + "_v1";
+      var form = panel.querySelector(".errlog-form");
+      var dateEl = panel.querySelector(".errlog-date");
+      var drillEl = panel.querySelector(".errlog-drill");
+      var resultEl = panel.querySelector(".errlog-result");
+      var historyEl = panel.querySelector(".errlog-history");
+      var listEl = panel.querySelector(".errlog-list");
+      var freqEl = panel.querySelector(".errlog-freq");
+
+      function load(){
+        try { return JSON.parse(safeGet(lsKey) || "[]"); } catch(e){ return []; }
+      }
+      function save(entries){ safeSet(lsKey, JSON.stringify(entries)); }
+
+      function render(){
+        var entries = load();
+        historyEl.hidden = entries.length === 0;
+        if(!entries.length) return;
+
+        var freq = {};
+        entries.forEach(function(e){
+          (e.codes || []).forEach(function(c){ freq[c] = (freq[c] || 0) + 1; });
+        });
+        var hot = Object.keys(freq).filter(function(c){ return freq[c] >= 3; }).sort(function(a,b){ return freq[b]-freq[a]; });
+        freqEl.textContent = hot.length ? "· prioridade: " + hot.map(function(c){ return c + " (" + freq[c] + "×)"; }).join(", ") : "";
+
+        listEl.innerHTML = "";
+        entries.forEach(function(entry, idx){
+          var row = document.createElement("div");
+          row.className = "errlog-entry";
+          var codesTxt = (entry.codes || []).join(", ");
+          row.innerHTML =
+            '<span class="errlog-entry-date">' + (entry.date || "—") + '</span>' +
+            '<span class="errlog-entry-drill">' + (entry.drill || "—") + '</span>' +
+            '<span class="errlog-entry-result">' + (entry.result || "—") + '</span>' +
+            '<span class="errlog-entry-codes">' + (codesTxt || "sem código") + '</span>' +
+            '<button type="button" class="errlog-entry-del" aria-label="Remover registro">✕</button>';
+          row.querySelector(".errlog-entry-del").addEventListener("click", function(){
+            var cur = load();
+            cur.splice(idx, 1);
+            save(cur);
+            render();
+          });
+          listEl.appendChild(row);
+        });
+      }
+
+      if(form){
+        form.addEventListener("submit", function(e){
+          e.preventDefault();
+          var codes = Array.prototype.slice.call(panel.querySelectorAll(".errlog-code input:checked")).map(function(i){ return i.value; });
+          var entries = load();
+          entries.unshift({
+            date: dateEl.value || new Date().toISOString().slice(0, 10),
+            drill: drillEl.value.trim(),
+            result: resultEl.value.trim(),
+            codes: codes,
+          });
+          save(entries);
+          form.reset();
+          render();
+        });
+      }
+
+      render();
     });
   })();
 
