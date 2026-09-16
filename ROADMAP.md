@@ -2,7 +2,7 @@
 
 Memória entre sessões. Atualizar ao concluir cada etapa.
 
-**Última atualização:** 2026-09-15
+**Última atualização:** 2026-09-16
 **Agora:** Fase 7 (conteúdo) concluída. **3 frentes abertas em paralelo** (ver abaixo).
 `artifact/index.html` ≈ 792 KB. Login agora obrigatório quando o Supabase
 está configurado (ver v11) — isso muda o comportamento em produção depois da
@@ -216,6 +216,24 @@ Conversa pulou entre três assuntos. Estado de cada um:
   Verificado ao vivo via Chrome headless com progresso semeado no
   `localStorage` (headless funcionou desta vez — user-data-dir isolado evita
   o Chrome do usuário "engolir" o comando quando já está aberto).
+- **v13 (commit 5837c13) — 2/4 da review de conteúdo (M1/M5/M6/M7/M8/M0):**
+  usuário confirmou os achados da review externa (estrutura consistente
+  M1→M5, ruptura de nomenclatura em M6, nota do Simulado 1 sem destaque em
+  M7, tom "coach" pontual mas sustentado por disclaimer+números reais em M8,
+  citação da fonte ETS real mas não conferida número a número) e priorizou
+  os 2 rápidos:
+  - M6: "SEÇÃO N" → "PARTE N" em todo o módulo (29 ocorrências — 12 títulos +
+    17 refs cruzadas + 1 uso genérico minúsculo que o replace automático não
+    pegou). Resolve de tabela o efeito colateral que o usuário apontou: a
+    barra "Nesta parte" também mudava de rótulo por módulo, porque reflete o
+    texto do heading.
+  - M7: nota "Simulado 1 = diagnóstico do M0" era parágrafo comum, sem
+    destaque — virou blockquote com 📌 (mesmo padrão dos callouts ⚠️/📌 já
+    usados no resto do site).
+  - **Não feito ainda (não é rápido, precisa de confirmação separada):**
+    validar os números oficiais linha a linha contra o PDF real da ETS
+    ("TOEFL iBT Test: 2026 Update Test Blueprint and Specifications
+    Document") — é pesquisa externa, não edição de código.
 - **Pendente:** Fase 6 (publicar no GitHub Pages) segue depois da aprovação do
   usuário — é ação pública/difícil de reverter, não faço sem confirmar.
 
