@@ -85,21 +85,23 @@
   var themeBtn = document.getElementById("themeToggle");
   var themeIcon = document.getElementById("themeIcon");
   var themeLabel = document.getElementById("themeLabel");
-  var themeStates = ["system", "light", "dark"];
-  var themeIcons = {system:"🌗", light:"☀️", dark:"🌙"};
-  var themeLabels = {system:"Sistema", light:"Claro", dark:"Escuro"};
+  // Só dois termos: claro/escuro — sem estado "sistema". Na primeira visita
+  // (nada salvo ainda), usa a preferência do SO uma vez só como ponto de
+  // partida; dali em diante é um alternador simples entre os dois.
+  var themeIcons = {light:"☀️", dark:"🌙"};
+  var themeLabels = {light:"Claro", dark:"Escuro"};
 
   function applyTheme(mode){
-    if(mode === "system"){ root.removeAttribute("data-theme"); }
-    else { root.setAttribute("data-theme", mode); }
+    root.setAttribute("data-theme", mode);
     themeIcon.textContent = themeIcons[mode];
     themeLabel.textContent = themeLabels[mode];
   }
-  var savedTheme = safeGet(LS_THEME) || "system";
+  var prefersDark = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches;
+  var savedTheme = safeGet(LS_THEME) || (prefersDark ? "dark" : "light");
   applyTheme(savedTheme);
   themeBtn.addEventListener("click", function(){
-    var cur = safeGet(LS_THEME) || "system";
-    var next = themeStates[(themeStates.indexOf(cur)+1) % themeStates.length];
+    var cur = safeGet(LS_THEME) || savedTheme;
+    var next = cur === "dark" ? "light" : "dark";
     safeSet(LS_THEME, next);
     applyTheme(next);
   });

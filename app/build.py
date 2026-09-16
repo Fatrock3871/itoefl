@@ -117,8 +117,13 @@ else:
 gate_hidden = "" if (supa_url and supa_key) else "hidden"
 gate = (
     f'<div class="auth-gate" id="authGate" {gate_hidden}>'
+    '<span class="auth-gate-ghost">iT</span>'
     '<div class="auth-gate-card">'
-    '<span class="auth-gate-logo">iT</span>'
+    '<div class="auth-gate-brand">'
+    '<span class="logo">iT</span>'
+    '<span class="btxt"><span class="name">iTOEFL</span><span class="mark">Preparação independente</span></span>'
+    '</div>'
+    '<span class="auth-gate-kicker">Acesso à plataforma</span>'
     '<h2>Entre para continuar</h2>'
     '<p>Seu progresso fica salvo na sua conta e sincroniza entre dispositivos.</p>'
     '<div class="auth-gate-actions">'
