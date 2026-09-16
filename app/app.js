@@ -61,7 +61,7 @@
 
   // chaves que sincronizam com o Supabase (progresso real do aluno).
   // ficam de fora: toefl_theme_v1, toefl_active_tab, toefl_timer_preset, toefl_sync_*
-  var SYNC_PREFIXES = ["toefl_progress", "toefl_srs_", "toefl_bsq_", "toefl_quiz_", "toefl_avatar", "toefl_errlog_"];
+  var SYNC_PREFIXES = ["toefl_progress", "toefl_srs_", "toefl_bsq_", "toefl_quiz_", "toefl_avatar", "toefl_errlog_", "toefl_cert_"];
   function isSyncedKey(key){
     if(!key || key.indexOf("toefl_") !== 0) return false;
     for(var i = 0; i < SYNC_PREFIXES.length; i++){
@@ -284,6 +284,17 @@
     document.getElementById("opFill").style.width = pct + "%";
     var opCount = document.getElementById("opCount");
     if(opCount) opCount.innerHTML = "<b>" + modsDone + "</b> de " + modOrder.length + " módulos concluídos";
+
+    // curso inteiro concluído (todos os módulos + o quiz do último, já que o
+    // gate de avanço só valida o módulo ANTERIOR ao entrar no próximo — o
+    // último nunca passa por essa checagem sozinho)
+    var lastMod = modOrder[modOrder.length - 1];
+    var courseDone = modsDone === modOrder.length && moduleQuizPct(lastMod) >= 100;
+    var certBtn = document.getElementById("certBtn");
+    if(certBtn) certBtn.hidden = !courseDone;
+    if(courseDone && !safeGet("toefl_cert_date_v1")){
+      safeSet("toefl_cert_date_v1", new Date().toISOString());
+    }
 
     // reflete no estado visual da sidebar: concluído (✓), atual, ou bloqueado (🔒).
     // o número do módulo fica sempre visível (mesmo bloqueado — o texto dos
@@ -1315,6 +1326,43 @@
     client.auth.getSession().then(function(res){
       if(res.data && res.data.session) goOnline(res.data.session);
     });
+  })();
+
+  // ---------- Certificado de conclusão (nada oficial) ----------
+  (function(){
+    var btn = document.getElementById("certBtn");
+    var modal = document.getElementById("certModal");
+    if(!btn || !modal) return;
+    var backdrop = document.getElementById("certModalBackdrop");
+    var closeBtn = document.getElementById("certClose");
+    var printBtn = document.getElementById("certPrint");
+    var nameEl = document.getElementById("certName");
+    var dateEl = document.getElementById("certDate");
+
+    function fmtDate(iso){
+      try{
+        var d = new Date(iso);
+        return d.toLocaleDateString("pt-BR", { day:"2-digit", month:"long", year:"numeric" });
+      }catch(e){ return ""; }
+    }
+    function open(){
+      var email = document.getElementById("authEmail");
+      var name = (email && email.textContent.trim()) ? email.textContent.trim().split("@")[0] : "Aluno(a) iTOEFL";
+      nameEl.textContent = name;
+      var iso = safeGet("toefl_cert_date_v1");
+      dateEl.textContent = iso ? "Concluído em " + fmtDate(iso) : "";
+      modal.hidden = false;
+      document.body.classList.add("menu-open"); // reaproveita o travamento de scroll do drawer
+    }
+    function close(){
+      modal.hidden = true;
+      document.body.classList.remove("menu-open");
+    }
+    btn.addEventListener("click", open);
+    closeBtn.addEventListener("click", close);
+    backdrop.addEventListener("click", close);
+    document.addEventListener("keydown", function(e){ if(e.key === "Escape" && !modal.hidden) close(); });
+    printBtn.addEventListener("click", function(){ window.print(); });
   })();
 
   // ---------- Registro de erros (formulário por módulo) ----------

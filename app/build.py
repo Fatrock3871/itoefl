@@ -130,6 +130,25 @@ gate = (
     '</div>'
 )
 
+# certificado de conclusão: nada oficial, só uma tela pra comemorar que
+# terminou os 10 módulos — aparece a partir daí (ver app.js/updateBadges)
+cert_modal = (
+    '<div class="cert-modal" id="certModal" hidden>'
+    '<div class="cert-modal-backdrop" id="certModalBackdrop"></div>'
+    '<div class="cert-card">'
+    '<button type="button" class="cert-close" id="certClose" aria-label="Fechar">✕</button>'
+    '<div class="cert-ornament">🎓</div>'
+    '<p class="cert-kicker">Certificado de Conclusão</p>'
+    '<h2 class="cert-name" id="certName">Aluno(a) iTOEFL</h2>'
+    '<p class="cert-body">concluiu a preparação completa para o <strong>TOEFL iBT</strong> '
+    '(formato 2026) pela plataforma iTOEFL — os 10 módulos, do diagnóstico ao protocolo do dia da prova.</p>'
+    '<p class="cert-date" id="certDate"></p>'
+    '<p class="cert-disclaimer">Não é um certificado oficial da ETS — é só um jeito de comemorar que você terminou. 🎉</p>'
+    '<button type="button" class="cert-print" id="certPrint">🖨 Imprimir / salvar como PDF</button>'
+    '</div>'
+    '</div>'
+)
+
 html = f'''<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -142,6 +161,7 @@ html = f'''<!DOCTYPE html>
 </head>
 <body>
 {gate}
+{cert_modal}
 <div class="shell">
   <div class="side-backdrop" id="sideBackdrop"></div>
   <aside class="side" id="sideRail">
@@ -166,6 +186,7 @@ html = f'''<!DOCTYPE html>
       <span class="level-badge-band" id="levelBadgeBand"></span>
       <span class="level-badge-sched" id="levelBadgeSched"></span>
     </div>
+    <button type="button" class="cert-btn" id="certBtn" hidden>🎓 Ver certificado de conclusão</button>
     <nav class="modnav" id="modnav">
       {nav_items}
     </nav>
