@@ -7,6 +7,7 @@ from render_build import render_build_sentence
 from drills_data import (
     MOD1_DRILLS, MOD2_DRILLS,
     MOD1_ACTION_DRILLS_A, MOD1_ACTION_DRILLS_B, MOD1_ACTION_DRILLS_C,
+    MOD2_ACTION_DRILLS_A, MOD2_ACTION_DRILLS_B, MOD2_ACTION_DRILLS_C, MOD2_ACTION_DRILLS_D,
 )
 from build_sentence_data import BUILD_SENTENCE_ITEMS
 
@@ -106,22 +107,36 @@ def build_mod1():
 
 
 # ---------- Módulo 2: Listening drills ----------
+# NOTA (2026-09-16): mesma reescrita de build_mod1() — a versão anterior
+# fatiava em "PARTE 3: ACTION DRILLS", marcador que não existe mais (Action
+# Drills é Parte 5 na estrutura atual, 4 grupos A-D).
 def build_mod2():
     raw = open(f"{SRC}/modulo_2_listening.md", encoding="utf-8").read()
     raw = strip_title_banner(raw)
-    before, after = slice_lines(raw, "## PARTE 3: ACTION DRILLS", "### 📊 SCORE ESTIMADO")
-    before_lines = before.split("\n")
-    heading_line = before_lines[-1] if before_lines and before_lines[-1].startswith("## PARTE 3") else "## PARTE 3: ACTION DRILLS — EXERCÍCIOS CRONOMETRADOS"
-    if before_lines and before_lines[-1].startswith("## PARTE 3"):
-        before = "\n".join(before_lines[:-1])
-    html_before = to_html(before) + f"<h2>{heading_line.split(':',1)[-1].strip()}</h2>"
-    html_after = to_html(after)
 
-    widgets = "".join(
-        render_quiz_drill(d["id"], d["title"], d["objective"], d.get("passage_html"), d["items"])
-        for d in MOD2_DRILLS
-    )
-    return html_before + widgets + html_after
+    def swap_group(rest, start_marker, end_marker, label, drills):
+        before, rest = slice_lines(rest, start_marker, end_marker)
+        widgets = "".join(
+            render_quiz_drill(d["id"], d["title"], d["objective"], d.get("passage_html"), d["items"])
+            for d in drills
+        )
+        return to_html(before) + f"<h3>{label} — exercícios interativos</h3>" + widgets, rest
+
+    rest = raw
+    html_a, rest = swap_group(rest, "### GRUPO A: LISTEN AND CHOOSE A RESPONSE", "### GRUPO B: LISTEN TO A CONVERSATION", "Grupo A: Listen and Choose a Response", MOD2_ACTION_DRILLS_A)
+    html_b, rest = swap_group(rest, "### GRUPO B: LISTEN TO A CONVERSATION", "### GRUPO C: LISTEN TO AN ANNOUNCEMENT", "Grupo B: Listen to a Conversation", MOD2_ACTION_DRILLS_B)
+    html_c, rest = swap_group(rest, "### GRUPO C: LISTEN TO AN ANNOUNCEMENT", "### GRUPO D: LISTEN TO AN ACADEMIC TALK", "Grupo C: Listen to an Announcement", MOD2_ACTION_DRILLS_C)
+    html_d, rest = swap_group(rest, "### GRUPO D: LISTEN TO AN ACADEMIC TALK", "## PARTE 6: GABARITO COMENTADO", "Grupo D: Listen to an Academic Talk", MOD2_ACTION_DRILLS_D)
+
+    # PARTE 6: remove as 4 tabelas de gabarito redundantes (a explicação já
+    # aparece inline em cada widget acima); mantém o Score Consolidado
+    before_g, rest = slice_lines(rest, "### GRUPO A: Listen and Choose a Response", "### GRUPO B: Listen to a Conversation")
+    _, rest = slice_lines(rest, "### GRUPO B: Listen to a Conversation", "### GRUPO C: Listen to an Announcement")
+    _, rest = slice_lines(rest, "### GRUPO C: Listen to an Announcement", "### GRUPO D: Listen to an Academic Talk")
+    _, rest = slice_lines(rest, "### GRUPO D: Listen to an Academic Talk", "### 📊 SCORE CONSOLIDADO")
+    html_rest = to_html(before_g) + to_html(rest)
+
+    return html_a + html_b + html_c + html_d + html_rest
 
 
 # ---------- Módulos 3, 4, 5, 7, 8, 9: plain markdown (no MC quiz) ----------
@@ -175,9 +190,8 @@ def add_progress_hooks(html, modkey):
 def main():
     frag = {
         "mod0": build_mod0(),
-        "mod1": build_mod1(),  # Grupo A (Complete the Words) interativo; B/C ainda estáticos
-        "mod2": build_plain(f"{SRC}/modulo_2_listening.md"),  # expandido: drills em texto + gabarito
-        # (build_mod2 continua definida mas não usada até M2 ser convertido — ver histórico)
+        "mod1": build_mod1(),  # Grupos A/B/C (Action Drills) interativos, 67 itens
+        "mod2": build_mod2(),  # Grupos A/B/C/D (Action Drills) interativos, 51 itens
         "mod3": build_plain(f"{SRC}/modulo_3_speaking.md"),
         "mod4": build_plain(f"{SRC}/modulo_4_writing.md"),  # expandido: 30 Build a Sentence em texto + gabarito
         "mod5": build_plain(f"{SRC}/modulo_5_registro.md"),

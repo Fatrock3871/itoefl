@@ -535,3 +535,295 @@ MOD2_DRILLS = [
         ],
     },
 ]
+
+# PARTE 5 (Action Drills) do M2, Grupo A: Listen and Choose a Response —
+# 12 itens, sem passagem compartilhada (cada item é um estímulo independente,
+# igual ao formato do diagnóstico do M0).
+MOD2_ACTION_DRILLS_A = [
+    {
+        "id": "mod2-a",
+        "title": None,
+        "objective": "Escolha a resposta mais natural e pragmaticamente adequada a cada fala. Tempo alvo: 12 segundos por item.",
+        "passage_html": None,
+        "items": [
+            {"num": "A1", "prompt": "\"I was going to grab lunch before the seminar, but there's no time now.\"",
+             "options": {"A": "That's fine, I had a big breakfast.", "B": "Yeah, let's just head straight there.", "C": "The seminar was really interesting.", "D": "I ate there last week too."},
+             "correct": "B", "explanation": "O falante sinaliza falta de tempo; a resposta natural propõe a ação consequente. (A)/(C)/(D) ignoram a urgência."},
+            {"num": "A2", "prompt": "\"Do you mind if I borrow your notes from Tuesday? I was out sick.\"",
+             "options": {"A": "Sure — I'll send them over tonight.", "B": "I hope you feel better soon.", "C": "Tuesday's class was canceled, actually.", "D": "I wasn't there either, unfortunately."},
+             "correct": "A", "explanation": "Pedido direto → resposta direta de concessão + plano. (B) é gentil mas não responde ao pedido; (C)/(D) mudam de assunto."},
+            {"num": "A3", "prompt": "\"Honestly, I'm not sure this draft is ready to submit.\"",
+             "options": {"A": "The deadline's not until Friday, right?", "B": "What do you think it still needs?", "C": "I submitted mine yesterday.", "D": "That's a great title."},
+             "correct": "B", "explanation": "Insegurança sobre o rascunho → resposta busca o problema específico. (A) muda para prazo; (C)/(D) ignoram a preocupação."},
+            {"num": "A4", "prompt": "\"You're not still planning to walk in this weather, are you?\"",
+             "options": {"A": "No, I'll catch the bus instead.", "B": "Campus is only ten minutes away.", "C": "I walked there yesterday.", "D": "It rained a lot last semester too."},
+             "correct": "A", "explanation": "Pergunta retórica = alerta educado sobre andar na chuva. Resposta natural revisa o plano. (B)/(C) reforçam o plano problemático."},
+            {"num": "A5", "prompt": "\"I heard the registrar's office changed their hours.\"",
+             "options": {"A": "I registered for four classes this term.", "B": "Really? Do you know the new schedule?", "C": "The office is on the second floor.", "D": "I haven't registered for anything yet."},
+             "correct": "B", "explanation": "Informação nova (mudança de horário) → interesse + pedido de detalhe. (A)/(D) confundem <em>register</em> (matricular-se) com <em>hours</em>. (C) é verdade, mas não é o que foi dito."},
+            {"num": "A6", "prompt": "\"Could you run your presentation by me before the meeting?\"",
+             "options": {"A": "I ran three miles this morning.", "B": "Sure — are you free around four?", "C": "The meeting's been moved to Thursday.", "D": "I've given that presentation twice already."},
+             "correct": "B", "explanation": "\"Run X by me\" = me mostrar antes. Resposta natural marca um horário. (A) toma \"run\" ao pé da letra; (C) muda o foco; (D) ignora o pedido."},
+            {"num": "A7", "prompt": "\"I thought the lab report was due next week, not tomorrow.\"",
+             "options": {"A": "So did I — let me double-check the syllabus.", "B": "The lab is on the ground floor.", "C": "I finished my report last month.", "D": "Next week works better for me too."},
+             "correct": "A", "explanation": "Divergência sobre a data → confirmar juntos, checar o syllabus. (B)/(C)/(D) ignoram a divergência."},
+            {"num": "A8", "prompt": "\"Would you rather present first or last?\"",
+             "options": {"A": "I presented last time.", "B": "Last, if that's an option — I need time to prepare.", "C": "The presentation is worth 20% of the grade.", "D": "First place goes to the best presentation."},
+             "correct": "B", "explanation": "Pergunta de preferência (primeiro ou último) → escolher e justificar. (A)/(C)/(D) não respondem à escolha oferecida."},
+            {"num": "A9", "prompt": "\"This bus is taking forever. We should've left earlier.\"",
+             "options": {"A": "The bus stop is right over there.", "B": "Tell me about it — I hate cutting it this close.", "C": "I take this bus every day.", "D": "We left at eight, same as always."},
+             "correct": "B", "explanation": "Reclamação sobre a demora → \"Tell me about it\" concorda enfaticamente + acrescenta. (A)/(C)/(D) mudam o foco."},
+            {"num": "A10", "prompt": "\"Professor Lin said she might cancel Friday's class.\"",
+             "options": {"A": "She's a great lecturer, isn't she?", "B": "Did she say why, or was it just a maybe?", "C": "Friday's class is in the east building.", "D": "I've never had a class canceled before."},
+             "correct": "B", "explanation": "Notícia incerta (\"might cancel\") → pedir esclarecimento sobre o motivo/certeza. (A)/(C)/(D) desviam."},
+            {"num": "A11", "prompt": "\"I've been meaning to ask: how did the interview go?\"",
+             "options": {"A": "It's at two o'clock on Thursday.", "B": "Better than I expected, actually. They said they'd call by Friday.", "C": "I've had a lot of interviews lately.", "D": "The company is downtown, near the station."},
+             "correct": "B", "explanation": "Pergunta sobre como foi a entrevista → dar o resultado + próximo passo. (A) responde sobre horário; (C)/(D) generalizam/desviam."},
+            {"num": "A12", "prompt": "\"Do you think it's worth applying? I doubt I'd get in.\"",
+             "options": {"A": "The application fee is fifty dollars.", "B": "You never know unless you try — I'd go for it.", "C": "I applied there two years ago.", "D": "It's a very competitive program."},
+             "correct": "B", "explanation": "Dúvida + autodepreciação → encorajamento. (A)/(C)/(D) desviam para custo, experiência passada, competitividade."},
+        ],
+    },
+]
+
+# PARTE 5 (Action Drills) do M2, Grupo B: Listen to a Conversation — 3
+# diálogos, 12 itens ao todo.
+MOD2_ACTION_DRILLS_B = [
+    {
+        "id": "mod2-b1",
+        "title": "Drill B1 · Advising Office · alvo: 3 min",
+        "objective": "Leia o diálogo (ou peça pra alguém ler em voz alta) e responda às 4 questões. Tempo alvo: 3 minutos.",
+        "passage_html": """<p><em>Narrator: Listen to a conversation between a student and an academic advisor.</em></p>
+<p><strong>Student:</strong> Hi, I wanted to ask about switching one of my electives. I'm in Intro to Statistics, but I'd rather take Data Visualization instead.</p>
+<p><strong>Advisor:</strong> Let me check... okay, Data Visualization has space. But it has Statistics as a prerequisite — have you completed that?</p>
+<p><strong>Student:</strong> No, that's why I wanted to switch — I was hoping to take Data Visualization first and Statistics later.</p>
+<p><strong>Advisor:</strong> Ah. Unfortunately that's not possible; the prerequisite is enforced by the system. You'd need to finish Statistics first, or get a written waiver from the Data Visualization instructor.</p>
+<p><strong>Student:</strong> Is it worth asking her directly, or is that rarely approved?</p>
+<p><strong>Advisor:</strong> It's approved sometimes, especially if you have relevant experience — a coding background, say. Do you have any?</p>
+<p><strong>Student:</strong> I do, actually — I took two programming courses last year.</p>
+<p><strong>Advisor:</strong> Then it's worth emailing her. I'll send you her contact information now.</p>""",
+        "items": [
+            {"num": "B1.1", "prompt": "Gist-purpose. Why does the student visit the advising office?",
+             "options": {"A": "To complain about a scheduling conflict between two required courses", "B": "To request a change from one elective to another", "C": "To register for classes for the first time", "D": "To find out why she was removed from a course"},
+             "correct": "B", "explanation": "A estudante quer \"switch one of my electives\". (A) sem conflito de horário; (C) já está matriculada; (D) está fora do que foi dito."},
+            {"num": "B1.2", "prompt": "Detail. What problem does the advisor identify?",
+             "options": {"A": "Data Visualization is already full", "B": "The student failed Statistics once already", "C": "Data Visualization requires Statistics, which the student hasn't taken", "D": "The student can't take electives outside her major"},
+             "correct": "C", "explanation": "\"It has Statistics as a prerequisite... you'd need to complete Statistics first.\" (A) é o oposto (há vaga); (B)/(D) não ditos."},
+            {"num": "B1.3", "prompt": "Function. Why does the advisor ask whether the student has a coding background?",
+             "options": {"A": "To check whether she qualifies for a scholarship", "B": "To suggest she switch majors", "C": "To assess whether the instructor might realistically grant a waiver", "D": "To recommend a different course"},
+             "correct": "C", "explanation": "A pergunta avalia se a professora poderia dar um <em>waiver</em>. (A)/(B)/(D) sem base no diálogo."},
+            {"num": "B1.4", "prompt": "Detail. What does the advisor do at the end?",
+             "options": {"A": "Enrolls the student in Data Visualization", "B": "Gives the student the instructor's contact information", "C": "Schedules a follow-up meeting", "D": "Tells the student to wait until next semester"},
+             "correct": "B", "explanation": "\"I'll send you her contact information now.\" (A) a matrícula não é feita ali; (C)/(D) não ditos."},
+        ],
+    },
+    {
+        "id": "mod2-b2",
+        "title": "Drill B2 · Library Reserve Desk · alvo: 3 min",
+        "objective": "Leia o diálogo (ou peça pra alguém ler em voz alta) e responda às 4 questões. Tempo alvo: 3 minutos.",
+        "passage_html": """<p><em>Narrator: Listen to a conversation between a student and a librarian.</em></p>
+<p><strong>Student:</strong> Hi — I'm looking for a book my professor put on reserve for the history seminar. It's <em>The Making of the Atlantic World</em>.</p>
+<p><strong>Librarian:</strong> Let me look... yes, we have two copies on reserve. Reserve items are two-hour loans, in-library use only. You can't take them out of the building.</p>
+<p><strong>Student:</strong> Oh. I was hoping to take it home for the weekend — the essay's due Monday.</p>
+<p><strong>Librarian:</strong> For reserve items, no, sorry. But here's an option: there's a circulating copy in the stacks, on the fourth floor. That one you <em>can</em> take out, for three weeks.</p>
+<p><strong>Student:</strong> Great, I'll grab that instead. Is it available right now?</p>
+<p><strong>Librarian:</strong> The catalog says one copy is in. If it's not on the shelf, come back and I'll place a hold on the reserve copy for you to use here.</p>
+<p><strong>Student:</strong> Thanks — I'll check the stacks first.</p>""",
+        "items": [
+            {"num": "B2.1", "prompt": "Gist-purpose. What is the student trying to do?",
+             "options": {"A": "Return an overdue book", "B": "Get a book she needs for an essay due Monday", "C": "Renew a book she already borrowed", "D": "Report that a reserve book is missing"},
+             "correct": "B", "explanation": "Ela quer um livro para um ensaio com prazo na segunda. (A) não é devolução; (C) não é renovação; (D) o livro não está perdido."},
+            {"num": "B2.2", "prompt": "Detail. What is the rule for reserve items?",
+             "options": {"A": "They can be borrowed for three weeks", "B": "They are two-hour loans, for use inside the library only", "C": "They cannot be used by undergraduates", "D": "They must be requested 24 hours in advance"},
+             "correct": "B", "explanation": "\"Two-hour loans, in-library use only... can't take them out of the building.\" (A) descreve o exemplar da circulação; (C)/(D) não ditos."},
+            {"num": "B2.3", "prompt": "Detail. What does the librarian suggest instead?",
+             "options": {"A": "Buying the book at the campus bookstore", "B": "Borrowing the circulating copy from the fourth-floor stacks", "C": "Asking the professor for a personal copy", "D": "Waiting until Monday when more copies arrive"},
+             "correct": "B", "explanation": "\"There's a circulating copy in the stacks, on the fourth floor. That one you can take out.\" (A)/(C)/(D) não sugeridos."},
+            {"num": "B2.4", "prompt": "Inference. What will the student probably do next?",
+             "options": {"A": "Place a hold on the reserve copy immediately", "B": "Go to the fourth floor to look for the circulating copy", "C": "Leave the library without the book", "D": "Ask the professor to extend the deadline"},
+             "correct": "B", "explanation": "\"I'll check the stacks first.\" Inferência direta. (A) só se não achar; (C)/(D) contradizem a intenção declarada."},
+        ],
+    },
+    {
+        "id": "mod2-b3",
+        "title": "Drill B3 · After Class · alvo: 3 min",
+        "objective": "Leia o diálogo (ou peça pra alguém ler em voz alta) e responda às 4 questões. Tempo alvo: 3 minutos.",
+        "passage_html": """<p><em>Narrator: Listen to a conversation between a student and a professor.</em></p>
+<p><strong>Student:</strong> Professor, do you have a minute? I'm a bit lost on the second essay prompt.</p>
+<p><strong>Professor:</strong> Of course. Which part?</p>
+<p><strong>Student:</strong> It asks us to "evaluate" the argument, and I'm not sure if that means summarize it or agree or disagree with it.</p>
+<p><strong>Professor:</strong> Good question — "evaluate" means neither, exactly. It means weigh the argument: where is it strong, where is it weak, and does the evidence actually support the conclusion? You can end up agreeing or disagreeing, but the point is the <em>weighing</em>, not the verdict.</p>
+<p><strong>Student:</strong> Okay, that helps. So a summary alone wouldn't be enough.</p>
+<p><strong>Professor:</strong> Right. A summary shows you understood it. Evaluation shows you can think about it. Aim for maybe a third summary, two-thirds evaluation.</p>
+<p><strong>Student:</strong> Got it. And length — still fifteen hundred words?</p>
+<p><strong>Professor:</strong> Fifteen hundred, give or take a hundred. Don't pad it.</p>""",
+        "items": [
+            {"num": "B3.1", "prompt": "Gist-purpose. Why does the student talk to the professor?",
+             "options": {"A": "To ask for an extension on the essay", "B": "To clarify what the essay prompt is asking for", "C": "To dispute a grade on the first essay", "D": "To request a different topic"},
+             "correct": "B", "explanation": "\"I'm a bit lost on the second essay prompt.\" (A) não pede prazo; (C) não é sobre nota; (D) não pede outro tema."},
+            {"num": "B3.2", "prompt": "Detail. According to the professor, what does \"evaluate\" mean here?",
+             "options": {"A": "Summarize the argument accurately", "B": "Simply agree or disagree with the argument", "C": "Weigh the argument's strengths, weaknesses, and use of evidence", "D": "Compare the argument with another author's"},
+             "correct": "C", "explanation": "\"Weigh the argument: where is it strong, where is it weak, and does the evidence support the conclusion?\" (A)/(B) o professor diz que \"evaluate\" é <strong>nenhum</strong> dos dois; (D) não dito."},
+            {"num": "B3.3", "prompt": "Detail. What balance between summary and evaluation does the professor recommend?",
+             "options": {"A": "Half summary, half evaluation", "B": "All evaluation, no summary", "C": "About one-third summary, two-thirds evaluation", "D": "A brief summary followed by a personal opinion"},
+             "correct": "C", "explanation": "\"Maybe a third summary, two-thirds evaluation.\""},
+            {"num": "B3.4", "prompt": "Attitude. What does the professor mean by \"Don't pad it\"?",
+             "options": {"A": "Write more than 1,500 words to be safe", "B": "Don't add filler just to reach the word count", "C": "Use larger margins and spacing", "D": "Include as many quotations as possible"},
+             "correct": "B", "explanation": "\"Don't pad it\" = não encher linguiça para bater a contagem de palavras. (A) é o oposto; (C)/(D) estão fora do que foi dito."},
+        ],
+    },
+]
+
+# PARTE 5 (Action Drills) do M2, Grupo C: Listen to an Announcement — 3
+# anúncios, 11 itens ao todo.
+MOD2_ACTION_DRILLS_C = [
+    {
+        "id": "mod2-c1",
+        "title": "Drill C1 · Library Services · alvo: 2 min",
+        "objective": "Leia o anúncio (ou peça pra alguém ler em voz alta) e responda às 3 questões. Tempo alvo: 2 minutos.",
+        "passage_html": """<p><em>Narrator: Listen to an announcement about a change to library services.</em></p>
+<p><strong>Speaker:</strong> Attention, students. Starting next Monday, the Main Library's third-floor reading room will be closed for renovation through the end of the month. During this period you can use the East Wing reading room instead, which keeps its regular hours. Reserved study rooms originally booked for the third floor have already been transferred automatically to the East Wing — you don't need to rebook. However, if your reservation was for a room with audiovisual equipment, please double-check availability, since not all East Wing rooms are equipped. Questions go to the circulation desk.</p>""",
+        "items": [
+            {"num": "C1.1", "prompt": "Detail. When does the closure begin?",
+             "options": {"A": "Today", "B": "Next Monday", "C": "At the end of the month", "D": "Next semester"},
+             "correct": "B", "explanation": "\"Starting next Monday...\" (C) confunde início com fim do período."},
+            {"num": "C1.2", "prompt": "Detail. What happens to previously reserved study rooms?",
+             "options": {"A": "They are canceled and must be rebooked", "B": "They are automatically transferred to the East Wing", "C": "They stay on the third floor", "D": "They are honored only if confirmed by email"},
+             "correct": "B", "explanation": "\"Transferred automatically to the East Wing — you don't need to rebook.\" (A) é o oposto; (D) adiciona uma condição não dita."},
+            {"num": "C1.3", "prompt": "Function. Why does the speaker mention audiovisual equipment?",
+             "options": {"A": "To announce that all AV equipment is being removed", "B": "To tell students to avoid using AV equipment during renovations", "C": "To warn that not every transferred room has the same equipment as before", "D": "To advertise a new AV rental service"},
+             "correct": "C", "explanation": "Aviso prático de que \"not all East Wing rooms are equipped\". (A)/(D) exageram; (B) está fora do que foi dito."},
+        ],
+    },
+    {
+        "id": "mod2-c2",
+        "title": "Drill C2 · Course Registration · alvo: 2 min",
+        "objective": "Leia o anúncio (ou peça pra alguém ler em voz alta) e responda às 4 questões. Tempo alvo: 2 minutos.",
+        "passage_html": """<p><em>Narrator: Listen to an announcement about course registration.</em></p>
+<p><strong>Speaker:</strong> A reminder to all second-year students: registration for spring courses opens this Thursday at 8 a.m. and closes the following Wednesday at midnight. Register early — popular courses fill within hours. If a course you need is full, add yourself to the waitlist rather than emailing the instructor; the system releases spots automatically as students drop, and it works strictly in waitlist order. One change this year: the add/drop period after classes begin has been shortened from two weeks to one, so finalize your schedule before the term starts, not after.</p>""",
+        "items": [
+            {"num": "C2.1", "prompt": "Detail. When does registration close?",
+             "options": {"A": "Thursday at 8 a.m.", "B": "The following Wednesday at midnight", "C": "One week after classes begin", "D": "Two weeks after classes begin"},
+             "correct": "B", "explanation": "\"Closes the following Wednesday at midnight.\" (A) é a abertura; (C)/(D) confundem com o add/drop."},
+            {"num": "C2.2", "prompt": "Detail. What should a student do if a course is full?",
+             "options": {"A": "Email the instructor to ask for a spot", "B": "Register for a different course permanently", "C": "Add themselves to the waitlist", "D": "Wait until the add/drop period"},
+             "correct": "C", "explanation": "\"Add yourself to the waitlist rather than emailing the instructor.\" (A) é explicitamente desaconselhado."},
+            {"num": "C2.3", "prompt": "Connecting content. What has changed this year?",
+             "options": {"A": "Registration now opens earlier in the day", "B": "The add/drop period has been shortened from two weeks to one", "C": "Waitlists are no longer used", "D": "Second-year students register last"},
+             "correct": "B", "explanation": "\"The add/drop period... has been shortened from two weeks to one.\" (A)/(C)/(D) não ditos."},
+            {"num": "C2.4", "prompt": "Inference. Why does the speaker emphasize finalizing the schedule before the term?",
+             "options": {"A": "Because instructors will not answer email during the term", "B": "Because there will be less time to change courses once classes start", "C": "Because spring courses are harder than fall courses", "D": "Because registration reopens midway through the term"},
+             "correct": "B", "explanation": "Add/drop mais curto → menos tempo para ajustar depois que as aulas começam. (A) é verdade em outro contexto, mas não é o que foi dito; (C)/(D) sem base."},
+        ],
+    },
+    {
+        "id": "mod2-c3",
+        "title": "Drill C3 · Campus Event · alvo: 2 min",
+        "objective": "Leia o anúncio (ou peça pra alguém ler em voz alta) e responda às 4 questões. Tempo alvo: 2 minutos.",
+        "passage_html": """<p><em>Narrator: Listen to an announcement about a career event.</em></p>
+<p><strong>Speaker:</strong> The annual Career Fair takes place next Wednesday from 10 to 4 in the main gymnasium. Over eighty employers will attend, mostly in engineering, healthcare, and education. A few reminders. Bring several printed copies of your résumé — most recruiters still expect a paper copy. Business-casual dress is recommended, not required. The résumé-review station near the entrance will be open from 9, an hour before the fair, and it operates first-come, first-served, so arrive early if you want feedback before talking to employers. Finally, the 9:30 workshop on interview skills is now full; a recording will be posted next week for those who missed it.</p>""",
+        "items": [
+            {"num": "C3.1", "prompt": "Detail. What time does the Career Fair itself begin?",
+             "options": {"A": "9 a.m.", "B": "9:30 a.m.", "C": "10 a.m.", "D": "4 p.m."},
+             "correct": "C", "explanation": "\"From 10 to 4.\" (A) é a abertura da estação de revisão de currículo; (B) é o workshop."},
+            {"num": "C3.2", "prompt": "Detail. What does the speaker say about dress?",
+             "options": {"A": "Business formal is required", "B": "Business-casual is recommended but not required", "C": "There is no dress guidance", "D": "Recruiters will provide name tags and jackets"},
+             "correct": "B", "explanation": "\"Business-casual dress is recommended, not required.\""},
+            {"num": "C3.3", "prompt": "Connecting content. A student wants résumé feedback before speaking to employers. What should they do?",
+             "options": {"A": "Attend the 9:30 workshop", "B": "Arrive at the résumé-review station around 9, since it is first-come, first-served", "C": "Email their résumé to a recruiter in advance", "D": "Wait until after 4 p.m."},
+             "correct": "B", "explanation": "A estação abre às 9, é <em>first-come, first-served</em> → chegar cedo. (A) o workshop é de habilidades de entrevista, não revisão de currículo; (C)/(D) não sugeridos."},
+            {"num": "C3.4", "prompt": "Detail. What is true of the 9:30 interview-skills workshop?",
+             "options": {"A": "It has open spots", "B": "It is full, but a recording will be posted next week", "C": "It has been moved to next Wednesday", "D": "It requires advance payment"},
+             "correct": "B", "explanation": "\"The 9:30 workshop... is now full; a recording will be posted next week.\""},
+        ],
+    },
+]
+
+# PARTE 5 (Action Drills) do M2, Grupo D: Listen to an Academic Talk — 3
+# palestras, 16 itens ao todo.
+MOD2_ACTION_DRILLS_D = [
+    {
+        "id": "mod2-d1",
+        "title": "Drill D1 · Psicologia · alvo: 4 min",
+        "objective": "Leia a palestra (ou peça pra alguém ler em voz alta) e responda às 5 questões. Tempo alvo: 4 minutos.",
+        "passage_html": """<p><em>Narrator: Listen to part of a talk in a psychology class.</em></p>
+<p><strong>Professor:</strong> We've been discussing decision-making, and today I want to bring up something researchers call the paradox of choice. The idea is counterintuitive: you'd think more options would always make us happier, but past a certain point it does the opposite.</p>
+<p>A classic example. In one well-known study, researchers set up a tasting table in a grocery store: first with six varieties of jam, then with twenty-four. You'd expect the bigger display to sell more. Actually, the smaller display generated significantly more purchases. The larger one attracted more browsers, but far fewer of them bought anything.</p>
+<p>Why? Two things: decision fatigue and anticipated regret. With more options, comparing them mentally becomes exhausting — that's the fatigue. And once you pick, you start second-guessing whether one of the other twenty-three would've been better — that's the regret. Ironically, more choices can leave people feeling back to square one, unable to commit at all.</p>
+<p>Now, this doesn't mean choice is bad: a complete absence of options is its own problem. The point is there's a sweet spot, and past it, additional options stop helping and start working against us.</p>""",
+        "items": [
+            {"num": "D1.1", "prompt": "Gist-content. What is the talk mainly about?",
+             "options": {"A": "Grocery stores should minimize the products they display", "B": "Beyond a point, more options can reduce satisfaction and hinder decisions", "C": "Consumers always prefer smaller displays", "D": "Decision fatigue affects only in-store shoppers"},
+             "correct": "B", "explanation": "Tese anunciada no início e no fechamento. (A) exagera; (C) \"always\" nunca é dito; (D) está fora do que foi dito."},
+            {"num": "D1.2", "prompt": "Detail. What happened with the 24-variety display?",
+             "options": {"A": "It attracted more browsers but produced fewer purchases", "B": "It produced both more browsers and more purchases", "C": "It was removed for low interest", "D": "It produced identical sales to the smaller display"},
+             "correct": "A", "explanation": "\"Attracted more browsers, but far fewer of them bought anything.\" (B) é o oposto."},
+            {"num": "D1.3", "prompt": "Organization. Why does the professor describe the grocery store study in detail?",
+             "options": {"A": "To criticize the researchers' methodology", "B": "To give concrete evidence for the paradox of choice", "C": "To introduce an unrelated topic about marketing", "D": "To explain how stores design displays"},
+             "correct": "B", "explanation": "Exemplo empírico logo após o conceito abstrato. (A)/(C)/(D) sem base."},
+            {"num": "D1.4", "prompt": "Inference. What is the professor's view on having zero options?",
+             "options": {"A": "It is preferable to having too many", "B": "It is also a problem, just as too many options are", "C": "It has never been studied", "D": "It applies only to grocery shopping"},
+             "correct": "B", "explanation": "\"A complete absence of options is its own problem.\" (A) inverte o sentido."},
+            {"num": "D1.5", "prompt": "Idiom in context. What does \"back to square one\" mean here?",
+             "options": {"A": "Making a confident final decision", "B": "Returning to a starting point without real progress", "C": "Choosing the first option presented", "D": "Comparing two options systematically"},
+             "correct": "B", "explanation": "\"Back to square one\" = voltar ao ponto de partida sem progresso. (A) é o oposto; (C)/(D) distorcem."},
+        ],
+    },
+    {
+        "id": "mod2-d2",
+        "title": "Drill D2 · Biologia · alvo: 4 min",
+        "objective": "Leia a palestra (ou peça pra alguém ler em voz alta) e responda às 5 questões. Tempo alvo: 4 minutos.",
+        "passage_html": """<p><em>Narrator: Listen to part of a talk in a biology class.</em></p>
+<p><strong>Professor:</strong> When we picture a forest, we tend to see individual trees competing — for light, for water, for space. And that's real. But over the last thirty years, research has revealed something the old picture missed: the trees are also <strong>connected</strong>, underground, through fungi.</p>
+<p>Here's how. The roots of most trees are wrapped in a network of fungal threads called mycorrhizae. The fungi pull in water and minerals the tree's roots can't reach efficiently, and hand them to the tree. In return, the tree gives the fungi sugars it makes through photosynthesis. So far, a simple trade.</p>
+<p>The surprising part is that a single fungal network can link <strong>many</strong> trees at once — even trees of different species. And things move along those links. Experiments using radioactive tracers have shown carbon flowing from a tree standing in full sun to a shaded seedling of another species nearby. Some researchers describe old, well-connected trees as "hub trees" that support younger ones around them.</p>
+<p>Now, a word of caution. This work has captured the public imagination, and some popular accounts overstate it: talking about forests as single cooperative organisms. The jury's still out on how deliberate or widespread the sharing really is. What's solid is that the connections exist and that resources can move through them. How much that reshapes our model of the forest is still being worked out.</p>""",
+        "items": [
+            {"num": "D2.1", "prompt": "Gist-content. What is the main point of the talk?",
+             "options": {"A": "Trees in a forest only compete, never cooperate", "B": "Trees are connected underground through fungal networks, and resources can move between them", "C": "Mycorrhizal fungi are harmful to most trees", "D": "Forests are single cooperative organisms"},
+             "correct": "B", "explanation": "O professor admite a competição <strong>mas</strong> acrescenta a conexão. (A) ignora a segunda metade da tese; (C) é o oposto (a relação é benéfica); (D) é exatamente o exagero que ele critica no fim."},
+            {"num": "D2.2", "prompt": "Detail. What does the tree give the fungi in the relationship?",
+             "options": {"A": "Water it pulls from deep soil", "B": "Minerals from its leaves", "C": "Sugars made through photosynthesis", "D": "Nothing — the relationship is one-directional"},
+             "correct": "C", "explanation": "\"The tree gives the fungi sugars it makes through photosynthesis.\" (A)/(B) são o que os fungos fazem pela árvore; (D) é o oposto."},
+            {"num": "D2.3", "prompt": "Detail. What did the radioactive-tracer experiments show?",
+             "options": {"A": "That fungi kill shaded seedlings", "B": "That carbon can flow from a sunlit tree to a shaded seedling of another species", "C": "That only trees of the same species can be connected", "D": "That the networks do not actually transfer anything"},
+             "correct": "B", "explanation": "\"Carbon flowing from a tree standing in full sun to a shaded seedling of another species.\""},
+            {"num": "D2.4", "prompt": "Attitude / Organization. Why does the professor add \"a word of caution\" near the end?",
+             "options": {"A": "To retract everything said earlier in the talk", "B": "To distinguish what the evidence firmly supports from claims that popular accounts exaggerate", "C": "To argue that the research is worthless", "D": "To introduce a completely different topic"},
+             "correct": "B", "explanation": "Ele separa o que a evidência sustenta firmemente do que relatos populares exageram (\"forests as single cooperative organisms\"). (A)/(C) exageram; (D) está fora do que foi dito."},
+            {"num": "D2.5", "prompt": "Idiom in context. What does the professor mean by \"the jury's still out\"?",
+             "options": {"A": "The question has been definitively settled", "B": "There is not yet a firm conclusion on the matter", "C": "A court case is involved in the research", "D": "The researchers have stopped studying it"},
+             "correct": "B", "explanation": "\"The jury's still out\" = ainda não há conclusão firme. (A) é o oposto; (C) é literal demais; (D) não é dito."},
+        ],
+    },
+    {
+        "id": "mod2-d3",
+        "title": "Drill D3 · História da tecnologia · alvo: 4 min",
+        "objective": "Leia a palestra (ou peça pra alguém ler em voz alta) e responda às 6 questões. Tempo alvo: 4 minutos.",
+        "passage_html": """<p><em>Narrator: Listen to part of a talk in a history of technology class.</em></p>
+<p><strong>Professor:</strong> Look at your keyboard. The top row of letters spells Q-W-E-R-T-Y. It's an odd arrangement — the most common letters aren't under your strongest fingers. So why has it survived, essentially unchanged, for a hundred and fifty years?</p>
+<p>The layout dates from the 1870s, from early mechanical typewriters. The common story is that QWERTY was designed to <em>slow typists down</em> so the metal type-bars wouldn't jam. That's probably an oversimplification (the real design pressures were more mixed) but the key point is that the layout was shaped by the constraints of 1870s <strong>machinery</strong>, constraints that vanished decades ago.</p>
+<p>Better layouts have been proposed. The best known, Dvorak, was patented in 1936 and, in some studies, allows modestly faster and more comfortable typing. Yet it never caught on. Why not?</p>
+<p>This is a textbook case of what economists call <strong>path dependence</strong>, or sometimes "lock-in." Once QWERTY became the standard, everything organized itself around that standard: typewriters were built for it, typing was taught on it, and every new typist learned it because that's what the machines used — and machines used it because that's what typists knew. To switch, a single person gains little unless nearly everyone switches at once. The cost of coordinating that switch is enormous, and no one bears it. So an arrangement that made sense only for 1870s hardware is still, quietly, on every device you own.</p>""",
+        "items": [
+            {"num": "D3.1", "prompt": "Gist-content. What is the talk mainly about?",
+             "options": {"A": "How to type faster using the Dvorak layout", "B": "Why an outdated keyboard layout has persisted, as an example of path dependence", "C": "The mechanical design of 19th-century typewriters", "D": "Why Dvorak is objectively the best possible layout"},
+             "correct": "B", "explanation": "A pergunta central é por que um layout ultrapassado sobreviveu — e a resposta é <em>path dependence</em>. (A)/(D) mudam o foco/exageram; (C) é contexto, não o tema."},
+            {"num": "D3.2", "prompt": "Detail. What does the professor say about the \"common story\" that QWERTY was designed to slow typists down?",
+             "options": {"A": "It is completely accurate", "B": "It is probably an oversimplification, though the layout was shaped by 1870s machinery", "C": "It was invented by economists", "D": "It explains why Dvorak succeeded"},
+             "correct": "B", "explanation": "\"That's probably an oversimplification... but the layout was shaped by 1870s machinery.\""},
+            {"num": "D3.3", "prompt": "Detail. According to the talk, what happened to the Dvorak layout?",
+             "options": {"A": "It became the new standard in the 1940s", "B": "It was patented in 1936 but never caught on", "C": "It was proven to be slower than QWERTY", "D": "It is now used on most smartphones"},
+             "correct": "B", "explanation": "\"Patented in 1936... Yet it never caught on.\" (A)/(C)/(D) contradizem."},
+            {"num": "D3.4", "prompt": "Organization. Why does the professor describe the cycle of \"typists learned QWERTY because machines used it, and machines used it because typists knew it\"?",
+             "options": {"A": "To illustrate how lock-in makes a standard self-reinforcing and hard to change", "B": "To criticize typewriter manufacturers", "C": "To explain how mechanical type-bars work", "D": "To argue that QWERTY is actually well designed"},
+             "correct": "A", "explanation": "O ciclo ilustra como o padrão se auto-reforça (<em>lock-in</em>). (B)/(C)/(D) sem base."},
+            {"num": "D3.5", "prompt": "Inference. What can be inferred about why an individual rarely switches to Dvorak?",
+             "options": {"A": "Dvorak keyboards are illegal in most countries", "B": "The benefit to one person is small unless almost everyone switches together", "C": "Dvorak is much harder to learn than any other layout", "D": "Employers forbid it"},
+             "correct": "B", "explanation": "\"A single person gains little unless nearly everyone switches at once.\" (A)/(C)/(D) exageram ou não são ditos."},
+            {"num": "D3.6", "prompt": "Idiom in context. When the professor says the old arrangement is \"still, quietly, on every device you own,\" the word \"quietly\" suggests that:",
+             "options": {"A": "keyboards make no sound", "B": "most people use QWERTY without noticing that it is an outdated design", "C": "the layout is a secret", "D": "typing should be done silently"},
+             "correct": "B", "explanation": "\"Quietly\" sugere que as pessoas usam QWERTY sem perceber que é um design obsoleto. (A)/(C)/(D) tomam a palavra ao pé da letra ou fora de contexto."},
+        ],
+    },
+]
