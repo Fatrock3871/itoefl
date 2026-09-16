@@ -4,7 +4,7 @@ Memória entre sessões. Atualizar ao concluir cada etapa.
 
 **Última atualização:** 2026-09-16 (v15)
 **Agora:** Fase 7 (conteúdo) concluída. **3 frentes abertas em paralelo** (ver abaixo).
-`artifact/index.html` ≈ 881 KB. Login agora obrigatório quando o Supabase
+`artifact/index.html` ≈ 915 KB. Login agora obrigatório quando o Supabase
 está configurado (ver v11) — isso muda o comportamento em produção depois da
 Fase 6, não só em dev.
 
@@ -309,13 +309,41 @@ Conversa pulou entre três assuntos. Estado de cada um:
   - **Item 8 considerado obsoleto pra M1/M2** — não existe mais Gabarito
     separado pra navegar até (virou inline nos widgets); não se aplica a
     outros módulos, que não tinham esse par drill/gabarito.
+  - **Item 10 (commit 706855c):** o "Registro" de cada Protocolo de Análise de
+    Erros (M1-M6; M7 fica de fora, protocolo de triagem próprio) virou
+    formulário de verdade — data, drill, resultado, códigos daquele módulo
+    (checkboxes com os mesmos R1-R6/L1-L6/S1-S6/W1-W6/RG1-RG6/V1-V6 que a
+    tabela já tinha), histórico salvo e sincronizado, detecção automática de
+    "código 3+ vezes = prioridade" (antes era só um aviso de texto, virou
+    cálculo). Novo `render_errorlog.py` + `ERRLOG_CODES`/`split_registro_block`
+    em `build_pipeline.py`. **Achado de bônus:** `main()` ainda chamava
+    `build_plain()` pro mod4 em vez de `build_mod4()` — mesmo padrão de bug
+    do M1/M2 (código pronto, nunca ligado). Corrigido junto: o widget de
+    Build a Sentence (10 itens) passa a aparecer de verdade em M4 pela
+    primeira vez. Testado ao vivo: 3 submissões reais, histórico correto
+    (mais recente primeiro), prioridade detectada certo ("R2 3×"), delete
+    funcionando, persistência confirmada.
+  - **Certificado de conclusão** (pedido à parte, não da lista de 12):
+    botão na sidebar (some até concluir os 10 módulos + o quiz do último —
+    o gate normal só valida o módulo *anterior* ao destravar o próximo, o
+    último nunca era conferido sozinho) abre modal não-oficial com nome
+    (e-mail logado ou "Aluno(a) iTOEFL"), data da primeira conclusão e botão
+    de imprimir/PDF. Testado ao vivo semeando os 86 checkboxes do site.
+  - **3 ajustes de UI** (pedidos à parte): tema virou alternador estrito
+    claro/escuro (sem "Sistema", 1ª visita usa a preferência do SO só como
+    ponto de partida — testado o ciclo de cliques); "Nesta parte" ganhou mais
+    contraste (`--ink-2`→`--ink`, peso 600→700); tela de login redesenhada
+    pra usar a identidade visual real do site (lockup de marca completo,
+    kicker tombado, marca-d'água gigante) em vez de cara de formulário
+    genérico — sem descrição específica do que incomodava, foi julgamento
+    próprio; pode precisar de mais uma rodada se algo específico ainda
+    incomodar.
   - **Pendente da lista original de 12:** M7 (decisão de design à parte —
-    simulado completo não deveria ter feedback item a item), item 10 (registro
-    de erros como formulário — depende de decidir onde persistir: local vs.
-    Supabase), item 11 (painel de progresso consolidado — parcialmente coberto
-    pelo painel do item 3, falta estender pra outros módulos/tipos de item),
-    item 12 (teste de responsividade mobile, nunca feito em viewport real
-    nesta leva de mudanças).
+    simulado completo não deveria ter feedback item a item), item 11 (painel
+    de progresso consolidado — parcialmente coberto pelo painel do item 3,
+    falta estender pra outros módulos/tipos de item), item 12 (teste de
+    responsividade mobile, nunca feito em viewport real nesta leva de
+    mudanças).
 - **Pendente:** Fase 6 (publicar no GitHub Pages) segue depois da aprovação do
   usuário — é ação pública/difícil de reverter, não faço sem confirmar.
 
