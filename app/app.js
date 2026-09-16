@@ -373,6 +373,62 @@
 
   // ---------- Quiz widgets (select -> confirm -> reveal -> retry) ----------
   // Each .quiz-drill has data-drill="<id>" and its own localStorage key.
+
+  // itens de múltipla seleção (data-multi="N" no .qcard): picked vira um
+  // array de letras em vez de uma letra só; acerta se o CONJUNTO bate,
+  // independente da ordem em que foram marcadas. Compartilhado entre os
+  // widgets individuais e o painel de desempenho agregado (M0, Parte 4).
+  function isMultiCard(card){ return !!card.dataset.multi; }
+  function isCardCorrect(card, picked){
+    if(isMultiCard(card)){
+      var want = card.dataset.correct.split(",").map(function(s){ return s.trim(); }).sort();
+      var got = (picked || []).slice().sort();
+      return want.length === got.length && want.every(function(L, i){ return L === got[i]; });
+    }
+    return picked === card.dataset.correct;
+  }
+
+  // painel "Seu desempenho real até agora" (M0, Parte 4) — soma acertos
+  // confirmados em todos os .quiz-drill cujo id começa com um prefixo
+  // (mod1- = Reading, mod2- = Listening), sem depender de estar na aba certa
+  function computeQuizAccuracy(prefix){
+    var drills = Array.prototype.slice.call(document.querySelectorAll('.quiz-drill[data-drill^="' + prefix + '"]'));
+    var total = 0, confirmed = 0, correct = 0;
+    drills.forEach(function(drillEl){
+      var st = {};
+      try { st = JSON.parse(safeGet("toefl_quiz_" + drillEl.dataset.drill + "_v1") || "{}"); } catch(e){}
+      Array.prototype.forEach.call(drillEl.querySelectorAll(".qcard"), function(card){
+        total++;
+        var s = st[card.dataset.num];
+        if(s && s.confirmed){
+          confirmed++;
+          if(isCardCorrect(card, s.picked)) correct++;
+        }
+      });
+    });
+    return { total: total, confirmed: confirmed, correct: correct };
+  }
+  function renderLiveScoreSection(prefix, pctId, bandId, emptyText){
+    var pctEl = document.getElementById(pctId);
+    var bandEl = document.getElementById(bandId);
+    if(!pctEl || !bandEl) return;
+    var a = computeQuizAccuracy(prefix);
+    if(a.confirmed === 0){
+      pctEl.textContent = "—";
+      bandEl.textContent = emptyText;
+      return;
+    }
+    var pct = Math.round(100 * a.correct / a.confirmed);
+    var band = cefrBandFromPct(pct);
+    pctEl.textContent = pct + "%";
+    bandEl.textContent = "Banda " + band.code + " (" + band.label + ") · " + a.correct + "/" + a.confirmed + " confirmadas" +
+      (a.confirmed < a.total ? " de " + a.total + " no total" : "");
+  }
+  function updateLiveScorePanel(){
+    renderLiveScoreSection("mod1-", "liveScoreReadingPct", "liveScoreReadingBand", "Responda os Action Drills do Módulo 1 para calcular");
+    renderLiveScoreSection("mod2-", "liveScoreListeningPct", "liveScoreListeningBand", "Responda os Action Drills do Módulo 2 para calcular");
+  }
+
   var quizDrills = Array.prototype.slice.call(document.querySelectorAll(".quiz-drill"));
 
   quizDrills.forEach(function(drillEl){
@@ -384,19 +440,6 @@
     var qcards = Array.prototype.slice.call(drillEl.querySelectorAll(".qcard"));
 
     function saveState(){ safeSet(lsKey, JSON.stringify(state)); }
-
-    // itens de múltipla seleção (data-multi="N" no .qcard): picked vira um
-    // array de letras em vez de uma letra só; acerta se o CONJUNTO bate,
-    // independente da ordem em que foram marcadas
-    function isMultiCard(card){ return !!card.dataset.multi; }
-    function isCardCorrect(card, picked){
-      if(isMultiCard(card)){
-        var want = card.dataset.correct.split(",").map(function(s){ return s.trim(); }).sort();
-        var got = (picked || []).slice().sort();
-        return want.length === got.length && want.every(function(L, i){ return L === got[i]; });
-      }
-      return picked === card.dataset.correct;
-    }
 
     function renderSummary(){
       var total = qcards.length, confirmed = 0, correct = 0;
@@ -424,6 +467,9 @@
       }
       if(drillId === "mod0-diag" && confirmed === total && total > 0){
         updateLevelBadge(correct, total);
+      }
+      if(drillId.indexOf("mod1-") === 0 || drillId.indexOf("mod2-") === 0){
+        updateLiveScorePanel();
       }
     }
 

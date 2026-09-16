@@ -494,6 +494,25 @@ main{max-width:1320px; margin:0 auto; padding:0 30px 120px; min-width:0;}
 .quiz-retry{padding:9px 18px; border-radius:99px; border:2px solid var(--accent); background:var(--paper); color:var(--ink); font-size:13px;}
 .quiz-retry:hover{background:var(--accent); color:#fff;}
 
+/* painel "seu desempenho real" (M0, Parte 4) — alimentado pelos Action
+   Drills interativos de M1/M2, sem input manual */
+.live-score-panel{
+  margin:18px 0 26px; padding:20px 22px; background:var(--paper); border:2px solid var(--edge);
+  border-radius:var(--radius); box-shadow:var(--shadow-hard);
+}
+.live-score-title{font-size:13.5px; color:var(--ink-2); font-style:italic; margin:0 0 16px !important;}
+.live-score-grid{display:grid; grid-template-columns:repeat(auto-fit, minmax(200px, 1fr)); gap:16px;}
+.live-score-item{
+  display:flex; flex-direction:column; gap:4px; padding:14px 16px;
+  background:var(--accent-wash); border:1.5px solid var(--accent); border-radius:8px;
+}
+.live-score-label{
+  font-family:'Bricolage Grotesque',sans-serif; font-size:11px; font-weight:800; text-transform:uppercase;
+  letter-spacing:0.08em; color:var(--accent-strong);
+}
+.live-score-pct{font-family:'Bricolage Grotesque',sans-serif; font-size:30px; font-weight:800; color:var(--ink); line-height:1.1;}
+.live-score-band{font-size:12.5px; color:var(--ink-2); line-height:1.4;}
+
 /* ================= Build a Sentence (M4) ================= */
 .bsq{margin:16px 0 34px;}
 .bsq-objective{font-size:13.5px; color:var(--ink-2); font-style:italic; margin:0 0 14px !important;}

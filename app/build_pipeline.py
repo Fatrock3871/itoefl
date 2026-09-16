@@ -57,6 +57,27 @@ def build_mod0():
         "Teste de Nivelamento Express — 10 questões de gramática, vocabulário e conectivos acadêmicos. Responda, confirme cada resposta para ver o gabarito, e refaça quando quiser.",
         None, items,
     )
+
+    # painel "Seu desempenho real até agora" (Parte 4, depois de 4.3): soma os
+    # acertos dos Action Drills interativos de M1/M2 (JS calcula em tempo real,
+    # sem input manual) — injeta antes da Parte 5, que hoje é preenchida à mão
+    live_score = (
+        '<div class="live-score-panel" id="liveScorePanel">'
+        '<p class="live-score-title">Seu desempenho real até agora — calculado automaticamente a partir dos '
+        'Action Drills que você já respondeu nos Módulos 1 e 2, sem precisar somar nada à mão.</p>'
+        '<div class="live-score-grid">'
+        '<div class="live-score-item"><span class="live-score-label">Reading</span>'
+        '<span class="live-score-pct" id="liveScoreReadingPct">—</span>'
+        '<span class="live-score-band" id="liveScoreReadingBand">Responda os Action Drills do Módulo 1 para calcular</span></div>'
+        '<div class="live-score-item"><span class="live-score-label">Listening</span>'
+        '<span class="live-score-pct" id="liveScoreListeningPct">—</span>'
+        '<span class="live-score-band" id="liveScoreListeningBand">Responda os Action Drills do Módulo 2 para calcular</span></div>'
+        '</div></div>'
+    )
+    idx = html_after.find("<h2>PARTE 5")
+    if idx != -1:
+        html_after = html_after[:idx] + live_score + html_after[idx:]
+
     return html_before + widget + html_after
 
 
