@@ -4,7 +4,7 @@ import markdown as md
 from render_quiz import render_quiz_drill
 from render_srs import render_srs
 from render_build import render_build_sentence
-from drills_data import MOD1_DRILLS, MOD2_DRILLS, MOD1_ACTION_DRILLS_A
+from drills_data import MOD1_DRILLS, MOD2_DRILLS, MOD1_ACTION_DRILLS_A, MOD1_ACTION_DRILLS_B
 from build_sentence_data import BUILD_SENTENCE_ITEMS
 
 SRC = "../consolidated"
@@ -68,20 +68,28 @@ def build_mod1():
     raw = strip_title_banner(raw)
 
     # PARTE 5, Grupo A: troca o texto estático das 5 lacunas pelos widgets
-    before_a, after_a = slice_lines(raw, "### GRUPO A: COMPLETE THE WORDS", "### GRUPO B: READ IN DAILY LIFE")
+    before_a, rest = slice_lines(raw, "### GRUPO A: COMPLETE THE WORDS", "### GRUPO B: READ IN DAILY LIFE")
     widgets_a = "".join(
         render_quiz_drill(d["id"], d["title"], d["objective"], d.get("passage_html"), d["items"])
         for d in MOD1_ACTION_DRILLS_A
     )
     html_a = to_html(before_a) + "<h3>Grupo A: Complete the Words — exercícios interativos</h3>" + widgets_a
 
-    # PARTE 6, Grupo A: a tabela de gabarito fica redundante (a explicação já
-    # aparece inline no widget acima) -- remove só essa subseção, mantém as
-    # de Grupo B/C intactas (ainda estáticas)
-    before_g, after_g = slice_lines(after_a, "### GRUPO A: Complete the Words", "### GRUPO B: Read in Daily Life")
-    html_rest = to_html(before_g) + to_html(after_g)
+    # PARTE 5, Grupo B: troca os 5 textos curtos pelos widgets
+    before_b, rest = slice_lines(rest, "### GRUPO B: READ IN DAILY LIFE", "### GRUPO C: READ AN ACADEMIC PASSAGE")
+    widgets_b = "".join(
+        render_quiz_drill(d["id"], d["title"], d["objective"], d.get("passage_html"), d["items"])
+        for d in MOD1_ACTION_DRILLS_B
+    )
+    html_b = to_html(before_b) + "<h3>Grupo B: Read in Daily Life — exercícios interativos</h3>" + widgets_b
 
-    return html_a + html_rest
+    # PARTE 6: remove as tabelas de gabarito redundantes de A e B (a explicação
+    # já aparece inline nos widgets acima); Grupo C segue estático por ora
+    before_g, rest = slice_lines(rest, "### GRUPO A: Complete the Words", "### GRUPO B: Read in Daily Life")
+    _, rest = slice_lines(rest, "### GRUPO B: Read in Daily Life", "### GRUPO C: Read an Academic Passage")
+    html_rest = to_html(before_g) + to_html(rest)
+
+    return html_a + html_b + html_rest
 
 
 # ---------- Módulo 2: Listening drills ----------

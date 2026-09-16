@@ -212,6 +212,119 @@ MOD1_ACTION_DRILLS_A = [
     },
 ]
 
+# PARTE 5 (Action Drills) do M1, Grupo B: Read in Daily Life — 5 textos
+# curtos, 14 itens ao todo.
+MOD1_ACTION_DRILLS_B = [
+    {
+        "id": "mod1-b1",
+        "title": "Drill B1 · Placa / aviso · alvo: 2 min",
+        "objective": "Leia o texto e responda às questões de compreensão. Tempo alvo: 2 minutos.",
+        "passage_html": """<p><strong>TEXT: Sign at a nature reserve trailhead</strong></p>
+<blockquote><p><strong>RIDGELINE TRAIL: PLEASE READ BEFORE ENTERING</strong></p>
+<p>• Trail open sunrise to sunset. Overnight camping is not permitted anywhere on the reserve.<br>
+• Dogs welcome on a leash no longer than 2 metres. The upper loop (marked in red) is closed to dogs from 1 April to 15 July to protect ground-nesting birds.<br>
+• No bicycles. E-bikes and mobility scooters are exempt from this rule.<br>
+• Pack out all rubbish. There are no bins beyond this point.</p></blockquote>""",
+        "items": [
+            {"num": "B1.1", "prompt": "A visitor with a dog on 20 May may walk:",
+             "options": {"A": "anywhere on the reserve", "B": "on all trails except the upper loop", "C": "only on the upper loop", "D": "nowhere, because dogs are banned in summer"},
+             "correct": "B", "explanation": "Cães de coleira são permitidos; o <em>upper loop</em> é fechado a cães de 1/abr a 15/jul, e 20 de maio cai nesse período → todas as trilhas <strong>exceto</strong> o upper loop. (A) ignora a restrição; (C) inverte; (D) exagera — cães não são banidos, só do upper loop."},
+            {"num": "B1.2", "prompt": "Which of the following is allowed on the trail?",
+             "options": {"A": "A regular bicycle", "B": "An overnight tent", "C": "A mobility scooter", "D": "Leaving food scraps in a bin"},
+             "correct": "C", "explanation": "\"E-bikes and mobility scooters are exempt\" da proibição de bicicletas. (A) bicicleta comum é proibida; (B) camping é proibido; (D) não há lixeiras além daquele ponto."},
+        ],
+    },
+    {
+        "id": "mod1-b2",
+        "title": "Drill B2 · Cardápio · alvo: 3 min",
+        "objective": "Leia o texto e responda às questões de compreensão. Tempo alvo: 3 minutos.",
+        "passage_html": """<p><strong>TEXT: Café lunch menu (extract)</strong></p>
+<blockquote><p><strong>SANDWICHES</strong>: all served on sourdough with a side salad (swap for fries +$2)</p>
+<p>• <strong>Garden</strong> — roasted vegetables, hummus, rocket · $9 · <em>vegan</em><br>
+• <strong>Classic Club</strong> (chicken, bacon, egg, lettuce) · $12<br>
+• <strong>Halloumi Stack</strong> — grilled halloumi, tomato, pesto · $11 · <em>vegetarian (contains nuts)</em></p>
+<p><strong>SOUPS</strong> · served with bread · $7 · soup of the day is always vegetarian; ask staff whether today's is vegan.</p>
+<p><em>A 10% discount applies to all lunch orders placed before noon.</em></p></blockquote>""",
+        "items": [
+            {"num": "B2.1", "prompt": "A customer who is vegan and allergic to nuts could safely order:",
+             "options": {"A": "the Halloumi Stack", "B": "the Garden sandwich", "C": "the soup of the day, no questions asked", "D": "the Classic Club without bacon"},
+             "correct": "B", "explanation": "<em>Garden</em> é vegan e não tem aviso de nozes. (A) Halloumi Stack tem queijo (não vegan) e <em>contains nuts</em>; (C) a sopa é sempre vegetariana mas <strong>pode não ser vegana</strong> — o texto manda perguntar; (D) Classic Club tem frango e ovo."},
+            {"num": "B2.2", "prompt": "A customer orders a Classic Club with fries at 11:45 a.m. Before any discount, the price is:",
+             "options": {"A": "$12", "B": "$14", "C": "$9", "D": "$16"},
+             "correct": "B", "explanation": "$12 do sanduíche + $2 pela troca por fries = $14. O desconto de 10% (pedido antes do meio-dia) se aplica <strong>depois</strong>, mas a pergunta é o preço <strong>antes</strong> do desconto."},
+            {"num": "B2.3", "prompt": "According to the menu, the soup of the day:",
+             "options": {"A": "is always vegan", "B": "is always vegetarian, and may or may not be vegan", "C": "never contains bread", "D": "costs more than any sandwich"},
+             "correct": "B", "explanation": "\"Soup of the day is always vegetarian; ask staff whether today's is vegan\" — sempre vegetariana, veganidade varia."},
+        ],
+    },
+    {
+        "id": "mod1-b3",
+        "title": "Drill B3 · E-mail formal · alvo: 3 min",
+        "objective": "Leia o texto e responda às questões de compreensão. Tempo alvo: 3 minutos.",
+        "passage_html": """<p><strong>TEXT: Email from a course coordinator</strong></p>
+<blockquote>
+<p><strong>Subject: Re: Request to submit Assignment 2 late</strong></p>
+<p>Dear Bruna,</p>
+<p>Thank you for letting me know about your situation in advance rather than after the deadline. I'm sorry to hear you've been unwell.</p>
+<p>Our department policy does not allow me to grant extensions longer than 48 hours without a medical certificate. If you're able to provide one, I can extend your deadline to the following Monday. If not, I can still accept the assignment up to 48 hours late, though the standard 10% late penalty would apply in that case.</p>
+<p>Please let me know which option you'd prefer by Thursday so I can update the system.</p>
+<p>Best regards,<br>Dr. Okafor</p>
+</blockquote>""",
+        "items": [
+            {"num": "B3.1", "prompt": "What is the main purpose of this email?",
+             "options": {"A": "To refuse Bruna's request", "B": "To explain the options available and ask Bruna to choose", "C": "To inform Bruna that her assignment is now overdue", "D": "To apologise for a mistake the department made"},
+             "correct": "B", "explanation": "O e-mail lista duas opções (com ou sem atestado) e pede que Bruna escolha até quinta. (A) não recusa — oferece alternativas; (C) o trabalho ainda não está atrasado; (D) não houve erro do departamento."},
+            {"num": "B3.2", "prompt": "If Bruna does NOT provide a medical certificate, she can:",
+             "options": {"A": "submit the assignment by the following Monday with no penalty", "B": "submit up to 48 hours late, losing 10% of the marks", "C": "not submit the assignment at all", "D": "choose her own new deadline"},
+             "correct": "B", "explanation": "Sem atestado: aceita até 48h de atraso com penalidade padrão de 10%. (A) descreve a opção <strong>com</strong> atestado; (C)/(D) não constam."},
+            {"num": "B3.3", "prompt": "Dr. Okafor's tone is best described as:",
+             "options": {"A": "annoyed and dismissive", "B": "formal but sympathetic and helpful", "C": "uncertain and apologetic", "D": "casual and friendly"},
+             "correct": "B", "explanation": "Registro formal (<em>Dear... Best regards, Dr. Okafor</em>), mas empático (<em>I'm sorry to hear you've been unwell</em>) e prestativo (oferece soluções). (A)/(C)/(D) não batem com o texto."},
+        ],
+    },
+    {
+        "id": "mod1-b4",
+        "title": "Drill B4 · Horário / tabela · alvo: 2 min",
+        "objective": "Leia o texto e responda às questões de compreensão. Tempo alvo: 2 minutos.",
+        "passage_html": """<p><strong>TEXT: Shuttle timetable notice</strong></p>
+<blockquote><p><strong>CAMPUS ↔ STATION SHUTTLE</strong></p>
+<p>Departs Campus Gate: on the hour and at half past, 7:00–19:00, Mon–Fri. Departs Station: at quarter past and quarter to, same times. Journey time: approximately 20 minutes.</p>
+<p><em>The half-past and quarter-to services do not run after 17:00: the last half-past departure from Campus Gate is at 16:30. Weekend and holiday service runs on the hour only.</em></p></blockquote>""",
+        "items": [
+            {"num": "B4.1", "prompt": "A student wants to leave Campus Gate on a Tuesday at 17:30. On that day there is:",
+             "options": {"A": "no 17:30 service — after 17:00 the shuttle leaves on the hour only", "B": "a 17:30 service that arrives at the station around 17:50", "C": "a shuttle only if it is a holiday", "D": "a 17:30 service that takes about 45 minutes"},
+             "correct": "A", "explanation": "A nota de rodapé é explícita: \"the last half-past departure from Campus Gate is at 16:30\" e, depois das 17:00, o serviço é \"on the hour only\". Logo, não existe 17:30 na terça-feira. Este item treina a leitura da <strong>nota de rodapé</strong> — quem responde (B) leu só a linha principal e ignorou a exceção."},
+            {"num": "B4.2", "prompt": "On a Sunday, a shuttle leaves the Station at:",
+             "options": {"A": "quarter past and quarter to every hour", "B": "on the hour only", "C": "half past every hour", "D": "the timetable does not say"},
+             "correct": "B", "explanation": "Fim de semana: \"Weekend and holiday service runs on the hour only\". A tabela <em>quarter past / quarter to</em> da estação vale só de segunda a sexta."},
+        ],
+    },
+    {
+        "id": "mod1-b5",
+        "title": "Drill B5 · Post de rede social · alvo: 3 min",
+        "objective": "Leia o texto e responda às questões de compreensão. Tempo alvo: 3 minutos.",
+        "passage_html": """<p><strong>TEXT: A social media post from a local bakery</strong></p>
+<blockquote><p>🥐 <strong>Riverside Bakery</strong> · Posted 2 hours ago</p>
+<p>Big news, everyone! Starting next Tuesday, we're extending our weekday hours — open at 6:30 AM instead of 7:00 AM, so early risers can grab their coffee and croissants before work. 🌅</p>
+<p>Quick heads-up though: because of the earlier opening, our weekday sourdough batch will now go into the oven the night before instead of first thing in the morning. It'll still be baked fresh daily, just on a slightly different schedule — so if you're used to catching it warm right out of the oven at 8 AM, it might be ready a little earlier now. Come say hi and let us know what you think of the new hours!</p>
+<p>Weekend hours are unchanged (8 AM–3 PM, same as always).</p></blockquote>""",
+        "items": [
+            {"num": "B5.1", "prompt": "What is the main purpose of this post?",
+             "options": {"A": "To announce that the bakery is closing early on weekdays", "B": "To inform customers about a change to weekday opening hours", "C": "To apologise for a delay in the sourdough baking schedule", "D": "To advertise a new type of bread"},
+             "correct": "B", "explanation": "O post inteiro gira em torno de um anúncio: abrir mais cedo nos dias de semana. (A) inverte; (C) não pede desculpas; (D) nenhum pão novo."},
+            {"num": "B5.2", "prompt": "According to the post, the weekday sourdough will:",
+             "options": {"A": "no longer be baked fresh every day", "B": "only be available on weekends", "C": "be baked the night before instead of the same morning", "D": "be replaced with a different bread"},
+             "correct": "C", "explanation": "\"Will now go into the oven the night before\". (A) o texto diz \"still be baked fresh daily\"; (B)/(D) não constam."},
+            {"num": "B5.3", "prompt": "What can be inferred about the weekend hours?",
+             "options": {"A": "They will also move to 6:30 AM", "B": "They stay the same as before this announcement", "C": "They have not been decided yet", "D": "They will be shortened"},
+             "correct": "B", "explanation": "\"Weekend hours are unchanged\". (A)/(D) contradizem; (C) já está decidido."},
+            {"num": "B5.4", "prompt": "The overall tone of the post is:",
+             "options": {"A": "formal and apologetic", "B": "friendly and informative", "C": "urgent and cautionary", "D": "neutral and impersonal"},
+             "correct": "B", "explanation": "Emojis, \"Big news, everyone!\", \"Come say hi\", tom positivo."},
+        ],
+    },
+]
+
 MOD2_DRILLS = [
     {
         "id": "mod2-d1",
