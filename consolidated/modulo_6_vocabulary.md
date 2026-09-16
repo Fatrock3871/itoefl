@@ -2,13 +2,13 @@
 
 > **iTOEFL | Formato TOEFL iBT vigente desde 21/jan/2026**
 >
-> Módulo de referência permanente. Estude a estratégia da Seção 1 uma vez;
+> Módulo de referência permanente. Estude a estratégia da Parte 1 uma vez;
 > depois volte às tabelas como banco de consulta durante os drills de Reading,
 > Listening, Speaking e Writing.
 
 ---
 
-## SEÇÃO 1: A ESTRATÉGIA · COMO ESTE MÓDULO FUNCIONA
+## PARTE 1: A ESTRATÉGIA · COMO ESTE MÓDULO FUNCIONA
 
 ### A distinção crítica: reconhecer vs. ativar
 
@@ -39,7 +39,7 @@ O maior erro de preparação de vocabulário é estudar palavras que você **rec
 
 ---
 
-## SEÇÃO 2: HIGH-FREQUENCY TOEFL VOCABULARY
+## PARTE 2: HIGH-FREQUENCY TOEFL VOCABULARY
 
 > Estas são as palavras que o TOEFL **usa** nos textos e áudios. Dominar o reconhecimento elimina hesitações em Reading e Listening e garante que você entenda os estímulos.
 
@@ -120,7 +120,7 @@ O maior erro de preparação de vocabulário é estudar palavras que você **rec
 
 ---
 
-## SEÇÃO 3: LOW-FREQUENCY HIGH-IMPACT VOCABULARY
+## PARTE 3: LOW-FREQUENCY HIGH-IMPACT VOCABULARY
 
 > Estas são as palavras que **você** insere estrategicamente no Speaking e Writing para ativar os gatilhos de sofisticação lexical. Use-as apenas quando puder fazê-lo com precisão: uma palavra errada custa mais do que a palavra simples e correta.
 
@@ -201,7 +201,7 @@ O maior erro de preparação de vocabulário é estudar palavras que você **rec
 
 ---
 
-## SEÇÃO 4: ARSENAL CROSS-TEMÁTICO
+## PARTE 4: ARSENAL CROSS-TEMÁTICO
 
 ### ⚡ Verbos acadêmicos de alto impacto (universais: qualquer tema)
 
@@ -288,9 +288,9 @@ Collocations são pares de palavras que nativos usam naturalmente juntas. Usá-l
 
 ---
 
-## SEÇÃO 5: FAMÍLIAS DE PALAVRAS E MORFOLOGIA
+## PARTE 5: FAMÍLIAS DE PALAVRAS E MORFOLOGIA
 
-> Esta seção é o motor de duas coisas: acertar *Complete the Words* (que testa a forma exata) e adivinhar palavras desconhecidas em *Read an Academic Passage* pela estrutura. Aprender **uma família inteira** de cada vez rende mais do que aprender palavras soltas.
+> Esta parte é o motor de duas coisas: acertar *Complete the Words* (que testa a forma exata) e adivinhar palavras desconhecidas em *Read an Academic Passage* pela estrutura. Aprender **uma família inteira** de cada vez rende mais do que aprender palavras soltas.
 
 ### 5.1 Por que a família importa mais que a palavra
 
@@ -344,7 +344,7 @@ O item *Complete the Words* dá a você uma frase com uma palavra parcialmente a
 
 ---
 
-## SEÇÃO 6: NUANCE E PRECISÃO · PARES QUE O BRASILEIRO CONFUNDE
+## PARTE 6: NUANCE E PRECISÃO · PARES QUE O BRASILEIRO CONFUNDE
 
 > Estes erros não são de vocabulário "difícil": são de precisão. Cada um custa ponto de *language use* no e-rater e de *lexical resource* no SpeechRater porque sinaliza controle incompleto.
 
@@ -406,7 +406,7 @@ Ao relatar o que um autor, palestrante ou colega diz, o verbo escolhido revela *
 
 ---
 
-## SEÇÃO 7: VOCABULÁRIO FUNCIONAL PARA LISTENING
+## PARTE 7: VOCABULÁRIO FUNCIONAL PARA LISTENING
 
 > Em *Listen to an Academic Talk* e *Listen to a Conversation*, certas palavras não carregam o conteúdo: elas **sinalizam a estrutura**. Reconhecê-las na hora diz onde anotar e o que vai cair na pergunta.
 
@@ -464,7 +464,7 @@ O Listening usa muito phrasal verb onde o brasileiro espera o verbo latino. Reco
 
 ---
 
-## SEÇÃO 8: O KIT DE EMERGÊNCIA · AS 50 PALAVRAS DE MAIOR ROI
+## PARTE 8: O KIT DE EMERGÊNCIA · AS 50 PALAVRAS DE MAIOR ROI
 
 > Para quem tem pouco tempo: as 50 palavras com maior retorno por hora de estudo · combinando frequência no exame e impacto na pontuação quando usadas por você. Priorize-as acima de qualquer outra lista.
 
@@ -523,7 +523,7 @@ O Listening usa muito phrasal verb onde o brasileiro espera o verbo latino. Reco
 
 ---
 
-## SEÇÃO 9: DRILLS DE VOCABULÁRIO
+## PARTE 9: DRILLS DE VOCABULÁRIO
 
 > As tabelas acima são reconhecimento. Estes drills forçam **produção**. Faça-os com papel e caneta, sem consultar, e só depois confira o gabarito.
 
@@ -676,7 +676,7 @@ Cada frase tem **um** erro de vocabulário (forma, colocação, falso cognato ou
 
 ---
 
-## SEÇÃO 10: PROTOCOLO DE ATIVAÇÃO · DE RECONHECER A USAR
+## PARTE 10: PROTOCOLO DE ATIVAÇÃO · DE RECONHECER A USAR
 
 ### Plano de 30 dias para ativar as 50 palavras
 
@@ -699,29 +699,29 @@ A frase começa **com** a palavra de impacto, não termina nela.
 
 ### Como esta camada pontua em 2026
 
-- **Reading / Listening:** o vocabulário da Seção 2 aparece nos textos e áudios.
+- **Reading / Listening:** o vocabulário da Parte 2 aparece nos textos e áudios.
 Reconhecimento lento = pontos perdidos em *Read an Academic Passage* e *Listen to an Academic Talk*, além de dificuldade em *Complete the Words*.
 - **Take an Interview:** a rubrica premia **variedade lexical** · 2 a 3 palavras
-da Seção 3/8 por resposta, inseridas no começo da frase, elevam a banda sem custar fluência.
+da Parte 3/8 por resposta, inseridas no começo da frase, elevam a banda sem custar fluência.
 - **Write an Email:** vocabulário navegacional preciso (*request an extension,
 clarify the requirements, reschedule*), não termos acadêmicos raros.
-- **Write for an Academic Discussion:** é onde a Seção 3 rende mais · há tempo
+- **Write for an Academic Discussion:** é onde a Parte 3 rende mais · há tempo
 para inserir 4 a 6 termos de impacto com precisão.
 
 ---
 
-## SEÇÃO 11: PROTOCOLO DE ANÁLISE DE ERROS DE VOCABULÁRIO
+## PARTE 11: PROTOCOLO DE ANÁLISE DE ERROS DE VOCABULÁRIO
 
 Depois de cada drill de produção (Speaking/Writing), classifique cada erro lexical numa das seis categorias. O padrão diz onde focar.
 
 | Código | Erro | Sinal | Correção | Onde revisar |
 |---|---|---|---|---|
-| **V1** | Forma errada da palavra | usou *analyze* onde a lacuna pedia *analysis*; *robusts*, *an emphasis on* | identificar a função sintática antes de escolher a forma | Seção 5.1, Drills 1–2 |
-| **V2** | Colocação errada | *do a research*, *corroborate to*, *make an emphasis* | banco de collocations por verbo âncora | Seção 4, Drills 3, 9 |
-| **V3** | Falso cognato | *eventually* = "eventualmente"; *pretend* = "pretender"; *realize* = "realizar" | lista da Seção 6.2; ao ver um cognato "óbvio", desconfiar | Seção 6.2, Módulo 9 |
-| **V4** | Registro trocado | latinismo raro num e-mail; phrasal informal na Academic Discussion; palavra de impacto onde a simples bastava | escolher o registro da task antes de escrever | Seção 6, Módulo 5 |
-| **V5** | Overreach (usou palavra que não controla) | a palavra sofisticada está no lugar errado da frase, ou com sentido aproximado, ou trava a fala | rebaixar para a palavra simples e correta até a sofisticada passar no teste dos 3 segundos | Seção 1 (regra de ativação), Drill 8 |
-| **V6** | Sinônimo impreciso | *say* → *claim* quando o autor prova; *big* → *pervasive* quando era só *large* | escolher o sinônimo pela **nuance**, não pelo tamanho | Seção 6.3, Drill 4 |
+| **V1** | Forma errada da palavra | usou *analyze* onde a lacuna pedia *analysis*; *robusts*, *an emphasis on* | identificar a função sintática antes de escolher a forma | Parte 5.1, Drills 1–2 |
+| **V2** | Colocação errada | *do a research*, *corroborate to*, *make an emphasis* | banco de collocations por verbo âncora | Parte 4, Drills 3, 9 |
+| **V3** | Falso cognato | *eventually* = "eventualmente"; *pretend* = "pretender"; *realize* = "realizar" | lista da Parte 6.2; ao ver um cognato "óbvio", desconfiar | Parte 6.2, Módulo 9 |
+| **V4** | Registro trocado | latinismo raro num e-mail; phrasal informal na Academic Discussion; palavra de impacto onde a simples bastava | escolher o registro da task antes de escrever | Parte 6, Módulo 5 |
+| **V5** | Overreach (usou palavra que não controla) | a palavra sofisticada está no lugar errado da frase, ou com sentido aproximado, ou trava a fala | rebaixar para a palavra simples e correta até a sofisticada passar no teste dos 3 segundos | Parte 1 (regra de ativação), Drill 8 |
+| **V6** | Sinônimo impreciso | *say* → *claim* quando o autor prova; *big* → *pervasive* quando era só *large* | escolher o sinônimo pela **nuance**, não pelo tamanho | Parte 6.3, Drill 4 |
 
 ### Registro semanal
 
@@ -735,9 +735,9 @@ Depois de cada drill de produção (Speaking/Writing), classifique cada erro lex
 
 ---
 
-## SEÇÃO 12: CHECKLIST DE SAÍDA DO MÓDULO 6
+## PARTE 12: CHECKLIST DE SAÍDA DO MÓDULO 6
 
-- [ ] Entendi a diferença entre vocabulário de **reconhecimento** (Seção 2) e de **produção** (Seção 3)
+- [ ] Entendi a diferença entre vocabulário de **reconhecimento** (Parte 2) e de **produção** (Parte 3)
 - [ ] Sei que uma palavra só entra no *Take an Interview* quando sai em menos de 3 segundos
 - [ ] Sei aprender por **família de palavras**, não por palavra solta, e identificar a forma pela função sintática
 - [ ] Conheço os prefixos/sufixos que me deixam adivinhar palavras novas em Reading
@@ -747,9 +747,9 @@ Depois de cada drill de produção (Speaking/Writing), classifique cada erro lex
 - [ ] Escolhi as 50 palavras do Kit de Emergência como prioridade
 - [ ] Comecei o plano de 30 dias de ativação
 - [ ] Sei inserir a palavra de impacto **no início** da frase, não no fim
-- [ ] Memorizei os verbos e adjetivos universais da Seção 4 como substitutos diretos
-- [ ] Fiz os 9 drills da Seção 9 e tenho um registro de erros V1–V6 em andamento
+- [ ] Memorizei os verbos e adjetivos universais da Parte 4 como substitutos diretos
+- [ ] Fiz os 9 drills da Parte 9 e tenho um registro de erros V1–V6 em andamento
 
 ---
 
-✅ Módulo 6 concluído. As tabelas ficam como banco de consulta permanente durante todos os drills. Refaça os drills da Seção 9 depois de cada simulado do Módulo 7.
+✅ Módulo 6 concluído. As tabelas ficam como banco de consulta permanente durante todos os drills. Refaça os drills da Parte 9 depois de cada simulado do Módulo 7.

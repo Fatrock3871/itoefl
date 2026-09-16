@@ -32,7 +32,7 @@ A conclusão estratégica é direta: **o TOEFL pune começos fracos com mais sev
 | **3** | Avançado | Reproduzir a dinâmica real do exame adaptativo: tempo estrito, router ativo, pressão contínua | **Cronômetro obrigatório** | Após Módulo 6 |
 | **4** | Final (Exam Day) | Simulação idêntica ao teste real da ETS: as 4 seções na sequência oficial, zero consultas | **Cronômetro + condições reais** | 7–10 dias antes da prova |
 
-**Nota sobre o Simulado 1:** o Teste de Nivelamento Express (Módulo 0) constitui o Simulado 1 · Diagnóstico. Ele já converteu seu desempenho em uma estimativa de banda CEFR (1–6) por seção. Retome esses resultados antes de iniciar o Simulado 2 · eles definem quais tipos de item merecem mais repetição neste módulo.
+> 📌 **Nota sobre o Simulado 1:** o Teste de Nivelamento Express (Módulo 0) constitui o Simulado 1 · Diagnóstico. Ele já converteu seu desempenho em uma estimativa de banda CEFR (1–6) por seção. Retome esses resultados antes de iniciar o Simulado 2 · eles definem quais tipos de item merecem mais repetição neste módulo.
 
 ### Pré-requisitos de Cada Simulado
 
