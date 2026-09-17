@@ -109,16 +109,20 @@ body.menu-open{overflow:hidden;}
 .hamburger[aria-expanded="true"] span:nth-child(2){opacity:0;}
 .hamburger[aria-expanded="true"] span:nth-child(3){transform:translateY(-6px) rotate(-45deg);}
 
-.brand{display:flex; align-items:center; gap:10px; padding:2px 2px 4px; min-width:0; overflow:hidden;}
+.brand{display:flex; align-items:center; gap:11px; padding:2px 2px 4px; min-width:0; overflow:hidden;}
 .brand .logo{
-  width:34px; height:34px; flex:none; border-radius:9px; background:var(--accent);
-  border:2px solid var(--edge); box-shadow:2px 2px 0 var(--edge);
+  position:relative; width:40px; height:40px; flex:none; border-radius:11px; background:var(--accent);
+  border:2px solid var(--edge); box-shadow:2px 2px 0 var(--edge); transform:rotate(-3deg);
   display:flex; align-items:center; justify-content:center;
-  font-family:'Bricolage Grotesque',sans-serif; font-weight:800; font-size:15px; color:#fff;
+  font-family:'Bricolage Grotesque',sans-serif; font-weight:800; font-size:17px; color:#fff; letter-spacing:-0.02em;
 }
-.brand .btxt{display:flex; flex-direction:column; line-height:1.1; white-space:nowrap;}
-.brand .name{font-family:'Bricolage Grotesque',sans-serif; font-size:20px; font-weight:800; letter-spacing:-0.03em; color:#fff;}
-.brand .mark{font-size:9.5px; letter-spacing:0.16em; text-transform:uppercase; color:var(--accent-2); font-weight:700;}
+.brand .logo::after{
+  content:""; position:absolute; top:-5px; right:-5px; width:10px; height:10px; border-radius:50%;
+  background:var(--accent-2); border:1.5px solid var(--edge);
+}
+.brand .btxt{display:flex; flex-direction:column; line-height:1.05; white-space:nowrap;}
+.brand .name{font-family:'Bricolage Grotesque',sans-serif; font-size:24px; font-weight:800; letter-spacing:-0.03em; color:#fff;}
+.brand .mark{font-size:9.5px; letter-spacing:0.16em; text-transform:uppercase; color:var(--accent-2); font-weight:700; margin-top:2px;}
 
 .overall-progress{
   background:rgba(255,255,255,0.05); border:1px solid var(--rail-line); border-radius:10px; padding:13px 13px 12px;
@@ -217,16 +221,20 @@ nav.modnav{display:flex; flex-direction:column; gap:1px;}
   position:relative; z-index:1; max-width:400px; width:100%; background:var(--paper); border:2px solid var(--edge);
   border-radius:var(--radius); box-shadow:var(--shadow-hard); padding:38px 34px 32px; text-align:center;
 }
-.auth-gate-brand{display:inline-flex; align-items:center; gap:10px; margin-bottom:20px;}
+.auth-gate-brand{display:inline-flex; align-items:center; gap:14px; margin-bottom:26px;}
 .auth-gate-brand .logo{
-  width:38px; height:38px; flex:none; border-radius:10px; background:var(--accent);
-  border:2px solid var(--edge); box-shadow:2px 2px 0 var(--edge);
+  position:relative; width:54px; height:54px; flex:none; border-radius:14px; background:var(--accent);
+  border:2.5px solid var(--edge); box-shadow:3px 3px 0 var(--edge); transform:rotate(-3deg);
   display:flex; align-items:center; justify-content:center;
-  font-family:'Bricolage Grotesque',sans-serif; font-weight:800; font-size:16px; color:#fff;
+  font-family:'Bricolage Grotesque',sans-serif; font-weight:800; font-size:23px; color:#fff; letter-spacing:-0.02em;
 }
-.auth-gate-brand .btxt{display:flex; flex-direction:column; align-items:flex-start; line-height:1.1;}
-.auth-gate-brand .name{font-family:'Bricolage Grotesque',sans-serif; font-size:19px; font-weight:800; letter-spacing:-0.03em; color:var(--ink);}
-.auth-gate-brand .mark{font-size:9px; letter-spacing:0.14em; text-transform:uppercase; color:var(--accent-strong); font-weight:700;}
+.auth-gate-brand .logo::after{
+  content:""; position:absolute; top:-6px; right:-6px; width:13px; height:13px; border-radius:50%;
+  background:var(--accent-2); border:2px solid var(--edge);
+}
+.auth-gate-brand .btxt{display:flex; flex-direction:column; align-items:flex-start; line-height:1.05;}
+.auth-gate-brand .name{font-family:'Bricolage Grotesque',sans-serif; font-size:33px; font-weight:800; letter-spacing:-0.035em; color:var(--ink);}
+.auth-gate-brand .mark{font-size:10px; letter-spacing:0.13em; text-transform:uppercase; color:var(--accent-strong); font-weight:700; margin-top:3px;}
 .auth-gate-kicker{
   display:inline-block; font-family:'Bricolage Grotesque',sans-serif; font-size:10.5px; font-weight:800;
   text-transform:uppercase; letter-spacing:0.12em; color:#fff; background:var(--accent);
