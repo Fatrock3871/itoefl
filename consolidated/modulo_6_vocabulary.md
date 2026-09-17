@@ -12,7 +12,7 @@
 
 ### A distinção crítica: reconhecer vs. ativar
 
-O maior erro de preparação de vocabulário é estudar palavras que você **reconhece** ao ler, mas não consegue **usar** ao falar ou escrever sob pressão. Este módulo trabalha as duas camadas com objetivos distintos:
+O maior erro de preparação de vocabulário é estudar palavras que você **reconhece** ao ler, mas não consegue **usar** ao falar ou escrever sob pressão. Este módulo trabalha as duas camadas, cada uma com seu objetivo próprio:
 
 | Categoria | Função no TOEFL 2026 | Habilidade-alvo | Onde pesa |
 |---|---|---|---|
@@ -690,7 +690,7 @@ Cada frase tem **um** erro de vocabulário (forma, colocação, falso cognato ou
 
 ### Regra de inserção estratégica (Take an Interview)
 
-Nunca tente encaixar uma palavra de impacto no meio de uma frase que você já está construindo. Insira **no início da frase**, onde você tem controle:
+Nunca tente encaixar uma palavra de impacto no meio de uma frase que você já está construindo. Insira **no início da frase**, onde você ainda tem controle total:
 
 - ❌ Fraco: *"Education is important and it... um... pervasive in... in society."*
 - ✅ Elite: *"The pervasive influence of [X] on [Y] makes this a particularly consequential choice."*
