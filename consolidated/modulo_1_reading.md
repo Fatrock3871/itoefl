@@ -14,7 +14,7 @@
 
 ### 1.1 Radiografia oficial da seção
 
-O Reading é a **primeira seção do TOEFL iBT** e funciona como um **exame adaptativo em dois estágios**: seu desempenho nos primeiros minutos determina o nível de dificuldade (e o teto de pontuação) do restante da seção.
+O Reading abre a prova, e é um **exame adaptativo em dois estágios**. Isso muda tudo: seu desempenho nos primeiros minutos decide o nível de dificuldade, e o teto de pontuação, do resto da seção.
 
 | Elemento | Dado oficial (ETS 2026) |
 |---|---|
@@ -54,12 +54,9 @@ ESTÁGIO 2 — MÓDULO (~18–21 minutos)
 
 **O que isso significa na prática:**
 
-- **O router decide seu teto.** Ir bem no router te qualifica para o Módulo
-Superior, que contém os itens necessários para as bandas 5–6 (C1–C2). Ir mal te prende no Módulo Inferior, cujo teto de banda é **estruturalmente mais baixo**, não importa quão bem você vá depois, o teto perdido não volta.
-- **A transição router → módulo é invisível.** Você não sabe, durante a prova,
-qual item ainda é router. Trate **cada item, do primeiro ao último, com o mesmo rigor.**
-- **Não "aqueça" e não "economize".** Chutar rápido no início para ganhar tempo
-te roteia para baixo. Desacelerar de propósito "para controlar o ritmo" não ajuda: o sistema recompensa acurácia consistente sob o tempo dado, não cautela artificial.
+- **O router decide seu teto.** Ir bem qualifica você pro Módulo Superior, que tem os itens das bandas 5 a 6 (C1 a C2). Ir mal prende você no Módulo Inferior, com teto **estruturalmente mais baixo**. Não importa quão bem você vá depois: o teto perdido não volta.
+- **A transição router → módulo é invisível.** Você não sabe, durante a prova, qual item ainda é router. Por isso trate **cada item, do primeiro ao último, com o mesmo rigor.**
+- **Não "aqueça" e não "economize".** Chutar rápido no início pra ganhar tempo te roteia pra baixo. Desacelerar de propósito "pra controlar o ritmo" também não ajuda. O sistema recompensa acurácia consistente sob o tempo dado, não cautela artificial.
 
 > Pense no router como a fase de classificação de uma competição: longe de ser "aquecimento", ele define contra quem você compete na fase seguinte.
 
@@ -75,12 +72,9 @@ te roteia para baixo. Desacelerar de propósito "para controlar o ritmo" não aj
 
 **Leitura estratégica:**
 
-1. **Complete the Words domina em volume** (30 itens). É onde quem treinou de
-verdade se separa de quem não treinou: exige um método específico e uma base de gramática/collocation que ninguém desenvolve "por acaso". A Parte 3 deste módulo é dedicada a essa base.
-2. **Read in Daily Life é o único tipo com piso em A1**: mas sobe até C1, com
-armadilhas de tom, implicatura e formato. Não subestime.
-3. **Read an Academic Passage** testa leitura acadêmica compacta: passagens
-curtas, poucos itens por passagem, foco total no essencial.
+1. **Complete the Words domina em volume** (30 itens). É onde quem treinou de verdade se separa de quem não treinou. Exige um método específico e uma base de gramática e collocation que ninguém desenvolve "por acaso". A Parte 3 deste módulo é dedicada a essa base.
+2. **Read in Daily Life é o único tipo com piso em A1**, mas sobe até C1, com armadilhas de tom, implicatura e formato. Não subestime.
+3. **Read an Academic Passage** testa leitura acadêmica compacta: passagens curtas, poucos itens por passagem, foco total no essencial.
 
 ---
 
@@ -104,7 +98,7 @@ Cada passagem acadêmica traz uma combinação destes tipos. Reconhecer o tipo *
 
 ### 1.5 Por que o Reading vem primeiro
 
-Você enfrenta o Reading no pico de energia cognitiva: essa é sua vantagem. Como a seção é adaptativa e curta, a pressão de tempo por item já é alta no router. Gerenciar ansiedade nos primeiros minutos é **estruturalmente decisivo** para o seu teto, não um simples "seria bom".
+Você enfrenta o Reading no pico de energia cognitiva. Essa é sua vantagem, use bem. Como a seção é adaptativa e curta, a pressão de tempo por item já é alta no router. Gerenciar ansiedade nos primeiros minutos não é "seria bom": é **estruturalmente decisivo** para o seu teto.
 
 ---
 
@@ -121,7 +115,7 @@ incluindo **collocations** (*make a decision*, não *do a decision*).
 3. **Compreensão leitora**: usar o sentido do texto ao redor para eliminar
 opções gramaticalmente possíveis mas semanticamente erradas.
 
-Um item de CTW **nunca** se resolve só com gramática (várias opções podem ser gramaticais) nem só com vocabulário (uma palavra pode "fazer sentido" isolada e quebrar a estrutura da frase).
+Um item de CTW **nunca** se resolve só com gramática, já que várias opções podem ser gramaticais. Também não se resolve só com vocabulário: uma palavra pode "fazer sentido" isolada e ainda assim quebrar a estrutura da frase.
 
 #### O Método CTW em 4 passos
 
@@ -147,7 +141,7 @@ contradiz algo já estabelecido (troca de tempo verbal, de sujeito, quebra de ca
 
 ### 2.2 Read in Daily Life
 
-Textos funcionais do cotidiano. O erro nº 1 de quem vem de preparação só acadêmica é **superinterpretar**: procurar camadas que não existem.
+Textos funcionais do cotidiano: placa, cardápio, e-mail. O erro nº 1 de quem só treinou leitura acadêmica é **superinterpretar**, procurando camadas que não existem.
 
 #### Tática geral
 
@@ -193,7 +187,7 @@ alternativas "sofisticadas demais" para o registro do texto.
 
 ### 2.4 Estratégia para o Router
 
-O router decide se você disputa o Módulo Superior (bandas 5–6) ou fica limitado ao Inferior. Quatro princípios:
+O router decide se você disputa o Módulo Superior (bandas 5 a 6) ou fica limitado ao Inferior. São quatro princípios, simples de lembrar:
 
 1. **Mesmo rigor no primeiro item e no último.** Não há "aquecimento
 descartável": o sistema avalia desde o item 1.
@@ -208,7 +202,7 @@ acaba; a variável que você controla é a consistência mental item a item.
 
 ## PARTE 3: LABORATÓRIO DE LÍNGUA · A BASE DO COMPLETE THE WORDS
 
-O *Complete the Words* testa gramática e collocation numa forma disfarçada. Esta parte é a referência que sustenta o Passo 2 e o Passo 3 do Método CTW. Estude-a uma vez a fundo; depois volte a ela sempre que errar um item por gramática ou por palavra.
+O *Complete the Words* testa gramática e collocation numa forma disfarçada. Esta parte é a referência que sustenta o Passo 2 e o Passo 3 do Método CTW. Estude a fundo uma vez, depois volte aqui sempre que errar um item por gramática ou por palavra.
 
 ### 3.1 Formas verbais: a regra por posição
 
