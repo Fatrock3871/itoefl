@@ -135,7 +135,7 @@ gate = (
 
     '<form class="auth-form" id="signupForm" hidden>'
     '<input type="email" id="signupEmail" class="auth-input" placeholder="E-mail" autocomplete="email" required>'
-    '<input type="text" id="signupUsername" class="auth-input" placeholder="Usuário (letras minúsculas, números, _ · 3–20)" autocomplete="username" required pattern="[a-z0-9_]{3,20}">'
+    '<input type="text" id="signupUsername" class="auth-input" placeholder="Usuário (letras, números, _ · 3–20)" autocomplete="username" required pattern="[A-Za-z0-9_]{3,20}">'
     '<input type="password" id="signupPassword" class="auth-input" placeholder="Senha (mínimo 6 caracteres)" autocomplete="new-password" required minlength="6">'
     '<button type="submit" class="auth-gate-submit">Criar conta</button>'
     '</form>'
