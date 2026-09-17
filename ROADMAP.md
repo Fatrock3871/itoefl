@@ -628,11 +628,33 @@ Currículo passou de ~50k para ~110k palavras. Todos os módulos com protocolo d
 erros próprio, drills com gabarito, exemplos resolvidos; M7 e M9 amarram os
 códigos de erro entre si.
 
-## Fase 6 — Publicação
+## Fase 6 — Publicação (preparado em 2026-09-17, ainda não executado)
 
-- [ ] Publicar (GitHub Pages — o app é estático e autocontido)
-- [ ] Trocar Site URL / Redirect URLs do Supabase para o endereço publicado
-- [ ] Testar login e sync no endereço final, inclusive no celular
+Usuário pediu pra deixar pronto sem publicar ainda. Estado hoje: **sem
+remoto git configurado** (`git remote -v` vazio) — nenhum repositório no
+GitHub existe pra este projeto ainda. `artifact/index.html` é gitignored
+(gerado, nunca commitado) — pra publicar, o jeito mais simples é buildar
+localmente (onde `app/supabase_config.json` já existe com as credenciais
+reais) e mandar só o artifact pra uma branch/pasta que o GitHub Pages sirva,
+sem CI — evita ter que colocar segredos do Supabase em GitHub Actions.
+
+Checklist pra quando o usuário confirmar:
+
+- [ ] Criar o repositório no GitHub (público, já que Pages grátis exige
+      público num repo pessoal — ou usar GitHub Pro/Team se quiser privado)
+- [ ] `git remote add origin <url>` + `git push -u origin master` (ou `main`)
+- [ ] Copiar `artifact/index.html` (build local, com o Supabase real
+      embutido) pra `docs/index.html` na raiz do repo **ou** uma branch
+      `gh-pages` — GitHub Pages serve a partir de um desses dois
+- [ ] Settings → Pages → Source: a branch/pasta escolhida acima
+- [ ] Anotar a URL final (`https://<usuario>.github.io/<repo>/` ou domínio
+      customizado, se houver)
+- [ ] Supabase → Authentication → URL Configuration: trocar Site URL e
+      Redirect URLs de `http://localhost:8000` pra essa URL final
+- [ ] Testar login (e-mail + Google, se já configurado) e sync no endereço
+      final, inclusive no celular
+- [ ] Toda vez que o conteúdo/código mudar depois disso: rebuildar local e
+      repetir a cópia pro `docs/`/`gh-pages` — não é automático sem CI
 
 ---
 
