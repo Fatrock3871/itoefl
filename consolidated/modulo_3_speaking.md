@@ -25,7 +25,7 @@
 | **Pontuação bruta** | 55 pontos → banda **1–6** (CEFR) |
 | **Correção** | **100% por IA** (motor do tipo SpeechRater). Nenhuma correção humana. |
 
-O Speaking é **curto e denso**: 8 minutos, 55 pontos brutos · o dobro do Writing. Cada item vale proporcionalmente muito, e não há tempo de planejamento estendido para mascarar fraquezas. Você é avaliado em **precisão**, não em fluência genérica de discurso.
+O Speaking é **curto e denso**: 8 minutos, 55 pontos brutos, o dobro do Writing. Cada item vale proporcionalmente muito, e não sobra tempo de planejamento pra mascarar fraqueza. Você é avaliado em **precisão**, não em fluência genérica de discurso.
 
 ### 1.2 As duas tarefas
 
@@ -49,9 +49,9 @@ história, negócios*. Vocabulário calibrado ao nível, com contrações natura
 
 ### 1.3 O que a arquitetura revela
 
-Repare no peso: Listen and Repeat vale quase o dobro de Take an Interview (35 × 20). Isso é uma **declaração de prioridade** da ETS: o teste recompensa **precisão fonológica, sintática e lexical em tempo real** (processar e reproduzir estruturas com exatidão sob pressão) mais do que fluência de discurso longo.
+Repare no peso: Listen and Repeat vale quase o dobro de Take an Interview (35 contra 20). Isso é uma **declaração de prioridade** da ETS. O teste recompensa **precisão fonológica, sintática e lexical em tempo real**, ou seja, processar e reproduzir estruturas com exatidão sob pressão, mais do que fluência de discurso longo.
 
-Isso muda onde você investe suas horas: quem ignora Listen and Repeat para focar só em "falar bem" está otimizando a task errada. **Nenhum dos 11 itens pede um discurso longo e estruturado.** Templates de fala de 45+ segundos com introdução/corpo/conclusão (herança do formato antigo) **não existem mais**.
+Isso muda onde você investe suas horas. Quem ignora Listen and Repeat pra focar só em "falar bem" está otimizando a task errada. **Nenhum dos 11 itens pede um discurso longo e estruturado.** Templates de fala de 45 ou mais segundos com introdução, corpo e conclusão, herança do formato antigo, **não existem mais**.
 
 ---
 
@@ -59,7 +59,7 @@ Isso muda onde você investe suas horas: quem ignora Listen and Repeat para foca
 
 ### 2.1 O que a IA de fato mede
 
-Motores do tipo SpeechRater não "entendem" conteúdo como um humano: extraem **features acústicas e linguísticas mensuráveis** do seu áudio e comparam com milhares de respostas já calibradas por banda CEFR. As dimensões:
+Motores do tipo SpeechRater não "entendem" conteúdo como um humano. Eles extraem **features acústicas e linguísticas mensuráveis** do seu áudio e comparam com milhares de respostas já calibradas por banda CEFR. Aqui estão as dimensões que importam:
 
 | Categoria | O que é medido | Como ganhar banda |
 |---|---|---|
@@ -72,7 +72,7 @@ Motores do tipo SpeechRater não "entendem" conteúdo como um humano: extraem **
 
 ### 2.2 Estratégia para Listen and Repeat
 
-**A IA compara sua transcrição contra o áudio-fonte, palavra por palavra, sílaba por sílaba.** Parafrasear é o erro mais caro que existe nesta task. Se você trocar *"purchase"* por *"buy"* porque "soou mais natural", você **não** ganha ponto por fluência: você **perde** ponto por infidelidade ao alvo.
+**A IA compara sua transcrição contra o áudio-fonte, palavra por palavra, sílaba por sílaba.** Parafrasear é o erro mais caro que existe nesta task. Se você trocar *"purchase"* por *"buy"* porque "soou mais natural", você **não** ganha ponto por fluência. Você **perde** ponto por infidelidade ao alvo.
 
 **O que a pontuação recompensa:**
 
