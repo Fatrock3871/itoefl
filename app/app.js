@@ -1132,7 +1132,6 @@
       // uma falha de rede não pode trancar o aluno fora do próprio conteúdo
       if(gateEl) gateEl.hidden = true;
       box.hidden = false;
-      document.getElementById("authSignIn").hidden = true;
       var m = document.getElementById("authMsg");
       m.textContent = "Biblioteca do Supabase não carregou (sem internet ou CDN bloqueado). App em modo offline.";
       m.style.color = "var(--danger)";
@@ -1149,10 +1148,20 @@
       gateMsgEl.hidden = false;
     }
 
-    var signInBtn = document.getElementById("authSignIn");
     var googleBtn = document.getElementById("authSignInGoogle");
     var signedIn = document.getElementById("authIn");
     var emailEl = document.getElementById("authEmail");
+    // formulário de usuário+senha (substitui o antigo link mágico por e-mail)
+    var loginForm = document.getElementById("loginForm");
+    var signupForm = document.getElementById("signupForm");
+    var resetPasswordForm = document.getElementById("resetPasswordForm");
+    var authGateForms = [loginForm, signupForm, resetPasswordForm, document.getElementById("authLinks"),
+      document.getElementById("authGateDivider"), document.getElementById("authGateGoogleWrap"),
+      document.getElementById("authSwitchToSignup"), document.getElementById("authSwitchToLogin")];
+    var authGateTitle = document.getElementById("authGateTitle");
+    var authGateSubtitle = document.getElementById("authGateSubtitle");
+    var authGateKicker = document.getElementById("authGateKicker");
+    var PENDING_USERNAME_KEY = "toefl_pending_username";
     var avatarEl = document.getElementById("authAvatar");
     var avatarImgEl = document.getElementById("authAvatarImg");
     var avatarLetterEl = document.getElementById("authAvatarLetter");
@@ -1379,16 +1388,19 @@
         });
     }
 
+    function setGateFormsHidden(hidden){
+      authGateForms.forEach(function(el){ if(el) el.hidden = hidden; });
+    }
     function goOnline(session){
       uid = session.user.id;
       emailEl.textContent = session.user.email || "conectado";
       googleAvatarUrl = extractGoogleAvatar(session);
       renderAvatar(session.user.email);
-      signInBtn.hidden = true;
-      if(googleBtn) googleBtn.hidden = true;
+      setGateFormsHidden(true);
       signedIn.hidden = false;
       if(gateEl) gateEl.hidden = true;
       checkEntitlement(session);
+      checkUsername(session);
       onSyncedWrite = schedulePush;
       forceSyncPush = push;
       pull();
@@ -1398,23 +1410,130 @@
       googleAvatarUrl = null;
       onSyncedWrite = null;
       forceSyncPush = null;
-      signInBtn.hidden = false;
-      if(googleBtn) googleBtn.hidden = false;
+      setGateFormsHidden(false);
+      showLoginView();
       signedIn.hidden = true;
       if(gateEl) gateEl.hidden = false;
       if(payGateEl) payGateEl.hidden = true;
     }
 
-    signInBtn.addEventListener("click", function(){
-      var email = window.prompt("Seu e-mail. Enviaremos um link de acesso:");
+    // ---- login por usuário+senha (substitui o antigo link mágico) ----
+    var AUTH_ERROR_MAP = {
+      "Invalid login credentials": "Usuário ou senha incorretos.",
+      "User already registered": "Já existe uma conta com esse e-mail.",
+      "Password should be at least 6 characters": "A senha precisa ter pelo menos 6 caracteres.",
+    };
+    function friendlyError(message){ return AUTH_ERROR_MAP[message] || ("Erro: " + message); }
+
+    function showLoginView(){
+      loginForm.hidden = false; signupForm.hidden = true; resetPasswordForm.hidden = true;
+      document.getElementById("authSwitchToSignup").hidden = false;
+      document.getElementById("authSwitchToLogin").hidden = true;
+      document.getElementById("authLinks").hidden = false;
+      document.getElementById("authGateDivider").hidden = false;
+      document.getElementById("authGateGoogleWrap").hidden = false;
+      authGateTitle.textContent = "Entre para continuar";
+      authGateSubtitle.textContent = "Seu progresso fica salvo na sua conta e sincroniza entre dispositivos.";
+      authGateKicker.textContent = "Acesso à plataforma";
+    }
+    function showSignupView(){
+      loginForm.hidden = true; signupForm.hidden = false; resetPasswordForm.hidden = true;
+      document.getElementById("authSwitchToSignup").hidden = true;
+      document.getElementById("authSwitchToLogin").hidden = false;
+      document.getElementById("authLinks").hidden = true;
+      document.getElementById("authGateDivider").hidden = false;
+      document.getElementById("authGateGoogleWrap").hidden = false;
+      authGateTitle.textContent = "Criar conta";
+      authGateSubtitle.textContent = "O e-mail confirma que a conta é sua e serve pra recuperar usuário/senha depois.";
+      authGateKicker.textContent = "Novo por aqui?";
+    }
+    function showResetPasswordView(){
+      loginForm.hidden = true; signupForm.hidden = true; resetPasswordForm.hidden = false;
+      document.getElementById("authSwitchToSignup").hidden = true;
+      document.getElementById("authSwitchToLogin").hidden = true;
+      document.getElementById("authLinks").hidden = true;
+      document.getElementById("authGateDivider").hidden = true;
+      document.getElementById("authGateGoogleWrap").hidden = true;
+      authGateTitle.textContent = "Escolha uma nova senha";
+      authGateSubtitle.textContent = "";
+      authGateKicker.textContent = "Recuperação de senha";
+      if(gateEl) gateEl.hidden = false; // aparece mesmo se o app estava "logado" na sessão de recuperação
+    }
+
+    loginForm.addEventListener("submit", function(e){
+      e.preventDefault();
+      var username = document.getElementById("loginUsername").value.trim();
+      var password = document.getElementById("loginPassword").value;
+      if(!username || !password) return;
+      gateMsg("Entrando...", "ok");
+      client.rpc("email_for_username", { uname: username }).then(function(res){
+        if(res.error || !res.data){
+          gateMsg("Usuário ou senha incorretos.", "err");
+          return;
+        }
+        client.auth.signInWithPassword({ email: res.data, password: password }).then(function(r){
+          if(r.error) gateMsg(friendlyError(r.error.message), "err");
+        });
+      });
+    });
+
+    signupForm.addEventListener("submit", function(e){
+      e.preventDefault();
+      var email = document.getElementById("signupEmail").value.trim();
+      var username = document.getElementById("signupUsername").value.trim().toLowerCase();
+      var password = document.getElementById("signupPassword").value;
+      if(!/^[a-z0-9_]{3,20}$/.test(username)){
+        gateMsg("Usuário: só letras minúsculas, números e _ (3 a 20 caracteres).", "err");
+        return;
+      }
+      gateMsg("Criando conta...", "ok");
+      client.rpc("email_for_username", { uname: username }).then(function(checkRes){
+        if(checkRes.data){ gateMsg("Esse nome de usuário já está em uso.", "err"); return; }
+        try { sessionStorage.setItem(PENDING_USERNAME_KEY, username); } catch(ex){}
+        client.auth.signUp({ email: email, password: password }).then(function(res){
+          if(res.error){ gateMsg(friendlyError(res.error.message), "err"); return; }
+          if(res.data && res.data.session){
+            gateMsg("Conta criada!", "ok"); // goOnline() cuida do resto via onAuthStateChange
+          } else {
+            gateMsg("Conta criada! Confira seu e-mail para confirmar antes de entrar.", "ok");
+          }
+        });
+      });
+    });
+
+    resetPasswordForm.addEventListener("submit", function(e){
+      e.preventDefault();
+      var newPassword = document.getElementById("newPassword").value;
+      if(!newPassword || newPassword.length < 6) return;
+      gateMsg("Salvando...", "ok");
+      client.auth.updateUser({ password: newPassword }).then(function(res){
+        if(res.error){ gateMsg(friendlyError(res.error.message), "err"); return; }
+        gateMsg("Senha atualizada! Entrando...", "ok");
+        showLoginView();
+      });
+    });
+
+    document.getElementById("forgotPasswordLink").addEventListener("click", function(){
+      var email = window.prompt("Seu e-mail. Enviaremos um link pra você escolher uma nova senha:");
       if(!email) return;
       var redirect = location.href.split("#")[0].split("?")[0];
-      client.auth.signInWithOtp({ email: email.trim(), options: { emailRedirectTo: redirect } })
-        .then(function(res){
-          gateMsg(res.error ? ("Erro: " + res.error.message) : "Link enviado. Confira seu e-mail.",
-              res.error ? "err" : "ok");
-        });
+      client.auth.resetPasswordForEmail(email.trim(), { redirectTo: redirect }).then(function(res){
+        gateMsg(res.error ? friendlyError(res.error.message) : "Link enviado. Confira seu e-mail.",
+          res.error ? "err" : "ok");
+      });
     });
+    document.getElementById("forgotUsernameLink").addEventListener("click", function(){
+      var email = window.prompt("Seu e-mail. Enviaremos um link de acesso — ao entrar, seu usuário aparece na barra do topo:");
+      if(!email) return;
+      var redirect = location.href.split("#")[0].split("?")[0];
+      client.auth.signInWithOtp({ email: email.trim(), options: { emailRedirectTo: redirect } }).then(function(res){
+        gateMsg(res.error ? friendlyError(res.error.message) : "Link enviado. Confira seu e-mail.",
+          res.error ? "err" : "ok");
+      });
+    });
+    document.getElementById("showSignup").addEventListener("click", showSignupView);
+    document.getElementById("showLogin").addEventListener("click", showLoginView);
+
     if(googleBtn){
       googleBtn.addEventListener("click", function(){
         var redirect = location.href.split("#")[0].split("?")[0];
@@ -1429,7 +1548,29 @@
       client.auth.signOut().then(goOffline);
     });
 
+    // ---- nome de usuário: aplica o escolhido no cadastro assim que a conta
+    // tem sessão ativa (pode não ter tido sessão no momento do signUp, se a
+    // confirmação por e-mail estiver ligada) e mostra o usuário (em vez do
+    // e-mail cru) na barra do topo assim que ele existir -- é também como
+    // "esqueci meu usuário" se resolve: a pessoa entra por qualquer método
+    // e o nome aparece aqui, sem precisar de um e-mail separado pra isso.
+    function checkUsername(session){
+      client.from("profiles").select("username").eq("id", session.user.id).maybeSingle().then(function(res){
+        var current = res.data && res.data.username;
+        if(current){ emailEl.textContent = current; return; }
+        var pending = null;
+        try { pending = sessionStorage.getItem(PENDING_USERNAME_KEY); } catch(ex){}
+        if(!pending) return;
+        client.from("profiles").update({ username: pending }).eq("id", session.user.id).then(function(upd){
+          if(upd.error) return;
+          try { sessionStorage.removeItem(PENDING_USERNAME_KEY); } catch(ex){}
+          emailEl.textContent = pending;
+        });
+      });
+    }
+
     client.auth.onAuthStateChange(function(event, session){
+      if(event === "PASSWORD_RECOVERY"){ showResetPasswordView(); return; }
       if(session && session.user) goOnline(session);
       else goOffline();
     });
