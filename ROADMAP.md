@@ -5,8 +5,35 @@ Memória entre sessões. Atualizar ao concluir cada etapa.
 **Última atualização:** 2026-09-17
 **Agora:** Fase 7 (conteúdo) concluída. **3 frentes abertas em paralelo** (ver abaixo).
 `artifact/index.html` ≈ 954 KB. Login agora obrigatório quando o Supabase
-está configurado (ver v11) — isso muda o comportamento em produção depois da
+está configurado (ver v11), isso muda o comportamento em produção depois da
 Fase 6, não só em dev.
+
+---
+
+## Reescrita de tom dos 10 módulos (2026-09-17) — CONCLUÍDA
+
+A pedido do usuário (diretriz de designer instrucional sênior), o texto vivo
+de cada módulo (aberturas, transições, blockquotes explicativos) foi
+reescrito em tom de mentor/colega sênior, eliminando fórmulas robóticas
+("neste módulo iremos explorar") e travessões usados como pausa dramática.
+Tabelas, drills, roteiros passo a passo e blocos de código (diagramas ASCII,
+gabaritos) foram deliberadamente preservados sem alteração, por instrução
+explícita do usuário.
+
+Diretriz de pontuação seguida em todos os módulos e em toda escrita futura
+para este usuário: sem travessão (—) nem meia-risca (–) como recurso de
+pausa, ênfase ou separação de ideias, só vírgula, dois-pontos ou frase curta
+com ponto final. Hífen fica restrito a palavras compostas gramaticais.
+Exceções legítimas mantidas (auditadas módulo a módulo, não são violação):
+travessão dentro de bloco de código (diagramas/linhas do tempo) e travessão
+como placeholder de célula vazia/N-A em tabela. Meia-risca em intervalo
+numérico ("0–120", "CEFR 1–6") também é exceção, por ser convenção
+tipográfica diferente da pausa de prosa.
+
+Módulos M0–M9 todos commitados individualmente, cada um com verificação
+estrutural (contagem de headings e linhas de tabela idêntica ao HEAD antes
+da edição) e auditoria de travessões remanescentes. M0 precisou de um commit
+de correção (16 travessões reintroduzidos por engano na primeira passada).
 
 ---
 
