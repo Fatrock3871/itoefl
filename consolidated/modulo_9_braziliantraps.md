@@ -9,9 +9,9 @@
 
 ## PARTE 1: A MENTALIDADE CERTA · POR QUE ESTE MÓDULO EXISTE
 
-O cérebro aprende línguas novas sobre a estrutura da língua que já conhece. Para falantes de português, o inglês que você produz naturalmente: especialmente sob pressão de tempo em *Take an Interview* e nas tarefas de Writing · carrega a "impressão digital" do português. Isso não é fraqueza: é neurologia. O problema é quando essa impressão digital persiste sem que você a reconheça.
+Todo cérebro aprende uma língua nova apoiado na estrutura da língua que já domina. Para quem fala português, o inglês que você produz naturalmente carrega a impressão digital do português. Isso acontece principalmente sob pressão de tempo, em *Take an Interview* e nas tarefas de Writing. Não é fraqueza, é neurologia. O problema real é quando essa impressão digital persiste sem que você a reconheça.
 
-Este módulo não ensina gramática básica. Ele mapeia os **erros sistemáticos**: os que aparecem repetidamente nos mesmos contextos, mesmo em candidatos de nível avançado · e dá a correção cirúrgica para cada um.
+Este módulo não ensina gramática básica. Ele mapeia os **erros sistemáticos**: aqueles que aparecem repetidamente nos mesmos contextos, mesmo em candidatos de nível avançado, e entrega a correção cirúrgica para cada um.
 
 **Como usar este módulo:**
 1. Leia cada seção e identifique os erros que você já cometeu ou reconhece como risco
@@ -42,7 +42,7 @@ Este módulo não ensina gramática básica. Ele mapeia os **erros sistemáticos
 
 ## PARTE 2: TRANSFERÊNCIA LINGUÍSTICA FATAL
 
-> "Transferência linguística" é aplicar inconscientemente as regras da língua materna à língua-alvo. As que seguem são as mais frequentes e mais custosas para candidatos brasileiros.
+> Transferência linguística é aplicar, sem perceber, as regras da língua materna à língua-alvo. As que seguem são as mais frequentes e as mais custosas para candidatos brasileiros.
 
 ### 2.1 Preposições assassinas
 
@@ -230,7 +230,7 @@ O português usa o presente para situações que começaram no passado e continu
 
 ## PARTE 3: FALSOS COGNATOS EM CONTEXTO ACADÊMICO · OS MAIS PERIGOSOS
 
-> Falsos cognatos clássicos ("borracha/rubber", "polvo/octopus") raramente aparecem no TOEFL. Os que seguem aparecem em textos acadêmicos e em situações reais de Speaking e Writing: e causam confusão de sentido em contexto de alto risco.
+> Falsos cognatos clássicos ("borracha/rubber", "polvo/octopus") raramente aparecem no TOEFL. Os que seguem são diferentes: aparecem em textos acadêmicos e em situações reais de Speaking e Writing, e causam confusão de sentido justamente em contexto de alto risco.
 
 ### Tabela mestra de falsos cognatos acadêmicos
 
@@ -325,7 +325,7 @@ Uma família de erros de registro que aparece especialmente em *Write for an Aca
 
 ## PARTE 4: VÍCIOS DE PRONÚNCIA E ENTONAÇÃO · O QUE O SPEECHRATER PENALIZA
 
-> O SpeechRater da ETS (correção 100% IA no Speaking de 2026) processa padrões acústicos mensuráveis. Os erros abaixo são os mais frequentes em falantes de português e os que mais impactam a nota de **inteligibilidade e prosódia**: exatamente os critérios de *Listen and Repeat* e *Take an Interview*.
+> O SpeechRater da ETS (correção 100% IA no Speaking de 2026) processa padrões acústicos mensuráveis. Os erros abaixo são os mais frequentes em falantes de português. São também os que mais impactam a nota de **inteligibilidade e prosódia**, exatamente os critérios de *Listen and Repeat* e *Take an Interview*.
 
 ### 4.1 Os 6 fonemas críticos
 
@@ -500,7 +500,7 @@ Pratique em voz alta, gravando e ouvindo de volta.
 
 ## PARTE 5: ERROS ESPECÍFICOS NO WRITING ACADÊMICO
 
-Além da transferência oral, o Writing tem seus próprios padrões de interferência. Aplicam-se principalmente a *Write for an Academic Discussion* (e alguns ao *Write an Email*).
+Além da transferência oral, o Writing tem os próprios padrões de interferência. Eles aparecem principalmente em *Write for an Academic Discussion*, e alguns também em *Write an Email*.
 
 | Erro de Writing | Origem | Forma correta |
 |---|---|---|
@@ -665,7 +665,7 @@ Para uso imediato, antes de qualquer outro estudo deste módulo.
 
 ## PARTE 8: MAPA · ONDE CADA TRAP TE PEGA NOS PROTOCOLOS DE ERRO
 
-Depois de um simulado, quando você classificar um erro com um código de triagem do Módulo 7, use este mapa reverso para vir direto ao trecho deste módulo que corrige aquele padrão.
+Depois de um simulado, quando você classificar um erro com um código de triagem do Módulo 7, use este mapa reverso. Ele te leva direto ao trecho deste módulo que corrige aquele padrão.
 
 | Código (M7) | Protocolo do módulo | Traps deste módulo | Onde reparar aqui |
 |---|---|---|---|
@@ -683,7 +683,7 @@ Depois de um simulado, quando você classificar um erro com um código de triage
 
 ## PARTE 9: SPRINT DE ELIMINAÇÃO · 2 SEMANAS
 
-Este módulo tem material demais para "estudar de uma vez". O que funciona é um sprint focado nos **seus** traps (Parte 6), rodado uma vez, e depois monitoramento nos simulados.
+Este módulo tem material demais para "estudar de uma vez". O que funciona de verdade é um sprint focado nos **seus** traps (Parte 6): você roda uma vez e depois só monitora nos simulados.
 
 | Dia | Foco | Ação concreta |
 |---|---|---|
