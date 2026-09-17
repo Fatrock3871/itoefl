@@ -2,9 +2,9 @@
 
 Memória entre sessões. Atualizar ao concluir cada etapa.
 
-**Última atualização:** 2026-09-16 (v15)
+**Última atualização:** 2026-09-17
 **Agora:** Fase 7 (conteúdo) concluída. **3 frentes abertas em paralelo** (ver abaixo).
-`artifact/index.html` ≈ 915 KB. Login agora obrigatório quando o Supabase
+`artifact/index.html` ≈ 954 KB. Login agora obrigatório quando o Supabase
 está configurado (ver v11) — isso muda o comportamento em produção depois da
 Fase 6, não só em dev.
 
@@ -364,6 +364,45 @@ Conversa pulou entre três assuntos. Estado de cada um:
 - **Login com Google:** ainda não funciona — usuário confirmou que não
   completou a ativação do provedor no painel do Supabase. Sem mudança de
   código pendente; guia em `docs/supabase-setup.md` §3.1.
+- **Fase 6 preparada, não executada (2026-09-17):** checklist completo escrito
+  (sem remoto git configurado ainda — nenhum repo no GitHub pra este projeto).
+  Usuário pediu só pra deixar pronto, sem publicar.
+- **Botão "Reiniciar todo o progresso" (commit c86eb57):** zona de perigo na
+  sidebar, apaga checkboxes/quiz/SRS/Build a Sentence/registro de
+  erros/certificado (não mexe em avatar/tema). Achado no caminho: reload
+  imediato depois do reset tinha uma corrida real com o push debounced
+  (2.5s) pra nuvem — o próximo `pull()` acharia a nuvem "mais nova" (ainda
+  com o progresso antigo) e desfaria o reset. Corrigido expondo
+  `forceSyncPush()` (push sem debounce, com Promise) — só recarrega depois
+  que a nuvem confirma.
+- **Emojis decorativos removidos (mesmo commit c86eb57):** 58 ocorrências
+  em `consolidated/*.md` (🏋️ antes de cada drill, 📊/📘/🔴/🎧/📖/🚀/🔥 em
+  cabeçalhos), conferidas uma a uma por contexto antes de tirar. Mantido:
+  ✅❌✔☐✓ (certo/errado), ⚠️🚨 (avisos), setas (conectores), a legenda
+  funcional ✍️/🎤 do M9 e qualquer emoji dentro de conteúdo sendo lido pelo
+  aluno. **Cuidado técnico:** a primeira tentativa trocou LF→CRLF ao
+  reescrever os arquivos (Python `open()` em modo texto no Windows traduz
+  por padrão) e inflou o diff pra milhares de linhas — revertido e refeito
+  com `newline=""` nos dois lados.
+- **Login troca de link mágico por usuário+senha (commit 711b750,
+  2026-09-17):** pedido do usuário — cadastro pede e-mail+usuário+senha,
+  login só usuário+senha, e-mail vira recuperação (esqueci senha/usuário).
+  Google continua do lado. Supabase Auth só autentica por e-mail
+  nativamente — resolvido com uma função no banco (`email_for_username`,
+  SECURITY DEFINER, liberada pra `anon`) que traduz usuário→e-mail antes de
+  chamar `signInWithPassword`. Coluna `username` nova em `profiles` (única,
+  formato validado por CHECK). Reescrita completa da tela de login em
+  `build.py`/`app.js` — maior mudança de código só de UI da sessão, alto
+  risco de erro de sintaxe; verificado ao vivo via Chrome headless (zero
+  erros de JS, os 3 formulários existem, troca login↔cadastro funciona). O
+  fluxo que depende do Supabase de verdade (RPC, signUp, recuperação) só dá
+  pra confirmar depois que o usuário rodar o schema novo — `schema.sql`
+  precisa ser rodado de novo no SQL Editor (seção "LOGIN POR NOME DE
+  USUÁRIO"), documentado em `docs/supabase-setup.md`.
+- **Acesso pago pendente de confirmar com Google login funcionando:** a
+  tela de paywall (`#payGate`) só aparece depois do login — sem o Google OU
+  o usuário/senha funcionando de ponta a ponta, não dá pra testar o fluxo
+  completo de compra ainda.
 - **Pendente:** Fase 6 (publicar no GitHub Pages) segue depois da aprovação do
   usuário — é ação pública/difícil de reverter, não faço sem confirmar.
 
