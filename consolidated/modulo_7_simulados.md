@@ -151,7 +151,7 @@ Um simulado só rende se a semana seguinte for de reparo direcionado. Não faça
 
 ---
 
-### 📖 READING: SIMULADO 2
+### READING: SIMULADO 2
 
 #### Bloco A: Complete the Words
 
@@ -314,7 +314,7 @@ This standardizing effect was not entirely welcome. Writers who spoke regional v
 
 ---
 
-### 🎧 LISTENING: SIMULADO 2 (com transcrições)
+### LISTENING: SIMULADO 2 (com transcrições)
 
 #### Listen and Choose a Response
 
@@ -582,7 +582,7 @@ Responda em ~40 segundos cada, sem preparo. Grave todas.
 
 ---
 
-### 📖 READING · SIMULADO 3 (Tempo máximo: 27 minutos)
+### READING · SIMULADO 3 (Tempo máximo: 27 minutos)
 
 #### Bloco A: Complete the Words (cronometrado, alvo: 3 min)
 
@@ -673,7 +673,7 @@ Critics of this narrative, however, caution against treating network effects as 
 
 ---
 
-### 🎧 LISTENING · SIMULADO 3 (Tempo total: ~18 min, com router)
+### LISTENING · SIMULADO 3 (Tempo total: ~18 min, com router)
 
 **Instrução:** Ouça (ou leia a transcrição uma única vez, sem pausar) e responda sem retroceder · o áudio real não permite replay.
 

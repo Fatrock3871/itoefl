@@ -70,6 +70,7 @@
     return false;
   }
   var onSyncedWrite = null; // atribuído pelo módulo de sync quando logado
+  var forceSyncPush = null; // idem, mas sem debounce e devolvendo a Promise -- usado pelo reset de progresso, que precisa confirmar que a nuvem já ficou vazia antes de recarregar (senão o pull() do próximo load reidrata o estado antigo)
 
   function safeGet(key){ try { return localStorage.getItem(key); } catch(e){ return null; } }
   function safeSet(key, val){
@@ -845,6 +846,47 @@
       reader.readAsText(f);
       fileInput.value = "";
     });
+
+    // ---- Reiniciar todo o progresso ----
+    // não usa onSyncedWrite (debounced, 2.5s) porque recarregamos a página
+    // logo em seguida -- se o push ainda não tivesse terminado, o pull() do
+    // próximo load acharia a nuvem "mais nova" (com o progresso antigo) e
+    // reidrataria tudo de volta. forceSyncPush() é a versão sem debounce,
+    // e só recarrega depois que ela resolve (ou imediatamente se offline).
+    var resetBtn = document.getElementById("resetBtn");
+    if(resetBtn){
+      var RESET_PREFIXES = ["toefl_progress", "toefl_srs_", "toefl_bsq_", "toefl_quiz_", "toefl_errlog_", "toefl_cert_"];
+      resetBtn.addEventListener("click", function(){
+        var ok = window.confirm(
+          "Isso apaga TODO o seu progresso no curso (checkboxes, questões respondidas, " +
+          "flashcards, frases escritas, registro de erros) e não pode ser desfeito. Continuar?"
+        );
+        if(!ok) return;
+        var keys = [];
+        try{
+          for(var i = 0; i < localStorage.length; i++){
+            var k = localStorage.key(i);
+            if(k && RESET_PREFIXES.some(function(p){ return k.indexOf(p) === 0; })) keys.push(k);
+          }
+        }catch(e){}
+        keys.forEach(function(k){ try{ localStorage.removeItem(k); }catch(e){} });
+        try{ localStorage.setItem("toefl_dirty", "1"); }catch(e){}
+
+        function finishReset(){
+          flash("Progresso reiniciado. Recarregando…");
+          setTimeout(function(){ location.reload(); }, 600);
+        }
+        if(typeof forceSyncPush === "function"){
+          try{
+            var p = forceSyncPush();
+            if(p && typeof p.then === "function") p.then(finishReset, finishReset);
+            else finishReset();
+          }catch(e){ finishReset(); }
+        } else {
+          finishReset();
+        }
+      });
+    }
   })();
 
   // ---------- Build a Sentence — widget interativo (M4) ----------
@@ -1293,7 +1335,7 @@
       if(!uid) return;
       var bundle = collectSynced();
       var stamp = new Date().toISOString();
-      client.from("user_state")
+      return client.from("user_state")
         .upsert({ user_id: uid, state: bundle, updated_at: stamp }, { onConflict: "user_id" })
         .select("updated_at").single()
         .then(function(res){
@@ -1348,12 +1390,14 @@
       if(gateEl) gateEl.hidden = true;
       checkEntitlement(session);
       onSyncedWrite = schedulePush;
+      forceSyncPush = push;
       pull();
     }
     function goOffline(){
       uid = null;
       googleAvatarUrl = null;
       onSyncedWrite = null;
+      forceSyncPush = null;
       signInBtn.hidden = false;
       if(googleBtn) googleBtn.hidden = false;
       signedIn.hidden = true;

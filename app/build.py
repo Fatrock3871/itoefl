@@ -52,7 +52,7 @@ journey = (
     '<div class="journey-row">'
     '<div class="journey-tools">'
     '<button class="themetoggle" id="themeToggle" type="button" aria-label="Alternar tema">'
-    '<span id="themeIcon">🌗</span><span id="themeLabel">Sistema</span></button>'
+    '<span id="themeIcon">☀️</span><span id="themeLabel">Claro</span></button>'
     '<div class="auth-box" id="authBox" hidden>'
     '<div id="authIn" hidden>'
     '<span class="auth-avatar-wrap">'
@@ -173,7 +173,7 @@ cert_modal = (
     '<p class="cert-body">concluiu a preparação completa para o <strong>TOEFL iBT</strong> '
     '(formato 2026) pela plataforma iTOEFL — os 10 módulos, do diagnóstico ao protocolo do dia da prova.</p>'
     '<p class="cert-date" id="certDate"></p>'
-    '<p class="cert-disclaimer">Não é um certificado oficial da ETS — é só um jeito de comemorar que você terminou. 🎉</p>'
+    '<p class="cert-disclaimer">Não é um certificado oficial da ETS — é só um jeito de comemorar que você terminou.</p>'
     '<button type="button" class="cert-print" id="certPrint">🖨 Imprimir / salvar como PDF</button>'
     '</div>'
     '</div>'
@@ -217,7 +217,7 @@ html = f'''<!DOCTYPE html>
       <span class="level-badge-band" id="levelBadgeBand"></span>
       <span class="level-badge-sched" id="levelBadgeSched"></span>
     </div>
-    <button type="button" class="cert-btn" id="certBtn" hidden>🎓 Ver certificado de conclusão</button>
+    <button type="button" class="cert-btn" id="certBtn" hidden>Ver certificado de conclusão</button>
     <nav class="modnav" id="modnav">
       {nav_items}
     </nav>
@@ -228,6 +228,7 @@ html = f'''<!DOCTYPE html>
       <input type="file" id="dataFile" accept="application/json,.json" hidden>
       <span id="dataMsg" class="data-msg" hidden></span>
     </div>
+    <button type="button" class="reset-btn" id="resetBtn">↺ Reiniciar todo o progresso</button>
     <div class="foot-note">Preparação independente baseada nas especificações ETS vigentes desde 21/jan/2026. Não afiliada à ETS. Seu progresso é salvo neste navegador.</div>
   </aside>
 

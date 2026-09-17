@@ -43,7 +43,7 @@ O maior erro de preparação de vocabulário é estudar palavras que você **rec
 
 > Estas são as palavras que o TOEFL **usa** nos textos e áudios. Dominar o reconhecimento elimina hesitações em Reading e Listening e garante que você entenda os estímulos.
 
-### 📘 ÁREA: EDUCATION
+### ÁREA: EDUCATION
 
 | Palavra | Cat. | Significado (PT) | Sinônimo acadêmico | Exemplo: nível nota máxima |
 |---|---|---|---|---|
@@ -58,7 +58,7 @@ O maior erro de preparação de vocabulário é estudar palavras que você **rec
 | **collaboration** | n. | colaboração; trabalho conjunto entre indivíduos ou grupos | teamwork; joint effort | *"Structured collaboration among students not only deepens conceptual understanding but also develops the interpersonal competencies that professional contexts increasingly demand."* |
 | **standardized** | adj. | padronizado; desenvolvido para aplicação uniforme | uniform; regulated | *"Critics argue that standardized testing, by design, privileges test-taking proficiency over authentic academic competence."* |
 
-### 📘 ÁREA: BUSINESS & ECONOMICS
+### ÁREA: BUSINESS & ECONOMICS
 
 | Palavra | Cat. | Significado (PT) | Sinônimo acadêmico | Exemplo: nível nota máxima |
 |---|---|---|---|---|
@@ -73,7 +73,7 @@ O maior erro de preparação de vocabulário é estudar palavras que você **rec
 | **transparency** | n. | transparência; abertura e prestação de contas em operações | openness; disclosure | *"Organizational transparency, both in decision-making processes and financial reporting, is increasingly treated as a prerequisite for institutional legitimacy."* |
 | **infrastructure** | n. | infraestrutura; sistemas físicos e organizacionais fundamentais | foundational systems; backbone | *"Inadequate digital infrastructure disproportionately disadvantages rural and lower-income communities in an economy that increasingly privileges connectivity."* |
 
-### 📘 ÁREA: SCIENCE & RESEARCH
+### ÁREA: SCIENCE & RESEARCH
 
 | Palavra | Cat. | Significado (PT) | Sinônimo acadêmico | Exemplo: nível nota máxima |
 |---|---|---|---|---|
@@ -88,7 +88,7 @@ O maior erro de preparação de vocabulário é estudar palavras que você **rec
 | **phenomenon** | n. | fenômeno; fato ou evento observável | occurrence; manifestation | *"The urban heat island effect is a well-documented climatic phenomenon that has become increasingly consequential as global urbanization accelerates."* |
 | **paradigm** | n. | paradigma; estrutura de conceitos e práticas aceitos em uma área | framework; conceptual structure | *"A scientific paradigm provides researchers with the conceptual tools to formulate questions: but also, critically, determines which questions are considered legitimate."* |
 
-### 📘 ÁREA: ENVIRONMENT
+### ÁREA: ENVIRONMENT
 
 | Palavra | Cat. | Significado (PT) | Sinônimo acadêmico | Exemplo: nível nota máxima |
 |---|---|---|---|---|
@@ -103,7 +103,7 @@ O maior erro de preparação de vocabulário é estudar palavras que você **rec
 | **degradation** | n. | degradação; deterioração da qualidade ou função de um ambiente | deterioration; depletion | *"Soil degradation, driven primarily by intensive agricultural practices, threatens the productive capacity of approximately one-third of the Earth's arable land."* |
 | **carbon footprint** | n. | pegada de carbono; total de emissões de CO₂ geradas por atividade | emissions profile | *"The carbon footprint of a product encompasses not only its production phase but its entire lifecycle: from raw material extraction through disposal or recycling."* |
 
-### 📘 ÁREA: TECHNOLOGY
+### ÁREA: TECHNOLOGY
 
 | Palavra | Cat. | Significado (PT) | Sinônimo acadêmico | Exemplo: nível nota máxima |
 |---|---|---|---|---|
@@ -124,7 +124,7 @@ O maior erro de preparação de vocabulário é estudar palavras que você **rec
 
 > Estas são as palavras que **você** insere estrategicamente no Speaking e Writing para ativar os gatilhos de sofisticação lexical. Use-as apenas quando puder fazê-lo com precisão: uma palavra errada custa mais do que a palavra simples e correta.
 
-### 🔴 EDUCATION: HIGH-IMPACT
+### EDUCATION: HIGH-IMPACT
 
 | Palavra | Cat. | Significado (PT) | Sinônimo (mais simples) | Exemplo: nível nota máxima |
 |---|---|---|---|---|
@@ -139,7 +139,7 @@ O maior erro de preparação de vocabulário é estudar palavras que você **rec
 | **nuanced** | adj. | nuançado; que apresenta distinções sutis e complexidade | subtle; multifaceted | *"A nuanced understanding of learning differences requires moving beyond diagnostic labels toward a genuine appreciation of the specific cognitive profiles that shape each student's experience."* |
 | **transformative** | adj. | transformador; que produz mudança fundamental e duradoura | profound; foundational | *"The most transformative educational experiences are rarely those that transmit information efficiently; they are those that alter how the learner perceives the world itself."* |
 
-### 🔴 BUSINESS & ECONOMICS: HIGH-IMPACT
+### BUSINESS & ECONOMICS: HIGH-IMPACT
 
 | Palavra | Cat. | Significado (PT) | Sinônimo (mais simples) | Exemplo: nível nota máxima |
 |---|---|---|---|---|
@@ -154,7 +154,7 @@ O maior erro de preparação de vocabulário é estudar palavras que você **rec
 | **incremental** | adj. | incremental; que avança por pequenos acréscimos sucessivos | step-by-step; gradual | *"Incremental improvements to an established process often deliver more reliable returns than the pursuit of a single transformative breakthrough."* |
 | **benchmark** | v./n. | comparar com um padrão de referência; o próprio padrão | standard; reference point | *"Benchmarking organizational performance against industry peers provides a more meaningful signal of competitive positioning than absolute metrics considered in isolation."* |
 
-### 🔴 SCIENCE & RESEARCH: HIGH-IMPACT
+### SCIENCE & RESEARCH: HIGH-IMPACT
 
 | Palavra | Cat. | Significado (PT) | Sinônimo (mais simples) | Exemplo: nível nota máxima |
 |---|---|---|---|---|
@@ -169,7 +169,7 @@ O maior erro de preparação de vocabulário é estudar palavras que você **rec
 | **tenuous** | adj. | tênue; fraco, pouco convincente, facilmente contestável | weak; fragile | *"The connection between screen time and adverse mental health outcomes in adolescents remains statistically tenuous when rigorously controlled for pre-existing conditions."* |
 | **corroborate** | v. | corroborar; confirmar uma afirmação através de evidência independente | to confirm; to verify | *"The lecture's experimental evidence directly corroborates the theoretical prediction made in the reading, providing the empirical grounding that the model alone could not supply."* |
 
-### 🔴 ENVIRONMENT: HIGH-IMPACT
+### ENVIRONMENT: HIGH-IMPACT
 
 | Palavra | Cat. | Significado (PT) | Sinônimo (mais simples) | Exemplo: nível nota máxima |
 |---|---|---|---|---|
@@ -184,7 +184,7 @@ O maior erro de preparação de vocabulário é estudar palavras que você **rec
 | **symbiosis** | n. | simbiose; interação mutuamente benéfica entre organismos de espécies diferentes | mutualism; interdependence | *"The symbiosis between mycorrhizal fungi and plant root systems exemplifies how ecological relationships that appear parasitic at first glance can, upon closer analysis, prove mutualistic."* |
 | **acidification** | n. | acidificação; queda do pH (dos oceanos) por absorção de CO₂ | pH decline | *"Ocean acidification, driven by the absorption of atmospheric CO₂, impairs the ability of corals and shellfish to build the calcium carbonate structures on which entire marine food webs depend."* |
 
-### 🔴 TECHNOLOGY: HIGH-IMPACT
+### TECHNOLOGY: HIGH-IMPACT
 
 | Palavra | Cat. | Significado (PT) | Sinônimo (mais simples) | Exemplo: nível nota máxima |
 |---|---|---|---|---|

@@ -484,7 +484,7 @@ Anotar palavra por palavra é lento demais. Use símbolos.
 
 ---
 
-#### 🏋️ DRILL B1 · Advising Office · alvo: 3 min
+#### DRILL B1 · Advising Office · alvo: 3 min
 
 *Narrator: Listen to a conversation between a student and an academic advisor.*
 
@@ -514,7 +514,7 @@ Anotar palavra por palavra é lento demais. Use símbolos.
 
 ---
 
-#### 🏋️ DRILL B2: Library Reserve Desk · alvo: 3 min
+#### DRILL B2: Library Reserve Desk · alvo: 3 min
 
 *Narrator: Listen to a conversation between a student and a librarian.*
 
@@ -542,7 +542,7 @@ Anotar palavra por palavra é lento demais. Use símbolos.
 
 ---
 
-#### 🏋️ DRILL B3 · After Class · alvo: 3 min
+#### DRILL B3 · After Class · alvo: 3 min
 
 *Narrator: Listen to a conversation between a student and a professor.*
 
@@ -576,7 +576,7 @@ Anotar palavra por palavra é lento demais. Use símbolos.
 
 ---
 
-#### 🏋️ DRILL C1 · Library Services · alvo: 2 min
+#### DRILL C1 · Library Services · alvo: 2 min
 
 *Narrator: Listen to an announcement about a change to library services.*
 
@@ -590,7 +590,7 @@ Anotar palavra por palavra é lento demais. Use símbolos.
 
 ---
 
-#### 🏋️ DRILL C2: Course Registration · alvo: 2 min
+#### DRILL C2: Course Registration · alvo: 2 min
 
 *Narrator: Listen to an announcement about course registration.*
 
@@ -606,7 +606,7 @@ Anotar palavra por palavra é lento demais. Use símbolos.
 
 ---
 
-#### 🏋️ DRILL C3 · Campus Event · alvo: 2 min
+#### DRILL C3 · Campus Event · alvo: 2 min
 
 *Narrator: Listen to an announcement about a career event.*
 
@@ -626,7 +626,7 @@ Anotar palavra por palavra é lento demais. Use símbolos.
 
 ---
 
-#### 🏋️ DRILL D1 · Psicologia · alvo: 4 min
+#### DRILL D1 · Psicologia · alvo: 4 min
 
 *Narrator: Listen to part of a talk in a psychology class.*
 
@@ -650,7 +650,7 @@ Now, this doesn't mean choice is bad: a complete absence of options is its own p
 
 ---
 
-#### 🏋️ DRILL D2 · Biologia · alvo: 4 min
+#### DRILL D2 · Biologia · alvo: 4 min
 
 *Narrator: Listen to part of a talk in a biology class.*
 
@@ -674,7 +674,7 @@ Now, a word of caution. This work has captured the public imagination, and some 
 
 ---
 
-#### 🏋️ DRILL D3: História da tecnologia · alvo: 4 min
+#### DRILL D3: História da tecnologia · alvo: 4 min
 
 *Narrator: Listen to part of a talk in a history of technology class.*
 
@@ -775,7 +775,7 @@ This is a textbook case of what economists call **path dependence**, or sometime
 
 ---
 
-### 📊 SCORE CONSOLIDADO
+### SCORE CONSOLIDADO
 
 Some: Grupo A (**12**), Grupo B (**12**), Grupo C (**11**), Grupo D (**16**). Total: **51 itens**.
 

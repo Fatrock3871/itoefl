@@ -175,7 +175,7 @@ def build_mod1():
     # aparece inline em cada widget acima); mantém o Score Consolidado
     before_g, rest = slice_lines(rest, "### GRUPO A: Complete the Words", "### GRUPO B: Read in Daily Life")
     _, rest = slice_lines(rest, "### GRUPO B: Read in Daily Life", "### GRUPO C: Read an Academic Passage")
-    _, rest = slice_lines(rest, "### GRUPO C: Read an Academic Passage", "### 📊 SCORE CONSOLIDADO DOS DRILLS")
+    _, rest = slice_lines(rest, "### GRUPO C: Read an Academic Passage", "### SCORE CONSOLIDADO DOS DRILLS")
 
     # PARTE 7: troca o template de "Registro" (preencher à mão) pelo
     # formulário que salva histórico
@@ -213,7 +213,7 @@ def build_mod2():
     before_g, rest = slice_lines(rest, "### GRUPO A: Listen and Choose a Response", "### GRUPO B: Listen to a Conversation")
     _, rest = slice_lines(rest, "### GRUPO B: Listen to a Conversation", "### GRUPO C: Listen to an Announcement")
     _, rest = slice_lines(rest, "### GRUPO C: Listen to an Announcement", "### GRUPO D: Listen to an Academic Talk")
-    _, rest = slice_lines(rest, "### GRUPO D: Listen to an Academic Talk", "### 📊 SCORE CONSOLIDADO")
+    _, rest = slice_lines(rest, "### GRUPO D: Listen to an Academic Talk", "### SCORE CONSOLIDADO")
 
     # PARTE 7: troca o template de "Registro" (preencher à mão) pelo
     # formulário que salva histórico

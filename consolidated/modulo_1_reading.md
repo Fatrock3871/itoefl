@@ -387,7 +387,7 @@ Em itens de vocabulário em contexto, você raramente precisa "saber" a palavra:
 
 ---
 
-#### 🏋️ DRILL A1 · nível A2–B1 · alvo: 4 min
+#### DRILL A1 · nível A2–B1 · alvo: 4 min
 
 **TEXT: A message to a friend**
 
@@ -410,7 +410,7 @@ Talk soon, Lia
 
 ---
 
-#### 🏋️ DRILL A2 · nível B1 · alvo: 4 min
+#### DRILL A2 · nível B1 · alvo: 4 min
 
 **TEXT: Notice at a community pool**
 
@@ -427,7 +427,7 @@ We apologize for any (5)_____ this may cause. If you have questions about your m
 
 ---
 
-#### 🏋️ DRILL A3 · nível B2 · alvo: 5 min
+#### DRILL A3 · nível B2 · alvo: 5 min
 
 **TEXT: A message from the office manager**
 
@@ -452,7 +452,7 @@ Thanks for your patience, and enjoy the (8)_____ time off!
 
 ---
 
-#### 🏋️ DRILL A4 · nível B2–C1 · alvo: 5 min
+#### DRILL A4 · nível B2–C1 · alvo: 5 min
 
 **TEXT: Museum exhibit information card**
 
@@ -469,7 +469,7 @@ Visitors are (4)_____ to move through the rooms in order, since the layout follo
 
 ---
 
-#### 🏋️ DRILL A5 · nível C1 · alvo: 5 min
+#### DRILL A5 · nível C1 · alvo: 5 min
 
 **TEXT: Excerpt from an editorial**
 
@@ -490,7 +490,7 @@ This does not mean nothing (4)_____ be done. It means the solution lies elsewher
 
 ---
 
-#### 🏋️ DRILL B1 · Placa / aviso · alvo: 2 min
+#### DRILL B1 · Placa / aviso · alvo: 2 min
 
 **TEXT: Sign at a nature reserve trailhead**
 
@@ -510,7 +510,7 @@ This does not mean nothing (4)_____ be done. It means the solution lies elsewher
 
 ---
 
-#### 🏋️ DRILL B2 · Cardápio · alvo: 3 min
+#### DRILL B2 · Cardápio · alvo: 3 min
 
 **TEXT: Café lunch menu (extract)**
 
@@ -536,7 +536,7 @@ This does not mean nothing (4)_____ be done. It means the solution lies elsewher
 
 ---
 
-#### 🏋️ DRILL B3 · E-mail formal · alvo: 3 min
+#### DRILL B3 · E-mail formal · alvo: 3 min
 
 **TEXT: Email from a course coordinator**
 
@@ -579,7 +579,7 @@ This does not mean nothing (4)_____ be done. It means the solution lies elsewher
 
 ---
 
-#### 🏋️ DRILL B4 · Horário / tabela · alvo: 2 min
+#### DRILL B4 · Horário / tabela · alvo: 2 min
 
 **TEXT: Shuttle timetable notice**
 
@@ -599,7 +599,7 @@ This does not mean nothing (4)_____ be done. It means the solution lies elsewher
 
 ---
 
-#### 🏋️ DRILL B5: Post de rede social · alvo: 3 min
+#### DRILL B5: Post de rede social · alvo: 3 min
 
 **TEXT: A social media post from a local bakery**
 
@@ -648,7 +648,7 @@ This does not mean nothing (4)_____ be done. It means the solution lies elsewher
 
 ---
 
-#### 🏋️ DRILL C1 · Ciências naturais · alvo: 6 min
+#### DRILL C1 · Ciências naturais · alvo: 6 min
 
 **PASSAGE: Bioluminescence in Marine Organisms**
 
@@ -702,7 +702,7 @@ What makes bioluminescence especially interesting to evolutionary biologists is 
 
 ---
 
-#### 🏋️ DRILL C2 · História · alvo: 6 min
+#### DRILL C2 · História · alvo: 6 min
 
 **PASSAGE: Coffee Houses in Seventeenth-Century England**
 
@@ -756,7 +756,7 @@ The authorities were not comfortable with this. In 1675, the king issued a procl
 
 ---
 
-#### 🏋️ DRILL C3 · Ciências sociais · alvo: 6 min
+#### DRILL C3 · Ciências sociais · alvo: 6 min
 
 **PASSAGE: The Strength of Weak Ties**
 
@@ -922,7 +922,7 @@ The finding has been extended well beyond job-hunting. Weak ties have been linke
 
 ---
 
-### 📊 SCORE CONSOLIDADO DOS DRILLS
+### SCORE CONSOLIDADO DOS DRILLS
 
 Some seus acertos: Grupo A (**32 itens**), Grupo B (**14 itens**), Grupo C (**21 itens**). Total: **67 itens**.
 

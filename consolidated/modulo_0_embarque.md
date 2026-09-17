@@ -2,7 +2,7 @@
 ---
 
 # MÓDULO 0
-## 🚀 EMBARQUE, DIAGNÓSTICO E MÉTRICAS DE FLUXO
+## EMBARQUE, DIAGNÓSTICO E MÉTRICAS DE FLUXO
 
 ---
 
@@ -356,7 +356,7 @@ Consistência bate intensidade. O iTOEFL usa desafios de sequência (streaks) pa
 | **Streak de Consistência** | 14 dias | Dashboard semanal preenchido nas 2 semanas + pelo menos 1 simulado parcial por semana | Sessão de revisão de erros com foco personalizado |
 | **Streak de Elite** | 30 dias | Sequência completa sem interrupção + 2 simulados completos cronometrados no período | Certificação interna de "Preparação Completa" do Sistema |
 
-> 🔥 **Dica de execução:** registre seu streak visivelmente (aplicativo de hábitos, planilha, agenda física). A perda de um streak longo é o maior preditor comportamental de abandono do plano de estudos · proteja-o como protegeria qualquer outro ativo de alto valor.
+> **Dica de execução:** registre seu streak visivelmente (aplicativo de hábitos, planilha, agenda física). A perda de um streak longo é o maior preditor comportamental de abandono do plano de estudos · proteja-o como protegeria qualquer outro ativo de alto valor.
 
 ---
 

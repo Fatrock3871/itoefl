@@ -434,7 +434,7 @@ Reconstrua cada frase usando **todas** as palavras/blocos, na forma correta (pod
 
 ---
 
-#### 🏋️ DRILL A1 · nível A1–B1 · alvo: 6 min (10 itens)
+#### DRILL A1 · nível A1–B1 · alvo: 6 min (10 itens)
 
 1. `every day / she / to the library / goes`
 2. `I / not / do / have / any / questions`
@@ -449,7 +449,7 @@ Reconstrua cada frase usando **todas** as palavras/blocos, na forma correta (pod
 
 ---
 
-#### 🏋️ DRILL A2 · nível B1–B2 · alvo: 6 min (10 itens)
+#### DRILL A2 · nível B1–B2 · alvo: 6 min (10 itens)
 
 1. `since / the policy / changed, / fewer / people / have / complained`
 2. `the report / will / be / reviewed / by the committee / next week`
@@ -464,7 +464,7 @@ Reconstrua cada frase usando **todas** as palavras/blocos, na forma correta (pod
 
 ---
 
-#### 🏋️ DRILL A3 · nível C1 · alvo: 6 min (10 itens)
+#### DRILL A3 · nível C1 · alvo: 6 min (10 itens)
 
 1. `had / it / not / been / for / the extension, / the project / would / failed / have`
 2. `rarely / such / does / one / commitment / see`
@@ -672,7 +672,7 @@ razão = ganho de gestão de tempo vs. custo em horas de estudo · exemplo = sua
 
 ---
 
-### 📊 SCORE CONSOLIDADO
+### SCORE CONSOLIDADO
 
 **Build a Sentence (Grupo A, 30 itens):**
 

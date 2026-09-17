@@ -380,7 +380,7 @@ quebra de ritmo, infidelidade lexical/gramatical.
 
 ---
 
-#### 🏋️ A1: nível A1–B1 (1 oração, frases curtas)
+#### A1: nível A1–B1 (1 oração, frases curtas)
 
 1. *I usually wake up early.*
 2. *She works at a hospital downtown.*
@@ -394,7 +394,7 @@ quebra de ritmo, infidelidade lexical/gramatical.
 
 ---
 
-#### 🏋️ A2: nível B1–B2 (uma subordinada)
+#### A2: nível B1–B2 (uma subordinada)
 
 1. *The store closes at nine, so we should leave soon.*
 2. *I didn't realize that the meeting had been moved.*
@@ -408,7 +408,7 @@ quebra de ritmo, infidelidade lexical/gramatical.
 
 ---
 
-#### 🏋️ A3: nível B2 (subordinação múltipla, sintagmas nominais complexos)
+#### A3: nível B2 (subordinação múltipla, sintagmas nominais complexos)
 
 1. *Although the meeting was rescheduled twice, most participants managed to attend on the final date.*
 2. *The professor who wrote that article has been researching climate migration for over a decade.*
@@ -422,7 +422,7 @@ quebra de ritmo, infidelidade lexical/gramatical.
 
 ---
 
-#### 🏋️ A4 · nível C1 (foco: armadilhas de ritmo do brasileiro)
+#### A4 · nível C1 (foco: armadilhas de ritmo do brasileiro)
 
 1. *I could have called you earlier if I had remembered.*
 *(cadeia de modais + reduções: "could've", "if I'd")*
@@ -441,7 +441,7 @@ quebra de ritmo, infidelidade lexical/gramatical.
 
 ---
 
-#### 🏋️ A5: nível C2 (enunciados longos, densidade máxima)
+#### A5: nível C2 (enunciados longos, densidade máxima)
 
 1. *The commission concluded that, in the absence of additional funding, the program could not be sustained beyond the current fiscal year.*
 2. *What the researchers had assumed to be a measurement error turned out to be a genuine, if small, effect.*
@@ -514,7 +514,7 @@ quebra de ritmo, infidelidade lexical/gramatical.
 
 ---
 
-#### 🏋️ B7: RECONHECIMENTO RÁPIDO DE FUNÇÃO
+#### B7: RECONHECIMENTO RÁPIDO DE FUNÇÃO
 
 *Treina a velocidade de identificar a função: a habilidade que evita travamento nos primeiros segundos.* Leia cada pergunta e, **em ≤ 2 segundos**, diga em voz alta qual função ela pede, antes de responder.
 
@@ -529,7 +529,7 @@ quebra de ritmo, infidelidade lexical/gramatical.
 
 ---
 
-#### 🏋️ B8: SIMULAÇÃO COMPLETA (4 itens, cronometrada)
+#### B8: SIMULAÇÃO COMPLETA (4 itens, cronometrada)
 
 Simule a task real: 4 perguntas em sequência, sem pausa além dos ~5 s de planejamento por item. Grave tudo.
 
@@ -544,7 +544,7 @@ Depois, ouça as 4 em sequência e aplique a rubrica de 3.8 a cada uma. Se qualq
 
 ---
 
-### 🏋️ C: SHADOWING PROGRESSIVO (treino diário, 15–20 min)
+### C: SHADOWING PROGRESSIVO (treino diário, 15–20 min)
 
 Use um trecho de 60–90 s de um podcast/vídeo em inglês nativo (notícia, entrevista, palestra curta).
 
@@ -621,7 +621,7 @@ Não há "resposta" a comparar além do próprio texto-alvo. Ao ouvir sua grava�
 
 ---
 
-### 📊 SCORE CONSOLIDADO
+### SCORE CONSOLIDADO
 
 | Fonte | Como somar | Meta |
 |---|---|---|

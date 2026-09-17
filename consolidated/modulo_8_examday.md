@@ -274,7 +274,7 @@ Nenhum protocolo desta parte funciona se a primeira vez que você o usa é na pr
 
 > Se você chega ao dia D e os protocolos ainda parecem "técnicas que li uma vez", eles não vão te ajudar sob pressão. O objetivo é que estejam tão automáticos quanto respirar.
 
-### 📊 Mapa de ansiedade: identifique seu padrão
+### Mapa de ansiedade: identifique seu padrão
 
 | Padrão | Sintoma | Protocolo |
 |---|---|---|
@@ -397,7 +397,7 @@ Sequência de referência: **Reading → Listening → (pausa de 10 min) → Wri
 | Writing | ~23 min | Build a Sentence ~8 min · Email ~4 min · Academic Discussion ~10 min |
 | Speaking | ~8 min | Listen and Repeat (7 itens) + Take an Interview (4 itens), janelas fixas por item |
 
-### 📖 READING (~27–30 min: router + módulo adaptativo)
+### READING (~27–30 min: router + módulo adaptativo)
 
 **Estado mental:** você está no pico de energia cognitiva, e o **router** decide sua rota de dificuldade. Trate cada item do início da seção como se já valesse a nota · porque, indiretamente, vale.
 
@@ -414,7 +414,7 @@ Sequência de referência: **Reading → Listening → (pausa de 10 min) → Wri
 
 **Ao terminar:** execute o selo de seção. Não fique remoendo.
 
-### 🎧 LISTENING (~18 min: router + módulo adaptativo)
+### LISTENING (~18 min: router + módulo adaptativo)
 
 **Estado mental:** modo de captura ativa · lápis na mão antes de o áudio começar. Cada áudio toca **uma única vez**.
 

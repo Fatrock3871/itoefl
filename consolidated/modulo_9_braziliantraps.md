@@ -145,7 +145,7 @@ O marcador -s da 3ª pessoa do singular desaparece sistematicamente sob pressão
 | *"Each student **have** different needs"* | *"Each student **has** different needs"* | *Write for an Academic Discussion* |
 | *"The policy **affect** low-income families"* | *"The policy **affects** low-income families"* | *Write for an Academic Discussion* |
 
-> 🔴 **Este erro é detectado automaticamente pelo e-rater.** Cada ocorrência penaliza o critério de gramática. Como você usa esses verbos constantemente ("the author argues / the evidence suggests / the study challenges"), um padrão sistemático deste erro pode custar meia banda na seção.
+> **Este erro é detectado automaticamente pelo e-rater.** Cada ocorrência penaliza o critério de gramática. Como você usa esses verbos constantemente ("the author argues / the evidence suggests / the study challenges"), um padrão sistemático deste erro pode custar meia banda na seção.
 
 **D. Reflexivos desnecessários:**
 
@@ -176,7 +176,7 @@ O português pluraliza livremente; muitos desses substantivos são **incontávei
 | *"vocabularies"* | *"vocabulary"* |
 | *"evidences"* | *"evidence"* (incontável no sentido de "provas") |
 
-> 🔴 *"These informations are..."* dispara **dois** erros de gramática no e-rater (plural indevido + concordância). Código **SW-verb** → **M4 W2**.
+> *"These informations are..."* dispara **dois** erros de gramática no e-rater (plural indevido + concordância). Código **SW-verb** → **M4 W2**.
 
 **F. Artigo indefinido omitido + `a` vs `an` + instituições:**
 
