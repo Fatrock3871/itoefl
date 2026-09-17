@@ -6,7 +6,7 @@
 
 ---
 
-Este módulo cobre o TOEFL iBT nas especificações oficiais da ETS vigentes a partir de janeiro de 2026, e é sobre esse exame (o único que você vai fazer) que todo o iTOEFL foi construído.
+Este é o TOEFL iBT nas especificações oficiais da ETS, vigentes desde janeiro de 2026 — o único exame que você vai fazer, e o único em torno do qual o iTOEFL inteiro foi construído. Não tem meio-termo: ou você entende essa versão do teste, ou está treinando pra uma prova que não existe mais.
 
 ---
 
@@ -14,13 +14,19 @@ Este módulo cobre o TOEFL iBT nas especificações oficiais da ETS vigentes a p
 
 ### 1.1 Por Que Você Está Aqui
 
-Você não está estudando inglês. Você está adquirindo um **ativo de admissão**: um número que abre ou fecha portas de universidades, bolsas, vistos e processos seletivos internacionais. O TOEFL iBT é curto, adaptativo (o teste ajusta a dificuldade em tempo real em Reading e Listening) e implacável com quem não domina os fundamentos: o tempo de produção oral e escrita é enxuto, então não há espaço para "empurrar com o corpo" · cada resposta precisa ser certeira desde o primeiro momento.
+Você não está estudando inglês. Está construindo um **ativo de admissão** — um número que abre ou fecha porta de universidade, bolsa, visto, processo seletivo.
+
+O TOEFL iBT 2026 é curto e adaptativo: a dificuldade muda em tempo real conforme você responde Reading e Listening. Não existe gordura pra queimar.
+
+O tempo de fala e escrita também encolheu. Não dá pra "empurrar com o corpo" uma resposta capenga — ela precisa sair certa já na primeira tentativa.
+
+Pergunta pra responder com honestidade agora: se o exame começasse amanhã, sua primeira resposta em cada seção sairia assim, de primeira? Se a resposta for não, é exatamente esse gap que os próximos módulos fecham.
 
 > 📌 **Princípio fundamental do Sistema:** O TOEFL 2026 recompensa precisão imediata, não volume de esforço. Quem entende a arquitetura do teste (e treina exatamente para ela) sai na frente de quem apenas "estuda inglês em geral".
 
 ### 1.2 A Nova Régua: Duas Escalas, Um Só Objetivo
 
-A partir de 2026, sua pontuação é reportada em **duas escalas simultâneas**, durante um período de transição que a ETS estima ir até aproximadamente 2028:
+A partir de 2026 seu resultado sai em **duas escalas ao mesmo tempo** — a ETS estima que essa transição dure até aproximadamente 2028:
 
 | Escala | O que é | Status |
 |---|---|---|
@@ -70,7 +76,7 @@ A partir de 2026, sua pontuação é reportada em **duas escalas simultâneas**,
 | **Writing** | ~23 min | 12 itens | 20 | Não (linear) |
 | **Speaking** | ~8 min | 11 itens | 55 | Não (linear) |
 
-O Speaking chama atenção: apenas 8 minutos, mas 55 pontos brutos · o dobro do Writing em pontuação bruta, concentrado em 11 itens curtos. Cada item tem peso desproporcional, e precisão desde a primeira resposta é inegociável.
+Repara no Speaking: só 8 minutos, mas 55 pontos brutos — o dobro do Writing, espremidos em 11 itens curtos. Cada resposta pesa muito mais do que parece, e não tem chance de "esquentar": a primeira já precisa sair boa.
 
 ### 2.3 Os Tipos de Item: Mapa Completo
 
@@ -102,17 +108,17 @@ O Speaking chama atenção: apenas 8 minutos, mas 55 pontos brutos · o dobro do
 | **Listen and Repeat** | 7 (5pts cada) | Repetir frases com precisão e inteligibilidade: progride de orações simples a estruturas complexas | A1–C2 | IA (SpeechRater) |
 | **Take an Interview** | 4 (5pts cada) | Responder perguntas com elaboração clara, gramática precisa, prosódia inteligível: descrições, opiniões, previsões, narrações | A1–C2 | IA (SpeechRater) |
 
-O Speaking tem apenas 2 formatos de item (Listen and Repeat e Take an Interview): nenhum deles pede um discurso longo e estruturado.
+Speaking tem só 2 formatos — Listen and Repeat e Take an Interview. Não tem espaço, nem tempo, pra discurso longo estruturado.
 
 ### 2.4 A Lógica do Speaking e Writing
 
-Entender essa lógica muda como você treina:
-- Em **Listen and Repeat**, o que pontua é **fidelidade acústica e gramatical exata** ao que você ouviu, não "ter algo a dizer". Não há espaço para parafrasear ou improvisar.
-- **Take an Interview** exige respostas **curtas, diretas e imediatamente coerentes**, não discursos longos com introdução/corpo/conclusão.
-- **Write an Email** e **Write for an Academic Discussion** são textos multi-frase objetivos, não redações longas com desenvolvimento estendido.
-- **Build a Sentence** testa domínio gramatical puro e imediato: cada erro de estrutura custa pontos diretamente.
+Entender essa lógica muda como você treina — decora isso:
+- **Listen and Repeat** paga por **fidelidade exata** ao que você ouviu, som e gramática. "Ter algo pra dizer" não vale nada aqui: não tem espaço pra parafrasear.
+- **Take an Interview** quer resposta **curta, direta, coerente na hora**. Esquece introdução-desenvolvimento-conclusão.
+- **Write an Email** e **Write for an Academic Discussion** são textos objetivos de poucas frases, não redação longa.
+- **Build a Sentence** é gramática pura e imediata: cada erro de estrutura tira ponto na cara.
 
-O que ganha pontos é precisão instantânea, prosódia natural e controle gramatical automatizado: habilidades que vêm de repetição deliberada, não de memorização de scripts ou templates longos para "preencher o tempo".
+Resumindo: o que pontua é precisão instantânea, prosódia natural, gramática automática. Isso vem de repetição deliberada — não de decorar script pronto pra "encher linguiça".
 
 ---
 
@@ -120,7 +126,11 @@ O que ganha pontos é precisão instantânea, prosódia natural e controle grama
 
 ### 3.1 Como Usar Este Diagnóstico
 
-Este teste de 10 questões mede seus fundamentos de **gramática, vocabulário e conectivos acadêmicos**: as habilidades-base que sustentam as 4 seções do novo exame: elas aparecem diretamente em Complete the Words (Reading), na decodificação de discurso conectado (Listening), em Build a Sentence e Write an Email/Academic Discussion (Writing), e na precisão gramatical exigida em Listen and Repeat e Take an Interview (Speaking).
+Essas 10 questões medem seus fundamentos: **gramática, vocabulário e conectivos acadêmicos**. É a base que sustenta as 4 seções do exame novo.
+
+Ela aparece em Complete the Words (Reading), na decodificação de fala conectada (Listening), em Build a Sentence e nos textos de Writing, e na precisão gramatical que Listen and Repeat e Take an Interview cobram no Speaking.
+
+Ou seja: esse não é um teste "à parte" — é o esqueleto que sustenta tudo que vem depois.
 
 > ⏱️ **Tempo sugerido:** 12 minutos, sem consulta. Responda tudo antes de conferir o gabarito · o diagnóstico só é confiável se refletir seu nível real, não o que você consegue pesquisar.
 
@@ -205,9 +215,11 @@ What can be inferred from this statement?
 
 ### 4.1 Como Funciona (e Como NÃO Funciona)
 
-A ETS não publica uma tabela oficial de conversão entre acertos brutos e a banda CEFR ou o score 0–120. No desenho adaptativo de 2 estágios (Reading e Listening), o mesmo número de acertos pode gerar bandas diferentes dependendo de qual módulo (inferior ou superior) você foi roteado: itens do módulo superior valem proporcionalmente mais porque são mais difíceis.
+Sendo direto: a ETS não publica conversão oficial entre acertos e banda CEFR. Não existe fórmula secreta pra você calcular sozinho.
 
-Por isso, a calculadora abaixo é uma **estimativa pedagógica baseada em percentual de acerto**, não uma tabela oficial. Use-a para acompanhar sua evolução relativa ao longo do curso, não como previsão exata do seu score real.
+E no desenho adaptativo (Reading e Listening), o mesmo número de acertos pode virar bandas diferentes — depende se você foi roteado pro módulo inferior ou superior. Item do módulo superior vale mais porque é mais difícil.
+
+Por isso a calculadora abaixo é uma **estimativa pedagógica**, não um placar oficial. Serve pra você enxergar se está melhorando — não pra prever seu score exato no dia da prova.
 
 ### 4.2 Tabela de Estimativa por Percentual de Acerto (por seção)
 
@@ -220,9 +232,9 @@ Por isso, a calculadora abaixo é uma **estimativa pedagógica baseada em percen
 | 71–85% | 5 – 5.5 (C1) | Alta consistência, poucos erros sistemáticos |
 | 86–100% | 6 (C2) | Domínio quase completo |
 
-Em Reading e Listening, como são adaptativos, seu "% de acerto" deve ser calculado **separadamente para simulados do módulo inferior e do módulo superior** quando disponível. Ser roteado ao módulo superior já é, por si, um sinal de desempenho acima de B1/B2 no router.
+Reading e Listening são adaptativos — então calcule o "% de acerto" separado pro módulo inferior e pro superior, quando der pra saber qual foi o seu. E guarda isso: só de ser roteado pro módulo superior já é sinal de que você passou de B1/B2 no router.
 
-Em Writing e Speaking, como a correção por IA (e-rater / SpeechRater) pondera gramática, coesão, vocabulário e (no Speaking) prosódia e inteligibilidade (não apenas "conteúdo certo/errado") trate o % de acerto nessas seções como aproximado. Priorize o feedback qualitativo dos Módulos 3 e 4 sobre o número isolado.
+Em Writing e Speaking a IA (e-rater / SpeechRater) olha gramática, coesão, vocabulário e — no Speaking — prosódia e inteligibilidade. Não é "certo ou errado" simples. Trate o % dessas seções como aproximado, e confie mais no feedback qualitativo dos Módulos 3 e 4 do que num número isolado.
 
 ### 4.3 Score Geral Estimado
 
@@ -239,7 +251,7 @@ Score Comparável 0–120 = Referência pedagógica da tabela 1.3, nunca oficial
 
 ### 5.1 Template de Acompanhamento Semanal
 
-Preencha este quadro toda semana, sempre no mesmo dia, para visualizar tendência, não apenas números isolados.
+Preenche esse quadro toda semana, sempre no mesmo dia da semana. O que importa aqui não é o número isolado — é a tendência.
 
 | Métrica | Semana 1 | Semana 2 | Semana 3 | Semana 4 | Meta |
 |---|---|---|---|---|---|
@@ -270,7 +282,7 @@ Preencha este quadro toda semana, sempre no mesmo dia, para visualizar tendênci
 
 ## PARTE 6: CRONOGRAMAS DE ESTUDO
 
-> Os três cronogramas abaixo mapeiam seu tempo aos **4 pilares do exame 2026**: Reading, Listening, Writing e Speaking · cada um com suas tasks específicas cobertas nos Módulos 1–4.
+> Os três cronogramas abaixo distribuem seu tempo entre os **4 pilares do exame 2026** — Reading, Listening, Writing, Speaking — cada um coberto nos Módulos 1 a 4.
 
 ### 6.1 Sprint: 30 Dias (para quem já está próximo da banda-alvo, ex.: B2 alto → C1)
 
@@ -310,7 +322,7 @@ Preencha este quadro toda semana, sempre no mesmo dia, para visualizar tendênci
 
 ### 7.1 Quando Usar
 
-Ative este protocolo se: (a) você está a menos de 7 dias da prova e está atrás do cronograma, ou (b) uma semana do dashboard mostrou estagnação severa e a prova está próxima.
+Ative esse protocolo se: (a) faltam menos de 7 dias pra prova e você está atrasado no cronograma, ou (b) o dashboard mostrou estagnação séria numa semana e a prova está próxima.
 
 ### 7.2 O Princípio de Pareto Aplicado ao TOEFL 2026
 
@@ -346,7 +358,7 @@ Ative este protocolo se: (a) você está a menos de 7 dias da prova e está atr�
 
 ### 8.1 Por Que Gamificar
 
-Consistência bate intensidade. O iTOEFL usa desafios de sequência (streaks) para transformar disciplina em hábito automático: especialmente importante para os drills de Listen and Repeat e Build a Sentence, que exigem repetição diária para gerar automatismo real.
+Consistência bate intensidade — sempre. O iTOEFL usa sequências (streaks) pra virar disciplina em hábito automático, especialmente nos drills de Listen and Repeat e Build a Sentence, que só rendem de verdade com repetição diária.
 
 ### 8.2 Os 3 Desafios
 
