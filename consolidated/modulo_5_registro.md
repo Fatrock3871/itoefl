@@ -14,7 +14,7 @@
 
 ### 1.1 O que a correção por IA realmente mede na produção
 
-As três tasks produtivas do TOEFL 2026 corrigidas por IA: **Take an Interview** (Speaking), **Write an Email** e **Write for an Academic Discussion** (Writing), não são pontuadas por "você respondeu certo". São pontuadas contra rubricas alinhadas ao CEFR, e o que move a nota de banda para banda é medível:
+As três tasks produtivas do TOEFL 2026 corrigidas por IA (**Take an Interview**, **Write an Email** e **Write for an Academic Discussion**) não são pontuadas por "você respondeu certo". São pontuadas contra rubricas alinhadas ao CEFR, e o que move a nota de banda pra banda é medível. Veja:
 
 | Dimensão da rubrica | O que a IA extrai | Onde você ganha ou perde banda |
 |---|---|---|
@@ -26,7 +26,7 @@ As três tasks produtivas do TOEFL 2026 corrigidas por IA: **Take an Interview**
 
 ### 1.2 O que separa as bandas: densidade, não gramática
 
-Um candidato B1 e um candidato C1 podem escrever frases igualmente **corretas**. A diferença está em quanto cada frase **carrega**:
+Um candidato B1 e um candidato C1 podem escrever frases igualmente **corretas**. A diferença está em quanto cada frase **carrega**. Repara:
 
 - **B1:** uma ideia por frase, vocabulário de alta frequência, conectores básicos.
 - **B2:** uma a duas ideias por frase com elaboração, conectores de registro médio, algum vocabulário acadêmico preciso.
@@ -40,7 +40,7 @@ Use a banda mais alta que você consegue executar **sem pensar na estrutura dura
 
 ### 1.4 Como a rubrica CEFR "enxerga" a sua resposta: em concreto
 
-A IA não lê sentido: lê **sinais mensuráveis** e os agrega. Saber quais são esses sinais permite otimizar a resposta sem escrever mais.
+A IA não lê sentido. Ela lê **sinais mensuráveis** e os agrega. Saber quais são esses sinais deixa você otimizar a resposta sem precisar escrever mais.
 
 | Sinal medido | Como a IA quantifica | Alvo mínimo B2 | Alvo C1 |
 |---|---|---|---|
@@ -55,7 +55,7 @@ A IA não lê sentido: lê **sinais mensuráveis** e os agrega. Saber quais são
 
 ### 1.5 A escala de formalidade: as três "vozes" do TOEFL 2026
 
-Registro é escolher a voz certa para a situação, não uma escala fixa de "formal vs. informal". O TOEFL 2026 cobra três:
+Registro é escolher a voz certa pra situação, não uma escala fixa de "formal vs. informal". O TOEFL 2026 cobra três delas:
 
 | Voz | Onde aparece | Marca registrada | Erro típico do brasileiro |
 |---|---|---|---|
@@ -67,7 +67,7 @@ Registro é escolher a voz certa para a situação, não uma escala fixa de "for
 
 ## PARTE 2: O ATLAS LINGUÍSTICO
 
-A tabela mestra de referência. Antes de qualquer drill, identifique em qual banda você está operando e quais marcadores deve estar usando. As colunas substituem a antiga tierização por score (20+/25+/28+) pelas bandas CEFR.
+A tabela mestra de referência. Antes de qualquer drill, identifique em qual banda você está operando e quais marcadores deveria estar usando. As colunas trocam a antiga tierização por score (20+/25+/28+) pelas bandas CEFR.
 
 | Elemento linguístico | B1 (banda 3–3.5) | B2 (banda 4–4.5) | C1–C2 (banda 5–6) |
 |---|---|---|---|
