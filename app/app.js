@@ -1447,7 +1447,7 @@
 
     function showLoginView(){
       loginForm.hidden = false; signupForm.hidden = true; resetPasswordForm.hidden = true;
-      authTabs.hidden = false;
+      authTabs.hidden = false; authTabs.classList.remove("is-signup");
       authTabLogin.classList.add("is-active"); authTabSignup.classList.remove("is-active");
       document.getElementById("authLinks").hidden = false;
       document.getElementById("authGateDivider").hidden = false;
@@ -1458,7 +1458,7 @@
     }
     function showSignupView(){
       loginForm.hidden = true; signupForm.hidden = false; resetPasswordForm.hidden = true;
-      authTabs.hidden = false;
+      authTabs.hidden = false; authTabs.classList.add("is-signup");
       authTabSignup.classList.add("is-active"); authTabLogin.classList.remove("is-active");
       document.getElementById("authLinks").hidden = true;
       document.getElementById("authGateDivider").hidden = false;
@@ -1529,6 +1529,83 @@
         });
       });
     });
+
+    // mostrar/ocultar senha em qualquer campo do gate
+    document.querySelectorAll(".auth-eye").forEach(function(btn){
+      btn.addEventListener("click", function(){
+        var target = document.getElementById(btn.dataset.target);
+        if(!target) return;
+        var shown = target.type === "text";
+        target.type = shown ? "password" : "text";
+        btn.classList.toggle("is-shown", !shown);
+        btn.textContent = shown ? "👁" : "🙈";
+        btn.setAttribute("aria-label", shown ? "Mostrar senha" : "Ocultar senha");
+      });
+    });
+
+    // checagem ao vivo do usuário de cadastro: formato primeiro, depois
+    // disponibilidade (mesma RPC usada no submit, só que sem esperar o envio)
+    var signupUsernameEl = document.getElementById("signupUsername");
+    var signupUsernameHint = document.getElementById("signupUsernameHint");
+    var usernameCheckSeq = 0;
+    if(signupUsernameEl){
+      signupUsernameEl.addEventListener("input", function(){
+        var raw = signupUsernameEl.value.trim().toLowerCase();
+        var seq = ++usernameCheckSeq;
+        if(!raw){
+          signupUsernameHint.textContent = "Letras, números e _, de 3 a 20 caracteres";
+          signupUsernameHint.className = "auth-hint";
+          return;
+        }
+        if(!/^[a-z0-9_]{3,20}$/.test(raw)){
+          signupUsernameHint.textContent = "Só letras, números e _ (3 a 20 caracteres)";
+          signupUsernameHint.className = "auth-hint is-bad";
+          return;
+        }
+        signupUsernameHint.textContent = "Verificando disponibilidade...";
+        signupUsernameHint.className = "auth-hint";
+        setTimeout(function(){
+          if(seq !== usernameCheckSeq) return; // usuário já digitou de novo, descarta
+          client.rpc("email_for_username", { uname: raw }).then(function(res){
+            if(seq !== usernameCheckSeq) return;
+            if(res.data){
+              signupUsernameHint.textContent = "Esse nome de usuário já está em uso";
+              signupUsernameHint.className = "auth-hint is-bad";
+            } else {
+              signupUsernameHint.textContent = "Disponível";
+              signupUsernameHint.className = "auth-hint is-ok";
+            }
+          });
+        }, 450);
+      });
+    }
+
+    // medidor de força da senha de cadastro (só feedback visual, não bloqueia envio)
+    var signupPasswordEl = document.getElementById("signupPassword");
+    var signupStrengthEl = document.getElementById("signupStrength");
+    var signupStrengthFill = document.getElementById("signupStrengthFill");
+    var signupStrengthLabel = document.getElementById("signupStrengthLabel");
+    if(signupPasswordEl){
+      signupPasswordEl.addEventListener("input", function(){
+        var val = signupPasswordEl.value;
+        if(!val){ signupStrengthEl.hidden = true; return; }
+        signupStrengthEl.hidden = false;
+        var variety = (/[a-z]/.test(val) ? 1 : 0) + (/[A-Z]/.test(val) ? 1 : 0) +
+          (/[0-9]/.test(val) ? 1 : 0) + (/[^a-zA-Z0-9]/.test(val) ? 1 : 0);
+        var score = (val.length >= 6 ? 1 : 0) + (val.length >= 10 ? 1 : 0) + (variety >= 2 ? 1 : 0) + (variety >= 3 ? 1 : 0);
+        var levels = [
+          { pct: "20%", color: "var(--danger)", label: "Fraca" },
+          { pct: "45%", color: "var(--danger)", label: "Fraca" },
+          { pct: "65%", color: "var(--accent-2)", label: "Ok" },
+          { pct: "85%", color: "var(--accent)", label: "Boa" },
+          { pct: "100%", color: "var(--accent-strong)", label: "Forte" }
+        ];
+        var lvl = levels[Math.min(score, 4)];
+        signupStrengthFill.style.width = lvl.pct;
+        signupStrengthFill.style.background = lvl.color;
+        signupStrengthLabel.textContent = lvl.label;
+      });
+    }
 
     resetPasswordForm.addEventListener("submit", function(e){
       e.preventDefault();

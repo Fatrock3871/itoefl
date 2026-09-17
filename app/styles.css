@@ -220,7 +220,10 @@ nav.modnav{display:flex; flex-direction:column; gap:1px;}
 .auth-gate-card{
   position:relative; z-index:1; max-width:400px; width:100%; background:var(--paper); border:2px solid var(--edge);
   border-radius:var(--radius); box-shadow:var(--shadow-hard); padding:38px 34px 32px; text-align:center;
+  animation:authcard-in .4s cubic-bezier(.2,.8,.2,1);
 }
+@keyframes authcard-in{from{opacity:0; transform:translateY(14px) scale(.98);} to{opacity:1; transform:none;}}
+@media (prefers-reduced-motion:reduce){ .auth-gate-card{animation:none;} }
 .auth-gate-brand{display:inline-flex; align-items:center; gap:14px; margin-bottom:26px;}
 .auth-gate-brand .logo{
   position:relative; width:54px; height:54px; flex:none; border-radius:14px; background:var(--accent);
@@ -247,15 +250,21 @@ nav.modnav{display:flex; flex-direction:column; gap:1px;}
 }
 .auth-gate-card > p{color:var(--ink-2); font-size:14px; line-height:1.55; margin:0 0 22px;}
 .auth-tabs{
-  display:flex; gap:4px; padding:4px; margin:0 0 22px; border:2px solid var(--edge);
+  position:relative; display:flex; gap:4px; padding:4px; margin:0 0 22px; border:2px solid var(--edge);
   border-radius:10px; background:var(--bg);
 }
-.auth-tab{
-  flex:1; padding:9px 10px; border:none; border-radius:7px; background:transparent; cursor:pointer;
-  font-family:'Bricolage Grotesque',sans-serif; font-size:13px; font-weight:800; color:var(--ink-2);
-  transition:background .12s ease, color .12s ease;
+.auth-tab-indicator{
+  position:absolute; top:4px; left:4px; width:calc(50% - 4px); height:calc(100% - 8px);
+  background:var(--accent); border-radius:7px; box-shadow:2px 2px 0 var(--edge);
+  transition:transform .25s cubic-bezier(.65,0,.35,1); pointer-events:none;
 }
-.auth-tab.is-active{background:var(--accent); color:#fff; box-shadow:2px 2px 0 var(--edge);}
+.auth-tabs.is-signup .auth-tab-indicator{transform:translateX(calc(100% + 4px));}
+.auth-tab{
+  position:relative; z-index:1; flex:1; padding:9px 10px; border:none; border-radius:7px; background:transparent; cursor:pointer;
+  font-family:'Bricolage Grotesque',sans-serif; font-size:13px; font-weight:800; color:var(--ink-2);
+  transition:color .18s ease;
+}
+.auth-tab.is-active{color:#fff;}
 .auth-form{display:flex; flex-direction:column; gap:14px; margin-bottom:14px; text-align:left;}
 .auth-field{display:flex; flex-direction:column; gap:6px;}
 .auth-label{
@@ -267,7 +276,22 @@ nav.modnav{display:flex; flex-direction:column; gap:1px;}
   font-family:inherit; font-size:14.5px; color:var(--ink); width:100%; transition:border-color .12s ease, box-shadow .12s ease;
 }
 .auth-input:focus{outline:none; border-color:var(--accent); box-shadow:2px 2px 0 var(--edge);}
-.auth-hint{font-size:11px; color:var(--ink-2); line-height:1.3;}
+.auth-input-wrap{position:relative; display:flex;}
+.auth-input-wrap .auth-input{padding-right:42px;}
+.auth-eye{
+  position:absolute; right:5px; top:50%; transform:translateY(-50%); width:30px; height:30px;
+  border:none; border-radius:6px; background:transparent; cursor:pointer; font-size:15px; line-height:1;
+  display:flex; align-items:center; justify-content:center; opacity:.5; transition:opacity .12s ease, background .12s ease;
+}
+.auth-eye:hover{opacity:1; background:var(--accent-wash);}
+.auth-eye.is-shown{opacity:1;}
+.auth-strength{display:flex; align-items:center; gap:8px; margin-top:1px;}
+.auth-strength-bar{flex:1; height:5px; border-radius:99px; background:var(--hair); overflow:hidden;}
+.auth-strength-bar > span{display:block; height:100%; width:0%; border-radius:99px; transition:width .18s ease, background .18s ease; background:var(--danger);}
+.auth-strength-label{font-size:10px; font-weight:800; text-transform:uppercase; letter-spacing:.06em; color:var(--ink-2); white-space:nowrap;}
+.auth-hint{font-size:11px; color:var(--ink-2); line-height:1.3; transition:color .12s ease;}
+.auth-hint.is-ok{color:var(--accent-strong); font-weight:700;}
+.auth-hint.is-bad{color:var(--danger); font-weight:700;}
 .auth-gate-submit{
   padding:13px 16px; margin-top:2px; border-radius:8px; border:2px solid var(--edge); background:var(--accent); color:#fff;
   font-family:'Bricolage Grotesque',sans-serif; font-size:14px; font-weight:800; cursor:pointer;
