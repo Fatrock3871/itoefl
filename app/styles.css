@@ -517,7 +517,7 @@ main{max-width:1320px; margin:0 auto; padding:0 30px 120px; min-width:0;}
 .panel p > strong{background:linear-gradient(transparent 68%, var(--accent-wash) 68%);}
 .panel hr{border:none; margin:26px 0 0; height:0;}
 .panel code{background:var(--sand); padding:1px 6px; border-radius:4px; font-family:var(--mono); font-size:13px; border:1px solid var(--hair);}
-.panel pre{background:var(--edge); color:#f4eadd; padding:15px 17px; border-radius:6px; overflow-x:auto; font-family:var(--mono); font-size:12.5px; line-height:1.55; border:2px solid var(--edge); box-shadow:var(--shadow-hard);}
+.panel pre{background:var(--sand); color:var(--ink); padding:15px 17px; border-radius:6px; overflow-x:auto; font-family:var(--mono); font-size:12.5px; line-height:1.55; border:2px solid var(--edge); box-shadow:var(--shadow-hard);}
 .panel pre code{background:none; border:none; color:inherit; padding:0;}
 .panel blockquote{
   margin:0 0 16px; padding:14px 18px; background:var(--accent-wash); max-width:68ch;
