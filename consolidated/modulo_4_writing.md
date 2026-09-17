@@ -22,7 +22,7 @@
 | **Pontuação bruta** | 20 pontos → banda **1–6** (CEFR) |
 | **Correção** | 10 itens por **máquina** (Build a Sentence) + 2 por **IA / e-rater** (Email + Academic Discussion) |
 
-**Por que "linear" importa:** diferente de Reading e Listening, você **já sabe exatamente o que vem** · mesma estrutura, mesma ordem, para todo mundo. Isso elimina a variável "não sei o que vou enfrentar" e transforma a preparação em pura execução de padrão. Não há desculpa para chegar sem um plano cronometrado por tarefa.
+**Por que "linear" importa:** diferente de Reading e Listening, você **já sabe exatamente o que vem**. Mesma estrutura, mesma ordem, pra todo mundo. Isso elimina a variável "não sei o que vou enfrentar" e transforma a preparação em pura execução de padrão. Não tem desculpa pra chegar sem um plano cronometrado por tarefa.
 
 ### 1.2 As três tarefas
 
@@ -46,11 +46,11 @@ Write an Email:                       5/20 pontos (25%)
 Write for an Academic Discussion:     5/20 pontos (25%)
 ```
 
-**Insight estratégico:** metade da nota bruta do Writing vem de 10 itens rápidos e mecânicos de gramática. Domine estrutura de frase com precisão cirúrgica (Parte 3), depois entregue dois textos curtos impecáveis. Quem só treina a escrita longa e ignora Build a Sentence deixa metade da pontuação na mesa antes de escrever a primeira palavra própria.
+**Insight estratégico:** metade da nota bruta do Writing vem de 10 itens rápidos e mecânicos de gramática. Domine estrutura de frase com precisão cirúrgica (Parte 3), depois entregue dois textos curtos impecáveis. Quem só treina a escrita longa e ignora Build a Sentence já deixa metade da pontuação na mesa, antes mesmo de escrever a primeira palavra própria.
 
 ### 1.4 Como a IA (e-rater) corrige de verdade
 
-O e-rater não "entende" seu texto como um humano: ele extrai **features mensuráveis** e compara com milhares de respostas já calibradas por banda CEFR. As dimensões que ele pondera:
+O e-rater não "entende" seu texto como um humano. Ele extrai **features mensuráveis** e compara com milhares de respostas já calibradas por banda CEFR. Estas são as dimensões que ele pondera:
 
 | Dimensão | O que é medido | Como você ganha banda |
 |---|---|---|
@@ -62,7 +62,7 @@ O e-rater não "entende" seu texto como um humano: ele extrai **features mensur�
 | **Desenvolvimento** | Cada afirmação é seguida de razão, exemplo ou consequência? | Nenhuma frase genérica isolada: sempre uma camada de especificidade |
 | **Relevância ao tema** | O texto responde ao prompt? | Endereça **todos** os elementos pedidos (no Email: as 2–3 coisas que o enunciado manda incluir) |
 
-**A implicação prática mais importante:** num texto curto (4–8 frases no Email, 1 parágrafo na Discussion), **cada frase pesa muito**. Não há volume para "diluir" um erro. Precisão > ambição: uma resposta B2 impecável pontua mais que uma tentativa de C2 cheia de erros.
+**A implicação prática mais importante:** num texto curto, 4 a 8 frases no Email, 1 parágrafo na Discussion, **cada frase pesa muito**. Não tem volume pra "diluir" um erro. Precisão vale mais que ambição: uma resposta B2 impecável pontua mais que uma tentativa de C2 cheia de erros.
 
 ---
 
@@ -70,7 +70,7 @@ O e-rater não "entende" seu texto como um humano: ele extrai **features mensur�
 
 ### 2.1 Build a Sentence: o motor de correção por máquina
 
-Corrigido por **máquina** (não por IA generativa): a lógica é binária e estrutural. Sua reconstrução precisa corresponder a um padrão gramatical válido · concordância, ordem, morfologia verbal, artigos e preposições no lugar. Não há crédito parcial generoso: pequenos erros de concordância ou ordem derrubam o item inteiro.
+Corrigido por **máquina**, não por IA generativa: a lógica é binária e estrutural. Sua reconstrução precisa corresponder a um padrão gramatical válido, com concordância, ordem, morfologia verbal, artigos e preposições no lugar certo. Não tem crédito parcial generoso. Pequenos erros de concordância ou ordem derrubam o item inteiro.
 
 **Método em 3 passos, para cada item:**
 
