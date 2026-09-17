@@ -19,7 +19,7 @@
 
 ### 1.1 Radiografia oficial da seção
 
-O Listening é a **segunda seção** e usa **design adaptativo em dois estágios**, como o Reading: a dificuldade dos itens muda em tempo real conforme seu desempenho.
+O Listening é a **segunda seção**. Assim como o Reading, usa **design adaptativo em dois estágios**: a dificuldade dos itens muda em tempo real conforme seu desempenho.
 
 | Elemento | Dado oficial (ETS 2026) |
 |---|---|
@@ -32,7 +32,7 @@ O Listening é a **segunda seção** e usa **design adaptativo em dois estágios
 | **Vozes** | **Áudio gerado por IA + às vezes atores humanos.** Sotaques: EUA/Canadá, Austrália, Reino Unido |
 | **Apoio visual** | Cada áudio traz uma **imagem do(s) falante(s)** na tela |
 
-O ponto central: o Listening **não** é "ouça um áudio longo e responda um bloco de questões". É um **fluxo contínuo de itens majoritariamente curtos**, e cada resposta pode influenciar a dificuldade do próximo bloco. Memória de longo prazo importa menos; **velocidade de processamento e precisão item a item** importam mais.
+Grava isso: o Listening **não** é "ouça um áudio longo e responda um bloco de questões". É um **fluxo contínuo de itens majoritariamente curtos**, e cada resposta pode influenciar a dificuldade do próximo bloco. Memória de longo prazo importa menos. **Velocidade de processamento e precisão item a item** importam mais.
 
 ---
 
@@ -50,7 +50,7 @@ ESTÁGIO 2A — MÓDULO INFERIOR (~7 min)     ESTÁGIO 2B — MÓDULO SUPERIOR (
 └── confirma a banda inferior              └── distingue as bandas C1/C2
 ```
 
-Errar demais nos primeiros itens (mesmo os "fáceis" e curtos) pode te colocar no módulo inferior, cujo teto é estruturalmente mais baixo, ainda que você acertasse itens do superior. **Não existe "aquecer aos poucos" no Listening.** Pico de atenção desde o item 1.
+Errar demais nos primeiros itens, mesmo os "fáceis" e curtos, pode te colocar no módulo inferior. O teto dele é estruturalmente mais baixo, mesmo que você depois acertasse itens do superior. **Não existe "aquecer aos poucos" no Listening.** Pico de atenção desde o item 1.
 
 ---
 
@@ -63,7 +63,7 @@ Errar demais nos primeiros itens (mesmo os "fáceis" e curtos) pode te colocar n
 | 3 | **Listen to an Announcement** | Detalhe factual (data, local, ação, exceção) num anúncio | 6–10 | A2–C1 | monólogo informativo curto |
 | 4 | **Listen to an Academic Talk** | Ideia principal, apoio, inferência, organização, **vocabulário idiomático** | 8–16 | A2–C2 | monólogo acadêmico, até 250 palavras |
 
-Leia como uma escada de complexidade: da troca de uma frase (**Choose a Response**) ao monólogo acadêmico (**Academic Talk**). O router mistura os quatro; os módulos concentram volume proporcional à tabela.
+Pensa nisso como uma escada de complexidade: da troca de uma frase (**Choose a Response**) até o monólogo acadêmico (**Academic Talk**). O router mistura os quatro tipos. Os módulos depois concentram volume proporcional ao que está na tabela.
 
 ---
 
@@ -87,12 +87,11 @@ Cada item testa uma habilidade específica. Reconhecer o tipo pelo enunciado **a
 
 ### 1.5 Gestão de tempo
 
-Com 47 itens em ~18 min, sua margem média por item (áudio + resposta) gira em torno de **20–25 segundos**. Não há conversa longa para se situar aos poucos: é sprint constante.
+Com 47 itens em ~18 min, sua margem média por item (áudio mais resposta) fica em torno de **20 a 25 segundos**. Não tem conversa longa pra você se situar aos poucos. É sprint constante, do primeiro ao último item.
 
-- Menos tempo total = menos margem para recuperar um lapso de atenção.
-- Itens curtos = decisão rápida, com menos anotação e mais **processamento
-auditivo automático** (é o que a Parte 3 treina).
-- O Academic Talk ainda pede nota estruturada, mas em escala reduzida.
+- Menos tempo total significa menos margem pra recuperar um lapso de atenção.
+- Itens curtos pedem decisão rápida, com menos anotação e mais **processamento auditivo automático**. É exatamente isso que a Parte 3 treina.
+- O Academic Talk ainda pede nota estruturada, só que em escala reduzida.
 
 ---
 
@@ -100,9 +99,9 @@ auditivo automático** (é o que a Parte 3 treina).
 
 ### 2.1 Por que anotar tudo não funciona
 
-A maioria dos itens (Choose a Response, boa parte de Conversation e Announcement) tem áudio curto o suficiente para caber na memória de trabalho: **se você estiver em atenção plena**. Um sistema de note-taking para palestras longas não se aplica.
+A maioria dos itens (Choose a Response, boa parte de Conversation e Announcement) tem áudio curto o bastante pra caber na memória de trabalho, se você estiver em atenção plena. Um sistema de note-taking pensado pra palestra longa simplesmente não se aplica aqui.
 
-A habilidade central é **triagem instantânea**: decidir, nos primeiros segundos, se o item pede memória bruta (não anotar) ou estrutura (anotar rápido e seletivo). "Tomar notas" bem feitas é consequência disso, não o objetivo em si.
+A habilidade central é **triagem instantânea**: decidir, nos primeiros segundos, se o item pede memória bruta (não anota nada) ou estrutura (anota rápido e seletivo). Tomar notas bem feitas é consequência dessa decisão, não o objetivo em si.
 
 ### 2.2 O sistema de anotações escalonado
 
@@ -166,7 +165,7 @@ distrator usa o **desatualizado**.
 
 ### 2.5 Fase router: os primeiros itens decidem tudo
 
-O router é a fase **mais curta e mais decisiva**. É quase todo composto de itens curtos (Choose a Response). Erro comum: subestimá-los.
+O router é a fase **mais curta e mais decisiva**, e é quase todo composto de itens curtos (Choose a Response). O erro mais comum é subestimá-los.
 
 1. **Trate cada item do router como se já valesse o módulo superior.**
 2. **Não acelere nos itens curtos.** Gaste 2–3 s a mais para confirmar a
@@ -202,7 +201,7 @@ correção, uma instrução) costuma vir nas últimas palavras.
 
 ## PARTE 3: LABORATÓRIO DE ESCUTA · O INGLÊS FALADO DE VERDADE
 
-O maior obstáculo do brasileiro no Listening **não** é vocabulário: é que o inglês falado **não soa como o inglês escrito**. Palavras se colam, sons somem, formas se reduzem. Esta parte treina o que você precisa **reconhecer de ouvido**. Leia em voz alta, exagerando as reduções, até elas soarem naturais.
+O maior obstáculo do brasileiro no Listening **não** é vocabulário. É que o inglês falado **não soa como o inglês escrito**: palavras se colam, sons somem, formas se reduzem. Esta parte treina o que você precisa **reconhecer de ouvido**. Leia em voz alta, exagerando as reduções, até elas soarem naturais pra você.
 
 ### 3.1 Formas fracas e reduções: o que o áudio realmente "diz"
 
