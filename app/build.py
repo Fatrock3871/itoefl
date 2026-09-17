@@ -100,7 +100,7 @@ try:
 except FileNotFoundError:
     pass
 except (json.JSONDecodeError, OSError) as _e:
-    print(f"supabase: config invalida ({_e}) — seguindo offline")
+    print(f"supabase: config invalida ({_e}), seguindo offline")
 
 SUPA_HEAD = ""
 if supa_url and supa_key:
@@ -127,21 +127,33 @@ gate = (
     '<h2 id="authGateTitle">Entre para continuar</h2>'
     '<p id="authGateSubtitle">Seu progresso fica salvo na sua conta e sincroniza entre dispositivos.</p>'
 
+    '<div class="auth-tabs" id="authTabs">'
+    '<button type="button" id="authTabLogin" class="auth-tab is-active">Entrar</button>'
+    '<button type="button" id="authTabSignup" class="auth-tab">Criar conta</button>'
+    '</div>'
+
     '<form class="auth-form" id="loginForm">'
-    '<input type="text" id="loginUsername" class="auth-input" placeholder="Nome de usuário" autocomplete="username" required>'
-    '<input type="password" id="loginPassword" class="auth-input" placeholder="Senha" autocomplete="current-password" required>'
+    '<label class="auth-field"><span class="auth-label">Nome de usuário</span>'
+    '<input type="text" id="loginUsername" class="auth-input" placeholder="seu_usuario" autocomplete="username" required></label>'
+    '<label class="auth-field"><span class="auth-label">Senha</span>'
+    '<input type="password" id="loginPassword" class="auth-input" placeholder="••••••••" autocomplete="current-password" required></label>'
     '<button type="submit" class="auth-gate-submit">Entrar</button>'
     '</form>'
 
     '<form class="auth-form" id="signupForm" hidden>'
-    '<input type="email" id="signupEmail" class="auth-input" placeholder="E-mail" autocomplete="email" required>'
-    '<input type="text" id="signupUsername" class="auth-input" placeholder="Usuário (letras, números, _ · 3–20)" autocomplete="username" required pattern="[A-Za-z0-9_]{3,20}">'
-    '<input type="password" id="signupPassword" class="auth-input" placeholder="Senha (mínimo 6 caracteres)" autocomplete="new-password" required minlength="6">'
+    '<label class="auth-field"><span class="auth-label">E-mail</span>'
+    '<input type="email" id="signupEmail" class="auth-input" placeholder="voce@exemplo.com" autocomplete="email" required></label>'
+    '<label class="auth-field"><span class="auth-label">Nome de usuário</span>'
+    '<input type="text" id="signupUsername" class="auth-input" placeholder="seu_usuario" autocomplete="username" required pattern="[A-Za-z0-9_]{3,20}">'
+    '<span class="auth-hint">Letras, números e _, de 3 a 20 caracteres</span></label>'
+    '<label class="auth-field"><span class="auth-label">Senha</span>'
+    '<input type="password" id="signupPassword" class="auth-input" placeholder="mínimo 6 caracteres" autocomplete="new-password" required minlength="6"></label>'
     '<button type="submit" class="auth-gate-submit">Criar conta</button>'
     '</form>'
 
     '<form class="auth-form" id="resetPasswordForm" hidden>'
-    '<input type="password" id="newPassword" class="auth-input" placeholder="Nova senha (mínimo 6 caracteres)" autocomplete="new-password" required minlength="6">'
+    '<label class="auth-field"><span class="auth-label">Nova senha</span>'
+    '<input type="password" id="newPassword" class="auth-input" placeholder="mínimo 6 caracteres" autocomplete="new-password" required minlength="6"></label>'
     '<button type="submit" class="auth-gate-submit">Salvar nova senha</button>'
     '</form>'
 
@@ -152,13 +164,8 @@ gate = (
 
     '<div class="auth-gate-divider" id="authGateDivider"><span>ou</span></div>'
     '<div class="auth-gate-actions" id="authGateGoogleWrap">'
-    '<button type="button" id="authSignInGoogle">Entrar com Google</button>'
+    '<button type="button" id="authSignInGoogle"><span class="auth-google-badge">G</span>Entrar com Google</button>'
     '</div>'
-
-    '<p class="auth-switch" id="authSwitchToSignup">Não tem conta? '
-    '<button type="button" id="showSignup" class="auth-link">Criar conta</button></p>'
-    '<p class="auth-switch" id="authSwitchToLogin" hidden>Já tem conta? '
-    '<button type="button" id="showLogin" class="auth-link">Entrar</button></p>'
 
     '<span id="authGateMsg" class="auth-gate-msg" hidden></span>'
     '</div>'
@@ -182,7 +189,7 @@ pay_gate = (
     '<h2>Libere seu acesso</h2>'
     '<p>Sua conta está conectada, mas o conteúdo completo da plataforma só libera depois da compra.</p>'
     '<div class="auth-gate-actions">'
-    '<button type="button" id="payBtn">Comprar acesso — R$ 197 (vitalício)</button>'
+    '<button type="button" id="payBtn">Comprar acesso: R$ 197 (vitalício)</button>'
     '</div>'
     '<span id="payGateMsg" class="auth-gate-msg" hidden></span>'
     '<button type="button" id="paySignOut" class="pay-signout">Sair desta conta</button>'
@@ -201,9 +208,9 @@ cert_modal = (
     '<p class="cert-kicker">Certificado de Conclusão</p>'
     '<h2 class="cert-name" id="certName">Aluno(a) iTOEFL</h2>'
     '<p class="cert-body">concluiu a preparação completa para o <strong>TOEFL iBT</strong> '
-    '(formato 2026) pela plataforma iTOEFL — os 10 módulos, do diagnóstico ao protocolo do dia da prova.</p>'
+    '(formato 2026) pela plataforma iTOEFL: os 10 módulos, do diagnóstico ao protocolo do dia da prova.</p>'
     '<p class="cert-date" id="certDate"></p>'
-    '<p class="cert-disclaimer">Não é um certificado oficial da ETS — é só um jeito de comemorar que você terminou.</p>'
+    '<p class="cert-disclaimer">Não é um certificado oficial da ETS, é só um jeito de comemorar que você terminou.</p>'
     '<button type="button" class="cert-print" id="certPrint">🖨 Imprimir / salvar como PDF</button>'
     '</div>'
     '</div>'

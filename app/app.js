@@ -1144,7 +1144,15 @@
     function gateMsg(text, kind){
       if(!gateMsgEl) return;
       gateMsgEl.textContent = text;
-      gateMsgEl.style.color = kind === "err" ? "var(--danger)" : "var(--ink-2)";
+      if(kind === "err"){
+        gateMsgEl.style.color = "var(--danger)";
+        gateMsgEl.style.background = "var(--danger-wash)";
+        gateMsgEl.style.borderColor = "var(--danger)";
+      } else {
+        gateMsgEl.style.color = "var(--ink-2)";
+        gateMsgEl.style.background = "var(--bg)";
+        gateMsgEl.style.borderColor = "var(--hair)";
+      }
       gateMsgEl.hidden = false;
     }
 
@@ -1155,9 +1163,10 @@
     var loginForm = document.getElementById("loginForm");
     var signupForm = document.getElementById("signupForm");
     var resetPasswordForm = document.getElementById("resetPasswordForm");
+    var authTabs = document.getElementById("authTabs");
     var authGateForms = [loginForm, signupForm, resetPasswordForm, document.getElementById("authLinks"),
       document.getElementById("authGateDivider"), document.getElementById("authGateGoogleWrap"),
-      document.getElementById("authSwitchToSignup"), document.getElementById("authSwitchToLogin")];
+      document.getElementById("authTabs")];
     var authGateTitle = document.getElementById("authGateTitle");
     var authGateSubtitle = document.getElementById("authGateSubtitle");
     var authGateKicker = document.getElementById("authGateKicker");
@@ -1260,7 +1269,15 @@
     function payGateMsg(text, kind){
       if(!payGateMsgEl) return;
       payGateMsgEl.textContent = text;
-      payGateMsgEl.style.color = kind === "err" ? "var(--danger)" : "var(--ink-2)";
+      if(kind === "err"){
+        payGateMsgEl.style.color = "var(--danger)";
+        payGateMsgEl.style.background = "var(--danger-wash)";
+        payGateMsgEl.style.borderColor = "var(--danger)";
+      } else {
+        payGateMsgEl.style.color = "var(--ink-2)";
+        payGateMsgEl.style.background = "var(--bg)";
+        payGateMsgEl.style.borderColor = "var(--hair)";
+      }
       payGateMsgEl.hidden = false;
     }
     function isAdmin(session){
@@ -1425,10 +1442,13 @@
     };
     function friendlyError(message){ return AUTH_ERROR_MAP[message] || ("Erro: " + message); }
 
+    var authTabLogin = document.getElementById("authTabLogin");
+    var authTabSignup = document.getElementById("authTabSignup");
+
     function showLoginView(){
       loginForm.hidden = false; signupForm.hidden = true; resetPasswordForm.hidden = true;
-      document.getElementById("authSwitchToSignup").hidden = false;
-      document.getElementById("authSwitchToLogin").hidden = true;
+      authTabs.hidden = false;
+      authTabLogin.classList.add("is-active"); authTabSignup.classList.remove("is-active");
       document.getElementById("authLinks").hidden = false;
       document.getElementById("authGateDivider").hidden = false;
       document.getElementById("authGateGoogleWrap").hidden = false;
@@ -1438,8 +1458,8 @@
     }
     function showSignupView(){
       loginForm.hidden = true; signupForm.hidden = false; resetPasswordForm.hidden = true;
-      document.getElementById("authSwitchToSignup").hidden = true;
-      document.getElementById("authSwitchToLogin").hidden = false;
+      authTabs.hidden = false;
+      authTabSignup.classList.add("is-active"); authTabLogin.classList.remove("is-active");
       document.getElementById("authLinks").hidden = true;
       document.getElementById("authGateDivider").hidden = false;
       document.getElementById("authGateGoogleWrap").hidden = false;
@@ -1449,8 +1469,7 @@
     }
     function showResetPasswordView(){
       loginForm.hidden = true; signupForm.hidden = true; resetPasswordForm.hidden = false;
-      document.getElementById("authSwitchToSignup").hidden = true;
-      document.getElementById("authSwitchToLogin").hidden = true;
+      authTabs.hidden = true;
       document.getElementById("authLinks").hidden = true;
       document.getElementById("authGateDivider").hidden = true;
       document.getElementById("authGateGoogleWrap").hidden = true;
@@ -1531,8 +1550,8 @@
           res.error ? "err" : "ok");
       });
     });
-    document.getElementById("showSignup").addEventListener("click", showSignupView);
-    document.getElementById("showLogin").addEventListener("click", showLoginView);
+    authTabLogin.addEventListener("click", showLoginView);
+    authTabSignup.addEventListener("click", showSignupView);
 
     if(googleBtn){
       googleBtn.addEventListener("click", function(){
