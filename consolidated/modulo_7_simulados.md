@@ -10,7 +10,9 @@
 
 ### Como o TOEFL iBT Está Estruturado
 
-Este módulo é a sua sequência de prática completa para o TOEFL iBT atual: um teste de **1h23min a 1h29min**, com Reading e Listening **adaptativos em dois estágios** (um módulo "router" decide se você vai para um módulo mais fácil ou mais difícil) e Speaking e Writing **lineares**, com itens curtos e objetivos. O formato é denso: pouco tempo de sobra, pouca margem para itens de aquecimento, e cada resposta no início de Reading e Listening carrega peso real sobre o restante da seção.
+Este módulo é a sua sequência de prática completa pro TOEFL iBT atual, um teste de **1h23min a 1h29min**. Reading e Listening são **adaptativos em dois estágios**: um módulo "router" decide se você vai pra um módulo mais fácil ou mais difícil. Speaking e Writing são **lineares**, com itens curtos e objetivos.
+
+O formato é denso. Pouco tempo de sobra, pouca margem pra item de aquecimento. Cada resposta no início de Reading e Listening carrega peso real sobre o resto da seção.
 
 ### Por Que 4 Simulados
 
@@ -21,7 +23,7 @@ A lógica de progressão dos 4 simulados existe para treinar precisão desde o p
 - **Speaking tem 11 itens curtos**: repetição fiel e entrevista: o que conta é precisão e fidelidade imediatas, não "encher o tempo" com conteúdo.
 - **Writing inclui um componente 100% gramatical** (Build a Sentence), além de e-mail e discussão acadêmica: 12 itens ao todo.
 
-A conclusão estratégica é direta: **o TOEFL pune começos fracos com mais severidade e recompensa consistência item a item mais do que resistência de maratona.** A sequência de 4 simulados existe para treinar exatamente isso.
+A conclusão estratégica é direta: **o TOEFL pune começos fracos com mais severidade, e recompensa consistência item a item mais do que resistência de maratona.** A sequência de 4 simulados existe pra treinar exatamente isso.
 
 ### A Sequência em 4 Etapas
 
@@ -36,7 +38,7 @@ A conclusão estratégica é direta: **o TOEFL pune começos fracos com mais sev
 
 ### Pré-requisitos de Cada Simulado
 
-Não adianta rodar um simulado antes de ter estudado o que ele mede. A regra:
+Não adianta rodar um simulado antes de ter estudado o que ele mede. A regra é esta:
 
 | Simulado | Pré-requisito mínimo | Por quê |
 |---|---|---|
@@ -841,9 +843,9 @@ Cada módulo de conteúdo tem seu **próprio** protocolo de erros com códigos p
 | M3 Speaking | Parte 7: Protocolo S1–S6 (S1 fonema, S3 ritmo são prioridade) | **S1–S6** |
 | M4 Writing | Parte 7: Protocolo W1–W6 | **W1–W6** |
 | M5 Registro | Parte 9: Protocolo RG1–RG6 | **RG1–RG6** |
-| M6 Vocabulário | Seção 11: Protocolo V1–V6 | **V1–V6** |
+| M6 Vocabulário | Parte 11: Protocolo V1–V6 | **V1–V6** |
 
-O papel do Simulado é **triagem**: para cada questão errada, você primeiro classifica na tabela abaixo (código de simulado, prefixo `S`), e a última coluna te manda para o protocolo específico do módulo, onde o reparo acontece de verdade.
+O papel do Simulado é **triagem**. Para cada questão errada, você primeiro classifica na tabela abaixo (código de simulado, prefixo `S`), e a última coluna te manda pro protocolo específico do módulo, onde o reparo acontece de verdade.
 
 ### Taxonomia de Triagem do Simulado (Formato 2026)
 
@@ -868,7 +870,7 @@ Os códigos abaixo espelham 1-a-1 os protocolos dos módulos. A última coluna �
 | **SL-q** | Respondeu certo para outro tipo de pergunta (gist × function) | **M2 → L2** |
 | **SL-dist** | Caiu num distrator (palavra reusada do áudio / verdadeira mas não dita / extrema) | **M2 → L3** |
 | **SL-note** | Anotou demais e perdeu o áudio, ou de menos e não lembrou o detalhe | **M2 → L4** |
-| **SL-vocab** | Não sabia um termo de campus ou um idiom | **M2 → L5** + **M6 → Seção 7** |
+| **SL-vocab** | Não sabia um termo de campus ou um idiom | **M2 → L5** + **M6 → Parte 7** |
 | **SL-att** | Relaxou e perdeu um *but*, uma correção, uma instrução final | **M2 → L6** |
 
 **Speaking** (espelha M3 S1–S6):
@@ -1074,7 +1076,7 @@ Um cronograma-base assumindo que você já fez o Simulado 1 (Módulo 0) e tem ~8
 | **2** | M3 Speaking + M4 Writing (leitura + Laboratório) | Drills do M3 e M4; gravar tudo do Speaking | — |
 | **3** | M5 Registro (leitura completa) + começar M6 (Kit de 50) | Drills do M5; flashcards SRS do M6 diários | **Simulado 2** no fim da semana (com consulta) |
 | **4** | Reparo dos 3 códigos do Simulado 2 | Refazer só os drills ligados aos 3 códigos | Ciclo de reparo (D+1 a D+7) |
-| **5** | M6 completo (Seções 4–7) + M9 Brazilian Traps | Drills do M6 (Seção 9); drills do M9 | — |
+| **5** | M6 completo (Partes 4–7) + M9 Brazilian Traps | Drills do M6 (Parte 9); drills do M9 | — |
 | **6** | Revisão dos tipos de item mais fracos (dados dos Simulados 1–2) | Drills cronometrados: teto de segundos por item | **Simulado 3** no fim da semana (timing estrito, sem consulta) |
 | **7** | Reparo dos 3 gaps do Simulado 3 + M8 Exam Day (leitura) | Mini-simulados cronometrados dos tipos que caíram | Ciclo de reparo |
 | **8** | Apenas os 3 maiores gaps. Nada novo. | Leve: flashcards, releitura do M5, 1 resposta de cada task por dia | **Simulado 4** 7–10 dias antes da prova; depois só M8 |
