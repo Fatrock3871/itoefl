@@ -1198,6 +1198,68 @@
     var client = window.supabase.createClient(cfg.url, cfg.anonKey);
     var uid = null, pushTimer = null;
 
+    // ---- acesso pago (2026-09-17) ----
+    // conta admin sempre passa direto, sem checar entitlements -- pedido
+    // explícito do usuário ("eu tenho acesso ilimitado com minha conta")
+    var ADMIN_EMAIL = "pietrooliveiramarquespp@gmail.com";
+    var payGateEl = document.getElementById("payGate");
+    var payBtn = document.getElementById("payBtn");
+    var payGateMsgEl = document.getElementById("payGateMsg");
+    var paySignOutBtn = document.getElementById("paySignOut");
+    function payGateMsg(text, kind){
+      if(!payGateMsgEl) return;
+      payGateMsgEl.textContent = text;
+      payGateMsgEl.style.color = kind === "err" ? "var(--danger)" : "var(--ink-2)";
+      payGateMsgEl.hidden = false;
+    }
+    function isAdmin(session){
+      return !!(session && session.user && session.user.email &&
+        session.user.email.toLowerCase() === ADMIN_EMAIL.toLowerCase());
+    }
+    function checkEntitlement(session, attempt){
+      if(!payGateEl) return;
+      if(isAdmin(session)){ payGateEl.hidden = true; return; }
+      client.from("entitlements").select("paid").eq("user_id", session.user.id).maybeSingle()
+        .then(function(res){
+          var paid = !!(res.data && res.data.paid);
+          payGateEl.hidden = paid;
+          if(paid) return;
+          // volta de um checkout recém-aprovado: o webhook do Mercado Pago é
+          // assíncrono e pode demorar alguns segundos a mais que o redirect
+          // -- tenta de novo umas poucas vezes antes de deixar o aluno preso
+          // olhando "não pago" logo depois de pagar de verdade
+          var params = new URLSearchParams(location.search);
+          if(params.get("mp") === "success" && (attempt || 0) < 6){
+            payGateMsg("Pagamento recebido, confirmando acesso...", "ok");
+            setTimeout(function(){ checkEntitlement(session, (attempt || 0) + 1); }, 2500);
+          } else if(params.get("mp") === "success"){
+            payGateMsg("O pagamento foi recebido mas a liberação está demorando. Atualize a página em alguns minutos.", "err");
+          } else if(params.get("mp") === "pending"){
+            payGateMsg("Pagamento pendente de confirmação.", "err");
+          } else if(params.get("mp") === "failure"){
+            payGateMsg("Pagamento não concluído. Tente novamente.", "err");
+          }
+        });
+    }
+    if(payBtn){
+      payBtn.addEventListener("click", function(){
+        payBtn.disabled = true;
+        payGateMsg("Abrindo checkout...", "ok");
+        client.functions.invoke("create-checkout", { body: { origin: location.origin } })
+          .then(function(res){
+            payBtn.disabled = false;
+            if(res.error || !res.data || !res.data.url){
+              payGateMsg("Erro ao abrir checkout: " + (res.error ? res.error.message : "resposta inválida"), "err");
+              return;
+            }
+            location.href = res.data.url;
+          });
+      });
+    }
+    if(paySignOutBtn){
+      paySignOutBtn.addEventListener("click", function(){ client.auth.signOut().then(goOffline); });
+    }
+
     function msg(text, kind){
       msgEl.textContent = text;
       msgEl.style.color = kind === "err" ? "var(--danger)"
@@ -1284,6 +1346,7 @@
       if(googleBtn) googleBtn.hidden = true;
       signedIn.hidden = false;
       if(gateEl) gateEl.hidden = true;
+      checkEntitlement(session);
       onSyncedWrite = schedulePush;
       pull();
     }
@@ -1295,6 +1358,7 @@
       if(googleBtn) googleBtn.hidden = false;
       signedIn.hidden = true;
       if(gateEl) gateEl.hidden = false;
+      if(payGateEl) payGateEl.hidden = true;
     }
 
     signInBtn.addEventListener("click", function(){

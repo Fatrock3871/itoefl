@@ -344,6 +344,26 @@ Conversa pulou entre três assuntos. Estado de cada um:
     falta estender pra outros módulos/tipos de item), item 12 (teste de
     responsividade mobile, nunca feito em viewport real nesta leva de
     mudanças).
+- **Acesso pago via Mercado Pago (commit b6e0db8, 2026-09-17)** — pedido à
+  parte: só quem pagou vê o conteúdo, exceto a conta admin
+  (`pietrooliveiramarquespp@gmail.com`, bypass hardcoded em `app.js`).
+  Pagamento único vitalício, confirmado com o usuário antes de mexer no
+  schema. Tabela nova `entitlements` (sem policy de escrita pro papel
+  "authenticated" — só o `service_role` da edge function grava `paid=true`,
+  um aluno não consegue se autoliberar pelo console do navegador). Duas edge
+  functions novas: `create-checkout` (cria a preferência no Mercado Pago) e
+  `mp-webhook` (reconfirma o pagamento na API do MP antes de liberar — nunca
+  confia só na notificação). Gate novo `#payGate` some só depois do login se
+  a conta não tiver pago. **Pendente do usuário — nada disso funciona sem
+  isso, ver `docs/mercadopago-setup.md`:** rodar `schema.sql` de novo, criar
+  credenciais no Mercado Pago, instalar/ligar o Supabase CLI, configurar o
+  secret `MP_ACCESS_TOKEN`, publicar as duas functions, testar em sandbox
+  antes de produzir. Preço (`PRICE_BRL`) é um placeholder (R$ 197) — ajustar
+  em `supabase/functions/create-checkout/index.ts` **e** no texto do botão em
+  `app/build.py` antes de publicar de verdade.
+- **Login com Google:** ainda não funciona — usuário confirmou que não
+  completou a ativação do provedor no painel do Supabase. Sem mudança de
+  código pendente; guia em `docs/supabase-setup.md` §3.1.
 - **Pendente:** Fase 6 (publicar no GitHub Pages) segue depois da aprovação do
   usuário — é ação pública/difícil de reverter, não faço sem confirmar.
 

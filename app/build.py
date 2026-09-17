@@ -135,6 +135,31 @@ gate = (
     '</div>'
 )
 
+# gate de pagamento: some depois do login se a conta ainda não pagou (e não é
+# a conta admin, ver ADMIN_EMAIL em app.js). Preço aqui é só o texto do botão
+# -- o valor de verdade é cobrado pelo PRICE_BRL em
+# supabase/functions/create-checkout/index.ts; mudar um sem o outro deixa o
+# texto do botão errado.
+pay_gate = (
+    '<div class="auth-gate" id="payGate" hidden>'
+    '<span class="auth-gate-ghost">iT</span>'
+    '<div class="auth-gate-card">'
+    '<div class="auth-gate-brand">'
+    '<span class="logo">iT</span>'
+    '<span class="btxt"><span class="name">iTOEFL</span><span class="mark">Preparação independente</span></span>'
+    '</div>'
+    '<span class="auth-gate-kicker">Acesso pago</span>'
+    '<h2>Libere seu acesso</h2>'
+    '<p>Sua conta está conectada, mas o conteúdo completo da plataforma só libera depois da compra.</p>'
+    '<div class="auth-gate-actions">'
+    '<button type="button" id="payBtn">Comprar acesso — R$ 197 (vitalício)</button>'
+    '</div>'
+    '<span id="payGateMsg" class="auth-gate-msg" hidden></span>'
+    '<button type="button" id="paySignOut" class="pay-signout">Sair desta conta</button>'
+    '</div>'
+    '</div>'
+)
+
 # certificado de conclusão: nada oficial, só uma tela pra comemorar que
 # terminou os 10 módulos — aparece a partir daí (ver app.js/updateBadges)
 cert_modal = (
@@ -166,6 +191,7 @@ html = f'''<!DOCTYPE html>
 </head>
 <body>
 {gate}
+{pay_gate}
 {cert_modal}
 <div class="shell">
   <div class="side-backdrop" id="sideBackdrop"></div>

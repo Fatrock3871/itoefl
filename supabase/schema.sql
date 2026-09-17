@@ -63,3 +63,26 @@ drop trigger if exists on_auth_user_created on auth.users;
 create trigger on_auth_user_created
   after insert on auth.users
   for each row execute function public.handle_new_user();
+
+-- ============ ACESSO PAGO (2026-09-17) ============
+-- Tabela separada de `profiles` de propósito: o aluno pode LER sua própria
+-- linha (pra saber se já pagou), mas não existe nenhuma policy de insert/
+-- update para o papel "authenticated" -- com RLS ligado e sem essas
+-- policies, a escrita fica bloqueada por padrão. Só o service_role (usado
+-- pela edge function mp-webhook, nunca exposto ao navegador) grava aqui.
+-- Sem isso, um aluno poderia soltar `supabase.from('profiles').update(...)`
+-- no console do navegador e se autoliberar.
+
+create table if not exists entitlements (
+  user_id uuid primary key references auth.users(id) on delete cascade,
+  paid boolean not null default false,
+  paid_at timestamptz,
+  mp_payment_id text,
+  updated_at timestamptz not null default now()
+);
+
+alter table entitlements enable row level security;
+
+drop policy if exists "entitlements_select_own" on entitlements;
+create policy "entitlements_select_own" on entitlements for select using (auth.uid() = user_id);
+-- de propósito: nenhuma policy de insert/update/delete pra "authenticated"
