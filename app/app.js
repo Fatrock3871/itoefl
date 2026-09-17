@@ -1513,9 +1513,19 @@
           if(res.error){ gateMsg(friendlyError(res.error.message), "err"); return; }
           if(res.data && res.data.session){
             gateMsg("Conta criada!", "ok"); // goOnline() cuida do resto via onAuthStateChange
-          } else {
-            gateMsg("Conta criada! Confira seu e-mail para confirmar antes de entrar.", "ok");
+            return;
           }
+          // e-mail já cadastrado e confirmado: o Supabase responde como se tivesse
+          // dado certo (pra não revelar quais e-mails já existem) mas não manda
+          // nada e não cria identidade nova -- sem checar isso, o aviso de
+          // "confira seu e-mail" mente pra quem já tem conta.
+          var identities = res.data && res.data.user && res.data.user.identities;
+          if(identities && identities.length === 0){
+            try { sessionStorage.removeItem(PENDING_USERNAME_KEY); } catch(ex){}
+            gateMsg("Esse e-mail já tem conta. Use a aba Entrar, ou clique em \"Esqueci minha senha\" se não lembrar a senha.", "err");
+            return;
+          }
+          gateMsg("Conta criada! Confira seu e-mail para confirmar antes de entrar.", "ok");
         });
       });
     });
