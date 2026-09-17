@@ -485,6 +485,11 @@ main{max-width:1320px; margin:0 auto; padding:0 30px 120px; min-width:0;}
 .panel li{margin-bottom:9px; font-size:16px;}
 .panel ul li::marker{content:"▸  "; color:var(--accent); font-size:0.9em;}
 .panel ol li::marker{color:var(--accent); font-weight:700;}
+.panel ul li.checklist-item{list-style:none; margin-left:-20px;}
+.panel ul li.checklist-item::marker{content:"";}
+.checklist-item label{display:flex; align-items:flex-start; gap:10px; cursor:default;}
+.checklist-item input[type="checkbox"]{flex:none; width:18px; height:18px; margin-top:3px; accent-color:var(--accent);}
+.checklist-item span{font-size:16px; color:var(--ink);}
 .panel strong{color:var(--ink); font-weight:700;}
 .panel p > strong{background:linear-gradient(transparent 68%, var(--accent-wash) 68%);}
 .panel hr{border:none; margin:26px 0 0; height:0;}

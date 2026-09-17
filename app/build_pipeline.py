@@ -70,7 +70,24 @@ MD_EXT = ["tables", "fenced_code", "sane_lists"]
 
 
 def to_html(text):
-    return md.markdown(text, extensions=MD_EXT)
+    return fix_checklists(md.markdown(text, extensions=MD_EXT))
+
+
+# O `markdown` puro (nossa única dependência, CLAUDE.md) não entende a
+# sintaxe de task-list do GFM ("- [ ] item") — sem uma extensão de terceiro,
+# "[ ] item" vira texto literal dentro do <li>, colchetes e tudo. Os
+# checklists de saída de cada módulo usam exatamente essa sintaxe, então
+# toda `<li>[ ] texto</li>` saía quebrada. Em vez de adicionar uma
+# dependência nova só pra isso, um post-processo simples troca o `[ ]`/`[x]`
+# literal por uma checkbox de verdade depois da conversão.
+CHECKLIST_RE = re.compile(r"<li>\[([ xX])\]\s*(.*?)</li>")
+
+
+def fix_checklists(html):
+    def repl(m):
+        checked = " checked" if m.group(1).lower() == "x" else ""
+        return f'<li class="checklist-item"><label><input type="checkbox" disabled{checked}><span>{m.group(2)}</span></label></li>'
+    return CHECKLIST_RE.sub(repl, html)
 
 
 def strip_title_banner(text):
