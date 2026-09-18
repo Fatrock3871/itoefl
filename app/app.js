@@ -1169,7 +1169,6 @@
       document.getElementById("authTabs")];
     var authGateTitle = document.getElementById("authGateTitle");
     var authGateSubtitle = document.getElementById("authGateSubtitle");
-    var authGateKicker = document.getElementById("authGateKicker");
     var PENDING_USERNAME_KEY = "toefl_pending_username";
     var avatarEl = document.getElementById("authAvatar");
     var avatarImgEl = document.getElementById("authAvatarImg");
@@ -1454,7 +1453,6 @@
       document.getElementById("authGateGoogleWrap").hidden = false;
       authGateTitle.textContent = "Entre para continuar";
       authGateSubtitle.textContent = "Seu progresso fica salvo na sua conta e sincroniza entre dispositivos.";
-      authGateKicker.textContent = "Acesso à plataforma";
     }
     function showSignupView(){
       loginForm.hidden = true; signupForm.hidden = false; resetPasswordForm.hidden = true;
@@ -1465,7 +1463,6 @@
       document.getElementById("authGateGoogleWrap").hidden = false;
       authGateTitle.textContent = "Criar conta";
       authGateSubtitle.textContent = "O e-mail confirma que a conta é sua e serve pra recuperar usuário/senha depois.";
-      authGateKicker.textContent = "Novo por aqui?";
     }
     function showResetPasswordView(){
       loginForm.hidden = true; signupForm.hidden = true; resetPasswordForm.hidden = false;
@@ -1475,7 +1472,6 @@
       document.getElementById("authGateGoogleWrap").hidden = true;
       authGateTitle.textContent = "Escolha uma nova senha";
       authGateSubtitle.textContent = "";
-      authGateKicker.textContent = "Recuperação de senha";
       if(gateEl) gateEl.hidden = false; // aparece mesmo se o app estava "logado" na sessão de recuperação
     }
 

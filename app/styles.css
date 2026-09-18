@@ -240,8 +240,10 @@ nav.modnav{display:flex; flex-direction:column; gap:1px;}
   background:var(--accent-2); border:2px solid var(--edge);
 }
 .auth-gate-brand .btxt{display:flex; flex-direction:column; align-items:flex-start; line-height:1.05;}
-.auth-gate-brand .name{font-family:'Bricolage Grotesque',sans-serif; font-size:33px; font-weight:800; letter-spacing:-0.035em; color:var(--ink);}
-.auth-gate-brand .mark{font-size:10px; letter-spacing:0.13em; text-transform:uppercase; color:var(--accent-strong); font-weight:700; margin-top:3px;}
+.auth-gate-brand .name{
+  font-family:'Bricolage Grotesque',sans-serif; font-size:33px; font-weight:800; letter-spacing:-0.035em;
+  color:var(--ink); text-shadow:3px 3px 0 var(--accent);
+}
 .auth-gate-kicker{
   display:inline-block; font-family:'Bricolage Grotesque',sans-serif; font-size:10.5px; font-weight:800;
   text-transform:uppercase; letter-spacing:0.12em; color:#fff; background:var(--accent);
