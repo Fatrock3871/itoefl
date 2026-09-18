@@ -19,23 +19,54 @@
     "palavra", "palavra inglesa", "inglês", "verbo de alto impacto",
     "verbo âncora", "palavras de alto risco"
   ];
+  // escolhe a melhor voz em inglês disponível no navegador: as vozes "remotas"
+  // (Google/Microsoft Online/Natural) soam bem menos robóticas que a voz local
+  // padrão do sistema. getVoices() volta vazio até o evento voiceschanged em
+  // vários navegadores, por isso o cache é invalidado quando ele dispara.
+  var cachedVoice = null, voiceChecked = false;
+  function pickVoice(){
+    if(voiceChecked) return cachedVoice;
+    if(!("speechSynthesis" in window)) return null;
+    var voices = window.speechSynthesis.getVoices() || [];
+    if(!voices.length) return null; // ainda não carregou -- tenta de novo na próxima fala
+    voiceChecked = true;
+    var enVoices = voices.filter(function(v){ return /^en/i.test(v.lang); });
+    if(!enVoices.length) return null;
+    var preferred = /google us english|natural|online|premium|aria|guy|jenny/i;
+    cachedVoice =
+      enVoices.find(function(v){ return /^en-us$/i.test(v.lang) && preferred.test(v.name); }) ||
+      enVoices.find(function(v){ return preferred.test(v.name); }) ||
+      enVoices.find(function(v){ return /^en-us$/i.test(v.lang); }) ||
+      enVoices[0];
+    return cachedVoice;
+  }
+  if("speechSynthesis" in window){
+    window.speechSynthesis.getVoices();
+    window.speechSynthesis.onvoiceschanged = function(){ voiceChecked = false; };
+  }
   function speakText(text){
     if(!("speechSynthesis" in window)) return;
     try {
       window.speechSynthesis.cancel(); // corta qualquer fala anterior antes de começar a nova
       var utter = new SpeechSynthesisUtterance(text);
       utter.lang = "en-US";
-      utter.rate = 0.88;
+      utter.rate = 0.93;
+      utter.pitch = 1;
+      var voice = pickVoice();
+      if(voice) utter.voice = voice;
       window.speechSynthesis.speak(utter);
     } catch(ex){}
   }
   if("speechSynthesis" in window){
+    var speakPanelsHit = {};
     Array.prototype.slice.call(document.querySelectorAll(".panel table")).forEach(function(table){
       var headCells = Array.prototype.slice.call(table.querySelectorAll("thead th"));
       var colIndex = headCells.findIndex(function(th){
         return SPEAK_HEADER_WHITELIST.indexOf(th.textContent.trim().toLowerCase()) !== -1;
       });
       if(colIndex === -1) return;
+      var panel = table.closest(".panel");
+      if(panel) speakPanelsHit[panel.id] = true;
       Array.prototype.slice.call(table.querySelectorAll("tbody tr")).forEach(function(row){
         var cell = row.children[colIndex];
         var text = cell && cell.textContent.trim();
@@ -48,6 +79,20 @@
         btn.addEventListener("click", function(){ speakText(text); });
         cell.appendChild(btn);
       });
+    });
+    // avisa, uma vez no topo de cada módulo que usa o recurso, o que o
+    // ícone significa -- sem isso o símbolo sozinho não é óbvio pra quem
+    // nunca viu (M6 ganha o aviso mesmo sem tabela batendo o cabeçalho,
+    // por causa do kit de flashcards SRS, que também tem o botão)
+    speakPanelsHit["panel-mod6"] = true;
+    Object.keys(speakPanelsHit).forEach(function(panelId){
+      var panel = document.getElementById(panelId);
+      var head = panel && panel.querySelector(".panel-head");
+      if(!head || head.nextElementSibling && head.nextElementSibling.classList.contains("speak-hint")) return;
+      var hint = document.createElement("div");
+      hint.className = "speak-hint";
+      hint.innerHTML = '<span class="speak-hint-icon">🔊</span><span>Toque nesse ícone sempre que aparecer pra ouvir a pronúncia em inglês da palavra, caso fique com dúvida.</span>';
+      head.parentNode.insertBefore(hint, head.nextSibling);
     });
   }
 
