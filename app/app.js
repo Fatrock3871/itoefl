@@ -8,6 +8,49 @@
     wrap.appendChild(t);
   });
 
+  // botão de pronúncia (🔊) nas tabelas de palavra/termo em inglês dos
+  // módulos de pronúncia e vocabulário (M3, M6, M9). Usa a Web Speech API
+  // do navegador (sem arquivo de áudio, sem dependência nova): lê o cabeçalho
+  // de cada tabela e, se alguma coluna bater com a lista abaixo, adiciona o
+  // botão na célula daquela coluna em cada linha. Cobre listas de uma
+  // palavra por linha e também células com várias palavras separadas por
+  // vírgula (a API já pausa nas vírgulas ao falar).
+  var SPEAK_HEADER_WHITELIST = [
+    "palavra", "palavra inglesa", "inglês", "verbo de alto impacto",
+    "verbo âncora", "palavras de alto risco"
+  ];
+  function speakText(text){
+    if(!("speechSynthesis" in window)) return;
+    try {
+      window.speechSynthesis.cancel(); // corta qualquer fala anterior antes de começar a nova
+      var utter = new SpeechSynthesisUtterance(text);
+      utter.lang = "en-US";
+      utter.rate = 0.88;
+      window.speechSynthesis.speak(utter);
+    } catch(ex){}
+  }
+  if("speechSynthesis" in window){
+    Array.prototype.slice.call(document.querySelectorAll(".panel table")).forEach(function(table){
+      var headCells = Array.prototype.slice.call(table.querySelectorAll("thead th"));
+      var colIndex = headCells.findIndex(function(th){
+        return SPEAK_HEADER_WHITELIST.indexOf(th.textContent.trim().toLowerCase()) !== -1;
+      });
+      if(colIndex === -1) return;
+      Array.prototype.slice.call(table.querySelectorAll("tbody tr")).forEach(function(row){
+        var cell = row.children[colIndex];
+        var text = cell && cell.textContent.trim();
+        if(!cell || !text) return;
+        var btn = document.createElement("button");
+        btn.type = "button";
+        btn.className = "speak-btn";
+        btn.setAttribute("aria-label", "Ouvir pronúncia de " + text);
+        btn.textContent = "🔊";
+        btn.addEventListener("click", function(){ speakText(text); });
+        cell.appendChild(btn);
+      });
+    });
+  }
+
   // agrupa o conteudo de cada modulo em cards por secao (um card por H2),
   // ao estilo "unit card" de plataformas de curso, em vez de texto corrido.
   // O check de "concluir" sai do topo do H2 e vai para o fim do card: só faz
@@ -1026,6 +1069,24 @@
     var fWord = frontEl.querySelector(".srs-word");
     var fCat = frontEl.querySelector(".srs-cat");
     var bWord = backEl.querySelector(".srs-word");
+    // texto e botão de pronúncia vivem em nós separados dentro de .srs-word
+    // pra poder trocar só o texto a cada carta (textContent apagaria o botão junto)
+    var fWordText = document.createTextNode("");
+    var bWordText = document.createTextNode("");
+    fWord.appendChild(fWordText);
+    bWord.appendChild(bWordText);
+    var srsSpeakWord = "";
+    if("speechSynthesis" in window){
+      [fWord, bWord].forEach(function(wordEl){
+        var btn = document.createElement("button");
+        btn.type = "button";
+        btn.className = "speak-btn speak-btn-inline";
+        btn.setAttribute("aria-label", "Ouvir pronúncia");
+        btn.textContent = "🔊";
+        btn.addEventListener("click", function(){ speakText(srsSpeakWord); });
+        wordEl.appendChild(btn);
+      });
+    }
     var bPt = backEl.querySelector(".srs-pt");
     var bSyn = backEl.querySelector(".srs-syn");
     var bEx = backEl.querySelector(".srs-ex");
@@ -1081,8 +1142,9 @@
       cardEl.hidden = false;
       doneEl.hidden = true;
       var c = queue[0];
-      fWord.textContent = c.w; fCat.textContent = c.cat || "";
-      bWord.textContent = c.w;
+      srsSpeakWord = c.w;
+      fWordText.textContent = c.w; fCat.textContent = c.cat || "";
+      bWordText.textContent = c.w;
       bPt.textContent = c.pt;
       bSyn.textContent = c.syn ? "≈ " + c.syn : "";
       bEx.textContent = c.ex || "";

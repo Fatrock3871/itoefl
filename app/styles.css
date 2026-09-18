@@ -558,6 +558,15 @@ main{max-width:1320px; margin:0 auto; padding:0 30px 120px; min-width:0;}
 .panel code{background:var(--sand); padding:1px 6px; border-radius:4px; font-family:var(--mono); font-size:13px; border:1px solid var(--hair);}
 .panel pre{background:var(--sand); color:var(--ink); padding:15px 17px; border-radius:6px; overflow-x:auto; font-family:var(--mono); font-size:12.5px; line-height:1.55; border:2px solid var(--edge); box-shadow:var(--shadow-hard);}
 .panel pre code{background:none; border:none; color:inherit; padding:0;}
+.speak-btn{
+  display:inline-flex; align-items:center; justify-content:center; margin-left:6px;
+  width:22px; height:22px; padding:0; border:1.5px solid var(--hair); border-radius:50%;
+  background:var(--paper); font-size:11px; line-height:1; cursor:pointer; vertical-align:middle;
+  transition:background .12s ease, border-color .12s ease, transform .1s ease;
+}
+.speak-btn:hover{background:var(--accent-wash); border-color:var(--accent);}
+.speak-btn:active{transform:scale(0.92);}
+.speak-btn-inline{width:26px; height:26px; font-size:13px; margin-left:8px; vertical-align:middle;}
 .panel blockquote{
   margin:0 0 16px; padding:14px 18px; background:var(--accent-wash); max-width:68ch;
   border:1.5px solid var(--edge); border-left:5px solid var(--accent); border-radius:0 6px 6px 0;
