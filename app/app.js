@@ -1452,7 +1452,7 @@
       document.getElementById("authGateDivider").hidden = false;
       document.getElementById("authGateGoogleWrap").hidden = false;
       authGateTitle.textContent = "Entre para continuar";
-      authGateSubtitle.textContent = "Seu progresso fica salvo na sua conta e sincroniza entre dispositivos.";
+      authGateSubtitle.textContent = "";
     }
     function showSignupView(){
       loginForm.hidden = true; signupForm.hidden = false; resetPasswordForm.hidden = true;

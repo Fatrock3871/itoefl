@@ -165,7 +165,7 @@ gate = (
     '<span class="btxt"><span class="name">iTOEFL</span></span>'
     '</div>'
     '<h2 id="authGateTitle">Entre para continuar</h2>'
-    '<p id="authGateSubtitle">Seu progresso fica salvo na sua conta e sincroniza entre dispositivos.</p>'
+    '<p id="authGateSubtitle"></p>'
 
     '<div class="auth-tabs" id="authTabs">'
     '<span class="auth-tab-indicator" id="authTabIndicator"></span>'
