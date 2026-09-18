@@ -1462,7 +1462,7 @@
       document.getElementById("authGateDivider").hidden = false;
       document.getElementById("authGateGoogleWrap").hidden = false;
       authGateTitle.textContent = "Criar conta";
-      authGateSubtitle.textContent = "O e-mail confirma que a conta é sua e serve pra recuperar usuário/senha depois.";
+      authGateSubtitle.textContent = "";
     }
     function showResetPasswordView(){
       loginForm.hidden = true; signupForm.hidden = true; resetPasswordForm.hidden = false;
