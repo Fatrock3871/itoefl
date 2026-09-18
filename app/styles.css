@@ -242,7 +242,7 @@ nav.modnav{display:flex; flex-direction:column; gap:1px;}
 .auth-gate-brand .btxt{display:flex; flex-direction:column; align-items:flex-start; line-height:1.05;}
 .auth-gate-brand .name{
   font-family:'Bricolage Grotesque',sans-serif; font-size:33px; font-weight:800; letter-spacing:-0.035em;
-  color:var(--accent); text-shadow:2px 2px 0 var(--edge);
+  color:var(--accent);
 }
 .auth-gate-kicker{
   display:inline-block; font-family:'Bricolage Grotesque',sans-serif; font-size:10.5px; font-weight:800;
