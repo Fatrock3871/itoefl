@@ -1445,6 +1445,11 @@
     var authTabSignup = document.getElementById("authTabSignup");
 
     function showLoginView(){
+      // descarta usuario pendente de uma tentativa de cadastro abandonada --
+      // sem isso, um "fatrock3871" digitado e nunca confirmado podia ficar
+      // preso no sessionStorage e ser aplicado por engano num login comum
+      // bem depois, trocando o usuario de uma conta sem o dono pedir.
+      try { sessionStorage.removeItem(PENDING_USERNAME_KEY); } catch(ex){}
       loginForm.hidden = false; signupForm.hidden = true; resetPasswordForm.hidden = true;
       authTabs.hidden = false; authTabs.classList.remove("is-signup");
       authTabLogin.classList.add("is-active"); authTabSignup.classList.remove("is-active");
