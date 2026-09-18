@@ -212,11 +212,16 @@ nav.modnav{display:flex; flex-direction:column; gap:1px;}
   position:fixed; inset:0; z-index:300; background:var(--bg);
   display:flex; align-items:center; justify-content:center; padding:20px; overflow:hidden;
 }
-.auth-gate-ghost{
-  position:absolute; right:-4vw; bottom:-8vh; font-family:'Bricolage Grotesque',sans-serif;
-  font-weight:800; font-size:min(48vw,520px); line-height:0.75; letter-spacing:-0.05em; color:transparent;
-  -webkit-text-stroke:2px var(--hair); text-stroke:2px var(--hair); pointer-events:none; z-index:0; user-select:none;
-}
+.auth-gate-bg{position:absolute; inset:0; z-index:0; pointer-events:none; overflow:hidden;}
+.bgicon{position:absolute; color:var(--hair); opacity:0.85;}
+.bgicon.bgicon-1{width:120px; height:120px; top:8%; left:6%; transform:rotate(-8deg);}
+.bgicon.bgicon-2{width:150px; height:150px; top:12%; right:-3%; transform:rotate(18deg);}
+.bgicon.bgicon-3{width:95px; height:95px; bottom:16%; left:3%; transform:rotate(-6deg);}
+.bgicon.bgicon-4{width:110px; height:110px; bottom:6%; right:8%; transform:rotate(10deg);}
+.bgicon.bgicon-5{width:80px; height:80px; top:42%; left:-4%; transform:rotate(-14deg);}
+.bgicon.bgicon-6{width:100px; height:100px; top:58%; right:4%; transform:rotate(9deg);}
+@media(max-width:680px){ .bgicon.bgicon-2, .bgicon.bgicon-4{display:none;} }
+@media(max-width:480px){ .auth-gate-bg{opacity:0.7;} .bgicon{transform:scale(0.75) rotate(0deg) !important;} }
 .auth-gate-card{
   position:relative; z-index:1; max-width:400px; width:100%; background:var(--paper); border:2px solid var(--edge);
   border-radius:var(--radius); box-shadow:var(--shadow-hard); padding:38px 34px 32px; text-align:center;

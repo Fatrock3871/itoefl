@@ -20,6 +20,29 @@ LOGO_SVG = (
     + '</svg>'
 )
 
+# fundo decorativo da tela de login/pagamento: ícones de linha soltos, tema
+# "aprender um idioma / intercâmbio" (globo, avião, balão de fala, livro,
+# fone, passaporte). Mesmo tratamento visual do antigo "iT" fantasma que
+# substituem (stroke fino em var(--hair), sem preenchimento) -- textura de
+# fundo, não deve competir com o card.
+_BG_ICON_SVGS = {
+    "globe": '<circle cx="12" cy="12" r="9"/><ellipse cx="12" cy="12" rx="4" ry="9"/><line x1="3" y1="12" x2="21" y2="12"/>',
+    "plane": '<path d="M22 2 11 13M22 2 15 22l-4-9-9-4 20-7Z"/>',
+    "chat": '<path d="M4 4h16v12H8l-4 4V4Z"/><path d="M8 9h8M8 12.5h5"/>',
+    "book": '<path d="M12 6c-2-1.5-6-1.5-9-.5v13c3-1 7-1 9 .5 2-1.5 6-1.5 9-.5v-13c-3-1-7-1-9 .5Z"/><path d="M12 6v13"/>',
+    "headset": '<path d="M4 14v-2a8 8 0 0 1 16 0v2"/><rect x="2" y="14" width="5" height="7" rx="2"/><rect x="17" y="14" width="5" height="7" rx="2"/>',
+    "passport": '<rect x="5" y="2" width="14" height="20" rx="2"/><circle cx="12" cy="10" r="3.5"/><path d="M9 18h6"/>',
+}
+_BG_ICON_LAYOUT = [
+    ("globe", "bgicon-1"), ("plane", "bgicon-2"), ("chat", "bgicon-3"),
+    ("book", "bgicon-4"), ("headset", "bgicon-5"), ("passport", "bgicon-6"),
+]
+AUTH_BG_DECOR = '<div class="auth-gate-bg" aria-hidden="true">' + "".join(
+    f'<svg class="bgicon {cls}" viewBox="0 0 24 24" fill="none" stroke="currentColor" '
+    f'stroke-width="1.15" stroke-linecap="round" stroke-linejoin="round">{_BG_ICON_SVGS[name]}</svg>'
+    for name, cls in _BG_ICON_LAYOUT
+) + '</div>'
+
 MODS = [
     ("mod0","00","Embarque & Diagnóstico","modulo_0_embarque.md",
      "Onde você está e para onde vai. Comece pelo diagnóstico de nivelamento."),
@@ -135,7 +158,7 @@ else:
 gate_hidden = "" if (supa_url and supa_key) else "hidden"
 gate = (
     f'<div class="auth-gate" id="authGate" {gate_hidden}>'
-    '<span class="auth-gate-ghost">iT</span>'
+    f'{AUTH_BG_DECOR}'
     '<div class="auth-gate-card">'
     '<div class="auth-gate-brand">'
     f'<span class="logo">{LOGO_SVG}</span>'
@@ -210,7 +233,7 @@ gate = (
 # texto do botão errado.
 pay_gate = (
     '<div class="auth-gate" id="payGate" hidden>'
-    '<span class="auth-gate-ghost">iT</span>'
+    f'{AUTH_BG_DECOR}'
     '<div class="auth-gate-card">'
     '<div class="auth-gate-brand">'
     f'<span class="logo">{LOGO_SVG}</span>'
