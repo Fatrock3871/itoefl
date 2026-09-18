@@ -111,15 +111,15 @@ body.menu-open{overflow:hidden;}
 
 .brand{display:flex; align-items:center; gap:11px; padding:2px 2px 4px; min-width:0; overflow:hidden;}
 .brand .logo{
-  position:relative; width:40px; height:40px; flex:none; border-radius:11px; background:var(--accent);
+  position:relative; width:40px; height:40px; flex:none; border-radius:11px; background:var(--paper);
   border:2px solid var(--edge); box-shadow:2px 2px 0 var(--edge); transform:rotate(-3deg);
-  display:flex; align-items:center; justify-content:center;
-  font-family:'Bricolage Grotesque',sans-serif; font-weight:800; font-size:17px; color:#fff; letter-spacing:-0.02em;
+  display:flex; align-items:center; justify-content:center; padding:5px;
 }
 .brand .logo::after{
   content:""; position:absolute; top:-5px; right:-5px; width:10px; height:10px; border-radius:50%;
   background:var(--accent-2); border:1.5px solid var(--edge);
 }
+.logo-mark{width:100%; height:100%; display:block; filter:drop-shadow(0 1px 0 rgba(0,0,0,0.08));}
 .brand .btxt{display:flex; flex-direction:column; line-height:1.05; white-space:nowrap;}
 .brand .name{font-family:'Bricolage Grotesque',sans-serif; font-size:24px; font-weight:800; letter-spacing:-0.03em; color:#fff;}
 .brand .mark{font-size:9.5px; letter-spacing:0.16em; text-transform:uppercase; color:var(--accent-2); font-weight:700; margin-top:2px;}
@@ -226,10 +226,9 @@ nav.modnav{display:flex; flex-direction:column; gap:1px;}
 @media (prefers-reduced-motion:reduce){ .auth-gate-card{animation:none;} }
 .auth-gate-brand{display:inline-flex; align-items:center; gap:14px; margin-bottom:26px;}
 .auth-gate-brand .logo{
-  position:relative; width:54px; height:54px; flex:none; border-radius:14px; background:var(--accent);
+  position:relative; width:54px; height:54px; flex:none; border-radius:14px; background:var(--paper);
   border:2.5px solid var(--edge); box-shadow:3px 3px 0 var(--edge); transform:rotate(-3deg);
-  display:flex; align-items:center; justify-content:center;
-  font-family:'Bricolage Grotesque',sans-serif; font-weight:800; font-size:23px; color:#fff; letter-spacing:-0.02em;
+  display:flex; align-items:center; justify-content:center; padding:7px;
 }
 .auth-gate-brand .logo::after{
   content:""; position:absolute; top:-6px; right:-6px; width:13px; height:13px; border-radius:50%;

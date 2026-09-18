@@ -2,6 +2,24 @@ import json
 
 frag = json.load(open("module_fragments_final.json", encoding="utf-8"))
 
+# marca iTOEFL: flor/redemoinho de 6 pétalas em tons de laranja, desenhada
+# em SVG (vetorial, sem depender de arquivo externo) para substituir o
+# antigo selo "iT" chapado. Cada pétala é a mesma curva repetida a cada 60°;
+# a variação de tom entre var(--accent)/--accent-2/--accent-strong dá o
+# efeito de profundidade sem precisar de gradiente por pétala.
+_PETAL_COLORS = ["var(--accent-2)", "var(--accent)", "var(--accent-strong)",
+                  "var(--accent)", "var(--accent-2)", "var(--accent-strong)"]
+_PETAL_D = "M50,52 C34,48 26,34 30,18 C33,7 44,4 50,15 C56,4 67,7 70,18 C74,34 66,48 50,52 Z"
+LOGO_SVG = (
+    '<svg class="logo-mark" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">'
+    + "".join(
+        f'<path d="{_PETAL_D}" fill="{c}" transform="rotate({i * 60} 50 50)"/>'
+        for i, c in enumerate(_PETAL_COLORS)
+    )
+    + '<circle cx="50" cy="52" r="6" fill="var(--accent-strong)"/>'
+    + '</svg>'
+)
+
 MODS = [
     ("mod0","00","Embarque & Diagnóstico","modulo_0_embarque.md",
      "Onde você está e para onde vai. Comece pelo diagnóstico de nivelamento."),
@@ -120,7 +138,7 @@ gate = (
     '<span class="auth-gate-ghost">iT</span>'
     '<div class="auth-gate-card">'
     '<div class="auth-gate-brand">'
-    '<span class="logo">iT</span>'
+    f'<span class="logo">{LOGO_SVG}</span>'
     '<span class="btxt"><span class="name">iTOEFL</span><span class="mark">Preparação independente</span></span>'
     '</div>'
     '<span class="auth-gate-kicker" id="authGateKicker">Acesso à plataforma</span>'
@@ -195,7 +213,7 @@ pay_gate = (
     '<span class="auth-gate-ghost">iT</span>'
     '<div class="auth-gate-card">'
     '<div class="auth-gate-brand">'
-    '<span class="logo">iT</span>'
+    f'<span class="logo">{LOGO_SVG}</span>'
     '<span class="btxt"><span class="name">iTOEFL</span><span class="mark">Preparação independente</span></span>'
     '</div>'
     '<span class="auth-gate-kicker">Acesso pago</span>'
@@ -248,7 +266,7 @@ html = f'''<!DOCTYPE html>
   <aside class="side" id="sideRail">
     <div class="side-top">
       <div class="brand">
-        <span class="logo">iT</span>
+        <span class="logo">{LOGO_SVG}</span>
         <span class="btxt">
           <span class="name">iTOEFL</span>
           <span class="mark">Preparação independente</span>
