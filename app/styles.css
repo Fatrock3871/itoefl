@@ -479,16 +479,40 @@ nav.modnav{display:flex; flex-direction:column; gap:1px;}
   font-family:'Bricolage Grotesque',sans-serif; font-size:21px; font-weight:800; font-style:italic;
   color:var(--ink); margin:3px 0 0 !important;
 }
-.dash-section{margin-bottom:22px; padding-bottom:22px; border-bottom:1px solid var(--hair);}
-.dash-section:last-of-type{margin-bottom:0; padding-bottom:0; border-bottom:none;}
-.dash-section-label{
+/* grade de estatísticas (em vez da lista de seções simples do "Minha
+   conta") -- é o que diferencia o Painel visualmente: blocos coloridos
+   tipo cartão em vez de texto corrido, mais "infográfico" e menos
+   "formulário". Duas variantes de cor (a/b) alternando em tabuleiro,
+   dentro da mesma paleta laranja/dourada da marca (sem cor nova). */
+.dash-stats-grid{display:grid; grid-template-columns:1fr 1fr; gap:10px; margin-bottom:20px;}
+.dash-stat{
+  padding:14px 13px 12px; border-radius:13px; border:1.5px solid var(--edge);
+  display:flex; flex-direction:column; gap:5px;
+}
+.dash-stat-a{background:var(--accent-wash);}
+.dash-stat-b{background:rgba(247,183,51,0.16);}
+:root[data-theme="dark"] .dash-stat-b{background:rgba(247,183,51,0.1);}
+@media (prefers-color-scheme:dark){ :root:not([data-theme="light"]) .dash-stat-b{background:rgba(247,183,51,0.1);} }
+.dash-stat-icon{font-size:19px; line-height:1;}
+.dash-stat-label{
+  font-family:'Bricolage Grotesque',sans-serif; font-size:10px; font-weight:800;
+  text-transform:uppercase; letter-spacing:0.06em; color:var(--ink-2);
+}
+.dash-value{font-size:14px; color:var(--ink); margin:0; line-height:1.35; font-weight:700;}
+.dash-value-sm{font-size:12px; font-weight:600;}
+.dash-bar{margin:2px 0 1px; background:rgba(28,23,18,0.12); border-color:transparent;}
+.dash-callout{
+  margin-bottom:16px; padding:15px 16px; border-radius:12px; border:1.5px solid;
+}
+.dash-callout:last-child{margin-bottom:0;}
+.dash-callout-warn{background:var(--danger-wash); border-color:var(--danger);}
+.dash-callout-accent{background:var(--accent-wash); border-color:var(--accent);}
+.dash-callout .dash-section-label{
   display:flex; align-items:center; gap:8px; font-family:'Bricolage Grotesque',sans-serif;
   font-size:11.5px; font-weight:800; text-transform:uppercase; letter-spacing:0.08em;
   color:var(--ink-2); margin-bottom:10px;
 }
 .dash-section-icon{font-size:14px;}
-.dash-value{font-size:14px; color:var(--ink); margin:0; line-height:1.4;}
-.dash-bar{margin-bottom:8px;}
 .dash-weak-list{display:flex; flex-direction:column; gap:7px;}
 .dash-weak-row{
   display:flex; align-items:center; gap:9px; padding:8px 10px; border-radius:8px;
