@@ -149,7 +149,7 @@
 
   // chaves que sincronizam com o Supabase (progresso real do aluno).
   // ficam de fora: toefl_theme_v1, toefl_active_tab, toefl_timer_preset, toefl_sync_*
-  var SYNC_PREFIXES = ["toefl_progress", "toefl_srs_", "toefl_bsq_", "toefl_quiz_", "toefl_avatar", "toefl_errlog_", "toefl_cert_"];
+  var SYNC_PREFIXES = ["toefl_progress", "toefl_srs_", "toefl_bsq_", "toefl_quiz_", "toefl_avatar", "toefl_errlog_", "toefl_cert_", "toefl_streak"];
   function isSyncedKey(key){
     if(!key || key.indexOf("toefl_") !== 0) return false;
     for(var i = 0; i < SYNC_PREFIXES.length; i++){
@@ -166,7 +166,37 @@
     if(isSyncedKey(key)){
       try { localStorage.setItem("toefl_dirty", "1"); } catch(e){}
       if(onSyncedWrite){ try { onSyncedWrite(); } catch(e){} }
+      if(key !== LS_STREAK) markStreakToday();
     }
+  }
+
+  // ---------- Sequência de dias estudando (streak) ----------
+  // Marca o dia de hoje sempre que qualquer chave sincronizada é escrita
+  // (checkbox de progresso, quiz, SRS, registro de erro etc.) -- ou seja,
+  // qualquer atividade real de estudo, não só abrir o site. O guard de
+  // "já marcado hoje" evita reescrever a cada tecla e evita recursão (marcar
+  // o streak também passa por safeSet, que por sua vez chamaria
+  // markStreakToday de novo se não fosse por isso).
+  var LS_STREAK = "toefl_streak_v1";
+  function todayStr(d){ return (d || new Date()).toISOString().slice(0, 10); }
+  function markStreakToday(){
+    var data = {}; try { data = JSON.parse(safeGet(LS_STREAK) || "{}"); } catch(e){}
+    if(!data.days) data.days = {};
+    var t = todayStr();
+    if(data.days[t]) return;
+    data.days[t] = true;
+    var keys = Object.keys(data.days);
+    if(keys.length > 400){ keys.sort(); delete data.days[keys[0]]; } // não guarda histórico infinito
+    safeSet(LS_STREAK, JSON.stringify(data));
+  }
+  function computeStreak(){
+    var data = {}; try { data = JSON.parse(safeGet(LS_STREAK) || "{}"); } catch(e){}
+    var days = data.days || {};
+    var cursor = new Date();
+    if(!days[todayStr(cursor)]) cursor.setDate(cursor.getDate() - 1); // hoje ainda vazio: conta a partir de ontem, sem "quebrar" o streak antes da meia-noite
+    var n = 0;
+    while(days[todayStr(cursor)]){ n++; cursor.setDate(cursor.getDate() - 1); }
+    return { count: n, today: !!days[todayStr(new Date())] };
   }
 
   // ---------- Theme ----------
@@ -1929,6 +1959,116 @@
     backdrop.addEventListener("click", close);
     document.addEventListener("keydown", function(e){ if(e.key === "Escape" && !modal.hidden) close(); });
     printBtn.addEventListener("click", function(){ window.print(); });
+  })();
+
+  // ---------- Painel (dashboard): sequência, banda estimada, progresso, pontos fracos ----------
+  // Tudo aqui só lê dados que já existem em outros widgets (progresso,
+  // diagnóstico do M0, live score de Reading/Listening, registro de erros)
+  // -- nenhum estado novo além do streak em si.
+  (function(){
+    var btn = document.getElementById("dashboardBtn");
+    var modal = document.getElementById("dashboardModal");
+    if(!btn || !modal) return;
+    var backdrop = document.getElementById("dashboardModalBackdrop");
+    var closeBtn = document.getElementById("dashboardClose");
+    var streakEl = document.getElementById("dashStreak");
+    var bandEl = document.getElementById("dashBand");
+    var progressFillEl = document.getElementById("dashProgressFill");
+    var progressTextEl = document.getElementById("dashProgressText");
+    var weakListEl = document.getElementById("dashWeakSpots");
+
+    // mesmos rótulos de app/build_pipeline.py (ERRLOG_CODES) -- duplicado
+    // aqui de propósito: são só 36 pares fixos, não vale a pena gerar isso
+    // no build só pra não repetir uma lista curta.
+    var ERRLOG_LABELS = {
+      R1:"Não entendi a pergunta", R2:"Caí num distrator", R3:"Lacuna de gramática (CTW)",
+      R4:"Lacuna de vocabulário / collocation", R5:"Tempo", R6:"Desatenção / releitura",
+      L1:"Não decodifiquei o áudio", L2:"Não entendi a pergunta", L3:"Caí num distrator",
+      L4:"Anotação errada", L5:"Vocabulário", L6:"Atenção / fim do áudio",
+      S1:"Fonema / segmento", S2:"Acento de palavra", S3:"Ritmo / acento de frase",
+      S4:"Fluência", S5:"Gramática sob pressão", S6:"Estrutura da resposta",
+      W1:"Estrutura de frase", W2:"Gramática de verbo", W3:"Artigo / preposição / word form",
+      W4:"Registro", W5:"Conteúdo / prompt", W6:"Léxico",
+      RG1:"Over-formality / cerimônia", RG2:"Register clash", RG3:"Sofisticação sem controle",
+      RG4:"Repetição lexical", RG5:"Conector impreciso ou ausente", RG6:"Densidade plana",
+      V1:"Forma errada da palavra", V2:"Colocação errada", V3:"Falso cognato",
+      V4:"Registro trocado", V5:"Overreach (usou palavra que não controla)", V6:"Sinônimo impreciso"
+    };
+    function computeWeakSpots(){
+      var freq = {};
+      ["mod1","mod2","mod3","mod4","mod5","mod6"].forEach(function(mod){
+        var entries = []; try { entries = JSON.parse(safeGet("toefl_errlog_" + mod + "_v1") || "[]"); } catch(e){}
+        entries.forEach(function(entry){
+          (entry.codes || []).forEach(function(c){ freq[c] = (freq[c] || 0) + 1; });
+        });
+      });
+      return Object.keys(freq)
+        .map(function(c){ return { code: c, label: ERRLOG_LABELS[c] || c, count: freq[c] }; })
+        .sort(function(a, b){ return b.count - a.count; })
+        .slice(0, 3);
+    }
+    function computeOverallProgress(){
+      var totalAll = 0, doneAll = 0, modsDone = 0;
+      allChecks.forEach(function(c){
+        totalAll++;
+        if(progressState[c.dataset.pid]) doneAll++;
+      });
+      modOrder.forEach(function(k){ if((modPct[k] || 0) >= 100) modsDone++; });
+      return { pct: totalAll ? Math.round(100 * doneAll / totalAll) : 0, modsDone: modsDone, totalMods: modOrder.length };
+    }
+    function computeBandEstimate(){
+      var diag = computeQuizAccuracy("mod0-diag");
+      if(diag.confirmed > 0 && diag.confirmed === diag.total){
+        var pct = Math.round(100 * diag.correct / diag.confirmed);
+        return { pct: pct, source: "diagnóstico do Módulo 0" };
+      }
+      var reading = computeQuizAccuracy("mod1-"), listening = computeQuizAccuracy("mod2-");
+      var confirmed = reading.confirmed + listening.confirmed, correct = reading.correct + listening.correct;
+      if(confirmed > 0){
+        return { pct: Math.round(100 * correct / confirmed), source: "Action Drills de Reading/Listening" };
+      }
+      return null;
+    }
+    function render(){
+      var streak = computeStreak();
+      streakEl.textContent = streak.count === 0
+        ? "Comece hoje pra iniciar sua sequência."
+        : streak.count + (streak.count === 1 ? " dia seguido estudando" : " dias seguidos estudando") +
+          (streak.today ? "" : " (continue hoje pra manter)");
+
+      var band = computeBandEstimate();
+      bandEl.textContent = band
+        ? "Banda " + cefrBandFromPct(band.pct).code + " (" + cefrBandFromPct(band.pct).label + ") · com base em " + band.source
+        : "Complete o diagnóstico do Módulo 0 pra ver sua estimativa.";
+
+      var prog = computeOverallProgress();
+      progressFillEl.style.width = prog.pct + "%";
+      progressTextEl.textContent = prog.pct + "% · " + prog.modsDone + " de " + prog.totalMods + " módulos concluídos";
+
+      var weak = computeWeakSpots();
+      weakListEl.innerHTML = weak.length ? "" : '<p class="dash-empty">Nenhum erro registrado ainda. Use o "Registre esta sessão" no fim dos módulos M1–M6.</p>';
+      weak.forEach(function(w){
+        var row = document.createElement("div");
+        row.className = "dash-weak-row";
+        row.innerHTML = '<span class="dash-weak-code">' + w.code + '</span>' +
+          '<span class="dash-weak-label">' + w.label + '</span>' +
+          '<span class="dash-weak-count">' + w.count + 'x</span>';
+        weakListEl.appendChild(row);
+      });
+    }
+    function open(){
+      render();
+      modal.hidden = false;
+      document.body.classList.add("menu-open");
+    }
+    function close(){
+      modal.hidden = true;
+      document.body.classList.remove("menu-open");
+    }
+    btn.addEventListener("click", open);
+    closeBtn.addEventListener("click", close);
+    backdrop.addEventListener("click", close);
+    document.addEventListener("keydown", function(e){ if(e.key === "Escape" && !modal.hidden) close(); });
   })();
 
   // ---------- Registro de erros (formulário por módulo) ----------

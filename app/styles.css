@@ -386,9 +386,9 @@ nav.modnav{display:flex; flex-direction:column; gap:1px;}
 
 @media print{ .shell, .auth-gate, .float-tools, body::after{display:none !important;} .cert-modal{position:static; background:#fff;} .cert-modal-backdrop, .cert-close, .cert-print{display:none !important;} }
 
-/* modal "minha conta" -- visual próprio (fundo escuro tipo sidebar), de
-   propósito diferente do resto da página (papel/creme), pra não parecer
-   só mais um card de conteúdo. Fundo com blur atrás, pra focar no modal. */
+/* modal "minha conta" -- cabeçalho com selo, seções com ícone e divisor,
+   pra não parecer só mais um card de conteúdo. Fundo com blur atrás, pra
+   focar no modal. */
 .account-modal{position:fixed; inset:0; z-index:300; display:flex; align-items:center; justify-content:center; padding:20px;}
 .account-modal-backdrop{
   position:absolute; inset:0; background:rgba(10,7,5,0.6);
@@ -441,6 +441,64 @@ nav.modnav{display:flex; flex-direction:column; gap:1px;}
 .account-card .auth-gate-msg{background:var(--bg); border-color:var(--hair); color:var(--ink-2);}
 @media(max-width:480px){ .account-card{padding:26px 20px 22px; border-radius:16px;} .account-title{font-size:19px;} }
 @media print{ .account-modal{display:none !important;} }
+
+/* modal "painel" -- mesmo tratamento visual do modal de conta (cabeçalho
+   com selo, seções com ícone/divisor, fundo desfocado), conteúdo diferente:
+   sequência de dias, banda estimada, progresso geral, pontos fracos. */
+.dash-modal{position:fixed; inset:0; z-index:300; display:flex; align-items:center; justify-content:center; padding:20px;}
+.dash-modal-backdrop{
+  position:absolute; inset:0; background:rgba(10,7,5,0.6);
+  backdrop-filter:blur(9px); -webkit-backdrop-filter:blur(9px);
+}
+.dash-card{
+  position:relative; z-index:1; max-width:420px; width:100%; max-height:86vh; overflow-y:auto;
+  background:var(--paper); color:var(--ink); border:2.5px solid var(--edge); border-radius:20px;
+  box-shadow:var(--shadow-hard); padding:30px 28px 26px; text-align:left;
+}
+.dash-close{
+  position:absolute; top:14px; right:14px; width:28px; height:28px; border-radius:50%;
+  border:1.5px solid var(--hair); background:var(--bg); color:var(--ink-2);
+  font-size:12px; cursor:pointer;
+}
+.dash-close:hover{border-color:var(--accent); color:var(--accent);}
+.dash-head{display:flex; align-items:center; gap:14px; margin-bottom:26px;}
+.dash-head-icon{
+  width:46px; height:46px; flex:none; border-radius:13px; background:var(--accent);
+  border:2px solid var(--edge); box-shadow:2px 2px 0 var(--edge);
+  display:flex; align-items:center; justify-content:center; font-size:19px;
+}
+.dash-kicker{
+  font-family:'Bricolage Grotesque',sans-serif; font-size:10.5px; font-weight:800;
+  text-transform:uppercase; letter-spacing:0.14em; color:var(--accent-strong); margin:0 !important;
+}
+.dash-title{
+  font-family:'Bricolage Grotesque',sans-serif; font-size:21px; font-weight:800; font-style:italic;
+  color:var(--ink); margin:3px 0 0 !important;
+}
+.dash-section{margin-bottom:22px; padding-bottom:22px; border-bottom:1px solid var(--hair);}
+.dash-section:last-of-type{margin-bottom:0; padding-bottom:0; border-bottom:none;}
+.dash-section-label{
+  display:flex; align-items:center; gap:8px; font-family:'Bricolage Grotesque',sans-serif;
+  font-size:11.5px; font-weight:800; text-transform:uppercase; letter-spacing:0.08em;
+  color:var(--ink-2); margin-bottom:10px;
+}
+.dash-section-icon{font-size:14px;}
+.dash-value{font-size:14px; color:var(--ink); margin:0; line-height:1.4;}
+.dash-bar{margin-bottom:8px;}
+.dash-weak-list{display:flex; flex-direction:column; gap:7px;}
+.dash-weak-row{
+  display:flex; align-items:center; gap:9px; padding:8px 10px; border-radius:8px;
+  background:var(--bg); border:1px solid var(--hair); font-size:12.5px;
+}
+.dash-weak-code{
+  flex:none; font-family:var(--mono); font-size:10.5px; font-weight:700; color:#fff;
+  background:var(--accent); border-radius:5px; padding:2px 6px;
+}
+.dash-weak-label{flex:1; color:var(--ink);}
+.dash-weak-count{flex:none; font-weight:800; color:var(--accent-strong); font-size:11.5px;}
+.dash-empty{font-size:12.5px; color:var(--ink-2); margin:0; line-height:1.5;}
+@media(max-width:480px){ .dash-card{padding:26px 20px 22px; border-radius:16px;} .dash-title{font-size:19px;} }
+@media print{ .dash-modal{display:none !important;} }
 
 .data-tools{display:flex; flex-wrap:wrap; gap:6px; align-items:center;}
 .data-tools button{

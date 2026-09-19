@@ -103,6 +103,7 @@ journey = (
     '</span>'
     '<input type="file" id="authAvatarFile" accept="image/*" hidden>'
     '<span id="authEmail" class="auth-email"></span>'
+    '<button type="button" id="dashboardBtn" class="account-gear" aria-label="Meu painel" title="Meu painel">📊</button>'
     '<button type="button" id="accountBtn" class="account-gear" aria-label="Minha conta" title="Minha conta">⚙️</button>'
     '<button type="button" id="authSignOut">Sair</button></div>'
     '<span id="authMsg" class="auth-msg" hidden></span></div>'
@@ -318,6 +319,43 @@ account_modal = (
     '</div>'
 )
 
+# painel: sequência de dias, banda estimada, progresso geral e pontos fracos
+# -- tudo calculado em cima de dados que já existem em outros widgets (ver
+# app.js, bloco "Painel (dashboard)"), sem nenhum conteúdo novo pra manter.
+dashboard_modal = (
+    '<div class="dash-modal" id="dashboardModal" hidden>'
+    '<div class="dash-modal-backdrop" id="dashboardModalBackdrop"></div>'
+    '<div class="dash-card">'
+    '<button type="button" class="dash-close" id="dashboardClose" aria-label="Fechar">✕</button>'
+    '<div class="dash-head">'
+    '<span class="dash-head-icon">📊</span>'
+    '<div><p class="dash-kicker">Seu progresso</p><h2 class="dash-title">Painel</h2></div>'
+    '</div>'
+
+    '<div class="dash-section">'
+    '<span class="dash-section-label"><span class="dash-section-icon">🔥</span>Sequência</span>'
+    '<p class="dash-value" id="dashStreak">—</p>'
+    '</div>'
+
+    '<div class="dash-section">'
+    '<span class="dash-section-label"><span class="dash-section-icon">🎯</span>Banda estimada</span>'
+    '<p class="dash-value" id="dashBand">—</p>'
+    '</div>'
+
+    '<div class="dash-section">'
+    '<span class="dash-section-label"><span class="dash-section-icon">📈</span>Progresso geral</span>'
+    '<div class="op-bar dash-bar"><div class="op-fill" id="dashProgressFill"></div></div>'
+    '<p class="dash-value" id="dashProgressText"></p>'
+    '</div>'
+
+    '<div class="dash-section">'
+    '<span class="dash-section-label"><span class="dash-section-icon">⚠️</span>Pontos fracos</span>'
+    '<div id="dashWeakSpots" class="dash-weak-list"></div>'
+    '</div>'
+    '</div>'
+    '</div>'
+)
+
 html = f'''<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -333,6 +371,7 @@ html = f'''<!DOCTYPE html>
 {pay_gate}
 {cert_modal}
 {account_modal}
+{dashboard_modal}
 <div class="shell">
   <div class="side-backdrop" id="sideBackdrop"></div>
   <aside class="side" id="sideRail">
