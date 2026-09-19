@@ -1783,6 +1783,94 @@
       });
     }
 
+    // ---- "Minha conta": trocar usuário/senha depois de criar a conta ----
+    // até aqui só dava pra recuperar (esqueci senha/usuário); isso deixa
+    // trocar por escolha própria, sem precisar sair e usar o link de e-mail.
+    (function(){
+      var accountBtn = document.getElementById("accountBtn");
+      var accountModal = document.getElementById("accountModal");
+      if(!accountBtn || !accountModal) return;
+      var backdrop = document.getElementById("accountModalBackdrop");
+      var closeBtn = document.getElementById("accountClose");
+      var usernameForm = document.getElementById("accountUsernameForm");
+      var usernameInput = document.getElementById("accountUsername");
+      var usernameHint = document.getElementById("accountUsernameHint");
+      var passwordForm = document.getElementById("accountPasswordForm");
+      var accountMsgEl = document.getElementById("accountMsg");
+
+      function accountMsg(text, kind){
+        accountMsgEl.textContent = text;
+        if(kind === "err"){
+          accountMsgEl.style.color = "var(--danger)";
+          accountMsgEl.style.background = "var(--danger-wash)";
+          accountMsgEl.style.borderColor = "var(--danger)";
+        } else {
+          accountMsgEl.style.color = "var(--ink-2)";
+          accountMsgEl.style.background = "var(--bg)";
+          accountMsgEl.style.borderColor = "var(--hair)";
+        }
+        accountMsgEl.hidden = false;
+      }
+
+      function open(){
+        accountMsgEl.hidden = true;
+        usernameInput.value = "";
+        client.from("profiles").select("username").eq("id", uid).maybeSingle().then(function(res){
+          usernameInput.value = (res.data && res.data.username) || "";
+        });
+        accountModal.hidden = false;
+        document.body.classList.add("menu-open");
+      }
+      function close(){
+        accountModal.hidden = true;
+        document.body.classList.remove("menu-open");
+      }
+      accountBtn.addEventListener("click", open);
+      closeBtn.addEventListener("click", close);
+      backdrop.addEventListener("click", close);
+      document.addEventListener("keydown", function(e){ if(e.key === "Escape" && !accountModal.hidden) close(); });
+
+      usernameForm.addEventListener("submit", function(e){
+        e.preventDefault();
+        var username = usernameInput.value.trim().toLowerCase();
+        if(!/^[a-z0-9_]{3,20}$/.test(username)){
+          accountMsg("Usuário: só letras minúsculas, números e _ (3 a 20 caracteres).", "err");
+          return;
+        }
+        accountMsg("Salvando...", "ok");
+        // busca o username atual direto (não a RPC email_for_username): ela
+        // resolve username->e-mail, então não dá pra usá-la sozinha pra saber
+        // se o nome digitado já é o meu -- comparar contra o próprio uid é
+        // o jeito direto de diferenciar "sem mudança" de "nome em uso".
+        client.from("profiles").select("username").eq("id", uid).maybeSingle().then(function(mine){
+          if(mine.data && mine.data.username === username){
+            accountMsg("Esse já é o seu nome de usuário atual.", "ok");
+            return;
+          }
+          client.rpc("email_for_username", { uname: username }).then(function(checkRes){
+            if(checkRes.data){ accountMsg("Esse nome de usuário já está em uso.", "err"); return; }
+            client.from("profiles").update({ username: username }).eq("id", uid).then(function(upd){
+              if(upd.error){ accountMsg("Erro ao salvar: " + upd.error.message, "err"); return; }
+              emailEl.textContent = username;
+              accountMsg("Nome de usuário atualizado.", "ok");
+            });
+          });
+        });
+      });
+
+      passwordForm.addEventListener("submit", function(e){
+        e.preventDefault();
+        var newPassword = document.getElementById("accountNewPassword").value;
+        if(!newPassword || newPassword.length < 6) return;
+        accountMsg("Salvando...", "ok");
+        client.auth.updateUser({ password: newPassword }).then(function(res){
+          if(res.error){ accountMsg("Erro ao salvar: " + res.error.message, "err"); return; }
+          passwordForm.reset();
+          accountMsg("Senha atualizada.", "ok");
+        });
+      });
+    })();
+
     client.auth.onAuthStateChange(function(event, session){
       if(event === "PASSWORD_RECOVERY"){ showResetPasswordView(); return; }
       if(session && session.user) goOnline(session);

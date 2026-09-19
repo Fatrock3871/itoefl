@@ -105,6 +105,7 @@ journey = (
     '</span>'
     '<input type="file" id="authAvatarFile" accept="image/*" hidden>'
     '<span id="authEmail" class="auth-email"></span>'
+    '<button type="button" id="accountBtn" class="account-gear" aria-label="Minha conta" title="Minha conta">⚙️</button>'
     '<button type="button" id="authSignOut">Sair</button></div>'
     '<span id="authMsg" class="auth-msg" hidden></span></div>'
     '</div></div>'
@@ -269,6 +270,39 @@ cert_modal = (
     '</div>'
 )
 
+# tela "Minha conta": trocar usuário e senha depois de criar a conta -- até
+# aqui só dava pra recuperar (esqueci senha/usuário), não pra trocar por
+# escolha própria. Reaproveita o shell do cert-modal (backdrop + card) e os
+# estilos de .auth-form/.auth-input já usados no gate de login.
+account_modal = (
+    '<div class="cert-modal" id="accountModal" hidden>'
+    '<div class="cert-modal-backdrop" id="accountModalBackdrop"></div>'
+    '<div class="cert-card account-card">'
+    '<button type="button" class="cert-close" id="accountClose" aria-label="Fechar">✕</button>'
+    '<p class="cert-kicker">Minha conta</p>'
+    '<h2 class="cert-name">Configurações</h2>'
+
+    '<form class="auth-form" id="accountUsernameForm">'
+    '<label class="auth-field"><span class="auth-label">Nome de usuário</span>'
+    '<input type="text" id="accountUsername" class="auth-input" required pattern="[A-Za-z0-9_]{3,20}">'
+    '<span class="auth-hint" id="accountUsernameHint">Letras, números e _, de 3 a 20 caracteres</span></label>'
+    '<button type="submit" class="auth-gate-submit">Salvar usuário</button>'
+    '</form>'
+
+    '<form class="auth-form" id="accountPasswordForm">'
+    '<label class="auth-field"><span class="auth-label">Nova senha</span>'
+    '<span class="auth-input-wrap">'
+    '<input type="password" id="accountNewPassword" class="auth-input" placeholder="mínimo 6 caracteres" autocomplete="new-password" required minlength="6">'
+    '<button type="button" class="auth-eye" data-target="accountNewPassword" aria-label="Mostrar senha">👁</button>'
+    '</span></label>'
+    '<button type="submit" class="auth-gate-submit">Salvar senha</button>'
+    '</form>'
+
+    '<span id="accountMsg" class="auth-gate-msg" hidden></span>'
+    '</div>'
+    '</div>'
+)
+
 html = f'''<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -283,6 +317,7 @@ html = f'''<!DOCTYPE html>
 {gate}
 {pay_gate}
 {cert_modal}
+{account_modal}
 <div class="shell">
   <div class="side-backdrop" id="sideBackdrop"></div>
   <aside class="side" id="sideRail">
