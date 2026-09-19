@@ -91,7 +91,7 @@
       if(!head || head.nextElementSibling && head.nextElementSibling.classList.contains("speak-hint")) return;
       var hint = document.createElement("div");
       hint.className = "speak-hint";
-      hint.innerHTML = '<span class="speak-hint-icon">🔊</span><span>Toque nesse ícone sempre que aparecer pra ouvir a pronúncia em inglês da palavra, caso fique com dúvida.</span>';
+      hint.innerHTML = '<span class="speak-hint-icon" aria-hidden="true">🔊</span><span>Toque nesse ícone sempre que aparecer pra ouvir a pronúncia em inglês da palavra, caso fique com dúvida.</span>';
       head.parentNode.insertBefore(hint, head.nextSibling);
     });
   }
