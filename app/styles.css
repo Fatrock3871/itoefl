@@ -396,15 +396,15 @@ nav.modnav{display:flex; flex-direction:column; gap:1px;}
 }
 .account-card{
   position:relative; z-index:1; max-width:420px; width:100%; max-height:86vh; overflow-y:auto;
-  background:var(--rail); color:var(--rail-ink); border:2.5px solid var(--edge); border-radius:20px;
+  background:var(--paper); color:var(--ink); border:2.5px solid var(--edge); border-radius:20px;
   box-shadow:var(--shadow-hard); padding:30px 28px 26px; text-align:left;
 }
 .account-close{
   position:absolute; top:14px; right:14px; width:28px; height:28px; border-radius:50%;
-  border:1.5px solid var(--rail-line); background:rgba(255,255,255,0.06); color:var(--rail-dim);
+  border:1.5px solid var(--hair); background:var(--bg); color:var(--ink-2);
   font-size:12px; cursor:pointer;
 }
-.account-close:hover{border-color:var(--accent-2); color:var(--accent-2);}
+.account-close:hover{border-color:var(--accent); color:var(--accent);}
 .account-head{display:flex; align-items:center; gap:14px; margin-bottom:26px;}
 .account-head-icon{
   width:46px; height:46px; flex:none; border-radius:13px; background:var(--accent);
@@ -413,32 +413,32 @@ nav.modnav{display:flex; flex-direction:column; gap:1px;}
 }
 .account-kicker{
   font-family:'Bricolage Grotesque',sans-serif; font-size:10.5px; font-weight:800;
-  text-transform:uppercase; letter-spacing:0.14em; color:var(--accent-2); margin:0 !important;
+  text-transform:uppercase; letter-spacing:0.14em; color:var(--accent-strong); margin:0 !important;
 }
 .account-title{
   font-family:'Bricolage Grotesque',sans-serif; font-size:21px; font-weight:800; font-style:italic;
-  color:var(--rail-ink); margin:3px 0 0 !important;
+  color:var(--ink); margin:3px 0 0 !important;
 }
-.account-section{margin-bottom:22px; padding-bottom:22px; border-bottom:1px solid var(--rail-line);}
+.account-section{margin-bottom:22px; padding-bottom:22px; border-bottom:1px solid var(--hair);}
 .account-section:last-of-type{margin-bottom:14px; padding-bottom:0; border-bottom:none;}
 .account-section-label{
   display:flex; align-items:center; gap:8px; font-family:'Bricolage Grotesque',sans-serif;
   font-size:11.5px; font-weight:800; text-transform:uppercase; letter-spacing:0.08em;
-  color:var(--rail-dim); margin-bottom:12px;
+  color:var(--ink-2); margin-bottom:12px;
 }
 .account-section-icon{font-size:14px;}
 .account-card .auth-form{margin-bottom:0; gap:10px;}
-.account-card .auth-input{background:rgba(255,255,255,0.07); border-color:var(--rail-line); color:var(--rail-ink);}
-.account-card .auth-input::placeholder{color:var(--rail-dim);}
-.account-card .auth-input:focus{border-color:var(--accent-2); box-shadow:2px 2px 0 var(--edge);}
-.account-card .auth-hint{color:var(--rail-dim);}
-.account-card .auth-hint.is-ok{color:var(--accent-2);}
+.account-card .auth-input{background:var(--bg); border-color:var(--hair); color:var(--ink);}
+.account-card .auth-input::placeholder{color:var(--ink-2);}
+.account-card .auth-input:focus{border-color:var(--accent); box-shadow:2px 2px 0 var(--edge);}
+.account-card .auth-hint{color:var(--ink-2);}
+.account-card .auth-hint.is-ok{color:var(--accent-strong);}
 .account-card .auth-hint.is-bad{color:var(--danger);}
-.account-card .auth-tabs{background:rgba(255,255,255,0.06); border-color:var(--rail-line);}
-.account-card .auth-tab{color:var(--rail-dim);}
-.account-card .auth-eye{color:var(--rail-ink);}
-.account-card .auth-eye:hover{background:rgba(255,255,255,0.1);}
-.account-card .auth-gate-msg{background:rgba(255,255,255,0.06); border-color:var(--rail-line); color:var(--rail-dim);}
+.account-card .auth-tabs{background:var(--bg); border-color:var(--hair);}
+.account-card .auth-tab{color:var(--ink-2);}
+.account-card .auth-eye{color:var(--ink);}
+.account-card .auth-eye:hover{background:var(--accent-wash);}
+.account-card .auth-gate-msg{background:var(--bg); border-color:var(--hair); color:var(--ink-2);}
 @media(max-width:480px){ .account-card{padding:26px 20px 22px; border-radius:16px;} .account-title{font-size:19px;} }
 @media print{ .account-modal{display:none !important;} }
 

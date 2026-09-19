@@ -92,8 +92,6 @@ journey = (
     '<span></span><span></span><span></span></button>'
     '<div class="journey-row">'
     '<div class="journey-tools">'
-    '<button class="themetoggle" id="themeToggle" type="button" aria-label="Alternar tema">'
-    '<span id="themeIcon">☀️</span><span id="themeLabel">Claro</span></button>'
     '<div class="auth-box" id="authBox" hidden>'
     '<div id="authIn" hidden>'
     '<span class="auth-avatar-wrap">'

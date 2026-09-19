@@ -185,8 +185,8 @@
 
   function applyTheme(mode){
     root.setAttribute("data-theme", mode);
-    themeIcon.textContent = themeIcons[mode];
-    themeLabel.textContent = themeLabels[mode];
+    if(themeIcon) themeIcon.textContent = themeIcons[mode];
+    if(themeLabel) themeLabel.textContent = themeLabels[mode];
     // espelha na aba "Aparência" da tela Minha conta, se ela existir
     if(accountThemeTabs){
       accountThemeTabs.classList.toggle("is-alt", mode === "dark");
@@ -197,7 +197,7 @@
   var prefersDark = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches;
   var savedTheme = safeGet(LS_THEME) || (prefersDark ? "dark" : "light");
   applyTheme(savedTheme);
-  themeBtn.addEventListener("click", function(){
+  if(themeBtn) themeBtn.addEventListener("click", function(){
     var cur = safeGet(LS_THEME) || savedTheme;
     var next = cur === "dark" ? "light" : "dark";
     safeSet(LS_THEME, next);
@@ -1813,17 +1813,14 @@
 
       function accountMsg(text, kind){
         accountMsgEl.textContent = text;
-        // cores fixas (não var(--bg)/var(--ink-2)) porque o card é sempre
-        // escuro tipo sidebar, nos dois temas -- usar as variáveis do tema
-        // claro deixaria a mensagem clara demais, destoando do card
         if(kind === "err"){
-          accountMsgEl.style.color = "#ff9d8a";
-          accountMsgEl.style.background = "rgba(224,64,32,0.18)";
-          accountMsgEl.style.borderColor = "rgba(224,64,32,0.5)";
+          accountMsgEl.style.color = "var(--danger)";
+          accountMsgEl.style.background = "var(--danger-wash)";
+          accountMsgEl.style.borderColor = "var(--danger)";
         } else {
-          accountMsgEl.style.color = "var(--rail-dim)";
-          accountMsgEl.style.background = "rgba(255,255,255,0.06)";
-          accountMsgEl.style.borderColor = "var(--rail-line)";
+          accountMsgEl.style.color = "var(--ink-2)";
+          accountMsgEl.style.background = "var(--bg)";
+          accountMsgEl.style.borderColor = "var(--hair)";
         }
         accountMsgEl.hidden = false;
       }
