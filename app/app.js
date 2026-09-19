@@ -149,7 +149,7 @@
 
   // chaves que sincronizam com o Supabase (progresso real do aluno).
   // ficam de fora: toefl_theme_v1, toefl_active_tab, toefl_timer_preset, toefl_sync_*
-  var SYNC_PREFIXES = ["toefl_progress", "toefl_srs_", "toefl_bsq_", "toefl_quiz_", "toefl_avatar", "toefl_errlog_", "toefl_cert_", "toefl_streak"];
+  var SYNC_PREFIXES = ["toefl_progress", "toefl_srs_", "toefl_bsq_", "toefl_quiz_", "toefl_avatar", "toefl_errlog_", "toefl_cert_", "toefl_streak", "toefl_dailygoal"];
   function isSyncedKey(key){
     if(!key || key.indexOf("toefl_") !== 0) return false;
     for(var i = 0; i < SYNC_PREFIXES.length; i++){
@@ -198,6 +198,34 @@
     while(days[todayStr(cursor)]){ n++; cursor.setDate(cursor.getDate() - 1); }
     return { count: n, today: !!days[todayStr(new Date())] };
   }
+
+  // ---------- Meta diária (1 seção concluída por dia) ----------
+  // Conta só transições de não-concluída -> concluída (ver o listener de
+  // checkbox mais abaixo), então marcar/desmarcar a mesma seção repetidas
+  // vezes no mesmo dia não infla o contador.
+  var LS_DAILY_GOAL = "toefl_dailygoal_v1";
+  var DAILY_GOAL_TARGET = 1;
+  function markDailyGoalProgress(){
+    var data = {}; try { data = JSON.parse(safeGet(LS_DAILY_GOAL) || "{}"); } catch(e){}
+    var t = todayStr();
+    if(data.date !== t){ data.date = t; data.count = 0; }
+    data.count = (data.count || 0) + 1;
+    safeSet(LS_DAILY_GOAL, JSON.stringify(data));
+    updateDailyGoalUI();
+  }
+  function getDailyGoal(){
+    var data = {}; try { data = JSON.parse(safeGet(LS_DAILY_GOAL) || "{}"); } catch(e){}
+    var count = (data.date === todayStr()) ? (data.count || 0) : 0;
+    return { count: count, target: DAILY_GOAL_TARGET, done: count >= DAILY_GOAL_TARGET };
+  }
+  function updateDailyGoalUI(){
+    var g = getDailyGoal();
+    var countEl = document.getElementById("dgCount");
+    var fillEl = document.getElementById("dgFill");
+    if(countEl) countEl.textContent = Math.min(g.count, g.target) + "/" + g.target;
+    if(fillEl) fillEl.style.width = Math.min(100, Math.round(100 * g.count / g.target)) + "%";
+  }
+  updateDailyGoalUI();
 
   // ---------- Theme ----------
   var root = document.documentElement;
@@ -472,7 +500,9 @@
       if(doneCard) doneCard.classList.add("done");
     }
     c.addEventListener("change", function(){
+      var wasChecked = progressState[pid];
       progressState[pid] = c.checked;
+      if(c.checked && !wasChecked) markDailyGoalProgress();
       var card = c.closest(".section-card");
       if(card) card.classList.toggle("done", c.checked);
       var lbl = c.closest(".mark-done");
@@ -1972,10 +2002,32 @@
     var backdrop = document.getElementById("dashboardModalBackdrop");
     var closeBtn = document.getElementById("dashboardClose");
     var streakEl = document.getElementById("dashStreak");
+    var goalFillEl = document.getElementById("dashGoalFill");
+    var goalTextEl = document.getElementById("dashGoalText");
     var bandEl = document.getElementById("dashBand");
     var progressFillEl = document.getElementById("dashProgressFill");
     var progressTextEl = document.getElementById("dashProgressText");
     var weakListEl = document.getElementById("dashWeakSpots");
+    var planTextEl = document.getElementById("dashPlanText");
+    var planBtnEl = document.getElementById("dashPlanBtn");
+
+    // pra onde mandar o aluno a partir do código de erro mais frequente --
+    // mesmo agrupamento do mapa reverso do Módulo 9, Parte 8 (RG antes de R,
+    // senão "RG1" bateria como se fosse Reading por causa do prefixo "R")
+    var ERROR_MODULE_MAP = [
+      { re: /^RG/, mod: "mod5", title: "Registro & Retórica" },
+      { re: /^R/, mod: "mod1", title: "Reading" },
+      { re: /^L/, mod: "mod2", title: "Listening" },
+      { re: /^S/, mod: "mod3", title: "Speaking" },
+      { re: /^W/, mod: "mod4", title: "Writing" },
+      { re: /^V/, mod: "mod6", title: "Vocabulário" }
+    ];
+    function moduleForErrorCode(code){
+      for(var i = 0; i < ERROR_MODULE_MAP.length; i++){
+        if(ERROR_MODULE_MAP[i].re.test(code)) return ERROR_MODULE_MAP[i];
+      }
+      return null;
+    }
 
     // mesmos rótulos de app/build_pipeline.py (ERRLOG_CODES) -- duplicado
     // aqui de propósito: são só 36 pares fixos, não vale a pena gerar isso
@@ -2036,6 +2088,12 @@
         : streak.count + (streak.count === 1 ? " dia seguido estudando" : " dias seguidos estudando") +
           (streak.today ? "" : " (continue hoje pra manter)");
 
+      var goal = getDailyGoal();
+      goalFillEl.style.width = Math.min(100, Math.round(100 * goal.count / goal.target)) + "%";
+      goalTextEl.textContent = goal.done
+        ? "Meta batida hoje! (" + goal.count + "/" + goal.target + ")"
+        : Math.min(goal.count, goal.target) + " de " + goal.target + " seção concluída hoje.";
+
       var band = computeBandEstimate();
       bandEl.textContent = band
         ? "Banda " + cefrBandFromPct(band.pct).code + " (" + cefrBandFromPct(band.pct).label + ") · com base em " + band.source
@@ -2055,6 +2113,26 @@
           '<span class="dash-weak-count">' + w.count + 'x</span>';
         weakListEl.appendChild(row);
       });
+
+      if(weak.length){
+        var top = weak[0];
+        var target = moduleForErrorCode(top.code);
+        if(target){
+          planTextEl.textContent = "Seu erro mais frequente é \"" + top.label + "\" (" + top.code + ", " + top.count +
+            "x). Revise no Módulo: " + target.title + ".";
+          planBtnEl.hidden = false;
+          planBtnEl.onclick = function(){
+            close();
+            navTo(target.mod);
+          };
+        } else {
+          planTextEl.textContent = "Continue registrando sessões pra receber uma sugestão personalizada.";
+          planBtnEl.hidden = true;
+        }
+      } else {
+        planTextEl.textContent = "Continue estudando e registrando sessões (M1–M6) pra receber uma sugestão personalizada aqui.";
+        planBtnEl.hidden = true;
+      }
     }
     function open(){
       render();

@@ -338,6 +338,12 @@ dashboard_modal = (
     '</div>'
 
     '<div class="dash-section">'
+    '<span class="dash-section-label"><span class="dash-section-icon">✅</span>Meta de hoje</span>'
+    '<div class="op-bar dash-bar"><div class="op-fill" id="dashGoalFill"></div></div>'
+    '<p class="dash-value" id="dashGoalText"></p>'
+    '</div>'
+
+    '<div class="dash-section">'
     '<span class="dash-section-label"><span class="dash-section-icon">🎯</span>Banda estimada</span>'
     '<p class="dash-value" id="dashBand">—</p>'
     '</div>'
@@ -351,6 +357,12 @@ dashboard_modal = (
     '<div class="dash-section">'
     '<span class="dash-section-label"><span class="dash-section-icon">⚠️</span>Pontos fracos</span>'
     '<div id="dashWeakSpots" class="dash-weak-list"></div>'
+    '</div>'
+
+    '<div class="dash-section">'
+    '<span class="dash-section-label"><span class="dash-section-icon">🧭</span>Plano sugerido</span>'
+    '<p class="dash-value" id="dashPlanText"></p>'
+    '<button type="button" class="dash-plan-btn" id="dashPlanBtn" hidden>Ir para o módulo</button>'
     '</div>'
     '</div>'
     '</div>'
@@ -390,6 +402,10 @@ html = f'''<!DOCTYPE html>
       <div class="op-label"><span>Progresso geral</span><span id="opPct">0%</span></div>
       <div class="op-bar"><div class="op-fill" id="opFill"></div></div>
       <div class="op-count" id="opCount"></div>
+    </div>
+    <div class="daily-goal" id="dailyGoal">
+      <div class="op-label"><span>🎯 Meta de hoje</span><span id="dgCount">0/1</span></div>
+      <div class="op-bar"><div class="op-fill" id="dgFill"></div></div>
     </div>
     <div class="level-badge" id="levelBadge" hidden>
       <span class="level-badge-tag">Nível estimado (diagnóstico)</span>
