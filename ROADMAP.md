@@ -726,6 +726,15 @@ Checklist pra quando o usuário confirmar:
 
 ## Pendências
 
+- **Cupom de desconto no checkout (pedido do usuário, 2026-09-18).** Adicionar
+  suporte a cupom de desconto na hora da compra (tela de pagamento / botão
+  "Comprar acesso"). Ainda não desenhado: precisa decidir onde os cupons
+  vivem (tabela nova no Supabase? campo fixo no código?), se são percentuais
+  ou valor fixo, se têm validade/limite de uso, e como isso se conecta com
+  `create-checkout`/`mp-webhook` (o preço vem do Mercado Pago, então o
+  desconto provavelmente precisa ajustar o valor da preference antes de
+  criar o checkout, não só cosmético na tela). Não implementado ainda,
+  só registrado aqui a pedido do usuário pra não perder o pedido.
 - **Verificar o formato 2026 contra fonte oficial da ETS.** O conteúdo assume os
   números do material de consolidação (50 itens Reading, Speaking de 8 min, etc.).
   Vale uma checagem no site oficial antes de finalizar M0.
