@@ -268,7 +268,7 @@ nav.modnav{display:flex; flex-direction:column; gap:1px;}
   background:var(--accent); border-radius:7px; box-shadow:2px 2px 0 var(--edge);
   transition:transform .25s cubic-bezier(.65,0,.35,1); pointer-events:none;
 }
-.auth-tabs.is-signup .auth-tab-indicator{transform:translateX(calc(100% + 4px));}
+.auth-tabs.is-signup .auth-tab-indicator, .auth-tabs.is-alt .auth-tab-indicator{transform:translateX(calc(100% + 4px));}
 .auth-tab{
   position:relative; z-index:1; flex:1; padding:9px 10px; border:none; border-radius:7px; background:transparent; cursor:pointer;
   font-family:'Bricolage Grotesque',sans-serif; font-size:13px; font-weight:800; color:var(--ink-2);
@@ -391,6 +391,9 @@ nav.modnav{display:flex; flex-direction:column; gap:1px;}
 .account-card .cert-name{text-align:center; font-size:22px;}
 .account-card .auth-form{margin-bottom:22px;}
 .account-card .auth-form:last-of-type{margin-bottom:14px;}
+.account-section{margin-bottom:22px; text-align:left;}
+.account-section > .auth-label{display:block; margin-bottom:8px;}
+.account-section .auth-tabs{margin:0;}
 @media print{ .shell, .auth-gate, .float-tools, body::after{display:none !important;} .cert-modal{position:static; background:#fff;} .cert-modal-backdrop, .cert-close, .cert-print{display:none !important;} }
 
 .data-tools{display:flex; flex-wrap:wrap; gap:6px; align-items:center;}

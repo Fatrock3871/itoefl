@@ -179,11 +179,20 @@
   // partida; dali em diante é um alternador simples entre os dois.
   var themeIcons = {light:"☀️", dark:"🌙"};
   var themeLabels = {light:"Claro", dark:"Escuro"};
+  var accountThemeTabs = document.getElementById("accountThemeTabs");
+  var accountThemeLight = document.getElementById("accountThemeLight");
+  var accountThemeDark = document.getElementById("accountThemeDark");
 
   function applyTheme(mode){
     root.setAttribute("data-theme", mode);
     themeIcon.textContent = themeIcons[mode];
     themeLabel.textContent = themeLabels[mode];
+    // espelha na aba "Aparência" da tela Minha conta, se ela existir
+    if(accountThemeTabs){
+      accountThemeTabs.classList.toggle("is-alt", mode === "dark");
+      accountThemeLight.classList.toggle("is-active", mode === "light");
+      accountThemeDark.classList.toggle("is-active", mode === "dark");
+    }
   }
   var prefersDark = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches;
   var savedTheme = safeGet(LS_THEME) || (prefersDark ? "dark" : "light");
@@ -194,6 +203,10 @@
     safeSet(LS_THEME, next);
     applyTheme(next);
   });
+  if(accountThemeLight){
+    accountThemeLight.addEventListener("click", function(){ safeSet(LS_THEME, "light"); applyTheme("light"); });
+    accountThemeDark.addEventListener("click", function(){ safeSet(LS_THEME, "dark"); applyTheme("dark"); });
+  }
 
   // ---------- Barra lateral: menu em gaveta (aberta sob demanda) ----------
   // Por padrão fica fechada (só o botão de 3 traços aparece) — não ocupa espaço.

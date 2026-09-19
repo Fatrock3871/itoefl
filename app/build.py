@@ -282,6 +282,15 @@ account_modal = (
     '<p class="cert-kicker">Minha conta</p>'
     '<h2 class="cert-name">Configurações</h2>'
 
+    '<div class="account-section">'
+    '<span class="auth-label">Aparência</span>'
+    '<div class="auth-tabs" id="accountThemeTabs">'
+    '<span class="auth-tab-indicator" id="accountThemeIndicator"></span>'
+    '<button type="button" id="accountThemeLight" class="auth-tab">☀️ Claro</button>'
+    '<button type="button" id="accountThemeDark" class="auth-tab">🌙 Escuro</button>'
+    '</div>'
+    '</div>'
+
     '<form class="auth-form" id="accountUsernameForm">'
     '<label class="auth-field"><span class="auth-label">Nome de usuário</span>'
     '<input type="text" id="accountUsername" class="auth-input" required pattern="[A-Za-z0-9_]{3,20}">'
