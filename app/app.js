@@ -172,6 +172,11 @@
     container.appendChild(frag);
   });
 
+  // espelha o client do Supabase e o uid logado pra fora do bloco de auth
+  // (que é seu próprio IIFE) -- o certificado precisa ler/gravar
+  // profiles.display_name e não tinha como chegar em `client`/`uid` de lá
+  var supaClient = null, supaUid = null;
+
   var LS_PROGRESS = "toefl_progress_v1";
   var LS_THEME = "toefl_theme_v1";
   var LS_QUIZ = "toefl_quiz_mod0_v1";
@@ -1506,6 +1511,7 @@
 
     var client = window.supabase.createClient(cfg.url, cfg.anonKey);
     var uid = null, pushTimer = null;
+    supaClient = client;
 
     // ---- acesso pago (2026-09-17) ----
     // conta admin sempre passa direto, sem checar entitlements -- pedido
@@ -1659,6 +1665,7 @@
     }
     function goOnline(session){
       uid = session.user.id;
+      supaUid = uid;
       emailEl.textContent = session.user.email || "conectado";
       googleAvatarUrl = extractGoogleAvatar(session);
       renderAvatar(session.user.email);
@@ -1673,6 +1680,7 @@
     }
     function goOffline(){
       uid = null;
+      supaUid = null;
       googleAvatarUrl = null;
       onSyncedWrite = null;
       forceSyncPush = null;
@@ -2034,6 +2042,12 @@
     var printBtn = document.getElementById("certPrint");
     var nameEl = document.getElementById("certName");
     var dateEl = document.getElementById("certDate");
+    var bandEl = document.getElementById("certBand");
+    var nameStep = document.getElementById("certNameStep");
+    var certView = document.getElementById("certView");
+    var nameForm = document.getElementById("certNameForm");
+    var nameInput = document.getElementById("certNameInput");
+    var editNameBtn = document.getElementById("certEditName");
 
     function fmtDate(iso){
       try{
@@ -2041,19 +2055,58 @@
         return d.toLocaleDateString("pt-BR", { day:"2-digit", month:"long", year:"numeric" });
       }catch(e){ return ""; }
     }
-    function open(){
-      var email = document.getElementById("authEmail");
-      var name = (email && email.textContent.trim()) ? email.textContent.trim().split("@")[0] : "Aluno(a) iTOEFL";
+    function fillCert(name){
       nameEl.textContent = name;
       var iso = safeGet("toefl_cert_date_v1");
-      dateEl.textContent = iso ? "Concluído em " + fmtDate(iso) : "";
+      dateEl.textContent = iso ? fmtDate(iso) : "—";
+      var diag = computeQuizAccuracy("mod0-diag");
+      if(diag.confirmed > 0 && diag.confirmed === diag.total){
+        var band = cefrBandFromPct(Math.round(100 * diag.correct / diag.confirmed));
+        bandEl.textContent = "Banda " + band.code + " (" + band.label + ")";
+      } else {
+        bandEl.textContent = "—";
+      }
+      nameStep.hidden = true;
+      certView.hidden = false;
+    }
+    function showNameStep(current){
+      nameInput.value = current || "";
+      certView.hidden = true;
+      nameStep.hidden = false;
+      nameInput.focus();
+    }
+    function open(){
       modal.hidden = false;
       document.body.classList.add("menu-open"); // reaproveita o travamento de scroll do drawer
+      if(!supaClient || !supaUid){
+        // sem sessão (raro, já que o gate exige login): usa o usuário/e-mail como fallback
+        var email = document.getElementById("authEmail");
+        var fallback = (email && email.textContent.trim()) ? email.textContent.trim().split("@")[0] : "Aluno(a) iTOEFL";
+        fillCert(fallback);
+        return;
+      }
+      supaClient.from("profiles").select("display_name").eq("id", supaUid).maybeSingle().then(function(res){
+        var saved = res.data && res.data.display_name;
+        if(saved) fillCert(saved); else showNameStep("");
+      });
     }
     function close(){
       modal.hidden = true;
       document.body.classList.remove("menu-open");
     }
+    nameForm.addEventListener("submit", function(e){
+      e.preventDefault();
+      var name = nameInput.value.trim();
+      if(!name) return;
+      if(supaClient && supaUid){
+        supaClient.from("profiles").update({ display_name: name }).eq("id", supaUid).then(function(){
+          fillCert(name);
+        });
+      } else {
+        fillCert(name);
+      }
+    });
+    editNameBtn.addEventListener("click", function(){ showNameStep(nameEl.textContent); });
     btn.addEventListener("click", open);
     closeBtn.addEventListener("click", close);
     backdrop.addEventListener("click", close);
