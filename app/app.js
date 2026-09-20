@@ -1544,6 +1544,17 @@
       if(isAdmin(session)){ payGateEl.hidden = true; return; }
       client.from("entitlements").select("paid").eq("user_id", session.user.id).maybeSingle()
         .then(function(res){
+          if(res.error){
+            // erro de rede/consulta: mantém a tela de pagamento visível (o
+            // padrão seguro pra receita continua sendo travar por padrão),
+            // mas avisa que foi uma falha de conexão, não que o aluno não
+            // pagou -- sem isso, quem já pagou via um erro transitório
+            // lia "sem acesso" sem saber que é só tentar de novo.
+            payGateEl.hidden = false;
+            payGateMsg("Não deu pra confirmar seu acesso agora (erro de conexão). Atualize a página pra tentar de novo.", "err");
+            console.error("Falha ao verificar pagamento:", res.error.message);
+            return;
+          }
           var paid = !!(res.data && res.data.paid);
           payGateEl.hidden = paid;
           if(paid) return;
@@ -1576,6 +1587,13 @@
               return;
             }
             location.href = res.data.url;
+          })
+          .catch(function(){
+            // rejeição de verdade (ex.: sem internet, DNS falhou antes de
+            // chegar no Supabase) -- sem isso o botão ficava travado em
+            // "Abrindo checkout..." pra sempre, sem erro e sem como tentar de novo
+            payBtn.disabled = false;
+            payGateMsg("Erro de conexão ao abrir checkout. Tente de novo.", "err");
           });
       });
     }
@@ -1751,8 +1769,8 @@
         }
         client.auth.signInWithPassword({ email: res.data, password: password }).then(function(r){
           if(r.error) gateMsg(friendlyError(r.error.message), "err");
-        });
-      });
+        }).catch(function(){ gateMsg("Erro de conexão. Tente de novo.", "err"); });
+      }).catch(function(){ gateMsg("Erro de conexão. Tente de novo.", "err"); });
     });
 
     signupForm.addEventListener("submit", function(e){
@@ -1785,8 +1803,8 @@
             return;
           }
           gateMsg("Conta criada! Confira seu e-mail para confirmar antes de entrar.", "ok");
-        });
-      });
+        }).catch(function(){ gateMsg("Erro de conexão. Tente de novo.", "err"); });
+      }).catch(function(){ gateMsg("Erro de conexão. Tente de novo.", "err"); });
     });
 
     // mostrar/ocultar senha em qualquer campo do gate
@@ -2012,7 +2030,7 @@
               accountMsg("Nome de usuário atualizado.", "ok");
             });
           });
-        });
+        }).catch(function(){ accountMsg("Erro de conexão. Tente de novo.", "err"); });
       });
 
       emailForm.addEventListener("submit", function(e){
@@ -2032,8 +2050,8 @@
             // "secure email change" estiver ligado, também pro antigo) --
             // o e-mail só troca de verdade depois de clicar nesse link
             accountMsg("Confira o e-mail enviado para " + email + " e confirme a troca por lá.", "ok");
-          });
-        });
+          }).catch(function(){ accountMsg("Erro de conexão. Tente de novo.", "err"); });
+        }).catch(function(){ accountMsg("Erro de conexão. Tente de novo.", "err"); });
       });
 
       passwordForm.addEventListener("submit", function(e){
@@ -2045,7 +2063,7 @@
           if(res.error){ accountMsg("Erro ao salvar: " + res.error.message, "err"); return; }
           passwordForm.reset();
           accountMsg("Senha atualizada.", "ok");
-        });
+        }).catch(function(){ accountMsg("Erro de conexão. Tente de novo.", "err"); });
       });
     })();
 
