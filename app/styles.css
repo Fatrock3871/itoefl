@@ -823,6 +823,14 @@ main{max-width:1320px; margin:0 auto; padding:0 30px 120px; min-width:0;}
 .quiz-passage p{font-size:14.5px !important; margin:0 0 10px !important;}
 .quiz-passage p:last-child{margin-bottom:0 !important;}
 .quiz-passage blockquote{margin:0;}
+.quiz-passage-speak{
+  display:inline-flex; align-items:center; gap:7px; margin-bottom:14px; padding:9px 15px;
+  border-radius:8px; border:2px solid var(--edge); background:var(--accent); color:#fff;
+  font-family:'Bricolage Grotesque',sans-serif; font-size:12.5px; font-weight:800; cursor:pointer;
+  box-shadow:2px 2px 0 var(--edge);
+}
+.quiz-passage-speak:hover{background:var(--accent-strong);}
+.qprompt-text{margin-right:2px;}
 .quiz-objective{font-size:13.5px; color:var(--ink-2); margin:0 0 14px !important; font-style:italic;}
 .drill-timer-btn{
   display:inline-flex; align-items:center; gap:6px; margin:0 0 12px; padding:7px 14px;

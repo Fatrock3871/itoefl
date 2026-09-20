@@ -94,6 +94,25 @@
       hint.innerHTML = '<span class="speak-hint-icon" aria-hidden="true">🔊</span><span>Toque nesse ícone sempre que aparecer pra ouvir a pronúncia em inglês da palavra, caso fique com dúvida.</span>';
       head.parentNode.insertBefore(hint, head.nextSibling);
     });
+
+    // Listening (M2): os drills viravam texto pra ler em silêncio -- esses
+    // dois botões tocam o item/a passagem em voz alta (Web Speech API),
+    // virando prática de ouvir de verdade em vez de leitura de transcrição.
+    Array.prototype.slice.call(document.querySelectorAll(".quiz-item-speak")).forEach(function(btn){
+      btn.addEventListener("click", function(){
+        var textEl = btn.parentNode.querySelector(".qprompt-text");
+        if(!textEl) return;
+        var text = textEl.textContent.replace(/^Speaker:\s*/i, "").replace(/^"|"$/g, "");
+        speakText(text);
+      });
+    });
+    Array.prototype.slice.call(document.querySelectorAll(".quiz-passage-speak")).forEach(function(btn){
+      btn.addEventListener("click", function(){
+        var body = btn.parentNode.querySelector(".quiz-passage-body");
+        if(!body) return;
+        speakText(body.textContent);
+      });
+    });
   }
 
   // agrupa o conteudo de cada modulo em cards por secao (um card por H2),

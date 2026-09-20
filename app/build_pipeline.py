@@ -214,7 +214,7 @@ def build_mod2():
     def swap_group(rest, start_marker, end_marker, label, drills):
         before, rest = slice_lines(rest, start_marker, end_marker)
         widgets = "".join(
-            render_quiz_drill(d["id"], d["title"], d["objective"], d.get("passage_html"), d["items"])
+            render_quiz_drill(d["id"], d["title"], d["objective"], d.get("passage_html"), d["items"], listen=True)
             for d in drills
         )
         return to_html(before) + f"<h3>{label} — exercícios interativos</h3>" + widgets, rest
