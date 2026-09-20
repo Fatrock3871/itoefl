@@ -1,12 +1,12 @@
 # MÓDULO 3: SPEAKING
 
-> **iTOEFL | Formato TOEFL iBT vigente desde 21/jan/2026**
+> **iTOEFL**
 >
-> Cobre o Speaking no blueprint oficial da ETS 2026 (`docs/ets-blueprint-2026.md`).
-> Sete partes: as regras, como a IA pontua, o **Laboratório de Fala** (fonemas,
-> acento, ritmo, entonação, fluência: o que o texto não te ensina), um exemplo
-> resolvido, os drills, o gabarito com respostas-modelo por banda, e o protocolo
-> de erros.
+> Este módulo (formato oficial completo: Módulo 0, Parte 2) tem sete partes:
+> as regras, como a IA pontua, o **Laboratório de Fala** (fonemas, acento,
+> ritmo, entonação, fluência: o que o texto não te ensina), um exemplo
+> resolvido, os drills, o gabarito com respostas-modelo por banda, e o
+> protocolo de erros.
 >
 > ⚠️ **Grave-se em todos os drills.** Speaking não se treina lendo: só ouvindo
 > a própria voz e comparando com o alvo. Use o gravador da barra lateral do app.

@@ -1,12 +1,11 @@
 # MÓDULO 1: READING
 
-> **iTOEFL | Formato TOEFL iBT vigente desde 21/jan/2026**
+> **iTOEFL**
 >
-> Este módulo cobre o Reading no formato oficial da ETS (blueprint 2026: 
-> ver `docs/ets-blueprint-2026.md`). Ele tem sete partes: as regras do jogo,
-> a estratégia, o **Laboratório de Língua** (a gramática e o vocabulário que a
-> seção exige), um exemplo resolvido, os drills, o gabarito comentado e o
-> protocolo de análise de erros.
+> Este módulo (formato oficial completo: Módulo 0, Parte 2) tem sete partes:
+> as regras do jogo, a estratégia, o **Laboratório de Língua** (a gramática e
+> o vocabulário que a seção exige), um exemplo resolvido, os drills, o
+> gabarito comentado e o protocolo de análise de erros.
 
 ---
 

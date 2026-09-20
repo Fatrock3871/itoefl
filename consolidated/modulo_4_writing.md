@@ -1,11 +1,11 @@
 # MÓDULO 4: WRITING
 
-> **iTOEFL | Formato TOEFL iBT vigente desde 21/jan/2026**
+> **iTOEFL**
 >
-> Cobre o Writing no blueprint oficial da ETS 2026 (`docs/ets-blueprint-2026.md`).
-> Sete partes: as regras, como a IA corrige, o **Laboratório de Produção
-> Escrita** (a língua que você precisa produzir certo, não só reconhecer), um
-> exemplo resolvido, os drills, o gabarito com respostas-modelo por banda, e o
+> Este módulo (formato oficial completo: Módulo 0, Parte 2) tem sete partes:
+> as regras, como a IA corrige, o **Laboratório de Produção Escrita** (a
+> língua que você precisa produzir certo, não só reconhecer), um exemplo
+> resolvido, os drills, o gabarito com respostas-modelo por banda, e o
 > protocolo de erros.
 
 ---

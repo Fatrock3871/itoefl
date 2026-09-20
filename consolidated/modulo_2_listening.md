@@ -1,11 +1,11 @@
 # MÓDULO 2: LISTENING
 
-> **iTOEFL | Formato TOEFL iBT vigente desde 21/jan/2026**
+> **iTOEFL**
 >
-> Cobre o Listening no blueprint oficial da ETS 2026 (`docs/ets-blueprint-2026.md`).
-> Sete partes: as regras, a estratégia, o **Laboratório de Escuta** (o inglês
-> falado de verdade: o que o texto não te ensina), um exemplo resolvido, os
-> drills, o gabarito e o protocolo de erros.
+> Este módulo (formato oficial completo: Módulo 0, Parte 2) tem sete partes:
+> as regras, a estratégia, o **Laboratório de Escuta** (o inglês falado de
+> verdade: o que o texto não te ensina), um exemplo resolvido, os drills, o
+> gabarito e o protocolo de erros.
 >
 > ⚠️ Os drills usam **transcrições**. No exame o áudio é falado, com entonação,
 > hesitação e prosódia. Use os drills para treinar reconhecimento de task type,
