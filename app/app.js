@@ -1946,6 +1946,8 @@
       var usernameForm = document.getElementById("accountUsernameForm");
       var usernameInput = document.getElementById("accountUsername");
       var usernameHint = document.getElementById("accountUsernameHint");
+      var emailForm = document.getElementById("accountEmailForm");
+      var emailInput = document.getElementById("accountEmail");
       var passwordForm = document.getElementById("accountPasswordForm");
       var accountMsgEl = document.getElementById("accountMsg");
 
@@ -1966,8 +1968,12 @@
       function open(){
         accountMsgEl.hidden = true;
         usernameInput.value = "";
+        emailInput.value = "";
         client.from("profiles").select("username").eq("id", uid).maybeSingle().then(function(res){
           usernameInput.value = (res.data && res.data.username) || "";
+        });
+        client.auth.getUser().then(function(res){
+          emailInput.value = (res.data && res.data.user && res.data.user.email) || "";
         });
         accountModal.hidden = false;
         document.body.classList.add("menu-open");
@@ -2005,6 +2011,27 @@
               emailEl.textContent = username;
               accountMsg("Nome de usuário atualizado.", "ok");
             });
+          });
+        });
+      });
+
+      emailForm.addEventListener("submit", function(e){
+        e.preventDefault();
+        var email = emailInput.value.trim();
+        if(!email) return;
+        client.auth.getUser().then(function(cur){
+          var current = (cur.data && cur.data.user && cur.data.user.email) || "";
+          if(email.toLowerCase() === current.toLowerCase()){
+            accountMsg("Esse já é o seu e-mail atual.", "ok");
+            return;
+          }
+          accountMsg("Salvando...", "ok");
+          client.auth.updateUser({ email: email }).then(function(res){
+            if(res.error){ accountMsg(friendlyError(res.error.message), "err"); return; }
+            // o Supabase manda link de confirmação pro endereço NOVO (e, se
+            // "secure email change" estiver ligado, também pro antigo) --
+            // o e-mail só troca de verdade depois de clicar nesse link
+            accountMsg("Confira o e-mail enviado para " + email + " e confirme a troca por lá.", "ok");
           });
         });
       });

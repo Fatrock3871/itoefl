@@ -331,6 +331,17 @@ account_modal = (
     '</div>'
 
     '<div class="account-section">'
+    '<span class="account-section-label"><span class="account-section-icon">📧</span>E-mail</span>'
+    '<form class="auth-form" id="accountEmailForm">'
+    '<span class="auth-field">'
+    '<input type="email" id="accountEmail" class="auth-input" required>'
+    '<span class="auth-hint">Trocar o e-mail exige confirmar o link enviado pro endereço novo.</span>'
+    '</span>'
+    '<button type="submit" class="auth-gate-submit">Salvar e-mail</button>'
+    '</form>'
+    '</div>'
+
+    '<div class="account-section">'
     '<span class="account-section-label"><span class="account-section-icon">🔑</span>Senha</span>'
     '<form class="auth-form" id="accountPasswordForm">'
     '<span class="auth-input-wrap">'
