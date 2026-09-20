@@ -17,7 +17,10 @@
   // vírgula (a API já pausa nas vírgulas ao falar).
   var SPEAK_HEADER_WHITELIST = [
     "palavra", "palavra inglesa", "inglês", "verbo de alto impacto",
-    "verbo âncora", "palavras de alto risco"
+    "verbo âncora", "palavras de alto risco", "termo", "expressão"
+    // "verbo" sozinho de propósito NÃO entra aqui: o mesmo cabeçalho aparece
+    // em tabelas de concordância (M1/M4, "Sujeito | Verbo | Exemplo") cujas
+    // células dizem coisa tipo "verbo + -s", não uma palavra pra pronunciar
   ];
   // escolhe a melhor voz em inglês disponível no navegador: as vozes "remotas"
   // (Google/Microsoft Online/Natural) soam bem menos robóticas que a voz local
@@ -61,23 +64,30 @@
     var speakPanelsHit = {};
     Array.prototype.slice.call(document.querySelectorAll(".panel table")).forEach(function(table){
       var headCells = Array.prototype.slice.call(table.querySelectorAll("thead th"));
-      var colIndex = headCells.findIndex(function(th){
-        return SPEAK_HEADER_WHITELIST.indexOf(th.textContent.trim().toLowerCase()) !== -1;
+      // colIndexes (plural): algumas tabelas repetem o cabeçalho duas vezes
+      // na mesma linha pra economizar espaço (ex.: "Verbo | Collocations |
+      // Verbo | Collocations", duas colunas lado a lado) -- pegar só a
+      // primeira ocorrência deixava a segunda coluna sem botão.
+      var colIndexes = [];
+      headCells.forEach(function(th, i){
+        if(SPEAK_HEADER_WHITELIST.indexOf(th.textContent.trim().toLowerCase()) !== -1) colIndexes.push(i);
       });
-      if(colIndex === -1) return;
+      if(!colIndexes.length) return;
       var panel = table.closest(".panel");
       if(panel) speakPanelsHit[panel.id] = true;
       Array.prototype.slice.call(table.querySelectorAll("tbody tr")).forEach(function(row){
-        var cell = row.children[colIndex];
-        var text = cell && cell.textContent.trim();
-        if(!cell || !text) return;
-        var btn = document.createElement("button");
-        btn.type = "button";
-        btn.className = "speak-btn";
-        btn.setAttribute("aria-label", "Ouvir pronúncia de " + text);
-        btn.textContent = "🔊";
-        btn.addEventListener("click", function(){ speakText(text); });
-        cell.appendChild(btn);
+        colIndexes.forEach(function(colIndex){
+          var cell = row.children[colIndex];
+          var text = cell && cell.textContent.trim();
+          if(!cell || !text) return;
+          var btn = document.createElement("button");
+          btn.type = "button";
+          btn.className = "speak-btn";
+          btn.setAttribute("aria-label", "Ouvir pronúncia de " + text);
+          btn.textContent = "🔊";
+          btn.addEventListener("click", function(){ speakText(text); });
+          cell.appendChild(btn);
+        });
       });
     });
     // avisa, uma vez no topo de cada módulo que usa o recurso, o que o
