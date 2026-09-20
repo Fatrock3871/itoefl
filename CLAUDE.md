@@ -138,17 +138,21 @@ Implicações que o conteúdo deve respeitar:
 removido; os originais pré-2026 dos 10 módulos seguem em
 `_archive/content-old-format/`.
 
-## Progressão sequencial (bloqueio de módulos)
+## Navegação livre entre módulos (decisão revertida em 2026-09-20)
 
-O app é um **curso guiado**, não uma referência de navegação livre. O módulo N
-só desbloqueia quando o módulo N-1 está 100% (todos os checkboxes de progresso
-`.pchk` daquele módulo marcados). M0 sempre aberto. A ordem de desbloqueio é a
-ordem dos botões na sidebar (= ordem de `MODS` em `build.py`); o JS a deriva do
-DOM (`modOrder` em `app.js`), sem duplicar a lista. Lógica em `updateBadges()` +
-`isUnlocked()` + `showLockMessage()`. Restaurar a última aba na carga **ignora**
-o bloqueio de propósito (não prender quem já tinha o módulo aberto); só o clique
-do usuário é barrado. Selo circular por módulo: número (aberto) / ✓ (concluído)
-/ 🔒 (bloqueado).
+**Decisão anterior (até 2026-09-20, não usar como referência):** o app bloqueava
+a navegação, módulo N só abria com o módulo N-1 100% concluído.
+
+**Decisão atual:** navegação **livre** entre os 10 módulos, a qualquer momento,
+em qualquer ordem — não é mais um curso sequencialmente travado. O que continua
+existindo, sem mudança, é a **medição de conclusão por módulo** (checkboxes de
+progresso `.pchk`, % na sidebar/jornada, selo ✓ quando 100%, e o certificado
+final, que ainda exige os 10 módulos concluídos). `isUnlocked(key)` em `app.js`
+foi deixada no código (sempre retorna `true` agora) só por compatibilidade com
+quem ainda chama ela (`navTo()`, `updateBadges()`); não reintroduzir lógica de
+bloqueio ali sem pedido explícito do usuário. `showLockMessage()`/`.lock-msg`
+ficaram como código morto inofensivo (nunca mais chamados) — podem ser
+removidos numa limpeza futura, não é urgente.
 
 ## Camadas visuais (runtime, montadas no `app.js`)
 

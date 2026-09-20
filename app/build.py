@@ -120,7 +120,7 @@ panels = "\n".join(
     f'<div class="panel-inner">'
     f'<header class="panel-head"><span class="ph-num">{n}</span>'
     f'<span class="ph-text"><h1>{t}</h1>'
-    '<p class="ph-progress-hint">Seu progresso: conclua 70% para avançar</p>'
+    '<p class="ph-progress-hint">Seu progresso neste módulo</p>'
     f'<p>{tag}</p></span></header>'
     f'{frag[k]}</div></section>'
     for k, n, t, _, tag in MODS

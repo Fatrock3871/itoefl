@@ -365,11 +365,13 @@
     return Math.round(100 * done / total);
   }
 
+  // navegação livre entre módulos (pedido do usuário, 2026-09-20): o curso
+  // não bloqueia mais a ordem de acesso, só continua marcando/medindo a
+  // conclusão de cada módulo (checkbox, badge ✓, % na sidebar/jornada,
+  // certificado). isUnlocked() fica só por compatibilidade com o resto do
+  // código (updateBadges/navTo ainda chamam ela) -- sempre true agora.
   function isUnlocked(key){
-    var idx = modOrder.indexOf(key);
-    if(idx <= 0) return true;
-    var prev = modOrder[idx - 1];
-    return (modPct[prev] || 0) >= UNLOCK_PCT && moduleQuizPct(prev) >= 100;
+    return true;
   }
 
   function showLockMessage(key){
