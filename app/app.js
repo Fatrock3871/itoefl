@@ -395,24 +395,46 @@
   var journeyNodes = Array.prototype.slice.call(document.querySelectorAll(".jnode"));
 
   // ---------- Índice lateral ("Nesta parte") ----------
+  // a classe .active já tinha estilo em styles.css mas nunca era ligada em
+  // lugar nenhum -- o link da parte atual nunca destacava enquanto o aluno
+  // rolava a página. IntersectionObserver resolve isso: marca .active no
+  // link cujo H2 está mais perto do topo visível no momento.
   var railToc = document.getElementById("railToc");
+  var railObserver = null;
+  function setupRailScrollSpy(links){
+    if(railObserver) railObserver.disconnect();
+    if(!links.length || !("IntersectionObserver" in window)) return;
+    railObserver = new IntersectionObserver(function(entries){
+      entries.forEach(function(entry){
+        if(!entry.isIntersecting) return;
+        var match = links.filter(function(l){ return l.heading === entry.target; })[0];
+        if(!match) return;
+        links.forEach(function(l){ l.link.classList.toggle("active", l === match); });
+      });
+    }, { rootMargin: "-10% 0px -75% 0px", threshold: 0 });
+    links.forEach(function(l){ railObserver.observe(l.heading); });
+  }
   function populateRailToc(key){
     if(!railToc) return;
     railToc.innerHTML = "";
     var panel = document.querySelector('.panel[data-panel="' + key + '"]');
     if(!panel) return;
     var heads = Array.prototype.slice.call(panel.querySelectorAll("h2[id]"));
-    heads.forEach(function(h){
+    var links = [];
+    heads.forEach(function(h, i){
       var label = h.querySelector(".htext");
       var a = document.createElement("a");
       a.href = "#" + h.id;
       a.textContent = label ? label.textContent : h.textContent;
+      if(i === 0) a.classList.add("active"); // estado inicial, antes de rolar
       a.addEventListener("click", function(e){
         e.preventDefault();
         h.scrollIntoView({behavior:"smooth", block:"start"});
       });
       railToc.appendChild(a);
+      links.push({ link: a, heading: h });
     });
+    setupRailScrollSpy(links);
   }
 
   // gravador e cronômetro só fazem sentido nos módulos de prática cronometrada
@@ -476,6 +498,10 @@
       var pctMod = b.total ? Math.round(100 * b.done / b.total) : 0;
       modPct[mod] = pctMod;
       if(pctMod >= 100) modsDone++;
+      var phPct = document.getElementById("phPct-" + mod);
+      var phFill = document.getElementById("phFill-" + mod);
+      if(phPct) phPct.textContent = pctMod + "%";
+      if(phFill) phFill.style.width = pctMod + "%";
     });
     var pct = totalAll ? Math.round(100*doneAll/totalAll) : 0;
     document.getElementById("opPct").textContent = pct + "%";
