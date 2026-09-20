@@ -995,13 +995,22 @@ main{max-width:1320px; margin:0 auto; padding:0 30px 120px; min-width:0;}
 .st-controls button:hover{border-color:var(--edge);}
 .st-primary{background:var(--accent) !important; color:#fff !important; border-color:var(--edge) !important;}
 @media(max-width:640px){ .st-panel{width:200px;} }
-.mr-panel{background:var(--paper); border:2px solid var(--edge); border-radius:var(--radius); box-shadow:var(--shadow-hard); padding:16px; width:240px; display:flex; flex-direction:column; gap:10px;}
+.mr-panel{background:var(--paper); border:2px solid var(--edge); border-radius:var(--radius); box-shadow:var(--shadow-hard); padding:16px; width:260px; display:flex; flex-direction:column; gap:10px;}
 .mic-rec.collapsed .mr-panel{display:none;}
 .mr-display{font-family:var(--mono); font-size:34px; font-weight:600; text-align:center; color:var(--ink); font-variant-numeric:tabular-nums;}
 .mic-rec.recording .mr-display{color:var(--danger);}
 .mic-rec.recording .st-toggle{background:var(--danger); color:#fff;}
 .mr-status{font-size:11.5px; color:var(--ink-2); text-align:center; line-height:1.4; min-height:16px;}
 .mr-audio{width:100%; height:34px; accent-color:var(--accent);}
+.mr-transcript{
+  background:var(--sand); border:1.5px solid var(--hair); border-radius:8px;
+  padding:9px 11px; max-height:140px; overflow-y:auto;
+}
+.mr-transcript-label{
+  font-family:'Bricolage Grotesque',sans-serif; font-size:9.5px; font-weight:800;
+  text-transform:uppercase; letter-spacing:0.06em; color:var(--ink-2); margin:0 0 5px !important;
+}
+#mrTranscriptText{font-size:12.5px; color:var(--ink); line-height:1.4; margin:0 !important;}
 .mr-controls{display:flex; gap:8px;}
 .mr-controls button{flex:1; padding:9px 0; border-radius:7px; border:2px solid var(--hair); background:var(--paper); font-family:inherit; font-size:13px; font-weight:700; color:var(--ink); cursor:pointer;}
 .mr-controls button:hover{border-color:var(--edge);}

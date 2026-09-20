@@ -889,8 +889,45 @@
     var recBtn = document.getElementById("mrToggleBtn");
     var clearBtn = document.getElementById("mrClear");
     var toggle = document.getElementById("mrToggle");
+    var transcriptWrap = document.getElementById("mrTranscript");
+    var transcriptText = document.getElementById("mrTranscriptText");
 
     var rec = null, chunks = [], stream = null, elapsed = 0, tick = null, url = null;
+
+    // transcrição ao vivo (autoavaliação de Speaking): não substitui gravar o
+    // áudio, roda em paralelo via SpeechRecognition -- a "irmã" da API de voz
+    // já usada pros botões de pronúncia, só que no sentido contrário (fala ->
+    // texto). Não pontua nada, só mostra o que o app "ouviu" pra comparar com
+    // o que o aluno pretendia dizer. Sem suporte no navegador (ex.: Firefox),
+    // o gravador de áudio continua funcionando normal, só sem essa parte.
+    var SpeechRec = window.SpeechRecognition || window.webkitSpeechRecognition;
+    var recognizer = null, finalTranscript = "";
+    function startTranscript(){
+      if(!SpeechRec) return;
+      finalTranscript = "";
+      transcriptText.textContent = "";
+      transcriptWrap.hidden = false;
+      try {
+        recognizer = new SpeechRec();
+        recognizer.lang = "en-US";
+        recognizer.continuous = true;
+        recognizer.interimResults = true;
+        recognizer.onresult = function(e){
+          var interim = "";
+          for(var i = e.resultIndex; i < e.results.length; i++){
+            var chunk = e.results[i][0].transcript;
+            if(e.results[i].isFinal) finalTranscript += chunk + " ";
+            else interim += chunk;
+          }
+          transcriptText.textContent = (finalTranscript + interim).trim();
+        };
+        recognizer.onerror = function(){}; // silencioso -- audio gravado continua valendo mesmo se o reconhecimento falhar
+        recognizer.start();
+      } catch(ex){ recognizer = null; }
+    }
+    function stopTranscript(){
+      if(recognizer){ try { recognizer.stop(); } catch(ex){} recognizer = null; }
+    }
 
     if(!navigator.mediaDevices || !window.MediaRecorder){
       recBtn.disabled = true;
@@ -926,6 +963,7 @@
           releaseStream();
         };
         rec.start();
+        startTranscript();
         elapsed = 0; display.textContent = "00:00";
         wrap.classList.add("recording");
         recBtn.textContent = "■ Parar";
@@ -937,6 +975,7 @@
     }
     function stopRec(){
       stopClock();
+      stopTranscript();
       wrap.classList.remove("recording");
       recBtn.textContent = "● Gravar";
       if(rec && rec.state !== "inactive") rec.stop();
@@ -946,6 +985,8 @@
       revoke();
       audioEl.hidden = true; audioEl.removeAttribute("src");
       clearBtn.hidden = true;
+      transcriptWrap.hidden = true;
+      transcriptText.textContent = "";
       display.textContent = "00:00";
       statusEl.textContent = "Grave sua resposta e ouça de volta.";
     }

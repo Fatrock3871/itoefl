@@ -444,6 +444,10 @@ html = f'''<!DOCTYPE html>
       <div class="mr-display" id="mrDisplay">00:00</div>
       <div class="mr-status" id="mrStatus">Grave sua resposta e ouça de volta.</div>
       <audio id="mrAudio" class="mr-audio" controls hidden></audio>
+      <div class="mr-transcript" id="mrTranscript" hidden>
+        <p class="mr-transcript-label">Transcrição automática (autoavaliação, pode errar):</p>
+        <p id="mrTranscriptText"></p>
+      </div>
       <div class="mr-controls">
         <button type="button" id="mrToggleBtn" class="st-primary">● Gravar</button>
         <button type="button" id="mrClear" hidden>Nova</button>
