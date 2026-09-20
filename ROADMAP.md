@@ -726,6 +726,17 @@ Checklist pra quando o usuário confirmar:
 
 ## Pendências
 
+- **Vídeos explicativos por módulo (pedido do usuário, 2026-09-20).** O
+  usuário está gravando, por fora do projeto, um vídeo curto por módulo
+  explicando "o que fazer neste módulo" numa ferramenta de vídeo por IA
+  (a primeira sugerida numa resposta anterior: Synthesia/HeyGen, não
+  confirmado qual exatamente). Quando ele mandar os arquivos ou links
+  (um por módulo, pode ser aos poucos, não precisa ser tudo de uma vez),
+  falta: decidir onde hospedar (Supabase Storage, já que o app já usa
+  Supabase, ou um link externo tipo YouTube/Vimeo não listado publicamente)
+  e construir o player embutido no topo do painel de cada módulo (`.panel-head`
+  em `app/build.py`, ao lado do h1). Nada implementado ainda, só a estrutura
+  combinada.
 - **Cupom de desconto no checkout (pedido do usuário, 2026-09-18).** Adicionar
   suporte a cupom de desconto na hora da compra (tela de pagamento / botão
   "Comprar acesso"). Ainda não desenhado: precisa decidir onde os cupons
