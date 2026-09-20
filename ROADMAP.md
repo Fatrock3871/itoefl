@@ -2,11 +2,82 @@
 
 Memória entre sessões. Atualizar ao concluir cada etapa.
 
-**Última atualização:** 2026-09-17
-**Agora:** Fase 7 (conteúdo) concluída. **3 frentes abertas em paralelo** (ver abaixo).
-`artifact/index.html` ≈ 954 KB. Login agora obrigatório quando o Supabase
-está configurado (ver v11), isso muda o comportamento em produção depois da
-Fase 6, não só em dev.
+**Última atualização:** 2026-09-20
+**Agora:** conteúdo, autenticação, pagamento (código), painel, pronúncia,
+áudio de Listening, transcrição de Speaking e "Minha conta" (tema, usuário,
+e-mail, senha) estão prontos. O que falta está mapeado abaixo, por
+prioridade.
+
+---
+
+## Mapa do que falta (2026-09-20)
+
+### 🔴 Bloqueia uso real por alguém além do usuário/dono
+
+1. **Publicar o site.** Hoje só roda local (`python scripts\serve.py`). Sem
+   isso, nenhum link existe pra mandar pra ninguém testar. Checklist da
+   Fase 6 já preparado em sessão anterior, nunca executado.
+2. **Configurar login com Google.** Código já pronto (`authSignInGoogle`),
+   falta o usuário criar o provedor OAuth no Google Cloud Console e
+   habilitar/colar as chaves no Supabase (Authentication → Providers →
+   Google). Hoje o botão existe mas retorna erro (`provider is not
+   enabled`, confirmado nos logs do Supabase).
+3. **Configurar Mercado Pago.** Código pronto (`create-checkout`/
+   `mp-webhook`, ver `docs/mercadopago-setup.md`), falta o usuário criar as
+   credenciais reais e rodar `supabase secrets set MP_ACCESS_TOKEN=...` +
+   deploy das duas edge functions. Sem isso o botão "Comprar acesso"
+   quebra na hora de abrir o checkout.
+
+### 🟡 Funcionalidades pedidas, ainda não construídas
+
+4. **Vídeos explicativos por módulo.** Usuário está gravando por fora
+   (ferramenta de IA, provavelmente Synthesia/HeyGen). Quando mandar os
+   arquivos/links, falta decidir hospedagem e montar o player no
+   `.panel-head` de cada módulo.
+5. **Cupom de desconto no checkout.** Não desenhado ainda: onde os cupons
+   vivem, percentual vs. valor fixo, validade, e como isso ajusta o valor
+   mandado pro Mercado Pago antes de criar o checkout.
+6. **Correção por IA (Speaking/Writing).** Adiada de propósito até o
+   projeto ter retorno financeiro (custo por chamada de API). Foi
+   parcialmente compensada por duas features mais baratas já implementadas:
+   áudio sintético no Listening e transcrição automática no gravador do
+   Speaking — nenhuma delas dá nota, só ajuda na autoavaliação.
+7. **"Minha conta" — itens que faltam:**
+   - Ver status de pagamento ali dentro (a tabela `entitlements` já existe,
+     só falta mostrar "Pago ✓" / "Sem acesso" na tela).
+   - Excluir conta (exige função server-side com `service_role`, não dá
+     pra fazer só no navegador por segurança — maior escopo que os outros
+     itens da tela).
+
+### 🟢 Qualidade e robustez
+
+8. **Nenhuma suíte de teste automatizada.** Toda verificação até aqui foi
+   manual: um teste headless novo por mudança, descartado depois. Não
+   existe um script que rode sozinho e pegue regressão quando algo for
+   mexido de novo.
+9. **Tratamento de erro de rede.** Várias telas assumem que o Supabase vai
+   responder; queda de conexão no meio de uma ação nem sempre dá uma
+   mensagem clara.
+10. **Nunca testado em celular real.** Toda a verificação de responsividade
+    desta sessão foi via Chrome headless (com limitações conhecidas de
+    viewport simulado); nenhum teste em aparelho físico.
+11. **Nenhum usuário real testou o fluxo completo.** Maior lacuna de
+    qualidade do projeto em si (não de código): dificuldade dos drills,
+    ritmo dos módulos, clareza das explicações, nada disso foi validado
+    fora desta sessão.
+12. **Revisão de consistência pós-edições.** Depois de tantas rodadas de
+    corte/reescrita de tom nos 10 módulos, vale uma passada final
+    conferindo que nada ficou quebrado, repetido ou com referência cruzada
+    desatualizada (padrão do que já aconteceu uma vez em M7, corrigido).
+
+### ⚪ Decisões antigas nunca respondidas (baixa prioridade, podem estar obsoletas)
+
+13. **M0 "expandido como introdução"?** Pergunta de 2026-09-10, nunca
+    retomada. M0 já ganhou reescrita de tom depois disso; provavelmente
+    não é mais relevante, mas nunca foi formalmente descartada.
+14. **Verificar o formato 2026 contra a fonte oficial da ETS** antes de
+    considerar o conteúdo definitivamente "fechado" (pendência original
+    de 2026-09-03, nunca marcada como feita).
 
 ---
 
