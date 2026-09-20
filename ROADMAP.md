@@ -5,8 +5,10 @@ Memória entre sessões. Atualizar ao concluir cada etapa.
 **Última atualização:** 2026-09-20
 **Agora:** conteúdo, autenticação, pagamento (código), painel, pronúncia,
 áudio de Listening, transcrição de Speaking e "Minha conta" (tema, usuário,
-e-mail, senha) estão prontos. O que falta está mapeado abaixo, por
-prioridade.
+e-mail, senha) estão prontos. Navegação entre módulos agora é **livre**
+(decisão revertida em 2026-09-20, ver CLAUDE.md) — a conclusão de cada
+módulo continua sendo medida, só não bloqueia mais o acesso aos outros.
+O que falta está mapeado abaixo, por prioridade.
 
 ---
 
@@ -51,13 +53,17 @@ prioridade.
 
 ### 🟢 Qualidade e robustez
 
-8. **Nenhuma suíte de teste automatizada.** Toda verificação até aqui foi
-   manual: um teste headless novo por mudança, descartado depois. Não
-   existe um script que rode sozinho e pegue regressão quando algo for
-   mexido de novo.
-9. **Tratamento de erro de rede.** Várias telas assumem que o Supabase vai
-   responder; queda de conexão no meio de uma ação nem sempre dá uma
-   mensagem clara.
+8. ~~**Nenhuma suíte de teste automatizada.**~~ **FEITO (2026-09-20).**
+   `scripts/smoke_test.py`: builda o site, roda 23 checagens num Chrome
+   headless (gate, progresso/meta diária, painel, Minha conta, tema,
+   certificado, pronúncia/áudio, gravador, ausência de erro de JS) +
+   mojibake, sai com código 1 se algo falhar. `python scripts\smoke_test.py`.
+9. ~~**Tratamento de erro de rede.**~~ **FEITO (2026-09-20).** Corrigido um
+   bug real: `checkEntitlement()` não checava erro de consulta e podia
+   bloquear quem já tinha pago por causa de uma falha transitória.
+   Adicionado `.catch()` no fim das cadeias de chamada que ainda não
+   tinham (login, cadastro, checkout, formulários de Minha conta), pra
+   não deixar botão travado pra sempre sem mensagem numa rejeição de rede.
 10. **Nunca testado em celular real.** Toda a verificação de responsividade
     desta sessão foi via Chrome headless (com limitações conhecidas de
     viewport simulado); nenhum teste em aparelho físico.
