@@ -117,20 +117,6 @@ body.menu-open{overflow:hidden;}
 .logo-mark{width:100%; height:100%; display:block; filter:drop-shadow(0 2px 3px rgba(0,0,0,0.25));}
 .brand .btxt{display:flex; flex-direction:column; align-items:center; line-height:1.05; min-width:0;}
 .brand .name{font-family:'Baloo 2',sans-serif; font-size:24px; font-weight:800; letter-spacing:-0.01em; color:#fff; white-space:nowrap;}
-/* aviãozinho decorativo sobre o wordmark "iTOEFL" (do "i" ao "L" e volta), no
-   mesmo tratamento em qualquer contexto que use a marca */
-.name-wrap{position:relative; display:inline-block;}
-.name-plane-svg{position:absolute; left:0; top:-13px; width:100%; height:auto; overflow:visible; pointer-events:none;}
-/* bico sempre pra baixo, espelhando de lado a cada metade do trajeto (ver
-   comentário do NAME_PLANE_SVG em build.py pro porquê dos ângulos) */
-.name-plane-emoji{transform-box:fill-box; transform-origin:center; animation:plane-flip 4.4s steps(1,end) infinite;}
-@keyframes plane-flip{
-  0%{transform:rotate(90deg);}
-  49.9%{transform:rotate(90deg);}
-  50%{transform:rotate(180deg);}
-  100%{transform:rotate(180deg);}
-}
-@media (prefers-reduced-motion:reduce){ .name-plane-emoji{animation:none; transform:rotate(90deg);} }
 .brand .mark{
   font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:var(--accent-2);
   font-weight:700; margin-top:2px; white-space:normal; line-height:1.3;

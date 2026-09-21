@@ -23,33 +23,6 @@ LOGO_SVG = (
     '</svg>'
 )
 
-# aviãozinho voando do "i" ao "L" de "iTOEFL" e voltando, sempre seguindo o
-# arco pontilhado -- pedido do usuário. SMIL (<animateMotion>) em vez de CSS
-# offset-path de propósito: o path some dentro do mesmo viewBox do SVG, então
-# a curva e o avião escalam juntos com width:100% em qualquer tamanho de
-# wordmark (sidebar, card de login etc.), sem duplicar coordenadas em dois
-# sistemas diferentes que podiam desalinhar entre si. keyPoints/keyTimes faz
-# o avião ir até o fim do trajeto (o "L") e voltar (vai e volta), em vez de
-# saltar de volta ao início a cada repetição. O bico sempre aponta pra baixo
-# (nunca pra cima), espelhando de lado pra cada perna do trajeto: rotate(90deg)
-# quando vai do "i" pro "L" (bico baixo-direita, a favor do movimento),
-# rotate(180deg) na volta do "L" pro "i" (bico baixo-esquerda) -- animação CSS
-# em @keyframes com a mesma duração do <animateMotion>, alternando exatamente
-# na metade do ciclo (onde o SMIL também vira de direção).
-_FLIGHT_DUR = "4.4s"
-_FLIGHT_PATH_D = "M4,18 Q60,-2 116,8"
-NAME_PLANE_SVG = (
-    f'<svg class="name-plane-svg" viewBox="0 0 120 22" xmlns="http://www.w3.org/2000/svg" '
-    'aria-hidden="true" focusable="false">'
-    f'<path d="{_FLIGHT_PATH_D}" fill="none" stroke="var(--hair)" stroke-width="1.5" '
-    'stroke-dasharray="2.5 4" stroke-linecap="round"/>'
-    f'<text font-size="22" class="name-plane-emoji">✈️'
-    f'<animateMotion dur="{_FLIGHT_DUR}" repeatCount="indefinite" calcMode="linear" '
-    f'keyPoints="0;1;0" keyTimes="0;0.5;1" path="{_FLIGHT_PATH_D}"/>'
-    '</text>'
-    '</svg>'
-)
-
 # fundo decorativo da tela de login/pagamento: ícones de linha soltos, tema
 # "aprender um idioma / intercâmbio" (globo, avião, balão de fala, livro,
 # fone, passaporte). Mesmo tratamento visual do antigo "iT" fantasma que
@@ -195,7 +168,7 @@ gate = (
     '<div class="auth-gate-card">'
     '<div class="auth-gate-brand">'
     f'<span class="logo">{LOGO_SVG}</span>'
-    f'<span class="btxt"><span class="name-wrap"><span class="name">iTOEFL</span>{NAME_PLANE_SVG}</span></span>'
+    f'<span class="btxt"><span class="name">iTOEFL</span></span>'
     '</div>'
     '<h2 id="authGateTitle">Entre para continuar</h2>'
     '<p id="authGateSubtitle"></p>'
@@ -275,7 +248,7 @@ pay_gate = (
     '<div class="auth-gate-card">'
     '<div class="auth-gate-brand">'
     f'<span class="logo">{LOGO_SVG}</span>'
-    f'<span class="btxt"><span class="name-wrap"><span class="name">iTOEFL</span>{NAME_PLANE_SVG}</span></span>'
+    f'<span class="btxt"><span class="name">iTOEFL</span></span>'
     '</div>'
     '<span class="auth-gate-kicker">Acesso pago</span>'
     '<h2>Libere seu acesso</h2>'
@@ -467,7 +440,7 @@ html = f'''<!DOCTYPE html>
       <div class="brand">
         <span class="logo">{LOGO_SVG}</span>
         <span class="btxt">
-          <span class="name-wrap"><span class="name">iTOEFL</span>{NAME_PLANE_SVG}</span>
+          <span class="name">iTOEFL</span>
           <span class="mark">Preparação independente</span>
         </span>
       </div>
