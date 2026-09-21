@@ -2482,7 +2482,10 @@
   (function(){
     var cards = Array.prototype.slice.call(document.querySelectorAll(".section-card"));
     var allH3 = [];
+    var h3Seq = {}; // contador por módulo, pra dar um id estável a cada h3
     cards.forEach(function(card){
+      var panelEl = card.closest(".panel");
+      var modKey = panelEl ? panelEl.dataset.panel : "mod";
       var h3s = Array.prototype.slice.call(card.children).filter(function(n){ return n.tagName === "H3"; });
       h3s.forEach(function(h3){
         var nodes = [];
@@ -2500,6 +2503,9 @@
         nodes.forEach(function(n){ body.appendChild(n); });
         h3.parentNode.insertBefore(body, node);
         h3.classList.add("h3-toggle", "collapsed");
+        h3Seq[modKey] = (h3Seq[modKey] || 0) + 1;
+        h3.id = "h3-" + modKey + "-" + h3Seq[modKey];
+        h3.dataset.mod = modKey;
         h3.addEventListener("click", function(){
           h3.classList.toggle("collapsed");
           body.classList.toggle("h3-collapsed");
@@ -2508,11 +2514,30 @@
       });
     });
 
+    // "continuar de onde parei": guarda a última subseção que o aluno leu
+    // (a que entrou na faixa de leitura no meio da tela), pra sidebar
+    // oferecer um atalho direto pra lá na próxima visita -- ver resumeBtn
+    // mais abaixo. Separado do observer de auto-abrir porque precisa
+    // disparar mesmo pra seções que já estavam abertas.
+    // o IntersectionObserver dispara um callback inicial assim que começa a
+    // observar, refletindo o que já está na tela nesse instante (a seção
+    // 1.1 do módulo que acabou de carregar) -- isso não é "o aluno rolou até
+    // aqui", é só o estado de largada, e não pode sobrescrever a posição
+    // salva de uma visita anterior. Só passa a gravar depois desse atraso.
+    var trackingLastPos = false;
+    setTimeout(function(){ trackingLastPos = true; }, 900);
+    function saveLastPos(h3){
+      if(!trackingLastPos) return;
+      safeSet("toefl_lastpos_v1", JSON.stringify({ mod: h3.dataset.mod, id: h3.id, title: h3.textContent.trim() }));
+      updateResumeBtn();
+    }
+
     if(allH3.length && "IntersectionObserver" in window){
       var h3Observer = new IntersectionObserver(function(entries){
         entries.forEach(function(entry){
           if(!entry.isIntersecting) return;
           var h3 = entry.target;
+          saveLastPos(h3);
           if(!h3.classList.contains("collapsed")) return;
           h3.classList.remove("collapsed");
           var body = h3.nextElementSibling;
@@ -2533,5 +2558,40 @@
       var firstActiveBody = firstActiveH3.nextElementSibling;
       if(firstActiveBody && firstActiveBody.classList.contains("h3-body")) firstActiveBody.classList.remove("h3-collapsed");
     }
+
+    var resumeBtn = document.getElementById("resumeBtn");
+    var resumeLabel = document.getElementById("resumeLabel");
+    function readLastPos(){
+      var raw = safeGet("toefl_lastpos_v1");
+      if(!raw) return null;
+      try{ return JSON.parse(raw); }catch(e){ return null; }
+    }
+    function updateResumeBtn(){
+      if(!resumeBtn) return;
+      var pos = readLastPos();
+      if(!pos || !document.getElementById(pos.id)){ resumeBtn.hidden = true; return; }
+      resumeLabel.textContent = pos.title;
+      resumeBtn.hidden = false;
+    }
+    if(resumeBtn){
+      resumeBtn.addEventListener("click", function(){
+        var pos = readLastPos();
+        if(!pos) return;
+        navTo(pos.mod);
+        setTimeout(function(){
+          var target = document.getElementById(pos.id);
+          if(!target) return;
+          if(target.classList.contains("collapsed")){
+            target.classList.remove("collapsed");
+            var body = target.nextElementSibling;
+            if(body && body.classList.contains("h3-body")) body.classList.remove("h3-collapsed");
+          }
+          target.scrollIntoView({ behavior: "smooth", block: "center" });
+          target.classList.add("resume-highlight");
+          setTimeout(function(){ target.classList.remove("resume-highlight"); }, 2200);
+        }, 60);
+      });
+    }
+    updateResumeBtn();
   })();
 })();

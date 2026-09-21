@@ -478,6 +478,10 @@ html = f'''<!DOCTYPE html>
       <div class="op-label"><span>Progresso geral</span><span id="opPct">0%</span></div>
       <div class="op-bar"><div class="op-fill" id="opFill"></div></div>
       <div class="op-count" id="opCount"></div>
+      <button type="button" class="resume-btn" id="resumeBtn" hidden>
+        <span class="resume-ico" aria-hidden="true">↻</span>
+        <span class="resume-txt">Continuar de onde parei<b id="resumeLabel"></b></span>
+      </button>
     </div>
     <div class="daily-goal" id="dailyGoal">
       <div class="op-label"><span>🎯 Meta de hoje</span><span id="dgCount">0/1</span></div>
