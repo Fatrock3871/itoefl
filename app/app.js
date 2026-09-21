@@ -183,7 +183,7 @@
 
   // chaves que sincronizam com o Supabase (progresso real do aluno).
   // ficam de fora: toefl_theme_v1, toefl_active_tab, toefl_timer_preset, toefl_sync_*
-  var SYNC_PREFIXES = ["toefl_progress", "toefl_srs_", "toefl_bsq_", "toefl_quiz_", "toefl_avatar", "toefl_errlog_", "toefl_cert_", "toefl_streak", "toefl_dailygoal", "toefl_weeklydash"];
+  var SYNC_PREFIXES = ["toefl_progress", "toefl_srs_", "toefl_bsq_", "toefl_quiz_", "toefl_avatar", "toefl_errlog_", "toefl_cert_", "toefl_streak", "toefl_dailygoal", "toefl_weeklydash", "toefl_h3progress"];
   function isSyncedKey(key){
     if(!key || key.indexOf("toefl_") !== 0) return false;
     for(var i = 0; i < SYNC_PREFIXES.length; i++){
@@ -2479,10 +2479,25 @@
   // último de propósito: outros passes (botão de cronômetro por drill,
   // índice "Nesta parte") contam com a posição original dos elementos em
   // relação aos h3/h2.
+  // marcação de concluído por subseção (h3), separada da marcação por Parte
+  // (h2) que já existia -- pedido do usuário: só dava pra marcar a Parte
+  // inteira de uma vez, sem visão de quais subseções específicas já tinham
+  // sido lidas.
+  function readH3Progress(){
+    var raw = safeGet("toefl_h3progress_v1");
+    try{ return JSON.parse(raw) || {}; }catch(e){ return {}; }
+  }
+  function setH3Progress(id, done){
+    var obj = readH3Progress();
+    if(done) obj[id] = true; else delete obj[id];
+    safeSet("toefl_h3progress_v1", JSON.stringify(obj));
+  }
+
   (function(){
     var cards = Array.prototype.slice.call(document.querySelectorAll(".section-card"));
     var allH3 = [];
     var h3Seq = {}; // contador por módulo, pra dar um id estável a cada h3
+    var h3Done = readH3Progress();
     cards.forEach(function(card){
       var panelEl = card.closest(".panel");
       var modKey = panelEl ? panelEl.dataset.panel : "mod";
@@ -2511,6 +2526,36 @@
           body.classList.toggle("h3-collapsed");
         });
         allH3.push(h3);
+
+        var dot = document.createElement("span");
+        dot.className = "h3-done-dot";
+        dot.textContent = "✓";
+        h3.insertBefore(dot, h3.firstChild);
+
+        var doneWrap = document.createElement("label");
+        doneWrap.className = "prog-check h3-done-check";
+        var chk = document.createElement("input");
+        chk.type = "checkbox";
+        chk.className = "h3chk";
+        var box = document.createElement("span");
+        box.className = "box";
+        var lbl = document.createElement("span");
+        lbl.className = "h3-done-label";
+        lbl.textContent = "Marcar esta subseção como concluída";
+        doneWrap.appendChild(chk);
+        doneWrap.appendChild(box);
+        doneWrap.appendChild(lbl);
+        body.appendChild(doneWrap);
+
+        if(h3Done[h3.id]){ chk.checked = true; h3.classList.add("h3-done"); }
+        chk.addEventListener("change", function(){
+          setH3Progress(h3.id, chk.checked);
+          h3.classList.toggle("h3-done", chk.checked);
+          if(chk.checked && !h3.classList.contains("collapsed")){
+            h3.classList.add("collapsed");
+            body.classList.add("h3-collapsed");
+          }
+        });
       });
     });
 

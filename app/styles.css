@@ -869,6 +869,21 @@ main{max-width:1320px; margin:0 auto; padding:0 30px 120px; min-width:0;}
 .section-card.done .mark-done-label{color:var(--accent-strong);}
 .section-card.done{border-color:var(--accent);}
 
+/* marcação de concluído por subseção (h3) -- igual à de Parte, só que no
+   fim de cada h3 em vez de no fim da Parte inteira, pra ter uma visão
+   granular de quais subseções já foram lidas */
+.h3-done-check{
+  display:flex; align-items:center; gap:10px; margin-top:20px; padding-top:14px;
+  border-top:1.5px dashed var(--hair);
+}
+.h3-done-label{font-size:13px; font-weight:700; color:var(--ink-2);}
+/* marquinha de check no próprio título da subseção, visível mesmo fechada */
+.h3-done-dot{
+  display:none; color:var(--accent-2); font-weight:800; margin-right:6px;
+}
+.section-card h3.h3-done{color:var(--ink-2);}
+.section-card h3.h3-done .h3-done-dot{display:inline;}
+
 /* ================= Quiz widget ================= */
 .quiz-widget{margin:20px 0 30px;}
 .quiz-bar{height:8px; border-radius:99px; background:var(--sand); overflow:hidden; margin-bottom:8px; border:2px solid var(--edge);}
