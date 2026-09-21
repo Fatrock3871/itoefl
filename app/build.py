@@ -32,7 +32,7 @@ NAME_PLANE_SVG = (
     'aria-hidden="true" focusable="false">'
     f'<path d="{_FLIGHT_PATH_D}" fill="none" stroke="var(--hair)" stroke-width="1.5" '
     'stroke-dasharray="2.5 4" stroke-linecap="round"/>'
-    '<text font-size="13">✈️'
+    '<text font-size="22">✈️'
     f'<animateMotion dur="3.2s" repeatCount="indefinite" path="{_FLIGHT_PATH_D}"/>'
     '</text>'
     '</svg>'
