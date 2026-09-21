@@ -5,6 +5,7 @@ from render_quiz import render_quiz_drill
 from render_srs import render_srs
 from render_build import render_build_sentence
 from render_errorlog import render_error_log
+from render_weeklydash import render_weekly_dashboard
 from drills_data import (
     MOD1_DRILLS, MOD2_DRILLS,
     MOD1_ACTION_DRILLS_A, MOD1_ACTION_DRILLS_B, MOD1_ACTION_DRILLS_C,
@@ -53,6 +54,23 @@ ERRLOG_CODES = {
         ("V5", "Overreach (usou palavra que não controla)"), ("V6", "Sinônimo impreciso"),
     ],
 }
+
+# Módulo 0, Parte 5.1: mesmas 10 linhas do template estático de
+# acompanhamento semanal, agora alimentando a tabela interativa
+# (render_weeklydash.py) em vez de células em branco pra preencher à mão.
+WEEKLY_DASH_METRICS = [
+    ("complete_words", "% acerto: Complete the Words", "≥85%"),
+    ("read_daily_academic", "% acerto: Read in Daily Life / Academic Passage", "≥80%"),
+    ("listen_choose", "% acerto: Listen and Choose a Response", "≥85%"),
+    ("listen_conv_announce_talk", "% acerto: Listen to Conversation/Announcement/Academic Talk", "≥80%"),
+    ("build_sentence", "% acerto: Build a Sentence", "≥90%"),
+    ("write_email", "Nota qualitativa: Write an Email (1–5)", "≥4.5"),
+    ("write_discussion", "Nota qualitativa: Write for an Academic Discussion (1–5)", "≥4.5"),
+    ("listen_repeat", "% fidelidade: Listen and Repeat", "≥90%"),
+    ("take_interview", "Nota qualitativa: Take an Interview (1–5)", "≥4.5"),
+    ("cefr_band", "Banda CEFR geral estimada", "5.0–6.0"),
+    ("study_hours", "Horas de estudo deliberado na semana", "conforme cronograma"),
+]
 
 
 def split_registro_block(raw):
@@ -114,6 +132,18 @@ def build_mod0():
     raw = open(f"{SRC}/modulo_0_embarque.md", encoding="utf-8").read()
     raw = strip_title_banner(raw)
     before, after = slice_lines(raw, "### 3.2 As 10 Questões", "## PARTE 4")
+
+    # Parte 5.1: troca a tabela estática de acompanhamento semanal (células
+    # em branco pra preencher à mão -- não faz sentido numa página web sem
+    # nenhum jeito de digitar nela) pela versão interativa: input por
+    # semana/métrica, salvo sozinho em localStorage.
+    before_wd, after_wd = slice_lines(
+        after,
+        "| Métrica | Semana 1 | Semana 2 | Semana 3 | Semana 4 | Meta |",
+        "> ⚡ **Regra de ouro do dashboard:**",
+    )
+    after = before_wd + "\n\n" + render_weekly_dashboard(WEEKLY_DASH_METRICS) + "\n\n" + after_wd
+
     html_before = to_html(before)
     html_after = to_html(after)
 
@@ -131,7 +161,8 @@ def build_mod0():
 
     # painel "Seu desempenho real até agora" (Parte 4, depois de 4.3): soma os
     # acertos dos Action Drills interativos de M1/M2 (JS calcula em tempo real,
-    # sem input manual) — injeta antes da Parte 5, que hoje é preenchida à mão
+    # sem input manual) -- injeta antes da Parte 5 (o dashboard semanal,
+    # interativo desde a mudança acima)
     live_score = (
         '<div class="live-score-panel" id="liveScorePanel">'
         '<p class="live-score-title">Seu desempenho real até agora — calculado automaticamente a partir dos '

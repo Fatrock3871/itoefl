@@ -183,7 +183,7 @@
 
   // chaves que sincronizam com o Supabase (progresso real do aluno).
   // ficam de fora: toefl_theme_v1, toefl_active_tab, toefl_timer_preset, toefl_sync_*
-  var SYNC_PREFIXES = ["toefl_progress", "toefl_srs_", "toefl_bsq_", "toefl_quiz_", "toefl_avatar", "toefl_errlog_", "toefl_cert_", "toefl_streak", "toefl_dailygoal"];
+  var SYNC_PREFIXES = ["toefl_progress", "toefl_srs_", "toefl_bsq_", "toefl_quiz_", "toefl_avatar", "toefl_errlog_", "toefl_cert_", "toefl_streak", "toefl_dailygoal", "toefl_weeklydash"];
   function isSyncedKey(key){
     if(!key || key.indexOf("toefl_") !== 0) return false;
     for(var i = 0; i < SYNC_PREFIXES.length; i++){
@@ -2343,6 +2343,27 @@
     closeBtn.addEventListener("click", close);
     backdrop.addEventListener("click", close);
     document.addEventListener("keydown", function(e){ if(e.key === "Escape" && !modal.hidden) close(); });
+  })();
+
+  // ---------- Weekly Performance Dashboard (M0, Parte 5.1) ----------
+  // toefl_weeklydash_v1 guarda { <metrica>: { w1..w4: "valor digitado" } },
+  // salvo a cada tecla (o safeSet já cuida do dirty flag/push debounced pra
+  // quem está logado, igual ao resto do progresso).
+  (function(){
+    var root = document.getElementById("weeklyDash");
+    if(!root) return;
+    var LS_KEY = "toefl_weeklydash_v1";
+    var state = {};
+    try { state = JSON.parse(safeGet(LS_KEY) || "{}"); } catch(e){ state = {}; }
+    Array.prototype.slice.call(root.querySelectorAll(".wd-input")).forEach(function(inp){
+      var metric = inp.dataset.metric, week = inp.dataset.week;
+      if(state[metric] && state[metric][week] !== undefined) inp.value = state[metric][week];
+      inp.addEventListener("input", function(){
+        if(!state[metric]) state[metric] = {};
+        state[metric][week] = inp.value;
+        safeSet(LS_KEY, JSON.stringify(state));
+      });
+    });
   })();
 
   // ---------- Registro de erros (formulário por módulo) ----------
