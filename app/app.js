@@ -2581,6 +2581,12 @@
         setTimeout(function(){
           var target = document.getElementById(pos.id);
           if(!target) return;
+          // se o módulo estiver paginado por parte (ver IIFE de paginação
+          // logo abaixo), pula primeiro pra parte que contém essa subseção,
+          // senão ela fica escondida e o scroll não acha nada
+          var showPart = window.__toeflShowPart && window.__toeflShowPart[pos.mod];
+          var card = target.closest(".section-card");
+          if(showPart && card){ showPart(card, { noScroll: true }); }
           if(target.classList.contains("collapsed")){
             target.classList.remove("collapsed");
             var body = target.nextElementSibling;
@@ -2593,5 +2599,100 @@
       });
     }
     updateResumeBtn();
+  })();
+
+  // ---------- Paginação por Parte, tipo flashcard ----------
+  // Pedido do usuário: em vez de rolar por todas as Partes de um módulo de
+  // uma vez, mostrar uma Parte inteira por vez com um botão pra passar pra
+  // próxima (e voltar pra anterior). Roda depois do accordion de h3 (que já
+  // preparou os data-mod/ids); só mexe em visibilidade (hidden), não na
+  // ordem/estrutura dos elementos, então o resto do app (observer de scroll,
+  // "continuar de onde parei" etc.) continua funcionando normalmente dentro
+  // da Parte visível.
+  window.__toeflShowPart = window.__toeflShowPart || {};
+  (function(){
+    function readPartPos(){
+      var raw = safeGet("toefl_partpos_v1");
+      try{ return JSON.parse(raw) || {}; }catch(e){ return {}; }
+    }
+    function savePartPos(modKey, idx){
+      var obj = readPartPos();
+      obj[modKey] = idx;
+      safeSet("toefl_partpos_v1", JSON.stringify(obj));
+    }
+    Array.prototype.slice.call(document.querySelectorAll(".panel")).forEach(function(panel){
+      var modKey = panel.dataset.panel;
+      var cards = Array.prototype.slice.call(panel.querySelectorAll(".section-card"));
+      if(cards.length < 2) return; // um módulo com 1 parte só não precisa de paginação
+      var head = panel.querySelector(".panel-head");
+      var inner = panel.querySelector(".panel-inner");
+      var titles = cards.map(function(c){
+        var h2 = c.querySelector("h2");
+        return h2 ? h2.textContent.trim() : "";
+      });
+
+      var pager = document.createElement("div");
+      pager.className = "part-pager";
+      pager.innerHTML =
+        '<button type="button" class="part-nav-btn part-prev" aria-label="Parte anterior">‹ Anterior</button>' +
+        '<span class="part-pager-label"><span class="part-pager-count"></span><b class="part-pager-title"></b></span>' +
+        '<button type="button" class="part-nav-btn part-next" aria-label="Próxima parte">Próxima ›</button>';
+      if(head && head.parentNode === inner){ head.parentNode.insertBefore(pager, head.nextSibling); }
+      else if(inner){ inner.insertBefore(pager, inner.firstChild); }
+
+      var bottomBtns = cards.map(function(card, i){
+        var btn = document.createElement("button");
+        btn.type = "button";
+        btn.className = "part-next-bottom";
+        card.appendChild(btn);
+        btn.addEventListener("click", function(){ showPartIdx(i + 1); });
+        return btn;
+      });
+
+      function indexOf(card){ return cards.indexOf(card); }
+
+      function showPart(card, opts){ showPartIdx(indexOf(card), opts); }
+
+      function showPartIdx(idx, opts){
+        opts = opts || {};
+        idx = Math.max(0, Math.min(cards.length - 1, idx));
+        cards.forEach(function(c, i){ c.hidden = i !== idx; });
+        pager.querySelector(".part-pager-count").textContent = "Parte " + (idx + 1) + " de " + cards.length + " · ";
+        pager.querySelector(".part-pager-title").textContent = titles[idx];
+        pager.querySelector(".part-prev").disabled = idx === 0;
+        pager.querySelector(".part-next").disabled = idx === cards.length - 1;
+        bottomBtns.forEach(function(btn, i){
+          if(i !== idx) return;
+          if(idx === cards.length - 1){ btn.hidden = true; }
+          else { btn.hidden = false; btn.textContent = "Próxima parte: " + titles[idx + 1] + " →"; }
+        });
+        savePartPos(modKey, idx);
+        if(!opts.noScroll){
+          window.scrollTo(0, 0);
+          var ma = document.getElementById("mainArea"); if(ma) ma.scrollTop = 0;
+        }
+        // mesma rede de segurança do accordion de h3: abre a primeira
+        // subseção da parte que acabou de aparecer
+        var firstH3 = cards[idx].querySelector(".h3-toggle");
+        if(firstH3 && firstH3.classList.contains("collapsed")){
+          firstH3.classList.remove("collapsed");
+          var body = firstH3.nextElementSibling;
+          if(body && body.classList.contains("h3-body")) body.classList.remove("h3-collapsed");
+        }
+      }
+
+      pager.querySelector(".part-prev").addEventListener("click", function(){
+        var cur = cards.findIndex(function(c){ return !c.hidden; });
+        showPartIdx(cur - 1);
+      });
+      pager.querySelector(".part-next").addEventListener("click", function(){
+        var cur = cards.findIndex(function(c){ return !c.hidden; });
+        showPartIdx(cur + 1);
+      });
+
+      window.__toeflShowPart[modKey] = showPart;
+      var saved = readPartPos()[modKey];
+      showPartIdx(typeof saved === "number" ? saved : 0, { noScroll: true });
+    });
   })();
 })();
