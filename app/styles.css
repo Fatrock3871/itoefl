@@ -758,6 +758,10 @@ main{max-width:1320px; margin:0 auto; padding:0 30px 120px; min-width:0;}
 }
 .part-next-bottom:hover{filter:brightness(1.07);}
 .part-next-bottom:active{transform:translate(2px,2px); box-shadow:none;}
+.part-next-bottom-done{
+  background:var(--paper); color:var(--ink-2); text-align:center; cursor:default; box-shadow:none;
+}
+.part-next-bottom-done:hover{filter:none;}
 
 .panel h2{
   font-size:21px; font-weight:800; font-style:italic; margin:0 0 20px; scroll-margin-top:20px;

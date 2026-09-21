@@ -2640,14 +2640,33 @@
       if(head && head.parentNode === inner){ head.parentNode.insertBefore(pager, head.nextSibling); }
       else if(inner){ inner.insertBefore(pager, inner.firstChild); }
 
+      // no fim da última Parte, em vez de só esconder o botão, oferece a
+      // transição pro próximo módulo -- pedido do usuário: terminar um
+      // módulo não tinha nenhum convite claro pra seguir pro seguinte.
+      var modIdx = modOrder.indexOf(modKey);
+      var nextModKey = modIdx >= 0 ? modOrder[modIdx + 1] : null;
+      var nextModBtn = nextModKey ? tabBtns[modOrder.indexOf(nextModKey)] : null;
+      var nextModTitle = nextModBtn ? nextModBtn.dataset.title : "";
+
       var bottomBtns = cards.map(function(card, i){
         var btn = document.createElement("button");
         btn.type = "button";
         btn.className = "part-next-bottom";
         card.appendChild(btn);
-        btn.addEventListener("click", function(){ showPartIdx(i + 1); });
+        btn.addEventListener("click", function(){
+          var idx = indexOf(card);
+          if(idx === cards.length - 1){ if(nextModKey) navTo(nextModKey); }
+          else { showPartIdx(idx + 1); }
+        });
         return btn;
       });
+      var modDoneNote = nextModKey ? null : (function(){
+        var el = document.createElement("p");
+        el.className = "part-next-bottom part-next-bottom-done";
+        el.textContent = "🎉 Última parte do curso!";
+        return el;
+      })();
+      if(modDoneNote){ cards[cards.length - 1].appendChild(modDoneNote); }
 
       function indexOf(card){ return cards.indexOf(card); }
 
@@ -2660,11 +2679,15 @@
         pager.querySelector(".part-pager-count").textContent = "Parte " + (idx + 1) + " de " + cards.length + " · ";
         pager.querySelector(".part-pager-title").textContent = titles[idx];
         pager.querySelector(".part-prev").disabled = idx === 0;
-        pager.querySelector(".part-next").disabled = idx === cards.length - 1;
+        var topNextBtn = pager.querySelector(".part-next");
+        topNextBtn.disabled = idx === cards.length - 1 && !nextModKey;
+        topNextBtn.textContent = (idx === cards.length - 1 && nextModKey) ? "Próximo módulo ›" : "Próxima ›";
         bottomBtns.forEach(function(btn, i){
           if(i !== idx) return;
-          if(idx === cards.length - 1){ btn.hidden = true; }
-          else { btn.hidden = false; btn.textContent = "Próxima parte: " + titles[idx + 1] + " →"; }
+          if(idx === cards.length - 1){
+            if(nextModKey){ btn.hidden = false; btn.textContent = "Módulo concluído! Próximo: " + nextModTitle + " →"; }
+            else { btn.hidden = true; }
+          } else { btn.hidden = false; btn.textContent = "Próxima parte: " + titles[idx + 1] + " →"; }
         });
         savePartPos(modKey, idx);
         if(!opts.noScroll){
@@ -2687,6 +2710,7 @@
       });
       pager.querySelector(".part-next").addEventListener("click", function(){
         var cur = cards.findIndex(function(c){ return !c.hidden; });
+        if(cur === cards.length - 1){ if(nextModKey) navTo(nextModKey); return; }
         showPartIdx(cur + 1);
       });
 
