@@ -327,7 +327,7 @@ Uma família de erros de registro que aparece especialmente em *Write for an Aca
 
 > O SpeechRater da ETS (correção 100% IA no Speaking de 2026) processa padrões acústicos mensuráveis. Os erros abaixo são os mais frequentes em falantes de português. São também os que mais impactam a nota de **inteligibilidade e prosódia**, exatamente os critérios de *Listen and Repeat* e *Take an Interview*.
 
-### 4.1 Os 6 fonemas críticos
+### 4.1 Os 9 fonemas críticos
 
 **FONEMA 1 · /θ/ (TH surdo): o mais famoso**
 

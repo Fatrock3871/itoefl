@@ -625,7 +625,7 @@ Complete com: *empirical · mechanism · extrapolate · confounding · replicate
 
 > "The paper reports a strong ___(1) between screen time and poor sleep in teenagers. But ___(2) is not causation, and the study does not identify the ___(3) by which screens would disrupt sleep. A likely ___(4) variable is simply that anxious teenagers both sleep poorly and use phones more. Until an independent team can ___(5) the result under controlled conditions, the causal claim remains ___(6). The authors are right, however, that the broader trend is real and that its drivers are largely ___(7): a product of how devices and apps are designed. Any ___(8) strategy should therefore target design, not just individual willpower. The ___(9) evidence we do have supports modest limits; it does not support the alarmist framing that lets commentators ___(10) from a small effect to a generational crisis."
 
-**Gabarito:** 1 correlation · 2 correlation *(→ na verdade a frase quer "correlation is not causation"; aceite)* · 3 mechanism · 4 confounding · 5 replicate · 6 tenuous · 7 anthropogenic *(aqui no sentido "de origem humana/deliberada" · design humano)* · 8 mitigation · 9 empirical · 10 extrapolate
+**Gabarito:** 1 correlation · 2 correlation *(repete a mesma palavra do item 1: a expressão fixa é "correlation is not causation")* · 3 mechanism · 4 confounding · 5 replicate · 6 tenuous · 7 anthropogenic *(aqui no sentido "de origem humana/deliberada" · design humano)* · 8 mitigation · 9 empirical · 10 extrapolate
 
 > Nota: o item 7 é um uso esticado de *anthropogenic* (normalmente clima). O ponto do drill é a forma; num texto real você usaria *by design* ou *human-engineered*.
 
