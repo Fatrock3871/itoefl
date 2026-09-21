@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:ital,opsz,wght@0,12..96,400;0,12..96,500;0,12..96,600;0,12..96,700;0,12..96,800;1,12..96,700;1,12..96,800&family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:ital,opsz,wght@0,12..96,400;0,12..96,500;0,12..96,600;0,12..96,700;0,12..96,800;1,12..96,700;1,12..96,800&family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,600&family=Baloo+2:wght@600;700;800&display=swap');
 
 :root{
   --bg:#fbf4ea;
@@ -109,14 +109,14 @@ body.menu-open{overflow:hidden;}
 .hamburger[aria-expanded="true"] span:nth-child(2){opacity:0;}
 .hamburger[aria-expanded="true"] span:nth-child(3){transform:translateY(-6px) rotate(-45deg);}
 
-.brand{display:flex; align-items:center; gap:11px; padding:2px 2px 4px; min-width:0; overflow:hidden;}
+.brand{display:flex; flex-direction:column; align-items:center; text-align:center; gap:6px; padding:2px 2px 6px; min-width:0; overflow:hidden;}
 .brand .logo{
-  position:relative; width:46px; height:46px; flex:none;
+  position:relative; width:52px; height:52px; flex:none;
   display:flex; align-items:center; justify-content:center;
 }
 .logo-mark{width:100%; height:100%; display:block; filter:drop-shadow(0 2px 3px rgba(0,0,0,0.25));}
-.brand .btxt{display:flex; flex-direction:column; line-height:1.05; min-width:0;}
-.brand .name{font-family:'Bricolage Grotesque',sans-serif; font-size:24px; font-weight:800; letter-spacing:-0.03em; color:#fff; white-space:nowrap;}
+.brand .btxt{display:flex; flex-direction:column; align-items:center; line-height:1.05; min-width:0;}
+.brand .name{font-family:'Baloo 2',sans-serif; font-size:24px; font-weight:800; letter-spacing:-0.01em; color:#fff; white-space:nowrap;}
 /* aviãozinho decorativo sobre o wordmark "iTOEFL" (M do "i" ao "F"), no
    mesmo tratamento em qualquer contexto que use a marca */
 .name-wrap{position:relative; display:inline-block;}
@@ -125,6 +125,16 @@ body.menu-open{overflow:hidden;}
   font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:var(--accent-2);
   font-weight:700; margin-top:2px; white-space:normal; line-height:1.3;
 }
+
+/* bolinha laranja que "pula" da flor da logo até pousar em cima do "i" de
+   iTOEFL, assim que a marca é medida no DOM (ver .brand-dot em app.js) */
+.brand-dot{
+  position:fixed; border-radius:50%; background:var(--accent-2); border:1.5px solid var(--edge);
+  pointer-events:none; z-index:340; opacity:0;
+  transition:left .9s cubic-bezier(.32,1.7,.5,1), top .9s cubic-bezier(.32,1.7,.5,1), opacity .25s ease;
+}
+.brand-dot.is-ready{opacity:1;}
+@media (prefers-reduced-motion:reduce){ .brand-dot{transition:opacity .25s ease;} }
 
 .overall-progress{
   background:rgba(255,255,255,0.05); border:1px solid var(--rail-line); border-radius:10px; padding:13px 13px 12px;
@@ -238,14 +248,16 @@ nav.modnav{display:flex; flex-direction:column; gap:1px;}
 }
 @keyframes authcard-in{from{opacity:0; transform:translateY(14px) scale(.98);} to{opacity:1; transform:none;}}
 @media (prefers-reduced-motion:reduce){ .auth-gate-card{animation:none;} }
-.auth-gate-brand{display:inline-flex; align-items:center; gap:14px; margin-bottom:26px;}
+.auth-gate-brand{
+  display:flex; flex-direction:column; align-items:center; text-align:center; gap:8px; margin-bottom:26px;
+}
 .auth-gate-brand .logo{
   position:relative; width:64px; height:64px; flex:none;
   display:flex; align-items:center; justify-content:center;
 }
-.auth-gate-brand .btxt{display:flex; flex-direction:column; align-items:flex-start; line-height:1.05;}
+.auth-gate-brand .btxt{display:flex; flex-direction:column; align-items:center; line-height:1.05;}
 .auth-gate-brand .name{
-  font-family:'Bricolage Grotesque',sans-serif; font-size:33px; font-weight:800; letter-spacing:-0.035em;
+  font-family:'Baloo 2',sans-serif; font-size:33px; font-weight:800; letter-spacing:-0.01em;
   color:var(--accent);
 }
 .auth-gate-kicker{

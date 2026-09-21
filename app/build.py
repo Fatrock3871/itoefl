@@ -1,26 +1,16 @@
 import json
-import math
 
 frag = json.load(open("module_fragments_final.json", encoding="utf-8"))
 
-# marca iTOEFL: flor/redemoinho de 6 pétalas em tons de laranja sobre um
-# halo branco recortado (várias bolinhas brancas sobrepostas formando uma
-# borda ondulada), com a bolinha amarela de destaque embutida no próprio
-# SVG -- referência que o usuário mandou (a flor solta, sem moldura
-# quadrada em volta). Tudo num viewBox só, então o símbolo inteiro escala
-# junto em qualquer tamanho, sem precisar de um badge/caixa por fora.
+# marca iTOEFL: flor/redemoinho de 6 pétalas em tons de laranja, solta (sem
+# halo branco, sem moldura quadrada) -- pedido do usuário de tirar a "nuvem"
+# em volta do símbolo. A bolinha de destaque não fica mais presa no SVG: ela
+# vira um elemento HTML/CSS à parte que "pula" da logo até pousar em cima do
+# "i" de iTOEFL (ver .brand-dot em app.js/styles.css).
 _PETAL_COLORS = ["var(--accent-2)", "var(--accent)", "var(--accent-strong)",
                   "var(--accent)", "var(--accent-2)", "var(--accent-strong)"]
 _PETAL_D = "M50,52 C34,48 26,34 30,18 C33,7 44,4 50,15 C56,4 67,7 70,18 C74,34 66,48 50,52 Z"
-_PETAL_SCALE = 0.62
-_SCALLOP_N = 11
-_SCALLOP_RC = 37
-_SCALLOP_RB = 13
-_scallops = "".join(
-    f'<circle cx="{50 + _SCALLOP_RC * math.cos(2 * math.pi * i / _SCALLOP_N):.1f}" '
-    f'cy="{50 + _SCALLOP_RC * math.sin(2 * math.pi * i / _SCALLOP_N):.1f}" r="{_SCALLOP_RB}" fill="#fff"/>'
-    for i in range(_SCALLOP_N)
-)
+_PETAL_SCALE = 0.94
 _petals = "".join(
     f'<path d="{_PETAL_D}" fill="{c}" '
     f'transform="translate(50,50) rotate({i * 60}) scale({_PETAL_SCALE}) translate(-50,-50)"/>'
@@ -28,9 +18,8 @@ _petals = "".join(
 )
 LOGO_SVG = (
     '<svg class="logo-mark" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">'
-    f'<circle cx="50" cy="50" r="30" fill="#fff"/>{_scallops}{_petals}'
-    '<circle cx="50" cy="51" r="4" fill="var(--accent-strong)"/>'
-    '<circle cx="86" cy="15" r="8" fill="var(--accent-2)"/>'
+    f'{_petals}'
+    '<circle cx="50" cy="51" r="5" fill="var(--accent-strong)"/>'
     '</svg>'
 )
 
@@ -197,7 +186,7 @@ gate = (
     '<div class="auth-gate-card">'
     '<div class="auth-gate-brand">'
     f'<span class="logo">{LOGO_SVG}</span>'
-    f'<span class="btxt"><span class="name-wrap"><span class="name">iTOEFL</span>{NAME_PLANE_SVG}</span></span>'
+    f'<span class="btxt"><span class="name-wrap"><span class="name"><span class="name-i">i</span>TOEFL</span>{NAME_PLANE_SVG}</span></span>'
     '</div>'
     '<h2 id="authGateTitle">Entre para continuar</h2>'
     '<p id="authGateSubtitle"></p>'
@@ -277,7 +266,7 @@ pay_gate = (
     '<div class="auth-gate-card">'
     '<div class="auth-gate-brand">'
     f'<span class="logo">{LOGO_SVG}</span>'
-    f'<span class="btxt"><span class="name-wrap"><span class="name">iTOEFL</span>{NAME_PLANE_SVG}</span></span>'
+    f'<span class="btxt"><span class="name-wrap"><span class="name"><span class="name-i">i</span>TOEFL</span>{NAME_PLANE_SVG}</span></span>'
     '</div>'
     '<span class="auth-gate-kicker">Acesso pago</span>'
     '<h2>Libere seu acesso</h2>'
@@ -469,7 +458,7 @@ html = f'''<!DOCTYPE html>
       <div class="brand">
         <span class="logo">{LOGO_SVG}</span>
         <span class="btxt">
-          <span class="name-wrap"><span class="name">iTOEFL</span>{NAME_PLANE_SVG}</span>
+          <span class="name-wrap"><span class="name"><span class="name-i">i</span>TOEFL</span>{NAME_PLANE_SVG}</span>
           <span class="mark">Preparação independente</span>
         </span>
       </div>
