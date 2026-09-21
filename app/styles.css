@@ -49,7 +49,7 @@
 html{-webkit-text-size-adjust:100%; accent-color:var(--accent);}
 body{
   margin:0; background:var(--bg); color:var(--ink);
-  font-family:'Plus Jakarta Sans',system-ui,-apple-system,sans-serif; font-size:16px; line-height:1.68;
+  font-family:'Plus Jakarta Sans',system-ui,-apple-system,sans-serif; font-size:17px; line-height:1.68;
   -webkit-font-smoothing:antialiased;
 }
 /* textura de papel (contra a "perfeição estéril" — trend anti-IA 2026) */
@@ -750,21 +750,21 @@ main{max-width:1320px; margin:0 auto; padding:0 30px 120px; min-width:0;}
   font-size:12px; margin:24px 0 10px; color:var(--accent-strong);
   text-transform:uppercase; letter-spacing:0.09em; font-family:'Bricolage Grotesque',sans-serif; font-weight:800;
 }
-.panel p{margin:0 0 18px; color:var(--ink); font-size:16px; max-width:68ch;}
+.panel p{margin:0 0 18px; color:var(--ink); font-size:18px; max-width:68ch;}
 .panel ul, .panel ol{margin:0 0 18px; padding-left:20px; max-width:68ch;}
-.panel li{margin-bottom:9px; font-size:16px;}
+.panel li{margin-bottom:9px; font-size:18px;}
 .panel ul li::marker{content:"▸  "; color:var(--accent); font-size:0.9em;}
 .panel ol li::marker{color:var(--accent); font-weight:700;}
 .panel ul li.checklist-item{list-style:none; margin-left:-20px;}
 .panel ul li.checklist-item::marker{content:"";}
 .checklist-item label{display:flex; align-items:flex-start; gap:10px; cursor:default;}
 .checklist-item input[type="checkbox"]{flex:none; width:18px; height:18px; margin-top:3px; accent-color:var(--accent);}
-.checklist-item span{font-size:16px; color:var(--ink);}
+.checklist-item span{font-size:18px; color:var(--ink);}
 .panel strong{color:var(--ink); font-weight:700;}
 .panel p > strong{background:linear-gradient(transparent 68%, var(--accent-wash) 68%);}
 .panel hr{border:none; margin:26px 0 0; height:0;}
-.panel code{background:var(--sand); padding:1px 6px; border-radius:4px; font-family:var(--mono); font-size:13px; border:1px solid var(--hair);}
-.panel pre{background:var(--sand); color:var(--ink); padding:15px 17px; border-radius:6px; overflow-x:auto; font-family:var(--mono); font-size:12.5px; line-height:1.55; border:2px solid var(--edge); box-shadow:var(--shadow-hard);}
+.panel code{background:var(--sand); padding:1px 6px; border-radius:4px; font-family:var(--mono); font-size:14px; border:1px solid var(--hair);}
+.panel pre{background:var(--sand); color:var(--ink); padding:15px 17px; border-radius:6px; overflow-x:auto; font-family:var(--mono); font-size:13.5px; line-height:1.55; border:2px solid var(--edge); box-shadow:var(--shadow-hard);}
 .panel pre code{background:none; border:none; color:inherit; padding:0;}
 .speak-btn{
   display:inline-flex; align-items:center; justify-content:center; margin-left:7px;
@@ -789,14 +789,14 @@ main{max-width:1320px; margin:0 auto; padding:0 30px 120px; min-width:0;}
   margin:0 0 16px; padding:14px 18px; background:var(--accent-wash); max-width:68ch;
   border:1.5px solid var(--edge); border-left:5px solid var(--accent); border-radius:0 6px 6px 0;
 }
-.panel blockquote p{margin:0 0 8px; color:var(--ink); font-size:14.5px;}
+.panel blockquote p{margin:0 0 8px; color:var(--ink); font-size:16px;}
 .panel blockquote p:last-child{margin-bottom:0;}
 .panel blockquote strong{color:var(--accent-strong); box-shadow:none;}
 
 .table-wrap{overflow-x:auto; margin:0 0 20px; border:2px solid var(--edge); border-radius:6px;}
-.panel table{border-collapse:collapse; width:100%; font-size:13.5px; background:var(--paper);}
+.panel table{border-collapse:collapse; width:100%; font-size:15px; background:var(--paper);}
 .panel th{
-  text-align:left; font-family:'Bricolage Grotesque',sans-serif; font-size:11px; text-transform:uppercase;
+  text-align:left; font-family:'Bricolage Grotesque',sans-serif; font-size:12px; text-transform:uppercase;
   letter-spacing:0.05em; font-weight:800; color:#fff; background:var(--th-bg); padding:9px 12px;
 }
 .panel td{padding:10px 12px; border-bottom:1px solid var(--hair); vertical-align:top;}
