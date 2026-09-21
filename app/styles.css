@@ -111,15 +111,10 @@ body.menu-open{overflow:hidden;}
 
 .brand{display:flex; align-items:center; gap:11px; padding:2px 2px 4px; min-width:0; overflow:hidden;}
 .brand .logo{
-  position:relative; width:40px; height:40px; flex:none; border-radius:11px; background:var(--paper);
-  border:2px solid var(--edge); box-shadow:2px 2px 0 var(--edge); transform:rotate(-3deg);
-  display:flex; align-items:center; justify-content:center; padding:5px;
+  position:relative; width:46px; height:46px; flex:none;
+  display:flex; align-items:center; justify-content:center;
 }
-.brand .logo::after{
-  content:""; position:absolute; top:-5px; right:-5px; width:10px; height:10px; border-radius:50%;
-  background:var(--accent-2); border:1.5px solid var(--edge);
-}
-.logo-mark{width:100%; height:100%; display:block; filter:drop-shadow(0 1px 0 rgba(0,0,0,0.08));}
+.logo-mark{width:100%; height:100%; display:block; filter:drop-shadow(0 2px 3px rgba(0,0,0,0.25));}
 .brand .btxt{display:flex; flex-direction:column; line-height:1.05; min-width:0;}
 .brand .name{font-family:'Bricolage Grotesque',sans-serif; font-size:24px; font-weight:800; letter-spacing:-0.03em; color:#fff; white-space:nowrap;}
 /* aviãozinho decorativo sobre o wordmark "iTOEFL" (M do "i" ao "F"), no
@@ -245,13 +240,8 @@ nav.modnav{display:flex; flex-direction:column; gap:1px;}
 @media (prefers-reduced-motion:reduce){ .auth-gate-card{animation:none;} }
 .auth-gate-brand{display:inline-flex; align-items:center; gap:14px; margin-bottom:26px;}
 .auth-gate-brand .logo{
-  position:relative; width:54px; height:54px; flex:none; border-radius:14px; background:var(--paper);
-  border:2.5px solid var(--edge); box-shadow:3px 3px 0 var(--edge); transform:rotate(-3deg);
-  display:flex; align-items:center; justify-content:center; padding:7px;
-}
-.auth-gate-brand .logo::after{
-  content:""; position:absolute; top:-6px; right:-6px; width:13px; height:13px; border-radius:50%;
-  background:var(--accent-2); border:2px solid var(--edge);
+  position:relative; width:64px; height:64px; flex:none;
+  display:flex; align-items:center; justify-content:center;
 }
 .auth-gate-brand .btxt{display:flex; flex-direction:column; align-items:flex-start; line-height:1.05;}
 .auth-gate-brand .name{
