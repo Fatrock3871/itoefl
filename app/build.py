@@ -446,7 +446,6 @@ html = f'''<!DOCTYPE html>
       </div>
       <button class="side-close" id="sideClose" type="button" aria-label="Fechar menu">✕</button>
     </div>
-    {side_jtrack}
     <div class="overall-progress">
       <div class="op-label"><span>Progresso geral</span><span id="opPct">0%</span></div>
       <div class="op-bar"><div class="op-fill" id="opFill"></div></div>
@@ -466,6 +465,7 @@ html = f'''<!DOCTYPE html>
       <span class="level-badge-sched" id="levelBadgeSched"></span>
     </div>
     <button type="button" class="cert-btn" id="certBtn" hidden>Ver certificado de conclusão</button>
+    {side_jtrack}
     <nav class="modnav" id="modnav">
       {nav_items}
     </nav>
