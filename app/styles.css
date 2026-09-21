@@ -88,9 +88,14 @@ body.menu-open{overflow:hidden;}
 }
 .side-backdrop.show{opacity:1; pointer-events:auto;}
 
-.side-top{display:flex; align-items:center; justify-content:space-between; gap:10px;}
+/* position:relative + .side-close absoluto, em vez de flex space-between,
+   pra logo ficar centralizada na largura real da sidebar -- com
+   space-between ela ficava puxada pra esquerda, já que só o lado direito
+   tinha o botão de fechar ocupando espaço */
+.side-top{position:relative; display:flex; align-items:center; justify-content:center;}
 .side-close{
-  flex:none; width:30px; height:30px; border-radius:50%; border:1.5px solid var(--rail-line);
+  position:absolute; right:0; top:0; flex:none; width:30px; height:30px; border-radius:50%;
+  border:1.5px solid var(--rail-line);
   background:rgba(255,255,255,0.05); color:var(--rail-dim); font-size:13px; line-height:1; cursor:pointer;
   display:flex; align-items:center; justify-content:center; transition:.12s;
 }
