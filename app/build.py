@@ -23,27 +23,28 @@ LOGO_SVG = (
     '</svg>'
 )
 
-# aviãozinho voando do "i" ao "L" de "iTOEFL" e voltando, num arco pontilhado
-# por cima da palavra -- pedido do usuário. SMIL (<animateMotion>) em vez de
-# CSS offset-path de propósito: o path some dentro do mesmo viewBox do SVG,
-# então a curva e o avião escalam juntos com width:100% em qualquer tamanho
-# de wordmark (sidebar, card de login etc.), sem duplicar coordenadas em dois
+# aviãozinho voando do "i" ao "L" de "iTOEFL" e voltando, sempre seguindo o
+# arco pontilhado -- pedido do usuário. SMIL (<animateMotion>) em vez de CSS
+# offset-path de propósito: o path some dentro do mesmo viewBox do SVG, então
+# a curva e o avião escalam juntos com width:100% em qualquer tamanho de
+# wordmark (sidebar, card de login etc.), sem duplicar coordenadas em dois
 # sistemas diferentes que podiam desalinhar entre si. keyPoints/keyTimes faz
 # o avião ir até o fim do trajeto (o "L") e voltar (vai e volta), em vez de
-# saltar de volta ao início a cada repetição. rotate(180deg) (via
-# transform-box:fill-box, que centraliza a rotação no próprio emoji em vez
-# da origem do SVG) vira o bico do avião de "apontando pra cima" para
-# "apontando pra baixo", por pedido do usuário -- scale(1,-1) foi testado
-# antes mas o glyph colorido do emoji não espelha limpo nesse tipo de
-# transform, só a rotação de 180° deu o resultado esperado.
+# saltar de volta ao início a cada repetição. O bico sempre aponta pra baixo
+# (nunca pra cima), espelhando de lado pra cada perna do trajeto: rotate(90deg)
+# quando vai do "i" pro "L" (bico baixo-direita, a favor do movimento),
+# rotate(180deg) na volta do "L" pro "i" (bico baixo-esquerda) -- animação CSS
+# em @keyframes com a mesma duração do <animateMotion>, alternando exatamente
+# na metade do ciclo (onde o SMIL também vira de direção).
+_FLIGHT_DUR = "4.4s"
 _FLIGHT_PATH_D = "M4,18 Q60,-2 116,8"
 NAME_PLANE_SVG = (
     f'<svg class="name-plane-svg" viewBox="0 0 120 22" xmlns="http://www.w3.org/2000/svg" '
     'aria-hidden="true" focusable="false">'
     f'<path d="{_FLIGHT_PATH_D}" fill="none" stroke="var(--hair)" stroke-width="1.5" '
     'stroke-dasharray="2.5 4" stroke-linecap="round"/>'
-    '<text font-size="22" style="transform-box:fill-box;transform-origin:center;transform:rotate(180deg);">✈️'
-    f'<animateMotion dur="4.4s" repeatCount="indefinite" calcMode="linear" '
+    f'<text font-size="22" class="name-plane-emoji">✈️'
+    f'<animateMotion dur="{_FLIGHT_DUR}" repeatCount="indefinite" calcMode="linear" '
     f'keyPoints="0;1;0" keyTimes="0;0.5;1" path="{_FLIGHT_PATH_D}"/>'
     '</text>'
     '</svg>'
