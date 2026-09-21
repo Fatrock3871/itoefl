@@ -3,10 +3,10 @@ import json
 frag = json.load(open("module_fragments_final.json", encoding="utf-8"))
 
 # marca iTOEFL: flor/redemoinho de 6 pétalas em tons de laranja, solta (sem
-# halo branco, sem moldura quadrada) -- pedido do usuário de tirar a "nuvem"
-# em volta do símbolo. A bolinha de destaque não fica mais presa no SVG: ela
-# vira um elemento HTML/CSS à parte que "pula" da logo até pousar em cima do
-# "i" de iTOEFL (ver .brand-dot em app.js/styles.css).
+# halo branco, sem moldura quadrada em volta do símbolo, por pedido do
+# usuário). Sem bolinha de destaque separada -- tentativa anterior de fazer
+# uma bolinha "pular" da logo até o "i" foi removida a pedido do usuário
+# (achou feia).
 _PETAL_COLORS = ["var(--accent-2)", "var(--accent)", "var(--accent-strong)",
                   "var(--accent)", "var(--accent-2)", "var(--accent-strong)"]
 _PETAL_D = "M50,52 C34,48 26,34 30,18 C33,7 44,4 50,15 C56,4 67,7 70,18 C74,34 66,48 50,52 Z"
@@ -23,20 +23,28 @@ LOGO_SVG = (
     '</svg>'
 )
 
-# aviãozinho voando do "i" ao "F" de "iTOEFL", num arco pontilhado por cima
-# da palavra -- pedido do usuário. SMIL (<animateMotion>) em vez de CSS
-# offset-path de propósito: o path some dentro do mesmo viewBox do SVG, então
-# a curva e o avião escalam juntos com width:100% em qualquer tamanho de
-# wordmark (sidebar, card de login etc.), sem duplicar coordenadas em dois
-# sistemas diferentes que podiam desalinhar entre si.
+# aviãozinho voando do "i" ao "L" de "iTOEFL" e voltando, num arco pontilhado
+# por cima da palavra -- pedido do usuário. SMIL (<animateMotion>) em vez de
+# CSS offset-path de propósito: o path some dentro do mesmo viewBox do SVG,
+# então a curva e o avião escalam juntos com width:100% em qualquer tamanho
+# de wordmark (sidebar, card de login etc.), sem duplicar coordenadas em dois
+# sistemas diferentes que podiam desalinhar entre si. keyPoints/keyTimes faz
+# o avião ir até o fim do trajeto (o "L") e voltar (vai e volta), em vez de
+# saltar de volta ao início a cada repetição. rotate(180deg) (via
+# transform-box:fill-box, que centraliza a rotação no próprio emoji em vez
+# da origem do SVG) vira o bico do avião de "apontando pra cima" para
+# "apontando pra baixo", por pedido do usuário -- scale(1,-1) foi testado
+# antes mas o glyph colorido do emoji não espelha limpo nesse tipo de
+# transform, só a rotação de 180° deu o resultado esperado.
 _FLIGHT_PATH_D = "M4,18 Q60,-2 116,8"
 NAME_PLANE_SVG = (
     f'<svg class="name-plane-svg" viewBox="0 0 120 22" xmlns="http://www.w3.org/2000/svg" '
     'aria-hidden="true" focusable="false">'
     f'<path d="{_FLIGHT_PATH_D}" fill="none" stroke="var(--hair)" stroke-width="1.5" '
     'stroke-dasharray="2.5 4" stroke-linecap="round"/>'
-    '<text font-size="22">✈️'
-    f'<animateMotion dur="3.2s" repeatCount="indefinite" path="{_FLIGHT_PATH_D}"/>'
+    '<text font-size="22" style="transform-box:fill-box;transform-origin:center;transform:rotate(180deg);">✈️'
+    f'<animateMotion dur="4.4s" repeatCount="indefinite" calcMode="linear" '
+    f'keyPoints="0;1;0" keyTimes="0;0.5;1" path="{_FLIGHT_PATH_D}"/>'
     '</text>'
     '</svg>'
 )
@@ -186,7 +194,7 @@ gate = (
     '<div class="auth-gate-card">'
     '<div class="auth-gate-brand">'
     f'<span class="logo">{LOGO_SVG}</span>'
-    f'<span class="btxt"><span class="name-wrap"><span class="name"><span class="name-i">i</span>TOEFL</span>{NAME_PLANE_SVG}</span></span>'
+    f'<span class="btxt"><span class="name-wrap"><span class="name">iTOEFL</span>{NAME_PLANE_SVG}</span></span>'
     '</div>'
     '<h2 id="authGateTitle">Entre para continuar</h2>'
     '<p id="authGateSubtitle"></p>'
@@ -266,7 +274,7 @@ pay_gate = (
     '<div class="auth-gate-card">'
     '<div class="auth-gate-brand">'
     f'<span class="logo">{LOGO_SVG}</span>'
-    f'<span class="btxt"><span class="name-wrap"><span class="name"><span class="name-i">i</span>TOEFL</span>{NAME_PLANE_SVG}</span></span>'
+    f'<span class="btxt"><span class="name-wrap"><span class="name">iTOEFL</span>{NAME_PLANE_SVG}</span></span>'
     '</div>'
     '<span class="auth-gate-kicker">Acesso pago</span>'
     '<h2>Libere seu acesso</h2>'
@@ -458,7 +466,7 @@ html = f'''<!DOCTYPE html>
       <div class="brand">
         <span class="logo">{LOGO_SVG}</span>
         <span class="btxt">
-          <span class="name-wrap"><span class="name"><span class="name-i">i</span>TOEFL</span>{NAME_PLANE_SVG}</span>
+          <span class="name-wrap"><span class="name">iTOEFL</span>{NAME_PLANE_SVG}</span>
           <span class="mark">Preparação independente</span>
         </span>
       </div>

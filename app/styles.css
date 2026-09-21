@@ -126,16 +126,6 @@ body.menu-open{overflow:hidden;}
   font-weight:700; margin-top:2px; white-space:normal; line-height:1.3;
 }
 
-/* bolinha laranja que "pula" da flor da logo até pousar em cima do "i" de
-   iTOEFL, assim que a marca é medida no DOM (ver .brand-dot em app.js) */
-.brand-dot{
-  position:fixed; border-radius:50%; background:var(--accent-2); border:1.5px solid var(--edge);
-  pointer-events:none; z-index:340; opacity:0;
-  transition:left .9s cubic-bezier(.32,1.7,.5,1), top .9s cubic-bezier(.32,1.7,.5,1), opacity .25s ease;
-}
-.brand-dot.is-ready{opacity:1;}
-@media (prefers-reduced-motion:reduce){ .brand-dot{transition:opacity .25s ease;} }
-
 .overall-progress{
   background:rgba(255,255,255,0.05); border:1px solid var(--rail-line); border-radius:10px; padding:13px 13px 12px;
 }
