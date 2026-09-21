@@ -597,8 +597,7 @@ nav.modnav{display:flex; flex-direction:column; gap:1px;}
 main{max-width:1320px; margin:0 auto; padding:0 30px 120px; min-width:0;}
 @media(max-width:640px){ main{padding:0 16px 100px;} }
 
-.content-grid{display:grid; grid-template-columns:minmax(0,1fr) 230px; gap:48px; align-items:start;}
-@media(max-width:1080px){ .content-grid{grid-template-columns:minmax(0,1fr);} .rail{display:none;} }
+.content-grid{display:block;}
 .content-col{min-width:0;}
 
 .rail{position:sticky; top:24px; padding-top:52px;}
@@ -675,7 +674,7 @@ main{max-width:1320px; margin:0 auto; padding:0 30px 120px; min-width:0;}
 .side .jnode.locked .jlbl{opacity:0.45;}
 
 /* --- Abertura de módulo (chapter opener, quebra de grade) --- */
-.panel-inner{max-width:960px; padding:40px 0 0;}
+.panel-inner{max-width:1200px; padding:40px 0 0;}
 @media(max-width:1080px){ .panel-inner{max-width:800px; margin:0 auto;} }
 @media(max-width:640px){ .panel-inner{padding:24px 0 0;} }
 .panel-inner > *:first-child{margin-top:0;}

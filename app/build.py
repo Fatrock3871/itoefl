@@ -509,10 +509,6 @@ html = f'''<!DOCTYPE html>
     {journey}
     <div class="content-grid">
       <div class="content-col">{panels}</div>
-      <aside class="rail" id="rail">
-        <p class="rail-title">Nesta parte</p>
-        <nav class="rail-toc" id="railToc"></nav>
-      </aside>
     </div>
   </main>
 </div>

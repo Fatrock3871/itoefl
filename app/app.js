@@ -458,6 +458,18 @@
     if(lockMsgEl) lockMsgEl.hidden = true;
     setSidebarOpen(false); // navegar fecha a gaveta, que não deve ocupar espaço
     populateRailToc(key);
+    // abre a primeira subseção (h3) do módulo que acabou de aparecer -- sem
+    // isso a tela troca pra um módulo novo e mostra tudo fechado até o
+    // aluno clicar ou rolar (o observer de scroll só cobre rolagem, não
+    // troca de aba). No load inicial, antes do accordion existir (roda
+    // numa IIFE mais abaixo), isso não acha nada e não faz nada -- tudo bem,
+    // essa mesma IIFE abre a primeira seção do painel ativo quando monta.
+    var activeH3 = document.querySelector('.panel[data-panel="' + key + '"] .h3-toggle');
+    if(activeH3 && activeH3.classList.contains("collapsed")){
+      activeH3.classList.remove("collapsed");
+      var activeBody = activeH3.nextElementSibling;
+      if(activeBody && activeBody.classList.contains("h3-body")) activeBody.classList.remove("h3-collapsed");
+    }
   }
   function navTo(key){
     if(!isUnlocked(key)){ showLockMessage(key); return; }
@@ -566,7 +578,18 @@
       progressState[pid] = c.checked;
       if(c.checked && !wasChecked) markDailyGoalProgress();
       var card = c.closest(".section-card");
-      if(card) card.classList.toggle("done", c.checked);
+      if(card){
+        card.classList.toggle("done", c.checked);
+        // marcar a Parte como concluída fecha as subseções dela de volta
+        // (economiza espaço na tela) -- ainda dá pra reabrir clicando
+        if(c.checked){
+          Array.prototype.slice.call(card.querySelectorAll(".h3-toggle")).forEach(function(h3){
+            h3.classList.add("collapsed");
+            var body = h3.nextElementSibling;
+            if(body && body.classList.contains("h3-body")) body.classList.add("h3-collapsed");
+          });
+        }
+      }
       var lbl = c.closest(".mark-done");
       if(lbl){
         var t = lbl.querySelector(".mark-done-label");
@@ -2445,16 +2468,20 @@
   })();
 
   // ---------- Accordion por subseção (h3) dentro de cada parte ----------
-  // Cada h3 de conteúdo (não os títulos dos próprios drills/widgets
-  // interativos, que ficam sempre visíveis) vira clicável pra esconder/
-  // mostrar o que vem depois dele, até o próximo h3. Nada fica escondido
-  // por padrão — só dá a opção de recolher o que já foi lido; ajuda em
-  // partes longas (Laboratório de Língua, Gabaritos extensos) e em telas
-  // pequenas. Roda por último de propósito: outros passes (botão de
-  // cronômetro por drill, índice "Nesta parte") contam com a posição
-  // original dos elementos em relação aos h3/h2.
+  // Pedido do usuário: cada h3 de conteúdo (não os títulos dos próprios
+  // drills/widgets interativos, que ficam sempre visíveis) começa FECHADA,
+  // e abre sozinha quando o aluno rola até ela (IntersectionObserver) --
+  // "anda" pelo módulo abrindo uma subseção de cada vez, em vez de mostrar
+  // tudo de uma vez. Continua dando pra abrir/fechar clicando no título a
+  // qualquer momento. Marcar a Parte (h2) inteira como concluída fecha as
+  // subseções dela de volta (ver o listener de .pchk mais acima) -- depois
+  // disso elas não reabrem sozinhas de novo, só se o aluno clicar. Roda por
+  // último de propósito: outros passes (botão de cronômetro por drill,
+  // índice "Nesta parte") contam com a posição original dos elementos em
+  // relação aos h3/h2.
   (function(){
     var cards = Array.prototype.slice.call(document.querySelectorAll(".section-card"));
+    var allH3 = [];
     cards.forEach(function(card){
       var h3s = Array.prototype.slice.call(card.children).filter(function(n){ return n.tagName === "H3"; });
       h3s.forEach(function(h3){
@@ -2469,15 +2496,42 @@
         });
         if(hasWidget || !nodes.length) return;
         var body = document.createElement("div");
-        body.className = "h3-body";
+        body.className = "h3-body h3-collapsed";
         nodes.forEach(function(n){ body.appendChild(n); });
         h3.parentNode.insertBefore(body, node);
-        h3.classList.add("h3-toggle");
+        h3.classList.add("h3-toggle", "collapsed");
         h3.addEventListener("click", function(){
           h3.classList.toggle("collapsed");
           body.classList.toggle("h3-collapsed");
         });
+        allH3.push(h3);
       });
     });
+
+    if(allH3.length && "IntersectionObserver" in window){
+      var h3Observer = new IntersectionObserver(function(entries){
+        entries.forEach(function(entry){
+          if(!entry.isIntersecting) return;
+          var h3 = entry.target;
+          if(!h3.classList.contains("collapsed")) return;
+          h3.classList.remove("collapsed");
+          var body = h3.nextElementSibling;
+          if(body && body.classList.contains("h3-body")) body.classList.remove("h3-collapsed");
+        });
+      }, { rootMargin: "0px 0px -35% 0px", threshold: 0 });
+      allH3.forEach(function(h3){ h3Observer.observe(h3); });
+    }
+
+    // abre direto a primeira subseção do painel ativo no momento em que essa
+    // IIFE roda (o painel que o showTab() inicial já deixou visível) -- não
+    // depende do primeiro callback do IntersectionObserver, que na prática
+    // nem sempre dispara a tempo pra quem já está com a seção na tela sem
+    // ter rolado nada ainda.
+    var firstActiveH3 = document.querySelector(".panel:not([hidden]) .h3-toggle");
+    if(firstActiveH3 && firstActiveH3.classList.contains("collapsed")){
+      firstActiveH3.classList.remove("collapsed");
+      var firstActiveBody = firstActiveH3.nextElementSibling;
+      if(firstActiveBody && firstActiveBody.classList.contains("h3-body")) firstActiveBody.classList.remove("h3-collapsed");
+    }
   })();
 })();
