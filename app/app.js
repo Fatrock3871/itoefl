@@ -1672,7 +1672,17 @@
       payBtn.addEventListener("click", function(){
         payBtn.disabled = true;
         payGateMsg("Abrindo checkout...", "ok");
-        client.functions.invoke("create-checkout", { body: { origin: location.origin } })
+        // functions.invoke() nem sempre anexa o token de sessão sozinho
+        // (dependendo da versão da lib carregada pelo CDN) -- a edge
+        // function então recebe a chamada sem Authorization e responde
+        // "Não autenticado." mesmo com o aluno logado. Busca a sessão
+        // atual e manda o token explicitamente pra não depender disso.
+        client.auth.getSession().then(function(sessionRes){
+          var token = sessionRes && sessionRes.data && sessionRes.data.session && sessionRes.data.session.access_token;
+          var opts = { body: { origin: location.origin } };
+          if(token) opts.headers = { Authorization: "Bearer " + token };
+          return client.functions.invoke("create-checkout", opts);
+        })
           .then(function(res){
             payBtn.disabled = false;
             if(res.error || !res.data || !res.data.url){
