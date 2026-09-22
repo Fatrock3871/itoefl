@@ -254,7 +254,7 @@ pay_gate = (
     '<h2>Libere seu acesso</h2>'
     '<p>Sua conta está conectada, mas o conteúdo completo da plataforma só libera depois da compra.</p>'
     '<div class="auth-gate-actions">'
-    '<button type="button" id="payBtn">Comprar acesso: R$ 197 (vitalício)</button>'
+    '<button type="button" id="payBtn">Comprar acesso: R$ 9,90 (vitalício)</button>'
     '</div>'
     '<span id="payGateMsg" class="auth-gate-msg" hidden></span>'
     '<button type="button" id="paySignOut" class="pay-signout">Sair desta conta</button>'

@@ -15,7 +15,7 @@ const SUPABASE_URL = Deno.env.get("SUPABASE_URL")!;
 const SUPABASE_ANON_KEY = Deno.env.get("SUPABASE_ANON_KEY")!;
 
 // TODO: ajuste o preço e o título antes de publicar de verdade.
-const PRICE_BRL = 197.0;
+const PRICE_BRL = 9.9;
 const PRODUCT_TITLE = "iTOEFL — Acesso vitalício à plataforma";
 
 const CORS_HEADERS = {
