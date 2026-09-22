@@ -1517,7 +1517,6 @@
       document.getElementById("authTabs")];
     var authGateTitle = document.getElementById("authGateTitle");
     var authGateSubtitle = document.getElementById("authGateSubtitle");
-    var PENDING_USERNAME_KEY = "toefl_pending_username";
     var avatarEl = document.getElementById("authAvatar");
     var avatarImgEl = document.getElementById("authAvatarImg");
     var avatarLetterEl = document.getElementById("authAvatarLetter");
@@ -1794,7 +1793,6 @@
       signedIn.hidden = false;
       if(gateEl) gateEl.hidden = true;
       checkEntitlement(session);
-      checkUsername(session);
       onSyncedWrite = schedulePush;
       forceSyncPush = push;
       pull();
@@ -1824,11 +1822,6 @@
     var authTabSignup = document.getElementById("authTabSignup");
 
     function showLoginView(){
-      // descarta usuario pendente de uma tentativa de cadastro abandonada --
-      // sem isso, um "fatrock3871" digitado e nunca confirmado podia ficar
-      // preso no sessionStorage e ser aplicado por engano num login comum
-      // bem depois, trocando o usuario de uma conta sem o dono pedir.
-      try { sessionStorage.removeItem(PENDING_USERNAME_KEY); } catch(ex){}
       loginForm.hidden = false; signupForm.hidden = true; resetPasswordForm.hidden = true;
       authTabs.hidden = false; authTabs.classList.remove("is-signup");
       authTabLogin.classList.add("is-active"); authTabSignup.classList.remove("is-active");
@@ -1861,52 +1854,36 @@
 
     loginForm.addEventListener("submit", function(e){
       e.preventDefault();
-      var username = document.getElementById("loginUsername").value.trim();
+      var email = document.getElementById("loginEmail").value.trim();
       var password = document.getElementById("loginPassword").value;
-      if(!username || !password) return;
+      if(!email || !password) return;
       gateMsg("Entrando...", "ok");
-      client.rpc("email_for_username", { uname: username }).then(function(res){
-        if(res.error || !res.data){
-          gateMsg("Usuário ou senha incorretos.", "err");
-          return;
-        }
-        client.auth.signInWithPassword({ email: res.data, password: password }).then(function(r){
-          if(r.error) gateMsg(friendlyError(r.error.message), "err");
-        }).catch(function(){ gateMsg("Erro de conexão. Tente de novo.", "err"); });
+      client.auth.signInWithPassword({ email: email, password: password }).then(function(r){
+        if(r.error) gateMsg(friendlyError(r.error.message), "err");
       }).catch(function(){ gateMsg("Erro de conexão. Tente de novo.", "err"); });
     });
 
     signupForm.addEventListener("submit", function(e){
       e.preventDefault();
       var email = document.getElementById("signupEmail").value.trim();
-      var username = document.getElementById("signupUsername").value.trim().toLowerCase();
       var password = document.getElementById("signupPassword").value;
-      if(!/^[a-z0-9_]{3,20}$/.test(username)){
-        gateMsg("Usuário: só letras minúsculas, números e _ (3 a 20 caracteres).", "err");
-        return;
-      }
       gateMsg("Criando conta...", "ok");
-      client.rpc("email_for_username", { uname: username }).then(function(checkRes){
-        if(checkRes.data){ gateMsg("Esse nome de usuário já está em uso.", "err"); return; }
-        try { sessionStorage.setItem(PENDING_USERNAME_KEY, username); } catch(ex){}
-        client.auth.signUp({ email: email, password: password }).then(function(res){
-          if(res.error){ gateMsg(friendlyError(res.error.message), "err"); return; }
-          if(res.data && res.data.session){
-            gateMsg("Conta criada!", "ok"); // goOnline() cuida do resto via onAuthStateChange
-            return;
-          }
-          // e-mail já cadastrado e confirmado: o Supabase responde como se tivesse
-          // dado certo (pra não revelar quais e-mails já existem) mas não manda
-          // nada e não cria identidade nova -- sem checar isso, o aviso de
-          // "confira seu e-mail" mente pra quem já tem conta.
-          var identities = res.data && res.data.user && res.data.user.identities;
-          if(identities && identities.length === 0){
-            try { sessionStorage.removeItem(PENDING_USERNAME_KEY); } catch(ex){}
-            gateMsg("Esse e-mail já tem conta. Use a aba Entrar, ou clique em \"Esqueci minha senha\" se não lembrar a senha.", "err");
-            return;
-          }
-          gateMsg("Conta criada! Confira seu e-mail para confirmar antes de entrar.", "ok");
-        }).catch(function(){ gateMsg("Erro de conexão. Tente de novo.", "err"); });
+      client.auth.signUp({ email: email, password: password }).then(function(res){
+        if(res.error){ gateMsg(friendlyError(res.error.message), "err"); return; }
+        if(res.data && res.data.session){
+          gateMsg("Conta criada!", "ok"); // goOnline() cuida do resto via onAuthStateChange
+          return;
+        }
+        // e-mail já cadastrado e confirmado: o Supabase responde como se tivesse
+        // dado certo (pra não revelar quais e-mails já existem) mas não manda
+        // nada e não cria identidade nova -- sem checar isso, o aviso de
+        // "confira seu e-mail" mente pra quem já tem conta.
+        var identities = res.data && res.data.user && res.data.user.identities;
+        if(identities && identities.length === 0){
+          gateMsg("Esse e-mail já tem conta. Use a aba Entrar, ou clique em \"Esqueci minha senha\" se não lembrar a senha.", "err");
+          return;
+        }
+        gateMsg("Conta criada! Confira seu e-mail para confirmar antes de entrar.", "ok");
       }).catch(function(){ gateMsg("Erro de conexão. Tente de novo.", "err"); });
     });
 
@@ -1922,43 +1899,6 @@
         btn.setAttribute("aria-label", shown ? "Mostrar senha" : "Ocultar senha");
       });
     });
-
-    // checagem ao vivo do usuário de cadastro: formato primeiro, depois
-    // disponibilidade (mesma RPC usada no submit, só que sem esperar o envio)
-    var signupUsernameEl = document.getElementById("signupUsername");
-    var signupUsernameHint = document.getElementById("signupUsernameHint");
-    var usernameCheckSeq = 0;
-    if(signupUsernameEl){
-      signupUsernameEl.addEventListener("input", function(){
-        var raw = signupUsernameEl.value.trim().toLowerCase();
-        var seq = ++usernameCheckSeq;
-        if(!raw){
-          signupUsernameHint.textContent = "Letras, números e _, de 3 a 20 caracteres";
-          signupUsernameHint.className = "auth-hint";
-          return;
-        }
-        if(!/^[a-z0-9_]{3,20}$/.test(raw)){
-          signupUsernameHint.textContent = "Só letras, números e _ (3 a 20 caracteres)";
-          signupUsernameHint.className = "auth-hint is-bad";
-          return;
-        }
-        signupUsernameHint.textContent = "Verificando disponibilidade...";
-        signupUsernameHint.className = "auth-hint";
-        setTimeout(function(){
-          if(seq !== usernameCheckSeq) return; // usuário já digitou de novo, descarta
-          client.rpc("email_for_username", { uname: raw }).then(function(res){
-            if(seq !== usernameCheckSeq) return;
-            if(res.data){
-              signupUsernameHint.textContent = "Esse nome de usuário já está em uso";
-              signupUsernameHint.className = "auth-hint is-bad";
-            } else {
-              signupUsernameHint.textContent = "Disponível";
-              signupUsernameHint.className = "auth-hint is-ok";
-            }
-          });
-        }, 450);
-      });
-    }
 
     // medidor de força da senha de cadastro (só feedback visual, não bloqueia envio)
     var signupPasswordEl = document.getElementById("signupPassword");
@@ -2008,15 +1948,6 @@
           res.error ? "err" : "ok");
       });
     });
-    document.getElementById("forgotUsernameLink").addEventListener("click", function(){
-      var email = window.prompt("Seu e-mail. Enviaremos um link de acesso — ao entrar, seu usuário aparece na barra do topo:");
-      if(!email) return;
-      var redirect = location.href.split("#")[0].split("?")[0];
-      client.auth.signInWithOtp({ email: email.trim(), options: { emailRedirectTo: redirect } }).then(function(res){
-        gateMsg(res.error ? friendlyError(res.error.message) : "Link enviado. Confira seu e-mail.",
-          res.error ? "err" : "ok");
-      });
-    });
     authTabLogin.addEventListener("click", showLoginView);
     authTabSignup.addEventListener("click", showSignupView);
 
@@ -2034,28 +1965,7 @@
       client.auth.signOut().then(goOffline);
     });
 
-    // ---- nome de usuário: aplica o escolhido no cadastro assim que a conta
-    // tem sessão ativa (pode não ter tido sessão no momento do signUp, se a
-    // confirmação por e-mail estiver ligada) e mostra o usuário (em vez do
-    // e-mail cru) na barra do topo assim que ele existir -- é também como
-    // "esqueci meu usuário" se resolve: a pessoa entra por qualquer método
-    // e o nome aparece aqui, sem precisar de um e-mail separado pra isso.
-    function checkUsername(session){
-      client.from("profiles").select("username").eq("id", session.user.id).maybeSingle().then(function(res){
-        var current = res.data && res.data.username;
-        if(current){ emailEl.textContent = current; return; }
-        var pending = null;
-        try { pending = sessionStorage.getItem(PENDING_USERNAME_KEY); } catch(ex){}
-        if(!pending) return;
-        client.from("profiles").update({ username: pending }).eq("id", session.user.id).then(function(upd){
-          if(upd.error) return;
-          try { sessionStorage.removeItem(PENDING_USERNAME_KEY); } catch(ex){}
-          emailEl.textContent = pending;
-        });
-      });
-    }
-
-    // ---- "Minha conta": trocar usuário/senha depois de criar a conta ----
+    // ---- "Minha conta": trocar e-mail/senha depois de criar a conta ----
     // até aqui só dava pra recuperar (esqueci senha/usuário); isso deixa
     // trocar por escolha própria, sem precisar sair e usar o link de e-mail.
     (function(){
@@ -2064,9 +1974,6 @@
       if(!accountBtn || !accountModal) return;
       var backdrop = document.getElementById("accountModalBackdrop");
       var closeBtn = document.getElementById("accountClose");
-      var usernameForm = document.getElementById("accountUsernameForm");
-      var usernameInput = document.getElementById("accountUsername");
-      var usernameHint = document.getElementById("accountUsernameHint");
       var emailForm = document.getElementById("accountEmailForm");
       var emailInput = document.getElementById("accountEmail");
       var passwordForm = document.getElementById("accountPasswordForm");
@@ -2088,11 +1995,7 @@
 
       function open(){
         accountMsgEl.hidden = true;
-        usernameInput.value = "";
         emailInput.value = "";
-        client.from("profiles").select("username").eq("id", uid).maybeSingle().then(function(res){
-          usernameInput.value = (res.data && res.data.username) || "";
-        });
         client.auth.getUser().then(function(res){
           emailInput.value = (res.data && res.data.user && res.data.user.email) || "";
         });
@@ -2107,34 +2010,6 @@
       closeBtn.addEventListener("click", close);
       backdrop.addEventListener("click", close);
       document.addEventListener("keydown", function(e){ if(e.key === "Escape" && !accountModal.hidden) close(); });
-
-      usernameForm.addEventListener("submit", function(e){
-        e.preventDefault();
-        var username = usernameInput.value.trim().toLowerCase();
-        if(!/^[a-z0-9_]{3,20}$/.test(username)){
-          accountMsg("Usuário: só letras minúsculas, números e _ (3 a 20 caracteres).", "err");
-          return;
-        }
-        accountMsg("Salvando...", "ok");
-        // busca o username atual direto (não a RPC email_for_username): ela
-        // resolve username->e-mail, então não dá pra usá-la sozinha pra saber
-        // se o nome digitado já é o meu -- comparar contra o próprio uid é
-        // o jeito direto de diferenciar "sem mudança" de "nome em uso".
-        client.from("profiles").select("username").eq("id", uid).maybeSingle().then(function(mine){
-          if(mine.data && mine.data.username === username){
-            accountMsg("Esse já é o seu nome de usuário atual.", "ok");
-            return;
-          }
-          client.rpc("email_for_username", { uname: username }).then(function(checkRes){
-            if(checkRes.data){ accountMsg("Esse nome de usuário já está em uso.", "err"); return; }
-            client.from("profiles").update({ username: username }).eq("id", uid).then(function(upd){
-              if(upd.error){ accountMsg("Erro ao salvar: " + upd.error.message, "err"); return; }
-              emailEl.textContent = username;
-              accountMsg("Nome de usuário atualizado.", "ok");
-            });
-          });
-        }).catch(function(){ accountMsg("Erro de conexão. Tente de novo.", "err"); });
-      });
 
       emailForm.addEventListener("submit", function(e){
         e.preventDefault();

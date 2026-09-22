@@ -73,7 +73,7 @@ var dashClose = document.getElementById("dashboardClose"); if(dashClose) dashClo
 var accBtn = document.getElementById("accountBtn");
 if(accBtn) accBtn.click();
 check("account_opens", function(){ return document.getElementById("accountModal").hidden === false; });
-["accountUsernameForm", "accountEmailForm", "accountPasswordForm", "accountThemeTabs"].forEach(function(id){
+["accountEmailForm", "accountPasswordForm", "accountThemeTabs"].forEach(function(id){
   check("account_" + id, function(){ return !!document.getElementById(id); });
 });
 var accClose = document.getElementById("accountClose"); if(accClose) accClose.click();
