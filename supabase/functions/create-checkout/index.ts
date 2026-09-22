@@ -60,7 +60,11 @@ Deno.serve(async (req) => {
         failure: `${origin}?mp=failure`,
         pending: `${origin}?mp=pending`,
       };
-      preferenceBody.auto_return = "approved";
+      // auto_return exige que success/failure/pending sejam URLs https
+      // "de verdade" (não localhost) -- em produção, com o site publicado
+      // num domínio https, dá pra religar isso pra voltar sozinho depois
+      // do pagamento em vez de precisar clicar num botão na tela do MP.
+      if (origin.startsWith("https://")) preferenceBody.auto_return = "approved";
     }
 
     const prefRes = await fetch("https://api.mercadopago.com/checkout/preferences", {
