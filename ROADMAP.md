@@ -2,17 +2,67 @@
 
 Memória entre sessões. Atualizar ao concluir cada etapa.
 
-**Última atualização:** 2026-09-20
+**Última atualização:** 2026-09-21
 **Agora:** conteúdo, autenticação, pagamento (código), painel, pronúncia,
 áudio de Listening, transcrição de Speaking e "Minha conta" (tema, usuário,
 e-mail, senha) estão prontos. Navegação entre módulos agora é **livre**
 (decisão revertida em 2026-09-20, ver CLAUDE.md) — a conclusão de cada
 módulo continua sendo medida, só não bloqueia mais o acesso aos outros.
-O que falta está mapeado abaixo, por prioridade.
+Sessão de 2026-09-21 (ver bloco abaixo) trouxe uma leva grande de UX:
+identidade visual da logo, paginação por Parte tipo flashcard, marcação de
+concluído por subseção e "continuar de onde parei". O que falta está
+mapeado abaixo, por prioridade.
 
 ---
 
-## Mapa do que falta (2026-09-20)
+## Sessão 2026-09-21 — UX da logo, navegação por Parte, progresso granular
+
+- **Logo:** removida a moldura quadrada e depois o halo branco em volta da
+  flor (pedidos em duas rodadas); tentativa de bolinha animada "pulando" da
+  logo até o "i" foi implementada, testada, e depois **removida** a pedido
+  (usuário achou feia). Fonte do wordmark trocada pra Baloo 2 (bubble/rounded,
+  igual à referência que o usuário mandou); layout logo-em-cima/texto-embaixo
+  aplicado em `.brand` (sidebar) e `.auth-gate-brand` (login/paywall). Avião
+  decorativo sobre o wordmark: adicionado, ajustado (trajeto i→L e volta,
+  sempre bico pra baixo, espelhando de lado por perna do trajeto) e depois
+  **removido por completo** a pedido do usuário.
+- **Sidebar:** logo centralizada de verdade (bug: `justify-content:space-between`
+  com o botão de fechar empurrava a marca pra esquerda). "Mapa do curso"
+  reposicionado pra ficar logo acima da lista de módulos, não mais entre a
+  logo e o card de progresso.
+- **Navegação livre + qualidade:** suíte de smoke test (`scripts/smoke_test.py`,
+  23 checagens) continua sendo a rede de segurança padrão, rodada a cada
+  mudança de fonte nesta sessão.
+- **Paginação por Parte tipo flashcard:** cada módulo mostrava todas as
+  Partes (H2) empilhadas; agora só uma Parte fica visível por vez, com barra
+  "Parte X de Y" (Anterior/Próxima) no topo e botão grande no fim de cada
+  Parte pra avançar. Posição salva por módulo (`toefl_partpos_v1`).
+- **Transição entre módulos:** ao terminar a última Parte de um módulo, os
+  botões de navegação oferecem ir direto pro próximo módulo em vez de só
+  travar/desabilitar; no último módulo (M9) mostra uma nota de curso
+  concluído.
+- **Progresso granular por subseção:** antes só dava pra marcar a Parte (H2)
+  inteira como concluída. Cada subseção (h3) ganhou seu próprio checkbox
+  "Marcar esta subseção como concluída" + um ✓ visível no título mesmo
+  fechada (`toefl_h3progress_v1`, sincroniza como o resto do progresso).
+- **"Continuar de onde parei":** novo botão na sidebar (card de Progresso
+  Geral) que grava a última subseção lida (via o mesmo observer que auto-abre
+  subseções ao rolar) e pula direto pra lá — troca de módulo, abre a
+  subseção, dá scroll e um flash de destaque. Integrado com a paginação por
+  Parte (pula pra Parte certa antes de rolar até a subseção).
+- **Revisão de conteúdo PT/inglês:** a pedido do usuário, um agente leu os 10
+  módulos inteiros checando se as explicações em português estavam rasas
+  demais e se algum exercício estava incorretamente em português. Resultado:
+  **conteúdo já estava correto** (separação PT/inglês consistente, explicações
+  já densas com exemplos). Achados 2 nits cosméticos, corrigidos: gabarito
+  confuso no M6 Drill 6, título "6 fonemas" no M9 que na verdade lista 9.
+- Diversos ajustes menores de UI já cobertos em sessões anteriores (fonte
+  maior, dashboard semanal interativo, ícones/contraste do login) seguem
+  valendo, não repetidos aqui.
+
+---
+
+## Mapa do que falta (2026-09-20, ainda válido em 2026-09-21)
 
 ### 🔴 Bloqueia uso real por alguém além do usuário/dono
 
