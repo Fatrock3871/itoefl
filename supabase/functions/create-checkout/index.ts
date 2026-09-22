@@ -73,12 +73,12 @@ Deno.serve(async (req) => {
     });
     const pref = await prefRes.json();
     if (!prefRes.ok) {
-      // TEMP: expõe o motivo completo que o Mercado Pago devolveu (campo
-      // "cause", que a mensagem curta de "message" não mostra) -- só pra
-      // diagnosticar o "UNAUTHORIZED" genérico; tirar o detalhe depois de
+      // TEMP: manda o corpo INTEIRO que o Mercado Pago devolveu direto na
+      // resposta (em vez de só "message") -- os logs do lado do servidor
+      // não estavam mostrando nada útil, então a forma mais rápida de ver
+      // o motivo real é aqui, na aba Network do navegador. Tirar depois de
       // resolver, não é algo que faça sentido mostrar pro aluno.
-      console.error("MP preference error:", JSON.stringify(pref));
-      return new Response(JSON.stringify({ error: pref?.message || "Erro ao criar checkout.", cause: pref?.cause }), {
+      return new Response(JSON.stringify({ error: "Erro ao criar checkout.", mpStatus: prefRes.status, mpBody: pref }), {
         status: 502,
         headers: { ...CORS_HEADERS, "Content-Type": "application/json" },
       });
