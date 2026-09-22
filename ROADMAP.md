@@ -2,16 +2,78 @@
 
 Memória entre sessões. Atualizar ao concluir cada etapa.
 
-**Última atualização:** 2026-09-21
-**Agora:** conteúdo, autenticação, pagamento (código), painel, pronúncia,
-áudio de Listening, transcrição de Speaking e "Minha conta" (tema, usuário,
-e-mail, senha) estão prontos. Navegação entre módulos agora é **livre**
-(decisão revertida em 2026-09-20, ver CLAUDE.md) — a conclusão de cada
-módulo continua sendo medida, só não bloqueia mais o acesso aos outros.
-Sessão de 2026-09-21 (ver bloco abaixo) trouxe uma leva grande de UX:
-identidade visual da logo, paginação por Parte tipo flashcard, marcação de
-concluído por subseção e "continuar de onde parei". O que falta está
+**Última atualização:** 2026-09-22
+**Agora:** conteúdo, autenticação (e-mail+senha + Google, ambos configurados
+e funcionando), pagamento (Mercado Pago configurado, teste de compra
+pendente de confirmação), painel, pronúncia, áudio de Listening, transcrição
+de Speaking e "Minha conta" estão prontos. Navegação entre módulos agora é
+**livre** (decisão revertida em 2026-09-20, ver CLAUDE.md) — a conclusão de
+cada módulo continua sendo medida, só não bloqueia mais o acesso aos outros.
+Sessão de 2026-09-21 trouxe uma leva grande de UX (identidade visual da
+logo, paginação por Parte tipo flashcard, progresso granular). Sessão de
+2026-09-22 (ver bloco abaixo) configurou Google login e Mercado Pago de
+ponta a ponta e removeu o login por nome de usuário. O que falta está
 mapeado abaixo, por prioridade.
+
+---
+
+## Sessão 2026-09-22 — Google login, Mercado Pago configurados; login volta a ser só e-mail
+
+- **Login com Google: configurado e funcionando.** Usuário criou o app no
+  Google Cloud (hoje via "Google Auth Platform", não mais a antiga tela
+  "OAuth consent screen"), gerou Client ID/Secret, colou no Supabase
+  (Authentication → Providers → Google). Achado no caminho: o campo
+  "Client IDs" do Supabase tinha sido preenchido com o nome do projeto
+  ("ITOELF") em vez do Client ID de verdade — corrigido.
+- **Mercado Pago: configurado de ponta a ponta.** Schema rodado de novo
+  (cria `entitlements`), aplicação criada no painel do Mercado Pago,
+  credenciais de teste obtidas, Supabase CLI instalado via Scoop (não
+  winget — o pacote `Supabase.CLI` não existe lá; `npm` também não estava
+  disponível, o projeto não usa Node pra mais nada), `supabase link`,
+  `MP_ACCESS_TOKEN` configurado como secret, as duas edge functions
+  (`create-checkout`, `mp-webhook`) publicadas. Preço ajustado de R$ 197
+  para **R$ 9,90** (`PRICE_BRL` na function + texto do botão em `build.py`).
+- **Bug real achado e corrigido testando o checkout ao vivo:** o botão
+  "Comprar acesso" dava sempre "Não autenticado.", mesmo logado —
+  `client.functions.invoke("create-checkout")` não estava anexando o header
+  `Authorization` com o token de sessão (só mandava o `apikey`). Corrigido
+  buscando a sessão via `client.auth.getSession()` e passando o
+  `access_token` explicitamente no header da chamada.
+- **Teste de compra: ainda não confirmado de ponta a ponta.** Depois do fix
+  de autenticação, o erro mudou pra "At least one policy returned
+  UNAUTHORIZED." (mensagem do próprio Mercado Pago) — causa provável: a
+  conta logada no site usa um e-mail associado à mesma conta MP que está
+  vendendo, e o Mercado Pago não deixa comprar de si mesmo nem em teste.
+  Próximo passo: logar no site com uma conta cujo e-mail não tenha nenhuma
+  relação com a conta MP, e usar o "usuário de teste" do MP
+  (`TESTUSER5753308815578190935`) só na hora de pagar dentro do checkout.
+  Adiado pra uma próxima sessão a pedido do usuário.
+- **Achado no caminho: limite de e-mail do plano grátis do Supabase.**
+  Testar criação de conta repetidas vezes bateu no limite de envio de
+  e-mail (confirmação/recuperação) mais de uma vez. "Confirm email" foi
+  desligado temporariamente em Authentication → Providers → Email pra
+  testar sem depender de e-mail — **lembrar de ligar de volta antes de ir
+  pra produção**, senão qualquer um cria conta sem confirmar o e-mail de
+  verdade. Nesse processo, "Enable email provider" (o toggle principal, não
+  o "Confirm email") foi desligado por engano uma vez — religado.
+- **Login volta a ser só e-mail+senha (commit 315f380), sem nome de
+  usuário.** Reverte a decisão de 2026-09-17: tirado o campo "Nome de
+  usuário" do cadastro e do login, o link "Esqueci meu usuário", a seção
+  "Nome de usuário" de Minha conta, e todo o código de
+  checagem/atualização de usuário em `app.js` (a RPC `email_for_username`
+  não é mais chamada pelo site, mas continua existindo no schema do
+  Supabase — remover do banco é opcional, não urgente). Login e cadastro
+  chamam `signInWithPassword`/`signUp` direto com e-mail.
+- **Fix de configuração:** `Authentication → URL Configuration → Site URL`
+  estava como `http://localhost:8000` (a raiz, que só mostra uma listagem
+  de pastas) em vez de `http://localhost:8000/artifact/index.html` (o site
+  de verdade) — corrigia o link de confirmação de e-mail caindo na página
+  errada.
+- **⚠️ Duas senhas reais do usuário apareceram em texto puro no chat**
+  durante essa sessão (a senha do banco de dados do Supabase, colada sem
+  querer num comando de terminal, e a senha da conta Google/admin
+  `pietrooliveiramarquespp@gmail.com`, mencionada diretamente). Recomendado
+  ao usuário trocar as duas; não há como saber se ele já trocou.
 
 ---
 
@@ -62,23 +124,28 @@ mapeado abaixo, por prioridade.
 
 ---
 
-## Mapa do que falta (2026-09-20, ainda válido em 2026-09-21)
+## Mapa do que falta (2026-09-20, atualizado em 2026-09-22)
 
 ### 🔴 Bloqueia uso real por alguém além do usuário/dono
 
 1. **Publicar o site.** Hoje só roda local (`python scripts\serve.py`). Sem
    isso, nenhum link existe pra mandar pra ninguém testar. Checklist da
-   Fase 6 já preparado em sessão anterior, nunca executado.
-2. **Configurar login com Google.** Código já pronto (`authSignInGoogle`),
-   falta o usuário criar o provedor OAuth no Google Cloud Console e
-   habilitar/colar as chaves no Supabase (Authentication → Providers →
-   Google). Hoje o botão existe mas retorna erro (`provider is not
-   enabled`, confirmado nos logs do Supabase).
-3. **Configurar Mercado Pago.** Código pronto (`create-checkout`/
-   `mp-webhook`, ver `docs/mercadopago-setup.md`), falta o usuário criar as
-   credenciais reais e rodar `supabase secrets set MP_ACCESS_TOKEN=...` +
-   deploy das duas edge functions. Sem isso o botão "Comprar acesso"
-   quebra na hora de abrir o checkout.
+   Fase 6 já preparado em sessão anterior, nunca executado. **Pendências
+   pra quando publicar:** trocar o Site URL/Redirect URLs do Supabase (hoje
+   `localhost:8000`) pra URL final; adicionar a mesma URI de callback nova
+   nas Authorized redirect URIs do Google Cloud; religar "Confirm email".
+2. ~~**Configurar login com Google.**~~ **FEITO (2026-09-22).** Provedor
+   ativado no Supabase, credenciais OAuth criadas no Google Cloud, testado
+   e funcionando. App Google ainda em modo "Testing" — só e-mails
+   adicionados como testador conseguem logar por ele; qualquer pessoa
+   consegue logar por e-mail/senha normalmente.
+3. **Configurar Mercado Pago — quase pronto.** Credenciais, CLI, secret e
+   as duas edge functions já publicados; preço ajustado pra R$ 9,90. Um bug
+   real de autenticação no checkout já foi achado e corrigido ao vivo.
+   **Falta só:** terminar o teste de compra de ponta a ponta (ver sessão
+   2026-09-22 acima pro que travou — provavelmente e-mail da conta de teste
+   colidindo com a conta vendedora do Mercado Pago) e, antes de cobrar de
+   verdade, trocar as credenciais de teste pelas de produção.
 
 ### 🟡 Funcionalidades pedidas, ainda não construídas
 
