@@ -689,6 +689,45 @@
     renderLiveScoreSection("mod2-", "liveScoreListeningPct", "liveScoreListeningBand", "Responda os Action Drills do Módulo 2 para calcular");
   }
 
+  // melhor estimativa disponível da banda CEFR atual do aluno: prioriza o
+  // diagnóstico do Módulo 0 (se completo), senão usa o agregado dos Action
+  // Drills de Reading/Listening já respondidos. Movida pro escopo
+  // compartilhado (era local do modal do painel) pra também alimentar a
+  // recomendação de nível nos Action Drills (ver IIFE "Nível recomendado").
+  function computeBandEstimate(){
+    var diag = computeQuizAccuracy("mod0-diag");
+    if(diag.confirmed > 0 && diag.confirmed === diag.total){
+      var pct = Math.round(100 * diag.correct / diag.confirmed);
+      return { pct: pct, source: "diagnóstico do Módulo 0" };
+    }
+    var reading = computeQuizAccuracy("mod1-"), listening = computeQuizAccuracy("mod2-");
+    var confirmed = reading.confirmed + listening.confirmed, correct = reading.correct + listening.correct;
+    if(confirmed > 0){
+      return { pct: Math.round(100 * correct / confirmed), source: "Action Drills de Reading/Listening" };
+    }
+    return null;
+  }
+
+  // Action Drills de nível diferente pra cada aluno: cada drill de M1/M2 tem
+  // um nível CEFR (ver "level" em drills_data.py, ex. "B2–C1"). Marca como
+  // "recomendado pra você" os que incluem a banda estimada atual do aluno,
+  // sem esconder os outros -- navegação livre continua valendo (ver decisão
+  // em CLAUDE.md), isso só destaca por onde começar.
+  function updateLevelRecommendations(){
+    var est = computeBandEstimate();
+    if(!est) return; // sem diagnóstico/drills respondidos ainda, não dá pra recomendar nada
+    var myLevel = cefrBandFromPct(est.pct).label; // ex. "B1"
+    Array.prototype.slice.call(document.querySelectorAll(".quiz-drill[data-level]")).forEach(function(drillEl){
+      var levels = drillEl.dataset.level.split(/[–-]/).map(function(s){ return s.trim(); });
+      var lo = levels[0], hi = levels[levels.length - 1];
+      var order = ["A1", "A2", "B1", "B2", "C1", "C2"];
+      var match = order.indexOf(myLevel) >= order.indexOf(lo) && order.indexOf(myLevel) <= order.indexOf(hi);
+      drillEl.classList.toggle("level-recommended", match);
+      var badge = document.querySelector('[data-level-badge-for="' + drillEl.dataset.drill + '"]');
+      if(badge) badge.classList.toggle("is-recommended", match);
+    });
+  }
+
   var quizDrills = Array.prototype.slice.call(document.querySelectorAll(".quiz-drill"));
 
   quizDrills.forEach(function(drillEl){
@@ -730,6 +769,9 @@
       }
       if(drillId.indexOf("mod1-") === 0 || drillId.indexOf("mod2-") === 0){
         updateLiveScorePanel();
+      }
+      if(drillId === "mod0-diag" || drillId.indexOf("mod1-") === 0 || drillId.indexOf("mod2-") === 0){
+        updateLevelRecommendations();
       }
     }
 
@@ -2286,19 +2328,6 @@
       });
       modOrder.forEach(function(k){ if((modPct[k] || 0) >= 100) modsDone++; });
       return { pct: totalAll ? Math.round(100 * doneAll / totalAll) : 0, modsDone: modsDone, totalMods: modOrder.length };
-    }
-    function computeBandEstimate(){
-      var diag = computeQuizAccuracy("mod0-diag");
-      if(diag.confirmed > 0 && diag.confirmed === diag.total){
-        var pct = Math.round(100 * diag.correct / diag.confirmed);
-        return { pct: pct, source: "diagnóstico do Módulo 0" };
-      }
-      var reading = computeQuizAccuracy("mod1-"), listening = computeQuizAccuracy("mod2-");
-      var confirmed = reading.confirmed + listening.confirmed, correct = reading.correct + listening.correct;
-      if(confirmed > 0){
-        return { pct: Math.round(100 * correct / confirmed), source: "Action Drills de Reading/Listening" };
-      }
-      return null;
     }
     function render(){
       var streak = computeStreak();

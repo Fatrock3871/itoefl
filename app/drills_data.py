@@ -92,7 +92,8 @@ MOD1_DRILLS = [
 MOD1_ACTION_DRILLS_A = [
     {
         "id": "mod1-a1",
-        "title": "Drill A1 · nível A2–B1 · alvo: 4 min",
+        "title": "Drill A1 · alvo: 4 min",
+        "level": "A2–B1",
         "objective": "Leia o texto e escolha a opção que completa cada lacuna corretamente. Tempo alvo: 4 minutos.",
         "passage_html": """<p><strong>TEXT: A message to a friend</strong></p>
 <p>Hi Marco,</p>
@@ -117,7 +118,8 @@ MOD1_ACTION_DRILLS_A = [
     },
     {
         "id": "mod1-a2",
-        "title": "Drill A2 · nível B1 · alvo: 4 min",
+        "title": "Drill A2 · alvo: 4 min",
+        "level": "B1",
         "objective": "Leia o texto e escolha a opção que completa cada lacuna corretamente. Tempo alvo: 4 minutos.",
         "passage_html": """<p><strong>TEXT: Notice at a community pool</strong></p>
 <p>Starting Monday, the main pool (1)_____ closed for its annual maintenance. We expect the work (2)_____ completed by Friday afternoon. During this period, members (3)_____ still use the smaller training pool, which (4)_____ open at its usual hours.</p>
@@ -139,7 +141,8 @@ MOD1_ACTION_DRILLS_A = [
     },
     {
         "id": "mod1-a3",
-        "title": "Drill A3 · nível B2 · alvo: 5 min",
+        "title": "Drill A3 · alvo: 5 min",
+        "level": "B2",
         "objective": "Leia o texto e escolha a opção que completa cada lacuna corretamente. Tempo alvo: 5 minutos.",
         "passage_html": """<p><strong>TEXT: A message from the office manager</strong></p>
 <p>Hi team,</p>
@@ -168,7 +171,8 @@ MOD1_ACTION_DRILLS_A = [
     },
     {
         "id": "mod1-a4",
-        "title": "Drill A4 · nível B2–C1 · alvo: 5 min",
+        "title": "Drill A4 · alvo: 5 min",
+        "level": "B2–C1",
         "objective": "Leia o texto e escolha a opção que completa cada lacuna corretamente. Tempo alvo: 5 minutos.",
         "passage_html": """<p><strong>TEXT: Museum exhibit information card</strong></p>
 <p>This exhibit brings together more than two hundred objects (1)_____ over four decades of fieldwork in the region. Many of them (2)_____ never been displayed publicly before. Together, they offer a rare (3)_____ into daily life in a community that written records largely overlooked.</p>
@@ -190,7 +194,8 @@ MOD1_ACTION_DRILLS_A = [
     },
     {
         "id": "mod1-a5",
-        "title": "Drill A5 · nível C1 · alvo: 5 min",
+        "title": "Drill A5 · alvo: 5 min",
+        "level": "C1",
         "objective": "Leia o texto e escolha a opção que completa cada lacuna corretamente. Tempo alvo: 5 minutos.",
         "passage_html": """<p><strong>TEXT: Excerpt from an editorial</strong></p>
 <p>For decades, the standard response to traffic congestion (1)_____ been to add lanes. The logic seems sound. Yet a growing body of research points to the opposite (2)_____: added lanes tend to attract additional drivers until, within a few years, traffic returns to its former level — a phenomenon known as induced demand. Rarely (3)_____ a policy so intuitive prove so consistently ineffective.</p>
@@ -218,6 +223,7 @@ MOD1_ACTION_DRILLS_B = [
     {
         "id": "mod1-b1",
         "title": "Drill B1 · Placa / aviso · alvo: 2 min",
+        "level": "A2–B1",
         "objective": "Leia o texto e responda às questões de compreensão. Tempo alvo: 2 minutos.",
         "passage_html": """<p><strong>TEXT: Sign at a nature reserve trailhead</strong></p>
 <blockquote><p><strong>RIDGELINE TRAIL: PLEASE READ BEFORE ENTERING</strong></p>
@@ -237,6 +243,7 @@ MOD1_ACTION_DRILLS_B = [
     {
         "id": "mod1-b2",
         "title": "Drill B2 · Cardápio · alvo: 3 min",
+        "level": "A2–B1",
         "objective": "Leia o texto e responda às questões de compreensão. Tempo alvo: 3 minutos.",
         "passage_html": """<p><strong>TEXT: Café lunch menu (extract)</strong></p>
 <blockquote><p><strong>SANDWICHES</strong>: all served on sourdough with a side salad (swap for fries +$2)</p>
@@ -260,6 +267,7 @@ MOD1_ACTION_DRILLS_B = [
     {
         "id": "mod1-b3",
         "title": "Drill B3 · E-mail formal · alvo: 3 min",
+        "level": "B1–B2",
         "objective": "Leia o texto e responda às questões de compreensão. Tempo alvo: 3 minutos.",
         "passage_html": """<p><strong>TEXT: Email from a course coordinator</strong></p>
 <blockquote>
@@ -285,6 +293,7 @@ MOD1_ACTION_DRILLS_B = [
     {
         "id": "mod1-b4",
         "title": "Drill B4 · Horário / tabela · alvo: 2 min",
+        "level": "B1–B2",
         "objective": "Leia o texto e responda às questões de compreensão. Tempo alvo: 2 minutos.",
         "passage_html": """<p><strong>TEXT: Shuttle timetable notice</strong></p>
 <blockquote><p><strong>CAMPUS ↔ STATION SHUTTLE</strong></p>
@@ -302,6 +311,7 @@ MOD1_ACTION_DRILLS_B = [
     {
         "id": "mod1-b5",
         "title": "Drill B5 · Post de rede social · alvo: 3 min",
+        "level": "A2–B1",
         "objective": "Leia o texto e responda às questões de compreensão. Tempo alvo: 3 minutos.",
         "passage_html": """<p><strong>TEXT: A social media post from a local bakery</strong></p>
 <blockquote><p>🥐 <strong>Riverside Bakery</strong> · Posted 2 hours ago</p>
@@ -331,6 +341,7 @@ MOD1_ACTION_DRILLS_C = [
     {
         "id": "mod1-c1",
         "title": "Drill C1 · Ciências naturais · alvo: 6 min",
+        "level": "B2–C1",
         "objective": "Leia a passagem completa uma vez. Responda às 7 questões. Tempo alvo: 6 minutos.",
         "passage_html": """<p><strong>PASSAGE: Bioluminescence in Marine Organisms</strong></p>
 <p>Bioluminescence (the production and emission of light by a living organism) is remarkably common in the ocean, appearing in bacteria, jellyfish, fish, and even some sharks. Unlike the light produced by a bulb, which wastes most of its energy as heat, bioluminescent light is generated through a highly efficient chemical reaction, typically involving a light-emitting molecule called luciferin and an enzyme called luciferase. Because so little energy is lost as heat, biologists sometimes refer to this phenomenon as "cold light."</p>
@@ -363,6 +374,7 @@ MOD1_ACTION_DRILLS_C = [
     {
         "id": "mod1-c2",
         "title": "Drill C2 · História · alvo: 6 min",
+        "level": "B2–C1",
         "objective": "Leia a passagem completa uma vez. Responda às 7 questões. Tempo alvo: 6 minutos.",
         "passage_html": """<p><strong>PASSAGE: Coffee Houses in Seventeenth-Century England</strong></p>
 <p>The first English coffee house opened in Oxford in 1650; within two decades, London alone had hundreds. <strong>[■A]</strong> For the price of a single cup (a penny) a customer could sit for hours, read the newspapers provided by the house, and join whatever conversation was underway. <strong>[■B]</strong> Because admission was cheap and open to any man who could pay, the coffee house mixed people who rarely met elsewhere: merchants, scholars, clergymen, and minor gentry sat at the same long tables. <strong>[■C]</strong></p>
@@ -395,6 +407,7 @@ MOD1_ACTION_DRILLS_C = [
     {
         "id": "mod1-c3",
         "title": "Drill C3 · Ciências sociais · alvo: 6 min",
+        "level": "C1",
         "objective": "Leia a passagem completa uma vez. Responda às 7 questões (a última pede 3 respostas). Tempo alvo: 6 minutos.",
         "passage_html": """<p><strong>PASSAGE: The Strength of Weak Ties</strong></p>
 <p>When people look for a new job, common sense suggests they should turn to their closest contacts: family and good friends who know them well and want to help. In a study of professionals who had recently changed jobs, the sociologist Mark Granovetter found the opposite. Most had heard about their new position not from a close friend but from an acquaintance: someone they saw only occasionally and would not have described as part of their inner circle.</p>
@@ -543,6 +556,7 @@ MOD2_ACTION_DRILLS_A = [
     {
         "id": "mod2-a",
         "title": None,
+        "level": "A2–B1",
         "objective": "Escolha a resposta mais natural e pragmaticamente adequada a cada fala. Tempo alvo: 12 segundos por item.",
         "passage_html": None,
         "items": [
@@ -592,6 +606,7 @@ MOD2_ACTION_DRILLS_B = [
     {
         "id": "mod2-b1",
         "title": "Drill B1 · Advising Office · alvo: 3 min",
+        "level": "B1–B2",
         "objective": "Leia o diálogo (ou peça pra alguém ler em voz alta) e responda às 4 questões. Tempo alvo: 3 minutos.",
         "passage_html": """<p><em>Narrator: Listen to a conversation between a student and an academic advisor.</em></p>
 <p><strong>Student:</strong> Hi, I wanted to ask about switching one of my electives. I'm in Intro to Statistics, but I'd rather take Data Visualization instead.</p>
@@ -620,6 +635,7 @@ MOD2_ACTION_DRILLS_B = [
     {
         "id": "mod2-b2",
         "title": "Drill B2 · Library Reserve Desk · alvo: 3 min",
+        "level": "B1–B2",
         "objective": "Leia o diálogo (ou peça pra alguém ler em voz alta) e responda às 4 questões. Tempo alvo: 3 minutos.",
         "passage_html": """<p><em>Narrator: Listen to a conversation between a student and a librarian.</em></p>
 <p><strong>Student:</strong> Hi — I'm looking for a book my professor put on reserve for the history seminar. It's <em>The Making of the Atlantic World</em>.</p>
@@ -647,6 +663,7 @@ MOD2_ACTION_DRILLS_B = [
     {
         "id": "mod2-b3",
         "title": "Drill B3 · After Class · alvo: 3 min",
+        "level": "B1–B2",
         "objective": "Leia o diálogo (ou peça pra alguém ler em voz alta) e responda às 4 questões. Tempo alvo: 3 minutos.",
         "passage_html": """<p><em>Narrator: Listen to a conversation between a student and a professor.</em></p>
 <p><strong>Student:</strong> Professor, do you have a minute? I'm a bit lost on the second essay prompt.</p>
@@ -680,6 +697,7 @@ MOD2_ACTION_DRILLS_C = [
     {
         "id": "mod2-c1",
         "title": "Drill C1 · Library Services · alvo: 2 min",
+        "level": "B1",
         "objective": "Leia o anúncio (ou peça pra alguém ler em voz alta) e responda às 3 questões. Tempo alvo: 2 minutos.",
         "passage_html": """<p><em>Narrator: Listen to an announcement about a change to library services.</em></p>
 <p><strong>Speaker:</strong> Attention, students. Starting next Monday, the Main Library's third-floor reading room will be closed for renovation through the end of the month. During this period you can use the East Wing reading room instead, which keeps its regular hours. Reserved study rooms originally booked for the third floor have already been transferred automatically to the East Wing — you don't need to rebook. However, if your reservation was for a room with audiovisual equipment, please double-check availability, since not all East Wing rooms are equipped. Questions go to the circulation desk.</p>""",
@@ -698,6 +716,7 @@ MOD2_ACTION_DRILLS_C = [
     {
         "id": "mod2-c2",
         "title": "Drill C2 · Course Registration · alvo: 2 min",
+        "level": "B1",
         "objective": "Leia o anúncio (ou peça pra alguém ler em voz alta) e responda às 4 questões. Tempo alvo: 2 minutos.",
         "passage_html": """<p><em>Narrator: Listen to an announcement about course registration.</em></p>
 <p><strong>Speaker:</strong> A reminder to all second-year students: registration for spring courses opens this Thursday at 8 a.m. and closes the following Wednesday at midnight. Register early — popular courses fill within hours. If a course you need is full, add yourself to the waitlist rather than emailing the instructor; the system releases spots automatically as students drop, and it works strictly in waitlist order. One change this year: the add/drop period after classes begin has been shortened from two weeks to one, so finalize your schedule before the term starts, not after.</p>""",
@@ -719,6 +738,7 @@ MOD2_ACTION_DRILLS_C = [
     {
         "id": "mod2-c3",
         "title": "Drill C3 · Campus Event · alvo: 2 min",
+        "level": "B1",
         "objective": "Leia o anúncio (ou peça pra alguém ler em voz alta) e responda às 4 questões. Tempo alvo: 2 minutos.",
         "passage_html": """<p><em>Narrator: Listen to an announcement about a career event.</em></p>
 <p><strong>Speaker:</strong> The annual Career Fair takes place next Wednesday from 10 to 4 in the main gymnasium. Over eighty employers will attend, mostly in engineering, healthcare, and education. A few reminders. Bring several printed copies of your résumé — most recruiters still expect a paper copy. Business-casual dress is recommended, not required. The résumé-review station near the entrance will be open from 9, an hour before the fair, and it operates first-come, first-served, so arrive early if you want feedback before talking to employers. Finally, the 9:30 workshop on interview skills is now full; a recording will be posted next week for those who missed it.</p>""",
@@ -745,6 +765,7 @@ MOD2_ACTION_DRILLS_D = [
     {
         "id": "mod2-d1",
         "title": "Drill D1 · Psicologia · alvo: 4 min",
+        "level": "B2–C1",
         "objective": "Leia a palestra (ou peça pra alguém ler em voz alta) e responda às 5 questões. Tempo alvo: 4 minutos.",
         "passage_html": """<p><em>Narrator: Listen to part of a talk in a psychology class.</em></p>
 <p><strong>Professor:</strong> We've been discussing decision-making, and today I want to bring up something researchers call the paradox of choice. The idea is counterintuitive: you'd think more options would always make us happier, but past a certain point it does the opposite.</p>
@@ -772,6 +793,7 @@ MOD2_ACTION_DRILLS_D = [
     {
         "id": "mod2-d2",
         "title": "Drill D2 · Biologia · alvo: 4 min",
+        "level": "B2–C1",
         "objective": "Leia a palestra (ou peça pra alguém ler em voz alta) e responda às 5 questões. Tempo alvo: 4 minutos.",
         "passage_html": """<p><em>Narrator: Listen to part of a talk in a biology class.</em></p>
 <p><strong>Professor:</strong> When we picture a forest, we tend to see individual trees competing — for light, for water, for space. And that's real. But over the last thirty years, research has revealed something the old picture missed: the trees are also <strong>connected</strong>, underground, through fungi.</p>
@@ -799,6 +821,7 @@ MOD2_ACTION_DRILLS_D = [
     {
         "id": "mod2-d3",
         "title": "Drill D3 · História da tecnologia · alvo: 4 min",
+        "level": "B2–C1",
         "objective": "Leia a palestra (ou peça pra alguém ler em voz alta) e responda às 6 questões. Tempo alvo: 4 minutos.",
         "passage_html": """<p><em>Narrator: Listen to part of a talk in a history of technology class.</em></p>
 <p><strong>Professor:</strong> Look at your keyboard. The top row of letters spells Q-W-E-R-T-Y. It's an odd arrangement — the most common letters aren't under your strongest fingers. So why has it survived, essentially unchanged, for a hundred and fifty years?</p>
