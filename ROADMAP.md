@@ -39,15 +39,56 @@ mapeado abaixo, por prioridade.
   `Authorization` com o token de sessão (só mandava o `apikey`). Corrigido
   buscando a sessão via `client.auth.getSession()` e passando o
   `access_token` explicitamente no header da chamada.
-- **Teste de compra: ainda não confirmado de ponta a ponta.** Depois do fix
-  de autenticação, o erro mudou pra "At least one policy returned
-  UNAUTHORIZED." (mensagem do próprio Mercado Pago) — causa provável: a
-  conta logada no site usa um e-mail associado à mesma conta MP que está
-  vendendo, e o Mercado Pago não deixa comprar de si mesmo nem em teste.
-  Próximo passo: logar no site com uma conta cujo e-mail não tenha nenhuma
-  relação com a conta MP, e usar o "usuário de teste" do MP
-  (`TESTUSER5753308815578190935`) só na hora de pagar dentro do checkout.
-  Adiado pra uma próxima sessão a pedido do usuário.
+- **Teste de compra: checkout abre e processa pagamento; só falta achar o
+  cartão de teste certo pra ver a liberação de acesso de ponta a ponta.**
+  Sequência real do que aconteceu (deixado detalhado de propósito, é fácil
+  de esquecer a ordem):
+  1. Erro "At least one policy returned UNAUTHORIZED." (`blocked_by:
+     PolicyAgent`, código `PA_UNAUTHORIZED_RESULT_FROM_POLICIES`) ao criar a
+     preferência — **não é bug nosso**, é a política antifraude do Mercado
+     Pago bloqueando a conta real do usuário (provavelmente por ainda não
+     estar totalmente validada/ativada, mesmo com pendências resolvidas no
+     meio do caminho). **Resolvido usando as credenciais de PRODUÇÃO da
+     CONTA DE TESTE** (`TESTUSER5753308815578190935`, logada numa janela
+     anônima separada) em vez das credenciais de teste da conta real — é
+     assim que o Mercado Pago documenta o fluxo de sandbox: a conta de teste
+     inteira já é sandbox, então usa as próprias credenciais "de produção"
+     dela sem risco.
+  2. Depois disso, novo erro: `"auto_return invalid. back_url.success must
+     be defined"` — o Mercado Pago exige que as `back_urls` sejam **https**
+     de verdade quando `auto_return` está ligado; `http://localhost` não
+     serve. Corrigido em `create-checkout/index.ts`: `auto_return` só é
+     enviado quando o `origin` é https (ou seja, liga sozinho quando o site
+     for publicado de verdade; em localhost o aluno só precisa clicar num
+     botão "Voltar" na tela do Mercado Pago).
+  3. **Achado no processo:** o deploy da função (`supabase functions deploy
+     create-checkout`) várias vezes reportou sucesso no terminal mas não
+     atualizava o código de verdade (confirmado comparando o arquivo local
+     com a aba "Code" do painel) — **sem causa raiz identificada**, só
+     resolvido insistindo (rodar de novo, conferir a aba "Overview" pelo
+     horário do último deploy, dar Ctrl+Shift+R na aba "Code" do painel
+     pra não ver cache do navegador). Vale desconfiar disso de novo se um
+     fix não parecer "pegar".
+  4. Depois dos dois fixes, o checkout abriu de verdade — mas o botão
+     "Pagar" não reagia a clique nenhum. Causa: **uma extensão do
+     navegador** quebrando a hidratação do React da página do Mercado Pago
+     (console mostrava `NordicHydrateRootError`/React error #418 e um aviso
+     de CSP bloqueando um script inline — assinatura clássica de extensão
+     mexendo no DOM antes da página carregar). **Resolvido testando numa
+     janela anônima** (extensões desativadas por padrão).
+  5. **Onde parou:** na aba anônima, logado como o usuário de teste
+     (`TESTUSER5753308815578190935`), o pagamento chegou a ser processado
+     (sem mais travar), mas foi recusado mesmo usando o cartão recomendado
+     já salvo na conta (Mastercard Santander ****3311) e também um cartão
+     digitado na mão com nome de titular `APRO` (que deveria simular
+     aprovação automática). Não é mais um bug de código/configuração
+     conhecido — é sobre achar a combinação de cartão de teste que essa
+     conta específica aceita. **Adiado pra uma próxima sessão.**
+- **Pendência de limpeza:** `create-checkout/index.ts` está devolvendo o
+  corpo inteiro do erro do Mercado Pago (`mpBody`/`mpStatus`) na resposta
+  HTTP, só pra depurar durante essa sessão. Não vaza nenhum segredo, mas
+  não é algo que faça sentido o aluno ver — trocar de volta por uma
+  mensagem genérica quando o pagamento estiver 100% confirmado.
 - **Achado no caminho: limite de e-mail do plano grátis do Supabase.**
   Testar criação de conta repetidas vezes bateu no limite de envio de
   e-mail (confirmação/recuperação) mais de uma vez. "Confirm email" foi
@@ -139,13 +180,19 @@ mapeado abaixo, por prioridade.
    e funcionando. App Google ainda em modo "Testing" — só e-mails
    adicionados como testador conseguem logar por ele; qualquer pessoa
    consegue logar por e-mail/senha normalmente.
-3. **Configurar Mercado Pago — quase pronto.** Credenciais, CLI, secret e
-   as duas edge functions já publicados; preço ajustado pra R$ 9,90. Um bug
-   real de autenticação no checkout já foi achado e corrigido ao vivo.
-   **Falta só:** terminar o teste de compra de ponta a ponta (ver sessão
-   2026-09-22 acima pro que travou — provavelmente e-mail da conta de teste
-   colidindo com a conta vendedora do Mercado Pago) e, antes de cobrar de
-   verdade, trocar as credenciais de teste pelas de produção.
+3. **Configurar Mercado Pago — muito perto de pronto.** Credenciais, CLI,
+   secret e as duas edge functions publicados; preço ajustado pra R$ 9,90;
+   checkout abre e processa pagamento de ponta a ponta sem travar (4 bugs
+   reais achados e corrigidos ao vivo nessa sessão, ver detalhe em "Sessão
+   2026-09-22" acima: header de autenticação faltando, bloqueio de política
+   da conta real do Mercado Pago, `auto_return` exigindo https, extensão do
+   navegador quebrando a página de pagamento). **Falta só:** achar a
+   combinação de cartão de teste que essa conta de teste aceita (recusou o
+   cartão salvo recomendado e um cartão `APRO` digitado à mão — não é mais
+   um bug conhecido, é tentativa e erro com o sandbox do Mercado Pago),
+   tirar o debug temporário de `create-checkout/index.ts`, religar o
+   "Confirm email" do Supabase, e trocar as credenciais de teste pelas de
+   produção antes de cobrar de verdade.
 
 ### 🟡 Funcionalidades pedidas, ainda não construídas
 
