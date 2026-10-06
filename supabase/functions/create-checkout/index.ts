@@ -14,7 +14,8 @@ const MP_ACCESS_TOKEN = Deno.env.get("MP_ACCESS_TOKEN")!;
 const SUPABASE_URL = Deno.env.get("SUPABASE_URL")!;
 const SUPABASE_ANON_KEY = Deno.env.get("SUPABASE_ANON_KEY")!;
 
-// TODO: ajuste o preço e o título antes de publicar de verdade.
+// Preço cobrado de verdade. Mudar aqui exige mudar também o texto do botão
+// em app/build.py (pay_gate).
 const PRICE_BRL = 9.9;
 const PRODUCT_TITLE = "iTOEFL — Acesso vitalício à plataforma";
 
@@ -97,12 +98,11 @@ Deno.serve(async (req) => {
     });
     const pref = await prefRes.json();
     if (!prefRes.ok) {
-      // TEMP: manda o corpo INTEIRO que o Mercado Pago devolveu direto na
-      // resposta (em vez de só "message") -- os logs do lado do servidor
-      // não estavam mostrando nada útil, então a forma mais rápida de ver
-      // o motivo real é aqui, na aba Network do navegador. Tirar depois de
-      // resolver, não é algo que faça sentido mostrar pro aluno.
-      return new Response(JSON.stringify({ error: "Erro ao criar checkout.", mpStatus: prefRes.status, mpBody: pref }), {
+      // o motivo real fica só no log da function (Dashboard > Edge
+      // Functions > create-checkout > Logs); o aluno vê uma mensagem
+      // genérica, sem detalhe interno do Mercado Pago.
+      console.error("Mercado Pago recusou a preferência:", prefRes.status, JSON.stringify(pref));
+      return new Response(JSON.stringify({ error: "Não foi possível abrir o pagamento agora. Tente de novo em alguns minutos." }), {
         status: 502,
         headers: { ...CORS_HEADERS, "Content-Type": "application/json" },
       });
@@ -112,7 +112,8 @@ Deno.serve(async (req) => {
       headers: { ...CORS_HEADERS, "Content-Type": "application/json" },
     });
   } catch (e) {
-    return new Response(JSON.stringify({ error: String(e) }), {
+    console.error("create-checkout falhou:", e);
+    return new Response(JSON.stringify({ error: "Erro inesperado ao abrir o pagamento. Tente de novo." }), {
       status: 500,
       headers: { ...CORS_HEADERS, "Content-Type": "application/json" },
     });

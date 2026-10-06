@@ -74,22 +74,36 @@ supabase secrets set MP_ACCESS_TOKEN=APP_USR-xxxxxxxxxxxxxxxxxxxxxxxx
 
 supabase functions deploy create-checkout
 supabase functions deploy mp-webhook
+supabase functions deploy delete-account
 ```
 
 `SUPABASE_URL`, `SUPABASE_ANON_KEY` e `SUPABASE_SERVICE_ROLE_KEY` já existem
 automaticamente no ambiente de toda edge function do projeto — não precisa
 configurar esses três.
 
+**O `mp-webhook` precisa aceitar chamada sem login.** O Mercado Pago não manda
+header de autenticação, então a verificação de JWT dessa function fica
+desligada em `supabase/config.toml` (`[functions.mp-webhook] verify_jwt =
+false`). Com ela ligada, o Supabase responde 401 antes de o código rodar e
+nenhum pagamento libera acesso. Para conferir depois de publicar:
+
+```powershell
+curl.exe -X POST "https://itfosjcymqfzjsftvjey.supabase.co/functions/v1/mp-webhook?type=merchant_order&id=1"
+```
+
+Tem que responder `ok`. Se responder `Missing authorization header`, o
+`config.toml` não foi aplicado: rode o deploy do `mp-webhook` de novo.
+
 ## 5. Ajustar preço e nome do produto
 
 Em `supabase/functions/create-checkout/index.ts`, os dois primeiros valores:
 
 ```ts
-const PRICE_BRL = 197.0;
+const PRICE_BRL = 9.9;
 const PRODUCT_TITLE = "iTOEFL — Acesso vitalício à plataforma";
 ```
 
-O texto do botão "Comprar acesso — R$ 197" em `app/build.py` **não** puxa
+O texto do botão "Comprar acesso: R$ 9,90 (vitalício)" em `app/build.py` **não** puxa
 esse valor automaticamente — se mudar o preço, mude os dois lugares e rode
 `supabase functions deploy create-checkout` de novo, além de rebuildar o site
 (`python build_pipeline.py && python build.py`).

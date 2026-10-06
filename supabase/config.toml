@@ -1,1 +1,8 @@
 project_id = "itfosjcymqfzjsftvjey"
+
+# O Mercado Pago chama o webhook sem nenhum header de autenticação. Com a
+# verificação de JWT ligada (o padrão), o gateway do Supabase devolve 401
+# antes de o código rodar e nenhum pagamento libera acesso. A segurança do
+# webhook vem de reconferir o pagamento na API do Mercado Pago, não do JWT.
+[functions.mp-webhook]
+verify_jwt = false
