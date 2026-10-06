@@ -43,13 +43,33 @@ Deno.serve(async (req) => {
     }
 
     let origin = "";
+    let couponCode = "";
     try {
       const body = await req.json();
       if (typeof body?.origin === "string" && body.origin.startsWith("http")) origin = body.origin;
+      if (typeof body?.coupon === "string") couponCode = body.coupon.trim();
     } catch { /* corpo vazio é aceitável */ }
 
+    let finalPrice = PRICE_BRL;
+    let itemTitle = PRODUCT_TITLE;
+    if (couponCode) {
+      const { data: coupon, error: couponErr } = await supabase
+        .from("coupons")
+        .select("percent, active")
+        .ilike("code", couponCode)
+        .maybeSingle();
+      if (couponErr || !coupon || !coupon.active) {
+        return new Response(JSON.stringify({ error: "Cupom inválido ou expirado." }), {
+          status: 400,
+          headers: { ...CORS_HEADERS, "Content-Type": "application/json" },
+        });
+      }
+      finalPrice = Math.round(PRICE_BRL * (1 - coupon.percent / 100) * 100) / 100;
+      itemTitle = `${PRODUCT_TITLE} (cupom -${coupon.percent}%)`;
+    }
+
     const preferenceBody: Record<string, unknown> = {
-      items: [{ title: PRODUCT_TITLE, quantity: 1, unit_price: PRICE_BRL, currency_id: "BRL" }],
+      items: [{ title: itemTitle, quantity: 1, unit_price: finalPrice, currency_id: "BRL" }],
       external_reference: user.id,
       notification_url: `${SUPABASE_URL}/functions/v1/mp-webhook`,
     };

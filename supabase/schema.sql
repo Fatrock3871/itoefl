@@ -127,3 +127,32 @@ $$;
 
 revoke all on function public.email_for_username(text) from public;
 grant execute on function public.email_for_username(text) to anon, authenticated;
+
+-- ============ CUPONS DE DESCONTO (2026-09-24) ============
+-- Cupons percentuais aplicados no checkout (`create-checkout`, que roda com
+-- o token do próprio aluno, não com o service_role -- por isso a policy de
+-- select abaixo é necessária: sem ela, RLS bloquearia a leitura mesmo de
+-- cupons ativos). Só percentual (sem valor fixo), sem data de expiração nem
+-- limite de usos -- controle é só o campo `active`: crie a linha pra ligar
+-- o cupom, ponha `active=false` (ou apague a linha) pra desligar. Só o
+-- service_role escreve aqui (nenhuma policy de insert/update/delete pra
+-- "authenticated"); criar/editar cupons é feito pelo SQL Editor do Supabase.
+
+create table if not exists coupons (
+  code text primary key,
+  percent int not null check (percent > 0 and percent <= 100),
+  active boolean not null default true,
+  created_at timestamptz not null default now()
+);
+
+alter table coupons enable row level security;
+
+drop policy if exists "coupons_select_active" on coupons;
+create policy "coupons_select_active" on coupons
+  for select using (active = true);
+-- de propósito: nenhuma policy de insert/update/delete pra "authenticated"
+
+-- Exemplo de como criar um cupom (rode no SQL Editor, ajustando código/%):
+--   insert into coupons (code, percent) values ('LANCAMENTO20', 20);
+-- Pra desligar sem apagar o histórico:
+--   update coupons set active = false where code = 'LANCAMENTO20';

@@ -1613,6 +1613,7 @@
     var payBtn = document.getElementById("payBtn");
     var payGateMsgEl = document.getElementById("payGateMsg");
     var paySignOutBtn = document.getElementById("paySignOut");
+    var couponInput = document.getElementById("couponInput");
     function payGateMsg(text, kind){
       if(!payGateMsgEl) return;
       payGateMsgEl.textContent = text;
@@ -1678,14 +1679,24 @@
         // atual e manda o token explicitamente pra não depender disso.
         client.auth.getSession().then(function(sessionRes){
           var token = sessionRes && sessionRes.data && sessionRes.data.session && sessionRes.data.session.access_token;
-          var opts = { body: { origin: location.origin } };
+          var coupon = couponInput ? couponInput.value.trim() : "";
+          var opts = { body: { origin: location.origin, coupon: coupon } };
           if(token) opts.headers = { Authorization: "Bearer " + token };
           return client.functions.invoke("create-checkout", opts);
         })
           .then(function(res){
             payBtn.disabled = false;
             if(res.error || !res.data || !res.data.url){
-              payGateMsg("Erro ao abrir checkout: " + (res.error ? res.error.message : "resposta inválida"), "err");
+              // res.error.context é a Response HTTP crua quando a function
+              // responde status != 2xx (ex.: cupom inválido) -- sem ler o
+              // corpo, o aluno só veria "Edge Function returned a non-2xx
+              // status code" em vez do motivo de verdade.
+              var ctx = res.error && res.error.context;
+              (ctx && typeof ctx.json === "function" ? ctx.json().catch(function(){ return null; }) : Promise.resolve(null))
+                .then(function(body){
+                  var reason = (body && body.error) || (res.error ? res.error.message : "resposta inválida");
+                  payGateMsg("Erro ao abrir checkout: " + reason, "err");
+                });
               return;
             }
             location.href = res.data.url;
