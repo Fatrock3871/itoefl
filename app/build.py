@@ -46,6 +46,14 @@ AUTH_BG_DECOR = '<div class="auth-gate-bg" aria-hidden="true">' + "".join(
     for name, cls in _BG_ICON_LAYOUT
 ) + '</div>'
 
+# links para as duas páginas legais (geradas no fim deste arquivo a partir de
+# legal/*.md). Abrem em aba nova pra não tirar o aluno do meio do login/compra.
+LEGAL_LINKS = (
+    '<a href="termos.html" target="_blank" rel="noopener">Termos de Uso</a>'
+    '<span aria-hidden="true"> · </span>'
+    '<a href="privacidade.html" target="_blank" rel="noopener">Política de Privacidade</a>'
+)
+
 MODS = [
     ("mod0","00","Embarque & Diagnóstico","modulo_0_embarque.md",
      "Onde você está e para onde vai. Comece pelo diagnóstico de nivelamento."),
@@ -205,6 +213,9 @@ gate = (
     '<span class="auth-strength-label" id="signupStrengthLabel"></span></span>'
     '</label>'
     '<button type="submit" class="auth-gate-submit">Criar conta</button>'
+    '<p class="auth-consent">Ao criar a conta você concorda com os '
+    '<a href="termos.html" target="_blank" rel="noopener">Termos de Uso</a> e a '
+    '<a href="privacidade.html" target="_blank" rel="noopener">Política de Privacidade</a>.</p>'
     '</form>'
 
     '<form class="auth-form" id="resetPasswordForm" hidden>'
@@ -226,6 +237,7 @@ gate = (
     '</div>'
 
     '<span id="authGateMsg" class="auth-gate-msg" hidden></span>'
+    f'<p class="legal-links">{LEGAL_LINKS}</p>'
     '</div>'
     '</div>'
 )
@@ -255,6 +267,7 @@ pay_gate = (
     '</div>'
     '<span id="payGateMsg" class="auth-gate-msg" hidden></span>'
     '<button type="button" id="paySignOut" class="pay-signout">Sair desta conta</button>'
+    f'<p class="legal-links">{LEGAL_LINKS}</p>'
     '</div>'
     '</div>'
 )
@@ -305,9 +318,8 @@ cert_modal = (
     '</div>'
 )
 
-# tela "Minha conta": trocar usuário e senha depois de criar a conta -- até
-# aqui só dava pra recuperar (esqueci senha/usuário), não pra trocar por
-# escolha própria. Reaproveita o shell do cert-modal (backdrop + card) e os
+# tela "Minha conta": aparência, situação do acesso pago, troca de e-mail e
+# senha, links legais e exclusão da conta. Reaproveita o shell do cert-modal (backdrop + card) e os
 # estilos de .auth-form/.auth-input já usados no gate de login.
 account_modal = (
     '<div class="account-modal" id="accountModal" hidden>'
@@ -326,6 +338,11 @@ account_modal = (
     '<button type="button" id="accountThemeLight" class="auth-tab">☀️ Claro</button>'
     '<button type="button" id="accountThemeDark" class="auth-tab">🌙 Escuro</button>'
     '</div>'
+    '</div>'
+
+    '<div class="account-section">'
+    '<span class="account-section-label"><span class="account-section-icon">🎟️</span>Acesso</span>'
+    '<p class="account-access" id="accountAccess">Verificando...</p>'
     '</div>'
 
     '<div class="account-section">'
@@ -348,9 +365,29 @@ account_modal = (
     '</span>'
     '<button type="submit" class="auth-gate-submit">Salvar senha</button>'
     '</form>'
+    '<span id="accountMsg" class="auth-gate-msg" hidden></span>'
     '</div>'
 
-    '<span id="accountMsg" class="auth-gate-msg" hidden></span>'
+    # exclusão de conta: fica por último e fechada. Só abre o formulário
+    # depois de um clique, e o envio exige digitar EXCLUIR (conferido de
+    # novo no servidor, em supabase/functions/delete-account).
+    '<div class="account-section account-danger">'
+    '<span class="account-section-label"><span class="account-section-icon">🗑️</span>Excluir conta</span>'
+    '<p class="account-danger-text">Apaga de vez sua conta, seu progresso e o registro do seu pagamento. '
+    'O acesso comprado é perdido e não dá pra desfazer.</p>'
+    '<button type="button" class="account-danger-open" id="accountDeleteOpen">Quero excluir minha conta</button>'
+    '<form class="auth-form" id="accountDeleteForm" hidden>'
+    '<label class="auth-field"><span class="auth-label">Digite EXCLUIR para confirmar</span>'
+    '<input type="text" id="accountDeleteConfirm" class="auth-input" autocomplete="off" autocapitalize="characters" spellcheck="false"></label>'
+    '<div class="account-danger-actions">'
+    '<button type="button" class="account-danger-cancel" id="accountDeleteCancel">Cancelar</button>'
+    '<button type="submit" class="account-danger-submit" id="accountDeleteSubmit" disabled>Excluir conta de vez</button>'
+    '</div>'
+    '</form>'
+    '<span id="accountDeleteMsg" class="auth-gate-msg" hidden></span>'
+    '</div>'
+
+    f'<p class="legal-links">{LEGAL_LINKS}</p>'
     '</div>'
     '</div>'
 )
@@ -455,7 +492,6 @@ html = f'''<!DOCTYPE html>
     <nav class="modnav" id="modnav">
       {nav_items}
     </nav>
-    <div class="lock-msg" id="lockMsg" hidden></div>
     <div class="data-tools">
       <button type="button" id="dataExport">↓ Exportar progresso</button>
       <button type="button" id="dataImport">↑ Importar</button>
@@ -463,7 +499,8 @@ html = f'''<!DOCTYPE html>
       <span id="dataMsg" class="data-msg" hidden></span>
     </div>
     <button type="button" class="reset-btn" id="resetBtn">↺ Reiniciar todo o progresso</button>
-    <div class="foot-note">Preparação independente baseada nas especificações ETS vigentes desde 21/jan/2026. Não afiliada à ETS. Seu progresso é salvo neste navegador.</div>
+    <div class="foot-note">Preparação independente baseada nas especificações ETS vigentes desde 21/jan/2026. Não afiliada à ETS. Seu progresso é salvo neste navegador.
+      <span class="legal-links">{LEGAL_LINKS}</span></div>
   </aside>
 
   <main id="mainArea">
@@ -524,3 +561,50 @@ html = f'''<!DOCTYPE html>
 
 open("../artifact/index.html", "w", encoding="utf-8").write(html)
 print("written", len(html))
+
+# ---- páginas legais: legal/*.md -> artifact/<nome>.html ----
+# Páginas próprias (não abas do app) porque precisam abrir sem login: o link
+# vai na tela de cadastro, na tela de compra e na configuração do login com
+# Google, que exige uma URL pública de política de privacidade.
+import markdown as _md
+
+LEGAL_PAGES = [
+    ("termos", "Termos de Uso"),
+    ("privacidade", "Política de Privacidade"),
+]
+# aplica o tema salvo antes de pintar a página, igual ao app (mesma chave)
+_LEGAL_THEME_JS = (
+    '(function(){try{var t=localStorage.getItem("toefl_theme_v1");'
+    'if(t==="dark"||t==="light")document.documentElement.setAttribute("data-theme",t);}catch(e){}})();'
+)
+for _slug, _title in LEGAL_PAGES:
+    _src = open(f"../legal/{_slug}.md", encoding="utf-8").read()
+    _pending = _src.count("[PREENCHER")
+    if _pending:
+        print(f"AVISO: legal/{_slug}.md ainda tem {_pending} campo(s) [PREENCHER: ...], nao publicar assim")
+    _body = _md.markdown(_src, extensions=["tables"])
+    _page = f'''<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>{_title} · iTOEFL</title>
+<script>{_LEGAL_THEME_JS}</script>
+<style>
+{CSS}
+</style>
+</head>
+<body class="legal-page">
+<header class="legal-head">
+  <a class="legal-brand" href="index.html"><span class="logo">{LOGO_SVG}</span><span class="name">iTOEFL</span></a>
+  <a class="legal-back" href="index.html">Voltar para a plataforma</a>
+</header>
+<main class="legal-doc">
+{_body}
+</main>
+<footer class="legal-foot">{LEGAL_LINKS}</footer>
+</body>
+</html>
+'''
+    open(f"../artifact/{_slug}.html", "w", encoding="utf-8").write(_page)
+    print(f"written {_slug}.html", len(_page))

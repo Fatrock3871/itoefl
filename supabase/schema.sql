@@ -87,46 +87,17 @@ drop policy if exists "entitlements_select_own" on entitlements;
 create policy "entitlements_select_own" on entitlements for select using (auth.uid() = user_id);
 -- de propósito: nenhuma policy de insert/update/delete pra "authenticated"
 
--- ============ LOGIN POR NOME DE USUÁRIO (2026-09-17) ============
--- Troca o "entrar por link no e-mail" por usuário+senha de verdade. O
--- Supabase Auth só autentica por e-mail (ou telefone), não por username --
--- então o login por usuário funciona resolvendo username -> e-mail aqui no
--- banco (função abaixo) e chamando signInWithPassword com o e-mail
--- encontrado. O cadastro continua pedindo e-mail (fica em auth.users,
--- exige confirmação antes do primeiro login) + usuário + senha.
+-- ============ LIMPEZA DO LOGIN POR NOME DE USUÁRIO (2026-10-06) ============
+-- O login por nome de usuário existiu entre 2026-09-17 e 2026-09-22 e foi
+-- revertido: hoje o site só autentica por e-mail. Este bloco remove o que
+-- aquela versão criou no banco (a função que traduzia usuário em e-mail
+-- ficava exposta a `anon` sem necessidade). Em projeto novo, onde nada disso
+-- existe, os comandos abaixo não fazem nada.
 
-alter table profiles add column if not exists username text;
-
+drop function if exists public.email_for_username(text);
 drop index if exists profiles_username_unique;
-create unique index profiles_username_unique
-  on profiles (lower(username)) where username is not null;
-
 alter table profiles drop constraint if exists profiles_username_format;
-alter table profiles add constraint profiles_username_format
-  check (username is null or username ~ '^[a-z0-9_]{3,20}$');
-
--- Resolve username -> e-mail. SECURITY DEFINER pra poder ler auth.users
--- (RLS de `profiles` só libera o dono ler a própria linha, e isso
--- precisa funcionar ANTES do login, sem sessão nenhuma). Fica exposta a
--- anon de propósito -- é o único jeito do formulário de login funcionar
--- com usuário em vez de e-mail. Risco aceito: alguém pode usar isso pra
--- descobrir SE um username existe (não descobre a senha, nem pode logar
--- sem ela) -- razoável pra um app de uso pessoal/pequena escala.
-create or replace function public.email_for_username(uname text)
-returns text
-language sql
-security definer
-set search_path = public
-as $$
-  select u.email
-  from auth.users u
-  join public.profiles p on p.id = u.id
-  where lower(p.username) = lower(uname)
-  limit 1;
-$$;
-
-revoke all on function public.email_for_username(text) from public;
-grant execute on function public.email_for_username(text) to anon, authenticated;
+alter table profiles drop column if exists username;
 
 -- ============ CUPONS DE DESCONTO (2026-09-24) ============
 -- Cupons percentuais aplicados no checkout (`create-checkout`, que roda com

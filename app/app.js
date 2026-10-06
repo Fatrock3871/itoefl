@@ -331,10 +331,6 @@
   var panels = Array.prototype.slice.call(document.querySelectorAll(".panel"));
   var modOrder = tabBtns.map(function(b){ return b.dataset.tab; });
   var modPct = {}; // preenchido por updateBadges()
-  var lockMsgEl = document.getElementById("lockMsg");
-  var lockMsgTimer = null;
-
-  var UNLOCK_PCT = 70; // % do módulo anterior necessário para liberar o próximo
 
   // % de questões respondidas nos widgets interativos do módulo (quiz e
   // Build a Sentence). Módulo sem widget de questão retorna 100 (não bloqueia
@@ -369,27 +365,9 @@
   // não bloqueia mais a ordem de acesso, só continua marcando/medindo a
   // conclusão de cada módulo (checkbox, badge ✓, % na sidebar/jornada,
   // certificado). isUnlocked() fica só por compatibilidade com o resto do
-  // código (updateBadges/navTo ainda chamam ela) -- sempre true agora.
+  // código (updateBadges ainda chama ela) -- sempre true agora.
   function isUnlocked(key){
     return true;
-  }
-
-  function showLockMessage(key){
-    if(!lockMsgEl) return;
-    var idx = modOrder.indexOf(key);
-    var prevBtn = idx > 0 ? tabBtns[idx - 1] : null;
-    var prevTitle = prevBtn ? prevBtn.dataset.title : "o módulo anterior";
-    var prev = idx > 0 ? modOrder[idx - 1] : null;
-    var prevPct = prev ? (modPct[prev] || 0) : 0;
-    var quizPct = prev ? moduleQuizPct(prev) : 100;
-    var msg = "Conclua pelo menos " + UNLOCK_PCT + "% de \"" + prevTitle + "\" (você está em " + prevPct + "%).";
-    if(quizPct < 100){
-      msg += " Falta responder todas as questões dos exercícios interativos (" + quizPct + "% feito).";
-    }
-    lockMsgEl.textContent = msg;
-    lockMsgEl.hidden = false;
-    if(lockMsgTimer) clearTimeout(lockMsgTimer);
-    lockMsgTimer = setTimeout(function(){ lockMsgEl.hidden = true; }, 6000);
   }
 
   var journeyNodes = Array.prototype.slice.call(document.querySelectorAll(".jnode"));
@@ -455,7 +433,6 @@
     window.scrollTo(0, 0);
     var ma = document.getElementById("mainArea"); if(ma) ma.scrollTop = 0;
     safeSet("toefl_active_tab", key);
-    if(lockMsgEl) lockMsgEl.hidden = true;
     setSidebarOpen(false); // navegar fecha a gaveta, que não deve ocupar espaço
     populateRailToc(key);
     // abre a primeira subseção (h3) do módulo que acabou de aparecer -- sem
@@ -472,7 +449,6 @@
     }
   }
   function navTo(key){
-    if(!isUnlocked(key)){ showLockMessage(key); return; }
     showTab(key);
   }
   tabBtns.forEach(function(b){
@@ -1507,7 +1483,7 @@
     var googleBtn = document.getElementById("authSignInGoogle");
     var signedIn = document.getElementById("authIn");
     var emailEl = document.getElementById("authEmail");
-    // formulário de usuário+senha (substitui o antigo link mágico por e-mail)
+    // formulário de e-mail+senha
     var loginForm = document.getElementById("loginForm");
     var signupForm = document.getElementById("signupForm");
     var resetPasswordForm = document.getElementById("resetPasswordForm");
@@ -1821,9 +1797,9 @@
       if(payGateEl) payGateEl.hidden = true;
     }
 
-    // ---- login por usuário+senha (substitui o antigo link mágico) ----
+    // ---- login por e-mail+senha ----
     var AUTH_ERROR_MAP = {
-      "Invalid login credentials": "Usuário ou senha incorretos.",
+      "Invalid login credentials": "E-mail ou senha incorretos.",
       "User already registered": "Já existe uma conta com esse e-mail.",
       "Password should be at least 6 characters": "A senha precisa ter pelo menos 6 caracteres.",
     };
@@ -1976,9 +1952,8 @@
       client.auth.signOut().then(goOffline);
     });
 
-    // ---- "Minha conta": trocar e-mail/senha depois de criar a conta ----
-    // até aqui só dava pra recuperar (esqueci senha/usuário); isso deixa
-    // trocar por escolha própria, sem precisar sair e usar o link de e-mail.
+    // ---- "Minha conta": situação do acesso, troca de e-mail/senha e
+    // exclusão da conta ----
     (function(){
       var accountBtn = document.getElementById("accountBtn");
       var accountModal = document.getElementById("accountModal");
@@ -1989,6 +1964,36 @@
       var emailInput = document.getElementById("accountEmail");
       var passwordForm = document.getElementById("accountPasswordForm");
       var accountMsgEl = document.getElementById("accountMsg");
+      var accessEl = document.getElementById("accountAccess");
+
+      function setAccess(text, cls){
+        if(!accessEl) return;
+        accessEl.textContent = text;
+        accessEl.className = "account-access" + (cls ? " " + cls : "");
+      }
+      // mostra o que a tabela `entitlements` diz desta conta. É só leitura:
+      // quem libera ou bloqueia o conteúdo continua sendo checkEntitlement().
+      function loadAccess(user){
+        if(!accessEl) return;
+        if(!user){ setAccess("Não deu pra verificar agora.", ""); return; }
+        if(isAdmin({ user: user })){ setAccess("Conta de administrador: acesso liberado, sem cobrança.", "is-paid"); return; }
+        setAccess("Verificando...", "");
+        client.from("entitlements").select("paid, paid_at").eq("user_id", user.id).maybeSingle()
+          .then(function(res){
+            if(res.error){ setAccess("Não deu pra verificar agora. Feche e abra esta tela pra tentar de novo.", ""); return; }
+            if(res.data && res.data.paid){
+              var when = "";
+              if(res.data.paid_at){
+                var d = new Date(res.data.paid_at);
+                if(!isNaN(d.getTime())) when = " desde " + d.toLocaleDateString("pt-BR");
+              }
+              setAccess("Pago ✓ Acesso vitalício liberado" + when + ".", "is-paid");
+            } else {
+              setAccess("Sem acesso: esta conta ainda não tem compra confirmada.", "is-unpaid");
+            }
+          })
+          .catch(function(){ setAccess("Não deu pra verificar agora (erro de conexão).", ""); });
+      }
 
       function accountMsg(text, kind){
         accountMsgEl.textContent = text;
@@ -2007,9 +2012,13 @@
       function open(){
         accountMsgEl.hidden = true;
         emailInput.value = "";
+        resetDeleteForm();
+        setAccess("Verificando...", "");
         client.auth.getUser().then(function(res){
-          emailInput.value = (res.data && res.data.user && res.data.user.email) || "";
-        });
+          var user = res.data && res.data.user;
+          emailInput.value = (user && user.email) || "";
+          loadAccess(user);
+        }).catch(function(){ loadAccess(null); });
         accountModal.hidden = false;
         document.body.classList.add("menu-open");
       }
@@ -2054,6 +2063,110 @@
           accountMsg("Senha atualizada.", "ok");
         }).catch(function(){ accountMsg("Erro de conexão. Tente de novo.", "err"); });
       });
+
+      // ---- excluir conta ----
+      // quem apaga de verdade é a edge function delete-account (precisa da
+      // service_role, que não pode vir pro navegador). Aqui é só a
+      // confirmação e a limpeza do que ficou neste aparelho.
+      var deleteOpenBtn = document.getElementById("accountDeleteOpen");
+      var deleteForm = document.getElementById("accountDeleteForm");
+      var deleteConfirm = document.getElementById("accountDeleteConfirm");
+      var deleteCancel = document.getElementById("accountDeleteCancel");
+      var deleteSubmit = document.getElementById("accountDeleteSubmit");
+      var deleteMsgEl = document.getElementById("accountDeleteMsg");
+      var DELETE_WORD = "EXCLUIR";
+
+      function deleteMsg(text, kind){
+        if(!deleteMsgEl) return;
+        deleteMsgEl.textContent = text;
+        if(kind === "err"){
+          deleteMsgEl.style.color = "var(--danger)";
+          deleteMsgEl.style.background = "var(--danger-wash)";
+          deleteMsgEl.style.borderColor = "var(--danger)";
+        } else {
+          deleteMsgEl.style.color = "var(--ink-2)";
+          deleteMsgEl.style.background = "var(--bg)";
+          deleteMsgEl.style.borderColor = "var(--hair)";
+        }
+        deleteMsgEl.hidden = false;
+      }
+      function deleteWordOk(){
+        return !!deleteConfirm && deleteConfirm.value.trim().toUpperCase() === DELETE_WORD;
+      }
+      function resetDeleteForm(){
+        if(!deleteForm) return;
+        deleteForm.hidden = true;
+        deleteOpenBtn.hidden = false;
+        deleteConfirm.value = "";
+        deleteConfirm.disabled = false;
+        deleteCancel.disabled = false;
+        deleteSubmit.disabled = true;
+        deleteMsgEl.hidden = true;
+      }
+      // apaga tudo que é do aluno neste aparelho. Tema fica: é preferência
+      // do aparelho, não dado da conta.
+      function wipeLocalData(){
+        var keys = [];
+        try{
+          for(var i = 0; i < localStorage.length; i++){
+            var k = localStorage.key(i);
+            if(k && k.indexOf("toefl_") === 0 && k !== LS_THEME) keys.push(k);
+          }
+        }catch(e){}
+        keys.forEach(function(k){ try{ localStorage.removeItem(k); }catch(e){} });
+      }
+      if(deleteForm && deleteOpenBtn){
+        deleteOpenBtn.addEventListener("click", function(){
+          deleteOpenBtn.hidden = true;
+          deleteForm.hidden = false;
+          deleteMsgEl.hidden = true;
+          deleteConfirm.focus();
+        });
+        deleteCancel.addEventListener("click", resetDeleteForm);
+        deleteConfirm.addEventListener("input", function(){ deleteSubmit.disabled = !deleteWordOk(); });
+        deleteForm.addEventListener("submit", function(e){
+          e.preventDefault();
+          if(!deleteWordOk()) return;
+          deleteSubmit.disabled = true;
+          deleteCancel.disabled = true;
+          deleteConfirm.disabled = true;
+          deleteMsg("Excluindo sua conta...", "ok");
+          function fail(text){
+            deleteConfirm.disabled = false;
+            deleteCancel.disabled = false;
+            deleteSubmit.disabled = !deleteWordOk();
+            deleteMsg(text, "err");
+          }
+          // mesmo cuidado do checkout: manda o token de sessão explicitamente
+          client.auth.getSession().then(function(sessionRes){
+            var token = sessionRes && sessionRes.data && sessionRes.data.session && sessionRes.data.session.access_token;
+            var opts = { body: { confirm: DELETE_WORD } };
+            if(token) opts.headers = { Authorization: "Bearer " + token };
+            return client.functions.invoke("delete-account", opts);
+          })
+            .then(function(res){
+              if(res.error || !res.data || !res.data.deleted){
+                var ctx = res.error && res.error.context;
+                (ctx && typeof ctx.json === "function" ? ctx.json().catch(function(){ return null; }) : Promise.resolve(null))
+                  .then(function(body){
+                    fail((body && body.error) || "Não foi possível excluir a conta agora. Tente de novo em alguns minutos.");
+                  });
+                return;
+              }
+              // conta apagada no servidor. Para a sincronização antes de
+              // limpar o aparelho, senão um push pendente tentaria regravar.
+              if(pushTimer){ clearTimeout(pushTimer); pushTimer = null; }
+              onSyncedWrite = null;
+              forceSyncPush = null;
+              wipeLocalData();
+              deleteMsg("Conta excluída. Até mais.", "ok");
+              function done(){ location.href = location.pathname; }
+              // a sessão já não vale no servidor: encerra só a cópia local
+              client.auth.signOut({ scope: "local" }).then(done, done);
+            })
+            .catch(function(){ fail("Erro de conexão. Sua conta não foi excluída. Tente de novo."); });
+        });
+      }
     })();
 
     client.auth.onAuthStateChange(function(event, session){

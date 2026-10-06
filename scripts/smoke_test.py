@@ -2,9 +2,9 @@
 
 Builda o site, abre o artifact resultante num Chrome headless com um script
 de verificacao injetado, e reporta PASS/FAIL de cada checagem: gate de
-login, progresso/meta diaria, painel, "Minha conta", tema, certificado,
-botoes de pronuncia/audio, gravador de voz, e ausencia de erro de JS ou
-mojibake. Nao substitui teste manual em navegador de verdade nem em
+login, progresso/meta diaria, painel, "Minha conta" (incluindo o formulario
+de excluir conta), tema, certificado, botoes de pronuncia/audio, gravador de
+voz, paginas legais, e ausencia de erro de JS ou mojibake. Nao substitui teste manual em navegador de verdade nem em
 celular real (ver ROADMAP.md, item 10 de qualidade), mas pega regressao
 estrutural sem precisar testar tudo na mao a cada mudanca.
 
@@ -73,9 +73,26 @@ var dashClose = document.getElementById("dashboardClose"); if(dashClose) dashClo
 var accBtn = document.getElementById("accountBtn");
 if(accBtn) accBtn.click();
 check("account_opens", function(){ return document.getElementById("accountModal").hidden === false; });
-["accountEmailForm", "accountPasswordForm", "accountThemeTabs"].forEach(function(id){
+["accountEmailForm", "accountPasswordForm", "accountThemeTabs", "accountAccess", "accountDeleteForm"].forEach(function(id){
   check("account_" + id, function(){ return !!document.getElementById(id); });
 });
+// excluir conta: formulario fechado ate clicar, e o envio so libera com a
+// palavra de confirmacao (nao envia nada de verdade aqui)
+check("account_delete_starts_closed", function(){ return document.getElementById("accountDeleteForm").hidden === true; });
+var delOpen = document.getElementById("accountDeleteOpen"); if(delOpen) delOpen.click();
+check("account_delete_opens", function(){ return document.getElementById("accountDeleteForm").hidden === false; });
+check("account_delete_submit_locked", function(){ return document.getElementById("accountDeleteSubmit").disabled === true; });
+var delInput = document.getElementById("accountDeleteConfirm");
+if(delInput){ delInput.value = "excluir"; delInput.dispatchEvent(new Event("input")); }
+check("account_delete_submit_unlocks", function(){ return document.getElementById("accountDeleteSubmit").disabled === false; });
+var delCancel = document.getElementById("accountDeleteCancel"); if(delCancel) delCancel.click();
+check("account_delete_cancel_closes", function(){
+  return document.getElementById("accountDeleteForm").hidden === true && document.getElementById("accountDeleteConfirm").value === "";
+});
+check("legal_links_exist", function(){
+  return document.querySelectorAll('a[href="termos.html"]').length >= 4 && document.querySelectorAll('a[href="privacidade.html"]').length >= 4;
+});
+check("lock_message_removed", function(){ return !document.getElementById("lockMsg"); });
 var accClose = document.getElementById("accountClose"); if(accClose) accClose.click();
 
 var root = document.documentElement;
@@ -124,6 +141,23 @@ def mojibake_count():
     return len(re.findall(r"â€.|Ã[^A-Za-z ]", data))
 
 
+LEGAL_PAGES = ["termos.html", "privacidade.html"]
+
+
+def legal_page_checks():
+    """Paginas legais existem, tem conteudo e linkam de volta pro app."""
+    out = {}
+    for name in LEGAL_PAGES:
+        path = ARTIFACT.parent / name
+        key = "legal_page_" + name.split(".")[0]
+        if not path.exists():
+            out[key] = False
+            continue
+        data = path.read_text(encoding="utf-8")
+        out[key] = ("<h1>" in data and data.count("<h2>") >= 8 and 'href="index.html"' in data)
+    return out
+
+
 def run_browser_checks():
     html = ARTIFACT.read_text(encoding="utf-8")
     html = html.replace("</body>", TEST_JS)
@@ -162,6 +196,7 @@ def main():
 
     print("Rodando checagens no Chrome headless...")
     results = run_browser_checks()
+    results.update(legal_page_checks())
 
     failed = []
     print()

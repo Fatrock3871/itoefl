@@ -10,6 +10,8 @@ _snapshots/
 app/module_fragments.json
 app/module_fragments_final.json
 artifact/index.html
+artifact/termos.html
+artifact/privacidade.html
 
 # Credenciais do Supabase (a anon key é pública, mas fica fora do repo por higiene)
 app/supabase_config.json
