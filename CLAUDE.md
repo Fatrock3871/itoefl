@@ -17,8 +17,10 @@ O pacote Python `markdown` (3.10+) é a única dependência do build —
 cd app
 python build_pipeline.py     # consolidated/*.md  -> app/module_fragments_final.json
 python build.py              # fragments + styles.css + app.js  -> artifact/index.html
+                             # legal/*.md  -> artifact/termos.html, artifact/privacidade.html
 cd ..
 python scripts\serve.py      # abre http://localhost:8000/artifact/index.html
+python scripts\smoke_test.py # builda e roda as checagens num Chrome headless
 ```
 
 `artifact/index.html` é **gerado** — CSS e JS ficam embutidos nele pelo
@@ -39,15 +41,23 @@ app/build_sentence_data.py  Itens do widget Build a Sentence (M4)
 app/render_quiz.py        Renderizador dos widgets de quiz/drill
 app/render_srs.py         Renderizador do widget de flashcards (M6)
 app/render_build.py       Renderizador do widget Build a Sentence (M4)
+app/render_errorlog.py    Renderizador do formulário de Registro de erros (M1 a M6)
+app/render_weeklydash.py  Renderizador do dashboard semanal (M0)
 app/app.js                Runtime: tema, abas, progresso (checkboxes + badges), quizzes
 app/styles.css            Estilo (tema claro/escuro/sistema)
 app/module_fragments*.json  Saída do pipeline (gerado; não editar)
 artifact/index.html       Site final (gerado; não editar)
-supabase/schema.sql       Backend (MVP): profiles + user_state (jsonb) com RLS
+legal/*.md                Termos de Uso e Política de Privacidade (fonte)
+artifact/termos.html      Páginas legais (geradas pelo build.py; não editar)
+artifact/privacidade.html
+supabase/schema.sql       Backend: profiles, user_state (jsonb), entitlements, coupons, com RLS
+supabase/functions/       Edge functions: create-checkout, mp-webhook, delete-account
+supabase/config.toml      Config das functions (mp-webhook roda sem verificação de JWT)
 supabase/schema-content-optional.sql   Tabelas de conteúdo — só se um dia servir do banco
 supabase/content-seed-optional.json    Seed das tabelas de conteúdo (opcional)
 app/supabase_config.json  Credenciais (gitignored; .example commitado). Sem ele → modo offline
 scripts/serve.py          Servidor local
+scripts/smoke_test.py     Suíte de checagens automáticas (rodar antes de commitar)
 docs/                     Análises e notas de decisão
 _archive/                 Versão pré-2026: index.html monolítico + os 10 .md antigos
 _snapshots/               Cópias com timestamp antes de mudanças estruturais
@@ -62,6 +72,11 @@ _snapshots/               Cópias com timestamp antes de mudanças estruturais
 - **Palavras dos flashcards (M6)** → `app/vocab_kit.json`.
 - **Comportamento/interação** → `app/app.js` e os `app/render_*.py`.
 - **Estilo** → `app/styles.css`.
+- **Termos e privacidade** → `legal/*.md`. O build avisa enquanto houver campo
+  `[PREENCHER: ...]` sem preencher.
+- **Código de servidor** → `supabase/functions/`. Mudança ali só vale depois
+  de `supabase functions deploy <nome>`. O deploy já reportou sucesso sem
+  atualizar o código; conferir a versão publicada depois de cada deploy.
 
 Os módulos M1, M2, M4 e M6 têm um `build_modN()` no pipeline que injeta o
 widget no fragmento; os demais usam `build_plain()`. Cronômetro, gravador e
@@ -95,10 +110,12 @@ usado como referência de conteúdo — só como matéria-prima a ser reescrita.
 | Listening | ~18 min | 47 (35 pontuados) | 35 | Sim (2 estágios) |
 | Writing | ~23 min | 12 | 20 | Não (linear) |
 | Speaking | ~8 min | 11 | 55 | Não (linear) |
-| **Total** | **~1h23–1h29** | 120 | 120 | |
+| **Total** | **~1h23–1h29** | 120 | 145 | |
 
 Correção: 108 itens por máquina + 12 por IA. Pontuação reportada em **bandas
-CEFR 1–6** (com score legado 0–120 como referência).
+CEFR 1–6** (com score legado 0–120 como referência). Os 145 pontos brutos não
+são o score 0–120: são a soma das quatro seções antes da conversão, conferida
+em `docs/ets-blueprint-2026.md`.
 
 Tipos de item por seção:
 
@@ -149,10 +166,9 @@ existindo, sem mudança, é a **medição de conclusão por módulo** (checkboxe
 progresso `.pchk`, % na sidebar/jornada, selo ✓ quando 100%, e o certificado
 final, que ainda exige os 10 módulos concluídos). `isUnlocked(key)` em `app.js`
 foi deixada no código (sempre retorna `true` agora) só por compatibilidade com
-quem ainda chama ela (`navTo()`, `updateBadges()`); não reintroduzir lógica de
-bloqueio ali sem pedido explícito do usuário. `showLockMessage()`/`.lock-msg`
-ficaram como código morto inofensivo (nunca mais chamados) — podem ser
-removidos numa limpeza futura, não é urgente.
+`updateBadges()`, que ainda a chama; não reintroduzir lógica de bloqueio ali
+sem pedido explícito do usuário. `showLockMessage()` e `.lock-msg`, que eram
+código morto, foram removidos em 2026-10-06.
 
 ## Camadas visuais (runtime, montadas no `app.js`)
 
@@ -162,16 +178,30 @@ próximo `<h2>` num card, estilo "unit card". Não tocam nos `.md`.
 
 ## Estado e progresso do usuário (runtime)
 
-`localStorage`, chaves com prefixo `toefl_`: `toefl_progress_v1` (checkboxes),
-`toefl_theme_v1`, `toefl_active_tab`, `toefl_quiz_<drillId>_v1`,
-`toefl_timer_preset`, `toefl_srs_kit50_v1`, `toefl_bsq_m4build_v1`.
+`localStorage`, chaves com prefixo `toefl_`.
 
-**Sincronização:** quando o Supabase está configurado e o aluno logado, as chaves
-que casam com `SYNC_PREFIXES` em `app.js` (`toefl_progress`, `toefl_srs_`,
-`toefl_bsq_`, `toefl_quiz_`) são empacotadas num blob e salvas em
-`user_state.state`. `safeSet` marca `toefl_dirty` e agenda um push debounced.
-`toefl_theme_v1`, `toefl_active_tab`, `toefl_timer_preset` ficam sempre locais.
-`toefl_sync_at` / `toefl_dirty` são internos do sync. Setup: `docs/supabase-setup.md`.
+Sincronizadas com a conta (casam com `SYNC_PREFIXES` em `app.js`):
+`toefl_progress_v1` (checkboxes das Partes), `toefl_h3progress_v1` (checkboxes
+das subseções), `toefl_quiz_<drillId>_v1`, `toefl_srs_kit50_v1`,
+`toefl_bsq_m4build_v1`, `toefl_errlog_<módulo>_v1` (registro de erros),
+`toefl_cert_date_v1`, `toefl_streak_v1`, `toefl_dailygoal_v1`,
+`toefl_weeklydash_v1`, `toefl_avatar_v1`.
+
+Sempre locais, por aparelho: `toefl_theme_v1`, `toefl_active_tab`,
+`toefl_timer_preset`, `toefl_partpos_v1` (Parte aberta em cada módulo),
+`toefl_lastpos_v1` (alvo do "Continuar de onde parei"). `toefl_sync_at` e
+`toefl_dirty` são internos do sync.
+
+**Sincronização:** quando o Supabase está configurado e o aluno logado, as
+chaves sincronizadas são empacotadas num blob e salvas em `user_state.state`.
+`safeSet` marca `toefl_dirty` e agenda um push debounced. Setup:
+`docs/supabase-setup.md`.
+
+**Conta e acesso pago:** `entitlements` guarda quem pagou e só o `service_role`
+escreve nela (via `mp-webhook`). "Minha conta" mostra a situação do acesso e
+permite excluir a conta, o que chama a function `delete-account` e apaga em
+cascata `profiles`, `user_state` e `entitlements`. O bloqueio de quem não pagou
+é só uma camada visual: o conteúdo vai embutido no HTML.
 
 Os botões Exportar/Importar na sidebar empacotam todas as chaves `toefl_*` em
 JSON. Ao mudar o formato do estado, escrever migração — não descartar progresso.

@@ -50,7 +50,7 @@ Nada das etapas seguintes anda sem esta. Ordem sugerida de cima para baixo.
       sem commit (`app.js`, `build.py`, `create-checkout/index.ts`,
       `schema.sql`, este arquivo, `docs/roadmap-expansao.md`).
 - [x] (C) Colocar `supabase/.temp/` no `.gitignore`.
-- [ ] (C) Tirar o debug de `create-checkout/index.ts` (linha 105 ainda devolve
+- [x] (C) Tirar o debug de `create-checkout/index.ts` (linha 105 ainda devolve
       `mpStatus` e `mpBody` para o aluno) e publicar a function. Conferir na
       aba "Code" do painel se o deploy pegou, já falhou calado duas vezes.
 
@@ -77,7 +77,7 @@ Nada das etapas seguintes anda sem esta. Ordem sugerida de cima para baixo.
 - [ ] (U) Resolver a validação da conta real do Mercado Pago (a criação de
       checkout com ela foi bloqueada pelo antifraude) e trocar as
       credenciais de teste pelas de produção.
-- [ ] (C) Mostrar "Pago" ou "Sem acesso" em Minha conta (a tabela
+- [x] (C) Mostrar "Pago" ou "Sem acesso" em Minha conta (a tabela
       `entitlements` já existe).
 
 **0.4 Publicar**
@@ -96,10 +96,19 @@ Nada das etapas seguintes anda sem esta. Ordem sugerida de cima para baixo.
       o endereço final.
 - [ ] (U) Google Cloud: adicionar a URI de callback nova e tirar o app do
       modo "Testing", senão só testadores cadastrados logam com Google.
-- [ ] (C) Página de termos de uso e política de privacidade. Não existe
-      hoje. É exigida para vender, para o Google aprovar o login em produção
-      e para as lojas de app.
-- [ ] (C) Excluir conta (função no servidor com `service_role`). Pendência
+- [x] (C) Página de termos de uso e política de privacidade. Escritas em
+      `legal/*.md`, geradas pelo build como `artifact/termos.html` e
+      `artifact/privacidade.html`, com link no cadastro, na compra, em Minha
+      conta e na sidebar.
+- [ ] (U) Preencher os campos `[PREENCHER: ...]` dos dois textos (nome ou
+      razão social, CPF ou CNPJ, e-mail de contato). O build avisa enquanto
+      faltar. Os textos são um rascunho: passar por um advogado antes de
+      vender.
+- [ ] (U) Rodar o `supabase/schema.sql` atualizado no SQL Editor. Ele apaga
+      do banco a função `email_for_username` e a coluna `username`, sobras do
+      login por nome de usuário. A função ficava exposta a visitante sem
+      login e devolvia o e-mail de qualquer nome de usuário.
+- [x] (C) Excluir conta (função no servidor com `service_role`). Pendência
       antiga que vira obrigação com LGPD e com as lojas.
 
 **0.5 Validar**
@@ -121,7 +130,7 @@ Pequenas, independentes entre si, podem entrar em qualquer intervalo.
       tom: repetição, trecho quebrado, referência cruzada desatualizada.
 - [ ] (C) Conferir os números do formato 2026 linha a linha contra o
       documento oficial da ETS. Pré-requisito do aprofundamento teórico.
-- [ ] (C) Corrigir a tabela de formato do `CLAUDE.md`: o total de pontos
+- [x] (C) Corrigir a tabela de formato do `CLAUDE.md`: o total de pontos
       brutos está 120, mas as seções somam 145, que é o número registrado na
       verificação contra a ETS (Fase 7).
 - [ ] (U) M8: confirmar na inscrição da ETS a ordem Writing e Speaking, que
@@ -134,7 +143,7 @@ Pequenas, independentes entre si, podem entrar em qualquer intervalo.
 - [ ] (C) Estender o painel "Seu desempenho real" para além de M1 e M2.
 - [ ] (D) Duas perguntas antigas sem resposta: M0 expandido como introdução?
       M9 fica, some ou é fundido? Na falta de resposta, ficam como estão.
-- [ ] (C) Limpeza: remover `showLockMessage()` e `.lock-msg` (código morto),
+- [x] (C) Limpeza: remover `showLockMessage()` e `.lock-msg` (código morto),
       a RPC `email_for_username` e a coluna `username` do banco, e atualizar
       o `CLAUDE.md` (faltam as chaves `toefl_partpos_v1`,
       `toefl_h3progress_v1`, `toefl_avatar_v1`, os renderizadores
@@ -237,6 +246,41 @@ Não foram pedidos, apareceram ao consolidar a lista.
 - Medição de uso, para saber onde os alunos param.
 - Plano do Supabase: conferir limites e política de pausa do plano grátis
   antes de depender dele com gente pagando.
+
+---
+
+## Sessão 2026-10-06 — GitHub, roadmap único e cinco pendências de código
+
+- **Repositório no GitHub:** `https://github.com/Fatrock3871/itoefl`, privado,
+  branch `main`. README reescrito para colaboradores.
+- **Debug do checkout removido.** O erro do Mercado Pago agora vai só para o
+  log da function; o aluno vê mensagem genérica.
+- **Minha conta ganhou duas seções.** "Acesso" mostra pago, sem acesso ou
+  conta de administrador, lendo `entitlements`. "Excluir conta" pede a
+  palavra EXCLUIR, chama a function nova `delete-account` e limpa os dados do
+  aparelho. A function só apaga o dono do token e confere a palavra de novo
+  no servidor.
+- **Termos de Uso e Política de Privacidade** em `legal/*.md`, publicados como
+  páginas próprias para abrirem sem login. Rascunho, com campos a preencher.
+- **Limpeza:** `showLockMessage()`, `.lock-msg` e `UNLOCK_PCT` removidos;
+  textos que ainda falavam em "usuário e senha" corrigidos; `schema.sql`
+  passou a apagar as sobras do login por nome de usuário; `CLAUDE.md`,
+  `docs/supabase-setup.md` e `docs/mercadopago-setup.md` atualizados.
+- **Bug real achado no caminho: o webhook do Mercado Pago nunca rodaria.** O
+  `mp-webhook` estava publicado com verificação de JWT ligada. O Mercado Pago
+  não manda header de autenticação, então o Supabase respondia 401 antes de o
+  código rodar. Nenhum pagamento aprovado liberaria acesso. Não tinha
+  aparecido porque nenhum pagamento de teste chegou a ser aprovado.
+  Corrigido em `supabase/config.toml` (`verify_jwt = false` só para essa
+  function) e republicado. Conferido por chamada direta: antes 401, agora
+  `ok` para notificação que não é pagamento e 502 para pagamento inexistente,
+  que é o comportamento esperado do código.
+- **Publicado no Supabase nesta sessão:** `create-checkout` v11 (conteúdo
+  conferido contra o arquivo local), `mp-webhook` v4, `delete-account` v1.
+- **Não testado:** a exclusão de conta de ponta a ponta com um usuário real.
+  Testado só o formulário (smoke test) e a recusa de chamada sem login.
+  Testar com uma conta descartável antes de publicar.
+- Smoke test passou de 23 para 33 checagens.
 
 ---
 

@@ -53,6 +53,7 @@ commitado.
   - Flashcards: `app/vocab_kit.json`
   - Comportamento: `app/app.js` e `app/render_*.py`
   - Estilo: `app/styles.css`
+  - Termos de Uso e Política de Privacidade: `legal/*.md`
   - Banco e funções de servidor: `supabase/`
 - **Teste antes de enviar:** `python scripts\smoke_test.py` builda o site e
   roda as checagens num Chrome headless. Precisa do Chrome instalado.

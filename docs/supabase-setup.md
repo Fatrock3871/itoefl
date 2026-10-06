@@ -3,8 +3,8 @@
 Sem este arquivo configurado, o app funciona 100% sem login — o progresso fica
 no `localStorage` do navegador, sem tela de entrada. **Com ele configurado**,
 o app passa a exigir login antes de liberar o conteúdo (tela `#authGate`,
-decisão do usuário em 2026-09-14): o aluno entra com **usuário + senha** ou
-Google (decisão de 2026-09-17, substituiu o link mágico por e-mail original),
+decisão do usuário em 2026-09-14): o aluno entra com **e-mail + senha** ou
+Google,
 e o progresso (checkboxes, flashcards SRS, quiz, Build a Sentence, registro
 de erros) passa a acompanhar a conta e sincronizar entre dispositivos. Uma
 falha ao carregar a biblioteca do Supabase (CDN bloqueado/sem internet)
@@ -12,16 +12,12 @@ libera o conteúdo mesmo assim — só a ausência de configuração ou uma falh
 rede evita o bloqueio, nunca um bug trava o aluno pra fora do próprio
 material.
 
-**Cadastro:** e-mail + usuário (letras minúsculas/números/`_`, 3–20
-caracteres) + senha. O e-mail confirma que a conta é real (se a confirmação
-por e-mail estiver ligada no seu projeto — é o padrão do Supabase) e serve
-como recuperação: "esqueci minha senha" manda um link de redefinição pro
-e-mail cadastrado; "esqueci meu usuário" manda um link de acesso direto (o
-usuário aparece na barra do topo assim que loga por ele). **Login é só
-usuário + senha** — o Supabase Auth nativamente só autentica por e-mail, não
-por usuário, então o app resolve usuário → e-mail no banco antes de chamar
-`signInWithPassword` (função `email_for_username` em `schema.sql`, ver
-seção 2 abaixo).
+**Cadastro e login:** e-mail + senha, ou conta Google. O e-mail confirma que
+a conta é real (se a confirmação por e-mail estiver ligada no seu projeto, que
+é o padrão do Supabase) e serve como recuperação: "Esqueci minha senha" manda
+um link de redefinição pro e-mail cadastrado. O login por nome de usuário
+existiu por alguns dias em setembro de 2026 e foi removido; o `schema.sql`
+atual apaga do banco o que aquela versão criou.
 
 O que **não** sincroniza (fica sempre local por dispositivo): tema, aba ativa,
 preset do cronômetro.
@@ -137,19 +133,17 @@ sempre tem prioridade sobre a do Google, caso queira usar outra.
 
 ## 5. Como funciona no uso
 
-- **Entrar:** "Entrar com Google" loga direto; usuário + senha loga na hora,
-  sem sair da página. Depois de logado, o app mostra o usuário (ou e-mail, se
-  ainda não tem usuário — ex.: quem entrou só pelo Google)/avatar e um botão
-  **Sair**.
-- **Criar conta:** "Criar conta" pede e-mail + usuário + senha. Se a
-  confirmação por e-mail estiver ligada (padrão do Supabase), o aluno confirma
-  antes do primeiro login — o usuário escolhido só é gravado no perfil quando
-  a conta tiver uma sessão ativa de verdade (na hora, se a confirmação
-  estiver desligada; depois de confirmar, se estiver ligada).
-- **Esqueci a senha / o usuário:** dois links na tela de login, cada um pede
-  só o e-mail. "Esqueci a senha" manda um link de redefinição. "Esqueci o
-  usuário" manda um link de acesso direto — o usuário aparece na barra do
-  topo assim que a pessoa entra por ele.
+- **Entrar:** "Entrar com Google" loga direto; e-mail + senha loga na hora,
+  sem sair da página. Depois de logado, o app mostra o e-mail, o avatar e um
+  botão **Sair**.
+- **Criar conta:** "Criar conta" pede e-mail + senha. Se a confirmação por
+  e-mail estiver ligada (padrão do Supabase), o aluno confirma antes do
+  primeiro login.
+- **Esqueci a senha:** link na tela de login, pede só o e-mail e manda um link
+  de redefinição.
+- **Minha conta** (engrenagem no topo): tema, situação do acesso pago, troca
+  de e-mail e senha, e exclusão da conta. A exclusão depende da edge function
+  `delete-account` estar publicada (`supabase functions deploy delete-account`).
 - **Primeiro login num dispositivo novo:** o app baixa o progresso da nuvem e
   recarrega a página.
 - **Edições:** cada mudança de progresso é enviada para a nuvem ~2,5 s depois
@@ -169,8 +163,7 @@ sempre tem prioridade sobre a do Google, caso queira usar outra.
 | Sintoma | Causa provável |
 |---|---|
 | Tela de login não aparece | `build.py` imprimiu `nao configurado`; confira `app/supabase_config.json` e rebuilde |
-| "Usuário ou senha incorretos" mesmo com os dados certos | A conta ainda não confirmou o e-mail (se a confirmação estiver ligada), ou o `schema.sql` novo (seção "LOGIN POR NOME DE USUÁRIO") não foi rodado — sem a função `email_for_username`, a busca de usuário falha |
-| "Esse nome de usuário já está em uso" mesmo sendo novo | A função `email_for_username` não existe ainda (schema não rodado) e a checagem trata o erro como "já existe" por segurança — rode o schema |
+| "E-mail ou senha incorretos" mesmo com os dados certos | A conta ainda não confirmou o e-mail (se a confirmação estiver ligada) |
 | Link de recuperação/confirmação abre e nada acontece | O redirect aponta pra outro endereço; ajuste em Authentication → URL Configuration |
 | "Erro ao sincronizar" | O schema não foi rodado, ou as políticas de RLS não foram criadas |
 | Não recebe o e-mail de confirmação/recuperação | Limite de envio do plano grátis atingido; aguarde ou configure SMTP próprio |
