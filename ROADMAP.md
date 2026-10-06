@@ -2,18 +2,315 @@
 
 Memória entre sessões. Atualizar ao concluir cada etapa.
 
-**Última atualização:** 2026-09-22
+**Última atualização:** 2026-10-06
+**Lista única de pendências:** seção "Tudo que falta" logo abaixo.
+**Plano de expansão (2026-10-05):** as quatro frentes novas pedidas pelo
+usuário (app Android/Windows/macOS/iOS, didática com videoaulas e
+aprofundamento, banco de questões com correção de redações por agente,
+conversação) estão planejadas em `docs/roadmap-expansao.md`, em 7 ondas
+(0 a 6). Só plano, nada construído. A Onda 0 é o item 1 do mapa abaixo
+(publicar o site), que continua sendo o bloqueio de tudo. Decisões que o
+usuário ainda precisa tomar estão na seção 8 daquele arquivo.
 **Agora:** conteúdo, autenticação (e-mail+senha + Google, ambos configurados
-e funcionando), pagamento (Mercado Pago configurado, teste de compra
-pendente de confirmação), painel, pronúncia, áudio de Listening, transcrição
-de Speaking e "Minha conta" estão prontos. Navegação entre módulos agora é
-**livre** (decisão revertida em 2026-09-20, ver CLAUDE.md) — a conclusão de
-cada módulo continua sendo medida, só não bloqueia mais o acesso aos outros.
-Sessão de 2026-09-21 trouxe uma leva grande de UX (identidade visual da
-logo, paginação por Parte tipo flashcard, progresso granular). Sessão de
-2026-09-22 (ver bloco abaixo) configurou Google login e Mercado Pago de
-ponta a ponta e removeu o login por nome de usuário. O que falta está
-mapeado abaixo, por prioridade.
+e funcionando), pagamento (Mercado Pago configurado, cupom de desconto
+implementado, teste de compra pendente de confirmação), painel, pronúncia,
+áudio de Listening, transcrição de Speaking e "Minha conta" estão prontos.
+Navegação entre módulos agora é **livre** (decisão revertida em 2026-09-20,
+ver CLAUDE.md) — a conclusão de cada módulo continua sendo medida, só não
+bloqueia mais o acesso aos outros. Sessão de 2026-09-21 trouxe uma leva
+grande de UX (identidade visual da logo, paginação por Parte tipo
+flashcard, progresso granular). Sessão de 2026-09-22 configurou Google
+login e Mercado Pago de ponta a ponta e removeu o login por nome de
+usuário. Sessão de 2026-09-24 (ver bloco abaixo) implementou cupom de
+desconto no checkout e reabriu a discussão de trocar o Mercado Pago por
+outro gateway (ainda sem decisão). O que falta está mapeado abaixo, por
+prioridade.
+
+---
+
+## Tudo que falta (consolidado em 2026-10-06)
+
+Lista única de pendências, juntando o que estava espalhado neste arquivo
+(mapa de 2026-09-20, sessões de setembro, Fase 6, lista de 12 pontos, review
+do M0) com o plano de expansão de `docs/roadmap-expansao.md`. **Esta seção
+substitui o "Mapa do que falta" mais abaixo,** que fica só como histórico e
+detalhe. Marcar `[x]` aqui ao concluir.
+
+Legenda de quem faz: **(U)** só o usuário consegue (contas, painéis,
+pagamento, aparelho físico). **(C)** código ou conteúdo, feito em sessão.
+**(D)** decisão do usuário antes de qualquer trabalho.
+
+### Etapa 0: lançar o que já existe
+
+Nada das etapas seguintes anda sem esta. Ordem sugerida de cima para baixo.
+
+**0.1 Arrumar a casa**
+
+- [ ] (C) Commitar o trabalho do cupom, que está pronto e testado mas ainda
+      sem commit (`app.js`, `build.py`, `create-checkout/index.ts`,
+      `schema.sql`, este arquivo, `docs/roadmap-expansao.md`).
+- [ ] (C) Colocar `supabase/.temp/` no `.gitignore`.
+- [ ] (C) Tirar o debug de `create-checkout/index.ts` (linha 105 ainda devolve
+      `mpStatus` e `mpBody` para o aluno) e publicar a function. Conferir na
+      aba "Code" do painel se o deploy pegou, já falhou calado duas vezes.
+
+**0.2 Segurança, antes de qualquer aluno real**
+
+- [ ] (U) Trocar a senha do banco do Supabase e a senha da conta Google
+      admin. As duas apareceram em texto puro num chat em 2026-09-22.
+- [ ] (U) Confirmar que a `sb_secret` e a `service_role` coladas por engano
+      na fase do Supabase foram rotacionadas.
+- [ ] (U) Religar "Confirm email" no Supabase (desligado para teste).
+- [ ] (U+C) Configurar um SMTP próprio no Supabase. O limite de envio do
+      plano grátis já estourou só com testes, e com alunos reais vai travar
+      cadastro e recuperação de senha.
+
+**0.3 Pagamento**
+
+- [ ] (D) Ficar no Mercado Pago ou trocar de gateway. Aberto desde
+      2026-09-24. Decidir junto com o modelo de cobrança da correção por IA
+      (Etapa 3), porque assinatura muda o requisito.
+- [ ] (D) Confirmar o preço de lançamento. Hoje está R$ 9,90 (era R$ 197).
+- [ ] (U) Concluir a compra de teste em aba anônima, sem extensão nenhuma,
+      e ver o acesso ser liberado de ponta a ponta. Dados do cartão de teste
+      na Sessão 2026-09-24.
+- [ ] (U) Resolver a validação da conta real do Mercado Pago (a criação de
+      checkout com ela foi bloqueada pelo antifraude) e trocar as
+      credenciais de teste pelas de produção.
+- [ ] (C) Mostrar "Pago" ou "Sem acesso" em Minha conta (a tabela
+      `entitlements` já existe).
+
+**0.4 Publicar**
+
+- [ ] (D) Onde hospedar e com qual endereço. O plano escrito é GitHub Pages.
+      Um domínio próprio vale a pena desde já: o endereço entra nas
+      configurações de Supabase, Google, gateway e, depois, nas lojas, e
+      trocar depois dá retrabalho em todos.
+- [ ] (U) Criar o repositório no GitHub e configurar o remoto (hoje não
+      existe nenhum).
+- [ ] (C) Publicar o `artifact/` buildado. Checklist completo na Fase 6.
+- [ ] (U) Supabase: trocar Site URL e Redirect URLs de `localhost:8000` para
+      o endereço final.
+- [ ] (U) Google Cloud: adicionar a URI de callback nova e tirar o app do
+      modo "Testing", senão só testadores cadastrados logam com Google.
+- [ ] (C) Página de termos de uso e política de privacidade. Não existe
+      hoje. É exigida para vender, para o Google aprovar o login em produção
+      e para as lojas de app.
+- [ ] (C) Excluir conta (função no servidor com `service_role`). Pendência
+      antiga que vira obrigação com LGPD e com as lojas.
+
+**0.5 Validar**
+
+- [ ] (U) Testar o site publicado num Android e num iPhone reais. Nunca foi
+      feito, toda verificação até hoje foi em Chrome headless.
+- [ ] (U) Testar a sincronização com dois aparelhos na mesma conta.
+- [ ] (U) Colocar de 3 a 5 pessoas reais para fazer o fluxo inteiro
+      (cadastro, compra, estudo) e anotar onde travam. É a maior lacuna do
+      projeto: dificuldade dos drills, ritmo e clareza nunca foram validados
+      por ninguém de fora.
+- [ ] (C) Rodar `python scripts\smoke_test.py` no build final.
+
+### Etapa 0B: pendências de conteúdo e produto herdadas
+
+Pequenas, independentes entre si, podem entrar em qualquer intervalo.
+
+- [ ] (C) Passada de consistência nos 10 módulos depois das reescritas de
+      tom: repetição, trecho quebrado, referência cruzada desatualizada.
+- [ ] (C) Conferir os números do formato 2026 linha a linha contra o
+      documento oficial da ETS. Pré-requisito do aprofundamento teórico.
+- [ ] (C) Corrigir a tabela de formato do `CLAUDE.md`: o total de pontos
+      brutos está 120, mas as seções somam 145, que é o número registrado na
+      verificação contra a ETS (Fase 7).
+- [ ] (U) M8: confirmar na inscrição da ETS a ordem Writing e Speaking, que
+      varia por centro.
+- [ ] (D) M7: os simulados continuam em texto ou viram interativos? Se
+      virarem, sem feedback item a item, só no final.
+- [ ] (C) M4: o texto tem 30 itens de Build a Sentence e o widget só 10.
+- [ ] (C) M0: calculadora de score interativa e resumo executivo no topo
+      (dois itens da review externa que nunca foram iniciados).
+- [ ] (C) Estender o painel "Seu desempenho real" para além de M1 e M2.
+- [ ] (D) Duas perguntas antigas sem resposta: M0 expandido como introdução?
+      M9 fica, some ou é fundido? Na falta de resposta, ficam como estão.
+- [ ] (C) Limpeza: remover `showLockMessage()` e `.lock-msg` (código morto),
+      a RPC `email_for_username` e a coluna `username` do banco, e atualizar
+      o `CLAUDE.md` (faltam as chaves `toefl_partpos_v1`,
+      `toefl_h3progress_v1`, `toefl_avatar_v1`, os renderizadores
+      `render_errorlog.py` e `render_weeklydash.py`, o `smoke_test.py` e as
+      edge functions).
+- [ ] (C) Mover o histórico de sessões deste arquivo para
+      `docs/historico-sessoes.md`. Com mais de 1.100 linhas ele já não cabe
+      numa leitura só.
+
+### Etapa 1: app instalável e videoaulas
+
+Detalhe em `docs/roadmap-expansao.md`, seções 3 e 4.
+
+- [ ] (C) PWA: manifesto, service worker com versão carimbada pelo build,
+      ícones, botão "Instalar app", aviso de nova versão.
+- [ ] (U) Instalar e testar nas 4 plataformas: Android, Windows, macOS, iOS.
+- [ ] (C) Plano B para a transcrição do gravador no iPhone.
+- [ ] (D) Hospedagem dos vídeos. Recomendação: YouTube não listado agora.
+- [ ] (U) Entregar os vídeos gravados, pode ser um por vez.
+- [ ] (C) `app/videos.json` e player com carregamento no clique, no topo do
+      módulo e de cada Parte. "Aula assistida" conta no progresso.
+- [ ] (C) Legenda e transcrição recolhível.
+- [ ] (C) Seletor "trilha rápida" ou "trilha completa".
+
+### Etapa 2: banco de questões e aprofundamento
+
+Detalhe em `docs/roadmap-expansao.md`, seções 4 e 5.
+
+- [ ] (C) Formato do item e script de validação em `bank/`.
+- [ ] (C) Tabelas `items` e `attempts` no Supabase, leitura só para quem
+      pagou (proteção real do conteúdo, hoje o bloqueio é visual).
+- [ ] (C) Migrar os 128 itens atuais para o banco, com contagem declarada.
+- [ ] (C) Modo prática com filtros e "só as que errei".
+- [ ] (C) Caderno de erros com revisão espaçada e botão "reportar questão".
+- [ ] (D) Tamanho da amostra que o usuário revisa por lote. Sugestão: 10%.
+- [ ] (C+U) Produzir os lotes até 600 itens: 200 Reading, 200 Listening,
+      150 Build a Sentence, 50 enunciados de Writing.
+- [ ] (C) Áudio de Listening com voz neural, gerado uma vez por item.
+- [ ] (C) Bloco de aprofundamento recolhível no pipeline e checkpoint de
+      questões no fim de cada Parte.
+- [ ] (C) Escrever o aprofundamento, um módulo por sessão: M3, M1, M2, M4,
+      depois M5, M6, M9, M0, M7, M8.
+- [ ] (C+U) Banco v2, 1.500 itens, com Listen and Repeat e Interview.
+
+### Etapa 3: redações com correção por agente
+
+Detalhe em `docs/roadmap-expansao.md`, seção 6.
+
+- [ ] (D) Modelo de cobrança: créditos, assinatura ou cota incluída. Acesso
+      vitalício de R$ 9,90 não paga correção ilimitada.
+- [ ] (C) Piloto com 50 redações para medir custo e qualidade por modelo.
+- [ ] (C) Rubrica versionada por task e conjunto de calibração.
+- [ ] (C) Tabelas `submissions` e `feedback`, edge function `grade-writing`
+      com cota e limite no servidor.
+- [ ] (C) Tela de escrita (cronômetro, contador de palavras), tela de
+      devolutiva e histórico com evolução.
+- [ ] (C) Painel de revisão para a equipe ajustar notas.
+- [ ] (C) Consentimento de LGPD no primeiro envio.
+- [ ] (C) Cobrança do que for decidido (créditos ou assinatura) no gateway.
+
+### Etapa 4: lojas de aplicativo
+
+Detalhe em `docs/roadmap-expansao.md`, seção 3.
+
+- [ ] (U) Abrir a conta de desenvolvedor Google cedo, por causa do período
+      de teste obrigatório para conta nova.
+- [ ] (D) Nome do app nas lojas. "TOEFL" é marca registrada da ETS e já
+      causou um bloqueio de publicação neste projeto. Conferir a regra de
+      cada loja para uso de marca de terceiro.
+- [ ] (C+U) Play Store via PWABuilder, com `assetlinks.json` no domínio.
+- [ ] (C+U) Microsoft Store via PWABuilder.
+- [ ] (D) Conta Apple Developer e acesso a um Mac ou build em CI.
+- [ ] (C) Casca Capacitor com notificação de lembrete de estudo.
+- [ ] (U) Conferir a regra de pagamento dentro de app vigente na data.
+- [ ] (C+U) Submissão à App Store, iOS e macOS.
+
+### Etapa 5: Speaking com nota
+
+Detalhe em `docs/roadmap-expansao.md`, seção 7.
+
+- [ ] (C) Upload de áudio e transcrição no servidor.
+- [ ] (C) Listen and Repeat com nota de pronúncia por palavra e fonema.
+- [ ] (C) Simulador de Take an Interview por turnos, com rubrica e
+      calibração reaproveitadas das redações.
+- [ ] (C) Entrevista com perguntas de seguimento.
+
+### Etapa 6: longo prazo
+
+- [ ] (C) Banco v3, 3.000 itens ou mais.
+- [ ] (C) Simulados adaptativos em dois estágios montados do banco.
+- [ ] (C) Conversa por voz em tempo real, só dentro de plano de assinatura.
+- [ ] (U) Comunidade de alunos e encontros ao vivo.
+
+### Fora do código, a pensar antes de ter aluno pagante
+
+Não foram pedidos, apareceram ao consolidar a lista.
+
+- Canal de suporte ao aluno (um e-mail de contato já resolve no começo).
+- Página de venda e forma de divulgação. Hoje a primeira tela é o login.
+- Medição de uso, para saber onde os alunos param.
+- Plano do Supabase: conferir limites e política de pausa do plano grátis
+  antes de depender dele com gente pagando.
+
+---
+
+## Sessão 2026-09-24 — Cupom de desconto no checkout; botão "Pagar" travado de novo
+
+- **Cupom de desconto: implementado, aguardando teste do usuário.** Decisões
+  travadas com o usuário antes de mexer: cupons vivem numa tabela nova no
+  Supabase (não hardcoded, pra poder criar/desligar sem rebuild), só
+  desconto percentual (sem valor fixo), sem data de expiração nem limite de
+  usos — controle é só um campo `active` (liga/desliga a linha).
+  - `supabase/schema.sql`: tabela `coupons` (`code` texto primário,
+    `percent` 1–100, `active` boolean). RLS com policy de select só pra
+    `active = true`; nenhuma policy de insert/update/delete pra
+    `authenticated` — só o SQL Editor (ou `service_role`) cria/edita cupons.
+    Exemplo de uso comentado no próprio arquivo (`insert into coupons
+    (code, percent) values ('LANCAMENTO20', 20);`).
+  - `supabase/functions/create-checkout/index.ts`: aceita `coupon` opcional
+    no corpo da chamada; se vier preenchido, busca na tabela (case
+    insensitive via `ilike`), recusa com 400 + mensagem clara se inválido/
+    inativo, senão recalcula `unit_price` com o desconto antes de criar a
+    preferência no Mercado Pago.
+  - `app/build.py`: campo "Cupom de desconto (opcional)" novo no `#payGate`,
+    reaproveitando as classes `.auth-field`/`.auth-label`/`.auth-input` que
+    o login já usava (sem CSS novo).
+  - `app/app.js`: manda o valor do campo junto no `create-checkout`; e —
+    achado no caminho — o tratamento de erro genérico só mostrava "Edge
+    Function returned a non-2xx status code" pra qualquer falha, incluindo
+    cupom inválido. Corrigido lendo o corpo JSON de verdade da resposta
+    (`res.error.context.json()`) pra mostrar a mensagem real ("Cupom
+    inválido ou expirado.").
+  - **Testado de ponta a ponta e funcionando (2026-09-24).** `schema.sql`
+    rodado (tabela `coupons` criada), cupom `TESTE20` (20%) inserido via SQL
+    Editor, aplicado no checkout sandbox com sucesso. **Achado no
+    caminho, mesmo padrão já visto na sessão 2026-09-22:** o primeiro
+    `supabase functions deploy create-checkout` reportou sucesso mas a
+    versão publicada continuou sendo a antiga (sem lógica de cupom) —
+    resultado observado foi preço sempre R$ 9,90, sem erro nenhum, porque a
+    function nem tentava ler o cupom ainda. Confirmado comparando a aba
+    "Code" do painel (com Ctrl+Shift+R) com o arquivo local; um segundo
+    deploy resolveu. Vale desconfiar disso de novo sempre que um fix na
+    função não parecer "pegar" no teste.
+- **Botão "Pagar" do Mercado Pago travado de novo (mesmo sintoma da sessão
+  2026-09-22, item 4) — causa raiz confirmada de vez.** Usuário mandou print
+  mostrando a tela "Revise os dados antes de pagar" (checkout hospedado pelo
+  próprio Mercado Pago, fora do nosso controle) com o botão "Pagar"
+  cinza/desabilitado, mesmo com cartão salvo selecionado. **Importante:** o
+  campo "Inserir cupom" visível nessa tela é um recurso **nativo do Mercado
+  Pago**, sem relação com o cupom que a gente construiu (o nosso fica antes,
+  na nossa própria tela `#payGate`, antes do redirect) — não foi essa
+  mudança que quebrou o botão.
+  - **Confirmado nesta sessão:** é sempre `NordicHydrateRootError: An
+    recoverable error occurred during hydration` em
+    `px-checkout-frontend/app.5d279d12.js` (confirmado no Console pelo
+    próprio usuário, e depois de novo por um agente Claude com acesso ao
+    navegador via extensão Claude in Chrome, que bateu no mesmo erro e
+    documentou a causa: **qualquer extensão de navegador ativa** quebra a
+    hidratação React dessa página do MP, não é uma extensão específica.
+    Confirma a suspeita original da sessão 2026-09-22.
+  - **Único workaround conhecido: aba anônima/incógnito de verdade**, sem
+    nenhuma extensão carregada (o que inclui não poder usar Claude in Chrome
+    nessa aba, já que ele próprio é uma extensão). Testar o cartão de
+    pagamento em si (preencher número/CVV/CPF e clicar "Pagar") por isso
+    só pode ser feito manualmente pelo usuário, nunca por um agente com
+    acesso ao navegador via extensão.
+  - **Ainda pendente:** com o cupom confirmado funcionando (checkout mostrou
+    R$ 7,92 corretamente), falta só o usuário completar o pagamento de teste
+    numa aba anônima de verdade com os dados de cartão de teste (Mastercard
+    `5031 7557 3453 0604`, validade `11/30`, CVV `123`, titular `APRO`, CPF
+    `191.111.111-11`) pra confirmar aprovação e liberação de acesso de ponta
+    a ponta.
+- **Nova frente aberta pelo usuário, sem decisão ainda:** considerar trocar
+  o Mercado Pago por outro gateway de pagamento "pra facilitar" — motivo
+  não detalhado ainda (pode ser o histórico de bugs de sandbox/checkout
+  travado, ou outro motivo). **Combinado com o usuário:** terminar o cupom
+  primeiro (é independente de gateway, funciona igual em qualquer um) e
+  discutir a troca depois, com calma. Nenhuma pesquisa de alternativa
+  (Stripe, Pagar.me, etc.) feita ainda — conversa não retomada nesta sessão.
 
 ---
 
@@ -165,7 +462,10 @@ mapeado abaixo, por prioridade.
 
 ---
 
-## Mapa do que falta (2026-09-20, atualizado em 2026-09-22)
+## Mapa do que falta (2026-09-20, atualizado em 2026-09-24)
+
+> Substituído em 2026-10-06 pela seção "Tudo que falta" no topo deste
+> arquivo. Mantido aqui só pelo detalhe de cada item.
 
 ### 🔴 Bloqueia uso real por alguém além do usuário/dono
 
@@ -180,19 +480,22 @@ mapeado abaixo, por prioridade.
    e funcionando. App Google ainda em modo "Testing" — só e-mails
    adicionados como testador conseguem logar por ele; qualquer pessoa
    consegue logar por e-mail/senha normalmente.
-3. **Configurar Mercado Pago — muito perto de pronto.** Credenciais, CLI,
-   secret e as duas edge functions publicados; preço ajustado pra R$ 9,90;
-   checkout abre e processa pagamento de ponta a ponta sem travar (4 bugs
-   reais achados e corrigidos ao vivo nessa sessão, ver detalhe em "Sessão
-   2026-09-22" acima: header de autenticação faltando, bloqueio de política
-   da conta real do Mercado Pago, `auto_return` exigindo https, extensão do
-   navegador quebrando a página de pagamento). **Falta só:** achar a
-   combinação de cartão de teste que essa conta de teste aceita (recusou o
-   cartão salvo recomendado e um cartão `APRO` digitado à mão — não é mais
-   um bug conhecido, é tentativa e erro com o sandbox do Mercado Pago),
-   tirar o debug temporário de `create-checkout/index.ts`, religar o
+3. **Configurar Mercado Pago — muito perto de pronto, mas com um bug novo
+   (ou recorrente) achado em 2026-09-24.** Credenciais, CLI, secret e as
+   duas edge functions publicados; preço ajustado pra R$ 9,90; cupom de
+   desconto implementado (ver Sessão 2026-09-24). O botão "Pagar" da tela
+   hospedada pelo próprio Mercado Pago voltou a ficar travado/desabilitado
+   mesmo com cartão salvo selecionado — mesmo sintoma da sessão anterior
+   (extensão do navegador quebrando a hidratação React da página), ainda
+   não confirmado se é a mesma causa ou algo novo; usuário vai testar em
+   aba anônima e checar o Console. **Falta:** confirmar a causa do botão
+   travado, achar a combinação de cartão de teste que essa conta de teste
+   aceita (recusou o cartão salvo recomendado e um cartão `APRO` digitado à
+   mão), tirar o debug temporário de `create-checkout/index.ts`, religar o
    "Confirm email" do Supabase, e trocar as credenciais de teste pelas de
-   produção antes de cobrar de verdade.
+   produção antes de cobrar de verdade. **Em discussão, sem decisão:**
+   usuário levantou a possibilidade de trocar o Mercado Pago por outro
+   gateway de pagamento — conversa aberta, retomar quando o usuário priorizar.
 
 ### 🟡 Funcionalidades pedidas, ainda não construídas
 
@@ -200,9 +503,12 @@ mapeado abaixo, por prioridade.
    (ferramenta de IA, provavelmente Synthesia/HeyGen). Quando mandar os
    arquivos/links, falta decidir hospedagem e montar o player no
    `.panel-head` de cada módulo.
-5. **Cupom de desconto no checkout.** Não desenhado ainda: onde os cupons
-   vivem, percentual vs. valor fixo, validade, e como isso ajusta o valor
-   mandado pro Mercado Pago antes de criar o checkout.
+5. ~~**Cupom de desconto no checkout.**~~ **FEITO e testado (2026-09-24).**
+   Tabela `coupons` no Supabase (código, percentual, ativo), validado na
+   edge function `create-checkout` antes de gerar a preferência no Mercado
+   Pago, campo novo na tela de pagamento do site. Testado de ponta a ponta
+   com o cupom `TESTE20` (20%), preço final correto no checkout sandbox.
+   Ver detalhe completo na Sessão 2026-09-24 acima.
 6. **Correção por IA (Speaking/Writing).** Adiada de propósito até o
    projeto ter retorno financeiro (custo por chamada de API). Foi
    parcialmente compensada por duas features mais baratas já implementadas:
