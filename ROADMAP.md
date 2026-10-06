@@ -86,8 +86,11 @@ Nada das etapas seguintes anda sem esta. Ordem sugerida de cima para baixo.
       Um domínio próprio vale a pena desde já: o endereço entra nas
       configurações de Supabase, Google, gateway e, depois, nas lojas, e
       trocar depois dá retrabalho em todos.
-- [ ] (U) Criar o repositório no GitHub e configurar o remoto (hoje não
-      existe nenhum).
+- [x] (U) Criar o repositório no GitHub e configurar o remoto. Feito em
+      2026-10-06: `https://github.com/Fatrock3871/itoefl`, privado, branch
+      `main` (a antiga `master` foi renomeada). Repositório privado não
+      publica no GitHub Pages gratuito, o que pesa na decisão de
+      hospedagem acima.
 - [ ] (C) Publicar o `artifact/` buildado. Checklist completo na Fase 6.
 - [ ] (U) Supabase: trocar Site URL e Redirect URLs de `localhost:8000` para
       o endereço final.
