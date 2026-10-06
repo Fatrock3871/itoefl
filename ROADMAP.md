@@ -46,10 +46,10 @@ Nada das etapas seguintes anda sem esta. Ordem sugerida de cima para baixo.
 
 **0.1 Arrumar a casa**
 
-- [ ] (C) Commitar o trabalho do cupom, que está pronto e testado mas ainda
+- [x] (C) Commitar o trabalho do cupom, que está pronto e testado mas ainda
       sem commit (`app.js`, `build.py`, `create-checkout/index.ts`,
       `schema.sql`, este arquivo, `docs/roadmap-expansao.md`).
-- [ ] (C) Colocar `supabase/.temp/` no `.gitignore`.
+- [x] (C) Colocar `supabase/.temp/` no `.gitignore`.
 - [ ] (C) Tirar o debug de `create-checkout/index.ts` (linha 105 ainda devolve
       `mpStatus` e `mpBody` para o aluno) e publicar a function. Conferir na
       aba "Code" do painel se o deploy pegou, já falhou calado duas vezes.
