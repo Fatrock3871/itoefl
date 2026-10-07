@@ -2,7 +2,7 @@
 
 Memória entre sessões. Atualizar ao concluir cada etapa.
 
-**Última atualização:** 2026-10-06
+**Última atualização:** 2026-10-07
 **Lista única de pendências:** seção "Tudo que falta" logo abaixo.
 **Plano de expansão (2026-10-05):** as quatro frentes novas pedidas pelo
 usuário (app Android/Windows/macOS/iOS, didática com videoaulas e
@@ -152,6 +152,29 @@ Pequenas, independentes entre si, podem entrar em qualquer intervalo.
 - [ ] (C) Mover o histórico de sessões deste arquivo para
       `docs/historico-sessoes.md`. Com mais de 1.100 linhas ele já não cabe
       numa leitura só.
+
+### Etapa 0C: alinhar as tarefas ao formato real da prova
+
+Achado em 2026-10-07 ao ler os quatro testes práticos gratuitos da ETS no
+formato 2026. Análise completa em `docs/ets-materiais-oficiais.md`. Vem antes
+do banco de questões, porque define o formato de dois tipos de item.
+
+- [ ] (C) M7: indicar os quatro testes oficiais gratuitos como simulados
+      extras, com link para a ETS.
+- [ ] (C) **Complete the Words está no formato errado.** O site usa lacuna de
+      palavra inteira com 4 alternativas; a prova apaga o final da palavra e o
+      aluno digita as letras, sem alternativas. São 30 dos 50 itens de
+      Reading. Falta: widget de digitar letras, parágrafos acadêmicos
+      originais e revisão do Método CTW no M1.
+- [ ] (C) **Build a Sentence está simplificado demais.** Na prova cada item é
+      resposta a uma fala, tem trechos fixos e às vezes um bloco que sobra,
+      com foco em perguntas indiretas. Falta estender o widget e escrever
+      itens novos.
+- [ ] (C) Listen and Repeat: conjuntos de 7 frases de um mesmo cenário,
+      crescendo de tamanho, só ouvidas (o texto hoje aparece antes).
+- [ ] (C) Take an Interview: cenários de 4 perguntas do mesmo tema, em escada.
+- [ ] (C) M4: e-mail de 7 minutos com 3 pontos obrigatórios e cenário que
+      também pode ser cotidiano; discussão com mínimo de 100 palavras.
 
 ### Etapa 1: app instalável e videoaulas
 
