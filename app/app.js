@@ -183,7 +183,7 @@
 
   // chaves que sincronizam com o Supabase (progresso real do aluno).
   // ficam de fora: toefl_theme_v1, toefl_active_tab, toefl_timer_preset, toefl_sync_*
-  var SYNC_PREFIXES = ["toefl_progress", "toefl_srs_", "toefl_bsq_", "toefl_quiz_", "toefl_avatar", "toefl_errlog_", "toefl_cert_", "toefl_streak", "toefl_dailygoal", "toefl_weeklydash", "toefl_h3progress"];
+  var SYNC_PREFIXES = ["toefl_progress", "toefl_srs_", "toefl_bsq_", "toefl_quiz_", "toefl_avatar", "toefl_errlog_", "toefl_cert_", "toefl_streak", "toefl_dailygoal", "toefl_weeklydash", "toefl_h3progress", "toefl_ctw_", "toefl_spk_", "toefl_write_"];
   function isSyncedKey(key){
     if(!key || key.indexOf("toefl_") !== 0) return false;
     for(var i = 0; i < SYNC_PREFIXES.length; i++){
@@ -1160,7 +1160,7 @@
     // e só recarrega depois que ela resolve (ou imediatamente se offline).
     var resetBtn = document.getElementById("resetBtn");
     if(resetBtn){
-      var RESET_PREFIXES = ["toefl_progress", "toefl_srs_", "toefl_bsq_", "toefl_quiz_", "toefl_errlog_", "toefl_cert_"];
+      var RESET_PREFIXES = ["toefl_progress", "toefl_srs_", "toefl_bsq_", "toefl_quiz_", "toefl_errlog_", "toefl_cert_", "toefl_ctw_", "toefl_spk_", "toefl_write_"];
       resetBtn.addEventListener("click", function(){
         var ok = window.confirm(
           "Isso apaga TODO o seu progresso no curso (checkboxes, questões respondidas, " +
@@ -1195,6 +1195,9 @@
   })();
 
   // ---------- Build a Sentence — widget interativo (M4) ----------
+  // Formato da prova: a resposta já vem com trechos fixos e espaços vazios
+  // (.bsq-slot); o aluno preenche os espaços com os blocos do banco. Alguns
+  // itens têm um bloco a mais, que fica de fora.
   Array.prototype.forEach.call(document.querySelectorAll(".bsq"), function(root){
     var bsqId = root.dataset.bsq;
     var lsKey = "toefl_bsq_" + bsqId + "_v1";
@@ -1208,10 +1211,6 @@
         var j = Math.floor(Math.random() * (i + 1));
         nodes[i].parentNode.insertBefore(nodes[i], nodes[j]);
       }
-    }
-    function frags(zone){
-      return Array.prototype.map.call(zone.querySelectorAll(".bsq-chip"),
-        function(c){ return c.dataset.frag; });
     }
 
     function renderSummary(){
@@ -1238,16 +1237,27 @@
       var num = card.dataset.num;
       var correct;
       try { correct = JSON.parse(card.dataset.answer); } catch(e){ correct = []; }
-      var build = card.querySelector('[data-role="build"]');
       var bank = card.querySelector('[data-role="bank"]');
+      var slots = Array.prototype.slice.call(card.querySelectorAll(".bsq-slot"));
       var checkBtn = card.querySelector(".bsq-check");
       var fb = card.querySelector(".bsq-feedback");
       var model = card.querySelector(".bsq-model");
       var allChips = Array.prototype.slice.call(card.querySelectorAll(".bsq-chip"));
 
-      function updateCheckBtn(){
-        checkBtn.disabled = bank.querySelector(".bsq-chip") !== null;
+      // conteúdo de cada espaço, na ordem; null = vazio
+      function placed(){
+        return slots.map(function(s){
+          var c = s.querySelector(".bsq-chip");
+          return c ? c.dataset.frag : null;
+        });
       }
+      function firstEmpty(){
+        for(var i = 0; i < slots.length; i++){
+          if(!slots[i].querySelector(".bsq-chip")) return slots[i];
+        }
+        return null;
+      }
+      function updateCheckBtn(){ checkBtn.disabled = firstEmpty() !== null; }
       function lock(){
         allChips.forEach(function(c){ c.disabled = true; });
         checkBtn.hidden = true;
@@ -1262,16 +1272,21 @@
       allChips.forEach(function(chip){
         chip.addEventListener("click", function(){
           if(chip.disabled) return;
-          if(chip.parentNode === bank) build.appendChild(chip);
-          else bank.appendChild(chip);
+          if(chip.parentNode === bank){
+            var slot = firstEmpty();
+            if(!slot) return; // tudo preenchido: devolva um bloco antes
+            slot.appendChild(chip);
+          } else {
+            bank.appendChild(chip);
+          }
           updateCheckBtn();
-          state[num] = { order: frags(build), checked: false };
+          state[num] = { order: placed(), checked: false };
           persist();
         });
       });
 
       checkBtn.addEventListener("click", function(){
-        var assembled = frags(build);
+        var assembled = placed();
         var ok = assembled.length === correct.length &&
           assembled.every(function(f, i){ return f === correct[i]; });
         state[num] = { order: assembled, checked: true, ok: ok };
@@ -1282,17 +1297,17 @@
 
       // restaura estado salvo
       var s = state[num];
+      shuffle(allChips);
       if(s && s.order && s.order.length){
         var pool = allChips.slice();
-        s.order.forEach(function(f){
+        s.order.forEach(function(f, i){
+          if(!f || !slots[i]) return;
           for(var k = 0; k < pool.length; k++){
-            if(pool[k].dataset.frag === f){ build.appendChild(pool[k]); pool.splice(k, 1); break; }
+            if(pool[k].dataset.frag === f){ slots[i].appendChild(pool[k]); pool.splice(k, 1); break; }
           }
         });
         updateCheckBtn();
         if(s.checked) reveal(!!s.ok);
-      }else{
-        shuffle(allChips);
       }
     });
 
@@ -1304,6 +1319,304 @@
       });
     }
     renderSummary();
+  });
+
+  // ---------- Complete the Words — formato da prova (M1) ----------
+  // O aluno digita o final de cada palavra. Nada é corrigido até clicar em
+  // Verificar, como na prova; depois disso o texto trava e mostra o gabarito.
+  Array.prototype.forEach.call(document.querySelectorAll(".ctw"), function(root){
+    var lsKey = "toefl_ctw_" + root.dataset.ctw + "_v1";
+    var inputs = Array.prototype.slice.call(root.querySelectorAll(".ctw-in"));
+    var checkBtn = root.querySelector(".ctw-check");
+    var retryBtn = root.querySelector(".ctw-retry");
+    var resultEl = root.querySelector(".ctw-result");
+    var noteEl = root.querySelector(".ctw-note");
+    var state = {};
+    try { state = JSON.parse(safeGet(lsKey) || "{}"); } catch(e){ state = {}; }
+    if(!state || typeof state !== "object") state = {};
+
+    function values(){ return inputs.map(function(i){ return i.value; }); }
+    function persist(checked){
+      state = { vals: values(), checked: !!checked };
+      safeSet(lsKey, JSON.stringify(state));
+    }
+    function isRight(input){
+      return input.value.trim().toLowerCase() === input.dataset.answer.toLowerCase();
+    }
+    function grade(){
+      var right = 0;
+      inputs.forEach(function(input){
+        var ok = isRight(input);
+        if(ok) right++;
+        input.classList.toggle("is-ok", ok);
+        input.classList.toggle("is-bad", !ok);
+        input.disabled = true;
+        var fix = input.parentNode.querySelector(".ctw-fix");
+        if(fix && !ok){
+          fix.textContent = input.parentNode.dataset.word;
+          fix.hidden = false;
+        }
+      });
+      resultEl.textContent = right + " de " + inputs.length + " corretas";
+      resultEl.hidden = false;
+      noteEl.hidden = false;
+      checkBtn.hidden = true;
+      retryBtn.hidden = false;
+      root.classList.add("is-checked");
+      root.dataset.right = String(right);
+    }
+
+    inputs.forEach(function(input, idx){
+      input.addEventListener("input", function(){
+        // só letras; ao completar a lacuna, pula para a próxima
+        var clean = input.value.replace(/[^A-Za-z]/g, "");
+        if(clean !== input.value) input.value = clean;
+        persist(false);
+        var max = parseInt(input.getAttribute("maxlength"), 10) || 0;
+        if(max && input.value.length >= max && inputs[idx + 1]) inputs[idx + 1].focus();
+      });
+      input.addEventListener("keydown", function(e){
+        if(e.key === "Backspace" && input.value === "" && inputs[idx - 1]){
+          inputs[idx - 1].focus();
+        } else if(e.key === "Enter"){
+          e.preventDefault();
+          if(inputs[idx + 1]) inputs[idx + 1].focus(); else checkBtn.focus();
+        }
+      });
+    });
+
+    checkBtn.addEventListener("click", function(){ persist(true); grade(); });
+    retryBtn.addEventListener("click", function(){
+      inputs.forEach(function(input){
+        input.value = ""; input.disabled = false;
+        input.classList.remove("is-ok", "is-bad");
+        var fix = input.parentNode.querySelector(".ctw-fix");
+        if(fix){ fix.hidden = true; fix.textContent = ""; }
+      });
+      resultEl.hidden = true; noteEl.hidden = true;
+      retryBtn.hidden = true; checkBtn.hidden = false;
+      root.classList.remove("is-checked");
+      delete root.dataset.right;
+      persist(false);
+      if(inputs[0]) inputs[0].focus();
+    });
+
+    if(state.vals && state.vals.length === inputs.length){
+      inputs.forEach(function(input, i){ input.value = state.vals[i] || ""; });
+      if(state.checked) grade();
+    }
+  });
+
+  // ---------- Speaking: Listen and Repeat / Take an Interview (M3) ----------
+  // O aluno ouve antes de ver. Em "repeat" ele marca se repetiu igual; em
+  // "interview", depois da pergunta corre a contagem do tempo de resposta.
+  (function(){
+    var roots = document.querySelectorAll(".spk");
+    if(!roots.length) return;
+    var canSpeak = "speechSynthesis" in window && typeof SpeechSynthesisUtterance !== "undefined";
+    var activeClock = null; // só um cronômetro de resposta por vez
+
+    function stopClock(){
+      if(activeClock){ clearInterval(activeClock.timer); activeClock.el.hidden = true; activeClock = null; }
+    }
+    function say(text, onEnd){
+      if(!canSpeak){ if(onEnd) onEnd(); return; }
+      try {
+        window.speechSynthesis.cancel();
+        var utter = new SpeechSynthesisUtterance(text);
+        utter.lang = "en-US";
+        utter.rate = 0.93;
+        var voice = pickVoice();
+        if(voice) utter.voice = voice;
+        var done = false;
+        function finish(){ if(done) return; done = true; if(onEnd) onEnd(); }
+        utter.onend = finish;
+        utter.onerror = finish;
+        window.speechSynthesis.speak(utter);
+      } catch(ex){ if(onEnd) onEnd(); }
+    }
+
+    Array.prototype.forEach.call(roots, function(root){
+      var lsKey = "toefl_spk_" + root.dataset.spk + "_v1";
+      var mode = root.dataset.mode;
+      var seconds = parseInt(root.dataset.seconds, 10) || 45;
+      var items = Array.prototype.slice.call(root.querySelectorAll(".spk-item"));
+      var scoreEl = root.querySelector(".spk-score");
+      var retryBtn = root.querySelector(".spk-retry");
+      var state = {};
+      try { state = JSON.parse(safeGet(lsKey) || "{}"); } catch(e){ state = {}; }
+      if(!state || typeof state !== "object") state = {};
+
+      if(!canSpeak){
+        var warn = root.querySelector(".spk-nosound");
+        if(warn) warn.hidden = false;
+      }
+
+      function renderScore(){
+        var done = 0, ok = 0;
+        items.forEach(function(it){
+          var m = state[it.dataset.num];
+          if(m){ done++; if(m === "ok") ok++; }
+          it.classList.toggle("is-ok", m === "ok");
+          it.classList.toggle("is-miss", m === "miss");
+        });
+        if(!done){ scoreEl.textContent = ""; }
+        else if(mode === "repeat"){ scoreEl.textContent = ok + " de " + items.length + " repetidas sem erro"; }
+        else { scoreEl.textContent = done + " de " + items.length + " respondidas"; }
+        retryBtn.hidden = done === 0;
+      }
+
+      items.forEach(function(it){
+        var playBtn = it.querySelector(".spk-play");
+        var showBtn = it.querySelector(".spk-show");
+        var textEl = it.querySelector(".spk-text");
+        var marks = it.querySelector(".spk-marks");
+        var clock = it.querySelector(".spk-clock");
+
+        function startClock(){
+          if(!clock) return;
+          stopClock();
+          var left = seconds;
+          clock.hidden = false;
+          clock.textContent = "Fale agora: " + left + " s";
+          var timer = setInterval(function(){
+            left--;
+            if(left <= 0){
+              clearInterval(timer);
+              clock.textContent = "Tempo esgotado";
+              activeClock = null;
+              return;
+            }
+            clock.textContent = "Fale agora: " + left + " s";
+          }, 1000);
+          activeClock = { timer: timer, el: clock };
+        }
+
+        playBtn.addEventListener("click", function(){
+          stopClock();
+          playBtn.disabled = true;
+          say(it.dataset.text, function(){
+            playBtn.disabled = false;
+            marks.hidden = false;
+            if(mode === "interview") startClock();
+          });
+        });
+        showBtn.addEventListener("click", function(){
+          textEl.hidden = !textEl.hidden;
+          showBtn.textContent = textEl.hidden ? "Mostrar texto" : "Esconder texto";
+          marks.hidden = false;
+        });
+        Array.prototype.forEach.call(it.querySelectorAll(".spk-mark"), function(btn){
+          btn.addEventListener("click", function(){
+            state[it.dataset.num] = btn.dataset.mark;
+            safeSet(lsKey, JSON.stringify(state));
+            if(clock && activeClock && activeClock.el === clock) stopClock();
+            renderScore();
+          });
+        });
+        if(state[it.dataset.num]) marks.hidden = false;
+      });
+
+      retryBtn.addEventListener("click", function(){
+        state = {};
+        safeSet(lsKey, JSON.stringify(state));
+        stopClock();
+        items.forEach(function(it){
+          it.querySelector(".spk-text").hidden = true;
+          it.querySelector(".spk-show").textContent = "Mostrar texto";
+          it.querySelector(".spk-marks").hidden = true;
+        });
+        renderScore();
+      });
+      renderScore();
+    });
+  })();
+
+  // ---------- Caixa de escrita com cronômetro (M4) ----------
+  Array.prototype.forEach.call(document.querySelectorAll(".wbox"), function(root){
+    var lsKey = "toefl_write_" + root.dataset.wbox + "_v1";
+    var minutes = parseInt(root.dataset.minutes, 10) || 7;
+    var minWords = parseInt(root.dataset.minwords, 10) || 0;
+    var area = root.querySelector(".wbox-text");
+    var startBtn = root.querySelector(".wbox-start");
+    var clockEl = root.querySelector(".wbox-clock");
+    var countEl = root.querySelector(".wbox-count");
+    var goalEl = root.querySelector(".wbox-goal");
+    var statusEl = root.querySelector(".wbox-status");
+    var clearBtn = root.querySelector(".wbox-clear");
+    var timer = null, left = minutes * 60, saveTimer = null, clearArmed = null;
+
+    function fmt(sec){
+      var m = Math.floor(sec / 60), s = sec % 60;
+      return (m < 10 ? "0" : "") + m + ":" + (s < 10 ? "0" : "") + s;
+    }
+    function words(){
+      var t = area.value.trim();
+      return t ? t.split(/\s+/).length : 0;
+    }
+    function renderCount(){
+      var n = words();
+      countEl.textContent = n + (n === 1 ? " palavra" : " palavras");
+      if(goalEl) goalEl.classList.toggle("is-met", n >= minWords);
+    }
+    function save(){
+      safeSet(lsKey, JSON.stringify({ text: area.value }));
+      statusEl.textContent = "Salvo.";
+    }
+    function stop(label){
+      if(timer){ clearInterval(timer); timer = null; }
+      startBtn.textContent = label;
+      root.classList.remove("is-running");
+    }
+
+    try {
+      var saved = JSON.parse(safeGet(lsKey) || "{}");
+      if(saved && typeof saved.text === "string") area.value = saved.text;
+    } catch(e){}
+    renderCount();
+
+    area.addEventListener("input", function(){
+      renderCount();
+      statusEl.textContent = "Salvando...";
+      if(saveTimer) clearTimeout(saveTimer);
+      saveTimer = setTimeout(save, 600);
+    });
+
+    startBtn.addEventListener("click", function(){
+      if(timer){ stop("Continuar"); return; }
+      if(left <= 0){ left = minutes * 60; root.classList.remove("is-over"); }
+      clockEl.textContent = fmt(left);
+      startBtn.textContent = "Pausar";
+      root.classList.add("is-running");
+      area.focus();
+      timer = setInterval(function(){
+        left--;
+        clockEl.textContent = fmt(Math.max(left, 0));
+        if(left <= 0){
+          stop("Recomeçar " + minutes + " min");
+          root.classList.add("is-over");
+          statusEl.textContent = "Tempo esgotado. Na prova a tela trava aqui.";
+        }
+      }, 1000);
+    });
+
+    // apagar pede um segundo clique, porque confirm() nem sempre existe
+    clearBtn.addEventListener("click", function(){
+      if(!clearArmed){
+        clearBtn.textContent = "Clique de novo para apagar";
+        clearArmed = setTimeout(function(){ clearArmed = null; clearBtn.textContent = "Apagar texto"; }, 3500);
+        return;
+      }
+      clearTimeout(clearArmed); clearArmed = null;
+      clearBtn.textContent = "Apagar texto";
+      area.value = "";
+      renderCount();
+      save();
+      stop("Iniciar " + minutes + " min");
+      left = minutes * 60;
+      clockEl.textContent = fmt(left);
+      root.classList.remove("is-over");
+    });
   });
 
   // ---------- Flashcards com revisão espaçada (M6) ----------

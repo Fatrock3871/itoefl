@@ -46,6 +46,27 @@ Não adianta rodar um simulado antes de ter estudado o que ele mede. A regra é 
 | **3: Avançado** | Módulo 6 estudado + **todos os drills dos Módulos 1–4 feitos ao menos uma vez** + Protocolo de Erros do Simulado 2 executado | O Simulado 3 é sem consulta; se os drills não foram feitos, o simulado vira diagnóstico, não treino de pressão |
 | **4: Final** | Simulado 3 analisado + 3 áreas de gap identificadas e revisadas + Módulo 8 lido | O Simulado 4 valida prontidão; só faz sentido depois que os gaps do S3 foram atacados |
 
+### Simulados oficiais gratuitos da ETS
+
+A ETS publica quatro testes práticos gratuitos em PDF, já no formato de 2026, com gabarito de Reading, Listening e Build a Sentence. São a amostra mais fiel que existe da prova e valem como simulados extras:
+
+| Teste | Onde baixar |
+|---|---|
+| Practice Test 1 | [ets.org, Practice Test 1](https://www.ets.org/content/dam/ets-org/pdfs/toefl/toefl-ibt-full-length-practice-test-1.pdf) |
+| Practice Test 2 | [ets.org, Practice Test 2](https://www.ets.org/content/dam/ets-org/pdfs/toefl/toefl-ibt-full-length-practice-test-2.pdf) |
+| Teacher Resources, Practice Test 1 | [ets.org, Teacher Resources 1](https://www.ets.org/content/dam/ets-org/pdfs/toefl/toefl-ibt-teachers-resources-practice-test-1.pdf) |
+| Teacher Resources, Practice Test 2 | [ets.org, Teacher Resources 2](https://www.ets.org/content/dam/ets-org/pdfs/toefl/toefl-ibt-teachers-resources-practice-test-2.pdf) |
+
+**Como usar:**
+
+- **Quando:** guarde-os para depois do Simulado 2. Um bom encaixe é um teste oficial antes do Simulado 3 e outro entre o 3 e o 4. Não gaste os quatro no começo.
+- **Listening e Speaking vêm transcritos, sem áudio.** Não leia as falas: peça para alguém ler em voz alta ou cole o trecho num leitor de texto, e só olhe as alternativas depois de ouvir.
+- **Não há rubrica nem resposta-modelo** para o e-mail, a discussão e a entrevista. Avalie-se com as rubricas da Parte 7 deste módulo.
+- **O teste em papel não é adaptativo.** Cada seção traz dois módulos fixos; na prova o segundo depende do seu desempenho no primeiro.
+- **Triagem:** passe os erros pelo protocolo da Parte 6, como em qualquer simulado.
+
+O planejador de estudos de 8 semanas que a ETS também oferece de graça ainda descreve o formato antigo da prova. Não use.
+
 ### Conversão Banda CEFR ↔ Score Legado 0–120
 
 O formato 2026 reporta **bandas CEFR de 1 a 6** (com meios pontos). Durante o período de transição (até ~2028) a ETS também fornece um score comparável na escala antiga de 0–120. Use esta tabela apenas como **referência aproximada** para comparar com metas de instituições que ainda pedem a escala 0–120, não é uma conversão oficial exata.

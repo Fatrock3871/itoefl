@@ -12,6 +12,11 @@ from drills_data import (
     MOD2_ACTION_DRILLS_A, MOD2_ACTION_DRILLS_B, MOD2_ACTION_DRILLS_C, MOD2_ACTION_DRILLS_D,
 )
 from build_sentence_data import BUILD_SENTENCE_ITEMS
+from ctw_data import CTW_SETS
+from render_ctw import render_ctw_group
+from speaking_data import LISTEN_REPEAT_SETS, INTERVIEW_SETS
+from render_speaking import render_speaking_group
+from render_wbox import render_wbox, EMAIL_MINUTES, DISCUSSION_MINUTES, DISCUSSION_MIN_WORDS
 
 SRC = "../consolidated"
 
@@ -200,7 +205,23 @@ def build_mod1():
         render_quiz_drill(d["id"], d["title"], d["objective"], d.get("passage_html"), d["items"], level=d.get("level"))
         for d in MOD1_ACTION_DRILLS_A
     )
-    html_a = to_html(before_a) + "<h3>Grupo A: Complete the Words — exercícios interativos</h3>" + widgets_a
+    # Grupo A (2026-10-07): primeiro os textos no formato real da prova
+    # (digitar o final das palavras, sem alternativas); depois os drills de
+    # múltipla escolha que já existiam, agora apresentados como o que são:
+    # treino de gramática e collocation, não o formato da tarefa.
+    html_a = (
+        to_html(before_a)
+        + "<h3>Grupo A: Complete the Words no formato da prova</h3>"
+        + '<p class="ctw-group-intro">Oito parágrafos, 10 lacunas cada, do B1 ao C1+. Em cada lacuna o começo da '
+          'palavra está impresso e você digita o final. O campo aceita exatamente o número de letras que falta. '
+          'Alvo: 3 minutos por texto.</p>'
+        + render_ctw_group(CTW_SETS)
+        + "<h3>Grupo A2: gramática e collocation em contexto (treino de base)</h3>"
+        + '<p class="ctw-group-intro">Estes cinco textos <strong>não</strong> estão no formato da prova: aqui a lacuna '
+          'é uma palavra inteira e há alternativas. Servem para treinar a decisão gramatical e de collocation que '
+          'está por trás de cada lacuna do Grupo A.</p>'
+        + widgets_a
+    )
 
     # PARTE 5, Grupo B: troca os 5 textos curtos pelos widgets
     before_b, rest = slice_lines(rest, "### GRUPO B: READ IN DAILY LIFE", "### GRUPO C: READ AN ACADEMIC PASSAGE")
@@ -288,9 +309,43 @@ def build_with_errlog(path, mod_key):
     return to_html(before) + errlog + to_html(after)
 
 
-# ---------- Módulo 3: markdown + formulário de registro de erros ----------
+def swap_placeholder(html_out, name, widget):
+    """Troca o parágrafo '%%%NAME%%%' (deixado no .md) pelo widget."""
+    token = f"<p>%%%{name}%%%</p>"
+    if html_out.count(token) != 1:
+        raise ValueError(f"placeholder %%%{name}%%% deveria aparecer 1 vez, achei {html_out.count(token)}")
+    return html_out.replace(token, widget)
+
+
+# cada enunciado de Write an Email / Academic Discussion do M4 é um parágrafo
+# que começa com "Email N:" ou "Discussion N:" em negrito; a caixa de escrita
+# entra logo depois dele
+WBOX_PROMPT_RE = re.compile(r"(<p><strong>(Email|Discussion) (\d+):.*?</p>)", re.DOTALL)
+
+
+def add_writing_boxes(html_out):
+    count = {"Email": 0, "Discussion": 0}
+
+    def repl(m):
+        kind, num = m.group(2), m.group(3)
+        count[kind] += 1
+        if kind == "Email":
+            box = render_wbox(f"mod4-email{num}", EMAIL_MINUTES)
+        else:
+            box = render_wbox(f"mod4-disc{num}", DISCUSSION_MINUTES, DISCUSSION_MIN_WORDS)
+        return m.group(1) + box
+
+    out = WBOX_PROMPT_RE.sub(repl, html_out)
+    return out, count
+
+
+# ---------- Módulo 3: markdown + conjuntos de Speaking + registro de erros ----------
 def build_mod3():
-    return build_with_errlog(f"{SRC}/modulo_3_speaking.md", "mod3")
+    html_out = build_with_errlog(f"{SRC}/modulo_3_speaking.md", "mod3")
+    # conjuntos no formato da prova: o .md marca o lugar com um placeholder
+    html_out = swap_placeholder(html_out, "SPK_REPEAT", render_speaking_group(LISTEN_REPEAT_SETS, "repeat"))
+    html_out = swap_placeholder(html_out, "SPK_INTERVIEW", render_speaking_group(INTERVIEW_SETS, "interview"))
+    return html_out
 
 
 # ---------- Módulo 4: markdown + Build a Sentence + registro de erros ----------
@@ -301,15 +356,14 @@ def build_mod4():
     errlog = render_error_log("mod4", ERRLOG_CODES["mod4"])
     html_out = to_html(before) + errlog + to_html(after)
 
-    widget = render_build_sentence("m4build", BUILD_SENTENCE_ITEMS)
-    # injeta logo antes do heading "Drill 2 ... Write an Email"
-    idx = html_out.find("Drill 2")
-    if idx == -1:
-        return html_out + widget
-    h3 = html_out.rfind("<h3", 0, idx)
-    if h3 == -1:
-        h3 = idx
-    return html_out[:h3] + widget + "\n" + html_out[h3:]
+    html_out, boxes = add_writing_boxes(html_out)
+    if boxes != {"Email": 6, "Discussion": 6}:
+        raise ValueError(f"esperava 6 caixas de e-mail e 6 de discussão, achei {boxes}")
+
+    # id novo (m4build2): os itens mudaram de formato em 2026-10-07, então o
+    # estado salvo do widget antigo (m4build) não se aplica a estes
+    widget = render_build_sentence("m4build2", BUILD_SENTENCE_ITEMS)
+    return swap_placeholder(html_out, "BUILD_SENTENCE", widget)
 
 
 # ---------- Módulo 5: markdown + formulário de registro de erros ----------

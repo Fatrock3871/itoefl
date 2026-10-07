@@ -93,6 +93,95 @@ check("legal_links_exist", function(){
   return document.querySelectorAll('a[href="termos.html"]').length >= 4 && document.querySelectorAll('a[href="privacidade.html"]').length >= 4;
 });
 check("lock_message_removed", function(){ return !document.getElementById("lockMsg"); });
+
+// ---- exercicios no formato da prova (2026-10-07) ----
+function typeInto(input, value){ input.value = value; input.dispatchEvent(new Event("input")); }
+
+// Complete the Words: 8 textos de 10 lacunas; acertar tudo e errar tudo
+var ctws = document.querySelectorAll(".ctw");
+check("ctw_8_texts_80_gaps", function(){ return ctws.length === 8 && document.querySelectorAll(".ctw-in").length === 80; });
+check("ctw_gap_sizes_match_answers", function(){
+  return Array.prototype.every.call(document.querySelectorAll(".ctw-in"), function(i){
+    var word = i.parentNode.dataset.word, pre = i.parentNode.querySelector(".ctw-pre").textContent;
+    return pre + i.dataset.answer === word && parseInt(i.getAttribute("maxlength"), 10) === i.dataset.answer.length && pre.length >= 1;
+  });
+});
+if(ctws.length >= 2){
+  Array.prototype.forEach.call(ctws[0].querySelectorAll(".ctw-in"), function(i){ typeInto(i, i.dataset.answer.toUpperCase()); });
+  ctws[0].querySelector(".ctw-check").click();
+  check("ctw_all_right_scores_10", function(){ return ctws[0].querySelector(".ctw-result").textContent === "10 de 10 corretas" && ctws[0].querySelector(".ctw-note").hidden === false; });
+  Array.prototype.forEach.call(ctws[1].querySelectorAll(".ctw-in"), function(i){ typeInto(i, "zz9"); });
+  check("ctw_rejects_non_letters", function(){ return ctws[1].querySelector(".ctw-in").value.indexOf("9") === -1; });
+  ctws[1].querySelector(".ctw-check").click();
+  check("ctw_all_wrong_scores_0_and_shows_words", function(){
+    var fixes = ctws[1].querySelectorAll(".ctw-fix");
+    return ctws[1].querySelector(".ctw-result").textContent === "0 de 10 corretas" &&
+      Array.prototype.every.call(fixes, function(f){ return !f.hidden && f.textContent === f.parentNode.dataset.word; });
+  });
+  ctws[1].querySelector(".ctw-retry").click();
+  check("ctw_retry_clears", function(){ return ctws[1].querySelector(".ctw-in").value === "" && ctws[1].querySelector(".ctw-in").disabled === false; });
+}
+
+// Build a Sentence: 30 itens; montar certo (com bloco sobrando) e montar errado
+var bsqCards = document.querySelectorAll(".bsq-card");
+check("bsq_30_cards_with_context", function(){ return bsqCards.length === 30 && document.querySelectorAll(".bsq-context").length === 30; });
+function bsqPlace(card, order){
+  order.forEach(function(frag){
+    var chip = Array.prototype.filter.call(card.querySelectorAll(".bsq-bank .bsq-chip"), function(c){ return c.dataset.frag === frag; })[0];
+    if(chip) chip.click();
+  });
+}
+check("bsq_slots_equal_answer_length", function(){
+  return Array.prototype.every.call(bsqCards, function(c){ return c.querySelectorAll(".bsq-slot").length === JSON.parse(c.dataset.answer).length; });
+});
+if(bsqCards.length === 30){
+  var extraCard = bsqCards[9]; // item 10 tem um bloco que sobra
+  check("bsq_check_starts_disabled", function(){ return extraCard.querySelector(".bsq-check").disabled === true; });
+  bsqPlace(extraCard, JSON.parse(extraCard.dataset.answer));
+  check("bsq_extra_chunk_stays_in_bank", function(){ return extraCard.querySelectorAll(".bsq-bank .bsq-chip").length === 1 && extraCard.querySelector(".bsq-check").disabled === false; });
+  extraCard.querySelector(".bsq-check").click();
+  check("bsq_right_order_is_correct", function(){ return extraCard.classList.contains("correct"); });
+  var wrongCard = bsqCards[1];
+  bsqPlace(wrongCard, JSON.parse(wrongCard.dataset.answer).slice().reverse());
+  wrongCard.querySelector(".bsq-check").click();
+  check("bsq_wrong_order_is_wrong", function(){ return wrongCard.classList.contains("wrong") && wrongCard.querySelector(".bsq-feedback").hidden === false; });
+}
+
+// Speaking: 5 cenarios de 7 frases + 4 entrevistas de 4 perguntas, texto escondido
+check("spk_sets_and_items", function(){
+  return document.querySelectorAll('.spk[data-mode="repeat"]').length === 5 &&
+    document.querySelectorAll('.spk[data-mode="repeat"] .spk-item').length === 35 &&
+    document.querySelectorAll('.spk[data-mode="interview"]').length === 4 &&
+    document.querySelectorAll('.spk[data-mode="interview"] .spk-item').length === 16;
+});
+check("spk_text_starts_hidden", function(){
+  return Array.prototype.every.call(document.querySelectorAll(".spk-text"), function(t){ return t.hidden; });
+});
+var spk0 = document.querySelector('.spk[data-mode="repeat"]');
+if(spk0){
+  var it0 = spk0.querySelector(".spk-item");
+  it0.querySelector(".spk-show").click();
+  check("spk_show_reveals_text", function(){ return it0.querySelector(".spk-text").hidden === false && it0.querySelector(".spk-marks").hidden === false; });
+  it0.querySelector('.spk-mark[data-mark="ok"]').click();
+  check("spk_mark_updates_score", function(){ return spk0.querySelector(".spk-score").textContent === "1 de 7 repetidas sem erro"; });
+}
+
+// Caixa de escrita: 6 de e-mail (7 min) + 6 de discussao (10 min, minimo 100)
+var wboxes = document.querySelectorAll(".wbox");
+check("wbox_12_boxes", function(){
+  return wboxes.length === 12 && document.querySelectorAll('.wbox[data-minutes="7"]').length === 6 &&
+    document.querySelectorAll('.wbox[data-minutes="10"][data-minwords="100"]').length === 6;
+});
+if(wboxes.length){
+  var wb = document.querySelector('.wbox[data-minwords="100"]');
+  typeInto(wb.querySelector(".wbox-text"), "one two  three\nfour");
+  check("wbox_counts_words", function(){ return wb.querySelector(".wbox-count").textContent === "4 palavras" && !wb.querySelector(".wbox-goal").classList.contains("is-met"); });
+  typeInto(wb.querySelector(".wbox-text"), new Array(101).join("word "));
+  check("wbox_goal_met_at_100", function(){ return wb.querySelector(".wbox-count").textContent === "100 palavras" && wb.querySelector(".wbox-goal").classList.contains("is-met"); });
+  wb.querySelector(".wbox-start").click();
+  check("wbox_timer_starts", function(){ return wb.classList.contains("is-running") && wb.querySelector(".wbox-start").textContent === "Pausar"; });
+  wb.querySelector(".wbox-start").click();
+}
 var accClose = document.getElementById("accountClose"); if(accClose) accClose.click();
 
 var root = document.documentElement;

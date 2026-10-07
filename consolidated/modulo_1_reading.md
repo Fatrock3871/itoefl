@@ -105,36 +105,49 @@ Você enfrenta o Reading no pico de energia cognitiva. Essa é sua vantagem, use
 
 ### 2.1 Complete the Words: o Método CTW
 
-**O que a tarefa testa:** reconstruir um texto coerente combinando três camadas **ao mesmo tempo**:
+**Como a tarefa é na prova:** um parágrafo acadêmico curto, de cerca de 70 palavras. A primeira frase vem inteira. Nas frases seguintes, 10 palavras aparecem com o começo escrito e o final apagado, e você **digita as letras que faltam**. O resto do parágrafo vem inteiro. Não há alternativas para escolher.
 
-1. **Ordem de palavras (sintaxe)**: onde sujeito, verbo, objeto, modificadores
-e conectores devem estar para a frase ser gramatical.
-2. **Conhecimento lexical**: qual palavra (não só qual classe) se encaixa,
-incluindo **collocations** (*make a decision*, não *do a decision*).
-3. **Compreensão leitora**: usar o sentido do texto ao redor para eliminar
-opções gramaticalmente possíveis mas semanticamente erradas.
+```
+Glaciers are large masses of ice that move slowly over land.
+They fo_ _ when sn_ _ builds up ov_ _ many years.
+```
 
-Um item de CTW **nunca** se resolve só com gramática, já que várias opções podem ser gramaticais. Também não se resolve só com vocabulário: uma palavra pode "fazer sentido" isolada e ainda assim quebrar a estrutura da frase.
+Aqui as respostas são *form*, *snow* e *over*. Cada traço é uma letra. A regra do corte é sempre a mesma: fica visível mais ou menos a primeira metade da palavra. Numa palavra de duas letras, como *is* ou *of*, sobra uma letra só.
+
+**O que a tarefa testa:** três camadas **ao mesmo tempo**:
+
+1. **Gramática da posição**: que tipo de palavra cabe naquele lugar da frase
+(verbo, substantivo, preposição, conector) e em que forma.
+2. **Conhecimento lexical**: qual palavra exata, incluindo **collocations**
+(*make a decision*, não *do a decision*) e a ortografia dela.
+3. **Compreensão leitora**: o sentido do parágrafo decide entre palavras que
+começam igual e têm o mesmo tamanho.
+
+Nenhuma camada resolve sozinha. *th_ _* pode ser *that*, *this*, *they*, *them*, *than* ou *then*: as letras não decidem, a frase decide.
 
 #### O Método CTW em 4 passos
 
 | Passo | Ação |
 |---|---|
-| **1. Leia a frase inteira ao redor da lacuna** | Nunca julgue por 2–3 palavras vizinhas. O sentido correto costuma depender da cláusula inteira, às vezes da frase anterior. |
-| **2. Filtre por gramática** | Elimine o que quebra a sintaxe (forma verbal errada, preposição impossível, concordância errada). Isso já corta 1–2 opções. |
-| **3. Filtre o resto por sentido e collocation** | Entre as opções gramaticais, escolha a que produz o sentido lógico **e** a combinação natural em inglês. |
-| **4. Releia a frase completa com sua escolha** | Soa natural e coerente com o texto ao redor? Se soar "quase certa, mas estranha", é armadilha lexical: reconsidere. |
+| **1. Leia o parágrafo inteiro antes de digitar** | A primeira frase dá o tema. O trecho depois das lacunas, que vem inteiro, confirma do que o texto fala. Dez segundos aqui economizam chutes. |
+| **2. Decida o tipo de palavra pela posição** | Depois de artigo vem substantivo ou adjetivo. Depois de *to* ou de um modal vem verbo na base. Entre duas orações falta um conector. Antes de um substantivo solto costuma faltar preposição ou artigo. |
+| **3. Feche a palavra com as letras e a contagem** | A resposta tem que começar com as letras impressas e ter exatamente o número de traços. Isso elimina quase todos os candidatos que o Passo 2 deixou. |
+| **4. Confira a terminação e releia a frase** | Plural, *-s* de terceira pessoa, *-ed*, *-ing*. A raiz certa com a terminação errada vale zero. Depois releia a frase inteira com a palavra dentro. |
 
-#### As 3 armadilhas clássicas do CTW
+#### As 5 armadilhas clássicas do CTW
 
-- **Distrator gramaticalmente correto, semanticamente incoerente**: respeita a
-sintaxe mas produz um sentido absurdo ou contraditório no contexto.
-- **Distrator lexicalmente plausível isolado, errado em collocation**: a
-palavra "combina" com o sentido geral, mas nativos nunca a usariam com aquele verbo/substantivo específico.
-- **Distrator que ignora o texto anterior**: funcionaria numa frase solta, mas
-contradiz algo já estabelecido (troca de tempo verbal, de sujeito, quebra de causa-efeito).
+- **Palavra de função curta**: *a_ _*, *th_ _*, *i_*, *o_*. Parecem fáceis e
+são as que mais derrubam, porque quem lê só as palavras "importantes" não percebe qual conector ou preposição a frase pede.
+- **Terminação errada**: escrever *eruption* onde a frase pede *eruptions*,
+ou *call* onde pede *called*. O número de traços avisa: conte.
+- **Ortografia**: a correção é por máquina, letra por letra. *recieve* não
+ganha meio ponto.
+- **Palavra que cabe nas letras mas não no sentido**: *fo_ _* aceita *form*,
+*fold*, *fork*, *foam*. Só uma faz sentido depois de *They ___ when snow builds up*.
+- **Travar numa lacuna**: são 30 lacunas na seção. Se uma não sai, siga em
+frente. Muitas vezes a palavra aparece inteira em outro ponto do texto, ou a lacuna seguinte destrava a anterior.
 
-> A ETS constrói os distratores para enganar exatamente quem julga por **uma só** das três camadas. Passe pelas três, sempre.
+> Os textos do **Grupo A**, na Parte 5, estão neste formato exato. O **Grupo A2** usa lacunas de palavra inteira com alternativas: não é o formato da prova, é treino da decisão de gramática e collocation que o Passo 2 exige.
 
 ---
 
@@ -320,36 +333,43 @@ Em itens de vocabulário em contexto, você raramente precisa "saber" a palavra:
 
 ### 4.1 Complete the Words, passo a passo
 
-**Texto:** *"The committee's decision to postpone the vote was widely seen as an attempt to (1)_____ growing public criticism."*
+**Texto:**
 
-**Opções:** (A) defer  (B) exacerbate  (C) circumvent  (D) endorse
+```
+Glaciers are large masses of ice that move slowly over land.
+They fo_ _ when sn_ _ builds up ov_ _ many years a_ _ is
+pressed in_ _ ice.
+```
 
-> **Passo 1: leia a frase inteira.** O sujeito é *the committee's decision to
-> postpone the vote*. Isso é descrito como *an attempt to _____ growing public
-> criticism*. A lógica: adiar o voto é uma forma de **lidar com / evitar** a
-> crítica.
+> **Passo 1: leia tudo.** A primeira frase diz que geleiras são massas de gelo
+> que se movem devagar. A segunda frase, com as lacunas, vai explicar como elas
+> surgem.
 >
-> **Passo 2: filtro gramatical.** A lacuna vem depois de *to* → precisa de
-> verbo na base. As quatro opções são verbos na base. Gramática **não elimina
-> nada** aqui · típico de CTW: a decisão será lexical.
+> **fo_ _** vem depois de *They* e antes de *when*. Falta o verbo da oração,
+> no presente e sem *-s*, porque o sujeito é plural. Quatro letras começando
+> com *fo*: *form*, *fold*, *fork*, *foam*. Geleiras se **formam**. → **form**
 >
-> **Passo 3: filtro de sentido e collocation.**
-> - (D) *endorse* = apoiar/endossar. Apoiar a crítica não faz sentido: o
->   comitê está tentando se proteger dela. **Fora.**
-> - (B) *exacerbate* = agravar. Agravar a própria crítica seria autossabotagem.
->   Sentido oposto ao contexto. **Fora.**
-> - Sobram (A) *defer* e (C) *circumvent*. Ambas têm a ver com "adiar/evitar".
->   Mas *defer* significa **adiar um evento** (*defer a payment*, *defer a
->   decision*): você adia **a crítica**? Crítica não é um evento que se
->   remarca. *Circumvent* = **contornar, driblar** um obstáculo: e crítica
->   pública **é** um obstáculo que se contorna. A collocation *circumvent
->   criticism / a rule / a problem* é natural; *defer criticism* não é.
+> **sn_ _** é o sujeito de *builds up*, que está no singular. Falta um
+> substantivo de quatro letras começando com *sn*. Num texto sobre gelo:
+> → **snow**
 >
-> **Passo 4: releia com a escolha.** *"...an attempt to **circumvent** growing
-> public criticism."* Natural, lógico, coerente. ✅
+> **ov_ _** vem antes de *many years*. Falta uma preposição de tempo. *Over
+> many years* é a collocation para "ao longo de muitos anos". → **over**
 >
-> **Resposta: (C).** O erro clássico aqui é parar no Passo 2 e chutar *defer*
-> por ser "parecido com adiar": sem checar se a collocation existe.
+> **a_ _** fica entre *builds up over many years* e *is pressed*. Já existem
+> dois verbos, então não falta verbo: falta o conector que os une. Três letras
+> começando com *a*. → **and**
+>
+> **in_ _** vem depois de *pressed* e antes de *ice*. A neve se transforma em
+> gelo, e transformação pede *into*, não *in*. A contagem confirma: quatro
+> letras. → **into**
+>
+> **Passo 4: releia.** *"They form when snow builds up over many years and is
+> pressed into ice."* Gramatical, lógico, coerente com a primeira frase. ✅
+>
+> **O que você digita:** *rm*, *ow*, *er*, *nd*, *to*. Repare que três das
+> cinco lacunas eram palavras de função (*over*, *and*, *into*). É a proporção
+> normal da prova.
 
 ### 4.2 Read an Academic Passage: 3 tipos de pergunta narrados
 

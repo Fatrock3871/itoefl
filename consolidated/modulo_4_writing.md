@@ -32,11 +32,11 @@
 | 2 | **Write an Email** | 1 | B1–C2 | IA (e-rater) | 5 | Academic Navigational |
 | 3 | **Write for an Academic Discussion** | 1 | B1–C2 | IA (e-rater) | 5 | Acadêmico |
 
-**Build a Sentence**: você reconstrói uma frase a partir de elementos fornecidos (palavras/blocos fora de ordem, ou um banco de opções), cobrindo uma progressão que vai de frases simples de nível A1 até subordinação complexa de nível C2. É pontuação **binária ou quase-binária** por item: a estrutura está certa ou não está.
+**Build a Sentence**: você lê a fala de outra pessoa e monta a resposta encaixando blocos de palavras nos espaços de uma frase que já vem com trechos escritos, cobrindo uma progressão que vai de frases simples de nível A1 até subordinação complexa de nível C2. É pontuação **binária ou quase-binária** por item: a estrutura está certa ou não está.
 
-**Write an Email**: cenário navegacional acadêmico (escrever para um professor, secretaria, orientador, colega de curso) exigindo texto multi-frase apropriado ao registro e à situação. Tipicamente 4–8 frases.
+**Write an Email**: uma situação e **três pontos obrigatórios** que o e-mail precisa cobrir, em **7 minutos**. O destinatário e o assunto já vêm preenchidos. O cenário costuma ser acadêmico (professor, secretaria, orientador), mas também pode ser cotidiano, como escrever ao editor de uma revista ou a uma empresa. Texto multi-frase apropriado ao registro e à situação, tipicamente 4–8 frases.
 
-**Write for an Academic Discussion**: você lê um prompt de discussão (com ou sem respostas de colegas simuladas) e escreve **um parágrafo** argumentativo com posição clara, justificativa, exemplo e vocabulário/gramática variados. ~150–200 palavras.
+**Write for an Academic Discussion**: você lê um prompt de discussão (com ou sem respostas de colegas simuladas) e escreve **um parágrafo** argumentativo com posição clara, justificativa, exemplo e vocabulário/gramática variados, em **10 minutos**. A instrução da prova diz que uma resposta eficaz tem **pelo menos 100 palavras**; os modelos deste módulo ficam entre 150 e 200.
 
 ### 1.3 Onde está o jogo: distribuição de peso
 
@@ -69,6 +69,19 @@ O e-rater não "entende" seu texto como um humano. Ele extrai **features mensur�
 ## PARTE 2: A ESTRATÉGIA POR TAREFA
 
 ### 2.1 Build a Sentence: o motor de correção por máquina
+
+**Como o item é na prova:** cada item é um mini-diálogo. Aparece a fala de outra pessoa e, embaixo, a sua resposta com alguns trechos já escritos e espaços vazios. Você preenche os espaços com os blocos do banco, que podem ter mais de uma palavra.
+
+```
+I heard Anna got a promotion.
+_____ _____ _____ _____ she will be _____ _____ ?
+```
+
+Três coisas que o formato muda na prática:
+
+- **As palavras fixas são pistas.** Elas dizem onde a frase começa, onde termina e, muitas vezes, se é pergunta ou afirmação.
+- **Às vezes sobra um bloco.** Se há mais blocos que espaços, um deles está ali para testar concordância ou um pronome repetido. Decida qual fica de fora antes de montar.
+- **A maior parte das respostas é pergunta**, e a estrutura mais cobrada é a **pergunta indireta**: *Do you know if...*, *Can you tell me whether...*, *She wanted to know where...* Depois dessas aberturas a ordem é de afirmação, sem inversão e sem auxiliar.
 
 Corrigido por **máquina**, não por IA generativa: a lógica é binária e estrutural. Sua reconstrução precisa corresponder a um padrão gramatical válido, com concordância, ordem, morfologia verbal, artigos e preposições no lugar certo. Não tem crédito parcial generoso. Pequenos erros de concordância ou ordem derrubam o item inteiro.
 
@@ -428,7 +441,11 @@ Reordene / complete. Respostas na Parte 6, seção "Laboratório".
 
 ---
 
+%%%BUILD_SENTENCE%%%
+
 ### GRUPO A: BUILD A SENTENCE (3 conjuntos, dificuldade crescente)
+
+Estes três conjuntos são **treino de base em papel**, não o formato da prova: aqui você escreve a frase e às vezes precisa mudar a forma de uma palavra. O drill interativo acima é o que reproduz o item real.
 
 Reconstrua cada frase usando **todas** as palavras/blocos, na forma correta (pode ser preciso mudar tempo verbal ou adicionar pequenas palavras de ligação quando indicado). Não adicione palavras de conteúdo novas.
 
@@ -481,7 +498,7 @@ Reconstrua cada frase usando **todas** as palavras/blocos, na forma correta (pod
 
 ### GRUPO B: WRITE AN EMAIL (banco de prompts)
 
-*Cada prompt: ~4 minutos. Escreva 4–8 frases, registro formal, aborde todos os elementos. Depois compare com os modelos da Parte 6 (feitos para B1, C4 e C5).*
+*Cada prompt: 7 minutos, o tempo da prova. Use a caixa de escrita embaixo de cada enunciado: ela tem cronômetro e contador de palavras, e guarda o seu texto. Escreva 4–8 frases, registro formal, aborde todos os elementos. Depois compare com os modelos da Parte 6 (feitos para B1, C4 e C5).*
 
 **Email 1: carta de recomendação** *You need a letter of recommendation from Professor Silva, who taught your research methods course last semester, for a scholarship application. Write an email to Professor Silva. In your email: (1) remind her which course you took and roughly how you performed, (2) ask whether she would be willing to write the letter, and (3) mention that the deadline is in three weeks.*
 
@@ -499,7 +516,7 @@ Reconstrua cada frase usando **todas** as palavras/blocos, na forma correta (pod
 
 ### GRUPO C: WRITE FOR AN ACADEMIC DISCUSSION (banco de prompts)
 
-*Cada prompt: ~10 minutos (inclui a leitura). Escreva um parágrafo de ~150–200 palavras: posição → razão → exemplo → engajamento com um colega. Compare com os modelos da Parte 6.*
+*Cada prompt: 10 minutos, o tempo da prova, incluindo a leitura. Use a caixa de escrita embaixo de cada enunciado. O mínimo indicado pela prova é de 100 palavras; mire um parágrafo de 150–200: posição → razão → exemplo → engajamento com um colega. Compare com os modelos da Parte 6.*
 
 **Discussion 1: presença obrigatória** *Professor: "Some universities are considering making class attendance optional. Others believe mandatory attendance improves learning. What is your view?"* *Ana: "Optional · if lectures are recorded, motivated students learn just as well on their own schedule."* *Tomás: "I disagree. Much of the value comes from discussion that only happens live."*
 

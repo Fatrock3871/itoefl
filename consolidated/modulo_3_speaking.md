@@ -72,6 +72,8 @@ Motores do tipo SpeechRater não "entendem" conteúdo como um humano. Eles extra
 
 ### 2.2 Estratégia para Listen and Repeat
 
+**Como a tarefa é na prova:** as sete frases pertencem a **um mesmo cenário** (por exemplo, o treinamento de alguém que vai receber visitantes num museu) e **crescem em tamanho**, de umas 5 palavras na primeira até umas 17 na última. Você **só ouve**, não lê, e repete **uma única vez**, sem tempo de preparo. O Grupo A da Parte 5 tem cinco cenários nesse formato, com áudio.
+
 **A IA compara sua transcrição contra o áudio-fonte, palavra por palavra, sílaba por sílaba.** Parafrasear é o erro mais caro que existe nesta task. Se você trocar *"purchase"* por *"buy"* porque "soou mais natural", você **não** ganha ponto por fluência. Você **perde** ponto por infidelidade ao alvo.
 
 **O que a pontuação recompensa:**
@@ -95,6 +97,8 @@ sílaba de stress.
 progressão do próprio teste.
 
 ### 2.3 Estratégia para Take an Interview
+
+**Como a tarefa é na prova:** as quatro perguntas fazem parte de **uma mesma entrevista**, sobre um único tema, e sobem em escada: (1) um fato simples sobre você, (2) sua reação pessoal e o porquê, (3) concordar ou discordar de uma opinião, (4) opinar sobre uma medida pública. Você ouve cada pergunta e responde na hora, sem tempo de preparo. O Grupo B da Parte 5 tem quatro entrevistas nesse formato, com áudio.
 
 Quatro perguntas, cada uma pedindo uma resposta **imediata, coerente e elaborada**. A pergunta pode pedir qualquer uma das 6 funções: você precisa reconhecer qual, em **segundos**.
 
@@ -374,7 +378,15 @@ quebra de ritmo, infidelidade lexical/gramatical.
 
 ---
 
+### Grupo A no formato da prova: cenários de Listen and Repeat
+
+Cinco cenários de sete frases, como na prova. Toque em **Ouvir**, repita em voz alta uma vez e só então, se quiser conferir, mostre o texto. Marque se repetiu igual ou se errou alguma palavra. Use o gravador do canto da tela para se ouvir depois.
+
+%%%SPK_REPEAT%%%
+
 ### GRUPO A: LISTEN AND REPEAT (5 conjuntos, dificuldade crescente)
+
+Estes conjuntos são **treino por nível**, não o formato da prova: as frases não formam um cenário e você pode lê-las antes.
 
 *Protocolo:* leia a frase **uma vez** em silêncio → **cubra o texto** → repita de memória, gravando → compare com o texto. Foco de correção indicado.
 
@@ -451,6 +463,12 @@ quebra de ritmo, infidelidade lexical/gramatical.
 > **Foco:** manter o compasso acentual por 25+ palavras sem "silabar"; agrupar em blocos sintáticos e respirar só entre eles.
 
 ---
+
+### Grupo B no formato da prova: entrevistas em cenário
+
+Quatro entrevistas de quatro perguntas, como na prova. Toque em **Ouvir**: quando a pergunta termina, começa a contagem de 45 segundos para a sua resposta. Responda sem ler a pergunta. Grave-se e depois aplique a rubrica da Parte 3.8.
+
+%%%SPK_INTERVIEW%%%
 
 ### GRUPO B: TAKE AN INTERVIEW (banco por função)
 
