@@ -64,7 +64,7 @@ def render_build_sentence(bsq_id, items):
     return f'''
 <h3>Drill interativo: Build a Sentence no formato da prova</h3>
 <p class="bsq-objective">Leia a fala e monte a resposta. Toque num bloco para colocá-lo no próximo espaço vazio; toque num bloco já colocado para devolvê-lo. As palavras impressas na resposta são fixas. Quando o item avisar que um bloco sobra, ele fica de fora.</p>
-<div class="bsq" data-bsq="{bsq_id}">
+<div class="bsq" data-bsq="{bsq_id}" data-level="A2–C1" data-lp-title="Build a Sentence · 30 itens no formato da prova">
   <div class="quiz-bar"><div class="quiz-bar-fill"></div></div>
   <p class="quiz-score">0 de {len(items)} verificadas</p>
   {"".join(cards)}

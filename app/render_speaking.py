@@ -41,7 +41,7 @@ def render_speaking_set(item, mode):
   </div>''')
     seconds = f' data-seconds="{INTERVIEW_SECONDS}"' if mode == "interview" else ""
     return f'''
-<div class="spk" data-spk="{html.escape(item["id"], quote=True)}" data-mode="{mode}"{seconds}>
+<div class="spk" data-spk="{html.escape(item["id"], quote=True)}" data-mode="{mode}"{seconds} data-level="{html.escape(item["level"], quote=True)}" data-lp-title="{'Listen and Repeat' if mode == 'repeat' else 'Take an Interview'} · {html.escape(item["title"], quote=True)}">
   <div class="spk-head"><span class="spk-title">{html.escape(item["title"])}</span><span class="spk-score"></span></div>
   <p class="spk-scenario">{html.escape(item["scenario"])}</p>
   {"".join(rows)}

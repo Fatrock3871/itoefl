@@ -1147,6 +1147,20 @@ main{max-width:1320px; margin:0 auto; padding:0 30px 120px; min-width:0;}
 .spk-foot{display:flex; align-items:center; justify-content:space-between; gap:12px; flex-wrap:wrap; padding-top:10px;}
 .spk-nosound{font-size:12.5px; color:var(--danger);}
 
+/* Treino no seu nível (M0) */
+.lvlp{background:var(--paper); border:2px solid var(--edge); border-radius:var(--radius); padding:18px 20px; margin:18px 0 26px; box-shadow:var(--shadow-hard);}
+.lvlp-title{font-weight:800; font-size:14px !important; color:var(--accent-strong) !important; margin:0 0 6px !important;}
+.lvlp-status{font-size:14px !important; margin:0 0 10px !important; max-width:none !important;}
+.lvlp-list{list-style:none; margin:0 0 12px !important; padding:0 !important; counter-reset:lvlp;}
+.lvlp-list li{display:grid; grid-template-columns:minmax(0,1fr) auto auto; align-items:center; gap:12px; padding:9px 0; border-top:1px solid var(--hair); margin:0 !important; max-width:none !important;}
+.lvlp-list li::before{content:none !important;}
+.lvlp-name{font-size:14.5px; font-weight:700; min-width:0;}
+.lvlp-meta{font-size:12px; color:var(--ink-2); white-space:nowrap;}
+.lvlp-go, .lvlp-shuffle{padding:7px 16px; border-radius:99px; border:2px solid var(--edge); background:var(--accent); color:#fff; font-family:inherit; font-size:12.5px; font-weight:700; cursor:pointer;}
+.lvlp-shuffle{background:var(--paper); color:var(--ink); border-width:1px; border-color:var(--hair);}
+.lvlp-shuffle:hover{border-color:var(--edge);}
+@media(max-width:480px){ .lvlp-list li{grid-template-columns:minmax(0,1fr) auto;} .lvlp-meta{grid-column:1; grid-row:2;} .lvlp-go{grid-row:1 / span 2; grid-column:2;} }
+
 /* Calculadora de score (M0, Parte 4) */
 .scalc{background:var(--paper); border:2px solid var(--edge); border-radius:var(--radius); padding:18px 20px; margin:18px 0 26px; box-shadow:var(--shadow-hard);}
 .scalc-title{font-weight:800; font-size:14px !important; color:var(--accent-strong) !important; margin:0 0 12px !important; max-width:none !important;}

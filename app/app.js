@@ -702,6 +702,7 @@
       var badge = document.querySelector('[data-level-badge-for="' + drillEl.dataset.drill + '"]');
       if(badge) badge.classList.toggle("is-recommended", match);
     });
+    if(typeof window.__toeflRefreshLevelPractice === "function") window.__toeflRefreshLevelPractice();
   }
 
   // Embaralha a ordem das alternativas de uma questão NA TELA. Roda a cada
@@ -3164,6 +3165,129 @@
       });
     }
     updateResumeBtn();
+  })();
+
+  // ---------- Treino no seu nível (M0) ----------
+  // Monta uma sessão de exercícios compatíveis com o nível estimado do aluno
+  // (diagnóstico do M0 ou, na falta dele, os drills de M1/M2). A sessão é
+  // sorteada de novo a cada carregamento da página e no botão "Sortear outra
+  // sessão". Não cria questões: escolhe entre os exercícios do site que têm
+  // faixa CEFR declarada (data-level), dando prioridade aos ainda não feitos.
+  (function(){
+    var box = document.getElementById("levelPractice");
+    if(!box) return;
+    var statusEl = document.getElementById("lvlpStatus");
+    var listEl = document.getElementById("lvlpList");
+    var shuffleBtn = document.getElementById("lvlpShuffle");
+    var ORDER = ["A1", "A2", "B1", "B2", "C1", "C2"];
+    var MOD_NAMES = { mod1: "Reading", mod2: "Listening", mod3: "Speaking", mod4: "Writing" };
+    var SESSION_SIZE = 5;
+    var lastLevel = null;
+
+    function range(el){
+      var parts = el.dataset.level.split(/[–-]/).map(function(x){ return x.trim(); });
+      return [ORDER.indexOf(parts[0]), ORDER.indexOf(parts[parts.length - 1])];
+    }
+    // distância entre o nível do aluno e a faixa do exercício (0 = dentro)
+    function distance(el, lvl){
+      var r = range(el);
+      if(r[0] < 0 || r[1] < 0) return 99;
+      if(lvl < r[0]) return r[0] - lvl;
+      if(lvl > r[1]) return lvl - r[1];
+      return 0;
+    }
+    function isDone(el){
+      if(el.classList.contains("ctw")) return el.classList.contains("is-checked");
+      var summary = el.querySelector(".quiz-summary");
+      return !!summary && !summary.hidden;
+    }
+    function shuffled(arr){
+      var a = arr.slice();
+      for(var i = a.length - 1; i > 0; i--){
+        var j = Math.floor(Math.random() * (i + 1));
+        var t = a[i]; a[i] = a[j]; a[j] = t;
+      }
+      return a;
+    }
+    function pool(){
+      return Array.prototype.filter.call(document.querySelectorAll("[data-level][data-lp-title]"), function(el){
+        var panel = el.closest(".panel");
+        return panel && MOD_NAMES[panel.dataset.panel];
+      });
+    }
+    function pick(lvl){
+      var all = pool();
+      var best = Math.min.apply(null, all.map(function(el){ return distance(el, lvl); }));
+      var fit = all.filter(function(el){ return distance(el, lvl) === best; });
+      // por módulo, os não feitos primeiro; depois um de cada módulo por vez,
+      // para a sessão misturar habilidades em vez de sair toda de Reading
+      var byMod = {};
+      shuffled(fit).forEach(function(el){
+        var mod = el.closest(".panel").dataset.panel;
+        (byMod[mod] = byMod[mod] || []).push(el);
+      });
+      Object.keys(byMod).forEach(function(mod){
+        byMod[mod].sort(function(a, b){ return (isDone(a) ? 1 : 0) - (isDone(b) ? 1 : 0); });
+      });
+      var mods = shuffled(Object.keys(byMod)), out = [];
+      while(out.length < SESSION_SIZE){
+        var took = false;
+        for(var i = 0; i < mods.length && out.length < SESSION_SIZE; i++){
+          var next = byMod[mods[i]].shift();
+          if(next){ out.push(next); took = true; }
+        }
+        if(!took) break;
+      }
+      return out;
+    }
+    function goTo(el){
+      var mod = el.closest(".panel").dataset.panel;
+      navTo(mod);
+      setTimeout(function(){
+        var showPart = window.__toeflShowPart && window.__toeflShowPart[mod];
+        var card = el.closest(".section-card");
+        if(showPart && card) showPart(card, { noScroll: true });
+        var body = el.closest(".h3-body");
+        if(body && body.classList.contains("h3-collapsed")){
+          body.classList.remove("h3-collapsed");
+          var head = body.previousElementSibling;
+          if(head) head.classList.remove("collapsed");
+        }
+        el.scrollIntoView({ behavior: "smooth", block: "start" });
+        el.classList.add("resume-highlight");
+        setTimeout(function(){ el.classList.remove("resume-highlight"); }, 2200);
+      }, 60);
+    }
+    function render(force){
+      var est = computeBandEstimate();
+      if(!est){ listEl.innerHTML = ""; shuffleBtn.hidden = true; lastLevel = null; return; }
+      var label = cefrBandFromPct(est.pct).label;
+      if(!force && label === lastLevel && listEl.children.length) return; // não troca a sessão no meio do estudo
+      lastLevel = label;
+      var session = pick(ORDER.indexOf(label));
+      statusEl.textContent = "Nível estimado: " + label + " (pelo " + est.source + "). Sessão sorteada para esse nível:";
+      listEl.innerHTML = "";
+      session.forEach(function(el){
+        var li = document.createElement("li");
+        var name = document.createElement("span");
+        name.className = "lvlp-name";
+        name.textContent = MOD_NAMES[el.closest(".panel").dataset.panel] + " · " + el.dataset.lpTitle;
+        var meta = document.createElement("span");
+        meta.className = "lvlp-meta";
+        meta.textContent = el.dataset.level + (isDone(el) ? " · já feito" : "");
+        var btn = document.createElement("button");
+        btn.type = "button";
+        btn.className = "lvlp-go";
+        btn.textContent = "Abrir";
+        btn.addEventListener("click", function(){ goTo(el); });
+        li.appendChild(name); li.appendChild(meta); li.appendChild(btn);
+        listEl.appendChild(li);
+      });
+      shuffleBtn.hidden = session.length === 0;
+    }
+    shuffleBtn.addEventListener("click", function(){ render(true); });
+    window.__toeflRefreshLevelPractice = function(){ render(false); };
+    render(true);
   })();
 
   // ---------- Paginação por Parte, tipo flashcard ----------

@@ -50,6 +50,9 @@ def render_quiz_drill(drill_id, title, objective, passage_html, items, listen=Fa
     level_badge = f'<span class="drill-level" data-level-badge-for="{drill_id}">Nível {level}</span>' if level else ""
     heading = f'<h3>{title}{level_badge}</h3>' if title else (f'<p class="quiz-level-standalone">{level_badge}</p>' if level_badge else "")
     level_attr = f' data-level="{level}"' if level else ""
+    if level and title:
+        import html as _html
+        level_attr += f' data-lp-title="{_html.escape(title, quote=True)}"'
     return f'''
 {heading}
 <p class="quiz-objective">{objective}</p>

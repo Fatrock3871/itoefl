@@ -185,9 +185,21 @@ def build_mod0():
         '<span class="live-score-band" id="liveScoreListeningBand">Responda os Action Drills do Módulo 2 para calcular</span></div>'
         '</div></div>'
     )
+    # treino por nível: o app.js sorteia, a cada sessão, exercícios do site
+    # cuja faixa CEFR inclui o nível estimado do aluno (ver "Treino no seu
+    # nível" em app.js). Não cria questão nova: escolhe entre as que existem.
+    level_practice = (
+        '<div class="lvlp" id="levelPractice">'
+        '<p class="lvlp-title">Treino no seu nível</p>'
+        '<p class="lvlp-status" id="lvlpStatus">Termine as 10 questões do diagnóstico (Parte 3) para liberar uma sessão '
+        'de exercícios escolhidos para o seu nível.</p>'
+        '<ol class="lvlp-list" id="lvlpList"></ol>'
+        '<button type="button" class="lvlp-shuffle" id="lvlpShuffle" hidden>Sortear outra sessão</button>'
+        '</div>'
+    )
     idx = html_after.find("<h2>PARTE 5")
     if idx != -1:
-        html_after = html_after[:idx] + live_score + html_after[idx:]
+        html_after = html_after[:idx] + live_score + level_practice + html_after[idx:]
 
     # calculadora de score (Parte 4): entra logo antes de "4.3 Score Geral
     # Estimado". Usa a mesma tabela de 4.2; a conta é feita no app.js.

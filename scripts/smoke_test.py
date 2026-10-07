@@ -203,6 +203,51 @@ if(spk0){
   });
 })();
 
+// Treino no seu nivel: sessao sorteada entre exercicios da faixa do aluno
+(function(){
+  var box = document.getElementById("levelPractice");
+  check("lvlp_exists_with_pool", function(){ return !!box && document.querySelectorAll("[data-level][data-lp-title]").length >= 40; });
+  if(!box) return;
+  var ORDER = ["A1","A2","B1","B2","C1","C2"];
+  function seedDiag(nRight){
+    var st = {};
+    Array.prototype.forEach.call(document.querySelectorAll('.quiz-drill[data-drill="mod0-diag"] .qcard'), function(c, k){
+      var wrong = ["A","B","C","D"].filter(function(L){ return L !== c.dataset.correct; })[0];
+      st[c.dataset.num] = { picked: k < nRight ? c.dataset.correct : wrong, confirmed: true };
+    });
+    localStorage.setItem("toefl_quiz_mod0-diag_v1", JSON.stringify(st));
+  }
+  function rows(){ return Array.prototype.slice.call(document.querySelectorAll("#lvlpList li")); }
+  function levelsFit(label){
+    var me = ORDER.indexOf(label);
+    return rows().every(function(li){
+      var r = li.querySelector(".lvlp-meta").textContent.split(" · ")[0].split(/[–-]/);
+      return ORDER.indexOf(r[0]) <= me && me <= ORDER.indexOf(r[r.length - 1]);
+    });
+  }
+  seedDiag(5);  // 50% -> B1
+  document.getElementById("lvlpShuffle").click();
+  check("lvlp_b1_session_has_5_in_range", function(){
+    return rows().length === 5 && document.getElementById("lvlpStatus").textContent.indexOf("Nível estimado: B1") === 0 && levelsFit("B1");
+  });
+  check("lvlp_session_mixes_skills", function(){
+    var mods = {}; rows().forEach(function(li){ mods[li.querySelector(".lvlp-name").textContent.split(" · ")[0]] = 1; });
+    return Object.keys(mods).length >= 3;
+  });
+  seedDiag(8);  // 80% -> C1
+  document.getElementById("lvlpShuffle").click();
+  check("lvlp_c1_session_in_range", function(){
+    return rows().length === 5 && document.getElementById("lvlpStatus").textContent.indexOf("Nível estimado: C1") === 0 && levelsFit("C1");
+  });
+  var first = rows().map(function(li){ return li.querySelector(".lvlp-name").textContent; }).join("|"), changed = false;
+  for(var t = 0; t < 6 && !changed; t++){
+    document.getElementById("lvlpShuffle").click();
+    changed = rows().map(function(li){ return li.querySelector(".lvlp-name").textContent; }).join("|") !== first;
+  }
+  check("lvlp_reshuffle_changes_session", function(){ return changed; });
+  localStorage.removeItem("toefl_quiz_mod0-diag_v1");
+})();
+
 // Calculadora de score do M0: tabela 4.2 e media arredondada a meia banda
 check("scalc_exists", function(){ return !!document.getElementById("scoreCalc") && document.querySelectorAll(".scalc-in").length === 4; });
 (function(){

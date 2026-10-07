@@ -6,6 +6,9 @@
 # Listen and Repeat: 7 frases de um mesmo cenário, crescendo de tamanho. O
 # aluno só ouve (o texto fica escondido) e repete uma vez.
 #
+# level: faixa CEFR para a qual o conjunto é indicado (usada no treino por
+# nível do M0).
+#
 # Take an Interview: 4 perguntas do mesmo tema, em escada: fato pessoal
 # simples, reação pessoal com porquê, concordar ou discordar de uma opinião,
 # opinar sobre uma medida pública.
@@ -13,6 +16,7 @@
 LISTEN_REPEAT_SETS = [
     {
         "id": "mod3-lr1",
+        "level": "A2–B2",
         "title": "Cenário 1 · Campus library",
         "scenario": "You are learning to help at a campus library. Listen to the librarian and repeat what she says. Repeat only once.",
         "items": [
@@ -27,6 +31,7 @@ LISTEN_REPEAT_SETS = [
     },
     {
         "id": "mod3-lr2",
+        "level": "A2–B2",
         "title": "Cenário 2 · Coffee shop",
         "scenario": "You are starting a job at a coffee shop. Listen to your manager and repeat what he says. Repeat only once.",
         "items": [
@@ -41,6 +46,7 @@ LISTEN_REPEAT_SETS = [
     },
     {
         "id": "mod3-lr3",
+        "level": "B1–C1",
         "title": "Cenário 3 · Museum tour",
         "scenario": "You are training to guide visitors at a museum. Listen to the senior guide and repeat what she says. Repeat only once.",
         "items": [
@@ -55,6 +61,7 @@ LISTEN_REPEAT_SETS = [
     },
     {
         "id": "mod3-lr4",
+        "level": "B1–C1",
         "title": "Cenário 4 · Chemistry lab",
         "scenario": "You are attending a safety briefing in a chemistry lab. Listen to the instructor and repeat what he says. Repeat only once.",
         "items": [
@@ -69,6 +76,7 @@ LISTEN_REPEAT_SETS = [
     },
     {
         "id": "mod3-lr5",
+        "level": "B2–C2",
         "title": "Cenário 5 · Hotel front desk",
         "scenario": "You are learning to work at a hotel front desk. Listen to your supervisor and repeat what she says. Repeat only once.",
         "items": [
@@ -86,6 +94,7 @@ LISTEN_REPEAT_SETS = [
 INTERVIEW_SETS = [
     {
         "id": "mod3-int1",
+        "level": "B1–C1",
         "title": "Entrevista 1 · Study habits",
         "scenario": "You have agreed to take part in a research study about how students prepare for exams. You will have a short online interview with a researcher.",
         "items": [
@@ -97,6 +106,7 @@ INTERVIEW_SETS = [
     },
     {
         "id": "mod3-int2",
+        "level": "B1–C1",
         "title": "Entrevista 2 · Getting around",
         "scenario": "You have agreed to take part in a survey about transportation in your area. You will have a short online interview with a researcher.",
         "items": [
@@ -108,6 +118,7 @@ INTERVIEW_SETS = [
     },
     {
         "id": "mod3-int3",
+        "level": "B1–C2",
         "title": "Entrevista 3 · Phones and free time",
         "scenario": "You have agreed to take part in a research study about technology and daily life. You will have a short online interview with a researcher.",
         "items": [
@@ -119,6 +130,7 @@ INTERVIEW_SETS = [
     },
     {
         "id": "mod3-int4",
+        "level": "B1–C2",
         "title": "Entrevista 4 · Food and cooking",
         "scenario": "You have agreed to take part in a research study about eating habits. You will have a short online interview with a researcher.",
         "items": [

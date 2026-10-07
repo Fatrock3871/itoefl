@@ -2,7 +2,7 @@
 
 Memória entre sessões. Atualizar ao concluir cada etapa.
 
-**Última atualização:** 2026-10-07
+**Última atualização:** 2026-10-07 (noite)
 **Lista única de pendências:** seção "Tudo que falta" logo abaixo.
 **Plano de expansão (2026-10-05):** as quatro frentes novas pedidas pelo
 usuário (app Android/Windows/macOS/iOS, didática com videoaulas e
@@ -126,7 +126,7 @@ Nada das etapas seguintes anda sem esta. Ordem sugerida de cima para baixo.
 
 Pequenas, independentes entre si, podem entrar em qualquer intervalo.
 
-- [ ] (C) Passada de consistência nos 10 módulos depois das reescritas de
+- [x] (C) Passada de consistência nos 10 módulos depois das reescritas de
       tom: repetição, trecho quebrado, referência cruzada desatualizada.
 - [ ] (C) Conferir os números do formato 2026 linha a linha contra o
       documento oficial da ETS. Pré-requisito do aprofundamento teórico.
@@ -135,14 +135,14 @@ Pequenas, independentes entre si, podem entrar em qualquer intervalo.
       verificação contra a ETS (Fase 7).
 - [ ] (U) M8: confirmar na inscrição da ETS a ordem Writing e Speaking, que
       varia por centro.
-- [ ] (D) M7: os simulados continuam em texto ou viram interativos? Se
-      virarem, sem feedback item a item, só no final.
-- [ ] (C) M4: o texto tem 30 itens de Build a Sentence e o widget só 10.
-- [ ] (C) M0: calculadora de score interativa e resumo executivo no topo
+- [x] (D) M7: decidido em 2026-10-07 que viram interativos. Feito: 19 blocos,
+      62 questões, correção só na entrega do bloco.
+- [x] (C) M4: o texto tem 30 itens de Build a Sentence e o widget só 10.
+- [x] (C) M0: calculadora de score interativa e resumo executivo no topo
       (dois itens da review externa que nunca foram iniciados).
 - [ ] (C) Estender o painel "Seu desempenho real" para além de M1 e M2.
-- [ ] (D) Duas perguntas antigas sem resposta: M0 expandido como introdução?
-      M9 fica, some ou é fundido? Na falta de resposta, ficam como estão.
+- [x] (D) M9: decidido em 2026-10-07 que fica como está. A pergunta sobre
+      expandir o M0 como introdução foi atendida pelo resumo no topo do módulo.
 - [x] (C) Limpeza: remover `showLockMessage()` e `.lock-msg` (código morto),
       a RPC `email_for_username` e a coluna `username` do banco, e atualizar
       o `CLAUDE.md` (faltam as chaves `toefl_partpos_v1`,
@@ -159,22 +159,37 @@ Achado em 2026-10-07 ao ler os quatro testes práticos gratuitos da ETS no
 formato 2026. Análise completa em `docs/ets-materiais-oficiais.md`. Vem antes
 do banco de questões, porque define o formato de dois tipos de item.
 
-- [ ] (C) M7: indicar os quatro testes oficiais gratuitos como simulados
+- [x] (C) M7: indicar os quatro testes oficiais gratuitos como simulados
       extras, com link para a ETS.
-- [ ] (C) **Complete the Words está no formato errado.** O site usa lacuna de
+- [x] (C) **Complete the Words está no formato errado.** O site usa lacuna de
       palavra inteira com 4 alternativas; a prova apaga o final da palavra e o
       aluno digita as letras, sem alternativas. São 30 dos 50 itens de
       Reading. Falta: widget de digitar letras, parágrafos acadêmicos
       originais e revisão do Método CTW no M1.
-- [ ] (C) **Build a Sentence está simplificado demais.** Na prova cada item é
+- [x] (C) **Build a Sentence está simplificado demais.** Na prova cada item é
       resposta a uma fala, tem trechos fixos e às vezes um bloco que sobra,
       com foco em perguntas indiretas. Falta estender o widget e escrever
       itens novos.
-- [ ] (C) Listen and Repeat: conjuntos de 7 frases de um mesmo cenário,
+- [x] (C) Listen and Repeat: conjuntos de 7 frases de um mesmo cenário,
       crescendo de tamanho, só ouvidas (o texto hoje aparece antes).
-- [ ] (C) Take an Interview: cenários de 4 perguntas do mesmo tema, em escada.
-- [ ] (C) M4: e-mail de 7 minutos com 3 pontos obrigatórios e cenário que
+- [x] (C) Take an Interview: cenários de 4 perguntas do mesmo tema, em escada.
+- [x] (C) M4: e-mail de 7 minutos com 3 pontos obrigatórios e cenário que
       também pode ser cotidiano; discussão com mínimo de 100 palavras.
+
+### Etapa 0D: sobras da leva de 2026-10-07
+
+- [ ] (U) Abrir o site e testar os exercícios novos de verdade: Complete the
+      Words (M1), Build a Sentence e caixa de escrita (M4), os conjuntos com
+      áudio (M3), um bloco de simulado (M7), a calculadora e o treino por
+      nível (M0). Só foram testados em Chrome headless.
+- [ ] (U) Passar os textos novos em inglês por um professor: 8 parágrafos
+      (`app/ctw_data.py`), 30 itens (`app/build_sentence_data.py`) e os
+      cenários de Speaking (`app/speaking_data.py`).
+- [ ] (C) Fazer o painel "Seu desempenho real", a meta diária e o progresso
+      do módulo contarem os exercícios novos.
+- [ ] (C) Tornar interativas as partes de Writing e Speaking dos simulados
+      do M7, reaproveitando a caixa de escrita e os conjuntos com áudio.
+- [ ] (C) Geração de questões por nível: depende do banco (Etapa 2).
 
 ### Etapa 1: app instalável e videoaulas
 
@@ -269,6 +284,85 @@ Não foram pedidos, apareceram ao consolidar a lista.
 - Medição de uso, para saber onde os alunos param.
 - Plano do Supabase: conferir limites e política de pausa do plano grátis
   antes de depender dele com gente pagando.
+
+---
+
+## Sessão 2026-10-07 — Formato real da prova, simulados interativos, viés de gabarito
+
+O usuário delegou a gestão do projeto "por enquanto" e pediu para ser chamado
+só em pontos cruciais. Decisões dele nesta sessão: M7 vira interativo, M9
+fica como está.
+
+**Origem:** leitura dos quatro testes práticos gratuitos da ETS no formato
+2026 (`docs/ets-materiais-oficiais.md`). Dois exercícios do site ensinavam
+um formato que não é o da prova.
+
+**Feito, tudo commitado e no GitHub:**
+
+- **M1, Complete the Words de digitar.** Widget novo em que o aluno digita o
+  final da palavra, sem alternativas. 8 parágrafos acadêmicos originais, 80
+  lacunas, B1 a C1+. Método CTW (2.1) e exemplo resolvido (4.1) reescritos.
+  Os 32 itens antigos de múltipla escolha viraram "Grupo A2, treino de base".
+- **M4, Build a Sentence no molde da prova.** Fala de contexto, trechos
+  fixos, espaços a preencher e, em 5 itens, um bloco que sobra. 30 itens
+  originais com foco em pergunta indireta. Widget com id novo (`m4build2`):
+  o progresso do widget antigo não se aplica.
+- **M4, caixa de escrita.** Campo com cronômetro (7 ou 10 minutos), contador
+  de palavras e mínimo de 100 na discussão, embaixo dos 12 enunciados. O
+  texto fica salvo e sincroniza. É a tela em que a correção por agente da
+  Etapa 3 vai se encaixar.
+- **M3, Speaking em cenário.** 5 cenários de Listen and Repeat (7 frases
+  crescentes) e 4 entrevistas (4 perguntas em escada), com áudio sintético e
+  texto escondido. A entrevista tem contagem de 45 segundos por resposta.
+- **M7 interativo.** 19 blocos, 62 questões, correção só na entrega. O
+  pipeline lê as questões e o gabarito do próprio `.md`.
+- **M7:** os quatro testes oficiais gratuitos indicados como simulados extras.
+- **M0:** calculadora de score (percentual por seção em banda, mais a banda
+  geral) e resumo do módulo no topo.
+- **M0, treino no seu nível.** Sorteia, a cada sessão, 5 exercícios cuja
+  faixa CEFR inclui o nível estimado do aluno, misturando habilidades e
+  priorizando o que ainda não foi feito. 40 exercícios têm faixa declarada.
+- **Tempos corrigidos** no M4 e no M8: e-mail de 7 minutos com três pontos
+  obrigatórios, discussão de 10 minutos com mínimo de 100 palavras, Build a
+  Sentence em cerca de 6.
+
+**Defeito grave achado no caminho: gabarito viciado em uma letra.** A resposta
+certa era "B" em 66% a 81% dos itens de quase todos os drills, e "C" em 7 das
+10 questões do diagnóstico. Marcar sempre a mesma letra dava nota alta, o que
+invalidava o diagnóstico e o painel de desempenho. Corrigido em duas camadas:
+
+1. `app/rebalance.py` redistribui a letra correta no build, de forma
+   determinística, e remapeia as citações "(B)" das explicações. Depois:
+   nenhuma letra passa de 38% em nenhum módulo. Conferido por script: 118
+   itens, 85 mudaram de letra, 218 citações, 0 inconsistências.
+2. A pedido do usuário, o `app.js` embaralha a ordem das alternativas na
+   tela a cada carregamento e a cada "Refazer". A correção usa a letra de
+   origem, então o progresso salvo continua valendo.
+
+**Auditoria de consistência dos 10 módulos (por script, não por leitura):**
+0 referências cruzadas quebradas ("Módulo N, Parte X", "Parte X.Y"), 0
+parágrafos repetidos, e os números da prova conferem com o blueprint em
+todos os módulos, exceto os tempos de Writing do M8, corrigidos. O script
+não avalia qualidade de texto: isso continua dependendo de leitura humana.
+
+**Smoke test:** de 33 para 75 checagens.
+
+**O que ficou de fora, com o motivo:**
+
+- **Gerar questões novas por nível.** O usuário pediu que o sistema "gere
+  questões de acordo com cada nível de diagnóstico". O que foi feito escolhe
+  entre exercícios que já existem. Criar questão nova na hora exige o banco
+  de questões (Etapa 2) ou chamada de IA por aluno (Etapa 3, que depende do
+  modelo de cobrança). Hoje o conjunto por nível é pequeno: 40 exercícios.
+- **Writing e Speaking dos simulados do M7** continuam em texto. Só a
+  múltipla escolha virou interativa.
+- **Painel "Seu desempenho real" e a meta diária** ainda não contam os
+  exercícios novos (Complete the Words, Build a Sentence, Speaking, M7).
+- **Nada disso foi testado por uma pessoa num navegador de verdade.** Tudo
+  passou no Chrome headless. O áudio dos conjuntos de Speaking depende da
+  voz sintética do aparelho e não foi ouvido.
+- **Os textos novos são originais meus e não passaram por revisão de um
+  professor de inglês.** Vale uma leitura antes de vender.
 
 ---
 

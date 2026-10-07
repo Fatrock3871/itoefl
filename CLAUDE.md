@@ -37,10 +37,17 @@ app/build.py              Monta artifact/index.html (nav + painéis + CSS + JS)
 app/quiz_mod0.json        As 10 questões do diagnóstico (M0)
 app/drills_data.py        Drills interativos de Reading (M1) e Listening (M2)
 app/vocab_kit.json        As 50 palavras do Kit de Emergência (flashcards SRS do M6)
-app/build_sentence_data.py  Itens do widget Build a Sentence (M4)
+app/build_sentence_data.py  30 itens de Build a Sentence no molde da prova (M4)
+app/ctw_data.py           8 parágrafos de Complete the Words no molde da prova (M1)
+app/speaking_data.py      Cenários de Listen and Repeat e de Take an Interview (M3)
 app/render_quiz.py        Renderizador dos widgets de quiz/drill
 app/render_srs.py         Renderizador do widget de flashcards (M6)
 app/render_build.py       Renderizador do widget Build a Sentence (M4)
+app/render_ctw.py         Renderizador do Complete the Words de digitar (M1)
+app/render_speaking.py    Renderizador dos conjuntos de Speaking com áudio (M3)
+app/render_wbox.py        Caixa de escrita com cronômetro e contador (M4)
+app/render_exam.py        Blocos de simulado do M7: lê as questões e o gabarito do próprio .md
+app/rebalance.py          Redistribui a letra correta no build e marca as citações "(B)"
 app/render_errorlog.py    Renderizador do formulário de Registro de erros (M1 a M6)
 app/render_weeklydash.py  Renderizador do dashboard semanal (M0)
 app/app.js                Runtime: tema, abas, progresso (checkboxes + badges), quizzes
@@ -69,6 +76,12 @@ _snapshots/               Cópias com timestamp antes de mudanças estruturais
 - **Questões do diagnóstico** → `app/quiz_mod0.json`.
 - **Drills de Reading/Listening** → `app/drills_data.py`.
 - **Itens de Build a Sentence (M4)** → `app/build_sentence_data.py`.
+- **Parágrafos de Complete the Words (M1)** → `app/ctw_data.py`.
+- **Cenários de Speaking (M3)** → `app/speaking_data.py`.
+- **Questões dos simulados (M7)** → no próprio `consolidated/modulo_7_simulados.md`.
+  Cada bloco de múltipla escolha seguido de `**Gabarito:** 1-B · 2-C` vira
+  widget sozinho. O build falha se a contagem de blocos ou itens mudar sem
+  atualizar `M7_EXPECTED_*` em `build_pipeline.py`.
 - **Palavras dos flashcards (M6)** → `app/vocab_kit.json`.
 - **Comportamento/interação** → `app/app.js` e os `app/render_*.py`.
 - **Estilo** → `app/styles.css`.
@@ -78,8 +91,21 @@ _snapshots/               Cópias com timestamp antes de mudanças estruturais
   de `supabase functions deploy <nome>`. O deploy já reportou sucesso sem
   atualizar o código; conferir a versão publicada depois de cada deploy.
 
-Os módulos M1, M2, M4 e M6 têm um `build_modN()` no pipeline que injeta o
-widget no fragmento; os demais usam `build_plain()`. Cronômetro, gravador e
+Os módulos M0 a M7 têm um `build_modN()` no pipeline que injeta os widgets no
+fragmento; M8 e M9 usam `build_plain()`. Em M3 e M4 o lugar do widget é
+marcado no `.md` com um parágrafo `%%%NOME%%%`, que o pipeline troca.
+
+**Formato real das tarefas:** antes de criar ou mudar exercício, ler
+`docs/ets-materiais-oficiais.md`. Ele descreve o molde de cada tarefa visto
+nos testes práticos oficiais de 2026. O conteúdo da ETS não pode ser copiado
+nem adaptado de perto: só o formato.
+
+**Letras das alternativas:** nos dados de origem a resposta certa era quase
+sempre "B". `rebalance.py` redistribui no build, e o `app.js` ainda embaralha
+a ordem na tela a cada sessão (`shuffleChoices`). Por isso: citar alternativa
+em explicação sempre como `(B)`, entre parênteses, que é o que as duas etapas
+sabem remapear. A correção e o progresso salvo usam `data-letter`, a letra
+depois do rebalanceamento do build, nunca a posição na tela. Cronômetro, gravador e
 export/import ficam no shell (`build.py`) e valem para todas as abas.
 - Depois de qualquer edição de fonte, rodar as duas builds e conferir
   `artifact/index.html` no navegador.
@@ -140,14 +166,14 @@ Implicações que o conteúdo deve respeitar:
 
 | ID | Módulo | Estado |
 |---|---|---|
-| M0 | Embarque & Diagnóstico | ✅ formato 2026, 10 questões |
-| M1 | Reading | ✅ formato 2026, 3 drills |
+| M0 | Embarque & Diagnóstico | ✅ formato 2026, 10 questões, calculadora de score, treino por nível |
+| M1 | Reading | ✅ formato 2026: 8 textos de Complete the Words de digitar (80 lacunas) + 66 itens de múltipla escolha |
 | M2 | Listening | ✅ formato 2026, 4 drills |
-| M3 | Speaking | ✅ formato 2026 |
-| M4 | Writing | ✅ formato 2026 |
+| M3 | Speaking | ✅ formato 2026: 5 cenários de Listen and Repeat e 4 entrevistas, com áudio |
+| M4 | Writing | ✅ formato 2026: 30 itens de Build a Sentence no molde da prova + 12 caixas de escrita |
 | M5 | Registro & Sofisticação Retórica | ✅ reescrito para 2026 — camada transversal de elevação de banda (Atlas Linguístico em bandas CEFR + 10 marcadores + aplicação por task) |
 | M6 | Vocabulário acadêmico | ✅ portado para 2026 — 100 entradas de léxico + arsenal cross-temático + kit de 50 palavras |
-| M7 | Simulados progressivos | ✅ formato 2026 |
+| M7 | Simulados progressivos | ✅ formato 2026: 19 blocos interativos (62 questões), correção só na entrega |
 | M8 | Exam Day Protocol | ✅ portado — Parte 6 (seção a seção) reescrita para as 4 seções de 2026 |
 | M9 | Brazilian Trap Library | ✅ portado — referências a tasks extintas atualizadas |
 
@@ -183,7 +209,10 @@ próximo `<h2>` num card, estilo "unit card". Não tocam nos `.md`.
 Sincronizadas com a conta (casam com `SYNC_PREFIXES` em `app.js`):
 `toefl_progress_v1` (checkboxes das Partes), `toefl_h3progress_v1` (checkboxes
 das subseções), `toefl_quiz_<drillId>_v1`, `toefl_srs_kit50_v1`,
-`toefl_bsq_m4build_v1`, `toefl_errlog_<módulo>_v1` (registro de erros),
+`toefl_bsq_m4build2_v1`, `toefl_ctw_<id>_v1`, `toefl_spk_<id>_v1`,
+`toefl_write_<id>_v1` (textos das caixas de escrita), `toefl_exam_<id>_v1`
+(simulados do M7), `toefl_scorecalc_v1`, `toefl_errlog_<módulo>_v1` (registro
+de erros),
 `toefl_cert_date_v1`, `toefl_streak_v1`, `toefl_dailygoal_v1`,
 `toefl_weeklydash_v1`, `toefl_avatar_v1`.
 

@@ -42,7 +42,7 @@ def render_ctw(item):
     body = GAP_RE.sub(gap, html.escape(item["text"], quote=False))
     level = f'<span class="ctw-level">{html.escape(item["level"])}</span>' if item.get("level") else ""
     return f'''
-<div class="ctw" data-ctw="{html.escape(item["id"], quote=True)}">
+<div class="ctw" data-ctw="{html.escape(item["id"], quote=True)}" data-level="{html.escape(item["level"].replace("C1+", "C1–C2"), quote=True)}" data-lp-title="Complete the Words · {html.escape(item["title"], quote=True)}">
   <div class="ctw-head"><span class="ctw-title">{html.escape(item["title"])}</span>{level}</div>
   <p class="ctw-instr">Fill in the missing letters in the paragraph.</p>
   <p class="ctw-text">{body}</p>
