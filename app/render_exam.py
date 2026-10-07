@@ -16,6 +16,8 @@ import re
 
 import markdown as md
 
+from rebalance import rebalance_items
+
 ITEM_NUM_RE = re.compile(r"^(\d+)\. (.+)$")
 ITEM_Q_RE = re.compile(r"^\*\*QUESTÃO(?: (\d+))?(?: · [^:*]+)?:\*\* ?(.*)$")
 OPTION_LINE_RE = re.compile(r"^(?:- )?\(A\) ")
@@ -133,7 +135,14 @@ def convert_exam_blocks(raw, id_prefix):
                         if it.get("after"):
                             it["explanation"] = " ".join([it["explanation"]] + it["after"]).strip()
                     token = f"%%%EXAM_{len(widgets) + 1}%%%"
-                    widgets[token] = render_exam(f"{id_prefix}-b{len(widgets) + 1}", pending)
+                    exam_id = f"{id_prefix}-b{len(widgets) + 1}"
+                    # tira o vício de letra do gabarito (ver rebalance.py)
+                    balanced = rebalance_items(
+                        [dict(it, options=dict(it["options"])) for it in pending],
+                        exam_id, ("prompt", "explanation", "note"))
+                    for it in balanced:
+                        it["options"] = list(it["options"].items())
+                    widgets[token] = render_exam(exam_id, balanced)
                     total_items += len(pending)
                     lines[first:last + 1] = [token] + [""] * (last - first)
                     lines[i] = ""  # a linha do gabarito sai: a correção vem no widget

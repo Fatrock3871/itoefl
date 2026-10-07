@@ -290,7 +290,7 @@ Coral reefs, despite occupying less than one percent of the ocean floor, support
 - (C) they only affect coral in tropical regions
 - (D) they eliminate zooxanthellae permanently from the ecosystem
 
-**Gabarito:** 1-B; 2-B (contraste com "does not kill immediately" indica corte abrupto do fluxo, não redução gradual · descarta D); 3-B (afirmado diretamente na última frase)
+**Gabarito:** 1-B; 2-B (contraste com "does not kill immediately" indica corte abrupto do fluxo, não redução gradual · descarta (D)); 3-B (afirmado diretamente na última frase)
 
 **PASSAGE 2: The Printing Press and the Standardization of Language**
 

@@ -17,6 +17,7 @@ from render_ctw import render_ctw_group
 from speaking_data import LISTEN_REPEAT_SETS, INTERVIEW_SETS
 from render_speaking import render_speaking_group
 from render_exam import convert_exam_blocks
+from rebalance import rebalance_items
 from render_wbox import render_wbox, EMAIL_MINUTES, DISCUSSION_MINUTES, DISCUSSION_MIN_WORDS
 
 SRC = "../consolidated"
@@ -159,6 +160,8 @@ def build_mod0():
         "options": q["options"], "correct": q["correct"],
         "explanation": f"<strong>Por que certa:</strong> {q['why_right']}<br><strong>Por que as outras erram:</strong> {q['why_wrong']}",
     } for q in quiz_json]
+    # 7 das 10 respostas do diagnóstico eram "C" na origem (ver rebalance.py)
+    items = rebalance_items(items, "mod0-diag")
     widget = render_quiz_drill(
         "mod0-diag", None,
         "Teste de Nivelamento Express — 10 questões de gramática, vocabulário e conectivos acadêmicos. Responda, confirme cada resposta para ver o gabarito, e refaça quando quiser.",
@@ -203,7 +206,7 @@ def build_mod1():
     # PARTE 5, Grupo A: troca o texto estático das 5 lacunas pelos widgets
     before_a, rest = slice_lines(raw, "### GRUPO A: COMPLETE THE WORDS", "### GRUPO B: READ IN DAILY LIFE")
     widgets_a = "".join(
-        render_quiz_drill(d["id"], d["title"], d["objective"], d.get("passage_html"), d["items"], level=d.get("level"))
+        render_quiz_drill(d["id"], d["title"], d["objective"], d.get("passage_html"), rebalance_items(d["items"], d["id"]), level=d.get("level"))
         for d in MOD1_ACTION_DRILLS_A
     )
     # Grupo A (2026-10-07): primeiro os textos no formato real da prova
@@ -227,7 +230,7 @@ def build_mod1():
     # PARTE 5, Grupo B: troca os 5 textos curtos pelos widgets
     before_b, rest = slice_lines(rest, "### GRUPO B: READ IN DAILY LIFE", "### GRUPO C: READ AN ACADEMIC PASSAGE")
     widgets_b = "".join(
-        render_quiz_drill(d["id"], d["title"], d["objective"], d.get("passage_html"), d["items"], level=d.get("level"))
+        render_quiz_drill(d["id"], d["title"], d["objective"], d.get("passage_html"), rebalance_items(d["items"], d["id"]), level=d.get("level"))
         for d in MOD1_ACTION_DRILLS_B
     )
     html_b = to_html(before_b) + "<h3>Grupo B: Read in Daily Life — exercícios interativos</h3>" + widgets_b
@@ -236,7 +239,7 @@ def build_mod1():
     # (C3.7 é múltipla seleção — "multi": 3 no item, suportado pelo widget)
     before_c, rest = slice_lines(rest, "### GRUPO C: READ AN ACADEMIC PASSAGE", "## PARTE 6: GABARITO COMENTADO")
     widgets_c = "".join(
-        render_quiz_drill(d["id"], d["title"], d["objective"], d.get("passage_html"), d["items"], level=d.get("level"))
+        render_quiz_drill(d["id"], d["title"], d["objective"], d.get("passage_html"), rebalance_items(d["items"], d["id"]), level=d.get("level"))
         for d in MOD1_ACTION_DRILLS_C
     )
     html_c = to_html(before_c) + "<h3>Grupo C: Read an Academic Passage — exercícios interativos</h3>" + widgets_c
@@ -267,7 +270,7 @@ def build_mod2():
     def swap_group(rest, start_marker, end_marker, label, drills):
         before, rest = slice_lines(rest, start_marker, end_marker)
         widgets = "".join(
-            render_quiz_drill(d["id"], d["title"], d["objective"], d.get("passage_html"), d["items"], listen=True, level=d.get("level"))
+            render_quiz_drill(d["id"], d["title"], d["objective"], d.get("passage_html"), rebalance_items(d["items"], d["id"]), listen=True, level=d.get("level"))
             for d in drills
         )
         return to_html(before) + f"<h3>{label} — exercícios interativos</h3>" + widgets, rest
