@@ -288,6 +288,27 @@ if(exams.length){
   });
 }
 
+// Painel de desempenho e meta do dia contam os exercicios novos. Ate aqui o
+// teste ja fez: 1 texto de Complete the Words com 10/10 (o 2o foi refeito e
+// nao conta), 2 itens de Build a Sentence (1 certo, 1 errado) e 1 bloco de
+// simulado com exatamente 1 erro.
+check("live_score_reading_counts_ctw", function(){
+  var t = document.getElementById("liveScoreReadingBand").textContent;
+  return t.indexOf("10/10 confirmadas") !== -1 || /\b1[01]\/1[01] confirmadas/.test(t);
+});
+check("live_score_writing_counts_bsq", function(){
+  return document.getElementById("liveScoreWritingPct").textContent === "50%" &&
+    document.getElementById("liveScoreWritingBand").textContent.indexOf("1/2 confirmadas de 30 no total") !== -1;
+});
+check("live_score_exam_counts_block", function(){
+  var n = document.querySelector(".exam").querySelectorAll(".exam-item").length;
+  return document.getElementById("liveScoreExamBand").textContent.indexOf((n - 1) + "/" + n + " confirmadas") !== -1;
+});
+check("daily_goal_counts_new_exercises", function(){
+  var d = JSON.parse(localStorage.getItem("toefl_dailygoal_v1") || "{}");
+  return d.count >= 3; // checkbox do inicio + texto de CTW + bloco de simulado
+});
+
 // Caixa de escrita: 6 de e-mail (7 min) + 6 de discussao (10 min, minimo 100)
 var wboxes = document.querySelectorAll(".wbox");
 check("wbox_12_boxes", function(){

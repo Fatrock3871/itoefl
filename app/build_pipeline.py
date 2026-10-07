@@ -174,8 +174,8 @@ def build_mod0():
     # interativo desde a mudança acima)
     live_score = (
         '<div class="live-score-panel" id="liveScorePanel">'
-        '<p class="live-score-title">Seu desempenho real até agora — calculado automaticamente a partir dos '
-        'Action Drills que você já respondeu nos Módulos 1 e 2, sem precisar somar nada à mão.</p>'
+        '<p class="live-score-title">Seu desempenho real até agora, calculado automaticamente a partir dos '
+        'exercícios que você já respondeu, sem precisar somar nada à mão.</p>'
         '<div class="live-score-grid">'
         '<div class="live-score-item"><span class="live-score-label">Reading</span>'
         '<span class="live-score-pct" id="liveScoreReadingPct">—</span>'
@@ -183,6 +183,12 @@ def build_mod0():
         '<div class="live-score-item"><span class="live-score-label">Listening</span>'
         '<span class="live-score-pct" id="liveScoreListeningPct">—</span>'
         '<span class="live-score-band" id="liveScoreListeningBand">Responda os Action Drills do Módulo 2 para calcular</span></div>'
+        '<div class="live-score-item"><span class="live-score-label">Writing · Build a Sentence</span>'
+        '<span class="live-score-pct" id="liveScoreWritingPct">—</span>'
+        '<span class="live-score-band" id="liveScoreWritingBand">Faça o drill interativo do Módulo 4 para calcular</span></div>'
+        '<div class="live-score-item"><span class="live-score-label">Simulados</span>'
+        '<span class="live-score-pct" id="liveScoreExamPct">—</span>'
+        '<span class="live-score-band" id="liveScoreExamBand">Entregue um bloco de simulado do Módulo 7 para calcular</span></div>'
         '</div></div>'
     )
     # treino por nível: o app.js sorteia, a cada sessão, exercícios do site

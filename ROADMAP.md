@@ -185,8 +185,10 @@ do banco de questões, porque define o formato de dois tipos de item.
 - [ ] (U) Passar os textos novos em inglês por um professor: 8 parágrafos
       (`app/ctw_data.py`), 30 itens (`app/build_sentence_data.py`) e os
       cenários de Speaking (`app/speaking_data.py`).
-- [ ] (C) Fazer o painel "Seu desempenho real", a meta diária e o progresso
-      do módulo contarem os exercícios novos.
+- [x] (C) Painel "Seu desempenho real" e meta diária contam os exercícios
+      novos (2026-10-07): Reading inclui o Complete the Words de digitar, e
+      há linhas novas para Build a Sentence e para os simulados do M7. A
+      estimativa de nível usada no treino por nível herda isso.
 - [ ] (C) Tornar interativas as partes de Writing e Speaking dos simulados
       do M7, reaproveitando a caixa de escrita e os conjuntos com áudio.
 - [ ] (C) Geração de questões por nível: depende do banco (Etapa 2).

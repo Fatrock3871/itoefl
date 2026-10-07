@@ -642,13 +642,58 @@
         }
       });
     });
+    // Reading inclui o Complete the Words de digitar: cada texto verificado
+    // entra com as suas 10 lacunas
+    if(prefix === "mod1-"){
+      var ctw = extraAccuracy("ctw");
+      total += ctw.total; confirmed += ctw.confirmed; correct += ctw.correct;
+    }
+    return { total: total, confirmed: confirmed, correct: correct };
+  }
+  // acertos dos exercícios que não são .quiz-drill, lidos do estado salvo
+  // (o mesmo que cada widget grava): "ctw", "bsq" ou "exam"
+  function extraAccuracy(kind){
+    var total = 0, confirmed = 0, correct = 0;
+    function read(key){ try { return JSON.parse(safeGet(key) || "{}") || {}; } catch(e){ return {}; } }
+    if(kind === "ctw"){
+      Array.prototype.forEach.call(document.querySelectorAll(".ctw"), function(root){
+        var inputs = root.querySelectorAll(".ctw-in");
+        var st = read("toefl_ctw_" + root.dataset.ctw + "_v1");
+        total += inputs.length;
+        if(!st.checked || !st.vals) return;
+        confirmed += inputs.length;
+        Array.prototype.forEach.call(inputs, function(input, i){
+          if(String(st.vals[i] || "").trim().toLowerCase() === input.dataset.answer.toLowerCase()) correct++;
+        });
+      });
+    } else if(kind === "bsq"){
+      Array.prototype.forEach.call(document.querySelectorAll(".bsq"), function(root){
+        var st = read("toefl_bsq_" + root.dataset.bsq + "_v1");
+        Array.prototype.forEach.call(root.querySelectorAll(".bsq-card"), function(card){
+          total++;
+          var s = st[card.dataset.num];
+          if(s && s.checked){ confirmed++; if(s.ok) correct++; }
+        });
+      });
+    } else if(kind === "exam"){
+      Array.prototype.forEach.call(document.querySelectorAll(".exam"), function(root){
+        var st = read("toefl_exam_" + root.dataset.exam + "_v1");
+        Array.prototype.forEach.call(root.querySelectorAll(".exam-item"), function(it){
+          total++;
+          if(!st.done || !st.answers) return;
+          confirmed++;
+          if(st.answers[it.dataset.num] === it.dataset.correct) correct++;
+        });
+      });
+    }
     return { total: total, confirmed: confirmed, correct: correct };
   }
   function renderLiveScoreSection(prefix, pctId, bandId, emptyText){
     var pctEl = document.getElementById(pctId);
     var bandEl = document.getElementById(bandId);
     if(!pctEl || !bandEl) return;
-    var a = computeQuizAccuracy(prefix);
+    // prefixo "extra:<tipo>" = exercício que não é .quiz-drill
+    var a = prefix.indexOf("extra:") === 0 ? extraAccuracy(prefix.slice(6)) : computeQuizAccuracy(prefix);
     if(a.confirmed === 0){
       pctEl.textContent = "—";
       bandEl.textContent = emptyText;
@@ -663,6 +708,8 @@
   function updateLiveScorePanel(){
     renderLiveScoreSection("mod1-", "liveScoreReadingPct", "liveScoreReadingBand", "Responda os Action Drills do Módulo 1 para calcular");
     renderLiveScoreSection("mod2-", "liveScoreListeningPct", "liveScoreListeningBand", "Responda os Action Drills do Módulo 2 para calcular");
+    renderLiveScoreSection("extra:bsq", "liveScoreWritingPct", "liveScoreWritingBand", "Faça o drill interativo do Módulo 4 para calcular");
+    renderLiveScoreSection("extra:exam", "liveScoreExamPct", "liveScoreExamBand", "Entregue um bloco de simulado do Módulo 7 para calcular");
   }
 
   // melhor estimativa disponível da banda CEFR atual do aluno: prioriza o
@@ -1327,6 +1374,9 @@
         persist();
         reveal(ok);
         renderSummary();
+        updateLiveScorePanel();
+        // o conjunto inteiro verificado conta como uma atividade do dia
+        if(cards.every(function(c){ return state[c.dataset.num] && state[c.dataset.num].checked; })) markDailyGoalProgress();
       });
 
       // restaura estado salvo
@@ -1419,7 +1469,12 @@
       });
     });
 
-    checkBtn.addEventListener("click", function(){ persist(true); grade(); });
+    checkBtn.addEventListener("click", function(){
+      persist(true); grade();
+      markDailyGoalProgress();
+      updateLiveScorePanel();
+      updateLevelRecommendations();
+    });
     retryBtn.addEventListener("click", function(){
       inputs.forEach(function(input){
         input.value = ""; input.disabled = false;
@@ -1432,6 +1487,8 @@
       root.classList.remove("is-checked");
       delete root.dataset.right;
       persist(false);
+      updateLiveScorePanel();
+      updateLevelRecommendations();
       if(inputs[0]) inputs[0].focus();
     });
 
@@ -1679,6 +1736,8 @@
     });
     submitBtn.addEventListener("click", function(){
       state.done = true; persist(); grade();
+      markDailyGoalProgress();
+      updateLiveScorePanel();
     });
     retryBtn.addEventListener("click", function(){
       state = { answers: {}, done: false }; persist();
@@ -1694,6 +1753,7 @@
       resultEl.hidden = true; retryBtn.hidden = true; submitBtn.hidden = false;
       items.forEach(function(it){ shuffleChoices(it, ".exam-opt"); });
       paintSelection();
+      updateLiveScorePanel();
     });
 
     // bloco ainda não entregue: ordem nova das alternativas a cada sessão
