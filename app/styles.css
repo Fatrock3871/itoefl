@@ -1202,6 +1202,15 @@ main{max-width:1320px; margin:0 auto; padding:0 30px 120px; min-width:0;}
 .exam-retry{background:var(--paper); color:var(--ink); box-shadow:none;}
 .exam-result{font-weight:800; font-size:14px;}
 
+/* Resposta escondida até o aluno pedir (simulados do M7) */
+.reveal{margin:8px 0 14px; border:1px dashed var(--hair); border-radius:8px; padding:0 12px;}
+.reveal > summary{cursor:pointer; padding:8px 0; font-size:13px; font-weight:700; color:var(--accent-strong); list-style:none;}
+.reveal > summary::-webkit-details-marker{display:none;}
+.reveal > summary::before{content:"▸ ";}
+.reveal[open] > summary::before{content:"▾ ";}
+.reveal[open]{padding-bottom:10px;}
+li > .reveal{margin:6px 0 4px;}
+
 /* Caixa de escrita com cronômetro (M4) */
 .wbox{border:2px solid var(--edge); border-radius:var(--radius); background:var(--paper); margin:10px 0 26px; overflow:hidden;}
 .wbox-bar{display:flex; align-items:center; gap:14px; flex-wrap:wrap; padding:10px 14px; background:var(--bg); border-bottom:1px solid var(--hair);}

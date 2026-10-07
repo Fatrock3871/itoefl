@@ -149,10 +149,22 @@ if(bsqCards.length === 30){
 
 // Speaking: 5 cenarios de 7 frases + 4 entrevistas de 4 perguntas, texto escondido
 check("spk_sets_and_items", function(){
-  return document.querySelectorAll('.spk[data-mode="repeat"]').length === 5 &&
-    document.querySelectorAll('.spk[data-mode="repeat"] .spk-item').length === 35 &&
-    document.querySelectorAll('.spk[data-mode="interview"]').length === 4 &&
-    document.querySelectorAll('.spk[data-mode="interview"] .spk-item').length === 16;
+  var m3 = document.getElementById("panel-mod3");
+  return m3.querySelectorAll('.spk[data-mode="repeat"]').length === 5 &&
+    m3.querySelectorAll('.spk[data-mode="repeat"] .spk-item').length === 35 &&
+    m3.querySelectorAll('.spk[data-mode="interview"]').length === 4 &&
+    m3.querySelectorAll('.spk[data-mode="interview"] .spk-item').length === 16;
+});
+// Writing e Speaking dos simulados do M7: audio, caixas de escrita e
+// respostas-modelo fechadas ate o aluno pedir
+check("m7_production_is_interactive", function(){
+  var m7 = document.getElementById("panel-mod7");
+  return m7.querySelectorAll('.spk[data-mode="repeat"] .spk-item').length === 10 &&
+    m7.querySelectorAll('.spk[data-mode="interview"] .spk-item').length === 10 &&
+    m7.querySelectorAll(".wbox").length === 4 && m7.querySelectorAll("details.reveal").length === 13;
+});
+check("m7_model_answers_start_closed", function(){
+  return Array.prototype.every.call(document.querySelectorAll("#panel-mod7 details.reveal"), function(d){ return !d.open; });
 });
 check("spk_text_starts_hidden", function(){
   return Array.prototype.every.call(document.querySelectorAll(".spk-text"), function(t){ return t.hidden; });
@@ -312,8 +324,9 @@ check("daily_goal_counts_new_exercises", function(){
 // Caixa de escrita: 6 de e-mail (7 min) + 6 de discussao (10 min, minimo 100)
 var wboxes = document.querySelectorAll(".wbox");
 check("wbox_12_boxes", function(){
-  return wboxes.length === 12 && document.querySelectorAll('.wbox[data-minutes="7"]').length === 6 &&
-    document.querySelectorAll('.wbox[data-minutes="10"][data-minwords="100"]').length === 6;
+  var m4 = document.getElementById("panel-mod4");
+  return m4.querySelectorAll(".wbox").length === 12 && m4.querySelectorAll('.wbox[data-minutes="7"]').length === 6 &&
+    m4.querySelectorAll('.wbox[data-minutes="10"][data-minwords="100"]').length === 6;
 });
 if(wboxes.length){
   var wb = document.querySelector('.wbox[data-minwords="100"]');

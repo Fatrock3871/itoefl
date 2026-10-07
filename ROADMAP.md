@@ -189,8 +189,11 @@ do banco de questões, porque define o formato de dois tipos de item.
       novos (2026-10-07): Reading inclui o Complete the Words de digitar, e
       há linhas novas para Build a Sentence e para os simulados do M7. A
       estimativa de nível usada no treino por nível herda isso.
-- [ ] (C) Tornar interativas as partes de Writing e Speaking dos simulados
-      do M7, reaproveitando a caixa de escrita e os conjuntos com áudio.
+- [x] (C) Writing e Speaking dos simulados do M7 interativos (2026-10-07):
+      Listen and Repeat e entrevista com áudio e texto escondido, caixa de
+      escrita no e-mail e na discussão, e as 13 respostas-modelo fechadas até
+      o aluno pedir (antes ficavam à vista, embaixo do enunciado). O Build a
+      Sentence do M7 continua no molde antigo, de reordenar e escrever.
 - [ ] (C) Geração de questões por nível: depende do banco (Etapa 2).
 
 ### Etapa 1: app instalável e videoaulas

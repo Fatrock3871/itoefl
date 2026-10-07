@@ -1,3 +1,4 @@
+import html as html_lib
 import json
 import re
 import markdown as md
@@ -15,7 +16,7 @@ from build_sentence_data import BUILD_SENTENCE_ITEMS
 from ctw_data import CTW_SETS
 from render_ctw import render_ctw_group
 from speaking_data import LISTEN_REPEAT_SETS, INTERVIEW_SETS
-from render_speaking import render_speaking_group
+from render_speaking import render_speaking_group, render_speaking_set
 from render_exam import convert_exam_blocks
 from rebalance import rebalance_items
 from render_wbox import render_wbox, EMAIL_MINUTES, DISCUSSION_MINUTES, DISCUSSION_MIN_WORDS
@@ -418,6 +419,80 @@ M7_EXPECTED_BLOCKS = 19
 M7_EXPECTED_ITEMS = 62
 
 
+# Writing e Speaking dos simulados: o texto do .md continua igual; aqui, já
+# em HTML, cada seção ganha o que precisa para ser feita na tela.
+M7_SECTION_RE = re.compile(r"(?=<h[234]>)")
+M7_MODEL_BLOCK_RE = re.compile(
+    r"<p><strong>Resposta[- ]modelo[^<]*</strong>[^<]*</p>\s*<blockquote>.*?</blockquote>", re.DOTALL)
+M7_MODEL_INLINE_RE = re.compile(r"<strong>Resposta modelo:</strong>\s*(<em>.*?</em>)", re.DOTALL)
+M7_EXPECTED_PRODUCTION = {"repeat": 2, "interview": 2, "wbox": 4, "model_inline": 10, "model_block": 3}
+
+
+def _reveal(label, inner):
+    return f'<details class="reveal"><summary>{label}</summary>{inner}</details>'
+
+
+def _list_texts(segment):
+    """Textos dos itens da primeira lista numerada da seção, sem marcação."""
+    m = re.search(r"<ol>(.*?)</ol>", segment, re.DOTALL)
+    if not m:
+        return None, []
+    texts = []
+    for li in re.findall(r"<li>(.*?)</li>", m.group(1), re.DOTALL):
+        li = re.sub(r"^\s*<strong>\([^)]*\)</strong>\s*", "", li.strip())  # rótulo "(Opinião)"
+        txt = html_lib.unescape(re.sub(r"<[^>]+>", "", li)).strip().strip('"“”').strip()
+        texts.append(txt)
+    return m, texts
+
+
+def enhance_m7_production(html_out):
+    count = {k: 0 for k in M7_EXPECTED_PRODUCTION}
+    out = []
+    for seg in M7_SECTION_RE.split(html_out):
+        head = re.match(r"<h4>(.*?)</h4>", seg)
+        title = re.sub(r"<[^>]+>", "", head.group(1)) if head else ""
+
+        if title.startswith("Listen and Repeat") or title.startswith("Take an Interview"):
+            mode = "repeat" if title.startswith("Listen") else "interview"
+            m, texts = _list_texts(seg)
+            if m and texts:
+                count[mode] += 1
+                n = count[mode]
+                widget = render_speaking_set({
+                    "id": f"mod7-{mode}{n}",
+                    "level": "A2–C2",
+                    "title": ("Listen and Repeat" if mode == "repeat" else "Take an Interview") + " do simulado",
+                    "scenario": ("Listen to each sentence once and repeat it. Repeat only once."
+                                 if mode == "repeat" else
+                                 "An interviewer will ask you questions. Answer each one as fully as you can in the time allowed."),
+                    "items": texts,
+                }, mode)
+                seg = seg[:m.start()] + widget + seg[m.end():]
+
+        elif title.startswith("Build a Sentence"):
+            seg, n = M7_MODEL_INLINE_RE.subn(lambda mm: _reveal("Ver resposta", mm.group(1)), seg)
+            count["model_inline"] += n
+
+        elif title.startswith("Write an Email") or title.startswith("Write for an Academic Discussion"):
+            seg, n = M7_MODEL_BLOCK_RE.subn(lambda mm: _reveal("Ver resposta-modelo", mm.group(0)), seg)
+            count["model_block"] += n
+            count["wbox"] += 1
+            if title.startswith("Write an Email"):
+                box = render_wbox(f'mod7-email{count["wbox"]}', EMAIL_MINUTES)
+            else:
+                box = render_wbox(f'mod7-disc{count["wbox"]}', DISCUSSION_MINUTES, DISCUSSION_MIN_WORDS)
+            # a caixa entra antes da primeira resposta-modelo; sem modelo, no
+            # fim da seção (antes de um <hr>, se houver)
+            cut = seg.find('<details class="reveal">')
+            if cut == -1:
+                cut = seg.rfind("<hr")
+                if cut == -1:
+                    cut = len(seg)
+            seg = seg[:cut] + box + seg[cut:]
+        out.append(seg)
+    return "".join(out), count
+
+
 def build_mod7():
     raw = open(f"{SRC}/modulo_7_simulados.md", encoding="utf-8").read()
     raw = strip_title_banner(raw)
@@ -430,6 +505,9 @@ def build_mod7():
     html_out = to_html(raw)
     for token, widget in widgets.items():
         html_out = swap_placeholder(html_out, token.strip("%"), widget)
+    html_out, production = enhance_m7_production(html_out)
+    if production != M7_EXPECTED_PRODUCTION:
+        raise ValueError(f"M7 Writing/Speaking: esperava {M7_EXPECTED_PRODUCTION}, achei {production}")
     return html_out
 
 
