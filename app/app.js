@@ -183,7 +183,7 @@
 
   // chaves que sincronizam com o Supabase (progresso real do aluno).
   // ficam de fora: toefl_theme_v1, toefl_active_tab, toefl_timer_preset, toefl_sync_*
-  var SYNC_PREFIXES = ["toefl_progress", "toefl_srs_", "toefl_bsq_", "toefl_quiz_", "toefl_avatar", "toefl_errlog_", "toefl_cert_", "toefl_streak", "toefl_dailygoal", "toefl_weeklydash", "toefl_h3progress", "toefl_ctw_", "toefl_spk_", "toefl_write_"];
+  var SYNC_PREFIXES = ["toefl_progress", "toefl_srs_", "toefl_bsq_", "toefl_quiz_", "toefl_avatar", "toefl_errlog_", "toefl_cert_", "toefl_streak", "toefl_dailygoal", "toefl_weeklydash", "toefl_h3progress", "toefl_ctw_", "toefl_spk_", "toefl_write_", "toefl_exam_"];
   function isSyncedKey(key){
     if(!key || key.indexOf("toefl_") !== 0) return false;
     for(var i = 0; i < SYNC_PREFIXES.length; i++){
@@ -1160,7 +1160,7 @@
     // e só recarrega depois que ela resolve (ou imediatamente se offline).
     var resetBtn = document.getElementById("resetBtn");
     if(resetBtn){
-      var RESET_PREFIXES = ["toefl_progress", "toefl_srs_", "toefl_bsq_", "toefl_quiz_", "toefl_errlog_", "toefl_cert_", "toefl_ctw_", "toefl_spk_", "toefl_write_"];
+      var RESET_PREFIXES = ["toefl_progress", "toefl_srs_", "toefl_bsq_", "toefl_quiz_", "toefl_errlog_", "toefl_cert_", "toefl_ctw_", "toefl_spk_", "toefl_write_", "toefl_exam_"];
       resetBtn.addEventListener("click", function(){
         var ok = window.confirm(
           "Isso apaga TODO o seu progresso no curso (checkboxes, questões respondidas, " +
@@ -1531,6 +1531,82 @@
       renderScore();
     });
   })();
+
+  // ---------- Blocos de simulado (M7) ----------
+  // Sem correção item a item: o aluno responde o bloco e só vê acertos,
+  // gabarito e explicações depois de entregar, como numa prova.
+  Array.prototype.forEach.call(document.querySelectorAll(".exam"), function(root){
+    var lsKey = "toefl_exam_" + root.dataset.exam + "_v1";
+    var items = Array.prototype.slice.call(root.querySelectorAll(".exam-item"));
+    var submitBtn = root.querySelector(".exam-submit");
+    var retryBtn = root.querySelector(".exam-retry");
+    var resultEl = root.querySelector(".exam-result");
+    var state = {};
+    try { state = JSON.parse(safeGet(lsKey) || "{}"); } catch(e){ state = {}; }
+    if(!state || typeof state !== "object" || !state.answers) state = { answers: {}, done: false };
+
+    function persist(){ safeSet(lsKey, JSON.stringify(state)); }
+    function paintSelection(){
+      items.forEach(function(it){
+        var chosen = state.answers[it.dataset.num];
+        Array.prototype.forEach.call(it.querySelectorAll(".exam-opt"), function(o){
+          o.classList.toggle("is-chosen", o.dataset.letter === chosen);
+        });
+      });
+      submitBtn.disabled = items.some(function(it){ return !state.answers[it.dataset.num]; });
+    }
+    function grade(){
+      var right = 0;
+      items.forEach(function(it){
+        var chosen = state.answers[it.dataset.num], key = it.dataset.correct;
+        var ok = chosen === key;
+        if(ok) right++;
+        it.classList.add(ok ? "is-right" : "is-wrong");
+        Array.prototype.forEach.call(it.querySelectorAll(".exam-opt"), function(o){
+          o.disabled = true;
+          o.classList.toggle("is-key", o.dataset.letter === key);
+        });
+        var expl = it.querySelector(".exam-expl");
+        if(expl) expl.hidden = false;
+      });
+      resultEl.textContent = right + " de " + items.length + " corretas";
+      resultEl.hidden = false;
+      submitBtn.hidden = true;
+      retryBtn.hidden = false;
+      root.classList.add("is-done");
+    }
+
+    items.forEach(function(it){
+      Array.prototype.forEach.call(it.querySelectorAll(".exam-opt"), function(o){
+        o.addEventListener("click", function(){
+          if(state.done) return;
+          state.answers[it.dataset.num] = o.dataset.letter;
+          persist();
+          paintSelection();
+        });
+      });
+    });
+    submitBtn.addEventListener("click", function(){
+      state.done = true; persist(); grade();
+    });
+    retryBtn.addEventListener("click", function(){
+      state = { answers: {}, done: false }; persist();
+      items.forEach(function(it){
+        it.classList.remove("is-right", "is-wrong");
+        Array.prototype.forEach.call(it.querySelectorAll(".exam-opt"), function(o){
+          o.disabled = false; o.classList.remove("is-key", "is-chosen");
+        });
+        var expl = it.querySelector(".exam-expl");
+        if(expl) expl.hidden = true;
+      });
+      root.classList.remove("is-done");
+      resultEl.hidden = true; retryBtn.hidden = true; submitBtn.hidden = false;
+      paintSelection();
+    });
+
+    paintSelection();
+    if(state.done) grade();
+  });
 
   // ---------- Caixa de escrita com cronômetro (M4) ----------
   Array.prototype.forEach.call(document.querySelectorAll(".wbox"), function(root){

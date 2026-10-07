@@ -16,6 +16,7 @@ from ctw_data import CTW_SETS
 from render_ctw import render_ctw_group
 from speaking_data import LISTEN_REPEAT_SETS, INTERVIEW_SETS
 from render_speaking import render_speaking_group
+from render_exam import convert_exam_blocks
 from render_wbox import render_wbox, EMAIL_MINUTES, DISCUSSION_MINUTES, DISCUSSION_MIN_WORDS
 
 SRC = "../consolidated"
@@ -366,6 +367,29 @@ def build_mod4():
     return swap_placeholder(html_out, "BUILD_SENTENCE", widget)
 
 
+# ---------- Módulo 7: simulados com blocos interativos ----------
+# Os blocos de múltipla escolha dos Simulados 2 e 3 viram widgets de prova
+# (resposta do bloco inteiro, correção só na entrega). As questões continuam
+# no .md: render_exam.convert_exam_blocks lê o texto e o gabarito de lá.
+M7_EXPECTED_BLOCKS = 19
+M7_EXPECTED_ITEMS = 62
+
+
+def build_mod7():
+    raw = open(f"{SRC}/modulo_7_simulados.md", encoding="utf-8").read()
+    raw = strip_title_banner(raw)
+    raw, widgets, report = convert_exam_blocks(raw, "mod7")
+    if report["skipped"] or report["blocks"] != M7_EXPECTED_BLOCKS or report["items"] != M7_EXPECTED_ITEMS:
+        raise ValueError(
+            f"M7: esperava {M7_EXPECTED_BLOCKS} blocos e {M7_EXPECTED_ITEMS} itens interativos, "
+            f"achei {report}. Se o .md mudou de propósito, atualize as constantes."
+        )
+    html_out = to_html(raw)
+    for token, widget in widgets.items():
+        html_out = swap_placeholder(html_out, token.strip("%"), widget)
+    return html_out
+
+
 # ---------- Módulo 5: markdown + formulário de registro de erros ----------
 def build_mod5():
     return build_with_errlog(f"{SRC}/modulo_5_registro.md", "mod5")
@@ -415,7 +439,7 @@ def main():
         "mod4": build_mod4(),  # Build a Sentence + registro de erros
         "mod5": build_mod5(),  # formulário de registro de erros (Parte 9)
         "mod6": build_mod6(),  # SRS + registro de erros (Parte 11)
-        "mod7": build_plain(f"{SRC}/modulo_7_simulados.md"),
+        "mod7": build_mod7(),  # blocos de simulado interativos, 62 itens
         "mod8": build_plain(f"{SRC}/modulo_8_examday.md"),
         "mod9": build_plain(f"{SRC}/modulo_9_braziliantraps.md"),
     }

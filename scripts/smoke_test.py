@@ -166,6 +166,27 @@ if(spk0){
   check("spk_mark_updates_score", function(){ return spk0.querySelector(".spk-score").textContent === "1 de 7 repetidas sem erro"; });
 }
 
+// Simulados do M7: 19 blocos, 62 itens, correcao so na entrega
+var exams = document.querySelectorAll(".exam");
+check("exam_19_blocks_62_items", function(){ return exams.length === 19 && document.querySelectorAll(".exam-item").length === 62; });
+check("exam_no_answer_key_left_as_text", function(){ return document.getElementById("panel-mod7").textContent.indexOf("Gabarito:") === -1; });
+if(exams.length){
+  var ex = exams[0], exItems = ex.querySelectorAll(".exam-item");
+  check("exam_submit_starts_disabled", function(){ return ex.querySelector(".exam-submit").disabled === true; });
+  Array.prototype.forEach.call(exItems, function(it, k){
+    var want = k === 0 ? (it.dataset.correct === "A" ? "B" : "A") : it.dataset.correct; // erra so a primeira
+    it.querySelector('.exam-opt[data-letter="' + want + '"]').click();
+  });
+  check("exam_no_feedback_before_submit", function(){
+    return !ex.querySelector(".is-key") && !ex.querySelector(".is-right") && ex.querySelector(".exam-result").hidden === true;
+  });
+  ex.querySelector(".exam-submit").click();
+  check("exam_grades_on_submit", function(){
+    return ex.querySelector(".exam-result").textContent === (exItems.length - 1) + " de " + exItems.length + " corretas" &&
+      exItems[0].classList.contains("is-wrong") && exItems[1].classList.contains("is-right");
+  });
+}
+
 // Caixa de escrita: 6 de e-mail (7 min) + 6 de discussao (10 min, minimo 100)
 var wboxes = document.querySelectorAll(".wbox");
 check("wbox_12_boxes", function(){

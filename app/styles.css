@@ -1147,6 +1147,32 @@ main{max-width:1320px; margin:0 auto; padding:0 30px 120px; min-width:0;}
 .spk-foot{display:flex; align-items:center; justify-content:space-between; gap:12px; flex-wrap:wrap; padding-top:10px;}
 .spk-nosound{font-size:12.5px; color:var(--danger);}
 
+/* Blocos de simulado (M7): correção só na entrega */
+.exam{background:var(--paper); border:2px solid var(--edge); border-radius:var(--radius); padding:6px 20px 18px; margin:14px 0 22px; box-shadow:var(--shadow-hard);}
+.exam-item{padding:14px 0; border-bottom:1px solid var(--hair);}
+.exam-pre{font-size:14.5px; padding:8px 12px; margin-bottom:10px; border-left:3px solid var(--accent); background:var(--bg); border-radius:0 6px 6px 0;}
+.exam-pre p{margin:0 !important; max-width:none !important;}
+.exam-prompt{display:flex; gap:10px; align-items:flex-start; margin:0 0 10px !important; font-size:15.5px !important; max-width:none !important;}
+.exam-n{flex:none; min-width:24px; height:24px; padding:0 5px; border-radius:99px; border:2px solid var(--edge); display:inline-flex; align-items:center; justify-content:center; font-size:12px; font-weight:800; margin-top:2px;}
+.exam-hint{display:block; font-size:12.5px; font-style:italic; color:var(--ink-2); margin-top:4px;}
+.exam-opts{display:grid; gap:7px;}
+.exam-opt{display:flex; align-items:flex-start; gap:10px; width:100%; text-align:left; padding:9px 12px; border:1px solid var(--hair); border-radius:8px; background:var(--paper); color:var(--ink); font-family:inherit; font-size:14.5px; line-height:1.45; cursor:pointer;}
+.exam-opt .oletter{flex:none; font-weight:800; color:var(--ink-2);}
+.exam-opt:hover:not(:disabled){border-color:var(--edge);}
+.exam-opt.is-chosen{border:2px solid var(--edge); background:var(--accent-wash); padding:8px 11px;}
+.exam-opt:disabled{cursor:default; opacity:1;}
+.exam.is-done .exam-opt.is-key{border:2px solid var(--accent); background:var(--accent-wash); padding:8px 11px;}
+.exam.is-done .exam-opt.is-key .oletter::after{content:" ✓"; color:var(--accent-strong);}
+.exam.is-done .exam-item.is-wrong .exam-opt.is-chosen{border:2px solid var(--danger); background:var(--danger-wash); text-decoration:line-through;}
+.exam-item.is-right .exam-n{background:var(--accent); color:#fff;}
+.exam-item.is-wrong .exam-n{background:var(--danger-wash); color:var(--danger); border-color:var(--danger);}
+.exam-expl{font-size:13px !important; color:var(--ink-2) !important; margin:10px 0 0 !important; max-width:none !important;}
+.exam-actions{display:flex; align-items:center; gap:12px; flex-wrap:wrap; padding-top:16px;}
+.exam-submit, .exam-retry{padding:10px 22px; border-radius:99px; border:2px solid var(--edge); background:var(--accent); color:#fff; font-family:inherit; font-size:13.5px; font-weight:700; cursor:pointer; box-shadow:var(--shadow-hard);}
+.exam-submit:disabled{opacity:.35; cursor:not-allowed; box-shadow:none;}
+.exam-retry{background:var(--paper); color:var(--ink); box-shadow:none;}
+.exam-result{font-weight:800; font-size:14px;}
+
 /* Caixa de escrita com cronômetro (M4) */
 .wbox{border:2px solid var(--edge); border-radius:var(--radius); background:var(--paper); margin:10px 0 26px; overflow:hidden;}
 .wbox-bar{display:flex; align-items:center; gap:14px; flex-wrap:wrap; padding:10px 14px; background:var(--bg); border-bottom:1px solid var(--hair);}
