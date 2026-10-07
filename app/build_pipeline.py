@@ -189,6 +189,28 @@ def build_mod0():
     if idx != -1:
         html_after = html_after[:idx] + live_score + html_after[idx:]
 
+    # calculadora de score (Parte 4): entra logo antes de "4.3 Score Geral
+    # Estimado". Usa a mesma tabela de 4.2; a conta é feita no app.js.
+    calc_rows = "".join(
+        f'<label class="scalc-row"><span class="scalc-name">{name}</span>'
+        f'<input type="number" class="scalc-in" id="scalc-{key}" data-section="{key}" min="0" max="100" step="1" inputmode="numeric" placeholder="%">'
+        f'<span class="scalc-band" data-band-for="{key}">sem dado</span></label>'
+        for key, name in (("reading", "Reading"), ("listening", "Listening"), ("writing", "Writing"), ("speaking", "Speaking"))
+    )
+    score_calc = (
+        '<div class="scalc" id="scoreCalc">'
+        '<p class="scalc-title">Calculadora: digite o seu percentual de acerto em cada seção</p>'
+        f'<div class="scalc-grid">{calc_rows}</div>'
+        '<p class="scalc-total"><span>Banda geral estimada</span><strong id="scalcTotal">preencha as quatro seções</strong></p>'
+        '<p class="scalc-note">Estimativa de treino pela tabela acima. A banda geral é a média das quatro, '
+        'arredondada à meia banda mais próxima, como na prova. Não é nota oficial.</p>'
+        '</div>'
+    )
+    idx = html_after.find("<h3>4.3")
+    if idx == -1:
+        raise ValueError("M0: não achei a seção 4.3 para encaixar a calculadora")
+    html_after = html_after[:idx] + score_calc + html_after[idx:]
+
     return html_before + widget + html_after
 
 

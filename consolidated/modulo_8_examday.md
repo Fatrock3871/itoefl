@@ -394,7 +394,7 @@ Sequência de referência: **Reading → Listening → (pausa de 10 min) → Wri
 | Reading | ~27–30 min | router ~9 min + módulo ~18–21 min |
 | Listening | ~18 min | router ~7 min + módulo 7–11 min |
 | *(pausa)* | 10 min | protocolo do intervalo (abaixo) |
-| Writing | ~23 min | Build a Sentence ~8 min · Email ~4 min · Academic Discussion ~10 min |
+| Writing | ~23 min | Build a Sentence ~6 min · Email 7 min · Academic Discussion 10 min |
 | Speaking | ~8 min | Listen and Repeat (7 itens) + Take an Interview (4 itens), janelas fixas por item |
 
 ### READING (~27–30 min: router + módulo adaptativo)
@@ -462,18 +462,18 @@ MINUTO 9–10: Retorne à estação. Anchor Phrase. "[Próxima seção] mode: ON
 
 **Estado mental:** a estrutura é sua âncora. Você já treinou cada task · execute o esqueleto, não improvise.
 
-**Build a Sentence (10 itens, ~8 min):**
+**Build a Sentence (10 itens, ~6 min):**
 - Corrigido por máquina, quase binário: a estrutura está certa ou não está
 - Monte o esqueleto SVO primeiro, depois encaixe os modificadores
 - Checagem rápida por item: verbo e tempo → sujeito → subordinação → ordem das palavras
 - Falha aqui → código **SW-synt/SW-verb** na análise (M7 Parte 6 → M4 W1/W2 + M9)
 
-**Write an Email (~4 min):**
+**Write an Email (7 min):**
 - Abertura (saudação + quem você é) → propósito em 1 frase clara → 1 detalhe de apoio → pedido educado com modal → fechamento com agradecimento
-- Registro formal consistente, sem contrações, **um** pedido por e-mail
+- Registro formal consistente, sem contrações. O enunciado lista **três pontos**: cubra os três, um por frase ou par de frases
 - Direto e educado: sem rodeios nem cerimônia (ver Módulo 9, Parte 5, e Módulo 5, Parte 5.2)
 
-**Write for an Academic Discussion (~10 min):**
+**Write for an Academic Discussion (10 min, mínimo indicado de 100 palavras):**
 - 0–1:30: leitura do prompt (pergunta + colegas)
 - 1:30–2:30: planejamento (posição + razão central + como engajar um colega)
 - 2:30–9: escrita · posição inequívoca na 1ª frase, razão mecanística, exemplo concreto, engajamento explícito com um colega

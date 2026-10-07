@@ -183,7 +183,7 @@
 
   // chaves que sincronizam com o Supabase (progresso real do aluno).
   // ficam de fora: toefl_theme_v1, toefl_active_tab, toefl_timer_preset, toefl_sync_*
-  var SYNC_PREFIXES = ["toefl_progress", "toefl_srs_", "toefl_bsq_", "toefl_quiz_", "toefl_avatar", "toefl_errlog_", "toefl_cert_", "toefl_streak", "toefl_dailygoal", "toefl_weeklydash", "toefl_h3progress", "toefl_ctw_", "toefl_spk_", "toefl_write_", "toefl_exam_"];
+  var SYNC_PREFIXES = ["toefl_progress", "toefl_srs_", "toefl_bsq_", "toefl_quiz_", "toefl_avatar", "toefl_errlog_", "toefl_cert_", "toefl_streak", "toefl_dailygoal", "toefl_weeklydash", "toefl_h3progress", "toefl_ctw_", "toefl_spk_", "toefl_write_", "toefl_exam_", "toefl_scorecalc"];
   function isSyncedKey(key){
     if(!key || key.indexOf("toefl_") !== 0) return false;
     for(var i = 0; i < SYNC_PREFIXES.length; i++){
@@ -704,6 +704,35 @@
     });
   }
 
+  // Embaralha a ordem das alternativas de uma questão NA TELA. Roda a cada
+  // carregamento da página e a cada "Refazer", para o aluno não decorar a
+  // posição da resposta. A letra que identifica a alternativa para correção
+  // e para o progresso salvo é a de origem (data-letter) e não muda; o que
+  // muda é a ordem e a letra mostrada (.oletter). As explicações citam
+  // alternativas em <span class="optref" data-ref="X">, atualizadas aqui.
+  var CHOICE_LETTERS = ["A", "B", "C", "D", "E", "F"];
+  function shuffleChoices(card, optSelector){
+    if(!card || card.hasAttribute("data-noshuffle")) return;
+    var opts = Array.prototype.slice.call(card.querySelectorAll(optSelector));
+    if(opts.length < 2) return;
+    var parent = opts[0].parentNode;
+    for(var i = opts.length - 1; i > 0; i--){
+      var j = Math.floor(Math.random() * (i + 1));
+      var tmp = opts[i]; opts[i] = opts[j]; opts[j] = tmp;
+    }
+    var shown = {};
+    opts.forEach(function(o, idx){
+      parent.appendChild(o);
+      shown[o.dataset.letter] = CHOICE_LETTERS[idx];
+      var label = o.querySelector(".oletter");
+      if(label) label.textContent = CHOICE_LETTERS[idx];
+    });
+    Array.prototype.forEach.call(card.querySelectorAll(".optref"), function(ref){
+      var L = shown[ref.dataset.ref];
+      if(L) ref.textContent = "(" + L + ")";
+    });
+  }
+
   var quizDrills = Array.prototype.slice.call(document.querySelectorAll(".quiz-drill"));
 
   quizDrills.forEach(function(drillEl){
@@ -826,6 +855,9 @@
         });
       }
 
+      // questão ainda não respondida nesta conta: ordem nova a cada sessão.
+      // A já confirmada fica como está, com a correção já à mostra.
+      if(!(state[num] && state[num].confirmed)) shuffleChoices(card, ".opt");
       applyCardState(card);
     });
 
@@ -834,6 +866,7 @@
       retryBtn.addEventListener("click", function(){
         state = {};
         saveState();
+        qcards.forEach(function(card){ shuffleChoices(card, ".opt"); });
         qcards.forEach(applyCardState);
         renderSummary();
       });
@@ -1532,6 +1565,63 @@
     });
   })();
 
+  // ---------- Calculadora de score (M0, Parte 4) ----------
+  // Percentual de acerto por seção -> banda, pela tabela 4.2 do módulo. Cada
+  // faixa da tabela cobre duas meias bandas: a metade de baixo da faixa dá a
+  // banda cheia, a de cima dá a meia banda seguinte.
+  (function(){
+    var root = document.getElementById("scoreCalc");
+    if(!root) return;
+    var LS = "toefl_scorecalc_v1";
+    var RANGES = [[0, 20, 1], [21, 40, 2], [41, 55, 3], [56, 70, 4], [71, 85, 5]];
+    var LABELS = { 1: "A1", 2: "A2", 3: "B1", 4: "B2", 5: "C1", 6: "C2" };
+    var inputs = Array.prototype.slice.call(root.querySelectorAll(".scalc-in"));
+    var totalEl = document.getElementById("scalcTotal");
+    var saved = {};
+    try { saved = JSON.parse(safeGet(LS) || "{}") || {}; } catch(e){ saved = {}; }
+
+    function bandFromPct(pct){
+      if(pct >= 86) return 6;
+      for(var i = 0; i < RANGES.length; i++){
+        var lo = RANGES[i][0], hi = RANGES[i][1];
+        if(pct <= hi) return RANGES[i][2] + (pct > (lo + hi) / 2 ? 0.5 : 0);
+      }
+      return 6;
+    }
+    function fmt(band){ return String(band).replace(".", ","); }
+    function render(){
+      var bands = [], store = {};
+      inputs.forEach(function(input){
+        var out = root.querySelector('[data-band-for="' + input.dataset.section + '"]');
+        var raw = input.value.trim();
+        var pct = raw === "" ? NaN : Number(raw);
+        if(isNaN(pct) || pct < 0 || pct > 100){
+          out.textContent = raw === "" ? "sem dado" : "use de 0 a 100";
+          out.classList.remove("is-set");
+          return;
+        }
+        var band = bandFromPct(pct);
+        bands.push(band);
+        store[input.dataset.section] = raw;
+        out.textContent = "banda " + fmt(band) + " (" + LABELS[Math.floor(band)] + ")";
+        out.classList.add("is-set");
+      });
+      safeSet(LS, JSON.stringify(store));
+      if(bands.length < inputs.length){
+        totalEl.textContent = "preencha as quatro seções";
+        return;
+      }
+      var mean = bands.reduce(function(a, b){ return a + b; }, 0) / bands.length;
+      var overall = Math.round(mean * 2) / 2;
+      totalEl.textContent = fmt(overall) + " (" + LABELS[Math.floor(overall)] + ")";
+    }
+    inputs.forEach(function(input){
+      if(saved[input.dataset.section] != null) input.value = saved[input.dataset.section];
+      input.addEventListener("input", render);
+    });
+    render();
+  })();
+
   // ---------- Blocos de simulado (M7) ----------
   // Sem correção item a item: o aluno responde o bloco e só vê acertos,
   // gabarito e explicações depois de entregar, como numa prova.
@@ -1601,9 +1691,12 @@
       });
       root.classList.remove("is-done");
       resultEl.hidden = true; retryBtn.hidden = true; submitBtn.hidden = false;
+      items.forEach(function(it){ shuffleChoices(it, ".exam-opt"); });
       paintSelection();
     });
 
+    // bloco ainda não entregue: ordem nova das alternativas a cada sessão
+    if(!state.done) items.forEach(function(it){ shuffleChoices(it, ".exam-opt"); });
     paintSelection();
     if(state.done) grade();
   });

@@ -1,6 +1,9 @@
 """Shared renderer for interactive quiz-drill widgets (select -> confirm -> reveal -> retry)."""
 
 
+from rebalance import tag_refs, fixed_order
+
+
 def render_quiz_drill(drill_id, title, objective, passage_html, items, listen=False, level=None):
     # listen=True (só M2, Listening): acrescenta um botão de ouvir em voz
     # alta (Web Speech API, sem áudio gravado) -- o item/passagem vira som
@@ -18,14 +21,18 @@ def render_quiz_drill(drill_id, title, objective, passage_html, items, listen=Fa
             for L, txt in it["options"].items()
         )
         multi_attr = f' data-multi="{it["multi"]}"' if it.get("multi") else ""
+        # o app.js embaralha a ordem das alternativas a cada sessão; itens
+        # cuja letra tem significado próprio ficam na ordem original
+        if fixed_order(it["prompt"], it["explanation"], *it["options"].values()):
+            multi_attr += " data-noshuffle"
         cards.append(f'''
 <div class="qcard" data-correct="{it['correct']}" data-num="{it['num']}"{multi_attr}>
   <div class="qhead"><span class="qnum">{it['num']}</span></div>
-  <p class="qprompt"><span class="qprompt-text">{it['prompt']}</span>{item_listen_btn}</p>
+  <p class="qprompt"><span class="qprompt-text">{tag_refs(it['prompt'])}</span>{item_listen_btn}</p>
   <div class="qopts">{opts}</div>
   <button class="qconfirm" type="button" hidden>Confirmar resposta</button>
   <div class="qfeedback" hidden>
-    <p><strong>Explicação:</strong> {it['explanation']}</p>
+    <p><strong>Explicação:</strong> {tag_refs(it['explanation'])}</p>
   </div>
 </div>''')
     passage_listen_btn = (

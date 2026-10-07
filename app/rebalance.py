@@ -26,6 +26,20 @@ def remap_refs(text, mapping):
     return REF_RE.sub(lambda m: f"({mapping.get(m.group(1), m.group(1))})", text)
 
 
+def tag_refs(text):
+    """Envolve cada "(X)" num <span> que o app.js atualiza quando embaralha
+    as alternativas na tela (ver shuffleChoices em app.js)."""
+    if not text:
+        return text
+    return REF_RE.sub(lambda m: f'<span class="optref" data-ref="{m.group(1)}">({m.group(1)})</span>', text)
+
+
+def fixed_order(*texts):
+    """Itens em que a letra tem significado próprio (inserção com [■A]) não
+    podem ser embaralhados na tela."""
+    return any("■" in (t or "") for t in texts)
+
+
 def _seed(key):
     return int(hashlib.sha256(key.encode("utf-8")).hexdigest()[:12], 16)
 

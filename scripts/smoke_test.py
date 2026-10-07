@@ -166,6 +166,62 @@ if(spk0){
   check("spk_mark_updates_score", function(){ return spk0.querySelector(".spk-score").textContent === "1 de 7 repetidas sem erro"; });
 }
 
+// Alternativas embaralhadas na tela a cada sessao e a cada "Refazer"
+(function(){
+  function order(card, sel){ return Array.prototype.map.call(card.querySelectorAll(sel), function(o){ return o.dataset.letter; }).join(""); }
+  function shown(card, sel){ return Array.prototype.map.call(card.querySelectorAll(sel), function(o){ return o.querySelector(".oletter").textContent; }).join(""); }
+  var cards = Array.prototype.filter.call(document.querySelectorAll(".qcard"), function(c){ return !c.hasAttribute("data-noshuffle"); });
+  check("shuffle_display_letters_stay_in_order", function(){
+    return cards.every(function(c){ var s = shown(c, ".opt"); return s === "ABCDEF".slice(0, s.length); });
+  });
+  // com 4 alternativas, a chance de uma questao sair na ordem de origem e 1/24;
+  // de 100+ questoes sairem TODAS na ordem de origem e desprezivel
+  check("shuffle_changes_source_order_somewhere", function(){
+    return cards.filter(function(c){ var o = order(c, ".opt"); return o !== o.split("").sort().join(""); }).length > cards.length / 2;
+  });
+  check("shuffle_keeps_scoring_by_source_letter", function(){
+    return cards.filter(function(c){ return !c.dataset.multi; }).every(function(c){ return c.querySelectorAll('.opt[data-letter="' + c.dataset.correct + '"]').length === 1; });
+  });
+  check("shuffle_updates_letter_references", function(){
+    return cards.every(function(c){
+      var map = {};
+      Array.prototype.forEach.call(c.querySelectorAll(".opt"), function(o){ map[o.dataset.letter] = o.querySelector(".oletter").textContent; });
+      return Array.prototype.every.call(c.querySelectorAll(".optref"), function(r){ return r.textContent === "(" + map[r.dataset.ref] + ")"; });
+    }) && document.querySelectorAll(".qcard .optref").length > 100;
+  });
+  check("shuffle_skips_insertion_items", function(){
+    var fixed = document.querySelectorAll(".qcard[data-noshuffle]");
+    return fixed.length >= 1 && Array.prototype.every.call(fixed, function(c){ var o = order(c, ".opt"); return o === o.split("").sort().join(""); });
+  });
+  // responder certo depois de embaralhar: clica na alternativa pela letra de origem
+  var probe = cards[cards.length - 1], drill = probe.closest(".quiz-drill");
+  probe.querySelector('.opt[data-letter="' + probe.dataset.correct + '"]').click();
+  probe.querySelector(".qconfirm").click();
+  check("shuffle_correct_answer_still_scores", function(){
+    return probe.querySelector('.opt[data-letter="' + probe.dataset.correct + '"]').classList.contains("correct") &&
+      !probe.querySelector(".opt.wrong");
+  });
+})();
+
+// Calculadora de score do M0: tabela 4.2 e media arredondada a meia banda
+check("scalc_exists", function(){ return !!document.getElementById("scoreCalc") && document.querySelectorAll(".scalc-in").length === 4; });
+(function(){
+  function setPct(sec, v){ typeInto(document.getElementById("scalc-" + sec), v); }
+  function bandOf(sec){ return document.querySelector('[data-band-for="' + sec + '"]').textContent; }
+  if(!document.getElementById("scoreCalc")) return;
+  setPct("reading", "20"); setPct("listening", "48"); setPct("writing", "49");
+  check("scalc_total_waits_for_all_four", function(){ return document.getElementById("scalcTotal").textContent === "preencha as quatro seções"; });
+  setPct("speaking", "86");
+  check("scalc_bands_follow_table", function(){
+    return bandOf("reading") === "banda 1,5 (A1)" && bandOf("listening") === "banda 3 (B1)" &&
+      bandOf("writing") === "banda 3,5 (B1)" && bandOf("speaking") === "banda 6 (C2)";
+  });
+  // media de 1,5 + 3 + 3,5 + 6 = 3,5
+  check("scalc_overall_is_mean_rounded_to_half", function(){ return document.getElementById("scalcTotal").textContent === "3,5 (B1)"; });
+  setPct("speaking", "140");
+  check("scalc_rejects_out_of_range", function(){ return bandOf("speaking") === "use de 0 a 100"; });
+})();
+
 // Simulados do M7: 19 blocos, 62 itens, correcao so na entrega
 var exams = document.querySelectorAll(".exam");
 check("exam_19_blocks_62_items", function(){ return exams.length === 19 && document.querySelectorAll(".exam-item").length === 62; });

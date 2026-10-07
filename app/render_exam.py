@@ -16,7 +16,7 @@ import re
 
 import markdown as md
 
-from rebalance import rebalance_items
+from rebalance import rebalance_items, tag_refs
 
 ITEM_NUM_RE = re.compile(r"^(\d+)\. (.+)$")
 ITEM_Q_RE = re.compile(r"^\*\*QUESTÃO(?: (\d+))?(?: · [^:*]+)?:\*\* ?(.*)$")
@@ -64,8 +64,8 @@ def render_exam(exam_id, items):
             f'<span class="oletter">{L}</span><span class="otext">{inline(txt)}</span></button>'
             for L, txt in it["options"]
         )
-        note = f'<span class="exam-hint">{inline(it["note"])}</span>' if it.get("note") else ""
-        expl = f'<p class="exam-expl" hidden>{inline(it["explanation"])}</p>' if it.get("explanation") else ""
+        note = f'<span class="exam-hint">{tag_refs(inline(it["note"]))}</span>' if it.get("note") else ""
+        expl = f'<p class="exam-expl" hidden>{tag_refs(inline(it["explanation"]))}</p>' if it.get("explanation") else ""
         pre = f'<div class="exam-pre">{md.markdown(chr(10).join(it["pre"]))}</div>' if it.get("pre") else ""
         cards.append(f'''
   <div class="exam-item" data-num="{it["num"]}" data-correct="{it["correct"]}">

@@ -12,6 +12,8 @@ Este é o TOEFL iBT nas especificações oficiais da ETS, vigentes desde janeiro
 
 ## PARTE 1: O TARGET MATRIX · O QUE ESTÁ EM JOGO
 
+> 📌 **Este módulo em dois minutos.** Ele faz quatro coisas, nesta ordem: (1) explica como a prova de 2026 funciona e como ela é pontuada (Partes 1 e 2); (2) mede o seu nível com um teste de 10 questões (Parte 3); (3) transforma percentual de acerto em banda estimada, com uma calculadora (Parte 4); (4) entrega um cronograma de 30, 60 ou 90 dias de acordo com o seu nível (Parte 6). Com pouco tempo, faça a Parte 3 agora e vá direto para a Parte 6. O resto é referência para consultar depois.
+
 ### 1.1 Por Que Você Está Aqui
 
 Você não está estudando inglês. Está construindo um **ativo de admissão**: um número que abre ou fecha porta de universidade, bolsa, visto, processo seletivo.
