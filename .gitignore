@@ -18,3 +18,6 @@ app/supabase_config.json
 
 # Estado local do Supabase CLI (link do projeto, URL do pooler)
 supabase/.temp/
+
+# Versão de teste sem login (python scripts/build_teste.py)
+_teste/
