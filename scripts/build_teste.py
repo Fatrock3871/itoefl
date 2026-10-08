@@ -7,6 +7,9 @@ E o mesmo build de sempre, so que rodado numa copia de app/ sem o
 supabase_config.json, o que faz o build.py cair no modo offline (sem tela de
 login nem de compra). Nao mexe em artifact/ nem na configuracao real.
 
+A pasta sai completa, com manifesto, service worker e icones: servida por
+https, a versao de teste tambem e instalavel e abre offline, igual ao site.
+
     python scripts\\build_teste.py
 
 ATENCAO: quem tiver o link le o curso inteiro de graca. Nao deixe no ar depois
@@ -15,6 +18,7 @@ do teste.
 
 import shutil
 import subprocess
+import sys
 import tempfile
 from pathlib import Path
 
@@ -23,7 +27,9 @@ OUT = ROOT / "_teste"
 PAGES = ["index.html", "termos.html", "privacidade.html"]
 
 
-def main():
+def build(out=OUT):
+    """Builda a versao sem login e grava em `out` tudo que o build.py gerou."""
+    out = Path(out)
     with tempfile.TemporaryDirectory(prefix="itoefl_teste_") as tmp:
         work = Path(tmp)
         for name in ("app", "consolidated", "legal"):
@@ -31,22 +37,29 @@ def main():
         (work / "app" / "supabase_config.json").unlink(missing_ok=True)
         (work / "artifact").mkdir()
 
-        subprocess.run(["python", "build_pipeline.py"], cwd=work / "app", check=True)
-        subprocess.run(["python", "build.py"], cwd=work / "app", check=True)
+        # sys.executable, e nao "python": o do PATH pode ser outro
+        # interpretador, sem o pacote markdown
+        for script in ("build_pipeline.py", "build.py"):
+            subprocess.run([sys.executable, script], cwd=work / "app", check=True, capture_output=True)
 
         html = (work / "artifact" / "index.html").read_text(encoding="utf-8")
         # o build.py só escreve esta atribuição quando há Supabase configurado
         if "window.ITOEFL_SUPABASE=" in html:
             raise SystemExit("O build de teste saiu com Supabase configurado. Abortando.")
 
-        OUT.mkdir(exist_ok=True)
-        for page in PAGES:
-            shutil.copyfile(work / "artifact" / page, OUT / page)
+        # a pasta inteira, e nao so as paginas: sem manifest.json, sw.js e
+        # icons/ o site nao instala nem abre offline. Copia por cima em vez
+        # de apagar a pasta antes: dentro do OneDrive o Windows nega o rmdir.
+        shutil.copytree(work / "artifact", out, dirs_exist_ok=True)
+    return out
 
+
+def main():
+    out = build()
     print()
-    print(f"Versao de teste (sem login) gerada em: {OUT}")
-    for page in PAGES:
-        print(f"  {page}: {(OUT / page).stat().st_size // 1024} KB")
+    print(f"Versao de teste (sem login) gerada em: {out}")
+    for path in sorted(p for p in out.rglob("*") if p.is_file()):
+        print(f"  {path.relative_to(out).as_posix()}: {max(1, path.stat().st_size // 1024)} KB")
 
 
 if __name__ == "__main__":
