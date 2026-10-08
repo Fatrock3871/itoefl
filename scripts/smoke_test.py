@@ -5,7 +5,7 @@ de verificacao injetado, e reporta PASS/FAIL de cada checagem: gate de
 login, progresso/meta diaria, painel, "Minha conta" (incluindo o formulario
 de excluir conta), tema, certificado, botoes de pronuncia/audio, gravador de
 voz, paginas legais, e ausencia de erro de JS ou mojibake. Nao substitui teste manual em navegador de verdade nem em
-celular real (ver ROADMAP.md, item 10 de qualidade), mas pega regressao
+celular real (ver ROADMAP.md, Etapa 0.5), mas pega regressao
 estrutural sem precisar testar tudo na mao a cada mudanca.
 
     python scripts\\smoke_test.py

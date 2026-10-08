@@ -282,5 +282,7 @@ JSON. Ao mudar o formato do estado, escrever migração — não descartar progr
 
 ## Onde estamos
 
-Consultar `ROADMAP.md` antes de qualquer tarefa. É a memória entre sessões.
-Atualizar ao concluir cada etapa.
+Consultar `ROADMAP.md` antes de qualquer tarefa. É a memória entre sessões:
+a lista única de pendências ("Tudo que falta") e as decisões travadas. Marcar
+o item lá ao concluir cada etapa. O relato de cada sessão vai no topo de
+`docs/historico-sessoes.md`, que guarda também as fases antigas.
