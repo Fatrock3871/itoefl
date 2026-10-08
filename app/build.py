@@ -290,7 +290,7 @@ pay_gate = (
 # certificado de conclusão: nada oficial, só uma tela pra comemorar que
 # terminou os 10 módulos — aparece a partir daí (ver app.js/updateBadges)
 cert_modal = (
-    '<div class="cert-modal" id="certModal" hidden>'
+    '<div class="cert-modal" id="certModal" role="dialog" aria-modal="true" aria-label="Certificado de conclusão" hidden>'
     '<div class="cert-modal-backdrop" id="certModalBackdrop"></div>'
     '<div class="cert-card">'
     '<button type="button" class="cert-close" id="certClose" aria-label="Fechar">✕</button>'
@@ -337,7 +337,7 @@ cert_modal = (
 # senha, links legais e exclusão da conta. Reaproveita o shell do cert-modal (backdrop + card) e os
 # estilos de .auth-form/.auth-input já usados no gate de login.
 account_modal = (
-    '<div class="account-modal" id="accountModal" hidden>'
+    '<div class="account-modal" id="accountModal" role="dialog" aria-modal="true" aria-label="Minha conta" hidden>'
     '<div class="account-modal-backdrop" id="accountModalBackdrop"></div>'
     '<div class="account-card">'
     '<button type="button" class="account-close" id="accountClose" aria-label="Fechar">✕</button>'
@@ -411,7 +411,7 @@ account_modal = (
 # -- tudo calculado em cima de dados que já existem em outros widgets (ver
 # app.js, bloco "Painel (dashboard)"), sem nenhum conteúdo novo pra manter.
 dashboard_modal = (
-    '<div class="dash-modal" id="dashboardModal" hidden>'
+    '<div class="dash-modal" id="dashboardModal" role="dialog" aria-modal="true" aria-label="Painel de progresso" hidden>'
     '<div class="dash-modal-backdrop" id="dashboardModalBackdrop"></div>'
     '<div class="dash-card">'
     '<button type="button" class="dash-close" id="dashboardClose" aria-label="Fechar">✕</button>'
@@ -474,6 +474,7 @@ html = f'''<!DOCTYPE html>
 </style>
 </head>
 <body>
+<a class="skip-link" href="#mainArea">Pular para o conteúdo</a>
 {gate}
 {pay_gate}
 {cert_modal}
@@ -512,7 +513,7 @@ html = f'''<!DOCTYPE html>
     </div>
     <button type="button" class="cert-btn" id="certBtn" hidden>Ver certificado de conclusão</button>
     {side_jtrack}
-    <nav class="modnav" id="modnav">
+    <nav class="modnav" id="modnav" aria-label="Módulos">
       {nav_items}
     </nav>
     <div class="trail" id="trailBox" hidden>
@@ -538,7 +539,7 @@ html = f'''<!DOCTYPE html>
       <span class="legal-links">{LEGAL_LINKS}</span></div>
   </aside>
 
-  <main id="mainArea">
+  <main id="mainArea" tabindex="-1">
     {journey}
     <div class="content-grid">
       <div class="content-col">{panels}</div>

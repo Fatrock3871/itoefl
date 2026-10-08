@@ -71,6 +71,18 @@ a{color:var(--accent-strong); text-decoration-thickness:2px; text-underline-offs
 ::selection{background:var(--accent-fill); color:#fff;}
 :focus-visible{outline:2px solid var(--accent); outline-offset:3px;}
 
+/* "Pular para o conteúdo": só aparece quando recebe foco pelo teclado */
+.skip-link{
+  position:fixed; left:12px; top:-60px; z-index:3000; padding:10px 16px; border-radius:8px;
+  background:var(--ink); color:var(--bg); font-weight:800; font-size:14px; text-decoration:none; border:2px solid var(--accent);
+}
+.skip-link:focus{top:12px;}
+main:focus{outline:none;}
+/* quem pediu menos movimento ao sistema não recebe animação nem transição */
+@media (prefers-reduced-motion:reduce){
+  *, *::before, *::after{animation-duration:.01ms !important; animation-iteration-count:1 !important; transition-duration:.01ms !important; scroll-behavior:auto !important;}
+}
+
 .shell{max-width:1320px; margin:0 auto; min-height:100vh;}
 body.menu-open{overflow:hidden;}
 
@@ -922,6 +934,11 @@ main{max-width:1320px; margin:0 auto; padding:0 30px 120px; min-width:0;}
 }
 .section-card h3.h3-toggle.collapsed::after{transform:rotate(-90deg);}
 .h3-body.h3-collapsed{display:none;}
+/* o botão dentro do título: sem cara de botão, só o comportamento */
+.h3-btn{
+  display:block; width:100%; margin:0; padding:0; border:0; background:none; cursor:pointer;
+  font:inherit; color:inherit; letter-spacing:inherit; text-align:left; user-select:none;
+}
 .section-card h3.resume-highlight{animation:resume-flash 2.2s ease;}
 @keyframes resume-flash{
   0%, 100%{background:none;}
@@ -1515,3 +1532,23 @@ li > .reveal{margin:6px 0 4px;}
 .mr-controls button{flex:1; padding:9px 0; border-radius:7px; border:2px solid var(--hair); background:var(--paper); font-family:inherit; font-size:13px; font-weight:700; color:var(--ink); cursor:pointer;}
 .mr-controls button:hover{border-color:var(--edge);}
 .mic-rec.recording #mrToggleBtn{background:var(--danger-fill) !important; color:#fff !important; border-color:var(--edge) !important;}
+
+/* ================= Acessibilidade: foco e toque ================= */
+/* os campos de digitar tiram o contorno padrão e trocam por cor de borda.
+   Para quem navega por teclado o contorno volta, bem visível. */
+.auth-input:focus-visible, .wd-input:focus-visible, .ctw-in:focus-visible, .scalc-in:focus-visible, .wbox-text:focus-visible{
+  outline:2px solid var(--accent-strong); outline-offset:2px;
+}
+/* dedo, não mouse: alvos de toque com pelo menos 36 px */
+@media (pointer:coarse), (max-width:640px){
+  .speak-btn{width:36px; height:36px; font-size:15px;}
+  .ctw-in{min-height:36px;}
+  .wbox-clear{min-height:40px; padding:8px 12px;}
+  .errlog-entry-del{min-width:36px; min-height:36px;}
+  .checklist-item input[type="checkbox"]{width:22px; height:22px;}
+  .errlog-code input{width:20px; height:20px;}
+  .h3-done-check{min-height:44px; align-items:center;}
+}
+/* os ícones de olho e de usuário do login são emoji escuros: no tema escuro
+   sumiam dentro do campo */
+:root[data-theme="dark"] .auth-eye, :root[data-theme="dark"] .auth-input-icon{filter:grayscale(1) invert(1);}

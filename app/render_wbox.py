@@ -19,7 +19,7 @@ def render_wbox(box_id, minutes, min_words=0):
     <span class="wbox-count">0 palavras</span>
     {target}
   </div>
-  <textarea class="wbox-text" id="wbox-{box_id}" rows="9" spellcheck="false" autocomplete="off" autocorrect="off" autocapitalize="sentences" placeholder="Escreva sua resposta aqui. Na prova não há corretor ortográfico."></textarea>
+  <textarea class="wbox-text" id="wbox-{box_id}" aria-label="Sua resposta em inglês" lang="en" rows="9" spellcheck="false" autocomplete="off" autocorrect="off" autocapitalize="sentences" placeholder="Escreva sua resposta aqui. Na prova não há corretor ortográfico."></textarea>
   <div class="wbox-foot">
     <span class="wbox-status">Salvo automaticamente neste navegador.</span>
     <button type="button" class="wbox-clear">Apagar texto</button>

@@ -410,6 +410,41 @@ check("content_states_confirmed_exam_rules", function(){
     m5.indexOf("45 segundos") !== -1;
 });
 
+// acessibilidade estrutural: subsecoes operaveis por teclado, janelas com
+// papel de dialogo, campos com rotulo, link de pular, ingles marcado
+check("a11y_subsections_are_buttons_with_state", function(){
+  var hs = document.querySelectorAll("h3.h3-toggle"), ok = hs.length > 200;
+  Array.prototype.forEach.call(hs, function(h){
+    var b = h.querySelector(":scope > .h3-btn");
+    // o valor de aria-expanded e sincronizado por um observador assincrono:
+    // aqui so a estrutura; o valor e conferido em real_keyboard_opens_subsections_and_dialogs
+    if(!b || b.tagName !== "BUTTON" || !b.hasAttribute("aria-expanded")) ok = false;
+  });
+  return ok;
+});
+check("a11y_dialogs_have_role_and_name", function(){
+  return ["certModal", "accountModal", "dashboardModal"].every(function(id){
+    var m = document.getElementById(id);
+    return m.getAttribute("role") === "dialog" && m.getAttribute("aria-modal") === "true" && !!m.getAttribute("aria-label");
+  });
+});
+check("a11y_every_field_has_a_label", function(){
+  return Array.prototype.every.call(document.querySelectorAll(".shell input:not([type=hidden]):not([type=file]), .shell textarea, .shell select"), function(i){
+    return !!(i.getAttribute("aria-label") || i.closest("label") || (i.id && document.querySelector('label[for="' + i.id + '"]')));
+  });
+});
+check("a11y_skip_link_and_current_module", function(){
+  var s = document.querySelector("a.skip-link");
+  return !!s && s.getAttribute("href") === "#mainArea" && document.body.firstElementChild === s &&
+    document.querySelectorAll('.tabbtn[aria-current="page"]').length === 1;
+});
+check("a11y_english_content_is_marked", function(){
+  var opts = document.querySelectorAll(".opt .otext"), en = document.querySelectorAll('.opt .otext[lang="en"]');
+  return en.length > opts.length * 0.8 && document.querySelectorAll('.ctw-text[lang="en"]').length === 8 &&
+    document.querySelectorAll('.spk-text[lang="en"]').length > 50 &&
+    Array.prototype.every.call(document.querySelectorAll('[lang="en"]'), function(e){ return !/[ãõç]/.test(e.textContent); });
+});
+
 // "Marcar esta parte como concluida": o texto fica dentro do <label> da caixa
 check("mark_done_label_wraps_text", function(){
   var all = document.querySelectorAll(".mark-done");

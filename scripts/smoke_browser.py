@@ -346,6 +346,30 @@ def run():
                 check("real_dashboard_reads_progress",
                       "Meta batida" in dash["goal"] and "/1" not in dash["goal"] and "R1" in dash["weak"] and "B2" in dash["band"], dash)
 
+                # teclado: Enter no titulo de uma subsecao abre e fecha; a
+                # janela do painel recebe o foco, fecha com Esc e devolve o foco
+                kb = b.eval(r"""(function(){
+                  document.querySelector('.tabbtn[data-tab="mod5"]').click();
+                  var h = document.querySelectorAll("#panel-mod5 .section-card:not([hidden]) h3.h3-toggle")[1], btn = h.querySelector(".h3-btn");
+                  var was = h.classList.contains("collapsed");
+                  btn.focus();
+                  var focused = document.activeElement === btn;
+                  btn.click();   // Enter e Espaco num <button> viram click
+                  var o = { focused: focused, toggled: h.classList.contains("collapsed") !== was };
+                  return new Promise(function(res){ setTimeout(function(){
+                    o.aria = btn.getAttribute("aria-expanded") === (h.classList.contains("collapsed") ? "false" : "true");
+                    var opener = document.getElementById("dashboardBtn"); opener.focus(); opener.click();
+                    setTimeout(function(){
+                      var m = document.getElementById("dashboardModal");
+                      o.focusIn = m.contains(document.activeElement);
+                      m.dispatchEvent(new KeyboardEvent("keydown", { key: "Escape", bubbles: true }));
+                      setTimeout(function(){ o.closed = m.hidden; o.focusBack = document.activeElement === opener; res(o); }, 60);
+                    }, 60);
+                  }, 60); });
+                })()""")
+                check("real_keyboard_opens_subsections_and_dialogs",
+                      all(kb.get(k) for k in ("focused", "toggled", "aria", "focusIn", "closed", "focusBack")), kb)
+
                 # "continuar de onde parei" sem o ✓ da subsecao concluida
                 b.eval('(function(){ var h = document.querySelector("#panel-mod0 h3.h3-done");'
                        ' localStorage.setItem("toefl_lastpos_v1", JSON.stringify({ mod: "mod0", id: h.id, title: h.textContent.trim() })); })()')

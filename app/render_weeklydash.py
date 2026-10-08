@@ -4,6 +4,13 @@ do antigo template de texto com células vazias pra preencher à mão -- numa
 página web, uma tabela sem nenhum jeito de digitar nela não faz sentido."""
 
 
+def _plain(label):
+    """Texto do rótulo sem marcação, pronto para ir num atributo."""
+    import html
+    import re
+    return html.escape(re.sub(r"<[^>]+>", "", label), quote=True)
+
+
 def render_weekly_dashboard(metrics):
     """metrics: lista de (key, label, meta)."""
     head_weeks = "".join(f"<th>Semana {w}</th>" for w in range(1, 5))
@@ -11,6 +18,8 @@ def render_weekly_dashboard(metrics):
         f'<tr><td class="wd-metric">{label}</td>'
         + "".join(
             f'<td><input type="text" class="wd-input" data-metric="{key}" data-week="w{w}" '
+            # rótulo para leitor de tela: a célula sozinha não diz o que é
+            f'aria-label="{_plain(label)}, semana {w}" '
             f'inputmode="decimal" autocomplete="off" placeholder="—"></td>'
             for w in range(1, 5)
         )

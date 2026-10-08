@@ -3326,6 +3326,17 @@
         dot.textContent = "✓";
         h3.insertBefore(dot, h3.firstChild);
 
+        // o título inteiro vira um <button> dentro do <h3>: continua sendo
+        // título para leitor de tela, mas ganha foco de teclado, Enter e
+        // Espaço, e anuncia aberto ou fechado. O clique sobe para o h3, que
+        // é quem abre e fecha.
+        var hbtn = document.createElement("button");
+        hbtn.type = "button";
+        hbtn.className = "h3-btn";
+        while(h3.firstChild) hbtn.appendChild(h3.firstChild);
+        hbtn.setAttribute("aria-expanded", "false");
+        h3.appendChild(hbtn);
+
         var doneWrap = document.createElement("label");
         doneWrap.className = "prog-check h3-done-check";
         var chk = document.createElement("input");
@@ -3404,6 +3415,21 @@
       firstActiveH3.classList.remove("collapsed");
       var firstActiveBody = firstActiveH3.nextElementSibling;
       if(firstActiveBody && firstActiveBody.classList.contains("h3-body")) firstActiveBody.classList.remove("h3-collapsed");
+    }
+
+    // aberto ou fechado muda em vários pontos do código (clique, rolagem,
+    // troca de aba, paginação, concluir Parte). Em vez de avisar o botão em
+    // cada um, um observador só acompanha a classe do h3.
+    if("MutationObserver" in window){
+      var syncExpanded = function(h3){
+        var b = h3.querySelector(".h3-btn");
+        if(b) b.setAttribute("aria-expanded", h3.classList.contains("collapsed") ? "false" : "true");
+      };
+      var h3Sync = new MutationObserver(function(muts){ muts.forEach(function(m){ syncExpanded(m.target); }); });
+      allH3.forEach(function(h3){
+        syncExpanded(h3);
+        h3Sync.observe(h3, { attributes: true, attributeFilter: ["class"] });
+      });
     }
 
     var resumeBtn = document.getElementById("resumeBtn");
@@ -3694,6 +3720,65 @@
       var saved = readPartPos()[modKey];
       showPartIdx(typeof saved === "number" ? saved : 0, { noScroll: true });
     });
+  })();
+
+  // ---------- Janelas (painel, conta, certificado): foco e teclado ----------
+  // Ao abrir, o foco entra na janela; Tab fica preso nela; Esc fecha; ao
+  // fechar, o foco volta para o botão que abriu. Quem abre e fecha cada
+  // janela é o código dela: aqui só se observa o atributo hidden.
+  (function(){
+    if(!("MutationObserver" in window)) return;
+    function focusables(m){
+      return Array.prototype.filter.call(
+        m.querySelectorAll('button, a[href], input, select, textarea, [tabindex]:not([tabindex="-1"])'),
+        function(el){ return !el.disabled && el.offsetParent !== null; });
+    }
+    ["certModal", "accountModal", "dashboardModal"].forEach(function(id){
+      var m = document.getElementById(id);
+      if(!m) return;
+      var opener = null;
+      new MutationObserver(function(){
+        if(!m.hidden){
+          if(!m.contains(document.activeElement)){
+            opener = document.activeElement;
+            var first = focusables(m)[0];
+            if(first) first.focus();
+          }
+        } else if(opener && opener.focus){
+          opener.focus();
+          opener = null;
+        }
+      }).observe(m, { attributes: true, attributeFilter: ["hidden"] });
+      m.addEventListener("keydown", function(e){
+        if(e.key === "Escape"){
+          var closeBtn = m.querySelector('[aria-label="Fechar"]');
+          if(closeBtn && !m.hidden) closeBtn.click();
+          return;
+        }
+        if(e.key !== "Tab") return;
+        var f = focusables(m);
+        if(!f.length) return;
+        if(e.shiftKey && document.activeElement === f[0]){ e.preventDefault(); f[f.length - 1].focus(); }
+        else if(!e.shiftKey && document.activeElement === f[f.length - 1]){ e.preventDefault(); f[0].focus(); }
+      });
+    });
+  })();
+
+  // ---------- Inglês marcado como inglês ----------
+  // A página é pt-BR, e sem lang="en" o leitor de tela lê as alternativas e
+  // os textos dos exercícios com pronúncia de português. Marca só o que é
+  // conteúdo-alvo dos widgets; alternativa escrita em português (há algumas)
+  // fica de fora pelo teste abaixo. O texto corrido dos módulos mistura as
+  // duas línguas na mesma frase e não é marcado.
+  (function(){
+    var PT = /[ãõçáéíóúâêôà]|\s(não|que|para|uma|você|de|os|da|com|em)\s/i;
+    Array.prototype.forEach.call(
+      document.querySelectorAll(".opt .otext, .exam-opt .otext, .quiz-passage-body, .ctw-text, .bsq-chip, .bsq-context, .spk-text"),
+      function(el){
+        var t = " " + el.textContent + " ";
+        if(t.trim() && !PT.test(t)) el.setAttribute("lang", "en");
+      });
+    Array.prototype.forEach.call(document.querySelectorAll(".srs-word, .srs-ex, .srs-syn"), function(el){ el.setAttribute("lang", "en"); });
   })();
 
   // ---------- "Comece aqui": o primeiro passo, no topo do Módulo 0 ----------
