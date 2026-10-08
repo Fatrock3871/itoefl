@@ -24,7 +24,7 @@
       "D": "similarly"
     },
     "correct": "C",
-    "why_right": "O conector precisa sinalizar contraste + ironia entre a intenção da política (reduzir custos) e o resultado real (aumentou custos) — \"paradoxically\" captura essa contradição inesperada.",
+    "why_right": "O conector precisa sinalizar contraste + ironia entre a intenção da política (reduzir custos) e o resultado real (aumentou custos): \"paradoxically\" captura essa contradição inesperada.",
     "why_wrong": "(A) e (B) são de continuidade/consequência lógica, incompatíveis com contraste; (D) sinaliza semelhança, o oposto do que a frase exige."
   },
   {
@@ -39,7 +39,7 @@
     },
     "correct": "C",
     "why_right": "\"Circumvent\" (contornar/evitar) encaixa com a lógica de adiar o voto para não enfrentar diretamente a crítica pública.",
-    "why_wrong": "(A) \"defer\" é próximo mas não captura a ideia de \"evitar/desviar\" a crítica em si — refere-se a adiar algo, não contornar algo; (B) significa piorar, sentido oposto; (D) significa endossar, sentido oposto."
+    "why_wrong": "(A) \"defer\" é próximo mas não captura a ideia de \"evitar/desviar\" a crítica em si: refere-se a adiar algo, não contornar algo; (B) significa piorar, sentido oposto; (D) significa endossar, sentido oposto."
   },
   {
     "num": 4,
@@ -80,7 +80,7 @@
       "D": "meanwhile"
     },
     "correct": "C",
-    "why_right": "A segunda oração é uma consequência lógica direta da sensibilidade térmica mencionada na primeira — \"accordingly\" (consequentemente) é o conector de causa-efeito correto.",
+    "why_right": "A segunda oração é uma consequência lógica direta da sensibilidade térmica mencionada na primeira: \"accordingly\" (consequentemente) é o conector de causa-efeito correto.",
     "why_wrong": "(A) e (B) sinalizam contraste, incompatível com a relação de causa-efeito; (D) sinaliza simultaneidade, não consequência."
   },
   {
@@ -99,7 +99,7 @@
   },
   {
     "num": 8,
-    "topic": "Gramática (relative clauses / estrutura complexa — relevante para Listen and Repeat)",
+    "topic": "Gramática (relative clauses / estrutura complexa, relevante para Listen and Repeat)",
     "prompt": "The proposal, ______ implications had not been fully considered, was rejected by the board.",
     "options": {
       "A": "that its",
@@ -122,8 +122,8 @@
       "D": "So I was thinking maybe you guys could push the date back for me?"
     },
     "correct": "B",
-    "why_right": "Registro formal, verbos modais de cortesia (\"I am writing to respectfully request\"), justificativa objetiva — adequado para comunicação institucional, exatamente o padrão exigido em Write an Email.",
-    "why_wrong": "(A), (C) e (D) usam registro coloquial, contrações e informalidade excessiva (\"just wondering\", \"you guys\", \"please\" isolado) — inadequados para o contexto navegacional acadêmico formal."
+    "why_right": "Registro formal, verbos modais de cortesia (\"I am writing to respectfully request\"), justificativa objetiva: adequado para comunicação institucional, exatamente o padrão exigido em Write an Email.",
+    "why_wrong": "(A), (C) e (D) usam registro coloquial, contrações e informalidade excessiva (\"just wondering\", \"you guys\", \"please\" isolado), inadequados para o contexto navegacional acadêmico formal."
   },
   {
     "num": 10,
@@ -136,7 +136,7 @@
       "D": "Researchers recommend canceling the program."
     },
     "correct": "C",
-    "why_right": "O texto explicitamente qualifica os resultados como não-generalizáveis devido à baixa participação rural — a inferência lógica direta é que os resultados podem não representar a população total.",
-    "why_wrong": "(A) contradiz o texto (resultados foram \"promissores\", não um fracasso); (B) exagera — \"baixa participação\" não é \"exclusão total\"; (D) é uma conclusão não sustentada pelo texto, que apenas pede cautela, não cancelamento."
+    "why_right": "O texto explicitamente qualifica os resultados como não-generalizáveis devido à baixa participação rural: a inferência lógica direta é que os resultados podem não representar a população total.",
+    "why_wrong": "(A) contradiz o texto (resultados foram \"promissores\", não um fracasso); (B) exagera: \"baixa participação\" não é \"exclusão total\"; (D) é uma conclusão não sustentada pelo texto, que apenas pede cautela, não cancelamento."
   }
 ]

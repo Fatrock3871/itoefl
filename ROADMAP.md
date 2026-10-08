@@ -152,6 +152,13 @@ Pequenas, independentes entre si, podem entrar em qualquer intervalo.
       `toefl_h3progress_v1`, `toefl_avatar_v1`, os renderizadores
       `render_errorlog.py` e `render_weeklydash.py`, o `smoke_test.py` e as
       edge functions).
+- [x] (C) Travessão de pausa trocado por vírgula, dois-pontos ou ponto nas
+      explicações em português de `app/drills_data.py` (23) e
+      `app/quiz_mod0.json` (8), em 2026-10-07. Ficaram de propósito os do
+      texto em inglês e os que separam rótulo em título.
+- [ ] (C) Mesma passada de travessão nos `consolidated/*.md` (59 ocorrências
+      em 8 módulos, parte delas em inglês ou em diagrama) e nos textos de
+      interface de `app/app.js` e `app/build.py`. Não foi olhado caso a caso.
 - [x] (C) Mover o histórico de sessões deste arquivo para
       `docs/historico-sessoes.md` (2026-10-07). Aqui ficam só esta lista e as
       decisões travadas.

@@ -25,7 +25,7 @@
       "D": "nowhere, because dogs are banned in summer"
     },
     "answer": "B",
-    "explanation": "Cães de coleira são permitidos; o <em>upper loop</em> é fechado a cães de 1/abr a 15/jul, e 20 de maio cai nesse período → todas as trilhas <strong>exceto</strong> o upper loop. (A) ignora a restrição; (C) inverte; (D) exagera — cães não são banidos, só do upper loop.",
+    "explanation": "Cães de coleira são permitidos; o <em>upper loop</em> é fechado a cães de 1/abr a 15/jul, e 20 de maio cai nesse período → todas as trilhas <strong>exceto</strong> o upper loop. (A) ignora a restrição; (C) inverte; (D) exagera: cães não são banidos, só do upper loop.",
     "hint": null,
     "trap_codes": [],
     "tags": [],
@@ -115,7 +115,7 @@
       "D": "the Classic Club without bacon"
     },
     "answer": "B",
-    "explanation": "<em>Garden</em> é vegan e não tem aviso de nozes. (A) Halloumi Stack tem queijo (não vegan) e <em>contains nuts</em>; (C) a sopa é sempre vegetariana mas <strong>pode não ser vegana</strong> — o texto manda perguntar; (D) Classic Club tem frango e ovo.",
+    "explanation": "<em>Garden</em> é vegan e não tem aviso de nozes. (A) Halloumi Stack tem queijo (não vegan) e <em>contains nuts</em>; (C) a sopa é sempre vegetariana mas <strong>pode não ser vegana</strong>: o texto manda perguntar; (D) Classic Club tem frango e ovo.",
     "hint": null,
     "trap_codes": [],
     "tags": [],
@@ -205,7 +205,7 @@
       "D": "costs more than any sandwich"
     },
     "answer": "B",
-    "explanation": "\"Soup of the day is always vegetarian; ask staff whether today's is vegan\" — sempre vegetariana, veganidade varia.",
+    "explanation": "\"Soup of the day is always vegetarian; ask staff whether today's is vegan\": sempre vegetariana, veganidade varia.",
     "hint": null,
     "trap_codes": [],
     "tags": [],
@@ -250,7 +250,7 @@
       "D": "To apologise for a mistake the department made"
     },
     "answer": "B",
-    "explanation": "O e-mail lista duas opções (com ou sem atestado) e pede que Bruna escolha até quinta. (A) não recusa — oferece alternativas; (C) o trabalho ainda não está atrasado; (D) não houve erro do departamento.",
+    "explanation": "O e-mail lista duas opções (com ou sem atestado) e pede que Bruna escolha até quinta. (A) não recusa, oferece alternativas; (C) o trabalho ainda não está atrasado; (D) não houve erro do departamento.",
     "hint": null,
     "trap_codes": [],
     "tags": [],
@@ -385,7 +385,7 @@
       "D": "a 17:30 service that takes about 45 minutes"
     },
     "answer": "A",
-    "explanation": "A nota de rodapé é explícita: \"the last half-past departure from Campus Gate is at 16:30\" e, depois das 17:00, o serviço é \"on the hour only\". Logo, não existe 17:30 na terça-feira. Este item treina a leitura da <strong>nota de rodapé</strong> — quem responde (B) leu só a linha principal e ignorou a exceção.",
+    "explanation": "A nota de rodapé é explícita: \"the last half-past departure from Campus Gate is at 16:30\" e, depois das 17:00, o serviço é \"on the hour only\". Logo, não existe 17:30 na terça-feira. Este item treina a leitura da <strong>nota de rodapé</strong>: quem responde (B) leu só a linha principal e ignorou a exceção.",
     "hint": null,
     "trap_codes": [],
     "tags": [],

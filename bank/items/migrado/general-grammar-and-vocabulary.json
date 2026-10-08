@@ -60,7 +60,7 @@
       "D": "similarly"
     },
     "answer": "C",
-    "explanation": "<strong>Por que certa:</strong> O conector precisa sinalizar contraste + ironia entre a intenção da política (reduzir custos) e o resultado real (aumentou custos) — \"paradoxically\" captura essa contradição inesperada.<br><strong>Por que as outras erram:</strong> (A) e (B) são de continuidade/consequência lógica, incompatíveis com contraste; (D) sinaliza semelhança, o oposto do que a frase exige.",
+    "explanation": "<strong>Por que certa:</strong> O conector precisa sinalizar contraste + ironia entre a intenção da política (reduzir custos) e o resultado real (aumentou custos): \"paradoxically\" captura essa contradição inesperada.<br><strong>Por que as outras erram:</strong> (A) e (B) são de continuidade/consequência lógica, incompatíveis com contraste; (D) sinaliza semelhança, o oposto do que a frase exige.",
     "hint": null,
     "trap_codes": [],
     "tags": [
@@ -101,7 +101,7 @@
       "D": "endorse"
     },
     "answer": "C",
-    "explanation": "<strong>Por que certa:</strong> \"Circumvent\" (contornar/evitar) encaixa com a lógica de adiar o voto para não enfrentar diretamente a crítica pública.<br><strong>Por que as outras erram:</strong> (A) \"defer\" é próximo mas não captura a ideia de \"evitar/desviar\" a crítica em si — refere-se a adiar algo, não contornar algo; (B) significa piorar, sentido oposto; (D) significa endossar, sentido oposto.",
+    "explanation": "<strong>Por que certa:</strong> \"Circumvent\" (contornar/evitar) encaixa com a lógica de adiar o voto para não enfrentar diretamente a crítica pública.<br><strong>Por que as outras erram:</strong> (A) \"defer\" é próximo mas não captura a ideia de \"evitar/desviar\" a crítica em si: refere-se a adiar algo, não contornar algo; (B) significa piorar, sentido oposto; (D) significa endossar, sentido oposto.",
     "hint": null,
     "trap_codes": [],
     "tags": [
@@ -224,7 +224,7 @@
       "D": "meanwhile"
     },
     "answer": "C",
-    "explanation": "<strong>Por que certa:</strong> A segunda oração é uma consequência lógica direta da sensibilidade térmica mencionada na primeira — \"accordingly\" (consequentemente) é o conector de causa-efeito correto.<br><strong>Por que as outras erram:</strong> (A) e (B) sinalizam contraste, incompatível com a relação de causa-efeito; (D) sinaliza simultaneidade, não consequência.",
+    "explanation": "<strong>Por que certa:</strong> A segunda oração é uma consequência lógica direta da sensibilidade térmica mencionada na primeira: \"accordingly\" (consequentemente) é o conector de causa-efeito correto.<br><strong>Por que as outras erram:</strong> (A) e (B) sinalizam contraste, incompatível com a relação de causa-efeito; (D) sinaliza simultaneidade, não consequência.",
     "hint": null,
     "trap_codes": [],
     "tags": [
@@ -292,7 +292,7 @@
     "task_type": "Grammar and Vocabulary",
     "exam_format": false,
     "format": "mcq",
-    "skill": "Gramática (relative clauses / estrutura complexa — relevante para Listen and Repeat)",
+    "skill": "Gramática (relative clauses / estrutura complexa, relevante para Listen and Repeat)",
     "cefr_min": null,
     "cefr_max": null,
     "stimulus": null,
@@ -347,7 +347,7 @@
       "D": "So I was thinking maybe you guys could push the date back for me?"
     },
     "answer": "B",
-    "explanation": "<strong>Por que certa:</strong> Registro formal, verbos modais de cortesia (\"I am writing to respectfully request\"), justificativa objetiva — adequado para comunicação institucional, exatamente o padrão exigido em Write an Email.<br><strong>Por que as outras erram:</strong> (A), (C) e (D) usam registro coloquial, contrações e informalidade excessiva (\"just wondering\", \"you guys\", \"please\" isolado) — inadequados para o contexto navegacional acadêmico formal.",
+    "explanation": "<strong>Por que certa:</strong> Registro formal, verbos modais de cortesia (\"I am writing to respectfully request\"), justificativa objetiva: adequado para comunicação institucional, exatamente o padrão exigido em Write an Email.<br><strong>Por que as outras erram:</strong> (A), (C) e (D) usam registro coloquial, contrações e informalidade excessiva (\"just wondering\", \"you guys\", \"please\" isolado), inadequados para o contexto navegacional acadêmico formal.",
     "hint": null,
     "trap_codes": [],
     "tags": [
@@ -388,7 +388,7 @@
       "D": "Researchers recommend canceling the program."
     },
     "answer": "C",
-    "explanation": "<strong>Por que certa:</strong> O texto explicitamente qualifica os resultados como não-generalizáveis devido à baixa participação rural — a inferência lógica direta é que os resultados podem não representar a população total.<br><strong>Por que as outras erram:</strong> (A) contradiz o texto (resultados foram \"promissores\", não um fracasso); (B) exagera — \"baixa participação\" não é \"exclusão total\"; (D) é uma conclusão não sustentada pelo texto, que apenas pede cautela, não cancelamento.",
+    "explanation": "<strong>Por que certa:</strong> O texto explicitamente qualifica os resultados como não-generalizáveis devido à baixa participação rural: a inferência lógica direta é que os resultados podem não representar a população total.<br><strong>Por que as outras erram:</strong> (A) contradiz o texto (resultados foram \"promissores\", não um fracasso); (B) exagera: \"baixa participação\" não é \"exclusão total\"; (D) é uma conclusão não sustentada pelo texto, que apenas pede cautela, não cancelamento.",
     "hint": null,
     "trap_codes": [],
     "tags": [
