@@ -839,6 +839,36 @@ main{max-width:1320px; margin:0 auto; padding:0 30px 120px; min-width:0;}
   .panel-head h1{font-size:27px;}
 }
 
+/* "Comece aqui": primeiro passo, no topo do Módulo 0 */
+.start-card{
+  background:var(--accent-wash); border:2px solid var(--edge); border-radius:var(--radius);
+  box-shadow:var(--shadow-hard); padding:20px 24px 22px; margin:0 0 26px;
+}
+.start-kicker{
+  display:inline-block; margin:0 0 10px !important; padding:3px 10px; background:var(--accent-fill); color:#fff !important;
+  border:2px solid var(--edge); font-family:'Bricolage Grotesque',sans-serif; font-size:11px !important; font-weight:800;
+  text-transform:uppercase; letter-spacing:0.1em;
+}
+.panel .start-card h2.start-title{
+  font-size:22px; font-style:normal; border:none; padding:0; margin:0 0 8px; line-height:1.2;
+}
+.start-text{font-size:16px !important; margin:0 0 12px !important; color:var(--ink) !important;}
+.panel .start-steps{margin:0 0 16px; padding-left:22px;}
+.panel .start-steps li{font-size:15.5px; margin-bottom:5px;}
+.start-actions{display:flex; flex-wrap:wrap; align-items:center; gap:10px 16px;}
+.start-go{
+  padding:12px 22px; border-radius:99px; border:2px solid var(--edge); background:var(--accent-fill); color:#fff;
+  font-family:'Bricolage Grotesque',sans-serif; font-size:14.5px; font-weight:800; cursor:pointer; box-shadow:3px 3px 0 var(--edge);
+}
+.start-go:hover{background:var(--accent-fill-hover);}
+.start-skip{
+  background:none; border:none; padding:10px 4px; font-family:inherit; font-size:13px; font-weight:700; color:var(--ink-2);
+  text-decoration:underline; text-underline-offset:3px; cursor:pointer;
+}
+.start-skip:hover{color:var(--ink);}
+@media(max-width:640px){ .start-card{padding:16px 16px 18px;} .panel .start-card h2.start-title{font-size:19px;} }
+@media print{ .start-card{display:none;} }
+
 /* card por seção */
 .section-card{
   background:var(--paper); border:2px solid var(--edge); border-radius:var(--radius);

@@ -263,7 +263,8 @@ de erros),
 Sempre locais, por aparelho: `toefl_theme_v1`, `toefl_active_tab`,
 `toefl_timer_preset`, `toefl_partpos_v1` (Parte aberta em cada módulo),
 `toefl_lastpos_v1` (alvo do "Continuar de onde parei"), `toefl_trilha_v1`
-(trilha rápida ou completa: preferência de leitura, não progresso). `toefl_sync_at` e
+(trilha rápida ou completa: preferência de leitura, não progresso),
+`toefl_welcome_v1` (cartão "Comece aqui" do M0 dispensado). `toefl_sync_at` e
 `toefl_dirty` são internos do sync.
 
 **Sincronização:** quando o Supabase está configurado e o aluno logado, as

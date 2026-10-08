@@ -911,6 +911,7 @@
       if(drillId === "mod0-diag" && confirmed === total && total > 0){
         updateLevelBadge(correct, total);
       }
+      if(drillId === "mod0-diag" && typeof window.__toeflRefreshStart === "function") window.__toeflRefreshStart();
       if(drillId.indexOf("mod1-") === 0 || drillId.indexOf("mod2-") === 0){
         updateLiveScorePanel();
       }
@@ -3693,6 +3694,81 @@
       var saved = readPartPos()[modKey];
       showPartIdx(typeof saved === "number" ? saved : 0, { noScroll: true });
     });
+  })();
+
+  // ---------- "Comece aqui": o primeiro passo, no topo do Módulo 0 ----------
+  // Sem isto o aluno novo caía na Parte 1 (teoria sobre a prova) sem ninguém
+  // dizer o que fazer primeiro nem onde fica o menu. O cartão tem dois
+  // estados: antes do diagnóstico (leva até ele) e depois (leva ao
+  // cronograma). Some quando o aluno dispensa; a escolha fica em
+  // toefl_welcome_v1, local do aparelho como o tema.
+  (function(){
+    var panel = document.getElementById("panel-mod0");
+    var diag = document.querySelector('.quiz-drill[data-drill="mod0-diag"]');
+    var head = panel && panel.querySelector(".panel-head");
+    if(!panel || !diag || !head) return;
+    var LS_WELCOME = "toefl_welcome_v1";
+    var card = document.createElement("section");
+    card.className = "start-card";
+    card.id = "startCard";
+    card.setAttribute("aria-label", "Comece aqui");
+    card.innerHTML =
+      '<p class="start-kicker">Comece aqui</p>' +
+      '<h2 class="start-title"></h2>' +
+      '<p class="start-text"></p>' +
+      '<ol class="start-steps"></ol>' +
+      '<div class="start-actions">' +
+      '<button type="button" class="start-go"></button>' +
+      '<button type="button" class="start-skip">Dispensar este aviso</button>' +
+      '</div>';
+    head.parentNode.insertBefore(card, head.nextSibling);
+    var titleEl = card.querySelector(".start-title"), textEl = card.querySelector(".start-text");
+    var stepsEl = card.querySelector(".start-steps"), goBtn = card.querySelector(".start-go");
+
+    function partCard(n){ return panel.querySelectorAll(".section-card")[n - 1]; }
+    function goToPart(n, target){
+      navTo("mod0");
+      var showPart = window.__toeflShowPart && window.__toeflShowPart.mod0;
+      if(showPart && partCard(n)) showPart(partCard(n), { noScroll: true });
+      setTimeout(function(){ (target || partCard(n)).scrollIntoView({ behavior: "smooth", block: "start" }); }, 60);
+    }
+    function setSteps(items){
+      stepsEl.innerHTML = "";
+      items.forEach(function(t){ var li = document.createElement("li"); li.textContent = t; stepsEl.appendChild(li); });
+    }
+    function render(){
+      if(safeGet(LS_WELCOME) === "1"){ card.hidden = true; return; }
+      card.hidden = false;
+      var a = computeQuizAccuracy("mod0-diag");
+      if(a.confirmed < a.total){
+        titleEl.textContent = "Faça o diagnóstico antes de ler qualquer coisa";
+        textEl.textContent = "São 10 questões e levam uns 10 minutos. O resultado define o seu nível de partida e qual cronograma de estudo seguir.";
+        setSteps([
+          "Responda as 10 questões do diagnóstico.",
+          "Veja o seu nível estimado e o cronograma indicado.",
+          "Siga os módulos na ordem ou vá direto ao que mais precisa: a navegação é livre."
+        ]);
+        goBtn.textContent = a.confirmed ? "Continuar o diagnóstico (" + a.confirmed + " de " + a.total + ")" : "Fazer o diagnóstico agora";
+        goBtn.onclick = function(){ goToPart(3, diag); };
+      } else {
+        var band = cefrBandFromPct(Math.round(100 * a.correct / a.total));
+        titleEl.textContent = "Diagnóstico feito: nível estimado " + band.label;
+        textEl.textContent = "Você acertou " + a.correct + " de " + a.total + ". Próximo passo: abrir o cronograma indicado para o seu nível e marcar a data da prova.";
+        setSteps([
+          scheduleFromPct(Math.round(100 * a.correct / a.total)).split(" · ")[0] + ".",
+          "O botão de três traços, no alto à esquerda, abre o menu com os 10 módulos e o seu progresso.",
+          "Ao fim de cada Parte, marque como concluída: é isso que faz o progresso andar."
+        ]);
+        goBtn.textContent = "Ver o meu cronograma";
+        goBtn.onclick = function(){ goToPart(6); };
+      }
+    }
+    card.querySelector(".start-skip").addEventListener("click", function(){
+      safeSet(LS_WELCOME, "1");
+      render();
+    });
+    window.__toeflRefreshStart = render;
+    render();
   })();
 
   // ---------- Videoaulas (app/videos.json) ----------

@@ -264,8 +264,27 @@ def run():
                 idle = b.eval('Object.keys(localStorage).filter(function(k){ return /^toefl_(streak|dailygoal|dirty|scorecalc)/.test(k); })')
                 check("real_opening_the_site_marks_nothing", not idle, idle)
 
+                # "Comece aqui": aluno novo ve o cartao e o botao leva ao diagnostico
+                start = b.eval(r"""(function(){
+                  var c = document.getElementById("startCard");
+                  var o = { shown: !!c && !c.hidden, go: c.querySelector(".start-go").textContent,
+                            beforePager: c.nextElementSibling.classList.contains("part-pager") };
+                  c.querySelector(".start-go").click();
+                  var diagCard = document.querySelector('.quiz-drill[data-drill="mod0-diag"]').closest(".section-card");
+                  o.partOpen = !diagCard.hidden && document.getElementById("jtPart").textContent === "Parte 3 de 9";
+                  return o;
+                })()""")
+                check("real_start_card_leads_to_diagnostic",
+                      start["shown"] and start["go"] == "Fazer o diagnóstico agora" and start["beforePager"] and start["partOpen"], start)
+
                 failed = b.eval(ACT)
                 b.pump(1.2)  # a caixa de escrita salva com atraso
+                start2 = b.eval('({ title: document.querySelector("#startCard .start-title").textContent,'
+                                ' go: document.querySelector("#startCard .start-go").textContent })')
+                b.eval('document.querySelector("#startCard .start-skip").click()')
+                check("real_start_card_follows_diagnostic_and_dismisses",
+                      "nível estimado B2" in start2["title"] and start2["go"] == "Ver o meu cronograma"
+                      and b.eval('document.getElementById("startCard").hidden && localStorage.getItem("toefl_welcome_v1") === "1"'), start2)
                 check("real_every_widget_responds", not failed, failed)
                 before = b.eval(SNAP)
                 check("real_mark_done_text_is_clickable", before["parte"] is True)
@@ -337,6 +356,7 @@ def run():
                 check("real_progress_survives_reload", not diff, diff)
                 label = b.eval('document.getElementById("resumeBtn").hidden ? null : document.getElementById("resumeLabel").textContent')
                 check("real_resume_label_has_no_checkmark", bool(label) and "✓" not in label, label)
+                check("real_start_card_stays_dismissed", b.eval('document.getElementById("startCard").hidden'))
 
                 # gaveta: o mapa do curso aparece (ja saiu com altura zero)
                 b.eval('document.getElementById("sideToggle").click()')
