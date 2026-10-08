@@ -533,6 +533,8 @@ html = f'''<!DOCTYPE html>
         <p class="mr-transcript-label">Transcrição automática (autoavaliação, pode errar):</p>
         <p id="mrTranscriptText"></p>
       </div>
+      <label class="mr-mode" id="mrModeWrap" hidden><input type="checkbox" id="mrMode"> Só transcrever, sem gravar áudio</label>
+      <p class="mr-note" id="mrNote" hidden></p>
       <div class="mr-controls">
         <button type="button" id="mrToggleBtn" class="st-primary">● Gravar</button>
         <button type="button" id="mrClear" hidden>Nova</button>

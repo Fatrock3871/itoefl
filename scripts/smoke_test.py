@@ -359,6 +359,8 @@ check("listening_passage_speak_exists", function(){ return document.querySelecto
 
 check("mic_recorder_exists", function(){ return !!document.getElementById("mrToggleBtn"); });
 check("mic_transcript_exists", function(){ return !!document.getElementById("mrTranscript"); });
+// fora do iOS e com reconhecimento de fala, o plano B nao aparece
+check("mic_fallback_hidden_on_desktop", function(){ return document.getElementById("mrModeWrap").hidden && document.getElementById("mrNote").hidden; });
 
 // PWA: manifesto no <head>, nada aparece sozinho, o botao de instalar surge
 // com o evento do navegador e o aviso de versao nova abre e fecha. Aqui a
@@ -385,6 +387,64 @@ check("pwa_update_bar_dismisses", function(){ return document.getElementById("pw
 check("no_js_errors", function(){ return window.__errors.length === 0; });
 results.__jsErrors = window.__errors;
 
+document.title = JSON.stringify(results);
+</script>
+</body>
+"""
+
+
+# Segunda passada no navegador, fingindo um iPhone: user agent de iOS e um
+# reconhecimento de fala de mentira, definidos ANTES do app.js rodar. Exercita
+# o plano B do gravador (so gravar por padrao, opcao "So transcrever").
+IOS_PRELUDE = r"""<script>
+Object.defineProperty(navigator, "userAgent", { get: function(){ return "Mozilla/5.0 (iPhone; CPU iPhone OS 18_0 like Mac OS X) AppleWebKit/605.1.15 Version/18.0 Mobile/15E148 Safari/604.1"; } });
+window.__fakeRec = null;
+window.webkitSpeechRecognition = function(){ window.__fakeRec = this; };
+window.webkitSpeechRecognition.prototype.start = function(){ this.started = true; };
+window.webkitSpeechRecognition.prototype.stop = function(){ this.stopped = true; if(this.onend) this.onend(); };
+window.SpeechRecognition = undefined;
+</script>"""
+
+IOS_TEST_JS = r"""
+<script>
+window.__errors = [];
+window.onerror = function(msg, src, line){ window.__errors.push(msg + " @" + line); };
+var results = {};
+function check(name, fn){
+  try { results[name] = !!fn(); }
+  catch(ex){ results[name] = false; results[name + "__error"] = ex.message; }
+}
+var $ = function(id){ return document.getElementById(id); };
+check("ios_mic_mode_offered", function(){ return !$("mrModeWrap").hidden && !$("mrMode").checked && !$("mrMode").disabled; });
+check("ios_mic_note_shown", function(){ return !$("mrNote").hidden && $("mrNote").textContent.indexOf("iPhone") !== -1; });
+$("mrMode").checked = true;
+$("mrMode").dispatchEvent(new Event("change", { bubbles: true }));
+$("mrToggleBtn").click();
+check("ios_mic_transcribe_only_starts", function(){
+  return $("micRec").classList.contains("recording") && window.__fakeRec && window.__fakeRec.started &&
+         $("mrStatus").textContent.indexOf("Transcrevendo") === 0 && $("mrMode").disabled;
+});
+if(window.__fakeRec && window.__fakeRec.onresult){
+  window.__fakeRec.onresult({ resultIndex: 0, results: [{ 0: { transcript: "I would like to study abroad" }, isFinal: true, length: 1 }] });
+}
+check("ios_mic_transcript_shows_text", function(){ return !$("mrTranscript").hidden && $("mrTranscriptText").textContent === "I would like to study abroad"; });
+$("mrToggleBtn").click();
+check("ios_mic_transcribe_only_stops", function(){
+  return !$("micRec").classList.contains("recording") && $("mrAudio").hidden && !$("mrClear").hidden &&
+         !$("mrMode").disabled && $("mrToggleBtn").textContent.indexOf("Gravar") !== -1 &&
+         $("mrTranscriptText").textContent === "I would like to study abroad";
+});
+// o iOS encerra o reconhecimento sozinho no silencio: a tela tem que sair do modo gravando
+$("mrToggleBtn").click();
+if(window.__fakeRec && window.__fakeRec.onend) window.__fakeRec.onend();
+check("ios_mic_auto_end_resets_ui", function(){ return !$("micRec").classList.contains("recording") && !$("mrClear").hidden; });
+// erro de permissao: mensagem clara e tela de volta ao normal
+$("mrToggleBtn").click();
+if(window.__fakeRec && window.__fakeRec.onerror) window.__fakeRec.onerror({ error: "not-allowed" });
+check("ios_mic_permission_error_message", function(){ return !$("micRec").classList.contains("recording") && $("mrStatus").textContent.indexOf("negada") !== -1; });
+check("ios_pwa_no_hint_on_file", function(){ return $("pwaIosHint").hidden; });
+check("ios_no_js_errors", function(){ return window.__errors.length === 0; });
+results.__jsErrors = window.__errors;
 document.title = JSON.stringify(results);
 </script>
 </body>
@@ -472,9 +532,11 @@ def bank_checks():
     return out
 
 
-def run_browser_checks():
+def run_browser_checks(test_js=TEST_JS, prelude=""):
     html = ARTIFACT.read_text(encoding="utf-8")
-    html = html.replace("</body>", TEST_JS)
+    html = html.replace("</body>", test_js)
+    if prelude:
+        html = html.replace("<head>", "<head>" + prelude, 1)
 
     tmp_dir = Path(tempfile.gettempdir())
     tmp_html = tmp_dir / f"itoefl_smoke_{uuid.uuid4().hex}.html"
@@ -510,6 +572,9 @@ def main():
 
     print("Rodando checagens no Chrome headless...")
     results = run_browser_checks()
+    ios = run_browser_checks(IOS_TEST_JS, IOS_PRELUDE)
+    results["__jsErrors"] = (results.get("__jsErrors") or []) + (ios.pop("__jsErrors", None) or [])
+    results.update(ios)
     results.update(legal_page_checks())
     results.update(pwa_checks())
     results.update(bank_checks())

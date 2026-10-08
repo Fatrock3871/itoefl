@@ -1367,6 +1367,9 @@ li > .reveal{margin:6px 0 4px;}
   text-transform:uppercase; letter-spacing:0.06em; color:var(--ink-2); margin:0 0 5px !important;
 }
 #mrTranscriptText{font-size:12.5px; color:var(--ink); line-height:1.4; margin:0 !important;}
+.mr-mode{display:flex; align-items:center; gap:7px; font-size:12px; font-weight:600; color:var(--ink); cursor:pointer;}
+.mr-mode input{accent-color:var(--accent); margin:0;}
+.mr-note{font-size:11px; color:var(--ink-2); line-height:1.45; margin:0 !important;}
 .mr-controls{display:flex; gap:8px;}
 .mr-controls button{flex:1; padding:9px 0; border-radius:7px; border:2px solid var(--hair); background:var(--paper); font-family:inherit; font-size:13px; font-weight:700; color:var(--ink); cursor:pointer;}
 .mr-controls button:hover{border-color:var(--edge);}

@@ -216,7 +216,12 @@ Detalhe em `docs/roadmap-expansao.md`, seções 3 e 4.
       guarda os 6 arquivos e assume a página. Nunca testado em aparelho real:
       nem a instalação em si, nem o uso offline com login.
 - [ ] (U) Instalar e testar nas 4 plataformas: Android, Windows, macOS, iOS.
-- [ ] (C) Plano B para a transcrição do gravador no iPhone.
+- [x] (C) Plano B para a transcrição do gravador no iPhone (2026-10-07). No
+      iPhone e no iPad o padrão é só gravar, com a opção "Só transcrever, sem
+      gravar áudio". Navegador sem reconhecimento de fala mostra um aviso fixo
+      e segue gravando. Testado com um iPhone simulado no smoke test; falta o
+      teste em iPhone de verdade, que entra no item (U) acima. Transcrição no
+      servidor continua na Etapa 5.
 - [ ] (D) Hospedagem dos vídeos. Recomendação: YouTube não listado agora.
 - [ ] (U) Entregar os vídeos gravados, pode ser um por vez.
 - [ ] (C) `app/videos.json` e player com carregamento no clique, no topo do

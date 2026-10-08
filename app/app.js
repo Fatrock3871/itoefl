@@ -1067,7 +1067,32 @@
     // o gravador de áudio continua funcionando normal, só sem essa parte.
     var SpeechRec = window.SpeechRecognition || window.webkitSpeechRecognition;
     var recognizer = null, finalTranscript = "";
-    function startTranscript(){
+
+    // Plano B do iPhone/iPad. No iOS o Safari até expõe o reconhecimento de
+    // fala, mas rodar ele junto com o MediaRecorder disputa o microfone: um
+    // dos dois para ou volta vazio. Então no iOS o padrão é só gravar o áudio,
+    // e uma opção "Só transcrever" usa só o reconhecimento. Sem reconhecimento
+    // nenhum (Firefox, alguns navegadores dentro de app), aparece um aviso
+    // fixo e o gravador segue funcionando. Transcrição no servidor fica para a
+    // Etapa 5 do ROADMAP.
+    var isIOS = /iP(hone|ad|od)/.test(navigator.userAgent) ||
+                (navigator.platform === "MacIntel" && navigator.maxTouchPoints > 1);
+    // splitMode: neste aparelho é gravar OU transcrever, nunca os dois juntos
+    var splitMode = isIOS, transcribing = false;
+    var modeWrap = document.getElementById("mrModeWrap");
+    var modeChk = document.getElementById("mrMode");
+    var noteEl = document.getElementById("mrNote");
+    function setNote(txt){ if(!noteEl) return; noteEl.textContent = txt || ""; noteEl.hidden = !txt; }
+    function transcribeOnly(){ return !!(splitMode && SpeechRec && modeChk && modeChk.checked); }
+    function concurrentTranscript(){ return !!SpeechRec && !splitMode; }
+    if(!SpeechRec){
+      setNote("Transcrição automática indisponível neste navegador. A gravação funciona normalmente: ouça e compare com o texto do exercício.");
+    } else if(isIOS){
+      if(modeWrap) modeWrap.hidden = false;
+      setNote("No iPhone e no iPad, gravar e transcrever ao mesmo tempo não funciona bem. Grave para ouvir sua voz, ou marque \"Só transcrever\" para ver o texto que o aparelho entendeu.");
+    }
+
+    function startTranscript(onError, onEnd){
       if(!SpeechRec) return;
       finalTranscript = "";
       transcriptText.textContent = "";
@@ -1086,17 +1111,27 @@
           }
           transcriptText.textContent = (finalTranscript + interim).trim();
         };
-        recognizer.onerror = function(){}; // silencioso -- audio gravado continua valendo mesmo se o reconhecimento falhar
+        recognizer.onerror = function(e){ if(onError) onError(e); }; // no modo normal fica silencioso: o áudio gravado continua valendo
+        // o iOS encerra o reconhecimento sozinho depois de um silêncio
+        recognizer.onend = function(){ if(onEnd) onEnd(); };
         recognizer.start();
-      } catch(ex){ recognizer = null; }
+      } catch(ex){ recognizer = null; if(onError) onError(ex); }
     }
     function stopTranscript(){
-      if(recognizer){ try { recognizer.stop(); } catch(ex){} recognizer = null; }
+      // zera antes de parar: o stop() dispara o onend, que pode voltar aqui
+      var r = recognizer;
+      recognizer = null;
+      if(r){ try { r.stop(); } catch(ex){} }
     }
 
-    if(!navigator.mediaDevices || !window.MediaRecorder){
+    if((!navigator.mediaDevices || !window.MediaRecorder) && !SpeechRec){
       recBtn.disabled = true;
       statusEl.textContent = "Gravação não suportada neste navegador.";
+    } else if(!navigator.mediaDevices || !window.MediaRecorder){
+      // sem gravador mas com reconhecimento: o modo "só transcrever" é o que sobra
+      if(modeWrap) modeWrap.hidden = false;
+      if(modeChk){ modeChk.checked = true; modeChk.disabled = true; }
+      splitMode = true;
     }
 
     function fmt(s){
@@ -1110,6 +1145,32 @@
     function revoke(){ if(url){ URL.revokeObjectURL(url); url = null; } }
 
     function startRec(){
+      if(transcribeOnly()){
+        // plano B: só o reconhecimento de fala, sem MediaRecorder
+        revoke();
+        audioEl.hidden = true;
+        clearBtn.hidden = true;
+        transcribing = true;
+        var failed = "";
+        startTranscript(function(e){
+          var err = e && e.error;
+          if(err === "no-speech" || err === "aborted") return; // silêncio ou parada normal: o onend cuida
+          failed = err === "not-allowed" || err === "service-not-allowed"
+            ? "Permissão de microfone ou de reconhecimento de fala negada."
+            : (err === "network" ? "A transcrição precisa de internet." : "Não foi possível transcrever agora.");
+          if(transcribing) stopRec(failed);
+        }, function(){
+          if(transcribing) stopRec(failed);
+        });
+        if(!transcribing) return; // falhou já na partida
+        elapsed = 0; display.textContent = "00:00";
+        wrap.classList.add("recording");
+        recBtn.textContent = "■ Parar";
+        if(modeChk) modeChk.disabled = true;
+        statusEl.textContent = "Transcrevendo… fale em inglês.";
+        tick = setInterval(function(){ elapsed++; display.textContent = fmt(elapsed); }, 1000);
+        return;
+      }
       navigator.mediaDevices.getUserMedia({ audio: true }).then(function(s){
         stream = s;
         revoke();
@@ -1128,7 +1189,7 @@
           releaseStream();
         };
         rec.start();
-        startTranscript();
+        if(concurrentTranscript()) startTranscript();
         elapsed = 0; display.textContent = "00:00";
         wrap.classList.add("recording");
         recBtn.textContent = "■ Parar";
@@ -1138,11 +1199,19 @@
         statusEl.textContent = "Permissão de microfone negada.";
       });
     }
-    function stopRec(){
+    function stopRec(failMsg){
       stopClock();
       stopTranscript();
       wrap.classList.remove("recording");
       recBtn.textContent = "● Gravar";
+      if(transcribing){
+        // modo só transcrever: não há áudio para ouvir (rec é null), sobra o texto
+        transcribing = false;
+        if(modeChk && (navigator.mediaDevices && window.MediaRecorder)) modeChk.disabled = false;
+        clearBtn.hidden = false;
+        statusEl.textContent = typeof failMsg === "string" && failMsg ? failMsg : "Compare o texto com o que você quis dizer.";
+        return;
+      }
       if(rec && rec.state !== "inactive") rec.stop();
       rec = null;
     }
@@ -1160,6 +1229,10 @@
       if(wrap.classList.contains("recording")) stopRec(); else startRec();
     });
     clearBtn.addEventListener("click", clearRec);
+    if(modeChk) modeChk.addEventListener("change", function(){
+      clearRec();
+      if(modeChk.checked) statusEl.textContent = "Fale e veja o texto que o aparelho entendeu.";
+    });
     toggle.addEventListener("click", function(){ wrap.classList.toggle("collapsed"); });
   })();
 
