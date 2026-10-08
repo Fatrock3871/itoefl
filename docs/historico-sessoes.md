@@ -7,6 +7,48 @@ falta" do `ROADMAP.md`. Sessão nova entra no topo.
 
 ---
 
+## Sessão 2026-10-08: caça a erros, conferência de conteúdo, auditoria e melhorias
+
+Sessão do desenvolvedor a pedido do gerente (Hermes), em três fases.
+
+**Fase 1, erros.** O site sem login foi percorrido num Chrome de verdade
+(`scripts/cdp.py`, cliente do DevTools só com a biblioteca padrão): os 10
+módulos, todos os widgets, recarga, 375 px, dois temas, service worker.
+
+- `a86c38f` Contraste AA: botões laranja davam 3,4:1 no claro e 2,7:1 no
+  escuro. Mapa do curso da gaveta estava com altura zero.
+- `8a0ca18` Data da sequência em UTC (o dia virava às 21h), sequência marcada
+  só por abrir o site, HTML no registro de erros, reinício incompleto,
+  importação sem marcar sincronização, "✓" no rótulo de continuar, texto de
+  concluir Parte não clicável.
+- `7e6ac8a` `scripts/build_teste.py` gera a pasta inteira (manifesto, service
+  worker, ícones).
+- `d2ab7a2` `scripts/smoke_browser.py`: passada do smoke test com recarga,
+  celular, contraste e ciclo do service worker.
+
+Conferido e sem defeito: persistência de todos os widgets, estouro em 375 px,
+links internos, os quatro links da ETS e o service worker depois de um build
+novo (mostra o aviso, troca no "Recarregar", abre offline).
+
+**Fase 2, conteúdo.** `eb90f10`. Registro em
+`docs/conferencia-conteudo-2026-10.md`. Os três PDFs da ETS de hoje são
+idênticos aos de ontem. Corrigidos M0, M3, M5, M7 e M8.
+
+**Fase 3, nível da plataforma.** `c2b1cb2` auditoria em
+`docs/auditoria-plataforma-2026-10.md`. Depois, em ordem: `e5bc999`
+devolutiva em palavras e barra do topo; `e4b39a8` cartão "Comece aqui";
+`92d3152` teclado, janelas, rótulos, `lang="en"`, toque; `6b89240` sequência
+na gaveta, fontes por `<link>`, erros de login em português.
+
+O smoke test foi de 126 para 168 checagens.
+
+**Não verificado:** nada rodou em aparelho real nem com leitor de tela. As
+páginas web da ETS foram lidas por ferramenta que resume; só os PDFs foram
+conferidos por busca literal. A tela de login foi vista, mas login, compra e
+sincronização de verdade não foram exercitados (dependem do Supabase).
+
+---
+
 ## Sessão 2026-10-07 (noite): banco, conferência com a ETS, PWA, videoaulas, aprofundamento
 
 Sessão do desenvolvedor a pedido do gerente (Hermes), retomando três

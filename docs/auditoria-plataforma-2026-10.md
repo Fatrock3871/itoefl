@@ -188,7 +188,28 @@ de um build novo, troca de versão no "Recarregar" e abre offline
 
 ## 5. O que foi implementado nesta rodada
 
-Preenchido ao fim da Fase 3.
+Nas tabelas da seção 2, "fila" é a situação de quando a auditoria foi
+escrita. A situação final é esta:
+
+| Itens | O que entrou | Commit | Checagens novas |
+|---|---|---|---|
+| C1, C2, F7, C3, C4 | Etiqueta em cada alternativa corrigida ("sua resposta", "correta") e frase de veredito com as duas letras, anunciada por leitor de tela, em quizzes e simulados. "Faltam N questões para entregar." Banda só a partir de 10 respostas | `e5bc999` | `real_feedback_says_right_or_wrong_in_words`, `real_exam_shows_how_many_left`, `real_no_band_from_tiny_sample` |
+| B1, B2, A3, B6, A4 | Barra do topo que gruda, vai de borda a borda e mostra módulo e Parte; clicar nela abre o menu. Gravador e cronômetro menores no celular. Paginação sem repetir "PARTE N" | `e5bc999` | `mobile_top_bar_sticks_and_names_the_place` |
+| A2 | Cartão "Comece aqui" no topo do M0, com dois estados (antes e depois do diagnóstico) | `e4b39a8` | `real_start_card_leads_to_diagnostic`, `real_start_card_follows_diagnostic_and_dismisses`, `real_start_card_stays_dismissed` |
+| F2, F4, F5, F6, F3, F8, F9, F10, E2 | Subseções por botão com `aria-expanded`; janelas com `role="dialog"`, foco, Tab preso e Esc; link de pular; `aria-current`; rótulos; `lang="en"`; contorno de foco; alvos de toque de 36 px; menos movimento; ícones do login no escuro | `92d3152` | `a11y_subsections_are_buttons_with_state`, `a11y_dialogs_have_role_and_name`, `a11y_every_field_has_a_label`, `a11y_skip_link_and_current_module`, `a11y_english_content_is_marked`, `real_keyboard_opens_subsections_and_dialogs` |
+| D2, G1, G5, H2, I2 | Sequência de dias na gaveta; fontes por `<link>` com preconnect; ícone nas páginas legais; enunciado e alternativas maiores; erros de login em português | `6b89240` | `streak_line_in_sidebar`, `fonts_load_by_link_not_import`, `auth_errors_are_in_portuguese` |
+
+**Ficou na fila, sem depender do dono:** E4 (aviso de que a tabela rola para
+o lado), I3 (aviso de sem internet), D3 (comemoração ao concluir módulo), C5
+(Build a Sentence sem recarregar a página), G2 e G3 (peso do HTML e das
+páginas legais), H4 (uniformizar "pra" e "para"), I5 (como liberar o
+microfone).
+
+**Limite do que foi verificado:** tudo acima passou em Chrome headless, em
+tela de 1280 px e de 375 px emulada. Nenhum item foi testado em aparelho
+real nem com leitor de tela de verdade. O `lang="en"` é aplicado por uma
+regra simples (texto sem acento e sem palavras comuns do português): pode
+deixar de marcar uma alternativa em inglês que contenha, por exemplo, " de ".
 
 ## 6. Desenhado, à espera do dono
 

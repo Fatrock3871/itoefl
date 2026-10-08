@@ -153,6 +153,15 @@ Pequenas, independentes entre si, podem entrar em qualquer intervalo.
       a partir de 15 min antes), atraso no centro sem tolerância,
       cancelamento de score, 4 envios incluídos, documento físico com
       assinatura, e "decore 3 esqueletos" reescrito.
+- [x] (C) Auditoria da plataforma e primeira leva de melhorias (2026-10-08),
+      em `docs/auditoria-plataforma-2026-10.md`: devolutiva em palavras nos
+      exercícios, barra do topo com módulo e Parte, cartão "Comece aqui",
+      teclado e leitor de tela (subseções, janelas, rótulos, inglês
+      marcado), alvos de toque, sequência de dias na gaveta, fontes por
+      `<link>`. O que sobrou sem depender de decisão está na seção 5 dela.
+- [ ] (D) Tela de apresentação com os três planos: desenhada na seção 6.1 da
+      auditoria. Espera os planos implementados e três decisões (diagnóstico
+      grátis sem conta, reembolso, selo de "mais escolhido").
 - [ ] (D) Os cronogramas do M0 se chamam Sprint (30 dias), Standard (60) e
       Premium (90); os planos de preço são Sprint (30), Standard (90) e
       Premium (vitalício). "Standard" passa a ter dois sentidos. Renomear um

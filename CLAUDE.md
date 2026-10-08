@@ -73,6 +73,9 @@ supabase/content-seed-optional.json    Seed das tabelas de conteúdo (opcional)
 app/supabase_config.json  Credenciais (gitignored; .example commitado). Sem ele → modo offline
 scripts/serve.py          Servidor local
 scripts/smoke_test.py     Suíte de checagens automáticas (rodar antes de commitar)
+scripts/smoke_browser.py  Passada do smoke test num Chrome de verdade: recarga, 375 px, contraste, service worker
+scripts/cdp.py            Cliente mínimo do DevTools (só biblioteca padrão) usado pela passada acima
+scripts/build_teste.py    Gera _teste/: o site sem login nem pagamento, completo e instalável
 docs/                     Análises e notas de decisão
 _archive/                 Versão pré-2026: index.html monolítico + os 10 .md antigos
 _snapshots/               Cópias com timestamp antes de mudanças estruturais
@@ -239,6 +242,16 @@ foi deixada no código (sempre retorna `true` agora) só por compatibilidade com
 `updateBadges()`, que ainda a chama; não reintroduzir lógica de bloqueio ali
 sem pedido explícito do usuário. `showLockMessage()` e `.lock-msg`, que eram
 código morto, foram removidos em 2026-10-06.
+
+## Cor e contraste
+
+Texto branco nunca vai sobre `--accent` puro (dá 3,4:1). Fundo de botão,
+selo e cabeçalho de tabela usa `--accent-fill`; texto laranja usa
+`--accent-strong`; a logo usa `--logo-deep`. `--accent` fica para borda,
+barra de progresso e sombra. O smoke test mede o contraste AA de todo texto
+nos dois temas (`contrast_aa_light`, `contrast_aa_dark`). As fontes entram
+por `<link>` no `<head>` (`FONT_LINKS` em `build.py`), não por importação no
+CSS.
 
 ## Camadas visuais (runtime, montadas no `app.js`)
 
