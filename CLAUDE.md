@@ -52,11 +52,15 @@ app/render_errorlog.py    Renderizador do formulário de Registro de erros (M1 a
 app/render_weeklydash.py  Renderizador do dashboard semanal (M0)
 app/app.js                Runtime: tema, abas, progresso (checkboxes + badges), quizzes
 app/styles.css            Estilo (tema claro/escuro/sistema)
+app/manifest.json         Manifesto da PWA (o build copia para artifact/)
+app/sw.js                 Service worker da PWA; o build troca __BUILD_VERSION__ por um hash do conteúdo
+app/icons/                Ícones da PWA, gerados por scripts/make_icons.py e versionados
 app/module_fragments*.json  Saída do pipeline (gerado; não editar)
 artifact/index.html       Site final (gerado; não editar)
 legal/*.md                Termos de Uso e Política de Privacidade (fonte)
 artifact/termos.html      Páginas legais (geradas pelo build.py; não editar)
 artifact/privacidade.html
+artifact/manifest.json, sw.js, icons/   PWA (gerados pelo build.py; não editar)
 supabase/schema.sql       Backend: profiles, user_state (jsonb), entitlements, coupons, com RLS
 supabase/functions/       Edge functions: create-checkout, mp-webhook, delete-account
 supabase/config.toml      Config das functions (mp-webhook roda sem verificação de JWT)
@@ -115,6 +119,14 @@ depois do rebalanceamento do build, nunca a posição na tela. Cronômetro, grav
 export/import ficam no shell (`build.py`) e valem para todas as abas.
 - Depois de qualquer edição de fonte, rodar as duas builds e conferir
   `artifact/index.html` no navegador.
+
+**PWA:** o site é instalável. O service worker só é registrado em https ou
+em localhost, nunca em `file://`. Ele serve do cache o que está na lista
+`PRECACHE` de `app/sw.js`: arquivo novo em `artifact/` que precise funcionar
+offline tem que entrar nessa lista e no hash de versão do `build.py`. Build
+com conteúdo igual gera a mesma versão; conteúdo novo gera versão nova e o
+aluno vê "Nova versão disponível" na visita seguinte. Testando em
+localhost, o site fica preso na versão em cache até clicar em Recarregar.
 
 ## Convenções
 

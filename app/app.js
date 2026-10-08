@@ -3468,4 +3468,92 @@
       showPartIdx(typeof saved === "number" ? saved : 0, { noScroll: true });
     });
   })();
+
+  // ---------- PWA: instalar app, service worker e aviso de nova versão ----------
+  // O service worker (app/sw.js, carimbado pelo build) só é registrado em
+  // https ou em localhost. Aberto direto do disco (file://) nada disto roda e
+  // o site segue como sempre foi. A versão nova fica em espera até o aluno
+  // clicar em "Recarregar", para não trocar o site no meio de um exercício.
+  (function(){
+    var tools = document.getElementById("pwaTools");
+    var installBtn = document.getElementById("pwaInstall");
+    var iosHint = document.getElementById("pwaIosHint");
+    var updateBar = document.getElementById("pwaUpdate");
+    var updateBtn = document.getElementById("pwaUpdateBtn");
+    var laterBtn = document.getElementById("pwaUpdateLater");
+    if(!tools || !updateBar) return;
+
+    var host = location.hostname;
+    var canRegister = "serviceWorker" in navigator &&
+      (location.protocol === "https:" || host === "localhost" || host === "127.0.0.1");
+    var standalone = navigator.standalone === true ||
+      (window.matchMedia && window.matchMedia("(display-mode: standalone)").matches);
+    var isIOS = /iP(hone|ad|od)/.test(navigator.userAgent) ||
+                (navigator.platform === "MacIntel" && navigator.maxTouchPoints > 1);
+
+    // Android, Windows e macOS (Chrome e Edge): o navegador avisa quando o
+    // site pode ser instalado e a gente guarda o evento para o botão usar
+    var deferredPrompt = null;
+    window.addEventListener("beforeinstallprompt", function(e){
+      e.preventDefault();
+      deferredPrompt = e;
+      tools.hidden = false;
+      installBtn.hidden = false;
+    });
+    installBtn.addEventListener("click", function(){
+      if(!deferredPrompt) return;
+      var p = deferredPrompt;
+      deferredPrompt = null;
+      installBtn.hidden = true;
+      tools.hidden = iosHint.hidden;
+      if(p.prompt) p.prompt();
+    });
+    window.addEventListener("appinstalled", function(){
+      deferredPrompt = null;
+      installBtn.hidden = true;
+      tools.hidden = true;
+    });
+
+    // iPhone e iPad não têm botão de instalar: só o caminho pelo Compartilhar
+    if(isIOS && !standalone && location.protocol !== "file:"){
+      tools.hidden = false;
+      iosHint.hidden = false;
+    }
+
+    var waiting = null, reloading = false;
+    function showUpdate(worker){
+      waiting = worker || null;
+      updateBar.hidden = false;
+    }
+    updateBtn.addEventListener("click", function(){
+      updateBtn.disabled = true;
+      reloading = true;
+      if(waiting) waiting.postMessage("SKIP_WAITING");
+      else location.reload();
+    });
+    laterBtn.addEventListener("click", function(){ updateBar.hidden = true; });
+
+    // gancho usado pelo smoke test, que roda em file:// e não tem service worker
+    window.__toeflPwa = { canRegister: canRegister, showUpdate: showUpdate };
+
+    if(!canRegister) return;
+    // só recarrega quando foi o aluno que pediu: na primeira instalação o
+    // service worker também assume o controle, e ali não há o que recarregar
+    navigator.serviceWorker.addEventListener("controllerchange", function(){
+      if(reloading) location.reload();
+    });
+    window.addEventListener("load", function(){
+      navigator.serviceWorker.register("sw.js").then(function(reg){
+        // já havia versão nova esperando de uma visita anterior
+        if(reg.waiting && navigator.serviceWorker.controller) showUpdate(reg.waiting);
+        reg.addEventListener("updatefound", function(){
+          var fresh = reg.installing;
+          if(!fresh) return;
+          fresh.addEventListener("statechange", function(){
+            if(fresh.state === "installed" && navigator.serviceWorker.controller) showUpdate(fresh);
+          });
+        });
+      }).catch(function(){}); // sem service worker o site funciona igual, só não fica offline
+    });
+  })();
 })();

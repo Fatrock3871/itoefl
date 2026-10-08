@@ -360,6 +360,28 @@ check("listening_passage_speak_exists", function(){ return document.querySelecto
 check("mic_recorder_exists", function(){ return !!document.getElementById("mrToggleBtn"); });
 check("mic_transcript_exists", function(){ return !!document.getElementById("mrTranscript"); });
 
+// PWA: manifesto no <head>, nada aparece sozinho, o botao de instalar surge
+// com o evento do navegador e o aviso de versao nova abre e fecha. Aqui a
+// pagina roda em file://, entao o service worker NAO pode ser registrado.
+check("pwa_manifest_linked", function(){ return !!document.querySelector('link[rel="manifest"][href="manifest.json"]'); });
+check("pwa_hidden_by_default", function(){
+  return document.getElementById("pwaTools").hidden && document.getElementById("pwaInstall").hidden &&
+         document.getElementById("pwaIosHint").hidden && document.getElementById("pwaUpdate").hidden;
+});
+check("pwa_no_sw_on_file", function(){ return window.__toeflPwa && window.__toeflPwa.canRegister === false; });
+var bip = new Event("beforeinstallprompt", { cancelable: true });
+var bipPrompted = false; bip.prompt = function(){ bipPrompted = true; };
+window.dispatchEvent(bip);
+check("pwa_install_button_appears", function(){
+  return bip.defaultPrevented && !document.getElementById("pwaTools").hidden && !document.getElementById("pwaInstall").hidden;
+});
+document.getElementById("pwaInstall").click();
+check("pwa_install_prompts_and_hides", function(){ return bipPrompted && document.getElementById("pwaInstall").hidden && document.getElementById("pwaTools").hidden; });
+if(window.__toeflPwa) window.__toeflPwa.showUpdate(null);
+check("pwa_update_bar_shows", function(){ return document.getElementById("pwaUpdate").hidden === false; });
+document.getElementById("pwaUpdateLater").click();
+check("pwa_update_bar_dismisses", function(){ return document.getElementById("pwaUpdate").hidden === true; });
+
 check("no_js_errors", function(){ return window.__errors.length === 0; });
 results.__jsErrors = window.__errors;
 
@@ -402,6 +424,32 @@ def legal_page_checks():
             continue
         data = path.read_text(encoding="utf-8")
         out[key] = ("<h1>" in data and data.count("<h2>") >= 8 and 'href="index.html"' in data)
+    return out
+
+
+def pwa_checks():
+    """Arquivos da PWA em artifact/: manifesto valido com os icones no lugar,
+    service worker com a versao carimbada e pre-cache so de arquivo que existe
+    (um arquivo faltando derruba a instalacao inteira do service worker)."""
+    out = {}
+    art = ARTIFACT.parent
+    try:
+        manifest = json.loads((art / "manifest.json").read_text(encoding="utf-8"))
+        icons = manifest.get("icons", [])
+        out["pwa_manifest_valid"] = (
+            manifest.get("display") == "standalone" and bool(manifest.get("start_url"))
+            and {"192x192", "512x512"} <= {i.get("sizes") for i in icons}
+            and all((art / i["src"]).stat().st_size > 0 for i in icons)
+        )
+    except (OSError, ValueError, KeyError):
+        out["pwa_manifest_valid"] = False
+
+    sw_path = art / "sw.js"
+    sw = sw_path.read_text(encoding="utf-8") if sw_path.exists() else ""
+    out["pwa_sw_version_stamped"] = bool(re.search(r'var VERSION = "[0-9a-f]{12}";', sw))
+    block = re.search(r"var PRECACHE = \[(.*?)\];", sw, re.S)
+    urls = re.findall(r'"\./([^"]+)"', block.group(1)) if block else []
+    out["pwa_sw_precache_files_exist"] = bool(urls) and all((art / u).exists() for u in urls)
     return out
 
 
@@ -463,6 +511,7 @@ def main():
     print("Rodando checagens no Chrome headless...")
     results = run_browser_checks()
     results.update(legal_page_checks())
+    results.update(pwa_checks())
     results.update(bank_checks())
 
     failed = []

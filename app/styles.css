@@ -650,6 +650,28 @@ nav.modnav{display:flex; flex-direction:column; gap:1px;}
   font-family:inherit; font-size:10.5px; font-weight:600; color:rgba(224,125,103,0.85); cursor:pointer; text-align:center;
 }
 .reset-btn:hover{background:rgba(224,125,103,0.12); border-style:solid; border-color:rgba(224,125,103,0.85); color:#e07d67;}
+.pwa-tools{margin-top:8px; display:flex; flex-direction:column; gap:6px;}
+.pwa-install-btn{
+  width:100%; padding:8px 10px; border-radius:7px; border:1px solid var(--accent); background:var(--accent);
+  font-family:inherit; font-size:11.5px; font-weight:700; color:#fff; cursor:pointer; text-align:center;
+}
+.pwa-install-btn:hover{background:var(--accent-strong); border-color:var(--accent-strong);}
+.pwa-ios-hint{margin:0; font-size:10.5px; line-height:1.5; color:var(--rail-dim);}
+.pwa-ios-hint b{color:var(--rail-ink);}
+.pwa-update{
+  position:fixed; left:50%; bottom:20px; transform:translateX(-50%); z-index:400;
+  display:flex; align-items:center; gap:10px; max-width:calc(100vw - 32px);
+  padding:10px 12px 10px 16px; border-radius:var(--radius);
+  background:var(--paper); border:2px solid var(--edge); box-shadow:var(--shadow-hard);
+  font-size:13px; font-weight:600; color:var(--ink);
+}
+.pwa-update button{
+  padding:7px 12px; border-radius:7px; border:2px solid var(--hair); background:var(--paper);
+  font-family:inherit; font-size:12.5px; font-weight:700; color:var(--ink); cursor:pointer;
+}
+.pwa-update #pwaUpdateBtn{background:var(--accent); border-color:var(--accent); color:#fff;}
+.pwa-update #pwaUpdateBtn:hover{background:var(--accent-strong); border-color:var(--accent-strong);}
+@media print{ .pwa-update{display:none !important;} }
 .foot-note{margin-top:auto; font-size:10.5px; color:var(--rail-dim); line-height:1.55; padding:0 2px;}
 
 /* ================= Área principal ================= */

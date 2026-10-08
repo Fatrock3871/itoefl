@@ -446,6 +446,14 @@ html = f'''<!DOCTYPE html>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>iTOEFL</title>
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#ef5a1f">
+<link rel="icon" type="image/png" sizes="192x192" href="icons/icon-192.png">
+<link rel="apple-touch-icon" href="icons/icon-192.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="iTOEFL">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
 <style>
 {CSS}
 </style>
@@ -497,6 +505,10 @@ html = f'''<!DOCTYPE html>
       <button type="button" id="dataImport">↑ Importar</button>
       <input type="file" id="dataFile" accept="application/json,.json" hidden>
       <span id="dataMsg" class="data-msg" hidden></span>
+    </div>
+    <div class="pwa-tools" id="pwaTools" hidden>
+      <button type="button" class="pwa-install-btn" id="pwaInstall" hidden>⤓ Instalar app</button>
+      <p class="pwa-ios-hint" id="pwaIosHint" hidden>No iPhone ou iPad: toque em <b>Compartilhar</b> e depois em <b>Adicionar à Tela de Início</b>.</p>
     </div>
     <button type="button" class="reset-btn" id="resetBtn">↺ Reiniciar todo o progresso</button>
     <div class="foot-note">Preparação independente baseada nas especificações ETS vigentes desde 21/jan/2026. Não afiliada à ETS. Seu progresso é salvo neste navegador.
@@ -552,6 +564,11 @@ html = f'''<!DOCTYPE html>
 </div>
 
 {SUPA_HEAD}
+<div class="pwa-update" id="pwaUpdate" role="status" hidden>
+  <span>Nova versão disponível.</span>
+  <button type="button" id="pwaUpdateBtn">Recarregar</button>
+  <button type="button" id="pwaUpdateLater" aria-label="Depois">Depois</button>
+</div>
 <script>
 {JS}
 </script>
@@ -610,3 +627,27 @@ for _slug, _title in LEGAL_PAGES:
 '''
     open(f"../artifact/{_slug}.html", "w", encoding="utf-8").write(_page)
     print(f"written {_slug}.html", len(_page))
+
+# ---- PWA: manifesto, ícones e service worker com versão carimbada ----
+# A versão é um hash de tudo que o service worker guarda em cache. Build com
+# conteúdo igual gera sw.js igual (o navegador não acusa versão nova à toa);
+# qualquer mudança gera sw.js diferente e dispara o aviso de nova versão.
+# Os ícones são gerados por scripts/make_icons.py e ficam versionados.
+import hashlib as _hashlib
+import shutil as _shutil
+
+_os.makedirs("../artifact/icons", exist_ok=True)
+_shutil.copyfile("manifest.json", "../artifact/manifest.json")
+for _icon in sorted(_os.listdir("icons")):
+    if _icon.endswith(".png"):
+        _shutil.copyfile(f"icons/{_icon}", f"../artifact/icons/{_icon}")
+
+_h = _hashlib.sha256()
+for _f in ["index.html", "termos.html", "privacidade.html", "manifest.json"] + \
+        [f"icons/{i}" for i in sorted(_os.listdir("../artifact/icons"))]:
+    _h.update(open(f"../artifact/{_f}", "rb").read())
+_h.update(open("sw.js", "rb").read())  # mudou a lógica do service worker: versão nova também
+_sw_version = _h.hexdigest()[:12]
+_sw = open("sw.js", encoding="utf-8").read().replace("__BUILD_VERSION__", _sw_version)
+open("../artifact/sw.js", "w", encoding="utf-8").write(_sw)
+print("written sw.js, versao", _sw_version)

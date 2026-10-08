@@ -210,8 +210,11 @@ do banco de questões, porque define o formato de dois tipos de item.
 
 Detalhe em `docs/roadmap-expansao.md`, seções 3 e 4.
 
-- [ ] (C) PWA: manifesto, service worker com versão carimbada pelo build,
-      ícones, botão "Instalar app", aviso de nova versão.
+- [x] (C) PWA: manifesto, service worker com versão carimbada pelo build,
+      ícones, botão "Instalar app", aviso de nova versão (2026-10-07).
+      Testado em Chrome headless via localhost: o service worker instala,
+      guarda os 6 arquivos e assume a página. Nunca testado em aparelho real:
+      nem a instalação em si, nem o uso offline com login.
 - [ ] (U) Instalar e testar nas 4 plataformas: Android, Windows, macOS, iOS.
 - [ ] (C) Plano B para a transcrição do gravador no iPhone.
 - [ ] (D) Hospedagem dos vídeos. Recomendação: YouTube não listado agora.
