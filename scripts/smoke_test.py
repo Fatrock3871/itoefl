@@ -445,6 +445,25 @@ check("a11y_english_content_is_marked", function(){
     Array.prototype.every.call(document.querySelectorAll('[lang="en"]'), function(e){ return !/[ãõç]/.test(e.textContent); });
 });
 
+// fontes por <link> no <head> (com preconnect), nunca por @import no CSS
+check("fonts_load_by_link_not_import", function(){
+  var css = Array.prototype.map.call(document.querySelectorAll("style"), function(s){ return s.textContent; }).join("");
+  return !!document.querySelector('head link[rel="stylesheet"][href*="fonts.googleapis.com"]') &&
+    document.querySelectorAll('head link[rel="preconnect"]').length === 2 && css.indexOf("@import") === -1;
+});
+// erro de login que o servidor manda em ingles sai em portugues
+check("auth_errors_are_in_portuguese", function(){
+  var f = window.__toeflFriendlyError;
+  return !!f && f("Invalid login credentials") === "E-mail ou senha incorretos." &&
+    f("Email not confirmed").indexOf("Confirme") === 0 && f("email rate limit exceeded").indexOf("Muitas tentativas") === 0 &&
+    f("TypeError: Failed to fetch").indexOf("Sem conexão") === 0 && f("algo novo").indexOf("Erro: ") === -1;
+});
+// a sequencia de dias aparece na gaveta, fora do Painel
+check("streak_line_in_sidebar", function(){
+  var t = document.getElementById("streakLine").textContent;
+  return t.indexOf("1 dia de estudo seguido") === 0;
+});
+
 // "Marcar esta parte como concluida": o texto fica dentro do <label> da caixa
 check("mark_done_label_wraps_text", function(){
   var all = document.querySelectorAll(".mark-done");
@@ -550,7 +569,8 @@ def legal_page_checks():
             out[key] = False
             continue
         data = path.read_text(encoding="utf-8")
-        out[key] = ("<h1>" in data and data.count("<h2>") >= 8 and 'href="index.html"' in data)
+        out[key] = ("<h1>" in data and data.count("<h2>") >= 8 and 'href="index.html"' in data
+                    and 'rel="icon"' in data and "@import" not in data)
     return out
 
 

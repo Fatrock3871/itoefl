@@ -1,4 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:ital,opsz,wght@0,12..96,400;0,12..96,500;0,12..96,600;0,12..96,700;0,12..96,800;1,12..96,700;1,12..96,800&family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,600&family=Baloo+2:wght@600;700;800&display=swap');
+/* As fontes (Bricolage Grotesque, Plus Jakarta Sans, Baloo 2) entram por
+   <link> no <head>, montado em app/build.py (FONT_LINKS). Não importar
+   fonte por regra de CSS aqui: o navegador só descobre a importação depois
+   de ler o CSS, o que atrasa o primeiro texto. O smoke test reprova. */
 
 :root{
   --bg:#fbf4ea;
@@ -1097,12 +1100,12 @@ main{max-width:1320px; margin:0 auto; padding:0 30px 120px; min-width:0;}
 .qhead{display:flex; align-items:center; gap:10px; margin-bottom:10px;}
 .qnum{font-family:'Plus Jakarta Sans',sans-serif; font-size:12px; font-weight:700; color:var(--accent-strong);}
 .qtopic{font-size:11.5px; color:var(--ink-2);}
-.qprompt{font-size:15px !important; font-weight:600; margin-bottom:14px !important;}
+.qprompt{font-size:16.5px !important; font-weight:600; margin-bottom:14px !important; line-height:1.5;}
 .qopts{display:grid; gap:8px;}
 .opt{
   display:flex; align-items:center; gap:10px; text-align:left; padding:11px 14px;
   border:2px solid var(--hair); border-radius:7px; background:var(--paper);
-  font-family:inherit; font-size:14px; color:var(--ink); cursor:pointer; width:100%; transition:.1s;
+  font-family:inherit; font-size:15.5px; color:var(--ink); cursor:pointer; width:100%; transition:.1s;
 }
 .opt:hover:not(:disabled){border-color:var(--edge); background:var(--accent-wash);}
 .opt:disabled{cursor:default;}
@@ -1138,7 +1141,7 @@ main{max-width:1320px; margin:0 auto; padding:0 30px 120px; min-width:0;}
 .verdict.verdict-bad{color:var(--danger) !important;}
 .exam-left{font-size:13px; color:var(--ink-2);}
 .qfeedback{margin-top:14px; padding-top:14px; border-top:2px dashed var(--hair);}
-.qfeedback p{font-size:13.5px !important; margin:0 0 8px !important; color:var(--ink-2);}
+.qfeedback p{font-size:15px !important; margin:0 0 8px !important; color:var(--ink-2);}
 .qfeedback strong{color:var(--ink);}
 
 .qconfirm, .bsq-check, .srs-flip, .quiz-retry, .srs-restart, .srs-grades button{

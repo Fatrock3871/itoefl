@@ -56,6 +56,18 @@ LEGAL_LINKS = (
     '<a href="privacidade.html" target="_blank" rel="noopener">Política de Privacidade</a>'
 )
 
+# fontes do Google: preconnect abre a conexão cedo e o <link> deixa o
+# navegador buscar o CSS das fontes em paralelo com o resto da página (antes
+# era um @import dentro do styles.css). Mesma lista de famílias e pesos.
+FONT_LINKS = (
+    '<link rel="preconnect" href="https://fonts.googleapis.com">\n'
+    '<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>\n'
+    '<link rel="stylesheet" href="https://fonts.googleapis.com/css2?'
+    'family=Bricolage+Grotesque:ital,opsz,wght@0,12..96,400;0,12..96,500;0,12..96,600;0,12..96,700;0,12..96,800;1,12..96,700;1,12..96,800'
+    '&amp;family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,600'
+    '&amp;family=Baloo+2:wght@600;700;800&amp;display=swap">'
+)
+
 MODS = [
     ("mod0","00","Embarque & Diagnóstico","modulo_0_embarque.md",
      "Onde você está e para onde vai. Comece pelo diagnóstico de nivelamento."),
@@ -469,6 +481,7 @@ html = f'''<!DOCTYPE html>
 <meta name="mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-title" content="iTOEFL">
 <meta name="apple-mobile-web-app-status-bar-style" content="default">
+{FONT_LINKS}
 <style>
 {CSS}
 </style>
@@ -505,6 +518,7 @@ html = f'''<!DOCTYPE html>
     <div class="daily-goal" id="dailyGoal">
       <div class="op-label"><span>🎯 Meta de hoje</span><span id="dgCount">0/1</span></div>
       <div class="op-bar"><div class="op-fill" id="dgFill"></div></div>
+      <div class="op-count" id="streakLine"></div>
     </div>
     <div class="level-badge" id="levelBadge" hidden>
       <span class="level-badge-tag">Nível estimado (diagnóstico)</span>
@@ -634,6 +648,9 @@ for _slug, _title in LEGAL_PAGES:
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>{_title} · iTOEFL</title>
+<link rel="icon" type="image/png" sizes="192x192" href="icons/icon-192.png">
+<meta name="theme-color" content="#ef5a1f">
+{FONT_LINKS}
 <script>{_LEGAL_THEME_JS}</script>
 <style>
 {CSS}

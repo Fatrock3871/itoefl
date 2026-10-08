@@ -232,6 +232,7 @@
     var keys = Object.keys(data.days);
     if(keys.length > 400){ keys.sort(); delete data.days[keys[0]]; } // não guarda histórico infinito
     safeSet(LS_STREAK, JSON.stringify(data));
+    updateDailyGoalUI(); // a linha da sequência na gaveta muda junto
   }
   function computeStreak(){
     var data = {}; try { data = JSON.parse(safeGet(LS_STREAK) || "{}"); } catch(e){}
@@ -268,6 +269,22 @@
     var fillEl = document.getElementById("dgFill");
     if(countEl) countEl.textContent = Math.min(g.count, g.target) + "/" + g.target;
     if(fillEl) fillEl.style.width = Math.min(100, Math.round(100 * g.count / g.target)) + "%";
+    // sequência de dias à vista na gaveta (antes só dentro do Painel, que
+    // só abre com login)
+    var streakEl = document.getElementById("streakLine");
+    if(streakEl){
+      var s = computeStreak();
+      streakEl.innerHTML = "";
+      if(s.count === 0){
+        streakEl.textContent = "Estude hoje para começar uma sequência.";
+      } else {
+        var b = document.createElement("b");
+        b.textContent = s.count + (s.count === 1 ? " dia" : " dias");
+        streakEl.appendChild(b);
+        streakEl.appendChild(document.createTextNode(s.count === 1 ? " de estudo seguido" : " de estudo seguidos"));
+        if(!s.today) streakEl.appendChild(document.createTextNode(". Estude hoje para manter."));
+      }
+    }
   }
   updateDailyGoalUI();
 
@@ -2191,6 +2208,35 @@
     renderCard();
   });
 
+  // ---- erros de login em português ----
+  // Fica fora do bloco de contas (que nem roda sem Supabase configurado)
+  // para o smoke test conseguir conferir. Mensagens que o servidor manda em
+  // inglês: as fixas casam inteiras, as que variam casam por trecho. O que
+  // não for reconhecido sai com uma frase em português e o original entre
+  // parênteses, para o aluno ter o que dizer ao suporte.
+  var AUTH_ERROR_MAP = {
+    "Invalid login credentials": "E-mail ou senha incorretos.",
+    "User already registered": "Já existe uma conta com esse e-mail.",
+    "Password should be at least 6 characters": "A senha precisa ter pelo menos 6 caracteres."
+  };
+  var AUTH_ERROR_PATTERNS = [
+    [/email not confirmed/i, "Confirme o seu e-mail pelo link que enviamos antes de entrar."],
+    [/rate limit|too many requests|security purposes/i, "Muitas tentativas em pouco tempo. Espere alguns minutos e tente de novo."],
+    [/failed to fetch|network|load failed/i, "Sem conexão com o servidor. Confira a internet e tente de novo."],
+    [/invalid.*email|unable to validate email/i, "Esse e-mail não parece válido."],
+    [/weak|password should/i, "Senha fraca demais. Use pelo menos 6 caracteres."],
+    [/same.*password/i, "A nova senha precisa ser diferente da atual."],
+    [/expired|invalid.*token|otp/i, "Esse link expirou ou já foi usado. Peça um novo."]
+  ];
+  function friendlyError(message){
+    if(AUTH_ERROR_MAP[message]) return AUTH_ERROR_MAP[message];
+    for(var i = 0; i < AUTH_ERROR_PATTERNS.length; i++){
+      if(AUTH_ERROR_PATTERNS[i][0].test(message || "")) return AUTH_ERROR_PATTERNS[i][1];
+    }
+    return "Não deu certo agora. Tente de novo em instantes. (" + message + ")";
+  }
+  window.__toeflFriendlyError = friendlyError; // gancho do smoke test
+
   // ---------- Contas + sincronização (Supabase) ----------
   (function(){
     var box = document.getElementById("authBox");
@@ -2545,13 +2591,6 @@
     }
 
     // ---- login por e-mail+senha ----
-    var AUTH_ERROR_MAP = {
-      "Invalid login credentials": "E-mail ou senha incorretos.",
-      "User already registered": "Já existe uma conta com esse e-mail.",
-      "Password should be at least 6 characters": "A senha precisa ter pelo menos 6 caracteres.",
-    };
-    function friendlyError(message){ return AUTH_ERROR_MAP[message] || ("Erro: " + message); }
-
     var authTabLogin = document.getElementById("authTabLogin");
     var authTabSignup = document.getElementById("authTabSignup");
 
