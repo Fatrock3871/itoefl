@@ -242,7 +242,7 @@ Um simulado só rende se a semana seguinte for de reparo direcionado. Não faça
 
 **TEXTO 2:**
 
-> **From: Alex Rivera <a.rivera@northgate.edu>**
+> **From: Alex Rivera (a.rivera@northgate.edu)**
 > **To: Group 4 · Marketing Project**
 > **Subject: Moving our Thursday meeting**
 >

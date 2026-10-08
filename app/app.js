@@ -142,8 +142,11 @@
         var labelSpan = document.createElement("span");
         labelSpan.className = "mark-done-label";
         labelSpan.textContent = "Marcar esta parte como concluída";
+        // o texto vai DENTRO do <label> da caixa: assim clicar na frase
+        // também marca (antes só a caixinha de 19 px respondia) e o leitor
+        // de tela anuncia a caixa com nome
+        pendingCheck.appendChild(labelSpan);
         wrap.appendChild(pendingCheck);
-        wrap.appendChild(labelSpan);
         current.appendChild(wrap);
       }
       pendingCheck = null;
@@ -212,7 +215,14 @@
   // o streak também passa por safeSet, que por sua vez chamaria
   // markStreakToday de novo se não fosse por isso).
   var LS_STREAK = "toefl_streak_v1";
-  function todayStr(d){ return (d || new Date()).toISOString().slice(0, 10); }
+  // data LOCAL do aparelho (aaaa-mm-dd). Não usar toISOString(): ele devolve
+  // a data em UTC, e no Brasil (UTC-3) o "hoje" virava amanhã às 21h, o que
+  // zerava a meta do dia e furava a sequência de quem estuda à noite.
+  function todayStr(d){
+    d = d || new Date();
+    var m = d.getMonth() + 1, day = d.getDate();
+    return d.getFullYear() + "-" + (m < 10 ? "0" : "") + m + "-" + (day < 10 ? "0" : "") + day;
+  }
   function markStreakToday(){
     var data = {}; try { data = JSON.parse(safeGet(LS_STREAK) || "{}"); } catch(e){}
     if(!data.days) data.days = {};
@@ -586,11 +596,12 @@
   // nunca um mínimo de acertos. O que os acertos FAZEM é isto aqui: estimar
   // a banda de entrada e recomendar um dos 3 cronogramas do Módulo 0, Parte 6.
   function cefrBandFromPct(pct){
-    if(pct <= 20) return {code:"1–1.5", label:"A1", desc:"fundamentos ausentes"};
-    if(pct <= 40) return {code:"2–2.5", label:"A2", desc:"fundamentos parciais"};
-    if(pct <= 55) return {code:"3–3.5", label:"B1", desc:"base funcional, muitos gaps de precisão"};
-    if(pct <= 70) return {code:"4–4.5", label:"B2", desc:"consistência intermediária-avançada"};
-    if(pct <= 85) return {code:"5–5.5", label:"C1", desc:"alta consistência, poucos erros sistemáticos"};
+    // meia banda com vírgula, como na calculadora e no texto do módulo
+    if(pct <= 20) return {code:"1–1,5", label:"A1", desc:"fundamentos ausentes"};
+    if(pct <= 40) return {code:"2–2,5", label:"A2", desc:"fundamentos parciais"};
+    if(pct <= 55) return {code:"3–3,5", label:"B1", desc:"base funcional, muitos gaps de precisão"};
+    if(pct <= 70) return {code:"4–4,5", label:"B2", desc:"consistência intermediária-avançada"};
+    if(pct <= 85) return {code:"5–5,5", label:"C1", desc:"alta consistência, poucos erros sistemáticos"};
     return {code:"6", label:"C2", desc:"domínio quase completo"};
   }
   function scheduleFromPct(pct){
@@ -1301,8 +1312,15 @@
           var data = parsed && parsed.data ? parsed.data : parsed;
           var n = 0;
           Object.keys(data).forEach(function(k){
-            if(k.indexOf(PREFIX) === 0){ localStorage.setItem(k, data[k]); n++; }
+            // os dois marcadores internos da sincronização são do aparelho
+            // que exportou, não entram
+            if(k === "toefl_sync_at" || k === "toefl_dirty") return;
+            if(k.indexOf(PREFIX) === 0 && typeof data[k] === "string"){ localStorage.setItem(k, data[k]); n++; }
           });
+          if(!n){ flash("Nenhum dado do iTOEFL neste arquivo.", false); return; }
+          // marca como alteração local pendente: com conta logada, o que foi
+          // importado sobe para a nuvem em vez de ser trocado pelo que está lá
+          localStorage.setItem("toefl_dirty", "1");
           flash(n + " itens importados. Recarregando…");
           setTimeout(function(){ location.reload(); }, 1200);
         }catch(e){
@@ -1321,11 +1339,14 @@
     // e só recarrega depois que ela resolve (ou imediatamente se offline).
     var resetBtn = document.getElementById("resetBtn");
     if(resetBtn){
-      var RESET_PREFIXES = ["toefl_progress", "toefl_srs_", "toefl_bsq_", "toefl_quiz_", "toefl_errlog_", "toefl_cert_", "toefl_ctw_", "toefl_spk_", "toefl_write_", "toefl_exam_"];
+      // tudo que é progresso de estudo. Ficam de fora, de propósito: a
+      // sequência de dias e a meta de hoje (histórico de constância), a foto
+      // e as preferências do aparelho (tema, cronômetro, trilha).
+      var RESET_PREFIXES = ["toefl_progress", "toefl_h3progress", "toefl_srs_", "toefl_bsq_", "toefl_quiz_", "toefl_errlog_", "toefl_cert_", "toefl_ctw_", "toefl_spk_", "toefl_write_", "toefl_exam_", "toefl_scorecalc", "toefl_weeklydash", "toefl_partpos", "toefl_lastpos"];
       resetBtn.addEventListener("click", function(){
         var ok = window.confirm(
-          "Isso apaga TODO o seu progresso no curso (checkboxes, questões respondidas, " +
-          "flashcards, frases escritas, registro de erros) e não pode ser desfeito. Continuar?"
+          "Isso apaga TODO o seu progresso no curso (partes e subseções marcadas, questões respondidas, " +
+          "flashcards, textos escritos, calculadora, painel semanal, registro de erros) e não pode ser desfeito. Continuar?"
         );
         if(!ok) return;
         var keys = [];
@@ -1727,7 +1748,9 @@
       return 6;
     }
     function fmt(band){ return String(band).replace(".", ","); }
-    function render(){
+    // save só quando o aluno digita. Gravar também na carga da página
+    // marcava a sequência de dias e a sincronização só por abrir o site.
+    function render(save){
       var bands = [], store = {};
       inputs.forEach(function(input){
         var out = root.querySelector('[data-band-for="' + input.dataset.section + '"]');
@@ -1744,7 +1767,7 @@
         out.textContent = "banda " + fmt(band) + " (" + LABELS[Math.floor(band)] + ")";
         out.classList.add("is-set");
       });
-      safeSet(LS, JSON.stringify(store));
+      if(save === true) safeSet(LS, JSON.stringify(store));
       if(bands.length < inputs.length){
         totalEl.textContent = "preencha as quatro seções";
         return;
@@ -1755,9 +1778,9 @@
     }
     inputs.forEach(function(input){
       if(saved[input.dataset.section] != null) input.value = saved[input.dataset.section];
-      input.addEventListener("input", render);
+      input.addEventListener("input", function(){ render(true); });
     });
-    render();
+    render(false);
   })();
 
   // ---------- Blocos de simulado (M7) ----------
@@ -2971,8 +2994,8 @@
       var goal = getDailyGoal();
       goalFillEl.style.width = Math.min(100, Math.round(100 * goal.count / goal.target)) + "%";
       goalTextEl.textContent = goal.done
-        ? "Meta batida hoje! (" + goal.count + "/" + goal.target + ")"
-        : Math.min(goal.count, goal.target) + " de " + goal.target + " seção concluída hoje.";
+        ? "Meta batida hoje! " + goal.count + (goal.count === 1 ? " atividade concluída." : " atividades concluídas.")
+        : "Nenhuma atividade concluída hoje. Feche uma Parte ou entregue um exercício.";
 
       var band = computeBandEstimate();
       bandEl.textContent = band
@@ -3091,12 +3114,21 @@
           var row = document.createElement("div");
           row.className = "errlog-entry";
           var codesTxt = (entry.codes || []).join(", ");
-          row.innerHTML =
-            '<span class="errlog-entry-date">' + (entry.date || "—") + '</span>' +
-            '<span class="errlog-entry-drill">' + (entry.drill || "—") + '</span>' +
-            '<span class="errlog-entry-result">' + (entry.result || "—") + '</span>' +
-            '<span class="errlog-entry-codes">' + (codesTxt || "sem código") + '</span>' +
-            '<button type="button" class="errlog-entry-del" aria-label="Remover registro">✕</button>';
+          // textContent, nunca innerHTML: drill e resultado são texto livre
+          // do aluno (e chegam também por sincronização e por importação)
+          [["date", entry.date || "—"], ["drill", entry.drill || "—"],
+           ["result", entry.result || "—"], ["codes", codesTxt || "sem código"]].forEach(function(cell){
+            var span = document.createElement("span");
+            span.className = "errlog-entry-" + cell[0];
+            span.textContent = cell[1];
+            row.appendChild(span);
+          });
+          var del = document.createElement("button");
+          del.type = "button";
+          del.className = "errlog-entry-del";
+          del.setAttribute("aria-label", "Remover registro");
+          del.textContent = "✕";
+          row.appendChild(del);
           row.querySelector(".errlog-entry-del").addEventListener("click", function(){
             var cur = load();
             cur.splice(idx, 1);
@@ -3113,7 +3145,7 @@
           var codes = Array.prototype.slice.call(panel.querySelectorAll(".errlog-code input:checked")).map(function(i){ return i.value; });
           var entries = load();
           entries.unshift({
-            date: dateEl.value || new Date().toISOString().slice(0, 10),
+            date: dateEl.value || todayStr(),
             drill: drillEl.value.trim(),
             result: resultEl.value.trim(),
             codes: codes,
@@ -3232,9 +3264,17 @@
     // salva de uma visita anterior. Só passa a gravar depois desse atraso.
     var trackingLastPos = false;
     setTimeout(function(){ trackingLastPos = true; }, 900);
+    // título da subseção sem a marquinha "✓" (.h3-done-dot), que mora dentro
+    // do próprio h3 e saía grudada no rótulo do "Continuar de onde parei"
+    function h3Title(h3){
+      var dot = h3.querySelector(".h3-done-dot");
+      var text = h3.textContent;
+      if(dot && text.indexOf(dot.textContent) === 0) text = text.slice(dot.textContent.length);
+      return text.trim();
+    }
     function saveLastPos(h3){
       if(!trackingLastPos) return;
-      safeSet("toefl_lastpos_v1", JSON.stringify({ mod: h3.dataset.mod, id: h3.id, title: h3.textContent.trim() }));
+      safeSet("toefl_lastpos_v1", JSON.stringify({ mod: h3.dataset.mod, id: h3.id, title: h3Title(h3) }));
       updateResumeBtn();
     }
 
@@ -3275,8 +3315,11 @@
     function updateResumeBtn(){
       if(!resumeBtn) return;
       var pos = readLastPos();
-      if(!pos || !document.getElementById(pos.id)){ resumeBtn.hidden = true; return; }
-      resumeLabel.textContent = pos.title;
+      var posEl = pos && document.getElementById(pos.id);
+      if(!posEl){ resumeBtn.hidden = true; return; }
+      // relê o título da página: posição salva antes desta correção ainda
+      // traz o "✓" no texto
+      resumeLabel.textContent = h3Title(posEl);
       resumeBtn.hidden = false;
     }
     if(resumeBtn){
@@ -3725,6 +3768,15 @@
           fresh.addEventListener("statechange", function(){
             if(fresh.state === "installed" && navigator.serviceWorker.controller) showUpdate(fresh);
           });
+        });
+        // o navegador só procura versão nova ao abrir a página. App instalado
+        // fica aberto por dias: confere de novo quando a janela volta ao
+        // primeiro plano, no máximo uma vez por hora.
+        var lastCheck = Date.now();
+        document.addEventListener("visibilitychange", function(){
+          if(document.visibilityState !== "visible" || Date.now() - lastCheck < 3600000) return;
+          lastCheck = Date.now();
+          reg.update().catch(function(){});
         });
       }).catch(function(){}); // sem service worker o site funciona igual, só não fica offline
     });
