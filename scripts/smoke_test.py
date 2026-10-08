@@ -377,8 +377,10 @@ def find_chrome():
 
 
 def build():
-    subprocess.run(["python", "build_pipeline.py"], cwd=APP_DIR, check=True)
-    subprocess.run(["python", "build.py"], cwd=APP_DIR, check=True)
+    # sys.executable, e nao "python": o do PATH pode ser outro interpretador,
+    # sem o pacote markdown
+    subprocess.run([sys.executable, "build_pipeline.py"], cwd=APP_DIR, check=True)
+    subprocess.run([sys.executable, "build.py"], cwd=APP_DIR, check=True)
 
 
 def mojibake_count():
@@ -400,6 +402,25 @@ def legal_page_checks():
             continue
         data = path.read_text(encoding="utf-8")
         out[key] = ("<h1>" in data and data.count("<h2>") >= 8 and 'href="index.html"' in data)
+    return out
+
+
+def bank_checks():
+    """Banco de questoes: todo item valida, e bank/items/migrado esta em dia
+    com as fontes do site (migrate.py numa pasta temporaria gera os mesmos bytes)."""
+    sys.path.insert(0, str(ROOT / "bank" / "tools"))
+    import migrate
+    import validate
+
+    errors, _, ok = validate.validate_items(validate.load_items())
+    out = {"bank_items_valid": not errors and len(ok) > 0}
+
+    committed = ROOT / "bank" / "items" / "migrado"
+    with tempfile.TemporaryDirectory() as tmp:
+        migrate.run(Path(tmp))
+        fresh = {p.name: p.read_bytes() for p in (Path(tmp) / "migrado").glob("*.json")}
+    current = {p.name: p.read_bytes() for p in committed.glob("*.json")}
+    out["bank_migrado_in_sync"] = fresh == current
     return out
 
 
@@ -442,6 +463,7 @@ def main():
     print("Rodando checagens no Chrome headless...")
     results = run_browser_checks()
     results.update(legal_page_checks())
+    results.update(bank_checks())
 
     failed = []
     print()

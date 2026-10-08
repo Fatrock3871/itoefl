@@ -2,9 +2,10 @@
 
 Fonte da verdade do banco de questões do iTOEFL, em arquivos JSON versionados
 no Git e validados por script. Segue a seção 5 de `docs/roadmap-expansao.md`:
-a fonte é arquivo, o resto é gerado. A publicação para a tabela `items` do
-Supabase (`supabase/schema-bank.sql`) é um passo posterior, que ainda não
-existe e precisa de autorização do dono.
+a fonte é arquivo, o resto é gerado. As tabelas `items` e `attempts` estão
+escritas em `supabase/schema-bank.sql`, que ainda não foi executado em banco
+nenhum: rodar SQL e publicar os itens são passos posteriores, que precisam de
+autorização do dono. O script de publicação ainda não existe.
 
 ```
 bank/
@@ -25,6 +26,10 @@ python bank/tools/migrate.py               # regenera items/migrado/ e mostra or
 python bank/tools/validate.py              # valida bank/items; sai com 1 se houver erro
 python -m unittest bank/tools/test_bank.py # testes
 ```
+
+O `scripts/smoke_test.py` roda o validador e confere que `items/migrado/`
+está em dia com as fontes: item quebrado, ou fonte editada sem rodar o
+`migrate.py` de novo, reprova o smoke test.
 
 Só biblioteca padrão. O `migrate.py` importa `app/render_exam.py`, que usa o
 pacote `markdown` (a mesma dependência do build).

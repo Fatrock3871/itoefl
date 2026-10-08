@@ -216,10 +216,27 @@ Detalhe em `docs/roadmap-expansao.md`, seções 3 e 4.
 
 Detalhe em `docs/roadmap-expansao.md`, seções 4 e 5.
 
-- [ ] (C) Formato do item e script de validação em `bank/`.
-- [ ] (C) Tabelas `items` e `attempts` no Supabase, leitura só para quem
-      pagou (proteção real do conteúdo, hoje o bloqueio é visual).
-- [ ] (C) Migrar os 128 itens atuais para o banco, com contagem declarada.
+- [x] (C) Formato do item e script de validação em `bank/` (2026-10-07):
+      `bank/README.md`, `bank/schema/item.schema.json`, `bank/tools/validate.py`
+      e 15 testes em `bank/tools/test_bank.py`.
+- [x] (C) Tabelas `items` e `attempts` com RLS, leitura só para quem pagou
+      (2026-10-07). **Só escritas** em `supabase/schema-bank.sql`, nunca
+      executadas.
+- [ ] (U) Autorizar e rodar o `supabase/schema-bank.sql`, de preferência
+      primeiro num projeto de rascunho. Depois disso falta (C) o script que
+      publica `bank/items/` na tabela `items`.
+- [x] (C) Migrar os itens atuais para o banco, com contagem declarada
+      (2026-10-07). Origem 228, destino 228: 10 do diagnóstico, 118 dos Action
+      Drills (67 no M1, 51 no M2), 8 parágrafos de Complete the Words (80
+      lacunas), 30 de Build a Sentence e 62 dos simulados do M7. Conferido
+      também contra o site gerado: 128 `.qcard` + 62 `.exam-q` + 30
+      `.bsq-card` + 8 `.ctw` = 228. Os "128" do plano eram só diagnóstico e
+      Action Drills. Todos entram como `rascunho`. O smoke test valida o
+      banco e reprova se `bank/items/migrado/` ficar atrás das fontes.
+- [ ] (D) `MOD1_DRILLS` e `MOD2_DRILLS` em `app/drills_data.py` (35 itens) são
+      importados pelo pipeline mas não aparecem no site, e repetem em parte os
+      Action Drills. Apagar da fonte ou revisar e migrar como itens novos.
+      Ficaram fora do banco.
 - [ ] (C) Modo prática com filtros e "só as que errei".
 - [ ] (C) Caderno de erros com revisão espaçada e botão "reportar questão".
 - [ ] (D) Tamanho da amostra que o usuário revisa por lote. Sugestão: 10%.

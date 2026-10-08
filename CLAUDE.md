@@ -60,6 +60,8 @@ artifact/privacidade.html
 supabase/schema.sql       Backend: profiles, user_state (jsonb), entitlements, coupons, com RLS
 supabase/functions/       Edge functions: create-checkout, mp-webhook, delete-account
 supabase/config.toml      Config das functions (mp-webhook roda sem verificação de JWT)
+supabase/schema-bank.sql  Banco de questões: tabelas items e attempts com RLS. ESCRITO, NUNCA EXECUTADO
+bank/                     Banco de questões em JSON (formato, schema, validador, 228 itens migrados). Ver bank/README.md
 supabase/schema-content-optional.sql   Tabelas de conteúdo — só se um dia servir do banco
 supabase/content-seed-optional.json    Seed das tabelas de conteúdo (opcional)
 app/supabase_config.json  Credenciais (gitignored; .example commitado). Sem ele → modo offline
@@ -83,6 +85,10 @@ _snapshots/               Cópias com timestamp antes de mudanças estruturais
   widget sozinho. O build falha se a contagem de blocos ou itens mudar sem
   atualizar `M7_EXPECTED_*` em `build_pipeline.py`.
 - **Palavras dos flashcards (M6)** → `app/vocab_kit.json`.
+- **Banco de questões** → `bank/items/`. A pasta `bank/items/migrado/` é
+  gerada das fontes acima por `bank/tools/migrate.py`: depois de mudar
+  questão em qualquer uma delas, rodar o `migrate.py` de novo, senão o smoke
+  test reprova. Item novo do banco vai em outra pasta de `bank/items/`.
 - **Comportamento/interação** → `app/app.js` e os `app/render_*.py`.
 - **Estilo** → `app/styles.css`.
 - **Termos e privacidade** → `legal/*.md`. O build avisa enquanto houver campo
@@ -167,7 +173,7 @@ Implicações que o conteúdo deve respeitar:
 | ID | Módulo | Estado |
 |---|---|---|
 | M0 | Embarque & Diagnóstico | ✅ formato 2026, 10 questões, calculadora de score, treino por nível |
-| M1 | Reading | ✅ formato 2026: 8 textos de Complete the Words de digitar (80 lacunas) + 66 itens de múltipla escolha |
+| M1 | Reading | ✅ formato 2026: 8 textos de Complete the Words de digitar (80 lacunas) + 67 itens de múltipla escolha |
 | M2 | Listening | ✅ formato 2026, 4 drills |
 | M3 | Speaking | ✅ formato 2026: 5 cenários de Listen and Repeat e 4 entrevistas, com áudio |
 | M4 | Writing | ✅ formato 2026: 30 itens de Build a Sentence no molde da prova + 12 caixas de escrita |
