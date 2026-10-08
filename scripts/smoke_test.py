@@ -396,6 +396,20 @@ check("video_none_without_registration", function(){ return document.querySelect
 // sem bloco de aprofundamento nos .md, o seletor de trilha fica escondido
 check("trail_selector_hidden_without_blocks", function(){ return document.querySelectorAll("details.deep").length === 0 && document.getElementById("trailBox").hidden; });
 
+// afirmacoes sobre a prova que a conferencia de 2026-10-08 derrubou
+// (docs/conferencia-conteudo-2026-10.md) nao podem voltar ao texto
+check("content_no_outdated_exam_claims", function(){
+  var text = document.querySelector(".content-col").textContent;
+  return ["ETS Test Browser", "decore 3 esqueletos", "segundos de preparação", "5 s de planejamento", "~42–71", "~20–41",
+          "não é uma conversão oficial", "janela de tolerância", "reagendar sem custo", "celular fica fora", "TOEPO",
+          "pausa de 10 minutos", "Fixação de Template"].every(function(s){ return text.indexOf(s) === -1; });
+});
+check("content_states_confirmed_exam_rules", function(){
+  var m8 = document.getElementById("panel-mod8").textContent, m5 = document.getElementById("panel-mod5").textContent;
+  return m8.indexOf("TOEFL Test App") !== -1 && m8.indexOf("4 envios") !== -1 && m8.indexOf("espelho de mão") !== -1 &&
+    m5.indexOf("45 segundos") !== -1;
+});
+
 // "Marcar esta parte como concluida": o texto fica dentro do <label> da caixa
 check("mark_done_label_wraps_text", function(){
   var all = document.querySelectorAll(".mark-done");

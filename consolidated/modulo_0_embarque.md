@@ -334,11 +334,11 @@ Ative esse protocolo se: (a) faltam menos de 7 dias pra prova e você está atra
 
 | # | Alavancador | Onde ganhar pontos rápido | Módulo de referência |
 |---|---|---|---|
-| **1** | **Templates de Write an Email** | Estruturas prontas de abertura/pedido/fechamento formal cobrem a maioria das situações navegacionais: decore 3 esqueletos e adapte | Módulo 4 |
+| **1** | **Estrutura do Write an Email** | Todo e-mail da prova pede a mesma coisa: abrir dizendo por que escreve, cobrir os 3 pontos do enunciado e fechar com o próximo passo. Escreva 3 e-mails cronometrados (7 min) de situações diferentes até essa ordem sair sozinha. Texto decorado não serve: a ETS pode anular resposta parecida demais com a de outros candidatos | Módulo 4 |
 | **2** | **Frameworks de resposta para Take an Interview** | Estrutura fixa de resposta curta (posição + razão + exemplo rápido) elimina hesitação e maximiza clareza nos 4 itens | Módulo 3 |
 | **3** | **Precisão gramatical em Build a Sentence** | 10 itens, 1 ponto cada, corrigidos por máquina: são os pontos "mais baratos" de garantir com prática de estrutura de frase | Módulo 4 |
 | **4** | **Drills de Listen and Repeat (prosódia + fidelidade)** | 7 itens valendo 5 pontos cada (35 pontos brutos só aqui): o maior bloco de pontos concentrado do Speaking | Módulo 3 |
-| **5** | **Protocolo de Complete the Words** | 30 itens no Reading (o maior bloco de itens pontuados do exame): domínio do padrão de ordenação lexical rende ganho de banda desproporcional | Módulo 1 |
+| **5** | **Protocolo de Complete the Words** | 30 itens no Reading (o maior bloco de itens pontuados do exame): completar o final das palavras com rapidez (gramática, forma da palavra e collocation) rende ganho de banda desproporcional | Módulo 1 |
 
 ### 7.4 Protocolo de Recuperação de 7 Dias
 

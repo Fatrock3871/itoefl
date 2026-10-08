@@ -30,7 +30,7 @@ A conclusão estratégica é direta: **o TOEFL pune começos fracos com mais sev
 | Simulado | Nome | Foco Principal | Condição de Tempo | Momento Ideal |
 |---|---|---|---|---|
 | **1** | Diagnóstico | Mapear nível atual (bandas CEFR 1–6) em todas as seções, sem viés de preparação | Sem cronômetro | Semana 1 (Módulo 0: já realizado) |
-| **2** | Intermediário | Fixar templates e mecânicas de cada tipo de item novo, com liberdade de consulta | Sem cronômetro | Após Módulos 1–5 |
+| **2** | Intermediário | Fixar a estrutura e a mecânica de cada tipo de item novo, com liberdade de consulta | Sem cronômetro | Após Módulos 1–5 |
 | **3** | Avançado | Reproduzir a dinâmica real do exame adaptativo: tempo estrito, router ativo, pressão contínua | **Cronômetro obrigatório** | Após Módulo 6 |
 | **4** | Final (Exam Day) | Simulação idêntica ao teste real da ETS: as 4 seções na sequência oficial, zero consultas | **Cronômetro + condições reais** | 7–10 dias antes da prova |
 
@@ -69,18 +69,18 @@ O planejador de estudos de 8 semanas que a ETS também oferece de graça ainda d
 
 ### Conversão Banda CEFR ↔ Score Legado 0–120
 
-O formato 2026 reporta **bandas CEFR de 1 a 6** (com meios pontos). Durante o período de transição (até ~2028) a ETS também fornece um score comparável na escala antiga de 0–120. Use esta tabela apenas como **referência aproximada** para comparar com metas de instituições que ainda pedem a escala 0–120, não é uma conversão oficial exata.
+O formato 2026 reporta **bandas CEFR de 1 a 6** (com meios pontos). Durante o período de transição (até ~2028) a ETS também fornece um score comparável na escala antiga de 0–120. A tabela abaixo segue a **concordância publicada pela ETS** (a mesma do Módulo 0, Parte 1.3), agrupada por nível. Cada faixa junta a banda cheia e a meia banda seguinte: banda 4 e 4,5 são B2, por exemplo.
 
-| Banda CEFR | Nível | Faixa 0–120 aproximada (total) | Leitura em uma frase |
+| Banda CEFR | Nível | Faixa 0–120 (total) | Leitura em uma frase |
 |---|---|---|---|
-| **6** | C2 | ~114–120 | Domínio pleno; produz e compreende sem esforço perceptível |
-| **5** | C1 | ~95–113 | Uso operacional eficaz; erros raros e não sistemáticos |
-| **4** | B2 | ~72–94 | Independente; comunica ideias complexas com imprecisões ocasionais |
-| **3** | B1 | ~42–71 | Intermediário; lida com o familiar, hesita no abstrato |
-| **2** | A2 | ~20–41 | Básico; frases curtas, apoio contextual necessário |
-| **1** | A1 | ~0–19 | Iniciante; elementos isolados |
+| **6** | C2 | 114–120 | Domínio pleno; produz e compreende sem esforço perceptível |
+| **5 e 5,5** | C1 | 95–113 | Uso operacional eficaz; erros raros e não sistemáticos |
+| **4 e 4,5** | B2 | 72–94 | Independente; comunica ideias complexas com imprecisões ocasionais |
+| **3 e 3,5** | B1 | 44–71 | Intermediário; lida com o familiar, hesita no abstrato |
+| **2 e 2,5** | A2 | 24–43 | Básico; frases curtas, apoio contextual necessário |
+| **1 e 1,5** | A1 | 0–23 | Iniciante; elementos isolados |
 
-> A maioria das universidades que pedem TOEFL mira o equivalente a **banda 4–5** (≈ 80–100 na escala antiga). Programas de pós competitivos costumam pedir **banda 5** (≈ 100+). Confirme a exigência da sua instituição na escala que **ela** usa e defina sua meta de banda a partir disso.
+> A maioria das universidades que pedem TOEFL mira algo entre 80 e 100 na escala antiga, o que hoje cai entre a **banda 4 e a banda 5**. Programas de pós competitivos costumam pedir 100 ou mais, que é **banda 5**. Confirme a exigência da sua instituição na escala que **ela** usa e defina sua meta de banda a partir disso.
 
 ### Como Funciona a Arquitetura de Roteamento
 
@@ -145,9 +145,9 @@ READING                                  LISTENING
 
 - Local silencioso, sem interrupções
 - Timer visível (relógio ou cronômetro, não o celular)
-- Fones de ouvido para o áudio do Listening
+- Fones de ouvido para o áudio do Listening (se a sua prova for a Home Edition, treine com o alto-falante do computador: lá o fone é proibido)
 - Água disponível: nenhum outro alimento ou bebida
-- Folhas de papel em branco para anotações (folha separada por seção)
+- Folhas de papel em branco para anotações (folha separada por seção). Na Home Edition papel solto não entra: treine com quadro branco pequeno ou com uma folha dentro de um plástico transparente e marcador apagável
 - Nenhuma consulta a notas, módulos ou qualquer outro material
 - Sem pausa entre as seções: a prova oficial não tem intervalo programado
 
@@ -167,7 +167,7 @@ Um simulado só rende se a semana seguinte for de reparo direcionado. Não faça
 
 ---
 
-## PARTE 3: SIMULADO 2 · INTERMEDIÁRIO (Sem Cronômetro, Fixação de Template)
+## PARTE 3: SIMULADO 2 · INTERMEDIÁRIO (Sem Cronômetro, Fixação de Estrutura)
 
 > **Objetivo:** Fixar a mecânica de cada tipo de item novo do formato 2026 sem a pressão do cronômetro. Consulte os frameworks de Speaking (Módulo 3) e de Writing (Módulo 4) abertamente durante essas seções. Para Reading e Listening, não consulte materiais · mas releia o gabarito imediatamente após cada seção. Este é um conjunto **abreviado** (amostra representativa de cada tipo de item, não a seção completa).
 
@@ -579,7 +579,7 @@ Repita cada frase com o máximo de fidelidade e naturalidade prosódica possíve
 
 #### Take an Interview (elicitação variada)
 
-Responda em ~40 segundos cada, sem preparo. Grave todas.
+Você tem 45 segundos para cada resposta, sem preparo, como na prova. Grave todas.
 
 1. **(Descrição)** "Describe a place in your city that you think visitors should see. What makes it special?"
 2. **(Opinião)** "Do you think it's better for students to study alone or in groups? Why?"
@@ -817,8 +817,8 @@ Critics of this narrative, however, caution against treating network effects as 
 
 | Recurso | Acesso | O que usar |
 |---|---|---|
-| **TOEFL Official Practice Online (TOEPO)** | toefl.org: pago | Simulado completo com interface e áudio idênticos ao teste real, incluindo o módulo router |
-| **ETS TOEFL iBT Free Practice** | ets.org/toefl: gratuito | Prova completa com áudio real |
+| **Os 4 testes práticos gratuitos da ETS** | ets.org: gratuito, links na Parte 1 deste módulo | Prova completa no formato 2026, com gabarito |
+| **Simulados pagos da ETS** | ets.org/toefl, área de preparação: confira lá o nome e o preço atuais | O que a ETS estiver vendendo no formato 2026 na data da sua prova |
 | **Guias oficiais atualizados da ETS** | ETS | Priorize sempre o material mais recente publicado pela ETS |
 
 **Se não tiver acesso a materiais oficiais atualizados para o Simulado 4:** Combine o Reading do Simulado 3 (não reutilizado) + o bloco de Listening deste módulo (Parte 4, sob timing simulado) + os prompts de Speaking e Writing do Simulado 3 · execute tudo na sequência oficial abaixo, em condições de tempo estrito, sem pausas não previstas.

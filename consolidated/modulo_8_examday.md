@@ -106,7 +106,7 @@ CHEGADA (30 min antes)
   ↓
 CHECK-IN E SETUP (~15–20 min antes)
   Biometria (foto/digital)
-  Receba folhas de rascunho + caneta/lápis
+  Receba folhas de rascunho + lápis
   Ajuste o fone de ouvido — teste o volume antes de começar
   ↓
 ANTES DE CLICAR EM "INICIAR"
@@ -293,15 +293,15 @@ Nenhum protocolo desta parte funciona se a primeira vez que você o usa é na pr
 ### ✅ Checklist do dia anterior (complete em D-2)
 
 **Documentação:**
-- [ ] Documento de identidade válido reconhecido pela ETS (geralmente passaporte)
+- [ ] Documento de identidade aceito pela ETS para o seu país de prova e a sua nacionalidade: confira na página de documentos da ETS (ets.org/toefl, em *Register* → *ID requirements*), porque a regra muda de país para país. Em todos os casos o documento tem de ser **original e físico** (documento digital no celular não vale), **dentro da validade**, com **foto recente** e **assinatura**. Passaporte válido é a escolha mais segura
 - [ ] E-mail de confirmação de inscrição (impresso ou salvo offline no celular)
-- [ ] Nome no documento **idêntico** ao nome registrado na inscrição ETS: discrepâncias podem impedir o acesso
+- [ ] Nome e data de nascimento no documento **idênticos** aos da inscrição ETS: discrepâncias impedem o acesso, e a taxa não é devolvida
 
 **Logística:**
 - [ ] Endereço exato do centro confirmado (não só a cidade)
 - [ ] Rota traçada com o tempo de deslocamento no horário de pico
 - [ ] Plano B de transporte
-- [ ] Horário de chegada alvo: **30 minutos antes** do horário de início
+- [ ] Horário de chegada: **pelo menos 30 minutos antes** do horário de início. Não é meta, é regra da ETS: quem chega depois do horário marcado não faz a prova e perde a taxa
 - [ ] Regras do seu centro sobre o que pode levar (água, lanches)
 
 **O que NÃO levar para dentro da sala:**
@@ -310,7 +310,7 @@ Nenhum protocolo desta parte funciona se a primeira vez que você o usa é na pr
 - [ ] Anotações, fichas de vocabulário, qualquer material de estudo
 - [ ] Fone de ouvido pessoal (o centro fornece)
 
-**O que o centro fornece:** folhas de rascunho e caneta/lápis, fone de ouvido, armário para pertences.
+**O que o centro fornece:** folhas de rascunho e lápis (você não pode levar o seu papel, e só recebe mais folhas devolvendo as usadas), fone de ouvido, armário para pertences.
 
 ### ⏱️ Linha do tempo do dia do exame (centro de testes)
 
@@ -332,9 +332,9 @@ Muitos candidatos brasileiros fazem a prova em casa. É o **mesmo teste e o mesm
 | Item | Exigência |
 |---|---|
 | Sistema | Desktop ou notebook (Windows ou macOS), **não** é permitido tablet/celular/Chromebook |
-| Navegador | O ETS Test Browser (baixado antes; roda o *system check* obrigatório) |
+| Aplicativo | O **TOEFL Test App**, baixado antes pelo painel *My TOEFL Home*; é nele que roda a checagem de equipamento (*equipment check*) |
 | Câmera | Webcam funcional; você precisará **mostrar o ambiente e o seu documento** por ela |
-| Microfone | Externo ou embutido; testado no *system check* |
+| Microfone | Externo ou embutido, desde que não seja o de um fone; testado na checagem de equipamento |
 | Internet | Conexão estável, de preferência cabeada; upload de vídeo contínuo durante toda a prova |
 | Alto-falante | **Fone de ouvido não é permitido** na Home Edition (o proctor precisa ouvir o áudio): use os alto-falantes do computador |
 
@@ -343,27 +343,29 @@ Muitos candidatos brasileiros fazem a prova em casa. É o **mesmo teste e o mesm
 - Sala fechada, sozinho, porta fechada; ninguém pode entrar durante a prova
 - Mesa e paredes livres: sem papéis, pôsteres, quadros, post-its
 - Nada nos ouvidos, nada no colo, nada no bolso
-- **Anotações:** papel comum **não** é permitido na Home Edition. As opções aceitas são: (a) um **quadro branco físico apagável** com marcador, ou (b) folha plástica transparente com marcador apagável, ou (c) papel dentro de um plástico transparente. Você mostra os dois lados em branco para a câmera no início e **apaga tudo na frente da câmera** no fim
+- **Anotações:** papel comum **não** é permitido na Home Edition. As duas opções aceitas pela ETS são: (a) um **quadro branco pequeno, de mesa**, com marcador apagável, ou (b) **uma folha em branco dentro de um plástico transparente**, com marcador apagável, e a folha não pode sair do plástico em nenhum momento. Conte com mostrar o material em branco para a câmera no início e apagar tudo diante dela no fim
 - O proctor pode pedir um *room scan* (girar a webcam/notebook 360°) a qualquer momento
 
 **Documento e identidade:**
 
 - Mesmo requisito do centro: documento oficial com foto, **nome idêntico** ao da inscrição
 - Você segura o documento próximo à câmera no check-in
+- A ETS pode pedir que você confirme a identidade por um aplicativo de celular antes da prova. Se for o seu caso, faça isso **pelo menos 48 horas antes**
+- Tenha à mão **um celular ou um espelho de mão**: o proctor usa um dos dois no check-in para ver a sua tela. Se a ETS exigir segunda câmera, é o celular que faz esse papel
 
 **Durante a prova:**
 
 - **Sem pausa nenhuma:** a prova não tem intervalo programado e, na Home Edition, pausa não programada não é permitida (ETS, *Information Bulletin 2026-2027*). Vá ao banheiro antes do check-in
 - Não leia os enunciados em voz alta (exceto quando o Speaking pede): o proctor pode interpretar como ajuda externa
-- Se a conexão cair: normalmente você reconecta e retoma; **não feche o navegador** · aguarde a instrução
+- Se a conexão cair: normalmente você reconecta e retoma; **não feche o aplicativo** · aguarde a instrução
 
 **Checklist Home Edition (fazer em D-2):**
 
-- [ ] *System check* completo rodado e aprovado no mesmo computador e sala da prova
-- [ ] ETS Test Browser instalado e testado
+- [ ] TOEFL Test App instalado
+- [ ] Checagem de equipamento rodada e aprovada no mesmo computador e sala da prova
 - [ ] Quadro branco apagável + marcador (ou alternativa permitida): testado
 - [ ] Sala reservada, ninguém em casa avisado para não interromper
-- [ ] Mesa e paredes limpas; celular fica **fora** da sala
+- [ ] Mesa e paredes limpas. O celular (ou um espelho de mão) fica com você **só para o check-in**; depois, longe do alcance e virado para baixo, como o proctor orientar
 - [ ] Plano para ruído (obra, cachorro, campainha): avise vizinhos/família
 - [ ] Documento com nome idêntico ao da inscrição, em mãos
 - [ ] Alto-falantes testados (fone não é permitido)
@@ -371,9 +373,10 @@ Muitos candidatos brasileiros fazem a prova em casa. É o **mesmo teste e o mesm
 ### ⏱️ Linha do tempo do dia do exame (Home Edition)
 
 ```
-T-40 min → Sala pronta: mesa limpa, porta fechada, celular fora
-T-30 min → Abrir o ETS Test Browser, iniciar check-in
-T-25 min → Proctor: verificação de identidade + room scan + quadro branco
+T-40 min → Sala pronta: mesa limpa, porta fechada, celular ou espelho à mão para o check-in
+T-30 min → Abrir o TOEFL Test App e deixar tudo pronto
+T-15 min → Iniciar o check-in (a ETS só libera a partir de 15 min antes; depois do horário marcado você ainda tem 30 min, e passando disso a prova é cancelada sem reembolso)
+T-12 min → Proctor: verificação de identidade + room scan + quadro branco
 T-10 min → Aguardando liberação (pode variar — proctor libera quando o ambiente está OK)
 T-05 min → 3 ciclos de box breathing + Anchor Phrase
 T-00 min → INÍCIO
@@ -512,10 +515,10 @@ reset acontece na tela de instruções entre uma seção e outra, sentado.
 | **"Não peguei a frase inteira em Listen and Repeat"** | Diga o máximo que reteve, com ritmo e entonação naturais. Uma reprodução parcial com boa prosódia pontua; o silêncio, não |
 | **"Travei em Take an Interview: 5 segundos de silêncio"** | Diga a primeira frase do esqueleto da função: *"I think..."* / *"In my experience..."*. O sistema motor de fala inicia e o resto segue |
 | **"Estou sem tempo na Academic Discussion"** | Feche o parágrafo agora: 1 frase de restatement da posição + 1 razão. Um parágrafo curto e completo pontua melhor que um longo interrompido |
-| **"O computador travou / problema técnico"** | **Centro:** levante a mão imediatamente, não tente resolver. **Home Edition:** não feche o navegador; aguarde o proctor pelo chat. Incidentes técnicos têm protocolo · você não é penalizado por algo fora do seu controle |
+| **"O computador travou / problema técnico"** | **Centro:** levante a mão imediatamente, não tente resolver. **Home Edition:** não feche o aplicativo; aguarde o proctor pelo chat. Incidentes técnicos têm protocolo · você não é penalizado por algo fora do seu controle |
 | **"Não consegui dormir na noite anterior"** | Relembre: D-3 e D-2 foram bem dormidos. Uma noite leve depois de semanas de sono adequado não destrói a performance. O pânico sobre o sono é mais prejudicial que o sono ruim. Hidrate, coma bem, execute o sistema |
-| **"Cheguei atrasado ao centro"** | Vá assim mesmo e explique na recepção. Chegar atrasado pode custar a sessão, mas **não** aparecer garante a perda. Muitos centros têm uma janela de tolerância |
-| **"O nome no meu documento tem uma diferença pequena da inscrição"** | Isso pode barrar o acesso. Leve um segundo documento oficial com foto se tiver. Em caso de recusa, contate a ETS no mesmo dia para reagendar sem custo total |
+| **"Cheguei atrasado ao centro"** | A regra da ETS é dura: quem chega ou faz o check-in depois do horário marcado não faz a prova e não recebe a taxa de volta. Não conte com tolerância no centro (ela só existe na Home Edition, de 30 minutos). Por isso o plano B de transporte da Parte 5 não é opcional. Se acontecer, vá assim mesmo e fale com a recepção: é a única chance |
+| **"O nome no meu documento tem uma diferença pequena da inscrição"** | Isso barra o acesso, e a ETS não devolve a taxa de quem não apresenta o documento exigido. Resolva **antes** do dia: corrija o nome na sua conta ETS assim que perceber. Um segundo documento com foto e assinatura ajuda quando falta a assinatura no principal, mas não conserta nome diferente |
 | **"Barulho começou no meio da prova (Home Edition)"** | Continue: o áudio da prova está nos alto-falantes e o Listening não pausa. Se ficar impossível, use o chat do proctor para registrar; há protocolo para interrupção de ambiente |
 | **"Meu microfone falhou no Speaking"** | Levante a mão / chame o proctor imediatamente. Não continue falando para um mic morto. Há reinício de item / seção para falha de equipamento |
 | **"Fiquei preso num item do router e perdi tempo"** | Selo de item: escolha o mais plausível, "próximo item, página em branco". Anote mentalmente **SX** para a análise. Um item do router perdido pesa menos que 3 itens perdidos por atraso em cascata |
@@ -534,11 +537,11 @@ O TOEFL exibe um score estimado não oficial para **Reading e Listening** logo a
 | Veja o score estimado não oficial de R/L | Imediatamente | Calibração inicial |
 | **Não interprete o score emocionalmente** | Primeiras 24h | Percepção pós-exame é distorcida por fadiga; o resultado oficial pode diferir |
 | Registre o que lembrar sobre erros | Primeiras 2h | Útil se considerar cancelamento ou reagendamento |
-| Aguarde o score oficial | Poucos dias úteis | Inclui Speaking e Writing e as bandas CEFR finais |
+| Aguarde o score oficial | Cerca de 3 dias depois da prova | Sai na sua conta ETS, com aviso por e-mail. Inclui Speaking e Writing e as bandas CEFR finais |
 
 ### Cancelamento de score: quando considerar
 
-A ETS permite cancelar o score antes de visualizá-lo (ou logo após, com custo). Considere **apenas** se:
+No fim da prova a tela pergunta se você quer **reportar** ou **cancelar** os scores. Cancelar não custa nada, vale para todas as seções de uma vez e não dá reembolso. Quem escolhe reportar não pode cancelar depois. Quem cancela e se arrepende pode pedir a reativação pela conta ETS em até 60 dias, pagando uma taxa. Considere cancelar **apenas** se:
 - Houve um problema técnico significativo durante o exame
 - Você estava genuinamente doente e o desempenho foi objetivamente comprometido
 
@@ -548,7 +551,8 @@ A ETS permite cancelar o score antes de visualizá-lo (ou logo após, com custo)
 
 | Ponto | Regra |
 |---|---|
-| **Intervalo mínimo entre testes** | 3 dias (política ETS atual: confirme na sua conta) |
+| **Intervalo mínimo entre testes** | Não dá para fazer a prova mais de uma vez num período de 3 dias, mesmo que você tenha cancelado o score da primeira |
+| **Envio para instituições** | A taxa da prova inclui até **4 envios**. Você escolhe ou troca os destinatários na conta ETS até as 22h (horário local do centro) da véspera. Depois disso, cada envio é pago |
 | **Validade do score** | 2 anos a partir da data do teste |
 | **Quantas vezes** | Sem limite, respeitado o intervalo de 3 dias |
 | **MyBest Scores (superscore)** | A ETS reporta automaticamente, junto do score da data, a melhor banda de **cada seção** entre todos os seus testes dos últimos 2 anos. Verifique se a sua instituição aceita MyBest: muitas aceitam |
@@ -588,7 +592,7 @@ Não é permitido levar nada para a prova. Esta página é o que você deve **me
 2. Anchor Phrase: _______________________ (a sua · escolhida na semana 1)
 3. "Um item de cada vez. Eu treinei para isto."
 
-**Reading (~28 min):** router = peso máximo, sem "aquecer devagar". 3 filtros no *Complete the Words* (gramática → léxico → sentido). Item negativo: circule o NOT. Ritmo constante, sem reler tudo no fim. Selo ao terminar.
+**Reading (~27–30 min):** router = peso máximo, sem "aquecer devagar". 3 filtros no *Complete the Words* (gramática → léxico → sentido). Item negativo: circule o NOT. Ritmo constante, sem reler tudo no fim. Selo ao terminar.
 
 **Listening (~25–29 min):** lápis na mão antes do áudio. Toca uma vez só. Perdeu um trecho → "?" e segue. Foco: ideia central + o *but*/correção + a instrução final. Selo imediato → Writing em seguida.
 

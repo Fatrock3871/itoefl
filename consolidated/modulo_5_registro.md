@@ -492,7 +492,7 @@ A elevação de registro **não é a mesma coisa** nas três tasks. Cada uma tem
 
 ### 5.1 Take an Interview (Speaking): sofisticação sem custar fluência
 
-Você tem ~5 segundos de preparação e ~30–45 segundos de resposta falada. Aqui, **hesitar para buscar uma palavra C1 pontua pior** do que dizer a palavra B2 com fluidez. A regra:
+Você tem **45 segundos** para responder cada pergunta, e os testes práticos oficiais não dão tempo de preparo: a contagem começa quando a pergunta termina. Aqui, **hesitar para buscar uma palavra C1 pontua pior** do que dizer a palavra B2 com fluidez. A regra:
 
 - Eleve **a estrutura da resposta** (posição → razão específica → contraponto curto), não cada palavra.
 - Use 1 ou 2 marcadores C1 da Parte 3 por resposta, não mais. O resto pode ser B2 limpo.

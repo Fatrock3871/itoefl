@@ -472,7 +472,7 @@ Quatro entrevistas de quatro perguntas, como na prova. Toque em **Ouvir**: quand
 
 ### GRUPO B: TAKE AN INTERVIEW (banco por função)
 
-*Protocolo:* leia a pergunta → **5 s de silêncio** para planejar (não escrever) → grave-se falando **~40 s**, aplicando o esqueleto da função (Parte 2.3). Depois aplique a rubrica de 3.8.
+*Protocolo:* leia a pergunta e comece a falar em seguida, sem pausa para planejar (a prova não dá tempo de preparo) → grave-se usando os **45 s** da prova, aplicando o esqueleto da função (Parte 2.3). Depois aplique a rubrica de 3.8.
 
 ---
 
@@ -549,7 +549,7 @@ Quatro entrevistas de quatro perguntas, como na prova. Toque em **Ouvir**: quand
 
 #### B8: SIMULAÇÃO COMPLETA (4 itens, cronometrada)
 
-Simule a task real: 4 perguntas em sequência, sem pausa além dos ~5 s de planejamento por item. Grave tudo.
+Simule a task real: 4 perguntas em sequência, 45 segundos para cada resposta, sem tempo de preparo entre elas. Grave tudo.
 
 | # | Função | Pergunta |
 |---|---|---|
