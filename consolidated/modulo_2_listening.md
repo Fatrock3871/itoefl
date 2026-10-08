@@ -24,7 +24,7 @@ O Listening é a **segunda seção**. Assim como o Reading, usa **design adaptat
 | Elemento | Dado oficial (ETS 2026) |
 |---|---|
 | **Posição** | 2ª seção (após o Reading) |
-| **Tempo** | Router + módulo inferior ~7 min **ou** superior ~11 min ≈ **~18 min** |
+| **Tempo** | Router ~18 min + módulo inferior ~7 min **ou** superior ~11 min ≈ **~25–29 min** |
 | **Total de itens** | 47 (~35 pontuados + ~12 itens-piloto, indistinguíveis) |
 | **Pontuação bruta** | 35 pontos (máx. **1 pt por item**) → banda **1–6** (CEFR) |
 | **Cada áudio toca** | **Uma vez**: sem repetição (salvo replays embutidos em certos itens) |
@@ -39,7 +39,7 @@ Grava isso: o Listening **não** é "ouça um áudio longo e responda um bloco d
 ### 1.2 O mecanismo adaptativo
 
 ```
-ESTÁGIO 1 — ROUTER (~7 min)
+ESTÁGIO 1 — ROUTER (~18 min)
 ├── mistura de itens de dificuldade variada
 ├── o sistema estima seu nível CEFR aproximado
 └── direciona para o Módulo Inferior OU Superior
@@ -87,7 +87,7 @@ Cada item testa uma habilidade específica. Reconhecer o tipo pelo enunciado **a
 
 ### 1.5 Gestão de tempo
 
-Com 47 itens em ~18 min, sua margem média por item (áudio mais resposta) fica em torno de **20 a 25 segundos**. Não tem conversa longa pra você se situar aos poucos. É sprint constante, do primeiro ao último item.
+Com 47 itens em ~25–29 min, sua margem média por item (áudio mais resposta) fica em torno de **32 a 37 segundos**. Não tem conversa longa pra você se situar aos poucos. É sprint constante, do primeiro ao último item.
 
 - Menos tempo total significa menos margem pra recuperar um lapso de atenção.
 - Itens curtos pedem decisão rápida, com menos anotação e mais **processamento auditivo automático**. É exatamente isso que a Parte 3 treina.

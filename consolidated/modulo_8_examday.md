@@ -176,18 +176,18 @@ O cérebro opera primariamente a partir de glicose. Alimentos de alto índice gl
 mensurável em atenção, velocidade de resposta e memória de trabalho.
 - **Protocolo:** 500ml ao acordar; 250ml com o café; 200–300ml no trajeto.
 **Pare com grandes volumes 30 min antes do exame** (evitar ir ao banheiro durante as seções).
-- **Na pausa de 10 minutos:** 150–200ml de água. Não mais.
+- **Durante a prova:** não há intervalo programado (ETS, *Information Bulletin 2026-2027*), e comida e bebida não entram na sala. A água fica para antes e depois.
 
-### 🥜 Snack de pausa (a única pausa oficial: 10 minutos após o Listening)
+### 🥜 Snack antes de entrar (a prova não tem pausa oficial)
 
-Se o centro permitir (verifique as regras do seu centro):
+Coma 30 a 45 minutos antes de começar. A prova não tem intervalo programado e comida não entra na sala, então o último lanche é antes do check-in:
 
 | Snack ideal | Por quê |
 |---|---|
 | Punhado de nozes ou amêndoas | Gordura + proteína sem pico glicêmico |
 | Banana pequena | Carboidrato de liberação moderada + magnésio |
 | Chocolate amargo (1–2 quadradinhos) | Estimulante leve + antioxidantes, sem o crash do chocolate ao leite |
-| Água | Reidratação pós-Listening |
+| Água | Hidratação antes de entrar (em goles, sem exagero) |
 
 **Evite no snack:** açúcar refinado (chocolate ao leite, biscoito doce, suco).
 
@@ -234,7 +234,7 @@ SEGURE por 4 segundos
 [Repita 2–3 ciclos]
 ```
 
-**Use quando:** na transição entre seções, na pausa de 10 minutos e antes de clicar em "INICIAR" pela primeira vez.
+**Use quando:** na transição entre seções e antes de clicar em "INICIAR" pela primeira vez.
 
 ### 🚪 Protocolo 3: o selo de seção
 
@@ -353,7 +353,7 @@ Muitos candidatos brasileiros fazem a prova em casa. É o **mesmo teste e o mesm
 
 **Durante a prova:**
 
-- **Sem pausas para sair da sala** em algumas configurações da Home Edition: confirme na sua confirmação se há a pausa de 10 min e se você pode se levantar
+- **Sem pausa nenhuma:** a prova não tem intervalo programado e, na Home Edition, pausa não programada não é permitida (ETS, *Information Bulletin 2026-2027*). Vá ao banheiro antes do check-in
 - Não leia os enunciados em voz alta (exceto quando o Speaking pede): o proctor pode interpretar como ajuda externa
 - Se a conexão cair: normalmente você reconecta e retoma; **não feche o navegador** · aguarde a instrução
 
@@ -383,17 +383,16 @@ T-00 min → INÍCIO
 
 ## PARTE 6: DURANTE O EXAME · PROTOCOLO SEÇÃO A SEÇÃO (FORMATO 2026)
 
-Sequência de referência: **Reading → Listening → (pausa de 10 min) → Writing → Speaking.** Duração total ~1h23–1h29.
+Sequência oficial: **Reading → Listening → Writing → Speaking**, sem intervalo programado. Duração total ~1h23–1h29.
 
-> ⚠️ **O que é fixo e o que varia:** Reading e Listening são **sempre** as duas primeiras seções, com a **única** pausa oficial de 10 minutos logo após o Listening. A ordem entre **Writing e Speaking** pode variar conforme o centro e a modalidade (centro de testes × Home Edition) · algumas configurações aplicam Speaking antes de Writing. **Confirme a ordem exata na sua confirmação de inscrição da ETS** e ajuste mentalmente qual "modo" você ativa ao sair da pausa. O protocolo abaixo funciona nos dois casos: o princípio é selar a seção anterior e ativar o sistema da próxima, seja ela qual for.
+> ⚠️ **O que é fixo:** a ordem das seções é sempre Reading, Listening, Writing e Speaking (ETS, *Updated TOEFL iBT Test Overview*), e não há intervalo programado (ETS, *Information Bulletin 2026-2027*). Entre uma seção e outra só existem as telas de instrução, que não contam no tempo das seções. O princípio do protocolo abaixo é selar a seção anterior e ativar o sistema da próxima nesses poucos segundos.
 
 ### Micro-orçamento de tempo por seção (referência rápida)
 
 | Seção | Tempo total | Divisão interna |
 |---|---|---|
 | Reading | ~27–30 min | router ~9 min + módulo ~18–21 min |
-| Listening | ~18 min | router ~7 min + módulo 7–11 min |
-| *(pausa)* | 10 min | protocolo do intervalo (abaixo) |
+| Listening | ~25–29 min | router ~18 min + módulo 7 ou 11 min |
 | Writing | ~23 min | Build a Sentence ~6 min · Email 7 min · Academic Discussion 10 min |
 | Speaking | ~8 min | Listen and Repeat (7 itens) + Take an Interview (4 itens), janelas fixas por item |
 
@@ -414,7 +413,7 @@ Sequência de referência: **Reading → Listening → (pausa de 10 min) → Wri
 
 **Ao terminar:** execute o selo de seção. Não fique remoendo.
 
-### LISTENING (~18 min: router + módulo adaptativo)
+### LISTENING (~25–29 min: router + módulo adaptativo)
 
 **Estado mental:** modo de captura ativa · lápis na mão antes de o áudio começar. Cada áudio toca **uma única vez**.
 
@@ -430,33 +429,30 @@ Sequência de referência: **Reading → Listening → (pausa de 10 min) → Wri
 - Se perder um trecho: escreva "?" e siga, não tente recuperar o perdido
 - O gargalo mais comum do brasileiro aqui é **SL-dec** (não converter o som em palavras a tempo). Se isso acontecer em vários itens, é o foco nº 1 do reparo (M2 Parte 3)
 
-**Ao terminar:** execute o selo de seção **imediatamente**. A pausa de 10 minutos começa agora.
+**Ao terminar:** execute o selo de seção **imediatamente**. O Writing vem em seguida, sem intervalo.
 
-### ⏸️ A pausa de 10 minutos: o protocolo do intervalo
+### ⏸️ A transição sem intervalo: o reset de 30 segundos
 
-Obrigatória e estratégica.
+A prova não tem pausa programada (ETS, *Information Bulletin 2026-2027*). O
+reset acontece na tela de instruções entre uma seção e outra, sentado.
 
 ```
-MINUTO 1–2: Levante, caminhe, estique mãos e pescoço
-MINUTO 2–3: Banheiro se necessário
-MINUTO 3–4: Snack (se o centro permitir) + água
-MINUTO 4–7: Revisão MENTAL da seção que vem a seguir (nada de material físico):
-            • se for Writing: estrutura do Email (5 movimentos) + estrutura da
-              Academic Discussion (posição → razão → exemplo → engajar colega)
-            • se for Speaking: aberturas de Take an Interview por função (Módulo 3)
-              + articule 3 frases em voz baixa para "acender" a voz
-MINUTO 7–9: Respiração em caixa (3 ciclos)
-MINUTO 9–10: Retorne à estação. Anchor Phrase. "[Próxima seção] mode: ON."
+1. Solte os ombros e as mãos (5 s)
+2. Um suspiro fisiológico ou um ciclo de respiração em caixa (10 s)
+3. Revisão MENTAL relâmpago da próxima seção (10 s):
+   • antes do Writing: estrutura do Email (5 movimentos) + estrutura da
+     Academic Discussion (posição → razão → exemplo → engajar colega)
+   • antes do Speaking: aberturas de Take an Interview por função (Módulo 3)
+4. Anchor Phrase. "[Próxima seção] mode: ON." (5 s)
 ```
 
-> ⚠️ **O erro mais comum na pausa:** gastar os 10 minutos checando o celular ou
-> conversando com outros candidatos sobre como foi o Listening. Isso quebra o
-> estado mental e contamina a seção seguinte. A pausa é sua: use-a para você.
+> ⚠️ **O erro mais comum na transição:** ficar remoendo o Listening enquanto
+> o Writing já começou. Selo de seção, reset e próxima.
 >
-> 💡 **Se Speaking vier logo após a pausa:** use os minutos 4–7 para falar 2–3
-> frases baixinho (qualquer coisa: descreva o que vê). O sistema motor de fala
-> precisa de ~30 s de uso para sair do modo "leitura". Não estreie a voz no
-> primeiro item.
+> 💡 **Antes do Speaking:** ele vem logo depois do Writing. Na tela de
+> instruções, fale 2 ou 3 frases baixinho (qualquer coisa: descreva o que vê).
+> O sistema motor de fala precisa de ~30 s de uso para sair do modo "leitura".
+> Não estreie a voz no primeiro item.
 
 ### ✍️ WRITING (~23 min: 12 itens, correção por IA)
 
@@ -483,7 +479,7 @@ MINUTO 9–10: Retorne à estação. Anchor Phrase. "[Próxima seção] mode: ON
 
 ### 🎤 SPEAKING (~8 min: 11 itens, correção 100% IA)
 
-**Estado mental:** modo de produção. O sistema motor de fala é diferente do de leitura · se Speaking vier logo após Writing (sem pausa), você entra "frio": articule 2–3 frases baixinho na tela de transição antes do primeiro item.
+**Estado mental:** modo de produção. O sistema motor de fala é diferente do de leitura · o Speaking vem logo após o Writing, sem pausa, e você entra "frio": articule 2–3 frases baixinho na tela de transição antes do primeiro item.
 
 **Listen and Repeat (7 itens):**
 - Não parafraseie. Reproduza exatamente o que ouviu: inclusive artigos e preposições
@@ -575,7 +571,7 @@ A ETS permite cancelar o score antes de visualizá-lo (ou logo após, com custo)
 | **1** | Chegam ao dia D descansados, não exaustos | A semana final é de consolidação, não de acumulação |
 | **2** | Seguem o sistema sem improvisar | Estruturas internalizadas eliminam a necessidade de pensar sob pressão |
 | **3** | Selam cada seção e avançam | Performance multi-seção exige compartimentalização |
-| **4** | Usam a pausa de 10 min como ativo estratégico | Recuperação ativa é tão importante quanto execução ativa |
+| **4** | Usam as transições entre seções como reset | Recuperação ativa é tão importante quanto execução ativa |
 | **5** | Respondem todos os itens, sem exceção | Sem penalidade por erro: deixar em branco é a única garantia de zero |
 | **6** | Interpretam a ansiedade como ativação, não como ameaça | A resposta fisiológica é a mesma: o framing determina se ajuda ou atrapalha |
 | **7** | Confiam no treinamento quando a cognição falha | Quando a mente trava, o corpo executa o que foi repetido |
@@ -584,9 +580,9 @@ A ETS permite cancelar o score antes de visualizá-lo (ou logo após, com custo)
 
 ## PARTE 9: A COLA MENTAL · UMA PÁGINA PARA O T-5 MIN
 
-Não é permitido levar nada para a prova. Esta página é o que você deve **memorizar** e rodar mentalmente nos 5 minutos antes de clicar em INICIAR, e de novo ao sair da pausa. Releia-a todo dia na semana final até saber de cor.
+Não é permitido levar nada para a prova. Esta página é o que você deve **memorizar** e rodar mentalmente nos 5 minutos antes de clicar em INICIAR, e de novo em cada transição entre seções. Releia-a todo dia na semana final até saber de cor.
 
-**Antes de INICIAR (e ao sair da pausa):**
+**Antes de INICIAR (e entre seções):**
 
 1. 3 ciclos de respiração em caixa (4-4-4-4)
 2. Anchor Phrase: _______________________ (a sua · escolhida na semana 1)
@@ -594,13 +590,13 @@ Não é permitido levar nada para a prova. Esta página é o que você deve **me
 
 **Reading (~28 min):** router = peso máximo, sem "aquecer devagar". 3 filtros no *Complete the Words* (gramática → léxico → sentido). Item negativo: circule o NOT. Ritmo constante, sem reler tudo no fim. Selo ao terminar.
 
-**Listening (~18 min):** lápis na mão antes do áudio. Toca uma vez só. Perdeu um trecho → "?" e segue. Foco: ideia central + o *but*/correção + a instrução final. Selo imediato → começa a pausa.
+**Listening (~25–29 min):** lápis na mão antes do áudio. Toca uma vez só. Perdeu um trecho → "?" e segue. Foco: ideia central + o *but*/correção + a instrução final. Selo imediato → Writing em seguida.
 
-**Pausa (10 min):** levantar, água (150 ml), banheiro. Minutos 4–7: revisão mental da próxima seção. 3 ciclos de box breathing. "Próxima seção: ON."
+**Transição (sem intervalo):** ombros soltos, 1 suspiro fisiológico, revisão relâmpago da próxima seção. "Próxima seção: ON."
 
 **Writing (~23 min):** Build a Sentence = esqueleto SVO primeiro. Email = 5 movimentos, sem contração, 1 pedido. Discussion = posição na 1ª frase → razão com mecanismo → exemplo concreto → engajar 1 colega → 60 s de caça aos 5 erros (–s, artigo, tempo, run-on, repetição).
 
-**Speaking (~8 min):** se veio sem pausa antes, acenda a voz com 2–3 frases baixinho. *Listen and Repeat*: reproduza exato, ritmo comprimido, parcial > silêncio. *Take an Interview*: função nos 2 primeiros segundos → esqueleto do Módulo 3, comece a falar já. Ritmo firme até o item 11.
+**Speaking (~8 min):** vem logo depois do Writing, então acenda a voz com 2–3 frases baixinho. *Listen and Repeat*: reproduza exato, ritmo comprimido, parcial > silêncio. *Take an Interview*: função nos 2 primeiros segundos → esqueleto do Módulo 3, comece a falar já. Ritmo firme até o item 11.
 
 **Se travar em qualquer ponto:** suspiro fisiológico (1 ciclo) → "próximo item, página em branco" → avança. Nunca releia o mesmo item 4 vezes.
 

@@ -138,8 +138,8 @@ usado como referência de conteúdo — só como matéria-prima a ser reescrita.
 
 | Seção | Duração | Itens | Pontos brutos | Adaptativo |
 |---|---|---|---|---|
-| Reading | ~18–21 min + 9 min router | 50 (30 pontuados) | 35 | Sim (2 estágios) |
-| Listening | ~18 min | 47 (35 pontuados) | 35 | Sim (2 estágios) |
+| Reading | ~18–21 min + 9 min router | 50 (35 pontuados) | 35 | Sim (2 estágios) |
+| Listening | ~25–29 min (router 18 + módulo 7 ou 11) | 47 (35 pontuados) | 35 | Sim (2 estágios) |
 | Writing | ~23 min | 12 | 20 | Não (linear) |
 | Speaking | ~8 min | 11 | 55 | Não (linear) |
 | **Total** | **~1h23–1h29** | 120 | 145 | |
@@ -147,7 +147,9 @@ usado como referência de conteúdo — só como matéria-prima a ser reescrita.
 Correção: 108 itens por máquina + 12 por IA. Pontuação reportada em **bandas
 CEFR 1–6** (com score legado 0–120 como referência). Os 145 pontos brutos não
 são o score 0–120: são a soma das quatro seções antes da conversão, conferida
-em `docs/ets-blueprint-2026.md`.
+em `docs/ets-blueprint-2026.md`. A conferência número a número contra as
+fontes da ETS (com o que ainda é ambíguo) está em
+`docs/conferencia-formato-2026.md`.
 
 Tipos de item por seção:
 

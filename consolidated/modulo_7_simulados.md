@@ -89,7 +89,7 @@ Reading e Listening não seguem uma prova única e fixa: eles têm uma **arquite
 ```
 READING                                  LISTENING
 ┌─────────────────┐                     ┌──────────────────┐
-│  MÓDULO ROUTER   │  ~9 min             │   MÓDULO ROUTER   │  ~7 min
+│  MÓDULO ROUTER   │  ~9 min             │   MÓDULO ROUTER   │  ~18 min
 │  (dificuldade    │                     │   (dificuldade    │
 │   mista)         │                     │    mista)         │
 └────────┬─────────┘                     └─────────┬─────────┘
@@ -115,7 +115,7 @@ READING                                  LISTENING
 
 | # | Regra | Por quê importa no formato 2026 |
 |---|---|---|
-| **1** | Realize cada simulado em sessão única e ininterrupta | O teste real dura ~1h23–1h29min sem pausas longas entre a maioria das seções: fragmentar o treino elimina o efeito de foco sustentado que você está calibrando |
+| **1** | Realize cada simulado em sessão única e ininterrupta | O teste real dura ~1h23–1h29min sem nenhuma pausa programada entre as seções: fragmentar o treino elimina o efeito de foco sustentado que você está calibrando |
 | **2** | Trate cada item do **módulo router** (Reading e Listening) com o mesmo cuidado que um item de alto peso | O router decide sua rota de dificuldade: um erro por pressa no início pode rebaixar o teto de banda disponível no restante da seção |
 | **3** | Use papel para anotações de Listening e Speaking (não digite no computador) | Simula o material físico do centro de testes |
 | **4** | No Simulado 2: consulte os frameworks de Speaking (Módulo 3) e os templates de Writing (Módulo 4) abertamente | A fixação de estrutura é o objetivo, não há mérito em travar sem referência nesta fase |
@@ -129,10 +129,9 @@ READING                                  LISTENING
 | Seção | Duração alvo | Estrutura interna | O que cronometrar |
 |---|---|---|---|
 | **Reading** | 27–30 min | ~9 min router + ~18–21 min módulo inferior/superior | Tempo total da seção: o sistema já controla o tempo por item |
-| **Listening** | ~18 min | 7 min router + 7 min módulo inferior OU 11 min módulo superior | Tempo total; módulos de áudio não pausam |
-| *(pausa oficial de 10 min após Listening)* | 10 min | — | Use cronômetro, não exceda nem antecipe o retorno |
-| **Speaking** | ~8 min | 7 itens Listen and Repeat + 4 itens Take an Interview | Tempo de resposta por item: cada item tem janela fixa |
+| **Listening** | ~25–29 min | ~18 min router + 7 min módulo inferior OU 11 min módulo superior | Tempo total; módulos de áudio não pausam |
 | **Writing** | ~23 min | 10 itens Build a Sentence + 1 Write an Email + 1 Write for an Academic Discussion | Tempo total da seção |
+| **Speaking** | ~8 min | 7 itens Listen and Repeat + 4 itens Take an Interview | Tempo de resposta por item: cada item tem janela fixa |
 
 **Regra de ouro:** os itens são curtos, numerosos e sequenciais, e não há tempo de sobra para revisar tudo no final. Treine para decidir rápido e seguir em frente · revisão extensa de itens já respondidos não é o uso mais eficiente dos minutos que você tem.
 
@@ -150,7 +149,7 @@ READING                                  LISTENING
 - Água disponível: nenhum outro alimento ou bebida
 - Folhas de papel em branco para anotações (folha separada por seção)
 - Nenhuma consulta a notas, módulos ou qualquer outro material
-- Pausa de 10 minutos apenas onde a sequência oficial prevê (após Listening): nunca em outro ponto
+- Sem pausa entre as seções: a prova oficial não tem intervalo programado
 
 ### A Semana Entre Simulados: Template de 5 Passos
 
@@ -601,7 +600,7 @@ Responda em ~40 segundos cada, sem preparo. Grave todas.
 - Timer visível para cada seção, seguindo os alvos da Parte 2
 - Speaking gravado sem pausas adicionais entre itens
 - Writing produzido em tempo cronometrado (~23 min total, sem extensão)
-- Pausa oficial de 10 minutos apenas após o Listening: nenhuma outra pausa
+- Nenhuma pausa entre as seções: a prova oficial não tem intervalo programado
 
 ---
 
@@ -696,7 +695,7 @@ Critics of this narrative, however, caution against treating network effects as 
 
 ---
 
-### LISTENING · SIMULADO 3 (Tempo total: ~18 min, com router)
+### LISTENING · SIMULADO 3 (Tempo total: ~25–29 min, com router)
 
 **Instrução:** Ouça (ou leia a transcrição uma única vez, sem pausar) e responda sem retroceder · o áudio real não permite replay.
 
@@ -829,8 +828,8 @@ Critics of this narrative, however, caution against treating network effects as 
 ```
 READING                  ~27–30 minutos  (router ~9min + módulo inferior/superior ~18–21min)
   ↓ [sem pausa]
-LISTENING                 ~18 minutos    (router 7min + módulo inferior 7min OU superior 11min)
-  ↓ [PAUSA DE 10 MINUTOS — obrigatória, única pausa oficial]
+LISTENING                 ~25–29 minutos (router 18min + módulo inferior 7min OU superior 11min)
+  ↓ [sem pausa: a prova não tem intervalo programado]
 WRITING                   ~23 minutos    (10 Build a Sentence + Write an Email + Write for an Academic Discussion)
   ↓ [sem pausa]
 SPEAKING                  ~8 minutos     (7 Listen and Repeat + 4 Take an Interview)
@@ -838,7 +837,7 @@ SPEAKING                  ~8 minutos     (7 Listen and Repeat + 4 Take an Interv
 DURAÇÃO TOTAL DA SESSÃO: ~1h23min a 1h29min
 ```
 
-Confirme a ordem exata das seções no momento da sua inscrição: a ETS pode ajustar a sequência entre Writing e Speaking conforme o centro de aplicação e a modalidade (computador vs. em casa). O que é fixo: Reading e Listening sempre no início, com a única pausa oficial de 10 minutos entre eles e as seções seguintes.
+A ordem é fixa: Reading, Listening, Writing e Speaking, nesta sequência (ETS, *Updated TOEFL iBT Test Overview*). E não há intervalo programado entre as seções (ETS, *TOEFL iBT Information Bulletin 2026-2027*).
 
 ### Após o Simulado 4
 

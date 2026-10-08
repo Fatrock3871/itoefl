@@ -45,7 +45,7 @@ história, negócios*. Vocabulário calibrado ao nível, com contrações natura
 
 **Apoio ao candidato (oficial):** cada task abre com uma **introdução de cenário, dita em áudio E impressa na tela**, com elementos visuais (imagens, mapas, formulários, fotos dos falantes).
 
-**Estimativa pedagógica de tempo em Take an Interview:** a ETS não publica timing exato por item, mas a janela de resposta amplamente reportada é de **~45 segundos**, **sem tempo de preparação**. Trate isso como referência de treino: o objetivo é responder **rápido e bem** desde o primeiro segundo.
+**Tempo de resposta (oficial):** em Take an Interview você tem **45 segundos** por pergunta; em Listen and Repeat, **de 8 a 12 segundos** para gravar cada frase (ETS, *Updated TOEFL iBT Test Overview*). Não há tempo de preparação nos testes práticos oficiais. O objetivo é responder **rápido e bem** desde o primeiro segundo.
 
 ### 1.3 O que a arquitetura revela
 

@@ -36,7 +36,10 @@ Página inicial de referência: `ets.org/toefl/test-takers/ibt/upcoming-updates-
 | **Read an Academic Passage** | 5–15 | B1–C2 | Máquina |
 
 - Seção: **50 itens**, **35 pontos brutos** (máx. 1 pt/item; ~15 itens-piloto).
-- Tempo: router **9 min** + módulo **18–21 min**.
+- Tempo: router **9 min** + módulo **18–21 min** = **27–30 min**. Atenção: na
+  tabela do PDF, "18 min – 21 min" aparece na coluna Router e "9 min" na
+  coluna do módulo. A divisão está em aberto; o total confere com os 30 min
+  de tempo-base da página de conteúdo da ETS. Ver `docs/conferencia-formato-2026.md`.
 - **Comprimento dos textos:** fáceis ~15–50 palavras; complexos até ~200
   palavras. Calibrados por TextEvaluator (Lexile ~800–1360+, Flesch-Kincaid
   ~7,4–20). Todos os textos ficam visíveis durante as questões.
@@ -58,7 +61,8 @@ Página inicial de referência: `ets.org/toefl/test-takers/ibt/upcoming-updates-
 | **Listen to an Academic Talk** | 8–16 | A2–C2 |
 
 - Seção: **47 itens**, **35 pontos brutos** (máx. 1 pt/item; ~12 itens-piloto).
-- Tempo: router incluído; módulo **inferior 7 min / superior 11 min**; ~18 min total.
+- Tempo: router **18 min** + módulo **inferior 7 min / superior 11 min** =
+  **25–29 min** (a página de conteúdo da ETS dá 29 min de tempo-base).
 - **Áudio:** de enunciados curtos (≤ 6 sílabas tônicas) a monólogos de até
   **250 palavras**; intermediários 35–100 palavras. Tocado **uma vez**.
 - **Vozes:** áudio gerado por IA + às vezes atores humanos. Sotaques

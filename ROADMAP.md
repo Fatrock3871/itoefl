@@ -128,13 +128,22 @@ Pequenas, independentes entre si, podem entrar em qualquer intervalo.
 
 - [x] (C) Passada de consistência nos 10 módulos depois das reescritas de
       tom: repetição, trecho quebrado, referência cruzada desatualizada.
-- [ ] (C) Conferir os números do formato 2026 linha a linha contra o
-      documento oficial da ETS. Pré-requisito do aprofundamento teórico.
+- [x] (C) Conferir os números do formato 2026 linha a linha contra o
+      documento oficial da ETS. Feito em 2026-10-07, registrado com as URLs
+      em `docs/conferencia-formato-2026.md`. Corrigido: a prova não tem pausa
+      de 10 minutos (M7 e M8 ensinavam uma), o Listening dura de 25 a 29
+      minutos e não 18, a ordem das seções é fixa, a ETS publica a
+      concordância entre as bandas e o 0 a 120 (o M0 usava faixas próprias) e
+      os tempos de resposta do Speaking são oficiais.
+- [ ] (D) Reading: o site diz router de 9 minutos e módulo de 18 a 21; a
+      tabela da ETS põe os números nas colunas contrárias. O total (27 a 30)
+      está certo. Não foi alterado, ver a seção 3 da conferência.
 - [x] (C) Corrigir a tabela de formato do `CLAUDE.md`: o total de pontos
       brutos está 120, mas as seções somam 145, que é o número registrado na
       verificação contra a ETS (Fase 7).
-- [ ] (U) M8: confirmar na inscrição da ETS a ordem Writing e Speaking, que
-      varia por centro.
+- [x] (U) M8: a ordem Writing e Speaking não varia por centro. A ETS fixa
+      Reading, Listening, Writing, Speaking (conferência de 2026-10-07), e o
+      M8 foi corrigido.
 - [x] (D) M7: decidido em 2026-10-07 que viram interativos. Feito: 19 blocos,
       62 questões, correção só na entrega do bloco.
 - [x] (C) M4: o texto tem 30 itens de Build a Sentence e o widget só 10.

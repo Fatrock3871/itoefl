@@ -37,18 +37,18 @@ A partir de 2026 seu resultado sai em **duas escalas ao mesmo tempo**, e a ETS e
 
 > ⚡ **Por que isso importa para você:** Universidades e programas de bolsa ainda estão migrando seus critérios de corte. Nos próximos 1–2 anos, muitas instituições vão aceitar equivalências entre as duas escalas. Você precisa entender e conseguir comunicar **ambas**, não apenas para o teste, mas para preencher formulários de admissão corretamente.
 
-### 1.3 Tabela de Referência CEFR × 0–120 (Comparação Pedagógica)
+### 1.3 Tabela CEFR × 0–120 (concordância oficial da ETS)
 
-> ⚠️ A ETS **não publica** uma tabela oficial de conversão exata entre a banda CEFR e o score 0–120: a equivalência é estatística e varia por administração do teste. A tabela abaixo é uma **referência pedagógica de posicionamento**, útil para você entender "em que faixa eu estou", não um conversor oficial.
+> 📌 A ETS publica a concordância entre as bandas 1–6 e a escala 0–120 (página *TOEFL Score Scale Update* e *Updated TOEFL iBT Test Overview*, Tabela 3). Cada banda corresponde a uma faixa do 0–120, e o boletim traz o ponto médio dessa faixa: uma banda 4,5, por exemplo, sai acompanhada de 90. As faixas abaixo juntam as duas meias bandas de cada nível CEFR. O perfil de candidato é leitura nossa.
 
-| Banda CEFR | Nível | Faixa comparável 0–120 (referência) | Perfil de candidato |
+| Banda CEFR | Nível | Faixa comparável 0–120 (ETS) | Perfil de candidato |
 |---|---|---|---|
-| 1 – 1.5 | A1 | ~0–17 | Iniciante, não apto ao exame ainda |
-| 2 – 2.5 | A2 | ~18–36 | Básico: fundamentos incompletos |
-| 3 – 3.5 | B1 | ~37–58 | Intermediário: base para começar preparação séria |
-| 4 – 4.5 | B2 | ~59–86 | Intermediário-avançado: faixa de aprovação da maioria dos programas de graduação |
-| 5 – 5.5 | C1 | ~87–110 | Avançado: faixa-alvo de bolsas competitivas e pós-graduação em universidades de elite |
-| 6 | C2 | ~111–120 | Proficiência plena: teto do exame |
+| 1 – 1.5 | A1 | 0–23 | Iniciante, não apto ao exame ainda |
+| 2 – 2.5 | A2 | 24–43 | Básico: fundamentos incompletos |
+| 3 – 3.5 | B1 | 44–71 | Intermediário: base para começar preparação séria |
+| 4 – 4.5 | B2 | 72–94 | Intermediário-avançado: faixa de aprovação da maioria dos programas de graduação |
+| 5 – 5.5 | C1 | 95–113 | Avançado: faixa-alvo de bolsas competitivas e pós-graduação em universidades de elite |
+| 6 | C2 | 114–120 | Proficiência plena: teto do exame |
 
 > 🎯 **Meta do iTOEFL:** levar você à banda **5–6 (C1–C2)**, equivalente à faixa alta historicamente exigida por Ivy League, G5 britânico e programas de mestrado/doutorado competitivos.
 
@@ -74,7 +74,7 @@ A partir de 2026 seu resultado sai em **duas escalas ao mesmo tempo**, e a ETS e
 | Seção | Duração | Itens | Pontos brutos | Adaptativo? |
 |---|---|---|---|---|
 | **Reading** | ~18–21 min + 9 min router | 50 itens (~35 pontuados + ~15 piloto) | 35 | Sim (2 estágios) |
-| **Listening** | ~18 min (router + inferior 7 / superior 11) | 47 itens (~35 pontuados + ~12 piloto) | 35 | Sim (2 estágios) |
+| **Listening** | ~25–29 min (router ~18 + inferior 7 / superior 11) | 47 itens (~35 pontuados + ~12 piloto) | 35 | Sim (2 estágios) |
 | **Writing** | ~23 min | 12 itens | 20 | Não (linear) |
 | **Speaking** | ~8 min | 11 itens | 55 | Não (linear) |
 
@@ -203,11 +203,11 @@ What can be inferred from this statement?
 
 | Acertos (de 10) | Banda CEFR estimada | Faixa 0–120 comparável | Leitura do resultado |
 |---|---|---|---|
-| 0–2 | A2 (2–2.5) | ~18–36 | Fundamentos com lacunas amplas: priorize gramática básica e vocabulário de alta frequência antes de avançar nos módulos de task |
-| 3–5 | B1 (3–3.5) | ~37–58 | Base intermediária: pronta para o Sistema, mas exige disciplina reforçada nos Módulos 1–4 |
-| 6–7 | B2 (4–4.5) | ~59–86 | Intermediário-avançado: foco em precisão e nuance, não em fundamentos | 
-| 8–9 | C1 (5–5.5) | ~87–110 | Avançado: foco total em estratégia de teste, timing e polimento de registro | 
-| 10 | C2 (6) | ~111–120 | Teto de proficiência: foco exclusivo em performance sob pressão e simulados cronometrados |
+| 0–2 | A2 (2–2.5) | 24–43 | Fundamentos com lacunas amplas: priorize gramática básica e vocabulário de alta frequência antes de avançar nos módulos de task |
+| 3–5 | B1 (3–3.5) | 44–71 | Base intermediária: pronta para o Sistema, mas exige disciplina reforçada nos Módulos 1–4 |
+| 6–7 | B2 (4–4.5) | 72–94 | Intermediário-avançado: foco em precisão e nuance, não em fundamentos | 
+| 8–9 | C1 (5–5.5) | 95–113 | Avançado: foco total em estratégia de teste, timing e polimento de registro | 
+| 10 | C2 (6) | 114–120 | Teto de proficiência: foco exclusivo em performance sob pressão e simulados cronometrados |
 
 > 🎯 Guarde seu resultado: ele é o ponto de partida do seu **Weekly Performance Dashboard** (Parte 5) e define qual cronograma de estudo (Parte 6) faz mais sentido para você.
 
@@ -242,10 +242,10 @@ Em Writing e Speaking a IA (e-rater / SpeechRater) olha gramática, coesão, voc
 
 ```
 Score Geral (CEFR) = Média das 4 bandas de seção (Reading + Listening + Writing + Speaking) ÷ 4
-Score Comparável 0–120 = Referência pedagógica da tabela 1.3, nunca oficial
+Score Comparável 0–120 = faixa da banda geral na concordância oficial da ETS (tabela 1.3)
 ```
 
-**Exemplo de cálculo:** Reading 4.5 + Listening 4.0 + Writing 4.0 + Speaking 3.5 = 16 ÷ 4 = **Banda geral 4.0 (B2)** → Faixa comparável pedagógica: aproximadamente 59–86 na escala 0–120.
+**Exemplo de cálculo:** Reading 4.5 + Listening 4.0 + Writing 4.0 + Speaking 3.5 = 16 ÷ 4 = **Banda geral 4.0 (B2)** → Faixa comparável na concordância da ETS: 72–85 na escala 0–120 (86 já é banda 4,5).
 
 ---
 
