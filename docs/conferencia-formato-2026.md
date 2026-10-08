@@ -96,7 +96,21 @@ A2 24 a 43, B1 44 a 71, B2 72 a 94, C1 95 a 113, C2 114 a 120.
    reportadas, mas não diz se o relógio da prova continua correndo. O M8
    manda ir ao banheiro antes e não promete nada.
 
-## 4. Onde foi mexido
+5. **Soma dos tempos-base.** Os tempos-base do OVER somam 90 minutos (30 +
+   29 + 23 + 8), mas o SPEC dá 1 h 29 min como máximo da prova. A diferença
+   de um minuto é da própria ETS.
+
+## 4. Presets do cronômetro
+
+O cronômetro do site (os botões em `#stPresets`, no `app/build.py`) usa o
+tempo-base de cada seção do OVER p. 4, que é o teto de cada uma, e o máximo
+do SPEC para a prova inteira: Reading 30, Listening 29, Writing 23, Speaking
+8, prova completa 89. Antes eram Reading 28, Listening 18 e prova completa
+85, números que não vinham de documento nenhum. A ordem dos botões passou a
+ser a da prova. Quem tinha um preset antigo salvo é levado ao novo
+equivalente.
+
+## 5. Onde foi mexido
 
 `consolidated/modulo_0_embarque.md` (tabela 1.3, tabela do diagnóstico,
 exemplo de cálculo, tempo do Listening), `modulo_2_listening.md` (tempo,

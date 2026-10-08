@@ -385,6 +385,12 @@ check("pwa_update_bar_shows", function(){ return document.getElementById("pwaUpd
 document.getElementById("pwaUpdateLater").click();
 check("pwa_update_bar_dismisses", function(){ return document.getElementById("pwaUpdate").hidden === true; });
 
+// cronometro: presets no tempo-base da ETS e na ordem da prova (docs/conferencia-formato-2026.md)
+check("timer_presets_match_ets", function(){
+  var mins = Array.prototype.map.call(document.querySelectorAll("#stPresets button"), function(b){ return b.dataset.min; });
+  return mins.join(",") === "30,29,23,8,89" && document.getElementById("stDisplay").textContent === "30:00";
+});
+
 // sem video cadastrado em app/videos.json, nenhum player aparece
 check("video_none_without_registration", function(){ return document.querySelectorAll(".vid").length === 0; });
 // sem bloco de aprofundamento nos .md, o seletor de trilha fica escondido

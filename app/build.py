@@ -565,11 +565,11 @@ html = f'''<!DOCTYPE html>
     <div class="st-panel">
       <div class="st-display" id="stDisplay">28:00</div>
       <div class="st-presets" id="stPresets">
-        <button type="button" data-min="28" class="active">Reading 28′</button>
-        <button type="button" data-min="18">Listening 18′</button>
-        <button type="button" data-min="8">Speaking 8′</button>
+        <button type="button" data-min="30" class="active">Reading 30′</button>
+        <button type="button" data-min="29">Listening 29′</button>
         <button type="button" data-min="23">Writing 23′</button>
-        <button type="button" data-min="85">Prova completa 85′</button>
+        <button type="button" data-min="8">Speaking 8′</button>
+        <button type="button" data-min="89">Prova completa 89′</button>
       </div>
       <div class="st-controls">
         <button type="button" id="stStart" class="st-primary">Iniciar</button>

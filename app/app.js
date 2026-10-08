@@ -942,7 +942,11 @@
 
     var LS_PRESET = "toefl_timer_preset";
     var minutes = parseInt(safeGet(LS_PRESET), 10);
-    if(!minutes || minutes < 1) minutes = 28;
+    // presets antigos (antes da conferência com a ETS de 2026-10-07) viram os
+    // novos: tempo-base de cada seção e duração máxima da prova
+    var OLD_PRESETS = { 28: 30, 18: 29, 85: 89 };
+    if(OLD_PRESETS[minutes]){ minutes = OLD_PRESETS[minutes]; safeSet(LS_PRESET, String(minutes)); }
+    if(!minutes || minutes < 1) minutes = 30;
     var remaining = minutes * 60;   // segundos
     var tick = null;
 
