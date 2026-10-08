@@ -29,8 +29,13 @@ worktrees que tinham ficado pela metade. Tudo foi revisado antes de entrar no
 - `a06b5bc` Videoaulas: `app/videos.json`, player que só carrega no clique,
   "aula assistida" no progresso, legenda e transcrição recolhível.
 - `7269538` Bloco `:::aprofundamento` no pipeline e seletor de trilha.
+- `867fc69` Este arquivo: o histórico saiu do `ROADMAP.md`.
+- `f548f40` Presets do cronômetro no tempo-base da ETS (Reading 30,
+  Listening 29, Writing 23, Speaking 8, prova 89).
+- `3bc5baa` Travessão de pausa fora das explicações em português dos drills
+  e do diagnóstico (31 trocas).
 
-O smoke test foi de 81 para 125 checagens, com duas passadas novas no
+O smoke test foi de 81 para 126 checagens, com duas passadas novas no
 navegador: uma simulando iPhone e outra num build de exemplo feito em pasta
 temporária (vídeos e bloco de aprofundamento de mentira, que não entram no
 site).
