@@ -236,7 +236,12 @@ Detalhe em `docs/roadmap-expansao.md`, seções 3 e 4.
       módulo em 100% (e o certificado) volta a ficar abaixo até marcar a
       aula. Se isso incomodar, a alternativa é a aula não contar para quem já
       concluiu. Hoje conta para todos.
-- [ ] (C) Seletor "trilha rápida" ou "trilha completa".
+- [x] (C) Seletor "trilha rápida" ou "trilha completa" (2026-10-07). Fica na
+      sidebar e só aparece quando houver bloco de aprofundamento no site, o
+      que ainda não é o caso. A escolha fica em `toefl_trilha_v1`, local do
+      aparelho como o tema.
+- [ ] (D) A trilha escolhida deve acompanhar a conta, de um aparelho para
+      outro? Hoje não acompanha.
 
 ### Etapa 2: banco de questões e aprofundamento
 
@@ -269,8 +274,12 @@ Detalhe em `docs/roadmap-expansao.md`, seções 4 e 5.
 - [ ] (C+U) Produzir os lotes até 600 itens: 200 Reading, 200 Listening,
       150 Build a Sentence, 50 enunciados de Writing.
 - [ ] (C) Áudio de Listening com voz neural, gerado uma vez por item.
-- [ ] (C) Bloco de aprofundamento recolhível no pipeline e checkpoint de
-      questões no fim de cada Parte.
+- [x] (C) Bloco de aprofundamento recolhível no pipeline (2026-10-07).
+      Marcação `:::aprofundamento Título` ... `:::` nos `.md`, descrita no
+      `CLAUDE.md`. Só a infraestrutura: nenhum bloco foi escrito. O exemplo
+      de teste vive no smoke test e não entra no site.
+- [ ] (C) Checkpoint de questões no fim de cada Parte. Depende do banco
+      publicado e do modo prática.
 - [ ] (C) Escrever o aprofundamento, um módulo por sessão: M3, M1, M2, M4,
       depois M5, M6, M9, M0, M7, M8.
 - [ ] (C+U) Banco v2, 1.500 itens, com Listen and Repeat e Interview.

@@ -509,6 +509,14 @@ html = f'''<!DOCTYPE html>
     <nav class="modnav" id="modnav">
       {nav_items}
     </nav>
+    <div class="trail" id="trailBox" hidden>
+      <p class="side-section-label">Trilha de estudo</p>
+      <div class="trail-tabs" role="group" aria-label="Trilha de estudo">
+        <button type="button" class="trail-btn" data-trail="rapida" aria-pressed="true">Rápida</button>
+        <button type="button" class="trail-btn" data-trail="completa" aria-pressed="false">Completa</button>
+      </div>
+      <p class="trail-hint" id="trailHint"></p>
+    </div>
     <div class="data-tools">
       <button type="button" id="dataExport">↓ Exportar progresso</button>
       <button type="button" id="dataImport">↑ Importar</button>

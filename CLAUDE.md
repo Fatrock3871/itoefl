@@ -112,6 +112,23 @@ Os módulos M0 a M7 têm um `build_modN()` no pipeline que injeta os widgets no
 fragmento; M8 e M9 usam `build_plain()`. Em M3 e M4 o lugar do widget é
 marcado no `.md` com um parágrafo `%%%NOME%%%`, que o pipeline troca.
 
+**Bloco de aprofundamento:** teoria densa que fica recolhida até o aluno
+abrir. Em qualquer `.md` de `consolidated/`:
+
+```
+:::aprofundamento Título opcional
+Markdown normal: parágrafos, listas, tabelas, ####.
+:::
+```
+
+As duas cercas ficam sozinhas na linha, coladas na margem, fora de lista,
+tabela e citação. Dentro do bloco não entra `#`, `##` nem `###` (são eles que
+montam as Partes e o accordion) nem outro bloco. Marcação errada derruba o
+build. O bloco não conta no progresso. O seletor "Trilha de estudo" da
+sidebar (rápida: blocos fechados; completa: abertos) só aparece quando existe
+ao menos um bloco no site. Hoje não existe nenhum: o exemplo usado no teste
+vive só no `scripts/smoke_test.py`, que o cola numa cópia temporária do M3.
+
 **Formato real das tarefas:** antes de criar ou mudar exercício, ler
 `docs/ets-materiais-oficiais.md`. Ele descreve o molde de cada tarefa visto
 nos testes práticos oficiais de 2026. O conteúdo da ETS não pode ser copiado
@@ -245,7 +262,8 @@ de erros),
 
 Sempre locais, por aparelho: `toefl_theme_v1`, `toefl_active_tab`,
 `toefl_timer_preset`, `toefl_partpos_v1` (Parte aberta em cada módulo),
-`toefl_lastpos_v1` (alvo do "Continuar de onde parei"). `toefl_sync_at` e
+`toefl_lastpos_v1` (alvo do "Continuar de onde parei"), `toefl_trilha_v1`
+(trilha rápida ou completa: preferência de leitura, não progresso). `toefl_sync_at` e
 `toefl_dirty` são internos do sync.
 
 **Sincronização:** quando o Supabase está configurado e o aluno logado, as

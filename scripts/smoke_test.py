@@ -387,6 +387,8 @@ check("pwa_update_bar_dismisses", function(){ return document.getElementById("pw
 
 // sem video cadastrado em app/videos.json, nenhum player aparece
 check("video_none_without_registration", function(){ return document.querySelectorAll(".vid").length === 0; });
+// sem bloco de aprofundamento nos .md, o seletor de trilha fica escondido
+check("trail_selector_hidden_without_blocks", function(){ return document.querySelectorAll("details.deep").length === 0 && document.getElementById("trailBox").hidden; });
 
 check("no_js_errors", function(){ return window.__errors.length === 0; });
 results.__jsErrors = window.__errors;
@@ -517,6 +519,33 @@ def pwa_checks():
     return out
 
 
+def deep_markup_checks():
+    """Marcacao :::aprofundamento mal escrita tem que derrubar o build, nao
+    sair calada no site."""
+    sys.path.insert(0, str(APP_DIR))
+    import build_pipeline as bp
+
+    def fails(text):
+        try:
+            bp.to_html(text)
+        except ValueError:
+            return True
+        return False
+
+    good = bp.to_html("Antes.\n\n:::aprofundamento Título\nTexto.\n:::\n\nDepois.")
+    return {
+        "deep_markup_converts": '<details class="deep">' in good and ":::" not in good and "<p>Depois.</p>" in good,
+        "deep_markup_rejects_broken": all(fails(t) for t in (
+            ":::aprofundamento Sem fim\nTexto.",
+            ":::aprofundamento Parte dentro\n## PARTE 9\n:::",
+            ":::aprofundamento A\n:::aprofundamento B\nx\n:::\n:::",
+            "Texto.\n:::\n",
+            ":::aprofundamento Vazio\n\n:::",
+            "- item\n\n    :::aprofundamento Na lista\n    x\n    :::",
+        )),
+    }
+
+
 def bank_checks():
     """Banco de questoes: todo item valida, e bank/items/migrado esta em dia
     com as fontes do site (migrate.py numa pasta temporaria gera os mesmos bytes)."""
@@ -550,6 +579,20 @@ FIXTURE_VIDEOS = {
          "captions": "https://example.invalid/aula.vtt"},
     ]
 }
+
+# bloco de aprofundamento de exemplo, colado na copia temporaria do M3 logo
+# antes desta subsecao (ou seja, dentro da PARTE 2, no fim da subsecao 2.1)
+FIXTURE_DEEP_ANCHOR = "### 2.2 Estratégia para Listen and Repeat"
+FIXTURE_DEEP_BLOCK = """:::aprofundamento Exemplo de aprofundamento
+Parágrafo de **exemplo**, só para testar a infraestrutura.
+
+#### Um subtítulo dentro do bloco
+
+- primeiro item
+- segundo item
+:::
+
+"""
 
 FIXTURE_TEST_JS = r"""
 <script>
@@ -612,6 +655,32 @@ check("video_file_marks_watched_at_end", function(){
   return partVid.querySelector(".vid-chk").checked && saved["mod3-video-exemplo-parte2"] === true;
 });
 check("video_watched_does_not_finish_part", function(){ return !partVid.closest(".section-card").classList.contains("done"); });
+
+// bloco de aprofundamento e seletor de trilha
+var deeps = document.querySelectorAll("details.deep");
+var deep = deeps[0];
+var trailBox = document.getElementById("trailBox");
+function trailBtn(name){ return trailBox.querySelector('.trail-btn[data-trail="' + name + '"]'); }
+check("deep_example_rendered", function(){
+  return deeps.length === 1 && m3.contains(deep) && deep.querySelector(".deep-title").textContent === "Exemplo de aprofundamento" &&
+         deep.querySelector(".deep-body strong").textContent === "exemplo" && deep.querySelectorAll(".deep-body li").length === 2 &&
+         !!deep.querySelector(".deep-body h4") && m3.textContent.indexOf(":::") === -1;
+});
+check("deep_inside_part_2_no_new_part", function(){
+  return deep.closest(".section-card").querySelector("h2 .htext").textContent.indexOf("PARTE 2") === 0 &&
+         m3.querySelectorAll(".section-card").length === 7;
+});
+check("trail_selector_shown_with_blocks", function(){ return trailBox.hidden === false && document.getElementById("trailHint").textContent.length > 0; });
+check("trail_fast_is_default_and_closed", function(){
+  return deep.open === false && trailBtn("rapida").classList.contains("active") && trailBtn("rapida").getAttribute("aria-pressed") === "true";
+});
+trailBtn("completa").click();
+check("trail_complete_opens_blocks", function(){
+  return deep.open === true && localStorage.getItem("toefl_trilha_v1") === "completa" && trailBtn("completa").classList.contains("active") &&
+         !trailBtn("rapida").classList.contains("active");
+});
+trailBtn("rapida").click();
+check("trail_fast_closes_blocks", function(){ return deep.open === false && localStorage.getItem("toefl_trilha_v1") === "rapida"; });
 check("fixture_no_js_errors", function(){ return window.__errors.length === 0; });
 results.__jsErrors = window.__errors;
 document.title = JSON.stringify(results);
@@ -626,6 +695,11 @@ def build_fixture(work):
         shutil.copytree(ROOT / name, work / name, ignore=shutil.ignore_patterns("__pycache__"))
     (work / "app" / "supabase_config.json").unlink(missing_ok=True)
     (work / "app" / "videos.json").write_text(json.dumps(FIXTURE_VIDEOS, ensure_ascii=False), encoding="utf-8")
+    m3 = work / "consolidated" / "modulo_3_speaking.md"
+    text = m3.read_text(encoding="utf-8")
+    if text.count(FIXTURE_DEEP_ANCHOR) != 1:
+        raise SystemExit(f"Fixture: nao achei {FIXTURE_DEEP_ANCHOR!r} no M3. Ajuste FIXTURE_DEEP_ANCHOR em scripts/smoke_test.py.")
+    m3.write_text(text.replace(FIXTURE_DEEP_ANCHOR, FIXTURE_DEEP_BLOCK + FIXTURE_DEEP_ANCHOR), encoding="utf-8", newline="\n")
     for script in ("build_pipeline.py", "build.py"):
         subprocess.run([sys.executable, script], cwd=work / "app", check=True, capture_output=True)
     return work / "artifact" / "index.html"
@@ -680,6 +754,7 @@ def main():
     results.update(fixture)
     results.update(legal_page_checks())
     results.update(pwa_checks())
+    results.update(deep_markup_checks())
     results.update(bank_checks())
 
     failed = []

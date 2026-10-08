@@ -3602,6 +3602,42 @@
     });
   });
 
+  // ---------- Trilha rápida ou completa (blocos de aprofundamento) ----------
+  // Os blocos <details class="deep"> vêm do build (marcação :::aprofundamento
+  // nos .md). Na trilha rápida ficam fechados e o aluno abre o que quiser; na
+  // completa já vêm abertos. A escolha é preferência do aparelho, como o
+  // tema: fica em toefl_trilha_v1 e não sincroniza. Sem nenhum bloco no site,
+  // o seletor nem aparece.
+  (function(){
+    var box = document.getElementById("trailBox");
+    var deep = Array.prototype.slice.call(document.querySelectorAll("details.deep"));
+    if(!box || !deep.length) return;
+    var btns = Array.prototype.slice.call(box.querySelectorAll(".trail-btn"));
+    var hint = document.getElementById("trailHint");
+    var LS_TRAIL = "toefl_trilha_v1";
+    var HINTS = {
+      rapida: "O essencial primeiro. Os blocos de aprofundamento ficam fechados: abra só os que quiser.",
+      completa: "Tudo aberto: o essencial e os blocos de aprofundamento."
+    };
+    function apply(trail, save){
+      if(!HINTS[trail]) trail = "rapida";
+      deep.forEach(function(d){ d.open = trail === "completa"; });
+      btns.forEach(function(b){
+        var on = b.dataset.trail === trail;
+        b.classList.toggle("active", on);
+        b.setAttribute("aria-pressed", on ? "true" : "false");
+      });
+      hint.textContent = HINTS[trail];
+      document.documentElement.setAttribute("data-trail", trail);
+      if(save) safeSet(LS_TRAIL, trail);
+    }
+    btns.forEach(function(b){
+      b.addEventListener("click", function(){ apply(b.dataset.trail, true); });
+    });
+    box.hidden = false;
+    apply(safeGet(LS_TRAIL) || "rapida", false);
+  })();
+
   // ---------- PWA: instalar app, service worker e aviso de nova versão ----------
   // O service worker (app/sw.js, carimbado pelo build) só é registrado em
   // https ou em localhost. Aberto direto do disco (file://) nada disto roda e

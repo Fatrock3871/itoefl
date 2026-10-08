@@ -95,8 +95,70 @@ def split_registro_block(raw):
 MD_EXT = ["tables", "fenced_code", "sane_lists"]
 
 
+# Bloco de aprofundamento (docs/roadmap-expansao.md, seção B2): teoria densa
+# que fica recolhida até o aluno abrir, ou que já vem aberta na "trilha
+# completa" (seletor na sidebar, app.js). Marcação nos .md de consolidated/:
+#
+#     :::aprofundamento Por que o router pesa tanto
+#     Texto em Markdown normal: parágrafos, listas, tabelas, ####.
+#     :::
+#
+# As duas linhas de cerca ficam sozinhas, coladas na margem. O título é
+# opcional. Dentro do bloco não entra título de Parte nem de subseção (#, ##,
+# ###), porque são eles que montam o progresso e o accordion, e não entra
+# outro bloco de aprofundamento.
+DEEP_OPEN_RE = re.compile(r"^:::aprofundamento[ \t]*(.*)$")
+DEEP_CLOSE_RE = re.compile(r"^:::[ \t]*$")
+
+
+def render_deep(title, inner_html):
+    title_html = f'<span class="deep-title">{html_lib.escape(title)}</span>' if title else ""
+    return ('<details class="deep"><summary><span class="deep-kicker">Aprofundamento</span>'
+            f'{title_html}</summary><div class="deep-body">{inner_html}</div></details>')
+
+
+def extract_deep_blocks(text):
+    """Tira os blocos :::aprofundamento do Markdown, deixando no lugar um
+    parágrafo-marcador. Devolve (texto, {marcador: html do bloco})."""
+    out, blocks, buf, title, start = [], {}, None, "", 0
+    for n, line in enumerate(text.split("\n"), 1):
+        if line[:1] in " \t>" and line.lstrip(" \t>").startswith(":::aprofundamento"):
+            raise ValueError(f"aprofundamento: a cerca fica colada na margem, fora de lista e de citação (linha {n} do trecho)")
+        opening = DEEP_OPEN_RE.match(line)
+        if buf is None:
+            if opening:
+                buf, title, start = [], opening.group(1).strip(), n
+            elif DEEP_CLOSE_RE.match(line):
+                raise ValueError(f"aprofundamento: ':::' sem abertura (linha {n} do trecho)")
+            else:
+                out.append(line)
+        elif opening:
+            raise ValueError(f"aprofundamento: bloco dentro de bloco (linha {n} do trecho)")
+        elif DEEP_CLOSE_RE.match(line):
+            body = "\n".join(buf)
+            if re.search(r"^#{1,3} ", body, flags=re.M):
+                raise ValueError(f"aprofundamento {title!r}: use #### dentro do bloco, não #, ## ou ###")
+            if not body.strip():
+                raise ValueError(f"aprofundamento {title!r}: bloco vazio")
+            token = f"@@APROFUNDAMENTO-{len(blocks)}@@"
+            blocks[token] = render_deep(title, fix_checklists(md.markdown(body, extensions=MD_EXT)))
+            out += ["", token, ""]
+            buf = None
+        else:
+            buf.append(line)
+    if buf is not None:
+        raise ValueError(f"aprofundamento {title!r}: faltou a linha ':::' de fechamento (aberto na linha {start} do trecho)")
+    return "\n".join(out), blocks
+
+
 def to_html(text):
-    return fix_checklists(md.markdown(text, extensions=MD_EXT))
+    text, deep = extract_deep_blocks(text)
+    out = fix_checklists(md.markdown(text, extensions=MD_EXT))
+    for token, block in deep.items():
+        if out.count(f"<p>{token}</p>") != 1:
+            raise ValueError("aprofundamento: o bloco precisa ficar fora de lista, tabela e citação")
+        out = out.replace(f"<p>{token}</p>", block)
+    return out
 
 
 # O `markdown` puro (nossa única dependência, CLAUDE.md) não entende a
@@ -568,6 +630,10 @@ def main():
     json.dump(final, open("module_fragments_final.json", "w", encoding="utf-8"), ensure_ascii=False)
     print("built:", {k: len(v) for k, v in final.items()})
     print("leftover %%% placeholders:", any("%%%" in v for v in final.values()))
+    stray = [k for k, v in final.items() if ":::aprofundamento" in v or "@@APROFUNDAMENTO" in v]
+    if stray:
+        raise ValueError(f"aprofundamento: marcação não convertida em {stray} (bloco dentro de questão de simulado ou de widget?)")
+    print("blocos de aprofundamento:", {k: v.count('<details class="deep">') for k, v in final.items() if '<details class="deep">' in v} or 0)
 
 
 if __name__ == "__main__":
