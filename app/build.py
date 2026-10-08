@@ -7,8 +7,10 @@ frag = json.load(open("module_fragments_final.json", encoding="utf-8"))
 # usuário). Sem bolinha de destaque separada -- tentativa anterior de fazer
 # uma bolinha "pular" da logo até o "i" foi removida a pedido do usuário
 # (achou feia).
-_PETAL_COLORS = ["var(--accent-2)", "var(--accent)", "var(--accent-strong)",
-                  "var(--accent)", "var(--accent-2)", "var(--accent-strong)"]
+# --logo-deep, e não --accent-strong: o tom de texto foi escurecido por
+# contraste (WCAG AA) e a logo não deve mudar junto.
+_PETAL_COLORS = ["var(--accent-2)", "var(--accent)", "var(--logo-deep)",
+                  "var(--accent)", "var(--accent-2)", "var(--logo-deep)"]
 _PETAL_D = "M50,52 C34,48 26,34 30,18 C33,7 44,4 50,15 C56,4 67,7 70,18 C74,34 66,48 50,52 Z"
 _PETAL_SCALE = 0.94
 _petals = "".join(
@@ -19,7 +21,7 @@ _petals = "".join(
 LOGO_SVG = (
     '<svg class="logo-mark" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">'
     f'{_petals}'
-    '<circle cx="50" cy="51" r="5" fill="var(--accent-strong)"/>'
+    '<circle cx="50" cy="51" r="5" fill="var(--logo-deep)"/>'
     '</svg>'
 )
 
@@ -563,7 +565,7 @@ html = f'''<!DOCTYPE html>
   </div>
   <div id="secTimer" class="sec-timer collapsed">
     <div class="st-panel">
-      <div class="st-display" id="stDisplay">28:00</div>
+      <div class="st-display" id="stDisplay">30:00</div>
       <div class="st-presets" id="stPresets">
         <button type="button" data-min="30" class="active">Reading 30′</button>
         <button type="button" data-min="29">Listening 29′</button>
