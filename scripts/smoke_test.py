@@ -396,6 +396,12 @@ check("video_none_without_registration", function(){ return document.querySelect
 // sem bloco de aprofundamento nos .md, o seletor de trilha fica escondido
 check("trail_selector_hidden_without_blocks", function(){ return document.querySelectorAll("details.deep").length === 0 && document.getElementById("trailBox").hidden; });
 
+// "Marcar esta parte como concluida": o texto fica dentro do <label> da caixa
+check("mark_done_label_wraps_text", function(){
+  var all = document.querySelectorAll(".mark-done");
+  return all.length > 50 && Array.prototype.every.call(all, function(m){ return !!m.querySelector("label.prog-check .pchk") && !!m.querySelector("label.prog-check .mark-done-label"); });
+});
+
 check("no_js_errors", function(){ return window.__errors.length === 0; });
 results.__jsErrors = window.__errors;
 
@@ -762,6 +768,15 @@ def main():
     results.update(pwa_checks())
     results.update(deep_markup_checks())
     results.update(bank_checks())
+
+    # quarta passada: Chrome de verdade por http://127.0.0.1 (recarregar,
+    # tela de celular, contraste, service worker). Ver scripts/smoke_browser.py
+    print("Rodando a passada no Chrome de verdade (recarga, celular, contraste, service worker)...")
+    import smoke_browser
+    real, real_details = smoke_browser.run()
+    results.update(real)
+    for name, detail in real_details.items():
+        results[name + "__error"] = detail
 
     failed = []
     print()
