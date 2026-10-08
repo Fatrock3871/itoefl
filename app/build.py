@@ -559,6 +559,8 @@ html = f'''<!DOCTYPE html>
 </html>
 '''
 
+import os as _os
+_os.makedirs("../artifact", exist_ok=True)  # num clone novo a pasta nao existe (artifact/ e gerado e fica fora do Git)
 open("../artifact/index.html", "w", encoding="utf-8").write(html)
 print("written", len(html))
 
