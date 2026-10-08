@@ -62,7 +62,16 @@ Nada das etapas seguintes anda sem esta. Ordem sugerida de cima para baixo.
 - [ ] (D) Ficar no Mercado Pago ou trocar de gateway. Aberto desde
       2026-09-24. Decidir junto com o modelo de cobrança da correção por IA
       (Etapa 3), porque assinatura muda o requisito.
-- [ ] (D) Confirmar o preço de lançamento. Hoje está R$ 9,90 (era R$ 197).
+- [x] (D) Preço de lançamento. Decidido em 2026-10-07: três planos, ver
+      "Decisões travadas". O preço único de R$ 9,90 vitalício sai.
+- [ ] (C) Implementar os três planos. Hoje o código só conhece um produto
+      vitalício: `PRICE_BRL = 9.9` em `create-checkout`, o botão em
+      `app/build.py` e `entitlements` sem data de expiração. Falta: escolha
+      de plano na tela de compra, preço por plano na function, validade em
+      `entitlements` (30 e 90 dias) com o `mp-webhook` gravando o prazo, o
+      aviso de acesso vencido em Minha conta e o texto de `legal/termos.md`,
+      que hoje só fala em acesso vitalício. Mexer no gateway e publicar
+      function exige autorização do usuário na hora.
 - [ ] (U) Concluir a compra de teste em aba anônima, sem extensão nenhuma,
       e ver o acesso ser liberado de ponta a ponta. Dados do cartão de teste
       na Sessão 2026-09-24 de `docs/historico-sessoes.md`.
@@ -339,6 +348,10 @@ Não foram pedidos, apareceram ao consolidar a lista.
 
 - Canal de suporte ao aluno (um e-mail de contato já resolve no começo).
 - Página de venda e forma de divulgação. Hoje a primeira tela é o login.
+  **Pedido pelo usuário em 2026-10-07, para pensar depois:** uma tela de
+  apresentação antes do login e da compra, mostrando o que a plataforma
+  oferece. É o lugar natural para a tabela dos três planos (ver "Decisões
+  travadas"), então convém desenhar as duas coisas juntas.
 - Medição de uso, para saber onde os alunos param.
 - Plano do Supabase: conferir limites e política de pausa do plano grátis
   antes de depender dele com gente pagando.
@@ -355,3 +368,4 @@ Não foram pedidos, apareceram ao consolidar a lista.
 | Fonte da verdade | `consolidated/*.md` (texto) + `app/*.json` e `drills_data.py` (widgets) | 2026-09-02 |
 | Backend Supabase | Sim, mas **depois** do conteúdo dos 10 módulos | 2026-09-02 |
 | Ferramental | Python 3.13 + Git 2.55 + pacote `markdown` | 2026-09-02 |
+| Precificação | Três planos. **Sprint**, 30 dias, R$ 39,90: prova já marcada, só simulado e plano de emergência (Pareto). **Standard**, 90 dias, R$ 89,90: o mais vendido, tempo para os 4 pilares com calma. **Premium (Passaporte)**, vitalício, R$ 149,90: quem vai tentar a prova várias vezes ou planeja com mais de um ano de antecedência. Substitui o R$ 9,90 vitalício | 2026-10-07 |
