@@ -1,0 +1,1439 @@
+[
+  {
+    "id": "mod4-bs01",
+    "section": "writing",
+    "task_type": "Build a Sentence",
+    "exam_format": true,
+    "format": "build_sentence",
+    "skill": null,
+    "cefr_min": "A2",
+    "cefr_max": "B1",
+    "stimulus": {
+      "kind": "text",
+      "format": "plain",
+      "title": null,
+      "content": "I'm going to the bakery.",
+      "audio_ref": null
+    },
+    "group": "m4build2",
+    "prompt": "{1} {2} {3} {4} {5}?",
+    "text_format": "plain",
+    "options": [
+      "Can",
+      "for me",
+      "get",
+      "some bread",
+      "you"
+    ],
+    "answer": [
+      "Can",
+      "you",
+      "get",
+      "some bread",
+      "for me"
+    ],
+    "explanation": "Pergunta com modal: modal + sujeito + verbo na base.",
+    "hint": null,
+    "trap_codes": [],
+    "tags": [],
+    "status": "rascunho",
+    "source": {
+      "kind": "migrado",
+      "file": "app/build_sentence_data.py",
+      "ref": "bs01",
+      "live_on_site": true,
+      "answer_letter": "origem",
+      "build_map": null
+    }
+  },
+  {
+    "id": "mod4-bs02",
+    "section": "writing",
+    "task_type": "Build a Sentence",
+    "exam_format": true,
+    "format": "build_sentence",
+    "skill": null,
+    "cefr_min": "A2",
+    "cefr_max": "B1",
+    "stimulus": {
+      "kind": "text",
+      "format": "plain",
+      "title": null,
+      "content": "The new café opens tomorrow.",
+      "audio_ref": null
+    },
+    "group": "m4build2",
+    "prompt": "{1} {2} {3} {4} {5}?",
+    "text_format": "plain",
+    "options": [
+      "does",
+      "it",
+      "open",
+      "time",
+      "What"
+    ],
+    "answer": [
+      "What",
+      "time",
+      "does",
+      "it",
+      "open"
+    ],
+    "explanation": "Pergunta direta no presente: palavra interrogativa + does + sujeito + verbo na base, sem -s.",
+    "hint": null,
+    "trap_codes": [],
+    "tags": [],
+    "status": "rascunho",
+    "source": {
+      "kind": "migrado",
+      "file": "app/build_sentence_data.py",
+      "ref": "bs02",
+      "live_on_site": true,
+      "answer_letter": "origem",
+      "build_map": null
+    }
+  },
+  {
+    "id": "mod4-bs03",
+    "section": "writing",
+    "task_type": "Build a Sentence",
+    "exam_format": true,
+    "format": "build_sentence",
+    "skill": null,
+    "cefr_min": "A2",
+    "cefr_max": "B1",
+    "stimulus": {
+      "kind": "text",
+      "format": "plain",
+      "title": null,
+      "content": "I can't find my keys.",
+      "audio_ref": null
+    },
+    "group": "m4build2",
+    "prompt": "{1} {2} {3} {4} {5}?",
+    "text_format": "plain",
+    "options": [
+      "Did",
+      "in",
+      "look",
+      "you",
+      "your bag"
+    ],
+    "answer": [
+      "Did",
+      "you",
+      "look",
+      "in",
+      "your bag"
+    ],
+    "explanation": "Pergunta no passado: did + sujeito + verbo na base. O passado fica só no auxiliar.",
+    "hint": null,
+    "trap_codes": [],
+    "tags": [],
+    "status": "rascunho",
+    "source": {
+      "kind": "migrado",
+      "file": "app/build_sentence_data.py",
+      "ref": "bs03",
+      "live_on_site": true,
+      "answer_letter": "origem",
+      "build_map": null
+    }
+  },
+  {
+    "id": "mod4-bs04",
+    "section": "writing",
+    "task_type": "Build a Sentence",
+    "exam_format": true,
+    "format": "build_sentence",
+    "skill": null,
+    "cefr_min": "A2",
+    "cefr_max": "B1",
+    "stimulus": {
+      "kind": "text",
+      "format": "plain",
+      "title": null,
+      "content": "We watched a movie last night.",
+      "audio_ref": null
+    },
+    "group": "m4build2",
+    "prompt": "{1} {2} {3} {4} {5}?",
+    "text_format": "plain",
+    "options": [
+      "did",
+      "movie",
+      "watch",
+      "Which",
+      "you"
+    ],
+    "answer": [
+      "Which",
+      "movie",
+      "did",
+      "you",
+      "watch"
+    ],
+    "explanation": "\"Which\" vem colado ao substantivo que ele pergunta, antes do auxiliar.",
+    "hint": null,
+    "trap_codes": [],
+    "tags": [],
+    "status": "rascunho",
+    "source": {
+      "kind": "migrado",
+      "file": "app/build_sentence_data.py",
+      "ref": "bs04",
+      "live_on_site": true,
+      "answer_letter": "origem",
+      "build_map": null
+    }
+  },
+  {
+    "id": "mod4-bs05",
+    "section": "writing",
+    "task_type": "Build a Sentence",
+    "exam_format": true,
+    "format": "build_sentence",
+    "skill": null,
+    "cefr_min": "A2",
+    "cefr_max": "B1",
+    "stimulus": {
+      "kind": "text",
+      "format": "plain",
+      "title": null,
+      "content": "My sister just moved to Canada.",
+      "audio_ref": null
+    },
+    "group": "m4build2",
+    "prompt": "{1} {2} {3} {4} {5} her?",
+    "text_format": "plain",
+    "options": [
+      "do",
+      "How",
+      "often",
+      "talk to",
+      "you"
+    ],
+    "answer": [
+      "How",
+      "often",
+      "do",
+      "you",
+      "talk to"
+    ],
+    "explanation": "\"How often\" fica junto. Depois vem auxiliar + sujeito + verbo.",
+    "hint": null,
+    "trap_codes": [],
+    "tags": [],
+    "status": "rascunho",
+    "source": {
+      "kind": "migrado",
+      "file": "app/build_sentence_data.py",
+      "ref": "bs05",
+      "live_on_site": true,
+      "answer_letter": "origem",
+      "build_map": null
+    }
+  },
+  {
+    "id": "mod4-bs06",
+    "section": "writing",
+    "task_type": "Build a Sentence",
+    "exam_format": true,
+    "format": "build_sentence",
+    "skill": null,
+    "cefr_min": "A2",
+    "cefr_max": "B1",
+    "stimulus": {
+      "kind": "text",
+      "format": "plain",
+      "title": null,
+      "content": "I'm thinking about joining the gym.",
+      "audio_ref": null
+    },
+    "group": "m4build2",
+    "prompt": "{1} {2} {3} {4} {5}?",
+    "text_format": "plain",
+    "options": [
+      "a membership",
+      "cost",
+      "does",
+      "How",
+      "much"
+    ],
+    "answer": [
+      "How",
+      "much",
+      "does",
+      "a membership",
+      "cost"
+    ],
+    "explanation": "Sujeito no singular pede \"does\", e o verbo principal volta à base: cost, não costs.",
+    "hint": null,
+    "trap_codes": [],
+    "tags": [],
+    "status": "rascunho",
+    "source": {
+      "kind": "migrado",
+      "file": "app/build_sentence_data.py",
+      "ref": "bs06",
+      "live_on_site": true,
+      "answer_letter": "origem",
+      "build_map": null
+    }
+  },
+  {
+    "id": "mod4-bs07",
+    "section": "writing",
+    "task_type": "Build a Sentence",
+    "exam_format": true,
+    "format": "build_sentence",
+    "skill": null,
+    "cefr_min": "A2",
+    "cefr_max": "B1",
+    "stimulus": {
+      "kind": "text",
+      "format": "plain",
+      "title": null,
+      "content": "The meeting was moved to Friday.",
+      "audio_ref": null
+    },
+    "group": "m4build2",
+    "prompt": "{1} {2} {3} {4} {5}?",
+    "text_format": "plain",
+    "options": [
+      "about",
+      "the change",
+      "told",
+      "Who",
+      "you"
+    ],
+    "answer": [
+      "Who",
+      "told",
+      "you",
+      "about",
+      "the change"
+    ],
+    "explanation": "Quando \"who\" é o sujeito da pergunta, não entra auxiliar: Who told you, não Who did tell you.",
+    "hint": null,
+    "trap_codes": [],
+    "tags": [],
+    "status": "rascunho",
+    "source": {
+      "kind": "migrado",
+      "file": "app/build_sentence_data.py",
+      "ref": "bs07",
+      "live_on_site": true,
+      "answer_letter": "origem",
+      "build_map": null
+    }
+  },
+  {
+    "id": "mod4-bs08",
+    "section": "writing",
+    "task_type": "Build a Sentence",
+    "exam_format": true,
+    "format": "build_sentence",
+    "skill": null,
+    "cefr_min": "A2",
+    "cefr_max": "B1",
+    "stimulus": {
+      "kind": "text",
+      "format": "plain",
+      "title": null,
+      "content": "I baked a cake for the party.",
+      "audio_ref": null
+    },
+    "group": "m4build2",
+    "prompt": "{1} {2} {3} {4} {5}?",
+    "text_format": "plain",
+    "options": [
+      "anything",
+      "bring",
+      "I can",
+      "Is",
+      "there"
+    ],
+    "answer": [
+      "Is",
+      "there",
+      "anything",
+      "I can",
+      "bring"
+    ],
+    "explanation": "\"Is there\" inverte na pergunta. \"I can bring\" é oração relativa sem pronome: anything (that) I can bring.",
+    "hint": null,
+    "trap_codes": [],
+    "tags": [],
+    "status": "rascunho",
+    "source": {
+      "kind": "migrado",
+      "file": "app/build_sentence_data.py",
+      "ref": "bs08",
+      "live_on_site": true,
+      "answer_letter": "origem",
+      "build_map": null
+    }
+  },
+  {
+    "id": "mod4-bs09",
+    "section": "writing",
+    "task_type": "Build a Sentence",
+    "exam_format": true,
+    "format": "build_sentence",
+    "skill": null,
+    "cefr_min": "A2",
+    "cefr_max": "B1",
+    "stimulus": {
+      "kind": "text",
+      "format": "plain",
+      "title": null,
+      "content": "Where did you put the tickets?",
+      "audio_ref": null
+    },
+    "group": "m4build2",
+    "prompt": "I {1} {2} {3} {4} {5}.",
+    "text_format": "plain",
+    "options": [
+      "left",
+      "on",
+      "table",
+      "the kitchen",
+      "them"
+    ],
+    "answer": [
+      "left",
+      "them",
+      "on",
+      "the kitchen",
+      "table"
+    ],
+    "explanation": "Verbo + objeto + lugar. O pronome objeto vem logo depois do verbo.",
+    "hint": null,
+    "trap_codes": [],
+    "tags": [],
+    "status": "rascunho",
+    "source": {
+      "kind": "migrado",
+      "file": "app/build_sentence_data.py",
+      "ref": "bs09",
+      "live_on_site": true,
+      "answer_letter": "origem",
+      "build_map": null
+    }
+  },
+  {
+    "id": "mod4-bs10",
+    "section": "writing",
+    "task_type": "Build a Sentence",
+    "exam_format": true,
+    "format": "build_sentence",
+    "skill": null,
+    "cefr_min": "A2",
+    "cefr_max": "B1",
+    "stimulus": {
+      "kind": "text",
+      "format": "plain",
+      "title": null,
+      "content": "Why were you late this morning?",
+      "audio_ref": null
+    },
+    "group": "m4build2",
+    "prompt": "The bus {1} {2} {3} {4} {5} late.",
+    "text_format": "plain",
+    "options": [
+      "I",
+      "take",
+      "that",
+      "usually",
+      "was",
+      "were"
+    ],
+    "answer": [
+      "that",
+      "I",
+      "usually",
+      "take",
+      "was"
+    ],
+    "explanation": "O sujeito é \"the bus\", singular, então o verbo é \"was\". O advérbio de frequência vem antes do verbo principal.",
+    "hint": null,
+    "trap_codes": [],
+    "tags": [
+      "sobra-um-bloco"
+    ],
+    "status": "rascunho",
+    "source": {
+      "kind": "migrado",
+      "file": "app/build_sentence_data.py",
+      "ref": "bs10",
+      "live_on_site": true,
+      "answer_letter": "origem",
+      "build_map": null
+    }
+  },
+  {
+    "id": "mod4-bs11",
+    "section": "writing",
+    "task_type": "Build a Sentence",
+    "exam_format": true,
+    "format": "build_sentence",
+    "skill": null,
+    "cefr_min": "B1",
+    "cefr_max": "B2",
+    "stimulus": {
+      "kind": "text",
+      "format": "plain",
+      "title": null,
+      "content": "The library closes early today.",
+      "audio_ref": null
+    },
+    "group": "m4build2",
+    "prompt": "{1} {2} {3} {4} {5}?",
+    "text_format": "plain",
+    "options": [
+      "Do",
+      "it closes",
+      "know",
+      "what time",
+      "you"
+    ],
+    "answer": [
+      "Do",
+      "you",
+      "know",
+      "what time",
+      "it closes"
+    ],
+    "explanation": "Pergunta indireta: depois de \"Do you know\", a ordem é de afirmação (it closes), sem auxiliar.",
+    "hint": null,
+    "trap_codes": [],
+    "tags": [],
+    "status": "rascunho",
+    "source": {
+      "kind": "migrado",
+      "file": "app/build_sentence_data.py",
+      "ref": "bs11",
+      "live_on_site": true,
+      "answer_letter": "origem",
+      "build_map": null
+    }
+  },
+  {
+    "id": "mod4-bs12",
+    "section": "writing",
+    "task_type": "Build a Sentence",
+    "exam_format": true,
+    "format": "build_sentence",
+    "skill": null,
+    "cefr_min": "B1",
+    "cefr_max": "B2",
+    "stimulus": {
+      "kind": "text",
+      "format": "plain",
+      "title": null,
+      "content": "I heard the professor canceled class.",
+      "audio_ref": null
+    },
+    "group": "m4build2",
+    "prompt": "{1} {2} {3} {4} the exam {5} {6}?",
+    "text_format": "plain",
+    "options": [
+      "Can",
+      "if",
+      "is still",
+      "on Monday",
+      "tell me",
+      "you"
+    ],
+    "answer": [
+      "Can",
+      "you",
+      "tell me",
+      "if",
+      "is still",
+      "on Monday"
+    ],
+    "explanation": "Pergunta indireta de sim ou não usa \"if\" ou \"whether\", com sujeito antes do verbo.",
+    "hint": null,
+    "trap_codes": [],
+    "tags": [],
+    "status": "rascunho",
+    "source": {
+      "kind": "migrado",
+      "file": "app/build_sentence_data.py",
+      "ref": "bs12",
+      "live_on_site": true,
+      "answer_letter": "origem",
+      "build_map": null
+    }
+  },
+  {
+    "id": "mod4-bs13",
+    "section": "writing",
+    "task_type": "Build a Sentence",
+    "exam_format": true,
+    "format": "build_sentence",
+    "skill": null,
+    "cefr_min": "B1",
+    "cefr_max": "B2",
+    "stimulus": {
+      "kind": "text",
+      "format": "plain",
+      "title": null,
+      "content": "Sara is looking for a new apartment.",
+      "audio_ref": null
+    },
+    "group": "m4build2",
+    "prompt": "{1} {2} {3} {4} she {5} {6}?",
+    "text_format": "plain",
+    "options": [
+      "Do",
+      "know",
+      "to live",
+      "wants",
+      "where",
+      "you"
+    ],
+    "answer": [
+      "Do",
+      "you",
+      "know",
+      "where",
+      "wants",
+      "to live"
+    ],
+    "explanation": "Dentro da pergunta indireta o verbo concorda normalmente: she wants, com -s.",
+    "hint": null,
+    "trap_codes": [],
+    "tags": [],
+    "status": "rascunho",
+    "source": {
+      "kind": "migrado",
+      "file": "app/build_sentence_data.py",
+      "ref": "bs13",
+      "live_on_site": true,
+      "answer_letter": "origem",
+      "build_map": null
+    }
+  },
+  {
+    "id": "mod4-bs14",
+    "section": "writing",
+    "task_type": "Build a Sentence",
+    "exam_format": true,
+    "format": "build_sentence",
+    "skill": null,
+    "cefr_min": "B1",
+    "cefr_max": "B2",
+    "stimulus": {
+      "kind": "text",
+      "format": "plain",
+      "title": null,
+      "content": "I ordered a laptop online last week.",
+      "audio_ref": null
+    },
+    "group": "m4build2",
+    "prompt": "{1} {2} {3} {4} it {5} {6}?",
+    "text_format": "plain",
+    "options": [
+      "arrive",
+      "Have",
+      "they",
+      "told you",
+      "when",
+      "will"
+    ],
+    "answer": [
+      "Have",
+      "they",
+      "told you",
+      "when",
+      "will",
+      "arrive"
+    ],
+    "explanation": "Present perfect na pergunta principal e ordem de afirmação na parte indireta: when it will arrive.",
+    "hint": null,
+    "trap_codes": [],
+    "tags": [],
+    "status": "rascunho",
+    "source": {
+      "kind": "migrado",
+      "file": "app/build_sentence_data.py",
+      "ref": "bs14",
+      "live_on_site": true,
+      "answer_letter": "origem",
+      "build_map": null
+    }
+  },
+  {
+    "id": "mod4-bs15",
+    "section": "writing",
+    "task_type": "Build a Sentence",
+    "exam_format": true,
+    "format": "build_sentence",
+    "skill": null,
+    "cefr_min": "B1",
+    "cefr_max": "B2",
+    "stimulus": {
+      "kind": "text",
+      "format": "plain",
+      "title": null,
+      "content": "What did the manager ask you?",
+      "audio_ref": null
+    },
+    "group": "m4build2",
+    "prompt": "She {1} {2} {3} {4} {5} on Saturday.",
+    "text_format": "plain",
+    "options": [
+      "can I",
+      "I could",
+      "to know",
+      "wanted",
+      "whether",
+      "work"
+    ],
+    "answer": [
+      "wanted",
+      "to know",
+      "whether",
+      "I could",
+      "work"
+    ],
+    "explanation": "Discurso indireto: sem inversão (I could, não could I) e com o modal recuado para o passado.",
+    "hint": null,
+    "trap_codes": [],
+    "tags": [
+      "sobra-um-bloco"
+    ],
+    "status": "rascunho",
+    "source": {
+      "kind": "migrado",
+      "file": "app/build_sentence_data.py",
+      "ref": "bs15",
+      "live_on_site": true,
+      "answer_letter": "origem",
+      "build_map": null
+    }
+  },
+  {
+    "id": "mod4-bs16",
+    "section": "writing",
+    "task_type": "Build a Sentence",
+    "exam_format": true,
+    "format": "build_sentence",
+    "skill": null,
+    "cefr_min": "B1",
+    "cefr_max": "B2",
+    "stimulus": {
+      "kind": "text",
+      "format": "plain",
+      "title": null,
+      "content": "How was the restaurant?",
+      "audio_ref": null
+    },
+    "group": "m4build2",
+    "prompt": "The food {1} {2} {3} {4} {5}.",
+    "text_format": "plain",
+    "options": [
+      "delicious",
+      "it",
+      "ordered",
+      "that",
+      "was",
+      "we"
+    ],
+    "answer": [
+      "that",
+      "we",
+      "ordered",
+      "was",
+      "delicious"
+    ],
+    "explanation": "Na oração relativa o pronome não se repete: the food that we ordered, nunca that we ordered it.",
+    "hint": null,
+    "trap_codes": [],
+    "tags": [
+      "sobra-um-bloco"
+    ],
+    "status": "rascunho",
+    "source": {
+      "kind": "migrado",
+      "file": "app/build_sentence_data.py",
+      "ref": "bs16",
+      "live_on_site": true,
+      "answer_letter": "origem",
+      "build_map": null
+    }
+  },
+  {
+    "id": "mod4-bs17",
+    "section": "writing",
+    "task_type": "Build a Sentence",
+    "exam_format": true,
+    "format": "build_sentence",
+    "skill": null,
+    "cefr_min": "B1",
+    "cefr_max": "B2",
+    "stimulus": {
+      "kind": "text",
+      "format": "plain",
+      "title": null,
+      "content": "Did you finish the report?",
+      "audio_ref": null
+    },
+    "group": "m4build2",
+    "prompt": "Yes, it {1} {2} {3} {4} {5}.",
+    "text_format": "plain",
+    "options": [
+      "sent",
+      "the client",
+      "this morning",
+      "to",
+      "was"
+    ],
+    "answer": [
+      "was",
+      "sent",
+      "to",
+      "the client",
+      "this morning"
+    ],
+    "explanation": "Voz passiva no passado: was + particípio. A expressão de tempo fecha a frase.",
+    "hint": null,
+    "trap_codes": [],
+    "tags": [],
+    "status": "rascunho",
+    "source": {
+      "kind": "migrado",
+      "file": "app/build_sentence_data.py",
+      "ref": "bs17",
+      "live_on_site": true,
+      "answer_letter": "origem",
+      "build_map": null
+    }
+  },
+  {
+    "id": "mod4-bs18",
+    "section": "writing",
+    "task_type": "Build a Sentence",
+    "exam_format": true,
+    "format": "build_sentence",
+    "skill": null,
+    "cefr_min": "B1",
+    "cefr_max": "B2",
+    "stimulus": {
+      "kind": "text",
+      "format": "plain",
+      "title": null,
+      "content": "I'm not sure which course to take.",
+      "audio_ref": null
+    },
+    "group": "m4build2",
+    "prompt": "{1} {2} {3} {4} the two courses {5} {6}?",
+    "text_format": "plain",
+    "options": [
+      "are",
+      "Could",
+      "different",
+      "explain",
+      "how",
+      "you"
+    ],
+    "answer": [
+      "Could",
+      "you",
+      "explain",
+      "how",
+      "are",
+      "different"
+    ],
+    "explanation": "\"Explain how\" abre uma pergunta indireta, com sujeito antes do verbo: the two courses are.",
+    "hint": null,
+    "trap_codes": [],
+    "tags": [],
+    "status": "rascunho",
+    "source": {
+      "kind": "migrado",
+      "file": "app/build_sentence_data.py",
+      "ref": "bs18",
+      "live_on_site": true,
+      "answer_letter": "origem",
+      "build_map": null
+    }
+  },
+  {
+    "id": "mod4-bs19",
+    "section": "writing",
+    "task_type": "Build a Sentence",
+    "exam_format": true,
+    "format": "build_sentence",
+    "skill": null,
+    "cefr_min": "B1",
+    "cefr_max": "B2",
+    "stimulus": {
+      "kind": "text",
+      "format": "plain",
+      "title": null,
+      "content": "The concert tickets sold out in an hour.",
+      "audio_ref": null
+    },
+    "group": "m4build2",
+    "prompt": "{1} {2} {3} {4} {5} to buy them.",
+    "text_format": "plain",
+    "options": [
+      "how many",
+      "I",
+      "people",
+      "tried",
+      "wonder"
+    ],
+    "answer": [
+      "I",
+      "wonder",
+      "how many",
+      "people",
+      "tried"
+    ],
+    "explanation": "\"I wonder\" introduz pergunta indireta e a frase termina com ponto final, não interrogação.",
+    "hint": null,
+    "trap_codes": [],
+    "tags": [],
+    "status": "rascunho",
+    "source": {
+      "kind": "migrado",
+      "file": "app/build_sentence_data.py",
+      "ref": "bs19",
+      "live_on_site": true,
+      "answer_letter": "origem",
+      "build_map": null
+    }
+  },
+  {
+    "id": "mod4-bs20",
+    "section": "writing",
+    "task_type": "Build a Sentence",
+    "exam_format": true,
+    "format": "build_sentence",
+    "skill": null,
+    "cefr_min": "B1",
+    "cefr_max": "B2",
+    "stimulus": {
+      "kind": "text",
+      "format": "plain",
+      "title": null,
+      "content": "Who is that woman by the door?",
+      "audio_ref": null
+    },
+    "group": "m4build2",
+    "prompt": "She is the {1} {2} {3} {4} {5}.",
+    "text_format": "plain",
+    "options": [
+      "bridge",
+      "designed",
+      "engineer",
+      "the new",
+      "who"
+    ],
+    "answer": [
+      "engineer",
+      "who",
+      "designed",
+      "the new",
+      "bridge"
+    ],
+    "explanation": "Oração relativa com \"who\" para pessoa, logo depois do substantivo que ela explica.",
+    "hint": null,
+    "trap_codes": [],
+    "tags": [],
+    "status": "rascunho",
+    "source": {
+      "kind": "migrado",
+      "file": "app/build_sentence_data.py",
+      "ref": "bs20",
+      "live_on_site": true,
+      "answer_letter": "origem",
+      "build_map": null
+    }
+  },
+  {
+    "id": "mod4-bs21",
+    "section": "writing",
+    "task_type": "Build a Sentence",
+    "exam_format": true,
+    "format": "build_sentence",
+    "skill": null,
+    "cefr_min": "C1",
+    "cefr_max": "C1",
+    "stimulus": {
+      "kind": "text",
+      "format": "plain",
+      "title": null,
+      "content": "The results were surprising.",
+      "audio_ref": null
+    },
+    "group": "m4build2",
+    "prompt": "{1} {2} {3} {4} {5} the numbers {6} {7}?",
+    "text_format": "plain",
+    "options": [
+      "any idea",
+      "changed",
+      "Do",
+      "have",
+      "so much",
+      "why",
+      "you"
+    ],
+    "answer": [
+      "Do",
+      "you",
+      "have",
+      "any idea",
+      "why",
+      "changed",
+      "so much"
+    ],
+    "explanation": "\"Do you have any idea why\" também pede ordem de afirmação depois: the numbers changed.",
+    "hint": null,
+    "trap_codes": [],
+    "tags": [],
+    "status": "rascunho",
+    "source": {
+      "kind": "migrado",
+      "file": "app/build_sentence_data.py",
+      "ref": "bs21",
+      "live_on_site": true,
+      "answer_letter": "origem",
+      "build_map": null
+    }
+  },
+  {
+    "id": "mod4-bs22",
+    "section": "writing",
+    "task_type": "Build a Sentence",
+    "exam_format": true,
+    "format": "build_sentence",
+    "skill": null,
+    "cefr_min": "C1",
+    "cefr_max": "C1",
+    "stimulus": {
+      "kind": "text",
+      "format": "plain",
+      "title": null,
+      "content": "I missed the announcement.",
+      "audio_ref": null
+    },
+    "group": "m4build2",
+    "prompt": "They {1} {2} {3} {4} {5} to stay late.",
+    "text_format": "plain",
+    "options": [
+      "anyone",
+      "asked",
+      "whether",
+      "will be",
+      "willing",
+      "would be"
+    ],
+    "answer": [
+      "asked",
+      "whether",
+      "anyone",
+      "would be",
+      "willing"
+    ],
+    "explanation": "Relato no passado: o \"will\" da fala original vira \"would\".",
+    "hint": null,
+    "trap_codes": [],
+    "tags": [
+      "sobra-um-bloco"
+    ],
+    "status": "rascunho",
+    "source": {
+      "kind": "migrado",
+      "file": "app/build_sentence_data.py",
+      "ref": "bs22",
+      "live_on_site": true,
+      "answer_letter": "origem",
+      "build_map": null
+    }
+  },
+  {
+    "id": "mod4-bs23",
+    "section": "writing",
+    "task_type": "Build a Sentence",
+    "exam_format": true,
+    "format": "build_sentence",
+    "skill": null,
+    "cefr_min": "C1",
+    "cefr_max": "C1",
+    "stimulus": {
+      "kind": "text",
+      "format": "plain",
+      "title": null,
+      "content": "How did you solve the problem?",
+      "audio_ref": null
+    },
+    "group": "m4build2",
+    "prompt": "I followed {1} {2} {3} {4} {5} the technician.",
+    "text_format": "plain",
+    "options": [
+      "by",
+      "provided",
+      "that",
+      "the instructions",
+      "they",
+      "were"
+    ],
+    "answer": [
+      "the instructions",
+      "that",
+      "were",
+      "provided",
+      "by"
+    ],
+    "explanation": "Relativa na passiva com agente. \"That\" já é o sujeito, então \"they\" sobra.",
+    "hint": null,
+    "trap_codes": [],
+    "tags": [
+      "sobra-um-bloco"
+    ],
+    "status": "rascunho",
+    "source": {
+      "kind": "migrado",
+      "file": "app/build_sentence_data.py",
+      "ref": "bs23",
+      "live_on_site": true,
+      "answer_letter": "origem",
+      "build_map": null
+    }
+  },
+  {
+    "id": "mod4-bs24",
+    "section": "writing",
+    "task_type": "Build a Sentence",
+    "exam_format": true,
+    "format": "build_sentence",
+    "skill": null,
+    "cefr_min": "C1",
+    "cefr_max": "C1",
+    "stimulus": {
+      "kind": "text",
+      "format": "plain",
+      "title": null,
+      "content": "Is the new policy working?",
+      "audio_ref": null
+    },
+    "group": "m4build2",
+    "prompt": "It is {1} {2} {3} {4} {5} costs.",
+    "text_format": "plain",
+    "options": [
+      "it has",
+      "reduced",
+      "to say",
+      "too early",
+      "whether"
+    ],
+    "answer": [
+      "too early",
+      "to say",
+      "whether",
+      "it has",
+      "reduced"
+    ],
+    "explanation": "\"Too + adjetivo + to + verbo\", seguido de pergunta indireta com present perfect.",
+    "hint": null,
+    "trap_codes": [],
+    "tags": [],
+    "status": "rascunho",
+    "source": {
+      "kind": "migrado",
+      "file": "app/build_sentence_data.py",
+      "ref": "bs24",
+      "live_on_site": true,
+      "answer_letter": "origem",
+      "build_map": null
+    }
+  },
+  {
+    "id": "mod4-bs25",
+    "section": "writing",
+    "task_type": "Build a Sentence",
+    "exam_format": true,
+    "format": "build_sentence",
+    "skill": null,
+    "cefr_min": "C1",
+    "cefr_max": "C1",
+    "stimulus": {
+      "kind": "text",
+      "format": "plain",
+      "title": null,
+      "content": "Why didn't you call me?",
+      "audio_ref": null
+    },
+    "group": "m4build2",
+    "prompt": "{1} {2} {3} {4} {5}, I would have called.",
+    "text_format": "plain",
+    "options": [
+      "I had",
+      "If",
+      "known",
+      "waiting",
+      "you were"
+    ],
+    "answer": [
+      "If",
+      "I had",
+      "known",
+      "you were",
+      "waiting"
+    ],
+    "explanation": "Terceiro condicional: if + past perfect, would have + particípio.",
+    "hint": null,
+    "trap_codes": [],
+    "tags": [],
+    "status": "rascunho",
+    "source": {
+      "kind": "migrado",
+      "file": "app/build_sentence_data.py",
+      "ref": "bs25",
+      "live_on_site": true,
+      "answer_letter": "origem",
+      "build_map": null
+    }
+  },
+  {
+    "id": "mod4-bs26",
+    "section": "writing",
+    "task_type": "Build a Sentence",
+    "exam_format": true,
+    "format": "build_sentence",
+    "skill": null,
+    "cefr_min": "C1",
+    "cefr_max": "C1",
+    "stimulus": {
+      "kind": "text",
+      "format": "plain",
+      "title": null,
+      "content": "What did the letter say?",
+      "audio_ref": null
+    },
+    "group": "m4build2",
+    "prompt": "{1} {2} {3} {4}, {5} no reason was given.",
+    "text_format": "plain",
+    "options": [
+      "but",
+      "Not only",
+      "rejected",
+      "the application",
+      "was"
+    ],
+    "answer": [
+      "Not only",
+      "was",
+      "the application",
+      "rejected",
+      "but"
+    ],
+    "explanation": "\"Not only\" no início da frase obriga a inversão: was the application rejected.",
+    "hint": null,
+    "trap_codes": [],
+    "tags": [],
+    "status": "rascunho",
+    "source": {
+      "kind": "migrado",
+      "file": "app/build_sentence_data.py",
+      "ref": "bs26",
+      "live_on_site": true,
+      "answer_letter": "origem",
+      "build_map": null
+    }
+  },
+  {
+    "id": "mod4-bs27",
+    "section": "writing",
+    "task_type": "Build a Sentence",
+    "exam_format": true,
+    "format": "build_sentence",
+    "skill": null,
+    "cefr_min": "C1",
+    "cefr_max": "C1",
+    "stimulus": {
+      "kind": "text",
+      "format": "plain",
+      "title": null,
+      "content": "Have you met the new director?",
+      "audio_ref": null
+    },
+    "group": "m4build2",
+    "prompt": "No, but I {1} {2} {3} {4} {5} a hospital.",
+    "text_format": "plain",
+    "options": [
+      "run",
+      "she",
+      "that",
+      "used to",
+      "was told"
+    ],
+    "answer": [
+      "was told",
+      "that",
+      "she",
+      "used to",
+      "run"
+    ],
+    "explanation": "Passiva de relato (I was told that) e \"used to\" + verbo na base para hábito passado.",
+    "hint": null,
+    "trap_codes": [],
+    "tags": [],
+    "status": "rascunho",
+    "source": {
+      "kind": "migrado",
+      "file": "app/build_sentence_data.py",
+      "ref": "bs27",
+      "live_on_site": true,
+      "answer_letter": "origem",
+      "build_map": null
+    }
+  },
+  {
+    "id": "mod4-bs28",
+    "section": "writing",
+    "task_type": "Build a Sentence",
+    "exam_format": true,
+    "format": "build_sentence",
+    "skill": null,
+    "cefr_min": "C1",
+    "cefr_max": "C1",
+    "stimulus": {
+      "kind": "text",
+      "format": "plain",
+      "title": null,
+      "content": "The project is behind schedule.",
+      "audio_ref": null
+    },
+    "group": "m4build2",
+    "prompt": "{1} {2} {3} {4} {5} the delay?",
+    "text_format": "plain",
+    "options": [
+      "caused",
+      "telling me",
+      "what",
+      "Would",
+      "you mind"
+    ],
+    "answer": [
+      "Would",
+      "you mind",
+      "telling me",
+      "what",
+      "caused"
+    ],
+    "explanation": "\"Would you mind\" pede verbo em -ing. Na parte indireta, \"what\" é o sujeito e não há auxiliar.",
+    "hint": null,
+    "trap_codes": [],
+    "tags": [],
+    "status": "rascunho",
+    "source": {
+      "kind": "migrado",
+      "file": "app/build_sentence_data.py",
+      "ref": "bs28",
+      "live_on_site": true,
+      "answer_letter": "origem",
+      "build_map": null
+    }
+  },
+  {
+    "id": "mod4-bs29",
+    "section": "writing",
+    "task_type": "Build a Sentence",
+    "exam_format": true,
+    "format": "build_sentence",
+    "skill": null,
+    "cefr_min": "C1",
+    "cefr_max": "C1",
+    "stimulus": {
+      "kind": "text",
+      "format": "plain",
+      "title": null,
+      "content": "Did everyone agree with the plan?",
+      "audio_ref": null
+    },
+    "group": "m4build2",
+    "prompt": "{1} {2} {3} {4} {5} supported it.",
+    "text_format": "plain",
+    "options": [
+      "anyone",
+      "attended",
+      "Hardly",
+      "the meeting",
+      "who"
+    ],
+    "answer": [
+      "Hardly",
+      "anyone",
+      "who",
+      "attended",
+      "the meeting"
+    ],
+    "explanation": "\"Hardly anyone\" é um sujeito de sentido negativo. A relativa fica entre o sujeito e o verbo principal.",
+    "hint": null,
+    "trap_codes": [],
+    "tags": [],
+    "status": "rascunho",
+    "source": {
+      "kind": "migrado",
+      "file": "app/build_sentence_data.py",
+      "ref": "bs29",
+      "live_on_site": true,
+      "answer_letter": "origem",
+      "build_map": null
+    }
+  },
+  {
+    "id": "mod4-bs30",
+    "section": "writing",
+    "task_type": "Build a Sentence",
+    "exam_format": true,
+    "format": "build_sentence",
+    "skill": null,
+    "cefr_min": "C1",
+    "cefr_max": "C1",
+    "stimulus": {
+      "kind": "text",
+      "format": "plain",
+      "title": null,
+      "content": "I can't decide between the two offers.",
+      "audio_ref": null
+    },
+    "group": "m4build2",
+    "prompt": "{1} {2} {3} {4} {5} you will learn.",
+    "text_format": "plain",
+    "options": [
+      "how much",
+      "is",
+      "matters",
+      "most",
+      "What"
+    ],
+    "answer": [
+      "What",
+      "matters",
+      "most",
+      "is",
+      "how much"
+    ],
+    "explanation": "Oração com \"what\" funcionando como sujeito: What matters most is...",
+    "hint": null,
+    "trap_codes": [],
+    "tags": [],
+    "status": "rascunho",
+    "source": {
+      "kind": "migrado",
+      "file": "app/build_sentence_data.py",
+      "ref": "bs30",
+      "live_on_site": true,
+      "answer_letter": "origem",
+      "build_map": null
+    }
+  }
+]

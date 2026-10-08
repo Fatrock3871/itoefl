@@ -1,0 +1,1649 @@
+[
+  {
+    "id": "mod1-c1.c1.1",
+    "section": "reading",
+    "task_type": "Read an Academic Passage",
+    "exam_format": true,
+    "format": "mcq",
+    "skill": null,
+    "cefr_min": "B2",
+    "cefr_max": "C1",
+    "stimulus": {
+      "kind": "text",
+      "format": "html",
+      "title": "Drill C1 · Ciências naturais · alvo: 6 min",
+      "content": "<p><strong>PASSAGE: Bioluminescence in Marine Organisms</strong></p>\n<p>Bioluminescence (the production and emission of light by a living organism) is remarkably common in the ocean, appearing in bacteria, jellyfish, fish, and even some sharks. Unlike the light produced by a bulb, which wastes most of its energy as heat, bioluminescent light is generated through a highly efficient chemical reaction, typically involving a light-emitting molecule called luciferin and an enzyme called luciferase. Because so little energy is lost as heat, biologists sometimes refer to this phenomenon as \"cold light.\"</p>\n<p>The functions of bioluminescence vary considerably across species, though three purposes appear again and again. Some organisms use light defensively: certain species of squid release a luminous cloud instead of ink, startling predators and buying time to escape. Others use it as a hunting tool. The anglerfish, perhaps the most famous example, dangles a glowing lure above its mouth to attract smaller prey close enough to seize. Still others use light for communication, particularly in the deep sea, where darkness is nearly absolute and visual signals cannot rely on ambient light. Certain species of ostracods, tiny crustaceans, produce synchronized light displays to attract mates.</p>\n<p>What makes bioluminescence especially interesting to evolutionary biologists is that it did not evolve just once. Genetic and biochemical evidence indicates that the capacity for bioluminescence has arisen independently dozens of times across unrelated lineages, using different chemical pathways to achieve a similar outcome. This pattern, in which unrelated organisms evolve similar traits independently, is known as convergent evolution, and bioluminescence is considered one of its most striking examples.</p>",
+      "audio_ref": null
+    },
+    "group": "mod1-c1",
+    "prompt": "Ideia principal. What is the main idea of the passage?",
+    "text_format": "html",
+    "options": {
+      "A": "Bioluminescence is a rare adaptation found only in a few deep-sea species.",
+      "B": "Bioluminescence is a widespread, chemically efficient trait that serves multiple functions and evolved independently many times.",
+      "C": "The anglerfish is the most important example of bioluminescence.",
+      "D": "Bioluminescent light is less efficient than artificial light."
+    },
+    "answer": "B",
+    "explanation": "Cobre os três eixos (o que é + eficiência, funções, evolução independente). (A) contradiz \"remarkably common\"; (C) é detalhe; (D) inverte a comparação com a lâmpada.",
+    "hint": null,
+    "trap_codes": [],
+    "tags": [],
+    "status": "rascunho",
+    "source": {
+      "kind": "migrado",
+      "file": "app/drills_data.py",
+      "ref": "MOD1_ACTION_DRILLS_C:mod1-c1#C1.1",
+      "live_on_site": true,
+      "answer_letter": "origem",
+      "build_map": {
+        "A": "C",
+        "B": "B",
+        "C": "D",
+        "D": "A"
+      }
+    }
+  },
+  {
+    "id": "mod1-c1.c1.2",
+    "section": "reading",
+    "task_type": "Read an Academic Passage",
+    "exam_format": true,
+    "format": "mcq",
+    "skill": null,
+    "cefr_min": "B2",
+    "cefr_max": "C1",
+    "stimulus": {
+      "kind": "text",
+      "format": "html",
+      "title": "Drill C1 · Ciências naturais · alvo: 6 min",
+      "content": "<p><strong>PASSAGE: Bioluminescence in Marine Organisms</strong></p>\n<p>Bioluminescence (the production and emission of light by a living organism) is remarkably common in the ocean, appearing in bacteria, jellyfish, fish, and even some sharks. Unlike the light produced by a bulb, which wastes most of its energy as heat, bioluminescent light is generated through a highly efficient chemical reaction, typically involving a light-emitting molecule called luciferin and an enzyme called luciferase. Because so little energy is lost as heat, biologists sometimes refer to this phenomenon as \"cold light.\"</p>\n<p>The functions of bioluminescence vary considerably across species, though three purposes appear again and again. Some organisms use light defensively: certain species of squid release a luminous cloud instead of ink, startling predators and buying time to escape. Others use it as a hunting tool. The anglerfish, perhaps the most famous example, dangles a glowing lure above its mouth to attract smaller prey close enough to seize. Still others use light for communication, particularly in the deep sea, where darkness is nearly absolute and visual signals cannot rely on ambient light. Certain species of ostracods, tiny crustaceans, produce synchronized light displays to attract mates.</p>\n<p>What makes bioluminescence especially interesting to evolutionary biologists is that it did not evolve just once. Genetic and biochemical evidence indicates that the capacity for bioluminescence has arisen independently dozens of times across unrelated lineages, using different chemical pathways to achieve a similar outcome. This pattern, in which unrelated organisms evolve similar traits independently, is known as convergent evolution, and bioluminescence is considered one of its most striking examples.</p>",
+      "audio_ref": null
+    },
+    "group": "mod1-c1",
+    "prompt": "Detalhe. Why is bioluminescent light sometimes called \"cold light\"?",
+    "text_format": "html",
+    "options": {
+      "A": "It only occurs in cold, deep-sea environments.",
+      "B": "It is produced by organisms that live in low-temperature waters.",
+      "C": "The reaction that produces it wastes very little energy as heat.",
+      "D": "It appears blue or white, resembling ice."
+    },
+    "answer": "C",
+    "explanation": "Relação causal explícita: \"Because so little energy is lost as heat...\". (A)/(B) confundem o nome com temperatura ambiente; (D) infere cor sem base.",
+    "hint": null,
+    "trap_codes": [],
+    "tags": [],
+    "status": "rascunho",
+    "source": {
+      "kind": "migrado",
+      "file": "app/drills_data.py",
+      "ref": "MOD1_ACTION_DRILLS_C:mod1-c1#C1.2",
+      "live_on_site": true,
+      "answer_letter": "origem",
+      "build_map": {
+        "A": "A",
+        "B": "C",
+        "C": "D",
+        "D": "B"
+      }
+    }
+  },
+  {
+    "id": "mod1-c1.c1.3",
+    "section": "reading",
+    "task_type": "Read an Academic Passage",
+    "exam_format": true,
+    "format": "mcq",
+    "skill": null,
+    "cefr_min": "B2",
+    "cefr_max": "C1",
+    "stimulus": {
+      "kind": "text",
+      "format": "html",
+      "title": "Drill C1 · Ciências naturais · alvo: 6 min",
+      "content": "<p><strong>PASSAGE: Bioluminescence in Marine Organisms</strong></p>\n<p>Bioluminescence (the production and emission of light by a living organism) is remarkably common in the ocean, appearing in bacteria, jellyfish, fish, and even some sharks. Unlike the light produced by a bulb, which wastes most of its energy as heat, bioluminescent light is generated through a highly efficient chemical reaction, typically involving a light-emitting molecule called luciferin and an enzyme called luciferase. Because so little energy is lost as heat, biologists sometimes refer to this phenomenon as \"cold light.\"</p>\n<p>The functions of bioluminescence vary considerably across species, though three purposes appear again and again. Some organisms use light defensively: certain species of squid release a luminous cloud instead of ink, startling predators and buying time to escape. Others use it as a hunting tool. The anglerfish, perhaps the most famous example, dangles a glowing lure above its mouth to attract smaller prey close enough to seize. Still others use light for communication, particularly in the deep sea, where darkness is nearly absolute and visual signals cannot rely on ambient light. Certain species of ostracods, tiny crustaceans, produce synchronized light displays to attract mates.</p>\n<p>What makes bioluminescence especially interesting to evolutionary biologists is that it did not evolve just once. Genetic and biochemical evidence indicates that the capacity for bioluminescence has arisen independently dozens of times across unrelated lineages, using different chemical pathways to achieve a similar outcome. This pattern, in which unrelated organisms evolve similar traits independently, is known as convergent evolution, and bioluminescence is considered one of its most striking examples.</p>",
+      "audio_ref": null
+    },
+    "group": "mod1-c1",
+    "prompt": "Detalhe negativo. Which is NOT mentioned as a function of bioluminescence?",
+    "text_format": "html",
+    "options": {
+      "A": "Startling predators",
+      "B": "Attracting prey",
+      "C": "Attracting mates",
+      "D": "Regulating body temperature"
+    },
+    "answer": "D",
+    "explanation": "O parágrafo 2 lista defesa, caça e comunicação/atração de parceiros. Regulação de temperatura nunca aparece.",
+    "hint": null,
+    "trap_codes": [],
+    "tags": [],
+    "status": "rascunho",
+    "source": {
+      "kind": "migrado",
+      "file": "app/drills_data.py",
+      "ref": "MOD1_ACTION_DRILLS_C:mod1-c1#C1.3",
+      "live_on_site": true,
+      "answer_letter": "origem",
+      "build_map": {
+        "A": "A",
+        "B": "B",
+        "C": "D",
+        "D": "C"
+      }
+    }
+  },
+  {
+    "id": "mod1-c1.c1.4",
+    "section": "reading",
+    "task_type": "Read an Academic Passage",
+    "exam_format": true,
+    "format": "mcq",
+    "skill": null,
+    "cefr_min": "B2",
+    "cefr_max": "C1",
+    "stimulus": {
+      "kind": "text",
+      "format": "html",
+      "title": "Drill C1 · Ciências naturais · alvo: 6 min",
+      "content": "<p><strong>PASSAGE: Bioluminescence in Marine Organisms</strong></p>\n<p>Bioluminescence (the production and emission of light by a living organism) is remarkably common in the ocean, appearing in bacteria, jellyfish, fish, and even some sharks. Unlike the light produced by a bulb, which wastes most of its energy as heat, bioluminescent light is generated through a highly efficient chemical reaction, typically involving a light-emitting molecule called luciferin and an enzyme called luciferase. Because so little energy is lost as heat, biologists sometimes refer to this phenomenon as \"cold light.\"</p>\n<p>The functions of bioluminescence vary considerably across species, though three purposes appear again and again. Some organisms use light defensively: certain species of squid release a luminous cloud instead of ink, startling predators and buying time to escape. Others use it as a hunting tool. The anglerfish, perhaps the most famous example, dangles a glowing lure above its mouth to attract smaller prey close enough to seize. Still others use light for communication, particularly in the deep sea, where darkness is nearly absolute and visual signals cannot rely on ambient light. Certain species of ostracods, tiny crustaceans, produce synchronized light displays to attract mates.</p>\n<p>What makes bioluminescence especially interesting to evolutionary biologists is that it did not evolve just once. Genetic and biochemical evidence indicates that the capacity for bioluminescence has arisen independently dozens of times across unrelated lineages, using different chemical pathways to achieve a similar outcome. This pattern, in which unrelated organisms evolve similar traits independently, is known as convergent evolution, and bioluminescence is considered one of its most striking examples.</p>",
+      "audio_ref": null
+    },
+    "group": "mod1-c1",
+    "prompt": "Inferência. It can be inferred from paragraph 2 that in deep-sea environments:",
+    "text_format": "html",
+    "options": {
+      "A": "visual communication is impossible for any species",
+      "B": "organisms rely on producing their own light because there is little to no ambient light",
+      "C": "most species have lost their sense of sight entirely",
+      "D": "bioluminescence is used only for hunting"
+    },
+    "answer": "B",
+    "explanation": "\"Where darkness is nearly absolute and visual signals cannot rely on ambient light\" → produzir a própria luz supre a ausência de luz ambiente. (A) é extremo; (C)/(D) sem base.",
+    "hint": null,
+    "trap_codes": [],
+    "tags": [],
+    "status": "rascunho",
+    "source": {
+      "kind": "migrado",
+      "file": "app/drills_data.py",
+      "ref": "MOD1_ACTION_DRILLS_C:mod1-c1#C1.4",
+      "live_on_site": true,
+      "answer_letter": "origem",
+      "build_map": {
+        "A": "B",
+        "B": "A",
+        "C": "C",
+        "D": "D"
+      }
+    }
+  },
+  {
+    "id": "mod1-c1.c1.5",
+    "section": "reading",
+    "task_type": "Read an Academic Passage",
+    "exam_format": true,
+    "format": "mcq",
+    "skill": null,
+    "cefr_min": "B2",
+    "cefr_max": "C1",
+    "stimulus": {
+      "kind": "text",
+      "format": "html",
+      "title": "Drill C1 · Ciências naturais · alvo: 6 min",
+      "content": "<p><strong>PASSAGE: Bioluminescence in Marine Organisms</strong></p>\n<p>Bioluminescence (the production and emission of light by a living organism) is remarkably common in the ocean, appearing in bacteria, jellyfish, fish, and even some sharks. Unlike the light produced by a bulb, which wastes most of its energy as heat, bioluminescent light is generated through a highly efficient chemical reaction, typically involving a light-emitting molecule called luciferin and an enzyme called luciferase. Because so little energy is lost as heat, biologists sometimes refer to this phenomenon as \"cold light.\"</p>\n<p>The functions of bioluminescence vary considerably across species, though three purposes appear again and again. Some organisms use light defensively: certain species of squid release a luminous cloud instead of ink, startling predators and buying time to escape. Others use it as a hunting tool. The anglerfish, perhaps the most famous example, dangles a glowing lure above its mouth to attract smaller prey close enough to seize. Still others use light for communication, particularly in the deep sea, where darkness is nearly absolute and visual signals cannot rely on ambient light. Certain species of ostracods, tiny crustaceans, produce synchronized light displays to attract mates.</p>\n<p>What makes bioluminescence especially interesting to evolutionary biologists is that it did not evolve just once. Genetic and biochemical evidence indicates that the capacity for bioluminescence has arisen independently dozens of times across unrelated lineages, using different chemical pathways to achieve a similar outcome. This pattern, in which unrelated organisms evolve similar traits independently, is known as convergent evolution, and bioluminescence is considered one of its most striking examples.</p>",
+      "audio_ref": null
+    },
+    "group": "mod1-c1",
+    "prompt": "Propósito retórico. Why does the author state that bioluminescence \"did not evolve just once\"?",
+    "text_format": "html",
+    "options": {
+      "A": "To argue that bioluminescence is less significant than previously thought",
+      "B": "To introduce and support the claim that it is a notable example of convergent evolution",
+      "C": "To explain why some marine species have gone extinct",
+      "D": "To compare bioluminescence with the evolution of eyesight in mammals"
+    },
+    "answer": "B",
+    "explanation": "A frase é seguida por \"...one of its most striking examples\" — serve para embasar o conceito de evolução convergente.",
+    "hint": null,
+    "trap_codes": [],
+    "tags": [],
+    "status": "rascunho",
+    "source": {
+      "kind": "migrado",
+      "file": "app/drills_data.py",
+      "ref": "MOD1_ACTION_DRILLS_C:mod1-c1#C1.5",
+      "live_on_site": true,
+      "answer_letter": "origem",
+      "build_map": {
+        "A": "D",
+        "B": "B",
+        "C": "A",
+        "D": "C"
+      }
+    }
+  },
+  {
+    "id": "mod1-c1.c1.6",
+    "section": "reading",
+    "task_type": "Read an Academic Passage",
+    "exam_format": true,
+    "format": "mcq",
+    "skill": null,
+    "cefr_min": "B2",
+    "cefr_max": "C1",
+    "stimulus": {
+      "kind": "text",
+      "format": "html",
+      "title": "Drill C1 · Ciências naturais · alvo: 6 min",
+      "content": "<p><strong>PASSAGE: Bioluminescence in Marine Organisms</strong></p>\n<p>Bioluminescence (the production and emission of light by a living organism) is remarkably common in the ocean, appearing in bacteria, jellyfish, fish, and even some sharks. Unlike the light produced by a bulb, which wastes most of its energy as heat, bioluminescent light is generated through a highly efficient chemical reaction, typically involving a light-emitting molecule called luciferin and an enzyme called luciferase. Because so little energy is lost as heat, biologists sometimes refer to this phenomenon as \"cold light.\"</p>\n<p>The functions of bioluminescence vary considerably across species, though three purposes appear again and again. Some organisms use light defensively: certain species of squid release a luminous cloud instead of ink, startling predators and buying time to escape. Others use it as a hunting tool. The anglerfish, perhaps the most famous example, dangles a glowing lure above its mouth to attract smaller prey close enough to seize. Still others use light for communication, particularly in the deep sea, where darkness is nearly absolute and visual signals cannot rely on ambient light. Certain species of ostracods, tiny crustaceans, produce synchronized light displays to attract mates.</p>\n<p>What makes bioluminescence especially interesting to evolutionary biologists is that it did not evolve just once. Genetic and biochemical evidence indicates that the capacity for bioluminescence has arisen independently dozens of times across unrelated lineages, using different chemical pathways to achieve a similar outcome. This pattern, in which unrelated organisms evolve similar traits independently, is known as convergent evolution, and bioluminescence is considered one of its most striking examples.</p>",
+      "audio_ref": null
+    },
+    "group": "mod1-c1",
+    "prompt": "Vocabulário em contexto. The word \"striking\" in paragraph 3 is closest in meaning to:",
+    "text_format": "html",
+    "options": {
+      "A": "violent",
+      "B": "notable",
+      "C": "accidental",
+      "D": "doubtful"
+    },
+    "answer": "B",
+    "explanation": "\"One of its most striking examples\" = exemplo notável. (A)/(C)/(D) pertencem a outros campos ou invertem o tom.",
+    "hint": null,
+    "trap_codes": [],
+    "tags": [],
+    "status": "rascunho",
+    "source": {
+      "kind": "migrado",
+      "file": "app/drills_data.py",
+      "ref": "MOD1_ACTION_DRILLS_C:mod1-c1#C1.6",
+      "live_on_site": true,
+      "answer_letter": "origem",
+      "build_map": {
+        "A": "B",
+        "B": "C",
+        "C": "D",
+        "D": "A"
+      }
+    }
+  },
+  {
+    "id": "mod1-c1.c1.7",
+    "section": "reading",
+    "task_type": "Read an Academic Passage",
+    "exam_format": true,
+    "format": "mcq",
+    "skill": null,
+    "cefr_min": "B2",
+    "cefr_max": "C1",
+    "stimulus": {
+      "kind": "text",
+      "format": "html",
+      "title": "Drill C1 · Ciências naturais · alvo: 6 min",
+      "content": "<p><strong>PASSAGE: Bioluminescence in Marine Organisms</strong></p>\n<p>Bioluminescence (the production and emission of light by a living organism) is remarkably common in the ocean, appearing in bacteria, jellyfish, fish, and even some sharks. Unlike the light produced by a bulb, which wastes most of its energy as heat, bioluminescent light is generated through a highly efficient chemical reaction, typically involving a light-emitting molecule called luciferin and an enzyme called luciferase. Because so little energy is lost as heat, biologists sometimes refer to this phenomenon as \"cold light.\"</p>\n<p>The functions of bioluminescence vary considerably across species, though three purposes appear again and again. Some organisms use light defensively: certain species of squid release a luminous cloud instead of ink, startling predators and buying time to escape. Others use it as a hunting tool. The anglerfish, perhaps the most famous example, dangles a glowing lure above its mouth to attract smaller prey close enough to seize. Still others use light for communication, particularly in the deep sea, where darkness is nearly absolute and visual signals cannot rely on ambient light. Certain species of ostracods, tiny crustaceans, produce synchronized light displays to attract mates.</p>\n<p>What makes bioluminescence especially interesting to evolutionary biologists is that it did not evolve just once. Genetic and biochemical evidence indicates that the capacity for bioluminescence has arisen independently dozens of times across unrelated lineages, using different chemical pathways to achieve a similar outcome. This pattern, in which unrelated organisms evolve similar traits independently, is known as convergent evolution, and bioluminescence is considered one of its most striking examples.</p>",
+      "audio_ref": null
+    },
+    "group": "mod1-c1",
+    "prompt": "Simplificação de frase. Which best expresses the essential information in the highlighted sentence? <em>\"This pattern, in which unrelated organisms evolve similar traits independently, is known as convergent evolution, and bioluminescence is considered one of its most striking examples.\"</em>",
+    "text_format": "html",
+    "options": {
+      "A": "Convergent evolution explains why all sea creatures glow.",
+      "B": "When unrelated organisms independently develop the same trait, the process is called convergent evolution, and bioluminescence is a prime example of it.",
+      "C": "Bioluminescence is the only known case of convergent evolution.",
+      "D": "Evolutionary biologists disagree about whether bioluminescence is truly convergent."
+    },
+    "answer": "B",
+    "explanation": "A frase original define evolução convergente e diz que a bioluminescência é um exemplo marcante. (B) preserva as duas ideias. (A) exagera (\"all sea creatures\"); (C) inventa exclusividade; (D) inventa controvérsia.",
+    "hint": null,
+    "trap_codes": [],
+    "tags": [],
+    "status": "rascunho",
+    "source": {
+      "kind": "migrado",
+      "file": "app/drills_data.py",
+      "ref": "MOD1_ACTION_DRILLS_C:mod1-c1#C1.7",
+      "live_on_site": true,
+      "answer_letter": "origem",
+      "build_map": {
+        "A": "D",
+        "B": "A",
+        "C": "C",
+        "D": "B"
+      }
+    }
+  },
+  {
+    "id": "mod1-c2.c2.1",
+    "section": "reading",
+    "task_type": "Read an Academic Passage",
+    "exam_format": true,
+    "format": "mcq",
+    "skill": null,
+    "cefr_min": "B2",
+    "cefr_max": "C1",
+    "stimulus": {
+      "kind": "text",
+      "format": "html",
+      "title": "Drill C2 · História · alvo: 6 min",
+      "content": "<p><strong>PASSAGE: Coffee Houses in Seventeenth-Century England</strong></p>\n<p>The first English coffee house opened in Oxford in 1650; within two decades, London alone had hundreds. <strong>[■A]</strong> For the price of a single cup (a penny) a customer could sit for hours, read the newspapers provided by the house, and join whatever conversation was underway. <strong>[■B]</strong> Because admission was cheap and open to any man who could pay, the coffee house mixed people who rarely met elsewhere: merchants, scholars, clergymen, and minor gentry sat at the same long tables. <strong>[■C]</strong></p>\n<p>This mixing had consequences that reached well beyond casual talk. Particular houses became known for particular subjects. Men interested in maritime insurance gathered at Lloyd's; those following scientific debates went to the houses near the Royal Society. <strong>[■D]</strong> Information that had once circulated slowly, by letter or rumour, now moved quickly through these rooms. Some historians argue that the coffee house functioned as an early public sphere: a space where opinion could form through discussion rather than being handed down by church or crown.</p>\n<p>The authorities were not comfortable with this. In 1675, the king issued a proclamation ordering the coffee houses closed, on the grounds that they spread \"false, malicious and scandalous reports.\" The order provoked such immediate opposition that it was withdrawn within days. The houses continued to operate for another century, gradually giving way to private clubs and, eventually, to the institutions that had first taken shape around their tables.</p>",
+      "audio_ref": null
+    },
+    "group": "mod1-c2",
+    "prompt": "Ideia principal. The passage is mainly about:",
+    "text_format": "html",
+    "options": {
+      "A": "how coffee was first imported into England",
+      "B": "how English coffee houses became important centres of information and public discussion",
+      "C": "why the king disliked coffee",
+      "D": "the architecture of seventeenth-century London"
+    },
+    "answer": "B",
+    "explanation": "O texto traça como as coffee houses viraram centros de informação e discussão pública. (A)/(C)/(D) são detalhes ou não constam.",
+    "hint": null,
+    "trap_codes": [],
+    "tags": [],
+    "status": "rascunho",
+    "source": {
+      "kind": "migrado",
+      "file": "app/drills_data.py",
+      "ref": "MOD1_ACTION_DRILLS_C:mod1-c2#C2.1",
+      "live_on_site": true,
+      "answer_letter": "origem",
+      "build_map": {
+        "A": "A",
+        "B": "D",
+        "C": "C",
+        "D": "B"
+      }
+    }
+  },
+  {
+    "id": "mod1-c2.c2.2",
+    "section": "reading",
+    "task_type": "Read an Academic Passage",
+    "exam_format": true,
+    "format": "mcq",
+    "skill": null,
+    "cefr_min": "B2",
+    "cefr_max": "C1",
+    "stimulus": {
+      "kind": "text",
+      "format": "html",
+      "title": "Drill C2 · História · alvo: 6 min",
+      "content": "<p><strong>PASSAGE: Coffee Houses in Seventeenth-Century England</strong></p>\n<p>The first English coffee house opened in Oxford in 1650; within two decades, London alone had hundreds. <strong>[■A]</strong> For the price of a single cup (a penny) a customer could sit for hours, read the newspapers provided by the house, and join whatever conversation was underway. <strong>[■B]</strong> Because admission was cheap and open to any man who could pay, the coffee house mixed people who rarely met elsewhere: merchants, scholars, clergymen, and minor gentry sat at the same long tables. <strong>[■C]</strong></p>\n<p>This mixing had consequences that reached well beyond casual talk. Particular houses became known for particular subjects. Men interested in maritime insurance gathered at Lloyd's; those following scientific debates went to the houses near the Royal Society. <strong>[■D]</strong> Information that had once circulated slowly, by letter or rumour, now moved quickly through these rooms. Some historians argue that the coffee house functioned as an early public sphere: a space where opinion could form through discussion rather than being handed down by church or crown.</p>\n<p>The authorities were not comfortable with this. In 1675, the king issued a proclamation ordering the coffee houses closed, on the grounds that they spread \"false, malicious and scandalous reports.\" The order provoked such immediate opposition that it was withdrawn within days. The houses continued to operate for another century, gradually giving way to private clubs and, eventually, to the institutions that had first taken shape around their tables.</p>",
+      "audio_ref": null
+    },
+    "group": "mod1-c2",
+    "prompt": "Detalhe. According to the passage, a customer who paid a penny could:",
+    "text_format": "html",
+    "options": {
+      "A": "buy unlimited cups of coffee",
+      "B": "stay for hours, read the newspapers, and take part in conversation",
+      "C": "join the Royal Society",
+      "D": "rent a private room"
+    },
+    "answer": "B",
+    "explanation": "\"Could sit for hours, read the newspapers provided by the house, and join whatever conversation was underway\".",
+    "hint": null,
+    "trap_codes": [],
+    "tags": [],
+    "status": "rascunho",
+    "source": {
+      "kind": "migrado",
+      "file": "app/drills_data.py",
+      "ref": "MOD1_ACTION_DRILLS_C:mod1-c2#C2.2",
+      "live_on_site": true,
+      "answer_letter": "origem",
+      "build_map": {
+        "A": "A",
+        "B": "B",
+        "C": "C",
+        "D": "D"
+      }
+    }
+  },
+  {
+    "id": "mod1-c2.c2.3",
+    "section": "reading",
+    "task_type": "Read an Academic Passage",
+    "exam_format": true,
+    "format": "mcq",
+    "skill": null,
+    "cefr_min": "B2",
+    "cefr_max": "C1",
+    "stimulus": {
+      "kind": "text",
+      "format": "html",
+      "title": "Drill C2 · História · alvo: 6 min",
+      "content": "<p><strong>PASSAGE: Coffee Houses in Seventeenth-Century England</strong></p>\n<p>The first English coffee house opened in Oxford in 1650; within two decades, London alone had hundreds. <strong>[■A]</strong> For the price of a single cup (a penny) a customer could sit for hours, read the newspapers provided by the house, and join whatever conversation was underway. <strong>[■B]</strong> Because admission was cheap and open to any man who could pay, the coffee house mixed people who rarely met elsewhere: merchants, scholars, clergymen, and minor gentry sat at the same long tables. <strong>[■C]</strong></p>\n<p>This mixing had consequences that reached well beyond casual talk. Particular houses became known for particular subjects. Men interested in maritime insurance gathered at Lloyd's; those following scientific debates went to the houses near the Royal Society. <strong>[■D]</strong> Information that had once circulated slowly, by letter or rumour, now moved quickly through these rooms. Some historians argue that the coffee house functioned as an early public sphere: a space where opinion could form through discussion rather than being handed down by church or crown.</p>\n<p>The authorities were not comfortable with this. In 1675, the king issued a proclamation ordering the coffee houses closed, on the grounds that they spread \"false, malicious and scandalous reports.\" The order provoked such immediate opposition that it was withdrawn within days. The houses continued to operate for another century, gradually giving way to private clubs and, eventually, to the institutions that had first taken shape around their tables.</p>",
+      "audio_ref": null
+    },
+    "group": "mod1-c2",
+    "prompt": "Inferência. It can be inferred that before coffee houses existed, information among these groups:",
+    "text_format": "html",
+    "options": {
+      "A": "did not exist at all",
+      "B": "travelled more slowly and less widely",
+      "C": "was controlled entirely by merchants",
+      "D": "was freely available to everyone"
+    },
+    "answer": "B",
+    "explanation": "\"Information that had once circulated slowly, by letter or rumour, now moved quickly\" → antes, mais devagar e menos amplamente. (A) exagera; (C)/(D) sem base.",
+    "hint": null,
+    "trap_codes": [],
+    "tags": [],
+    "status": "rascunho",
+    "source": {
+      "kind": "migrado",
+      "file": "app/drills_data.py",
+      "ref": "MOD1_ACTION_DRILLS_C:mod1-c2#C2.3",
+      "live_on_site": true,
+      "answer_letter": "origem",
+      "build_map": {
+        "A": "C",
+        "B": "A",
+        "C": "B",
+        "D": "D"
+      }
+    }
+  },
+  {
+    "id": "mod1-c2.c2.4",
+    "section": "reading",
+    "task_type": "Read an Academic Passage",
+    "exam_format": true,
+    "format": "mcq",
+    "skill": null,
+    "cefr_min": "B2",
+    "cefr_max": "C1",
+    "stimulus": {
+      "kind": "text",
+      "format": "html",
+      "title": "Drill C2 · História · alvo: 6 min",
+      "content": "<p><strong>PASSAGE: Coffee Houses in Seventeenth-Century England</strong></p>\n<p>The first English coffee house opened in Oxford in 1650; within two decades, London alone had hundreds. <strong>[■A]</strong> For the price of a single cup (a penny) a customer could sit for hours, read the newspapers provided by the house, and join whatever conversation was underway. <strong>[■B]</strong> Because admission was cheap and open to any man who could pay, the coffee house mixed people who rarely met elsewhere: merchants, scholars, clergymen, and minor gentry sat at the same long tables. <strong>[■C]</strong></p>\n<p>This mixing had consequences that reached well beyond casual talk. Particular houses became known for particular subjects. Men interested in maritime insurance gathered at Lloyd's; those following scientific debates went to the houses near the Royal Society. <strong>[■D]</strong> Information that had once circulated slowly, by letter or rumour, now moved quickly through these rooms. Some historians argue that the coffee house functioned as an early public sphere: a space where opinion could form through discussion rather than being handed down by church or crown.</p>\n<p>The authorities were not comfortable with this. In 1675, the king issued a proclamation ordering the coffee houses closed, on the grounds that they spread \"false, malicious and scandalous reports.\" The order provoked such immediate opposition that it was withdrawn within days. The houses continued to operate for another century, gradually giving way to private clubs and, eventually, to the institutions that had first taken shape around their tables.</p>",
+      "audio_ref": null
+    },
+    "group": "mod1-c2",
+    "prompt": "Propósito retórico. Why does the author mention Lloyd's and the houses near the Royal Society?",
+    "text_format": "html",
+    "options": {
+      "A": "To show that different coffee houses specialised in different topics",
+      "B": "To argue that Lloyd's was the most important coffee house",
+      "C": "To explain how coffee houses were decorated",
+      "D": "To prove that scientists disliked merchants"
+    },
+    "answer": "A",
+    "explanation": "\"Particular houses became known for particular subjects\": Lloyd's e as casas perto da Royal Society ilustram a especialização por tema.",
+    "hint": null,
+    "trap_codes": [],
+    "tags": [],
+    "status": "rascunho",
+    "source": {
+      "kind": "migrado",
+      "file": "app/drills_data.py",
+      "ref": "MOD1_ACTION_DRILLS_C:mod1-c2#C2.4",
+      "live_on_site": true,
+      "answer_letter": "origem",
+      "build_map": {
+        "A": "A",
+        "B": "C",
+        "C": "D",
+        "D": "B"
+      }
+    }
+  },
+  {
+    "id": "mod1-c2.c2.5",
+    "section": "reading",
+    "task_type": "Read an Academic Passage",
+    "exam_format": true,
+    "format": "mcq",
+    "skill": null,
+    "cefr_min": "B2",
+    "cefr_max": "C1",
+    "stimulus": {
+      "kind": "text",
+      "format": "html",
+      "title": "Drill C2 · História · alvo: 6 min",
+      "content": "<p><strong>PASSAGE: Coffee Houses in Seventeenth-Century England</strong></p>\n<p>The first English coffee house opened in Oxford in 1650; within two decades, London alone had hundreds. <strong>[■A]</strong> For the price of a single cup (a penny) a customer could sit for hours, read the newspapers provided by the house, and join whatever conversation was underway. <strong>[■B]</strong> Because admission was cheap and open to any man who could pay, the coffee house mixed people who rarely met elsewhere: merchants, scholars, clergymen, and minor gentry sat at the same long tables. <strong>[■C]</strong></p>\n<p>This mixing had consequences that reached well beyond casual talk. Particular houses became known for particular subjects. Men interested in maritime insurance gathered at Lloyd's; those following scientific debates went to the houses near the Royal Society. <strong>[■D]</strong> Information that had once circulated slowly, by letter or rumour, now moved quickly through these rooms. Some historians argue that the coffee house functioned as an early public sphere: a space where opinion could form through discussion rather than being handed down by church or crown.</p>\n<p>The authorities were not comfortable with this. In 1675, the king issued a proclamation ordering the coffee houses closed, on the grounds that they spread \"false, malicious and scandalous reports.\" The order provoked such immediate opposition that it was withdrawn within days. The houses continued to operate for another century, gradually giving way to private clubs and, eventually, to the institutions that had first taken shape around their tables.</p>",
+      "audio_ref": null
+    },
+    "group": "mod1-c2",
+    "prompt": "Detalhe. The king's 1675 proclamation was:",
+    "text_format": "html",
+    "options": {
+      "A": "enforced for a century",
+      "B": "withdrawn within days after strong opposition",
+      "C": "welcomed by most coffee house owners",
+      "D": "never actually issued"
+    },
+    "answer": "B",
+    "explanation": "\"The order provoked such immediate opposition that it was withdrawn within days.\"",
+    "hint": null,
+    "trap_codes": [],
+    "tags": [],
+    "status": "rascunho",
+    "source": {
+      "kind": "migrado",
+      "file": "app/drills_data.py",
+      "ref": "MOD1_ACTION_DRILLS_C:mod1-c2#C2.5",
+      "live_on_site": true,
+      "answer_letter": "origem",
+      "build_map": {
+        "A": "A",
+        "B": "C",
+        "C": "D",
+        "D": "B"
+      }
+    }
+  },
+  {
+    "id": "mod1-c2.c2.6",
+    "section": "reading",
+    "task_type": "Read an Academic Passage",
+    "exam_format": true,
+    "format": "mcq",
+    "skill": null,
+    "cefr_min": "B2",
+    "cefr_max": "C1",
+    "stimulus": {
+      "kind": "text",
+      "format": "html",
+      "title": "Drill C2 · História · alvo: 6 min",
+      "content": "<p><strong>PASSAGE: Coffee Houses in Seventeenth-Century England</strong></p>\n<p>The first English coffee house opened in Oxford in 1650; within two decades, London alone had hundreds. <strong>[■A]</strong> For the price of a single cup (a penny) a customer could sit for hours, read the newspapers provided by the house, and join whatever conversation was underway. <strong>[■B]</strong> Because admission was cheap and open to any man who could pay, the coffee house mixed people who rarely met elsewhere: merchants, scholars, clergymen, and minor gentry sat at the same long tables. <strong>[■C]</strong></p>\n<p>This mixing had consequences that reached well beyond casual talk. Particular houses became known for particular subjects. Men interested in maritime insurance gathered at Lloyd's; those following scientific debates went to the houses near the Royal Society. <strong>[■D]</strong> Information that had once circulated slowly, by letter or rumour, now moved quickly through these rooms. Some historians argue that the coffee house functioned as an early public sphere: a space where opinion could form through discussion rather than being handed down by church or crown.</p>\n<p>The authorities were not comfortable with this. In 1675, the king issued a proclamation ordering the coffee houses closed, on the grounds that they spread \"false, malicious and scandalous reports.\" The order provoked such immediate opposition that it was withdrawn within days. The houses continued to operate for another century, gradually giving way to private clubs and, eventually, to the institutions that had first taken shape around their tables.</p>",
+      "audio_ref": null
+    },
+    "group": "mod1-c2",
+    "prompt": "Vocabulário em contexto. The word \"provoked\" in paragraph 3 is closest in meaning to:",
+    "text_format": "html",
+    "options": {
+      "A": "prevented",
+      "B": "caused",
+      "C": "delayed",
+      "D": "forgave"
+    },
+    "answer": "B",
+    "explanation": "\"Provoked such... opposition\" = causou/gerou oposição.",
+    "hint": null,
+    "trap_codes": [],
+    "tags": [],
+    "status": "rascunho",
+    "source": {
+      "kind": "migrado",
+      "file": "app/drills_data.py",
+      "ref": "MOD1_ACTION_DRILLS_C:mod1-c2#C2.6",
+      "live_on_site": true,
+      "answer_letter": "origem",
+      "build_map": {
+        "A": "A",
+        "B": "B",
+        "C": "C",
+        "D": "D"
+      }
+    }
+  },
+  {
+    "id": "mod1-c2.c2.7",
+    "section": "reading",
+    "task_type": "Read an Academic Passage",
+    "exam_format": true,
+    "format": "mcq",
+    "skill": null,
+    "cefr_min": "B2",
+    "cefr_max": "C1",
+    "stimulus": {
+      "kind": "text",
+      "format": "html",
+      "title": "Drill C2 · História · alvo: 6 min",
+      "content": "<p><strong>PASSAGE: Coffee Houses in Seventeenth-Century England</strong></p>\n<p>The first English coffee house opened in Oxford in 1650; within two decades, London alone had hundreds. <strong>[■A]</strong> For the price of a single cup (a penny) a customer could sit for hours, read the newspapers provided by the house, and join whatever conversation was underway. <strong>[■B]</strong> Because admission was cheap and open to any man who could pay, the coffee house mixed people who rarely met elsewhere: merchants, scholars, clergymen, and minor gentry sat at the same long tables. <strong>[■C]</strong></p>\n<p>This mixing had consequences that reached well beyond casual talk. Particular houses became known for particular subjects. Men interested in maritime insurance gathered at Lloyd's; those following scientific debates went to the houses near the Royal Society. <strong>[■D]</strong> Information that had once circulated slowly, by letter or rumour, now moved quickly through these rooms. Some historians argue that the coffee house functioned as an early public sphere: a space where opinion could form through discussion rather than being handed down by church or crown.</p>\n<p>The authorities were not comfortable with this. In 1675, the king issued a proclamation ordering the coffee houses closed, on the grounds that they spread \"false, malicious and scandalous reports.\" The order provoked such immediate opposition that it was withdrawn within days. The houses continued to operate for another century, gradually giving way to private clubs and, eventually, to the institutions that had first taken shape around their tables.</p>",
+      "audio_ref": null
+    },
+    "group": "mod1-c2",
+    "prompt": "Inserir frase. Where would the following sentence best fit? <em>\"Even those who could not read had access to the news, since the sheets were often read aloud at the tables.\"</em>",
+    "text_format": "html",
+    "options": {
+      "A": "At [■A]",
+      "B": "At [■B]",
+      "C": "At [■C]",
+      "D": "At [■D]"
+    },
+    "answer": "B",
+    "explanation": "A frase estende a ideia dos <em>newspapers provided by the house</em>: \"the sheets\" retoma \"the newspapers\", e \"read aloud at the tables\" continua a descrição do que os clientes faziam. [■A] vem <strong>antes</strong> de os jornais serem mencionados — o pronome \"the sheets\" não teria referente. [■C] separaria a ideia de \"misturar pessoas\" da sua consequência. [■D] está no parágrafo errado.",
+    "hint": null,
+    "trap_codes": [],
+    "tags": [],
+    "status": "rascunho",
+    "source": {
+      "kind": "migrado",
+      "file": "app/drills_data.py",
+      "ref": "MOD1_ACTION_DRILLS_C:mod1-c2#C2.7",
+      "live_on_site": true,
+      "answer_letter": "origem",
+      "build_map": null
+    }
+  },
+  {
+    "id": "mod1-c3.c3.1",
+    "section": "reading",
+    "task_type": "Read an Academic Passage",
+    "exam_format": true,
+    "format": "mcq",
+    "skill": null,
+    "cefr_min": "C1",
+    "cefr_max": "C1",
+    "stimulus": {
+      "kind": "text",
+      "format": "html",
+      "title": "Drill C3 · Ciências sociais · alvo: 6 min",
+      "content": "<p><strong>PASSAGE: The Strength of Weak Ties</strong></p>\n<p>When people look for a new job, common sense suggests they should turn to their closest contacts: family and good friends who know them well and want to help. In a study of professionals who had recently changed jobs, the sociologist Mark Granovetter found the opposite. Most had heard about their new position not from a close friend but from an acquaintance: someone they saw only occasionally and would not have described as part of their inner circle.</p>\n<p>Granovetter's explanation rests on how information moves through social networks. Your close friends tend to know one another and to move in the same circles you do. As a result, they are exposed to more or less the same information you already have; what they can tell you, you have often already heard. An acquaintance, by contrast, moves in a different circle, encounters different people, and hears different news. A weak tie is therefore a bridge to parts of the network you could not otherwise reach.</p>\n<p>The finding has been extended well beyond job-hunting. Weak ties have been linked to the spread of new ideas between organisations, to the circulation of information during emergencies, and to innovation within companies, where teams connected to many outside groups tend to produce more original work. Critics note that weak ties are not always advantageous: they carry less trust, and acting on information from a near-stranger involves more risk. But the core insight has held up: the contacts most likely to tell you something genuinely new are often the ones you know least well.</p>",
+      "audio_ref": null
+    },
+    "group": "mod1-c3",
+    "prompt": "Ideia principal. The main idea of the passage is that:",
+    "text_format": "html",
+    "options": {
+      "A": "close friends are the best source of job information",
+      "B": "acquaintances (\"weak ties\") are often better than close contacts at providing genuinely new information, because they connect us to other parts of a social network",
+      "C": "social networks have no effect on how people find jobs",
+      "D": "Granovetter's study has been completely disproved"
+    },
+    "answer": "B",
+    "explanation": "Tese central: weak ties frequentemente trazem informação mais nova porque conectam a outras partes da rede. (A) contradiz o achado; (C)/(D) distorcem.",
+    "hint": null,
+    "trap_codes": [],
+    "tags": [],
+    "status": "rascunho",
+    "source": {
+      "kind": "migrado",
+      "file": "app/drills_data.py",
+      "ref": "MOD1_ACTION_DRILLS_C:mod1-c3#C3.1",
+      "live_on_site": true,
+      "answer_letter": "origem",
+      "build_map": {
+        "A": "C",
+        "B": "A",
+        "C": "B",
+        "D": "D"
+      }
+    }
+  },
+  {
+    "id": "mod1-c3.c3.2",
+    "section": "reading",
+    "task_type": "Read an Academic Passage",
+    "exam_format": true,
+    "format": "mcq",
+    "skill": null,
+    "cefr_min": "C1",
+    "cefr_max": "C1",
+    "stimulus": {
+      "kind": "text",
+      "format": "html",
+      "title": "Drill C3 · Ciências sociais · alvo: 6 min",
+      "content": "<p><strong>PASSAGE: The Strength of Weak Ties</strong></p>\n<p>When people look for a new job, common sense suggests they should turn to their closest contacts: family and good friends who know them well and want to help. In a study of professionals who had recently changed jobs, the sociologist Mark Granovetter found the opposite. Most had heard about their new position not from a close friend but from an acquaintance: someone they saw only occasionally and would not have described as part of their inner circle.</p>\n<p>Granovetter's explanation rests on how information moves through social networks. Your close friends tend to know one another and to move in the same circles you do. As a result, they are exposed to more or less the same information you already have; what they can tell you, you have often already heard. An acquaintance, by contrast, moves in a different circle, encounters different people, and hears different news. A weak tie is therefore a bridge to parts of the network you could not otherwise reach.</p>\n<p>The finding has been extended well beyond job-hunting. Weak ties have been linked to the spread of new ideas between organisations, to the circulation of information during emergencies, and to innovation within companies, where teams connected to many outside groups tend to produce more original work. Critics note that weak ties are not always advantageous: they carry less trust, and acting on information from a near-stranger involves more risk. But the core insight has held up: the contacts most likely to tell you something genuinely new are often the ones you know least well.</p>",
+      "audio_ref": null
+    },
+    "group": "mod1-c3",
+    "prompt": "Detalhe. In Granovetter's study, most professionals heard about their new job from:",
+    "text_format": "html",
+    "options": {
+      "A": "a family member",
+      "B": "a close friend",
+      "C": "an acquaintance they saw only occasionally",
+      "D": "a recruitment agency"
+    },
+    "answer": "C",
+    "explanation": "\"Most had heard about their new position not from a close friend but from an acquaintance.\"",
+    "hint": null,
+    "trap_codes": [],
+    "tags": [],
+    "status": "rascunho",
+    "source": {
+      "kind": "migrado",
+      "file": "app/drills_data.py",
+      "ref": "MOD1_ACTION_DRILLS_C:mod1-c3#C3.2",
+      "live_on_site": true,
+      "answer_letter": "origem",
+      "build_map": {
+        "A": "A",
+        "B": "C",
+        "C": "B",
+        "D": "D"
+      }
+    }
+  },
+  {
+    "id": "mod1-c3.c3.3",
+    "section": "reading",
+    "task_type": "Read an Academic Passage",
+    "exam_format": true,
+    "format": "mcq",
+    "skill": null,
+    "cefr_min": "C1",
+    "cefr_max": "C1",
+    "stimulus": {
+      "kind": "text",
+      "format": "html",
+      "title": "Drill C3 · Ciências sociais · alvo: 6 min",
+      "content": "<p><strong>PASSAGE: The Strength of Weak Ties</strong></p>\n<p>When people look for a new job, common sense suggests they should turn to their closest contacts: family and good friends who know them well and want to help. In a study of professionals who had recently changed jobs, the sociologist Mark Granovetter found the opposite. Most had heard about their new position not from a close friend but from an acquaintance: someone they saw only occasionally and would not have described as part of their inner circle.</p>\n<p>Granovetter's explanation rests on how information moves through social networks. Your close friends tend to know one another and to move in the same circles you do. As a result, they are exposed to more or less the same information you already have; what they can tell you, you have often already heard. An acquaintance, by contrast, moves in a different circle, encounters different people, and hears different news. A weak tie is therefore a bridge to parts of the network you could not otherwise reach.</p>\n<p>The finding has been extended well beyond job-hunting. Weak ties have been linked to the spread of new ideas between organisations, to the circulation of information during emergencies, and to innovation within companies, where teams connected to many outside groups tend to produce more original work. Critics note that weak ties are not always advantageous: they carry less trust, and acting on information from a near-stranger involves more risk. But the core insight has held up: the contacts most likely to tell you something genuinely new are often the ones you know least well.</p>",
+      "audio_ref": null
+    },
+    "group": "mod1-c3",
+    "prompt": "Detalhe. According to the passage, close friends tend to give us information that:",
+    "text_format": "html",
+    "options": {
+      "A": "is completely new to us",
+      "B": "we have often already heard, because they move in the same circles we do",
+      "C": "is always more trustworthy and therefore more useful",
+      "D": "comes from outside our network"
+    },
+    "answer": "B",
+    "explanation": "\"They are exposed to more or less the same information you already have; what they can tell you, you have often already heard.\"",
+    "hint": null,
+    "trap_codes": [],
+    "tags": [],
+    "status": "rascunho",
+    "source": {
+      "kind": "migrado",
+      "file": "app/drills_data.py",
+      "ref": "MOD1_ACTION_DRILLS_C:mod1-c3#C3.3",
+      "live_on_site": true,
+      "answer_letter": "origem",
+      "build_map": {
+        "A": "B",
+        "B": "D",
+        "C": "A",
+        "D": "C"
+      }
+    }
+  },
+  {
+    "id": "mod1-c3.c3.4",
+    "section": "reading",
+    "task_type": "Read an Academic Passage",
+    "exam_format": true,
+    "format": "mcq",
+    "skill": null,
+    "cefr_min": "C1",
+    "cefr_max": "C1",
+    "stimulus": {
+      "kind": "text",
+      "format": "html",
+      "title": "Drill C3 · Ciências sociais · alvo: 6 min",
+      "content": "<p><strong>PASSAGE: The Strength of Weak Ties</strong></p>\n<p>When people look for a new job, common sense suggests they should turn to their closest contacts: family and good friends who know them well and want to help. In a study of professionals who had recently changed jobs, the sociologist Mark Granovetter found the opposite. Most had heard about their new position not from a close friend but from an acquaintance: someone they saw only occasionally and would not have described as part of their inner circle.</p>\n<p>Granovetter's explanation rests on how information moves through social networks. Your close friends tend to know one another and to move in the same circles you do. As a result, they are exposed to more or less the same information you already have; what they can tell you, you have often already heard. An acquaintance, by contrast, moves in a different circle, encounters different people, and hears different news. A weak tie is therefore a bridge to parts of the network you could not otherwise reach.</p>\n<p>The finding has been extended well beyond job-hunting. Weak ties have been linked to the spread of new ideas between organisations, to the circulation of information during emergencies, and to innovation within companies, where teams connected to many outside groups tend to produce more original work. Critics note that weak ties are not always advantageous: they carry less trust, and acting on information from a near-stranger involves more risk. But the core insight has held up: the contacts most likely to tell you something genuinely new are often the ones you know least well.</p>",
+      "audio_ref": null
+    },
+    "group": "mod1-c3",
+    "prompt": "Inferência. It can be inferred that a person whose contacts are ALL close friends would:",
+    "text_format": "html",
+    "options": {
+      "A": "have access to a wider range of information than average",
+      "B": "be more likely to hear the same information repeatedly and less likely to hear news from distant parts of the network",
+      "C": "never be able to find a job",
+      "D": "be more innovative at work"
+    },
+    "answer": "B",
+    "explanation": "Se todos os contatos são amigos próximos, que circulam nos mesmos círculos → informação repetida, pouca novidade de partes distantes. (A) inverte; (C)/(D) exageram.",
+    "hint": null,
+    "trap_codes": [],
+    "tags": [],
+    "status": "rascunho",
+    "source": {
+      "kind": "migrado",
+      "file": "app/drills_data.py",
+      "ref": "MOD1_ACTION_DRILLS_C:mod1-c3#C3.4",
+      "live_on_site": true,
+      "answer_letter": "origem",
+      "build_map": {
+        "A": "C",
+        "B": "A",
+        "C": "D",
+        "D": "B"
+      }
+    }
+  },
+  {
+    "id": "mod1-c3.c3.5",
+    "section": "reading",
+    "task_type": "Read an Academic Passage",
+    "exam_format": true,
+    "format": "mcq",
+    "skill": null,
+    "cefr_min": "C1",
+    "cefr_max": "C1",
+    "stimulus": {
+      "kind": "text",
+      "format": "html",
+      "title": "Drill C3 · Ciências sociais · alvo: 6 min",
+      "content": "<p><strong>PASSAGE: The Strength of Weak Ties</strong></p>\n<p>When people look for a new job, common sense suggests they should turn to their closest contacts: family and good friends who know them well and want to help. In a study of professionals who had recently changed jobs, the sociologist Mark Granovetter found the opposite. Most had heard about their new position not from a close friend but from an acquaintance: someone they saw only occasionally and would not have described as part of their inner circle.</p>\n<p>Granovetter's explanation rests on how information moves through social networks. Your close friends tend to know one another and to move in the same circles you do. As a result, they are exposed to more or less the same information you already have; what they can tell you, you have often already heard. An acquaintance, by contrast, moves in a different circle, encounters different people, and hears different news. A weak tie is therefore a bridge to parts of the network you could not otherwise reach.</p>\n<p>The finding has been extended well beyond job-hunting. Weak ties have been linked to the spread of new ideas between organisations, to the circulation of information during emergencies, and to innovation within companies, where teams connected to many outside groups tend to produce more original work. Critics note that weak ties are not always advantageous: they carry less trust, and acting on information from a near-stranger involves more risk. But the core insight has held up: the contacts most likely to tell you something genuinely new are often the ones you know least well.</p>",
+      "audio_ref": null
+    },
+    "group": "mod1-c3",
+    "prompt": "Propósito retórico. Why does the author mention innovation within companies in paragraph 3?",
+    "text_format": "html",
+    "options": {
+      "A": "To give an example of how the weak-ties finding applies beyond job-hunting",
+      "B": "To argue that companies should fire employees with weak ties",
+      "C": "To contradict Granovetter's original study",
+      "D": "To explain how companies are structured"
+    },
+    "answer": "A",
+    "explanation": "O parágrafo 3 lista extensões do achado além da busca de emprego; a inovação nas empresas é um desses exemplos.",
+    "hint": null,
+    "trap_codes": [],
+    "tags": [],
+    "status": "rascunho",
+    "source": {
+      "kind": "migrado",
+      "file": "app/drills_data.py",
+      "ref": "MOD1_ACTION_DRILLS_C:mod1-c3#C3.5",
+      "live_on_site": true,
+      "answer_letter": "origem",
+      "build_map": {
+        "A": "B",
+        "B": "D",
+        "C": "C",
+        "D": "A"
+      }
+    }
+  },
+  {
+    "id": "mod1-c3.c3.6",
+    "section": "reading",
+    "task_type": "Read an Academic Passage",
+    "exam_format": true,
+    "format": "mcq",
+    "skill": null,
+    "cefr_min": "C1",
+    "cefr_max": "C1",
+    "stimulus": {
+      "kind": "text",
+      "format": "html",
+      "title": "Drill C3 · Ciências sociais · alvo: 6 min",
+      "content": "<p><strong>PASSAGE: The Strength of Weak Ties</strong></p>\n<p>When people look for a new job, common sense suggests they should turn to their closest contacts: family and good friends who know them well and want to help. In a study of professionals who had recently changed jobs, the sociologist Mark Granovetter found the opposite. Most had heard about their new position not from a close friend but from an acquaintance: someone they saw only occasionally and would not have described as part of their inner circle.</p>\n<p>Granovetter's explanation rests on how information moves through social networks. Your close friends tend to know one another and to move in the same circles you do. As a result, they are exposed to more or less the same information you already have; what they can tell you, you have often already heard. An acquaintance, by contrast, moves in a different circle, encounters different people, and hears different news. A weak tie is therefore a bridge to parts of the network you could not otherwise reach.</p>\n<p>The finding has been extended well beyond job-hunting. Weak ties have been linked to the spread of new ideas between organisations, to the circulation of information during emergencies, and to innovation within companies, where teams connected to many outside groups tend to produce more original work. Critics note that weak ties are not always advantageous: they carry less trust, and acting on information from a near-stranger involves more risk. But the core insight has held up: the contacts most likely to tell you something genuinely new are often the ones you know least well.</p>",
+      "audio_ref": null
+    },
+    "group": "mod1-c3",
+    "prompt": "Vocabulário em contexto. The word \"bridge\" in paragraph 2 is closest in meaning to:",
+    "text_format": "html",
+    "options": {
+      "A": "obstacle",
+      "B": "connection",
+      "C": "copy",
+      "D": "competitor"
+    },
+    "answer": "B",
+    "explanation": "\"A bridge to parts of the network you could not otherwise reach\" = uma ponte/conexão.",
+    "hint": null,
+    "trap_codes": [],
+    "tags": [],
+    "status": "rascunho",
+    "source": {
+      "kind": "migrado",
+      "file": "app/drills_data.py",
+      "ref": "MOD1_ACTION_DRILLS_C:mod1-c3#C3.6",
+      "live_on_site": true,
+      "answer_letter": "origem",
+      "build_map": {
+        "A": "B",
+        "B": "C",
+        "C": "A",
+        "D": "D"
+      }
+    }
+  },
+  {
+    "id": "mod1-c3.c3.7",
+    "section": "reading",
+    "task_type": "Read an Academic Passage",
+    "exam_format": true,
+    "format": "multi_select",
+    "skill": null,
+    "cefr_min": "C1",
+    "cefr_max": "C1",
+    "stimulus": {
+      "kind": "text",
+      "format": "html",
+      "title": "Drill C3 · Ciências sociais · alvo: 6 min",
+      "content": "<p><strong>PASSAGE: The Strength of Weak Ties</strong></p>\n<p>When people look for a new job, common sense suggests they should turn to their closest contacts: family and good friends who know them well and want to help. In a study of professionals who had recently changed jobs, the sociologist Mark Granovetter found the opposite. Most had heard about their new position not from a close friend but from an acquaintance: someone they saw only occasionally and would not have described as part of their inner circle.</p>\n<p>Granovetter's explanation rests on how information moves through social networks. Your close friends tend to know one another and to move in the same circles you do. As a result, they are exposed to more or less the same information you already have; what they can tell you, you have often already heard. An acquaintance, by contrast, moves in a different circle, encounters different people, and hears different news. A weak tie is therefore a bridge to parts of the network you could not otherwise reach.</p>\n<p>The finding has been extended well beyond job-hunting. Weak ties have been linked to the spread of new ideas between organisations, to the circulation of information during emergencies, and to innovation within companies, where teams connected to many outside groups tend to produce more original work. Critics note that weak ties are not always advantageous: they carry less trust, and acting on information from a near-stranger involves more risk. But the core insight has held up: the contacts most likely to tell you something genuinely new are often the ones you know least well.</p>",
+      "audio_ref": null
+    },
+    "group": "mod1-c3",
+    "prompt": "Resumo (marque as 3 ideias principais). Introductory sentence: <em>\"Granovetter's research challenged the assumption that close contacts are the most useful source of information.\"</em> Select the THREE choices that express the most important ideas.",
+    "text_format": "html",
+    "options": {
+      "A": "His study found that most job-changers had heard about their position from an acquaintance rather than a close friend.",
+      "B": "Weak ties are valuable because they connect us to circles (and information) we could not otherwise reach.",
+      "C": "The first English coffee house opened in Oxford in 1650.",
+      "D": "The finding applies well beyond job-hunting, including to the spread of ideas and to workplace innovation.",
+      "E": "Acquaintances are always more trustworthy than close friends.",
+      "F": "Granovetter interviewed exactly one hundred professionals."
+    },
+    "answer": [
+      "A",
+      "B",
+      "D"
+    ],
+    "explanation": "(A), (B) e (D) são as três ideias principais que parágrafos inteiros sustentam. (C) é de outra passagem (coffee houses) — distrator clássico de resumo; (E) contradiz o texto (\"they carry less trust\"); (F) é um detalhe numérico inventado, não consta no texto.",
+    "hint": null,
+    "trap_codes": [],
+    "tags": [],
+    "status": "rascunho",
+    "source": {
+      "kind": "migrado",
+      "file": "app/drills_data.py",
+      "ref": "MOD1_ACTION_DRILLS_C:mod1-c3#C3.7",
+      "live_on_site": true,
+      "answer_letter": "origem",
+      "build_map": null
+    },
+    "select_count": 3
+  },
+  {
+    "id": "mod7-b4.1",
+    "section": "reading",
+    "task_type": "Read an Academic Passage",
+    "exam_format": true,
+    "format": "mcq",
+    "skill": "Factual Information",
+    "cefr_min": null,
+    "cefr_max": null,
+    "stimulus": {
+      "kind": "text",
+      "format": "markdown",
+      "title": "Bloco C: Read an Academic Passage (versão abreviada)",
+      "content": "**PASSAGE: Coral Bleaching and Thermal Stress**\n\nCoral reefs, despite occupying less than one percent of the ocean floor, support roughly a quarter of all known marine species. This disproportionate biodiversity depends on a delicate symbiotic relationship between coral polyps and microscopic algae called zooxanthellae, which live within coral tissue and supply the majority of the coral's energy through photosynthesis. When ocean temperatures rise even slightly above a coral's tolerance threshold: often by as little as one or two degrees Celsius sustained over several weeks · the algae are expelled, leaving the coral's white calcium carbonate skeleton visible. This phenomenon, known as bleaching, does not itself kill the coral immediately, but it severs the primary energy supply, leaving the organism vulnerable to starvation and disease. Recovery is possible if temperatures normalize quickly, but repeated bleaching events, now increasingly common under sustained ocean warming, leave reefs with progressively less time to recover between episodes.",
+      "audio_ref": null
+    },
+    "group": "mod7-b4",
+    "prompt": "According to the passage, zooxanthellae primarily provide coral with:",
+    "text_format": "markdown",
+    "options": {
+      "A": "protection from predators",
+      "B": "energy through photosynthesis",
+      "C": "structural support for the skeleton",
+      "D": "resistance to temperature change"
+    },
+    "answer": "B",
+    "explanation": "",
+    "hint": null,
+    "trap_codes": [],
+    "tags": [
+      "simulado-2"
+    ],
+    "status": "rascunho",
+    "source": {
+      "kind": "migrado",
+      "file": "consolidated/modulo_7_simulados.md",
+      "ref": "linha 278",
+      "live_on_site": true,
+      "answer_letter": "origem",
+      "build_map": {
+        "A": "C",
+        "B": "A",
+        "C": "B",
+        "D": "D"
+      }
+    }
+  },
+  {
+    "id": "mod7-b4.2",
+    "section": "reading",
+    "task_type": "Read an Academic Passage",
+    "exam_format": true,
+    "format": "mcq",
+    "skill": "Vocabulary in Context",
+    "cefr_min": null,
+    "cefr_max": null,
+    "stimulus": {
+      "kind": "text",
+      "format": "markdown",
+      "title": "Bloco C: Read an Academic Passage (versão abreviada)",
+      "content": "**PASSAGE: Coral Bleaching and Thermal Stress**\n\nCoral reefs, despite occupying less than one percent of the ocean floor, support roughly a quarter of all known marine species. This disproportionate biodiversity depends on a delicate symbiotic relationship between coral polyps and microscopic algae called zooxanthellae, which live within coral tissue and supply the majority of the coral's energy through photosynthesis. When ocean temperatures rise even slightly above a coral's tolerance threshold: often by as little as one or two degrees Celsius sustained over several weeks · the algae are expelled, leaving the coral's white calcium carbonate skeleton visible. This phenomenon, known as bleaching, does not itself kill the coral immediately, but it severs the primary energy supply, leaving the organism vulnerable to starvation and disease. Recovery is possible if temperatures normalize quickly, but repeated bleaching events, now increasingly common under sustained ocean warming, leave reefs with progressively less time to recover between episodes.",
+      "audio_ref": null
+    },
+    "group": "mod7-b4",
+    "prompt": "The word \"severs\" is closest in meaning to:",
+    "text_format": "markdown",
+    "options": {
+      "A": "strengthens",
+      "B": "cuts off",
+      "C": "gradually reduces",
+      "D": "temporarily interrupts"
+    },
+    "answer": "B",
+    "explanation": "contraste com \"does not kill immediately\" indica corte abrupto do fluxo, não redução gradual · descarta (D)",
+    "hint": null,
+    "trap_codes": [],
+    "tags": [
+      "simulado-2"
+    ],
+    "status": "rascunho",
+    "source": {
+      "kind": "migrado",
+      "file": "consolidated/modulo_7_simulados.md",
+      "ref": "linha 284",
+      "live_on_site": true,
+      "answer_letter": "origem",
+      "build_map": {
+        "A": "A",
+        "B": "B",
+        "C": "C",
+        "D": "D"
+      }
+    }
+  },
+  {
+    "id": "mod7-b4.3",
+    "section": "reading",
+    "task_type": "Read an Academic Passage",
+    "exam_format": true,
+    "format": "mcq",
+    "skill": "Inference",
+    "cefr_min": null,
+    "cefr_max": null,
+    "stimulus": {
+      "kind": "text",
+      "format": "markdown",
+      "title": "Bloco C: Read an Academic Passage (versão abreviada)",
+      "content": "**PASSAGE: Coral Bleaching and Thermal Stress**\n\nCoral reefs, despite occupying less than one percent of the ocean floor, support roughly a quarter of all known marine species. This disproportionate biodiversity depends on a delicate symbiotic relationship between coral polyps and microscopic algae called zooxanthellae, which live within coral tissue and supply the majority of the coral's energy through photosynthesis. When ocean temperatures rise even slightly above a coral's tolerance threshold: often by as little as one or two degrees Celsius sustained over several weeks · the algae are expelled, leaving the coral's white calcium carbonate skeleton visible. This phenomenon, known as bleaching, does not itself kill the coral immediately, but it severs the primary energy supply, leaving the organism vulnerable to starvation and disease. Recovery is possible if temperatures normalize quickly, but repeated bleaching events, now increasingly common under sustained ocean warming, leave reefs with progressively less time to recover between episodes.",
+      "audio_ref": null
+    },
+    "group": "mod7-b4",
+    "prompt": "It can be inferred that repeated, closely spaced bleaching events are especially dangerous because:",
+    "text_format": "markdown",
+    "options": {
+      "A": "they permanently alter the coral's genetic structure",
+      "B": "they leave reefs less time to recover before the next episode",
+      "C": "they only affect coral in tropical regions",
+      "D": "they eliminate zooxanthellae permanently from the ecosystem"
+    },
+    "answer": "B",
+    "explanation": "afirmado diretamente na última frase",
+    "hint": null,
+    "trap_codes": [],
+    "tags": [
+      "simulado-2"
+    ],
+    "status": "rascunho",
+    "source": {
+      "kind": "migrado",
+      "file": "consolidated/modulo_7_simulados.md",
+      "ref": "linha 287",
+      "live_on_site": true,
+      "answer_letter": "origem",
+      "build_map": {
+        "A": "A",
+        "B": "C",
+        "C": "B",
+        "D": "D"
+      }
+    }
+  },
+  {
+    "id": "mod7-b5.1",
+    "section": "reading",
+    "task_type": "Read an Academic Passage",
+    "exam_format": true,
+    "format": "mcq",
+    "skill": "Main Idea",
+    "cefr_min": null,
+    "cefr_max": null,
+    "stimulus": {
+      "kind": "text",
+      "format": "markdown",
+      "title": "Bloco C: Read an Academic Passage (versão abreviada)",
+      "content": "**PASSAGE 2: The Printing Press and the Standardization of Language**\n\nBefore the spread of print in fifteenth-century Europe, a single language could vary so much from region to region that speakers a few hundred kilometers apart struggled to read one another's writing. Scribes copied texts by hand, and each copy absorbed the copyist's own spelling habits, regional vocabulary, and errors. There was no strong pressure toward a single written standard, because the audience for any given manuscript was small and usually local.\n\nThe printing press changed the economics of this situation. A printer who set a book in type was making a substantial investment and needed to sell copies across as wide an area as possible to recover the cost. This gave printers a direct financial incentive to choose forms of spelling and grammar that the largest number of readers would accept. Over several decades, the dialect of the commercially dominant region (often the capital or the largest trading city) tended to become the basis of the printed standard, not because it was linguistically superior, but because it reached the biggest market.\n\nThis standardizing effect was not entirely welcome. Writers who spoke regional varieties found their own usage increasingly marked as incorrect, and forms of the language that were never printed came to be seen as mere \"dialect\" rather than legitimate versions of the language. Historians of language now generally agree that the \"standard\" form of many European languages is less a natural centre of the language than an accident of which city happened to dominate early commercial printing.",
+      "audio_ref": null
+    },
+    "group": "mod7-b5",
+    "prompt": "The passage is primarily concerned with:",
+    "text_format": "markdown",
+    "options": {
+      "A": "how handwriting was replaced by typesetting",
+      "B": "how commercial pressures in early printing shaped which form of a language became \"standard\"",
+      "C": "why fifteenth-century books were expensive to produce",
+      "D": "how regional dialects disappeared completely after printing"
+    },
+    "answer": "B",
+    "explanation": "",
+    "hint": null,
+    "trap_codes": [],
+    "tags": [
+      "simulado-2"
+    ],
+    "status": "rascunho",
+    "source": {
+      "kind": "migrado",
+      "file": "consolidated/modulo_7_simulados.md",
+      "ref": "linha 303",
+      "live_on_site": true,
+      "answer_letter": "origem",
+      "build_map": {
+        "A": "D",
+        "B": "C",
+        "C": "A",
+        "D": "B"
+      }
+    }
+  },
+  {
+    "id": "mod7-b5.2",
+    "section": "reading",
+    "task_type": "Read an Academic Passage",
+    "exam_format": true,
+    "format": "mcq",
+    "skill": "Factual Information",
+    "cefr_min": null,
+    "cefr_max": null,
+    "stimulus": {
+      "kind": "text",
+      "format": "markdown",
+      "title": "Bloco C: Read an Academic Passage (versão abreviada)",
+      "content": "**PASSAGE 2: The Printing Press and the Standardization of Language**\n\nBefore the spread of print in fifteenth-century Europe, a single language could vary so much from region to region that speakers a few hundred kilometers apart struggled to read one another's writing. Scribes copied texts by hand, and each copy absorbed the copyist's own spelling habits, regional vocabulary, and errors. There was no strong pressure toward a single written standard, because the audience for any given manuscript was small and usually local.\n\nThe printing press changed the economics of this situation. A printer who set a book in type was making a substantial investment and needed to sell copies across as wide an area as possible to recover the cost. This gave printers a direct financial incentive to choose forms of spelling and grammar that the largest number of readers would accept. Over several decades, the dialect of the commercially dominant region (often the capital or the largest trading city) tended to become the basis of the printed standard, not because it was linguistically superior, but because it reached the biggest market.\n\nThis standardizing effect was not entirely welcome. Writers who spoke regional varieties found their own usage increasingly marked as incorrect, and forms of the language that were never printed came to be seen as mere \"dialect\" rather than legitimate versions of the language. Historians of language now generally agree that the \"standard\" form of many European languages is less a natural centre of the language than an accident of which city happened to dominate early commercial printing.",
+      "audio_ref": null
+    },
+    "group": "mod7-b5",
+    "prompt": "According to the passage, why did printers favor certain spellings and grammar?",
+    "text_format": "markdown",
+    "options": {
+      "A": "Government regulations required a single standard",
+      "B": "Those forms were known to be more logical",
+      "C": "They wanted to sell copies across the widest possible area",
+      "D": "Scribes had already agreed on them"
+    },
+    "answer": "C",
+    "explanation": "",
+    "hint": null,
+    "trap_codes": [],
+    "tags": [
+      "simulado-2"
+    ],
+    "status": "rascunho",
+    "source": {
+      "kind": "migrado",
+      "file": "consolidated/modulo_7_simulados.md",
+      "ref": "linha 309",
+      "live_on_site": true,
+      "answer_letter": "origem",
+      "build_map": {
+        "A": "B",
+        "B": "A",
+        "C": "D",
+        "D": "C"
+      }
+    }
+  },
+  {
+    "id": "mod7-b5.3",
+    "section": "reading",
+    "task_type": "Read an Academic Passage",
+    "exam_format": true,
+    "format": "mcq",
+    "skill": "Vocabulary in Context",
+    "cefr_min": null,
+    "cefr_max": null,
+    "stimulus": {
+      "kind": "text",
+      "format": "markdown",
+      "title": "Bloco C: Read an Academic Passage (versão abreviada)",
+      "content": "**PASSAGE 2: The Printing Press and the Standardization of Language**\n\nBefore the spread of print in fifteenth-century Europe, a single language could vary so much from region to region that speakers a few hundred kilometers apart struggled to read one another's writing. Scribes copied texts by hand, and each copy absorbed the copyist's own spelling habits, regional vocabulary, and errors. There was no strong pressure toward a single written standard, because the audience for any given manuscript was small and usually local.\n\nThe printing press changed the economics of this situation. A printer who set a book in type was making a substantial investment and needed to sell copies across as wide an area as possible to recover the cost. This gave printers a direct financial incentive to choose forms of spelling and grammar that the largest number of readers would accept. Over several decades, the dialect of the commercially dominant region (often the capital or the largest trading city) tended to become the basis of the printed standard, not because it was linguistically superior, but because it reached the biggest market.\n\nThis standardizing effect was not entirely welcome. Writers who spoke regional varieties found their own usage increasingly marked as incorrect, and forms of the language that were never printed came to be seen as mere \"dialect\" rather than legitimate versions of the language. Historians of language now generally agree that the \"standard\" form of many European languages is less a natural centre of the language than an accident of which city happened to dominate early commercial printing.",
+      "audio_ref": null
+    },
+    "group": "mod7-b5",
+    "prompt": "The word \"marked\" in paragraph 3 is closest in meaning to:",
+    "text_format": "markdown",
+    "options": {
+      "A": "graded",
+      "B": "labeled or identified",
+      "C": "crossed out",
+      "D": "celebrated"
+    },
+    "answer": "B",
+    "explanation": "",
+    "hint": null,
+    "trap_codes": [],
+    "tags": [
+      "simulado-2"
+    ],
+    "status": "rascunho",
+    "source": {
+      "kind": "migrado",
+      "file": "consolidated/modulo_7_simulados.md",
+      "ref": "linha 315",
+      "live_on_site": true,
+      "answer_letter": "origem",
+      "build_map": {
+        "A": "B",
+        "B": "A",
+        "C": "C",
+        "D": "D"
+      }
+    }
+  },
+  {
+    "id": "mod7-b5.4",
+    "section": "reading",
+    "task_type": "Read an Academic Passage",
+    "exam_format": true,
+    "format": "mcq",
+    "skill": "Inference",
+    "cefr_min": null,
+    "cefr_max": null,
+    "stimulus": {
+      "kind": "text",
+      "format": "markdown",
+      "title": "Bloco C: Read an Academic Passage (versão abreviada)",
+      "content": "**PASSAGE 2: The Printing Press and the Standardization of Language**\n\nBefore the spread of print in fifteenth-century Europe, a single language could vary so much from region to region that speakers a few hundred kilometers apart struggled to read one another's writing. Scribes copied texts by hand, and each copy absorbed the copyist's own spelling habits, regional vocabulary, and errors. There was no strong pressure toward a single written standard, because the audience for any given manuscript was small and usually local.\n\nThe printing press changed the economics of this situation. A printer who set a book in type was making a substantial investment and needed to sell copies across as wide an area as possible to recover the cost. This gave printers a direct financial incentive to choose forms of spelling and grammar that the largest number of readers would accept. Over several decades, the dialect of the commercially dominant region (often the capital or the largest trading city) tended to become the basis of the printed standard, not because it was linguistically superior, but because it reached the biggest market.\n\nThis standardizing effect was not entirely welcome. Writers who spoke regional varieties found their own usage increasingly marked as incorrect, and forms of the language that were never printed came to be seen as mere \"dialect\" rather than legitimate versions of the language. Historians of language now generally agree that the \"standard\" form of many European languages is less a natural centre of the language than an accident of which city happened to dominate early commercial printing.",
+      "audio_ref": null
+    },
+    "group": "mod7-b5",
+    "prompt": "It can be inferred that if a different city had dominated early printing:",
+    "text_format": "markdown",
+    "options": {
+      "A": "printing would have developed more slowly",
+      "B": "a different regional dialect might have become the standard form",
+      "C": "books would have contained more errors",
+      "D": "handwriting would have survived longer"
+    },
+    "answer": "B",
+    "explanation": "",
+    "hint": null,
+    "trap_codes": [],
+    "tags": [
+      "simulado-2"
+    ],
+    "status": "rascunho",
+    "source": {
+      "kind": "migrado",
+      "file": "consolidated/modulo_7_simulados.md",
+      "ref": "linha 318",
+      "live_on_site": true,
+      "answer_letter": "origem",
+      "build_map": {
+        "A": "C",
+        "B": "B",
+        "C": "D",
+        "D": "A"
+      }
+    }
+  },
+  {
+    "id": "mod7-b5.5",
+    "section": "reading",
+    "task_type": "Read an Academic Passage",
+    "exam_format": true,
+    "format": "mcq",
+    "skill": "Sentence Simplification",
+    "cefr_min": null,
+    "cefr_max": null,
+    "stimulus": {
+      "kind": "text",
+      "format": "markdown",
+      "title": "Bloco C: Read an Academic Passage (versão abreviada)",
+      "content": "**PASSAGE 2: The Printing Press and the Standardization of Language**\n\nBefore the spread of print in fifteenth-century Europe, a single language could vary so much from region to region that speakers a few hundred kilometers apart struggled to read one another's writing. Scribes copied texts by hand, and each copy absorbed the copyist's own spelling habits, regional vocabulary, and errors. There was no strong pressure toward a single written standard, because the audience for any given manuscript was small and usually local.\n\nThe printing press changed the economics of this situation. A printer who set a book in type was making a substantial investment and needed to sell copies across as wide an area as possible to recover the cost. This gave printers a direct financial incentive to choose forms of spelling and grammar that the largest number of readers would accept. Over several decades, the dialect of the commercially dominant region (often the capital or the largest trading city) tended to become the basis of the printed standard, not because it was linguistically superior, but because it reached the biggest market.\n\nThis standardizing effect was not entirely welcome. Writers who spoke regional varieties found their own usage increasingly marked as incorrect, and forms of the language that were never printed came to be seen as mere \"dialect\" rather than legitimate versions of the language. Historians of language now generally agree that the \"standard\" form of many European languages is less a natural centre of the language than an accident of which city happened to dominate early commercial printing.",
+      "audio_ref": null
+    },
+    "group": "mod7-b5",
+    "prompt": "*\"This gave printers a direct financial incentive to choose forms of spelling and grammar that the largest number of readers would accept.\"*",
+    "text_format": "markdown",
+    "options": {
+      "A": "Printers were legally obligated to use standard spelling.",
+      "B": "Because printers needed wide sales, they had a money-based reason to pick spelling and grammar most readers would accept.",
+      "C": "Readers refused to buy books with unfamiliar spelling.",
+      "D": "Printers preferred grammar that was easiest to typeset."
+    },
+    "answer": "B",
+    "explanation": "",
+    "hint": null,
+    "trap_codes": [],
+    "tags": [
+      "simulado-2"
+    ],
+    "status": "rascunho",
+    "source": {
+      "kind": "migrado",
+      "file": "consolidated/modulo_7_simulados.md",
+      "ref": "linha 324",
+      "live_on_site": true,
+      "answer_letter": "origem",
+      "build_map": {
+        "A": "A",
+        "B": "B",
+        "C": "C",
+        "D": "D"
+      }
+    }
+  },
+  {
+    "id": "mod7-b5.6",
+    "section": "reading",
+    "task_type": "Read an Academic Passage",
+    "exam_format": true,
+    "format": "mcq",
+    "skill": "Rhetorical Purpose",
+    "cefr_min": null,
+    "cefr_max": null,
+    "stimulus": {
+      "kind": "text",
+      "format": "markdown",
+      "title": "Bloco C: Read an Academic Passage (versão abreviada)",
+      "content": "**PASSAGE 2: The Printing Press and the Standardization of Language**\n\nBefore the spread of print in fifteenth-century Europe, a single language could vary so much from region to region that speakers a few hundred kilometers apart struggled to read one another's writing. Scribes copied texts by hand, and each copy absorbed the copyist's own spelling habits, regional vocabulary, and errors. There was no strong pressure toward a single written standard, because the audience for any given manuscript was small and usually local.\n\nThe printing press changed the economics of this situation. A printer who set a book in type was making a substantial investment and needed to sell copies across as wide an area as possible to recover the cost. This gave printers a direct financial incentive to choose forms of spelling and grammar that the largest number of readers would accept. Over several decades, the dialect of the commercially dominant region (often the capital or the largest trading city) tended to become the basis of the printed standard, not because it was linguistically superior, but because it reached the biggest market.\n\nThis standardizing effect was not entirely welcome. Writers who spoke regional varieties found their own usage increasingly marked as incorrect, and forms of the language that were never printed came to be seen as mere \"dialect\" rather than legitimate versions of the language. Historians of language now generally agree that the \"standard\" form of many European languages is less a natural centre of the language than an accident of which city happened to dominate early commercial printing.",
+      "audio_ref": null
+    },
+    "group": "mod7-b5",
+    "prompt": "In paragraph 3, the author mentions writers whose usage was \"marked as incorrect\" in order to:",
+    "text_format": "markdown",
+    "options": {
+      "A": "show that standardization also had costs",
+      "B": "argue that regional dialects were genuinely inferior",
+      "C": "explain how typesetting worked",
+      "D": "praise the efficiency of the printing press"
+    },
+    "answer": "A",
+    "explanation": "",
+    "hint": null,
+    "trap_codes": [],
+    "tags": [
+      "simulado-2"
+    ],
+    "status": "rascunho",
+    "source": {
+      "kind": "migrado",
+      "file": "consolidated/modulo_7_simulados.md",
+      "ref": "linha 330",
+      "live_on_site": true,
+      "answer_letter": "origem",
+      "build_map": {
+        "A": "A",
+        "B": "B",
+        "C": "C",
+        "D": "D"
+      }
+    }
+  },
+  {
+    "id": "mod7-b15.1",
+    "section": "reading",
+    "task_type": "Read an Academic Passage",
+    "exam_format": true,
+    "format": "mcq",
+    "skill": "Gist/Main Idea",
+    "cefr_min": null,
+    "cefr_max": null,
+    "stimulus": {
+      "kind": "text",
+      "format": "markdown",
+      "title": "Bloco C: Read an Academic Passage (alvo: 12–14 min)",
+      "content": "**PASSAGE: The Economics of Network Effects**\n\nA network effect occurs when the value of a product or service increases as more people use it. The telephone is the textbook example: a single telephone is useless, but as adoption grows, each additional user increases the value of the network for everyone already connected to it. This dynamic, largely peripheral to economic theory for much of the twentieth century, has become central to understanding digital markets, where platforms (social networks, marketplaces, operating systems) often derive their value primarily from the size and engagement of their user base rather than from the intrinsic quality of the underlying product.\n\nNetwork effects can be direct or indirect. Direct network effects occur when the value to a user increases as a function of other users of the *same* product: a messaging app is more useful as more of one's contacts join it. Indirect network effects occur across two distinct but interdependent user groups: a ride-sharing platform becomes more attractive to riders as more drivers join, and simultaneously more attractive to drivers as more riders join. This two-sided dynamic creates a powerful feedback loop that, once initiated, can be extraordinarily difficult for competitors to disrupt.\n\nThis difficulty of disruption is often described as a \"winner-take-most\" dynamic. Because users generally prefer the platform with the largest existing network, early leaders in markets with strong network effects tend to compound their advantage rapidly, often achieving dominant market positions that persist even when competitors offer superior underlying technology. This has generated significant regulatory concern, particularly regarding whether dominant platforms leverage network-effect-driven market power in ways that stifle competition rather than simply reflecting superior efficiency.\n\nCritics of this narrative, however, caution against treating network effects as an insurmountable barrier to entry. History offers counterexamples: several dominant platforms have been displaced by newer entrants offering a sufficiently differentiated experience, suggesting that network effects, while powerful, are not absolute. Switching costs, multi-homing behavior · where users maintain accounts on multiple competing platforms simultaneously · and shifts in user preference can erode even substantial network advantages over time.",
+      "audio_ref": null
+    },
+    "group": "mod7-b15",
+    "prompt": "What is the primary purpose of this passage?",
+    "text_format": "markdown",
+    "options": {
+      "A": "To argue that network effects make competition in digital markets impossible",
+      "B": "To explain the concept of network effects and evaluate the extent of their competitive power",
+      "C": "To criticize regulators for failing to break up dominant technology platforms",
+      "D": "To describe the history of the telephone as a communication technology"
+    },
+    "answer": "B",
+    "explanation": "",
+    "hint": null,
+    "trap_codes": [],
+    "tags": [
+      "simulado-3"
+    ],
+    "status": "rascunho",
+    "source": {
+      "kind": "migrado",
+      "file": "consolidated/modulo_7_simulados.md",
+      "ref": "linha 662",
+      "live_on_site": true,
+      "answer_letter": "origem",
+      "build_map": {
+        "A": "D",
+        "B": "C",
+        "C": "B",
+        "D": "A"
+      }
+    }
+  },
+  {
+    "id": "mod7-b15.2",
+    "section": "reading",
+    "task_type": "Read an Academic Passage",
+    "exam_format": true,
+    "format": "mcq",
+    "skill": "Factual Information",
+    "cefr_min": null,
+    "cefr_max": null,
+    "stimulus": {
+      "kind": "text",
+      "format": "markdown",
+      "title": "Bloco C: Read an Academic Passage (alvo: 12–14 min)",
+      "content": "**PASSAGE: The Economics of Network Effects**\n\nA network effect occurs when the value of a product or service increases as more people use it. The telephone is the textbook example: a single telephone is useless, but as adoption grows, each additional user increases the value of the network for everyone already connected to it. This dynamic, largely peripheral to economic theory for much of the twentieth century, has become central to understanding digital markets, where platforms (social networks, marketplaces, operating systems) often derive their value primarily from the size and engagement of their user base rather than from the intrinsic quality of the underlying product.\n\nNetwork effects can be direct or indirect. Direct network effects occur when the value to a user increases as a function of other users of the *same* product: a messaging app is more useful as more of one's contacts join it. Indirect network effects occur across two distinct but interdependent user groups: a ride-sharing platform becomes more attractive to riders as more drivers join, and simultaneously more attractive to drivers as more riders join. This two-sided dynamic creates a powerful feedback loop that, once initiated, can be extraordinarily difficult for competitors to disrupt.\n\nThis difficulty of disruption is often described as a \"winner-take-most\" dynamic. Because users generally prefer the platform with the largest existing network, early leaders in markets with strong network effects tend to compound their advantage rapidly, often achieving dominant market positions that persist even when competitors offer superior underlying technology. This has generated significant regulatory concern, particularly regarding whether dominant platforms leverage network-effect-driven market power in ways that stifle competition rather than simply reflecting superior efficiency.\n\nCritics of this narrative, however, caution against treating network effects as an insurmountable barrier to entry. History offers counterexamples: several dominant platforms have been displaced by newer entrants offering a sufficiently differentiated experience, suggesting that network effects, while powerful, are not absolute. Switching costs, multi-homing behavior · where users maintain accounts on multiple competing platforms simultaneously · and shifts in user preference can erode even substantial network advantages over time.",
+      "audio_ref": null
+    },
+    "group": "mod7-b15",
+    "prompt": "According to paragraph 2, an indirect network effect is best illustrated by:",
+    "text_format": "markdown",
+    "options": {
+      "A": "a messaging app becoming more useful as more contacts join",
+      "B": "a ride-sharing platform becoming more attractive to both riders and drivers as each group grows",
+      "C": "a telephone network growing in value as adoption increases",
+      "D": "a social network losing value as user growth slows"
+    },
+    "answer": "B",
+    "explanation": "",
+    "hint": null,
+    "trap_codes": [],
+    "tags": [
+      "simulado-3"
+    ],
+    "status": "rascunho",
+    "source": {
+      "kind": "migrado",
+      "file": "consolidated/modulo_7_simulados.md",
+      "ref": "linha 668",
+      "live_on_site": true,
+      "answer_letter": "origem",
+      "build_map": {
+        "A": "C",
+        "B": "B",
+        "C": "A",
+        "D": "D"
+      }
+    }
+  },
+  {
+    "id": "mod7-b15.3",
+    "section": "reading",
+    "task_type": "Read an Academic Passage",
+    "exam_format": true,
+    "format": "mcq",
+    "skill": "Vocabulary in Context",
+    "cefr_min": null,
+    "cefr_max": null,
+    "stimulus": {
+      "kind": "text",
+      "format": "markdown",
+      "title": "Bloco C: Read an Academic Passage (alvo: 12–14 min)",
+      "content": "**PASSAGE: The Economics of Network Effects**\n\nA network effect occurs when the value of a product or service increases as more people use it. The telephone is the textbook example: a single telephone is useless, but as adoption grows, each additional user increases the value of the network for everyone already connected to it. This dynamic, largely peripheral to economic theory for much of the twentieth century, has become central to understanding digital markets, where platforms (social networks, marketplaces, operating systems) often derive their value primarily from the size and engagement of their user base rather than from the intrinsic quality of the underlying product.\n\nNetwork effects can be direct or indirect. Direct network effects occur when the value to a user increases as a function of other users of the *same* product: a messaging app is more useful as more of one's contacts join it. Indirect network effects occur across two distinct but interdependent user groups: a ride-sharing platform becomes more attractive to riders as more drivers join, and simultaneously more attractive to drivers as more riders join. This two-sided dynamic creates a powerful feedback loop that, once initiated, can be extraordinarily difficult for competitors to disrupt.\n\nThis difficulty of disruption is often described as a \"winner-take-most\" dynamic. Because users generally prefer the platform with the largest existing network, early leaders in markets with strong network effects tend to compound their advantage rapidly, often achieving dominant market positions that persist even when competitors offer superior underlying technology. This has generated significant regulatory concern, particularly regarding whether dominant platforms leverage network-effect-driven market power in ways that stifle competition rather than simply reflecting superior efficiency.\n\nCritics of this narrative, however, caution against treating network effects as an insurmountable barrier to entry. History offers counterexamples: several dominant platforms have been displaced by newer entrants offering a sufficiently differentiated experience, suggesting that network effects, while powerful, are not absolute. Switching costs, multi-homing behavior · where users maintain accounts on multiple competing platforms simultaneously · and shifts in user preference can erode even substantial network advantages over time.",
+      "audio_ref": null
+    },
+    "group": "mod7-b15",
+    "prompt": "The word \"insurmountable\" in paragraph 4 is closest in meaning to:",
+    "text_format": "markdown",
+    "options": {
+      "A": "temporary",
+      "B": "impossible to overcome",
+      "C": "financially costly",
+      "D": "legally questionable"
+    },
+    "answer": "B",
+    "explanation": "",
+    "hint": null,
+    "trap_codes": [],
+    "tags": [
+      "simulado-3"
+    ],
+    "status": "rascunho",
+    "source": {
+      "kind": "migrado",
+      "file": "consolidated/modulo_7_simulados.md",
+      "ref": "linha 674",
+      "live_on_site": true,
+      "answer_letter": "origem",
+      "build_map": {
+        "A": "A",
+        "B": "D",
+        "C": "C",
+        "D": "B"
+      }
+    }
+  },
+  {
+    "id": "mod7-b15.4",
+    "section": "reading",
+    "task_type": "Read an Academic Passage",
+    "exam_format": true,
+    "format": "mcq",
+    "skill": "Inference",
+    "cefr_min": null,
+    "cefr_max": null,
+    "stimulus": {
+      "kind": "text",
+      "format": "markdown",
+      "title": "Bloco C: Read an Academic Passage (alvo: 12–14 min)",
+      "content": "**PASSAGE: The Economics of Network Effects**\n\nA network effect occurs when the value of a product or service increases as more people use it. The telephone is the textbook example: a single telephone is useless, but as adoption grows, each additional user increases the value of the network for everyone already connected to it. This dynamic, largely peripheral to economic theory for much of the twentieth century, has become central to understanding digital markets, where platforms (social networks, marketplaces, operating systems) often derive their value primarily from the size and engagement of their user base rather than from the intrinsic quality of the underlying product.\n\nNetwork effects can be direct or indirect. Direct network effects occur when the value to a user increases as a function of other users of the *same* product: a messaging app is more useful as more of one's contacts join it. Indirect network effects occur across two distinct but interdependent user groups: a ride-sharing platform becomes more attractive to riders as more drivers join, and simultaneously more attractive to drivers as more riders join. This two-sided dynamic creates a powerful feedback loop that, once initiated, can be extraordinarily difficult for competitors to disrupt.\n\nThis difficulty of disruption is often described as a \"winner-take-most\" dynamic. Because users generally prefer the platform with the largest existing network, early leaders in markets with strong network effects tend to compound their advantage rapidly, often achieving dominant market positions that persist even when competitors offer superior underlying technology. This has generated significant regulatory concern, particularly regarding whether dominant platforms leverage network-effect-driven market power in ways that stifle competition rather than simply reflecting superior efficiency.\n\nCritics of this narrative, however, caution against treating network effects as an insurmountable barrier to entry. History offers counterexamples: several dominant platforms have been displaced by newer entrants offering a sufficiently differentiated experience, suggesting that network effects, while powerful, are not absolute. Switching costs, multi-homing behavior · where users maintain accounts on multiple competing platforms simultaneously · and shifts in user preference can erode even substantial network advantages over time.",
+      "audio_ref": null
+    },
+    "group": "mod7-b15",
+    "prompt": "It can be inferred from paragraph 3 that regulatory concern about dominant platforms centers on whether:",
+    "text_format": "markdown",
+    "options": {
+      "A": "their market power reflects genuine efficiency or anticompetitive advantage",
+      "B": "they charge unfairly high prices to consumers",
+      "C": "they violate international trade agreements",
+      "D": "they fail to innovate at a sufficient pace"
+    },
+    "answer": "A",
+    "explanation": "",
+    "hint": null,
+    "trap_codes": [],
+    "tags": [
+      "simulado-3"
+    ],
+    "status": "rascunho",
+    "source": {
+      "kind": "migrado",
+      "file": "consolidated/modulo_7_simulados.md",
+      "ref": "linha 677",
+      "live_on_site": true,
+      "answer_letter": "origem",
+      "build_map": {
+        "A": "A",
+        "B": "C",
+        "C": "B",
+        "D": "D"
+      }
+    }
+  },
+  {
+    "id": "mod7-b15.5",
+    "section": "reading",
+    "task_type": "Read an Academic Passage",
+    "exam_format": true,
+    "format": "mcq",
+    "skill": "Rhetorical Purpose",
+    "cefr_min": null,
+    "cefr_max": null,
+    "stimulus": {
+      "kind": "text",
+      "format": "markdown",
+      "title": "Bloco C: Read an Academic Passage (alvo: 12–14 min)",
+      "content": "**PASSAGE: The Economics of Network Effects**\n\nA network effect occurs when the value of a product or service increases as more people use it. The telephone is the textbook example: a single telephone is useless, but as adoption grows, each additional user increases the value of the network for everyone already connected to it. This dynamic, largely peripheral to economic theory for much of the twentieth century, has become central to understanding digital markets, where platforms (social networks, marketplaces, operating systems) often derive their value primarily from the size and engagement of their user base rather than from the intrinsic quality of the underlying product.\n\nNetwork effects can be direct or indirect. Direct network effects occur when the value to a user increases as a function of other users of the *same* product: a messaging app is more useful as more of one's contacts join it. Indirect network effects occur across two distinct but interdependent user groups: a ride-sharing platform becomes more attractive to riders as more drivers join, and simultaneously more attractive to drivers as more riders join. This two-sided dynamic creates a powerful feedback loop that, once initiated, can be extraordinarily difficult for competitors to disrupt.\n\nThis difficulty of disruption is often described as a \"winner-take-most\" dynamic. Because users generally prefer the platform with the largest existing network, early leaders in markets with strong network effects tend to compound their advantage rapidly, often achieving dominant market positions that persist even when competitors offer superior underlying technology. This has generated significant regulatory concern, particularly regarding whether dominant platforms leverage network-effect-driven market power in ways that stifle competition rather than simply reflecting superior efficiency.\n\nCritics of this narrative, however, caution against treating network effects as an insurmountable barrier to entry. History offers counterexamples: several dominant platforms have been displaced by newer entrants offering a sufficiently differentiated experience, suggesting that network effects, while powerful, are not absolute. Switching costs, multi-homing behavior · where users maintain accounts on multiple competing platforms simultaneously · and shifts in user preference can erode even substantial network advantages over time.",
+      "audio_ref": null
+    },
+    "group": "mod7-b15",
+    "prompt": "Why does the author mention \"multi-homing behavior\" in the final paragraph?",
+    "text_format": "markdown",
+    "options": {
+      "A": "To argue that network effects do not exist in most digital markets",
+      "B": "To provide an example of a factor that can weaken an established network advantage",
+      "C": "To criticize users who maintain accounts on multiple platforms",
+      "D": "To explain why regulators should ignore network effects entirely"
+    },
+    "answer": "B",
+    "explanation": "",
+    "hint": null,
+    "trap_codes": [],
+    "tags": [
+      "simulado-3"
+    ],
+    "status": "rascunho",
+    "source": {
+      "kind": "migrado",
+      "file": "consolidated/modulo_7_simulados.md",
+      "ref": "linha 683",
+      "live_on_site": true,
+      "answer_letter": "origem",
+      "build_map": {
+        "A": "C",
+        "B": "A",
+        "C": "B",
+        "D": "D"
+      }
+    }
+  },
+  {
+    "id": "mod7-b15.6",
+    "section": "reading",
+    "task_type": "Read an Academic Passage",
+    "exam_format": true,
+    "format": "mcq",
+    "skill": "Sentence Simplification",
+    "cefr_min": null,
+    "cefr_max": null,
+    "stimulus": {
+      "kind": "text",
+      "format": "markdown",
+      "title": "Bloco C: Read an Academic Passage (alvo: 12–14 min)",
+      "content": "**PASSAGE: The Economics of Network Effects**\n\nA network effect occurs when the value of a product or service increases as more people use it. The telephone is the textbook example: a single telephone is useless, but as adoption grows, each additional user increases the value of the network for everyone already connected to it. This dynamic, largely peripheral to economic theory for much of the twentieth century, has become central to understanding digital markets, where platforms (social networks, marketplaces, operating systems) often derive their value primarily from the size and engagement of their user base rather than from the intrinsic quality of the underlying product.\n\nNetwork effects can be direct or indirect. Direct network effects occur when the value to a user increases as a function of other users of the *same* product: a messaging app is more useful as more of one's contacts join it. Indirect network effects occur across two distinct but interdependent user groups: a ride-sharing platform becomes more attractive to riders as more drivers join, and simultaneously more attractive to drivers as more riders join. This two-sided dynamic creates a powerful feedback loop that, once initiated, can be extraordinarily difficult for competitors to disrupt.\n\nThis difficulty of disruption is often described as a \"winner-take-most\" dynamic. Because users generally prefer the platform with the largest existing network, early leaders in markets with strong network effects tend to compound their advantage rapidly, often achieving dominant market positions that persist even when competitors offer superior underlying technology. This has generated significant regulatory concern, particularly regarding whether dominant platforms leverage network-effect-driven market power in ways that stifle competition rather than simply reflecting superior efficiency.\n\nCritics of this narrative, however, caution against treating network effects as an insurmountable barrier to entry. History offers counterexamples: several dominant platforms have been displaced by newer entrants offering a sufficiently differentiated experience, suggesting that network effects, while powerful, are not absolute. Switching costs, multi-homing behavior · where users maintain accounts on multiple competing platforms simultaneously · and shifts in user preference can erode even substantial network advantages over time.",
+      "audio_ref": null
+    },
+    "group": "mod7-b15",
+    "prompt": "*\"Because users generally prefer the platform with the largest existing network, early leaders in markets with strong network effects tend to compound their advantage rapidly.\"*",
+    "text_format": "markdown",
+    "options": {
+      "A": "Regulators prefer platforms that grow slowly and predictably.",
+      "B": "Early market leaders in network-effect industries tend to see their advantage grow faster, since users favor the biggest existing network.",
+      "C": "Users are legally required to use the largest platform available.",
+      "D": "Market leadership in these industries is determined entirely by product quality."
+    },
+    "answer": "B",
+    "explanation": "",
+    "hint": null,
+    "trap_codes": [],
+    "tags": [
+      "simulado-3"
+    ],
+    "status": "rascunho",
+    "source": {
+      "kind": "migrado",
+      "file": "consolidated/modulo_7_simulados.md",
+      "ref": "linha 689",
+      "live_on_site": true,
+      "answer_letter": "origem",
+      "build_map": {
+        "A": "A",
+        "B": "B",
+        "C": "D",
+        "D": "C"
+      }
+    }
+  }
+]

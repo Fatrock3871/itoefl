@@ -1,0 +1,412 @@
+[
+  {
+    "id": "mod0-diag.1",
+    "section": "general",
+    "task_type": "Grammar and Vocabulary",
+    "exam_format": false,
+    "format": "mcq",
+    "skill": "Gramática (verb tense/aspect)",
+    "cefr_min": null,
+    "cefr_max": null,
+    "stimulus": null,
+    "group": "mod0-diag",
+    "prompt": "By the time the seminar starts next Monday, Dr. Alvarez ______ her final report for over three weeks.",
+    "text_format": "html",
+    "options": {
+      "A": "writes",
+      "B": "has been writing",
+      "C": "will have been writing",
+      "D": "was writing"
+    },
+    "answer": "C",
+    "explanation": "<strong>Por que certa:</strong> Futuro perfeito contínuo: ação iniciada no passado, contínua até um ponto futuro específico (\"by the time... next Monday\"), com ênfase na duração (\"for over three weeks\").<br><strong>Por que as outras erram:</strong> (A) presente simples ignora a duração; (B) presente perfeito contínuo não projeta para o futuro; (D) passado contínuo não conecta com o marco temporal futuro.",
+    "hint": null,
+    "trap_codes": [],
+    "tags": [
+      "diagnostico"
+    ],
+    "status": "rascunho",
+    "source": {
+      "kind": "migrado",
+      "file": "app/quiz_mod0.json",
+      "ref": "num 1",
+      "live_on_site": true,
+      "answer_letter": "origem",
+      "build_map": {
+        "A": "D",
+        "B": "C",
+        "C": "B",
+        "D": "A"
+      }
+    }
+  },
+  {
+    "id": "mod0-diag.2",
+    "section": "general",
+    "task_type": "Grammar and Vocabulary",
+    "exam_format": false,
+    "format": "mcq",
+    "skill": "Conectivos (contraste)",
+    "cefr_min": null,
+    "cefr_max": null,
+    "stimulus": null,
+    "group": "mod0-diag",
+    "prompt": "The new policy was designed to reduce administrative costs; ______, early data suggests it has increased them.",
+    "text_format": "html",
+    "options": {
+      "A": "furthermore",
+      "B": "as a result",
+      "C": "paradoxically",
+      "D": "similarly"
+    },
+    "answer": "C",
+    "explanation": "<strong>Por que certa:</strong> O conector precisa sinalizar contraste + ironia entre a intenção da política (reduzir custos) e o resultado real (aumentou custos) — \"paradoxically\" captura essa contradição inesperada.<br><strong>Por que as outras erram:</strong> (A) e (B) são de continuidade/consequência lógica, incompatíveis com contraste; (D) sinaliza semelhança, o oposto do que a frase exige.",
+    "hint": null,
+    "trap_codes": [],
+    "tags": [
+      "diagnostico"
+    ],
+    "status": "rascunho",
+    "source": {
+      "kind": "migrado",
+      "file": "app/quiz_mod0.json",
+      "ref": "num 2",
+      "live_on_site": true,
+      "answer_letter": "origem",
+      "build_map": {
+        "A": "B",
+        "B": "C",
+        "C": "A",
+        "D": "D"
+      }
+    }
+  },
+  {
+    "id": "mod0-diag.3",
+    "section": "general",
+    "task_type": "Grammar and Vocabulary",
+    "exam_format": false,
+    "format": "mcq",
+    "skill": "Vocabulário acadêmico",
+    "cefr_min": null,
+    "cefr_max": null,
+    "stimulus": null,
+    "group": "mod0-diag",
+    "prompt": "The committee's decision to postpone the vote was widely seen as an attempt to ______ growing public criticism.",
+    "text_format": "html",
+    "options": {
+      "A": "defer",
+      "B": "exacerbate",
+      "C": "circumvent",
+      "D": "endorse"
+    },
+    "answer": "C",
+    "explanation": "<strong>Por que certa:</strong> \"Circumvent\" (contornar/evitar) encaixa com a lógica de adiar o voto para não enfrentar diretamente a crítica pública.<br><strong>Por que as outras erram:</strong> (A) \"defer\" é próximo mas não captura a ideia de \"evitar/desviar\" a crítica em si — refere-se a adiar algo, não contornar algo; (B) significa piorar, sentido oposto; (D) significa endossar, sentido oposto.",
+    "hint": null,
+    "trap_codes": [],
+    "tags": [
+      "diagnostico"
+    ],
+    "status": "rascunho",
+    "source": {
+      "kind": "migrado",
+      "file": "app/quiz_mod0.json",
+      "ref": "num 3",
+      "live_on_site": true,
+      "answer_letter": "origem",
+      "build_map": {
+        "A": "D",
+        "B": "C",
+        "C": "B",
+        "D": "A"
+      }
+    }
+  },
+  {
+    "id": "mod0-diag.4",
+    "section": "general",
+    "task_type": "Grammar and Vocabulary",
+    "exam_format": false,
+    "format": "mcq",
+    "skill": "Gramática (subjunctive/conditional)",
+    "cefr_min": null,
+    "cefr_max": null,
+    "stimulus": null,
+    "group": "mod0-diag",
+    "prompt": "If the funding request ______ approved last quarter, the lab would already have hired two new researchers.",
+    "text_format": "html",
+    "options": {
+      "A": "was",
+      "B": "were",
+      "C": "had been",
+      "D": "has been"
+    },
+    "answer": "C",
+    "explanation": "<strong>Por que certa:</strong> Condicional tipo 3 (passado hipotético): a oração principal usa \"would have hired\" implícito na lógica (\"would already have hired\"), exigindo past perfect na condicional (\"had been approved\").<br><strong>Por que as outras erram:</strong> (A) e (B) são formas de passado simples/subjuntivo incompatíveis com a estrutura de tipo 3; (D) é present perfect, tempo errado para hipótese no passado.",
+    "hint": null,
+    "trap_codes": [],
+    "tags": [
+      "diagnostico"
+    ],
+    "status": "rascunho",
+    "source": {
+      "kind": "migrado",
+      "file": "app/quiz_mod0.json",
+      "ref": "num 4",
+      "live_on_site": true,
+      "answer_letter": "origem",
+      "build_map": {
+        "A": "D",
+        "B": "B",
+        "C": "C",
+        "D": "A"
+      }
+    }
+  },
+  {
+    "id": "mod0-diag.5",
+    "section": "general",
+    "task_type": "Grammar and Vocabulary",
+    "exam_format": false,
+    "format": "mcq",
+    "skill": "Ordenação lexical (formato \"Complete the Words\")",
+    "cefr_min": null,
+    "cefr_max": null,
+    "stimulus": null,
+    "group": "mod0-diag",
+    "prompt": "Choose the option that best completes the sentence with correct word order and meaning:\nDespite ______, the research team published their findings ahead of schedule.",
+    "text_format": "html",
+    "options": {
+      "A": "numerous setbacks facing",
+      "B": "facing numerous setbacks",
+      "C": "setbacks numerous facing",
+      "D": "numerous facing setbacks"
+    },
+    "answer": "B",
+    "explanation": "<strong>Por que certa:</strong> Ordem correta: verbo no gerúndio + objeto (\"facing numerous setbacks\") após \"despite\", seguindo a estrutura padrão preposição + gerúndio + complemento.<br><strong>Por que as outras erram:</strong> (A) inverte adjetivo e verbo de forma não natural; (C) e (D) quebram a ordem sintática do inglês (adjetivo deve preceder o substantivo, verbo deve preceder o objeto).",
+    "hint": null,
+    "trap_codes": [],
+    "tags": [
+      "diagnostico"
+    ],
+    "status": "rascunho",
+    "source": {
+      "kind": "migrado",
+      "file": "app/quiz_mod0.json",
+      "ref": "num 5",
+      "live_on_site": true,
+      "answer_letter": "origem",
+      "build_map": {
+        "A": "B",
+        "B": "A",
+        "C": "C",
+        "D": "D"
+      }
+    }
+  },
+  {
+    "id": "mod0-diag.6",
+    "section": "general",
+    "task_type": "Grammar and Vocabulary",
+    "exam_format": false,
+    "format": "mcq",
+    "skill": "Conectivos (causa/consequência lógica)",
+    "cefr_min": null,
+    "cefr_max": null,
+    "stimulus": null,
+    "group": "mod0-diag",
+    "prompt": "Coral reefs are highly sensitive to temperature change; ______, even a one-degree rise can trigger mass bleaching events.",
+    "text_format": "html",
+    "options": {
+      "A": "nevertheless",
+      "B": "in contrast",
+      "C": "accordingly",
+      "D": "meanwhile"
+    },
+    "answer": "C",
+    "explanation": "<strong>Por que certa:</strong> A segunda oração é uma consequência lógica direta da sensibilidade térmica mencionada na primeira — \"accordingly\" (consequentemente) é o conector de causa-efeito correto.<br><strong>Por que as outras erram:</strong> (A) e (B) sinalizam contraste, incompatível com a relação de causa-efeito; (D) sinaliza simultaneidade, não consequência.",
+    "hint": null,
+    "trap_codes": [],
+    "tags": [
+      "diagnostico"
+    ],
+    "status": "rascunho",
+    "source": {
+      "kind": "migrado",
+      "file": "app/quiz_mod0.json",
+      "ref": "num 6",
+      "live_on_site": true,
+      "answer_letter": "origem",
+      "build_map": {
+        "A": "D",
+        "B": "B",
+        "C": "A",
+        "D": "C"
+      }
+    }
+  },
+  {
+    "id": "mod0-diag.7",
+    "section": "general",
+    "task_type": "Grammar and Vocabulary",
+    "exam_format": false,
+    "format": "mcq",
+    "skill": "Vocabulário acadêmico (collocation)",
+    "cefr_min": null,
+    "cefr_max": null,
+    "stimulus": null,
+    "group": "mod0-diag",
+    "prompt": "The professor asked students to ______ their arguments with at least two peer-reviewed sources.",
+    "text_format": "html",
+    "options": {
+      "A": "substantiate",
+      "B": "fabricate",
+      "C": "alleviate",
+      "D": "diminish"
+    },
+    "answer": "A",
+    "explanation": "<strong>Por que certa:</strong> \"Substantiate an argument\" é a collocation acadêmica padrão para \"sustentar/comprovar um argumento com evidências\".<br><strong>Por que as outras erram:</strong> (B) significa fabricar/inventar, sentido oposto ao contexto acadêmico legítimo; (C) significa aliviar, sem relação; (D) significa diminuir, sentido oposto.",
+    "hint": null,
+    "trap_codes": [],
+    "tags": [
+      "diagnostico"
+    ],
+    "status": "rascunho",
+    "source": {
+      "kind": "migrado",
+      "file": "app/quiz_mod0.json",
+      "ref": "num 7",
+      "live_on_site": true,
+      "answer_letter": "origem",
+      "build_map": {
+        "A": "B",
+        "B": "A",
+        "C": "C",
+        "D": "D"
+      }
+    }
+  },
+  {
+    "id": "mod0-diag.8",
+    "section": "general",
+    "task_type": "Grammar and Vocabulary",
+    "exam_format": false,
+    "format": "mcq",
+    "skill": "Gramática (relative clauses / estrutura complexa — relevante para Listen and Repeat)",
+    "cefr_min": null,
+    "cefr_max": null,
+    "stimulus": null,
+    "group": "mod0-diag",
+    "prompt": "The proposal, ______ implications had not been fully considered, was rejected by the board.",
+    "text_format": "html",
+    "options": {
+      "A": "that its",
+      "B": "which its",
+      "C": "whose",
+      "D": "who's"
+    },
+    "answer": "C",
+    "explanation": "<strong>Por que certa:</strong> \"Whose\" é o pronome relativo possessivo correto para conectar \"the proposal\" a \"its implications\" sem repetir \"its\".<br><strong>Por que as outras erram:</strong> (A) \"that its\" é gramaticalmente incorreto (that não aceita possessivo desta forma); (B) \"which its\" repete a posse de forma redundante e incorreta; (D) \"who's\" é contração de \"who is\", não um possessivo.",
+    "hint": null,
+    "trap_codes": [],
+    "tags": [
+      "diagnostico"
+    ],
+    "status": "rascunho",
+    "source": {
+      "kind": "migrado",
+      "file": "app/quiz_mod0.json",
+      "ref": "num 8",
+      "live_on_site": true,
+      "answer_letter": "origem",
+      "build_map": {
+        "A": "A",
+        "B": "B",
+        "C": "C",
+        "D": "D"
+      }
+    }
+  },
+  {
+    "id": "mod0-diag.9",
+    "section": "general",
+    "task_type": "Grammar and Vocabulary",
+    "exam_format": false,
+    "format": "mcq",
+    "skill": "Registro e função comunicativa (relevante para Write an Email)",
+    "cefr_min": null,
+    "cefr_max": null,
+    "stimulus": null,
+    "group": "mod0-diag",
+    "prompt": "Choose the sentence with the register most appropriate for a formal email to a university admissions office requesting a deadline extension:",
+    "text_format": "html",
+    "options": {
+      "A": "Hey, just wondering if I could get a bit more time to send my stuff over?",
+      "B": "I am writing to respectfully request a short extension to the submission deadline due to a documented medical circumstance.",
+      "C": "Give me more time please, it's urgent and I really need it.",
+      "D": "So I was thinking maybe you guys could push the date back for me?"
+    },
+    "answer": "B",
+    "explanation": "<strong>Por que certa:</strong> Registro formal, verbos modais de cortesia (\"I am writing to respectfully request\"), justificativa objetiva — adequado para comunicação institucional, exatamente o padrão exigido em Write an Email.<br><strong>Por que as outras erram:</strong> (A), (C) e (D) usam registro coloquial, contrações e informalidade excessiva (\"just wondering\", \"you guys\", \"please\" isolado) — inadequados para o contexto navegacional acadêmico formal.",
+    "hint": null,
+    "trap_codes": [],
+    "tags": [
+      "diagnostico"
+    ],
+    "status": "rascunho",
+    "source": {
+      "kind": "migrado",
+      "file": "app/quiz_mod0.json",
+      "ref": "num 9",
+      "live_on_site": true,
+      "answer_letter": "origem",
+      "build_map": {
+        "A": "B",
+        "B": "D",
+        "C": "C",
+        "D": "A"
+      }
+    }
+  },
+  {
+    "id": "mod0-diag.10",
+    "section": "general",
+    "task_type": "Grammar and Vocabulary",
+    "exam_format": false,
+    "format": "mcq",
+    "skill": "Compreensão inferencial (relevante para Read an Academic Passage / Listen to an Academic Talk)",
+    "cefr_min": null,
+    "cefr_max": null,
+    "stimulus": null,
+    "group": "mod0-diag",
+    "prompt": "\"Although the pilot program showed promising results in urban districts, researchers cautioned against broad conclusions, noting that participation rates in rural areas remained too low to generalize.\"\n\nWhat can be inferred from this statement?",
+    "text_format": "html",
+    "options": {
+      "A": "The pilot program failed in urban districts.",
+      "B": "Rural areas were excluded from the pilot program entirely.",
+      "C": "The results may not represent the population as a whole.",
+      "D": "Researchers recommend canceling the program."
+    },
+    "answer": "C",
+    "explanation": "<strong>Por que certa:</strong> O texto explicitamente qualifica os resultados como não-generalizáveis devido à baixa participação rural — a inferência lógica direta é que os resultados podem não representar a população total.<br><strong>Por que as outras erram:</strong> (A) contradiz o texto (resultados foram \"promissores\", não um fracasso); (B) exagera — \"baixa participação\" não é \"exclusão total\"; (D) é uma conclusão não sustentada pelo texto, que apenas pede cautela, não cancelamento.",
+    "hint": null,
+    "trap_codes": [],
+    "tags": [
+      "diagnostico"
+    ],
+    "status": "rascunho",
+    "source": {
+      "kind": "migrado",
+      "file": "app/quiz_mod0.json",
+      "ref": "num 10",
+      "live_on_site": true,
+      "answer_letter": "origem",
+      "build_map": {
+        "A": "A",
+        "B": "B",
+        "C": "D",
+        "D": "C"
+      }
+    }
+  }
+]

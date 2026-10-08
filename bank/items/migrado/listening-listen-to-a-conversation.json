@@ -1,0 +1,871 @@
+[
+  {
+    "id": "mod2-b1.b1.1",
+    "section": "listening",
+    "task_type": "Listen to a Conversation",
+    "exam_format": true,
+    "format": "mcq",
+    "skill": null,
+    "cefr_min": "B1",
+    "cefr_max": "B2",
+    "stimulus": {
+      "kind": "audio",
+      "format": "html",
+      "title": "Drill B1 · Advising Office · alvo: 3 min",
+      "content": "<p><em>Narrator: Listen to a conversation between a student and an academic advisor.</em></p>\n<p><strong>Student:</strong> Hi, I wanted to ask about switching one of my electives. I'm in Intro to Statistics, but I'd rather take Data Visualization instead.</p>\n<p><strong>Advisor:</strong> Let me check... okay, Data Visualization has space. But it has Statistics as a prerequisite — have you completed that?</p>\n<p><strong>Student:</strong> No, that's why I wanted to switch — I was hoping to take Data Visualization first and Statistics later.</p>\n<p><strong>Advisor:</strong> Ah. Unfortunately that's not possible; the prerequisite is enforced by the system. You'd need to finish Statistics first, or get a written waiver from the Data Visualization instructor.</p>\n<p><strong>Student:</strong> Is it worth asking her directly, or is that rarely approved?</p>\n<p><strong>Advisor:</strong> It's approved sometimes, especially if you have relevant experience — a coding background, say. Do you have any?</p>\n<p><strong>Student:</strong> I do, actually — I took two programming courses last year.</p>\n<p><strong>Advisor:</strong> Then it's worth emailing her. I'll send you her contact information now.</p>",
+      "audio_ref": null
+    },
+    "group": "mod2-b1",
+    "prompt": "Gist-purpose. Why does the student visit the advising office?",
+    "text_format": "html",
+    "options": {
+      "A": "To complain about a scheduling conflict between two required courses",
+      "B": "To request a change from one elective to another",
+      "C": "To register for classes for the first time",
+      "D": "To find out why she was removed from a course"
+    },
+    "answer": "B",
+    "explanation": "A estudante quer \"switch one of my electives\". (A) sem conflito de horário; (C) já está matriculada; (D) está fora do que foi dito.",
+    "hint": null,
+    "trap_codes": [],
+    "tags": [],
+    "status": "rascunho",
+    "source": {
+      "kind": "migrado",
+      "file": "app/drills_data.py",
+      "ref": "MOD2_ACTION_DRILLS_B:mod2-b1#B1.1",
+      "live_on_site": true,
+      "answer_letter": "origem",
+      "build_map": {
+        "A": "B",
+        "B": "A",
+        "C": "C",
+        "D": "D"
+      }
+    }
+  },
+  {
+    "id": "mod2-b1.b1.2",
+    "section": "listening",
+    "task_type": "Listen to a Conversation",
+    "exam_format": true,
+    "format": "mcq",
+    "skill": null,
+    "cefr_min": "B1",
+    "cefr_max": "B2",
+    "stimulus": {
+      "kind": "audio",
+      "format": "html",
+      "title": "Drill B1 · Advising Office · alvo: 3 min",
+      "content": "<p><em>Narrator: Listen to a conversation between a student and an academic advisor.</em></p>\n<p><strong>Student:</strong> Hi, I wanted to ask about switching one of my electives. I'm in Intro to Statistics, but I'd rather take Data Visualization instead.</p>\n<p><strong>Advisor:</strong> Let me check... okay, Data Visualization has space. But it has Statistics as a prerequisite — have you completed that?</p>\n<p><strong>Student:</strong> No, that's why I wanted to switch — I was hoping to take Data Visualization first and Statistics later.</p>\n<p><strong>Advisor:</strong> Ah. Unfortunately that's not possible; the prerequisite is enforced by the system. You'd need to finish Statistics first, or get a written waiver from the Data Visualization instructor.</p>\n<p><strong>Student:</strong> Is it worth asking her directly, or is that rarely approved?</p>\n<p><strong>Advisor:</strong> It's approved sometimes, especially if you have relevant experience — a coding background, say. Do you have any?</p>\n<p><strong>Student:</strong> I do, actually — I took two programming courses last year.</p>\n<p><strong>Advisor:</strong> Then it's worth emailing her. I'll send you her contact information now.</p>",
+      "audio_ref": null
+    },
+    "group": "mod2-b1",
+    "prompt": "Detail. What problem does the advisor identify?",
+    "text_format": "html",
+    "options": {
+      "A": "Data Visualization is already full",
+      "B": "The student failed Statistics once already",
+      "C": "Data Visualization requires Statistics, which the student hasn't taken",
+      "D": "The student can't take electives outside her major"
+    },
+    "answer": "C",
+    "explanation": "\"It has Statistics as a prerequisite... you'd need to complete Statistics first.\" (A) é o oposto (há vaga); (B)/(D) não ditos.",
+    "hint": null,
+    "trap_codes": [],
+    "tags": [],
+    "status": "rascunho",
+    "source": {
+      "kind": "migrado",
+      "file": "app/drills_data.py",
+      "ref": "MOD2_ACTION_DRILLS_B:mod2-b1#B1.2",
+      "live_on_site": true,
+      "answer_letter": "origem",
+      "build_map": {
+        "A": "D",
+        "B": "A",
+        "C": "B",
+        "D": "C"
+      }
+    }
+  },
+  {
+    "id": "mod2-b1.b1.3",
+    "section": "listening",
+    "task_type": "Listen to a Conversation",
+    "exam_format": true,
+    "format": "mcq",
+    "skill": null,
+    "cefr_min": "B1",
+    "cefr_max": "B2",
+    "stimulus": {
+      "kind": "audio",
+      "format": "html",
+      "title": "Drill B1 · Advising Office · alvo: 3 min",
+      "content": "<p><em>Narrator: Listen to a conversation between a student and an academic advisor.</em></p>\n<p><strong>Student:</strong> Hi, I wanted to ask about switching one of my electives. I'm in Intro to Statistics, but I'd rather take Data Visualization instead.</p>\n<p><strong>Advisor:</strong> Let me check... okay, Data Visualization has space. But it has Statistics as a prerequisite — have you completed that?</p>\n<p><strong>Student:</strong> No, that's why I wanted to switch — I was hoping to take Data Visualization first and Statistics later.</p>\n<p><strong>Advisor:</strong> Ah. Unfortunately that's not possible; the prerequisite is enforced by the system. You'd need to finish Statistics first, or get a written waiver from the Data Visualization instructor.</p>\n<p><strong>Student:</strong> Is it worth asking her directly, or is that rarely approved?</p>\n<p><strong>Advisor:</strong> It's approved sometimes, especially if you have relevant experience — a coding background, say. Do you have any?</p>\n<p><strong>Student:</strong> I do, actually — I took two programming courses last year.</p>\n<p><strong>Advisor:</strong> Then it's worth emailing her. I'll send you her contact information now.</p>",
+      "audio_ref": null
+    },
+    "group": "mod2-b1",
+    "prompt": "Function. Why does the advisor ask whether the student has a coding background?",
+    "text_format": "html",
+    "options": {
+      "A": "To check whether she qualifies for a scholarship",
+      "B": "To suggest she switch majors",
+      "C": "To assess whether the instructor might realistically grant a waiver",
+      "D": "To recommend a different course"
+    },
+    "answer": "C",
+    "explanation": "A pergunta avalia se a professora poderia dar um <em>waiver</em>. (A)/(B)/(D) sem base no diálogo.",
+    "hint": null,
+    "trap_codes": [],
+    "tags": [],
+    "status": "rascunho",
+    "source": {
+      "kind": "migrado",
+      "file": "app/drills_data.py",
+      "ref": "MOD2_ACTION_DRILLS_B:mod2-b1#B1.3",
+      "live_on_site": true,
+      "answer_letter": "origem",
+      "build_map": {
+        "A": "B",
+        "B": "D",
+        "C": "C",
+        "D": "A"
+      }
+    }
+  },
+  {
+    "id": "mod2-b1.b1.4",
+    "section": "listening",
+    "task_type": "Listen to a Conversation",
+    "exam_format": true,
+    "format": "mcq",
+    "skill": null,
+    "cefr_min": "B1",
+    "cefr_max": "B2",
+    "stimulus": {
+      "kind": "audio",
+      "format": "html",
+      "title": "Drill B1 · Advising Office · alvo: 3 min",
+      "content": "<p><em>Narrator: Listen to a conversation between a student and an academic advisor.</em></p>\n<p><strong>Student:</strong> Hi, I wanted to ask about switching one of my electives. I'm in Intro to Statistics, but I'd rather take Data Visualization instead.</p>\n<p><strong>Advisor:</strong> Let me check... okay, Data Visualization has space. But it has Statistics as a prerequisite — have you completed that?</p>\n<p><strong>Student:</strong> No, that's why I wanted to switch — I was hoping to take Data Visualization first and Statistics later.</p>\n<p><strong>Advisor:</strong> Ah. Unfortunately that's not possible; the prerequisite is enforced by the system. You'd need to finish Statistics first, or get a written waiver from the Data Visualization instructor.</p>\n<p><strong>Student:</strong> Is it worth asking her directly, or is that rarely approved?</p>\n<p><strong>Advisor:</strong> It's approved sometimes, especially if you have relevant experience — a coding background, say. Do you have any?</p>\n<p><strong>Student:</strong> I do, actually — I took two programming courses last year.</p>\n<p><strong>Advisor:</strong> Then it's worth emailing her. I'll send you her contact information now.</p>",
+      "audio_ref": null
+    },
+    "group": "mod2-b1",
+    "prompt": "Detail. What does the advisor do at the end?",
+    "text_format": "html",
+    "options": {
+      "A": "Enrolls the student in Data Visualization",
+      "B": "Gives the student the instructor's contact information",
+      "C": "Schedules a follow-up meeting",
+      "D": "Tells the student to wait until next semester"
+    },
+    "answer": "B",
+    "explanation": "\"I'll send you her contact information now.\" (A) a matrícula não é feita ali; (C)/(D) não ditos.",
+    "hint": null,
+    "trap_codes": [],
+    "tags": [],
+    "status": "rascunho",
+    "source": {
+      "kind": "migrado",
+      "file": "app/drills_data.py",
+      "ref": "MOD2_ACTION_DRILLS_B:mod2-b1#B1.4",
+      "live_on_site": true,
+      "answer_letter": "origem",
+      "build_map": {
+        "A": "B",
+        "B": "D",
+        "C": "C",
+        "D": "A"
+      }
+    }
+  },
+  {
+    "id": "mod2-b2.b2.1",
+    "section": "listening",
+    "task_type": "Listen to a Conversation",
+    "exam_format": true,
+    "format": "mcq",
+    "skill": null,
+    "cefr_min": "B1",
+    "cefr_max": "B2",
+    "stimulus": {
+      "kind": "audio",
+      "format": "html",
+      "title": "Drill B2 · Library Reserve Desk · alvo: 3 min",
+      "content": "<p><em>Narrator: Listen to a conversation between a student and a librarian.</em></p>\n<p><strong>Student:</strong> Hi — I'm looking for a book my professor put on reserve for the history seminar. It's <em>The Making of the Atlantic World</em>.</p>\n<p><strong>Librarian:</strong> Let me look... yes, we have two copies on reserve. Reserve items are two-hour loans, in-library use only. You can't take them out of the building.</p>\n<p><strong>Student:</strong> Oh. I was hoping to take it home for the weekend — the essay's due Monday.</p>\n<p><strong>Librarian:</strong> For reserve items, no, sorry. But here's an option: there's a circulating copy in the stacks, on the fourth floor. That one you <em>can</em> take out, for three weeks.</p>\n<p><strong>Student:</strong> Great, I'll grab that instead. Is it available right now?</p>\n<p><strong>Librarian:</strong> The catalog says one copy is in. If it's not on the shelf, come back and I'll place a hold on the reserve copy for you to use here.</p>\n<p><strong>Student:</strong> Thanks — I'll check the stacks first.</p>",
+      "audio_ref": null
+    },
+    "group": "mod2-b2",
+    "prompt": "Gist-purpose. What is the student trying to do?",
+    "text_format": "html",
+    "options": {
+      "A": "Return an overdue book",
+      "B": "Get a book she needs for an essay due Monday",
+      "C": "Renew a book she already borrowed",
+      "D": "Report that a reserve book is missing"
+    },
+    "answer": "B",
+    "explanation": "Ela quer um livro para um ensaio com prazo na segunda. (A) não é devolução; (C) não é renovação; (D) o livro não está perdido.",
+    "hint": null,
+    "trap_codes": [],
+    "tags": [],
+    "status": "rascunho",
+    "source": {
+      "kind": "migrado",
+      "file": "app/drills_data.py",
+      "ref": "MOD2_ACTION_DRILLS_B:mod2-b2#B2.1",
+      "live_on_site": true,
+      "answer_letter": "origem",
+      "build_map": {
+        "A": "D",
+        "B": "C",
+        "C": "A",
+        "D": "B"
+      }
+    }
+  },
+  {
+    "id": "mod2-b2.b2.2",
+    "section": "listening",
+    "task_type": "Listen to a Conversation",
+    "exam_format": true,
+    "format": "mcq",
+    "skill": null,
+    "cefr_min": "B1",
+    "cefr_max": "B2",
+    "stimulus": {
+      "kind": "audio",
+      "format": "html",
+      "title": "Drill B2 · Library Reserve Desk · alvo: 3 min",
+      "content": "<p><em>Narrator: Listen to a conversation between a student and a librarian.</em></p>\n<p><strong>Student:</strong> Hi — I'm looking for a book my professor put on reserve for the history seminar. It's <em>The Making of the Atlantic World</em>.</p>\n<p><strong>Librarian:</strong> Let me look... yes, we have two copies on reserve. Reserve items are two-hour loans, in-library use only. You can't take them out of the building.</p>\n<p><strong>Student:</strong> Oh. I was hoping to take it home for the weekend — the essay's due Monday.</p>\n<p><strong>Librarian:</strong> For reserve items, no, sorry. But here's an option: there's a circulating copy in the stacks, on the fourth floor. That one you <em>can</em> take out, for three weeks.</p>\n<p><strong>Student:</strong> Great, I'll grab that instead. Is it available right now?</p>\n<p><strong>Librarian:</strong> The catalog says one copy is in. If it's not on the shelf, come back and I'll place a hold on the reserve copy for you to use here.</p>\n<p><strong>Student:</strong> Thanks — I'll check the stacks first.</p>",
+      "audio_ref": null
+    },
+    "group": "mod2-b2",
+    "prompt": "Detail. What is the rule for reserve items?",
+    "text_format": "html",
+    "options": {
+      "A": "They can be borrowed for three weeks",
+      "B": "They are two-hour loans, for use inside the library only",
+      "C": "They cannot be used by undergraduates",
+      "D": "They must be requested 24 hours in advance"
+    },
+    "answer": "B",
+    "explanation": "\"Two-hour loans, in-library use only... can't take them out of the building.\" (A) descreve o exemplar da circulação; (C)/(D) não ditos.",
+    "hint": null,
+    "trap_codes": [],
+    "tags": [],
+    "status": "rascunho",
+    "source": {
+      "kind": "migrado",
+      "file": "app/drills_data.py",
+      "ref": "MOD2_ACTION_DRILLS_B:mod2-b2#B2.2",
+      "live_on_site": true,
+      "answer_letter": "origem",
+      "build_map": {
+        "A": "C",
+        "B": "A",
+        "C": "D",
+        "D": "B"
+      }
+    }
+  },
+  {
+    "id": "mod2-b2.b2.3",
+    "section": "listening",
+    "task_type": "Listen to a Conversation",
+    "exam_format": true,
+    "format": "mcq",
+    "skill": null,
+    "cefr_min": "B1",
+    "cefr_max": "B2",
+    "stimulus": {
+      "kind": "audio",
+      "format": "html",
+      "title": "Drill B2 · Library Reserve Desk · alvo: 3 min",
+      "content": "<p><em>Narrator: Listen to a conversation between a student and a librarian.</em></p>\n<p><strong>Student:</strong> Hi — I'm looking for a book my professor put on reserve for the history seminar. It's <em>The Making of the Atlantic World</em>.</p>\n<p><strong>Librarian:</strong> Let me look... yes, we have two copies on reserve. Reserve items are two-hour loans, in-library use only. You can't take them out of the building.</p>\n<p><strong>Student:</strong> Oh. I was hoping to take it home for the weekend — the essay's due Monday.</p>\n<p><strong>Librarian:</strong> For reserve items, no, sorry. But here's an option: there's a circulating copy in the stacks, on the fourth floor. That one you <em>can</em> take out, for three weeks.</p>\n<p><strong>Student:</strong> Great, I'll grab that instead. Is it available right now?</p>\n<p><strong>Librarian:</strong> The catalog says one copy is in. If it's not on the shelf, come back and I'll place a hold on the reserve copy for you to use here.</p>\n<p><strong>Student:</strong> Thanks — I'll check the stacks first.</p>",
+      "audio_ref": null
+    },
+    "group": "mod2-b2",
+    "prompt": "Detail. What does the librarian suggest instead?",
+    "text_format": "html",
+    "options": {
+      "A": "Buying the book at the campus bookstore",
+      "B": "Borrowing the circulating copy from the fourth-floor stacks",
+      "C": "Asking the professor for a personal copy",
+      "D": "Waiting until Monday when more copies arrive"
+    },
+    "answer": "B",
+    "explanation": "\"There's a circulating copy in the stacks, on the fourth floor. That one you can take out.\" (A)/(C)/(D) não sugeridos.",
+    "hint": null,
+    "trap_codes": [],
+    "tags": [],
+    "status": "rascunho",
+    "source": {
+      "kind": "migrado",
+      "file": "app/drills_data.py",
+      "ref": "MOD2_ACTION_DRILLS_B:mod2-b2#B2.3",
+      "live_on_site": true,
+      "answer_letter": "origem",
+      "build_map": {
+        "A": "B",
+        "B": "D",
+        "C": "C",
+        "D": "A"
+      }
+    }
+  },
+  {
+    "id": "mod2-b2.b2.4",
+    "section": "listening",
+    "task_type": "Listen to a Conversation",
+    "exam_format": true,
+    "format": "mcq",
+    "skill": null,
+    "cefr_min": "B1",
+    "cefr_max": "B2",
+    "stimulus": {
+      "kind": "audio",
+      "format": "html",
+      "title": "Drill B2 · Library Reserve Desk · alvo: 3 min",
+      "content": "<p><em>Narrator: Listen to a conversation between a student and a librarian.</em></p>\n<p><strong>Student:</strong> Hi — I'm looking for a book my professor put on reserve for the history seminar. It's <em>The Making of the Atlantic World</em>.</p>\n<p><strong>Librarian:</strong> Let me look... yes, we have two copies on reserve. Reserve items are two-hour loans, in-library use only. You can't take them out of the building.</p>\n<p><strong>Student:</strong> Oh. I was hoping to take it home for the weekend — the essay's due Monday.</p>\n<p><strong>Librarian:</strong> For reserve items, no, sorry. But here's an option: there's a circulating copy in the stacks, on the fourth floor. That one you <em>can</em> take out, for three weeks.</p>\n<p><strong>Student:</strong> Great, I'll grab that instead. Is it available right now?</p>\n<p><strong>Librarian:</strong> The catalog says one copy is in. If it's not on the shelf, come back and I'll place a hold on the reserve copy for you to use here.</p>\n<p><strong>Student:</strong> Thanks — I'll check the stacks first.</p>",
+      "audio_ref": null
+    },
+    "group": "mod2-b2",
+    "prompt": "Inference. What will the student probably do next?",
+    "text_format": "html",
+    "options": {
+      "A": "Place a hold on the reserve copy immediately",
+      "B": "Go to the fourth floor to look for the circulating copy",
+      "C": "Leave the library without the book",
+      "D": "Ask the professor to extend the deadline"
+    },
+    "answer": "B",
+    "explanation": "\"I'll check the stacks first.\" Inferência direta. (A) só se não achar; (C)/(D) contradizem a intenção declarada.",
+    "hint": null,
+    "trap_codes": [],
+    "tags": [],
+    "status": "rascunho",
+    "source": {
+      "kind": "migrado",
+      "file": "app/drills_data.py",
+      "ref": "MOD2_ACTION_DRILLS_B:mod2-b2#B2.4",
+      "live_on_site": true,
+      "answer_letter": "origem",
+      "build_map": {
+        "A": "A",
+        "B": "B",
+        "C": "D",
+        "D": "C"
+      }
+    }
+  },
+  {
+    "id": "mod2-b3.b3.1",
+    "section": "listening",
+    "task_type": "Listen to a Conversation",
+    "exam_format": true,
+    "format": "mcq",
+    "skill": null,
+    "cefr_min": "B1",
+    "cefr_max": "B2",
+    "stimulus": {
+      "kind": "audio",
+      "format": "html",
+      "title": "Drill B3 · After Class · alvo: 3 min",
+      "content": "<p><em>Narrator: Listen to a conversation between a student and a professor.</em></p>\n<p><strong>Student:</strong> Professor, do you have a minute? I'm a bit lost on the second essay prompt.</p>\n<p><strong>Professor:</strong> Of course. Which part?</p>\n<p><strong>Student:</strong> It asks us to \"evaluate\" the argument, and I'm not sure if that means summarize it or agree or disagree with it.</p>\n<p><strong>Professor:</strong> Good question — \"evaluate\" means neither, exactly. It means weigh the argument: where is it strong, where is it weak, and does the evidence actually support the conclusion? You can end up agreeing or disagreeing, but the point is the <em>weighing</em>, not the verdict.</p>\n<p><strong>Student:</strong> Okay, that helps. So a summary alone wouldn't be enough.</p>\n<p><strong>Professor:</strong> Right. A summary shows you understood it. Evaluation shows you can think about it. Aim for maybe a third summary, two-thirds evaluation.</p>\n<p><strong>Student:</strong> Got it. And length — still fifteen hundred words?</p>\n<p><strong>Professor:</strong> Fifteen hundred, give or take a hundred. Don't pad it.</p>",
+      "audio_ref": null
+    },
+    "group": "mod2-b3",
+    "prompt": "Gist-purpose. Why does the student talk to the professor?",
+    "text_format": "html",
+    "options": {
+      "A": "To ask for an extension on the essay",
+      "B": "To clarify what the essay prompt is asking for",
+      "C": "To dispute a grade on the first essay",
+      "D": "To request a different topic"
+    },
+    "answer": "B",
+    "explanation": "\"I'm a bit lost on the second essay prompt.\" (A) não pede prazo; (C) não é sobre nota; (D) não pede outro tema.",
+    "hint": null,
+    "trap_codes": [],
+    "tags": [],
+    "status": "rascunho",
+    "source": {
+      "kind": "migrado",
+      "file": "app/drills_data.py",
+      "ref": "MOD2_ACTION_DRILLS_B:mod2-b3#B3.1",
+      "live_on_site": true,
+      "answer_letter": "origem",
+      "build_map": {
+        "A": "A",
+        "B": "D",
+        "C": "B",
+        "D": "C"
+      }
+    }
+  },
+  {
+    "id": "mod2-b3.b3.2",
+    "section": "listening",
+    "task_type": "Listen to a Conversation",
+    "exam_format": true,
+    "format": "mcq",
+    "skill": null,
+    "cefr_min": "B1",
+    "cefr_max": "B2",
+    "stimulus": {
+      "kind": "audio",
+      "format": "html",
+      "title": "Drill B3 · After Class · alvo: 3 min",
+      "content": "<p><em>Narrator: Listen to a conversation between a student and a professor.</em></p>\n<p><strong>Student:</strong> Professor, do you have a minute? I'm a bit lost on the second essay prompt.</p>\n<p><strong>Professor:</strong> Of course. Which part?</p>\n<p><strong>Student:</strong> It asks us to \"evaluate\" the argument, and I'm not sure if that means summarize it or agree or disagree with it.</p>\n<p><strong>Professor:</strong> Good question — \"evaluate\" means neither, exactly. It means weigh the argument: where is it strong, where is it weak, and does the evidence actually support the conclusion? You can end up agreeing or disagreeing, but the point is the <em>weighing</em>, not the verdict.</p>\n<p><strong>Student:</strong> Okay, that helps. So a summary alone wouldn't be enough.</p>\n<p><strong>Professor:</strong> Right. A summary shows you understood it. Evaluation shows you can think about it. Aim for maybe a third summary, two-thirds evaluation.</p>\n<p><strong>Student:</strong> Got it. And length — still fifteen hundred words?</p>\n<p><strong>Professor:</strong> Fifteen hundred, give or take a hundred. Don't pad it.</p>",
+      "audio_ref": null
+    },
+    "group": "mod2-b3",
+    "prompt": "Detail. According to the professor, what does \"evaluate\" mean here?",
+    "text_format": "html",
+    "options": {
+      "A": "Summarize the argument accurately",
+      "B": "Simply agree or disagree with the argument",
+      "C": "Weigh the argument's strengths, weaknesses, and use of evidence",
+      "D": "Compare the argument with another author's"
+    },
+    "answer": "C",
+    "explanation": "\"Weigh the argument: where is it strong, where is it weak, and does the evidence support the conclusion?\" (A)/(B) o professor diz que \"evaluate\" é <strong>nenhum</strong> dos dois; (D) não dito.",
+    "hint": null,
+    "trap_codes": [],
+    "tags": [],
+    "status": "rascunho",
+    "source": {
+      "kind": "migrado",
+      "file": "app/drills_data.py",
+      "ref": "MOD2_ACTION_DRILLS_B:mod2-b3#B3.2",
+      "live_on_site": true,
+      "answer_letter": "origem",
+      "build_map": {
+        "A": "C",
+        "B": "A",
+        "C": "B",
+        "D": "D"
+      }
+    }
+  },
+  {
+    "id": "mod2-b3.b3.3",
+    "section": "listening",
+    "task_type": "Listen to a Conversation",
+    "exam_format": true,
+    "format": "mcq",
+    "skill": null,
+    "cefr_min": "B1",
+    "cefr_max": "B2",
+    "stimulus": {
+      "kind": "audio",
+      "format": "html",
+      "title": "Drill B3 · After Class · alvo: 3 min",
+      "content": "<p><em>Narrator: Listen to a conversation between a student and a professor.</em></p>\n<p><strong>Student:</strong> Professor, do you have a minute? I'm a bit lost on the second essay prompt.</p>\n<p><strong>Professor:</strong> Of course. Which part?</p>\n<p><strong>Student:</strong> It asks us to \"evaluate\" the argument, and I'm not sure if that means summarize it or agree or disagree with it.</p>\n<p><strong>Professor:</strong> Good question — \"evaluate\" means neither, exactly. It means weigh the argument: where is it strong, where is it weak, and does the evidence actually support the conclusion? You can end up agreeing or disagreeing, but the point is the <em>weighing</em>, not the verdict.</p>\n<p><strong>Student:</strong> Okay, that helps. So a summary alone wouldn't be enough.</p>\n<p><strong>Professor:</strong> Right. A summary shows you understood it. Evaluation shows you can think about it. Aim for maybe a third summary, two-thirds evaluation.</p>\n<p><strong>Student:</strong> Got it. And length — still fifteen hundred words?</p>\n<p><strong>Professor:</strong> Fifteen hundred, give or take a hundred. Don't pad it.</p>",
+      "audio_ref": null
+    },
+    "group": "mod2-b3",
+    "prompt": "Detail. What balance between summary and evaluation does the professor recommend?",
+    "text_format": "html",
+    "options": {
+      "A": "Half summary, half evaluation",
+      "B": "All evaluation, no summary",
+      "C": "About one-third summary, two-thirds evaluation",
+      "D": "A brief summary followed by a personal opinion"
+    },
+    "answer": "C",
+    "explanation": "\"Maybe a third summary, two-thirds evaluation.\"",
+    "hint": null,
+    "trap_codes": [],
+    "tags": [],
+    "status": "rascunho",
+    "source": {
+      "kind": "migrado",
+      "file": "app/drills_data.py",
+      "ref": "MOD2_ACTION_DRILLS_B:mod2-b3#B3.3",
+      "live_on_site": true,
+      "answer_letter": "origem",
+      "build_map": {
+        "A": "D",
+        "B": "A",
+        "C": "C",
+        "D": "B"
+      }
+    }
+  },
+  {
+    "id": "mod2-b3.b3.4",
+    "section": "listening",
+    "task_type": "Listen to a Conversation",
+    "exam_format": true,
+    "format": "mcq",
+    "skill": null,
+    "cefr_min": "B1",
+    "cefr_max": "B2",
+    "stimulus": {
+      "kind": "audio",
+      "format": "html",
+      "title": "Drill B3 · After Class · alvo: 3 min",
+      "content": "<p><em>Narrator: Listen to a conversation between a student and a professor.</em></p>\n<p><strong>Student:</strong> Professor, do you have a minute? I'm a bit lost on the second essay prompt.</p>\n<p><strong>Professor:</strong> Of course. Which part?</p>\n<p><strong>Student:</strong> It asks us to \"evaluate\" the argument, and I'm not sure if that means summarize it or agree or disagree with it.</p>\n<p><strong>Professor:</strong> Good question — \"evaluate\" means neither, exactly. It means weigh the argument: where is it strong, where is it weak, and does the evidence actually support the conclusion? You can end up agreeing or disagreeing, but the point is the <em>weighing</em>, not the verdict.</p>\n<p><strong>Student:</strong> Okay, that helps. So a summary alone wouldn't be enough.</p>\n<p><strong>Professor:</strong> Right. A summary shows you understood it. Evaluation shows you can think about it. Aim for maybe a third summary, two-thirds evaluation.</p>\n<p><strong>Student:</strong> Got it. And length — still fifteen hundred words?</p>\n<p><strong>Professor:</strong> Fifteen hundred, give or take a hundred. Don't pad it.</p>",
+      "audio_ref": null
+    },
+    "group": "mod2-b3",
+    "prompt": "Attitude. What does the professor mean by \"Don't pad it\"?",
+    "text_format": "html",
+    "options": {
+      "A": "Write more than 1,500 words to be safe",
+      "B": "Don't add filler just to reach the word count",
+      "C": "Use larger margins and spacing",
+      "D": "Include as many quotations as possible"
+    },
+    "answer": "B",
+    "explanation": "\"Don't pad it\" = não encher linguiça para bater a contagem de palavras. (A) é o oposto; (C)/(D) estão fora do que foi dito.",
+    "hint": null,
+    "trap_codes": [],
+    "tags": [],
+    "status": "rascunho",
+    "source": {
+      "kind": "migrado",
+      "file": "app/drills_data.py",
+      "ref": "MOD2_ACTION_DRILLS_B:mod2-b3#B3.4",
+      "live_on_site": true,
+      "answer_letter": "origem",
+      "build_map": {
+        "A": "B",
+        "B": "A",
+        "C": "D",
+        "D": "C"
+      }
+    }
+  },
+  {
+    "id": "mod7-b7.1",
+    "section": "listening",
+    "task_type": "Listen to a Conversation",
+    "exam_format": true,
+    "format": "mcq",
+    "skill": null,
+    "cefr_min": null,
+    "cefr_max": null,
+    "stimulus": {
+      "kind": "audio",
+      "format": "markdown",
+      "title": "Listen to a Conversation",
+      "content": "**TRANSCRIÇÃO:** **Student:** \"Hi, I registered for the wrong section of Psych 101 · I need the Tuesday/Thursday one, not Monday/Wednesday/Friday.\" **Advisor:** \"Let me check... the Tuesday/Thursday section is actually full right now, but there's a waitlist. I can add you to it, though I should mention the professor teaching that section is different · Dr. Alvarez instead of Dr. Chen.\" **Student:** \"Oh, I didn't realize that. Does it matter much which professor I have?\" **Advisor:** \"Honestly, both are excellent, but Dr. Alvarez's exams tend to be more essay-based, while Dr. Chen's are mostly multiple choice. Something to keep in mind.\"",
+      "audio_ref": null
+    },
+    "group": "mod7-b7",
+    "prompt": "What is the student's main purpose in this conversation?",
+    "text_format": "markdown",
+    "options": {
+      "A": "To drop the course entirely",
+      "B": "To switch to a different section of the same course",
+      "C": "To complain about a professor",
+      "D": "To register for the course for the first time"
+    },
+    "answer": "B",
+    "explanation": "",
+    "hint": null,
+    "trap_codes": [],
+    "tags": [
+      "simulado-2"
+    ],
+    "status": "rascunho",
+    "source": {
+      "kind": "migrado",
+      "file": "consolidated/modulo_7_simulados.md",
+      "ref": "linha 384",
+      "live_on_site": true,
+      "answer_letter": "origem",
+      "build_map": {
+        "A": "C",
+        "B": "B",
+        "C": "A",
+        "D": "D"
+      }
+    }
+  },
+  {
+    "id": "mod7-b7.2",
+    "section": "listening",
+    "task_type": "Listen to a Conversation",
+    "exam_format": true,
+    "format": "mcq",
+    "skill": null,
+    "cefr_min": null,
+    "cefr_max": null,
+    "stimulus": {
+      "kind": "audio",
+      "format": "markdown",
+      "title": "Listen to a Conversation",
+      "content": "**TRANSCRIÇÃO:** **Student:** \"Hi, I registered for the wrong section of Psych 101 · I need the Tuesday/Thursday one, not Monday/Wednesday/Friday.\" **Advisor:** \"Let me check... the Tuesday/Thursday section is actually full right now, but there's a waitlist. I can add you to it, though I should mention the professor teaching that section is different · Dr. Alvarez instead of Dr. Chen.\" **Student:** \"Oh, I didn't realize that. Does it matter much which professor I have?\" **Advisor:** \"Honestly, both are excellent, but Dr. Alvarez's exams tend to be more essay-based, while Dr. Chen's are mostly multiple choice. Something to keep in mind.\"",
+      "audio_ref": null
+    },
+    "group": "mod7-b7",
+    "prompt": "What does the advisor imply about the two professors?",
+    "text_format": "markdown",
+    "options": {
+      "A": "They teach completely different material",
+      "B": "One is significantly better rated than the other",
+      "C": "Their exam formats differ in a way the student should consider",
+      "D": "Only one of them is currently accepting new students"
+    },
+    "answer": "C",
+    "explanation": "",
+    "hint": null,
+    "trap_codes": [],
+    "tags": [
+      "simulado-2"
+    ],
+    "status": "rascunho",
+    "source": {
+      "kind": "migrado",
+      "file": "consolidated/modulo_7_simulados.md",
+      "ref": "linha 390",
+      "live_on_site": true,
+      "answer_letter": "origem",
+      "build_map": {
+        "A": "D",
+        "B": "B",
+        "C": "A",
+        "D": "C"
+      }
+    }
+  },
+  {
+    "id": "mod7-b10.1",
+    "section": "listening",
+    "task_type": "Listen to a Conversation",
+    "exam_format": true,
+    "format": "mcq",
+    "skill": null,
+    "cefr_min": null,
+    "cefr_max": null,
+    "stimulus": {
+      "kind": "audio",
+      "format": "markdown",
+      "title": "Listen to a Conversation (2)",
+      "content": "**TRANSCRIÇÃO:** **Student:** \"I'm here about the library fine on my account · it says forty dollars, but I returned the books on time.\" **Librarian:** \"Let me look... Ah, I see what happened. The books were returned to the wrong branch, so the system logged them as late until they were transferred back. That took about a week.\" **Student:** \"But there's a drop box at the north branch · I've used it before without a problem.\" **Librarian:** \"You have, and normally that's fine. The issue is that these were course-reserve items, and those can only go back to the main desk. It's a rule most people don't know about. I can waive the fine this time since it was an honest mistake, but I'd note it for next time.\"",
+      "audio_ref": null
+    },
+    "group": "mod7-b10",
+    "prompt": "Why was the student charged a fine?",
+    "text_format": "markdown",
+    "options": {
+      "A": "The books were genuinely returned late",
+      "B": "Course-reserve books returned to the wrong branch were logged as late during the transfer",
+      "C": "The student lost one of the books",
+      "D": "The north branch drop box was broken"
+    },
+    "answer": "B",
+    "explanation": "",
+    "hint": null,
+    "trap_codes": [],
+    "tags": [
+      "simulado-2"
+    ],
+    "status": "rascunho",
+    "source": {
+      "kind": "migrado",
+      "file": "consolidated/modulo_7_simulados.md",
+      "ref": "linha 432",
+      "live_on_site": true,
+      "answer_letter": "origem",
+      "build_map": {
+        "A": "B",
+        "B": "A",
+        "C": "C",
+        "D": "D"
+      }
+    }
+  },
+  {
+    "id": "mod7-b10.2",
+    "section": "listening",
+    "task_type": "Listen to a Conversation",
+    "exam_format": true,
+    "format": "mcq",
+    "skill": null,
+    "cefr_min": null,
+    "cefr_max": null,
+    "stimulus": {
+      "kind": "audio",
+      "format": "markdown",
+      "title": "Listen to a Conversation (2)",
+      "content": "**TRANSCRIÇÃO:** **Student:** \"I'm here about the library fine on my account · it says forty dollars, but I returned the books on time.\" **Librarian:** \"Let me look... Ah, I see what happened. The books were returned to the wrong branch, so the system logged them as late until they were transferred back. That took about a week.\" **Student:** \"But there's a drop box at the north branch · I've used it before without a problem.\" **Librarian:** \"You have, and normally that's fine. The issue is that these were course-reserve items, and those can only go back to the main desk. It's a rule most people don't know about. I can waive the fine this time since it was an honest mistake, but I'd note it for next time.\"",
+      "audio_ref": null
+    },
+    "group": "mod7-b10",
+    "prompt": "What does the librarian agree to do?",
+    "text_format": "markdown",
+    "options": {
+      "A": "Charge only half the fine",
+      "B": "Waive the fine this time as an honest mistake",
+      "C": "Transfer the student to another branch",
+      "D": "Report the student to the department"
+    },
+    "answer": "B",
+    "explanation": "",
+    "hint": null,
+    "trap_codes": [],
+    "tags": [
+      "simulado-2"
+    ],
+    "status": "rascunho",
+    "source": {
+      "kind": "migrado",
+      "file": "consolidated/modulo_7_simulados.md",
+      "ref": "linha 438",
+      "live_on_site": true,
+      "answer_letter": "origem",
+      "build_map": {
+        "A": "A",
+        "B": "B",
+        "C": "D",
+        "D": "C"
+      }
+    }
+  },
+  {
+    "id": "mod7-b10.3",
+    "section": "listening",
+    "task_type": "Listen to a Conversation",
+    "exam_format": true,
+    "format": "mcq",
+    "skill": null,
+    "cefr_min": null,
+    "cefr_max": null,
+    "stimulus": {
+      "kind": "audio",
+      "format": "markdown",
+      "title": "Listen to a Conversation (2)",
+      "content": "**TRANSCRIÇÃO:** **Student:** \"I'm here about the library fine on my account · it says forty dollars, but I returned the books on time.\" **Librarian:** \"Let me look... Ah, I see what happened. The books were returned to the wrong branch, so the system logged them as late until they were transferred back. That took about a week.\" **Student:** \"But there's a drop box at the north branch · I've used it before without a problem.\" **Librarian:** \"You have, and normally that's fine. The issue is that these were course-reserve items, and those can only go back to the main desk. It's a rule most people don't know about. I can waive the fine this time since it was an honest mistake, but I'd note it for next time.\"",
+      "audio_ref": null
+    },
+    "group": "mod7-b10",
+    "prompt": "What does the librarian imply about the north branch drop box?",
+    "text_format": "markdown",
+    "options": {
+      "A": "It should never be used",
+      "B": "It is fine for regular items but not for course-reserve materials",
+      "C": "It is being removed next semester",
+      "D": "It only works during staffed hours"
+    },
+    "answer": "B",
+    "explanation": "",
+    "hint": null,
+    "trap_codes": [],
+    "tags": [
+      "simulado-2"
+    ],
+    "status": "rascunho",
+    "source": {
+      "kind": "migrado",
+      "file": "consolidated/modulo_7_simulados.md",
+      "ref": "linha 444",
+      "live_on_site": true,
+      "answer_letter": "origem",
+      "build_map": {
+        "A": "D",
+        "B": "C",
+        "C": "B",
+        "D": "A"
+      }
+    }
+  },
+  {
+    "id": "mod7-b17.1",
+    "section": "listening",
+    "task_type": "Listen to a Conversation",
+    "exam_format": true,
+    "format": "mcq",
+    "skill": null,
+    "cefr_min": null,
+    "cefr_max": null,
+    "stimulus": {
+      "kind": "audio",
+      "format": "markdown",
+      "title": "Listen to a Conversation",
+      "content": "**TRANSCRIÇÃO:** **Student:** \"I wanted to ask about switching my thesis advisor. It's not personal, I just think my research interests have shifted toward a different subfield.\" **Faculty Coordinator:** \"That happens more than you'd think. Do you have someone specific in mind?\" **Student:** \"Dr. Watanabe, actually · her recent work overlaps a lot more with where I want to take my project.\" **Faculty Coordinator:** \"She's taken on a lot of advisees this year, so it might take a conversation to see if she has capacity. I'd recommend emailing her directly first, and if she agrees in principle, we can process the paperwork quickly.\"",
+      "audio_ref": null
+    },
+    "group": "mod7-b17",
+    "prompt": "Why does the student want to change advisors?",
+    "text_format": "markdown",
+    "options": {
+      "A": "A personal conflict with the current advisor",
+      "B": "A shift in research interests toward a different subfield",
+      "C": "The current advisor is retiring",
+      "D": "A scheduling conflict"
+    },
+    "answer": "B",
+    "explanation": "",
+    "hint": null,
+    "trap_codes": [],
+    "tags": [
+      "simulado-3"
+    ],
+    "status": "rascunho",
+    "source": {
+      "kind": "migrado",
+      "file": "consolidated/modulo_7_simulados.md",
+      "ref": "linha 719",
+      "live_on_site": true,
+      "answer_letter": "origem",
+      "build_map": {
+        "A": "C",
+        "B": "A",
+        "C": "B",
+        "D": "D"
+      }
+    }
+  },
+  {
+    "id": "mod7-b17.2",
+    "section": "listening",
+    "task_type": "Listen to a Conversation",
+    "exam_format": true,
+    "format": "mcq",
+    "skill": null,
+    "cefr_min": null,
+    "cefr_max": null,
+    "stimulus": {
+      "kind": "audio",
+      "format": "markdown",
+      "title": "Listen to a Conversation",
+      "content": "**TRANSCRIÇÃO:** **Student:** \"I wanted to ask about switching my thesis advisor. It's not personal, I just think my research interests have shifted toward a different subfield.\" **Faculty Coordinator:** \"That happens more than you'd think. Do you have someone specific in mind?\" **Student:** \"Dr. Watanabe, actually · her recent work overlaps a lot more with where I want to take my project.\" **Faculty Coordinator:** \"She's taken on a lot of advisees this year, so it might take a conversation to see if she has capacity. I'd recommend emailing her directly first, and if she agrees in principle, we can process the paperwork quickly.\"",
+      "audio_ref": null
+    },
+    "group": "mod7-b17",
+    "prompt": "What does the coordinator recommend the student do first?",
+    "text_format": "markdown",
+    "options": {
+      "A": "Submit formal paperwork immediately",
+      "B": "Email Dr. Watanabe directly to check her availability",
+      "C": "Wait until next semester to make the switch",
+      "D": "Speak with the current advisor first"
+    },
+    "answer": "B",
+    "explanation": "",
+    "hint": null,
+    "trap_codes": [],
+    "tags": [
+      "simulado-3"
+    ],
+    "status": "rascunho",
+    "source": {
+      "kind": "migrado",
+      "file": "consolidated/modulo_7_simulados.md",
+      "ref": "linha 725",
+      "live_on_site": true,
+      "answer_letter": "origem",
+      "build_map": {
+        "A": "C",
+        "B": "B",
+        "C": "D",
+        "D": "A"
+      }
+    }
+  }
+]

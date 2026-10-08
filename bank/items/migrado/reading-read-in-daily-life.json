@@ -1,0 +1,914 @@
+[
+  {
+    "id": "mod1-b1.b1.1",
+    "section": "reading",
+    "task_type": "Read in Daily Life",
+    "exam_format": true,
+    "format": "mcq",
+    "skill": null,
+    "cefr_min": "A2",
+    "cefr_max": "B1",
+    "stimulus": {
+      "kind": "text",
+      "format": "html",
+      "title": "Drill B1 · Placa / aviso · alvo: 2 min",
+      "content": "<p><strong>TEXT: Sign at a nature reserve trailhead</strong></p>\n<blockquote><p><strong>RIDGELINE TRAIL: PLEASE READ BEFORE ENTERING</strong></p>\n<p>• Trail open sunrise to sunset. Overnight camping is not permitted anywhere on the reserve.<br>\n• Dogs welcome on a leash no longer than 2 metres. The upper loop (marked in red) is closed to dogs from 1 April to 15 July to protect ground-nesting birds.<br>\n• No bicycles. E-bikes and mobility scooters are exempt from this rule.<br>\n• Pack out all rubbish. There are no bins beyond this point.</p></blockquote>",
+      "audio_ref": null
+    },
+    "group": "mod1-b1",
+    "prompt": "A visitor with a dog on 20 May may walk:",
+    "text_format": "html",
+    "options": {
+      "A": "anywhere on the reserve",
+      "B": "on all trails except the upper loop",
+      "C": "only on the upper loop",
+      "D": "nowhere, because dogs are banned in summer"
+    },
+    "answer": "B",
+    "explanation": "Cães de coleira são permitidos; o <em>upper loop</em> é fechado a cães de 1/abr a 15/jul, e 20 de maio cai nesse período → todas as trilhas <strong>exceto</strong> o upper loop. (A) ignora a restrição; (C) inverte; (D) exagera — cães não são banidos, só do upper loop.",
+    "hint": null,
+    "trap_codes": [],
+    "tags": [],
+    "status": "rascunho",
+    "source": {
+      "kind": "migrado",
+      "file": "app/drills_data.py",
+      "ref": "MOD1_ACTION_DRILLS_B:mod1-b1#B1.1",
+      "live_on_site": true,
+      "answer_letter": "origem",
+      "build_map": {
+        "A": "C",
+        "B": "B",
+        "C": "D",
+        "D": "A"
+      }
+    }
+  },
+  {
+    "id": "mod1-b1.b1.2",
+    "section": "reading",
+    "task_type": "Read in Daily Life",
+    "exam_format": true,
+    "format": "mcq",
+    "skill": null,
+    "cefr_min": "A2",
+    "cefr_max": "B1",
+    "stimulus": {
+      "kind": "text",
+      "format": "html",
+      "title": "Drill B1 · Placa / aviso · alvo: 2 min",
+      "content": "<p><strong>TEXT: Sign at a nature reserve trailhead</strong></p>\n<blockquote><p><strong>RIDGELINE TRAIL: PLEASE READ BEFORE ENTERING</strong></p>\n<p>• Trail open sunrise to sunset. Overnight camping is not permitted anywhere on the reserve.<br>\n• Dogs welcome on a leash no longer than 2 metres. The upper loop (marked in red) is closed to dogs from 1 April to 15 July to protect ground-nesting birds.<br>\n• No bicycles. E-bikes and mobility scooters are exempt from this rule.<br>\n• Pack out all rubbish. There are no bins beyond this point.</p></blockquote>",
+      "audio_ref": null
+    },
+    "group": "mod1-b1",
+    "prompt": "Which of the following is allowed on the trail?",
+    "text_format": "html",
+    "options": {
+      "A": "A regular bicycle",
+      "B": "An overnight tent",
+      "C": "A mobility scooter",
+      "D": "Leaving food scraps in a bin"
+    },
+    "answer": "C",
+    "explanation": "\"E-bikes and mobility scooters are exempt\" da proibição de bicicletas. (A) bicicleta comum é proibida; (B) camping é proibido; (D) não há lixeiras além daquele ponto.",
+    "hint": null,
+    "trap_codes": [],
+    "tags": [],
+    "status": "rascunho",
+    "source": {
+      "kind": "migrado",
+      "file": "app/drills_data.py",
+      "ref": "MOD1_ACTION_DRILLS_B:mod1-b1#B1.2",
+      "live_on_site": true,
+      "answer_letter": "origem",
+      "build_map": {
+        "A": "C",
+        "B": "D",
+        "C": "A",
+        "D": "B"
+      }
+    }
+  },
+  {
+    "id": "mod1-b2.b2.1",
+    "section": "reading",
+    "task_type": "Read in Daily Life",
+    "exam_format": true,
+    "format": "mcq",
+    "skill": null,
+    "cefr_min": "A2",
+    "cefr_max": "B1",
+    "stimulus": {
+      "kind": "text",
+      "format": "html",
+      "title": "Drill B2 · Cardápio · alvo: 3 min",
+      "content": "<p><strong>TEXT: Café lunch menu (extract)</strong></p>\n<blockquote><p><strong>SANDWICHES</strong>: all served on sourdough with a side salad (swap for fries +$2)</p>\n<p>• <strong>Garden</strong> — roasted vegetables, hummus, rocket · $9 · <em>vegan</em><br>\n• <strong>Classic Club</strong> (chicken, bacon, egg, lettuce) · $12<br>\n• <strong>Halloumi Stack</strong> — grilled halloumi, tomato, pesto · $11 · <em>vegetarian (contains nuts)</em></p>\n<p><strong>SOUPS</strong> · served with bread · $7 · soup of the day is always vegetarian; ask staff whether today's is vegan.</p>\n<p><em>A 10% discount applies to all lunch orders placed before noon.</em></p></blockquote>",
+      "audio_ref": null
+    },
+    "group": "mod1-b2",
+    "prompt": "A customer who is vegan and allergic to nuts could safely order:",
+    "text_format": "html",
+    "options": {
+      "A": "the Halloumi Stack",
+      "B": "the Garden sandwich",
+      "C": "the soup of the day, no questions asked",
+      "D": "the Classic Club without bacon"
+    },
+    "answer": "B",
+    "explanation": "<em>Garden</em> é vegan e não tem aviso de nozes. (A) Halloumi Stack tem queijo (não vegan) e <em>contains nuts</em>; (C) a sopa é sempre vegetariana mas <strong>pode não ser vegana</strong> — o texto manda perguntar; (D) Classic Club tem frango e ovo.",
+    "hint": null,
+    "trap_codes": [],
+    "tags": [],
+    "status": "rascunho",
+    "source": {
+      "kind": "migrado",
+      "file": "app/drills_data.py",
+      "ref": "MOD1_ACTION_DRILLS_B:mod1-b2#B2.1",
+      "live_on_site": true,
+      "answer_letter": "origem",
+      "build_map": {
+        "A": "C",
+        "B": "B",
+        "C": "A",
+        "D": "D"
+      }
+    }
+  },
+  {
+    "id": "mod1-b2.b2.2",
+    "section": "reading",
+    "task_type": "Read in Daily Life",
+    "exam_format": true,
+    "format": "mcq",
+    "skill": null,
+    "cefr_min": "A2",
+    "cefr_max": "B1",
+    "stimulus": {
+      "kind": "text",
+      "format": "html",
+      "title": "Drill B2 · Cardápio · alvo: 3 min",
+      "content": "<p><strong>TEXT: Café lunch menu (extract)</strong></p>\n<blockquote><p><strong>SANDWICHES</strong>: all served on sourdough with a side salad (swap for fries +$2)</p>\n<p>• <strong>Garden</strong> — roasted vegetables, hummus, rocket · $9 · <em>vegan</em><br>\n• <strong>Classic Club</strong> (chicken, bacon, egg, lettuce) · $12<br>\n• <strong>Halloumi Stack</strong> — grilled halloumi, tomato, pesto · $11 · <em>vegetarian (contains nuts)</em></p>\n<p><strong>SOUPS</strong> · served with bread · $7 · soup of the day is always vegetarian; ask staff whether today's is vegan.</p>\n<p><em>A 10% discount applies to all lunch orders placed before noon.</em></p></blockquote>",
+      "audio_ref": null
+    },
+    "group": "mod1-b2",
+    "prompt": "A customer orders a Classic Club with fries at 11:45 a.m. Before any discount, the price is:",
+    "text_format": "html",
+    "options": {
+      "A": "$12",
+      "B": "$14",
+      "C": "$9",
+      "D": "$16"
+    },
+    "answer": "B",
+    "explanation": "$12 do sanduíche + $2 pela troca por fries = $14. O desconto de 10% (pedido antes do meio-dia) se aplica <strong>depois</strong>, mas a pergunta é o preço <strong>antes</strong> do desconto.",
+    "hint": null,
+    "trap_codes": [],
+    "tags": [],
+    "status": "rascunho",
+    "source": {
+      "kind": "migrado",
+      "file": "app/drills_data.py",
+      "ref": "MOD1_ACTION_DRILLS_B:mod1-b2#B2.2",
+      "live_on_site": true,
+      "answer_letter": "origem",
+      "build_map": {
+        "A": "A",
+        "B": "C",
+        "C": "D",
+        "D": "B"
+      }
+    }
+  },
+  {
+    "id": "mod1-b2.b2.3",
+    "section": "reading",
+    "task_type": "Read in Daily Life",
+    "exam_format": true,
+    "format": "mcq",
+    "skill": null,
+    "cefr_min": "A2",
+    "cefr_max": "B1",
+    "stimulus": {
+      "kind": "text",
+      "format": "html",
+      "title": "Drill B2 · Cardápio · alvo: 3 min",
+      "content": "<p><strong>TEXT: Café lunch menu (extract)</strong></p>\n<blockquote><p><strong>SANDWICHES</strong>: all served on sourdough with a side salad (swap for fries +$2)</p>\n<p>• <strong>Garden</strong> — roasted vegetables, hummus, rocket · $9 · <em>vegan</em><br>\n• <strong>Classic Club</strong> (chicken, bacon, egg, lettuce) · $12<br>\n• <strong>Halloumi Stack</strong> — grilled halloumi, tomato, pesto · $11 · <em>vegetarian (contains nuts)</em></p>\n<p><strong>SOUPS</strong> · served with bread · $7 · soup of the day is always vegetarian; ask staff whether today's is vegan.</p>\n<p><em>A 10% discount applies to all lunch orders placed before noon.</em></p></blockquote>",
+      "audio_ref": null
+    },
+    "group": "mod1-b2",
+    "prompt": "According to the menu, the soup of the day:",
+    "text_format": "html",
+    "options": {
+      "A": "is always vegan",
+      "B": "is always vegetarian, and may or may not be vegan",
+      "C": "never contains bread",
+      "D": "costs more than any sandwich"
+    },
+    "answer": "B",
+    "explanation": "\"Soup of the day is always vegetarian; ask staff whether today's is vegan\" — sempre vegetariana, veganidade varia.",
+    "hint": null,
+    "trap_codes": [],
+    "tags": [],
+    "status": "rascunho",
+    "source": {
+      "kind": "migrado",
+      "file": "app/drills_data.py",
+      "ref": "MOD1_ACTION_DRILLS_B:mod1-b2#B2.3",
+      "live_on_site": true,
+      "answer_letter": "origem",
+      "build_map": {
+        "A": "D",
+        "B": "A",
+        "C": "C",
+        "D": "B"
+      }
+    }
+  },
+  {
+    "id": "mod1-b3.b3.1",
+    "section": "reading",
+    "task_type": "Read in Daily Life",
+    "exam_format": true,
+    "format": "mcq",
+    "skill": null,
+    "cefr_min": "B1",
+    "cefr_max": "B2",
+    "stimulus": {
+      "kind": "text",
+      "format": "html",
+      "title": "Drill B3 · E-mail formal · alvo: 3 min",
+      "content": "<p><strong>TEXT: Email from a course coordinator</strong></p>\n<blockquote>\n<p><strong>Subject: Re: Request to submit Assignment 2 late</strong></p>\n<p>Dear Bruna,</p>\n<p>Thank you for letting me know about your situation in advance rather than after the deadline. I'm sorry to hear you've been unwell.</p>\n<p>Our department policy does not allow me to grant extensions longer than 48 hours without a medical certificate. If you're able to provide one, I can extend your deadline to the following Monday. If not, I can still accept the assignment up to 48 hours late, though the standard 10% late penalty would apply in that case.</p>\n<p>Please let me know which option you'd prefer by Thursday so I can update the system.</p>\n<p>Best regards,<br>Dr. Okafor</p>\n</blockquote>",
+      "audio_ref": null
+    },
+    "group": "mod1-b3",
+    "prompt": "What is the main purpose of this email?",
+    "text_format": "html",
+    "options": {
+      "A": "To refuse Bruna's request",
+      "B": "To explain the options available and ask Bruna to choose",
+      "C": "To inform Bruna that her assignment is now overdue",
+      "D": "To apologise for a mistake the department made"
+    },
+    "answer": "B",
+    "explanation": "O e-mail lista duas opções (com ou sem atestado) e pede que Bruna escolha até quinta. (A) não recusa — oferece alternativas; (C) o trabalho ainda não está atrasado; (D) não houve erro do departamento.",
+    "hint": null,
+    "trap_codes": [],
+    "tags": [],
+    "status": "rascunho",
+    "source": {
+      "kind": "migrado",
+      "file": "app/drills_data.py",
+      "ref": "MOD1_ACTION_DRILLS_B:mod1-b3#B3.1",
+      "live_on_site": true,
+      "answer_letter": "origem",
+      "build_map": {
+        "A": "C",
+        "B": "A",
+        "C": "B",
+        "D": "D"
+      }
+    }
+  },
+  {
+    "id": "mod1-b3.b3.2",
+    "section": "reading",
+    "task_type": "Read in Daily Life",
+    "exam_format": true,
+    "format": "mcq",
+    "skill": null,
+    "cefr_min": "B1",
+    "cefr_max": "B2",
+    "stimulus": {
+      "kind": "text",
+      "format": "html",
+      "title": "Drill B3 · E-mail formal · alvo: 3 min",
+      "content": "<p><strong>TEXT: Email from a course coordinator</strong></p>\n<blockquote>\n<p><strong>Subject: Re: Request to submit Assignment 2 late</strong></p>\n<p>Dear Bruna,</p>\n<p>Thank you for letting me know about your situation in advance rather than after the deadline. I'm sorry to hear you've been unwell.</p>\n<p>Our department policy does not allow me to grant extensions longer than 48 hours without a medical certificate. If you're able to provide one, I can extend your deadline to the following Monday. If not, I can still accept the assignment up to 48 hours late, though the standard 10% late penalty would apply in that case.</p>\n<p>Please let me know which option you'd prefer by Thursday so I can update the system.</p>\n<p>Best regards,<br>Dr. Okafor</p>\n</blockquote>",
+      "audio_ref": null
+    },
+    "group": "mod1-b3",
+    "prompt": "If Bruna does NOT provide a medical certificate, she can:",
+    "text_format": "html",
+    "options": {
+      "A": "submit the assignment by the following Monday with no penalty",
+      "B": "submit up to 48 hours late, losing 10% of the marks",
+      "C": "not submit the assignment at all",
+      "D": "choose her own new deadline"
+    },
+    "answer": "B",
+    "explanation": "Sem atestado: aceita até 48h de atraso com penalidade padrão de 10%. (A) descreve a opção <strong>com</strong> atestado; (C)/(D) não constam.",
+    "hint": null,
+    "trap_codes": [],
+    "tags": [],
+    "status": "rascunho",
+    "source": {
+      "kind": "migrado",
+      "file": "app/drills_data.py",
+      "ref": "MOD1_ACTION_DRILLS_B:mod1-b3#B3.2",
+      "live_on_site": true,
+      "answer_letter": "origem",
+      "build_map": {
+        "A": "A",
+        "B": "C",
+        "C": "B",
+        "D": "D"
+      }
+    }
+  },
+  {
+    "id": "mod1-b3.b3.3",
+    "section": "reading",
+    "task_type": "Read in Daily Life",
+    "exam_format": true,
+    "format": "mcq",
+    "skill": null,
+    "cefr_min": "B1",
+    "cefr_max": "B2",
+    "stimulus": {
+      "kind": "text",
+      "format": "html",
+      "title": "Drill B3 · E-mail formal · alvo: 3 min",
+      "content": "<p><strong>TEXT: Email from a course coordinator</strong></p>\n<blockquote>\n<p><strong>Subject: Re: Request to submit Assignment 2 late</strong></p>\n<p>Dear Bruna,</p>\n<p>Thank you for letting me know about your situation in advance rather than after the deadline. I'm sorry to hear you've been unwell.</p>\n<p>Our department policy does not allow me to grant extensions longer than 48 hours without a medical certificate. If you're able to provide one, I can extend your deadline to the following Monday. If not, I can still accept the assignment up to 48 hours late, though the standard 10% late penalty would apply in that case.</p>\n<p>Please let me know which option you'd prefer by Thursday so I can update the system.</p>\n<p>Best regards,<br>Dr. Okafor</p>\n</blockquote>",
+      "audio_ref": null
+    },
+    "group": "mod1-b3",
+    "prompt": "Dr. Okafor's tone is best described as:",
+    "text_format": "html",
+    "options": {
+      "A": "annoyed and dismissive",
+      "B": "formal but sympathetic and helpful",
+      "C": "uncertain and apologetic",
+      "D": "casual and friendly"
+    },
+    "answer": "B",
+    "explanation": "Registro formal (<em>Dear... Best regards, Dr. Okafor</em>), mas empático (<em>I'm sorry to hear you've been unwell</em>) e prestativo (oferece soluções). (A)/(C)/(D) não batem com o texto.",
+    "hint": null,
+    "trap_codes": [],
+    "tags": [],
+    "status": "rascunho",
+    "source": {
+      "kind": "migrado",
+      "file": "app/drills_data.py",
+      "ref": "MOD1_ACTION_DRILLS_B:mod1-b3#B3.3",
+      "live_on_site": true,
+      "answer_letter": "origem",
+      "build_map": {
+        "A": "D",
+        "B": "B",
+        "C": "A",
+        "D": "C"
+      }
+    }
+  },
+  {
+    "id": "mod1-b4.b4.1",
+    "section": "reading",
+    "task_type": "Read in Daily Life",
+    "exam_format": true,
+    "format": "mcq",
+    "skill": null,
+    "cefr_min": "B1",
+    "cefr_max": "B2",
+    "stimulus": {
+      "kind": "text",
+      "format": "html",
+      "title": "Drill B4 · Horário / tabela · alvo: 2 min",
+      "content": "<p><strong>TEXT: Shuttle timetable notice</strong></p>\n<blockquote><p><strong>CAMPUS ↔ STATION SHUTTLE</strong></p>\n<p>Departs Campus Gate: on the hour and at half past, 7:00–19:00, Mon–Fri. Departs Station: at quarter past and quarter to, same times. Journey time: approximately 20 minutes.</p>\n<p><em>The half-past and quarter-to services do not run after 17:00: the last half-past departure from Campus Gate is at 16:30. Weekend and holiday service runs on the hour only.</em></p></blockquote>",
+      "audio_ref": null
+    },
+    "group": "mod1-b4",
+    "prompt": "A student wants to leave Campus Gate on a Tuesday at 17:30. On that day there is:",
+    "text_format": "html",
+    "options": {
+      "A": "no 17:30 service — after 17:00 the shuttle leaves on the hour only",
+      "B": "a 17:30 service that arrives at the station around 17:50",
+      "C": "a shuttle only if it is a holiday",
+      "D": "a 17:30 service that takes about 45 minutes"
+    },
+    "answer": "A",
+    "explanation": "A nota de rodapé é explícita: \"the last half-past departure from Campus Gate is at 16:30\" e, depois das 17:00, o serviço é \"on the hour only\". Logo, não existe 17:30 na terça-feira. Este item treina a leitura da <strong>nota de rodapé</strong> — quem responde (B) leu só a linha principal e ignorou a exceção.",
+    "hint": null,
+    "trap_codes": [],
+    "tags": [],
+    "status": "rascunho",
+    "source": {
+      "kind": "migrado",
+      "file": "app/drills_data.py",
+      "ref": "MOD1_ACTION_DRILLS_B:mod1-b4#B4.1",
+      "live_on_site": true,
+      "answer_letter": "origem",
+      "build_map": {
+        "A": "B",
+        "B": "D",
+        "C": "A",
+        "D": "C"
+      }
+    }
+  },
+  {
+    "id": "mod1-b4.b4.2",
+    "section": "reading",
+    "task_type": "Read in Daily Life",
+    "exam_format": true,
+    "format": "mcq",
+    "skill": null,
+    "cefr_min": "B1",
+    "cefr_max": "B2",
+    "stimulus": {
+      "kind": "text",
+      "format": "html",
+      "title": "Drill B4 · Horário / tabela · alvo: 2 min",
+      "content": "<p><strong>TEXT: Shuttle timetable notice</strong></p>\n<blockquote><p><strong>CAMPUS ↔ STATION SHUTTLE</strong></p>\n<p>Departs Campus Gate: on the hour and at half past, 7:00–19:00, Mon–Fri. Departs Station: at quarter past and quarter to, same times. Journey time: approximately 20 minutes.</p>\n<p><em>The half-past and quarter-to services do not run after 17:00: the last half-past departure from Campus Gate is at 16:30. Weekend and holiday service runs on the hour only.</em></p></blockquote>",
+      "audio_ref": null
+    },
+    "group": "mod1-b4",
+    "prompt": "On a Sunday, a shuttle leaves the Station at:",
+    "text_format": "html",
+    "options": {
+      "A": "quarter past and quarter to every hour",
+      "B": "on the hour only",
+      "C": "half past every hour",
+      "D": "the timetable does not say"
+    },
+    "answer": "B",
+    "explanation": "Fim de semana: \"Weekend and holiday service runs on the hour only\". A tabela <em>quarter past / quarter to</em> da estação vale só de segunda a sexta.",
+    "hint": null,
+    "trap_codes": [],
+    "tags": [],
+    "status": "rascunho",
+    "source": {
+      "kind": "migrado",
+      "file": "app/drills_data.py",
+      "ref": "MOD1_ACTION_DRILLS_B:mod1-b4#B4.2",
+      "live_on_site": true,
+      "answer_letter": "origem",
+      "build_map": {
+        "A": "C",
+        "B": "A",
+        "C": "D",
+        "D": "B"
+      }
+    }
+  },
+  {
+    "id": "mod1-b5.b5.1",
+    "section": "reading",
+    "task_type": "Read in Daily Life",
+    "exam_format": true,
+    "format": "mcq",
+    "skill": null,
+    "cefr_min": "A2",
+    "cefr_max": "B1",
+    "stimulus": {
+      "kind": "text",
+      "format": "html",
+      "title": "Drill B5 · Post de rede social · alvo: 3 min",
+      "content": "<p><strong>TEXT: A social media post from a local bakery</strong></p>\n<blockquote><p>🥐 <strong>Riverside Bakery</strong> · Posted 2 hours ago</p>\n<p>Big news, everyone! Starting next Tuesday, we're extending our weekday hours — open at 6:30 AM instead of 7:00 AM, so early risers can grab their coffee and croissants before work. 🌅</p>\n<p>Quick heads-up though: because of the earlier opening, our weekday sourdough batch will now go into the oven the night before instead of first thing in the morning. It'll still be baked fresh daily, just on a slightly different schedule — so if you're used to catching it warm right out of the oven at 8 AM, it might be ready a little earlier now. Come say hi and let us know what you think of the new hours!</p>\n<p>Weekend hours are unchanged (8 AM–3 PM, same as always).</p></blockquote>",
+      "audio_ref": null
+    },
+    "group": "mod1-b5",
+    "prompt": "What is the main purpose of this post?",
+    "text_format": "html",
+    "options": {
+      "A": "To announce that the bakery is closing early on weekdays",
+      "B": "To inform customers about a change to weekday opening hours",
+      "C": "To apologise for a delay in the sourdough baking schedule",
+      "D": "To advertise a new type of bread"
+    },
+    "answer": "B",
+    "explanation": "O post inteiro gira em torno de um anúncio: abrir mais cedo nos dias de semana. (A) inverte; (C) não pede desculpas; (D) nenhum pão novo.",
+    "hint": null,
+    "trap_codes": [],
+    "tags": [],
+    "status": "rascunho",
+    "source": {
+      "kind": "migrado",
+      "file": "app/drills_data.py",
+      "ref": "MOD1_ACTION_DRILLS_B:mod1-b5#B5.1",
+      "live_on_site": true,
+      "answer_letter": "origem",
+      "build_map": {
+        "A": "A",
+        "B": "D",
+        "C": "C",
+        "D": "B"
+      }
+    }
+  },
+  {
+    "id": "mod1-b5.b5.2",
+    "section": "reading",
+    "task_type": "Read in Daily Life",
+    "exam_format": true,
+    "format": "mcq",
+    "skill": null,
+    "cefr_min": "A2",
+    "cefr_max": "B1",
+    "stimulus": {
+      "kind": "text",
+      "format": "html",
+      "title": "Drill B5 · Post de rede social · alvo: 3 min",
+      "content": "<p><strong>TEXT: A social media post from a local bakery</strong></p>\n<blockquote><p>🥐 <strong>Riverside Bakery</strong> · Posted 2 hours ago</p>\n<p>Big news, everyone! Starting next Tuesday, we're extending our weekday hours — open at 6:30 AM instead of 7:00 AM, so early risers can grab their coffee and croissants before work. 🌅</p>\n<p>Quick heads-up though: because of the earlier opening, our weekday sourdough batch will now go into the oven the night before instead of first thing in the morning. It'll still be baked fresh daily, just on a slightly different schedule — so if you're used to catching it warm right out of the oven at 8 AM, it might be ready a little earlier now. Come say hi and let us know what you think of the new hours!</p>\n<p>Weekend hours are unchanged (8 AM–3 PM, same as always).</p></blockquote>",
+      "audio_ref": null
+    },
+    "group": "mod1-b5",
+    "prompt": "According to the post, the weekday sourdough will:",
+    "text_format": "html",
+    "options": {
+      "A": "no longer be baked fresh every day",
+      "B": "only be available on weekends",
+      "C": "be baked the night before instead of the same morning",
+      "D": "be replaced with a different bread"
+    },
+    "answer": "C",
+    "explanation": "\"Will now go into the oven the night before\". (A) o texto diz \"still be baked fresh daily\"; (B)/(D) não constam.",
+    "hint": null,
+    "trap_codes": [],
+    "tags": [],
+    "status": "rascunho",
+    "source": {
+      "kind": "migrado",
+      "file": "app/drills_data.py",
+      "ref": "MOD1_ACTION_DRILLS_B:mod1-b5#B5.2",
+      "live_on_site": true,
+      "answer_letter": "origem",
+      "build_map": {
+        "A": "C",
+        "B": "D",
+        "C": "A",
+        "D": "B"
+      }
+    }
+  },
+  {
+    "id": "mod1-b5.b5.3",
+    "section": "reading",
+    "task_type": "Read in Daily Life",
+    "exam_format": true,
+    "format": "mcq",
+    "skill": null,
+    "cefr_min": "A2",
+    "cefr_max": "B1",
+    "stimulus": {
+      "kind": "text",
+      "format": "html",
+      "title": "Drill B5 · Post de rede social · alvo: 3 min",
+      "content": "<p><strong>TEXT: A social media post from a local bakery</strong></p>\n<blockquote><p>🥐 <strong>Riverside Bakery</strong> · Posted 2 hours ago</p>\n<p>Big news, everyone! Starting next Tuesday, we're extending our weekday hours — open at 6:30 AM instead of 7:00 AM, so early risers can grab their coffee and croissants before work. 🌅</p>\n<p>Quick heads-up though: because of the earlier opening, our weekday sourdough batch will now go into the oven the night before instead of first thing in the morning. It'll still be baked fresh daily, just on a slightly different schedule — so if you're used to catching it warm right out of the oven at 8 AM, it might be ready a little earlier now. Come say hi and let us know what you think of the new hours!</p>\n<p>Weekend hours are unchanged (8 AM–3 PM, same as always).</p></blockquote>",
+      "audio_ref": null
+    },
+    "group": "mod1-b5",
+    "prompt": "What can be inferred about the weekend hours?",
+    "text_format": "html",
+    "options": {
+      "A": "They will also move to 6:30 AM",
+      "B": "They stay the same as before this announcement",
+      "C": "They have not been decided yet",
+      "D": "They will be shortened"
+    },
+    "answer": "B",
+    "explanation": "\"Weekend hours are unchanged\". (A)/(D) contradizem; (C) já está decidido.",
+    "hint": null,
+    "trap_codes": [],
+    "tags": [],
+    "status": "rascunho",
+    "source": {
+      "kind": "migrado",
+      "file": "app/drills_data.py",
+      "ref": "MOD1_ACTION_DRILLS_B:mod1-b5#B5.3",
+      "live_on_site": true,
+      "answer_letter": "origem",
+      "build_map": {
+        "A": "D",
+        "B": "B",
+        "C": "A",
+        "D": "C"
+      }
+    }
+  },
+  {
+    "id": "mod1-b5.b5.4",
+    "section": "reading",
+    "task_type": "Read in Daily Life",
+    "exam_format": true,
+    "format": "mcq",
+    "skill": null,
+    "cefr_min": "A2",
+    "cefr_max": "B1",
+    "stimulus": {
+      "kind": "text",
+      "format": "html",
+      "title": "Drill B5 · Post de rede social · alvo: 3 min",
+      "content": "<p><strong>TEXT: A social media post from a local bakery</strong></p>\n<blockquote><p>🥐 <strong>Riverside Bakery</strong> · Posted 2 hours ago</p>\n<p>Big news, everyone! Starting next Tuesday, we're extending our weekday hours — open at 6:30 AM instead of 7:00 AM, so early risers can grab their coffee and croissants before work. 🌅</p>\n<p>Quick heads-up though: because of the earlier opening, our weekday sourdough batch will now go into the oven the night before instead of first thing in the morning. It'll still be baked fresh daily, just on a slightly different schedule — so if you're used to catching it warm right out of the oven at 8 AM, it might be ready a little earlier now. Come say hi and let us know what you think of the new hours!</p>\n<p>Weekend hours are unchanged (8 AM–3 PM, same as always).</p></blockquote>",
+      "audio_ref": null
+    },
+    "group": "mod1-b5",
+    "prompt": "The overall tone of the post is:",
+    "text_format": "html",
+    "options": {
+      "A": "formal and apologetic",
+      "B": "friendly and informative",
+      "C": "urgent and cautionary",
+      "D": "neutral and impersonal"
+    },
+    "answer": "B",
+    "explanation": "Emojis, \"Big news, everyone!\", \"Come say hi\", tom positivo.",
+    "hint": null,
+    "trap_codes": [],
+    "tags": [],
+    "status": "rascunho",
+    "source": {
+      "kind": "migrado",
+      "file": "app/drills_data.py",
+      "ref": "MOD1_ACTION_DRILLS_B:mod1-b5#B5.4",
+      "live_on_site": true,
+      "answer_letter": "origem",
+      "build_map": {
+        "A": "B",
+        "B": "C",
+        "C": "D",
+        "D": "A"
+      }
+    }
+  },
+  {
+    "id": "mod7-b2.1",
+    "section": "reading",
+    "task_type": "Read in Daily Life",
+    "exam_format": true,
+    "format": "mcq",
+    "skill": null,
+    "cefr_min": null,
+    "cefr_max": null,
+    "stimulus": {
+      "kind": "text",
+      "format": "markdown",
+      "title": "Bloco B: Read in Daily Life",
+      "content": "**TEXTO:**\n\n> **NOTICE: Campus Recreation Center** Effective this semester, the pool will be closed for maintenance every Monday from 6:00 AM to 12:00 PM. All other hours remain unchanged. Members with Monday-morning lap swim reservations should rebook via the online portal or contact the front desk for a full refund of their session credit.",
+      "audio_ref": null
+    },
+    "group": "mod7-b2",
+    "prompt": "According to the notice, a member who had a 7:00 AM Monday swim reservation should:",
+    "text_format": "markdown",
+    "options": {
+      "A": "show up as usual, since only the 6:00–7:00 AM slot is affected",
+      "B": "rebook online or request a refund of their session credit",
+      "C": "wait until the following Monday to use the pool",
+      "D": "contact the maintenance department directly"
+    },
+    "answer": "B",
+    "explanation": "o texto instrui diretamente essa ação",
+    "hint": null,
+    "trap_codes": [],
+    "tags": [
+      "simulado-2"
+    ],
+    "status": "rascunho",
+    "source": {
+      "kind": "migrado",
+      "file": "consolidated/modulo_7_simulados.md",
+      "ref": "linha 230",
+      "live_on_site": true,
+      "answer_letter": "origem",
+      "build_map": {
+        "A": "D",
+        "B": "A",
+        "C": "B",
+        "D": "C"
+      }
+    }
+  },
+  {
+    "id": "mod7-b2.2",
+    "section": "reading",
+    "task_type": "Read in Daily Life",
+    "exam_format": true,
+    "format": "mcq",
+    "skill": null,
+    "cefr_min": null,
+    "cefr_max": null,
+    "stimulus": {
+      "kind": "text",
+      "format": "markdown",
+      "title": "Bloco B: Read in Daily Life",
+      "content": "**TEXTO:**\n\n> **NOTICE: Campus Recreation Center** Effective this semester, the pool will be closed for maintenance every Monday from 6:00 AM to 12:00 PM. All other hours remain unchanged. Members with Monday-morning lap swim reservations should rebook via the online portal or contact the front desk for a full refund of their session credit.",
+      "audio_ref": null
+    },
+    "group": "mod7-b2",
+    "prompt": "The notice implies that on Tuesday through Sunday, the pool:",
+    "text_format": "markdown",
+    "options": {
+      "A": "is open only in the afternoon",
+      "B": "operates on its usual schedule",
+      "C": "requires a new reservation each time",
+      "D": "is reserved for lap swim only"
+    },
+    "answer": "B",
+    "explanation": "\"All other hours remain unchanged\"",
+    "hint": null,
+    "trap_codes": [],
+    "tags": [
+      "simulado-2"
+    ],
+    "status": "rascunho",
+    "source": {
+      "kind": "migrado",
+      "file": "consolidated/modulo_7_simulados.md",
+      "ref": "linha 236",
+      "live_on_site": true,
+      "answer_letter": "origem",
+      "build_map": {
+        "A": "A",
+        "B": "B",
+        "C": "D",
+        "D": "C"
+      }
+    }
+  },
+  {
+    "id": "mod7-b3.1",
+    "section": "reading",
+    "task_type": "Read in Daily Life",
+    "exam_format": true,
+    "format": "mcq",
+    "skill": null,
+    "cefr_min": null,
+    "cefr_max": null,
+    "stimulus": {
+      "kind": "text",
+      "format": "markdown",
+      "title": "Bloco B: Read in Daily Life",
+      "content": "**TEXTO 2:**\n\n> **From: Alex Rivera <a.rivera@northgate.edu>**\n> **To: Group 4 · Marketing Project**\n> **Subject: Moving our Thursday meeting**\n>\n> Hi everyone: the library study rooms are fully booked Thursday, so I've moved our meeting to the Student Center, room 210, same time (4 PM). If you can't make it in person, I'll set up a video link · just reply and let me know by Wednesday noon so I can send it. Bring your section drafts either way.",
+      "audio_ref": null
+    },
+    "group": "mod7-b3",
+    "prompt": "What is the main purpose of this email?",
+    "text_format": "markdown",
+    "options": {
+      "A": "To cancel the group meeting",
+      "B": "To inform the group of a change of location and confirm attendance",
+      "C": "To assign new sections of the project",
+      "D": "To complain about the library booking system"
+    },
+    "answer": "B",
+    "explanation": "",
+    "hint": null,
+    "trap_codes": [],
+    "tags": [
+      "simulado-2"
+    ],
+    "status": "rascunho",
+    "source": {
+      "kind": "migrado",
+      "file": "consolidated/modulo_7_simulados.md",
+      "ref": "linha 252",
+      "live_on_site": true,
+      "answer_letter": "origem",
+      "build_map": {
+        "A": "B",
+        "B": "A",
+        "C": "D",
+        "D": "C"
+      }
+    }
+  },
+  {
+    "id": "mod7-b3.2",
+    "section": "reading",
+    "task_type": "Read in Daily Life",
+    "exam_format": true,
+    "format": "mcq",
+    "skill": null,
+    "cefr_min": null,
+    "cefr_max": null,
+    "stimulus": {
+      "kind": "text",
+      "format": "markdown",
+      "title": "Bloco B: Read in Daily Life",
+      "content": "**TEXTO 2:**\n\n> **From: Alex Rivera <a.rivera@northgate.edu>**\n> **To: Group 4 · Marketing Project**\n> **Subject: Moving our Thursday meeting**\n>\n> Hi everyone: the library study rooms are fully booked Thursday, so I've moved our meeting to the Student Center, room 210, same time (4 PM). If you can't make it in person, I'll set up a video link · just reply and let me know by Wednesday noon so I can send it. Bring your section drafts either way.",
+      "audio_ref": null
+    },
+    "group": "mod7-b3",
+    "prompt": "A group member who wants to join by video should:",
+    "text_format": "markdown",
+    "options": {
+      "A": "show up at the library as originally planned",
+      "B": "reply before Wednesday noon",
+      "C": "email the library directly",
+      "D": "wait for Alex to call them"
+    },
+    "answer": "B",
+    "explanation": "",
+    "hint": null,
+    "trap_codes": [],
+    "tags": [
+      "simulado-2"
+    ],
+    "status": "rascunho",
+    "source": {
+      "kind": "migrado",
+      "file": "consolidated/modulo_7_simulados.md",
+      "ref": "linha 258",
+      "live_on_site": true,
+      "answer_letter": "origem",
+      "build_map": {
+        "A": "A",
+        "B": "C",
+        "C": "D",
+        "D": "B"
+      }
+    }
+  },
+  {
+    "id": "mod7-b3.3",
+    "section": "reading",
+    "task_type": "Read in Daily Life",
+    "exam_format": true,
+    "format": "mcq",
+    "skill": null,
+    "cefr_min": null,
+    "cefr_max": null,
+    "stimulus": {
+      "kind": "text",
+      "format": "markdown",
+      "title": "Bloco B: Read in Daily Life",
+      "content": "**TEXTO 2:**\n\n> **From: Alex Rivera <a.rivera@northgate.edu>**\n> **To: Group 4 · Marketing Project**\n> **Subject: Moving our Thursday meeting**\n>\n> Hi everyone: the library study rooms are fully booked Thursday, so I've moved our meeting to the Student Center, room 210, same time (4 PM). If you can't make it in person, I'll set up a video link · just reply and let me know by Wednesday noon so I can send it. Bring your section drafts either way.",
+      "audio_ref": null
+    },
+    "group": "mod7-b3",
+    "prompt": "What are members expected to bring?",
+    "text_format": "markdown",
+    "options": {
+      "A": "nothing: the meeting is only to reschedule",
+      "B": "their section drafts",
+      "C": "a printed copy of the syllabus",
+      "D": "laptops for the video link"
+    },
+    "answer": "B",
+    "explanation": "",
+    "hint": null,
+    "trap_codes": [],
+    "tags": [
+      "simulado-2"
+    ],
+    "status": "rascunho",
+    "source": {
+      "kind": "migrado",
+      "file": "consolidated/modulo_7_simulados.md",
+      "ref": "linha 264",
+      "live_on_site": true,
+      "answer_letter": "origem",
+      "build_map": {
+        "A": "D",
+        "B": "B",
+        "C": "C",
+        "D": "A"
+      }
+    }
+  },
+  {
+    "id": "mod7-b14.1",
+    "section": "reading",
+    "task_type": "Read in Daily Life",
+    "exam_format": true,
+    "format": "mcq",
+    "skill": null,
+    "cefr_min": null,
+    "cefr_max": null,
+    "stimulus": {
+      "kind": "text",
+      "format": "markdown",
+      "title": "Bloco B · Read in Daily Life (alvo: 2 min)",
+      "content": "> **Café Menu Insert:** Our oat milk is now available at no extra charge for all espresso drinks. Almond and soy milk remain available for a $0.75 upcharge. This change applies to in-store and mobile orders alike.",
+      "audio_ref": null
+    },
+    "group": "mod7-b14",
+    "prompt": "Based on the notice, a customer who orders a latte with soy milk through the mobile app will:",
+    "text_format": "markdown",
+    "options": {
+      "A": "pay no extra charge, same as oat milk",
+      "B": "pay a $0.75 upcharge",
+      "C": "be unable to order soy milk through the app",
+      "D": "receive oat milk automatically instead"
+    },
+    "answer": "B",
+    "explanation": "",
+    "hint": null,
+    "trap_codes": [],
+    "tags": [
+      "simulado-3"
+    ],
+    "status": "rascunho",
+    "source": {
+      "kind": "migrado",
+      "file": "consolidated/modulo_7_simulados.md",
+      "ref": "linha 642",
+      "live_on_site": true,
+      "answer_letter": "origem",
+      "build_map": {
+        "A": "C",
+        "B": "A",
+        "C": "B",
+        "D": "D"
+      }
+    }
+  }
+]

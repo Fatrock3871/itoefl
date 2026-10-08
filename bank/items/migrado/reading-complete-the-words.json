@@ -1,0 +1,2600 @@
+[
+  {
+    "id": "mod1-a1.1",
+    "section": "reading",
+    "task_type": "Complete the Words",
+    "exam_format": false,
+    "format": "mcq",
+    "skill": null,
+    "cefr_min": "A2",
+    "cefr_max": "B1",
+    "stimulus": {
+      "kind": "text",
+      "format": "html",
+      "title": "Drill A1 · alvo: 4 min",
+      "content": "<p><strong>TEXT: A message to a friend</strong></p>\n<p>Hi Marco,</p>\n<p>I'm really sorry, but I have to (1)_____ our plans for Saturday. My sister (2)_____ from Recife that morning and I have to pick her up at the airport. I know we (3)_____ this dinner for weeks, and I feel terrible about it.</p>\n<p>Would Sunday afternoon (4)_____ instead? There's a new place near the park that everyone (5)_____ about. If Sunday doesn't work for you, just let me (6)_____ and we'll find another day.</p>\n<p>Again, I'm sorry for the short notice.</p>\n<p>Talk soon, Lia</p>",
+      "audio_ref": null
+    },
+    "group": "mod1-a1",
+    "prompt": "Lacuna (1)",
+    "text_format": "html",
+    "options": {
+      "A": "cancel",
+      "B": "canceling",
+      "C": "to cancel",
+      "D": "cancelled"
+    },
+    "answer": "A",
+    "explanation": "\"Have to\" + <strong>verbo base</strong>. As opções (B) <em>canceling</em>, (C) <em>to cancel</em> e (D) <em>cancelled</em> quebram a estrutura \"have to + base\".",
+    "hint": null,
+    "trap_codes": [],
+    "tags": [],
+    "status": "rascunho",
+    "source": {
+      "kind": "migrado",
+      "file": "app/drills_data.py",
+      "ref": "MOD1_ACTION_DRILLS_A:mod1-a1#1",
+      "live_on_site": true,
+      "answer_letter": "origem",
+      "build_map": {
+        "A": "C",
+        "B": "D",
+        "C": "A",
+        "D": "B"
+      }
+    }
+  },
+  {
+    "id": "mod1-a1.2",
+    "section": "reading",
+    "task_type": "Complete the Words",
+    "exam_format": false,
+    "format": "mcq",
+    "skill": null,
+    "cefr_min": "A2",
+    "cefr_max": "B1",
+    "stimulus": {
+      "kind": "text",
+      "format": "html",
+      "title": "Drill A1 · alvo: 4 min",
+      "content": "<p><strong>TEXT: A message to a friend</strong></p>\n<p>Hi Marco,</p>\n<p>I'm really sorry, but I have to (1)_____ our plans for Saturday. My sister (2)_____ from Recife that morning and I have to pick her up at the airport. I know we (3)_____ this dinner for weeks, and I feel terrible about it.</p>\n<p>Would Sunday afternoon (4)_____ instead? There's a new place near the park that everyone (5)_____ about. If Sunday doesn't work for you, just let me (6)_____ and we'll find another day.</p>\n<p>Again, I'm sorry for the short notice.</p>\n<p>Talk soon, Lia</p>",
+      "audio_ref": null
+    },
+    "group": "mod1-a1",
+    "prompt": "Lacuna (2)",
+    "text_format": "html",
+    "options": {
+      "A": "arrive",
+      "B": "arrives",
+      "C": "arriving",
+      "D": "is arriving"
+    },
+    "answer": "D",
+    "explanation": "Compromisso futuro já combinado (\"that morning\") → <strong>presente contínuo com valor de futuro</strong>. (A)/(B) presente simples não expressam plano; (C) <em>arriving</em> sozinho não tem auxiliar.",
+    "hint": null,
+    "trap_codes": [],
+    "tags": [],
+    "status": "rascunho",
+    "source": {
+      "kind": "migrado",
+      "file": "app/drills_data.py",
+      "ref": "MOD1_ACTION_DRILLS_A:mod1-a1#2",
+      "live_on_site": true,
+      "answer_letter": "origem",
+      "build_map": {
+        "A": "B",
+        "B": "C",
+        "C": "D",
+        "D": "A"
+      }
+    }
+  },
+  {
+    "id": "mod1-a1.3",
+    "section": "reading",
+    "task_type": "Complete the Words",
+    "exam_format": false,
+    "format": "mcq",
+    "skill": null,
+    "cefr_min": "A2",
+    "cefr_max": "B1",
+    "stimulus": {
+      "kind": "text",
+      "format": "html",
+      "title": "Drill A1 · alvo: 4 min",
+      "content": "<p><strong>TEXT: A message to a friend</strong></p>\n<p>Hi Marco,</p>\n<p>I'm really sorry, but I have to (1)_____ our plans for Saturday. My sister (2)_____ from Recife that morning and I have to pick her up at the airport. I know we (3)_____ this dinner for weeks, and I feel terrible about it.</p>\n<p>Would Sunday afternoon (4)_____ instead? There's a new place near the park that everyone (5)_____ about. If Sunday doesn't work for you, just let me (6)_____ and we'll find another day.</p>\n<p>Again, I'm sorry for the short notice.</p>\n<p>Talk soon, Lia</p>",
+      "audio_ref": null
+    },
+    "group": "mod1-a1",
+    "prompt": "Lacuna (3)",
+    "text_format": "html",
+    "options": {
+      "A": "plan",
+      "B": "planned",
+      "C": "have been planning",
+      "D": "are planning"
+    },
+    "answer": "C",
+    "explanation": "\"For weeks\" + ação iniciada no passado e ainda em curso → <strong>presente perfeito contínuo</strong>. (D) <em>are planning</em> ignora o \"for weeks\"; (A)/(B) não conectam passado e presente.",
+    "hint": null,
+    "trap_codes": [],
+    "tags": [],
+    "status": "rascunho",
+    "source": {
+      "kind": "migrado",
+      "file": "app/drills_data.py",
+      "ref": "MOD1_ACTION_DRILLS_A:mod1-a1#3",
+      "live_on_site": true,
+      "answer_letter": "origem",
+      "build_map": {
+        "A": "A",
+        "B": "B",
+        "C": "D",
+        "D": "C"
+      }
+    }
+  },
+  {
+    "id": "mod1-a1.4",
+    "section": "reading",
+    "task_type": "Complete the Words",
+    "exam_format": false,
+    "format": "mcq",
+    "skill": null,
+    "cefr_min": "A2",
+    "cefr_max": "B1",
+    "stimulus": {
+      "kind": "text",
+      "format": "html",
+      "title": "Drill A1 · alvo: 4 min",
+      "content": "<p><strong>TEXT: A message to a friend</strong></p>\n<p>Hi Marco,</p>\n<p>I'm really sorry, but I have to (1)_____ our plans for Saturday. My sister (2)_____ from Recife that morning and I have to pick her up at the airport. I know we (3)_____ this dinner for weeks, and I feel terrible about it.</p>\n<p>Would Sunday afternoon (4)_____ instead? There's a new place near the park that everyone (5)_____ about. If Sunday doesn't work for you, just let me (6)_____ and we'll find another day.</p>\n<p>Again, I'm sorry for the short notice.</p>\n<p>Talk soon, Lia</p>",
+      "audio_ref": null
+    },
+    "group": "mod1-a1",
+    "prompt": "Lacuna (4)",
+    "text_format": "html",
+    "options": {
+      "A": "work",
+      "B": "works",
+      "C": "working",
+      "D": "worked"
+    },
+    "answer": "A",
+    "explanation": "Depois do modal <em>would</em> → <strong>base</strong>. \"Would Sunday afternoon work?\"",
+    "hint": null,
+    "trap_codes": [],
+    "tags": [],
+    "status": "rascunho",
+    "source": {
+      "kind": "migrado",
+      "file": "app/drills_data.py",
+      "ref": "MOD1_ACTION_DRILLS_A:mod1-a1#4",
+      "live_on_site": true,
+      "answer_letter": "origem",
+      "build_map": {
+        "A": "B",
+        "B": "A",
+        "C": "D",
+        "D": "C"
+      }
+    }
+  },
+  {
+    "id": "mod1-a1.5",
+    "section": "reading",
+    "task_type": "Complete the Words",
+    "exam_format": false,
+    "format": "mcq",
+    "skill": null,
+    "cefr_min": "A2",
+    "cefr_max": "B1",
+    "stimulus": {
+      "kind": "text",
+      "format": "html",
+      "title": "Drill A1 · alvo: 4 min",
+      "content": "<p><strong>TEXT: A message to a friend</strong></p>\n<p>Hi Marco,</p>\n<p>I'm really sorry, but I have to (1)_____ our plans for Saturday. My sister (2)_____ from Recife that morning and I have to pick her up at the airport. I know we (3)_____ this dinner for weeks, and I feel terrible about it.</p>\n<p>Would Sunday afternoon (4)_____ instead? There's a new place near the park that everyone (5)_____ about. If Sunday doesn't work for you, just let me (6)_____ and we'll find another day.</p>\n<p>Again, I'm sorry for the short notice.</p>\n<p>Talk soon, Lia</p>",
+      "audio_ref": null
+    },
+    "group": "mod1-a1",
+    "prompt": "Lacuna (5)",
+    "text_format": "html",
+    "options": {
+      "A": "talk",
+      "B": "talks",
+      "C": "talking",
+      "D": "talked"
+    },
+    "answer": "B",
+    "explanation": "<em>Everyone</em> = <strong>singular</strong> → verbo + -s. \"Everyone talks about...\"",
+    "hint": null,
+    "trap_codes": [],
+    "tags": [],
+    "status": "rascunho",
+    "source": {
+      "kind": "migrado",
+      "file": "app/drills_data.py",
+      "ref": "MOD1_ACTION_DRILLS_A:mod1-a1#5",
+      "live_on_site": true,
+      "answer_letter": "origem",
+      "build_map": {
+        "A": "A",
+        "B": "B",
+        "C": "D",
+        "D": "C"
+      }
+    }
+  },
+  {
+    "id": "mod1-a1.6",
+    "section": "reading",
+    "task_type": "Complete the Words",
+    "exam_format": false,
+    "format": "mcq",
+    "skill": null,
+    "cefr_min": "A2",
+    "cefr_max": "B1",
+    "stimulus": {
+      "kind": "text",
+      "format": "html",
+      "title": "Drill A1 · alvo: 4 min",
+      "content": "<p><strong>TEXT: A message to a friend</strong></p>\n<p>Hi Marco,</p>\n<p>I'm really sorry, but I have to (1)_____ our plans for Saturday. My sister (2)_____ from Recife that morning and I have to pick her up at the airport. I know we (3)_____ this dinner for weeks, and I feel terrible about it.</p>\n<p>Would Sunday afternoon (4)_____ instead? There's a new place near the park that everyone (5)_____ about. If Sunday doesn't work for you, just let me (6)_____ and we'll find another day.</p>\n<p>Again, I'm sorry for the short notice.</p>\n<p>Talk soon, Lia</p>",
+      "audio_ref": null
+    },
+    "group": "mod1-a1",
+    "prompt": "Lacuna (6)",
+    "text_format": "html",
+    "options": {
+      "A": "know",
+      "B": "known",
+      "C": "knowing",
+      "D": "to know"
+    },
+    "answer": "A",
+    "explanation": "<em>Let</em> + objeto + <strong>base</strong> (\"let me know\": fórmula fixa). (D) \"let me to know\" é agramatical.",
+    "hint": null,
+    "trap_codes": [],
+    "tags": [],
+    "status": "rascunho",
+    "source": {
+      "kind": "migrado",
+      "file": "app/drills_data.py",
+      "ref": "MOD1_ACTION_DRILLS_A:mod1-a1#6",
+      "live_on_site": true,
+      "answer_letter": "origem",
+      "build_map": {
+        "A": "A",
+        "B": "B",
+        "C": "C",
+        "D": "D"
+      }
+    }
+  },
+  {
+    "id": "mod1-a2.1",
+    "section": "reading",
+    "task_type": "Complete the Words",
+    "exam_format": false,
+    "format": "mcq",
+    "skill": null,
+    "cefr_min": "B1",
+    "cefr_max": "B1",
+    "stimulus": {
+      "kind": "text",
+      "format": "html",
+      "title": "Drill A2 · alvo: 4 min",
+      "content": "<p><strong>TEXT: Notice at a community pool</strong></p>\n<p>Starting Monday, the main pool (1)_____ closed for its annual maintenance. We expect the work (2)_____ completed by Friday afternoon. During this period, members (3)_____ still use the smaller training pool, which (4)_____ open at its usual hours.</p>\n<p>We apologize for any (5)_____ this may cause. If you have questions about your membership or class schedule, please (6)_____ to speak with the front desk staff, who will be happy to help.</p>",
+      "audio_ref": null
+    },
+    "group": "mod1-a2",
+    "prompt": "Lacuna (1)",
+    "text_format": "html",
+    "options": {
+      "A": "is",
+      "B": "be",
+      "C": "being",
+      "D": "been"
+    },
+    "answer": "A",
+    "explanation": "\"The main pool ___ closed\": voz passiva no presente: <strong>is</strong> + particípio (<em>closed</em>).",
+    "hint": null,
+    "trap_codes": [],
+    "tags": [],
+    "status": "rascunho",
+    "source": {
+      "kind": "migrado",
+      "file": "app/drills_data.py",
+      "ref": "MOD1_ACTION_DRILLS_A:mod1-a2#1",
+      "live_on_site": true,
+      "answer_letter": "origem",
+      "build_map": {
+        "A": "A",
+        "B": "C",
+        "C": "D",
+        "D": "B"
+      }
+    }
+  },
+  {
+    "id": "mod1-a2.2",
+    "section": "reading",
+    "task_type": "Complete the Words",
+    "exam_format": false,
+    "format": "mcq",
+    "skill": null,
+    "cefr_min": "B1",
+    "cefr_max": "B1",
+    "stimulus": {
+      "kind": "text",
+      "format": "html",
+      "title": "Drill A2 · alvo: 4 min",
+      "content": "<p><strong>TEXT: Notice at a community pool</strong></p>\n<p>Starting Monday, the main pool (1)_____ closed for its annual maintenance. We expect the work (2)_____ completed by Friday afternoon. During this period, members (3)_____ still use the smaller training pool, which (4)_____ open at its usual hours.</p>\n<p>We apologize for any (5)_____ this may cause. If you have questions about your membership or class schedule, please (6)_____ to speak with the front desk staff, who will be happy to help.</p>",
+      "audio_ref": null
+    },
+    "group": "mod1-a2",
+    "prompt": "Lacuna (2)",
+    "text_format": "html",
+    "options": {
+      "A": "is",
+      "B": "to be",
+      "C": "being",
+      "D": "be"
+    },
+    "answer": "B",
+    "explanation": "\"We expect the work ___ completed\": <em>expect</em> + objeto + <strong>to + infinitivo</strong> (aqui infinitivo passivo <em>to be completed</em>).",
+    "hint": null,
+    "trap_codes": [],
+    "tags": [],
+    "status": "rascunho",
+    "source": {
+      "kind": "migrado",
+      "file": "app/drills_data.py",
+      "ref": "MOD1_ACTION_DRILLS_A:mod1-a2#2",
+      "live_on_site": true,
+      "answer_letter": "origem",
+      "build_map": {
+        "A": "A",
+        "B": "B",
+        "C": "D",
+        "D": "C"
+      }
+    }
+  },
+  {
+    "id": "mod1-a2.3",
+    "section": "reading",
+    "task_type": "Complete the Words",
+    "exam_format": false,
+    "format": "mcq",
+    "skill": null,
+    "cefr_min": "B1",
+    "cefr_max": "B1",
+    "stimulus": {
+      "kind": "text",
+      "format": "html",
+      "title": "Drill A2 · alvo: 4 min",
+      "content": "<p><strong>TEXT: Notice at a community pool</strong></p>\n<p>Starting Monday, the main pool (1)_____ closed for its annual maintenance. We expect the work (2)_____ completed by Friday afternoon. During this period, members (3)_____ still use the smaller training pool, which (4)_____ open at its usual hours.</p>\n<p>We apologize for any (5)_____ this may cause. If you have questions about your membership or class schedule, please (6)_____ to speak with the front desk staff, who will be happy to help.</p>",
+      "audio_ref": null
+    },
+    "group": "mod1-a2",
+    "prompt": "Lacuna (3)",
+    "text_format": "html",
+    "options": {
+      "A": "may",
+      "B": "may to",
+      "C": "maying",
+      "D": "mays"
+    },
+    "answer": "A",
+    "explanation": "Modal simples; \"members may still use\". (B) \"may to\" é agramatical: modal nunca leva <em>to</em>.",
+    "hint": null,
+    "trap_codes": [],
+    "tags": [],
+    "status": "rascunho",
+    "source": {
+      "kind": "migrado",
+      "file": "app/drills_data.py",
+      "ref": "MOD1_ACTION_DRILLS_A:mod1-a2#3",
+      "live_on_site": true,
+      "answer_letter": "origem",
+      "build_map": {
+        "A": "D",
+        "B": "C",
+        "C": "B",
+        "D": "A"
+      }
+    }
+  },
+  {
+    "id": "mod1-a2.4",
+    "section": "reading",
+    "task_type": "Complete the Words",
+    "exam_format": false,
+    "format": "mcq",
+    "skill": null,
+    "cefr_min": "B1",
+    "cefr_max": "B1",
+    "stimulus": {
+      "kind": "text",
+      "format": "html",
+      "title": "Drill A2 · alvo: 4 min",
+      "content": "<p><strong>TEXT: Notice at a community pool</strong></p>\n<p>Starting Monday, the main pool (1)_____ closed for its annual maintenance. We expect the work (2)_____ completed by Friday afternoon. During this period, members (3)_____ still use the smaller training pool, which (4)_____ open at its usual hours.</p>\n<p>We apologize for any (5)_____ this may cause. If you have questions about your membership or class schedule, please (6)_____ to speak with the front desk staff, who will be happy to help.</p>",
+      "audio_ref": null
+    },
+    "group": "mod1-a2",
+    "prompt": "Lacuna (4)",
+    "text_format": "html",
+    "options": {
+      "A": "remain",
+      "B": "remains",
+      "C": "remaining",
+      "D": "to remain"
+    },
+    "answer": "B",
+    "explanation": "Sujeito <em>which</em> retoma <em>the smaller training pool</em> (singular) → <strong>+ -s</strong>.",
+    "hint": null,
+    "trap_codes": [],
+    "tags": [],
+    "status": "rascunho",
+    "source": {
+      "kind": "migrado",
+      "file": "app/drills_data.py",
+      "ref": "MOD1_ACTION_DRILLS_A:mod1-a2#4",
+      "live_on_site": true,
+      "answer_letter": "origem",
+      "build_map": {
+        "A": "A",
+        "B": "C",
+        "C": "D",
+        "D": "B"
+      }
+    }
+  },
+  {
+    "id": "mod1-a2.5",
+    "section": "reading",
+    "task_type": "Complete the Words",
+    "exam_format": false,
+    "format": "mcq",
+    "skill": null,
+    "cefr_min": "B1",
+    "cefr_max": "B1",
+    "stimulus": {
+      "kind": "text",
+      "format": "html",
+      "title": "Drill A2 · alvo: 4 min",
+      "content": "<p><strong>TEXT: Notice at a community pool</strong></p>\n<p>Starting Monday, the main pool (1)_____ closed for its annual maintenance. We expect the work (2)_____ completed by Friday afternoon. During this period, members (3)_____ still use the smaller training pool, which (4)_____ open at its usual hours.</p>\n<p>We apologize for any (5)_____ this may cause. If you have questions about your membership or class schedule, please (6)_____ to speak with the front desk staff, who will be happy to help.</p>",
+      "audio_ref": null
+    },
+    "group": "mod1-a2",
+    "prompt": "Lacuna (5)",
+    "text_format": "html",
+    "options": {
+      "A": "inconvenient",
+      "B": "inconveniently",
+      "C": "inconvenience",
+      "D": "inconvenienced"
+    },
+    "answer": "C",
+    "explanation": "Depois de <em>any</em>, a lacuna é <strong>substantivo</strong>: \"any inconvenience this may cause\".",
+    "hint": null,
+    "trap_codes": [],
+    "tags": [],
+    "status": "rascunho",
+    "source": {
+      "kind": "migrado",
+      "file": "app/drills_data.py",
+      "ref": "MOD1_ACTION_DRILLS_A:mod1-a2#5",
+      "live_on_site": true,
+      "answer_letter": "origem",
+      "build_map": {
+        "A": "D",
+        "B": "C",
+        "C": "A",
+        "D": "B"
+      }
+    }
+  },
+  {
+    "id": "mod1-a2.6",
+    "section": "reading",
+    "task_type": "Complete the Words",
+    "exam_format": false,
+    "format": "mcq",
+    "skill": null,
+    "cefr_min": "B1",
+    "cefr_max": "B1",
+    "stimulus": {
+      "kind": "text",
+      "format": "html",
+      "title": "Drill A2 · alvo: 4 min",
+      "content": "<p><strong>TEXT: Notice at a community pool</strong></p>\n<p>Starting Monday, the main pool (1)_____ closed for its annual maintenance. We expect the work (2)_____ completed by Friday afternoon. During this period, members (3)_____ still use the smaller training pool, which (4)_____ open at its usual hours.</p>\n<p>We apologize for any (5)_____ this may cause. If you have questions about your membership or class schedule, please (6)_____ to speak with the front desk staff, who will be happy to help.</p>",
+      "audio_ref": null
+    },
+    "group": "mod1-a2",
+    "prompt": "Lacuna (6)",
+    "text_format": "html",
+    "options": {
+      "A": "hesitate",
+      "B": "not hesitate",
+      "C": "don't hesitate",
+      "D": "hesitating"
+    },
+    "answer": "C",
+    "explanation": "Fórmula fixa: \"please don't hesitate to...\". (B) \"not hesitate\" sem auxiliar é agramatical num pedido; (A) sozinho inverteria o sentido.",
+    "hint": null,
+    "trap_codes": [],
+    "tags": [],
+    "status": "rascunho",
+    "source": {
+      "kind": "migrado",
+      "file": "app/drills_data.py",
+      "ref": "MOD1_ACTION_DRILLS_A:mod1-a2#6",
+      "live_on_site": true,
+      "answer_letter": "origem",
+      "build_map": {
+        "A": "A",
+        "B": "D",
+        "C": "B",
+        "D": "C"
+      }
+    }
+  },
+  {
+    "id": "mod1-a3.1",
+    "section": "reading",
+    "task_type": "Complete the Words",
+    "exam_format": false,
+    "format": "mcq",
+    "skill": null,
+    "cefr_min": "B2",
+    "cefr_max": "B2",
+    "stimulus": {
+      "kind": "text",
+      "format": "html",
+      "title": "Drill A3 · alvo: 5 min",
+      "content": "<p><strong>TEXT: A message from the office manager</strong></p>\n<p>Hi team,</p>\n<p>I wanted to send a quick note before the long weekend. As most of you already (1)_____, the building's heating system will be shut down for scheduled maintenance from Friday evening through Monday morning. Please make sure you (2)_____ any equipment that shouldn't be left running unattended, and take home anything that might be sensitive to temperature changes over the weekend.</p>\n<p>The maintenance crew has assured us that the work will be (3)_____ before Monday, so there shouldn't be any disruption when everyone (4)_____ back to the office. However, if the weather turns unexpectedly cold, the building may take a little longer than usual to (5)_____ up again — so please dress in layers just in case.</p>\n<p>If you have any questions or concerns, don't (6)_____ to reach out to facilities directly. We'd rather you ask a question that turns out to be unnecessary than (7)_____ a real problem over the weekend.</p>\n<p>Thanks for your patience, and enjoy the (8)_____ time off!</p>",
+      "audio_ref": null
+    },
+    "group": "mod1-a3",
+    "prompt": "Lacuna (1)",
+    "text_format": "html",
+    "options": {
+      "A": "know",
+      "B": "knows",
+      "C": "known",
+      "D": "knowing"
+    },
+    "answer": "A",
+    "explanation": "\"As most of you already know\" pede presente simples na 3ª pessoa do plural (forma base, sem -s). (B) quebra a concordância; (C) exigiria auxiliar (\"have known\"); (D) não completa o tempo verbal.",
+    "hint": null,
+    "trap_codes": [],
+    "tags": [],
+    "status": "rascunho",
+    "source": {
+      "kind": "migrado",
+      "file": "app/drills_data.py",
+      "ref": "MOD1_ACTION_DRILLS_A:mod1-a3#1",
+      "live_on_site": true,
+      "answer_letter": "origem",
+      "build_map": {
+        "A": "D",
+        "B": "A",
+        "C": "C",
+        "D": "B"
+      }
+    }
+  },
+  {
+    "id": "mod1-a3.2",
+    "section": "reading",
+    "task_type": "Complete the Words",
+    "exam_format": false,
+    "format": "mcq",
+    "skill": null,
+    "cefr_min": "B2",
+    "cefr_max": "B2",
+    "stimulus": {
+      "kind": "text",
+      "format": "html",
+      "title": "Drill A3 · alvo: 5 min",
+      "content": "<p><strong>TEXT: A message from the office manager</strong></p>\n<p>Hi team,</p>\n<p>I wanted to send a quick note before the long weekend. As most of you already (1)_____, the building's heating system will be shut down for scheduled maintenance from Friday evening through Monday morning. Please make sure you (2)_____ any equipment that shouldn't be left running unattended, and take home anything that might be sensitive to temperature changes over the weekend.</p>\n<p>The maintenance crew has assured us that the work will be (3)_____ before Monday, so there shouldn't be any disruption when everyone (4)_____ back to the office. However, if the weather turns unexpectedly cold, the building may take a little longer than usual to (5)_____ up again — so please dress in layers just in case.</p>\n<p>If you have any questions or concerns, don't (6)_____ to reach out to facilities directly. We'd rather you ask a question that turns out to be unnecessary than (7)_____ a real problem over the weekend.</p>\n<p>Thanks for your patience, and enjoy the (8)_____ time off!</p>",
+      "audio_ref": null
+    },
+    "group": "mod1-a3",
+    "prompt": "Lacuna (2)",
+    "text_format": "html",
+    "options": {
+      "A": "turn off",
+      "B": "turn down",
+      "C": "turn out",
+      "D": "turn over"
+    },
+    "answer": "A",
+    "explanation": "\"Turn off equipment\" = desligar equipamento. (B) = diminuir intensidade; (C) = revelar-se/comparecer; (D) = virar/entregar.",
+    "hint": null,
+    "trap_codes": [],
+    "tags": [],
+    "status": "rascunho",
+    "source": {
+      "kind": "migrado",
+      "file": "app/drills_data.py",
+      "ref": "MOD1_ACTION_DRILLS_A:mod1-a3#2",
+      "live_on_site": true,
+      "answer_letter": "origem",
+      "build_map": {
+        "A": "B",
+        "B": "D",
+        "C": "C",
+        "D": "A"
+      }
+    }
+  },
+  {
+    "id": "mod1-a3.3",
+    "section": "reading",
+    "task_type": "Complete the Words",
+    "exam_format": false,
+    "format": "mcq",
+    "skill": null,
+    "cefr_min": "B2",
+    "cefr_max": "B2",
+    "stimulus": {
+      "kind": "text",
+      "format": "html",
+      "title": "Drill A3 · alvo: 5 min",
+      "content": "<p><strong>TEXT: A message from the office manager</strong></p>\n<p>Hi team,</p>\n<p>I wanted to send a quick note before the long weekend. As most of you already (1)_____, the building's heating system will be shut down for scheduled maintenance from Friday evening through Monday morning. Please make sure you (2)_____ any equipment that shouldn't be left running unattended, and take home anything that might be sensitive to temperature changes over the weekend.</p>\n<p>The maintenance crew has assured us that the work will be (3)_____ before Monday, so there shouldn't be any disruption when everyone (4)_____ back to the office. However, if the weather turns unexpectedly cold, the building may take a little longer than usual to (5)_____ up again — so please dress in layers just in case.</p>\n<p>If you have any questions or concerns, don't (6)_____ to reach out to facilities directly. We'd rather you ask a question that turns out to be unnecessary than (7)_____ a real problem over the weekend.</p>\n<p>Thanks for your patience, and enjoy the (8)_____ time off!</p>",
+      "audio_ref": null
+    },
+    "group": "mod1-a3",
+    "prompt": "Lacuna (3)",
+    "text_format": "html",
+    "options": {
+      "A": "complete",
+      "B": "completing",
+      "C": "completed",
+      "D": "completes"
+    },
+    "answer": "C",
+    "explanation": "\"Will be _____\" pede particípio passado para a voz passiva. As outras formas quebram a estrutura \"be + particípio\".",
+    "hint": null,
+    "trap_codes": [],
+    "tags": [],
+    "status": "rascunho",
+    "source": {
+      "kind": "migrado",
+      "file": "app/drills_data.py",
+      "ref": "MOD1_ACTION_DRILLS_A:mod1-a3#3",
+      "live_on_site": true,
+      "answer_letter": "origem",
+      "build_map": {
+        "A": "A",
+        "B": "C",
+        "C": "D",
+        "D": "B"
+      }
+    }
+  },
+  {
+    "id": "mod1-a3.4",
+    "section": "reading",
+    "task_type": "Complete the Words",
+    "exam_format": false,
+    "format": "mcq",
+    "skill": null,
+    "cefr_min": "B2",
+    "cefr_max": "B2",
+    "stimulus": {
+      "kind": "text",
+      "format": "html",
+      "title": "Drill A3 · alvo: 5 min",
+      "content": "<p><strong>TEXT: A message from the office manager</strong></p>\n<p>Hi team,</p>\n<p>I wanted to send a quick note before the long weekend. As most of you already (1)_____, the building's heating system will be shut down for scheduled maintenance from Friday evening through Monday morning. Please make sure you (2)_____ any equipment that shouldn't be left running unattended, and take home anything that might be sensitive to temperature changes over the weekend.</p>\n<p>The maintenance crew has assured us that the work will be (3)_____ before Monday, so there shouldn't be any disruption when everyone (4)_____ back to the office. However, if the weather turns unexpectedly cold, the building may take a little longer than usual to (5)_____ up again — so please dress in layers just in case.</p>\n<p>If you have any questions or concerns, don't (6)_____ to reach out to facilities directly. We'd rather you ask a question that turns out to be unnecessary than (7)_____ a real problem over the weekend.</p>\n<p>Thanks for your patience, and enjoy the (8)_____ time off!</p>",
+      "audio_ref": null
+    },
+    "group": "mod1-a3",
+    "prompt": "Lacuna (4)",
+    "text_format": "html",
+    "options": {
+      "A": "come",
+      "B": "comes",
+      "C": "coming",
+      "D": "will comes"
+    },
+    "answer": "B",
+    "explanation": "\"Everyone\" é gramaticalmente singular → 3ª pessoa do singular: \"comes back\". (D) é agramatical (\"will\" nunca é seguido de verbo com -s).",
+    "hint": null,
+    "trap_codes": [],
+    "tags": [],
+    "status": "rascunho",
+    "source": {
+      "kind": "migrado",
+      "file": "app/drills_data.py",
+      "ref": "MOD1_ACTION_DRILLS_A:mod1-a3#4",
+      "live_on_site": true,
+      "answer_letter": "origem",
+      "build_map": {
+        "A": "A",
+        "B": "C",
+        "C": "B",
+        "D": "D"
+      }
+    }
+  },
+  {
+    "id": "mod1-a3.5",
+    "section": "reading",
+    "task_type": "Complete the Words",
+    "exam_format": false,
+    "format": "mcq",
+    "skill": null,
+    "cefr_min": "B2",
+    "cefr_max": "B2",
+    "stimulus": {
+      "kind": "text",
+      "format": "html",
+      "title": "Drill A3 · alvo: 5 min",
+      "content": "<p><strong>TEXT: A message from the office manager</strong></p>\n<p>Hi team,</p>\n<p>I wanted to send a quick note before the long weekend. As most of you already (1)_____, the building's heating system will be shut down for scheduled maintenance from Friday evening through Monday morning. Please make sure you (2)_____ any equipment that shouldn't be left running unattended, and take home anything that might be sensitive to temperature changes over the weekend.</p>\n<p>The maintenance crew has assured us that the work will be (3)_____ before Monday, so there shouldn't be any disruption when everyone (4)_____ back to the office. However, if the weather turns unexpectedly cold, the building may take a little longer than usual to (5)_____ up again — so please dress in layers just in case.</p>\n<p>If you have any questions or concerns, don't (6)_____ to reach out to facilities directly. We'd rather you ask a question that turns out to be unnecessary than (7)_____ a real problem over the weekend.</p>\n<p>Thanks for your patience, and enjoy the (8)_____ time off!</p>",
+      "audio_ref": null
+    },
+    "group": "mod1-a3",
+    "prompt": "Lacuna (5)",
+    "text_format": "html",
+    "options": {
+      "A": "warm",
+      "B": "warms",
+      "C": "warmly",
+      "D": "warmth"
+    },
+    "answer": "A",
+    "explanation": "\"To _____ up again\" pede o infinitivo (verbo base) após \"to\". \"Warm up\" é o phrasal verb certo para um ambiente recuperando temperatura.",
+    "hint": null,
+    "trap_codes": [],
+    "tags": [],
+    "status": "rascunho",
+    "source": {
+      "kind": "migrado",
+      "file": "app/drills_data.py",
+      "ref": "MOD1_ACTION_DRILLS_A:mod1-a3#5",
+      "live_on_site": true,
+      "answer_letter": "origem",
+      "build_map": {
+        "A": "A",
+        "B": "C",
+        "C": "B",
+        "D": "D"
+      }
+    }
+  },
+  {
+    "id": "mod1-a3.6",
+    "section": "reading",
+    "task_type": "Complete the Words",
+    "exam_format": false,
+    "format": "mcq",
+    "skill": null,
+    "cefr_min": "B2",
+    "cefr_max": "B2",
+    "stimulus": {
+      "kind": "text",
+      "format": "html",
+      "title": "Drill A3 · alvo: 5 min",
+      "content": "<p><strong>TEXT: A message from the office manager</strong></p>\n<p>Hi team,</p>\n<p>I wanted to send a quick note before the long weekend. As most of you already (1)_____, the building's heating system will be shut down for scheduled maintenance from Friday evening through Monday morning. Please make sure you (2)_____ any equipment that shouldn't be left running unattended, and take home anything that might be sensitive to temperature changes over the weekend.</p>\n<p>The maintenance crew has assured us that the work will be (3)_____ before Monday, so there shouldn't be any disruption when everyone (4)_____ back to the office. However, if the weather turns unexpectedly cold, the building may take a little longer than usual to (5)_____ up again — so please dress in layers just in case.</p>\n<p>If you have any questions or concerns, don't (6)_____ to reach out to facilities directly. We'd rather you ask a question that turns out to be unnecessary than (7)_____ a real problem over the weekend.</p>\n<p>Thanks for your patience, and enjoy the (8)_____ time off!</p>",
+      "audio_ref": null
+    },
+    "group": "mod1-a3",
+    "prompt": "Lacuna (6)",
+    "text_format": "html",
+    "options": {
+      "A": "hesitate",
+      "B": "hesitating",
+      "C": "hesitation",
+      "D": "hesitated"
+    },
+    "answer": "A",
+    "explanation": "\"Don't _____ to reach out\" pede verbo base após o imperativo negativo \"don't\". \"Don't hesitate to + verbo\" é expressão fixa.",
+    "hint": null,
+    "trap_codes": [],
+    "tags": [],
+    "status": "rascunho",
+    "source": {
+      "kind": "migrado",
+      "file": "app/drills_data.py",
+      "ref": "MOD1_ACTION_DRILLS_A:mod1-a3#6",
+      "live_on_site": true,
+      "answer_letter": "origem",
+      "build_map": {
+        "A": "C",
+        "B": "A",
+        "C": "D",
+        "D": "B"
+      }
+    }
+  },
+  {
+    "id": "mod1-a3.7",
+    "section": "reading",
+    "task_type": "Complete the Words",
+    "exam_format": false,
+    "format": "mcq",
+    "skill": null,
+    "cefr_min": "B2",
+    "cefr_max": "B2",
+    "stimulus": {
+      "kind": "text",
+      "format": "html",
+      "title": "Drill A3 · alvo: 5 min",
+      "content": "<p><strong>TEXT: A message from the office manager</strong></p>\n<p>Hi team,</p>\n<p>I wanted to send a quick note before the long weekend. As most of you already (1)_____, the building's heating system will be shut down for scheduled maintenance from Friday evening through Monday morning. Please make sure you (2)_____ any equipment that shouldn't be left running unattended, and take home anything that might be sensitive to temperature changes over the weekend.</p>\n<p>The maintenance crew has assured us that the work will be (3)_____ before Monday, so there shouldn't be any disruption when everyone (4)_____ back to the office. However, if the weather turns unexpectedly cold, the building may take a little longer than usual to (5)_____ up again — so please dress in layers just in case.</p>\n<p>If you have any questions or concerns, don't (6)_____ to reach out to facilities directly. We'd rather you ask a question that turns out to be unnecessary than (7)_____ a real problem over the weekend.</p>\n<p>Thanks for your patience, and enjoy the (8)_____ time off!</p>",
+      "audio_ref": null
+    },
+    "group": "mod1-a3",
+    "prompt": "Lacuna (7)",
+    "text_format": "html",
+    "options": {
+      "A": "miss",
+      "B": "lose",
+      "C": "waste",
+      "D": "fail"
+    },
+    "answer": "B",
+    "explanation": "Estrutura paralela \"ask a question... than _____ a real problem\" pede verbo base após \"than\". \"Lose\" mantém o contraste lógico entre perguntar à toa e deixar um problema real sem solução.",
+    "hint": null,
+    "trap_codes": [],
+    "tags": [],
+    "status": "rascunho",
+    "source": {
+      "kind": "migrado",
+      "file": "app/drills_data.py",
+      "ref": "MOD1_ACTION_DRILLS_A:mod1-a3#7",
+      "live_on_site": true,
+      "answer_letter": "origem",
+      "build_map": {
+        "A": "D",
+        "B": "B",
+        "C": "A",
+        "D": "C"
+      }
+    }
+  },
+  {
+    "id": "mod1-a3.8",
+    "section": "reading",
+    "task_type": "Complete the Words",
+    "exam_format": false,
+    "format": "mcq",
+    "skill": null,
+    "cefr_min": "B2",
+    "cefr_max": "B2",
+    "stimulus": {
+      "kind": "text",
+      "format": "html",
+      "title": "Drill A3 · alvo: 5 min",
+      "content": "<p><strong>TEXT: A message from the office manager</strong></p>\n<p>Hi team,</p>\n<p>I wanted to send a quick note before the long weekend. As most of you already (1)_____, the building's heating system will be shut down for scheduled maintenance from Friday evening through Monday morning. Please make sure you (2)_____ any equipment that shouldn't be left running unattended, and take home anything that might be sensitive to temperature changes over the weekend.</p>\n<p>The maintenance crew has assured us that the work will be (3)_____ before Monday, so there shouldn't be any disruption when everyone (4)_____ back to the office. However, if the weather turns unexpectedly cold, the building may take a little longer than usual to (5)_____ up again — so please dress in layers just in case.</p>\n<p>If you have any questions or concerns, don't (6)_____ to reach out to facilities directly. We'd rather you ask a question that turns out to be unnecessary than (7)_____ a real problem over the weekend.</p>\n<p>Thanks for your patience, and enjoy the (8)_____ time off!</p>",
+      "audio_ref": null
+    },
+    "group": "mod1-a3",
+    "prompt": "Lacuna (8)",
+    "text_format": "html",
+    "options": {
+      "A": "extend",
+      "B": "extending",
+      "C": "extended",
+      "D": "extension"
+    },
+    "answer": "C",
+    "explanation": "\"The _____ time off\" pede um particípio-adjetivo antes do substantivo. \"Extended time off\" = folga prolongada.",
+    "hint": null,
+    "trap_codes": [],
+    "tags": [],
+    "status": "rascunho",
+    "source": {
+      "kind": "migrado",
+      "file": "app/drills_data.py",
+      "ref": "MOD1_ACTION_DRILLS_A:mod1-a3#8",
+      "live_on_site": true,
+      "answer_letter": "origem",
+      "build_map": {
+        "A": "C",
+        "B": "B",
+        "C": "A",
+        "D": "D"
+      }
+    }
+  },
+  {
+    "id": "mod1-a4.1",
+    "section": "reading",
+    "task_type": "Complete the Words",
+    "exam_format": false,
+    "format": "mcq",
+    "skill": null,
+    "cefr_min": "B2",
+    "cefr_max": "C1",
+    "stimulus": {
+      "kind": "text",
+      "format": "html",
+      "title": "Drill A4 · alvo: 5 min",
+      "content": "<p><strong>TEXT: Museum exhibit information card</strong></p>\n<p>This exhibit brings together more than two hundred objects (1)_____ over four decades of fieldwork in the region. Many of them (2)_____ never been displayed publicly before. Together, they offer a rare (3)_____ into daily life in a community that written records largely overlooked.</p>\n<p>Visitors are (4)_____ to move through the rooms in order, since the layout follows a rough chronology. Labels have been kept deliberately brief; those who wish to (5)_____ deeper into any single object will find extended notes on the tablets provided at the entrance. Photography without flash (6)_____ permitted throughout, except in the final room, where the light-sensitive textiles require complete darkness.</p>",
+      "audio_ref": null
+    },
+    "group": "mod1-a4",
+    "prompt": "Lacuna (1)",
+    "text_format": "html",
+    "options": {
+      "A": "collect",
+      "B": "collected",
+      "C": "collecting",
+      "D": "collection"
+    },
+    "answer": "B",
+    "explanation": "\"Objects ___ over four decades\": particípio reduzido de \"objects <strong>that were collected</strong>\".",
+    "hint": null,
+    "trap_codes": [],
+    "tags": [],
+    "status": "rascunho",
+    "source": {
+      "kind": "migrado",
+      "file": "app/drills_data.py",
+      "ref": "MOD1_ACTION_DRILLS_A:mod1-a4#1",
+      "live_on_site": true,
+      "answer_letter": "origem",
+      "build_map": {
+        "A": "A",
+        "B": "D",
+        "C": "C",
+        "D": "B"
+      }
+    }
+  },
+  {
+    "id": "mod1-a4.2",
+    "section": "reading",
+    "task_type": "Complete the Words",
+    "exam_format": false,
+    "format": "mcq",
+    "skill": null,
+    "cefr_min": "B2",
+    "cefr_max": "C1",
+    "stimulus": {
+      "kind": "text",
+      "format": "html",
+      "title": "Drill A4 · alvo: 5 min",
+      "content": "<p><strong>TEXT: Museum exhibit information card</strong></p>\n<p>This exhibit brings together more than two hundred objects (1)_____ over four decades of fieldwork in the region. Many of them (2)_____ never been displayed publicly before. Together, they offer a rare (3)_____ into daily life in a community that written records largely overlooked.</p>\n<p>Visitors are (4)_____ to move through the rooms in order, since the layout follows a rough chronology. Labels have been kept deliberately brief; those who wish to (5)_____ deeper into any single object will find extended notes on the tablets provided at the entrance. Photography without flash (6)_____ permitted throughout, except in the final room, where the light-sensitive textiles require complete darkness.</p>",
+      "audio_ref": null
+    },
+    "group": "mod1-a4",
+    "prompt": "Lacuna (2)",
+    "text_format": "html",
+    "options": {
+      "A": "has",
+      "B": "have",
+      "C": "had",
+      "D": "having"
+    },
+    "answer": "B",
+    "explanation": "Sujeito <em>Many of them</em> (plural) + presente perfeito → \"have never been displayed\". (A) quebra a concordância; (C) mudaria para passado perfeito sem marco; (D) não fecha o tempo.",
+    "hint": null,
+    "trap_codes": [],
+    "tags": [],
+    "status": "rascunho",
+    "source": {
+      "kind": "migrado",
+      "file": "app/drills_data.py",
+      "ref": "MOD1_ACTION_DRILLS_A:mod1-a4#2",
+      "live_on_site": true,
+      "answer_letter": "origem",
+      "build_map": {
+        "A": "A",
+        "B": "C",
+        "C": "B",
+        "D": "D"
+      }
+    }
+  },
+  {
+    "id": "mod1-a4.3",
+    "section": "reading",
+    "task_type": "Complete the Words",
+    "exam_format": false,
+    "format": "mcq",
+    "skill": null,
+    "cefr_min": "B2",
+    "cefr_max": "C1",
+    "stimulus": {
+      "kind": "text",
+      "format": "html",
+      "title": "Drill A4 · alvo: 5 min",
+      "content": "<p><strong>TEXT: Museum exhibit information card</strong></p>\n<p>This exhibit brings together more than two hundred objects (1)_____ over four decades of fieldwork in the region. Many of them (2)_____ never been displayed publicly before. Together, they offer a rare (3)_____ into daily life in a community that written records largely overlooked.</p>\n<p>Visitors are (4)_____ to move through the rooms in order, since the layout follows a rough chronology. Labels have been kept deliberately brief; those who wish to (5)_____ deeper into any single object will find extended notes on the tablets provided at the entrance. Photography without flash (6)_____ permitted throughout, except in the final room, where the light-sensitive textiles require complete darkness.</p>",
+      "audio_ref": null
+    },
+    "group": "mod1-a4",
+    "prompt": "Lacuna (3)",
+    "text_format": "html",
+    "options": {
+      "A": "window",
+      "B": "door",
+      "C": "mirror",
+      "D": "bridge"
+    },
+    "answer": "A",
+    "explanation": "\"A rare ___ into daily life\": collocation fixa — <em>a window into/onto</em> = uma janela para (uma visão de). As outras opções não colocam com \"into daily life\" nesse sentido.",
+    "hint": null,
+    "trap_codes": [],
+    "tags": [],
+    "status": "rascunho",
+    "source": {
+      "kind": "migrado",
+      "file": "app/drills_data.py",
+      "ref": "MOD1_ACTION_DRILLS_A:mod1-a4#3",
+      "live_on_site": true,
+      "answer_letter": "origem",
+      "build_map": {
+        "A": "B",
+        "B": "A",
+        "C": "D",
+        "D": "C"
+      }
+    }
+  },
+  {
+    "id": "mod1-a4.4",
+    "section": "reading",
+    "task_type": "Complete the Words",
+    "exam_format": false,
+    "format": "mcq",
+    "skill": null,
+    "cefr_min": "B2",
+    "cefr_max": "C1",
+    "stimulus": {
+      "kind": "text",
+      "format": "html",
+      "title": "Drill A4 · alvo: 5 min",
+      "content": "<p><strong>TEXT: Museum exhibit information card</strong></p>\n<p>This exhibit brings together more than two hundred objects (1)_____ over four decades of fieldwork in the region. Many of them (2)_____ never been displayed publicly before. Together, they offer a rare (3)_____ into daily life in a community that written records largely overlooked.</p>\n<p>Visitors are (4)_____ to move through the rooms in order, since the layout follows a rough chronology. Labels have been kept deliberately brief; those who wish to (5)_____ deeper into any single object will find extended notes on the tablets provided at the entrance. Photography without flash (6)_____ permitted throughout, except in the final room, where the light-sensitive textiles require complete darkness.</p>",
+      "audio_ref": null
+    },
+    "group": "mod1-a4",
+    "prompt": "Lacuna (4)",
+    "text_format": "html",
+    "options": {
+      "A": "encourage",
+      "B": "encouraged",
+      "C": "encouraging",
+      "D": "encouragement"
+    },
+    "answer": "B",
+    "explanation": "\"Visitors are ___ to move\": voz passiva — <em>are encouraged to</em>. (C) mudaria o sujeito; (A)/(D) não formam o passivo.",
+    "hint": null,
+    "trap_codes": [],
+    "tags": [],
+    "status": "rascunho",
+    "source": {
+      "kind": "migrado",
+      "file": "app/drills_data.py",
+      "ref": "MOD1_ACTION_DRILLS_A:mod1-a4#4",
+      "live_on_site": true,
+      "answer_letter": "origem",
+      "build_map": {
+        "A": "D",
+        "B": "A",
+        "C": "B",
+        "D": "C"
+      }
+    }
+  },
+  {
+    "id": "mod1-a4.5",
+    "section": "reading",
+    "task_type": "Complete the Words",
+    "exam_format": false,
+    "format": "mcq",
+    "skill": null,
+    "cefr_min": "B2",
+    "cefr_max": "C1",
+    "stimulus": {
+      "kind": "text",
+      "format": "html",
+      "title": "Drill A4 · alvo: 5 min",
+      "content": "<p><strong>TEXT: Museum exhibit information card</strong></p>\n<p>This exhibit brings together more than two hundred objects (1)_____ over four decades of fieldwork in the region. Many of them (2)_____ never been displayed publicly before. Together, they offer a rare (3)_____ into daily life in a community that written records largely overlooked.</p>\n<p>Visitors are (4)_____ to move through the rooms in order, since the layout follows a rough chronology. Labels have been kept deliberately brief; those who wish to (5)_____ deeper into any single object will find extended notes on the tablets provided at the entrance. Photography without flash (6)_____ permitted throughout, except in the final room, where the light-sensitive textiles require complete darkness.</p>",
+      "audio_ref": null
+    },
+    "group": "mod1-a4",
+    "prompt": "Lacuna (5)",
+    "text_format": "html",
+    "options": {
+      "A": "delve",
+      "B": "fall",
+      "C": "drop",
+      "D": "sink"
+    },
+    "answer": "A",
+    "explanation": "\"Wish to ___ deeper into any single object\": <em>delve into</em> = aprofundar-se em. As outras opções não colocam com \"deeper into [um tema]\" no sentido de investigar.",
+    "hint": null,
+    "trap_codes": [],
+    "tags": [],
+    "status": "rascunho",
+    "source": {
+      "kind": "migrado",
+      "file": "app/drills_data.py",
+      "ref": "MOD1_ACTION_DRILLS_A:mod1-a4#5",
+      "live_on_site": true,
+      "answer_letter": "origem",
+      "build_map": {
+        "A": "A",
+        "B": "B",
+        "C": "D",
+        "D": "C"
+      }
+    }
+  },
+  {
+    "id": "mod1-a4.6",
+    "section": "reading",
+    "task_type": "Complete the Words",
+    "exam_format": false,
+    "format": "mcq",
+    "skill": null,
+    "cefr_min": "B2",
+    "cefr_max": "C1",
+    "stimulus": {
+      "kind": "text",
+      "format": "html",
+      "title": "Drill A4 · alvo: 5 min",
+      "content": "<p><strong>TEXT: Museum exhibit information card</strong></p>\n<p>This exhibit brings together more than two hundred objects (1)_____ over four decades of fieldwork in the region. Many of them (2)_____ never been displayed publicly before. Together, they offer a rare (3)_____ into daily life in a community that written records largely overlooked.</p>\n<p>Visitors are (4)_____ to move through the rooms in order, since the layout follows a rough chronology. Labels have been kept deliberately brief; those who wish to (5)_____ deeper into any single object will find extended notes on the tablets provided at the entrance. Photography without flash (6)_____ permitted throughout, except in the final room, where the light-sensitive textiles require complete darkness.</p>",
+      "audio_ref": null
+    },
+    "group": "mod1-a4",
+    "prompt": "Lacuna (6)",
+    "text_format": "html",
+    "options": {
+      "A": "is",
+      "B": "are",
+      "C": "being",
+      "D": "be"
+    },
+    "answer": "A",
+    "explanation": "\"Photography without flash ___ permitted\": sujeito <em>Photography</em> (incontável, singular) → <strong>is</strong>.",
+    "hint": null,
+    "trap_codes": [],
+    "tags": [],
+    "status": "rascunho",
+    "source": {
+      "kind": "migrado",
+      "file": "app/drills_data.py",
+      "ref": "MOD1_ACTION_DRILLS_A:mod1-a4#6",
+      "live_on_site": true,
+      "answer_letter": "origem",
+      "build_map": {
+        "A": "B",
+        "B": "D",
+        "C": "A",
+        "D": "C"
+      }
+    }
+  },
+  {
+    "id": "mod1-a5.1",
+    "section": "reading",
+    "task_type": "Complete the Words",
+    "exam_format": false,
+    "format": "mcq",
+    "skill": null,
+    "cefr_min": "C1",
+    "cefr_max": "C1",
+    "stimulus": {
+      "kind": "text",
+      "format": "html",
+      "title": "Drill A5 · alvo: 5 min",
+      "content": "<p><strong>TEXT: Excerpt from an editorial</strong></p>\n<p>For decades, the standard response to traffic congestion (1)_____ been to add lanes. The logic seems sound. Yet a growing body of research points to the opposite (2)_____: added lanes tend to attract additional drivers until, within a few years, traffic returns to its former level — a phenomenon known as induced demand. Rarely (3)_____ a policy so intuitive prove so consistently ineffective.</p>\n<p>This does not mean nothing (4)_____ be done. It means the solution lies elsewhere: in reliable public transit, in pricing that reflects the true cost of road use, and in land-use decisions that reduce the (5)_____ to drive in the first place. None of these is as politically straightforward as pouring concrete, which is (6)_____ they are so often postponed.</p>",
+      "audio_ref": null
+    },
+    "group": "mod1-a5",
+    "prompt": "Lacuna (1)",
+    "text_format": "html",
+    "options": {
+      "A": "has",
+      "B": "have",
+      "C": "had",
+      "D": "having"
+    },
+    "answer": "A",
+    "explanation": "Sujeito \"the standard response\" = <strong>singular</strong> → \"has been\" (presente perfeito: \"For decades... has been\"). (B) quebra a concordância; (C) pediria um marco no passado; (D) não fecha o tempo.",
+    "hint": null,
+    "trap_codes": [],
+    "tags": [],
+    "status": "rascunho",
+    "source": {
+      "kind": "migrado",
+      "file": "app/drills_data.py",
+      "ref": "MOD1_ACTION_DRILLS_A:mod1-a5#1",
+      "live_on_site": true,
+      "answer_letter": "origem",
+      "build_map": {
+        "A": "A",
+        "B": "C",
+        "C": "B",
+        "D": "D"
+      }
+    }
+  },
+  {
+    "id": "mod1-a5.2",
+    "section": "reading",
+    "task_type": "Complete the Words",
+    "exam_format": false,
+    "format": "mcq",
+    "skill": null,
+    "cefr_min": "C1",
+    "cefr_max": "C1",
+    "stimulus": {
+      "kind": "text",
+      "format": "html",
+      "title": "Drill A5 · alvo: 5 min",
+      "content": "<p><strong>TEXT: Excerpt from an editorial</strong></p>\n<p>For decades, the standard response to traffic congestion (1)_____ been to add lanes. The logic seems sound. Yet a growing body of research points to the opposite (2)_____: added lanes tend to attract additional drivers until, within a few years, traffic returns to its former level — a phenomenon known as induced demand. Rarely (3)_____ a policy so intuitive prove so consistently ineffective.</p>\n<p>This does not mean nothing (4)_____ be done. It means the solution lies elsewhere: in reliable public transit, in pricing that reflects the true cost of road use, and in land-use decisions that reduce the (5)_____ to drive in the first place. None of these is as politically straightforward as pouring concrete, which is (6)_____ they are so often postponed.</p>",
+      "audio_ref": null
+    },
+    "group": "mod1-a5",
+    "prompt": "Lacuna (2)",
+    "text_format": "html",
+    "options": {
+      "A": "conclusion",
+      "B": "decision",
+      "C": "opinion",
+      "D": "suggestion"
+    },
+    "answer": "A",
+    "explanation": "\"Points to the opposite ___\": <em>point to a conclusion</em> é a collocation. As outras opções não colocam com \"research points to the opposite ___\".",
+    "hint": null,
+    "trap_codes": [],
+    "tags": [],
+    "status": "rascunho",
+    "source": {
+      "kind": "migrado",
+      "file": "app/drills_data.py",
+      "ref": "MOD1_ACTION_DRILLS_A:mod1-a5#2",
+      "live_on_site": true,
+      "answer_letter": "origem",
+      "build_map": {
+        "A": "C",
+        "B": "D",
+        "C": "A",
+        "D": "B"
+      }
+    }
+  },
+  {
+    "id": "mod1-a5.3",
+    "section": "reading",
+    "task_type": "Complete the Words",
+    "exam_format": false,
+    "format": "mcq",
+    "skill": null,
+    "cefr_min": "C1",
+    "cefr_max": "C1",
+    "stimulus": {
+      "kind": "text",
+      "format": "html",
+      "title": "Drill A5 · alvo: 5 min",
+      "content": "<p><strong>TEXT: Excerpt from an editorial</strong></p>\n<p>For decades, the standard response to traffic congestion (1)_____ been to add lanes. The logic seems sound. Yet a growing body of research points to the opposite (2)_____: added lanes tend to attract additional drivers until, within a few years, traffic returns to its former level — a phenomenon known as induced demand. Rarely (3)_____ a policy so intuitive prove so consistently ineffective.</p>\n<p>This does not mean nothing (4)_____ be done. It means the solution lies elsewhere: in reliable public transit, in pricing that reflects the true cost of road use, and in land-use decisions that reduce the (5)_____ to drive in the first place. None of these is as politically straightforward as pouring concrete, which is (6)_____ they are so often postponed.</p>",
+      "audio_ref": null
+    },
+    "group": "mod1-a5",
+    "prompt": "Lacuna (3)",
+    "text_format": "html",
+    "options": {
+      "A": "does",
+      "B": "do",
+      "C": "is",
+      "D": "has"
+    },
+    "answer": "A",
+    "explanation": "Inversão após <em>Rarely</em> no início da frase → auxiliar <strong>does</strong> + sujeito + base (<em>prove</em>). \"Rarely does a policy... prove...\"",
+    "hint": null,
+    "trap_codes": [],
+    "tags": [],
+    "status": "rascunho",
+    "source": {
+      "kind": "migrado",
+      "file": "app/drills_data.py",
+      "ref": "MOD1_ACTION_DRILLS_A:mod1-a5#3",
+      "live_on_site": true,
+      "answer_letter": "origem",
+      "build_map": {
+        "A": "B",
+        "B": "D",
+        "C": "C",
+        "D": "A"
+      }
+    }
+  },
+  {
+    "id": "mod1-a5.4",
+    "section": "reading",
+    "task_type": "Complete the Words",
+    "exam_format": false,
+    "format": "mcq",
+    "skill": null,
+    "cefr_min": "C1",
+    "cefr_max": "C1",
+    "stimulus": {
+      "kind": "text",
+      "format": "html",
+      "title": "Drill A5 · alvo: 5 min",
+      "content": "<p><strong>TEXT: Excerpt from an editorial</strong></p>\n<p>For decades, the standard response to traffic congestion (1)_____ been to add lanes. The logic seems sound. Yet a growing body of research points to the opposite (2)_____: added lanes tend to attract additional drivers until, within a few years, traffic returns to its former level — a phenomenon known as induced demand. Rarely (3)_____ a policy so intuitive prove so consistently ineffective.</p>\n<p>This does not mean nothing (4)_____ be done. It means the solution lies elsewhere: in reliable public transit, in pricing that reflects the true cost of road use, and in land-use decisions that reduce the (5)_____ to drive in the first place. None of these is as politically straightforward as pouring concrete, which is (6)_____ they are so often postponed.</p>",
+      "audio_ref": null
+    },
+    "group": "mod1-a5",
+    "prompt": "Lacuna (4)",
+    "text_format": "html",
+    "options": {
+      "A": "can",
+      "B": "can't",
+      "C": "must",
+      "D": "should"
+    },
+    "answer": "A",
+    "explanation": "\"This does not mean nothing ___ be done\": dupla negação lógica — \"não significa que nada pode ser feito\". (B) inverteria o sentido; (C)/(D) mudam para obrigação/recomendação, não cabimento.",
+    "hint": null,
+    "trap_codes": [],
+    "tags": [],
+    "status": "rascunho",
+    "source": {
+      "kind": "migrado",
+      "file": "app/drills_data.py",
+      "ref": "MOD1_ACTION_DRILLS_A:mod1-a5#4",
+      "live_on_site": true,
+      "answer_letter": "origem",
+      "build_map": {
+        "A": "D",
+        "B": "B",
+        "C": "C",
+        "D": "A"
+      }
+    }
+  },
+  {
+    "id": "mod1-a5.5",
+    "section": "reading",
+    "task_type": "Complete the Words",
+    "exam_format": false,
+    "format": "mcq",
+    "skill": null,
+    "cefr_min": "C1",
+    "cefr_max": "C1",
+    "stimulus": {
+      "kind": "text",
+      "format": "html",
+      "title": "Drill A5 · alvo: 5 min",
+      "content": "<p><strong>TEXT: Excerpt from an editorial</strong></p>\n<p>For decades, the standard response to traffic congestion (1)_____ been to add lanes. The logic seems sound. Yet a growing body of research points to the opposite (2)_____: added lanes tend to attract additional drivers until, within a few years, traffic returns to its former level — a phenomenon known as induced demand. Rarely (3)_____ a policy so intuitive prove so consistently ineffective.</p>\n<p>This does not mean nothing (4)_____ be done. It means the solution lies elsewhere: in reliable public transit, in pricing that reflects the true cost of road use, and in land-use decisions that reduce the (5)_____ to drive in the first place. None of these is as politically straightforward as pouring concrete, which is (6)_____ they are so often postponed.</p>",
+      "audio_ref": null
+    },
+    "group": "mod1-a5",
+    "prompt": "Lacuna (5)",
+    "text_format": "html",
+    "options": {
+      "A": "need",
+      "B": "want",
+      "C": "wish",
+      "D": "hope"
+    },
+    "answer": "A",
+    "explanation": "\"Reduce the ___ to drive\": <em>the need to (do something)</em> = a necessidade de. As outras opções não colocam com essa estrutura.",
+    "hint": null,
+    "trap_codes": [],
+    "tags": [],
+    "status": "rascunho",
+    "source": {
+      "kind": "migrado",
+      "file": "app/drills_data.py",
+      "ref": "MOD1_ACTION_DRILLS_A:mod1-a5#5",
+      "live_on_site": true,
+      "answer_letter": "origem",
+      "build_map": {
+        "A": "A",
+        "B": "D",
+        "C": "B",
+        "D": "C"
+      }
+    }
+  },
+  {
+    "id": "mod1-a5.6",
+    "section": "reading",
+    "task_type": "Complete the Words",
+    "exam_format": false,
+    "format": "mcq",
+    "skill": null,
+    "cefr_min": "C1",
+    "cefr_max": "C1",
+    "stimulus": {
+      "kind": "text",
+      "format": "html",
+      "title": "Drill A5 · alvo: 5 min",
+      "content": "<p><strong>TEXT: Excerpt from an editorial</strong></p>\n<p>For decades, the standard response to traffic congestion (1)_____ been to add lanes. The logic seems sound. Yet a growing body of research points to the opposite (2)_____: added lanes tend to attract additional drivers until, within a few years, traffic returns to its former level — a phenomenon known as induced demand. Rarely (3)_____ a policy so intuitive prove so consistently ineffective.</p>\n<p>This does not mean nothing (4)_____ be done. It means the solution lies elsewhere: in reliable public transit, in pricing that reflects the true cost of road use, and in land-use decisions that reduce the (5)_____ to drive in the first place. None of these is as politically straightforward as pouring concrete, which is (6)_____ they are so often postponed.</p>",
+      "audio_ref": null
+    },
+    "group": "mod1-a5",
+    "prompt": "Lacuna (6)",
+    "text_format": "html",
+    "options": {
+      "A": "why",
+      "B": "because",
+      "C": "how",
+      "D": "what"
+    },
+    "answer": "A",
+    "explanation": "\"Which is ___ they are so often postponed\": \"which is why...\" = \"razão pela qual\". (B) precisaria de outra estrutura; (C)/(D) não fecham a relativa.",
+    "hint": null,
+    "trap_codes": [],
+    "tags": [],
+    "status": "rascunho",
+    "source": {
+      "kind": "migrado",
+      "file": "app/drills_data.py",
+      "ref": "MOD1_ACTION_DRILLS_A:mod1-a5#6",
+      "live_on_site": true,
+      "answer_letter": "origem",
+      "build_map": {
+        "A": "B",
+        "B": "D",
+        "C": "A",
+        "D": "C"
+      }
+    }
+  },
+  {
+    "id": "mod1-ctw1",
+    "section": "reading",
+    "task_type": "Complete the Words",
+    "exam_format": true,
+    "format": "fill_words",
+    "skill": null,
+    "cefr_min": "B1",
+    "cefr_max": "B1",
+    "stimulus": {
+      "kind": "text",
+      "format": "plain",
+      "title": "Texto 1 · Honeybees",
+      "content": "Honeybees live in large colonies that can contain tens of thousands of insects. Each [[bee]] has a [[job]] that changes [[as]] it grows [[older]]. Young workers [[clean]] the hive [[and]] feed the [[larvae]], while older [[ones]] leave the [[nest]] to collect [[food]]. A single queen lays all the eggs, sometimes more than a thousand in one day. This division of labor allows the colony to survive cold winters and long periods without flowers.",
+      "audio_ref": null
+    },
+    "prompt": "Fill in the missing letters to complete the words in the paragraph.",
+    "text_format": "plain",
+    "options": null,
+    "answer": [
+      "bee",
+      "job",
+      "as",
+      "older",
+      "clean",
+      "and",
+      "larvae",
+      "ones",
+      "nest",
+      "food"
+    ],
+    "explanation": "Palavras curtas de conteúdo e duas palavras de função (as, and). Repare em \"ones\": o inglês usa esse pronome para não repetir \"workers\".",
+    "hint": null,
+    "trap_codes": [],
+    "tags": [],
+    "status": "rascunho",
+    "source": {
+      "kind": "migrado",
+      "file": "app/ctw_data.py",
+      "ref": "mod1-ctw1",
+      "live_on_site": true,
+      "answer_letter": "origem",
+      "build_map": null
+    }
+  },
+  {
+    "id": "mod1-ctw2",
+    "section": "reading",
+    "task_type": "Complete the Words",
+    "exam_format": true,
+    "format": "fill_words",
+    "skill": null,
+    "cefr_min": "B1",
+    "cefr_max": "B1",
+    "stimulus": {
+      "kind": "text",
+      "format": "plain",
+      "title": "Texto 2 · Volcanoes",
+      "content": "Volcanoes form where melted rock from deep inside the Earth reaches the surface. This [[melted]] rock is [[called]] magma while [[it]] stays underground [[and]] lava once it [[flows]] out. Some [[eruptions]] are gentle, [[with]] slow rivers [[of]] lava, but [[others]] are violent [[explosions]] of ash and gas. Scientists watch small earthquakes and changes in the shape of a mountain to predict when an eruption may happen. Their warnings have saved thousands of lives.",
+      "audio_ref": null
+    },
+    "prompt": "Fill in the missing letters to complete the words in the paragraph.",
+    "text_format": "plain",
+    "options": null,
+    "answer": [
+      "melted",
+      "called",
+      "it",
+      "and",
+      "flows",
+      "eruptions",
+      "with",
+      "of",
+      "others",
+      "explosions"
+    ],
+    "explanation": "Terminações contam: called (particípio na passiva), flows (terceira pessoa), eruptions e explosions (plural). A primeira frase já entrega \"melted\".",
+    "hint": null,
+    "trap_codes": [],
+    "tags": [],
+    "status": "rascunho",
+    "source": {
+      "kind": "migrado",
+      "file": "app/ctw_data.py",
+      "ref": "mod1-ctw2",
+      "live_on_site": true,
+      "answer_letter": "origem",
+      "build_map": null
+    }
+  },
+  {
+    "id": "mod1-ctw3",
+    "section": "reading",
+    "task_type": "Complete the Words",
+    "exam_format": true,
+    "format": "fill_words",
+    "skill": null,
+    "cefr_min": "B1",
+    "cefr_max": "B2",
+    "stimulus": {
+      "kind": "text",
+      "format": "plain",
+      "title": "Texto 3 · The printing press",
+      "content": "Before the printing press, books in Europe were copied slowly by hand. A [[single]] volume could [[take]] months to [[finish]], so only [[wealthy]] people and [[religious]] institutions could [[afford]] one. When [[printers]] began using [[movable]] metal type in [[the]] fifteenth century, [[prices]] fell quickly. Ideas that had once traveled slowly could now spread across the continent within weeks. Historians often connect this change to the growth of literacy and scientific debate.",
+      "audio_ref": null
+    },
+    "prompt": "Fill in the missing letters to complete the words in the paragraph.",
+    "text_format": "plain",
+    "options": null,
+    "answer": [
+      "single",
+      "take",
+      "finish",
+      "wealthy",
+      "religious",
+      "afford",
+      "printers",
+      "movable",
+      "the",
+      "prices"
+    ],
+    "explanation": "Verbo na base depois de could e de to (take, finish, afford). Collocation: \"take months\", \"afford one\", \"prices fell\".",
+    "hint": null,
+    "trap_codes": [],
+    "tags": [],
+    "status": "rascunho",
+    "source": {
+      "kind": "migrado",
+      "file": "app/ctw_data.py",
+      "ref": "mod1-ctw3",
+      "live_on_site": true,
+      "answer_letter": "origem",
+      "build_map": null
+    }
+  },
+  {
+    "id": "mod1-ctw4",
+    "section": "reading",
+    "task_type": "Complete the Words",
+    "exam_format": true,
+    "format": "fill_words",
+    "skill": null,
+    "cefr_min": "B2",
+    "cefr_max": "B2",
+    "stimulus": {
+      "kind": "text",
+      "format": "plain",
+      "title": "Texto 4 · Sleep and memory",
+      "content": "Sleep plays an important role in how the brain stores new information. During [[the]] day, memories [[are]] held in a [[temporary]] form that [[is]] easily lost. [[While]] we sleep, [[the]] brain replays [[recent]] experiences and [[moves]] them into [[more]] stable, long-term [[storage]]. Students who sleep after studying usually remember more than those who stay awake. For this reason, researchers advise against studying all night before an exam.",
+      "audio_ref": null
+    },
+    "prompt": "Fill in the missing letters to complete the words in the paragraph.",
+    "text_format": "plain",
+    "options": null,
+    "answer": [
+      "the",
+      "are",
+      "temporary",
+      "is",
+      "While",
+      "the",
+      "recent",
+      "moves",
+      "more",
+      "storage"
+    ],
+    "explanation": "Metade das lacunas é palavra de função (the, are, is, while, more). São as que mais derrubam quem lê só as palavras \"importantes\".",
+    "hint": null,
+    "trap_codes": [],
+    "tags": [],
+    "status": "rascunho",
+    "source": {
+      "kind": "migrado",
+      "file": "app/ctw_data.py",
+      "ref": "mod1-ctw4",
+      "live_on_site": true,
+      "answer_letter": "origem",
+      "build_map": null
+    }
+  },
+  {
+    "id": "mod1-ctw5",
+    "section": "reading",
+    "task_type": "Complete the Words",
+    "exam_format": true,
+    "format": "fill_words",
+    "skill": null,
+    "cefr_min": "B2",
+    "cefr_max": "B2",
+    "stimulus": {
+      "kind": "text",
+      "format": "plain",
+      "title": "Texto 5 · Urban heat",
+      "content": "Cities are usually warmer than the countryside that surrounds them. Dark [[surfaces]] such as [[roads]] and rooftops [[absorb]] sunlight during [[the]] day and [[release]] the heat [[slowly]] at night. [[Tall]] buildings also [[block]] the wind [[that]] would otherwise [[carry]] warm air away. Planting trees and painting roofs in light colors can lower temperatures by several degrees. Many city governments now include such measures in their climate plans.",
+      "audio_ref": null
+    },
+    "prompt": "Fill in the missing letters to complete the words in the paragraph.",
+    "text_format": "plain",
+    "options": null,
+    "answer": [
+      "surfaces",
+      "roads",
+      "absorb",
+      "the",
+      "release",
+      "slowly",
+      "Tall",
+      "block",
+      "that",
+      "carry"
+    ],
+    "explanation": "Sujeito no plural pede verbo sem -s (surfaces absorb, buildings block). \"that\" abre a oração relativa que explica \"the wind\".",
+    "hint": null,
+    "trap_codes": [],
+    "tags": [],
+    "status": "rascunho",
+    "source": {
+      "kind": "migrado",
+      "file": "app/ctw_data.py",
+      "ref": "mod1-ctw5",
+      "live_on_site": true,
+      "answer_letter": "origem",
+      "build_map": null
+    }
+  },
+  {
+    "id": "mod1-ctw6",
+    "section": "reading",
+    "task_type": "Complete the Words",
+    "exam_format": true,
+    "format": "fill_words",
+    "skill": null,
+    "cefr_min": "B2",
+    "cefr_max": "C1",
+    "stimulus": {
+      "kind": "text",
+      "format": "plain",
+      "title": "Texto 6 · Supply and demand",
+      "content": "The price of a product depends largely on the relationship between supply and demand. When [[buyers]] want more [[of]] a good [[than]] producers can [[offer]], its price [[tends]] to rise. [[Higher]] prices then [[encourage]] companies to [[increase]] production, which [[eventually]] brings the [[market]] back toward balance. Governments sometimes interrupt this process by setting maximum prices. Economists warn that such limits often create shortages instead of helping consumers.",
+      "audio_ref": null
+    },
+    "prompt": "Fill in the missing letters to complete the words in the paragraph.",
+    "text_format": "plain",
+    "options": null,
+    "answer": [
+      "buyers",
+      "of",
+      "than",
+      "offer",
+      "tends",
+      "Higher",
+      "encourage",
+      "increase",
+      "eventually",
+      "market"
+    ],
+    "explanation": "Estrutura comparativa (more of ... than) e verbos acadêmicos com seus complementos: \"tends to rise\", \"encourage companies to increase\".",
+    "hint": null,
+    "trap_codes": [],
+    "tags": [],
+    "status": "rascunho",
+    "source": {
+      "kind": "migrado",
+      "file": "app/ctw_data.py",
+      "ref": "mod1-ctw6",
+      "live_on_site": true,
+      "answer_letter": "origem",
+      "build_map": null
+    }
+  },
+  {
+    "id": "mod1-ctw7",
+    "section": "reading",
+    "task_type": "Complete the Words",
+    "exam_format": true,
+    "format": "fill_words",
+    "skill": null,
+    "cefr_min": "C1",
+    "cefr_max": "C1",
+    "stimulus": {
+      "kind": "text",
+      "format": "plain",
+      "title": "Texto 7 · Coral reefs",
+      "content": "Coral reefs cover less than one percent of the ocean floor, yet they support about a quarter of all marine species. The [[structures]] are built [[by]] tiny animals [[whose]] hard skeletons [[accumulate]] over thousands [[of]] years. These [[animals]] depend on [[microscopic]] algae that [[live]] inside their [[tissues]] and provide [[much]] of their energy. When water becomes too warm, the corals expel the algae and turn white. Unless temperatures fall again, the weakened reef may not recover.",
+      "audio_ref": null
+    },
+    "prompt": "Fill in the missing letters to complete the words in the paragraph.",
+    "text_format": "plain",
+    "options": null,
+    "answer": [
+      "structures",
+      "by",
+      "whose",
+      "accumulate",
+      "of",
+      "animals",
+      "microscopic",
+      "live",
+      "tissues",
+      "much"
+    ],
+    "explanation": "Passiva com agente (are built by), relativo possessivo (whose) e vocabulário científico longo, em que ortografia decide o ponto.",
+    "hint": null,
+    "trap_codes": [],
+    "tags": [],
+    "status": "rascunho",
+    "source": {
+      "kind": "migrado",
+      "file": "app/ctw_data.py",
+      "ref": "mod1-ctw7",
+      "live_on_site": true,
+      "answer_letter": "origem",
+      "build_map": null
+    }
+  },
+  {
+    "id": "mod1-ctw8",
+    "section": "reading",
+    "task_type": "Complete the Words",
+    "exam_format": true,
+    "format": "fill_words",
+    "skill": null,
+    "cefr_min": "C1",
+    "cefr_max": "C2",
+    "stimulus": {
+      "kind": "text",
+      "format": "plain",
+      "title": "Texto 8 · Confirmation bias",
+      "content": "People rarely evaluate evidence as objectively as they believe they do. Psychologists [[have]] shown that [[individuals]] tend to [[notice]] information that [[confirms]] what they [[already]] think, while [[overlooking]] facts that [[challenge]] it. This [[tendency]], known as [[confirmation]] bias, affects [[experts]] as well as beginners. It can distort medical diagnoses, financial decisions, and even scientific research. Awareness of the bias helps, although it does not eliminate its influence.",
+      "audio_ref": null
+    },
+    "prompt": "Fill in the missing letters to complete the words in the paragraph.",
+    "text_format": "plain",
+    "options": null,
+    "answer": [
+      "have",
+      "individuals",
+      "notice",
+      "confirms",
+      "already",
+      "overlooking",
+      "challenge",
+      "tendency",
+      "confirmation",
+      "experts"
+    ],
+    "explanation": "Famílias de palavras no mesmo texto (confirms, confirmation; tend, tendency) e a forma em -ing depois de while (overlooking).",
+    "hint": null,
+    "trap_codes": [],
+    "tags": [],
+    "status": "rascunho",
+    "source": {
+      "kind": "migrado",
+      "file": "app/ctw_data.py",
+      "ref": "mod1-ctw8",
+      "live_on_site": true,
+      "answer_letter": "origem",
+      "build_map": null
+    }
+  },
+  {
+    "id": "mod7-b1.1",
+    "section": "reading",
+    "task_type": "Complete the Words",
+    "exam_format": false,
+    "format": "mcq",
+    "skill": null,
+    "cefr_min": null,
+    "cefr_max": null,
+    "stimulus": {
+      "kind": "text",
+      "format": "markdown",
+      "title": "Bloco A: Complete the Words",
+      "content": "**Instrução:** Cada frase abaixo contém palavras parcialmente apagadas. Use lógica gramatical, contexto semântico e conhecimento lexical para completar a palavra com a alternativa correta.\n\n**Parte 1: múltipla escolha (reconhecimento de padrão):**",
+      "audio_ref": null
+    },
+    "group": "mod7-b1",
+    "prompt": "Despite the company's initial success, its market share began to **dec_____** steadily after the arrival of two aggressive competitors.",
+    "text_format": "markdown",
+    "options": {
+      "A": "decorate",
+      "B": "decline",
+      "C": "declare",
+      "D": "decrease"
+    },
+    "answer": "B",
+    "explanation": "declínio combina com \"despite success\"",
+    "hint": "nota: mais de uma opção pode ser gramaticalmente plausível · escolha a que preserva o sentido lógico do contraste com \"initial success\"",
+    "trap_codes": [],
+    "tags": [
+      "simulado-2"
+    ],
+    "status": "rascunho",
+    "source": {
+      "kind": "migrado",
+      "file": "consolidated/modulo_7_simulados.md",
+      "ref": "linha 185",
+      "live_on_site": true,
+      "answer_letter": "origem",
+      "build_map": {
+        "A": "B",
+        "B": "C",
+        "C": "A",
+        "D": "D"
+      }
+    }
+  },
+  {
+    "id": "mod7-b1.2",
+    "section": "reading",
+    "task_type": "Complete the Words",
+    "exam_format": false,
+    "format": "mcq",
+    "skill": null,
+    "cefr_min": null,
+    "cefr_max": null,
+    "stimulus": {
+      "kind": "text",
+      "format": "markdown",
+      "title": "Bloco A: Complete the Words",
+      "content": "**Instrução:** Cada frase abaixo contém palavras parcialmente apagadas. Use lógica gramatical, contexto semântico e conhecimento lexical para completar a palavra com a alternativa correta.\n\n**Parte 1: múltipla escolha (reconhecimento de padrão):**",
+      "audio_ref": null
+    },
+    "group": "mod7-b1",
+    "prompt": "The museum's new exhibit was designed to be **inter_____**, allowing visitors to touch and manipulate several of the historical replicas.",
+    "text_format": "markdown",
+    "options": {
+      "A": "international",
+      "B": "interactive",
+      "C": "intermediate",
+      "D": "intersecting"
+    },
+    "answer": "B",
+    "explanation": "\"touch and manipulate\" = interativo",
+    "hint": null,
+    "trap_codes": [],
+    "tags": [
+      "simulado-2"
+    ],
+    "status": "rascunho",
+    "source": {
+      "kind": "migrado",
+      "file": "consolidated/modulo_7_simulados.md",
+      "ref": "linha 188",
+      "live_on_site": true,
+      "answer_letter": "origem",
+      "build_map": {
+        "A": "B",
+        "B": "A",
+        "C": "C",
+        "D": "D"
+      }
+    }
+  },
+  {
+    "id": "mod7-b1.3",
+    "section": "reading",
+    "task_type": "Complete the Words",
+    "exam_format": false,
+    "format": "mcq",
+    "skill": null,
+    "cefr_min": null,
+    "cefr_max": null,
+    "stimulus": {
+      "kind": "text",
+      "format": "markdown",
+      "title": "Bloco A: Complete the Words",
+      "content": "**Instrução:** Cada frase abaixo contém palavras parcialmente apagadas. Use lógica gramatical, contexto semântico e conhecimento lexical para completar a palavra com a alternativa correta.\n\n**Parte 1: múltipla escolha (reconhecimento de padrão):**",
+      "audio_ref": null
+    },
+    "group": "mod7-b1",
+    "prompt": "Researchers were **sur_____** to discover that the newly identified species had survived in an environment previously believed to be uninhabitable.",
+    "text_format": "markdown",
+    "options": {
+      "A": "surrounded",
+      "B": "surprised",
+      "C": "surveyed",
+      "D": "surrendered"
+    },
+    "answer": "B",
+    "explanation": "descoberta inesperada",
+    "hint": null,
+    "trap_codes": [],
+    "tags": [
+      "simulado-2"
+    ],
+    "status": "rascunho",
+    "source": {
+      "kind": "migrado",
+      "file": "consolidated/modulo_7_simulados.md",
+      "ref": "linha 191",
+      "live_on_site": true,
+      "answer_letter": "origem",
+      "build_map": {
+        "A": "A",
+        "B": "B",
+        "C": "D",
+        "D": "C"
+      }
+    }
+  },
+  {
+    "id": "mod7-b1.4",
+    "section": "reading",
+    "task_type": "Complete the Words",
+    "exam_format": false,
+    "format": "mcq",
+    "skill": null,
+    "cefr_min": null,
+    "cefr_max": null,
+    "stimulus": {
+      "kind": "text",
+      "format": "markdown",
+      "title": "Bloco A: Complete the Words",
+      "content": "**Instrução:** Cada frase abaixo contém palavras parcialmente apagadas. Use lógica gramatical, contexto semântico e conhecimento lexical para completar a palavra com a alternativa correta.\n\n**Parte 1: múltipla escolha (reconhecimento de padrão):**",
+      "audio_ref": null
+    },
+    "group": "mod7-b1",
+    "prompt": "The committee's decision was **unani_____**: every member voted in favor of the proposed budget revision.",
+    "text_format": "markdown",
+    "options": {
+      "A": "unanimous",
+      "B": "unannounced",
+      "C": "unification",
+      "D": "uniform"
+    },
+    "answer": "A",
+    "explanation": "\"every member voted in favor\"",
+    "hint": null,
+    "trap_codes": [],
+    "tags": [
+      "simulado-2"
+    ],
+    "status": "rascunho",
+    "source": {
+      "kind": "migrado",
+      "file": "consolidated/modulo_7_simulados.md",
+      "ref": "linha 194",
+      "live_on_site": true,
+      "answer_letter": "origem",
+      "build_map": {
+        "A": "A",
+        "B": "C",
+        "C": "D",
+        "D": "B"
+      }
+    }
+  },
+  {
+    "id": "mod7-b1.5",
+    "section": "reading",
+    "task_type": "Complete the Words",
+    "exam_format": false,
+    "format": "mcq",
+    "skill": null,
+    "cefr_min": null,
+    "cefr_max": null,
+    "stimulus": {
+      "kind": "text",
+      "format": "markdown",
+      "title": "Bloco A: Complete the Words",
+      "content": "**Instrução:** Cada frase abaixo contém palavras parcialmente apagadas. Use lógica gramatical, contexto semântico e conhecimento lexical para completar a palavra com a alternativa correta.\n\n**Parte 1: múltipla escolha (reconhecimento de padrão):**",
+      "audio_ref": null
+    },
+    "group": "mod7-b1",
+    "prompt": "The instructions were **amb_____**, and half the class interpreted the task differently from the other half.",
+    "text_format": "markdown",
+    "options": {
+      "A": "ambitious",
+      "B": "ambient",
+      "C": "ambiguous",
+      "D": "amiable"
+    },
+    "answer": "C",
+    "explanation": "\"interpreted differently\" = ambíguo",
+    "hint": null,
+    "trap_codes": [],
+    "tags": [
+      "simulado-2"
+    ],
+    "status": "rascunho",
+    "source": {
+      "kind": "migrado",
+      "file": "consolidated/modulo_7_simulados.md",
+      "ref": "linha 197",
+      "live_on_site": true,
+      "answer_letter": "origem",
+      "build_map": {
+        "A": "C",
+        "B": "A",
+        "C": "D",
+        "D": "B"
+      }
+    }
+  },
+  {
+    "id": "mod7-b1.6",
+    "section": "reading",
+    "task_type": "Complete the Words",
+    "exam_format": false,
+    "format": "mcq",
+    "skill": null,
+    "cefr_min": null,
+    "cefr_max": null,
+    "stimulus": {
+      "kind": "text",
+      "format": "markdown",
+      "title": "Bloco A: Complete the Words",
+      "content": "**Instrução:** Cada frase abaixo contém palavras parcialmente apagadas. Use lógica gramatical, contexto semântico e conhecimento lexical para completar a palavra com a alternativa correta.\n\n**Parte 1: múltipla escolha (reconhecimento de padrão):**",
+      "audio_ref": null
+    },
+    "group": "mod7-b1",
+    "prompt": "Because the data came from a single site, the authors were careful not to **gen_____** their findings to the whole population.",
+    "text_format": "markdown",
+    "options": {
+      "A": "generate",
+      "B": "generalize",
+      "C": "generous",
+      "D": "genuine"
+    },
+    "answer": "B",
+    "explanation": "\"not to generalize... to the whole population\"",
+    "hint": null,
+    "trap_codes": [],
+    "tags": [
+      "simulado-2"
+    ],
+    "status": "rascunho",
+    "source": {
+      "kind": "migrado",
+      "file": "consolidated/modulo_7_simulados.md",
+      "ref": "linha 200",
+      "live_on_site": true,
+      "answer_letter": "origem",
+      "build_map": {
+        "A": "C",
+        "B": "D",
+        "C": "B",
+        "D": "A"
+      }
+    }
+  },
+  {
+    "id": "mod7-b1.7",
+    "section": "reading",
+    "task_type": "Complete the Words",
+    "exam_format": false,
+    "format": "mcq",
+    "skill": null,
+    "cefr_min": null,
+    "cefr_max": null,
+    "stimulus": {
+      "kind": "text",
+      "format": "markdown",
+      "title": "Bloco A: Complete the Words",
+      "content": "**Instrução:** Cada frase abaixo contém palavras parcialmente apagadas. Use lógica gramatical, contexto semântico e conhecimento lexical para completar a palavra com a alternativa correta.\n\n**Parte 1: múltipla escolha (reconhecimento de padrão):**",
+      "audio_ref": null
+    },
+    "group": "mod7-b1",
+    "prompt": "The new policy will be introduced **grad_____**, one department at a time, rather than all at once.",
+    "text_format": "markdown",
+    "options": {
+      "A": "gradually",
+      "B": "graduate",
+      "C": "grateful",
+      "D": "gradient"
+    },
+    "answer": "A",
+    "explanation": "advérbio; \"one department at a time\"",
+    "hint": null,
+    "trap_codes": [],
+    "tags": [
+      "simulado-2"
+    ],
+    "status": "rascunho",
+    "source": {
+      "kind": "migrado",
+      "file": "consolidated/modulo_7_simulados.md",
+      "ref": "linha 203",
+      "live_on_site": true,
+      "answer_letter": "origem",
+      "build_map": {
+        "A": "B",
+        "B": "C",
+        "C": "A",
+        "D": "D"
+      }
+    }
+  },
+  {
+    "id": "mod7-b1.8",
+    "section": "reading",
+    "task_type": "Complete the Words",
+    "exam_format": false,
+    "format": "mcq",
+    "skill": null,
+    "cefr_min": null,
+    "cefr_max": null,
+    "stimulus": {
+      "kind": "text",
+      "format": "markdown",
+      "title": "Bloco A: Complete the Words",
+      "content": "**Instrução:** Cada frase abaixo contém palavras parcialmente apagadas. Use lógica gramatical, contexto semântico e conhecimento lexical para completar a palavra com a alternativa correta.\n\n**Parte 1: múltipla escolha (reconhecimento de padrão):**",
+      "audio_ref": null
+    },
+    "group": "mod7-b1",
+    "prompt": "Attendance at the optional review sessions was **cons_____** higher than the professor had expected.",
+    "text_format": "markdown",
+    "options": {
+      "A": "consistent",
+      "B": "considerably",
+      "C": "consecutive",
+      "D": "conscious"
+    },
+    "answer": "B",
+    "explanation": "advérbio modificando \"higher\"",
+    "hint": null,
+    "trap_codes": [],
+    "tags": [
+      "simulado-2"
+    ],
+    "status": "rascunho",
+    "source": {
+      "kind": "migrado",
+      "file": "consolidated/modulo_7_simulados.md",
+      "ref": "linha 206",
+      "live_on_site": true,
+      "answer_letter": "origem",
+      "build_map": {
+        "A": "C",
+        "B": "B",
+        "C": "A",
+        "D": "D"
+      }
+    }
+  },
+  {
+    "id": "mod7-b1.9",
+    "section": "reading",
+    "task_type": "Complete the Words",
+    "exam_format": false,
+    "format": "mcq",
+    "skill": null,
+    "cefr_min": null,
+    "cefr_max": null,
+    "stimulus": {
+      "kind": "text",
+      "format": "markdown",
+      "title": "Bloco A: Complete the Words",
+      "content": "**Instrução:** Cada frase abaixo contém palavras parcialmente apagadas. Use lógica gramatical, contexto semântico e conhecimento lexical para completar a palavra com a alternativa correta.\n\n**Parte 1: múltipla escolha (reconhecimento de padrão):**",
+      "audio_ref": null
+    },
+    "group": "mod7-b1",
+    "prompt": "The bridge was closed after inspectors found that years of neglect had left it structurally **uns_____**.",
+    "text_format": "markdown",
+    "options": {
+      "A": "unsafe",
+      "B": "unsure",
+      "C": "unseen",
+      "D": "unsaid"
+    },
+    "answer": "A",
+    "explanation": "\"structurally unsafe\"",
+    "hint": null,
+    "trap_codes": [],
+    "tags": [
+      "simulado-2"
+    ],
+    "status": "rascunho",
+    "source": {
+      "kind": "migrado",
+      "file": "consolidated/modulo_7_simulados.md",
+      "ref": "linha 209",
+      "live_on_site": true,
+      "answer_letter": "origem",
+      "build_map": {
+        "A": "C",
+        "B": "A",
+        "C": "D",
+        "D": "B"
+      }
+    }
+  },
+  {
+    "id": "mod7-b1.10",
+    "section": "reading",
+    "task_type": "Complete the Words",
+    "exam_format": false,
+    "format": "mcq",
+    "skill": null,
+    "cefr_min": null,
+    "cefr_max": null,
+    "stimulus": {
+      "kind": "text",
+      "format": "markdown",
+      "title": "Bloco A: Complete the Words",
+      "content": "**Instrução:** Cada frase abaixo contém palavras parcialmente apagadas. Use lógica gramatical, contexto semântico e conhecimento lexical para completar a palavra com a alternativa correta.\n\n**Parte 1: múltipla escolha (reconhecimento de padrão):**",
+      "audio_ref": null
+    },
+    "group": "mod7-b1",
+    "prompt": "The study's conclusions remain **ten_____**: the sample was small and has not yet been replicated.",
+    "text_format": "markdown",
+    "options": {
+      "A": "tender",
+      "B": "tenant",
+      "C": "tentative",
+      "D": "tenacious"
+    },
+    "answer": "C",
+    "explanation": "(\"small sample, not replicated\" = tentativo) · 11 **confirmed** · 12 **logically**",
+    "hint": null,
+    "trap_codes": [],
+    "tags": [
+      "simulado-2"
+    ],
+    "status": "rascunho",
+    "source": {
+      "kind": "migrado",
+      "file": "consolidated/modulo_7_simulados.md",
+      "ref": "linha 212",
+      "live_on_site": true,
+      "answer_letter": "origem",
+      "build_map": {
+        "A": "D",
+        "B": "B",
+        "C": "A",
+        "D": "C"
+      }
+    }
+  },
+  {
+    "id": "mod7-b13.1",
+    "section": "reading",
+    "task_type": "Complete the Words",
+    "exam_format": false,
+    "format": "mcq",
+    "skill": null,
+    "cefr_min": null,
+    "cefr_max": null,
+    "stimulus": null,
+    "group": "mod7-b13",
+    "prompt": "The negotiations reached a **dead_____** after both sides refused to modify their core demands.",
+    "text_format": "markdown",
+    "options": {
+      "A": "deadline",
+      "B": "deadlock",
+      "C": "deadweight",
+      "D": "deadbeat"
+    },
+    "answer": "B",
+    "explanation": "",
+    "hint": null,
+    "trap_codes": [],
+    "tags": [
+      "simulado-3"
+    ],
+    "status": "rascunho",
+    "source": {
+      "kind": "migrado",
+      "file": "consolidated/modulo_7_simulados.md",
+      "ref": "linha 612",
+      "live_on_site": true,
+      "answer_letter": "origem",
+      "build_map": {
+        "A": "C",
+        "B": "A",
+        "C": "B",
+        "D": "D"
+      }
+    }
+  },
+  {
+    "id": "mod7-b13.2",
+    "section": "reading",
+    "task_type": "Complete the Words",
+    "exam_format": false,
+    "format": "mcq",
+    "skill": null,
+    "cefr_min": null,
+    "cefr_max": null,
+    "stimulus": null,
+    "group": "mod7-b13",
+    "prompt": "The professor's argument was **compe_____**, drawing on three independent lines of evidence.",
+    "text_format": "markdown",
+    "options": {
+      "A": "competent",
+      "B": "competitive",
+      "C": "compelling",
+      "D": "compensating"
+    },
+    "answer": "C",
+    "explanation": "",
+    "hint": null,
+    "trap_codes": [],
+    "tags": [
+      "simulado-3"
+    ],
+    "status": "rascunho",
+    "source": {
+      "kind": "migrado",
+      "file": "consolidated/modulo_7_simulados.md",
+      "ref": "linha 615",
+      "live_on_site": true,
+      "answer_letter": "origem",
+      "build_map": {
+        "A": "D",
+        "B": "A",
+        "C": "C",
+        "D": "B"
+      }
+    }
+  },
+  {
+    "id": "mod7-b13.3",
+    "section": "reading",
+    "task_type": "Complete the Words",
+    "exam_format": false,
+    "format": "mcq",
+    "skill": null,
+    "cefr_min": null,
+    "cefr_max": null,
+    "stimulus": null,
+    "group": "mod7-b13",
+    "prompt": "The startup's growth was **unsu_____**; within a year, it had expanded into four new markets.",
+    "text_format": "markdown",
+    "options": {
+      "A": "unsuitable",
+      "B": "unsustainable",
+      "C": "unsupported",
+      "D": "unsurpassed *(considerando o contexto positivo de \"expanded into four new markets\")*"
+    },
+    "answer": "D",
+    "explanation": "",
+    "hint": null,
+    "trap_codes": [],
+    "tags": [
+      "simulado-3"
+    ],
+    "status": "rascunho",
+    "source": {
+      "kind": "migrado",
+      "file": "consolidated/modulo_7_simulados.md",
+      "ref": "linha 618",
+      "live_on_site": true,
+      "answer_letter": "origem",
+      "build_map": {
+        "A": "B",
+        "B": "A",
+        "C": "D",
+        "D": "C"
+      }
+    }
+  },
+  {
+    "id": "mod7-b13.4",
+    "section": "reading",
+    "task_type": "Complete the Words",
+    "exam_format": false,
+    "format": "mcq",
+    "skill": null,
+    "cefr_min": null,
+    "cefr_max": null,
+    "stimulus": null,
+    "group": "mod7-b13",
+    "prompt": "The findings, though preliminary, are **prom_____** enough to justify a larger follow-up study.",
+    "text_format": "markdown",
+    "options": {
+      "A": "prominent",
+      "B": "promising",
+      "C": "promoted",
+      "D": "prompt"
+    },
+    "answer": "B",
+    "explanation": "",
+    "hint": null,
+    "trap_codes": [],
+    "tags": [
+      "simulado-3"
+    ],
+    "status": "rascunho",
+    "source": {
+      "kind": "migrado",
+      "file": "consolidated/modulo_7_simulados.md",
+      "ref": "linha 621",
+      "live_on_site": true,
+      "answer_letter": "origem",
+      "build_map": {
+        "A": "D",
+        "B": "B",
+        "C": "A",
+        "D": "C"
+      }
+    }
+  },
+  {
+    "id": "mod7-b13.5",
+    "section": "reading",
+    "task_type": "Complete the Words",
+    "exam_format": false,
+    "format": "mcq",
+    "skill": null,
+    "cefr_min": null,
+    "cefr_max": null,
+    "stimulus": null,
+    "group": "mod7-b13",
+    "prompt": "The two accounts are not contradictory; they are simply **compl_____**, each describing a different aspect of the process.",
+    "text_format": "markdown",
+    "options": {
+      "A": "complete",
+      "B": "complicated",
+      "C": "complementary",
+      "D": "complimentary"
+    },
+    "answer": "C",
+    "explanation": "\"not contradictory... different aspect\" = complementares; cuidado: *complimentary* = elogioso/grátis",
+    "hint": null,
+    "trap_codes": [],
+    "tags": [
+      "simulado-3"
+    ],
+    "status": "rascunho",
+    "source": {
+      "kind": "migrado",
+      "file": "consolidated/modulo_7_simulados.md",
+      "ref": "linha 624",
+      "live_on_site": true,
+      "answer_letter": "origem",
+      "build_map": {
+        "A": "B",
+        "B": "A",
+        "C": "D",
+        "D": "C"
+      }
+    }
+  },
+  {
+    "id": "mod7-b13.6",
+    "section": "reading",
+    "task_type": "Complete the Words",
+    "exam_format": false,
+    "format": "mcq",
+    "skill": null,
+    "cefr_min": null,
+    "cefr_max": null,
+    "stimulus": null,
+    "group": "mod7-b13",
+    "prompt": "The author's tone throughout the essay is **skept_____**, questioning claims that other writers accept without comment.",
+    "text_format": "markdown",
+    "options": {
+      "A": "skeptical",
+      "B": "sketchy",
+      "C": "skilful",
+      "D": "scattered"
+    },
+    "answer": "A",
+    "explanation": "",
+    "hint": null,
+    "trap_codes": [],
+    "tags": [
+      "simulado-3"
+    ],
+    "status": "rascunho",
+    "source": {
+      "kind": "migrado",
+      "file": "consolidated/modulo_7_simulados.md",
+      "ref": "linha 627",
+      "live_on_site": true,
+      "answer_letter": "origem",
+      "build_map": {
+        "A": "A",
+        "B": "D",
+        "C": "B",
+        "D": "C"
+      }
+    }
+  },
+  {
+    "id": "mod7-b13.7",
+    "section": "reading",
+    "task_type": "Complete the Words",
+    "exam_format": false,
+    "format": "mcq",
+    "skill": null,
+    "cefr_min": null,
+    "cefr_max": null,
+    "stimulus": null,
+    "group": "mod7-b13",
+    "prompt": "Enrollment has been **decl_____** for three consecutive years, prompting a review of the department's course offerings.",
+    "text_format": "markdown",
+    "options": {
+      "A": "declared",
+      "B": "declining",
+      "C": "decoding",
+      "D": "dedicating"
+    },
+    "answer": "B",
+    "explanation": "\"for three consecutive years\" + tempo contínuo",
+    "hint": null,
+    "trap_codes": [],
+    "tags": [
+      "simulado-3"
+    ],
+    "status": "rascunho",
+    "source": {
+      "kind": "migrado",
+      "file": "consolidated/modulo_7_simulados.md",
+      "ref": "linha 630",
+      "live_on_site": true,
+      "answer_letter": "origem",
+      "build_map": {
+        "A": "C",
+        "B": "D",
+        "C": "A",
+        "D": "B"
+      }
+    }
+  },
+  {
+    "id": "mod7-b13.8",
+    "section": "reading",
+    "task_type": "Complete the Words",
+    "exam_format": false,
+    "format": "mcq",
+    "skill": null,
+    "cefr_min": null,
+    "cefr_max": null,
+    "stimulus": null,
+    "group": "mod7-b13",
+    "prompt": "The safety protocol is **manda_____**; there are no exceptions, regardless of experience level.",
+    "text_format": "markdown",
+    "options": {
+      "A": "mandatory",
+      "B": "managerial",
+      "C": "mandated",
+      "D": "manual"
+    },
+    "answer": "A",
+    "explanation": "",
+    "hint": "nota: (A) e (C) são ambas plausíveis · escolha o adjetivo predicativo mais natural após \"is\"",
+    "trap_codes": [],
+    "tags": [
+      "simulado-3"
+    ],
+    "status": "rascunho",
+    "source": {
+      "kind": "migrado",
+      "file": "consolidated/modulo_7_simulados.md",
+      "ref": "linha 633",
+      "live_on_site": true,
+      "answer_letter": "origem",
+      "build_map": {
+        "A": "B",
+        "B": "A",
+        "C": "C",
+        "D": "D"
+      }
+    }
+  }
+]

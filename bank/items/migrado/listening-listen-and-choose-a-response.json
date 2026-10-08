@@ -1,0 +1,777 @@
+[
+  {
+    "id": "mod2-a.a1",
+    "section": "listening",
+    "task_type": "Listen and Choose a Response",
+    "exam_format": true,
+    "format": "mcq",
+    "skill": null,
+    "cefr_min": "A2",
+    "cefr_max": "B1",
+    "stimulus": {
+      "kind": "audio",
+      "format": "html",
+      "title": null,
+      "content": "\"I was going to grab lunch before the seminar, but there's no time now.\"",
+      "audio_ref": null
+    },
+    "group": "mod2-a",
+    "prompt": "Choose the best response.",
+    "text_format": "html",
+    "options": {
+      "A": "That's fine, I had a big breakfast.",
+      "B": "Yeah, let's just head straight there.",
+      "C": "The seminar was really interesting.",
+      "D": "I ate there last week too."
+    },
+    "answer": "B",
+    "explanation": "O falante sinaliza falta de tempo; a resposta natural propõe a ação consequente. (A)/(C)/(D) ignoram a urgência.",
+    "hint": null,
+    "trap_codes": [],
+    "tags": [],
+    "status": "rascunho",
+    "source": {
+      "kind": "migrado",
+      "file": "app/drills_data.py",
+      "ref": "MOD2_ACTION_DRILLS_A:mod2-a#A1",
+      "live_on_site": true,
+      "answer_letter": "origem",
+      "build_map": {
+        "A": "A",
+        "B": "B",
+        "C": "D",
+        "D": "C"
+      }
+    }
+  },
+  {
+    "id": "mod2-a.a2",
+    "section": "listening",
+    "task_type": "Listen and Choose a Response",
+    "exam_format": true,
+    "format": "mcq",
+    "skill": null,
+    "cefr_min": "A2",
+    "cefr_max": "B1",
+    "stimulus": {
+      "kind": "audio",
+      "format": "html",
+      "title": null,
+      "content": "\"Do you mind if I borrow your notes from Tuesday? I was out sick.\"",
+      "audio_ref": null
+    },
+    "group": "mod2-a",
+    "prompt": "Choose the best response.",
+    "text_format": "html",
+    "options": {
+      "A": "Sure — I'll send them over tonight.",
+      "B": "I hope you feel better soon.",
+      "C": "Tuesday's class was canceled, actually.",
+      "D": "I wasn't there either, unfortunately."
+    },
+    "answer": "A",
+    "explanation": "Pedido direto → resposta direta de concessão + plano. (B) é gentil mas não responde ao pedido; (C)/(D) mudam de assunto.",
+    "hint": null,
+    "trap_codes": [],
+    "tags": [],
+    "status": "rascunho",
+    "source": {
+      "kind": "migrado",
+      "file": "app/drills_data.py",
+      "ref": "MOD2_ACTION_DRILLS_A:mod2-a#A2",
+      "live_on_site": true,
+      "answer_letter": "origem",
+      "build_map": {
+        "A": "D",
+        "B": "C",
+        "C": "A",
+        "D": "B"
+      }
+    }
+  },
+  {
+    "id": "mod2-a.a3",
+    "section": "listening",
+    "task_type": "Listen and Choose a Response",
+    "exam_format": true,
+    "format": "mcq",
+    "skill": null,
+    "cefr_min": "A2",
+    "cefr_max": "B1",
+    "stimulus": {
+      "kind": "audio",
+      "format": "html",
+      "title": null,
+      "content": "\"Honestly, I'm not sure this draft is ready to submit.\"",
+      "audio_ref": null
+    },
+    "group": "mod2-a",
+    "prompt": "Choose the best response.",
+    "text_format": "html",
+    "options": {
+      "A": "The deadline's not until Friday, right?",
+      "B": "What do you think it still needs?",
+      "C": "I submitted mine yesterday.",
+      "D": "That's a great title."
+    },
+    "answer": "B",
+    "explanation": "Insegurança sobre o rascunho → resposta busca o problema específico. (A) muda para prazo; (C)/(D) ignoram a preocupação.",
+    "hint": null,
+    "trap_codes": [],
+    "tags": [],
+    "status": "rascunho",
+    "source": {
+      "kind": "migrado",
+      "file": "app/drills_data.py",
+      "ref": "MOD2_ACTION_DRILLS_A:mod2-a#A3",
+      "live_on_site": true,
+      "answer_letter": "origem",
+      "build_map": {
+        "A": "C",
+        "B": "B",
+        "C": "D",
+        "D": "A"
+      }
+    }
+  },
+  {
+    "id": "mod2-a.a4",
+    "section": "listening",
+    "task_type": "Listen and Choose a Response",
+    "exam_format": true,
+    "format": "mcq",
+    "skill": null,
+    "cefr_min": "A2",
+    "cefr_max": "B1",
+    "stimulus": {
+      "kind": "audio",
+      "format": "html",
+      "title": null,
+      "content": "\"You're not still planning to walk in this weather, are you?\"",
+      "audio_ref": null
+    },
+    "group": "mod2-a",
+    "prompt": "Choose the best response.",
+    "text_format": "html",
+    "options": {
+      "A": "No, I'll catch the bus instead.",
+      "B": "Campus is only ten minutes away.",
+      "C": "I walked there yesterday.",
+      "D": "It rained a lot last semester too."
+    },
+    "answer": "A",
+    "explanation": "Pergunta retórica = alerta educado sobre andar na chuva. Resposta natural revisa o plano. (B)/(C) reforçam o plano problemático.",
+    "hint": null,
+    "trap_codes": [],
+    "tags": [],
+    "status": "rascunho",
+    "source": {
+      "kind": "migrado",
+      "file": "app/drills_data.py",
+      "ref": "MOD2_ACTION_DRILLS_A:mod2-a#A4",
+      "live_on_site": true,
+      "answer_letter": "origem",
+      "build_map": {
+        "A": "C",
+        "B": "A",
+        "C": "D",
+        "D": "B"
+      }
+    }
+  },
+  {
+    "id": "mod2-a.a5",
+    "section": "listening",
+    "task_type": "Listen and Choose a Response",
+    "exam_format": true,
+    "format": "mcq",
+    "skill": null,
+    "cefr_min": "A2",
+    "cefr_max": "B1",
+    "stimulus": {
+      "kind": "audio",
+      "format": "html",
+      "title": null,
+      "content": "\"I heard the registrar's office changed their hours.\"",
+      "audio_ref": null
+    },
+    "group": "mod2-a",
+    "prompt": "Choose the best response.",
+    "text_format": "html",
+    "options": {
+      "A": "I registered for four classes this term.",
+      "B": "Really? Do you know the new schedule?",
+      "C": "The office is on the second floor.",
+      "D": "I haven't registered for anything yet."
+    },
+    "answer": "B",
+    "explanation": "Informação nova (mudança de horário) → interesse + pedido de detalhe. (A)/(D) confundem <em>register</em> (matricular-se) com <em>hours</em>. (C) é verdade, mas não é o que foi dito.",
+    "hint": null,
+    "trap_codes": [],
+    "tags": [],
+    "status": "rascunho",
+    "source": {
+      "kind": "migrado",
+      "file": "app/drills_data.py",
+      "ref": "MOD2_ACTION_DRILLS_A:mod2-a#A5",
+      "live_on_site": true,
+      "answer_letter": "origem",
+      "build_map": {
+        "A": "B",
+        "B": "C",
+        "C": "A",
+        "D": "D"
+      }
+    }
+  },
+  {
+    "id": "mod2-a.a6",
+    "section": "listening",
+    "task_type": "Listen and Choose a Response",
+    "exam_format": true,
+    "format": "mcq",
+    "skill": null,
+    "cefr_min": "A2",
+    "cefr_max": "B1",
+    "stimulus": {
+      "kind": "audio",
+      "format": "html",
+      "title": null,
+      "content": "\"Could you run your presentation by me before the meeting?\"",
+      "audio_ref": null
+    },
+    "group": "mod2-a",
+    "prompt": "Choose the best response.",
+    "text_format": "html",
+    "options": {
+      "A": "I ran three miles this morning.",
+      "B": "Sure — are you free around four?",
+      "C": "The meeting's been moved to Thursday.",
+      "D": "I've given that presentation twice already."
+    },
+    "answer": "B",
+    "explanation": "\"Run X by me\" = me mostrar antes. Resposta natural marca um horário. (A) toma \"run\" ao pé da letra; (C) muda o foco; (D) ignora o pedido.",
+    "hint": null,
+    "trap_codes": [],
+    "tags": [],
+    "status": "rascunho",
+    "source": {
+      "kind": "migrado",
+      "file": "app/drills_data.py",
+      "ref": "MOD2_ACTION_DRILLS_A:mod2-a#A6",
+      "live_on_site": true,
+      "answer_letter": "origem",
+      "build_map": {
+        "A": "B",
+        "B": "D",
+        "C": "A",
+        "D": "C"
+      }
+    }
+  },
+  {
+    "id": "mod2-a.a7",
+    "section": "listening",
+    "task_type": "Listen and Choose a Response",
+    "exam_format": true,
+    "format": "mcq",
+    "skill": null,
+    "cefr_min": "A2",
+    "cefr_max": "B1",
+    "stimulus": {
+      "kind": "audio",
+      "format": "html",
+      "title": null,
+      "content": "\"I thought the lab report was due next week, not tomorrow.\"",
+      "audio_ref": null
+    },
+    "group": "mod2-a",
+    "prompt": "Choose the best response.",
+    "text_format": "html",
+    "options": {
+      "A": "So did I — let me double-check the syllabus.",
+      "B": "The lab is on the ground floor.",
+      "C": "I finished my report last month.",
+      "D": "Next week works better for me too."
+    },
+    "answer": "A",
+    "explanation": "Divergência sobre a data → confirmar juntos, checar o syllabus. (B)/(C)/(D) ignoram a divergência.",
+    "hint": null,
+    "trap_codes": [],
+    "tags": [],
+    "status": "rascunho",
+    "source": {
+      "kind": "migrado",
+      "file": "app/drills_data.py",
+      "ref": "MOD2_ACTION_DRILLS_A:mod2-a#A7",
+      "live_on_site": true,
+      "answer_letter": "origem",
+      "build_map": {
+        "A": "A",
+        "B": "D",
+        "C": "B",
+        "D": "C"
+      }
+    }
+  },
+  {
+    "id": "mod2-a.a8",
+    "section": "listening",
+    "task_type": "Listen and Choose a Response",
+    "exam_format": true,
+    "format": "mcq",
+    "skill": null,
+    "cefr_min": "A2",
+    "cefr_max": "B1",
+    "stimulus": {
+      "kind": "audio",
+      "format": "html",
+      "title": null,
+      "content": "\"Would you rather present first or last?\"",
+      "audio_ref": null
+    },
+    "group": "mod2-a",
+    "prompt": "Choose the best response.",
+    "text_format": "html",
+    "options": {
+      "A": "I presented last time.",
+      "B": "Last, if that's an option — I need time to prepare.",
+      "C": "The presentation is worth 20% of the grade.",
+      "D": "First place goes to the best presentation."
+    },
+    "answer": "B",
+    "explanation": "Pergunta de preferência (primeiro ou último) → escolher e justificar. (A)/(C)/(D) não respondem à escolha oferecida.",
+    "hint": null,
+    "trap_codes": [],
+    "tags": [],
+    "status": "rascunho",
+    "source": {
+      "kind": "migrado",
+      "file": "app/drills_data.py",
+      "ref": "MOD2_ACTION_DRILLS_A:mod2-a#A8",
+      "live_on_site": true,
+      "answer_letter": "origem",
+      "build_map": {
+        "A": "A",
+        "B": "D",
+        "C": "C",
+        "D": "B"
+      }
+    }
+  },
+  {
+    "id": "mod2-a.a9",
+    "section": "listening",
+    "task_type": "Listen and Choose a Response",
+    "exam_format": true,
+    "format": "mcq",
+    "skill": null,
+    "cefr_min": "A2",
+    "cefr_max": "B1",
+    "stimulus": {
+      "kind": "audio",
+      "format": "html",
+      "title": null,
+      "content": "\"This bus is taking forever. We should've left earlier.\"",
+      "audio_ref": null
+    },
+    "group": "mod2-a",
+    "prompt": "Choose the best response.",
+    "text_format": "html",
+    "options": {
+      "A": "The bus stop is right over there.",
+      "B": "Tell me about it — I hate cutting it this close.",
+      "C": "I take this bus every day.",
+      "D": "We left at eight, same as always."
+    },
+    "answer": "B",
+    "explanation": "Reclamação sobre a demora → \"Tell me about it\" concorda enfaticamente + acrescenta. (A)/(C)/(D) mudam o foco.",
+    "hint": null,
+    "trap_codes": [],
+    "tags": [],
+    "status": "rascunho",
+    "source": {
+      "kind": "migrado",
+      "file": "app/drills_data.py",
+      "ref": "MOD2_ACTION_DRILLS_A:mod2-a#A9",
+      "live_on_site": true,
+      "answer_letter": "origem",
+      "build_map": {
+        "A": "A",
+        "B": "C",
+        "C": "B",
+        "D": "D"
+      }
+    }
+  },
+  {
+    "id": "mod2-a.a10",
+    "section": "listening",
+    "task_type": "Listen and Choose a Response",
+    "exam_format": true,
+    "format": "mcq",
+    "skill": null,
+    "cefr_min": "A2",
+    "cefr_max": "B1",
+    "stimulus": {
+      "kind": "audio",
+      "format": "html",
+      "title": null,
+      "content": "\"Professor Lin said she might cancel Friday's class.\"",
+      "audio_ref": null
+    },
+    "group": "mod2-a",
+    "prompt": "Choose the best response.",
+    "text_format": "html",
+    "options": {
+      "A": "She's a great lecturer, isn't she?",
+      "B": "Did she say why, or was it just a maybe?",
+      "C": "Friday's class is in the east building.",
+      "D": "I've never had a class canceled before."
+    },
+    "answer": "B",
+    "explanation": "Notícia incerta (\"might cancel\") → pedir esclarecimento sobre o motivo/certeza. (A)/(C)/(D) desviam.",
+    "hint": null,
+    "trap_codes": [],
+    "tags": [],
+    "status": "rascunho",
+    "source": {
+      "kind": "migrado",
+      "file": "app/drills_data.py",
+      "ref": "MOD2_ACTION_DRILLS_A:mod2-a#A10",
+      "live_on_site": true,
+      "answer_letter": "origem",
+      "build_map": {
+        "A": "C",
+        "B": "A",
+        "C": "B",
+        "D": "D"
+      }
+    }
+  },
+  {
+    "id": "mod2-a.a11",
+    "section": "listening",
+    "task_type": "Listen and Choose a Response",
+    "exam_format": true,
+    "format": "mcq",
+    "skill": null,
+    "cefr_min": "A2",
+    "cefr_max": "B1",
+    "stimulus": {
+      "kind": "audio",
+      "format": "html",
+      "title": null,
+      "content": "\"I've been meaning to ask: how did the interview go?\"",
+      "audio_ref": null
+    },
+    "group": "mod2-a",
+    "prompt": "Choose the best response.",
+    "text_format": "html",
+    "options": {
+      "A": "It's at two o'clock on Thursday.",
+      "B": "Better than I expected, actually. They said they'd call by Friday.",
+      "C": "I've had a lot of interviews lately.",
+      "D": "The company is downtown, near the station."
+    },
+    "answer": "B",
+    "explanation": "Pergunta sobre como foi a entrevista → dar o resultado + próximo passo. (A) responde sobre horário; (C)/(D) generalizam/desviam.",
+    "hint": null,
+    "trap_codes": [],
+    "tags": [],
+    "status": "rascunho",
+    "source": {
+      "kind": "migrado",
+      "file": "app/drills_data.py",
+      "ref": "MOD2_ACTION_DRILLS_A:mod2-a#A11",
+      "live_on_site": true,
+      "answer_letter": "origem",
+      "build_map": {
+        "A": "A",
+        "B": "B",
+        "C": "C",
+        "D": "D"
+      }
+    }
+  },
+  {
+    "id": "mod2-a.a12",
+    "section": "listening",
+    "task_type": "Listen and Choose a Response",
+    "exam_format": true,
+    "format": "mcq",
+    "skill": null,
+    "cefr_min": "A2",
+    "cefr_max": "B1",
+    "stimulus": {
+      "kind": "audio",
+      "format": "html",
+      "title": null,
+      "content": "\"Do you think it's worth applying? I doubt I'd get in.\"",
+      "audio_ref": null
+    },
+    "group": "mod2-a",
+    "prompt": "Choose the best response.",
+    "text_format": "html",
+    "options": {
+      "A": "The application fee is fifty dollars.",
+      "B": "You never know unless you try — I'd go for it.",
+      "C": "I applied there two years ago.",
+      "D": "It's a very competitive program."
+    },
+    "answer": "B",
+    "explanation": "Dúvida + autodepreciação → encorajamento. (A)/(C)/(D) desviam para custo, experiência passada, competitividade.",
+    "hint": null,
+    "trap_codes": [],
+    "tags": [],
+    "status": "rascunho",
+    "source": {
+      "kind": "migrado",
+      "file": "app/drills_data.py",
+      "ref": "MOD2_ACTION_DRILLS_A:mod2-a#A12",
+      "live_on_site": true,
+      "answer_letter": "origem",
+      "build_map": {
+        "A": "B",
+        "B": "A",
+        "C": "C",
+        "D": "D"
+      }
+    }
+  },
+  {
+    "id": "mod7-b6.1",
+    "section": "listening",
+    "task_type": "Listen and Choose a Response",
+    "exam_format": true,
+    "format": "mcq",
+    "skill": null,
+    "cefr_min": null,
+    "cefr_max": null,
+    "stimulus": {
+      "kind": "audio",
+      "format": "markdown",
+      "title": "Listen and Choose a Response",
+      "content": "**ÁUDIO 1 (transcrição):** **Man:** \"Would you mind if I borrowed your notes from Tuesday's lecture? I was out sick.\"",
+      "audio_ref": null
+    },
+    "group": "mod7-b6",
+    "prompt": "Which response best continues the exchange?",
+    "text_format": "markdown",
+    "options": {
+      "A": "\"Sure, I'll email them to you tonight.\"",
+      "B": "\"I hope you feel better soon.\"",
+      "C": "\"The lecture was about economic policy.\"",
+      "D": "\"I wasn't in class either.\""
+    },
+    "answer": "A",
+    "explanation": "resposta direta ao pedido",
+    "hint": null,
+    "trap_codes": [],
+    "tags": [
+      "simulado-2"
+    ],
+    "status": "rascunho",
+    "source": {
+      "kind": "migrado",
+      "file": "consolidated/modulo_7_simulados.md",
+      "ref": "linha 346",
+      "live_on_site": true,
+      "answer_letter": "origem",
+      "build_map": {
+        "A": "B",
+        "B": "D",
+        "C": "C",
+        "D": "A"
+      }
+    }
+  },
+  {
+    "id": "mod7-b6.2",
+    "section": "listening",
+    "task_type": "Listen and Choose a Response",
+    "exam_format": true,
+    "format": "mcq",
+    "skill": null,
+    "cefr_min": null,
+    "cefr_max": null,
+    "stimulus": {
+      "kind": "audio",
+      "format": "markdown",
+      "title": "Listen and Choose a Response",
+      "content": "**ÁUDIO 2:** **Woman:** \"Have you decided whether you're presenting first or second on Friday?\"",
+      "audio_ref": null
+    },
+    "group": "mod7-b6",
+    "prompt": "Best response:",
+    "text_format": "markdown",
+    "options": {
+      "A": "\"The presentation is in room 120.\"",
+      "B": "\"I'd rather go first, if that's okay with you.\"",
+      "C": "\"Friday is my busiest day.\"",
+      "D": "\"I haven't finished reading the article.\""
+    },
+    "answer": "B",
+    "explanation": "",
+    "hint": null,
+    "trap_codes": [],
+    "tags": [
+      "simulado-2"
+    ],
+    "status": "rascunho",
+    "source": {
+      "kind": "migrado",
+      "file": "consolidated/modulo_7_simulados.md",
+      "ref": "linha 354",
+      "live_on_site": true,
+      "answer_letter": "origem",
+      "build_map": {
+        "A": "B",
+        "B": "C",
+        "C": "D",
+        "D": "A"
+      }
+    }
+  },
+  {
+    "id": "mod7-b6.3",
+    "section": "listening",
+    "task_type": "Listen and Choose a Response",
+    "exam_format": true,
+    "format": "mcq",
+    "skill": null,
+    "cefr_min": null,
+    "cefr_max": null,
+    "stimulus": {
+      "kind": "audio",
+      "format": "markdown",
+      "title": "Listen and Choose a Response",
+      "content": "**ÁUDIO 3:** **Man:** \"I emailed the professor two days ago and still haven't heard back.\"",
+      "audio_ref": null
+    },
+    "group": "mod7-b6",
+    "prompt": "Best response:",
+    "text_format": "markdown",
+    "options": {
+      "A": "\"She's usually pretty quick, so maybe check your spam folder.\"",
+      "B": "\"I sent mine last week.\"",
+      "C": "\"The email server was down on Monday, I think: try again.\"",
+      "D": "\"You should present first.\""
+    },
+    "answer": "C",
+    "explanation": "(nota: (A) e (C) são ambas coerentes; escolha a que oferece a explicação mais direta para o silêncio · (C) dá uma causa concreta e uma ação. Em itens assim, a resposta que **faz o diálogo avançar** ganha.)",
+    "hint": null,
+    "trap_codes": [],
+    "tags": [
+      "simulado-2"
+    ],
+    "status": "rascunho",
+    "source": {
+      "kind": "migrado",
+      "file": "consolidated/modulo_7_simulados.md",
+      "ref": "linha 362",
+      "live_on_site": true,
+      "answer_letter": "origem",
+      "build_map": {
+        "A": "B",
+        "B": "C",
+        "C": "D",
+        "D": "A"
+      }
+    }
+  },
+  {
+    "id": "mod7-b6.4",
+    "section": "listening",
+    "task_type": "Listen and Choose a Response",
+    "exam_format": true,
+    "format": "mcq",
+    "skill": null,
+    "cefr_min": null,
+    "cefr_max": null,
+    "stimulus": {
+      "kind": "audio",
+      "format": "markdown",
+      "title": "Listen and Choose a Response",
+      "content": "**ÁUDIO 4:** **Woman:** \"This reading is forty pages · there's no way I'll finish it before class.\"",
+      "audio_ref": null
+    },
+    "group": "mod7-b6",
+    "prompt": "Best response:",
+    "text_format": "markdown",
+    "options": {
+      "A": "\"The class is at ten.\"",
+      "B": "\"Focus on the intro and the conclusion: that's usually enough to follow the discussion.\"",
+      "C": "\"I bought the book last semester.\"",
+      "D": "\"Forty pages isn't very long.\""
+    },
+    "answer": "B",
+    "explanation": "",
+    "hint": null,
+    "trap_codes": [],
+    "tags": [
+      "simulado-2"
+    ],
+    "status": "rascunho",
+    "source": {
+      "kind": "migrado",
+      "file": "consolidated/modulo_7_simulados.md",
+      "ref": "linha 372",
+      "live_on_site": true,
+      "answer_letter": "origem",
+      "build_map": {
+        "A": "C",
+        "B": "A",
+        "C": "B",
+        "D": "D"
+      }
+    }
+  },
+  {
+    "id": "mod7-b16.1",
+    "section": "listening",
+    "task_type": "Listen and Choose a Response",
+    "exam_format": true,
+    "format": "mcq",
+    "skill": null,
+    "cefr_min": null,
+    "cefr_max": null,
+    "stimulus": {
+      "kind": "audio",
+      "format": "markdown",
+      "title": "Listen and Choose a Response",
+      "content": "**Woman:** \"I can't believe how much the printer fees went up this semester.\"",
+      "audio_ref": null
+    },
+    "group": "mod7-b16",
+    "prompt": "Best response:",
+    "text_format": "markdown",
+    "options": {
+      "A": "\"Yeah, I switched to printing at the library instead.\"",
+      "B": "\"The printer is out of paper again.\"",
+      "C": "\"I registered for four classes this semester.\"",
+      "D": "\"The library closes at nine.\""
+    },
+    "answer": "A",
+    "explanation": "",
+    "hint": null,
+    "trap_codes": [],
+    "tags": [
+      "simulado-3"
+    ],
+    "status": "rascunho",
+    "source": {
+      "kind": "migrado",
+      "file": "consolidated/modulo_7_simulados.md",
+      "ref": "linha 707",
+      "live_on_site": true,
+      "answer_letter": "origem",
+      "build_map": {
+        "A": "A",
+        "B": "B",
+        "C": "D",
+        "D": "C"
+      }
+    }
+  }
+]

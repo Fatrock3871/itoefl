@@ -1,0 +1,685 @@
+[
+  {
+    "id": "mod2-c1.c1.1",
+    "section": "listening",
+    "task_type": "Listen to an Announcement",
+    "exam_format": true,
+    "format": "mcq",
+    "skill": null,
+    "cefr_min": "B1",
+    "cefr_max": "B1",
+    "stimulus": {
+      "kind": "audio",
+      "format": "html",
+      "title": "Drill C1 · Library Services · alvo: 2 min",
+      "content": "<p><em>Narrator: Listen to an announcement about a change to library services.</em></p>\n<p><strong>Speaker:</strong> Attention, students. Starting next Monday, the Main Library's third-floor reading room will be closed for renovation through the end of the month. During this period you can use the East Wing reading room instead, which keeps its regular hours. Reserved study rooms originally booked for the third floor have already been transferred automatically to the East Wing — you don't need to rebook. However, if your reservation was for a room with audiovisual equipment, please double-check availability, since not all East Wing rooms are equipped. Questions go to the circulation desk.</p>",
+      "audio_ref": null
+    },
+    "group": "mod2-c1",
+    "prompt": "Detail. When does the closure begin?",
+    "text_format": "html",
+    "options": {
+      "A": "Today",
+      "B": "Next Monday",
+      "C": "At the end of the month",
+      "D": "Next semester"
+    },
+    "answer": "B",
+    "explanation": "\"Starting next Monday...\" (C) confunde início com fim do período.",
+    "hint": null,
+    "trap_codes": [],
+    "tags": [],
+    "status": "rascunho",
+    "source": {
+      "kind": "migrado",
+      "file": "app/drills_data.py",
+      "ref": "MOD2_ACTION_DRILLS_C:mod2-c1#C1.1",
+      "live_on_site": true,
+      "answer_letter": "origem",
+      "build_map": {
+        "A": "D",
+        "B": "A",
+        "C": "B",
+        "D": "C"
+      }
+    }
+  },
+  {
+    "id": "mod2-c1.c1.2",
+    "section": "listening",
+    "task_type": "Listen to an Announcement",
+    "exam_format": true,
+    "format": "mcq",
+    "skill": null,
+    "cefr_min": "B1",
+    "cefr_max": "B1",
+    "stimulus": {
+      "kind": "audio",
+      "format": "html",
+      "title": "Drill C1 · Library Services · alvo: 2 min",
+      "content": "<p><em>Narrator: Listen to an announcement about a change to library services.</em></p>\n<p><strong>Speaker:</strong> Attention, students. Starting next Monday, the Main Library's third-floor reading room will be closed for renovation through the end of the month. During this period you can use the East Wing reading room instead, which keeps its regular hours. Reserved study rooms originally booked for the third floor have already been transferred automatically to the East Wing — you don't need to rebook. However, if your reservation was for a room with audiovisual equipment, please double-check availability, since not all East Wing rooms are equipped. Questions go to the circulation desk.</p>",
+      "audio_ref": null
+    },
+    "group": "mod2-c1",
+    "prompt": "Detail. What happens to previously reserved study rooms?",
+    "text_format": "html",
+    "options": {
+      "A": "They are canceled and must be rebooked",
+      "B": "They are automatically transferred to the East Wing",
+      "C": "They stay on the third floor",
+      "D": "They are honored only if confirmed by email"
+    },
+    "answer": "B",
+    "explanation": "\"Transferred automatically to the East Wing — you don't need to rebook.\" (A) é o oposto; (D) adiciona uma condição não dita.",
+    "hint": null,
+    "trap_codes": [],
+    "tags": [],
+    "status": "rascunho",
+    "source": {
+      "kind": "migrado",
+      "file": "app/drills_data.py",
+      "ref": "MOD2_ACTION_DRILLS_C:mod2-c1#C1.2",
+      "live_on_site": true,
+      "answer_letter": "origem",
+      "build_map": {
+        "A": "D",
+        "B": "C",
+        "C": "A",
+        "D": "B"
+      }
+    }
+  },
+  {
+    "id": "mod2-c1.c1.3",
+    "section": "listening",
+    "task_type": "Listen to an Announcement",
+    "exam_format": true,
+    "format": "mcq",
+    "skill": null,
+    "cefr_min": "B1",
+    "cefr_max": "B1",
+    "stimulus": {
+      "kind": "audio",
+      "format": "html",
+      "title": "Drill C1 · Library Services · alvo: 2 min",
+      "content": "<p><em>Narrator: Listen to an announcement about a change to library services.</em></p>\n<p><strong>Speaker:</strong> Attention, students. Starting next Monday, the Main Library's third-floor reading room will be closed for renovation through the end of the month. During this period you can use the East Wing reading room instead, which keeps its regular hours. Reserved study rooms originally booked for the third floor have already been transferred automatically to the East Wing — you don't need to rebook. However, if your reservation was for a room with audiovisual equipment, please double-check availability, since not all East Wing rooms are equipped. Questions go to the circulation desk.</p>",
+      "audio_ref": null
+    },
+    "group": "mod2-c1",
+    "prompt": "Function. Why does the speaker mention audiovisual equipment?",
+    "text_format": "html",
+    "options": {
+      "A": "To announce that all AV equipment is being removed",
+      "B": "To tell students to avoid using AV equipment during renovations",
+      "C": "To warn that not every transferred room has the same equipment as before",
+      "D": "To advertise a new AV rental service"
+    },
+    "answer": "C",
+    "explanation": "Aviso prático de que \"not all East Wing rooms are equipped\". (A)/(D) exageram; (B) está fora do que foi dito.",
+    "hint": null,
+    "trap_codes": [],
+    "tags": [],
+    "status": "rascunho",
+    "source": {
+      "kind": "migrado",
+      "file": "app/drills_data.py",
+      "ref": "MOD2_ACTION_DRILLS_C:mod2-c1#C1.3",
+      "live_on_site": true,
+      "answer_letter": "origem",
+      "build_map": {
+        "A": "C",
+        "B": "D",
+        "C": "B",
+        "D": "A"
+      }
+    }
+  },
+  {
+    "id": "mod2-c2.c2.1",
+    "section": "listening",
+    "task_type": "Listen to an Announcement",
+    "exam_format": true,
+    "format": "mcq",
+    "skill": null,
+    "cefr_min": "B1",
+    "cefr_max": "B1",
+    "stimulus": {
+      "kind": "audio",
+      "format": "html",
+      "title": "Drill C2 · Course Registration · alvo: 2 min",
+      "content": "<p><em>Narrator: Listen to an announcement about course registration.</em></p>\n<p><strong>Speaker:</strong> A reminder to all second-year students: registration for spring courses opens this Thursday at 8 a.m. and closes the following Wednesday at midnight. Register early — popular courses fill within hours. If a course you need is full, add yourself to the waitlist rather than emailing the instructor; the system releases spots automatically as students drop, and it works strictly in waitlist order. One change this year: the add/drop period after classes begin has been shortened from two weeks to one, so finalize your schedule before the term starts, not after.</p>",
+      "audio_ref": null
+    },
+    "group": "mod2-c2",
+    "prompt": "Detail. When does registration close?",
+    "text_format": "html",
+    "options": {
+      "A": "Thursday at 8 a.m.",
+      "B": "The following Wednesday at midnight",
+      "C": "One week after classes begin",
+      "D": "Two weeks after classes begin"
+    },
+    "answer": "B",
+    "explanation": "\"Closes the following Wednesday at midnight.\" (A) é a abertura; (C)/(D) confundem com o add/drop.",
+    "hint": null,
+    "trap_codes": [],
+    "tags": [],
+    "status": "rascunho",
+    "source": {
+      "kind": "migrado",
+      "file": "app/drills_data.py",
+      "ref": "MOD2_ACTION_DRILLS_C:mod2-c2#C2.1",
+      "live_on_site": true,
+      "answer_letter": "origem",
+      "build_map": {
+        "A": "A",
+        "B": "D",
+        "C": "C",
+        "D": "B"
+      }
+    }
+  },
+  {
+    "id": "mod2-c2.c2.2",
+    "section": "listening",
+    "task_type": "Listen to an Announcement",
+    "exam_format": true,
+    "format": "mcq",
+    "skill": null,
+    "cefr_min": "B1",
+    "cefr_max": "B1",
+    "stimulus": {
+      "kind": "audio",
+      "format": "html",
+      "title": "Drill C2 · Course Registration · alvo: 2 min",
+      "content": "<p><em>Narrator: Listen to an announcement about course registration.</em></p>\n<p><strong>Speaker:</strong> A reminder to all second-year students: registration for spring courses opens this Thursday at 8 a.m. and closes the following Wednesday at midnight. Register early — popular courses fill within hours. If a course you need is full, add yourself to the waitlist rather than emailing the instructor; the system releases spots automatically as students drop, and it works strictly in waitlist order. One change this year: the add/drop period after classes begin has been shortened from two weeks to one, so finalize your schedule before the term starts, not after.</p>",
+      "audio_ref": null
+    },
+    "group": "mod2-c2",
+    "prompt": "Detail. What should a student do if a course is full?",
+    "text_format": "html",
+    "options": {
+      "A": "Email the instructor to ask for a spot",
+      "B": "Register for a different course permanently",
+      "C": "Add themselves to the waitlist",
+      "D": "Wait until the add/drop period"
+    },
+    "answer": "C",
+    "explanation": "\"Add yourself to the waitlist rather than emailing the instructor.\" (A) é explicitamente desaconselhado.",
+    "hint": null,
+    "trap_codes": [],
+    "tags": [],
+    "status": "rascunho",
+    "source": {
+      "kind": "migrado",
+      "file": "app/drills_data.py",
+      "ref": "MOD2_ACTION_DRILLS_C:mod2-c2#C2.2",
+      "live_on_site": true,
+      "answer_letter": "origem",
+      "build_map": {
+        "A": "D",
+        "B": "B",
+        "C": "A",
+        "D": "C"
+      }
+    }
+  },
+  {
+    "id": "mod2-c2.c2.3",
+    "section": "listening",
+    "task_type": "Listen to an Announcement",
+    "exam_format": true,
+    "format": "mcq",
+    "skill": null,
+    "cefr_min": "B1",
+    "cefr_max": "B1",
+    "stimulus": {
+      "kind": "audio",
+      "format": "html",
+      "title": "Drill C2 · Course Registration · alvo: 2 min",
+      "content": "<p><em>Narrator: Listen to an announcement about course registration.</em></p>\n<p><strong>Speaker:</strong> A reminder to all second-year students: registration for spring courses opens this Thursday at 8 a.m. and closes the following Wednesday at midnight. Register early — popular courses fill within hours. If a course you need is full, add yourself to the waitlist rather than emailing the instructor; the system releases spots automatically as students drop, and it works strictly in waitlist order. One change this year: the add/drop period after classes begin has been shortened from two weeks to one, so finalize your schedule before the term starts, not after.</p>",
+      "audio_ref": null
+    },
+    "group": "mod2-c2",
+    "prompt": "Connecting content. What has changed this year?",
+    "text_format": "html",
+    "options": {
+      "A": "Registration now opens earlier in the day",
+      "B": "The add/drop period has been shortened from two weeks to one",
+      "C": "Waitlists are no longer used",
+      "D": "Second-year students register last"
+    },
+    "answer": "B",
+    "explanation": "\"The add/drop period... has been shortened from two weeks to one.\" (A)/(C)/(D) não ditos.",
+    "hint": null,
+    "trap_codes": [],
+    "tags": [],
+    "status": "rascunho",
+    "source": {
+      "kind": "migrado",
+      "file": "app/drills_data.py",
+      "ref": "MOD2_ACTION_DRILLS_C:mod2-c2#C2.3",
+      "live_on_site": true,
+      "answer_letter": "origem",
+      "build_map": {
+        "A": "B",
+        "B": "C",
+        "C": "D",
+        "D": "A"
+      }
+    }
+  },
+  {
+    "id": "mod2-c2.c2.4",
+    "section": "listening",
+    "task_type": "Listen to an Announcement",
+    "exam_format": true,
+    "format": "mcq",
+    "skill": null,
+    "cefr_min": "B1",
+    "cefr_max": "B1",
+    "stimulus": {
+      "kind": "audio",
+      "format": "html",
+      "title": "Drill C2 · Course Registration · alvo: 2 min",
+      "content": "<p><em>Narrator: Listen to an announcement about course registration.</em></p>\n<p><strong>Speaker:</strong> A reminder to all second-year students: registration for spring courses opens this Thursday at 8 a.m. and closes the following Wednesday at midnight. Register early — popular courses fill within hours. If a course you need is full, add yourself to the waitlist rather than emailing the instructor; the system releases spots automatically as students drop, and it works strictly in waitlist order. One change this year: the add/drop period after classes begin has been shortened from two weeks to one, so finalize your schedule before the term starts, not after.</p>",
+      "audio_ref": null
+    },
+    "group": "mod2-c2",
+    "prompt": "Inference. Why does the speaker emphasize finalizing the schedule before the term?",
+    "text_format": "html",
+    "options": {
+      "A": "Because instructors will not answer email during the term",
+      "B": "Because there will be less time to change courses once classes start",
+      "C": "Because spring courses are harder than fall courses",
+      "D": "Because registration reopens midway through the term"
+    },
+    "answer": "B",
+    "explanation": "Add/drop mais curto → menos tempo para ajustar depois que as aulas começam. (A) é verdade em outro contexto, mas não é o que foi dito; (C)/(D) sem base.",
+    "hint": null,
+    "trap_codes": [],
+    "tags": [],
+    "status": "rascunho",
+    "source": {
+      "kind": "migrado",
+      "file": "app/drills_data.py",
+      "ref": "MOD2_ACTION_DRILLS_C:mod2-c2#C2.4",
+      "live_on_site": true,
+      "answer_letter": "origem",
+      "build_map": {
+        "A": "D",
+        "B": "B",
+        "C": "A",
+        "D": "C"
+      }
+    }
+  },
+  {
+    "id": "mod2-c3.c3.1",
+    "section": "listening",
+    "task_type": "Listen to an Announcement",
+    "exam_format": true,
+    "format": "mcq",
+    "skill": null,
+    "cefr_min": "B1",
+    "cefr_max": "B1",
+    "stimulus": {
+      "kind": "audio",
+      "format": "html",
+      "title": "Drill C3 · Campus Event · alvo: 2 min",
+      "content": "<p><em>Narrator: Listen to an announcement about a career event.</em></p>\n<p><strong>Speaker:</strong> The annual Career Fair takes place next Wednesday from 10 to 4 in the main gymnasium. Over eighty employers will attend, mostly in engineering, healthcare, and education. A few reminders. Bring several printed copies of your résumé — most recruiters still expect a paper copy. Business-casual dress is recommended, not required. The résumé-review station near the entrance will be open from 9, an hour before the fair, and it operates first-come, first-served, so arrive early if you want feedback before talking to employers. Finally, the 9:30 workshop on interview skills is now full; a recording will be posted next week for those who missed it.</p>",
+      "audio_ref": null
+    },
+    "group": "mod2-c3",
+    "prompt": "Detail. What time does the Career Fair itself begin?",
+    "text_format": "html",
+    "options": {
+      "A": "9 a.m.",
+      "B": "9:30 a.m.",
+      "C": "10 a.m.",
+      "D": "4 p.m."
+    },
+    "answer": "C",
+    "explanation": "\"From 10 to 4.\" (A) é a abertura da estação de revisão de currículo; (B) é o workshop.",
+    "hint": null,
+    "trap_codes": [],
+    "tags": [],
+    "status": "rascunho",
+    "source": {
+      "kind": "migrado",
+      "file": "app/drills_data.py",
+      "ref": "MOD2_ACTION_DRILLS_C:mod2-c3#C3.1",
+      "live_on_site": true,
+      "answer_letter": "origem",
+      "build_map": {
+        "A": "A",
+        "B": "C",
+        "C": "D",
+        "D": "B"
+      }
+    }
+  },
+  {
+    "id": "mod2-c3.c3.2",
+    "section": "listening",
+    "task_type": "Listen to an Announcement",
+    "exam_format": true,
+    "format": "mcq",
+    "skill": null,
+    "cefr_min": "B1",
+    "cefr_max": "B1",
+    "stimulus": {
+      "kind": "audio",
+      "format": "html",
+      "title": "Drill C3 · Campus Event · alvo: 2 min",
+      "content": "<p><em>Narrator: Listen to an announcement about a career event.</em></p>\n<p><strong>Speaker:</strong> The annual Career Fair takes place next Wednesday from 10 to 4 in the main gymnasium. Over eighty employers will attend, mostly in engineering, healthcare, and education. A few reminders. Bring several printed copies of your résumé — most recruiters still expect a paper copy. Business-casual dress is recommended, not required. The résumé-review station near the entrance will be open from 9, an hour before the fair, and it operates first-come, first-served, so arrive early if you want feedback before talking to employers. Finally, the 9:30 workshop on interview skills is now full; a recording will be posted next week for those who missed it.</p>",
+      "audio_ref": null
+    },
+    "group": "mod2-c3",
+    "prompt": "Detail. What does the speaker say about dress?",
+    "text_format": "html",
+    "options": {
+      "A": "Business formal is required",
+      "B": "Business-casual is recommended but not required",
+      "C": "There is no dress guidance",
+      "D": "Recruiters will provide name tags and jackets"
+    },
+    "answer": "B",
+    "explanation": "\"Business-casual dress is recommended, not required.\"",
+    "hint": null,
+    "trap_codes": [],
+    "tags": [],
+    "status": "rascunho",
+    "source": {
+      "kind": "migrado",
+      "file": "app/drills_data.py",
+      "ref": "MOD2_ACTION_DRILLS_C:mod2-c3#C3.2",
+      "live_on_site": true,
+      "answer_letter": "origem",
+      "build_map": {
+        "A": "A",
+        "B": "B",
+        "C": "D",
+        "D": "C"
+      }
+    }
+  },
+  {
+    "id": "mod2-c3.c3.3",
+    "section": "listening",
+    "task_type": "Listen to an Announcement",
+    "exam_format": true,
+    "format": "mcq",
+    "skill": null,
+    "cefr_min": "B1",
+    "cefr_max": "B1",
+    "stimulus": {
+      "kind": "audio",
+      "format": "html",
+      "title": "Drill C3 · Campus Event · alvo: 2 min",
+      "content": "<p><em>Narrator: Listen to an announcement about a career event.</em></p>\n<p><strong>Speaker:</strong> The annual Career Fair takes place next Wednesday from 10 to 4 in the main gymnasium. Over eighty employers will attend, mostly in engineering, healthcare, and education. A few reminders. Bring several printed copies of your résumé — most recruiters still expect a paper copy. Business-casual dress is recommended, not required. The résumé-review station near the entrance will be open from 9, an hour before the fair, and it operates first-come, first-served, so arrive early if you want feedback before talking to employers. Finally, the 9:30 workshop on interview skills is now full; a recording will be posted next week for those who missed it.</p>",
+      "audio_ref": null
+    },
+    "group": "mod2-c3",
+    "prompt": "Connecting content. A student wants résumé feedback before speaking to employers. What should they do?",
+    "text_format": "html",
+    "options": {
+      "A": "Attend the 9:30 workshop",
+      "B": "Arrive at the résumé-review station around 9, since it is first-come, first-served",
+      "C": "Email their résumé to a recruiter in advance",
+      "D": "Wait until after 4 p.m."
+    },
+    "answer": "B",
+    "explanation": "A estação abre às 9, é <em>first-come, first-served</em> → chegar cedo. (A) o workshop é de habilidades de entrevista, não revisão de currículo; (C)/(D) não sugeridos.",
+    "hint": null,
+    "trap_codes": [],
+    "tags": [],
+    "status": "rascunho",
+    "source": {
+      "kind": "migrado",
+      "file": "app/drills_data.py",
+      "ref": "MOD2_ACTION_DRILLS_C:mod2-c3#C3.3",
+      "live_on_site": true,
+      "answer_letter": "origem",
+      "build_map": {
+        "A": "A",
+        "B": "C",
+        "C": "B",
+        "D": "D"
+      }
+    }
+  },
+  {
+    "id": "mod2-c3.c3.4",
+    "section": "listening",
+    "task_type": "Listen to an Announcement",
+    "exam_format": true,
+    "format": "mcq",
+    "skill": null,
+    "cefr_min": "B1",
+    "cefr_max": "B1",
+    "stimulus": {
+      "kind": "audio",
+      "format": "html",
+      "title": "Drill C3 · Campus Event · alvo: 2 min",
+      "content": "<p><em>Narrator: Listen to an announcement about a career event.</em></p>\n<p><strong>Speaker:</strong> The annual Career Fair takes place next Wednesday from 10 to 4 in the main gymnasium. Over eighty employers will attend, mostly in engineering, healthcare, and education. A few reminders. Bring several printed copies of your résumé — most recruiters still expect a paper copy. Business-casual dress is recommended, not required. The résumé-review station near the entrance will be open from 9, an hour before the fair, and it operates first-come, first-served, so arrive early if you want feedback before talking to employers. Finally, the 9:30 workshop on interview skills is now full; a recording will be posted next week for those who missed it.</p>",
+      "audio_ref": null
+    },
+    "group": "mod2-c3",
+    "prompt": "Detail. What is true of the 9:30 interview-skills workshop?",
+    "text_format": "html",
+    "options": {
+      "A": "It has open spots",
+      "B": "It is full, but a recording will be posted next week",
+      "C": "It has been moved to next Wednesday",
+      "D": "It requires advance payment"
+    },
+    "answer": "B",
+    "explanation": "\"The 9:30 workshop... is now full; a recording will be posted next week.\"",
+    "hint": null,
+    "trap_codes": [],
+    "tags": [],
+    "status": "rascunho",
+    "source": {
+      "kind": "migrado",
+      "file": "app/drills_data.py",
+      "ref": "MOD2_ACTION_DRILLS_C:mod2-c3#C3.4",
+      "live_on_site": true,
+      "answer_letter": "origem",
+      "build_map": {
+        "A": "B",
+        "B": "A",
+        "C": "D",
+        "D": "C"
+      }
+    }
+  },
+  {
+    "id": "mod7-b8.1",
+    "section": "listening",
+    "task_type": "Listen to an Announcement",
+    "exam_format": true,
+    "format": "mcq",
+    "skill": null,
+    "cefr_min": null,
+    "cefr_max": null,
+    "stimulus": {
+      "kind": "audio",
+      "format": "markdown",
+      "title": "Listen to an Announcement",
+      "content": "**TRANSCRIÇÃO:** \"Attention students: due to a scheduled power maintenance on Saturday, the main library building will be closed from 8:00 AM to 2:00 PM. The east-wing study annex will remain open during this time with limited seating. Students with reserved group study rooms in the main building should contact the circulation desk to relocate their reservation.\"",
+      "audio_ref": null
+    },
+    "group": "mod7-b8",
+    "prompt": "What should a student with a reserved group study room in the main library do?",
+    "text_format": "markdown",
+    "options": {
+      "A": "Cancel the reservation entirely",
+      "B": "Contact the circulation desk to relocate it",
+      "C": "Use the room as normal, since only lighting is affected",
+      "D": "Wait until 2:00 PM to enter the building"
+    },
+    "answer": "B",
+    "explanation": "",
+    "hint": null,
+    "trap_codes": [],
+    "tags": [
+      "simulado-2"
+    ],
+    "status": "rascunho",
+    "source": {
+      "kind": "migrado",
+      "file": "consolidated/modulo_7_simulados.md",
+      "ref": "linha 402",
+      "live_on_site": true,
+      "answer_letter": "origem",
+      "build_map": {
+        "A": "C",
+        "B": "A",
+        "C": "D",
+        "D": "B"
+      }
+    }
+  },
+  {
+    "id": "mod7-b11.1",
+    "section": "listening",
+    "task_type": "Listen to an Announcement",
+    "exam_format": true,
+    "format": "mcq",
+    "skill": null,
+    "cefr_min": null,
+    "cefr_max": null,
+    "stimulus": {
+      "kind": "audio",
+      "format": "markdown",
+      "title": "Listen to an Announcement (2)",
+      "content": "**TRANSCRIÇÃO:** \"Good afternoon. This is a reminder that the shuttle schedule changes starting next Monday. The route to the north campus will run every fifteen minutes during peak hours (that's 8 to 10 AM and 4 to 6 PM) and every thirty minutes at all other times. The weekend shuttle is unchanged. Real-time tracking is available through the campus app; the printed schedules posted at the stops will be replaced by the end of the week.\"",
+      "audio_ref": null
+    },
+    "group": "mod7-b11",
+    "prompt": "During peak hours on a weekday, how often will the north campus shuttle run?",
+    "text_format": "markdown",
+    "options": {
+      "A": "every ten minutes",
+      "B": "every fifteen minutes",
+      "C": "every thirty minutes",
+      "D": "once an hour"
+    },
+    "answer": "B",
+    "explanation": "",
+    "hint": null,
+    "trap_codes": [],
+    "tags": [
+      "simulado-2"
+    ],
+    "status": "rascunho",
+    "source": {
+      "kind": "migrado",
+      "file": "consolidated/modulo_7_simulados.md",
+      "ref": "linha 456",
+      "live_on_site": true,
+      "answer_letter": "origem",
+      "build_map": {
+        "A": "A",
+        "B": "B",
+        "C": "C",
+        "D": "D"
+      }
+    }
+  },
+  {
+    "id": "mod7-b11.2",
+    "section": "listening",
+    "task_type": "Listen to an Announcement",
+    "exam_format": true,
+    "format": "mcq",
+    "skill": null,
+    "cefr_min": null,
+    "cefr_max": null,
+    "stimulus": {
+      "kind": "audio",
+      "format": "markdown",
+      "title": "Listen to an Announcement (2)",
+      "content": "**TRANSCRIÇÃO:** \"Good afternoon. This is a reminder that the shuttle schedule changes starting next Monday. The route to the north campus will run every fifteen minutes during peak hours (that's 8 to 10 AM and 4 to 6 PM) and every thirty minutes at all other times. The weekend shuttle is unchanged. Real-time tracking is available through the campus app; the printed schedules posted at the stops will be replaced by the end of the week.\"",
+      "audio_ref": null
+    },
+    "group": "mod7-b11",
+    "prompt": "According to the announcement, what will happen to the printed schedules at the stops?",
+    "text_format": "markdown",
+    "options": {
+      "A": "They will be removed and not replaced",
+      "B": "They will be updated by the end of the week",
+      "C": "They will stay as they are",
+      "D": "They will only be available in the app"
+    },
+    "answer": "B",
+    "explanation": "",
+    "hint": null,
+    "trap_codes": [],
+    "tags": [
+      "simulado-2"
+    ],
+    "status": "rascunho",
+    "source": {
+      "kind": "migrado",
+      "file": "consolidated/modulo_7_simulados.md",
+      "ref": "linha 462",
+      "live_on_site": true,
+      "answer_letter": "origem",
+      "build_map": {
+        "A": "C",
+        "B": "A",
+        "C": "D",
+        "D": "B"
+      }
+    }
+  },
+  {
+    "id": "mod7-b18.1",
+    "section": "listening",
+    "task_type": "Listen to an Announcement",
+    "exam_format": true,
+    "format": "mcq",
+    "skill": null,
+    "cefr_min": null,
+    "cefr_max": null,
+    "stimulus": {
+      "kind": "audio",
+      "format": "markdown",
+      "title": "Listen to an Announcement",
+      "content": "**TRANSCRIÇÃO:** \"Reminder to all residents: the annual fire safety inspection will take place this Thursday between 9 AM and 4 PM. Maintenance staff will need access to every unit, so please ensure pets are secured and any fire alarms are unobstructed. Units that are not accessible during the scheduled window will be inspected the following week, with a formal notice posted 48 hours in advance.\"",
+      "audio_ref": null
+    },
+    "group": "mod7-b18",
+    "prompt": "What should a resident do if they will not be home during the inspection window?",
+    "text_format": "markdown",
+    "options": {
+      "A": "Nothing: the unit will simply be skipped",
+      "B": "They will be inspected the following week, with prior notice given",
+      "C": "Contact the fire department directly",
+      "D": "Leave a key with a neighbor immediately"
+    },
+    "answer": "B",
+    "explanation": "",
+    "hint": null,
+    "trap_codes": [],
+    "tags": [
+      "simulado-3"
+    ],
+    "status": "rascunho",
+    "source": {
+      "kind": "migrado",
+      "file": "consolidated/modulo_7_simulados.md",
+      "ref": "linha 737",
+      "live_on_site": true,
+      "answer_letter": "origem",
+      "build_map": {
+        "A": "B",
+        "B": "A",
+        "C": "D",
+        "D": "C"
+      }
+    }
+  }
+]
