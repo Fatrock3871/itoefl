@@ -2,7 +2,7 @@
 
 Memória entre sessões. Atualizar ao concluir cada etapa.
 
-**Última atualização:** 2026-10-07 (noite)
+**Última atualização:** 2026-10-08
 **O que tem neste arquivo:** a lista única de pendências ("Tudo que falta") e
 as decisões travadas. Nada mais.
 **Histórico:** o que cada sessão fez, as fases antigas e o mapa de pendências
@@ -11,7 +11,8 @@ topo, e aqui só se marca o item.
 **Plano de expansão:** as frentes de app, videoaulas, banco de questões,
 correção por agente e conversação estão detalhadas em
 `docs/roadmap-expansao.md`. As etapas 1 a 6 abaixo são o resumo dele.
-**Conferência do formato da prova:** `docs/conferencia-formato-2026.md`.
+**Conferência do formato da prova:** `docs/conferencia-formato-2026.md` (números)
+e `docs/conferencia-conteudo-2026-10.md` (regras, Home Edition, notas).
 **Agora:** o site está pronto para publicar e a Etapa 0 (publicar, pagamento,
 teste em celular) bloqueia todo o resto. Fora dela, já estão feitos o PWA, o
 plano B do gravador no iPhone, a infraestrutura de videoaulas e de
@@ -137,6 +138,30 @@ Pequenas, independentes entre si, podem entrar em qualquer intervalo.
       minutos e não 18, a ordem das seções é fixa, a ETS publica a
       concordância entre as bandas e o 0 a 120 (o M0 usava faixas próprias) e
       os tempos de resposta do Speaking são oficiais.
+- [x] (C) Caça a erros no site inteiro, num Chrome de verdade (2026-10-08).
+      Corrigidos: data da sequência em UTC (o dia virava às 21h), sequência
+      marcada só por abrir o site, HTML digitado no registro de erros,
+      reinício que deixava subseções e calculadora, importação sem marcar
+      sincronização, mapa do curso invisível na gaveta, contraste dos botões
+      abaixo de AA nos dois temas, texto de "marcar como concluída" que não
+      clicava. O smoke test ganhou uma passada com recarga, tela de 375 px,
+      contraste e service worker (`scripts/smoke_browser.py`).
+- [x] (C) Conferência do resto do conteúdo contra a ETS (2026-10-08), em
+      `docs/conferencia-conteudo-2026-10.md`. Corrigidos M0, M3, M5, M7 e M8:
+      45 s sem preparo na entrevista, concordância oficial no M7, regras da
+      Home Edition (TOEFL Test App, celular ou espelho no check-in, check-in
+      a partir de 15 min antes), atraso no centro sem tolerância,
+      cancelamento de score, 4 envios incluídos, documento físico com
+      assinatura, e "decore 3 esqueletos" reescrito.
+- [ ] (D) Os cronogramas do M0 se chamam Sprint (30 dias), Standard (60) e
+      Premium (90); os planos de preço são Sprint (30), Standard (90) e
+      Premium (vitalício). "Standard" passa a ter dois sentidos. Renomear um
+      dos conjuntos antes de os planos entrarem.
+- [ ] (D) O site diz que Speaking e Writing são corrigidos "100% por IA" e
+      cita e-rater e SpeechRater; a ETS de 2026 não nomeia os motores. Ver a
+      seção 4 de `docs/conferencia-conteudo-2026-10.md`, com os outros pontos
+      que ficaram em aberto (preço no Brasil, documento aceito para
+      brasileiros, pontos brutos 35 ou 30).
 - [ ] (D) Reading: o site diz router de 9 minutos e módulo de 18 a 21; a
       tabela da ETS põe os números nas colunas contrárias. O total (27 a 30)
       está certo. Não foi alterado, ver a seção 3 da conferência.
