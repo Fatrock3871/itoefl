@@ -126,6 +126,15 @@ side_jtrack = (
     f'<div class="jtrack-wrap"><div class="jtrack">{journey_nodes}</div></div>'
 )
 
+# videoaulas (app/videos.json): vídeo de Parte entra no fragmento, logo abaixo
+# do <h2>; a aula de abertura entra abaixo do cabeçalho do módulo. Com a lista
+# vazia, frag e o HTML saem iguais aos de antes.
+import render_video
+VIDEOS = render_video.load_videos()
+frag, VIDEO_OPENERS = render_video.inject(frag, VIDEOS)
+for _w in render_video.warnings(VIDEOS):
+    print("AVISO:", _w)
+
 panels = "\n".join(
     f'<section class="panel" data-panel="{k}" id="panel-{k}" {"hidden" if k != "mod0" else ""}>'
     f'<div class="panel-inner">'
@@ -136,7 +145,7 @@ panels = "\n".join(
     f'<div class="ph-progress-bar"><div class="ph-progress-fill" id="phFill-{k}"></div></div>'
     '</div>'
     f'<p>{tag}</p></span></header>'
-    f'{frag[k]}</div></section>'
+    f'{VIDEO_OPENERS.get(k, "")}{frag[k]}</div></section>'
     for k, n, t, _, tag in MODS
 )
 

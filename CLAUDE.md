@@ -48,6 +48,8 @@ app/render_speaking.py    Renderizador dos conjuntos de Speaking com áudio (M3)
 app/render_wbox.py        Caixa de escrita com cronômetro e contador (M4)
 app/render_exam.py        Blocos de simulado do M7: lê as questões e o gabarito do próprio .md
 app/rebalance.py          Redistribui a letra correta no build e marca as citações "(B)"
+app/videos.json           Cadastro das videoaulas (começa vazio: sem vídeo, nada aparece)
+app/render_video.py       Valida o videos.json e injeta os players no topo do módulo e das Partes
 app/render_errorlog.py    Renderizador do formulário de Registro de erros (M1 a M6)
 app/render_weeklydash.py  Renderizador do dashboard semanal (M0)
 app/app.js                Runtime: tema, abas, progresso (checkboxes + badges), quizzes
@@ -89,6 +91,11 @@ _snapshots/               Cópias com timestamp antes de mudanças estruturais
   widget sozinho. O build falha se a contagem de blocos ou itens mudar sem
   atualizar `M7_EXPECTED_*` em `build_pipeline.py`.
 - **Palavras dos flashcards (M6)** → `app/vocab_kit.json`.
+- **Videoaulas** → `app/videos.json` (as instruções estão no próprio
+  arquivo). O build só gera a capa; o player carrega no clique. A caixa "aula
+  assistida" é um `.pchk` com `data-pid` `modN-video-<id>`, guardado em
+  `toefl_progress_v1` junto com as Partes, então cadastrar um vídeo aumenta
+  o total do módulo e quem estava em 100% deixa de estar até assistir.
 - **Banco de questões** → `bank/items/`. A pasta `bank/items/migrado/` é
   gerada das fontes acima por `bank/tools/migrate.py`: depois de mudar
   questão em qualquer uma delas, rodar o `migrate.py` de novo, senão o smoke

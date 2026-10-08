@@ -544,16 +544,19 @@
 
   allChecks.forEach(function(c){
     var pid = c.dataset.pid;
+    // "aula assistida" de uma videoaula também é um .pchk (conta no
+    // progresso do módulo), mas não conclui nem fecha a Parte onde está
+    var isVideo = c.classList.contains("vid-chk");
     if(progressState[pid]){
       c.checked = true;
-      var doneCard = c.closest(".section-card");
+      var doneCard = isVideo ? null : c.closest(".section-card");
       if(doneCard) doneCard.classList.add("done");
     }
     c.addEventListener("change", function(){
       var wasChecked = progressState[pid];
       progressState[pid] = c.checked;
       if(c.checked && !wasChecked) markDailyGoalProgress();
-      var card = c.closest(".section-card");
+      var card = isVideo ? null : c.closest(".section-card");
       if(card){
         card.classList.toggle("done", c.checked);
         // marcar a Parte como concluída fecha as subseções dela de volta
@@ -3541,6 +3544,63 @@
       showPartIdx(typeof saved === "number" ? saved : 0, { noScroll: true });
     });
   })();
+
+  // ---------- Videoaulas (app/videos.json) ----------
+  // O build só põe a capa. O player (iframe do YouTube ou <video>) nasce no
+  // clique, para a página não buscar nada de fora antes disso. A caixa "aula
+  // assistida" é um .pchk comum: quem salva e conta no progresso é o bloco de
+  // Progress checkboxes lá em cima.
+  Array.prototype.slice.call(document.querySelectorAll(".vid")).forEach(function(box){
+    var cover = box.querySelector(".vid-cover");
+    var frame = box.querySelector(".vid-frame");
+    var chk = box.querySelector(".vid-chk");
+    var doneLabel = box.querySelector(".vid-done-label");
+    function syncLabel(){
+      box.classList.toggle("watched", chk.checked);
+      doneLabel.textContent = chk.checked ? "Aula assistida" : "Marcar aula como assistida";
+    }
+    chk.addEventListener("change", syncLabel);
+    syncLabel();
+
+    cover.addEventListener("click", function(){
+      var player;
+      if(box.dataset.provider === "youtube"){
+        player = document.createElement("iframe");
+        // nocookie: o YouTube não grava cookie antes do aluno dar play.
+        // cc_load_policy liga a legenda, em português quando o vídeo tiver.
+        player.src = "https://www.youtube-nocookie.com/embed/" + encodeURIComponent(box.dataset.src) +
+          "?autoplay=1&rel=0&cc_load_policy=1&cc_lang_pref=pt-BR&hl=pt-BR";
+        player.allow = "accelerometer; autoplay; encrypted-media; picture-in-picture; fullscreen";
+        player.allowFullscreen = true;
+        player.referrerPolicy = "strict-origin-when-cross-origin";
+      } else {
+        player = document.createElement("video");
+        player.controls = true;
+        player.autoplay = true;
+        player.playsInline = true;
+        player.preload = "metadata";
+        player.src = box.dataset.src;
+        if(box.dataset.captions){
+          var track = document.createElement("track");
+          track.kind = "captions";
+          track.srclang = "pt-BR";
+          track.label = "Português";
+          track.src = box.dataset.captions;
+          track.default = true;
+          player.appendChild(track);
+        }
+        // arquivo próprio avisa quando termina, então a marcação é automática
+        player.addEventListener("ended", function(){
+          if(!chk.checked){ chk.checked = true; chk.dispatchEvent(new Event("change", { bubbles: true })); }
+        });
+      }
+      player.className = "vid-player";
+      player.title = cover.querySelector(".vid-title").textContent;
+      frame.appendChild(player);
+      frame.hidden = false;
+      cover.hidden = true;
+    });
+  });
 
   // ---------- PWA: instalar app, service worker e aviso de nova versão ----------
   // O service worker (app/sw.js, carimbado pelo build) só é registrado em

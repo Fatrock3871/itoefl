@@ -1,0 +1,12 @@
+{
+  "_como_usar": [
+    "Cada objeto da lista 'videos' vira um player no site. Lista vazia: nada aparece.",
+    "id: minúsculas, números e hífen. Não mudar depois de publicado: o progresso do aluno é guardado por ele.",
+    "module: mod0 a mod9. part: número da Parte (2 = 'PARTE 2'), ou null para a aula de abertura do módulo.",
+    "provider 'youtube': src é o id de 11 caracteres do vídeo. A legenda vem do próprio YouTube, em pt-BR quando existir.",
+    "provider 'file': src é a URL https do arquivo de vídeo e captions é a URL do arquivo de legenda .vtt.",
+    "Opcionais: duration (texto, ex. '8 min'), poster (imagem de capa), transcript (texto da aula, aceita Markdown).",
+    "Exemplo: {\"id\": \"m3-abertura\", \"module\": \"mod3\", \"part\": null, \"title\": \"Como o Speaking é pontuado\", \"duration\": \"8 min\", \"provider\": \"youtube\", \"src\": \"XXXXXXXXXXX\", \"transcript\": \"Texto da aula...\"}"
+  ],
+  "videos": []
+}

@@ -15,6 +15,7 @@ Sai com codigo 0 se tudo passar, 1 se alguma checagem falhar.
 
 import json
 import re
+import shutil
 import subprocess
 import sys
 import tempfile
@@ -384,6 +385,9 @@ check("pwa_update_bar_shows", function(){ return document.getElementById("pwaUpd
 document.getElementById("pwaUpdateLater").click();
 check("pwa_update_bar_dismisses", function(){ return document.getElementById("pwaUpdate").hidden === true; });
 
+// sem video cadastrado em app/videos.json, nenhum player aparece
+check("video_none_without_registration", function(){ return document.querySelectorAll(".vid").length === 0; });
+
 check("no_js_errors", function(){ return window.__errors.length === 0; });
 results.__jsErrors = window.__errors;
 
@@ -532,8 +536,103 @@ def bank_checks():
     return out
 
 
-def run_browser_checks(test_js=TEST_JS, prelude=""):
-    html = ARTIFACT.read_text(encoding="utf-8")
+# Terceira passada: um build de EXEMPLO, feito numa copia temporaria das
+# fontes, com conteudo que o site de verdade ainda nao tem (videoaulas
+# cadastradas). Serve para testar a infraestrutura sem deixar exemplo no ar:
+# artifact/ e as fontes reais nao sao tocados.
+FIXTURE_VIDEOS = {
+    "videos": [
+        {"id": "exemplo-abertura", "module": "mod3", "part": None, "title": "Aula de exemplo: abertura",
+         "duration": "8 min", "provider": "youtube", "src": "abcdefghijk",
+         "transcript": "Primeiro parágrafo da **transcrição** de exemplo."},
+        {"id": "exemplo-parte2", "module": "mod3", "part": 2, "title": "Aula de exemplo: Parte 2",
+         "provider": "file", "src": "https://example.invalid/aula.mp4",
+         "captions": "https://example.invalid/aula.vtt"},
+    ]
+}
+
+FIXTURE_TEST_JS = r"""
+<script>
+window.__errors = [];
+window.onerror = function(msg, src, line){ window.__errors.push(msg + " @" + line); };
+var results = {};
+function check(name, fn){
+  try { results[name] = !!fn(); }
+  catch(ex){ results[name] = false; results[name + "__error"] = ex.message; }
+}
+// nada de rede no teste: o src do player fica so anotado, sem carregar
+["HTMLIFrameElement", "HTMLMediaElement", "HTMLTrackElement"].forEach(function(cls){
+  Object.defineProperty(window[cls].prototype, "src", {
+    set: function(v){ this.setAttribute("data-test-src", v); },
+    get: function(){ return this.getAttribute("data-test-src") || ""; }
+  });
+});
+var m3 = document.querySelector('.panel[data-panel="mod3"]');
+var vids = document.querySelectorAll(".vid");
+var opener = m3.querySelector(".panel-inner > .vid");
+var partVid = m3.querySelector(".section-card .vid");
+check("video_two_rendered", function(){ return vids.length === 2 && opener && partVid && opener !== partVid; });
+check("video_opener_before_first_part", function(){
+  return opener.dataset.vid === "exemplo-abertura" && !!(opener.compareDocumentPosition(m3.querySelector(".section-card")) & Node.DOCUMENT_POSITION_FOLLOWING);
+});
+check("video_part_inside_its_part", function(){
+  var card = partVid.closest(".section-card");
+  return partVid.dataset.vid === "exemplo-parte2" && card.querySelector("h2 .htext").textContent.indexOf("PARTE 2") === 0 &&
+         card.querySelector("h2").nextElementSibling === partVid;
+});
+check("video_lazy_no_player_before_click", function(){ return document.querySelectorAll(".vid iframe, .vid video").length === 0; });
+check("video_transcript_collapsed", function(){
+  var d = opener.querySelector("details.vid-transcript");
+  return d && d.open === false && d.querySelector("strong").textContent === "transcrição" && !partVid.querySelector(".vid-transcript");
+});
+opener.querySelector(".vid-cover").click();
+check("video_youtube_player_on_click", function(){
+  var f = opener.querySelector(".vid-frame iframe");
+  return f && f.src.indexOf("https://www.youtube-nocookie.com/embed/abcdefghijk?") === 0 && f.src.indexOf("cc_lang_pref=pt-BR") !== -1 &&
+         opener.querySelector(".vid-cover").hidden && !opener.querySelector(".vid-frame").hidden;
+});
+partVid.querySelector(".vid-cover").click();
+var player = partVid.querySelector(".vid-frame video");
+check("video_file_player_with_captions", function(){
+  var t = player && player.querySelector('track[kind="captions"]');
+  return player.controls && player.src === "https://example.invalid/aula.mp4" && t && t.srclang === "pt-BR" && t.src === "https://example.invalid/aula.vtt";
+});
+check("video_counts_in_module_total", function(){ return m3.querySelectorAll(".pchk").length === m3.querySelectorAll(".section-card").length + 2; });
+var pctBefore = document.getElementById("phPct-mod3").textContent;
+var oc = opener.querySelector(".vid-chk");
+oc.checked = true; oc.dispatchEvent(new Event("change", { bubbles: true }));
+check("video_watched_counts_as_progress", function(){
+  var saved = JSON.parse(localStorage.getItem("toefl_progress_v1") || "{}");
+  return saved["mod3-video-exemplo-abertura"] === true && pctBefore === "0%" && document.getElementById("phPct-mod3").textContent !== "0%" &&
+         opener.querySelector(".vid-done-label").textContent === "Aula assistida";
+});
+player.dispatchEvent(new Event("ended"));
+check("video_file_marks_watched_at_end", function(){
+  var saved = JSON.parse(localStorage.getItem("toefl_progress_v1") || "{}");
+  return partVid.querySelector(".vid-chk").checked && saved["mod3-video-exemplo-parte2"] === true;
+});
+check("video_watched_does_not_finish_part", function(){ return !partVid.closest(".section-card").classList.contains("done"); });
+check("fixture_no_js_errors", function(){ return window.__errors.length === 0; });
+results.__jsErrors = window.__errors;
+document.title = JSON.stringify(results);
+</script>
+</body>
+"""
+
+
+def build_fixture(work):
+    """Builda o site de exemplo em `work` e devolve o index.html gerado."""
+    for name in ("app", "consolidated", "legal"):
+        shutil.copytree(ROOT / name, work / name, ignore=shutil.ignore_patterns("__pycache__"))
+    (work / "app" / "supabase_config.json").unlink(missing_ok=True)
+    (work / "app" / "videos.json").write_text(json.dumps(FIXTURE_VIDEOS, ensure_ascii=False), encoding="utf-8")
+    for script in ("build_pipeline.py", "build.py"):
+        subprocess.run([sys.executable, script], cwd=work / "app", check=True, capture_output=True)
+    return work / "artifact" / "index.html"
+
+
+def run_browser_checks(test_js=TEST_JS, prelude="", source=None):
+    html = (source or ARTIFACT).read_text(encoding="utf-8")
     html = html.replace("</body>", test_js)
     if prelude:
         html = html.replace("<head>", "<head>" + prelude, 1)
@@ -575,6 +674,10 @@ def main():
     ios = run_browser_checks(IOS_TEST_JS, IOS_PRELUDE)
     results["__jsErrors"] = (results.get("__jsErrors") or []) + (ios.pop("__jsErrors", None) or [])
     results.update(ios)
+    with tempfile.TemporaryDirectory(prefix="itoefl_fixture_") as tmp:
+        fixture = run_browser_checks(FIXTURE_TEST_JS, source=build_fixture(Path(tmp)))
+    results["__jsErrors"] += fixture.pop("__jsErrors", None) or []
+    results.update(fixture)
     results.update(legal_page_checks())
     results.update(pwa_checks())
     results.update(bank_checks())

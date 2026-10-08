@@ -224,9 +224,18 @@ Detalhe em `docs/roadmap-expansao.md`, seções 3 e 4.
       servidor continua na Etapa 5.
 - [ ] (D) Hospedagem dos vídeos. Recomendação: YouTube não listado agora.
 - [ ] (U) Entregar os vídeos gravados, pode ser um por vez.
-- [ ] (C) `app/videos.json` e player com carregamento no clique, no topo do
-      módulo e de cada Parte. "Aula assistida" conta no progresso.
-- [ ] (C) Legenda e transcrição recolhível.
+- [x] (C) `app/videos.json` e player com carregamento no clique, no topo do
+      módulo e de cada Parte. "Aula assistida" conta no progresso
+      (2026-10-07). A lista começa vazia e nada aparece. Aceita YouTube (pelo
+      id do vídeo) e arquivo próprio (URL). Testado no smoke test com um
+      build de exemplo; nunca com vídeo de verdade.
+- [x] (C) Legenda e transcrição recolhível (2026-10-07). No YouTube a legenda
+      é a do próprio vídeo, pedida em português; em arquivo próprio é um
+      `.vtt`. O build avisa quando o vídeo não tem transcrição.
+- [ ] (D) Cadastrar um vídeo aumenta o total do módulo: quem já tinha o
+      módulo em 100% (e o certificado) volta a ficar abaixo até marcar a
+      aula. Se isso incomodar, a alternativa é a aula não contar para quem já
+      concluiu. Hoje conta para todos.
 - [ ] (C) Seletor "trilha rápida" ou "trilha completa".
 
 ### Etapa 2: banco de questões e aprofundamento
