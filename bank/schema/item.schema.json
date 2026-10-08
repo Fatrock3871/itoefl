@@ -1,0 +1,125 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://itoefl.local/bank/item.schema.json",
+  "title": "Item do banco de questões iTOEFL (v1)",
+  "description": "Um item do banco. Os arquivos de bank/items/ são listas JSON destes objetos. Regras que o JSON Schema não expressa bem (resposta entre as opções, tipo de tarefa compatível com a seção, faixa CEFR, lacunas do Complete the Words) ficam em bank/tools/validate.py. O validador só usa o subconjunto de JSON Schema descrito no README: type, enum, pattern, required, properties, additionalProperties, items, minItems, minLength, minimum, $ref.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "id", "section", "task_type", "exam_format", "format", "skill",
+    "cefr_min", "cefr_max", "stimulus", "prompt", "text_format",
+    "options", "answer", "explanation", "hint", "trap_codes", "tags",
+    "status", "source"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^[a-z0-9]+(?:[-.][a-z0-9]+)*$",
+      "description": "Estável: nunca muda depois de publicado, porque attempts aponta para ele. Itens migrados herdam o id do widget no site (drill + número)."
+    },
+    "section": {
+      "type": "string",
+      "enum": ["reading", "listening", "writing", "speaking", "general"],
+      "description": "general = fora das quatro seções (diagnóstico de gramática e vocabulário do M0)."
+    },
+    "task_type": {
+      "type": "string",
+      "enum": [
+        "Complete the Words", "Read in Daily Life", "Read an Academic Passage",
+        "Listen and Choose a Response", "Listen to a Conversation",
+        "Listen to an Announcement", "Listen to an Academic Talk",
+        "Build a Sentence", "Write an Email", "Write for an Academic Discussion",
+        "Listen and Repeat", "Take an Interview",
+        "Grammar and Vocabulary"
+      ]
+    },
+    "exam_format": {
+      "type": "boolean",
+      "description": "true se o item reproduz o formato da tarefa na prova; false se é treino de base para a habilidade (ex.: Complete the Words de múltipla escolha)."
+    },
+    "format": {
+      "type": "string",
+      "enum": ["mcq", "multi_select", "fill_words", "build_sentence"],
+      "description": "Como o aluno responde. Define a forma de options e answer."
+    },
+    "select_count": {
+      "type": "integer",
+      "minimum": 2,
+      "description": "Só em multi_select: quantas alternativas o aluno marca."
+    },
+    "skill": {
+      "type": ["string", "null"],
+      "description": "Habilidade ou tipo de pergunta, quando a fonte declara (ex.: Factual Information, Inference)."
+    },
+    "cefr_min": { "$ref": "#/$defs/cefr" },
+    "cefr_max": { "$ref": "#/$defs/cefr" },
+    "stimulus": {
+      "type": ["object", "null"],
+      "additionalProperties": false,
+      "required": ["kind", "format", "title", "content", "audio_ref"],
+      "properties": {
+        "kind": { "type": "string", "enum": ["text", "audio"], "description": "audio = o aluno ouve; content guarda a transcrição." },
+        "format": { "$ref": "#/$defs/text_format" },
+        "title": { "type": ["string", "null"] },
+        "content": { "type": "string", "minLength": 1 },
+        "audio_ref": { "type": ["string", "null"], "description": "Caminho no storage quando o áudio existir. Hoje sempre null: o site usa a voz do navegador." }
+      }
+    },
+    "group": {
+      "type": "string",
+      "description": "Itens que compartilham o mesmo estímulo (um drill, um bloco de simulado)."
+    },
+    "prompt": { "type": "string", "minLength": 1 },
+    "text_format": {
+      "$ref": "#/$defs/text_format",
+      "description": "Formato de prompt, options, explanation e hint."
+    },
+    "options": {
+      "type": ["object", "array", "null"],
+      "description": "mcq e multi_select: objeto letra -> texto. build_sentence: lista dos blocos do banco (resposta + sobra). fill_words: null."
+    },
+    "answer": {
+      "type": ["string", "array"],
+      "description": "mcq: letra. multi_select: lista de letras. fill_words: palavras completas na ordem das lacunas. build_sentence: blocos na ordem certa."
+    },
+    "explanation": {
+      "type": "string",
+      "description": "Em português do Brasil. Cita alternativas como (B), entre parênteses, sempre na letra de origem. Pode ficar vazia quando a fonte não tem (o validador avisa)."
+    },
+    "hint": { "type": ["string", "null"] },
+    "trap_codes": {
+      "type": "array",
+      "items": { "type": "string", "pattern": "^[RLWS][1-6]$" },
+      "description": "Códigos de armadilha do curso (R1 a R6, L1 a L6, W1 a W6, S1 a S6)."
+    },
+    "tags": { "type": "array", "items": { "type": "string", "minLength": 1 } },
+    "status": {
+      "type": "string",
+      "enum": ["rascunho", "revisado", "publicado"]
+    },
+    "source": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["kind", "file", "ref", "live_on_site", "answer_letter", "build_map"],
+      "properties": {
+        "kind": { "type": "string", "enum": ["migrado", "original"] },
+        "file": { "type": ["string", "null"] },
+        "ref": { "type": ["string", "null"], "description": "Onde o item está na fonte (id do drill e número, linha do .md)." },
+        "live_on_site": { "type": "boolean", "description": "O item aparece hoje no artifact/index.html." },
+        "answer_letter": {
+          "type": "string",
+          "enum": ["origem"],
+          "description": "As letras de options e answer são as da fonte, antes do rebalance.py."
+        },
+        "build_map": {
+          "type": ["object", "null"],
+          "description": "Letra de origem -> letra que o build mostra (rebalance.py). null quando o build não troca as letras. Serve para ligar respostas gravadas pelo site (data-letter) a este item."
+        }
+      }
+    }
+  },
+  "$defs": {
+    "cefr": { "type": ["string", "null"], "enum": ["A1", "A2", "B1", "B2", "C1", "C2", null] },
+    "text_format": { "type": "string", "enum": ["plain", "html", "markdown"] }
+  }
+}
