@@ -140,7 +140,8 @@ Pequenas, independentes entre si, podem entrar em qualquer intervalo.
 - [x] (C) M4: o texto tem 30 itens de Build a Sentence e o widget só 10.
 - [x] (C) M0: calculadora de score interativa e resumo executivo no topo
       (dois itens da review externa que nunca foram iniciados).
-- [ ] (C) Estender o painel "Seu desempenho real" para além de M1 e M2.
+- [x] (C) Estender o painel "Seu desempenho real" para além de M1 e M2.
+      Feito em 2026-10-07: inclui Complete the Words, Build a Sentence e M7.
 - [x] (D) M9: decidido em 2026-10-07 que fica como está. A pergunta sobre
       expandir o M0 como introdução foi atendida pelo resumo no topo do módulo.
 - [x] (C) Limpeza: remover `showLockMessage()` e `.lock-msg` (código morto),
