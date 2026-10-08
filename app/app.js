@@ -431,8 +431,29 @@
   var PRACTICE_MODULES = {mod1:1, mod2:1, mod3:1, mod4:1, mod7:1};
   var floatTools = document.querySelector(".float-tools");
 
+  // barra do topo: módulo e Parte atuais. A Parte vem da paginação, que é
+  // montada mais abaixo e avisa por setBarPart().
+  var jtMod = document.getElementById("jtMod"), jtPart = document.getElementById("jtPart");
+  var journeyTitle = document.getElementById("journeyTitle");
+  var barParts = {}, currentTab = null;
+  function renderBar(){
+    var btn = tabBtns.filter(function(b){ return b.dataset.tab === currentTab; })[0];
+    if(!btn || !jtMod) return;
+    var badge = btn.querySelector(".num-badge");
+    jtMod.textContent = (badge ? badge.dataset.n + " · " : "") + btn.dataset.title;
+    jtPart.textContent = barParts[currentTab] || "";
+  }
+  function setBarPart(modKey, text){ barParts[modKey] = text; if(modKey === currentTab) renderBar(); }
+  if(journeyTitle) journeyTitle.addEventListener("click", function(){ setSidebarOpen(true); });
+
   function showTab(key){
-    tabBtns.forEach(function(b){ b.classList.toggle("active", b.dataset.tab === key); });
+    currentTab = key;
+    renderBar();
+    tabBtns.forEach(function(b){
+      var on = b.dataset.tab === key;
+      b.classList.toggle("active", on);
+      if(on) b.setAttribute("aria-current", "page"); else b.removeAttribute("aria-current");
+    });
     if(floatTools) floatTools.hidden = !PRACTICE_MODULES[key];
     journeyNodes.forEach(function(j){
       var on = j.dataset.tab === key;
@@ -702,6 +723,7 @@
     }
     return { total: total, confirmed: confirmed, correct: correct };
   }
+  var LIVE_SCORE_MIN = 10;
   function renderLiveScoreSection(prefix, pctId, bandId, emptyText){
     var pctEl = document.getElementById(pctId);
     var bandEl = document.getElementById(bandId);
@@ -716,8 +738,12 @@
     var pct = Math.round(100 * a.correct / a.confirmed);
     var band = cefrBandFromPct(pct);
     pctEl.textContent = pct + "%";
-    bandEl.textContent = "Banda " + band.code + " (" + band.label + ") · " + a.correct + "/" + a.confirmed + " confirmadas" +
-      (a.confirmed < a.total ? " de " + a.total + " no total" : "");
+    // com poucas respostas o percentual não diz nada (1 de 1 daria "banda
+    // 6"): a banda só aparece a partir de LIVE_SCORE_MIN respostas
+    var tail = a.correct + "/" + a.confirmed + " confirmadas" + (a.confirmed < a.total ? " de " + a.total + " no total" : "");
+    bandEl.textContent = (a.confirmed < LIVE_SCORE_MIN
+      ? "Amostra pequena: a banda aparece a partir de " + LIVE_SCORE_MIN + " respostas"
+      : "Banda " + band.code + " (" + band.label + ")") + " · " + tail;
   }
   function updateLiveScorePanel(){
     renderLiveScoreSection("mod1-", "liveScoreReadingPct", "liveScoreReadingBand", "Responda os Action Drills do Módulo 1 para calcular");
@@ -795,6 +821,57 @@
     });
   }
 
+  // Devolutiva em palavras, usada pelos quizzes e pelos simulados. Antes a
+  // correção era só cor (errada em vermelho, certa em laranja): quem não
+  // distingue as duas não sabia se tinha acertado. Agora cada alternativa
+  // ganha uma etiqueta ("sua resposta", "correta") e a questão ganha uma
+  // frase de veredito, anunciada por leitor de tela (role="status").
+  function shownLetter(opt){
+    var l = opt.querySelector(".oletter");
+    return l ? l.textContent.trim() : opt.dataset.letter;
+  }
+  function setOptTag(opt, text, kind){
+    var tag = opt.querySelector(".otag");
+    if(!text){ if(tag) tag.parentNode.removeChild(tag); return; }
+    if(!tag){ tag = document.createElement("span"); opt.appendChild(tag); }
+    tag.className = "otag otag-" + kind;
+    tag.textContent = text;
+  }
+  function verdictText(ok, pickedOpts, keyOpts){
+    function list(opts){
+      var L = opts.map(function(o){ return "(" + shownLetter(o) + ")"; });
+      return L.length > 1 ? L.slice(0, -1).join(", ") + " e " + L[L.length - 1] : (L[0] || "");
+    }
+    if(ok) return "Você acertou.";
+    return "Você marcou " + list(pickedOpts) + ". " + (keyOpts.length > 1 ? "As corretas são " : "A correta é ") + list(keyOpts) + ".";
+  }
+  // marca as alternativas de uma questão corrigida e devolve a frase
+  function tagOptions(opts, pickedLetters, keyLetters){
+    var picked = [], key = [];
+    opts.forEach(function(o){
+      var L = o.dataset.letter, isKey = keyLetters.indexOf(L) !== -1, isPicked = pickedLetters.indexOf(L) !== -1;
+      if(isKey) key.push(o);
+      if(isPicked) picked.push(o);
+      if(isKey && isPicked) setOptTag(o, "sua resposta, correta", "ok");
+      else if(isKey) setOptTag(o, "correta", "ok");
+      else if(isPicked) setOptTag(o, "sua resposta", "bad");
+      else setOptTag(o, "");
+    });
+    var ok = key.length === picked.length && key.every(function(o){ return picked.indexOf(o) !== -1; });
+    return { ok: ok, text: verdictText(ok, picked, key) };
+  }
+  function setVerdict(holder, beforeNode, result){
+    var v = holder.querySelector(".verdict");
+    if(!result){ if(v) v.parentNode.removeChild(v); return; }
+    if(!v){
+      v = document.createElement("p");
+      v.setAttribute("role", "status");
+      holder.insertBefore(v, beforeNode || null);
+    }
+    v.className = "verdict " + (result.ok ? "verdict-ok" : "verdict-bad");
+    v.textContent = (result.ok ? "✓ " : "✗ ") + result.text;
+  }
+
   var quizDrills = Array.prototype.slice.call(document.querySelectorAll(".quiz-drill"));
 
   quizDrills.forEach(function(drillEl){
@@ -850,8 +927,12 @@
       var opts = Array.prototype.slice.call(card.querySelectorAll(".opt"));
       var confirmBtn = card.querySelector(".qconfirm");
       var fb = card.querySelector(".qfeedback");
+      if(!s || !s.confirmed){
+        opts.forEach(function(o){ setOptTag(o, ""); });
+        if(fb) setVerdict(fb, null, null);
+      }
       if(!s){
-        opts.forEach(function(o){ o.disabled = false; o.classList.remove("correct","wrong","picked"); });
+        opts.forEach(function(o){ o.disabled = false; o.classList.remove("correct","wrong","picked"); o.setAttribute("aria-pressed", "false"); });
         if(confirmBtn){ confirmBtn.hidden = true; confirmBtn.disabled = true; }
         if(fb) fb.hidden = true;
         return;
@@ -860,7 +941,9 @@
         var pickedList = multi ? (s.picked || []) : (s.picked ? [s.picked] : []);
         opts.forEach(function(o){
           o.disabled = false;
-          o.classList.toggle("picked", pickedList.indexOf(o.dataset.letter) !== -1);
+          var on = pickedList.indexOf(o.dataset.letter) !== -1;
+          o.classList.toggle("picked", on);
+          o.setAttribute("aria-pressed", on ? "true" : "false");
         });
         if(confirmBtn){ confirmBtn.hidden = false; confirmBtn.disabled = pickedList.length !== need; }
         if(fb) fb.hidden = true;
@@ -875,7 +958,10 @@
           else if(gotSet.indexOf(L) !== -1) o.classList.add("wrong");
         });
         if(confirmBtn){ confirmBtn.hidden = true; }
-        if(fb) fb.hidden = false;
+        if(fb){
+          setVerdict(fb, fb.firstChild, tagOptions(opts, gotSet, wantSet));
+          fb.hidden = false;
+        }
       }
     }
 
@@ -1792,6 +1878,9 @@
     var submitBtn = root.querySelector(".exam-submit");
     var retryBtn = root.querySelector(".exam-retry");
     var resultEl = root.querySelector(".exam-result");
+    var leftEl = document.createElement("span");
+    leftEl.className = "exam-left";
+    resultEl.parentNode.insertBefore(leftEl, resultEl);
     var state = {};
     try { state = JSON.parse(safeGet(lsKey) || "{}"); } catch(e){ state = {}; }
     if(!state || typeof state !== "object" || !state.answers) state = { answers: {}, done: false };
@@ -1802,9 +1891,16 @@
         var chosen = state.answers[it.dataset.num];
         Array.prototype.forEach.call(it.querySelectorAll(".exam-opt"), function(o){
           o.classList.toggle("is-chosen", o.dataset.letter === chosen);
+          o.setAttribute("aria-pressed", o.dataset.letter === chosen ? "true" : "false");
         });
       });
-      submitBtn.disabled = items.some(function(it){ return !state.answers[it.dataset.num]; });
+      var missing = items.filter(function(it){ return !state.answers[it.dataset.num]; }).length;
+      submitBtn.disabled = missing > 0;
+      // o botão apagado não dizia por quê: mostra quantas faltam
+      if(leftEl){
+        leftEl.hidden = missing === 0 || state.done;
+        leftEl.textContent = missing === 1 ? "Falta 1 questão para entregar." : "Faltam " + missing + " questões para entregar.";
+      }
     }
     function grade(){
       var right = 0;
@@ -1813,12 +1909,14 @@
         var ok = chosen === key;
         if(ok) right++;
         it.classList.add(ok ? "is-right" : "is-wrong");
-        Array.prototype.forEach.call(it.querySelectorAll(".exam-opt"), function(o){
+        var opts = Array.prototype.slice.call(it.querySelectorAll(".exam-opt"));
+        opts.forEach(function(o){
           o.disabled = true;
           o.classList.toggle("is-key", o.dataset.letter === key);
         });
         var expl = it.querySelector(".exam-expl");
         if(expl) expl.hidden = false;
+        setVerdict(it, expl, tagOptions(opts, [chosen], [key]));
       });
       resultEl.textContent = right + " de " + items.length + " corretas";
       resultEl.hidden = false;
@@ -1848,7 +1946,9 @@
         it.classList.remove("is-right", "is-wrong");
         Array.prototype.forEach.call(it.querySelectorAll(".exam-opt"), function(o){
           o.disabled = false; o.classList.remove("is-key", "is-chosen");
+          setOptTag(o, "");
         });
+        setVerdict(it, null, null);
         var expl = it.querySelector(".exam-expl");
         if(expl) expl.hidden = true;
       });
@@ -3502,6 +3602,7 @@
         var h2 = c.querySelector("h2");
         return h2 ? h2.textContent.trim() : "";
       });
+      var shortTitles = titles.map(function(t){ return t.replace(/^PARTE\s+\d+\s*[:·]\s*/i, ""); });
 
       var pager = document.createElement("div");
       pager.className = "part-pager";
@@ -3548,8 +3649,10 @@
         opts = opts || {};
         idx = Math.max(0, Math.min(cards.length - 1, idx));
         cards.forEach(function(c, i){ c.hidden = i !== idx; });
-        pager.querySelector(".part-pager-count").textContent = "Parte " + (idx + 1) + " de " + cards.length + " · ";
-        pager.querySelector(".part-pager-title").textContent = titles[idx];
+        // "Parte 1 de 9" já diz o número: o título entra sem o "PARTE 1:"
+        pager.querySelector(".part-pager-count").textContent = "Parte " + (idx + 1) + " de " + cards.length;
+        pager.querySelector(".part-pager-title").textContent = shortTitles[idx];
+        setBarPart(modKey, "Parte " + (idx + 1) + " de " + cards.length);
         pager.querySelector(".part-prev").disabled = idx === 0;
         var topNextBtn = pager.querySelector(".part-next");
         topNextBtn.disabled = idx === cards.length - 1 && !nextModKey;

@@ -104,6 +104,10 @@ journey = (
     '<button class="hamburger" id="sideToggle" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="sideRail">'
     '<span></span><span></span><span></span></button>'
     '<div class="journey-row">'
+    # onde o aluno está (módulo e Parte), sempre à vista na barra do topo.
+    # É um botão: clicar abre a gaveta, o que dá um rótulo ao menu.
+    '<button type="button" class="journey-title" id="journeyTitle" aria-label="Abrir o menu de módulos">'
+    '<span class="jt-mod" id="jtMod"></span><span class="jt-part" id="jtPart"></span></button>'
     '<div class="journey-tools">'
     '<div class="auth-box" id="authBox" hidden>'
     '<div id="authIn" hidden>'

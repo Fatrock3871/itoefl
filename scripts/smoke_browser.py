@@ -275,6 +275,33 @@ def run():
                     ' return !!c && c.textContent === "Drill <b>A1</b> & teste" && c.children.length === 0; })()'))
                 check("real_no_mailto_links", b.eval('document.querySelectorAll(\'a[href^="mailto:"]\').length === 0'))
 
+                # devolutiva em palavras, nao so em cor: questao errada do M1
+                # (etiquetas e frase com as duas letras), questao certa do
+                # diagnostico, bloco de simulado entregue e o que ainda falta
+                fb = b.eval(r"""(function(){
+                  function tags(card, sel){ return Array.prototype.map.call(card.querySelectorAll(sel + " .otag"), function(t){ return t.textContent; }).sort().join("|"); }
+                  var wrong = document.querySelector("#panel-mod1 .opt.wrong").closest(".qcard");
+                  var right = document.querySelector('.quiz-drill[data-drill="mod0-diag"] .qcard');
+                  var v = wrong.querySelector(".verdict"), letters = (v.textContent.match(/\([A-F]\)/g) || []);
+                  var ex = document.querySelectorAll(".exam");
+                  return { wrongTags: tags(wrong, ".opt"), wrongVerdict: v.textContent, role: v.getAttribute("role"),
+                    lettersMatch: letters.length === 2 &&
+                      letters[0] === "(" + wrong.querySelector(".opt.wrong .oletter").textContent + ")" &&
+                      letters[1] === "(" + wrong.querySelector(".opt.correct .oletter").textContent + ")",
+                    rightTags: tags(right, ".opt"), rightVerdict: right.querySelector(".verdict").textContent,
+                    examVerdicts: ex[0].querySelectorAll(".verdict.verdict-ok").length === ex[0].querySelectorAll(".exam-item").length,
+                    examTags: ex[0].querySelectorAll(".otag-ok").length === ex[0].querySelectorAll(".exam-item").length,
+                    openTags: ex[1].querySelectorAll(".otag, .verdict").length, left: ex[1].querySelector(".exam-left").textContent,
+                    pressed: ex[1].querySelectorAll('.exam-opt[aria-pressed="true"]').length };
+                })()""")
+                check("real_feedback_says_right_or_wrong_in_words",
+                      fb["wrongTags"] == "correta|sua resposta" and fb["wrongVerdict"].startswith("✗ Você marcou") and fb["lettersMatch"]
+                      and fb["role"] == "status" and fb["rightTags"] == "sua resposta, correta" and fb["rightVerdict"] == "✓ Você acertou."
+                      and fb["examVerdicts"] and fb["examTags"], fb)
+                check("real_exam_shows_how_many_left", fb["openTags"] == 0 and fb["left"].startswith("Falta") and fb["pressed"] == 1, fb)
+                small = b.eval('document.getElementById("liveScoreWritingBand").textContent')
+                check("real_no_band_from_tiny_sample", small.startswith("Amostra pequena") and "Banda" not in small, small)
+
                 # a data da meta e da sequencia e a do aparelho, nao a de UTC:
                 # com o toISOString trocado, quem depender dele grava 1999
                 dates = b.eval(
@@ -349,6 +376,24 @@ def run():
                     if bad:
                         over[key] = bad
                 check("mobile_375_no_horizontal_overflow", not over, over)
+
+                # barra do topo: gruda no alto, cobre o botao do menu (que
+                # antes flutuava sobre o texto) e diz onde o aluno esta
+                bar = b.eval(r"""(function(){
+                  document.querySelector('.tabbtn[data-tab="mod1"]').click();
+                  window.__toeflShowPart.mod1(document.querySelectorAll("#panel-mod1 .section-card")[2]);
+                  window.scrollTo(0, 900);
+                  var j = document.getElementById("journey").getBoundingClientRect(), h = document.getElementById("sideToggle").getBoundingClientRect();
+                  return { top: Math.round(j.top), left: Math.round(j.left), right: Math.round(j.right), vw: document.documentElement.clientWidth,
+                    covers: h.top >= j.top && h.bottom <= j.bottom && h.left >= j.left,
+                    mod: document.getElementById("jtMod").textContent, part: document.getElementById("jtPart").textContent,
+                    pager: document.querySelector("#panel-mod1 .part-pager-label").textContent, scrolled: window.scrollY > 300,
+                    current: document.querySelector('.tabbtn[aria-current="page"]').dataset.tab };
+                })()""")
+                check("mobile_top_bar_sticks_and_names_the_place",
+                      bar["scrolled"] and bar["top"] == 0 and bar["left"] <= 0 and bar["right"] >= bar["vw"] and bar["covers"]
+                      and bar["mod"] == "01 · Reading" and bar["part"] == "Parte 3 de 7" and "PARTE 3" not in bar["pager"]
+                      and bar["current"] == "mod1", bar)
 
                 for theme in ("light", "dark"):
                     b.eval('document.documentElement.setAttribute("data-theme", %s)' % json.dumps(theme))
