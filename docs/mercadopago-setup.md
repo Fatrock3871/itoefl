@@ -14,15 +14,17 @@ functions no seu projeto Supabase. Isso exige acesso que só você tem.
 
 1. Aluno loga (e-mail ou Google) → passa pelo `#authGate` de sempre.
 2. Se não for a conta admin, o app confere a tabela `entitlements` no
-   Supabase. Sem linha `paid = true` → mostra `#payGate` ("Comprar acesso").
-3. Clique em "Comprar acesso" → chama a edge function `create-checkout`, que
-   cria uma preferência de pagamento no Mercado Pago e devolve a URL de
-   checkout. O navegador é redirecionado pra lá.
+   Supabase. Sem acesso em dia (nunca comprou, ou `expires_at` já passou) →
+   mostra `#payGate`, com a escolha de plano.
+3. O aluno escolhe o plano e clica em "Comprar" → chama a edge function
+   `create-checkout` com o id do plano. Ela decide o preço, cria uma
+   preferência de pagamento no Mercado Pago e devolve a URL de checkout. O
+   navegador é redirecionado pra lá.
 4. Aluno paga no Mercado Pago → o Mercado Pago notifica a edge function
    `mp-webhook` (URL configurada automaticamente na criação da preferência,
    não precisa cadastrar nada no painel do MP) → ela reconfirma o pagamento
-   direto na API do Mercado Pago (nunca confia só na notificação) e grava
-   `paid = true` na tabela `entitlements` do aluno.
+   direto na API do Mercado Pago (nunca confia só na notificação), registra
+   o pagamento em `payments` e recalcula o prazo em `entitlements`.
 5. O Mercado Pago também redireciona o navegador de volta pro site
    (`?mp=success`) → o app tenta confirmar o acesso por até ~15 segundos
    (o webhook é assíncrono, pode chegar um pouco depois do redirect) antes
@@ -94,19 +96,23 @@ curl.exe -X POST "https://itfosjcymqfzjsftvjey.supabase.co/functions/v1/mp-webho
 Tem que responder `ok`. Se responder `Missing authorization header`, o
 `config.toml` não foi aplicado: rode o deploy do `mp-webhook` de novo.
 
-## 5. Ajustar preço e nome do produto
+## 5. Planos e preços
 
-Em `supabase/functions/create-checkout/index.ts`, os dois primeiros valores:
+Desde 2026-10-08 são três planos (Sprint, Standard e Premium), com prazo.
+O passo a passo para publicar essa mudança, a regra de renovação e os testes
+de compra estão em `docs/deploy-planos.md`.
 
-```ts
-const PRICE_BRL = 9.9;
-const PRODUCT_TITLE = "iTOEFL — Acesso vitalício à plataforma";
-```
+O preço mora em dois arquivos, que têm de dizer a mesma coisa:
 
-O texto do botão "Comprar acesso: R$ 9,90 (vitalício)" em `app/build.py` **não** puxa
-esse valor automaticamente — se mudar o preço, mude os dois lugares e rode
-`supabase functions deploy create-checkout` de novo, além de rebuildar o site
-(`python build_pipeline.py && python build.py`).
+- `supabase/functions/_shared/plans.ts`: o valor **cobrado** e o prazo
+  gravado. Roda no servidor.
+- `app/plans.json`: o valor **mostrado** na tela de compra e na tela de
+  apresentação.
+
+O navegador manda só o id do plano. Para mudar preço ou prazo: editar os
+dois arquivos (o smoke test reprova se divergirem), rebuildar o site e rodar
+`supabase functions deploy create-checkout` e
+`supabase functions deploy mp-webhook`.
 
 ## 6. Testar
 

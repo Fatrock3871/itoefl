@@ -65,14 +65,25 @@ Nada das etapas seguintes anda sem esta. Ordem sugerida de cima para baixo.
       (Etapa 3), porque assinatura muda o requisito.
 - [x] (D) Preço de lançamento. Decidido em 2026-10-07: três planos, ver
       "Decisões travadas". O preço único de R$ 9,90 vitalício sai.
-- [ ] (C) Implementar os três planos. Hoje o código só conhece um produto
-      vitalício: `PRICE_BRL = 9.9` em `create-checkout`, o botão em
-      `app/build.py` e `entitlements` sem data de expiração. Falta: escolha
-      de plano na tela de compra, preço por plano na function, validade em
-      `entitlements` (30 e 90 dias) com o `mp-webhook` gravando o prazo, o
-      aviso de acesso vencido em Minha conta e o texto de `legal/termos.md`,
-      que hoje só fala em acesso vitalício. Mexer no gateway e publicar
-      function exige autorização do usuário na hora.
+- [x] (C) Implementar os três planos, **em código, sem publicar**
+      (2026-10-08). Escolha de plano na tela de compra; preço e prazo no
+      servidor (`supabase/functions/_shared/plans.ts`), o navegador manda só
+      o id; tabela `payments` (extrato) e `entitlements.expires_at`,
+      recalculada do extrato pela função `apply_payment`; aviso de acesso
+      vencido no bloqueio e em Minha conta, com "Renovar ou mudar de plano";
+      cupom percentual sobre o preço do plano; termos com planos, validade e
+      reembolso de 7 dias. Regra: renovar antes de vencer soma os dias,
+      Premium troca o prazo por vitalício, reembolso recalcula. As functions
+      nunca rodaram (a máquina não tem Deno): a primeira execução é o deploy.
+- [ ] (U) Publicar os planos, seguindo `docs/deploy-planos.md` na ordem:
+      rodar `supabase/migrations/20261008_planos.sql`, publicar
+      `create-checkout` e `mp-webhook`, conferir a versão publicada e fazer a
+      compra de teste de cada plano (inclui vencimento, aviso repetido e
+      reembolso).
+- [ ] (U) Passar por advogado os dois trechos de `legal/termos.md` marcados
+      `REVISAR (advogado)`: seção 6 (planos, validade, renovação) e seção 7
+      (reembolso de 7 dias, sem reembolso proporcional depois). O build
+      avisa enquanto a marca existir.
 - [ ] (U) Concluir a compra de teste em aba anônima, sem extensão nenhuma,
       e ver o acesso ser liberado de ponta a ponta. Dados do cartão de teste
       na Sessão 2026-09-24 de `docs/historico-sessoes.md`.

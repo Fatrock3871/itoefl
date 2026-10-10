@@ -95,6 +95,69 @@ check("legal_links_exist", function(){
 });
 check("lock_message_removed", function(){ return !document.getElementById("lockMsg"); });
 
+// ---- planos: escolha na tela de compra e validade do acesso ----
+var planInputs = Array.prototype.slice.call(document.querySelectorAll("#planPick input[name=plan]"));
+check("plans_three_options_standard_default", function(){
+  var checked = planInputs.filter(function(i){ return i.checked; });
+  return planInputs.map(function(i){ return i.value; }).join() === "sprint,standard,premium" &&
+    checked.length === 1 && checked[0].value === "standard" &&
+    document.getElementById("payBtn").textContent === "Comprar Standard: R$ 89,90";
+});
+check("plans_recommended_badge_only_on_standard", function(){
+  var badges = document.querySelectorAll("#planPick .plan-badge");
+  return badges.length === 1 && badges[0].textContent === "Recomendado" &&
+    badges[0].closest(".plan-opt").querySelector("input").value === "standard" &&
+    !/mais (escolhido|vendido)/i.test(document.body.textContent);
+});
+check("plans_button_follows_choice", function(){
+  var btn = document.getElementById("payBtn"), out = [];
+  ["sprint", "premium", "standard"].forEach(function(id){
+    var input = document.querySelector('#planPick input[value="' + id + '"]');
+    input.checked = true; input.dispatchEvent(new Event("change", { bubbles: true }));
+    out.push(btn.textContent);
+  });
+  return out.join("|") === "Comprar Sprint: R$ 39,90|Comprar Premium: R$ 149,90|Comprar Standard: R$ 89,90";
+});
+check("plans_gate_states_refund_and_single_payment", function(){
+  var t = document.querySelector("#payGate .pay-terms").textContent;
+  return t.indexOf("7 dias") !== -1 && t.indexOf("sem renovação automática") !== -1;
+});
+var ACC = window.__toeflAccess, NOW = Date.UTC(2026, 9, 8, 12, 0, 0), DAY = 86400000;
+check("access_none_without_purchase", function(){
+  return !ACC.state(null, NOW).active && !ACC.state({ paid: false, expires_at: null }, NOW).active &&
+    ACC.gateCopy(ACC.state(null, NOW)).title === "Libere seu acesso";
+});
+check("access_lifetime_without_expiry", function(){
+  // linha antiga, sem as colunas dos planos, e Premium: as duas sem prazo
+  var old = ACC.state({ paid: true }, NOW), prem = ACC.state({ paid: true, plan: "premium", expires_at: null }, NOW);
+  return old.active && old.lifetime && prem.active && prem.lifetime &&
+    ACC.text(prem, null).text === "Plano Premium: acesso vitalício liberado." && ACC.text(old, null).text === "Acesso vitalício liberado.";
+});
+check("access_active_until_expiry_with_days_left", function(){
+  var st = ACC.state({ paid: true, plan: "standard", expires_at: new Date(NOW + 10 * DAY).toISOString() }, NOW);
+  var line = ACC.text(st, null);
+  return st.active && !st.lifetime && st.daysLeft === 10 && line.cls === "is-paid" &&
+    line.text.indexOf("Plano Standard: acesso liberado até ") === 0 && line.text.indexOf("(faltam 10 dias)") !== -1 &&
+    ACC.gateCopy(st).title === "Renovar ou mudar de plano";
+});
+check("access_last_week_is_flagged", function(){
+  var st = ACC.state({ paid: true, plan: "sprint", expires_at: new Date(NOW + DAY / 2).toISOString() }, NOW);
+  return st.active && st.daysLeft === 1 && ACC.text(st, null).cls === "is-ending" && ACC.text(st, null).text.indexOf("(falta 1 dia)") !== -1;
+});
+check("access_expired_blocks_and_says_so", function(){
+  var st = ACC.state({ paid: true, plan: "sprint", expires_at: new Date(NOW - 1000).toISOString() }, NOW);
+  var line = ACC.text(st, null), copy = ACC.gateCopy(st);
+  return !st.active && st.expired && line.cls === "is-unpaid" && line.text.indexOf("O plano Sprint venceu em ") === 0 &&
+    copy.title === "Seu acesso venceu" && copy.text.indexOf("progresso continua salvo") !== -1;
+});
+check("access_bad_date_stays_locked", function(){
+  return !ACC.state({ paid: true, expires_at: "nao-e-data" }, NOW).active;
+});
+check("account_renew_button_starts_hidden", function(){
+  var b = document.getElementById("accountRenew");
+  return !!b && b.hidden === true;
+});
+
 // ---- exercicios no formato da prova (2026-10-07) ----
 function typeInto(input, value){ input.value = value; input.dispatchEvent(new Event("input")); }
 
@@ -608,6 +671,56 @@ def pwa_checks():
     return out
 
 
+def plans_checks():
+    """Os tres planos: o que o site mostra (app/plans.json) bate com o que o
+    servidor cobra (supabase/functions/_shared/plans.ts), o preco nunca vem
+    do navegador, a migracao esta espelhada no schema.sql e os termos falam
+    dos planos e do reembolso."""
+    out = {}
+    site = json.loads((APP_DIR / "plans.json").read_text(encoding="utf-8"))
+    fn_dir = ROOT / "supabase" / "functions"
+    shared = (fn_dir / "_shared" / "plans.ts").read_text(encoding="utf-8")
+    server = [
+        (m.group(1), m.group(2), None if m.group(3) == "null" else int(m.group(3)), int(m.group(4)))
+        for m in re.finditer(r'\{ id: "(\w+)", name: "(\w+)", days: (null|\d+), priceCents: (\d+) \}', shared)
+    ]
+    out["plans_server_matches_site"] = len(server) == 3 and server == [
+        (p["id"], p["name"], p["days"], p["price_cents"]) for p in site["plans"]
+    ]
+    out["plans_prices_are_the_decided_ones"] = server == [
+        ("sprint", "Sprint", 30, 3990), ("standard", "Standard", 90, 8990), ("premium", "Premium", None, 14990),
+    ]
+
+    checkout = (fn_dir / "create-checkout" / "index.ts").read_text(encoding="utf-8")
+    out["plans_checkout_price_comes_from_server"] = (
+        "findPlan(planId)" in checkout and "unit_price: priceCents / 100" in checkout
+        and "plan.priceCents * (100 - coupon.percent)" in checkout
+        and not re.search(r"body\??\.(price|amount|unit_price|days)", checkout)
+    )
+    webhook = (fn_dir / "mp-webhook" / "index.ts").read_text(encoding="utf-8")
+    out["plans_webhook_records_term"] = (
+        'rpc("apply_payment"' in webhook and "p_days: ref.plan.days" in webhook
+        and "parseReference(payment.external_reference)" in webhook
+    )
+
+    # o corpo da migracao (da primeira secao em diante) tem de estar igual no schema.sql
+    migration = (ROOT / "supabase" / "migrations" / "20261008_planos.sql").read_text(encoding="utf-8")
+    body = migration[migration.index("-- ============ entitlements: plano e validade"):]
+    schema = (ROOT / "supabase" / "schema.sql").read_text(encoding="utf-8")
+    out["plans_migration_mirrored_in_schema"] = body in schema and all(
+        s in body for s in ("expires_at timestamptz", "create table if not exists payments",
+                            "function public.apply_payment", "from public, anon, authenticated")
+    )
+
+    terms = (ARTIFACT.parent / "termos.html").read_text(encoding="utf-8")
+    out["plans_terms_cover_plans_and_refund"] = (
+        all(s in terms for s in ("Sprint", "Standard", "Premium", "30 dias", "90 dias", "Vitalício",
+                                 "7 dias corridos", "artigo 49", "renovação automática"))
+        and "REVISAR" not in terms
+    )
+    return out
+
+
 def deep_markup_checks():
     """Marcacao :::aprofundamento mal escrita tem que derrubar o build, nao
     sair calada no site."""
@@ -843,6 +956,7 @@ def main():
     results.update(fixture)
     results.update(legal_page_checks())
     results.update(pwa_checks())
+    results.update(plans_checks())
     results.update(deep_markup_checks())
     results.update(bank_checks())
 

@@ -269,11 +269,43 @@ gate = (
     '</div>'
 )
 
-# gate de pagamento: some depois do login se a conta ainda não pagou (e não é
-# a conta admin, ver ADMIN_EMAIL em app.js). Preço aqui é só o texto do botão
-# -- o valor de verdade é cobrado pelo PRICE_BRL em
-# supabase/functions/create-checkout/index.ts; mudar um sem o outro deixa o
-# texto do botão errado.
+# ---- os três planos de preço (app/plans.json) ----
+# Só o que o site MOSTRA sai daqui. O valor cobrado e o prazo gravado saem de
+# supabase/functions/_shared/plans.ts, no servidor; o smoke test reprova se os
+# dois arquivos divergirem.
+with open("plans.json", encoding="utf-8") as _f:
+    _plans_cfg = json.load(_f)
+PLANS = _plans_cfg["plans"]
+REFUND_DAYS = _plans_cfg["refund_days"]
+if [p["id"] for p in PLANS if p.get("recommended")] != ["standard"]:
+    raise SystemExit("plans.json: o selo Recomendado tem de estar no Standard, e só nele (decisão de 2026-10-08)")
+
+
+def brl(cents):
+    """3990 -> 'R$ 39,90'"""
+    return f"R$ {cents // 100},{cents % 100:02d}"
+
+
+# o selo é "Recomendado" e nunca "mais escolhido" ou "mais vendido": sem dado
+# de venda seria afirmação falsa
+PLAN_BADGE = '<span class="plan-badge">Recomendado</span>'
+
+plan_options = "".join(
+    f'<label class="plan-opt"><input type="radio" name="plan" value="{p["id"]}" data-name="{p["name"]}" '
+    f'data-price="{brl(p["price_cents"])}"{" checked" if p.get("recommended") else ""}>'
+    '<span class="plan-opt-body">'
+    f'<span class="plan-opt-name">{p["name"]}{PLAN_BADGE if p.get("recommended") else ""}</span>'
+    f'<span class="plan-opt-access">{p["access"]}</span>'
+    '</span>'
+    f'<span class="plan-opt-price">{brl(p["price_cents"])}</span></label>'
+    for p in PLANS
+)
+_plan_default = next(p for p in PLANS if p.get("recommended"))
+
+# gate de pagamento: aparece depois do login se a conta não tem acesso em dia
+# (nunca comprou, ou o plano venceu) e não é a conta admin, ver ADMIN_EMAIL em
+# app.js. Os textos do título e do parágrafo são trocados pelo app.js conforme
+# a situação (gateCopy). O preço mostrado aqui vem de plans.json.
 pay_gate = (
     '<div class="auth-gate" id="payGate" hidden>'
     f'{AUTH_BG_DECOR}'
@@ -282,17 +314,24 @@ pay_gate = (
     f'<span class="logo">{LOGO_SVG}</span>'
     f'<span class="btxt"><span class="name">iTOEFL</span></span>'
     '</div>'
-    '<span class="auth-gate-kicker">Acesso pago</span>'
-    '<h2>Libere seu acesso</h2>'
-    '<p>Sua conta está conectada, mas o conteúdo completo da plataforma só libera depois da compra.</p>'
+    '<span class="auth-gate-kicker" id="payGateKicker">Acesso pago</span>'
+    '<h2 id="payGateTitle">Libere seu acesso</h2>'
+    '<p id="payGateText">Sua conta está conectada, mas o conteúdo completo da plataforma só libera depois da compra.</p>'
+    '<fieldset class="plan-pick" id="planPick">'
+    '<legend class="auth-label">Escolha o plano</legend>'
+    f'{plan_options}'
+    '</fieldset>'
     '<div class="auth-field">'
     '<label class="auth-label" for="couponInput">Cupom de desconto (opcional)</label>'
     '<input type="text" class="auth-input" id="couponInput" autocomplete="off" placeholder="Ex.: LANCAMENTO20">'
     '</div>'
     '<div class="auth-gate-actions">'
-    '<button type="button" id="payBtn">Comprar acesso: R$ 9,90 (vitalício)</button>'
+    f'<button type="button" id="payBtn">Comprar {_plan_default["name"]}: {brl(_plan_default["price_cents"])}</button>'
     '</div>'
+    f'<p class="pay-terms">Pagamento único, sem renovação automática. Você pode desistir em até {REFUND_DAYS} dias '
+    'e receber o valor de volta.</p>'
     '<span id="payGateMsg" class="auth-gate-msg" hidden></span>'
+    '<button type="button" id="payGateBack" class="pay-signout" hidden>Voltar para a plataforma</button>'
     '<button type="button" id="paySignOut" class="pay-signout">Sair desta conta</button>'
     f'<p class="legal-links">{LEGAL_LINKS}</p>'
     '</div>'
@@ -370,6 +409,7 @@ account_modal = (
     '<div class="account-section">'
     '<span class="account-section-label"><span class="account-section-icon">🎟️</span>Acesso</span>'
     '<p class="account-access" id="accountAccess">Verificando...</p>'
+    '<button type="button" class="account-renew" id="accountRenew" hidden>Renovar ou mudar de plano</button>'
     '</div>'
 
     '<div class="account-section">'
@@ -625,6 +665,7 @@ print("written", len(html))
 # Páginas próprias (não abas do app) porque precisam abrir sem login: o link
 # vai na tela de cadastro, na tela de compra e na configuração do login com
 # Google, que exige uma URL pública de política de privacidade.
+import re as _re
 import markdown as _md
 
 LEGAL_PAGES = [
@@ -641,6 +682,12 @@ for _slug, _title in LEGAL_PAGES:
     _pending = _src.count("[PREENCHER")
     if _pending:
         print(f"AVISO: legal/{_slug}.md ainda tem {_pending} campo(s) [PREENCHER: ...], nao publicar assim")
+    # trecho novo que ainda não passou por advogado é marcado na fonte com
+    # <!-- REVISAR (advogado): ... -->. O comentário não vai para a página.
+    _review = len(_re.findall(r"<!--\s*REVISAR.*?-->", _src, flags=_re.S))
+    if _review:
+        print(f"AVISO: legal/{_slug}.md tem {_review} trecho(s) marcado(s) REVISAR (advogado)")
+    _src = _re.sub(r"<!--\s*REVISAR.*?-->\n?", "", _src, flags=_re.S)
     _body = _md.markdown(_src, extensions=["tables"])
     _page = f'''<!DOCTYPE html>
 <html lang="pt-BR">

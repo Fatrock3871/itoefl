@@ -63,8 +63,11 @@ legal/*.md                Termos de Uso e Política de Privacidade (fonte)
 artifact/termos.html      Páginas legais (geradas pelo build.py; não editar)
 artifact/privacidade.html
 artifact/manifest.json, sw.js, icons/   PWA (gerados pelo build.py; não editar)
-supabase/schema.sql       Backend: profiles, user_state (jsonb), entitlements, coupons, com RLS
+app/plans.json            Os três planos de preço como o site mostra (tela de compra e apresentação)
+supabase/schema.sql       Backend: profiles, user_state (jsonb), entitlements, payments, coupons, com RLS
+supabase/migrations/      Mudanças de banco para aplicar num projeto que já existe (SQL Editor, com autorização)
 supabase/functions/       Edge functions: create-checkout, mp-webhook, delete-account
+supabase/functions/_shared/plans.ts   Preço cobrado e prazo de cada plano (servidor). Tem de bater com app/plans.json
 supabase/config.toml      Config das functions (mp-webhook roda sem verificação de JWT)
 supabase/schema-bank.sql  Banco de questões: tabelas items e attempts com RLS. ESCRITO, NUNCA EXECUTADO
 bank/                     Banco de questões em JSON (formato, schema, validador, 228 itens migrados). Ver bank/README.md
@@ -285,11 +288,20 @@ chaves sincronizadas são empacotadas num blob e salvas em `user_state.state`.
 `safeSet` marca `toefl_dirty` e agenda um push debounced. Setup:
 `docs/supabase-setup.md`.
 
-**Conta e acesso pago:** `entitlements` guarda quem pagou e só o `service_role`
-escreve nela (via `mp-webhook`). "Minha conta" mostra a situação do acesso e
-permite excluir a conta, o que chama a function `delete-account` e apaga em
-cascata `profiles`, `user_state` e `entitlements`. O bloqueio de quem não pagou
-é só uma camada visual: o conteúdo vai embutido no HTML.
+**Conta e acesso pago:** três planos, Sprint (30 dias), Standard (90 dias) e
+Premium (vitalício). O navegador manda só o id do plano; o preço e o prazo
+saem de `supabase/functions/_shared/plans.ts`. `payments` é o extrato (uma
+linha por pagamento) e `entitlements` é sempre recalculada dele: `paid` mais
+`expires_at` (null = sem prazo). Só o `service_role` escreve nas duas (via
+`mp-webhook`, que chama a função de banco `apply_payment`). A regra de
+renovação, troca de plano e reembolso está no cabeçalho de
+`supabase/migrations/20261008_planos.sql`. No site, `accessState()` em
+`app.js` decide se o acesso está em dia. "Minha conta" mostra o plano e a
+validade, oferece renovar, e permite excluir a conta, o que chama a function
+`delete-account` e apaga em cascata `profiles`, `user_state`, `entitlements`
+e `payments`. O bloqueio de quem não pagou ou venceu é só uma camada visual:
+o conteúdo vai embutido no HTML. **Os planos estão escritos e não
+publicados:** `docs/deploy-planos.md` é o passo a passo para o dono.
 
 Os botões Exportar/Importar na sidebar empacotam todas as chaves `toefl_*` em
 JSON. Ao mudar o formato do estado, escrever migração — não descartar progresso.

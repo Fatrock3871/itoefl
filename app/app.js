@@ -2237,6 +2237,80 @@
   }
   window.__toeflFriendlyError = friendlyError; // gancho do smoke test
 
+  // ---------- Planos e validade do acesso ----------
+  // Fica fora do bloco do Supabase porque não depende dele: são contas puras
+  // sobre a linha de `entitlements` e os textos da tela de compra, e o smoke
+  // test roda sem login. Quem grava o prazo é o servidor (mp-webhook); aqui
+  // só se lê e se explica.
+  var DAY_MS = 86400000;
+  // row: a linha de `entitlements` da conta (ou null). Banco que ainda não
+  // tem a coluna expires_at devolve só `paid`: vale como acesso sem prazo,
+  // que é o que toda compra anterior aos planos era.
+  function accessState(row, nowMs){
+    var st = { active:false, expired:false, lifetime:false, plan:(row && row.plan) || null, until:null, daysLeft:null };
+    if(!row || !row.paid) return st;
+    if(!row.expires_at){ st.active = true; st.lifetime = true; return st; }
+    var t = new Date(row.expires_at).getTime();
+    if(isNaN(t)) return st; // data ilegível: trava, que é o padrão seguro
+    st.until = new Date(t);
+    st.active = t > nowMs;
+    st.expired = !st.active;
+    st.daysLeft = st.active ? Math.ceil((t - nowMs) / DAY_MS) : 0;
+    return st;
+  }
+  function planName(id){
+    var input = id ? document.querySelector('#planPick input[value="' + String(id).replace(/[^a-z0-9_-]/gi, "") + '"]') : null;
+    return input ? input.dataset.name : "";
+  }
+  function fmtDate(d){ return d.toLocaleDateString("pt-BR"); }
+  function daysLeftText(n){ return n === 1 ? "falta 1 dia" : "faltam " + n + " dias"; }
+  // frase de "Minha conta"
+  function accessText(st, paidAt){
+    var name = planName(st.plan);
+    var label = name ? "Plano " + name : "Acesso";
+    if(st.lifetime){
+      var when = "";
+      var d = paidAt ? new Date(paidAt) : null;
+      if(d && !isNaN(d.getTime())) when = " desde " + fmtDate(d);
+      return { text: (name ? "Plano " + name + ": acesso" : "Acesso") + " vitalício liberado" + when + ".", cls: "is-paid" };
+    }
+    if(st.active){
+      return { text: label + (name ? ": acesso" : "") + " liberado até " + fmtDate(st.until) + " (" + daysLeftText(st.daysLeft) + ").",
+               cls: st.daysLeft <= 7 ? "is-ending" : "is-paid" };
+    }
+    if(st.expired){
+      return { text: (name ? "O plano " + name : "O seu acesso") + " venceu em " + fmtDate(st.until) + ". Seu progresso continua salvo.", cls: "is-unpaid" };
+    }
+    return { text: "Sem acesso: esta conta ainda não tem compra confirmada.", cls: "is-unpaid" };
+  }
+  // título e parágrafo da tela de compra, conforme a situação da conta
+  function gateCopy(st){
+    if(st.expired){
+      return { kicker: "Acesso vencido", title: "Seu acesso venceu",
+        text: (planName(st.plan) ? "O plano " + planName(st.plan) : "O seu acesso") + " terminou em " + fmtDate(st.until) +
+          ". O seu progresso continua salvo: escolha um plano para voltar a estudar de onde parou." };
+    }
+    if(st.active && !st.lifetime){
+      return { kicker: "Seu plano", title: "Renovar ou mudar de plano",
+        text: "Seu acesso vai até " + fmtDate(st.until) + ". Sprint e Standard somam os dias ao fim desse prazo. O Premium troca o prazo por acesso vitalício." };
+    }
+    return { kicker: "Acesso pago", title: "Libere seu acesso",
+      text: "Sua conta está conectada, mas o conteúdo completo da plataforma só libera depois da compra." };
+  }
+  function selectedPlan(){
+    return document.querySelector("#planPick input:checked");
+  }
+  (function(){
+    var pick = document.getElementById("planPick");
+    var btn = document.getElementById("payBtn");
+    if(!pick || !btn) return;
+    pick.addEventListener("change", function(){
+      var p = selectedPlan();
+      if(p) btn.textContent = "Comprar " + p.dataset.name + ": " + p.dataset.price;
+    });
+  })();
+  window.__toeflAccess = { state: accessState, text: accessText, gateCopy: gateCopy }; // gancho do smoke test
+
   // ---------- Contas + sincronização (Supabase) ----------
   (function(){
     var box = document.getElementById("authBox");
@@ -2401,10 +2475,38 @@
       return !!(session && session.user && session.user.email &&
         session.user.email.toLowerCase() === ADMIN_EMAIL.toLowerCase());
     }
+    // Lê a linha de entitlements da conta. Se o banco ainda não tiver as
+    // colunas dos planos (migração de 2026-10-08 não rodada), a consulta
+    // completa falha: repete só com `paid`, que accessState() lê como acesso
+    // sem prazo. Assim o site novo funciona com o banco antigo.
+    function fetchEntitlement(userId){
+      return client.from("entitlements").select("paid, paid_at, plan, expires_at").eq("user_id", userId).maybeSingle()
+        .then(function(res){
+          if(!res.error) return res;
+          return client.from("entitlements").select("paid, paid_at").eq("user_id", userId).maybeSingle();
+        });
+    }
+    var payGateBack = document.getElementById("payGateBack");
+    function setGateCopy(st, canGoBack){
+      var copy = gateCopy(st);
+      var kicker = document.getElementById("payGateKicker");
+      var title = document.getElementById("payGateTitle");
+      var text = document.getElementById("payGateText");
+      if(kicker) kicker.textContent = copy.kicker;
+      if(title) title.textContent = copy.title;
+      if(text) text.textContent = copy.text;
+      // "Voltar" só existe para quem abriu a tela por Minha conta com o
+      // acesso em dia; quem está bloqueado só pode comprar ou sair
+      if(payGateBack) payGateBack.hidden = !canGoBack;
+      if(paySignOutBtn) paySignOutBtn.hidden = !!canGoBack;
+    }
+    if(payGateBack){
+      payGateBack.addEventListener("click", function(){ payGateEl.hidden = true; });
+    }
     function checkEntitlement(session, attempt){
       if(!payGateEl) return;
       if(isAdmin(session)){ payGateEl.hidden = true; return; }
-      client.from("entitlements").select("paid").eq("user_id", session.user.id).maybeSingle()
+      fetchEntitlement(session.user.id)
         .then(function(res){
           if(res.error){
             // erro de rede/consulta: mantém a tela de pagamento visível (o
@@ -2417,9 +2519,10 @@
             console.error("Falha ao verificar pagamento:", res.error.message);
             return;
           }
-          var paid = !!(res.data && res.data.paid);
-          payGateEl.hidden = paid;
-          if(paid) return;
+          var st = accessState(res.data, Date.now());
+          payGateEl.hidden = st.active;
+          if(st.active) return;
+          setGateCopy(st, false);
           // volta de um checkout recém-aprovado: o webhook do Mercado Pago é
           // assíncrono e pode demorar alguns segundos a mais que o redirect
           // -- tenta de novo umas poucas vezes antes de deixar o aluno preso
@@ -2449,7 +2552,9 @@
         client.auth.getSession().then(function(sessionRes){
           var token = sessionRes && sessionRes.data && sessionRes.data.session && sessionRes.data.session.access_token;
           var coupon = couponInput ? couponInput.value.trim() : "";
-          var opts = { body: { origin: location.origin, coupon: coupon } };
+          var chosen = selectedPlan();
+          // vai só o id do plano: o preço é decidido no servidor
+          var opts = { body: { origin: location.origin, coupon: coupon, plan: chosen ? chosen.value : "" } };
           if(token) opts.headers = { Authorization: "Bearer " + token };
           return client.functions.invoke("create-checkout", opts);
         })
@@ -2751,6 +2856,7 @@
       var passwordForm = document.getElementById("accountPasswordForm");
       var accountMsgEl = document.getElementById("accountMsg");
       var accessEl = document.getElementById("accountAccess");
+      var renewBtn = document.getElementById("accountRenew");
 
       function setAccess(text, cls){
         if(!accessEl) return;
@@ -2761,21 +2867,27 @@
       // quem libera ou bloqueia o conteúdo continua sendo checkEntitlement().
       function loadAccess(user){
         if(!accessEl) return;
+        if(renewBtn) renewBtn.hidden = true;
         if(!user){ setAccess("Não deu pra verificar agora.", ""); return; }
         if(isAdmin({ user: user })){ setAccess("Conta de administrador: acesso liberado, sem cobrança.", "is-paid"); return; }
         setAccess("Verificando...", "");
-        client.from("entitlements").select("paid, paid_at").eq("user_id", user.id).maybeSingle()
+        fetchEntitlement(user.id)
           .then(function(res){
             if(res.error){ setAccess("Não deu pra verificar agora. Feche e abra esta tela pra tentar de novo.", ""); return; }
-            if(res.data && res.data.paid){
-              var when = "";
-              if(res.data.paid_at){
-                var d = new Date(res.data.paid_at);
-                if(!isNaN(d.getTime())) when = " desde " + d.toLocaleDateString("pt-BR");
-              }
-              setAccess("Pago ✓ Acesso vitalício liberado" + when + ".", "is-paid");
-            } else {
-              setAccess("Sem acesso: esta conta ainda não tem compra confirmada.", "is-unpaid");
+            var st = accessState(res.data, Date.now());
+            var line = accessText(st, res.data && res.data.paid_at);
+            setAccess(line.text, line.cls);
+            // renovar ou trocar de plano: só para quem tem prazo correndo.
+            // Vitalício não tem o que comprar; vencido ou sem compra já está
+            // na tela de compra.
+            if(renewBtn){
+              renewBtn.hidden = !(st.active && !st.lifetime);
+              renewBtn.onclick = function(){
+                close();
+                setGateCopy(st, true);
+                if(payGateMsgEl) payGateMsgEl.hidden = true;
+                payGateEl.hidden = false;
+              };
             }
           })
           .catch(function(){ setAccess("Não deu pra verificar agora (erro de conexão).", ""); });

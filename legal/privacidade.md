@@ -1,6 +1,6 @@
 # Política de Privacidade
 
-**Última atualização:** 6 de outubro de 2026
+**Última atualização:** 8 de outubro de 2026
 
 Esta política explica quais dados o iTOEFL coleta, para que usa, com quem
 compartilha e como você exerce seus direitos pela Lei Geral de Proteção de
@@ -23,7 +23,7 @@ Para qualquer assunto de privacidade, escreva para
 | Nome para o certificado | Se você gerar o certificado | Imprimir seu nome no certificado de conclusão |
 | Foto de perfil enviada por você | Se você trocar o avatar | Mostrar sua foto na plataforma |
 | Progresso de estudo | Enquanto você usa a plataforma | Guardar e sincronizar entre aparelhos: itens concluídos, respostas dos exercícios, flashcards, registro de erros, sequência de dias, metas |
-| Situação do pagamento | Depois de uma compra | Liberar o acesso. Guardamos se a conta pagou, a data e o identificador do pagamento no Mercado Pago |
+| Situação do pagamento | Depois de uma compra | Liberar o acesso. Guardamos o plano comprado, o valor pago, a data, até quando o acesso vale e o identificador do pagamento no Mercado Pago |
 | Cupom informado | Na tela de compra | Calcular o desconto |
 
 ## 3. O que não coletamos
