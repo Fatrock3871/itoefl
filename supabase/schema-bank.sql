@@ -11,7 +11,8 @@
 --   attempts  uma linha por resposta do aluno a um item
 --
 -- É aqui que o conteúdo pago passa a ser protegido de verdade: a leitura de
--- `items` só é liberada por RLS a quem tem `entitlements.paid = true`. Hoje o
+-- `items` só é liberada por RLS a quem tem acesso em dia em `entitlements`
+-- (`paid = true` e, nos planos com prazo, `expires_at` no futuro). Hoje o
 -- bloqueio do site é só visual, porque o conteúdo vai embutido no HTML.
 
 -- ============ QUEM PAGOU ============
@@ -29,6 +30,8 @@ as $$
   select exists (
     select 1 from entitlements e
     where e.user_id = auth.uid() and e.paid
+      -- planos com prazo (2026-10-08): acesso vencido não lê o banco
+      and (e.expires_at is null or e.expires_at > now())
   );
 $$;
 
