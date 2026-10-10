@@ -255,7 +255,15 @@ ao app. Assim a apresentação pode ser indexada por buscador e não carrega o
 **Decisões que só o dono toma:** se há diagnóstico grátis sem conta (hoje
 tudo fica atrás do pagamento); política de reembolso; se o "mais escolhido"
 pode ser dito antes de haver venda; e a colisão de nomes com os cronogramas
-do M0 (Sprint 30, Standard 60, Premium 90 dias), registrada no ROADMAP.
+do M0, registrada no ROADMAP.
+
+**Decidido em 2026-10-08:** diagnóstico grátis sem conta, com as 10 questões
+do M0 e o resultado de banda; reembolso de 7 dias em todos os planos (direito
+de arrependimento, art. 49 do CDC); selo "Recomendado" no Standard, e não
+"Mais escolhido", que sem dado de venda seria afirmação falsa; e os
+cronogramas do M0 passam a se chamar Intensivo (30 dias), Regular (60) e
+Completo (90). As capturas de tela do item 4 ficaram de fora da primeira
+versão.
 
 ### 6.2 Outros que esperam decisão
 

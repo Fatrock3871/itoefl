@@ -143,10 +143,9 @@ Nada daqui foi alterado no site.
 
 ## 6. Para o dono decidir
 
-- **Nomes dos cronogramas contra nomes dos planos.** O M0 chama os
-  cronogramas de estudo de Sprint (30 dias), Standard (60 dias) e Premium (90
-  dias). Os planos de preço decididos em 2026-10-07 são Sprint (30 dias),
-  Standard (90 dias) e Premium (vitalício). Com os dois no ar, "Standard"
-  quer dizer 60 dias numa tela e 90 na outra. Um dos dois conjuntos precisa
-  mudar de nome antes de os planos entrarem.
+- **Nomes dos cronogramas contra nomes dos planos. Resolvido em 2026-10-08.**
+  Os cronogramas de estudo do M0 tinham os mesmos nomes dos planos de preço,
+  com prazos diferentes. O dono decidiu renomear os cronogramas: Intensivo
+  (30 dias), Regular (60 dias) e Completo (90 dias). Os nomes Sprint,
+  Standard e Premium ficam só para os planos de preço.
 - Itens 6 e 9 da seção 4.

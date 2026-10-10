@@ -286,7 +286,7 @@ Preenche esse quadro toda semana, sempre no mesmo dia da semana. O que importa a
 
 > Os três cronogramas abaixo distribuem seu tempo entre os **4 pilares do exame 2026**: Reading, Listening, Writing, Speaking. Cada um coberto nos Módulos 1 a 4.
 
-### 6.1 Sprint: 30 Dias (para quem já está próximo da banda-alvo, ex.: B2 alto → C1)
+### 6.1 Intensivo: 30 Dias (para quem já está próximo da banda-alvo, ex.: B2 alto → C1)
 
 | Semana | Foco principal | Módulos | Entregável da semana |
 |---|---|---|---|
@@ -295,7 +295,7 @@ Preenche esse quadro toda semana, sempre no mesmo dia da semana. O que importa a
 | 3 | Write an Email + Write for an Academic Discussion + Listen and Repeat | Módulo 4 + Módulo 3 | 5 e-mails e 5 parágrafos corrigidos; 20 repetições gravadas |
 | 4 | Take an Interview + simulado completo + revisão de erros recorrentes | Módulo 3 + Módulo 7 | Simulado completo cronometrado (1h23–1h29min) |
 
-### 6.2 Standard: 60 Dias (recomendado para a maioria dos candidatos)
+### 6.2 Regular: 60 Dias (recomendado para a maioria dos candidatos)
 
 | Semanas | Foco principal | Módulos | Marco |
 |---|---|---|---|
@@ -305,7 +305,7 @@ Preenche esse quadro toda semana, sempre no mesmo dia da semana. O que importa a
 | 7 | Speaking completo (Listen and Repeat, Take an Interview) | Módulo 3 | % de fidelidade e nota qualitativa estabilizadas |
 | 8 | Simulados completos + revisão integrada + ajuste fino | Módulo 7 | 2 simulados completos cronometrados |
 
-### 6.3 Premium: 90 Dias (recomendado para quem parte de B1 ou tem meta C1/C2)
+### 6.3 Completo: 90 Dias (recomendado para quem parte de B1 ou tem meta C1/C2)
 
 | Semanas | Foco principal | Módulos | Marco |
 |---|---|---|---|
@@ -316,7 +316,7 @@ Preenche esse quadro toda semana, sempre no mesmo dia da semana. O que importa a
 | 12 | Speaking completo com foco em prosódia e fidelidade | Módulo 3 | % fidelidade 85%+ em Listen and Repeat |
 | 13 | Simulados completos + polimento final + gestão de ansiedade de prova | Módulo 7 | 3 simulados completos, banda geral estável na meta |
 
-> 📌 Semanas 13 do Premium equivalem à semana final de qualquer cronograma: sempre termine com simulados completos cronometrados, nunca apenas prática isolada por task.
+> 📌 A semana 13 do Completo equivale à semana final de qualquer cronograma: sempre termine com simulados completos cronometrados, nunca apenas prática isolada por task.
 
 ---
 
@@ -383,7 +383,7 @@ Antes de avançar ao Módulo 1, confirme:
 - [ ] Sei quais são as 4 seções do exame e as tasks de cada uma
 - [ ] Entendi que o exame total dura 1h23–1h29min e ajustei minhas expectativas de gestão de energia
 - [ ] Configurei meu Weekly Performance Dashboard
-- [ ] Escolhi meu cronograma (Sprint 30 / Standard 60 / Premium 90) com base na minha banda diagnóstica
+- [ ] Escolhi meu cronograma (Intensivo 30 / Regular 60 / Completo 90) com base na minha banda diagnóstica
 - [ ] Sei onde recorrer ao Plano de Emergência (Catch-Up) se ficar atrás do cronograma
 - [ ] Ativei meu primeiro Streak de Ignição (7 dias)
 

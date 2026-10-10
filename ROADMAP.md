@@ -162,10 +162,12 @@ Pequenas, independentes entre si, podem entrar em qualquer intervalo.
 - [ ] (D) Tela de apresentação com os três planos: desenhada na seção 6.1 da
       auditoria. Espera os planos implementados e três decisões (diagnóstico
       grátis sem conta, reembolso, selo de "mais escolhido").
-- [ ] (D) Os cronogramas do M0 se chamam Sprint (30 dias), Standard (60) e
-      Premium (90); os planos de preço são Sprint (30), Standard (90) e
-      Premium (vitalício). "Standard" passa a ter dois sentidos. Renomear um
-      dos conjuntos antes de os planos entrarem.
+- [x] (D) Colisão de nomes entre os cronogramas do M0 e os planos de preço.
+      Decidido e feito em 2026-10-08: os cronogramas passam a ser Intensivo
+      (30 dias), Regular (60) e Completo (90). Nenhuma chave de
+      `localStorage` guardava o nome (a recomendação é recalculada do
+      diagnóstico e o id das subseções é por posição), então não houve
+      migração.
 - [ ] (D) O site diz que Speaking e Writing são corrigidos "100% por IA" e
       cita e-rater e SpeechRater; a ETS de 2026 não nomeia os motores. Ver a
       seção 4 de `docs/conferencia-conteudo-2026-10.md`, com os outros pontos
@@ -403,3 +405,7 @@ Não foram pedidos, apareceram ao consolidar a lista.
 | Backend Supabase | Sim, mas **depois** do conteúdo dos 10 módulos | 2026-09-02 |
 | Ferramental | Python 3.13 + Git 2.55 + pacote `markdown` | 2026-09-02 |
 | Precificação | Três planos. **Sprint**, 30 dias, R$ 39,90: prova já marcada, só simulado e plano de emergência (Pareto). **Standard**, 90 dias, R$ 89,90: o mais vendido, tempo para os 4 pilares com calma. **Premium (Passaporte)**, vitalício, R$ 149,90: quem vai tentar a prova várias vezes ou planeja com mais de um ano de antecedência. Substitui o R$ 9,90 vitalício | 2026-10-07 |
+| Nomes dos cronogramas do M0 | **Intensivo** (30 dias), **Regular** (60 dias), **Completo** (90 dias). "Sprint", "Standard" e "Premium" ficam só para os planos de preço | 2026-10-08 |
+| Diagnóstico grátis | As 10 questões do M0 abertas na tela de apresentação, **sem conta**, com o resultado de banda | 2026-10-08 |
+| Reembolso | **7 dias** em todos os planos, pelo direito de arrependimento do CDC (art. 49) | 2026-10-08 |
+| Selo na tabela de planos | **"Recomendado"** no Standard. Nunca "mais escolhido" ou "mais vendido": sem dado de venda seria afirmação falsa | 2026-10-08 |

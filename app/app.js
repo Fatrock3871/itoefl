@@ -643,9 +643,9 @@
     return {code:"6", label:"C2", desc:"domínio quase completo"};
   }
   function scheduleFromPct(pct){
-    if(pct <= 55) return "Cronograma Premium (90 dias) · Módulo 0, Parte 6.3";
-    if(pct <= 70) return "Cronograma Standard (60 dias) · Módulo 0, Parte 6.2";
-    return "Cronograma Sprint (30 dias) · Módulo 0, Parte 6.1";
+    if(pct <= 55) return "Cronograma Completo (90 dias) · Módulo 0, Parte 6.3";
+    if(pct <= 70) return "Cronograma Regular (60 dias) · Módulo 0, Parte 6.2";
+    return "Cronograma Intensivo (30 dias) · Módulo 0, Parte 6.1";
   }
   function updateLevelBadge(correct, total){
     var badge = document.getElementById("levelBadge");

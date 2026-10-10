@@ -409,6 +409,14 @@ check("content_states_confirmed_exam_rules", function(){
   return m8.indexOf("TOEFL Test App") !== -1 && m8.indexOf("4 envios") !== -1 && m8.indexOf("espelho de mão") !== -1 &&
     m5.indexOf("45 segundos") !== -1;
 });
+// cronogramas do M0: Intensivo, Regular e Completo. Sprint, Standard e
+// Premium sao so os planos de preco (decisao de 2026-10-08)
+check("schedules_do_not_use_plan_names", function(){
+  var m0 = document.getElementById("panel-mod0").textContent;
+  return ["6.1 Intensivo: 30 Dias", "6.2 Regular: 60 Dias", "6.3 Completo: 90 Dias"].every(function(s){ return m0.indexOf(s) !== -1; }) &&
+    !/(Sprint|Standard|Premium)/.test(m0) &&
+    !/Cronograma (Sprint|Standard|Premium)/.test(document.body.textContent);
+});
 
 // acessibilidade estrutural: subsecoes operaveis por teclado, janelas com
 // papel de dialogo, campos com rotulo, link de pular, ingles marcado
