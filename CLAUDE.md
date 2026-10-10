@@ -53,6 +53,8 @@ app/render_video.py       Valida o videos.json e injeta os players no topo do m�
 app/render_errorlog.py    Renderizador do formulário de Registro de erros (M1 a M6)
 app/render_weeklydash.py  Renderizador do dashboard semanal (M0)
 app/app.js                Runtime: tema, abas, progresso (checkboxes + badges), quizzes
+app/level.js              Resultado do diagnóstico -> banda CEFR e cronograma. O build cola antes do app.js e do landing.js
+app/landing.js            Runtime da tela de apresentação: diagnóstico sem conta e plano clicado
 app/styles.css            Estilo (tema claro/escuro/sistema)
 app/manifest.json         Manifesto da PWA (o build copia para artifact/)
 app/sw.js                 Service worker da PWA; o build troca __BUILD_VERSION__ por um hash do conteúdo
@@ -62,6 +64,7 @@ artifact/index.html       Site final (gerado; não editar)
 legal/*.md                Termos de Uso e Política de Privacidade (fonte)
 artifact/termos.html      Páginas legais (geradas pelo build.py; não editar)
 artifact/privacidade.html
+artifact/apresentacao.html  Tela de apresentação, pública, antes do login (gerada pelo build.py; não editar)
 artifact/manifest.json, sw.js, icons/   PWA (gerados pelo build.py; não editar)
 app/plans.json            Os três planos de preço como o site mostra (tela de compra e apresentação)
 supabase/schema.sql       Backend: profiles, user_state (jsonb), entitlements, payments, coupons, com RLS
@@ -231,6 +234,26 @@ Implicações que o conteúdo deve respeitar:
 removido; os originais pré-2026 dos 10 módulos seguem em
 `_archive/content-old-format/`.
 
+## Tela de apresentação
+
+`artifact/apresentacao.html` é montada no fim do `app/build.py`: chamada, o
+que tem dentro, diagnóstico grátis sem conta, os três planos e perguntas
+frequentes. "Entrar" e "Criar conta" levam ao `index.html`. Quando o site for
+publicado, o endereço público deve abrir nela.
+
+- **Só entra o que dá para provar.** Os números saem do próprio build
+  (`LP_STATS`), o selo do Standard é "Recomendado" e nunca "mais escolhido",
+  e não há promessa de nota nem contagem de alunos. O smoke test tem uma
+  lista de frases proibidas (`landing_makes_no_unprovable_claims`).
+- **Diagnóstico:** é o mesmo HTML das 10 questões do M0, tirado do fragmento
+  do pipeline, e grava na mesma chave do app (`toefl_quiz_mod0-diag_v1`).
+  Quem cria a conta no mesmo navegador encontra o M0 já respondido. A banda
+  e o cronograma saem de `app/level.js`, igual ao app.
+- **Planos:** vêm de `app/plans.json`. O plano clicado fica em
+  `toefl_plan_pick_v1` e a tela de compra do app abre com ele marcado.
+- A página não entra no pré-cache do service worker: não precisa abrir
+  offline.
+
 ## Navegação livre entre módulos (decisão revertida em 2026-09-20)
 
 **Decisão anterior (até 2026-09-20, não usar como referência):** o app bloqueava
@@ -280,7 +303,8 @@ Sempre locais, por aparelho: `toefl_theme_v1`, `toefl_active_tab`,
 `toefl_timer_preset`, `toefl_partpos_v1` (Parte aberta em cada módulo),
 `toefl_lastpos_v1` (alvo do "Continuar de onde parei"), `toefl_trilha_v1`
 (trilha rápida ou completa: preferência de leitura, não progresso),
-`toefl_welcome_v1` (cartão "Comece aqui" do M0 dispensado). `toefl_sync_at` e
+`toefl_welcome_v1` (cartão "Comece aqui" do M0 dispensado),
+`toefl_plan_pick_v1` (plano clicado na tela de apresentação). `toefl_sync_at` e
 `toefl_dirty` são internos do sync.
 
 **Sincronização:** quando o Supabase está configurado e o aluno logado, as

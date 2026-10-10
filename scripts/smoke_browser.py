@@ -231,6 +231,56 @@ RESET_KEYS = ["toefl_progress", "toefl_h3progress", "toefl_srs_", "toefl_bsq_", 
               "toefl_spk_", "toefl_write_", "toefl_exam_", "toefl_scorecalc", "toefl_weeklydash"]
 
 
+# Tela de apresentacao: o que esta na pagina, o que estoura na largura e o
+# que ela NAO pode dizer (nada que nao de para provar).
+LANDING_STATE = r"""
+(function(){
+  var over = [], small = [];
+  Array.prototype.forEach.call(document.querySelectorAll("body *"), function(e){
+    var r = e.getBoundingClientRect();
+    if(r.width && r.right > innerWidth + 1) over.push(e.tagName + "." + e.className);
+  });
+  Array.prototype.forEach.call(document.querySelectorAll(".lp-btn, .opt, .lp-faq-item summary"), function(e){
+    var r = e.getBoundingClientRect();
+    if(r.height && r.height < 44) small.push(e.textContent.trim().slice(0, 30) + ":" + Math.round(r.height));
+  });
+  var text = document.body.textContent;
+  var banned = [/mais (escolhido|vendido|popular)/i, /milhares|centenas de alunos|\d+ alunos/i, /aprova[çc][ãa]o garantida/i,
+                /garant(imos|e) (a |sua |uma )?(nota|aprova)/i, /nota garantida/i, /melhor curso/i, /n[úu]mero 1|#1/i, /oficial da ETS\./i];
+  return {
+    h1: document.querySelectorAll("h1").length,
+    sections: Array.prototype.map.call(document.querySelectorAll("section[id]"), function(s){ return s.id; }),
+    qcards: document.querySelectorAll("#diagnostico .qcard").length,
+    enter: document.querySelector(".lp-enter").getAttribute("href"),
+    legal: !!document.querySelector('.lp-foot a[href="termos.html"]') && !!document.querySelector('.lp-foot a[href="privacidade.html"]'),
+    faq: document.querySelectorAll(".lp-faq-item").length,
+    resultHidden: document.getElementById("lpResult").hidden,
+    refund: /7 dias corridos/.test(document.querySelector(".lp-refund").textContent) && /artigo 49/.test(document.querySelector(".lp-refund").textContent),
+    plans: Array.prototype.map.call(document.querySelectorAll(".lp-plan"), function(p){
+      var b = p.querySelector(".plan-badge");
+      return { id: p.dataset.plan, price: p.querySelector(".lp-plan-price").textContent, badge: b ? b.textContent : "",
+               top: Math.round(p.getBoundingClientRect().top + scrollY) };
+    }),
+    claims: banned.filter(function(re){ return re.test(text); }).map(String),
+    docW: document.documentElement.scrollWidth, vw: innerWidth, over: over.slice(0, 6), smallTargets: small.slice(0, 6)
+  };
+})()
+"""
+
+LANDING_ANSWER = r"""
+(function(){
+  Array.prototype.forEach.call(document.querySelectorAll("#diagnostico .qcard"), function(c, k){
+    var want = k < 7 ? c.dataset.correct : ["A","B","C","D"].filter(function(L){ return L !== c.dataset.correct; })[0];
+    c.querySelector('.opt[data-letter="' + want + '"]').click(); c.querySelector(".qconfirm").click();
+  });
+  var r = document.getElementById("lpResult");
+  return { hidden: r.hidden, text: r.textContent.replace(/\s+/g, " ").trim(),
+    verdicts: document.querySelectorAll("#diagnostico .verdict").length,
+    saved: Object.keys(JSON.parse(localStorage.getItem("toefl_quiz_mod0-diag_v1") || "{}")).length };
+})()
+"""
+
+
 def run():
     """Devolve (resultados, detalhes): nome -> bool, e nome -> texto do que falhou."""
     out, why = {}, {}
@@ -445,6 +495,56 @@ def run():
                     low = b.eval(CONTRAST)
                     check("contrast_aa_" + theme, not low, low)
                 check("real_no_js_errors_after_use", not b.errors, b.errors)
+
+            # tela de apresentacao: pagina publica, antes do login
+            with Browser() as b:
+                b.goto(base + "/apresentacao.html", settle=0.5)
+                b.eval('localStorage.clear(); localStorage.setItem("toefl_theme_v1", "light")')
+                b.reload(settle=1.2)
+                lp = b.eval(LANDING_STATE)
+                check("landing_desktop_has_all_sections",
+                      lp["h1"] == 1 and lp["sections"] == ["diagnostico", "planos", "duvidas"] and lp["qcards"] == 10
+                      and lp["enter"] == "index.html" and lp["legal"] and lp["faq"] >= 6 and lp["resultHidden"]
+                      and lp["docW"] <= lp["vw"] and not lp["over"], lp)
+                check("landing_plans_side_by_side_standard_recommended",
+                      [p["id"] for p in lp["plans"]] == ["sprint", "standard", "premium"]
+                      and [p["price"] for p in lp["plans"]] == ["R$ 39,90", "R$ 89,90", "R$ 149,90"]
+                      and [p["badge"] for p in lp["plans"]] == ["", "Recomendado", ""]
+                      and len({p["top"] for p in lp["plans"]}) == 1 and lp["refund"], lp)
+                check("landing_makes_no_unprovable_claims", not lp["claims"], lp["claims"])
+                # 7 certas de 10: B2, cronograma Regular, e o estado fica na
+                # mesma chave que o app le
+                res = b.eval(LANDING_ANSWER)
+                check("landing_free_diagnostic_gives_band",
+                      "Você acertou 7 de 10." in res["text"] and "Nível estimado: B2, banda 4–4,5" in res["text"]
+                      and "Cronograma Regular (60 dias)" in res["text"] and res["saved"] == 10 and res["verdicts"] == 10
+                      and not res["hidden"], res)
+                b.reload(settle=1)
+                again = b.eval('(function(){ var r = document.getElementById("lpResult"); return { hidden: r.hidden, text: r.textContent }; })()')
+                check("landing_diagnostic_survives_reload", not again["hidden"] and "B2" in again["text"], again)
+                pick = b.eval('(function(){ var a = document.querySelector(\'.lp-plan[data-plan="sprint"] a\'); a.addEventListener("click", function(e){ e.preventDefault(); });'
+                              ' a.click(); return { href: a.getAttribute("href"), saved: localStorage.getItem("toefl_plan_pick_v1") }; })()')
+                check("landing_plan_click_carries_choice", pick == {"href": "index.html#criar-conta", "saved": "sprint"}, pick)
+                for theme in ("light", "dark"):
+                    b.eval('document.documentElement.setAttribute("data-theme", %s)' % json.dumps(theme))
+                    b.pump(0.3)
+                    low = b.eval(CONTRAST)
+                    check("landing_contrast_aa_" + theme, not low, low)
+
+                b.viewport(375, 812, mobile=True)
+                b.reload(settle=1)
+                lp = b.eval(LANDING_STATE)
+                tops = {p["id"]: p["top"] for p in lp["plans"]}
+                check("landing_mobile_375_fits_and_stacks_standard_first",
+                      lp["docW"] <= 375 and not lp["over"] and len(tops) == 3
+                      and tops["standard"] < tops["sprint"] < tops["premium"] and lp["smallTargets"] == [], lp)
+                check("landing_no_js_errors", not b.errors, b.errors)
+                # o plano clicado la (Sprint) chega marcado na tela de compra do app
+                b.goto(page, settle=1)
+                carried = b.eval('(function(){ var p = document.querySelector("#planPick input:checked");'
+                                 ' return { plan: p && p.value, btn: document.getElementById("payBtn").textContent }; })()')
+                check("landing_choice_preselects_plan_in_app",
+                      carried == {"plan": "sprint", "btn": "Comprar Sprint: R$ 39,90"}, carried)
 
             # service worker: navegador novo, sem cache nenhum
             with Browser() as b:

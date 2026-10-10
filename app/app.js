@@ -633,20 +633,10 @@
   // diagnóstico exige só responder as 10 (ver isUnlocked/moduleQuizPct) --
   // nunca um mínimo de acertos. O que os acertos FAZEM é isto aqui: estimar
   // a banda de entrada e recomendar um dos 3 cronogramas do Módulo 0, Parte 6.
-  function cefrBandFromPct(pct){
-    // meia banda com vírgula, como na calculadora e no texto do módulo
-    if(pct <= 20) return {code:"1–1,5", label:"A1", desc:"fundamentos ausentes"};
-    if(pct <= 40) return {code:"2–2,5", label:"A2", desc:"fundamentos parciais"};
-    if(pct <= 55) return {code:"3–3,5", label:"B1", desc:"base funcional, muitos gaps de precisão"};
-    if(pct <= 70) return {code:"4–4,5", label:"B2", desc:"consistência intermediária-avançada"};
-    if(pct <= 85) return {code:"5–5,5", label:"C1", desc:"alta consistência, poucos erros sistemáticos"};
-    return {code:"6", label:"C2", desc:"domínio quase completo"};
-  }
-  function scheduleFromPct(pct){
-    if(pct <= 55) return "Cronograma Completo (90 dias) · Módulo 0, Parte 6.3";
-    if(pct <= 70) return "Cronograma Regular (60 dias) · Módulo 0, Parte 6.2";
-    return "Cronograma Intensivo (30 dias) · Módulo 0, Parte 6.1";
-  }
+  // A tabela mora em app/level.js (ToeflLevel), que o build cola antes deste
+  // arquivo: a tela de apresentação usa a mesma no diagnóstico sem conta.
+  function cefrBandFromPct(pct){ return ToeflLevel.band(pct); }
+  function scheduleFromPct(pct){ return ToeflLevel.schedule(pct); }
   function updateLevelBadge(correct, total){
     var badge = document.getElementById("levelBadge");
     var bandEl = document.getElementById("levelBadgeBand");
@@ -2304,10 +2294,15 @@
     var pick = document.getElementById("planPick");
     var btn = document.getElementById("payBtn");
     if(!pick || !btn) return;
-    pick.addEventListener("change", function(){
+    function sync(){
       var p = selectedPlan();
       if(p) btn.textContent = "Comprar " + p.dataset.name + ": " + p.dataset.price;
-    });
+    }
+    pick.addEventListener("change", sync);
+    // plano clicado na tela de apresentação (landing.js): já vem marcado
+    var wanted = safeGet("toefl_plan_pick_v1");
+    var input = wanted ? pick.querySelector('input[value="' + wanted.replace(/[^a-z0-9_-]/gi, "") + '"]') : null;
+    if(input){ input.checked = true; sync(); }
   })();
   window.__toeflAccess = { state: accessState, text: accessText, gateCopy: gateCopy }; // gancho do smoke test
 
@@ -2828,6 +2823,8 @@
     });
     authTabLogin.addEventListener("click", showLoginView);
     authTabSignup.addEventListener("click", showSignupView);
+    // "Criar conta" da tela de apresentação chega com #criar-conta
+    if(location.hash === "#criar-conta") showSignupView();
 
     if(googleBtn){
       googleBtn.addEventListener("click", function(){

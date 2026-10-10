@@ -721,6 +721,35 @@ def plans_checks():
     return out
 
 
+def landing_checks():
+    """Tela de apresentacao gerada: existe, e leve (nao carrega o curso), os
+    numeros que anuncia sao os do site de verdade e o login aponta para ela."""
+    out = {}
+    path = ARTIFACT.parent / "apresentacao.html"
+    if not path.exists():
+        return {"landing_page_built": False}
+    page = path.read_text(encoding="utf-8")
+    index = ARTIFACT.read_text(encoding="utf-8")
+    out["landing_page_built"] = (
+        '<meta name="description"' in page and "@import" not in page and 'rel="icon"' in page
+        and "panel-mod1" not in page and "ITOEFL_SUPABASE" not in page and len(page) < len(index) / 4
+    )
+    announced = [int(n) for n in re.findall(r'<span class="lp-stat-n">(\d+)</span>', page)]
+    real = [
+        len(re.findall(r'<section class="panel', index)),
+        len(re.findall(r'class="ctw-in"', index)),
+        len(re.findall(r'class="qcard"', index.split('id="panel-mod1"')[1].split('id="panel-mod2"')[0])),
+        len(re.findall(r'class="qcard"', index.split('id="panel-mod2"')[1].split('id="panel-mod3"')[0])),
+        len(re.findall(r'class="bsq-card', index.split('id="panel-mod4"')[1].split('id="panel-mod5"')[0])),
+        len(re.findall(r'class="spk"', index.split('id="panel-mod3"')[1].split('id="panel-mod4"')[0])),
+        len(re.findall(r'class="exam-item', index)),
+        len(json.loads((APP_DIR / "vocab_kit.json").read_text(encoding="utf-8"))),
+    ]
+    out["landing_numbers_match_the_site"] = announced == real and all(n > 0 for n in real)
+    out["landing_linked_from_login"] = 'href="apresentacao.html"' in index or "ITOEFL_SUPABASE" not in index
+    return out
+
+
 def deep_markup_checks():
     """Marcacao :::aprofundamento mal escrita tem que derrubar o build, nao
     sair calada no site."""
@@ -957,6 +986,7 @@ def main():
     results.update(legal_page_checks())
     results.update(pwa_checks())
     results.update(plans_checks())
+    results.update(landing_checks())
     results.update(deep_markup_checks())
     results.update(bank_checks())
 

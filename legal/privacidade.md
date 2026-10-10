@@ -28,6 +28,10 @@ Para qualquer assunto de privacidade, escreva para
 
 ## 3. O que não coletamos
 
+- **Respostas do diagnóstico grátis.** O diagnóstico da página de
+  apresentação funciona sem conta. As respostas ficam guardadas só no seu
+  navegador e não são enviadas a nós. Se você criar uma conta depois, no
+  mesmo navegador, elas passam a fazer parte do seu progresso de estudo.
 - **Dados de cartão.** O pagamento acontece no ambiente do Mercado Pago. O
   número do cartão nunca passa pelos nossos sistemas.
 - **Suas gravações de voz.** O áudio gravado no gravador de Speaking fica só

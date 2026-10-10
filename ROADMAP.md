@@ -170,9 +170,14 @@ Pequenas, independentes entre si, podem entrar em qualquer intervalo.
       teclado e leitor de tela (subseções, janelas, rótulos, inglês
       marcado), alvos de toque, sequência de dias na gaveta, fontes por
       `<link>`. O que sobrou sem depender de decisão está na seção 5 dela.
-- [ ] (D) Tela de apresentação com os três planos: desenhada na seção 6.1 da
-      auditoria. Espera os planos implementados e três decisões (diagnóstico
-      grátis sem conta, reembolso, selo de "mais escolhido").
+- [x] (C) Tela de apresentação com os três planos (2026-10-08):
+      `artifact/apresentacao.html`, gerada pelo build. Chamada, o que tem
+      dentro (números tirados do build), diagnóstico grátis sem conta com
+      banda e cronograma, tabela dos planos com "Recomendado" no Standard,
+      reembolso de 7 dias, perguntas frequentes e links legais. Testada em
+      desktop e 375 px, nos dois temas. Ficaram de fora as capturas de tela
+      do desenho original. Falta (U) ler o texto da página, e, ao publicar,
+      apontar o endereço público para ela.
 - [x] (D) Colisão de nomes entre os cronogramas do M0 e os planos de preço.
       Decidido e feito em 2026-10-08: os cronogramas passam a ser Intensivo
       (30 dias), Regular (60) e Completo (90). Nenhuma chave de

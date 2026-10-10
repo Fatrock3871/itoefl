@@ -168,7 +168,10 @@ panels = "\n".join(
 )
 
 CSS = open("styles.css", encoding="utf-8").read()
-JS = open("app.js", encoding="utf-8").read()
+# level.js (resultado do diagnóstico -> banda e cronograma) vai na frente do
+# app.js e do landing.js: as duas páginas fazem a mesma conta
+LEVEL_JS = open("level.js", encoding="utf-8").read()
+JS = LEVEL_JS + "\n" + open("app.js", encoding="utf-8").read()
 
 # ---- Supabase (opcional): só entra se app/supabase_config.json existir e estiver preenchido ----
 supa_url = supa_key = ""
@@ -264,6 +267,7 @@ gate = (
     '</div>'
 
     '<span id="authGateMsg" class="auth-gate-msg" hidden></span>'
+    '<p class="legal-links"><a href="apresentacao.html">Conhecer a plataforma e os planos</a></p>'
     f'<p class="legal-links">{LEGAL_LINKS}</p>'
     '</div>'
     '</div>'
@@ -717,6 +721,194 @@ for _slug, _title in LEGAL_PAGES:
 '''
     open(f"../artifact/{_slug}.html", "w", encoding="utf-8").write(_page)
     print(f"written {_slug}.html", len(_page))
+
+# ---- tela de apresentação: artifact/apresentacao.html ----
+# Página pública, antes do login (seção 6.1 de
+# docs/auditoria-plataforma-2026-10.md): o que a plataforma tem, o
+# diagnóstico grátis sem conta, os três planos e as perguntas frequentes. É
+# página própria, e não uma tela do app, para abrir sem carregar o curso
+# inteiro. "Entrar" e "Criar conta" levam ao index.html.
+#
+# Regra de texto desta página: só entra o que dá para provar. Os números
+# saem do próprio build, o selo é "Recomendado" (nunca "mais escolhido"), e
+# não há promessa de nota nem contagem de alunos.
+
+# as 10 questões do diagnóstico, já com as letras redistribuídas pelo
+# pipeline: o mesmo HTML do Módulo 0, sem o rodapé de "refazer" (a página tem
+# o próprio painel de resultado)
+_diag = _re.search(r'<div class="quiz-drill" data-drill="mod0-diag">.*?(?=<div class="quiz-summary")', frag["mod0"], flags=_re.S)
+if not _diag or _diag.group(0).count('class="qcard"') != 10:
+    raise SystemExit("apresentacao: nao achei as 10 questoes do diagnostico no fragmento do M0")
+DIAG_HTML = _diag.group(0) + "</div>"
+
+
+def _count(mod, pattern):
+    return len(_re.findall(pattern, frag[mod]))
+
+
+LP_STATS = [
+    (len(MODS), "módulos, do diagnóstico ao dia da prova"),
+    (_count("mod1", r'class="ctw-in"'), "lacunas de Complete the Words para digitar"),
+    (_count("mod1", r'class="qcard"'), "questões de Reading"),
+    (_count("mod2", r'class="qcard"'), "questões de Listening"),
+    (_count("mod4", r'class="bsq-card'), "itens de Build a Sentence"),
+    (_count("mod3", r'class="spk"'), "conjuntos de Speaking para ouvir e responder"),
+    (_count("mod7", r'class="exam-item'), "questões de simulado"),
+    (len(json.load(open("vocab_kit.json", encoding="utf-8"))), "flashcards de vocabulário"),
+]
+if any(n <= 0 for n, _ in LP_STATS):
+    raise SystemExit(f"apresentacao: contagem zerada em LP_STATS: {LP_STATS}")
+lp_stats = "".join(f'<li><span class="lp-stat-n">{n}</span><span class="lp-stat-t">{t}</span></li>' for n, t in LP_STATS)
+
+lp_plans = "".join(
+    f'<article class="lp-plan{" is-recommended" if p.get("recommended") else ""}" data-plan="{p["id"]}">'
+    f'{PLAN_BADGE if p.get("recommended") else ""}'
+    f'<h3>{p["name"]}</h3>'
+    f'<p class="lp-plan-price">{brl(p["price_cents"])}</p>'
+    f'<p class="lp-plan-access">{p["access"]}</p>'
+    f'<p class="lp-plan-for">{p["audience"]}</p>'
+    f'<p class="lp-plan-detail">{p["detail"]}</p>'
+    f'<a class="lp-btn{" lp-btn-main" if p.get("recommended") else ""}" href="index.html#criar-conta" '
+    f'data-plan-pick="{p["id"]}">Escolher o {p["name"]}</a>'
+    '</article>'
+    for p in PLANS
+)
+
+LP_FAQ = [
+    ("O iTOEFL é oficial da ETS?",
+     "Não. É uma preparação independente, sem vínculo com a ETS. TOEFL e TOEFL iBT são marcas registradas da ETS. "
+     "O material é original e segue o formato público da prova; não reproduz questões oficiais."),
+    ("Existe garantia de nota?",
+     "Não. Nenhum curso pode garantir. O resultado depende do seu estudo. O diagnóstico e as bandas mostradas na "
+     "plataforma são estimativas de treino, não notas oficiais."),
+    ("Funciona no celular?",
+     "A plataforma é um site: abre no navegador do celular, do tablet e do computador, e o progresso acompanha a sua conta."),
+    ("O pagamento é mensal?",
+     "Não. Cada plano é pago uma vez só, pelo Mercado Pago. Não há renovação automática nem cobrança recorrente."),
+    ("E se o meu acesso vencer?",
+     "O conteúdo fica bloqueado, mas a conta e o progresso continuam salvos. Se você comprar outro plano, retoma de onde parou. "
+     "Quem renova antes de vencer soma os dias ao prazo que já tinha."),
+    ("Tem reembolso?",
+     f"Sim. Você pode desistir da compra em até {REFUND_DAYS} dias corridos e receber o valor inteiro de volta, sem precisar "
+     "justificar. É o direito de arrependimento do artigo 49 do Código de Defesa do Consumidor, e vale para os três planos."),
+    ("O que acontece com as respostas do diagnóstico grátis?",
+     "Ficam guardadas só neste navegador, sem conta e sem envio para o servidor. Se você criar a conta neste mesmo navegador, "
+     "o Módulo 0 já abre com o diagnóstico respondido."),
+]
+lp_faq = "".join(f'<details class="lp-faq-item"><summary>{q}</summary><p>{a}</p></details>' for q, a in LP_FAQ)
+
+LANDING_JS = LEVEL_JS + "\n" + open("landing.js", encoding="utf-8").read()
+_lp_desc = ("Preparação em português para o TOEFL iBT no formato 2026: 10 módulos, exercícios no molde da prova e simulados. "
+            "Faça o diagnóstico grátis, sem criar conta.")
+_landing = f'''<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>iTOEFL: preparação para o TOEFL iBT no formato 2026</title>
+<meta name="description" content="{_lp_desc}">
+<meta property="og:title" content="iTOEFL: preparação para o TOEFL iBT no formato 2026">
+<meta property="og:description" content="{_lp_desc}">
+<meta property="og:type" content="website">
+<link rel="icon" type="image/png" sizes="192x192" href="icons/icon-192.png">
+<meta name="theme-color" content="#ef5a1f">
+{FONT_LINKS}
+<script>{_LEGAL_THEME_JS}</script>
+<style>
+{CSS}
+</style>
+</head>
+<body class="lp-page">
+<a class="skip-link" href="#lpMain">Pular para o conteúdo</a>
+<header class="lp-top">
+  <a class="legal-brand" href="apresentacao.html" aria-label="iTOEFL, início"><span class="logo">{LOGO_SVG}</span><span class="name">iTOEFL</span></a>
+  <nav class="lp-nav" aria-label="Seções da página">
+    <a href="#diagnostico">Diagnóstico grátis</a>
+    <a href="#planos">Planos</a>
+    <a href="#duvidas">Dúvidas</a>
+  </nav>
+  <a class="lp-btn lp-enter" href="index.html">Entrar</a>
+</header>
+
+<main id="lpMain" tabindex="-1">
+<section class="lp-hero">
+  <p class="lp-kicker">Formato vigente desde 21 de janeiro de 2026</p>
+  <h1>TOEFL iBT no formato 2026, em português.</h1>
+  <p class="lp-sub">A prova mudou em janeiro de 2026: menos de 1h30, Reading e Listening adaptativos, nota de 1 a 6.
+  Este curso foi escrito para ela.</p>
+  <div class="lp-cta">
+    <a class="lp-btn lp-btn-main" href="#planos">Ver os planos</a>
+    <a class="lp-btn" href="#diagnostico">Fazer o diagnóstico grátis</a>
+  </div>
+  <p class="lp-note">O diagnóstico tem 10 questões, leva cerca de 12 minutos e não pede conta.</p>
+</section>
+
+<section class="lp-section" aria-labelledby="lpInsideTitle">
+  <h2 id="lpInsideTitle">O que tem dentro</h2>
+  <ul class="lp-stats">{lp_stats}</ul>
+  <div class="lp-feats">
+    <div class="lp-feat"><h3>As quatro seções, no molde da prova</h3>
+      <p>Reading, Listening, Writing e Speaking, com os tipos de tarefa de 2026: Complete the Words de digitar,
+      Build a Sentence, Write an Email, Listen and Repeat, Take an Interview.</p></div>
+    <div class="lp-feat"><h3>Explicação em português, treino em inglês</h3>
+      <p>Cada questão corrigida mostra por que a resposta está certa e por que as outras erram. Um módulo inteiro
+      trata dos erros típicos de quem fala português.</p></div>
+    <div class="lp-feat"><h3>Simulados e acompanhamento</h3>
+      <p>Simulados progressivos com correção só na entrega, cronômetro por seção, gravador para o Speaking,
+      registro de erros e progresso salvo na sua conta.</p></div>
+  </div>
+</section>
+
+<section class="lp-section" id="diagnostico" aria-labelledby="lpDiagTitle">
+  <h2 id="lpDiagTitle">Diagnóstico grátis, sem conta</h2>
+  <p class="lp-lead">São as 10 questões do Teste de Nivelamento do Módulo 0: gramática, vocabulário e conectivos
+  acadêmicos. Responda sem consulta, confirme cada resposta e veja no fim o seu nível estimado. É uma estimativa de
+  treino, não uma nota oficial.</p>
+  {DIAG_HTML}
+  <div class="lp-result" id="lpResult" tabindex="-1" role="status" hidden>
+    <p class="lp-result-score" id="lpResultScore"></p>
+    <p class="lp-result-band" id="lpResultBand"></p>
+    <p class="lp-result-desc" id="lpResultDesc"></p>
+    <p class="lp-result-next">No curso, o caminho indicado para esse nível é o <strong id="lpResultSched"></strong>.
+    A estimativa vem de 10 questões de gramática e vocabulário: serve para escolher por onde começar, não para prever a nota da prova.</p>
+    <div class="lp-cta">
+      <a class="lp-btn lp-btn-main" href="#planos">Ver os planos</a>
+      <button type="button" class="lp-btn" id="lpRetry">Refazer o diagnóstico</button>
+    </div>
+  </div>
+</section>
+
+<section class="lp-section" id="planos" aria-labelledby="lpPlansTitle">
+  <h2 id="lpPlansTitle">Planos</h2>
+  <p class="lp-lead">Os três planos dão acesso ao mesmo material. O que muda é por quanto tempo. Pagamento único,
+  sem renovação automática.</p>
+  <div class="lp-plans">{lp_plans}</div>
+  <p class="lp-why">Por que o Standard é o recomendado: o cronograma de estudo que o curso indica para a maioria
+  dos alunos tem 60 dias, e o mais longo tem 90. Os 90 dias do Standard cobrem os dois.</p>
+  <p class="lp-refund"><strong>Reembolso em {REFUND_DAYS} dias.</strong> Em qualquer plano, você pode desistir da compra
+  em até {REFUND_DAYS} dias corridos e receber o valor inteiro de volta, sem justificar (artigo 49 do Código de Defesa do
+  Consumidor). Detalhes nos <a href="termos.html">Termos de Uso</a>.</p>
+</section>
+
+<section class="lp-section" id="duvidas" aria-labelledby="lpFaqTitle">
+  <h2 id="lpFaqTitle">Perguntas frequentes</h2>
+  <div class="lp-faq">{lp_faq}</div>
+</section>
+</main>
+
+<footer class="lp-foot">
+  <p>Preparação independente, baseada nas especificações públicas da prova. Não afiliada à ETS.
+  TOEFL e TOEFL iBT são marcas registradas da ETS.</p>
+  <p><a href="termos.html">Termos de Uso</a><span aria-hidden="true"> · </span><a href="privacidade.html">Política de Privacidade</a><span aria-hidden="true"> · </span><a href="termos.html">Contato (nos Termos de Uso)</a><span aria-hidden="true"> · </span><a href="index.html">Entrar</a></p>
+</footer>
+<script>
+{LANDING_JS}
+</script>
+</body>
+</html>
+'''
+open("../artifact/apresentacao.html", "w", encoding="utf-8").write(_landing)
+print("written apresentacao.html", len(_landing))
 
 # ---- PWA: manifesto, ícones e service worker com versão carimbada ----
 # A versão é um hash de tudo que o service worker guarda em cache. Build com
