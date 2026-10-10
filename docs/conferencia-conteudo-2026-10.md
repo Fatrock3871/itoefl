@@ -97,7 +97,9 @@ Nada daqui foi alterado no site.
    cancelamento dentro do prazo, reativação de score US$ 20. Vieram de FEES
    por leitura resumida: conferir no navegador antes de pôr no M8.
 2. **Preço do envio adicional de score.** FEES diz US$ 29, SEND diz US$ 25.
-   Divergência da própria ETS.
+   Divergência da própria ETS. **Resolvido em 2026-10-08:** o site nunca
+   citou o valor e continua sem citar. O M8 (Parte 8) agora manda conferir o
+   valor atual na página SEND, com link.
 3. **Documento aceito para brasileiros.** A regra por país fica no mesmo
    seletor. O boletim aceita, no país de cidadania, passaporte, carteira de
    motorista e identidade nacional, sempre físicos e com assinatura. Se a CNH
@@ -116,14 +118,17 @@ Nada daqui foi alterado no site.
    seguro; como aparece em seis módulos, fica para decisão.
 7. **Pontos brutos de Reading e Listening.** O SPEC p. 2 dá 35 e 35. A Tabela
    1 do OVER p. 21 traz "Raw Score Range 0-30" para as duas. O site segue o
-   SPEC. A ETS se contradiz ou a tabela do OVER fala de outra coisa.
+   SPEC. **Conferido de novo em 2026-10-08, ver a seção 7:** a divergência é
+   real e o site fica com o SPEC.
 8. **Itens por IA.** O SPEC dá o total "108 por máquina e 12 por IA", mas as
    linhas da própria tabela somam 107 e 13. O site repete o total.
 9. **Duração total.** O SPEC dá de 1h23 a 1h29, que é o que o site ensina. As
    páginas web dizem "just under 2 hours" e mandam reservar 2h30 com o
    check-in. Vale uma frase no M8 sobre reservar a manhã inteira.
 10. **Home Edition, sistema.** HOME pede Windows 11 ou superior; a FAQ diz 10.
-    O M8 diz só "Windows ou macOS".
+    O M8 diz só "Windows ou macOS". **Resolvido em 2026-10-08:** o site
+    segue sem citar versão, e o M8 (Parte 5) agora manda conferir o requisito
+    atual na página HOME, com link.
 11. **Tempo do Build a Sentence** (~6 min no site) é conta nossa: 23 menos 7
     menos 10.
 12. Seguem abertos da conferência anterior: divisão do tempo do Reading entre
@@ -149,3 +154,60 @@ Nada daqui foi alterado no site.
   (30 dias), Regular (60 dias) e Completo (90 dias). Os nomes Sprint,
   Standard e Premium ficam só para os planos de preço.
 - Itens 6 e 9 da seção 4.
+
+## 7. Pontos brutos de Reading e Listening: 35 ou 30 (2026-10-08)
+
+**A pergunta.** O "0 a 30" do OVER seria a escala antiga por seção (o 0 a
+120 dividido em quatro), e não pontos brutos? Se fosse, não haveria
+divergência com o SPEC.
+
+**Como foi conferido.** Busca no texto extraído dos dois PDFs guardados em
+`_snapshots/ets-pdfs/` (os mesmos de 2026-10-07, idênticos por hash aos
+baixados em 2026-10-08).
+
+**O que os documentos dizem.**
+
+| Documento | Trecho | Reading | Listening | Writing | Speaking |
+|---|---|---|---|---|---|
+| OVER p. 21, Tabela 1, "Raw Score and Band Score Ranges", coluna "Raw Score Range" | "Table 1 presents the raw score and band score ranges for the TOEFL test" | 0-30 | 0-30 | 0-20 | 0-55 |
+| SPEC p. 2, Blueprint Table, coluna "Raw Points" | Nota 1: "Items include non-scored items in the reading and listening sections"; "Max points per item is 1 for scored items" | 35 | 35 | 20 | 55 |
+| OVER p. 22, Tabela 3, "Score Concordance Between the 1–6 Band Levels and the 0–30 and 0–120 Score Scales" | "For two years, TOEFL will provide references to the old score scale in the score reports" | 0–30 | 0–30 | 0–30 | 0–30 |
+
+**Conclusão: a hipótese não se sustenta.** A Tabela 1 do OVER não é a escala
+antiga. Três motivos:
+
+1. O título e a coluna dizem "Raw Score", e o parágrafo que a apresenta
+   também.
+2. Na mesma coluna, Writing vai de 0 a 20 e Speaking de 0 a 55. Esses são os
+   pontos brutos do SPEC. Na escala antiga as quatro seções iam de 0 a 30:
+   se a tabela fosse a escala antiga, Writing e Speaking também estariam em
+   0-30.
+3. A escala antiga aparece em outro lugar do mesmo documento, a Tabela 3, e
+   lá sim as quatro seções usam 0–30.
+
+Então existem dois "0 a 30" no OVER, e eles são coisas diferentes: o da
+Tabela 3 é a escala antiga (correto, e é o que o aluno vê no relatório); o da
+Tabela 1 é apresentado como ponto bruto de Reading e Listening e **diverge**
+do SPEC, que dá 35. É uma divergência entre dois documentos da ETS, não um
+erro de leitura nosso. A coincidência do número pode ser a origem do erro
+(se for erro) na Tabela 1, mas isso é suposição: nenhum dos dois documentos
+explica.
+
+**Fonte escolhida: o SPEC (*Test Blueprint and Specifications Document*).** É
+o mais específico dos dois: lista os itens por competência, diz que Reading
+e Listening incluem itens não pontuados, e fixa 1 ponto por item pontuado.
+O OVER é um documento de apresentação e dá só a faixa, sem a conta. O site
+continua com 35 e 35, e o total bruto continua 145 (com a Tabela 1 do OVER
+seria 135).
+
+**O que mudou no site.** O M0 (Parte 2.2) ganhou um aviso logo abaixo da
+tabela de pontos, "Três números que não se misturam": ponto bruto (não
+aparece no resultado), banda de 1 a 6 (a nota oficial) e escala antiga de 0
+a 30 por seção e 0 a 120 no total (referência por dois anos). O aviso diz
+que o Overview traz "0–30" na tabela de pontos brutos, que o Blueprint dá 35
+e qual dos dois o curso segue.
+
+**O que continua sem resposta.** Qual dos dois números a ETS usa de fato.
+Para o aluno não faz diferença: ponto bruto não aparece no relatório e não
+entra em nenhuma conta do curso (a calculadora do M0 trabalha com
+porcentagem de acerto e banda).

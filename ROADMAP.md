@@ -188,7 +188,15 @@ Pequenas, independentes entre si, podem entrar em qualquer intervalo.
       cita e-rater e SpeechRater; a ETS de 2026 não nomeia os motores. Ver a
       seção 4 de `docs/conferencia-conteudo-2026-10.md`, com os outros pontos
       que ficaram em aberto (preço no Brasil, documento aceito para
-      brasileiros, pontos brutos 35 ou 30).
+      brasileiros).
+- [x] (C) Divergências da ETS fechadas em 2026-10-08. Pontos brutos de
+      Reading e Listening: o "0-30" da Tabela 1 do Overview não é a escala
+      antiga (na mesma coluna Writing é 0-20 e Speaking 0-55, que são pontos
+      brutos), então a divergência com o Blueprint (35) é real; o site segue
+      o Blueprint, o mais específico, e o M0 explica os três números (bruto,
+      banda, escala antiga). Preço do envio adicional e versão do Windows:
+      o site não cita número e o M8 manda conferir na página da ETS, com
+      link. Seção 7 de `docs/conferencia-conteudo-2026-10.md`.
 - [ ] (D) Reading: o site diz router de 9 minutos e módulo de 18 a 21; a
       tabela da ETS põe os números nas colunas contrárias. O total (27 a 30)
       está certo. Não foi alterado, ver a seção 3 da conferência.

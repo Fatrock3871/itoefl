@@ -472,6 +472,16 @@ check("content_states_confirmed_exam_rules", function(){
   return m8.indexOf("TOEFL Test App") !== -1 && m8.indexOf("4 envios") !== -1 && m8.indexOf("espelho de mão") !== -1 &&
     m5.indexOf("45 segundos") !== -1;
 });
+// numeros que a ETS publica com divergencia: o site nao cita valor de envio
+// nem versao de Windows, aponta para a pagina oficial; e o M0 separa ponto
+// bruto, banda e escala antiga
+check("content_points_to_ets_for_changing_numbers", function(){
+  var m8 = document.getElementById("panel-mod8"), m0 = document.getElementById("panel-mod0").textContent;
+  return !!m8.querySelector('a[href*="ets.org/toefl/test-takers/ibt/register/at-home-requirements"]') &&
+    !!m8.querySelector('a[href*="ets.org/toefl/test-takers/ibt/scores/send-scores"]') &&
+    !/US\$\s?\d|Windows 1[01]/.test(m8.textContent) &&
+    m0.indexOf("Três números que não se misturam") !== -1 && m0.indexOf("não é ponto bruto") !== -1;
+});
 // cronogramas do M0: Intensivo, Regular e Completo. Sprint, Standard e
 // Premium sao so os planos de preco (decisao de 2026-10-08)
 check("schedules_do_not_use_plan_names", function(){

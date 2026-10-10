@@ -331,7 +331,7 @@ Muitos candidatos brasileiros fazem a prova em casa. É o **mesmo teste e o mesm
 
 | Item | Exigência |
 |---|---|
-| Sistema | Desktop ou notebook (Windows ou macOS), **não** é permitido tablet/celular/Chromebook |
+| Sistema | Desktop ou notebook (Windows ou macOS), **não** é permitido tablet/celular/Chromebook. A versão mínima do sistema muda com o tempo: confira o requisito atual na [página de requisitos da Home Edition, no site da ETS](https://www.ets.org/toefl/test-takers/ibt/register/at-home-requirements.html) e rode a checagem de equipamento com antecedência |
 | Aplicativo | O **TOEFL Test App**, baixado antes pelo painel *My TOEFL Home*; é nele que roda a checagem de equipamento (*equipment check*) |
 | Câmera | Webcam funcional; você precisará **mostrar o ambiente e o seu documento** por ela |
 | Microfone | Externo ou embutido, desde que não seja o de um fone; testado na checagem de equipamento |
@@ -552,7 +552,7 @@ No fim da prova a tela pergunta se você quer **reportar** ou **cancelar** os sc
 | Ponto | Regra |
 |---|---|
 | **Intervalo mínimo entre testes** | Não dá para fazer a prova mais de uma vez num período de 3 dias, mesmo que você tenha cancelado o score da primeira |
-| **Envio para instituições** | A taxa da prova inclui até **4 envios**. Você escolhe ou troca os destinatários na conta ETS até as 22h (horário local do centro) da véspera. Depois disso, cada envio é pago |
+| **Envio para instituições** | A taxa da prova inclui até **4 envios**. Você escolhe ou troca os destinatários na conta ETS até as 22h (horário local do centro) da véspera. Depois disso, cada envio adicional é pago: confira o valor atual na [página de envio de notas da ETS](https://www.ets.org/toefl/test-takers/ibt/scores/send-scores.html) antes de pedir |
 | **Validade do score** | 2 anos a partir da data do teste |
 | **Quantas vezes** | Sem limite, respeitado o intervalo de 3 dias |
 | **MyBest Scores (superscore)** | A ETS reporta automaticamente, junto do score da data, a melhor banda de **cada seção** entre todos os seus testes dos últimos 2 anos. Verifique se a sua instituição aceita MyBest: muitas aceitam |

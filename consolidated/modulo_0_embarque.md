@@ -78,6 +78,14 @@ A partir de 2026 seu resultado sai em **duas escalas ao mesmo tempo**, e a ETS e
 | **Writing** | ~23 min | 12 itens | 20 | Não (linear) |
 | **Speaking** | ~8 min | 11 itens | 55 | Não (linear) |
 
+> 📌 **Três números que não se misturam.**
+>
+> 1. **Pontos brutos** (a coluna acima: 35, 35, 20 e 55). É a soma dos itens que contam ponto, antes de qualquer conversão. Esse número não aparece no seu resultado.
+> 2. **Banda de 1 a 6.** É a nota oficial de cada seção e a geral, de meio em meio ponto.
+> 3. **Escala antiga, de 0 a 30 por seção e 0 a 120 no total.** Aparece no relatório de notas só como referência, por dois anos, para quem ainda pensa na escala anterior (a equivalência das bandas com o 0 a 120 está na Parte 1.3). Esse "0 a 30" **não** é ponto bruto.
+>
+> Um aviso sobre as fontes: o *Test Overview* da ETS tem uma tabela de pontos brutos em que Reading e Listening aparecem como "0–30", enquanto o *Test Blueprint and Specifications* dá 35 para cada uma. Os dois documentos concordam em Writing (20) e Speaking (55). Este curso segue o Blueprint, que é o documento que detalha quantos itens contam ponto em cada seção. Para o seu estudo não muda nada: o que você acompanha é a banda.
+
 Repara no Speaking: só 8 minutos, mas 55 pontos brutos, o dobro do Writing, espremidos em 11 itens curtos. Cada resposta pesa muito mais do que parece, e não tem chance de "esquentar": a primeira já precisa sair boa.
 
 ### 2.3 Os Tipos de Item: Mapa Completo
