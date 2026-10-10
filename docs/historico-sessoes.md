@@ -7,6 +7,43 @@ falta" do `ROADMAP.md`. Sessão nova entra no topo.
 
 ---
 
+## Sessão 2026-10-08 (segunda leva): cronogramas, três planos, tela de apresentação
+
+Sessão do desenvolvedor a pedido do gerente (Hermes), com as decisões do dono
+do dia: nomes dos cronogramas, diagnóstico grátis sem conta, reembolso de 7
+dias, selo "Recomendado".
+
+- `81efb94` Cronogramas do M0 viram Intensivo (30), Regular (60) e Completo
+  (90). Sem migração: nenhuma chave guardava o nome.
+- `72e461c` Planos no servidor: preço e prazo em
+  `supabase/functions/_shared/plans.ts`, `create-checkout` recebe só o id,
+  `mp-webhook` grava pela função de banco `apply_payment`, tabela `payments`
+  e `entitlements.expires_at`. Migração em
+  `supabase/migrations/20261008_planos.sql`.
+- `3740b2d` Planos no site: escolha na tela de compra, acesso vencido no
+  bloqueio e em Minha conta, termos com planos e reembolso, e
+  `docs/deploy-planos.md`.
+- `d62324e` Tela de apresentação (`artifact/apresentacao.html`), com o
+  diagnóstico sem conta e a tabela de planos.
+- `06e1697` Divergências da ETS: pontos brutos 35 contra 30 (o site fica com
+  o Blueprint e o M0 explica), envio de notas e versão do sistema apontam
+  para a página oficial.
+- Plano da versão gratuita em `docs/versao-gratuita.md`, sem implementar.
+
+O smoke test foi de 168 para 201 checagens.
+
+**Não executado, de propósito:** nenhum SQL rodou, nenhuma function foi
+publicada, o site não foi publicado. As duas functions foram revisadas por
+leitura e nunca rodaram (a máquina não tem Deno): a primeira execução é o
+deploy, e o `docs/deploy-planos.md` traz os testes de compra que cobrem
+isso.
+
+**Não verificado:** nada em aparelho real. A tela de apresentação foi
+conferida em Chrome a 1280 e a 375 px, nos dois temas. O texto dela e o dos
+termos novos precisam ser lidos pelo dono, e os termos por advogado.
+
+---
+
 ## Sessão 2026-10-08: caça a erros, conferência de conteúdo, auditoria e melhorias
 
 Sessão do desenvolvedor a pedido do gerente (Hermes), em três fases.

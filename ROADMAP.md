@@ -14,7 +14,9 @@ correção por agente e conversação estão detalhadas em
 **Conferência do formato da prova:** `docs/conferencia-formato-2026.md` (números)
 e `docs/conferencia-conteudo-2026-10.md` (regras, Home Edition, notas).
 **Agora:** o site está pronto para publicar e a Etapa 0 (publicar, pagamento,
-teste em celular) bloqueia todo o resto. Fora dela, já estão feitos o PWA, o
+teste em celular) bloqueia todo o resto. Os três planos e a tela de
+apresentação estão em código, sem publicar: o próximo passo do dono é o
+`docs/deploy-planos.md`. Fora dela, já estão feitos o PWA, o
 plano B do gravador no iPhone, a infraestrutura de videoaulas e de
 aprofundamento e a primeira parte do banco de questões.
 
@@ -184,6 +186,13 @@ Pequenas, independentes entre si, podem entrar em qualquer intervalo.
       `localStorage` guardava o nome (a recomendação é recalculada do
       diagnóstico e o id das subseções é por posição), então não houve
       migração.
+- [ ] (D) Versão gratuita de teste. Opções, riscos e esforço em
+      `docs/versao-gratuita.md` (só plano, nada implementado). Recomendação:
+      freemium por conteúdo agora (M0 inteiro, Parte 1 de cada módulo e um
+      exercício por seção, 18 Partes de 86), e degustação por tempo só
+      depois da Etapa 2, porque hoje o curso inteiro vai dentro do HTML e um
+      teste de acesso completo entregaria o produto. Decidir: qual modelo, a
+      amostra, 3 ou 7 dias se houver teste, e se pode entrar medição de uso.
 - [ ] (D) O site diz que Speaking e Writing são corrigidos "100% por IA" e
       cita e-rater e SpeechRater; a ETS de 2026 não nomeia os motores. Ver a
       seção 4 de `docs/conferencia-conteudo-2026-10.md`, com os outros pontos
