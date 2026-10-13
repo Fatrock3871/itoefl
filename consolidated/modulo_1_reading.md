@@ -415,10 +415,10 @@ Again, I'm sorry for the short notice.
 Talk soon, Lia
 
 **Item 1**: (A) cancel  (B) canceling  (C) to cancel  (D) cancelled
-**Item 2**: (A) arrive  (B) arrives  (C) arriving  (D) is arriving
-**Item 3**: (A) plan  (B) planned  (C) have been planning  (D) are planning
+**Item 2**: (A) arrive  (B) will arriving  (C) arriving  (D) is arriving
+**Item 3**: (A) plan  (B) planning  (C) have been planning  (D) are planning
 **Item 4**: (A) work  (B) works  (C) working  (D) worked
-**Item 5**: (A) talk  (B) talks  (C) talking  (D) talked
+**Item 5**: (A) are talking  (B) is talking  (C) talking  (D) be talking
 **Item 6**: (A) know  (B) known  (C) knowing  (D) to know
 
 ---
@@ -456,7 +456,7 @@ Thanks for your patience, and enjoy the (8)_____ time off!
 
 **Item 1**: (A) know  (B) knows  (C) known  (D) knowing
 **Item 2**: (A) turn off  (B) turn down  (C) turn out  (D) turn over
-**Item 3**: (A) complete  (B) completing  (C) completed  (D) completes
+**Item 3**: (A) completion  (B) completing  (C) completed  (D) completes
 **Item 4**: (A) come  (B) comes  (C) coming  (D) will comes
 **Item 5**: (A) warm  (B) warms  (C) warmly  (D) warmth
 **Item 6**: (A) hesitate  (B) hesitating  (C) hesitation  (D) hesitated
@@ -493,7 +493,7 @@ This does not mean nothing (4)_____ be done. It means the solution lies elsewher
 **Item 1**: (A) has  (B) have  (C) had  (D) having
 **Item 2**: (A) conclusion  (B) decision  (C) opinion  (D) suggestion
 **Item 3**: (A) does  (B) do  (C) is  (D) has
-**Item 4**: (A) can  (B) can't  (C) must  (D) should
+**Item 4**: (A) can  (B) can't  (C) is  (D) has
 **Item 5**: (A) need  (B) want  (C) wish  (D) hope
 **Item 6**: (A) why  (B) because  (C) how  (D) what
 
@@ -834,10 +834,10 @@ The finding has been extended well beyond job-hunting. Weak ties have been linke
 | Item | Resp. | Por quê |
 |---|---|---|
 | 1 | **A** *cancel* | *have to* + **verbo base**. As opções (B) *canceling*, (C) *to cancel* e (D) *cancelled* quebram a estrutura *"have to + base"*. |
-| 2 | **D** *is arriving* | Compromisso futuro já combinado (*that morning*) → **presente contínuo com valor de futuro**. (A)/(B) presente simples não expressam plano; (C) *arriving* sozinho não tem auxiliar. |
-| 3 | **C** *have been planning* | *"for weeks"* + ação iniciada no passado e ainda em curso → **presente perfeito contínuo**. (D) *are planning* ignora o *"for weeks"*; (A)/(B) não conectam passado e presente. |
+| 2 | **D** *is arriving* | Compromisso futuro já combinado (*that morning*) → **presente contínuo com valor de futuro**. (A) quebra a concordância com *my sister*; (B) *will* + *-ing* sem *be* é agramatical; (C) *arriving* sozinho não tem auxiliar. Obs.: *arrives* também estaria certo aqui (horário de voo), por isso não está entre as opções. |
+| 3 | **C** *have been planning* | *"for weeks"* + ação iniciada no passado e ainda em curso → **presente perfeito contínuo**. (D) *are planning* ignora o *"for weeks"*; (A) não conecta passado e presente; (B) *planning* sozinho não tem auxiliar. |
 | 4 | **A** *work* | Depois do modal *would* → **base**. *"Would Sunday afternoon work?"* |
-| 5 | **B** *talks* | *everyone* = **singular** → verbo **+ -s**. *"everyone talks about"*. |
+| 5 | **B** *is talking* | *everyone* = **singular** → *is talking* (o contínuo é o natural para o que está na moda agora). (A) quebra a concordância; (C) e (D) não têm auxiliar conjugado. |
 | 6 | **A** *know* | *let* + objeto + **base** (*let me know*: fórmula fixa). (D) *"let me to know"* é agramatical. |
 
 #### DRILL A2
@@ -857,11 +857,11 @@ The finding has been extended well beyond job-hunting. Weak ties have been linke
 |---|---|---|---|
 | 1 | **A** *know* | *most of you* + *already* → presente, sujeito plural → **base**. | *"As most of you already know"* é fórmula de aviso. (B) quebra concordância; (C) exigiria *have*; (D) não fecha o tempo verbal. |
 | 2 | **A** *turn off* | imperativo + objeto *equipment*. | *turn off* = desligar. (B) *turn down* = baixar volume/recusar; (C) *turn out* = revelar-se; (D) *turn over* = virar/entregar. |
-| 3 | **C** *completed* | *"will be ___"* → voz passiva → **particípio**. | *will be completed* = padrão. (B) *being* formaria *"will be being completed"*, não natural; (A) e (D) quebram *be + particípio*. |
+| 3 | **C** *completed* | *"will be ___"* → voz passiva → **particípio**. | *will be completed* = padrão. (A) *completion* é substantivo; (B) *completing* daria voz ativa sem objeto; (D) é verbo conjugado, impossível depois de *be*. |
 | 4 | **B** *comes* | *everyone* = singular → **+ -s**. | *comes back* = collocation de rotina. (A) quebra concordância; (C) exigiria *is*; (D) *"will comes"* é agramatical. |
 | 5 | **A** *warm* | depois de *to* → **base**. | *warm up* = esquentar (phrasal verb). (B) quebra o infinitivo; (C) advérbio; (D) substantivo. |
 | 6 | **A** *hesitate* | depois de *don't* → **base**. | *don't hesitate to* = fórmula fixa. (B)/(D) quebram o imperativo; (C) é substantivo. |
-| 7 | **B** *lose* | paralelo com *ask* após *than* → **base**. | *than lose (time over) a real problem* mantém o contraste "perguntar à toa vs. deixar um problema real sem solução". (A) *miss* não combina com *problem*; (C) *waste* pede *time/resources*; (D) *fail* pede *to* (*fail to address*). |
+| 7 | **A** *miss* | paralelo com *ask* após *than* → **base**. | *miss a problem* = não perceber, deixar passar um problema: melhor uma pergunta à toa do que um problema real que ninguém notou. (B) *lose a problem* não existe; (C) *waste* pede *time/money*; (D) *fail* pede *to* (*fail to notice*). |
 | 8 | **C** *extended* | modifica o substantivo *time off* → **particípio-adjetivo**. | *extended time off* = folga prolongada, retomando *the long weekend*. (A) verbo base; (B) muda o sentido para "que se estende"; (D) substantivo não modifica substantivo aqui. |
 
 #### DRILL A4
@@ -882,7 +882,7 @@ The finding has been extended well beyond job-hunting. Weak ties have been linke
 | 1 | **A** *has* | Sujeito *"the standard response"* = **singular** → *"has been"* (presente perfeito: *"For decades... has been"*). (B) *have* quebra a concordância; (C) *had* pediria um marco no passado; (D) *having* não fecha o tempo. |
 | 2 | **A** *conclusion* | *"points to the opposite ___"*: *point to a conclusion* é a collocation. (B) *decision*, (C) *opinion*, (D) *suggestion* não colocam com *research points to the opposite ___*. |
 | 3 | **A** *does* | inversão após *Rarely* no início da frase → **auxiliar** *does* + sujeito + base (*prove*). *"Rarely does a policy... prove..."* |
-| 4 | **A** *can* | *"This does not mean nothing ___ be done"* · dupla negação lógica: *"não significa que nada **pode** ser feito"*. (B) inverteria; (C)/(D) mudam o sentido para obrigação/recomendação, não cabimento. |
+| 4 | **A** *can* | *"This does not mean nothing ___ be done"* · modal + *be done* (passiva): *"não significa que nada **pode** ser feito"*. (B) inverteria o sentido; (C) e (D) não podem vir antes de *be* (*"is be"* e *"has be"* são agramaticais). |
 | 5 | **A** *need* | *"reduce the ___ to drive"*: *the need to (do something)* = a necessidade de. *want/wish/hope* não colocam com *reduce the ___ to drive* nesse sentido estrutural. |
 | 6 | **A** *why* | *"which is ___ they are so often postponed"*: *"which is why..."* = "razão pela qual". (B) *because* precisaria de outra estrutura; (C)/(D) não fecham a relativa. |
 

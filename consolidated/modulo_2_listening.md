@@ -455,11 +455,11 @@ Anotar palavra por palavra é lento demais. Use símbolos.
 
 **A1.** *"I was going to grab lunch before the seminar, but there's no time now."* (A) "That's fine, I had a big breakfast." (B) "Yeah, let's just head straight there." (C) "The seminar was really interesting." (D) "I ate there last week too."
 
-**A2.** *"Do you mind if I borrow your notes from Tuesday? I was out sick."* (A) "Sure: I'll send them over tonight." (B) "I hope you feel better soon." (C) "Tuesday's class was canceled, actually." (D) "I wasn't there either, unfortunately."
+**A2.** *"Do you mind if I borrow your notes from Tuesday? I was out sick."* (A) "Sure: I'll send them over tonight." (B) "I hope you feel better soon." (C) "I borrowed a book from the library on Tuesday." (D) "Tuesday's class starts at nine."
 
-**A3.** *"Honestly, I'm not sure this draft is ready to submit."* (A) "The deadline's not until Friday, right?" (B) "What do you think it still needs?" (C) "I submitted mine yesterday." (D) "That's a great title."
+**A3.** *"Honestly, I'm not sure this draft is ready to submit."* (A) "I'm sure the printer is ready." (B) "What do you think it still needs?" (C) "I submitted mine yesterday." (D) "That's a great title."
 
-**A4.** *"You're not still planning to walk in this weather, are you?"* (A) "No, I'll catch the bus instead." (B) "Campus is only ten minutes away." (C) "I walked there yesterday." (D) "It rained a lot last semester too."
+**A4.** *"You're not still planning to walk in this weather, are you?"* (A) "No, I'll catch the bus instead." (B) "The weather report comes on at six." (C) "I walked there yesterday." (D) "It rained a lot last semester too."
 
 **A5.** *"I heard the registrar's office changed their hours."* (A) "I registered for four classes this term." (B) "Really? Do you know the new schedule?" (C) "The office is on the second floor." (D) "I haven't registered for anything yet."
 
@@ -469,13 +469,13 @@ Anotar palavra por palavra é lento demais. Use símbolos.
 
 **A8.** *"Would you rather present first or last?"* (A) "I presented last time." (B) "Last, if that's an option: I need time to prepare." (C) "The presentation is worth 20% of the grade." (D) "First place goes to the best presentation."
 
-**A9.** *"This bus is taking forever. We should've left earlier."* (A) "The bus stop is right over there." (B) "Tell me about it: I hate cutting it this close." (C) "I take this bus every day." (D) "We left at eight, same as always."
+**A9.** *"This bus is taking forever. We should've left earlier."* (A) "The bus stop is right over there." (B) "Tell me about it: I hate cutting it this close." (C) "I take this bus every day." (D) "I left my umbrella on the bus once."
 
 **A10.** *"Professor Lin said she might cancel Friday's class."* (A) "She's a great lecturer, isn't she?" (B) "Did she say why, or was it just a maybe?" (C) "Friday's class is in the east building." (D) "I've never had a class canceled before."
 
 **A11.** *"I've been meaning to ask: how did the interview go?"* (A) "It's at two o'clock on Thursday." (B) "Better than I expected, actually. They said they'd call by Friday." (C) "I've had a lot of interviews lately." (D) "The company is downtown, near the station."
 
-**A12.** *"Do you think it's worth applying? I doubt I'd get in."* (A) "The application fee is fifty dollars." (B) "You never know unless you try: I'd go for it." (C) "I applied there two years ago." (D) "It's a very competitive program."
+**A12.** *"Do you think it's worth applying? I doubt I'd get in."* (A) "The application fee is fifty dollars." (B) "You never know unless you try: I'd go for it." (C) "I applied there two years ago." (D) "The program starts in September."
 
 ---
 
@@ -706,17 +706,17 @@ This is a textbook case of what economists call **path dependence**, or sometime
 | Item | Resp. | Por quê / padrão do distrator |
 |---|---|---|
 | A1 | **B** | O falante sinaliza falta de tempo; a resposta natural propõe a ação consequente. (A)(C)(D) ignoram a urgência: **WRONG FOCUS**. |
-| A2 | **A** | Pedido direto → resposta direta de concessão + plano. (B) é gentil mas não responde ao pedido; (C)(D) mudam de assunto. |
-| A3 | **B** | Insegurança sobre o rascunho → resposta busca o problema específico. (A) muda para prazo; (C)(D) ignoram a preocupação. |
-| A4 | **A** | Pergunta retórica = alerta educado sobre andar na chuva. Resposta natural revisa o plano. (B)(C) reforçam o plano problemático: **CONFUSED REASONING**. |
+| A2 | **A** | Pedido direto → resposta direta de concessão + plano. (B) é gentil mas não responde ao pedido; (C) reaproveita *borrow* e (D) reaproveita *Tuesday*: **CORRECT WORDS, WRONG MEANING**. |
+| A3 | **B** | Insegurança sobre o rascunho → resposta busca o problema específico. (A) reaproveita *ready* sem tratar da preocupação: **CORRECT WORDS, WRONG MEANING**; (C)(D) ignoram a preocupação. |
+| A4 | **A** | Pergunta retórica = alerta educado sobre ir a pé com esse tempo. A resposta natural revisa o plano. (B) reaproveita *weather*: **CORRECT WORDS, WRONG MEANING**; (C)(D) falam de outro momento e ignoram o alerta. |
 | A5 | **B** | Informação nova (mudança de horário) → interesse + pedido de detalhe. (A)(D) confundem *register* (matricular-se) com *hours*: **CORRECT WORDS, WRONG MEANING**. (C) é **TRUE BUT NOT SAID**. |
 | A6 | **B** | *"run X by me"* = me mostrar antes. Resposta natural marca um horário. (A) toma *"run"* ao pé da letra: **CORRECT WORDS, WRONG MEANING**. (C) muda o foco; (D) ignora o pedido. |
 | A7 | **A** | Divergência sobre a data → confirmar juntos, checar o syllabus. (B) muda o foco (localização); (C)(D) ignoram a divergência. |
 | A8 | **B** | Pergunta de preferência (primeiro ou último) → escolher e justificar. (A)(C)(D) não respondem à escolha oferecida. |
-| A9 | **B** | Reclamação sobre a demora → *"Tell me about it"* concorda enfaticamente + acrescenta. (A)(C)(D) mudam o foco. |
+| A9 | **B** | Reclamação sobre a demora → *"Tell me about it"* concorda enfaticamente + acrescenta. (A)(C)(D) reaproveitam *bus*/*left* sem reagir à reclamação. |
 | A10 | **B** | Notícia incerta (*"might cancel"*) → pedir esclarecimento sobre o motivo/certeza. (A)(C)(D) desviam. |
 | A11 | **B** | Pergunta sobre como foi a entrevista → dar o resultado + próximo passo. (A) responde sobre horário; (C)(D) generalizam/desviam. |
-| A12 | **B** | Dúvida + autodepreciação → encorajamento. (A)(C)(D) desviam para custo, experiência passada, competitividade. |
+| A12 | **B** | Dúvida + autodepreciação → encorajamento. (A)(C)(D) desviam para custo, experiência passada e calendário. |
 
 ### GRUPO B: Listen to a Conversation
 

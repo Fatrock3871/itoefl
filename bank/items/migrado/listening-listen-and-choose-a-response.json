@@ -66,11 +66,11 @@
     "options": {
       "A": "Sure — I'll send them over tonight.",
       "B": "I hope you feel better soon.",
-      "C": "Tuesday's class was canceled, actually.",
-      "D": "I wasn't there either, unfortunately."
+      "C": "I borrowed a book from the library on Tuesday.",
+      "D": "Tuesday's class starts at nine."
     },
     "answer": "A",
-    "explanation": "Pedido direto → resposta direta de concessão + plano. (B) é gentil mas não responde ao pedido; (C)/(D) mudam de assunto.",
+    "explanation": "Pedido direto → resposta direta de concessão + plano. (B) é gentil mas não responde ao pedido; (C) e (D) só reaproveitam palavras da fala (<em>borrow</em>, <em>Tuesday</em>).",
     "hint": null,
     "trap_codes": [],
     "tags": [],
@@ -109,13 +109,13 @@
     "prompt": "Choose the best response.",
     "text_format": "html",
     "options": {
-      "A": "The deadline's not until Friday, right?",
+      "A": "I'm sure the printer is ready.",
       "B": "What do you think it still needs?",
       "C": "I submitted mine yesterday.",
       "D": "That's a great title."
     },
     "answer": "B",
-    "explanation": "Insegurança sobre o rascunho → resposta busca o problema específico. (A) muda para prazo; (C)/(D) ignoram a preocupação.",
+    "explanation": "Insegurança sobre o rascunho → a resposta busca o problema específico. (A) reaproveita <em>ready</em> sem tratar da preocupação; (C)/(D) ignoram a preocupação.",
     "hint": null,
     "trap_codes": [],
     "tags": [],
@@ -155,12 +155,12 @@
     "text_format": "html",
     "options": {
       "A": "No, I'll catch the bus instead.",
-      "B": "Campus is only ten minutes away.",
+      "B": "The weather report comes on at six.",
       "C": "I walked there yesterday.",
       "D": "It rained a lot last semester too."
     },
     "answer": "A",
-    "explanation": "Pergunta retórica = alerta educado sobre andar na chuva. Resposta natural revisa o plano. (B)/(C) reforçam o plano problemático.",
+    "explanation": "Pergunta retórica = alerta educado sobre ir a pé com esse tempo. A resposta natural revisa o plano. (B) só reaproveita <em>weather</em>; (C)/(D) falam de outro momento e ignoram o alerta.",
     "hint": null,
     "trap_codes": [],
     "tags": [],
@@ -382,10 +382,10 @@
       "A": "The bus stop is right over there.",
       "B": "Tell me about it — I hate cutting it this close.",
       "C": "I take this bus every day.",
-      "D": "We left at eight, same as always."
+      "D": "I left my umbrella on the bus once."
     },
     "answer": "B",
-    "explanation": "Reclamação sobre a demora → \"Tell me about it\" concorda enfaticamente + acrescenta. (A)/(C)/(D) mudam o foco.",
+    "explanation": "Reclamação sobre a demora → \"Tell me about it\" concorda enfaticamente + acrescenta. (A), (C) e (D) reaproveitam <em>bus</em>/<em>left</em> sem reagir à reclamação.",
     "hint": null,
     "trap_codes": [],
     "tags": [],
@@ -517,10 +517,10 @@
       "A": "The application fee is fifty dollars.",
       "B": "You never know unless you try — I'd go for it.",
       "C": "I applied there two years ago.",
-      "D": "It's a very competitive program."
+      "D": "The program starts in September."
     },
     "answer": "B",
-    "explanation": "Dúvida + autodepreciação → encorajamento. (A)/(C)/(D) desviam para custo, experiência passada, competitividade.",
+    "explanation": "Dúvida + autodepreciação → encorajamento. (A), (C) e (D) desviam para custo, experiência passada e calendário.",
     "hint": null,
     "trap_codes": [],
     "tags": [],

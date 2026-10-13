@@ -65,12 +65,12 @@
     "text_format": "html",
     "options": {
       "A": "arrive",
-      "B": "arrives",
+      "B": "will arriving",
       "C": "arriving",
       "D": "is arriving"
     },
     "answer": "D",
-    "explanation": "Compromisso futuro já combinado (\"that morning\") → <strong>presente contínuo com valor de futuro</strong>. (A)/(B) presente simples não expressam plano; (C) <em>arriving</em> sozinho não tem auxiliar.",
+    "explanation": "Compromisso futuro já combinado (\"that morning\") → <strong>presente contínuo com valor de futuro</strong>. (A) quebra a concordância com <em>my sister</em>; (B) <em>will</em> + <em>-ing</em> sem <em>be</em> é agramatical; (C) <em>arriving</em> sozinho não tem auxiliar. Obs.: <em>arrives</em> também estaria certo aqui (horário de voo), por isso não está entre as opções.",
     "hint": null,
     "trap_codes": [],
     "tags": [],
@@ -110,12 +110,12 @@
     "text_format": "html",
     "options": {
       "A": "plan",
-      "B": "planned",
+      "B": "planning",
       "C": "have been planning",
       "D": "are planning"
     },
     "answer": "C",
-    "explanation": "\"For weeks\" + ação iniciada no passado e ainda em curso → <strong>presente perfeito contínuo</strong>. (D) <em>are planning</em> ignora o \"for weeks\"; (A)/(B) não conectam passado e presente.",
+    "explanation": "\"For weeks\" + ação iniciada no passado e ainda em curso → <strong>presente perfeito contínuo</strong>. (D) <em>are planning</em> ignora o \"for weeks\"; (A) não conecta passado e presente; (B) <em>planning</em> sozinho não tem auxiliar.",
     "hint": null,
     "trap_codes": [],
     "tags": [],
@@ -199,13 +199,13 @@
     "prompt": "Lacuna (5)",
     "text_format": "html",
     "options": {
-      "A": "talk",
-      "B": "talks",
+      "A": "are talking",
+      "B": "is talking",
       "C": "talking",
-      "D": "talked"
+      "D": "be talking"
     },
     "answer": "B",
-    "explanation": "<em>Everyone</em> = <strong>singular</strong> → verbo + -s. \"Everyone talks about...\"",
+    "explanation": "<em>Everyone</em> = <strong>singular</strong> → <em>is talking</em> (o contínuo é o natural para o que está na moda agora). (A) quebra a concordância; (C) e (D) não têm auxiliar conjugado.",
     "hint": null,
     "trap_codes": [],
     "tags": [],
@@ -649,13 +649,13 @@
     "prompt": "Lacuna (3)",
     "text_format": "html",
     "options": {
-      "A": "complete",
+      "A": "completion",
       "B": "completing",
       "C": "completed",
       "D": "completes"
     },
     "answer": "C",
-    "explanation": "\"Will be _____\" pede particípio passado para a voz passiva. As outras formas quebram a estrutura \"be + particípio\".",
+    "explanation": "\"Will be _____\" pede particípio passado (voz passiva): \"will be completed\". (A) é substantivo; (B) daria voz ativa sem objeto; (D) é verbo conjugado, impossível depois de \"be\".",
     "hint": null,
     "trap_codes": [],
     "tags": [],
@@ -834,8 +834,8 @@
       "C": "waste",
       "D": "fail"
     },
-    "answer": "B",
-    "explanation": "Estrutura paralela \"ask a question... than _____ a real problem\" pede verbo base após \"than\". \"Lose\" mantém o contraste lógico entre perguntar à toa e deixar um problema real sem solução.",
+    "answer": "A",
+    "explanation": "Estrutura paralela \"ask a question... than _____ a real problem\" pede verbo base após \"than\". <em>Miss a problem</em> = não perceber, deixar passar um problema: melhor uma pergunta à toa do que um problema real que ninguém notou. (B) <em>lose a problem</em> não existe; (C) <em>waste</em> pede <em>time/money</em>; (D) <em>fail</em> pede <em>to</em> (\"fail to notice\").",
     "hint": null,
     "trap_codes": [],
     "tags": [],
@@ -847,8 +847,8 @@
       "live_on_site": true,
       "answer_letter": "origem",
       "build_map": {
-        "A": "D",
-        "B": "B",
+        "A": "B",
+        "B": "D",
         "C": "A",
         "D": "C"
       }
@@ -1326,11 +1326,11 @@
     "options": {
       "A": "can",
       "B": "can't",
-      "C": "must",
-      "D": "should"
+      "C": "is",
+      "D": "has"
     },
     "answer": "A",
-    "explanation": "\"This does not mean nothing ___ be done\": dupla negação lógica: \"não significa que nada pode ser feito\". (B) inverteria o sentido; (C)/(D) mudam para obrigação/recomendação, não cabimento.",
+    "explanation": "\"This does not mean nothing ___ be done\": modal + <em>be done</em> (passiva): \"não significa que nada pode ser feito\". (B) inverteria o sentido; (C) e (D) não podem vir antes de \"be\" (\"is be\" e \"has be\" são agramaticais).",
     "hint": null,
     "trap_codes": [],
     "tags": [],

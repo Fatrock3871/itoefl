@@ -806,6 +806,48 @@ def bank_checks():
     return out
 
 
+def content_review_checks():
+    """Revisao de conteudo de 2026-10-13, rodada 1: o gabarito corrigido e as
+    alternativas que deixavam o item com duas respostas nao podem voltar."""
+    sys.path.insert(0, str(APP_DIR))
+    import drills_data
+
+    lists = [getattr(drills_data, n) for n in dir(drills_data) if n.startswith("MOD")]
+    drills = {d["id"]: d for lst in lists for d in lst}
+    items = [it for d in drills.values() for it in d["items"]]
+
+    def item(drill_id, num):
+        return next(it for it in drills[drill_id]["items"] if it["num"] == num)
+
+    def answer(drill_id, num):
+        it = item(drill_id, num)
+        return it["options"][it["correct"]]
+
+    def opts(drill_id, num):
+        return set(item(drill_id, num)["options"].values())
+
+    # distratores que eram resposta natural (Listen and Choose a Response) ou
+    # segunda forma gramatical (lacunas do M1)
+    banned = {
+        ("mod1-a1", "2"): "arrives", ("mod1-a1", "3"): "planned", ("mod1-a1", "5"): "talked",
+        ("mod1-a3", "3"): "complete", ("mod1-a5", "4"): "should",
+        ("mod2-a", "A2"): "Tuesday's class was canceled, actually.",
+        ("mod2-a", "A3"): "The deadline's not until Friday, right?",
+        ("mod2-a", "A4"): "Campus is only ten minutes away.",
+        ("mod2-a", "A9"): "We left at eight, same as always.",
+        ("mod2-a", "A12"): "It's a very competitive program.",
+    }
+    out = {
+        "drills_legacy_lists_gone": not hasattr(drills_data, "MOD1_DRILLS") and not hasattr(drills_data, "MOD2_DRILLS"),
+        # "A,B,D" e o item de marcar tres (sai na rodada 2)
+        "drills_keys_point_to_an_option": all(set(it["correct"].split(",")) <= set(it["options"])
+                                              and len(set(it["options"].values())) == len(it["options"]) for it in items),
+        "review_drill_a3_7_is_miss": answer("mod1-a3", "7") == "miss" and "lose a problem" in item("mod1-a3", "7")["explanation"],
+        "review_drill_distractors_not_valid": all(text not in opts(*key) for key, text in banned.items()),
+    }
+    return out
+
+
 # Terceira passada: um build de EXEMPLO, feito numa copia temporaria das
 # fontes, com conteudo que o site de verdade ainda nao tem (videoaulas
 # cadastradas). Serve para testar a infraestrutura sem deixar exemplo no ar:
@@ -999,6 +1041,7 @@ def main():
     results.update(landing_checks())
     results.update(deep_markup_checks())
     results.update(bank_checks())
+    results.update(content_review_checks())
 
     # quarta passada: Chrome de verdade por http://127.0.0.1 (recarregar,
     # tela de celular, contraste, service worker). Ver scripts/smoke_browser.py
