@@ -422,6 +422,18 @@ Não foram pedidos, apareceram ao consolidar a lista.
   oferece. É o lugar natural para a tabela dos três planos (ver "Decisões
   travadas"), então convém desenhar as duas coisas juntas.
 - Medição de uso, para saber onde os alunos param.
+- **No radar, pedido pelo usuário em 2026-10-13:** cursor do mouse
+  personalizado, que muda conforme a pessoa mexe no app. Falta o usuário
+  dizer o que imagina (um cursor da marca no site todo, ou um que reage a
+  botão, alternativa, arrastar). Cuidados quando for feito: não vale em
+  celular, e o cursor de texto e o de link precisam continuar reconhecíveis.
+- **No radar, pedido pelo usuário em 2026-10-13:** possível filiação a
+  plataformas de venda de conteúdo digital, como a Kirvano. A decidir junto
+  com o item do gateway (0.3), porque nessas plataformas o checkout é delas:
+  a liberação do acesso em `entitlements` teria de vir de um aviso da
+  plataforma, no lugar do `mp-webhook`. A conferir antes: taxas, como
+  funciona o programa de afiliados, se aceitam os três planos com prazo e
+  se avisam o nosso servidor a cada venda e reembolso.
 - Plano do Supabase: conferir limites e política de pausa do plano grátis
   antes de depender dele com gente pagando.
 
