@@ -59,10 +59,6 @@ DRILL_LISTS = [
     ("MOD2_ACTION_DRILLS_C", "Listen to an Announcement", True),
     ("MOD2_ACTION_DRILLS_D", "Listen to an Academic Talk", True),
 ]
-# MOD1_DRILLS e MOD2_DRILLS ficam de fora: são importados mas não renderizados
-# pelo build_pipeline.py, repetem parte dos Action Drills e reusam ids
-# (mod2-d1 a mod2-d3). Ver bank/README.md, "Fora da migração".
-LEGACY_LISTS = ["MOD1_DRILLS", "MOD2_DRILLS"]
 
 
 def parse_level(level):
@@ -359,8 +355,6 @@ def run(out_dir=OUT_DEFAULT, verbose=False):
             path.unlink()
 
     if verbose:
-        import drills_data
-        legacy = sum(len(d["items"]) for name in LEGACY_LISTS for d in getattr(drills_data, name))
         print(f"{'fonte':<55} {'origem':>7} {'destino':>8}")
         for r in report:
             print(f"{r['fonte']:<55} {r['origem']:>7} {r['destino']:>8}")
@@ -370,8 +364,7 @@ def run(out_dir=OUT_DEFAULT, verbose=False):
         print(f"\nArquivos em {out_dir.relative_to(ROOT) if out_dir.is_relative_to(ROOT) else out_dir}:")
         for name in sorted(files):
             print(f"  {name:<50} {len(files[name]):>4}")
-        print(f"\nFora da migração: {legacy} itens de MOD1_DRILLS/MOD2_DRILLS (não renderizados pelo build);"
-              f" {typed} itens de digitação do M7 sem alternativas.")
+        print(f"\nFora da migração: {typed} itens de digitação do M7 sem alternativas.")
     bad = [r for r in report if r["origem"] != r["destino"]]
     if bad:
         raise SystemExit(f"contagem não bate: {bad}")

@@ -131,7 +131,7 @@ certa distribuída entre A, B, C e D.
 3. `task_type` pertence à `section`.
 4. `cefr_min` ≤ `cefr_max`, ou os dois `null`.
 5. Explicação em português do Brasil; conteúdo-alvo em inglês. Sem travessão
-   como pausa nos textos novos.
+   como pausa no texto em português; no inglês o travessão é permitido.
 6. Conteúdo original. Nada copiado nem adaptado de perto de material da ETS:
    só o formato (ver `docs/ets-materiais-oficiais.md`).
 7. Item novo nasce `rascunho`. Passa a `revisado` depois da revisão por um
@@ -184,11 +184,9 @@ Ajustes feitos na migração, todos no `migrate.py`:
 
 ### Fora da migração
 
-- `MOD1_DRILLS` e `MOD2_DRILLS` em `app/drills_data.py` (35 itens): são
-  importados mas não renderizados pelo `build_pipeline.py`, repetem em parte os
-  Action Drills (os 8 de `mod1-d1` são idênticos aos de `mod1-a3`) e reusam os
-  ids `mod2-d1` a `mod2-d3`. Decisão do dono: apagar da fonte ou revisar e
-  migrar como itens novos.
+- `MOD1_DRILLS` e `MOD2_DRILLS` (35 itens) existiam em `app/drills_data.py`
+  sem aparecer no site e repetiam em parte os Action Drills. Foram apagados
+  da fonte em 2026-10-13, por decisão do dono. Nunca entraram no banco.
 - Itens 11 e 12 do Bloco A do Simulado 2: digitação livre, sem alternativas e
   fora do widget. Pequenos demais para virar `fill_words` sozinhos.
 - Writing de produção (Write an Email, Academic Discussion) e Speaking: são

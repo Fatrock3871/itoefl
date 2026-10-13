@@ -8,7 +8,6 @@ from render_build import render_build_sentence
 from render_errorlog import render_error_log
 from render_weeklydash import render_weekly_dashboard
 from drills_data import (
-    MOD1_DRILLS, MOD2_DRILLS,
     MOD1_ACTION_DRILLS_A, MOD1_ACTION_DRILLS_B, MOD1_ACTION_DRILLS_C,
     MOD2_ACTION_DRILLS_A, MOD2_ACTION_DRILLS_B, MOD2_ACTION_DRILLS_C, MOD2_ACTION_DRILLS_D,
 )
