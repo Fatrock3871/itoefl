@@ -57,7 +57,7 @@
   },
   {
     "num": 5,
-    "topic": "Ordenação lexical (formato \"Complete the Words\")",
+    "topic": "Ordem das palavras (base de Build a Sentence)",
     "prompt": "Choose the option that best completes the sentence with correct word order and meaning:\nDespite ______, the research team published their findings ahead of schedule.",
     "options": {
       "A": "numerous setbacks facing",

@@ -164,7 +164,7 @@ Ou seja: esse não é um teste "à parte". É o esqueleto que sustenta tudo que 
 
 (A) was (B) were (C) had been (D) has been
 
-**Questão 5: Ordenação lexical (formato "Complete the Words")** Choose the option that best completes the sentence with correct word order and meaning: Despite ______, the research team published their findings ahead of schedule.
+**Questão 5: Ordem das palavras (base de Build a Sentence)** Choose the option that best completes the sentence with correct word order and meaning: Despite ______, the research team published their findings ahead of schedule.
 
 (A) numerous setbacks facing (B) facing numerous setbacks (C) setbacks numerous facing (D) numerous facing setbacks
 

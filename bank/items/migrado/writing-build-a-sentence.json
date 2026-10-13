@@ -783,12 +783,11 @@
       "audio_ref": null
     },
     "group": "m4build2",
-    "prompt": "Yes, it {1} {2} {3} {4} {5}.",
+    "prompt": "Yes, it {1} {2} {3} {4} this morning.",
     "text_format": "plain",
     "options": [
       "sent",
       "the client",
-      "this morning",
       "to",
       "was"
     ],
@@ -796,10 +795,9 @@
       "was",
       "sent",
       "to",
-      "the client",
-      "this morning"
+      "the client"
     ],
-    "explanation": "Voz passiva no passado: was + particípio. A expressão de tempo fecha a frase.",
+    "explanation": "Voz passiva no passado: was + particípio (sent). Quem recebeu vem depois de \"to\".",
     "hint": null,
     "trap_codes": [],
     "tags": [],
@@ -1028,9 +1026,9 @@
     "text_format": "plain",
     "options": [
       "anyone",
+      "are",
       "asked",
       "whether",
-      "will be",
       "willing",
       "would be"
     ],
@@ -1041,7 +1039,7 @@
       "would be",
       "willing"
     ],
-    "explanation": "Relato no passado: o \"will\" da fala original vira \"would\".",
+    "explanation": "Relato no passado: depois de \"They asked\", o \"will\" da fala original costuma recuar para \"would\". E \"anyone\" é singular: anyone would be, nunca anyone are.",
     "hint": null,
     "trap_codes": [],
     "tags": [

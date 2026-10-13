@@ -845,6 +845,24 @@ def content_review_checks():
         "review_drill_a3_7_is_miss": answer("mod1-a3", "7") == "miss" and "lose a problem" in item("mod1-a3", "7")["explanation"],
         "review_drill_distractors_not_valid": all(text not in opts(*key) for key, text in banned.items()),
     }
+
+    # Build a Sentence: a correcao so aceita a ordem do gabarito, entao bloco
+    # movel que cabe em dois lugares vira texto fixo, e o bloco que sobra tem
+    # de ser errado de verdade
+    from build_sentence_data import BUILD_SENTENCE_ITEMS
+    bs = {it["id"]: it for it in BUILD_SENTENCE_ITEMS}
+    out["review_build_sentence_single_order"] = ("{this morning}" not in bs["bs17"]["pattern"]
+                                                 and "this morning" in bs["bs17"]["pattern"]
+                                                 and "will be" not in bs["bs22"].get("extra", []))
+
+    kit = json.loads((APP_DIR / "vocab_kit.json").read_text(encoding="utf-8"))
+    words = {w["w"]: w for w in (kit["words"] if isinstance(kit, dict) else kit)}
+    out["review_vocab_consequential_gloss"] = not words["consequential"]["pt"].startswith("consequente")
+
+    quiz = json.loads((APP_DIR / "quiz_mod0.json").read_text(encoding="utf-8"))
+    questions = quiz["questions"] if isinstance(quiz, dict) else quiz
+    q5 = next(q for q in questions if q["num"] == 5)
+    out["review_diag_q5_not_called_ctw"] = "Complete the Words" not in q5["topic"]
     return out
 
 
