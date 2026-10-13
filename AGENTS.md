@@ -44,8 +44,11 @@ Se você está aqui para gerenciar, e não para programar, o seu trabalho é:
   verificado. Trabalhar em branch e abrir pull request quando houver mais de
   uma pessoa ou agente mexendo ao mesmo tempo.
 - **Conteúdo da ETS não se copia nem se adapta de perto.** Só o formato.
-- **Sem travessão como pausa** em nenhum texto (regra de estilo do usuário).
-  Vírgula, dois-pontos ou frase curta.
+- **Sem travessão como pausa em texto em português** (regra de estilo do
+  usuário). Vírgula, dois-pontos ou frase curta. A regra não vale para o
+  texto em inglês: em passagem, transcrição, resposta-modelo e exemplo, o
+  travessão (—) é pontuação correta e fica. Nunca trocar travessão do inglês
+  por ":" ou "·" (decisão de 2026-10-13).
 - **Nenhum segredo no repositório.** `app/supabase_config.json` fica fora do Git.
 
 ## Só com autorização explícita do usuário

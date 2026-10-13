@@ -2,7 +2,7 @@
 
 Memória entre sessões. Atualizar ao concluir cada etapa.
 
-**Última atualização:** 2026-10-08
+**Última atualização:** 2026-10-13
 **O que tem neste arquivo:** a lista única de pendências ("Tudo que falta") e
 as decisões travadas. Nada mais.
 **Histórico:** o que cada sessão fez, as fases antigas e o mapa de pendências
@@ -237,6 +237,20 @@ Pequenas, independentes entre si, podem entrar em qualquer intervalo.
 - [ ] (C) Mesma passada de travessão nos `consolidated/*.md` (59 ocorrências
       em 8 módulos, parte delas em inglês ou em diagrama) e nos textos de
       interface de `app/app.js` e `app/build.py`. Não foi olhado caso a caso.
+      Só o que estiver em português: no inglês o travessão fica (decisão de
+      2026-10-13).
+- [ ] (C) **Revisão de conteúdo de 2026-10-13** (professor de inglês; 79
+      críticos, 346 importantes, 187 de estilo; relatórios fora do
+      repositório, em `itoefl-gerencia/revisao/`). Entra em três rodadas:
+  - [ ] Rodada 1 (2026-10-13): os críticos, mais as decisões A (travessão
+        só em português) e C (drills legados apagados). O que foi aplicado e
+        o que foi recusado, item a item, está em
+        `itoefl-gerencia/revisao/APLICADO-rodada1.md`.
+  - [ ] Rodada 2: os importantes, a decisão B (tirar Sentence
+        Simplification, Insert a Sentence, Prose Summary e arrastar para a
+        tabela; encurtar as passagens para o padrão da prova) e devolver a
+        pontuação do inglês onde o travessão virou ":" ou "·".
+  - [ ] Rodada 3: estilo.
 - [x] (C) Mover o histórico de sessões deste arquivo para
       `docs/historico-sessoes.md` (2026-10-07). Aqui ficam só esta lista e as
       decisões travadas.
@@ -342,10 +356,11 @@ Detalhe em `docs/roadmap-expansao.md`, seções 4 e 5.
       `.bsq-card` + 8 `.ctw` = 228. Os "128" do plano eram só diagnóstico e
       Action Drills. Todos entram como `rascunho`. O smoke test valida o
       banco e reprova se `bank/items/migrado/` ficar atrás das fontes.
-- [ ] (D) `MOD1_DRILLS` e `MOD2_DRILLS` em `app/drills_data.py` (35 itens) são
-      importados pelo pipeline mas não aparecem no site, e repetem em parte os
-      Action Drills. Apagar da fonte ou revisar e migrar como itens novos.
-      Ficaram fora do banco.
+- [x] (D) `MOD1_DRILLS` e `MOD2_DRILLS` em `app/drills_data.py` (35 itens)
+      eram importados pelo pipeline mas não apareciam no site, e repetiam em
+      parte os Action Drills. Decisão do dono em 2026-10-13: apagar. Apagados
+      da fonte no mesmo dia; o banco tinha 228 itens antes e tem 228 depois,
+      porque eles nunca entraram.
 - [ ] (C) Modo prática com filtros e "só as que errei".
 - [ ] (C) Caderno de erros com revisão espaçada e botão "reportar questão".
 - [ ] (D) Tamanho da amostra que o usuário revisa por lote. Sugestão: 10%.
@@ -454,3 +469,7 @@ Não foram pedidos, apareceram ao consolidar a lista.
 | Diagnóstico grátis | As 10 questões do M0 abertas na tela de apresentação, **sem conta**, com o resultado de banda | 2026-10-08 |
 | Reembolso | **7 dias** em todos os planos, pelo direito de arrependimento do CDC (art. 49) | 2026-10-08 |
 | Selo na tabela de planos | **"Recomendado"** no Standard. Nunca "mais escolhido" ou "mais vendido": sem dado de venda seria afirmação falsa | 2026-10-08 |
+| Travessão | A regra "sem travessão como pausa" vale **só para texto em português**. Em texto em inglês (passagens, transcrições, respostas-modelo, exemplos) o travessão é pontuação correta e permitido | 2026-10-13 |
+| Tipos de pergunta extintos | **Remover** Sentence Simplification, Insert a Sentence, Prose Summary e arrastar para a tabela, e **encurtar as passagens** para o padrão da prova de 2026. Entra na rodada 2 da revisão de conteúdo | 2026-10-13 |
+| Drills legados | **Apagar** `MOD1_DRILLS` e `MOD2_DRILLS` de `app/drills_data.py`: não apareciam no site | 2026-10-13 |
+| Revisão de conteúdo de 2026-10-13 | Entra em **3 rodadas**: 1) críticos, 2) importantes + tipos extintos + pontuação do inglês, 3) estilo | 2026-10-13 |

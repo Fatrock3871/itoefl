@@ -171,6 +171,10 @@ localhost, o site fica preso na versão em cache até clicar em Recarregar.
   contagem de itens origem vs. destino e declarar o número.
 - Interface e explicações em **português do Brasil**; conteúdo-alvo (inglês)
   permanece em inglês.
+- **Travessão:** em texto em português, nunca como pausa (vírgula,
+  dois-pontos ou frase curta). Em texto em inglês (passagem, transcrição,
+  resposta-modelo, exemplo) o travessão (—) é pontuação correta e fica: não
+  trocar por ":" nem por "·" (decisão de 2026-10-13).
 - Sem framework, sem bundler. Dependência única: `markdown` (build-time) +
   fontes do Google (runtime).
 
