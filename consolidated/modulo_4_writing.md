@@ -81,7 +81,7 @@ Três coisas que o formato muda na prática:
 
 - **As palavras fixas são pistas.** Elas dizem onde a frase começa, onde termina e, muitas vezes, se é pergunta ou afirmação.
 - **Às vezes sobra um bloco.** Se há mais blocos que espaços, um deles está ali para testar concordância ou um pronome repetido. Decida qual fica de fora antes de montar.
-- **A maior parte das respostas é pergunta**, e a estrutura mais cobrada é a **pergunta indireta**: *Do you know if...*, *Can you tell me whether...*, *She wanted to know where...* Depois dessas aberturas a ordem é de afirmação, sem inversão e sem auxiliar.
+- **A maior parte das respostas é pergunta**, e a estrutura mais cobrada é a **pergunta indireta**: *Do you know if...*, *Can you tell me whether...*, *She wanted to know where...* Depois dessas aberturas a ordem é de afirmação: sem inversão e sem o *do/does/did* de pergunta (*Do you know where she **lives**?*, não *where does she live*).
 
 Corrigido por **máquina**, não por IA generativa: a lógica é binária e estrutural. Sua reconstrução precisa corresponder a um padrão gramatical válido, com concordância, ordem, morfologia verbal, artigos e preposições no lugar certo. Não tem crédito parcial generoso. Pequenos erros de concordância ou ordem derrubam o item inteiro.
 
@@ -103,7 +103,7 @@ erros vêm de tentar montar a frase palavra por palavra na ordem em que ela "soa
 | Oração subordinada primeiro | Conjunção + subordinada **,** principal | Falta a vírgula quando a subordinada vem primeiro |
 | Adjetivos em série | opinião → tamanho → idade → forma → cor → origem → material + substantivo | *"a red big house"* → *"a **big red** house"* |
 | Objeto duplo | V + Obj.Indireto + Obj.Direto (ou + *to/for* + Obj.Indireto) | *"I gave to my friend a book"* → *"I gave **my friend a book**"* / *"I gave **a book to my friend**"* |
-| Oração relativa | Substantivo + [*that/who/which* + oração] | Relativo redundante: *"the man that **he** called"* → *"the man **that he called**"* está errado: *"the man **he called**"* / *"the man **whom** he called"* |
+| Oração relativa | Substantivo + [*that/who/which* + oração] | Pronome sobrando na relativa: *"the man that I called **him**"* → *"the man (that/whom) I called"* |
 
 Progressão de dificuldade (A1 → C2): o que Build a Sentence cobra em cada faixa está detalhado na **Parte 3.9**, com mini-drills.
 
@@ -302,7 +302,7 @@ O e-rater penaliza usar a classe errada. Aprenda as famílias das palavras de al
 | **Sem vírgula com relativa restritiva** | informação essencial | *Students who work part-time need flexibility.* |
 | **Ponto e vírgula** | liga 2 orações independentes relacionadas | *The idea is appealing; the evidence is weak.* |
 | **Dois-pontos** | introduz uma explicação, lista ou exemplo (após oração completa) | *The reason is simple: cost.* |
-| **Travessão (: )** | ênfase ou aposto forte | *One factor (cost) dominates the debate.* |
+| **Travessão (em inglês)** | ênfase ou aposto forte | *One factor — cost — dominates the debate.* |
 | **Apóstrofo** | posse (*the student's essay*) ou contração (evite contrações no Email) | não confunda *its* (posse) com *it's* (= it is) |
 
 ### 3.8 Registro: formal vs. informal
@@ -329,13 +329,13 @@ Reordene / complete. Respostas na Parte 6, seção "Laboratório".
 > L3. `if / rains / it / tomorrow, / the event / be / will / moved / indoors` L4. `if / I / in your position, / were / I / the offer / would / accept`
 
 **C. Terceiro condicional (e invertido)**
-> L5. `if / had / I / earlier, / known / I / have / would / left` L6. `had / not / it / been / for / the deadline, / extended / the project / would / failed / have`
+> L5. `if / had / I / earlier, / known / I / have / would / left` L6. `had / not / it / been / for / the extended deadline, / the project / would / failed / have`
 
 **D. Voz passiva (vários tempos)**
 > L7. `the report / by / Friday / be / will / submitted` L8. `the results / have / not / yet / announced / been`
 
 **E. Orações relativas**
-> L9. `the professor / recommended / the book / who / very helpful / was` L10. `the students / studied / who / hardest / passed / the exam`
+> L9. `the professor / recommended / The book / that / very helpful. / was` L10. `the students / studied / who / hardest / passed / the exam`
 
 **F. Discurso indireto**
 > L11. `she / said / (that) / the meeting / postponed / had been` L12. `he / asked / whether / I / finished / had / the assignment`
@@ -415,16 +415,16 @@ Reordene / complete. Respostas na Parte 6, seção "Laboratório".
 >
 > *In my view, universities are right to keep attendance mandatory, at least for
 > discussion-based courses. Ana makes a fair point that a motivated student can
-> absorb recorded lectures alone, but this assumes that the only thing a class
-> offers is information: and often it is not. As Tomás notes, much of the
+> absorb recorded lectures alone, but this assumes that a class offers nothing
+> more than information, and that is rarely the case. As Tomás notes, much of the
 > learning happens in the exchange: a classmate's objection, a question the
 > professor did not anticipate, a debate that forces you to defend a position
 > out loud. In a literature seminar I took last year, the readings were
 > straightforward, yet the sessions were where my interpretations actually
 > changed, precisely because other people pushed back on them. That kind of
 > friction is difficult to reproduce from a recording. While I accept that
-> attendance rules can feel patronising to adults, the alternative: a room
-> half-empty by week three: tends to weaken the discussion for everyone who
+> attendance rules can feel patronising to adults, the alternative — a room
+> half-empty by week three — tends to weaken the discussion for everyone who
 > does show up.*
 >
 > **Checagem:** posição clara na 1ª frase ✓ · razão mecanística (*"not
@@ -459,7 +459,7 @@ Reconstrua cada frase usando **todas** as palavras/blocos, na forma correta (pod
 4. `there / two / are / options / on the table`
 5. `he / has / finished / already / his report`
 6. `we / to the park / went / yesterday / because / it / sunny / was`
-7. `the book / is / on the shelf / that / mine`
+7. `the book / is / lent me / that / you / really good`
 8. `they / will / arrive / before / dinner / probably`
 9. `if / you / need / help, / ask / just`
 10. `the students / who / studied / passed / the test`
@@ -492,7 +492,7 @@ Reconstrua cada frase usando **todas** as palavras/blocos, na forma correta (pod
 7. `so / difficult / was / the exam / that / half / the class / failed`
 8. `not only / did / attendance / drop, / but / participation / also / declined`
 9. `the report, / submitted / just before / the deadline, / several / contained / inconsistencies`
-10. `only after / the data / re-examined / was / the error / became / clear`
+10. `only after / the data / re-examined / was / the error / did / become / clear`
 
 ---
 
@@ -546,10 +546,10 @@ Reconstrua cada frase usando **todas** as palavras/blocos, na forma correta (pod
 | 4 | **There are two options on the table.** | *There are* + plural. |
 | 5 | **He has already finished his report.** | Presente perfeito; *already* entre auxiliar e particípio. |
 | 6 | **We went to the park yesterday because it was sunny.** | Passado simples; subordinada causal com *because*. |
-| 7 | **The book that is on the shelf is mine.** | Relativa restritiva *that is on the shelf* modificando *the book*. |
+| 7 | **The book that you lent me is really good.** | Relativa restritiva de objeto *that you lent me* modificando *the book*. |
 | 8 | **They will probably arrive before dinner.** | *probably* entre o modal *will* e o verbo base. |
 | 9 | **If you need help, just ask.** | 1º condicional; subordinada primeiro → vírgula; *just* antes do imperativo. |
-| 10 | **The students who studied passed the test.** | Relativa restritiva *who studied*; verbo principal *passed*. |
+| 10 | **The students who studied passed the test.** | Relativa restritiva *who studied*; verbo principal *passed*. (*The students who passed the test studied* também é gramatical: aceite as duas.) |
 
 #### DRILL A2
 
@@ -579,7 +579,7 @@ Reconstrua cada frase usando **todas** as palavras/blocos, na forma correta (pod
 | 7 | **So difficult was the exam that half the class failed.** | Inversão enfática: *So + adjetivo + was + sujeito + that...*. |
 | 8 | **Not only did attendance drop, but participation also declined.** | *Not only + did + sujeito + base*; *also* antes do verbo na 2ª oração. |
 | 9 | **The report, submitted just before the deadline, contained several inconsistencies.** | Particípio passado reduzindo *"which was submitted..."*, entre vírgulas. |
-| 10 | **Only after the data was re-examined did the error become clear.** | Inversão após *Only after + oração*: *did the error become*. (*"became"* → *"become"* após *did*.) |
+| 10 | **Only after the data was re-examined did the error become clear.** | Inversão após *Only after + oração*: *did the error become*. |
 
 ### GRUPO B: Write an Email · modelos por banda
 
@@ -679,12 +679,12 @@ razão = ganho de gestão de tempo vs. custo em horas de estudo · exemplo = sua
 | L2 | *Last semester I took a similar course.* | L13 | *I enjoy working with other students.* |
 | L3 | *If it rains tomorrow, the event will be moved indoors.* | L14 | *They decided to extend the deadline.* |
 | L4 | *If I were in your position, I would accept the offer.* | L15 | *The more you practice, the better you get.* |
-| L5 | *If I had known earlier, I would have left.* | L16 | *Not only did he arrive late, but he also forgot his notes.* |
+| L5 | *If I had known earlier, I would have left.* | L16 | *He not only arrived late but also forgot his notes.* |
 | L6 | *Had it not been for the extended deadline, the project would have failed.* | L17 | *Rarely does one see such dedication.* |
 | L7 | *The report will be submitted by Friday.* | L18 | *Not only did the team exceed its targets, but it also reduced costs.* |
 | L8 | *The results have not yet been announced.* | L19 | *It was the cost that determined the decision.* |
-| L9 | *The professor who recommended the book was very helpful.* | L20 | *What students most need is detailed feedback.* |
-| L10 | *The students who studied hardest passed the exam.* | L21 | *Having finished the analysis, they published their findings.* |
+| L9 | *The book that the professor recommended was very helpful.* | L20 | *What students most need is detailed feedback.* |
+| L10 | *The students who studied hardest passed the exam.* (aceite também: *The students who passed the exam studied hardest.*) | L21 | *Having finished the analysis, they published their findings.* |
 | L11 | *She said (that) the meeting had been postponed.* | L22 | *The report, submitted just before the deadline, contained several errors.* |
 
 ---

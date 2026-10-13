@@ -569,7 +569,7 @@ O e-mail navegacional acadêmico é curto (4–8 frases). Aqui, sofisticação =
 > "I agree with Tomás that universities should require at least one course outside the major. Education should prepare students for more than one job, and a broad base helps with that. For example, an engineering student who takes a writing course can explain technical ideas more clearly. While Maria has a point about workload, one extra course per program is manageable."
 
 **C1/C2:**
-> "While Maria raises a fair concern about workload, the stronger case is Tomás's: a single required course outside the major is a small price for a meaningful gain in adaptability. What makes cross-disciplinary exposure valuable is not the content itself but the transfer · an engineering student who has had to argue a position in a history seminar writes more persuasive technical reports afterward. That kind of skill rarely develops inside a single field. The workload objection holds only if the requirement is poorly designed; capped at one course, the trade-off clearly favors breadth."
+> "While Maria raises a fair concern about workload, the stronger case is Tomás's: a single required course outside the major is a small price for a meaningful gain in adaptability. What makes cross-disciplinary exposure valuable is not the content itself but the transfer · an engineering student who has had to argue a position in a history seminar writes more persuasive technical reports afterward. The same holds for a biology major who takes an economics course and starts to see research funding as a question of trade-offs. That kind of skill rarely develops inside a single field. The workload objection holds only if the requirement is poorly designed; capped at one course, the trade-off clearly favors breadth."
 
 *O que muda: a concessão abre o parágrafo (marcador 5), a razão é específica e mecanística ("not the content itself but the transfer"), há um exemplo concreto e desenvolvido, e o engajamento com os dois colegas é explícito e integrado, não anexado.*
 
@@ -611,9 +611,9 @@ exatamente eles resolvem? *"...the case for tablets rests on one real advantage:
 *"Taken together, the gain in currency and the reduction in physical load outweigh a distraction risk that schools already know how to contain."*
 
 **Versão C1 final:**
-> "While Lía is right that a screen invites distraction, the case for tablets rests on one real advantage: the content can be corrected and expanded without a new print run. A biology text printed in 2019 still teaches 2019 taxonomy; a digital one can be revised the week a change is agreed. The distraction worry is legitimate, but it underestimates how much of it is a management problem · locked-down devices and clear rules narrow the gap considerably. Taken together, the gain in currency and the reduction in physical load outweigh a distraction risk that schools already know how to contain."
+> "While Lía is right that a screen invites distraction, the case for tablets rests on one real advantage: the content can be corrected and expanded without a new print run. A biology text printed in 2019 still teaches 2019 taxonomy; a digital one can be revised the week a change is agreed. The distraction worry is legitimate, but it underestimates how much of it is a management problem · locked-down devices and clear rules narrow the gap considerably. Otto's point about weight matters too: a single device replaces a backpack of books that many younger students struggle to carry. Taken together, the gain in currency and the reduction in physical load outweigh a distraction risk that schools already know how to contain."
 
-*151 palavras. Nenhuma palavra obscura. O salto de banda veio de estrutura (concessão na abertura, uma razão com mecanismo, objeção respondida especificamente, síntese no fecho), não de vocabulário difícil.*
+*Cerca de 120 palavras. Nenhuma palavra obscura. O salto de banda veio de estrutura (concessão na abertura, uma razão com mecanismo, objeção respondida especificamente, síntese no fecho), não de vocabulário difícil.*
 
 ### 6.2 Take an Interview: elevar a estrutura, não as palavras
 
