@@ -242,14 +242,16 @@ Pequenas, independentes entre si, podem entrar em qualquer intervalo.
 - [ ] (C) **Revisão de conteúdo de 2026-10-13** (professor de inglês; 79
       críticos, 346 importantes, 187 de estilo; relatórios fora do
       repositório, em `itoefl-gerencia/revisao/`). Entra em três rodadas:
-  - [ ] Rodada 1 (2026-10-13): os críticos, mais as decisões A (travessão
-        só em português) e C (drills legados apagados). O que foi aplicado e
-        o que foi recusado, item a item, está em
-        `itoefl-gerencia/revisao/APLICADO-rodada1.md`.
+  - [x] Rodada 1 (2026-10-13): os críticos, mais as decisões A (travessão
+        só em português) e C (drills legados apagados). 77 de 79 aplicados,
+        2 adiados para a rodada 2, nenhum recusado. A lista item a item
+        está em `itoefl-gerencia/revisao/APLICADO-rodada1.md`.
   - [ ] Rodada 2: os importantes, a decisão B (tirar Sentence
         Simplification, Insert a Sentence, Prose Summary e arrastar para a
         tabela; encurtar as passagens para o padrão da prova) e devolver a
-        pontuação do inglês onde o travessão virou ":" ou "·".
+        pontuação do inglês onde o travessão virou ":" ou "·". Inclui os 2
+        críticos adiados: o Grupo A2 do M1 (lacunas com alternativas, que
+        não é o formato da prova) e os tipos extintos nos drills do M1.
   - [ ] Rodada 3: estilo.
 - [x] (C) Mover o histórico de sessões deste arquivo para
       `docs/historico-sessoes.md` (2026-10-07). Aqui ficam só esta lista e as

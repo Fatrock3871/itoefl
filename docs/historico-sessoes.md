@@ -7,6 +7,40 @@ falta" do `ROADMAP.md`. Sessão nova entra no topo.
 
 ---
 
+## Sessão 2026-10-13: rodada 1 da revisão de conteúdo (os críticos)
+
+Sessão do desenvolvedor a pedido do gerente (Hermes). Um professor de inglês
+revisou todo o conteúdo em 9 relatórios (79 críticos, 346 importantes, 187 de
+estilo), guardados fora do repositório em `itoefl-gerencia/revisao/`. O dono
+decidiu: travessão só é proibido em português (A), tirar os tipos de pergunta
+extintos e encurtar passagens (B, rodada 2), apagar os drills legados (C) e
+aplicar em três rodadas (D).
+
+- `2679162` Decisão C: `MOD1_DRILLS` e `MOD2_DRILLS` apagados. Banco: 228
+  itens antes e depois.
+- `a8d2ef4` Decisão A em `AGENTS.md` e `CLAUDE.md`; decisões A a D no ROADMAP.
+- `96685b6` Drills de Reading e Listening: gabarito "lose a real problem"
+  vira "miss", e saem alternativas que também estavam certas.
+- `4d6771f` Build a Sentence (bs17, bs22), "consequential" no kit e a questão
+  5 do diagnóstico.
+- `e51d6cf` Simulados do M7: quatro itens com duas respostas, três Build a
+  Sentence que não montavam, a pergunta do anúncio e "switching costs".
+- `f11660e`, `c3f0458`, `59a9a10`, `66364ad`, `0b0b274` Texto dos módulos
+  M0 a M9 e a política de privacidade: pronúncia ensinada errado no M3 e no
+  M9, formato da prova descrito errado no M1 e no M2, exercícios do M4 e do
+  M6 que não fechavam.
+- `13addfa` Smoke test: a leitura da porta do Chrome caía por corrida no
+  Windows.
+
+**Resultado:** 77 dos 79 críticos aplicados, 2 adiados para a rodada 2 (os
+dois são a decisão B), nenhum recusado. A lista item a item está em
+`itoefl-gerencia/revisao/APLICADO-rodada1.md`. O smoke test foi de 201 para
+213 checagens.
+
+**Não feito, de propósito:** a rodada 2 não começou. Nada foi publicado.
+
+---
+
 ## Sessão 2026-10-08 (segunda leva): cronogramas, três planos, tela de apresentação
 
 Sessão do desenvolvedor a pedido do gerente (Hermes), com as decisões do dono
