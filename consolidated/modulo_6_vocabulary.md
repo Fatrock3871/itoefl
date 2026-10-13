@@ -309,7 +309,8 @@ O item *Complete the Words* dá a você uma frase com uma palavra parcialmente a
 | persist | persistence | — | persistent | persistently |
 | prove | proof | — | provable / proven | — |
 | conclude | conclusion | — | conclusive | conclusively |
-| assume | assumption | — | assumed | presumably |
+| assume | assumption | — | assumed | — |
+| presume | presumption | — | presumable | presumably |
 | sustain | sustainability | — | sustainable | sustainably |
 | vary | variation / variety / variable | — | various / variable | variously |
 | distinguish | distinction | — | distinct / distinctive | distinctly |
@@ -369,22 +370,22 @@ O item *Complete the Words* dá a você uma frase com uma palavra parcialmente a
 
 O Módulo 9 cobre os falsos cognatos de fala cotidiana. Estes são os que mais aparecem em contexto acadêmico e que o brasileiro erra por semelhança com o português.
 
-| Inglês | NÃO significa | Significa | Palavra PT correspondente |
+| Inglês | NÃO significa | Significa | Para dizer o sentido do português, use |
 |---|---|---|---|
-| **eventually** | eventualmente (às vezes) | no fim, mais cedo ou mais tarde | *finally, in the end* |
-| **actually** | atualmente | na verdade, de fato | *in fact* |
+| **eventually** | eventualmente (às vezes) | no fim, mais cedo ou mais tarde | *occasionally, possibly* |
+| **actually** | atualmente | na verdade, de fato | *currently, nowadays* |
 | **currently** | — | atualmente, no momento | (esta sim = "atualmente") |
-| **comprehensive** | compreensivo | abrangente, completo | *thorough, wide-ranging* |
-| **sensible** | sensível | sensato, com bom senso | (*sensitive* = sensível) |
-| **pretend** | pretender | fingir | (*intend to* = pretender) |
-| **realize** | realizar (fazer) | perceber, dar-se conta | (*carry out* = realizar) |
-| **eventual** | eventual | final, resultante | *possible, occasional* |
-| **exit** | êxito | saída | (*success* = êxito) |
-| **notice** | notícia | aviso; perceber | (*news* = notícia) |
-| **argument** | (só) discussão hostil | argumento, linha de raciocínio | (também "briga", mas em acadêmico = raciocínio) |
-| **evidence** | evidência (o óbvio) | provas, indícios | *proof, indication* |
-| **support** | (só) apoiar emocionalmente | sustentar (uma tese), corroborar | *back up, substantiate* |
-| **matriculate** | matricular-se (comum) | ingressar formalmente numa universidade (raro/formal) | *enrol / register* |
+| **comprehensive** | compreensivo | abrangente, completo | *understanding* |
+| **sensible** | sensível | sensato, com bom senso | *sensitive* |
+| **pretend** | pretender | fingir | *intend to, plan to* |
+| **realize** | realizar (fazer) | perceber, dar-se conta | *carry out, accomplish* |
+| **eventual** | eventual (possível, ocasional) | final, resultante | *possible, occasional* |
+| **exit** | êxito | saída | *success* |
+| **notice** | notícia | aviso; perceber | *news* |
+| **support** | suportar (aguentar) | apoiar; sustentar uma tese | *stand, bear, put up with* |
+| **matriculate** | matricular-se (em qualquer curso) | ingressar formalmente numa universidade (raro, formal) | *enroll, register* |
+| **argument** | — | argumento; em conversa, também briga, bate-boca | (no Listening, *they had an argument* = eles brigaram) |
+| **evidence** | evidência no sentido de "coisa óbvia" | provas, indícios; incontável: nunca *an evidence* nem *evidences* | para "é evidente que", use *it is clear that* |
 
 ### 6.3 Verbos de reporte e a postura que carregam
 
@@ -472,7 +473,7 @@ O Listening usa muito phrasal verb onde o brasileiro espera o verbo latino. Reco
 |---|---|---|---|---|
 | 1 | **underscore** | v. | ...quiser enfatizar um ponto | ...introduzir sua conclusão ou evidência |
 | 2 | **posit** | v. | ...reportar a posição de alguém | ...apresentar uma hipótese ou afirmação |
-| 3 | **contend** | v. | ...sempre, como substituto de "say/argue" | ...sempre |
+| 3 | **contend** | v. | ...reportar alguém que defende uma posição discutível | ...apresentar a tese de um dos lados do debate (não como sinônimo neutro de *say*) |
 | 4 | **proliferation** | n. | ...falar sobre crescimento rápido de qualquer coisa | ...descrever expansão de fenômenos |
 | 5 | **nuanced** | adj. | ...descrever uma situação complexa | ...qualificar um argumento simplista |
 | 6 | **exacerbate** | v. | ...algo piora um problema existente | ...mostrar relação de agravamento |
@@ -541,8 +542,8 @@ Complete a palavra. As primeiras letras são dadas; a frase determina a forma.
 8. "The evidence is far from *concl___*." → *(adjetivo)*
 9. "The lecture *elab___* on a point the reading only mentions." → *(verbo, 3ª pessoa)*
 10. "Such policies tend to *perp___* existing inequalities." → *(verbo)*
-11. "The findings were later *corr___* by an independent team." → *(verbo, particípio)*
-12. "There is considerable *var___* between the regions." → *(substantivo)*
+11. "The findings were later *corrob___* by an independent team." → *(verbo, particípio)*
+12. "There is considerable *variat___* between the regions." → *(substantivo)*
 13. "The professor's account is more *nu___* than the textbook's." → *(adjetivo)*
 14. "This raises an important *episte___* question about how we know what we claim to know." → *(adjetivo)*
 15. "The intervention produced only a *marg___* improvement." → *(adjetivo)*
@@ -592,7 +593,7 @@ Substitua a palavra simples pela acadêmica que melhor se encaixa. Mais de uma p
 3. "The two studies **agree with** each other." → ___
 4. "The theory is **weak** and easily challenged." → ___
 5. "Green spaces can **reduce** urban heat." → ___
-6. "The professor **says** the cause is economic." → ___ *(neutro)*
+6. "The professor **says** the cause is economic." → ___ *(propõe como hipótese)*
 7. "Critics **say** the model ignores regional gaps." → ___ *(defendem uma posição)*
 8. "The result was **surprising** given common sense." → ___
 9. "The influence of social media is **everywhere**." → ___
@@ -621,13 +622,11 @@ Escolha a palavra certa.
 
 ### DRILL 6: Gap-fill em contexto acadêmico
 
-Complete com: *empirical · mechanism · extrapolate · confounding · replicate · tenuous · anthropogenic · mitigation · correlation · robust*
+Complete com: *empirical · mechanism · extrapolate · confounding · replicate · tenuous · systemic · mitigation · correlation · causation*
 
-> "The paper reports a strong ___(1) between screen time and poor sleep in teenagers. But ___(2) is not causation, and the study does not identify the ___(3) by which screens would disrupt sleep. A likely ___(4) variable is simply that anxious teenagers both sleep poorly and use phones more. Until an independent team can ___(5) the result under controlled conditions, the causal claim remains ___(6). The authors are right, however, that the broader trend is real and that its drivers are largely ___(7): a product of how devices and apps are designed. Any ___(8) strategy should therefore target design, not just individual willpower. The ___(9) evidence we do have supports modest limits; it does not support the alarmist framing that lets commentators ___(10) from a small effect to a generational crisis."
+> "The paper reports a strong ___(1) between screen time and poor sleep in teenagers. But correlation is not ___(2), and the study does not identify the ___(3) by which screens would disrupt sleep. A likely ___(4) variable is simply that anxious teenagers both sleep poorly and use phones more. Until an independent team can ___(5) the result under controlled conditions, the causal claim remains ___(6). The authors are right, however, that the broader trend is real and that its drivers are largely ___(7): a product of how devices and apps are designed. Any ___(8) strategy should therefore target design, not just individual willpower. The ___(9) evidence we do have supports modest limits; it does not support the alarmist framing that lets commentators ___(10) from a small effect to a generational crisis."
 
-**Gabarito:** 1 correlation · 2 correlation *(repete a mesma palavra do item 1: a expressão fixa é "correlation is not causation")* · 3 mechanism · 4 confounding · 5 replicate · 6 tenuous · 7 anthropogenic *(aqui no sentido "de origem humana/deliberada" · design humano)* · 8 mitigation · 9 empirical · 10 extrapolate
-
-> Nota: o item 7 é um uso esticado de *anthropogenic* (normalmente clima). O ponto do drill é a forma; num texto real você usaria *by design* ou *human-engineered*.
+**Gabarito:** 1 correlation · 2 causation · 3 mechanism · 4 confounding · 5 replicate · 6 tenuous · 7 systemic · 8 mitigation · 9 empirical · 10 extrapolate
 
 ### DRILL 7: Verbo de reporte + postura
 
@@ -640,7 +639,7 @@ Para cada frase, escolha o verbo que combina com a postura indicada entre colche
 5. "The passage ___ that enrollment rose in 2024. [registra um fato, neutro]"
 6. "While she ___ the cost is real, she argues the benefit is larger. [admite o contra]"
 
-**Gabarito:** 1 acknowledges · 2 demonstrates · 3 claims · 4 disputes · 5 notes · 6 concedes
+**Gabarito:** 1 acknowledges · 2 demonstrates · 3 claims · 4 disputes · 5 notes · 6 concedes *(nos itens 1 e 6 as duas formas servem: acknowledge e concede estão na mesma linha da tabela 6.3)*
 
 ### DRILL 8: Ativação (inserção no início da frase)
 

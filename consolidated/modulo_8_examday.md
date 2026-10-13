@@ -452,10 +452,11 @@ reset acontece na tela de instruções entre uma seção e outra, sentado.
 > ⚠️ **O erro mais comum na transição:** ficar remoendo o Listening enquanto
 > o Writing já começou. Selo de seção, reset e próxima.
 >
-> 💡 **Antes do Speaking:** ele vem logo depois do Writing. Na tela de
-> instruções, fale 2 ou 3 frases baixinho (qualquer coisa: descreva o que vê).
-> O sistema motor de fala precisa de ~30 s de uso para sair do modo "leitura".
-> Não estreie a voz no primeiro item.
+> 💡 **Antes do Speaking:** ele vem logo depois do Writing. No centro de
+> testes, fale 2 ou 3 frases baixinho na tela de instruções (qualquer coisa:
+> descreva o que vê). Na Home Edition, não fale fora dos itens de Speaking,
+> porque o proctor pode interpretar como ajuda externa: só articule as
+> palavras, sem som. Não estreie a voz no primeiro item.
 
 ### ✍️ WRITING (~23 min: 12 itens, correção por IA)
 
@@ -482,7 +483,7 @@ reset acontece na tela de instruções entre uma seção e outra, sentado.
 
 ### 🎤 SPEAKING (~8 min: 11 itens, correção 100% IA)
 
-**Estado mental:** modo de produção. O sistema motor de fala é diferente do de leitura · o Speaking vem logo após o Writing, sem pausa, e você entra "frio": articule 2–3 frases baixinho na tela de transição antes do primeiro item.
+**Estado mental:** modo de produção. O sistema motor de fala é diferente do de leitura · o Speaking vem logo após o Writing, sem pausa, e você entra "frio": articule 2–3 frases baixinho na tela de transição antes do primeiro item (na Home Edition, sem som).
 
 **Listen and Repeat (7 itens):**
 - Não parafraseie. Reproduza exatamente o que ouviu: inclusive artigos e preposições
@@ -600,7 +601,7 @@ Não é permitido levar nada para a prova. Esta página é o que você deve **me
 
 **Writing (~23 min):** Build a Sentence = esqueleto SVO primeiro. Email = 5 movimentos, sem contração, 1 pedido. Discussion = posição na 1ª frase → razão com mecanismo → exemplo concreto → engajar 1 colega → 60 s de caça aos 5 erros (–s, artigo, tempo, run-on, repetição).
 
-**Speaking (~8 min):** vem logo depois do Writing, então acenda a voz com 2–3 frases baixinho. *Listen and Repeat*: reproduza exato, ritmo comprimido, parcial > silêncio. *Take an Interview*: função nos 2 primeiros segundos → esqueleto do Módulo 3, comece a falar já. Ritmo firme até o item 11.
+**Speaking (~8 min):** vem logo depois do Writing, então acenda a voz com 2–3 frases baixinho (na Home Edition, só articule, sem som). *Listen and Repeat*: reproduza exato, ritmo comprimido, parcial > silêncio. *Take an Interview*: função nos 2 primeiros segundos → esqueleto do Módulo 3, comece a falar já. Ritmo firme até o item 11.
 
 **Se travar em qualquer ponto:** suspiro fisiológico (1 ciclo) → "próximo item, página em branco" → avança. Nunca releia o mesmo item 4 vezes.
 
