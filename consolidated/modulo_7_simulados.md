@@ -182,7 +182,7 @@ Um simulado só rende se a semana seguinte for de reparo direcionado. Não faça
 **Parte 1: múltipla escolha (reconhecimento de padrão):**
 
 1. Despite the company's initial success, its market share began to **dec_____** steadily after the arrival of two aggressive competitors.
-(A) decorate  (B) decline  (C) declare  (D) decrease *(nota: mais de uma opção pode ser gramaticalmente plausível · escolha a que preserva o sentido lógico do contraste com "initial success")*
+(A) decorate  (B) decline  (C) declare  (D) deceive
 
 2. The museum's new exhibit was designed to be **inter_____**, allowing visitors to touch and manipulate several of the historical replicas.
 (A) international  (B) interactive  (C) intermediate  (D) intersecting
@@ -213,10 +213,12 @@ Um simulado só rende se a semana seguinte for de reparo direcionado. Não faça
 
 **Parte 2: digitação livre (formato C-test real): complete apenas as letras que faltam.**
 
-11. The results were surprising, but they were later **conf\_\_\_\_\_\_\_** by two independent laboratories. → *(verbo, particípio; "confirmed")*
-12. A well-organized argument moves **log\_\_\_\_\_\_\_** from evidence to conclusion. → *(advérbio; "logically")*
+11. The results were surprising, but they were later **conf\_\_\_\_\_** by two independent laboratories. → *(verbo no particípio)*
+12. A well-organized argument moves **log\_\_\_\_\_\_** from evidence to conclusion. → *(advérbio)*
 
-**Gabarito:** 1-B (declínio combina com "despite success") · 2-B ("touch and manipulate" = interativo) · 3-B (descoberta inesperada) · 4-A ("every member voted in favor") · 5-C ("interpreted differently" = ambíguo) · 6-B ("not to generalize... to the whole population") · 7-A (advérbio; "one department at a time") · 8-B (advérbio modificando "higher") · 9-A ("structurally unsafe") · 10-C ("small sample, not replicated" = tentativo) · 11 **confirmed** · 12 **logically**
+<details class="reveal"><summary>Ver as respostas da Parte 2</summary>11 <strong>confirmed</strong> · 12 <strong>logically</strong>. Cada traço é uma letra que falta.</details>
+
+**Gabarito:** 1-B ("market share" que cai depois de "initial success"; *decorate*, *declare* e *deceive* não cabem) · 2-B ("touch and manipulate" = interativo) · 3-B (descoberta inesperada) · 4-A ("every member voted in favor") · 5-C ("interpreted differently" = ambíguo) · 6-B ("not to generalize... to the whole population") · 7-A (advérbio; "one department at a time") · 8-B (advérbio modificando "higher") · 9-A ("structurally unsafe") · 10-C ("small sample, not replicated" = tentativo) · 11 **confirmed** · 12 **logically**
 
 > 💡 No teste real, **todos** os 30 itens de *Complete the Words* são digitação livre (formato C-test) dentro de um texto corrido: nunca múltipla escolha. As Partes 1 e 2 acima treinam as duas habilidades: reconhecer o padrão (MC) e produzir a forma exata (digitação). O drill completo de digitação está no Módulo 1 (Reading), Parte 5.
 
@@ -359,12 +361,12 @@ This standardizing effect was not entirely welcome. Writers who spoke regional v
 **ÁUDIO 3:** **Man:** "I emailed the professor two days ago and still haven't heard back."
 
 **QUESTÃO:** Best response:
-- (A) "She's usually pretty quick, so maybe check your spam folder."
+- (A) "The professor's office is on the second floor."
 - (B) "I sent mine last week."
-- (C) "The email server was down on Monday, I think: try again."
+- (C) "I think the email server was down on Monday, so try again."
 - (D) "You should present first."
 
-*(nota: (A) e (C) são ambas coerentes; escolha a que oferece a explicação mais direta para o silêncio · (C) dá uma causa concreta e uma ação. Em itens assim, a resposta que **faz o diálogo avançar** ganha.)*
+*(nota: (C) dá uma causa provável e uma ação. (A) e (B) reaproveitam o assunto "professor/e-mail" sem responder à queixa.)*
 
 **ÁUDIO 4:** **Woman:** "This reading is forty pages · there's no way I'll finish it before class."
 
@@ -500,10 +502,10 @@ This standardizing effect was not entirely welcome. Writers who spoke regional v
 
 Reordene os fragmentos para formar uma frase gramaticalmente correta e natural.
 
-1. `has become / renewable energy / over the past decade / significantly more affordable`
+1. `has become / over the past decade. / Renewable energy / significantly more affordable`
 **Resposta modelo:** *Renewable energy has become significantly more affordable over the past decade.*
 
-2. `despite / the negotiations / the deadline / concluded successfully / repeated delays`
+2. `the negotiations / before the deadline. / Despite / concluded successfully / repeated delays,`
 **Resposta modelo:** *Despite repeated delays, the negotiations concluded successfully before the deadline.*
 
 3. `that / the report / suggests / consumer confidence / is beginning to recover`
@@ -512,16 +514,17 @@ Reordene os fragmentos para formar uma frase gramaticalmente correta e natural.
 4. `the more / a language / you practise speaking / the faster / your fluency improves`
 **Resposta modelo:** *The more you practise speaking a language, the faster your fluency improves.*
 
-5. `the results / had been reviewed / once / the committee / released its final report`
+5. `the results / had been reviewed, / Once / the committee / released its final report.`
 **Resposta modelo:** *Once the results had been reviewed, the committee released its final report.*
 
-6. `not / the cost / but / the delay / was / what concerned the investors most`
-**Resposta modelo:** *It was not the cost but the delay that concerned the investors most.*
+6. Context: "Were the investors upset about the cost?"
+`not / the cost / but / the delay. / was / What concerned the investors most`
+**Resposta modelo:** *What concerned the investors most was not the cost but the delay.*
 
-7. `students / who submit their work late / a penalty / will receive / unless they have an approved extension`
+7. `Students / who submit their work late / a penalty / will receive / unless they have an approved extension.`
 **Resposta modelo:** *Students who submit their work late will receive a penalty unless they have an approved extension.*
 
-8. `having / the instructions / carefully / read / she / began the experiment`
+8. `Having read / the instructions / she / carefully, / began the experiment.`
 **Resposta modelo:** *Having read the instructions carefully, she began the experiment.*
 
 > **Como se autoavaliar:** compare cada frase com a modelo usando a rubrica de *Build a Sentence* da Parte 7. Erro de ordem, concordância ou fragmento faltando/sobrando = item errado, mesmo que o sentido "dê para entender".
@@ -614,8 +617,8 @@ Você tem 45 segundos para cada resposta, sem preparo, como na prova. Grave toda
 2. The professor's argument was **compe_____**, drawing on three independent lines of evidence.
 (A) competent  (B) competitive  (C) compelling  (D) compensating
 
-3. The startup's growth was **unsu_____**; within a year, it had expanded into four new markets.
-(A) unsuitable  (B) unsustainable  (C) unsupported  (D) unsurpassed *(considerando o contexto positivo de "expanded into four new markets")*
+3. The startup's growth was **unsu_____**: no other company in its sector had ever expanded into four new markets in a single year.
+(A) unsuitable  (B) unsustainable  (C) unsupported  (D) unsurpassed
 
 4. The findings, though preliminary, are **prom_____** enough to justify a larger follow-up study.
 (A) prominent  (B) promising  (C) promoted  (D) prompt
@@ -630,9 +633,9 @@ Você tem 45 segundos para cada resposta, sem preparo, como na prova. Grave toda
 (A) declared  (B) declining  (C) decoding  (D) dedicating
 
 8. The safety protocol is **manda_____**; there are no exceptions, regardless of experience level.
-(A) mandatory  (B) managerial  (C) mandated  (D) manual *(nota: (A) e (C) são ambas plausíveis · escolha o adjetivo predicativo mais natural após "is")*
+(A) mandatory  (B) managerial  (C) mandate  (D) mandarin
 
-**Gabarito:** 1-B · 2-C · 3-D · 4-B · 5-C ("not contradictory... different aspect" = complementares; cuidado: *complimentary* = elogioso/grátis) · 6-A · 7-B ("for three consecutive years" + tempo contínuo) · 8-A
+**Gabarito:** 1-B · 2-C · 3-D ("no other company... had ever" = sem igual; nada no texto fala em risco, o que descarta *unsustainable*) · 4-B · 5-C ("not contradictory... different aspect" = complementares; cuidado: *complimentary* = elogioso/grátis) · 6-A · 7-B ("for three consecutive years" + tempo contínuo) · 8-A (depois de "is" vem adjetivo; *mandate* é substantivo ou verbo, e *mandarin* não faz sentido)
 
 #### Bloco B · Read in Daily Life (alvo: 2 min)
 
@@ -656,7 +659,7 @@ Network effects can be direct or indirect. Direct network effects occur when the
 
 This difficulty of disruption is often described as a "winner-take-most" dynamic. Because users generally prefer the platform with the largest existing network, early leaders in markets with strong network effects tend to compound their advantage rapidly, often achieving dominant market positions that persist even when competitors offer superior underlying technology. This has generated significant regulatory concern, particularly regarding whether dominant platforms leverage network-effect-driven market power in ways that stifle competition rather than simply reflecting superior efficiency.
 
-Critics of this narrative, however, caution against treating network effects as an insurmountable barrier to entry. History offers counterexamples: several dominant platforms have been displaced by newer entrants offering a sufficiently differentiated experience, suggesting that network effects, while powerful, are not absolute. Switching costs, multi-homing behavior · where users maintain accounts on multiple competing platforms simultaneously · and shifts in user preference can erode even substantial network advantages over time.
+Critics of this narrative, however, caution against treating network effects as an insurmountable barrier to entry. History offers counterexamples: several dominant platforms have been displaced by newer entrants offering a sufficiently differentiated experience, suggesting that network effects, while powerful, are not absolute. Low switching costs, multi-homing behavior (where users maintain accounts on multiple competing platforms simultaneously), and shifts in user preference can erode even substantial network advantages over time.
 
 **QUESTÃO 1 · Gist/Main Idea:** What is the primary purpose of this passage?
 - (A) To argue that network effects make competition in digital markets impossible
@@ -733,11 +736,11 @@ Critics of this narrative, however, caution against treating network effects as 
 
 **TRANSCRIÇÃO:** "Reminder to all residents: the annual fire safety inspection will take place this Thursday between 9 AM and 4 PM. Maintenance staff will need access to every unit, so please ensure pets are secured and any fire alarms are unobstructed. Units that are not accessible during the scheduled window will be inspected the following week, with a formal notice posted 48 hours in advance."
 
-**QUESTÃO:** What should a resident do if they will not be home during the inspection window?
-- (A) Nothing: the unit will simply be skipped
-- (B) They will be inspected the following week, with prior notice given
-- (C) Contact the fire department directly
-- (D) Leave a key with a neighbor immediately
+**QUESTÃO:** What will happen to a unit that staff cannot access during the inspection window?
+- (A) It will be skipped until next year's inspection
+- (B) It will be inspected the following week, after a notice is posted
+- (C) Its resident will be charged a fee
+- (D) It will be inspected later the same day
 
 **Gabarito:** B
 
@@ -765,10 +768,10 @@ Critics of this narrative, however, caution against treating network effects as 
 
 #### Build a Sentence
 
-1. `if / had / the funding / been approved earlier / the project / launched on schedule / would have`
+1. `had / the funding / If / been approved earlier, / launched on schedule. / the project / would have`
 **Resposta modelo:** *If the funding had been approved earlier, the project would have launched on schedule.*
 
-2. `not only / but / the policy reduced costs / also improved customer satisfaction / significantly`
+2. `not only / but also / customer satisfaction. / The policy / significantly improved / reduced costs`
 **Resposta modelo:** *The policy not only reduced costs but also significantly improved customer satisfaction.*
 
 #### Write an Email

@@ -1822,11 +1822,11 @@
       "A": "decorate",
       "B": "decline",
       "C": "declare",
-      "D": "decrease"
+      "D": "deceive"
     },
     "answer": "B",
-    "explanation": "declínio combina com \"despite success\"",
-    "hint": "nota: mais de uma opção pode ser gramaticalmente plausível · escolha a que preserva o sentido lógico do contraste com \"initial success\"",
+    "explanation": "\"market share\" que cai depois de \"initial success\"; *decorate*, *declare* e *deceive* não cabem",
+    "hint": null,
     "trap_codes": [],
     "tags": [
       "simulado-2"
@@ -2299,7 +2299,7 @@
     "source": {
       "kind": "migrado",
       "file": "consolidated/modulo_7_simulados.md",
-      "ref": "linha 611",
+      "ref": "linha 614",
       "live_on_site": true,
       "answer_letter": "origem",
       "build_map": {
@@ -2340,7 +2340,7 @@
     "source": {
       "kind": "migrado",
       "file": "consolidated/modulo_7_simulados.md",
-      "ref": "linha 614",
+      "ref": "linha 617",
       "live_on_site": true,
       "answer_letter": "origem",
       "build_map": {
@@ -2362,16 +2362,16 @@
     "cefr_max": null,
     "stimulus": null,
     "group": "mod7-b13",
-    "prompt": "The startup's growth was **unsu_____**; within a year, it had expanded into four new markets.",
+    "prompt": "The startup's growth was **unsu_____**: no other company in its sector had ever expanded into four new markets in a single year.",
     "text_format": "markdown",
     "options": {
       "A": "unsuitable",
       "B": "unsustainable",
       "C": "unsupported",
-      "D": "unsurpassed *(considerando o contexto positivo de \"expanded into four new markets\")*"
+      "D": "unsurpassed"
     },
     "answer": "D",
-    "explanation": "",
+    "explanation": "\"no other company... had ever\" = sem igual; nada no texto fala em risco, o que descarta *unsustainable*",
     "hint": null,
     "trap_codes": [],
     "tags": [
@@ -2381,7 +2381,7 @@
     "source": {
       "kind": "migrado",
       "file": "consolidated/modulo_7_simulados.md",
-      "ref": "linha 617",
+      "ref": "linha 620",
       "live_on_site": true,
       "answer_letter": "origem",
       "build_map": {
@@ -2422,7 +2422,7 @@
     "source": {
       "kind": "migrado",
       "file": "consolidated/modulo_7_simulados.md",
-      "ref": "linha 620",
+      "ref": "linha 623",
       "live_on_site": true,
       "answer_letter": "origem",
       "build_map": {
@@ -2463,7 +2463,7 @@
     "source": {
       "kind": "migrado",
       "file": "consolidated/modulo_7_simulados.md",
-      "ref": "linha 623",
+      "ref": "linha 626",
       "live_on_site": true,
       "answer_letter": "origem",
       "build_map": {
@@ -2504,7 +2504,7 @@
     "source": {
       "kind": "migrado",
       "file": "consolidated/modulo_7_simulados.md",
-      "ref": "linha 626",
+      "ref": "linha 629",
       "live_on_site": true,
       "answer_letter": "origem",
       "build_map": {
@@ -2545,7 +2545,7 @@
     "source": {
       "kind": "migrado",
       "file": "consolidated/modulo_7_simulados.md",
-      "ref": "linha 629",
+      "ref": "linha 632",
       "live_on_site": true,
       "answer_letter": "origem",
       "build_map": {
@@ -2572,12 +2572,12 @@
     "options": {
       "A": "mandatory",
       "B": "managerial",
-      "C": "mandated",
-      "D": "manual"
+      "C": "mandate",
+      "D": "mandarin"
     },
     "answer": "A",
-    "explanation": "",
-    "hint": "nota: (A) e (C) são ambas plausíveis · escolha o adjetivo predicativo mais natural após \"is\"",
+    "explanation": "depois de \"is\" vem adjetivo; *mandate* é substantivo ou verbo, e *mandarin* não faz sentido",
+    "hint": null,
     "trap_codes": [],
     "tags": [
       "simulado-3"
@@ -2586,7 +2586,7 @@
     "source": {
       "kind": "migrado",
       "file": "consolidated/modulo_7_simulados.md",
-      "ref": "linha 632",
+      "ref": "linha 635",
       "live_on_site": true,
       "answer_letter": "origem",
       "build_map": {

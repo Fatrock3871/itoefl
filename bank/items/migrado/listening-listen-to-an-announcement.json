@@ -530,7 +530,7 @@
     "source": {
       "kind": "migrado",
       "file": "consolidated/modulo_7_simulados.md",
-      "ref": "linha 401",
+      "ref": "linha 403",
       "live_on_site": true,
       "answer_letter": "origem",
       "build_map": {
@@ -577,7 +577,7 @@
     "source": {
       "kind": "migrado",
       "file": "consolidated/modulo_7_simulados.md",
-      "ref": "linha 455",
+      "ref": "linha 457",
       "live_on_site": true,
       "answer_letter": "origem",
       "build_map": {
@@ -624,7 +624,7 @@
     "source": {
       "kind": "migrado",
       "file": "consolidated/modulo_7_simulados.md",
-      "ref": "linha 461",
+      "ref": "linha 463",
       "live_on_site": true,
       "answer_letter": "origem",
       "build_map": {
@@ -652,13 +652,13 @@
       "audio_ref": null
     },
     "group": "mod7-b18",
-    "prompt": "What should a resident do if they will not be home during the inspection window?",
+    "prompt": "What will happen to a unit that staff cannot access during the inspection window?",
     "text_format": "markdown",
     "options": {
-      "A": "Nothing: the unit will simply be skipped",
-      "B": "They will be inspected the following week, with prior notice given",
-      "C": "Contact the fire department directly",
-      "D": "Leave a key with a neighbor immediately"
+      "A": "It will be skipped until next year's inspection",
+      "B": "It will be inspected the following week, after a notice is posted",
+      "C": "Its resident will be charged a fee",
+      "D": "It will be inspected later the same day"
     },
     "answer": "B",
     "explanation": "",
@@ -671,7 +671,7 @@
     "source": {
       "kind": "migrado",
       "file": "consolidated/modulo_7_simulados.md",
-      "ref": "linha 736",
+      "ref": "linha 739",
       "live_on_site": true,
       "answer_letter": "origem",
       "build_map": {

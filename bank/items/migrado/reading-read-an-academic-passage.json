@@ -977,7 +977,7 @@
     "source": {
       "kind": "migrado",
       "file": "consolidated/modulo_7_simulados.md",
-      "ref": "linha 277",
+      "ref": "linha 279",
       "live_on_site": true,
       "answer_letter": "origem",
       "build_map": {
@@ -1024,7 +1024,7 @@
     "source": {
       "kind": "migrado",
       "file": "consolidated/modulo_7_simulados.md",
-      "ref": "linha 283",
+      "ref": "linha 285",
       "live_on_site": true,
       "answer_letter": "origem",
       "build_map": {
@@ -1071,7 +1071,7 @@
     "source": {
       "kind": "migrado",
       "file": "consolidated/modulo_7_simulados.md",
-      "ref": "linha 286",
+      "ref": "linha 288",
       "live_on_site": true,
       "answer_letter": "origem",
       "build_map": {
@@ -1118,7 +1118,7 @@
     "source": {
       "kind": "migrado",
       "file": "consolidated/modulo_7_simulados.md",
-      "ref": "linha 302",
+      "ref": "linha 304",
       "live_on_site": true,
       "answer_letter": "origem",
       "build_map": {
@@ -1165,7 +1165,7 @@
     "source": {
       "kind": "migrado",
       "file": "consolidated/modulo_7_simulados.md",
-      "ref": "linha 308",
+      "ref": "linha 310",
       "live_on_site": true,
       "answer_letter": "origem",
       "build_map": {
@@ -1212,7 +1212,7 @@
     "source": {
       "kind": "migrado",
       "file": "consolidated/modulo_7_simulados.md",
-      "ref": "linha 314",
+      "ref": "linha 316",
       "live_on_site": true,
       "answer_letter": "origem",
       "build_map": {
@@ -1259,7 +1259,7 @@
     "source": {
       "kind": "migrado",
       "file": "consolidated/modulo_7_simulados.md",
-      "ref": "linha 317",
+      "ref": "linha 319",
       "live_on_site": true,
       "answer_letter": "origem",
       "build_map": {
@@ -1306,7 +1306,7 @@
     "source": {
       "kind": "migrado",
       "file": "consolidated/modulo_7_simulados.md",
-      "ref": "linha 323",
+      "ref": "linha 325",
       "live_on_site": true,
       "answer_letter": "origem",
       "build_map": {
@@ -1353,7 +1353,7 @@
     "source": {
       "kind": "migrado",
       "file": "consolidated/modulo_7_simulados.md",
-      "ref": "linha 329",
+      "ref": "linha 331",
       "live_on_site": true,
       "answer_letter": "origem",
       "build_map": {
@@ -1377,7 +1377,7 @@
       "kind": "text",
       "format": "markdown",
       "title": "Bloco C: Read an Academic Passage (alvo: 12–14 min)",
-      "content": "**PASSAGE: The Economics of Network Effects**\n\nA network effect occurs when the value of a product or service increases as more people use it. The telephone is the textbook example: a single telephone is useless, but as adoption grows, each additional user increases the value of the network for everyone already connected to it. This dynamic, largely peripheral to economic theory for much of the twentieth century, has become central to understanding digital markets, where platforms (social networks, marketplaces, operating systems) often derive their value primarily from the size and engagement of their user base rather than from the intrinsic quality of the underlying product.\n\nNetwork effects can be direct or indirect. Direct network effects occur when the value to a user increases as a function of other users of the *same* product: a messaging app is more useful as more of one's contacts join it. Indirect network effects occur across two distinct but interdependent user groups: a ride-sharing platform becomes more attractive to riders as more drivers join, and simultaneously more attractive to drivers as more riders join. This two-sided dynamic creates a powerful feedback loop that, once initiated, can be extraordinarily difficult for competitors to disrupt.\n\nThis difficulty of disruption is often described as a \"winner-take-most\" dynamic. Because users generally prefer the platform with the largest existing network, early leaders in markets with strong network effects tend to compound their advantage rapidly, often achieving dominant market positions that persist even when competitors offer superior underlying technology. This has generated significant regulatory concern, particularly regarding whether dominant platforms leverage network-effect-driven market power in ways that stifle competition rather than simply reflecting superior efficiency.\n\nCritics of this narrative, however, caution against treating network effects as an insurmountable barrier to entry. History offers counterexamples: several dominant platforms have been displaced by newer entrants offering a sufficiently differentiated experience, suggesting that network effects, while powerful, are not absolute. Switching costs, multi-homing behavior · where users maintain accounts on multiple competing platforms simultaneously · and shifts in user preference can erode even substantial network advantages over time.",
+      "content": "**PASSAGE: The Economics of Network Effects**\n\nA network effect occurs when the value of a product or service increases as more people use it. The telephone is the textbook example: a single telephone is useless, but as adoption grows, each additional user increases the value of the network for everyone already connected to it. This dynamic, largely peripheral to economic theory for much of the twentieth century, has become central to understanding digital markets, where platforms (social networks, marketplaces, operating systems) often derive their value primarily from the size and engagement of their user base rather than from the intrinsic quality of the underlying product.\n\nNetwork effects can be direct or indirect. Direct network effects occur when the value to a user increases as a function of other users of the *same* product: a messaging app is more useful as more of one's contacts join it. Indirect network effects occur across two distinct but interdependent user groups: a ride-sharing platform becomes more attractive to riders as more drivers join, and simultaneously more attractive to drivers as more riders join. This two-sided dynamic creates a powerful feedback loop that, once initiated, can be extraordinarily difficult for competitors to disrupt.\n\nThis difficulty of disruption is often described as a \"winner-take-most\" dynamic. Because users generally prefer the platform with the largest existing network, early leaders in markets with strong network effects tend to compound their advantage rapidly, often achieving dominant market positions that persist even when competitors offer superior underlying technology. This has generated significant regulatory concern, particularly regarding whether dominant platforms leverage network-effect-driven market power in ways that stifle competition rather than simply reflecting superior efficiency.\n\nCritics of this narrative, however, caution against treating network effects as an insurmountable barrier to entry. History offers counterexamples: several dominant platforms have been displaced by newer entrants offering a sufficiently differentiated experience, suggesting that network effects, while powerful, are not absolute. Low switching costs, multi-homing behavior (where users maintain accounts on multiple competing platforms simultaneously), and shifts in user preference can erode even substantial network advantages over time.",
       "audio_ref": null
     },
     "group": "mod7-b15",
@@ -1400,7 +1400,7 @@
     "source": {
       "kind": "migrado",
       "file": "consolidated/modulo_7_simulados.md",
-      "ref": "linha 661",
+      "ref": "linha 664",
       "live_on_site": true,
       "answer_letter": "origem",
       "build_map": {
@@ -1424,7 +1424,7 @@
       "kind": "text",
       "format": "markdown",
       "title": "Bloco C: Read an Academic Passage (alvo: 12–14 min)",
-      "content": "**PASSAGE: The Economics of Network Effects**\n\nA network effect occurs when the value of a product or service increases as more people use it. The telephone is the textbook example: a single telephone is useless, but as adoption grows, each additional user increases the value of the network for everyone already connected to it. This dynamic, largely peripheral to economic theory for much of the twentieth century, has become central to understanding digital markets, where platforms (social networks, marketplaces, operating systems) often derive their value primarily from the size and engagement of their user base rather than from the intrinsic quality of the underlying product.\n\nNetwork effects can be direct or indirect. Direct network effects occur when the value to a user increases as a function of other users of the *same* product: a messaging app is more useful as more of one's contacts join it. Indirect network effects occur across two distinct but interdependent user groups: a ride-sharing platform becomes more attractive to riders as more drivers join, and simultaneously more attractive to drivers as more riders join. This two-sided dynamic creates a powerful feedback loop that, once initiated, can be extraordinarily difficult for competitors to disrupt.\n\nThis difficulty of disruption is often described as a \"winner-take-most\" dynamic. Because users generally prefer the platform with the largest existing network, early leaders in markets with strong network effects tend to compound their advantage rapidly, often achieving dominant market positions that persist even when competitors offer superior underlying technology. This has generated significant regulatory concern, particularly regarding whether dominant platforms leverage network-effect-driven market power in ways that stifle competition rather than simply reflecting superior efficiency.\n\nCritics of this narrative, however, caution against treating network effects as an insurmountable barrier to entry. History offers counterexamples: several dominant platforms have been displaced by newer entrants offering a sufficiently differentiated experience, suggesting that network effects, while powerful, are not absolute. Switching costs, multi-homing behavior · where users maintain accounts on multiple competing platforms simultaneously · and shifts in user preference can erode even substantial network advantages over time.",
+      "content": "**PASSAGE: The Economics of Network Effects**\n\nA network effect occurs when the value of a product or service increases as more people use it. The telephone is the textbook example: a single telephone is useless, but as adoption grows, each additional user increases the value of the network for everyone already connected to it. This dynamic, largely peripheral to economic theory for much of the twentieth century, has become central to understanding digital markets, where platforms (social networks, marketplaces, operating systems) often derive their value primarily from the size and engagement of their user base rather than from the intrinsic quality of the underlying product.\n\nNetwork effects can be direct or indirect. Direct network effects occur when the value to a user increases as a function of other users of the *same* product: a messaging app is more useful as more of one's contacts join it. Indirect network effects occur across two distinct but interdependent user groups: a ride-sharing platform becomes more attractive to riders as more drivers join, and simultaneously more attractive to drivers as more riders join. This two-sided dynamic creates a powerful feedback loop that, once initiated, can be extraordinarily difficult for competitors to disrupt.\n\nThis difficulty of disruption is often described as a \"winner-take-most\" dynamic. Because users generally prefer the platform with the largest existing network, early leaders in markets with strong network effects tend to compound their advantage rapidly, often achieving dominant market positions that persist even when competitors offer superior underlying technology. This has generated significant regulatory concern, particularly regarding whether dominant platforms leverage network-effect-driven market power in ways that stifle competition rather than simply reflecting superior efficiency.\n\nCritics of this narrative, however, caution against treating network effects as an insurmountable barrier to entry. History offers counterexamples: several dominant platforms have been displaced by newer entrants offering a sufficiently differentiated experience, suggesting that network effects, while powerful, are not absolute. Low switching costs, multi-homing behavior (where users maintain accounts on multiple competing platforms simultaneously), and shifts in user preference can erode even substantial network advantages over time.",
       "audio_ref": null
     },
     "group": "mod7-b15",
@@ -1447,7 +1447,7 @@
     "source": {
       "kind": "migrado",
       "file": "consolidated/modulo_7_simulados.md",
-      "ref": "linha 667",
+      "ref": "linha 670",
       "live_on_site": true,
       "answer_letter": "origem",
       "build_map": {
@@ -1471,7 +1471,7 @@
       "kind": "text",
       "format": "markdown",
       "title": "Bloco C: Read an Academic Passage (alvo: 12–14 min)",
-      "content": "**PASSAGE: The Economics of Network Effects**\n\nA network effect occurs when the value of a product or service increases as more people use it. The telephone is the textbook example: a single telephone is useless, but as adoption grows, each additional user increases the value of the network for everyone already connected to it. This dynamic, largely peripheral to economic theory for much of the twentieth century, has become central to understanding digital markets, where platforms (social networks, marketplaces, operating systems) often derive their value primarily from the size and engagement of their user base rather than from the intrinsic quality of the underlying product.\n\nNetwork effects can be direct or indirect. Direct network effects occur when the value to a user increases as a function of other users of the *same* product: a messaging app is more useful as more of one's contacts join it. Indirect network effects occur across two distinct but interdependent user groups: a ride-sharing platform becomes more attractive to riders as more drivers join, and simultaneously more attractive to drivers as more riders join. This two-sided dynamic creates a powerful feedback loop that, once initiated, can be extraordinarily difficult for competitors to disrupt.\n\nThis difficulty of disruption is often described as a \"winner-take-most\" dynamic. Because users generally prefer the platform with the largest existing network, early leaders in markets with strong network effects tend to compound their advantage rapidly, often achieving dominant market positions that persist even when competitors offer superior underlying technology. This has generated significant regulatory concern, particularly regarding whether dominant platforms leverage network-effect-driven market power in ways that stifle competition rather than simply reflecting superior efficiency.\n\nCritics of this narrative, however, caution against treating network effects as an insurmountable barrier to entry. History offers counterexamples: several dominant platforms have been displaced by newer entrants offering a sufficiently differentiated experience, suggesting that network effects, while powerful, are not absolute. Switching costs, multi-homing behavior · where users maintain accounts on multiple competing platforms simultaneously · and shifts in user preference can erode even substantial network advantages over time.",
+      "content": "**PASSAGE: The Economics of Network Effects**\n\nA network effect occurs when the value of a product or service increases as more people use it. The telephone is the textbook example: a single telephone is useless, but as adoption grows, each additional user increases the value of the network for everyone already connected to it. This dynamic, largely peripheral to economic theory for much of the twentieth century, has become central to understanding digital markets, where platforms (social networks, marketplaces, operating systems) often derive their value primarily from the size and engagement of their user base rather than from the intrinsic quality of the underlying product.\n\nNetwork effects can be direct or indirect. Direct network effects occur when the value to a user increases as a function of other users of the *same* product: a messaging app is more useful as more of one's contacts join it. Indirect network effects occur across two distinct but interdependent user groups: a ride-sharing platform becomes more attractive to riders as more drivers join, and simultaneously more attractive to drivers as more riders join. This two-sided dynamic creates a powerful feedback loop that, once initiated, can be extraordinarily difficult for competitors to disrupt.\n\nThis difficulty of disruption is often described as a \"winner-take-most\" dynamic. Because users generally prefer the platform with the largest existing network, early leaders in markets with strong network effects tend to compound their advantage rapidly, often achieving dominant market positions that persist even when competitors offer superior underlying technology. This has generated significant regulatory concern, particularly regarding whether dominant platforms leverage network-effect-driven market power in ways that stifle competition rather than simply reflecting superior efficiency.\n\nCritics of this narrative, however, caution against treating network effects as an insurmountable barrier to entry. History offers counterexamples: several dominant platforms have been displaced by newer entrants offering a sufficiently differentiated experience, suggesting that network effects, while powerful, are not absolute. Low switching costs, multi-homing behavior (where users maintain accounts on multiple competing platforms simultaneously), and shifts in user preference can erode even substantial network advantages over time.",
       "audio_ref": null
     },
     "group": "mod7-b15",
@@ -1494,7 +1494,7 @@
     "source": {
       "kind": "migrado",
       "file": "consolidated/modulo_7_simulados.md",
-      "ref": "linha 673",
+      "ref": "linha 676",
       "live_on_site": true,
       "answer_letter": "origem",
       "build_map": {
@@ -1518,7 +1518,7 @@
       "kind": "text",
       "format": "markdown",
       "title": "Bloco C: Read an Academic Passage (alvo: 12–14 min)",
-      "content": "**PASSAGE: The Economics of Network Effects**\n\nA network effect occurs when the value of a product or service increases as more people use it. The telephone is the textbook example: a single telephone is useless, but as adoption grows, each additional user increases the value of the network for everyone already connected to it. This dynamic, largely peripheral to economic theory for much of the twentieth century, has become central to understanding digital markets, where platforms (social networks, marketplaces, operating systems) often derive their value primarily from the size and engagement of their user base rather than from the intrinsic quality of the underlying product.\n\nNetwork effects can be direct or indirect. Direct network effects occur when the value to a user increases as a function of other users of the *same* product: a messaging app is more useful as more of one's contacts join it. Indirect network effects occur across two distinct but interdependent user groups: a ride-sharing platform becomes more attractive to riders as more drivers join, and simultaneously more attractive to drivers as more riders join. This two-sided dynamic creates a powerful feedback loop that, once initiated, can be extraordinarily difficult for competitors to disrupt.\n\nThis difficulty of disruption is often described as a \"winner-take-most\" dynamic. Because users generally prefer the platform with the largest existing network, early leaders in markets with strong network effects tend to compound their advantage rapidly, often achieving dominant market positions that persist even when competitors offer superior underlying technology. This has generated significant regulatory concern, particularly regarding whether dominant platforms leverage network-effect-driven market power in ways that stifle competition rather than simply reflecting superior efficiency.\n\nCritics of this narrative, however, caution against treating network effects as an insurmountable barrier to entry. History offers counterexamples: several dominant platforms have been displaced by newer entrants offering a sufficiently differentiated experience, suggesting that network effects, while powerful, are not absolute. Switching costs, multi-homing behavior · where users maintain accounts on multiple competing platforms simultaneously · and shifts in user preference can erode even substantial network advantages over time.",
+      "content": "**PASSAGE: The Economics of Network Effects**\n\nA network effect occurs when the value of a product or service increases as more people use it. The telephone is the textbook example: a single telephone is useless, but as adoption grows, each additional user increases the value of the network for everyone already connected to it. This dynamic, largely peripheral to economic theory for much of the twentieth century, has become central to understanding digital markets, where platforms (social networks, marketplaces, operating systems) often derive their value primarily from the size and engagement of their user base rather than from the intrinsic quality of the underlying product.\n\nNetwork effects can be direct or indirect. Direct network effects occur when the value to a user increases as a function of other users of the *same* product: a messaging app is more useful as more of one's contacts join it. Indirect network effects occur across two distinct but interdependent user groups: a ride-sharing platform becomes more attractive to riders as more drivers join, and simultaneously more attractive to drivers as more riders join. This two-sided dynamic creates a powerful feedback loop that, once initiated, can be extraordinarily difficult for competitors to disrupt.\n\nThis difficulty of disruption is often described as a \"winner-take-most\" dynamic. Because users generally prefer the platform with the largest existing network, early leaders in markets with strong network effects tend to compound their advantage rapidly, often achieving dominant market positions that persist even when competitors offer superior underlying technology. This has generated significant regulatory concern, particularly regarding whether dominant platforms leverage network-effect-driven market power in ways that stifle competition rather than simply reflecting superior efficiency.\n\nCritics of this narrative, however, caution against treating network effects as an insurmountable barrier to entry. History offers counterexamples: several dominant platforms have been displaced by newer entrants offering a sufficiently differentiated experience, suggesting that network effects, while powerful, are not absolute. Low switching costs, multi-homing behavior (where users maintain accounts on multiple competing platforms simultaneously), and shifts in user preference can erode even substantial network advantages over time.",
       "audio_ref": null
     },
     "group": "mod7-b15",
@@ -1541,7 +1541,7 @@
     "source": {
       "kind": "migrado",
       "file": "consolidated/modulo_7_simulados.md",
-      "ref": "linha 676",
+      "ref": "linha 679",
       "live_on_site": true,
       "answer_letter": "origem",
       "build_map": {
@@ -1565,7 +1565,7 @@
       "kind": "text",
       "format": "markdown",
       "title": "Bloco C: Read an Academic Passage (alvo: 12–14 min)",
-      "content": "**PASSAGE: The Economics of Network Effects**\n\nA network effect occurs when the value of a product or service increases as more people use it. The telephone is the textbook example: a single telephone is useless, but as adoption grows, each additional user increases the value of the network for everyone already connected to it. This dynamic, largely peripheral to economic theory for much of the twentieth century, has become central to understanding digital markets, where platforms (social networks, marketplaces, operating systems) often derive their value primarily from the size and engagement of their user base rather than from the intrinsic quality of the underlying product.\n\nNetwork effects can be direct or indirect. Direct network effects occur when the value to a user increases as a function of other users of the *same* product: a messaging app is more useful as more of one's contacts join it. Indirect network effects occur across two distinct but interdependent user groups: a ride-sharing platform becomes more attractive to riders as more drivers join, and simultaneously more attractive to drivers as more riders join. This two-sided dynamic creates a powerful feedback loop that, once initiated, can be extraordinarily difficult for competitors to disrupt.\n\nThis difficulty of disruption is often described as a \"winner-take-most\" dynamic. Because users generally prefer the platform with the largest existing network, early leaders in markets with strong network effects tend to compound their advantage rapidly, often achieving dominant market positions that persist even when competitors offer superior underlying technology. This has generated significant regulatory concern, particularly regarding whether dominant platforms leverage network-effect-driven market power in ways that stifle competition rather than simply reflecting superior efficiency.\n\nCritics of this narrative, however, caution against treating network effects as an insurmountable barrier to entry. History offers counterexamples: several dominant platforms have been displaced by newer entrants offering a sufficiently differentiated experience, suggesting that network effects, while powerful, are not absolute. Switching costs, multi-homing behavior · where users maintain accounts on multiple competing platforms simultaneously · and shifts in user preference can erode even substantial network advantages over time.",
+      "content": "**PASSAGE: The Economics of Network Effects**\n\nA network effect occurs when the value of a product or service increases as more people use it. The telephone is the textbook example: a single telephone is useless, but as adoption grows, each additional user increases the value of the network for everyone already connected to it. This dynamic, largely peripheral to economic theory for much of the twentieth century, has become central to understanding digital markets, where platforms (social networks, marketplaces, operating systems) often derive their value primarily from the size and engagement of their user base rather than from the intrinsic quality of the underlying product.\n\nNetwork effects can be direct or indirect. Direct network effects occur when the value to a user increases as a function of other users of the *same* product: a messaging app is more useful as more of one's contacts join it. Indirect network effects occur across two distinct but interdependent user groups: a ride-sharing platform becomes more attractive to riders as more drivers join, and simultaneously more attractive to drivers as more riders join. This two-sided dynamic creates a powerful feedback loop that, once initiated, can be extraordinarily difficult for competitors to disrupt.\n\nThis difficulty of disruption is often described as a \"winner-take-most\" dynamic. Because users generally prefer the platform with the largest existing network, early leaders in markets with strong network effects tend to compound their advantage rapidly, often achieving dominant market positions that persist even when competitors offer superior underlying technology. This has generated significant regulatory concern, particularly regarding whether dominant platforms leverage network-effect-driven market power in ways that stifle competition rather than simply reflecting superior efficiency.\n\nCritics of this narrative, however, caution against treating network effects as an insurmountable barrier to entry. History offers counterexamples: several dominant platforms have been displaced by newer entrants offering a sufficiently differentiated experience, suggesting that network effects, while powerful, are not absolute. Low switching costs, multi-homing behavior (where users maintain accounts on multiple competing platforms simultaneously), and shifts in user preference can erode even substantial network advantages over time.",
       "audio_ref": null
     },
     "group": "mod7-b15",
@@ -1588,7 +1588,7 @@
     "source": {
       "kind": "migrado",
       "file": "consolidated/modulo_7_simulados.md",
-      "ref": "linha 682",
+      "ref": "linha 685",
       "live_on_site": true,
       "answer_letter": "origem",
       "build_map": {
@@ -1612,7 +1612,7 @@
       "kind": "text",
       "format": "markdown",
       "title": "Bloco C: Read an Academic Passage (alvo: 12–14 min)",
-      "content": "**PASSAGE: The Economics of Network Effects**\n\nA network effect occurs when the value of a product or service increases as more people use it. The telephone is the textbook example: a single telephone is useless, but as adoption grows, each additional user increases the value of the network for everyone already connected to it. This dynamic, largely peripheral to economic theory for much of the twentieth century, has become central to understanding digital markets, where platforms (social networks, marketplaces, operating systems) often derive their value primarily from the size and engagement of their user base rather than from the intrinsic quality of the underlying product.\n\nNetwork effects can be direct or indirect. Direct network effects occur when the value to a user increases as a function of other users of the *same* product: a messaging app is more useful as more of one's contacts join it. Indirect network effects occur across two distinct but interdependent user groups: a ride-sharing platform becomes more attractive to riders as more drivers join, and simultaneously more attractive to drivers as more riders join. This two-sided dynamic creates a powerful feedback loop that, once initiated, can be extraordinarily difficult for competitors to disrupt.\n\nThis difficulty of disruption is often described as a \"winner-take-most\" dynamic. Because users generally prefer the platform with the largest existing network, early leaders in markets with strong network effects tend to compound their advantage rapidly, often achieving dominant market positions that persist even when competitors offer superior underlying technology. This has generated significant regulatory concern, particularly regarding whether dominant platforms leverage network-effect-driven market power in ways that stifle competition rather than simply reflecting superior efficiency.\n\nCritics of this narrative, however, caution against treating network effects as an insurmountable barrier to entry. History offers counterexamples: several dominant platforms have been displaced by newer entrants offering a sufficiently differentiated experience, suggesting that network effects, while powerful, are not absolute. Switching costs, multi-homing behavior · where users maintain accounts on multiple competing platforms simultaneously · and shifts in user preference can erode even substantial network advantages over time.",
+      "content": "**PASSAGE: The Economics of Network Effects**\n\nA network effect occurs when the value of a product or service increases as more people use it. The telephone is the textbook example: a single telephone is useless, but as adoption grows, each additional user increases the value of the network for everyone already connected to it. This dynamic, largely peripheral to economic theory for much of the twentieth century, has become central to understanding digital markets, where platforms (social networks, marketplaces, operating systems) often derive their value primarily from the size and engagement of their user base rather than from the intrinsic quality of the underlying product.\n\nNetwork effects can be direct or indirect. Direct network effects occur when the value to a user increases as a function of other users of the *same* product: a messaging app is more useful as more of one's contacts join it. Indirect network effects occur across two distinct but interdependent user groups: a ride-sharing platform becomes more attractive to riders as more drivers join, and simultaneously more attractive to drivers as more riders join. This two-sided dynamic creates a powerful feedback loop that, once initiated, can be extraordinarily difficult for competitors to disrupt.\n\nThis difficulty of disruption is often described as a \"winner-take-most\" dynamic. Because users generally prefer the platform with the largest existing network, early leaders in markets with strong network effects tend to compound their advantage rapidly, often achieving dominant market positions that persist even when competitors offer superior underlying technology. This has generated significant regulatory concern, particularly regarding whether dominant platforms leverage network-effect-driven market power in ways that stifle competition rather than simply reflecting superior efficiency.\n\nCritics of this narrative, however, caution against treating network effects as an insurmountable barrier to entry. History offers counterexamples: several dominant platforms have been displaced by newer entrants offering a sufficiently differentiated experience, suggesting that network effects, while powerful, are not absolute. Low switching costs, multi-homing behavior (where users maintain accounts on multiple competing platforms simultaneously), and shifts in user preference can erode even substantial network advantages over time.",
       "audio_ref": null
     },
     "group": "mod7-b15",
@@ -1635,7 +1635,7 @@
     "source": {
       "kind": "migrado",
       "file": "consolidated/modulo_7_simulados.md",
-      "ref": "linha 688",
+      "ref": "linha 691",
       "live_on_site": true,
       "answer_letter": "origem",
       "build_map": {

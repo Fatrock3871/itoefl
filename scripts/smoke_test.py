@@ -225,7 +225,9 @@ check("m7_production_is_interactive", function(){
   var m7 = document.getElementById("panel-mod7");
   return m7.querySelectorAll('.spk[data-mode="repeat"] .spk-item').length === 10 &&
     m7.querySelectorAll('.spk[data-mode="interview"] .spk-item').length === 10 &&
-    m7.querySelectorAll(".wbox").length === 4 && m7.querySelectorAll("details.reveal").length === 13;
+    // 10 de Build a Sentence, 3 respostas-modelo de Writing e as 2 respostas de
+    // digitacao do Complete the Words do Simulado 2 (um bloco so)
+    m7.querySelectorAll(".wbox").length === 4 && m7.querySelectorAll("details.reveal").length === 14;
 });
 check("m7_model_answers_start_closed", function(){
   return Array.prototype.every.call(document.querySelectorAll("#panel-mod7 details.reveal"), function(d){ return !d.open; });
@@ -863,6 +865,20 @@ def content_review_checks():
     questions = quiz["questions"] if isinstance(quiz, dict) else quiz
     q5 = next(q for q in questions if q["num"] == 5)
     out["review_diag_q5_not_called_ctw"] = "Complete the Words" not in q5["topic"]
+
+    # M7: toda resposta-modelo de Build a Sentence usa exatamente as palavras
+    # dos blocos (tres modelos pediam palavra que nao estava em bloco nenhum)
+    def words(text):
+        return sorted(re.findall(r"[a-z']+", text.lower()))
+
+    m7 = (ROOT / "consolidated" / "modulo_7_simulados.md").read_text(encoding="utf-8")
+    pairs = re.findall(r"`([^`\n]+ / [^`\n]+)`\n\*\*Resposta modelo:\*\* \*([^*\n]+)\*", m7)
+    out["review_m7_build_models_use_the_chunks"] = (len(pairs) == 10 and all(
+        words(chunks.replace("/", " ")) == words(model) for chunks, model in pairs))
+    # a resposta nao vem impressa no enunciado nem como dica ao lado das opcoes
+    out["review_m7_no_answer_in_prompt"] = all(s not in m7 for s in (
+        '"confirmed")', '"logically")', "(D) decrease", "(C) mandated", "(considerando o contexto positivo"))
+    out["review_m7_low_switching_costs"] = "Low switching costs, multi-homing" in m7
     return out
 
 

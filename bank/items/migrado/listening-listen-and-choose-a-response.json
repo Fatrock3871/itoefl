@@ -575,7 +575,7 @@
     "source": {
       "kind": "migrado",
       "file": "consolidated/modulo_7_simulados.md",
-      "ref": "linha 345",
+      "ref": "linha 347",
       "live_on_site": true,
       "answer_letter": "origem",
       "build_map": {
@@ -622,7 +622,7 @@
     "source": {
       "kind": "migrado",
       "file": "consolidated/modulo_7_simulados.md",
-      "ref": "linha 353",
+      "ref": "linha 355",
       "live_on_site": true,
       "answer_letter": "origem",
       "build_map": {
@@ -653,13 +653,13 @@
     "prompt": "Best response:",
     "text_format": "markdown",
     "options": {
-      "A": "\"She's usually pretty quick, so maybe check your spam folder.\"",
+      "A": "\"The professor's office is on the second floor.\"",
       "B": "\"I sent mine last week.\"",
-      "C": "\"The email server was down on Monday, I think: try again.\"",
+      "C": "\"I think the email server was down on Monday, so try again.\"",
       "D": "\"You should present first.\""
     },
     "answer": "C",
-    "explanation": "(nota: (A) e (C) são ambas coerentes; escolha a que oferece a explicação mais direta para o silêncio · (C) dá uma causa concreta e uma ação. Em itens assim, a resposta que **faz o diálogo avançar** ganha.)",
+    "explanation": "(nota: (C) dá uma causa provável e uma ação. (A) e (B) reaproveitam o assunto \"professor/e-mail\" sem responder à queixa.)",
     "hint": null,
     "trap_codes": [],
     "tags": [
@@ -669,7 +669,7 @@
     "source": {
       "kind": "migrado",
       "file": "consolidated/modulo_7_simulados.md",
-      "ref": "linha 361",
+      "ref": "linha 363",
       "live_on_site": true,
       "answer_letter": "origem",
       "build_map": {
@@ -716,7 +716,7 @@
     "source": {
       "kind": "migrado",
       "file": "consolidated/modulo_7_simulados.md",
-      "ref": "linha 371",
+      "ref": "linha 373",
       "live_on_site": true,
       "answer_letter": "origem",
       "build_map": {
@@ -763,7 +763,7 @@
     "source": {
       "kind": "migrado",
       "file": "consolidated/modulo_7_simulados.md",
-      "ref": "linha 706",
+      "ref": "linha 709",
       "live_on_site": true,
       "answer_letter": "origem",
       "build_map": {
