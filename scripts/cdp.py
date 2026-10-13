@@ -134,12 +134,22 @@ class Browser:
         )
         port_file = self.profile / "DevToolsActivePort"
         deadline = time.time() + 30
-        while not port_file.exists() or not port_file.read_text().strip():
+        def read_port():
+            # no Windows o arquivo pode existir e ainda estar travado pelo
+            # Chrome, que o está escrevendo: tentar de novo em vez de cair
+            try:
+                return port_file.read_text().strip()
+            except OSError:
+                return ""
+
+        port_text = read_port()
+        while not port_text:
             if time.time() > deadline:
                 self.close()
                 raise SystemExit("Chrome nao abriu a porta de depuracao em 30 s.")
             time.sleep(0.1)
-        self.port = int(port_file.read_text().split()[0])
+            port_text = read_port()
+        self.port = int(port_text.split()[0])
         targets = json.loads(urllib.request.urlopen(f"http://127.0.0.1:{self.port}/json/list").read())
         page = [t for t in targets if t.get("type") == "page"][0]
         self.ws = _WebSocket(page["webSocketDebuggerUrl"])
