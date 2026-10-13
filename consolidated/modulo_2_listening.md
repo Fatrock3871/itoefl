@@ -80,7 +80,8 @@ Cada item testa uma habilidade específica. Reconhecer o tipo pelo enunciado **a
 | **Attitude / stance** | *"What is the professor's opinion of...?"* / *"How does the man feel about...?"* | Capta o **tom** (aprova / duvida / se surpreende / minimiza) a partir de escolha de palavras e entonação |
 | **Organization** | *"Why does the professor mention X?"* / *"How does the professor introduce the topic?"* | Diz a **função estrutural** do trecho (exemplo de apoio, contraste, digressão, transição) |
 | **Inference** | *"What can be inferred about...?"* / *"What does the professor imply?"* | Um passo lógico além do dito: nunca dois; alternativas com *always/never/only/impossible* quase sempre saem |
-| **Connecting content** | *"What is the likely outcome of...?"* / arrasta itens numa tabela | Junta duas informações ditas em pontos diferentes do áudio |
+| **Connecting content** | *"What is the likely outcome of...?"* | Junta duas informações ditas em pontos diferentes do áudio |
+| **Prediction / what's next** | *"What will the professor probably discuss next?"* | Segue a pista dada no fim do áudio (*"Next time, we'll look at..."*, *"Let's turn to..."*) |
 | **Vocabulary / idiom in context** | *"What does the speaker mean by 'X'?"* | O sentido **daquela expressão naquele contexto**: o literal é distrator |
 
 ---
@@ -165,7 +166,7 @@ distrator usa o **desatualizado**.
 
 ### 2.5 Fase router: os primeiros itens decidem tudo
 
-O router é a fase **mais curta e mais decisiva**, e é quase todo composto de itens curtos (Choose a Response). O erro mais comum é subestimá-los.
+O router é a fase **mais longa e mais decisiva**: abre com uma sequência de itens curtos (Choose a Response) e depois traz conversas, um anúncio e uma fala acadêmica. O erro mais comum é subestimar os itens curtos do começo.
 
 1. **Trate cada item do router como se já valesse o módulo superior.**
 2. **Não acelere nos itens curtos.** Gaste 2–3 s a mais para confirmar a
@@ -269,7 +270,7 @@ Palavras de função (auxiliares, preposições, artigos, pronomes) são ditas *
 | **a quarter past / to** | :15 / :45 | *"quarter to five"* = 4:45 |
 | **half past** | :30 | *"half past nine"* = 9:30 |
 | **half an hour** / **an hour and a half** | 30 min / 90 min | |
-| **the 3rd** vs. **the 30th** | ordinais também sofrem -teen/-ty | contexto do calendário |
+| **the 13th** vs. **the 30th** | ordinais também sofrem -teen/-ty (*thirTEENTH* × *THIRtieth*) | contexto do calendário |
 | **oh** em números | zero | *"room two-oh-four"* = 204 |
 | **fortnight** (britânico) | duas semanas | |
 | datas | mês-dia (EUA) ou dia-mês (RU) | *"March fifth"* / *"the fifth of March"* |

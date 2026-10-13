@@ -25,7 +25,7 @@
 | **Pontuação bruta** | 55 pontos → banda **1–6** (CEFR) |
 | **Correção** | **100% por IA** (motor do tipo SpeechRater). Nenhuma correção humana. |
 
-O Speaking é **curto e denso**: 8 minutos, 55 pontos brutos, o dobro do Writing. Cada item vale proporcionalmente muito, e não sobra tempo de planejamento pra mascarar fraqueza. Você é avaliado em **precisão**, não em fluência genérica de discurso.
+O Speaking é **curto e denso**: 8 minutos, 55 pontos brutos, quase o triplo dos 20 do Writing. Cada item vale proporcionalmente muito, e não sobra tempo de planejamento pra mascarar fraqueza. Você é avaliado em **precisão**, não em fluência genérica de discurso.
 
 ### 1.2 As duas tarefas
 
@@ -128,7 +128,7 @@ O português brasileiro é uma língua de **ritmo silábico**: cada sílaba rece
 
 É por isso que brasileiros soam "robóticos" ou "silabados" em inglês, mesmo com vocabulário e gramática impecáveis: e é exatamente o desvio de prosódia que a IA de inteligibilidade captura em Listen and Repeat.
 
-> **Diagnóstico:** grave-se dizendo *"I would have gone to the party if I had known about it"* e compare o tempo entre as sílabas tônicas (WOULD, GONE, PAR-ty, KNOWN, IT) com um áudio nativo. Se você dá o mesmo peso a *"would have"* e *"gone"*, está no ritmo silábico · o *"have"* precisa reduzir a um schwa quase inaudível (*"I'd-uv gone"*). A Parte 3.3 e 3.5 treinam isso.
+> **Diagnóstico:** grave-se dizendo *"I would have gone to the party if I had known about it"* e compare o tempo entre as sílabas tônicas (GONE, PAR-ty, KNOWN, a-BOUT) com um áudio nativo. Se você dá o mesmo peso a *"would have"* e a *"gone"*, está no ritmo silábico: o *"would have"* precisa encolher para algo como *"I'd-uv"*, quase inaudível (*"I'd-uv GONE"*). As seções 3.3 e 3.5 treinam isso.
 
 ---
 
@@ -142,7 +142,7 @@ Speaking se ganha ou se perde aqui. A estratégia (Parte 2) diz **o que** fazer;
 |---|---|---|---|---|
 | 1 | **/θ/** (th surdo) | vira /t/, /f/ ou /s/ | think, through, both, method, health, growth, math, mouth, faith | ponta da língua **entre os dentes**, ar passando sem vibração |
 | 2 | **/ð/** (th sonoro) | vira /d/ | the, this, that, they, there, other, mother, weather, rather, although | mesma posição do /θ/, **com** vibração das cordas vocais |
-| 3 | **/ɪ/** vs **/iː/** | *ship* e *sheep* soam iguais (ambos "i" longo) | live/leave, sit/seat, bit/beat, fill/feel, it/eat, his/he's | /ɪ/ é **curto e relaxado**, boca mais fechada; /iː/ é **longo e tenso** |
+| 3 | **/ɪ/** vs **/iː/** | *ship* e *sheep* soam iguais (ambos "i" longo) | live/leave, sit/seat, bit/beat, fill/feel, it/eat, his/he's | /ɪ/ é **curto e relaxado**, com a boca um pouco mais aberta e a língua um pouco mais baixa (perto de um "ê" bem curto); /iː/ é **longo e tenso**, lábios esticados como num sorriso |
 | 4 | **/æ/** (short a) | vira /ɛ/ ("fez") ou /a/ ("faz") | cat, bad, man, plan, have, actually, language, academic, grammar, natural | abra mais a boca que em "fez", língua para baixo e para frente. Par mínimo: *bed* (/ɛ/) × *bad* (/æ/) |
 | 5 | **/ʌ/** | vira /a/ ou /u/ | but, cut, done, love, money, enough, culture, budget, function | vogal **central e relaxada**, boca semiaberta: o "u" de "but" não é o de "put" |
 | 6 | **/ɜːr/** (bird) | vira "er" silabado ou "ir" | word, work, first, learn, term, research, prefer, occur, concern | um som só, contínuo, com a língua enrolada (rótico) |
@@ -174,7 +174,7 @@ O brasileiro erra o acento de cognatos porque projeta o padrão do português. A
 | sig-ni-fi-CANT | sig-**NI**-fi-cant |
 | com-for-TA-ble | **COM**-for-ta-ble (3 sílabas: "CUMF-tuh-bul") |
 | en-gi-NE-er | en-gi-**NEER** |
-| e-CO-no-my / e-co-NO-mic | e-**CO**-no-my mas e-co-**NO**-mic |
+| e-co-NO-my / e-CO-no-mic | e-**CO**-no-my mas e-co-**NO**-mic |
 | a-na-LY-sis | a-**NA**-ly-sis |
 | en-VI-ron-ment | en-**VY**-ron-ment (4 sílabas) |
 | par-ti-CU-lar-ly | par-**TI**-cu-lar-ly |
@@ -189,13 +189,13 @@ acento na sílaba **imediatamente antes** do sufixo: *inforMAtion*, *speCIfic*, 
 - Pares substantivo/verbo de 2 sílabas → substantivo com acento na **1ª**, verbo
 na **2ª**: *a REcord* × *to reCORD*; *a PREsent* × *to preSENT*; *an INcrease* × *to inCREASE*; *CONtent* (n.) × *conTENT* (adj., "satisfeito").
 - Verbos terminados em **-ate** → acento 2 sílabas antes do *-ate*:
-*COMmunicate*, *inVEStigate*, *deMONstrate*.
+*comMUnicate*, *inVEStigate*, *DEMonstrate*.
 
 ### 3.3 Acento de frase e ritmo (stress-timed)
 
 Numa frase, o inglês **acentua as palavras de conteúdo** (substantivos, verbos principais, adjetivos, advérbios) e **reduz as de função** (artigos, preposições, auxiliares, pronomes, conjunções).
 
-*"I would have called you if I had remembered."* → acentuadas: **CALLED**, **YOU**, **rememBERED**. → reduzidas: *I would have* → *"I'd-uv"*; *if I had* → *"if I'd"*.
+*"I would have called you if I had remembered."* → acentuadas: **CALLED**, **reMEMbered**. → reduzidas: *I would have* → *"I'd-uv"*; *you* → */jə/*; *if I had* → *"if I'd"*.
 
 **Treino do compasso:** bata a mão na mesa **só nas sílabas tônicas** e diga a frase encaixando as átonas entre as batidas. As batidas devem sair em intervalos aproximadamente **regulares**, não importa quantas sílabas átonas há entre elas.
 
@@ -249,7 +249,7 @@ A IA penaliza *"uh"*, *"um"*, repetições e falsos começos. Mas silêncio tota
 1. **Comece a falar em ≤ 2 segundos.** A primeira frase pode ser a posição ou
 uma frase-ponte (*"That's an interesting one."*).
 2. **Fale em blocos, com micro-pausas nas fronteiras sintáticas**, nunca no meio
-de um sintagma. Pausa **depois** de *"...because"*, não antes.
+de um sintagma. Pausa **antes** de *"because"*, não depois: *"I prefer mornings / because I focus better"*.
 3. **Ritmo médio, estável.** Rápido demais derruba a inteligibilidade; devagar
 demais sinaliza baixa fluência.
 4. **Se travar no meio, não recomece do zero**: retome do último bloco
@@ -449,7 +449,7 @@ Estes conjuntos são **treino por nível**, não o formato da prova: as frases n
 6. *There's nothing we can do about it now.*
 *("There's" + "we can" reduzidos)*
 
-> **Foco:** cronometre o intervalo entre as sílabas tônicas (CALLED, EAR-lier, RE-mem-bered) · deve ser aproximadamente **regular**, mesmo com número diferente de sílabas átonas entre elas. Se o tempo total cresce proporcionalmente ao número de sílabas, você ainda está no padrão silábico.
+> **Foco:** cronometre o intervalo entre as sílabas tônicas (CALLED, EAR-lier, re-MEM-bered): ele deve ser aproximadamente **regular**, mesmo com número diferente de sílabas átonas entre elas. Se o tempo total cresce proporcionalmente ao número de sílabas, você ainda está no padrão silábico.
 
 ---
 
