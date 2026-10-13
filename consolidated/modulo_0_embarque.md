@@ -86,7 +86,7 @@ A partir de 2026 seu resultado sai em **duas escalas ao mesmo tempo**, e a ETS e
 >
 > Um aviso sobre as fontes: o *Test Overview* da ETS tem uma tabela de pontos brutos em que Reading e Listening aparecem como "0–30", enquanto o *Test Blueprint and Specifications* dá 35 para cada uma. Os dois documentos concordam em Writing (20) e Speaking (55). Este curso segue o Blueprint, que é o documento que detalha quantos itens contam ponto em cada seção. Para o seu estudo não muda nada: o que você acompanha é a banda.
 
-Repara no Speaking: só 8 minutos, mas 55 pontos brutos, o dobro do Writing, espremidos em 11 itens curtos. Cada resposta pesa muito mais do que parece, e não tem chance de "esquentar": a primeira já precisa sair boa.
+Repara no Speaking: só 8 minutos, mas 55 pontos brutos, quase o triplo do Writing, espremidos em 11 itens curtos. Cada resposta pesa muito mais do que parece, e não tem chance de "esquentar": a primeira já precisa sair boa.
 
 ### 2.3 Os Tipos de Item: Mapa Completo
 
@@ -249,7 +249,7 @@ Em Writing e Speaking a IA (e-rater / SpeechRater) olha gramática, coesão, voc
 ### 4.3 Score Geral Estimado
 
 ```
-Score Geral (CEFR) = Média das 4 bandas de seção (Reading + Listening + Writing + Speaking) ÷ 4
+Score Geral (CEFR) = (Reading + Listening + Writing + Speaking) ÷ 4, arredondado para a meia banda mais próxima
 Score Comparável 0–120 = faixa da banda geral na concordância oficial da ETS (tabela 1.3)
 ```
 

@@ -218,7 +218,7 @@ O *Complete the Words* testa gramática e collocation numa forma disfarçada. Es
 
 ### 3.1 Formas verbais: a regra por posição
 
-O CTW quase sempre oferece 4 formas do **mesmo verbo** (*complete / completing / completed / completes*). A forma certa depende do que vem **antes** da lacuna.
+No CTW você digita o final da palavra, e muitas vezes as letras visíveis servem para várias formas do **mesmo verbo** (*comp___* pode virar *complete*, *completing*, *completed*, *completes*). A forma certa depende do que vem **antes** da lacuna, e a contagem de traços confirma.
 
 | O que vem antes | Forma exigida | Exemplo |
 |---|---|---|
@@ -264,7 +264,7 @@ O português usa artigo definido com substantivos abstratos e genéricos ("**A**
 | Regra | Errado (transferência do PT) | Correto |
 |---|---|---|
 | Substantivo genérico/abstrato (incontável ou plural), no sentido geral → **sem artigo** | *"**The** education is important"* · *"**The** technology changed our lives"* | ***Education** is important.* · ***Technology** changed our lives.* |
-| Substantivo **específico** (definido pelo contexto ou por uma cláusula) → **the** | *"research conducted by Smith shows..."* | ***The** research conducted by Smith shows...* |
+| Substantivo **específico** (definido pelo contexto ou por uma cláusula) → **the** | *"Book on the table is mine."* · *"Results of the study were clear."* | ***The** book on the table is mine.* · ***The** results of the study were clear.* |
 | Substantivo contável singular, primeira menção, não específico → **a / an** (*an* antes de som de vogal) | *"He is engineer."* · *"It took hour."* | *He is **an** engineer.* · *It took **an** hour.* |
 | Substantivo já mencionado, ou único no contexto → **the** | — | *I saw **a** dog. **The** dog was barking.* · ***The** sun*, ***the** government* |
 
@@ -283,7 +283,7 @@ Combinações que nativos usam automaticamente. O CTW testa se você as reconhec
 | **set** | set a goal / a limit / a date / an example / a standard | **hold** | hold a meeting / a position / an opinion / a view |
 | **keep** | keep a record / a promise / in touch / track of / an eye on | **break** | break a rule / a promise / a habit / a record / the news |
 
-**Não** existem: *"do a decision"*, *"make a research"*, *"take a photo of me"* (→ *take **my** photo* / *take **a** photo **of me***), *"put a question"* (→ *ask a question*).
+**Não** existem: *"do a decision"* (→ *make a decision*), *"make a research"* (→ *do research*), *"make a photo"* (→ *take a photo*), *"make a question"* (→ *ask a question*).
 
 ### 3.6 Conectores: o que cada um sinaliza
 
@@ -325,7 +325,7 @@ Em itens de vocabulário em contexto, você raramente precisa "saber" a palavra:
 | *-less* | adjetivo (sem) | *harmless, endless* |
 | *-ly* | advérbio (ou adjetivo, em *friendly, likely*) | *rapidly, notably* |
 
-**Regra prática no item:** identifique se a lacuna pede substantivo, verbo, adjetivo ou advérbio (pela posição na frase); só então escolha entre as opções da classe certa.
+**Regra prática no item:** identifique primeiro a classe de palavra pedida pela posição na frase (substantivo, verbo, adjetivo ou advérbio); só então pense no sentido.
 
 ---
 
