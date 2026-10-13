@@ -879,6 +879,31 @@ def content_review_checks():
     out["review_m7_no_answer_in_prompt"] = all(s not in m7 for s in (
         '"confirmed")', '"logically")', "(D) decrease", "(C) mandated", "(considerando o contexto positivo"))
     out["review_m7_low_switching_costs"] = "Low switching costs, multi-homing" in m7
+
+    # Texto dos modulos: trechos que ensinavam errado e foram corrigidos
+    def module(n):
+        return next((ROOT / "consolidated").glob(f"modulo_{n}_*.md")).read_text(encoding="utf-8")
+
+    wrong = {
+        0: ['formato "Complete the Words"', "o dobro do Writing", "Média das 4 bandas de seção (Reading"],
+        1: ["**B** *lose*", '*"take a photo of me"*', "O CTW quase sempre oferece 4 formas"],
+        2: ["mais curta e mais decisiva", "arrasta itens numa tabela", "**the 3rd** vs. **the 30th**"],
+        3: ["o dobro do Writing", "rememBERED", "RE-mem-bered", "COMmunicate", "deMONstrate", "boca mais fechada",
+            "| e-CO-no-my / e-co-NO-mic |"],
+        4: ["Travessão (: )", "sem inversão e sem auxiliar", "information: and often it is not",
+            "**The book that is on the shelf is mine.**"],
+        6: ["| assumed | presumably |", "2 correlation *(repete", '*(neutro)*'],
+        8: ['para sair do modo "leitura"'],
+        9: ["| **graduate** | graduado (bacharel)", 'stress em "RON"', "(ð ausente)", "think through the hypothesis"],
+    }
+    out["review_modules_fixed_text_stays_fixed"] = all(s not in module(n) for n, bad in wrong.items() for s in bad)
+
+    # M5: resposta-modelo de Academic Discussion nao fica abaixo do minimo de
+    # 100 palavras que o M4 ensina
+    m5 = module(5)
+    models = [l for l in m5.splitlines() if l.startswith('> "While Maria raises') or l.startswith('> "While Lía is right')]
+    out["review_m5_models_reach_100_words"] = len(models) == 2 and all(
+        len(re.findall(r"[A-Za-zÀ-ÿ0-9][A-Za-zÀ-ÿ0-9'’-]*", l)) >= 100 for l in models)
     return out
 
 

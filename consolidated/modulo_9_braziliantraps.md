@@ -253,9 +253,9 @@ O português usa o presente para situações que começaram no passado e continu
 | **eventual** | eventual (possível/ocasional) | definitivo / que ocorre no final | possible / occasional |
 | **assist** | assistir (watch/attend) | ajudar / auxiliar | watch / attend / observe |
 | **data** | data (calendário) | dados / informações | date (calendário) |
-| **graduate** | graduado (bacharel) | pós-graduado / mestre / doutor | undergraduate |
+| **graduation** | graduação (o curso) | formatura (cerimônia ou conclusão do curso) | undergraduate studies / a bachelor's degree (e *graduate school* = pós-graduação) |
 | **resume** | resumo (summary) | currículo (profissional) | summary / abstract |
-| **argument** | argumento (discussão/briga) | raciocínio / tese / ponto de vista | disagreement / debate / fight |
+| **argument** | só "argumento" (raciocínio) | argumento **e também** discussão, briga (*they had an argument* = eles brigaram) | para briga sem ambiguidade: fight / quarrel |
 | **policy** | polícia | política (diretriz, plano de ação) | police |
 | **politics** | políticas (planos) | política (atividade partidária) | policies |
 | **economic** | econômico (barato) | relativo à economia | economical / cheap / affordable |
@@ -333,9 +333,9 @@ Uma família de erros de registro que aparece especialmente em *Write for an Aca
 
 | O que é | Como brasileiros produzem | Palavras de alto risco |
 |---|---|---|
-| "th" em "think": língua entre os dentes, ar sem vibração | /t/ ("tink"), /f/ ("fink"), /s/ ("sink") | **think, through, although, whether, hypothesis, throughout, method, both, health, growth, worth** |
+| "th" em "think": língua entre os dentes, ar sem vibração | /t/ ("tink"), /f/ ("fink"), /s/ ("sink") | **think, through, thank, theory, hypothesis, throughout, method, both, health, growth, worth** |
 
-**Como praticar:** ponta da língua levemente entre os dentes; sopre ar sem fechar; toque leve, sem pressão. Pratique *"think through the hypothesis"* · todas com /θ/.
+**Como praticar:** ponta da língua levemente entre os dentes; sopre ar sem fechar; toque leve, sem pressão. Pratique *"think through both methods"* · todas com /θ/.
 
 **Em *Listen and Repeat*:** frases com "although", "the", "hypothesis" são recorrentes na progressão de dificuldade. Reproduzir o /θ/ e o /ð/ com precisão é diretamente pontuado como inteligibilidade.
 
@@ -381,7 +381,7 @@ Uma família de erros de registro que aparece especialmente em *Write for an Aca
 
 > **Erro mais comum:** produzir /ɪd/ para todos os verbos no passado ("looked-id, discussed-id") · detectado como erro fonológico sistemático.
 
-**Drill:** *"The author **argued** that the researchers **conducted** a study and **indicated** that the results **showed** a pattern."* · "argued/conducted/ indicated" = 3 sílabas extra; "showed" = sem vogal extra.
+**Drill:** *"The author **argued** that the researchers **conducted** a study and **indicated** that the results **showed** a pattern."* · *conducted* e *indicated* ganham /ɪd/ (sílaba extra); *argued* e *showed* terminam em /d/, sem vogal extra.
 
 **FONEMA 7: /ɪ/ vs. /iː/ (o par que muda a palavra)**
 
@@ -465,7 +465,7 @@ Já apresentado no Módulo 3 (Speaking), revisitado aqui com foco na correção.
 
 | Palavra | Erro comum | Pronúncia alvo | Dica |
 |---|---|---|---|
-| **although** | /ˌalˈðo/ (ð ausente) | /ɔːlˈðoʊ/ | "though" final soa como "doh": ð sonoro |
+| **although** | /alˈdo/ (d no lugar de ð) | /ɔːlˈðoʊ/ | "though" rima com "go", mas começa com /ð/ (língua entre os dentes, com voz), nunca com /d/ |
 | **whether** | /ˈwɛtɛr/ (t no lugar de ð) | /ˈwɛðər/ | "weh-THer": ð sonoro + schwa |
 | **rather** | /ˈrɑðɛr/ | /ˈræðər/ | æ (short a) + ð + schwa |
 | **throughout** | /θruˈaʊt/ | /θruːˈaʊt/ | θ + "roo" + "owt" |
@@ -489,7 +489,7 @@ Pratique em voz alta, gravando e ouvindo de volta.
 > Risco: **Although** (/ð/), **the** (/ð/ × 3), **that** (/ð/), **hypothesis** (/θ/), **this** (/ð/), **throughout** (/θ/)
 
 **Drill 2 · stress-timing e vogais:** *"Evidence from longitudinal studies specifically indicates that academic performance depends on environmental factors."*
-> Risco: **Evidence** (schwa), **longitudinal** (stress em "TU"), **specifically** (stress em "SIF"), **academic** (stress em "DEM"), **environmental** (stress em "RON")
+> Risco: **Evidence** (schwa), **longitudinal** (stress em "TU"), **specifically** (stress em "SIF"), **academic** (stress em "DEM"), **environmental** (tônica em "MEN": en-vi-ron-**MEN**-tal; em *environment* ela fica em "VI")
 
 **Drill 3 · terminações -ED:** *"The researchers argued that the proposed policy had generated unintended consequences and suggested that further studies be conducted."*
 > Risco: **argued** (/d/), **proposed** (/d/), **generated** (/ɪd/), **suggested** (/ɪd/), **conducted** (/ɪd/)

@@ -44,8 +44,9 @@ Um ponto de atenção sobre a transcrição automática do gravador: ela usa o
 reconhecimento de fala do seu próprio navegador. Dependendo do navegador, o
 áudio pode ser enviado ao fornecedor dele (por exemplo, o Google, no Chrome)
 para ser transcrito. Esse envio é feito pelo navegador, segue a política de
-privacidade do fornecedor e não passa por nós. Se preferir, use o gravador sem
-olhar a transcrição em um navegador que não ofereça o recurso.
+privacidade do fornecedor e não passa por nós. Se não quiser esse envio, use o
+gravador em um navegador que não ofereça reconhecimento de fala: nesse caso a
+transcrição fica desligada e o áudio não sai do seu aparelho.
 
 ## 4. Dados guardados no seu aparelho
 
