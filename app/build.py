@@ -477,7 +477,7 @@ account_modal = (
     # novo no servidor, em supabase/functions/delete-account).
     '<div class="account-section account-danger">'
     '<span class="account-section-label"><span class="account-section-icon">🗑️</span>Excluir conta</span>'
-    '<p class="account-danger-text">Apaga de vez sua conta, seu progresso e o registro do seu pagamento. '
+    '<p class="account-danger-text">Apaga de vez sua conta, seu progresso, suas redações e o registro do seu pagamento. '
     'O acesso comprado é perdido e não dá pra desfazer.</p>'
     '<button type="button" class="account-danger-open" id="accountDeleteOpen">Quero excluir minha conta</button>'
     '<form class="auth-form" id="accountDeleteForm" hidden>'

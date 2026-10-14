@@ -6,8 +6,9 @@
 // aceita id de usuário no corpo, então não há como um aluno apagar outro.
 //
 // Apagar a linha de auth.users leva junto, por `on delete cascade` (ver
-// supabase/schema.sql): profiles, user_state, entitlements e payments. Ou
-// seja, some também o registro de pagamento, e o acesso comprado é perdido.
+// supabase/schema.sql): profiles, user_state, entitlements, payments,
+// essay_submissions e admins. Ou seja, somem também as redações e o registro
+// de pagamento, e o acesso comprado é perdido.
 //
 // (SUPABASE_URL, SUPABASE_ANON_KEY e SUPABASE_SERVICE_ROLE_KEY já existem
 // automaticamente no ambiente de toda edge function do projeto.)

@@ -1,6 +1,6 @@
 # Termos de Uso
 
-**Última atualização:** 8 de outubro de 2026
+**Última atualização:** 14 de outubro de 2026
 
 Estes termos valem para todo mundo que cria uma conta ou compra acesso ao
 iTOEFL. Ao criar a conta você declara que leu e concorda com eles e com a
@@ -26,8 +26,8 @@ prova. Não reproduzimos questões oficiais.
 
 Acesso ao material de estudo da plataforma: os módulos de conteúdo, os
 exercícios interativos, os flashcards, as ferramentas de prática (cronômetro,
-gravador, registro de erros) e a sincronização do seu progresso entre
-aparelhos.
+gravador, registro de erros), a sincronização do seu progresso entre
+aparelhos e o envio de redações para correção, nas regras do item 5.
 
 ## 4. O que não prometemos
 
@@ -43,7 +43,38 @@ aparelhos.
   material quando ele muda, mas confira sempre as regras no site oficial da
   ETS antes da sua prova.
 
-## 5. Sua conta
+## 5. Correção de redações
+
+<!-- REVISAR (advogado): seção nova de 2026-10-14, com as regras do envio de redações, o prazo de devolução, a nota como estimativa de treino e o uso de ferramenta de IA na correção. -->
+
+Quem tem um plano com acesso em dia pode enviar redações no formato da prova
+(Write an Email e Write for an Academic Discussion) para a nossa equipe
+corrigir. O envio faz parte do plano e não tem custo à parte.
+
+- **Frequência.** Uma redação a cada 4 dias, contados do seu último envio. A
+  data em que o próximo envio fica liberado aparece na plataforma.
+- **Prazo de devolução.** Até 3 dias úteis (de segunda a sexta, sem feriados
+  nacionais) depois do dia do envio. A data prevista aparece no momento do
+  envio. Se um imprevisto atrasar a devolução, avisaremos pela plataforma.
+- **Tempo de escrita.** 7 minutos para o e-mail e 10 minutos para a
+  discussão, como na prova. O cronômetro não pausa; quando ele zera, o texto
+  trava e você decide se envia.
+- **Tamanho.** A discussão precisa ter pelo menos 100 palavras para ser
+  enviada. O e-mail não tem mínimo.
+- **Como corrigimos.** A correção é feita pela nossa equipe com apoio de
+  ferramenta de inteligência artificial e revisada por uma pessoa antes de
+  chegar a você. O uso da ferramenta depende do seu consentimento no primeiro
+  envio, como explica a [Política de Privacidade](privacidade.html).
+- **O que a nota significa.** A nota de 0 a 5 e o nível estimado são uma
+  estimativa de treino, para orientar o seu estudo. Não são a nota oficial da
+  ETS e não garantem nenhum resultado na prova.
+- **O seu texto.** A redação continua sendo sua. Ao enviar, você nos autoriza
+  a guardá-la na sua conta e a analisá-la para a correção. Envie só texto
+  escrito por você e não coloque dados pessoais nele.
+- **Mudança nas regras.** Podemos ajustar estas regras com aviso na
+  plataforma. Um envio já feito segue as regras da data em que foi feito.
+
+## 6. Sua conta
 
 - Você precisa de um e-mail válido e de uma senha, ou de uma conta Google.
 - A conta é pessoal. Não compartilhe o acesso com outras pessoas.
@@ -52,7 +83,7 @@ aparelhos.
 - Menores de 18 anos devem usar a plataforma com autorização do responsável
   legal.
 
-## 6. Planos, pagamento e validade
+## 7. Planos, pagamento e validade
 
 <!-- REVISAR (advogado): seção nova de 2026-10-08, com os três planos, a contagem do prazo e a regra de renovação e troca de plano. -->
 
@@ -98,7 +129,7 @@ muda é por quanto tempo.
   parte, com preço e condições informados antes da contratação. Eles não fazem
   parte do acesso já comprado, a não ser que isso seja dito expressamente.
 
-## 7. Arrependimento e reembolso
+## 8. Arrependimento e reembolso
 
 <!-- REVISAR (advogado): reembolso de 7 dias em todos os planos (art. 49 do CDC), efeito do reembolso sobre o prazo e ausência de reembolso proporcional depois dos 7 dias. -->
 
@@ -119,7 +150,7 @@ O prazo vale para cada compra, inclusive renovação e troca de plano.
 - **Depois dos 7 dias.** Não há reembolso proporcional aos dias não usados.
   Isso não afeta os outros direitos que a lei garante ao consumidor.
 
-## 8. Uso permitido
+## 9. Uso permitido
 
 Você pode usar o material para o seu estudo pessoal. Não pode:
 
@@ -131,7 +162,7 @@ Você pode usar o material para o seu estudo pessoal. Não pode:
 
 O descumprimento pode levar à suspensão ou ao encerramento da conta.
 
-## 9. Propriedade intelectual
+## 10. Propriedade intelectual
 
 Textos, exercícios, explicações, identidade visual e código da plataforma
 pertencem ao responsável indicado no item 1 ou são usados sob licença. A
@@ -141,32 +172,32 @@ propriedade sobre ele.
 O que você produz na plataforma (respostas, gravações, anotações) continua
 sendo seu.
 
-## 10. Disponibilidade
+## 11. Disponibilidade
 
 Trabalhamos para manter a plataforma no ar, mas ela pode ficar indisponível
 por manutenção, falha técnica ou problema em serviços de terceiros dos quais
 dependemos. Parte do material funciona sem conexão depois de carregado, mas a
 sincronização entre aparelhos exige internet.
 
-## 11. Encerramento da conta
+## 12. Encerramento da conta
 
 Você pode excluir sua conta a qualquer momento em Minha conta. A exclusão
-apaga seus dados da plataforma, incluindo o registro do pagamento, e o acesso
-comprado é perdido. Excluir a conta fora do prazo do item 7 não gera
+apaga seus dados da plataforma, incluindo as redações enviadas e o registro do pagamento, e o acesso
+comprado é perdido. Excluir a conta fora do prazo do item 8 não gera
 reembolso.
 
-## 12. Mudanças nestes termos
+## 13. Mudanças nestes termos
 
 Podemos atualizar estes termos. Quando a mudança for relevante, avisaremos na
 plataforma ou pelo e-mail cadastrado antes de ela valer. A data no topo indica
 a versão em vigor.
 
-## 13. Lei aplicável
+## 14. Lei aplicável
 
 Estes termos seguem a lei brasileira. Fica eleito o foro do domicílio do
 consumidor para resolver qualquer disputa.
 
-## 14. Contato
+## 15. Contato
 
 Dúvidas, pedidos de reembolso e reclamações:
 [PREENCHER: e-mail de contato].

@@ -1026,6 +1026,23 @@ def essay_topic_checks():
         len(data.get("topics", [])) == 10 and len(data.get("partes", {}).get("M4", [])) == 7
         and len(data.get("partes", {}).get("M5", [])) == 10 and "toefl_essay_seen" in index
     )
+
+    # páginas legais: redações, IA de terceiros, retenção e exclusão; regras
+    # do envio e nota como estimativa; seções novas marcadas para o advogado
+    priv_src = (ROOT / "legal" / "privacidade.md").read_text(encoding="utf-8")
+    terms_src = (ROOT / "legal" / "termos.md").read_text(encoding="utf-8")
+    priv = (ARTIFACT.parent / "privacidade.html").read_text(encoding="utf-8")
+    terms = (ARTIFACT.parent / "termos.html").read_text(encoding="utf-8")
+    out["essay_legal_pages_cover_essays"] = (
+        all(s in priv for s in ("Redações enviadas para correção", "inteligência artificial de terceiros",
+                                "Consentimento:", "Ao excluir a conta, elas são apagadas junto",
+                                "as redações enviadas com as devolutivas"))
+        and all(s in terms for s in ("Correção de redações", "Uma redação a cada 4 dias", "Até 3 dias úteis",
+                                     "estimativa de treino", "pelo menos 100 palavras"))
+        and re.search(r"REVISAR \(advogado\): seção nova de 2026-10-14", priv_src)
+        and re.search(r"REVISAR \(advogado\): seção nova de 2026-10-14", terms_src)
+        and "REVISAR" not in priv and "REVISAR" not in terms
+    )
     return out
 
 
