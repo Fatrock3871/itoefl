@@ -1782,5 +1782,17 @@ li > .reveal{margin:6px 0 4px;}
 .essay-badge{display:inline-block; margin:8px 0 0; padding:3px 10px; border-radius:99px; background:var(--accent-fill); color:#fff; font-size:12px; font-weight:800;}
 #authIn .account-gear{position:relative;}
 .essay-dot{position:absolute; top:-2px; right:-2px; width:10px; height:10px; border-radius:50%; background:var(--accent); border:2px solid var(--paper);}
+/* painel do corretor */
+.essay-item.is-due{border:2px solid var(--danger);}
+.review-meta{text-transform:none; letter-spacing:0; margin-top:12px !important;}
+.review-pre{white-space:pre-wrap; word-wrap:break-word; margin:0; padding:12px 14px; border-radius:var(--radius); border:1px solid var(--hair); background:var(--bg); font-family:inherit; font-size:14px; line-height:1.6; color:var(--ink);}
+.review-left{justify-content:flex-start;}
+.review-field{display:flex; flex-direction:column; gap:4px; margin-top:10px; font-size:13px; color:var(--ink);}
+.review-field input, .review-field select, .review-field textarea, .review-paste{width:100%; padding:8px 10px; min-height:40px; border-radius:6px; border:1.5px solid var(--hair); background:var(--paper); color:var(--ink); font-family:inherit; font-size:13.5px;}
+.review-paste{font-family:var(--mono); font-size:12.5px;}
+.review-set{margin:10px 0 0; padding:8px 12px 12px; border:1px solid var(--hair); border-radius:var(--radius);}
+.review-set legend{font-weight:800; font-size:13px; color:var(--ink); padding:0 4px;}
+.review-errors{margin:12px 0 0; padding:10px 12px 10px 28px; border-radius:var(--radius); border:1px solid var(--danger); background:var(--danger-wash); color:var(--danger); font-size:13px; font-weight:700;}
+.review-final{margin:14px 0 0; font-weight:800; color:var(--accent-strong);}
 @media(max-width:480px){ .essay-summary{grid-template-columns:1fr;} .essay-actions button{flex:1 1 100%;} }
 @media print{ .essay-modal{display:none !important;} }

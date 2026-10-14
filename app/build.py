@@ -185,7 +185,7 @@ JS = (LEVEL_JS + "\n" + REDACAO_JS + "\n" + open("app.js", encoding="utf-8").rea
 
 # tela de redação para correção: os títulos das Partes do M4 e do M5 servem
 # ao link da "prioridade de estudo" da devolutiva
-from render_redacao import render_essay_modal, module_parts
+from render_redacao import render_essay_modal, render_review_modal, module_parts
 ESSAY_PARTS = {
     "M4": module_parts(open("../consolidated/modulo_4_writing.md", encoding="utf-8").read()),
     "M5": module_parts(open("../consolidated/modulo_5_registro.md", encoding="utf-8").read()),
@@ -193,7 +193,7 @@ ESSAY_PARTS = {
 _essay_rules = open("../supabase/functions/_shared/redacao.js", encoding="utf-8").read()
 if f'partes: {{ M4: {len(ESSAY_PARTS["M4"])}, M5: {len(ESSAY_PARTS["M5"])} }}' not in _essay_rules:
     raise SystemExit("redacao.js: REDACAO_REGRAS.partes não bate com o número de Partes do M4 e do M5")
-essay_modal = render_essay_modal(ESSAY_PARTS)
+essay_modal = render_essay_modal(ESSAY_PARTS) + render_review_modal()
 
 # ---- Supabase (opcional): só entra se app/supabase_config.json existir e estiver preenchido ----
 supa_url = supa_key = ""

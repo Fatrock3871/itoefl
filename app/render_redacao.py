@@ -168,6 +168,79 @@ def render_essay_cta():
     )
 
 
+def _field(label, control):
+    return f'<label class="review-field"><span class="auth-label">{label}</span>{control}</label>'
+
+
+def render_review_modal():
+    """Painel do corretor. Fica escondido para todo mundo: o app/redacao.js só
+    o abre para conta com linha na tabela `admins` (e o banco e a function
+    review-essay conferem de novo, então mostrar a tela não dá poder nenhum)."""
+    notas = '<option value="">escolha</option>' + "".join(
+        f'<option value="{n / 2:g}">{str(n / 2).replace(".0", "").replace(".", ",")}</option>' for n in range(11))
+    crit = "".join(
+        f'<fieldset class="review-set"><legend>{e(c["nome"])}</legend>'
+        + _field("Nota", f'<select data-crit="{c["id"]}" data-key="nota">{notas}</select>')
+        + _field("Justificativa (1 frase)", f'<input type="text" data-crit="{c["id"]}" data-key="justificativa" maxlength="1500">')
+        + '</fieldset>'
+        for c in RUBRICA
+    )
+    codigos = '<option value="">sem código</option>' + "".join(
+        f'<option value="{k}">{k} · {e(v)}</option>' for k, v in CODIGOS.items())
+    trechos = "".join(
+        f'<fieldset class="review-set"><legend>Trecho {i}</legend>'
+        + _field("Original (copiado do aluno)", f'<input type="text" data-trecho="{i}" data-key="original" lang="en" maxlength="1500">')
+        + _field("Correção (em inglês)", f'<input type="text" data-trecho="{i}" data-key="correcao" lang="en" maxlength="1500">')
+        + _field("Explicação (em português)", f'<input type="text" data-trecho="{i}" data-key="explicacao" maxlength="1500">')
+        + _field("Código", f'<select data-trecho="{i}" data-key="codigo">{codigos}</select>')
+        + '</fieldset>'
+        for i in range(1, 6)
+    )
+    return f'''
+<div class="account-modal essay-modal" id="reviewModal" role="dialog" aria-modal="true" aria-label="Painel do corretor" hidden>
+<div class="account-modal-backdrop" id="reviewBackdrop"></div>
+<div class="account-card essay-card">
+<button type="button" class="account-close" id="reviewClose" aria-label="Fechar">✕</button>
+<div class="account-head"><span class="account-head-icon">🖊️</span>
+<div><p class="account-kicker">Equipe</p><h2 class="account-title">Painel do corretor</h2></div></div>
+
+<section class="essay-view" id="reviewList">
+<p class="essay-status" id="reviewStatus" role="status">Carregando a fila...</p>
+<div class="essay-history" id="reviewQueue"></div>
+<div class="essay-actions"><button type="button" class="essay-secondary" id="reviewReload">Atualizar a fila</button></div>
+</section>
+
+<section class="essay-view" id="reviewDetail" hidden>
+<button type="button" class="essay-secondary" id="reviewBack">Voltar à fila</button>
+<p class="essay-kicker review-meta" id="reviewMeta"></p>
+<details class="essay-rubric"><summary>Enunciado que o aluno viu</summary><pre class="review-pre" id="reviewPrompt" lang="en"></pre></details>
+<h4 class="essay-h4">Texto do aluno</h4>
+<pre class="review-pre" id="reviewText" lang="en"></pre>
+<div class="essay-actions review-left"><button type="button" class="essay-primary" id="reviewCopy">Copiar para a IA</button></div>
+<p class="essay-msg" id="reviewCopyMsg" role="status" hidden></p>
+<textarea class="review-paste" id="reviewPromptBox" aria-label="Texto para a IA" rows="6" readonly hidden></textarea>
+{_field("Cole aqui o JSON devolvido pela IA", '<textarea class="review-paste" id="reviewPaste" rows="6" spellcheck="false"></textarea>')}
+<div class="essay-actions review-left"><button type="button" class="essay-secondary" id="reviewApply">Conferir e preencher o formulário</button></div>
+<ul class="review-errors" id="reviewErrors" role="alert" hidden></ul>
+<form class="review-form" id="reviewForm">
+<h4 class="essay-h4">1 e 2. Notas por critério</h4>{crit}
+<h4 class="essay-h4">3. Trechos (até 5; deixe em branco os que não usar)</h4>{trechos}
+<h4 class="essay-h4">4. Reescrita um nível acima</h4>
+{_field("Frase original do aluno", '<textarea data-reescrita="original" rows="2" lang="en"></textarea>')}
+{_field("Versão um nível acima", '<textarea data-reescrita="versao" rows="2" lang="en"></textarea>')}
+<h4 class="essay-h4">5. Prioridade de estudo</h4>
+{_field("Texto da prioridade", '<input type="text" data-prioridade="texto" maxlength="1500">')}
+{_field("Módulo", '<select data-prioridade="modulo"><option value="M4">M4</option><option value="M5">M5</option></select>')}
+{_field("Parte", '<input type="number" data-prioridade="parte" min="1" max="10" step="1">')}
+</form>
+<p class="review-final" id="reviewFinal" role="status"></p>
+<div class="essay-actions"><button type="button" class="essay-primary" id="reviewReturn" disabled>Devolver ao aluno</button></div>
+<p class="essay-msg" id="reviewMsg" role="status" hidden></p>
+</section>
+</div>
+</div>'''
+
+
 def render_essay_modal(parts):
     rules = "".join(f"<li>{r}</li>" for r in REGRAS)
     rubric = "".join(
