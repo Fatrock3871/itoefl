@@ -186,7 +186,7 @@
 
   // chaves que sincronizam com o Supabase (progresso real do aluno).
   // ficam de fora: toefl_theme_v1, toefl_active_tab, toefl_timer_preset, toefl_sync_*
-  var SYNC_PREFIXES = ["toefl_progress", "toefl_srs_", "toefl_bsq_", "toefl_quiz_", "toefl_avatar", "toefl_errlog_", "toefl_cert_", "toefl_streak", "toefl_dailygoal", "toefl_weeklydash", "toefl_h3progress", "toefl_ctw_", "toefl_spk_", "toefl_write_", "toefl_exam_", "toefl_scorecalc"];
+  var SYNC_PREFIXES = ["toefl_progress", "toefl_srs_", "toefl_bsq_", "toefl_quiz_", "toefl_avatar", "toefl_errlog_", "toefl_cert_", "toefl_streak", "toefl_dailygoal", "toefl_weeklydash", "toefl_h3progress", "toefl_ctw_", "toefl_spk_", "toefl_write_", "toefl_exam_", "toefl_scorecalc", "toefl_essay_seen"];
   function isSyncedKey(key){
     if(!key || key.indexOf("toefl_") !== 0) return false;
     for(var i = 0; i < SYNC_PREFIXES.length; i++){
@@ -1974,7 +1974,9 @@
   });
 
   // ---------- Caixa de escrita com cronômetro (M4) ----------
-  Array.prototype.forEach.call(document.querySelectorAll(".wbox"), function(root){
+  // só as caixas de treino: a caixa da redação para correção (sem data-wbox)
+  // é do app/redacao.js, que não deixa pausar
+  Array.prototype.forEach.call(document.querySelectorAll(".wbox[data-wbox]"), function(root){
     var lsKey = "toefl_write_" + root.dataset.wbox + "_v1";
     var minutes = parseInt(root.dataset.minutes, 10) || 7;
     var minWords = parseInt(root.dataset.minwords, 10) || 0;
@@ -2676,6 +2678,9 @@
       onSyncedWrite = schedulePush;
       forceSyncPush = push;
       pull();
+      // redações (app/redacao.js): histórico, selo de devolutiva nova e,
+      // para conta corretora, o painel
+      if(window.__toeflEssayOnline) window.__toeflEssayOnline(session);
     }
     function goOffline(){
       uid = null;
@@ -2688,6 +2693,7 @@
       signedIn.hidden = true;
       if(gateEl) gateEl.hidden = false;
       if(payGateEl) payGateEl.hidden = true;
+      if(window.__toeflEssayOffline) window.__toeflEssayOffline();
     }
 
     // ---- login por e-mail+senha ----
@@ -4193,4 +4199,22 @@
       }).catch(function(){}); // sem service worker o site funciona igual, só não fica offline
     });
   })();
+
+  // ponte para o app/redacao.js, que o build cola depois deste arquivo e
+  // precisa do armazenamento, da conta e da navegação daqui
+  window.__toeflApp = {
+    safeGet: safeGet,
+    safeSet: safeSet,
+    client: function(){ return supaClient; },
+    uid: function(){ return supaUid; },
+    // abre o módulo na Parte n (prioridade de estudo da devolutiva)
+    openPart: function(mod, n){
+      navTo(mod);
+      var panel = document.querySelector('.panel[data-panel="' + mod + '"]');
+      var card = panel && panel.querySelectorAll(".section-card")[n - 1];
+      var showPart = window.__toeflShowPart && window.__toeflShowPart[mod];
+      if(card && showPart) showPart(card, { noScroll: true });
+      if(card) setTimeout(function(){ card.scrollIntoView({ behavior: "smooth", block: "start" }); }, 60);
+    }
+  };
 })();

@@ -433,6 +433,8 @@ Reordene / complete. Respostas na Parte 6, seção "Laboratório".
 > (relativa, concessiva *while*, travessão para aposto) ✓ · vocabulário preciso,
 > sem repetição ✓ · ~180 palavras. Banda 6.
 
+%%%REDACAO%%%
+
 ---
 
 ## PARTE 5: ACTION DRILLS

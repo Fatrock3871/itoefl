@@ -25,3 +25,6 @@ supabase/.temp/
 
 # Versão de teste sem login (python scripts/build_teste.py)
 _teste/
+
+# Saída do smoke test redirecionada para arquivo
+_smoke*.log

@@ -178,7 +178,22 @@ import re as _re
 REDACAO_JS = _re.sub(r"^export ", "", open("../supabase/functions/_shared/redacao.js", encoding="utf-8").read(), flags=_re.M)
 if _re.search(r"^\s*(export|import)\b", REDACAO_JS, flags=_re.M):
     raise SystemExit("redacao.js: o arquivo compartilhado não pode ter import, nem export no meio da linha")
-JS = LEVEL_JS + "\n" + REDACAO_JS + "\n" + open("app.js", encoding="utf-8").read()
+# app/redacao.js (tela do aluno e painel do corretor) vai depois do app.js:
+# usa a ponte window.__toeflApp que o app.js monta no fim
+JS = (LEVEL_JS + "\n" + REDACAO_JS + "\n" + open("app.js", encoding="utf-8").read() + "\n" +
+      open("redacao.js", encoding="utf-8").read())
+
+# tela de redação para correção: os títulos das Partes do M4 e do M5 servem
+# ao link da "prioridade de estudo" da devolutiva
+from render_redacao import render_essay_modal, module_parts
+ESSAY_PARTS = {
+    "M4": module_parts(open("../consolidated/modulo_4_writing.md", encoding="utf-8").read()),
+    "M5": module_parts(open("../consolidated/modulo_5_registro.md", encoding="utf-8").read()),
+}
+_essay_rules = open("../supabase/functions/_shared/redacao.js", encoding="utf-8").read()
+if f'partes: {{ M4: {len(ESSAY_PARTS["M4"])}, M5: {len(ESSAY_PARTS["M5"])} }}' not in _essay_rules:
+    raise SystemExit("redacao.js: REDACAO_REGRAS.partes não bate com o número de Partes do M4 e do M5")
+essay_modal = render_essay_modal(ESSAY_PARTS)
 
 # ---- Supabase (opcional): só entra se app/supabase_config.json existir e estiver preenchido ----
 supa_url = supa_key = ""
@@ -423,6 +438,17 @@ account_modal = (
     '<button type="button" class="account-renew" id="accountRenew" hidden>Renovar ou mudar de plano</button>'
     '</div>'
 
+    # redações para correção (app/redacao.js): o selo aparece quando há
+    # devolutiva que o aluno ainda não abriu. "Painel do corretor" só aparece
+    # para conta com linha na tabela `admins` do banco.
+    '<div class="account-section">'
+    '<span class="account-section-label"><span class="account-section-icon">✍️</span>Redações</span>'
+    '<p class="account-access">Envie uma redação no tempo da prova e receba nota, nível e comentários em até 3 dias úteis.</p>'
+    '<span class="essay-badge" id="accountEssayBadge" hidden></span>'
+    '<button type="button" class="account-renew" id="accountEssay">Correção de redação</button>'
+    '<button type="button" class="account-renew" id="accountReviewer" hidden>Painel do corretor</button>'
+    '</div>'
+
     '<div class="account-section">'
     '<span class="account-section-label"><span class="account-section-icon">📧</span>E-mail</span>'
     '<form class="auth-form" id="accountEmailForm">'
@@ -544,6 +570,7 @@ html = f'''<!DOCTYPE html>
 {cert_modal}
 {account_modal}
 {dashboard_modal}
+{essay_modal}
 <div class="shell">
   <div class="side-backdrop" id="sideBackdrop"></div>
   <aside class="side" id="sideRail">

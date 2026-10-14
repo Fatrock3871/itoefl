@@ -614,6 +614,97 @@ check("essay_feedback_rejects_with_clear_messages", function(){
          !redacaoValidaDevolutiva("texto solto").ok && !redacaoValidaDevolutiva(null).ok;
 });
 
+// ---- redação: tela do aluno (app/redacao.js) ----
+var ES = window.__toeflEssay, $e = function(id){ return document.getElementById(id); };
+function essayTopic(id){ $e("essayModal").querySelector('.essay-topic[data-topic="' + id + '"]').click(); }
+function essayDiscard(){ $e("essayConfirmDiscard").click(); $e("essayConfirmDiscard").click(); }
+check("essay_entry_from_m4_and_account", function(){
+  return document.querySelectorAll("#panel-mod4 .essay-cta .essay-open").length === 1 && !!$e("accountEssay") && $e("essayModal").hidden;
+});
+ES.open();
+check("essay_home_lists_10_topics", function(){
+  return !$e("essayModal").hidden && !$e("essayHome").hidden && $e("essayModal").querySelectorAll(".essay-topic").length === 10;
+});
+essayTopic("D1");
+check("essay_rules_visible_before_start", function(){
+  var t = $e("essayBrief").textContent;
+  return !$e("essayBrief").hidden && $e("essayWrite").hidden && $e("essayBriefGoal").textContent.indexOf("Posição clara") === 0 &&
+    ["7 minutos", "10 minutos", "não pausa", "o texto trava", "100 palavras", "1 redação a cada 4 dias", "3 dias úteis",
+     "estimativa de treino", "IA de terceiros", "apagado junto com a sua conta", "plano em dia"].every(function(s){ return t.indexOf(s) !== -1; }) &&
+    $e("essayRules").querySelectorAll("li").length === 9 && !$e("essayStart").disabled;
+});
+$e("essayStart").click();
+check("essay_write_starts_timer_without_pause", function(){
+  var p = $e("essayModal").querySelector('.essay-prompt[data-topic="D1"]');
+  return !$e("essayWrite").hidden && !p.hidden && p.getAttribute("lang") === "en" && p.querySelectorAll(".essay-post").length === 3 &&
+    /^(10:00|09:5\d)$/.test($e("essayClock").textContent) && !$e("essayText").readOnly && !$e("essayGoal").hidden &&
+    !$e("essayBox").querySelector(".wbox-start, .wbox-clear") && !!localStorage.getItem("toefl_essaydraft_v1");
+});
+typeInto($e("essayText"), new Array(51).join("word "));
+var essayRealNow = Date.now, essayT0 = Date.now();
+Date.now = function(){ return essayT0 + 10 * 60000 + 1000; };
+ES.tick();
+Date.now = essayRealNow;
+typeInto($e("essayText"), "typed after the time ran out");
+check("essay_timer_locks_at_zero", function(){
+  return $e("essayClock").textContent === "00:00" && $e("essayText").readOnly && !$e("essayLocked").hidden &&
+    ES.draft().timeUp === true && redacaoContaPalavras(ES.draft().text) === 50;
+});
+$e("essayFinish").click();
+check("essay_min_100_words_blocks_send", function(){
+  return !$e("essayConfirm").hidden && $e("essaySend").disabled && $e("essayMinMsg").textContent.indexOf("Faltam 50 palavras") === 0 &&
+    $e("essayConfirmBack").hidden && ES.sendBlockers().indexOf("min") !== -1 &&
+    /^\d\d\/\d\d \(até 3 dias úteis\)$/.test($e("essaySumDue").textContent);
+});
+essayDiscard();
+check("essay_discard_clears_draft", function(){ return !$e("essayHome").hidden && ES.draft() === null && !localStorage.getItem("toefl_essaydraft_v1"); });
+// conta conectada (simulada, sem servidor) e sem envio anterior
+window.__toeflEssayOnline();
+ES.setHistory([]);
+essayTopic("D2");
+$e("essayStart").click();
+typeInto($e("essayText"), new Array(101).join("word "));
+$e("essayFinish").click();
+check("essay_100_words_and_consent_unlock_send", function(){
+  var before = $e("essaySend").disabled && !$e("essayConsentWrap").hidden && ES.sendBlockers().join() === "consentimento";
+  $e("essayConsent").checked = true; $e("essayConsent").dispatchEvent(new Event("change"));
+  return before && !$e("essaySend").disabled && $e("essayMinMsg").hidden && ES.sendBlockers().length === 0;
+});
+essayDiscard();
+var essayNow = Date.now(), essaySent = { id: "a1", topic_id: "E1", task: "email", status: "na_fila", due_on: "2026-10-20",
+  submitted_at: new Date(essayNow - 86400000).toISOString() };
+ES.setHistory([essaySent]);
+check("essay_cooldown_blocks_and_shows_next_date", function(){
+  var s = $e("essayStatus").textContent;
+  essayTopic("E2");
+  var ok = /^Próximo envio liberado em \d\d\/\d\d, às \d\d:\d\d\./.test(s) && $e("essayStart").disabled && !$e("essayBriefBlock").hidden;
+  $e("essayStart").click();
+  return ok && ES.draft() === null && $e("essayWrite").hidden;
+});
+var essayBack = { id: "b2", topic_id: "D3", task: "discussion", status: "devolvida", text: "My essay text.", due_on: "2026-10-09",
+  submitted_at: new Date(essayNow - 8 * 86400000).toISOString(), returned_at: new Date(essayNow - 6 * 86400000).toISOString(),
+  final_score: 3.5, level: "B2 (banda 4)", feedback: essayGoodFeedback() };
+essayBack.feedback.criterios.gramatica.justificativa = '<img src=x onerror="window.__essayXss=1">';
+ES.setHistory([essaySent, essayBack]);
+$e("essayBriefBack").click();
+check("essay_badge_for_new_feedback", function(){
+  return !$e("accountEssayBadge").hidden && $e("accountEssayBadge").textContent === "1 devolutiva nova" && !$e("essayDot").hidden;
+});
+check("essay_history_shows_score_and_chart", function(){
+  return $e("essayHistory").textContent.indexOf("Nota 3,5 de 5 · B2 (banda 4)") !== -1 && !$e("essayChart").hidden &&
+    $e("essayChart").querySelectorAll("circle.essay-point").length === 1;
+});
+$e("essayHistory").querySelector(".essay-see").click();
+check("essay_feedback_5_parts_rendered_as_text", function(){
+  var b = $e("essayFeedbackBody");
+  return !$e("essayFeedback").hidden && b.querySelectorAll(".essay-fb-part").length === 5 &&
+    b.querySelector(".essay-fb-score").textContent === "3,5 de 5" && b.querySelectorAll(".essay-fb-fix").length === 2 &&
+    !b.querySelector("img") && b.textContent.indexOf("<img") !== -1 && !window.__essayXss &&
+    b.textContent.indexOf("Abrir M4, Parte 3: LABORATÓRIO") !== -1;
+});
+check("essay_badge_clears_after_opening", function(){ return $e("accountEssayBadge").hidden && $e("essayDot").hidden; });
+ES.close();
+
 check("no_js_errors", function(){ return window.__errors.length === 0; });
 results.__jsErrors = window.__errors;
 
@@ -848,6 +939,48 @@ def essay_server_checks():
     functions_code += shared
     out["essay_no_ai_api_called"] = not re.search(
         r"anthropic|openai|generativelanguage|api\.mistral|ANTHROPIC|OPENAI", functions_code)
+    return out
+
+
+def essay_topic_checks():
+    """Os 10 temas de redação: ids e tarefas iguais aos que o servidor aceita,
+    e-mail com destinatário, assunto e 3 pontos, discussão com 2 colegas de 40
+    a 60 palavras, números das regras iguais aos do redacao.js e nenhum
+    travessão nos textos em português."""
+    sys.path.insert(0, str(APP_DIR))
+    import redacao_data as rd
+    import render_redacao as rr
+
+    shared = (ROOT / "supabase" / "functions" / "_shared" / "redacao.js").read_text(encoding="utf-8")
+    temas = dict(re.findall(r"(\b[ED]\d): \"(email|discussion)\"", shared))
+    site = {t["id"]: ("email" if "points" in t else "discussion") for t in rd.TOPICS}
+
+    def words(s):
+        return len(s.split())
+
+    out = {
+        "essay_topics_match_server": len(site) == 10 and site == temas,
+        "essay_topics_follow_the_format": (
+            all(t["to"] and t["subject"] and len(t["points"]) == 3 for t in rd.EMAIL_TOPICS)
+            and all(len(t["students"]) == 2 and all(40 <= words(p) <= 60 for _, p in t["students"])
+                    and t["question"].rstrip().endswith("?") for t in rd.DISCUSSION_TOPICS)
+        ),
+        "essay_rule_numbers_match_shared": (
+            f"intervaloDias: {rd.INTERVALO_DIAS}," in shared and f"prazoDiasUteis: {rd.PRAZO_DIAS_UTEIS}," in shared
+            and f"minutos: {{ email: {rd.MINUTOS['email']}, discussion: {rd.MINUTOS['discussion']} }}" in shared
+            and f"discussion: {rd.MIN_PALAVRAS_DISCUSSAO} }}" in shared
+        ),
+    }
+    portuguese = [t["titulo"] + " " + t["objetivo"] for t in rd.TOPICS] + rr.REGRAS + [rr.AVISO, rr.CONSENTIMENTO]
+    portuguese += [c["avalia"] + c["5"] + c["3"] + c["1"] for c in rr.RUBRICA]
+    out["essay_portuguese_text_has_no_dash"] = not any("—" in s or " – " in s for s in portuguese)
+    index = ARTIFACT.read_text(encoding="utf-8")
+    m = re.search(r'<script type="application/json" id="essayData">(.*?)</script>', index, re.S)
+    data = json.loads(m.group(1)) if m else {}
+    out["essay_page_has_topics_and_parts"] = (
+        len(data.get("topics", [])) == 10 and len(data.get("partes", {}).get("M4", [])) == 7
+        and len(data.get("partes", {}).get("M5", [])) == 10 and "toefl_essay_seen" in index
+    )
     return out
 
 
@@ -1226,6 +1359,7 @@ def main():
     results.update(pwa_checks())
     results.update(plans_checks())
     results.update(essay_server_checks())
+    results.update(essay_topic_checks())
     results.update(landing_checks())
     results.update(deep_markup_checks())
     results.update(bank_checks())

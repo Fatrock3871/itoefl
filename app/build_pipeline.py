@@ -19,6 +19,7 @@ from render_speaking import render_speaking_group, render_speaking_set
 from render_exam import convert_exam_blocks
 from rebalance import rebalance_items
 from render_wbox import render_wbox, EMAIL_MINUTES, DISCUSSION_MINUTES, DISCUSSION_MIN_WORDS
+from render_redacao import render_essay_cta
 
 SRC = "../consolidated"
 
@@ -469,7 +470,9 @@ def build_mod4():
     # id novo (m4build2): os itens mudaram de formato em 2026-10-07, então o
     # estado salvo do widget antigo (m4build) não se aplica a estes
     widget = render_build_sentence("m4build2", BUILD_SENTENCE_ITEMS)
-    return swap_placeholder(html_out, "BUILD_SENTENCE", widget)
+    html_out = swap_placeholder(html_out, "BUILD_SENTENCE", widget)
+    # chamada para o envio de redação (a tela em si fica no shell, build.py)
+    return swap_placeholder(html_out, "REDACAO", render_essay_cta())
 
 
 # ---------- Módulo 7: simulados com blocos interativos ----------
