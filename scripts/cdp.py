@@ -127,7 +127,9 @@ class Browser:
     def __init__(self, width=1280, height=900):
         self.profile = Path(tempfile.mkdtemp(prefix="itoefl_cdp_"))
         self.proc = subprocess.Popen(
-            [find_chrome(), "--headless=new", "--disable-gpu", "--remote-debugging-port=0",
+            # --no-sandbox: ver o comentário em run_browser_checks, no
+            # smoke_test.py (Chrome 155 headless travava às vezes)
+            [find_chrome(), "--headless=new", "--no-sandbox", "--disable-gpu", "--remote-debugging-port=0",
              f"--user-data-dir={self.profile}", f"--window-size={width},{height}",
              "--no-first-run", "--no-default-browser-check", "--mute-audio", "about:blank"],
             stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL,

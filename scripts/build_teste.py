@@ -32,7 +32,8 @@ def build(out=OUT):
     out = Path(out)
     with tempfile.TemporaryDirectory(prefix="itoefl_teste_") as tmp:
         work = Path(tmp)
-        for name in ("app", "consolidated", "legal"):
+        # supabase/functions/_shared: o build cola as regras de redação de lá
+        for name in ("app", "consolidated", "legal", "supabase/functions/_shared"):
             shutil.copytree(ROOT / name, work / name, ignore=shutil.ignore_patterns("__pycache__"))
         (work / "app" / "supabase_config.json").unlink(missing_ok=True)
         (work / "artifact").mkdir()

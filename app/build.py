@@ -171,7 +171,14 @@ CSS = open("styles.css", encoding="utf-8").read()
 # level.js (resultado do diagnóstico -> banda e cronograma) vai na frente do
 # app.js e do landing.js: as duas páginas fazem a mesma conta
 LEVEL_JS = open("level.js", encoding="utf-8").read()
-JS = LEVEL_JS + "\n" + open("app.js", encoding="utf-8").read()
+# regras do envio de redação: o mesmo arquivo que as edge functions importam.
+# No site ele entra sem a palavra "export" (os nomes começam todos com
+# "redacao" e viram globais).
+import re as _re
+REDACAO_JS = _re.sub(r"^export ", "", open("../supabase/functions/_shared/redacao.js", encoding="utf-8").read(), flags=_re.M)
+if _re.search(r"^\s*(export|import)\b", REDACAO_JS, flags=_re.M):
+    raise SystemExit("redacao.js: o arquivo compartilhado não pode ter import, nem export no meio da linha")
+JS = LEVEL_JS + "\n" + REDACAO_JS + "\n" + open("app.js", encoding="utf-8").read()
 
 # ---- Supabase (opcional): só entra se app/supabase_config.json existir e estiver preenchido ----
 supa_url = supa_key = ""

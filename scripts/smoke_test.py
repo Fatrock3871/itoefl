@@ -553,6 +553,67 @@ check("mark_done_label_wraps_text", function(){
   return all.length > 50 && Array.prototype.every.call(all, function(m){ return !!m.querySelector("label.prog-check .pchk") && !!m.querySelector("label.prog-check .mark-done-label"); });
 });
 
+// ---- redação: regras compartilhadas com o servidor (supabase/functions/_shared/redacao.js) ----
+// horário de Brasília = UTC-3: "sexta às 23h30" é sábado 02h30 em UTC
+function brt(y, m, d, h, min){ return Date.UTC(y, m - 1, d, h + 3, min || 0); }
+check("essay_due_friday_night_skips_weekend_and_tiradentes", function(){
+  // sexta 17/04/2026 23h30: segunda 20 (1), terça 21 é Tiradentes, quarta 22 (2), quinta 23 (3)
+  return redacaoPrevisao(brt(2026, 4, 17, 23, 30)) === "2026-04-23";
+});
+check("essay_due_friday_night_before_carnival", function(){
+  // sexta 05/02/2027 23h: segunda 8 e terça 9 são Carnaval; quarta 10, quinta 11, sexta 12
+  return redacaoPrevisao(brt(2027, 2, 5, 23, 0)) === "2027-02-12";
+});
+check("essay_due_uses_brasilia_date", function(){
+  // quinta 15/10/2026 23h30 em Brasília já é sexta em UTC: o prazo conta da quinta
+  return redacaoPrevisao(brt(2026, 10, 15, 23, 30)) === "2026-10-20";
+});
+check("essay_due_skips_good_friday_and_christmas", function(){
+  return redacaoPrevisao(brt(2026, 4, 2, 10)) === "2026-04-08" && redacaoPrevisao(brt(2026, 12, 24, 10)) === "2026-12-30";
+});
+check("essay_holidays_fixed_and_movable", function(){
+  var f26 = redacaoFeriados(2026), f27 = redacaoFeriados(2027);
+  return ["2026-01-01", "2026-02-16", "2026-02-17", "2026-04-03", "2026-04-21", "2026-06-04", "2026-11-20", "2026-12-25"]
+           .every(function(d){ return !!f26[d]; }) &&
+         ["2027-02-08", "2027-02-09", "2027-03-26", "2027-05-27"].every(function(d){ return !!f27[d]; }) &&
+         !f26["2026-04-22"] && Object.keys(f26).length === 13;
+});
+check("essay_cooldown_4_days", function(){
+  var t = Date.UTC(2026, 9, 14, 15, 0), DAYMS = 86400000, h = [{ submitted_at: new Date(t).toISOString() }];
+  var b1 = redacaoBloqueio(h, t + 3.9 * DAYMS), b2 = redacaoBloqueio(h, t + 4 * DAYMS), b0 = redacaoBloqueio([], t);
+  return b1.bloqueado && b1.liberaEm === t + 4 * DAYMS && !b2.bloqueado && !b0.bloqueado && b0.liberaEm === null;
+});
+check("essay_final_score_rounds_and_caps", function(){
+  function f(a, b, c, d){ return redacaoNotaFinal({ cumprimento: a, organizacao: b, gramatica: c, vocabulario: d }); }
+  return f(4, 3, 3, 3) === 3.5 && f(4, 4, 4, 3) === 4 && f(2, 5, 5, 5) === 2.5 && f(2, 2, 2, 1) === 2 &&
+         f(5, 5, 5, 5) === 5 && redacaoNivel(5) === "C1/C2 (banda 5,5 a 6)" && redacaoNivel(4.5) === "B2 alto/C1 (banda 4,5 a 5)" &&
+         redacaoNivel(3.5) === "B2 (banda 4)" && redacaoNivel(2.5) === "B1 (banda 3 a 3,5)" && redacaoNivel(1) === "A2 (banda 2 a 2,5)" &&
+         redacaoNivel(0.5) === "A1 ou sem resposta";
+});
+function essayGoodFeedback(){
+  function crit(n){ return { nota: n, justificativa: "Frase de justificativa." }; }
+  return {
+    criterios: { cumprimento: crit(4), organizacao: crit(3.5), gramatica: crit(3), vocabulario: crit(4) },
+    trechos: [{ original: "I am agree", correcao: "I agree", explicacao: "Agree já é verbo.", codigo: "W2" },
+              { original: "very much people", correcao: "many people", explicacao: "Contável pede many.", codigo: null }],
+    reescrita: { original: "I think it is good.", versao: "I would argue that it is beneficial." },
+    prioridade: { texto: "Revise a concordância verbal.", modulo: "M4", parte: 3 }
+  };
+}
+check("essay_feedback_accepts_exact_format", function(){ return redacaoValidaDevolutiva(essayGoodFeedback()).ok; });
+check("essay_feedback_rejects_with_clear_messages", function(){
+  function errs(mut){ var d = essayGoodFeedback(); mut(d); return redacaoValidaDevolutiva(d).erros.join(" | "); }
+  return errs(function(d){ d.criterios.gramatica.nota = 6; }).indexOf("criterios.gramatica.nota: tem de ser um número de 0 a 5") === 0 &&
+         errs(function(d){ d.criterios.vocabulario.nota = 3.3; }).indexOf("passos de 0.5") !== -1 &&
+         errs(function(d){ delete d.reescrita; }) === 'falta o campo "reescrita".' &&
+         errs(function(d){ d.nota_final = 4; }).indexOf("calculados pelo site") !== -1 &&
+         errs(function(d){ for(var i = 0; i < 4; i++) d.trechos.push(d.trechos[0]); }).indexOf("no máximo 5") !== -1 &&
+         errs(function(d){ d.trechos[0].codigo = "W9"; }).indexOf("trechos[1].codigo: use W1 a W6") === 0 &&
+         errs(function(d){ d.prioridade.parte = 9; }) === "prioridade.parte: o M4 tem as Partes 1 a 7 (veio 9)." &&
+         errs(function(d){ d.prioridade.modulo = "M9"; }).indexOf('use "M4" ou "M5"') !== -1 &&
+         !redacaoValidaDevolutiva("texto solto").ok && !redacaoValidaDevolutiva(null).ok;
+});
+
 check("no_js_errors", function(){ return window.__errors.length === 0; });
 results.__jsErrors = window.__errors;
 
@@ -730,6 +791,63 @@ def plans_checks():
                                  "7 dias corridos", "artigo 49", "renovação automática"))
         and "REVISAR" not in terms
     )
+    return out
+
+
+def essay_server_checks():
+    """Envio de redação no servidor: a migração está espelhada no schema.sql,
+    nenhuma tabela nova aceita escrita do navegador, as regras do envio são
+    conferidas na edge function (e não só no site), só corretor devolve, e
+    nenhuma API de IA é chamada (modelo assistido, 2026-10-14)."""
+    out = {}
+    sb = ROOT / "supabase"
+    migration = (sb / "migrations" / "20261014_redacoes.sql").read_text(encoding="utf-8")
+    body = migration[migration.index("-- ============ redações: quem corrige"):]
+    schema = (sb / "schema.sql").read_text(encoding="utf-8")
+    out["essay_migration_mirrored_in_schema"] = body in schema
+
+    policies = re.findall(r"create policy \"(\w+)\" on (\w+)\s+for (\w+)", migration)
+    out["essay_db_no_client_write"] = (
+        {(name, table, op) for name, table, op in policies}
+        == {("admins_select_own", "admins", "select"), ("essays_select_own_or_admin", "essay_submissions", "select")}
+        and "alter table admins enable row level security" in migration
+        and "alter table essay_submissions enable row level security" in migration
+        and "auth.uid() = user_id or public.is_admin()" in migration
+        and re.search(r"revoke all on function public\.create_essay_submission\([^)]*\) from public, anon, authenticated", migration)
+        and re.search(r"grant execute on function public\.create_essay_submission\([^)]*\) to service_role;", migration)
+        and "on delete cascade" in migration.split("create table if not exists essay_submissions")[1].split(");")[0]
+    )
+
+    shared = (sb / "functions" / "_shared" / "redacao.js").read_text(encoding="utf-8")
+    rules = {k: int(v) for k, v in re.findall(r"^\s+(intervaloDias|prazoDiasUteis|maxPalavras|maxCaracteres): (\d+)", shared, re.M)}
+    out["essay_db_limits_match_rules"] = (
+        rules == {"intervaloDias": 4, "prazoDiasUteis": 3, "maxPalavras": 600, "maxCaracteres": 5000}
+        and "interval '4 days'" in migration and "between 1 and 5000" in migration and "between 1 and 600" in migration
+        and "minutos: { email: 7, discussion: 10 }" in shared and "minPalavras: { email: 1, discussion: 100 }" in shared
+    )
+
+    submit = (sb / "functions" / "submit-essay" / "index.ts").read_text(encoding="utf-8")
+    out["essay_submit_enforces_rules_on_server"] = all(s in submit for s in (
+        'from "../_shared/redacao.js"', "redacaoContaPalavras(text)", "REDACAO_REGRAS.minPalavras",
+        "REDACAO_REGRAS.maxCaracteres", "REDACAO_REGRAS.maxPalavras", 'from("entitlements")', "ent.expires_at",
+        "redacaoBloqueio(", "redacaoPrevisao(now)", 'rpc("create_essay_submission"', "body.consent === true",
+    )) and not re.search(r"body\.(words|word_count|due|due_on|status)\b", submit)
+
+    review = (sb / "functions" / "review-essay" / "index.ts").read_text(encoding="utf-8")
+    out["essay_review_admin_only_and_validated"] = (
+        review.index('from("admins")') < review.index('body.action === "start"')
+        and "redacaoValidaDevolutiva(feedback)" in review and "redacaoNotaFinal(notas)" in review
+        and not re.search(r"body\.(final|final_score|level)\b", review)
+    )
+    mail = (sb / "functions" / "_shared" / "mail.ts").read_text(encoding="utf-8")
+    out["essay_email_only_with_smtp"] = (
+        "if (!smtpConfigured() || !to) return false;" in mail and "sendMail(" in review
+        and not re.search(r"SMTP_PASS\s*=|password:\s*\"", mail)
+    )
+    functions_code = "\n".join(p.read_text(encoding="utf-8") for p in (sb / "functions").rglob("*.ts"))
+    functions_code += shared
+    out["essay_no_ai_api_called"] = not re.search(
+        r"anthropic|openai|generativelanguage|api\.mistral|ANTHROPIC|OPENAI", functions_code)
     return out
 
 
@@ -1033,7 +1151,8 @@ document.title = JSON.stringify(results);
 
 def build_fixture(work):
     """Builda o site de exemplo em `work` e devolve o index.html gerado."""
-    for name in ("app", "consolidated", "legal"):
+    # supabase/functions/_shared: o build cola as regras de redação de lá
+    for name in ("app", "consolidated", "legal", "supabase/functions/_shared"):
         shutil.copytree(ROOT / name, work / name, ignore=shutil.ignore_patterns("__pycache__"))
     (work / "app" / "supabase_config.json").unlink(missing_ok=True)
     (work / "app" / "videos.json").write_text(json.dumps(FIXTURE_VIDEOS, ensure_ascii=False), encoding="utf-8")
@@ -1063,10 +1182,19 @@ def run_browser_checks(test_js=TEST_JS, prelude="", source=None):
 
     result = None
     for _ in range(3):  # headless as vezes nao retorna saida na primeira tentativa (visto na sessao)
-        result = subprocess.run(
-            [chrome, "--headless=new", "--disable-gpu", f"--user-data-dir={profile}", "--dump-dom", uri],
-            capture_output=True, text=True, encoding="utf-8", errors="replace", timeout=30,
-        )
+        try:
+            result = subprocess.run(
+                # --no-sandbox: com o sandbox ligado, o Chrome 155 headless às
+                # vezes trava sem abrir nem uma página vazia (2026-10-14). A
+                # página aberta aqui é sempre o próprio site, local.
+                [chrome, "--headless=new", "--no-sandbox", "--disable-gpu", f"--user-data-dir={profile}", "--dump-dom", uri],
+                capture_output=True, text=True, encoding="utf-8", errors="replace", timeout=90,
+            )
+        except subprocess.TimeoutExpired:
+            # a passada leva uns 20 s, mas o Chrome desta máquina às vezes
+            # demora bem mais para abrir: conta como tentativa perdida
+            result = None
+            continue
         if result.stdout.strip():
             break
     tmp_html.unlink(missing_ok=True)
@@ -1097,6 +1225,7 @@ def main():
     results.update(legal_page_checks())
     results.update(pwa_checks())
     results.update(plans_checks())
+    results.update(essay_server_checks())
     results.update(landing_checks())
     results.update(deep_markup_checks())
     results.update(bank_checks())
