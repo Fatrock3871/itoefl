@@ -36,7 +36,7 @@
 
 **Write an Email**: uma situação e **três pontos obrigatórios** que o e-mail precisa cobrir, em **7 minutos**. O destinatário e o assunto já vêm preenchidos. O cenário costuma ser acadêmico (professor, secretaria, orientador), mas também pode ser cotidiano, como escrever ao editor de uma revista ou a uma empresa. Texto multi-frase apropriado ao registro e à situação, tipicamente 4–8 frases.
 
-**Write for an Academic Discussion**: você lê um prompt de discussão (com ou sem respostas de colegas simuladas) e escreve **um parágrafo** argumentativo com posição clara, justificativa, exemplo e vocabulário/gramática variados, em **10 minutos**. A instrução da prova diz que uma resposta eficaz tem **pelo menos 100 palavras**; os modelos deste módulo ficam entre 150 e 200.
+**Write for an Academic Discussion**: você lê um prompt de discussão (com ou sem respostas de colegas simuladas) e escreve **um parágrafo** argumentativo com posição clara, justificativa, exemplo e vocabulário/gramática variados, em **10 minutos**. A instrução da prova diz que uma resposta eficaz tem **pelo menos 100 palavras**; os modelos de banda 5 e 6 deste módulo ficam entre 110 e 150.
 
 ### 1.3 Onde está o jogo: distribuição de peso
 
@@ -60,7 +60,7 @@ O e-rater não "entende" seu texto como um humano. Ele extrai **features mensur�
 | **Escolha lexical / estilo** | Variedade de vocabulário; ausência de repetição; registro adequado; precisão | Não repetir a mesma palavra de conteúdo 3+ vezes; vocabulário preciso; registro consistente (formal no Email, acadêmico na Discussion) |
 | **Organização** | Presença de abertura, corpo, fechamento; conectores; progressão lógica | Estrutura visível; conectores corretos e bem pontuados |
 | **Desenvolvimento** | Cada afirmação é seguida de razão, exemplo ou consequência? | Nenhuma frase genérica isolada: sempre uma camada de especificidade |
-| **Relevância ao tema** | O texto responde ao prompt? | Endereça **todos** os elementos pedidos (no Email: as 2–3 coisas que o enunciado manda incluir) |
+| **Relevância ao tema** | O texto responde ao prompt? | Endereça **todos** os elementos pedidos (no Email: os três pontos que o enunciado manda incluir) |
 
 **A implicação prática mais importante:** num texto curto, 4 a 8 frases no Email, 1 parágrafo na Discussion, **cada frase pesa muito**. Não tem volume pra "diluir" um erro. Precisão vale mais que ambição: uma resposta B2 impecável pontua mais que uma tentativa de C2 cheia de erros.
 
@@ -97,7 +97,7 @@ erros vêm de tentar montar a frase palavra por palavra na ordem em que ela "soa
 
 | Estrutura | Ordem padrão | Erro típico do falante de português |
 |---|---|---|
-| Declarativa simples | Sujeito + Verbo + Objeto (SVO) | Inversões: *"Yesterday went I to..."* → *"Yesterday I went to..."* |
+| Declarativa simples | Sujeito + Verbo + Objeto (SVO) | Sujeito omitido: *"Is important to study"* → *"**It** is important to study"* |
 | Advérbio de frequência | Sujeito + ADV + verbo principal | *"She goes always"* → *"She **always** goes"* |
 | Pergunta com auxiliar | Aux + Sujeito + Verbo | *"What you want?"* → *"What **do** you want?"* |
 | Oração subordinada primeiro | Conjunção + subordinada **,** principal | Falta a vírgula quando a subordinada vem primeiro |
@@ -109,7 +109,7 @@ Progressão de dificuldade (A1 → C2): o que Build a Sentence cobra em cada fai
 
 ### 2.2 Write an Email: registro e template
 
-O e-rater avalia adequação de registro, clareza de propósito, estrutura (abertura/corpo/fechamento) e correção gramatical, num texto curto. O enunciado sempre manda incluir **2 ou 3 elementos específicos** (ex.: *explique a situação, peça uma alternativa, e proponha um horário*). **Endereçar todos os elementos é a primeira coisa que o e-rater checa.**
+O e-rater avalia adequação de registro, clareza de propósito, estrutura (abertura/corpo/fechamento) e correção gramatical, num texto curto. O enunciado sempre manda incluir **3 elementos específicos** (ex.: *explique a situação, peça uma alternativa, e proponha um horário*). **Endereçar todos os elementos é a primeira coisa que o e-rater checa.**
 
 **As três partes obrigatórias:**
 
@@ -201,7 +201,7 @@ Ler inglês certo é uma coisa; **produzir** inglês certo em 23 minutos, sob pr
 | Tipo | Estrutura | Exemplo |
 |---|---|---|
 | **Simples** | 1 oração independente | *The deadline is Friday.* |
-| **Composta** | 2 independentes ligadas por `, + conjunção coordenativa` (*and, but, or, so, yet, for, nor*) **ou** por `;` | "The deadline is Friday, **so** I started early." / "The deadline is Friday **;** I started early." |
+| **Composta** | 2 independentes ligadas por `, + conjunção coordenativa` (*and, but, or, so, yet, for, nor*) **ou** por `;` | "The deadline is Friday, **so** I started early." / "The deadline is Friday**;** I started early." |
 | **Complexa** | 1 independente + 1+ subordinada (*because, although, when, if, that, which, who...*) | "**Because** the deadline is Friday, I started early." |
 | **Composta-complexa** | 2+ independentes + 1+ subordinada | "**Although** the deadline is Friday, I started early, **and** I finished ahead of time." |
 
@@ -242,7 +242,7 @@ Itens numa lista ou ligados por *and/or/but* devem ter a **mesma forma gramatica
 | ❌ Errado | ✅ Correto |
 |---|---|
 | *She likes reading, to write, and discussion.* | *She likes **reading**, **writing**, and **discussing**.* |
-| *The course improves grammar and how to write.* | *The course improves grammar and **writing**.* / *...how to use grammar and how to write.* |
+| *The course improves grammar and how to write.* | *The course improves grammar and **writing**.* / *The course improves **your grammar and your writing**.* |
 | *not only cheaper but also it is faster* | "not only **cheaper** but also **faster**" |
 | *Students want feedback that is fast and which is detailed.* | *Students want feedback that is **fast** and **detailed**.* |
 
@@ -288,7 +288,7 @@ O e-rater penaliza usar a classe errada. Aprenda as famílias das palavras de al
 | responsibility | — | responsible | responsibly |
 | argument | argue | arguable | arguably |
 | benefit | benefit | beneficial | — |
-| effect (n) / affect (v) | affect | effective | effectively |
+| effect | (o verbo comum é *affect*, de outra família) | effective | effectively |
 
 **Erros típicos:** *"the develop of technology"* → *"the **development** of..."*; *"it is benefit for students"* → *"it is **beneficial**..."*; *"this **effect** the result"* → *"this **affects** the result"*.
 
@@ -316,7 +316,7 @@ O e-rater penaliza usar a classe errada. Aprenda as famílias das palavras de al
 | Pessoa | *you* genérico (*"you can see that..."*) | *one*, ou reformular sem pessoa (*"it can be seen that..."*) |
 | Vagos | *stuff, things, a bunch of, kids* | *materials, aspects, several, students / young people* |
 
-> No **Email**, o registro é formal-cortês (você está escrevendo a um professor). Na **Academic Discussion**, é acadêmico mas pode ter um *"In my opinion"* e um exemplo pessoal, não precisa ser impessoal a ponto de soar artificial.
+> No **Email**, o registro é formal-cortês (em geral você escreve a um professor, a um editor ou a uma empresa). Na **Academic Discussion**, é acadêmico mas pode ter um *"In my opinion"* e um exemplo pessoal, não precisa ser impessoal a ponto de soar artificial.
 
 ### 3.9 As estruturas que o Build a Sentence cobra (com mini-drills)
 
@@ -347,7 +347,7 @@ Reordene / complete. Respostas na Parte 6, seção "Laboratório".
 > L15. `the more / you / practice, / the better / you / get` L16. `not only / he / late / arrived / but also / his notes / forgot`
 
 **I. Inversão (C1–C2)**
-> L17. `rarely / such / does / one / dedication / see` L18. `not only / did / the team / its targets / exceed, / but / it / also / costs / reduced`
+> L17. `rarely / such / does / one / dedication / see` L18. `not only / did / the team / its targets, / exceed / but / it / also / costs / reduced`
 
 **J. Cleft sentences (C1–C2)**
 > L19. `it / was / the cost / that / the decision / determined` L20. `what / students / most / need / is / feedback / detailed`
@@ -368,7 +368,7 @@ Reordene / complete. Respostas na Parte 6, seção "Laboratório".
 > tarde. Registro: formal (é um professor). Template: abertura + corpo com os
 > 3 elementos + fechamento.
 >
-> **Minuto 1–3:30 · escreva sem revisar:**
+> **Minuto 1–5:30 · escreva sem revisar:**
 >
 > *Dear Dr. Reyes,*
 >
@@ -389,11 +389,10 @@ Reordene / complete. Respostas na Parte 6, seção "Laboratório".
 > *Best regards,*
 > *Pietro Marques*
 >
-> **Minuto 3:30–4 · revise (caça aos 5 erros):**
+> **Minuto 5:30–7 · revise (caça aos 5 erros):**
 > - Artigos: *"a scheduling conflict"* ✓, *"a mandatory meeting"* ✓, *"a
 >   different lab section"* ✓
-> - 3ª pessoa -s: *"which overlaps"* · está certo? sujeito *"the... session"* +
->   *"overlaps"* ✓
+> - 3ª pessoa -s: *"the required Thursday lab session now overlaps"* ✓
 > - Tempo verbal: presente/presente perfeito consistente ✓
 > - Run-on: nenhuma vírgula emendando orações ✓
 > - Contrações: nenhuma (*I am*, *cannot*) ✓
@@ -402,11 +401,11 @@ Reordene / complete. Respostas na Parte 6, seção "Laboratório".
 > **Resultado:** ~130 palavras, registro formal consistente, os 3 elementos
 > claros, zero erro. Banda 5–6.
 
-### 4.2 Write for an Academic Discussion: o parágrafo em C1
+### 4.2 Write for an Academic Discussion: o parágrafo em C1–C2
 
 **Prompt do professor:** *"Some universities are considering making class attendance optional, arguing that adult students should manage their own time. Others believe mandatory attendance improves learning outcomes. What is your view?"* **Colega (Ana):** *"I think attendance should be optional. If the lectures are recorded, motivated students can learn just as well on their own schedule."* **Colega (Tomás):** *"I disagree. A lot of the value of a class comes from discussion and questions that only happen live."*
 
-> **Planejamento (60 s):** Posição · atendência **obrigatória**, mas com
+> **Planejamento (60 s):** Posição: presença **obrigatória**, mas com
 > nuance. Razão: o valor não está só no conteúdo (que se grava), está na
 > interação. Exemplo: seminários. Engajamento · reconhecer o ponto de Ana
 > sobre alunos motivados, mas virá-lo.
@@ -423,7 +422,7 @@ Reordene / complete. Respostas na Parte 6, seção "Laboratório".
 > straightforward, yet the sessions were where my interpretations actually
 > changed, precisely because other people pushed back on them. That kind of
 > friction is difficult to reproduce from a recording. While I accept that
-> attendance rules can feel patronising to adults, the alternative — a room
+> attendance rules can feel patronizing to adults, the alternative — a room
 > half-empty by week three — tends to weaken the discussion for everyone who
 > does show up.*
 >
@@ -431,7 +430,7 @@ Reordene / complete. Respostas na Parte 6, seção "Laboratório".
 > information: interaction"*) ✓ · exemplo concreto e desenvolvido (seminário
 > de literatura) ✓ · engajamento com **os dois** colegas, integrado ✓ · variedade
 > (relativa, concessiva *while*, travessão para aposto) ✓ · vocabulário preciso,
-> sem repetição ✓ · ~180 palavras. Banda 6.
+> sem repetição ✓ · ~150 palavras. Banda 5–6.
 
 %%%REDACAO%%%
 
@@ -500,7 +499,7 @@ Reconstrua cada frase usando **todas** as palavras/blocos, na forma correta (pod
 
 ### GRUPO B: WRITE AN EMAIL (banco de prompts)
 
-*Cada prompt: 7 minutos, o tempo da prova. Use a caixa de escrita embaixo de cada enunciado: ela tem cronômetro e contador de palavras, e guarda o seu texto. Escreva 4–8 frases, registro formal, aborde todos os elementos. Depois compare com os modelos da Parte 6 (feitos para B1, C4 e C5).*
+*Cada prompt: 7 minutos, o tempo da prova. Use a caixa de escrita embaixo de cada enunciado: ela tem cronômetro e contador de palavras, e guarda o seu texto. Escreva 4–8 frases, registro formal, aborde todos os elementos. Depois compare com os modelos da Parte 6 (bandas 3, 5 e 6).*
 
 **Email 1: carta de recomendação** *You need a letter of recommendation from Professor Silva, who taught your research methods course last semester, for a scholarship application. Write an email to Professor Silva. In your email: (1) remind her which course you took and roughly how you performed, (2) ask whether she would be willing to write the letter, and (3) mention that the deadline is in three weeks.*
 
@@ -542,7 +541,7 @@ Reconstrua cada frase usando **todas** as palavras/blocos, na forma correta (pod
 
 | # | Reconstrução correta | Nota gramatical |
 |---|---|---|
-| 1 | **She goes to the library every day.** | SVO + advérbio de frequência de tempo no fim (*every day* é locução, vai no fim). |
+| 1 | **She goes to the library every day.** | SVO + locução de frequência no fim (*every day*); no início também é possível: *Every day, she goes to the library.* |
 | 2 | **I do not have any questions.** | Negativa com *do* + base; *any* em contexto negativo. |
 | 3 | **The meeting starts at three o'clock.** | Presente simples para horário agendado; preposição *at* + hora. |
 | 4 | **There are two options on the table.** | *There are* + plural. |
@@ -590,9 +589,9 @@ Reconstrua cada frase usando **todas** as palavras/blocos, na forma correta (pod
 **Banda ~3 (B1) · funcional, mas limitada:**
 > *Dear Dr. Wu, I am sorry but I was sick last week and I missed the lab. I am student in your Biology class. Can I do the lab again another day? I can bring a doctor note if you want. Thank you. Best, Pietro*
 
-*Diagnóstico:* propósito comunicado, mas frases curtas e desconectadas; *"I am student"* (falta artigo → *"I am **a** student"*); *"a doctor note"* → *"a doctor's note"*; abertura/fechamento pobres; não abordou claramente o elemento "alternative assignment".
+*Diagnóstico:* propósito comunicado, mas frases curtas e desconectadas; *"I am student"* (falta artigo → *"I am **a** student"*); *"a doctor note"* → *"a doctor's note"*; *"do the lab again"* → *"do the lab on another day"* (o aluno não fez o laboratório, então não há o que repetir); abertura/fechamento pobres; não abordou claramente o elemento "alternative assignment".
 
-**Banda ~5 (B2–C1) · modelo de referência:**
+**Banda ~5 (C1) · modelo de referência:**
 > *Dear Dr. Wu,*
 >
 > *My name is Pietro Marques, and I am a student in your Biology 101 course,
@@ -612,36 +611,36 @@ Reconstrua cada frase usando **todas** as palavras/blocos, na forma correta (pod
 
 *Por que pontua alto:* (1) abertura contextualizada; (2) propósito claro numa frase; (3) detalhe de apoio (doctor's note); (4) **os dois** pedidos (make-up **ou** alternative assignment) abordados; (5) modal de cortesia (*Would it be possible*); (6) fechamento completo; (7) sem contrações; vocabulário navegacional (*lab component*, *make-up session*, *alternative assignment*).
 
-**Banda ~6 (C1–C2) · refinamento:**
+**Banda ~6 (C2) · refinamento:**
 > *Dear Dr. Wu,*
 >
 > *I am a student in your Biology 101 course (Tuesday lab section), and I am
 > writing to explain an absence and ask about making up the work.*
 >
 > *I was unable to attend last week's session because of illness; I have a
-> doctor's note and can forward it at your convenience. As I know the lab
-> component is not something that can simply be skipped, I would be grateful to
-> know whether a make-up session is offered, or whether there is an equivalent
+> doctor's note and can forward it at your convenience. Since I understand that
+> the lab component cannot simply be skipped, I would be grateful to know
+> whether a make-up session is offered, or whether there is an equivalent
 > assignment I could complete instead. My afternoons are generally open, so I
-> can fit into almost any alternative you can offer.*
+> can work around whatever time suits you.*
 >
 > *Thank you for your understanding.*
 >
 > *Best regards,*
 > *Pietro Marques*
 
-*Diferença para a banda 5:* mais econômico (nada supérfluo), subordinação natural (*As I know...*), colocação idiomática (*at your convenience*, *fit into*), e o mesmo conteúdo em menos palavras.
+*Diferença para a banda 5:* mais econômico (nada supérfluo), subordinação natural (*Since I understand that...*), colocação idiomática (*at your convenience*, *work around*, *suits you*), e o mesmo conteúdo em menos palavras.
 
 **Modelos abreviados para os outros prompts (banda ~5):**
 
 - **Email 1 (recomendação):** *"...I took your Research Methods course last
 semester and finished with an A−. I am applying for the [name] scholarship, and I was hoping you might be willing to write a letter of recommendation on my behalf. The deadline is [date], about three weeks from now; I can send you my CV and a short summary of the project if that would help..."*
 - **Email 3 (nota sem feedback):** *"...I received a grade of [X] for Assignment
-2, but no written comments appeared in the system, and I would like to understand where I lost marks. Could you let me know whether feedback is available, or arrange a brief meeting during your office hours so we can go over it?..."*
+2, but no written comments appeared in the system, and I would like to understand where I lost points. Could you let me know whether feedback is available, or arrange a brief meeting during your office hours so we can go over it?..."*
 - **Email 4 (prorrogação):** *"...A family emergency has made it impossible for
 me to complete the term paper by Friday. I would like to request a short extension until Monday. I understand that a late penalty may apply if an extension cannot be granted, and I am prepared to accept that if necessary..."*
 
-> **Checklist do Email (aplique nos últimos 60 s):** abordou os 2–3 elementos? · abertura com nome + curso? · propósito claro na 1ª frase do corpo? · fechamento com agradecimento + assinatura? · zero contrações? · zero run-on? · 3ª pessoa -s conferida?
+> **Checklist do Email (aplique nos últimos 60 s):** abordou os 3 elementos? · abertura com nome + curso? · propósito claro na 1ª frase do corpo? · fechamento com agradecimento + assinatura? · zero contrações? · zero run-on? · 3ª pessoa -s conferida?
 
 ### GRUPO C: Write for an Academic Discussion · modelos por banda
 
@@ -650,15 +649,15 @@ me to complete the term paper by Friday. I would like to request a short extensi
 **Banda ~3 (B1): posição clara, desenvolvimento fraco:**
 > *I think universities should require unrelated courses. It is good for students. Students learn new things and it is important to know many subjects. I agree with Jordan. So universities should require these courses.*
 
-*Diagnóstico:* posição presente, mas sem razão específica nem exemplo · só afirmações genéricas repetidas (*"it is good"*, *"it is important"*); vocabulário limitado; nenhum engajamento real com Maria.
+*Diagnóstico:* posição presente, mas sem razão específica nem exemplo · só afirmações genéricas repetidas (*"it is good"*, *"it is important"*); vocabulário limitado; nenhum engajamento real com Maria; e, com cerca de 35 palavras, fica muito abaixo do mínimo de 100 indicado na prova.
 
-**Banda ~5 (B2–C1) · modelo de referência:**
+**Banda ~5 (C1) · modelo de referência:**
 > *In my opinion, universities should require every student to take at least one course outside their major. This is mainly because education should prepare students not only for a single job but for a working life in which roles keep changing. For example, an engineering student who takes a communications course may develop the ability to explain technical ideas to non-specialists: a skill that is valuable in almost any workplace. While Maria is right that students already carry a heavy load, one course over an entire degree is a small cost, and the workload problem is really an argument for designing the requirement carefully, not for removing it.*
 
-*Por que pontua alto:* posição inequívoca na 1ª frase; razão central específica (*"not a single job but a working life"*); exemplo concreto e desenvolvido; engajamento explícito com Maria, **virado** a favor da posição; variedade (*not only... but*, concessiva *while*, travessão); ~150 palavras.
+*Por que pontua alto:* posição inequívoca na 1ª frase; razão central específica (*"not a single job but a working life"*); exemplo concreto e desenvolvido; engajamento explícito com Maria, **virado** a favor da posição; variedade (*not only... but*, concessiva *while*, aposto explicativo); ~110 palavras.
 
-**Banda ~6 (C1–C2):**
-> *While both students raise fair points, the stronger case is Jordan's: a single required course outside the major is a modest price for a meaningful gain in adaptability. What such courses train is less the content than the transfer · an engineering student who has had to argue a position in a history seminar tends to write clearer technical reports afterwards, and that habit of mind rarely develops inside one discipline. Maria's objection about workload is real, but it points to a design problem, not a reason to abandon the idea: cap the requirement at one course, let it count as an elective, and the cost largely disappears. The alternative · a degree in which a student never once has to think outside their field · produces graduates who are technically competent and intellectually narrow.*
+**Banda ~6 (C2):**
+> *While both students raise fair points, the stronger case is Jordan's: a single required course outside the major is a modest price for a meaningful gain in adaptability. What such courses train is less the content than the transfer: an engineering student who has had to argue a position in a history seminar tends to write clearer technical reports afterward, and that habit of mind rarely develops inside one discipline. Maria's objection about workload is real, but it points to a design problem, not a reason to abandon the idea: cap the requirement at one course, let it count as an elective, and the cost largely disappears. The alternative — a degree in which a student never once has to think outside their field — produces graduates who are technically competent and intellectually narrow.*
 
 *Diferença:* abre pela concessão (marcador de alto nível), razão mecanística (*"less the content than the transfer"*), engajamento com **os dois** colegas integrado ao argumento, fechamento com uma consequência de longo prazo.
 
@@ -735,7 +734,7 @@ Ação para a próxima sessão: __________________________
 3. O tempo verbal é consistente do início ao fim? (W2)
 4. Alguma vírgula emendando duas orações completas? (W1)
 5. Alguma palavra-chave repetida 3+ vezes? (W6)
-6. (Email) O propósito está claro numa frase? Abordei os 2–3 elementos? (W5)
+6. (Email) O propósito está claro numa frase? Abordei os 3 elementos? (W5)
 7. (Discussion) Minha posição está inequívoca na 1ª frase? Engajei com um
 colega? (W5)
 

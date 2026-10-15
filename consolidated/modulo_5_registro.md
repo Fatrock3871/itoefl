@@ -42,7 +42,7 @@ Use a banda mais alta que você consegue executar **sem pensar na estrutura dura
 
 A IA não lê sentido. Ela lê **sinais mensuráveis** e os agrega. Saber quais são esses sinais deixa você otimizar a resposta sem precisar escrever mais.
 
-| Sinal medido | Como a IA quantifica | Alvo mínimo B2 | Alvo C1 |
+| Sinal medido | Como medir (estimativa didática) | Alvo mínimo B2 | Alvo C1 |
 |---|---|---|---|
 | **Diversidade lexical** (type-token ratio) | palavras distintas ÷ total de palavras | ~0,55 em 150 palavras | ~0,65; nenhuma palavra de conteúdo 3+ vezes |
 | **Comprimento médio de oração** | palavras ÷ nº de orações finitas | 9–13 palavras | 12–18, com variação deliberada |
@@ -51,7 +51,7 @@ A IA não lê sentido. Ela lê **sinais mensuráveis** e os agrega. Saber quais 
 | **Elaboração por afirmação** | frases de suporte (exemplo/mecanismo/consequência) após cada tese | ≥1 | ≥2, encadeadas |
 | **Consistência de registro** | contrações, gíria, marcadores de fala em contexto formal | 0 em e-mail formal | 0; vocabulário navegacional preciso |
 
-> 💡 Nenhum desses números precisa ser calculado na prova. Você os internaliza nos drills da Parte 7 até que a resposta saia com esse perfil naturalmente.
+> 💡 Os alvos são estimativas didáticas do iTOEFL, não números publicados pela ETS. Nenhum deles precisa ser calculado na prova. Você os internaliza nos drills da Parte 7 até que a resposta saia com esse perfil naturalmente.
 
 ### 1.5 A escala de formalidade: as três "vozes" do TOEFL 2026
 
@@ -59,8 +59,8 @@ Registro é escolher a voz certa pra situação, não uma escala fixa de "formal
 
 | Voz | Onde aparece | Marca registrada | Erro típico do brasileiro |
 |---|---|---|---|
-| **Conversacional-competente** | Take an Interview; partes de Listen and Repeat | contrações OK, frases médias, vocabulário concreto, fluência acima de ornamento | tentar soar "acadêmico" na fala e travar |
-| **Profissional-navegacional** | Write an Email | modais de cortesia, sem contrações, um pedido claro, direto e educado | cerimônia excessiva, rodeios, "humbly request" |
+| **Conversacional-competente** | Take an Interview | contrações OK, frases médias, vocabulário concreto, fluência acima de ornamento | tentar soar "acadêmico" na fala e travar |
+| **Profissional-navegacional** | Write an Email | modais de cortesia, sem contrações, cada pedido claro, direto e educado | cerimônia excessiva, rodeios, "humbly request" |
 | **Acadêmico-analítico** | Write for an Academic Discussion | nominalizações, hedging, subordinação, engajamento com o interlocutor | densidade plana; opinião sem mecanismo |
 
 ---
@@ -74,7 +74,7 @@ A tabela mestra de referência. Antes de qualquer drill, identifique em qual ban
 | **Abertura de resposta oral (Take an Interview)** | *"I think X because..."* | *"In my experience, X: mainly because..."* | *"What stands out for me about X is..."* / *"My view on X comes down to..."* |
 | **Abertura de parágrafo (Academic Discussion)** | *"I agree with X."* | *"I agree with X, primarily because..."* | *"While both points have merit, the stronger case is that..."* |
 | **Abertura de e-mail (Write an Email)** | *"I am writing because..."* | *"I am writing to request / to ask about..."* | *"I am writing to request... and to clarify..."* (propósito duplo, controlado) |
-| **Conectores de adição** | *First... Second... Also...* | *Furthermore... Additionally... Moreover...* | *Beyond this... What is more... Compounding this...* |
+| **Conectores de adição** | *First... Second... Also...* | *Furthermore... Additionally... Moreover...* | *Beyond this... What is more... Compounding this problem...* (só para somar um problema a outro) |
 | **Conectores de contraste** | *But... However...* | *Nevertheless... In contrast... That said...* | *Notwithstanding this... This is not to say that...* |
 | **Conectores de causa/efeito** | *So... Because... Therefore...* | *Consequently... As a result... Given that...* | *What this implies is... This gives rise to... The consequence of this is...* |
 | **Concessão** | (ausente ou mínima) | *"While X is true, Y matters more."* | *"Proponents of X rightly note Y; however, this overlooks Z."* |
@@ -97,7 +97,7 @@ O Atlas acima dá **um** exemplo por elemento. Abaixo, o inventário de trabalho
 |---|---|---|
 | I think... | In my view... / I would argue that... | My sense is that... / To my mind... |
 | I like / I don't like... | I'm inclined to think... | I find it hard to accept that... |
-| It is good / bad that... | On balance, I believe... | Where I come down is... |
+| It is good / bad that... | On balance, I believe... | Where I come down on this is... |
 
 **Adicionar um ponto:**
 
@@ -105,7 +105,7 @@ O Atlas acima dá **um** exemplo por elemento. Abaixo, o inventário de trabalho
 |---|---|---|
 | Also... / And... | Furthermore... / In addition... | Beyond this... / What is more... |
 | Another thing is... | A further consideration is... | This is reinforced by the fact that... |
-| Too / as well | Equally... | Compounding this... |
+| Too / as well | Equally... | Compounding this problem... (só para somar um problema a outro) |
 
 **Contrastar:**
 
@@ -205,7 +205,7 @@ Estes dez marcadores são os que mais rápido movem uma resposta de B2 para C1/C
 **Antes → depois:**
 
 - "Remote work changes the office." → *"The implications of remote work extend well beyond the office, reshaping how cities plan transport and housing."*
-- "AI affects translators." → *"The impact of machine translation extends past translators to how languages are taught at all."*
+- "AI affects translators." → *"The impact of machine translation extends beyond translators to the way languages are taught."*
 
 **Uso indevido:** anunciar implicações e não nomear nenhuma. O molde é uma promessa que a frase precisa cumprir.
 
@@ -217,10 +217,10 @@ Estes dez marcadores são os que mais rápido movem uma resposta de B2 para C1/C
 
 **Antes → depois:**
 
-- "Maria is wrong about the workload." → *"Maria's workload argument underestimates how much a single course can be absorbed into an existing schedule."*
+- "Maria is wrong about the workload." → *"Maria's workload argument underestimates how easily a single course can be absorbed into an existing schedule."*
 - "That idea doesn't think about cost." → *"This proposal overlooks the recurring cost of maintaining the system after installation."*
 
-**Uso indevido:** usar como insulto genérico (*"this argument fails"*) sem dizer **a account for quê**.
+**Uso indevido:** usar como insulto genérico (*"this argument fails"*) sem dizer **o que** o argumento deixa de considerar.
 
 **Quando não usar:** contra um ponto que você, no fim, aceita · aí use concessão (Marcador 5), não crítica.
 
@@ -270,7 +270,7 @@ Estes dez marcadores são os que mais rápido movem uma resposta de B2 para C1/C
 **Antes → depois:**
 
 - "For these reasons, I think X." → *"Taken together, these considerations make X the more defensible choice."*
-- "So X is better." → *"On balance, then, the weight of the argument sits with X."*
+- "So X is better." → *"On balance, then, the weight of the argument lies with X."*
 
 **Uso indevido:** usar *"Taken together"* quando só houve **um** ponto. Precisa de ≥2 antes.
 
@@ -318,7 +318,7 @@ Uma nominalização transforma um verbo ou adjetivo numa palavra-substantivo, qu
 
 | Origem | Sufixo | Exemplo |
 |---|---|---|
-| verbo | -tion / -sion | develop → *development*, decide → *decision*, erode → *erosion* |
+| verbo | -tion / -sion | explain → *explanation*, decide → *decision*, erode → *erosion* |
 | verbo | -ment | achieve → *achievement*, treat → *treatment* |
 | verbo | -ance / -ence | rely → *reliance*, emerge → *emergence* |
 | verbo | -al | arrive → *arrival*, refuse → *refusal* |
@@ -427,7 +427,7 @@ Conectores (*however, therefore*) são só uma das cinco formas de amarrar um te
 
 ### 4.6 A escala de formalidade lexical
 
-Trocar palavra de alta frequência por equivalente de registro acadêmico é o ajuste mais barato de banda no Writing. **Não** vale para o e-mail (que quer clareza, não latinismo) nem para a fala (que quer fluência).
+Trocar palavra de alta frequência por equivalente de registro acadêmico é o ajuste mais barato de banda no Writing. No e-mail, use com parcimônia: *postpone* e *request* cabem; *utilize* e *facilitate* soam pesados. Na fala, a fluência vem antes.
 
 | Informal / neutro | Acadêmico-analítico |
 |---|---|
@@ -444,7 +444,7 @@ Trocar palavra de alta frequência por equivalente de registro acadêmico é o a
 | deal with | address, tackle |
 | part | component, element, aspect |
 | way | method, approach, means |
-| thing / factor | factor, consideration, variable |
+| thing | factor, consideration, issue |
 | because of | owing to, as a result of, due to |
 | but | however, yet, nonetheless |
 | so | therefore, consequently, thus |
@@ -466,7 +466,7 @@ Trocar palavra de alta frequência por equivalente de registro acadêmico é o a
 | look into | investigate, examine |
 | come up with | devise, propose |
 
-**Armadilha:** *utilize* onde *use* bastava, em toda frase. Um ou dois latinismos por parágrafo elevam; dez por parágrafo soam forçados e a IA penaliza texto que "soa mecânico".
+**Armadilha:** *utilize* onde *use* bastava, em toda frase. Um ou dois latinismos por frase elevam; trocar toda palavra que dá para trocar soa forçado e a IA penaliza texto que "soa mecânico".
 
 ### 4.7 Colocações de registro acadêmico
 
@@ -482,7 +482,7 @@ Registro alto depende da **combinação** certa entre as palavras, muito mais do
 
 **Substantivo + preposição (o que o brasileiro erra):**
 
-- an increase **in** (não "of") · the impact **on** · a solution **to** · the reason **for** · a demand **for** · research **on / into** · an effect **on** · insight **into** · a basis **for** · concern **about / over** · an alternative **to** · a distinction **between** · dependence **on** · an emphasis **on**
+- an increase **in** + o que aumenta (*an increase in applications*); **of** + quantidade (*an increase of 10%*) · the impact **on** · a solution **to** · the reason **for** · a demand **for** · research **on / into** · an effect **on** · insight **into** · a basis **for** · concern **about / over** · an alternative **to** · a distinction **between** · dependence **on** · an emphasis **on**
 
 ---
 
@@ -517,7 +517,7 @@ Você tem **45 segundos** para responder cada pergunta, e os testes práticos of
 > "I would suggest practicing every day, even for a short time. Listening to podcasts and repeating sentences out loud helps a lot with speaking. I would also recommend doing practice tests to get used to the format and the timing."
 
 **C1/C2:**
-> "The single most useful thing would be daily speaking practice, even ten minutes, because fluency only comes from production, not from studying rules. On top of that, I'd have them do timed practice sections weekly: not for the score, but to make the format automatic so that on the day, attention goes to the content and not the clock."
+> "The single most useful thing would be daily speaking practice, even ten minutes, because fluency only comes from production, not from studying rules. On top of that, I'd have them do timed practice sections every week, not for the score but to make the format automatic, so that on test day their attention goes to the content and not the clock."
 
 *Nota: na função de sugestão, C1 acrescenta o **porquê** de cada recomendação ("because fluency only comes from production") e prioriza ("the single most useful thing"), em vez de listar.*
 
@@ -540,7 +540,7 @@ O e-mail navegacional acadêmico é curto (4–8 frases). Aqui, sofisticação =
 - Modais de cortesia: *would, could, might*
 - Sem contrações em contexto formal (*I am* em vez de *I'm*)
 - Vocabulário navegacional preciso: *request an extension, schedule an appointment, clarify the requirements, reschedule*
-- **Um** pedido claro por e-mail, declarado em uma frase identificável
+- Cada pedido declarado numa frase própria e identificável
 
 **► EXEMPLO CONTRASTIVO: e-mail de problema (não de pedido):** *Situação: seu colega de quarto no alojamento faz barulho tarde da noite e você tem provas. Escreva ao coordenador da residência.*
 
@@ -556,7 +556,7 @@ O e-mail navegacional acadêmico é curto (4–8 frases). Aqui, sofisticação =
 
 ### 5.3 Write for an Academic Discussion: onde a densidade retórica mais rende
 
-É um parágrafo (~150–200 palavras), corrigido por IA, com peso proporcional alto dentro do Writing. Esta é a task onde investir em C1/C2 tem o maior retorno, porque há tempo (parte dos ~23 min da seção) para construir frases densas com controle.
+É um parágrafo (~150–200 palavras), corrigido por IA, com peso proporcional alto dentro do Writing. Esta é a task onde investir em C1/C2 tem o maior retorno, porque há tempo (10 minutos) para construir frases densas com controle.
 
 **Estrutura vencedora:** Posição → Razão central → Elaboração/exemplo → Engajamento com um colega
 
@@ -569,7 +569,7 @@ O e-mail navegacional acadêmico é curto (4–8 frases). Aqui, sofisticação =
 > "I agree with Tomás that universities should require at least one course outside the major. Education should prepare students for more than one job, and a broad base helps with that. For example, an engineering student who takes a writing course can explain technical ideas more clearly. While Maria has a point about workload, one extra course per program is manageable."
 
 **C1/C2:**
-> "While Maria raises a fair concern about workload, the stronger case is Tomás's: a single required course outside the major is a small price for a meaningful gain in adaptability. What makes cross-disciplinary exposure valuable is not the content itself but the transfer · an engineering student who has had to argue a position in a history seminar writes more persuasive technical reports afterward. The same holds for a biology major who takes an economics course and starts to see research funding as a question of trade-offs. That kind of skill rarely develops inside a single field. The workload objection holds only if the requirement is poorly designed; capped at one course, the trade-off clearly favors breadth."
+> "While Maria raises a fair concern about workload, the stronger case is Tomás's: a single required course outside the major is a small price for a meaningful gain in adaptability. What makes cross-disciplinary exposure valuable is not the content itself but the transfer — an engineering student who has had to argue a position in a history seminar writes more persuasive technical reports afterward. The same holds for a biology major who takes an economics course and starts to see research funding as a question of trade-offs. That kind of skill rarely develops inside a single field. The workload objection holds only if the requirement is poorly designed; once it is capped at one course, the trade-off clearly favors breadth."
 
 *O que muda: a concessão abre o parágrafo (marcador 5), a razão é específica e mecanística ("not the content itself but the transfer"), há um exemplo concreto e desenvolvido, e o engajamento com os dois colegas é explícito e integrado, não anexado.*
 
@@ -602,7 +602,7 @@ Aqui você acompanha o processo de elevação **decisão por decisão**, não s�
 exatamente eles resolvem? *"...the case for tablets rests on one real advantage: the content can be corrected and expanded without a new print run."* Uma razão específica vale mais que três genéricas.
 
 3. **Elaborar essa razão com um caso concreto.**
-*"A biology text printed in 2019 still teaches 2019 taxonomy; a digital one can be revised the week a change is agreed."*
+*"A biology text printed in 2019 still teaches 2019 taxonomy; a digital one can be revised the week a change is agreed on."*
 
 4. **Responder à objeção nomeando o que ela ignora (Marcador 4).**
 *"The distraction worry is legitimate, but it underestimates how much of it is a management problem: locked-down devices and clear rules narrow the gap considerably."*
@@ -611,7 +611,7 @@ exatamente eles resolvem? *"...the case for tablets rests on one real advantage:
 *"Taken together, the gain in currency and the reduction in physical load outweigh a distraction risk that schools already know how to contain."*
 
 **Versão C1 final:**
-> "While Lía is right that a screen invites distraction, the case for tablets rests on one real advantage: the content can be corrected and expanded without a new print run. A biology text printed in 2019 still teaches 2019 taxonomy; a digital one can be revised the week a change is agreed. The distraction worry is legitimate, but it underestimates how much of it is a management problem · locked-down devices and clear rules narrow the gap considerably. Otto's point about weight matters too: a single device replaces a backpack of books that many younger students struggle to carry. Taken together, the gain in currency and the reduction in physical load outweigh a distraction risk that schools already know how to contain."
+> "While Lía is right that a screen invites distraction, the case for tablets rests on one real advantage: the content can be corrected and expanded without a new print run. A biology text printed in 2019 still teaches 2019 taxonomy; a digital one can be revised the week a change is agreed on. The distraction worry is legitimate, but it underestimates how much of it is a management problem: locked-down devices and clear rules narrow the gap considerably. Otto's point about weight matters too: a single device replaces a backpack of books that many younger students struggle to carry. Taken together, the gain in currency and the reduction in physical load outweigh a distraction risk that schools already know how to contain."
 
 *Cerca de 120 palavras. Nenhuma palavra obscura. O salto de banda veio de estrutura (concessão na abertura, uma razão com mecanismo, objeção respondida especificamente, síntese no fecho), não de vocabulário difícil.*
 
@@ -666,7 +666,7 @@ Para cada frase B1, escreva a versão B2 e a versão C1.
 5. B2: *"A second language is a substantial advantage in the job market."* · C1: *"What a second language signals to an employer is less the language itself than the capacity to see a problem from another frame."*
 6. B2: *"Social media strengthens connection but also accelerates the spread of misinformation."* · C1: *"The same architecture that lets social media connect people at scale is what lets falsehoods travel at that scale."*
 7. B2: *"After the company added staff, waiting times fell significantly."* · C1: *"It was the staffing increase, not the new software, that brought waiting times down."*
-8. B2: *"For retention, active reading tends to outperform passive video."* · C1: *"Reading forces a pace the reader sets; video sets its own, and comprehension quietly drops to match."*
+8. B2: *"For retention, active reading tends to outperform passive video."* · C1: *"Reading moves at a pace the reader sets; video sets its own, and comprehension quietly drops to match."*
 9. B2: *"Public transport is both cheaper than driving and less polluting."* · C1: *"Public transport is the rare option that is cheaper for the individual and cleaner for everyone else at the same time."*
 10. B2: *"Cheating undermines assessment, and schools should address it directly."* · C1: *"Cheating is less a discipline problem than a design one: it thrives wherever the stakes are high and the format is easy to game."*
 
@@ -705,7 +705,7 @@ Reescreva o parágrafo trocando cada conector pelo equivalente C1 da Parte 2, se
 > "Online courses are cheaper than traditional ones. Also, they are more flexible. However, they have higher dropout rates. So, universities should not rely on them completely. Because of this, a mixed model works better."
 
 **Gabarito (uma solução):**
-> "Online courses cost less than traditional ones. **Beyond this**, they offer far more flexibility. **That said**, they carry markedly higher dropout rates. **It follows that** universities should not depend on them entirely. **The more defensible approach** is a blended model."
+> "Online courses are cheaper than traditional ones. **Beyond this**, they are more flexible. **This is not to say that** they are flawless: they have higher dropout rates. **What this implies is that** universities should not rely on them completely. **The consequence of this is that** a mixed model works better."
 
 ### DRILL 4: Desinflar o e-mail (cortar a cerimônia)
 
@@ -737,7 +737,7 @@ Junte cada grupo de frases curtas numa única frase B2/C1, usando subordinação
 4. *"After the city invested in bike lanes, cycling doubled while car traffic fell slightly."*
 5. *"Despite a small sample, the study produced striking results that matched earlier work."*
 6. *"The app was free but ad-supported, and the ads drove many users away."*
-7. *"Because the professor posts recordings, students who miss class can catch up: and attendance has held steady."*
+7. *"Although the professor posts recordings so that students who miss class can catch up, attendance has not dropped."*
 8. *"The external panel's report, critical of the process, was largely accepted by management."*
 
 ### DRILL 6: Cleft e wh-cleft para foco
@@ -758,7 +758,7 @@ Reescreva cada frase clivando-a para destacar o elemento sublinhado.
 3. *"It is the follow-up call that closes most sales."*
 4. *"What this argument misses is the long-term effect."*
 5. *"It was the sustained investment that turned the neighborhood around."*
-6. *"Only when the funding was cut did we see the problem."*
+6. *"It was only when the funding was cut that we saw the problem."* (A inversão *Only when the funding was cut did we see the problem.* também é válida, mas não é clivagem.)
 
 ### DRILL 7: Escala de formalidade (Writing acadêmico)
 
@@ -796,7 +796,7 @@ Pegue qualquer resposta de Writing que você já escreveu. Sublinhe cada palavra
 
 ### DRILL 10 · Take an Interview: resposta em 3 bandas (cronometrado)
 
-Grave-se respondendo à pergunta abaixo três vezes: uma mirando B1, uma B2, uma C1. Cada resposta em ~40 segundos. Ouça e confirme que a versão C1 **não tem mais hesitação** que a B2 · se tiver, você está mirando alto demais para o seu nível atual de fluência. Repita com uma pergunta de sugestão e uma de previsão.
+Grave-se respondendo à pergunta abaixo três vezes: uma mirando B1, uma B2, uma C1. Cada resposta em até 45 segundos, sem preparo. Ouça e confirme que a versão C1 **não tem mais hesitação** que a B2 · se tiver, você está mirando alto demais para o seu nível atual de fluência. Repita com uma pergunta de sugestão e uma de previsão.
 
 *"Tell me about a place you like to spend time in. Why do you enjoy it?"*
 
@@ -822,16 +822,18 @@ Reescreva o parágrafo trocando cada *"this / it"* solto por *this + substantivo
 
 ### DRILL 13: Colocação acadêmica
 
-Complete com o verbo ou preposição que colca (Parte 4.7).
+Complete com o verbo ou a preposição que forma a colocação (Parte 4.7). Conjugue o verbo quando precisar; uma preposição pode servir em mais de um item.
 
-1. "Access to clean water ___ a central role in public health." *(play)*
-2. "The study ___ compelling evidence that the effect is real." *(provide)*
+**Banco:** play · provide · raise · gain · pose · in · into · on
+
+1. "Access to clean water ___ a central role in public health."
+2. "The study ___ compelling evidence that the effect is real."
 3. "There has been a sharp increase ___ applications this year."
-4. "The report ___ concerns about the timeline." *(raise)*
-5. "Researchers are trying to ___ insight ___ how the disease spreads." *(gain / into)*
+4. "The report ___ concerns about the timeline."
+5. "Researchers are trying to ___ insight ___ how the disease spreads."
 6. "The two approaches differ ___ one fundamental respect."
 7. "The policy had a significant impact ___ rural clinics."
-8. "This ___ a serious challenge to the standard model." *(pose)*
+8. "This ___ a serious challenge to the standard model."
 
 **Gabarito:** 1 plays · 2 provides · 3 in · 4 raises · 5 gain / into · 6 in · 7 on · 8 poses
 
@@ -855,7 +857,7 @@ Pegue uma resposta sua de um drill do Módulo 3 (Speaking) ou Módulo 4 (Writing
 | Banda estimada agora (Speaking/Writing) | Banda-alvo do treino | Condição para subir |
 |---|---|---|
 | 3–3.5 (B1) | **B2**: consolidar estrutura antes de vocabulário | A estrutura (posição → razão → exemplo) precisa sair automática, sem lembrar o esqueleto, por 5 sessões seguidas |
-| 4–4.5 (B2) | **B2 consolidado + marcadores C1 seletivos** | Introduza 2–3 marcadores da Parte 3 por vez; quando saírem sem esforço, adicione os próximos |
+| 4–4.5 (B2) | **B2 consolidado + marcadores C1 seletivos** | Introduza um marcador da Parte 3 por semana; quando sair sem esforço, passe ao próximo |
 | 5–5.5 (C1) | **C1 completo + eliminação de microfalhas** | Foco no Módulo 9 (Brazilian Traps): artigos, concordância, ritmo silábico, over-formality no e-mail |
 | 6 (C2) | **C2: refinamento sob pressão** | Só simulados cronometrados; o ganho aqui é consistência, não novos recursos |
 
