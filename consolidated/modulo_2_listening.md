@@ -50,7 +50,7 @@ ESTÁGIO 2A — MÓDULO INFERIOR (~7 min)     ESTÁGIO 2B — MÓDULO SUPERIOR (
 └── confirma a banda inferior              └── distingue as bandas C1/C2
 ```
 
-Errar demais nos primeiros itens, mesmo os "fáceis" e curtos, pode te colocar no módulo inferior. O teto dele é estruturalmente mais baixo, mesmo que você depois acertasse itens do superior. **Não existe "aquecer aos poucos" no Listening.** Pico de atenção desde o item 1.
+Errar demais nos primeiros itens, mesmo os "fáceis" e curtos, pode te colocar no módulo inferior. O teto dele é estruturalmente mais baixo: mesmo acertando tudo ali, você não alcança as bandas mais altas. **Não existe "aquecer aos poucos" no Listening.** Pico de atenção desde o item 1.
 
 ---
 
@@ -59,7 +59,7 @@ Errar demais nos primeiros itens, mesmo os "fáceis" e curtos, pode te colocar n
 | # | Task type | O que testa | Itens | CEFR | Áudio |
 |---|---|---|---|---|---|
 | 1 | **Listen and Choose a Response** | Escolher a resposta natural a uma fala isolada (pragmática: intenção, tom, registro) | **15–19** | A1–B2 | 1 fala isolada, muito curta |
-| 2 | **Listen to a Conversation** | Propósito, detalhe, relação entre os falantes numa conversa curta | 10 | A2–C1 | 3–6 turnos, contexto de campus |
+| 2 | **Listen to a Conversation** | Propósito, detalhe, relação entre os falantes numa conversa curta | 10 | A2–C1 | 4–9 falas curtas, cotidiano ou campus |
 | 3 | **Listen to an Announcement** | Detalhe factual (data, local, ação, exceção) num anúncio | 6–10 | A2–C1 | monólogo informativo curto |
 | 4 | **Listen to an Academic Talk** | Ideia principal, apoio, inferência, organização, **vocabulário idiomático** | 8–16 | A2–C2 | monólogo acadêmico, até 250 palavras |
 
@@ -123,7 +123,7 @@ PONTO 2: __________        ATITUDE DO PROFESSOR ( + / − / ? ):
 EXPRESSÃO IDIOMÁTICA/CHAVE: _______  (sentido em contexto: _______)
 ```
 
-O campo de expressão idiomática existe porque o blueprint **destaca explicitamente** vocabulário idiomático como alvo em Academic Talk. Sempre que ouvir algo não-literal (*"that's a stretch"*, *"the jury's still out"*), anote a expressão e o contexto: é candidata quase certa a questão.
+O campo de expressão idiomática existe porque o blueprint **destaca explicitamente** vocabulário idiomático como alvo em Academic Talk. Sempre que ouvir algo não literal (*"that's a stretch"*, *"the jury's still out"*), anote a expressão e o contexto: é candidata quase certa a questão.
 
 ### 2.3 Discourse markers: o sinal aponta direto para a resposta
 
@@ -136,7 +136,7 @@ Em áudio curto, o marcador aponta para a **própria resposta**, não para uma s
 | **Instrução / ação requerida** | *"Please make sure to...", "Don't forget...", "You'll need to...", "Be sure to..."* | Fato de altíssima chance de ser testado: é o "core" do anúncio |
 | **Ênfase** | *"The key thing is...", "What matters here is...", "This is important:"* | Marque mentalmente ou em 2–3 palavras |
 | **Contraste rápido** | *"but", "though", "except that", "having said that"* | Um único *"but"* pode inverter o item inteiro, não relaxe perto do fim |
-| **Concessão + retorno à tese** | *"Sure, X: but the point is Y"* | A resposta é **Y**, não X |
+| **Concessão + retorno à tese** | *"Sure, X, but the point is Y"* | A resposta é **Y**, não X |
 | **Exemplificação** | *"Take X, for instance", "Here's a case:", "Say you..."* | O que vem a seguir é exemplo de apoio, não ideia nova |
 | **Digressão e volta** | *"Anyway...", "Where was I?", "Getting back to..."* | O que veio no meio é secundário; a linha principal retoma aqui |
 | **Idiomatismo** | *"back to square one", "a long shot", "let's not get ahead of ourselves"* | Pare o piloto automático e traduza o sentido figurado |
@@ -176,7 +176,7 @@ Mantenha o ritmo.
 4. **Consistência > heroísmo.** Um padrão estável de acertos nos itens curtos
 pesa mais que acertar um item difícil isolado e errar fáceis por pressa.
 
-### 2.6 Os 6 padrões de distrator da ETS
+### 2.6 Os 7 padrões de distrator da ETS
 
 | # | Padrão | Como aparece |
 |---|---|---|
@@ -186,12 +186,13 @@ pesa mais que acertar um item difícil isolado e errar fáceis por pressa.
 | **4** | **CONFUSED REASONING** | inverte quem pediu o quê a quem; troca causa por efeito |
 | **5** | **OPPOSITE** | diz o contrário do áudio (o distrator usa a palavra-chave certa com polaridade trocada) |
 | **6** | **EXTREME / WRONG REGISTER** | tecnicamente relacionado ao tópico, mas com *always/never/only* ou tom incompatível |
+| **7** | **OUT OF SCOPE** | fala de algo que o áudio nem aborda (outro assunto, outra pessoa, outro momento) |
 
 ### 2.7 Regras de ouro do pacing
 
 1. **Nunca deixe item em branco.** Sem penalidade: chute > zero.
-2. **Sprint, não maratona.** ~20–25 s por item; confie no primeiro processamento
-correto.
+2. **Sprint, não maratona.** A média é de 32 a 37 s por item, áudio incluído;
+confie no primeiro processamento correto.
 3. **Router = atenção máxima desde o item 1.**
 4. **Escale a anotação ao task type**, não anote por hábito.
 5. **Idiomatismo é alvo prioritário no Academic Talk.**
@@ -227,7 +228,7 @@ Palavras de função (auxiliares, preposições, artigos, pronomes) são ditas *
 | you | **/jə/** (átono) | *"See ya later."* |
 | to | **/tə/** (átono) | *"I need to go"* → *"I need /tə/ go"* |
 | of | **/ə/** (átono) | *"a cup of coffee"* → *"a cup /ə/ coffee"* |
-| and | **/ən/** or **/n/** | *"bread and butter"* → *"bread /n/ butter"* |
+| and | **/ən/** ou **/n/** | *"bread and butter"* → *"bread /n/ butter"* |
 | for | **/fər/** (átono) | *"This is for you."* |
 | him / her / them | **/əm/ /ər/ /əm/** (após consoante) | *"tell him"* → *"tell /əm/"*; *"ask her"* → *"ask /ər/"* |
 | can (afirmativo) | **/kən/** (átono, curto): vs. **can't** /kænt/ (tônico, longo) | *"I /kən/ do it"* vs. *"I **can't** do it"* |
@@ -240,10 +241,10 @@ Palavras de função (auxiliares, preposições, artigos, pronomes) são ditas *
 |---|---|---|
 | **Consoante + vogal** | a consoante final se cola à vogal seguinte | *"an apple"* → *"a-napple"*; *"pick it up"* → *"pi-ki-tup"* |
 | **/t/ e /d/ entre vogais (flap)** | viram um /d/ leve | *"water"* → *"wader"*; *"better"* → *"bedder"*; *"a lot of"* → *"a lodda"* |
-| **/t/ e /d/ finais somem** antes de consoante | *"next week"* → *"nex week"*; *"old man"* → *"ol man"*; *"just now"* → *"jus now"* | |
-| **/h/ some** em pronomes átonos | *"did he"* → *"didee"*; *"tell her"* → *"teller"*; *"ask him"* → *"askim"* | |
-| **vogal + vogal** ganha um /w/ ou /j/ de ligação | *"go on"* → *"gowon"*; *"I asked"* → *"I-yasked"* | |
-| **"n't" some quase todo** | *"I don't think so"* → *"I dun think so"*; *"couldn't"* → *"kudn"* | |
+| **/t/ e /d/ finais** | somem antes de consoante | *"next week"* → *"nex week"*; *"old man"* → *"ol man"*; *"just now"* → *"jus now"* |
+| **/h/ de pronome átono** | some | *"did he"* → *"didee"*; *"tell her"* → *"teller"*; *"ask him"* → *"askim"* |
+| **vogal + vogal** | ganha um /w/ ou /j/ de ligação | *"go on"* → *"gowon"*; *"I asked"* → *"I-yasked"* |
+| **"n't"** | quase some | *"I don't think so"* → *"I dun think so"*; *"couldn't"* → *"kudn"* |
 
 **Treino:** ouça um trecho de podcast 3×. Na 1ª, só sinta o ritmo. Na 2ª, marque onde as palavras se colam. Na 3ª, tente repetir colando igual.
 
@@ -275,7 +276,7 @@ Palavras de função (auxiliares, preposições, artigos, pronomes) são ditas *
 | **fortnight** (britânico) | duas semanas | |
 | datas | mês-dia (EUA) ou dia-mês (RU) | *"March fifth"* / *"the fifth of March"* |
 
-### 3.5 Vocabulário de campus (os 40 termos que o teste usa)
+### 3.5 Vocabulário de campus (os 41 termos que o teste usa)
 
 Conversation e Announcement acontecem quase sempre num contexto universitário americano. Não saber esses termos = perder o item.
 
@@ -434,7 +435,7 @@ Anotar palavra por palavra é lento demais. Use símbolos.
 
 > O professor diz explicitamente: *"it's the smaller, newer companies that move first."* → **(B)**. (A) é o que você *"esperaria"* · e o professor usa isso como contraste (*"You'd expect... But..."*). **OPPOSITE.** Cuidado com distratores que repetem a parte "esperada" da frase.
 
-**Pergunta B · Organization:** *"Why does the professor say that a large firm 'has more to lose'?"* (A) To criticize large firms for being too cautious. (B) To explain **why** established firms adopt new technology later. (C) To introduce a new, unrelated topic about company finances. (D) To argue that startups always outperform large firms.
+**Pergunta B · Organization:** *"Why does the professor say that a large firm 'has more to lose'?"* (A) To criticize large firms for being too cautious. (B) To explain why established firms adopt new technology later. (C) To introduce a new, unrelated topic about company finances. (D) To argue that startups always outperform large firms.
 
 > A frase vem logo depois de *"Why?"*: é a **explicação** do padrão que ele acabou de descrever. Função estrutural = dar a causa. → **(B)**. (A) confunde explicar com criticar; (D) é **EXTREME** (*always*).
 
@@ -454,7 +455,7 @@ Anotar palavra por palavra é lento demais. Use símbolos.
 
 *Escolha a resposta mais natural e pragmaticamente adequada.*
 
-**A1.** *"I was going to grab lunch before the seminar, but there's no time now."* (A) "That's fine, I had a big breakfast." (B) "Yeah, let's just head straight there." (C) "The seminar was really interesting." (D) "I ate there last week too."
+**A1.** *"I was going to grab lunch before the seminar, but there's no time now."* (A) "I usually have lunch at the café downstairs." (B) "Yeah, let's just head straight there." (C) "The seminar was really interesting." (D) "I ate there last week too."
 
 **A2.** *"Do you mind if I borrow your notes from Tuesday? I was out sick."* (A) "Sure: I'll send them over tonight." (B) "I hope you feel better soon." (C) "I borrowed a book from the library on Tuesday." (D) "Tuesday's class starts at nine."
 
@@ -488,11 +489,11 @@ Anotar palavra por palavra é lento demais. Use símbolos.
 
 *Narrator: Listen to a conversation between a student and an academic advisor.*
 
-**Student:** Hi, I wanted to ask about switching one of my electives. I'm in Intro to Statistics, but I'd rather take Data Visualization instead.
+**Student:** Hi, I wanted to ask about switching one of my electives. I'm in Intro to Statistics, but I'd rather take Data Visualization this term.
 
 **Advisor:** Let me check... okay, Data Visualization has space. But it has Statistics as a prerequisite · have you completed that?
 
-**Student:** No, that's why I wanted to switch · I was hoping to take Data Visualization first and Statistics later.
+**Student:** No, I'm taking it right now. I was hoping to take Data Visualization first and Statistics later.
 
 **Advisor:** Ah. Unfortunately that's not possible; the prerequisite is enforced by the system. You'd need to finish Statistics first, or get a written waiver from the Data Visualization instructor.
 
@@ -506,7 +507,7 @@ Anotar palavra por palavra é lento demais. Use símbolos.
 
 **B1.1: Gist-purpose.** Why does the student visit the advising office? (A) To complain about a scheduling conflict between two required courses (B) To request a change from one elective to another (C) To register for classes for the first time (D) To find out why she was removed from a course
 
-**B1.2: Detail.** What problem does the advisor identify? (A) Data Visualization is already full (B) The student failed Statistics once already (C) Data Visualization requires Statistics, which the student hasn't taken (D) The student can't take electives outside her major
+**B1.2: Detail.** What problem does the advisor identify? (A) Data Visualization is already full (B) The student failed Statistics once already (C) Data Visualization requires Statistics, which the student hasn't completed (D) The student can't take electives outside her major
 
 **B1.3: Function.** Why does the advisor ask whether the student has a coding background? (A) To check whether she qualifies for a scholarship (B) To suggest she switch majors (C) To assess whether the instructor might realistically grant a waiver (D) To recommend a different course
 
@@ -600,7 +601,7 @@ Anotar palavra por palavra é lento demais. Use símbolos.
 
 **C2.2: Detail.** What should a student do if a course is full? (A) Email the instructor to ask for a spot (B) Register for a different course permanently (C) Add themselves to the waitlist (D) Wait until the add/drop period
 
-**C2.3: Connecting content.** What has changed this year? (A) Registration now opens earlier in the day (B) The add/drop period has been shortened from two weeks to one (C) Waitlists are no longer used (D) Second-year students register last
+**C2.3: Detail.** What has changed this year? (A) Registration now opens earlier in the day (B) The add/drop period has been shortened from two weeks to one (C) Waitlists are no longer used (D) Second-year students register last
 
 **C2.4: Inference.** Why does the speaker emphasize finalizing the schedule before the term? (A) Because instructors will not answer email during the term (B) Because there will be less time to change courses once classes start (C) Because spring courses are harder than fall courses (D) Because registration reopens midway through the term
 
@@ -634,7 +635,7 @@ Anotar palavra por palavra é lento demais. Use símbolos.
 
 A classic example. In one well-known study, researchers set up a tasting table in a grocery store: first with six varieties of jam, then with twenty-four. You'd expect the bigger display to sell more. Actually, the smaller display generated significantly more purchases. The larger one attracted more browsers, but far fewer of them bought anything.
 
-Why? Two things: decision fatigue and anticipated regret. With more options, comparing them mentally becomes exhausting · that's the fatigue. And even before you pick, you start worrying that one of the other twenty-three might be better and that you'll regret your choice — that's the regret. Ironically, more choices can leave people feeling back to square one, unable to commit at all.
+Why? Two things: decision fatigue and anticipated regret. With more options, comparing them mentally becomes exhausting · that's the fatigue. And even before you pick, you start worrying that one of the other twenty-three might be better and that you'll regret your choice — that's the regret. Ironically, more choices can leave people stuck at square one, unable to commit at all.
 
 Now, this doesn't mean choice is bad: a complete absence of options is its own problem. The point is there's a sweet spot, and past it, additional options stop helping and start working against us. To be fair, later studies haven't always replicated the jam result, so the size of the effect is still debated.
 
@@ -646,7 +647,7 @@ Now, this doesn't mean choice is bad: a complete absence of options is its own p
 
 **D1.4: Detail.** What does the professor say about having zero options? (A) It is preferable to having too many (B) It is also a problem, just as too many options are (C) It has never been studied (D) It applies only to grocery shopping
 
-**D1.5: Idiom in context.** What does *"back to square one"* mean here? (A) Making a confident final decision (B) Returning to a starting point without real progress (C) Choosing the first option presented (D) Comparing two options systematically
+**D1.5: Idiom in context.** What does *"stuck at square one"* mean here? (A) Making a confident final decision (B) Unable to make any progress toward a decision (C) Choosing the first option presented (D) Comparing two options systematically
 
 ---
 
@@ -706,7 +707,7 @@ This is a textbook case of what economists call **path dependence**, or sometime
 
 | Item | Resp. | Por quê / padrão do distrator |
 |---|---|---|
-| A1 | **B** | O falante sinaliza falta de tempo; a resposta natural propõe a ação consequente. (A)(C)(D) ignoram a urgência: **WRONG FOCUS**. |
+| A1 | **B** | O falante sinaliza falta de tempo; a resposta natural propõe a ação consequente. (A) reaproveita *lunch* sem reagir à falta de tempo: **CORRECT WORDS, WRONG MEANING**; (C)(D) ignoram a urgência: **WRONG FOCUS**. |
 | A2 | **A** | Pedido direto → resposta direta de concessão + plano. (B) é gentil mas não responde ao pedido; (C) reaproveita *borrow* e (D) reaproveita *Tuesday*: **CORRECT WORDS, WRONG MEANING**. |
 | A3 | **B** | Insegurança sobre o rascunho → resposta busca o problema específico. (A) reaproveita *ready* sem tratar da preocupação: **CORRECT WORDS, WRONG MEANING**; (C)(D) ignoram a preocupação. |
 | A4 | **A** | Pergunta retórica = alerta educado sobre ir a pé com esse tempo. A resposta natural revisa o plano. (B) reaproveita *weather*: **CORRECT WORDS, WRONG MEANING**; (C)(D) falam de outro momento e ignoram o alerta. |
@@ -722,7 +723,7 @@ This is a textbook case of what economists call **path dependence**, or sometime
 ### GRUPO B: Listen to a Conversation
 
 **B1.1: (B).** A estudante quer *"switch one of my electives"*. (A) sem conflito de horário; (C) já está matriculada; (D) **OUT OF SCOPE**.
-**B1.2: (C).** *"it has Statistics as a prerequisite... you'd need to complete Statistics first."* (A) o oposto (há vaga); (B)(D) não ditos.
+**B1.2: (C).** *"it has Statistics as a prerequisite... You'd need to finish Statistics first."* (A) o oposto (há vaga); (B)(D) não ditos.
 **B1.3: (C).** A pergunta avalia se a professora poderia dar um *waiver*. (A)(B)(D) sem base.
 **B1.4: (B).** *"I'll send you her contact information now."* (A) a matrícula não é feita aqui; (C)(D) não ditos.
 
@@ -732,7 +733,7 @@ This is a textbook case of what economists call **path dependence**, or sometime
 **B2.4: (B).** *"I'll check the stacks first."* Inferência direta. (A) só se não achar; (C)(D) contradizem a intenção declarada.
 
 **B3.1: (B).** *"I'm a bit lost on the second essay prompt."* (A) não pede prazo; (C) não é sobre nota; (D) não pede outro tema.
-**B3.2: (C).** *"weigh the argument: where is it strong, where is it weak, and does the evidence support the conclusion?"* (A)(B) o professor diz que *"evaluate"* é **nenhum** dos dois; (D) não dito.
+**B3.2: (C).** *"weigh the argument: where is it strong, where is it weak, and does the evidence actually support the conclusion?"* (A)(B) o professor diz que *"evaluate"* é **nenhum** dos dois; (D) não dito.
 **B3.3: (C).** *"maybe a third summary, two-thirds evaluation."*
 **B3.4: (B).** *"Don't pad it"* = não encher linguiça para bater a contagem de palavras. (A) o oposto; (C)(D) **OUT OF SCOPE**.
 
@@ -754,11 +755,11 @@ This is a textbook case of what economists call **path dependence**, or sometime
 
 ### GRUPO D: Listen to an Academic Talk
 
-**D1.1: (B).** Tese anunciada no início e no fechamento. (A) **EXTREME**; (C) *"always"* nunca dito; (D) **OUT OF SCOPE**.
+**D1.1: (B).** Tese anunciada no início e no fechamento. (A) **EXTREME**; (C) **EXTREME** (*always*) e generaliza um único estudo; (D) **OUT OF SCOPE**.
 **D1.2: (A).** *"attracted more browsers, but far fewer of them bought anything."* (B) o oposto · **OPPOSITE**.
 **D1.3: (B).** Exemplo empírico logo após o conceito abstrato. (A)(C)(D) sem base.
 **D1.4: (B).** *"a complete absence of options is its own problem."* (A) inverte.
-**D1.5: (B).** *"back to square one"* = voltar ao ponto de partida sem progresso. (A) o oposto; (C)(D) distorcem.
+**D1.5: (B).** *"stuck at square one"* = sem sair do ponto de partida. (A) o oposto; (C)(D) distorcem.
 
 **D2.1: (B).** *"the trees are also connected, underground, through fungi... and things move along those links."* (A) o professor admite competição **mas** acrescenta a conexão; (C) o oposto (a relação é benéfica); (D) é exatamente o exagero que ele critica no fim.
 **D2.2: (C).** *"the tree gives the fungi sugars it makes through photosynthesis."* (A)(B) são o que os fungos fazem pela árvore; (D) o oposto.
@@ -785,7 +786,7 @@ Some: Grupo A (**12**), Grupo B (**12**), Grupo C (**11**), Grupo D (**16**). To
 | 71–85% | 4,5–5,5 (B2–C1) | Releia a Parte 3 nos pontos fracos (formas fracas 3.1, idioms 3.6). Refaça o Grupo D **de ouvido**. |
 | 56–70% | 4–4,5 (B2) | O reconhecimento de task/distrator entrou; o processamento auditivo não. Trabalhe a Parte 3 inteira e refaça A e D. |
 | 41–55% | 3–3,5 (B1) | Foque em 3.1 (reduções) e 3.2 (linking) por uma semana, 15 min/dia, ouvindo material real. Depois volte aos drills. |
-| ≤40% | ≤3 (A2–B1) | Sua base de escuta precede este módulo: 20 min/dia de shadowing (Módulo 3, Parte 3) antes de retornar. |
+| ≤40% | ≤3 (A2–B1) | Sua base de escuta precede este módulo: 20 min/dia de shadowing (Módulo 3, Parte 5, bloco C) antes de retornar. |
 
 ---
 
@@ -797,7 +798,7 @@ Classifique **todo** erro numa destas categorias antes de seguir.
 |---|---|---|---|
 | **L1** | **Não decodifiquei o áudio** | "Não ouvi a palavra" / ouviu errado (*can* vs *can't*, *thirteen* vs *thirty*, um pronome que sumiu) | Parte 3.1–3.4. Faça shadowing do trecho 5×. É o erro que mais trava o brasileiro. |
 | **L2** | **Não entendi a pergunta** | Respondeu certo para outro tipo (deu gist quando pediram function) | Parte 1.4. Sublinhe a palavra-chave do enunciado antes das opções. |
-| **L3** | **Caí num distrator** | A opção reusava uma palavra do áudio / era verdadeira mas não dita / extrema | Parte 2.6. Reescreva qual dos 6 padrões te pegou. |
+| **L3** | **Caí num distrator** | A opção reusava uma palavra do áudio / era verdadeira mas não dita / extrema | Parte 2.6. Anote qual dos 7 padrões te pegou. |
 | **L4** | **Anotação errada** | Anotou demais e perdeu o áudio, ou de menos e não lembrou o detalhe | Parte 2.2. Cheque se usou a escala certa para o task type. |
 | **L5** | **Vocabulário** | Não sabia um termo de campus ou um idiom | Parte 3.5 / 3.6. Anote o termo num caderno com o contexto. |
 | **L6** | **Atenção / fim do áudio** | Relaxou e perdeu um *but*, uma correção, uma instrução final | Regra 6 do pacing. Force atenção nas últimas 3 palavras de cada áudio. |

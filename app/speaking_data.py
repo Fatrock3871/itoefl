@@ -47,16 +47,16 @@ LISTEN_REPEAT_SETS = [
     {
         "id": "mod3-lr3",
         "level": "B1–C1",
-        "title": "Cenário 3 · Museum tour",
-        "scenario": "You are training to guide visitors at a museum. Listen to the senior guide and repeat what she says. Repeat only once.",
+        "title": "Cenário 3 · Bike-share program",
+        "scenario": "You are learning to work for a city bike-share program. Listen to your trainer and repeat what he says. Repeat only once.",
         "items": [
-            "The tour starts in this room.",
-            "Please stay together as a group.",
-            "Photographs are allowed, but please turn off the flash.",
-            "The paintings on this wall are more than three hundred years old.",
-            "Our newest exhibition, on the upper level, explores the history of flight.",
-            "Visitors who would like more detail can borrow an audio guide at the entrance.",
-            "The gift shop and the café, which are both next to the main exit, close thirty minutes before the museum does.",
+            "Riders unlock bikes with the app.",
+            "Each ride is free for thirty minutes.",
+            "After that, riders pay a small fee for every extra minute.",
+            "Please check the tires and brakes on every bike at your station.",
+            "Park damaged bikes in the red section so that no one can rent them.",
+            "If a station is full, the app will show riders where the nearest open dock is.",
+            "Members who report a broken bike within the first five minutes of a ride will not be charged for that trip.",
         ],
     },
     {
@@ -76,7 +76,7 @@ LISTEN_REPEAT_SETS = [
     },
     {
         "id": "mod3-lr5",
-        "level": "B2–C2",
+        "level": "B1–C1",
         "title": "Cenário 5 · Hotel front desk",
         "scenario": "You are learning to work at a hotel front desk. Listen to your supervisor and repeat what she says. Repeat only once.",
         "items": [

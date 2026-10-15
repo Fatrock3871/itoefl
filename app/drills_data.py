@@ -374,8 +374,8 @@ MOD2_ACTION_DRILLS_A = [
         "passage_html": None,
         "items": [
             {"num": "A1", "prompt": "\"I was going to grab lunch before the seminar, but there's no time now.\"",
-             "options": {"A": "That's fine, I had a big breakfast.", "B": "Yeah, let's just head straight there.", "C": "The seminar was really interesting.", "D": "I ate there last week too."},
-             "correct": "B", "explanation": "O falante sinaliza falta de tempo; a resposta natural propõe a ação consequente. (A)/(C)/(D) ignoram a urgência."},
+             "options": {"A": "I usually have lunch at the café downstairs.", "B": "Yeah, let's just head straight there.", "C": "The seminar was really interesting.", "D": "I ate there last week too."},
+             "correct": "B", "explanation": "O falante sinaliza falta de tempo; a resposta natural propõe a ação consequente. (A) reaproveita <em>lunch</em> sem reagir à falta de tempo; (C)/(D) ignoram a urgência."},
             {"num": "A2", "prompt": "\"Do you mind if I borrow your notes from Tuesday? I was out sick.\"",
              "options": {"A": "Sure — I'll send them over tonight.", "B": "I hope you feel better soon.", "C": "I borrowed a book from the library on Tuesday.", "D": "Tuesday's class starts at nine."},
              "correct": "A", "explanation": "Pedido direto → resposta direta de concessão + plano. (B) é gentil mas não responde ao pedido; (C) e (D) só reaproveitam palavras da fala (<em>borrow</em>, <em>Tuesday</em>)."},
@@ -422,9 +422,9 @@ MOD2_ACTION_DRILLS_B = [
         "level": "B1–B2",
         "objective": "Leia o diálogo (ou peça pra alguém ler em voz alta) e responda às 4 questões. Tempo alvo: 3 minutos.",
         "passage_html": """<p><em>Narrator: Listen to a conversation between a student and an academic advisor.</em></p>
-<p><strong>Student:</strong> Hi, I wanted to ask about switching one of my electives. I'm in Intro to Statistics, but I'd rather take Data Visualization instead.</p>
+<p><strong>Student:</strong> Hi, I wanted to ask about switching one of my electives. I'm in Intro to Statistics, but I'd rather take Data Visualization this term.</p>
 <p><strong>Advisor:</strong> Let me check... okay, Data Visualization has space. But it has Statistics as a prerequisite — have you completed that?</p>
-<p><strong>Student:</strong> No, that's why I wanted to switch — I was hoping to take Data Visualization first and Statistics later.</p>
+<p><strong>Student:</strong> No, I'm taking it right now. I was hoping to take Data Visualization first and Statistics later.</p>
 <p><strong>Advisor:</strong> Ah. Unfortunately that's not possible; the prerequisite is enforced by the system. You'd need to finish Statistics first, or get a written waiver from the Data Visualization instructor.</p>
 <p><strong>Student:</strong> Is it worth asking the instructor directly, or is that rarely approved?</p>
 <p><strong>Advisor:</strong> It's approved sometimes, especially if you have relevant experience — a coding background, say. Do you have any?</p>
@@ -435,8 +435,8 @@ MOD2_ACTION_DRILLS_B = [
              "options": {"A": "To complain about a scheduling conflict between two required courses", "B": "To request a change from one elective to another", "C": "To register for classes for the first time", "D": "To find out why she was removed from a course"},
              "correct": "B", "explanation": "A estudante quer \"switch one of my electives\". (A) sem conflito de horário; (C) já está matriculada; (D) está fora do que foi dito."},
             {"num": "B1.2", "prompt": "Detail. What problem does the advisor identify?",
-             "options": {"A": "Data Visualization is already full", "B": "The student failed Statistics once already", "C": "Data Visualization requires Statistics, which the student hasn't taken", "D": "The student can't take electives outside her major"},
-             "correct": "C", "explanation": "\"It has Statistics as a prerequisite... you'd need to complete Statistics first.\" (A) é o oposto (há vaga); (B)/(D) não ditos."},
+             "options": {"A": "Data Visualization is already full", "B": "The student failed Statistics once already", "C": "Data Visualization requires Statistics, which the student hasn't completed", "D": "The student can't take electives outside her major"},
+             "correct": "C", "explanation": "\"It has Statistics as a prerequisite... You'd need to finish Statistics first.\" (A) é o oposto (há vaga); (B)/(D) não ditos."},
             {"num": "B1.3", "prompt": "Function. Why does the advisor ask whether the student has a coding background?",
              "options": {"A": "To check whether she qualifies for a scholarship", "B": "To suggest she switch majors", "C": "To assess whether the instructor might realistically grant a waiver", "D": "To recommend a different course"},
              "correct": "C", "explanation": "A pergunta avalia se a professora poderia dar um <em>waiver</em>. (A)/(B)/(D) sem base no diálogo."},
@@ -493,7 +493,7 @@ MOD2_ACTION_DRILLS_B = [
              "correct": "B", "explanation": "\"I'm a bit lost on the second essay prompt.\" (A) não pede prazo; (C) não é sobre nota; (D) não pede outro tema."},
             {"num": "B3.2", "prompt": "Detail. According to the professor, what does \"evaluate\" mean here?",
              "options": {"A": "Summarize the argument accurately", "B": "Simply agree or disagree with the argument", "C": "Weigh the argument's strengths, weaknesses, and use of evidence", "D": "Compare the argument with another author's"},
-             "correct": "C", "explanation": "\"Weigh the argument: where is it strong, where is it weak, and does the evidence support the conclusion?\" (A)/(B) o professor diz que \"evaluate\" é <strong>nenhum</strong> dos dois; (D) não dito."},
+             "correct": "C", "explanation": "\"Weigh the argument: where is it strong, where is it weak, and does the evidence actually support the conclusion?\" (A)/(B) o professor diz que \"evaluate\" é <strong>nenhum</strong> dos dois; (D) não dito."},
             {"num": "B3.3", "prompt": "Detail. What balance between summary and evaluation does the professor recommend?",
              "options": {"A": "Half summary, half evaluation", "B": "All evaluation, no summary", "C": "About one-third summary, two-thirds evaluation", "D": "A brief summary followed by a personal opinion"},
              "correct": "C", "explanation": "\"Maybe a third summary, two-thirds evaluation.\""},
@@ -540,7 +540,7 @@ MOD2_ACTION_DRILLS_C = [
             {"num": "C2.2", "prompt": "Detail. What should a student do if a course is full?",
              "options": {"A": "Email the instructor to ask for a spot", "B": "Register for a different course permanently", "C": "Add themselves to the waitlist", "D": "Wait until the add/drop period"},
              "correct": "C", "explanation": "\"Add yourself to the waitlist rather than emailing the instructor.\" (A) é explicitamente desaconselhado."},
-            {"num": "C2.3", "prompt": "Connecting content. What has changed this year?",
+            {"num": "C2.3", "prompt": "Detail. What has changed this year?",
              "options": {"A": "Registration now opens earlier in the day", "B": "The add/drop period has been shortened from two weeks to one", "C": "Waitlists are no longer used", "D": "Second-year students register last"},
              "correct": "B", "explanation": "\"The add/drop period... has been shortened from two weeks to one.\" (A)/(C)/(D) não ditos."},
             {"num": "C2.4", "prompt": "Inference. Why does the speaker emphasize finalizing the schedule before the term?",
@@ -583,12 +583,12 @@ MOD2_ACTION_DRILLS_D = [
         "passage_html": """<p><em>Narrator: Listen to part of a talk in a psychology class.</em></p>
 <p><strong>Professor:</strong> We've been discussing decision-making, and today I want to bring up something researchers call the paradox of choice. The idea is counterintuitive: you'd think more options would always make us happier, but past a certain point it does the opposite.</p>
 <p>A classic example. In one well-known study, researchers set up a tasting table in a grocery store: first with six varieties of jam, then with twenty-four. You'd expect the bigger display to sell more. Actually, the smaller display generated significantly more purchases. The larger one attracted more browsers, but far fewer of them bought anything.</p>
-<p>Why? Two things: decision fatigue and anticipated regret. With more options, comparing them mentally becomes exhausting — that's the fatigue. And even before you pick, you start worrying that one of the other twenty-three might be better and that you'll regret your choice — that's the regret. Ironically, more choices can leave people feeling back to square one, unable to commit at all.</p>
+<p>Why? Two things: decision fatigue and anticipated regret. With more options, comparing them mentally becomes exhausting — that's the fatigue. And even before you pick, you start worrying that one of the other twenty-three might be better and that you'll regret your choice — that's the regret. Ironically, more choices can leave people stuck at square one, unable to commit at all.</p>
 <p>Now, this doesn't mean choice is bad: a complete absence of options is its own problem. The point is there's a sweet spot, and past it, additional options stop helping and start working against us. To be fair, later studies haven't always replicated the jam result, so the size of the effect is still debated.</p>""",
         "items": [
             {"num": "D1.1", "prompt": "Gist-content. What is the talk mainly about?",
              "options": {"A": "Grocery stores should minimize the products they display", "B": "Beyond a point, more options can reduce satisfaction and hinder decisions", "C": "Consumers always prefer smaller displays", "D": "Decision fatigue affects only in-store shoppers"},
-             "correct": "B", "explanation": "Tese anunciada no início e no fechamento. (A) exagera; (C) \"always\" nunca é dito; (D) está fora do que foi dito."},
+             "correct": "B", "explanation": "Tese anunciada no início e no fechamento. (A) exagera; (C) também exagera (\"always\") e generaliza um único estudo; (D) está fora do que foi dito."},
             {"num": "D1.2", "prompt": "Detail. What happened with the 24-variety display?",
              "options": {"A": "It attracted more browsers but produced fewer purchases", "B": "It produced both more browsers and more purchases", "C": "It was removed for low interest", "D": "It produced identical sales to the smaller display"},
              "correct": "A", "explanation": "\"Attracted more browsers, but far fewer of them bought anything.\" (B) é o oposto."},
@@ -598,9 +598,9 @@ MOD2_ACTION_DRILLS_D = [
             {"num": "D1.4", "prompt": "Detail. What does the professor say about having zero options?",
              "options": {"A": "It is preferable to having too many", "B": "It is also a problem, just as too many options are", "C": "It has never been studied", "D": "It applies only to grocery shopping"},
              "correct": "B", "explanation": "\"A complete absence of options is its own problem.\" (A) inverte o sentido."},
-            {"num": "D1.5", "prompt": "Idiom in context. What does \"back to square one\" mean here?",
-             "options": {"A": "Making a confident final decision", "B": "Returning to a starting point without real progress", "C": "Choosing the first option presented", "D": "Comparing two options systematically"},
-             "correct": "B", "explanation": "\"Back to square one\" = voltar ao ponto de partida sem progresso. (A) é o oposto; (C)/(D) distorcem."},
+            {"num": "D1.5", "prompt": "Idiom in context. What does \"stuck at square one\" mean here?",
+             "options": {"A": "Making a confident final decision", "B": "Unable to make any progress toward a decision", "C": "Choosing the first option presented", "D": "Comparing two options systematically"},
+             "correct": "B", "explanation": "\"Stuck at square one\" = sem sair do ponto de partida. (A) é o oposto; (C)/(D) distorcem."},
         ],
     },
     {

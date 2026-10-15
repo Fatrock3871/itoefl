@@ -19,13 +19,13 @@
     "prompt": "Choose the best response.",
     "text_format": "html",
     "options": {
-      "A": "That's fine, I had a big breakfast.",
+      "A": "I usually have lunch at the café downstairs.",
       "B": "Yeah, let's just head straight there.",
       "C": "The seminar was really interesting.",
       "D": "I ate there last week too."
     },
     "answer": "B",
-    "explanation": "O falante sinaliza falta de tempo; a resposta natural propõe a ação consequente. (A)/(C)/(D) ignoram a urgência.",
+    "explanation": "O falante sinaliza falta de tempo; a resposta natural propõe a ação consequente. (A) reaproveita <em>lunch</em> sem reagir à falta de tempo; (C)/(D) ignoram a urgência.",
     "hint": null,
     "trap_codes": [],
     "tags": [],

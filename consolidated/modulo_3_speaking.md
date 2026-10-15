@@ -20,7 +20,7 @@
 | Elemento | Dado oficial (ETS 2026) |
 |---|---|
 | **Duração** | ~8 minutos |
-| **Design** | **Linear** (não-adaptativo): todo candidato recebe as mesmas tasks |
+| **Design** | **Linear** (não adaptativo): todo candidato recebe as mesmas tasks |
 | **Total de itens** | 11 |
 | **Pontuação bruta** | 55 pontos → banda **1–6** (CEFR) |
 | **Correção** | **100% por IA** (motor do tipo SpeechRater). Nenhuma correção humana. |
@@ -32,7 +32,7 @@ O Speaking é **curto e denso**: 8 minutos, 55 pontos brutos, quase o triplo dos
 | Task | Itens | Pontos | Mecânica | Critério de correção | CEFR |
 |---|---|---|---|---|---|
 | **Listen and Repeat** | 7 | 5 cada (**35 pts = 64% da seção**) | Ouve uma frase falada e a repete em voz alta com a maior fidelidade possível | **Precisão** (reprodução exata) + **inteligibilidade** (clareza da pronúncia) | A1–C2 |
-| **Take an Interview** | 4 | 5 cada (**20 pts = 36%**) | Ouve (e lê) uma pergunta e responde oralmente, de forma imediata | Elaboração clara e coerente, gramática precisa, vocabulário variado, prosódia inteligível | A1–C2 |
+| **Take an Interview** | 4 | 5 cada (**20 pts = 36%**) | Ouve uma pergunta e responde oralmente, de forma imediata | Elaboração clara e coerente, gramática precisa, vocabulário variado, prosódia inteligível | A1–C2 |
 
 **Progressão de dificuldade (oficial):**
 
@@ -51,7 +51,7 @@ história, negócios*. Vocabulário calibrado ao nível, com contrações natura
 
 Repare no peso: Listen and Repeat vale quase o dobro de Take an Interview (35 contra 20). Isso é uma **declaração de prioridade** da ETS. O teste recompensa **precisão fonológica, sintática e lexical em tempo real**, ou seja, processar e reproduzir estruturas com exatidão sob pressão, mais do que fluência de discurso longo.
 
-Isso muda onde você investe suas horas. Quem ignora Listen and Repeat pra focar só em "falar bem" está otimizando a task errada. **Nenhum dos 11 itens pede um discurso longo e estruturado.** Templates de fala de 45 ou mais segundos com introdução, corpo e conclusão, herança do formato antigo, **não existem mais**.
+Isso muda onde você investe suas horas. Quem ignora Listen and Repeat pra focar só em "falar bem" está otimizando a task errada. **Nenhum dos 11 itens pede um discurso longo e estruturado.** Templates de discurso longo com introdução, corpo e conclusão, herança do formato antigo, **não existem mais**.
 
 ---
 
@@ -72,7 +72,7 @@ Motores do tipo SpeechRater não "entendem" conteúdo como um humano. Eles extra
 
 ### 2.2 Estratégia para Listen and Repeat
 
-**Como a tarefa é na prova:** as sete frases pertencem a **um mesmo cenário** (por exemplo, o treinamento de alguém que vai receber visitantes num museu) e **crescem em tamanho**, de umas 5 palavras na primeira até umas 17 na última. Você **só ouve**, não lê, e repete **uma única vez**, sem tempo de preparo. O Grupo A da Parte 5 tem cinco cenários nesse formato, com áudio.
+**Como a tarefa é na prova:** as sete frases pertencem a **um mesmo cenário** (por exemplo, as instruções de um supervisor no primeiro dia de um emprego) e **crescem em tamanho**, de umas 5 palavras na primeira até umas 17 na última. Você **só ouve**, não lê, e repete **uma única vez**, sem tempo de preparo. O Grupo A da Parte 5 tem cinco cenários nesse formato, com áudio.
 
 **A IA compara sua transcrição contra o áudio-fonte, palavra por palavra, sílaba por sílaba.** Parafrasear é o erro mais caro que existe nesta task. Se você trocar *"purchase"* por *"buy"* porque "soou mais natural", você **não** ganha ponto por fluência. Você **perde** ponto por infidelidade ao alvo.
 
@@ -81,11 +81,11 @@ Motores do tipo SpeechRater não "entendem" conteúdo como um humano. Eles extra
 1. **Reprodução literal, não interpretação.** Replique exatamente as palavras
 ouvidas: inclusive artigos, preposições e conectores que parecem "descartáveis" mas são onde os erros se escondem.
 2. **Stress e ritmo corretos**, não só os fonemas certos. Uma frase com todos os
-sons "certos" mas no ritmo errado soa não-nativa para a IA: prosódia é parâmetro central de inteligibilidade.
+sons "certos" mas no ritmo errado soa não nativa para a IA: prosódia é parâmetro central de inteligibilidade.
 3. **Entonação de acordo com a função**: sobe em perguntas, desce em
 declarações, ênfase em palavras de conteúdo.
 
-**Técnica do "chunking sintático":** repetir uma frase de 20+ palavras ouvida uma vez testa **memória de trabalho fonológica**, mais do que audição pura. Em vez de memorizar palavra por palavra, treine-se a reter **blocos sintáticos** (grupo sujeito / sintagma verbal / oração subordinada) como unidades únicas. *"The company that was founded in 1998"* vira um único bloco mental, não sete palavras soltas. É assim que nativos processam fala.
+**Técnica do "chunking sintático":** repetir uma frase de 15 a 20 palavras ouvida uma vez testa **memória de trabalho fonológica**, mais do que audição pura. Em vez de memorizar palavra por palavra, treine-se a reter **blocos sintáticos** (grupo sujeito / sintagma verbal / oração subordinada) como unidades únicas. *"The company that was founded in 1998"* vira um único bloco mental, não sete palavras soltas. É assim que nativos processam fala.
 
 **Protocolo de shadowing progressivo (15 min/dia):**
 
@@ -117,8 +117,7 @@ Cada esqueleto força naturalmente o uso de **conectores e subordinação** (*be
 
 **Regra de ouro: elaborar sem enrolar.** "Elaboração clara e coerente" significa **adicionar uma camada de especificidade** a cada afirmação genérica, não simplesmente falar mais tempo.
 - ❌ Genérico: *"I think technology is good because it helps people communicate."*
-- ✅ Elaborado: *"I think technology is good because it helps people communicate · 
-for example, my grandmother, who lives in another city, can video-call us every week, which she couldn't do ten years ago."*
+- ✅ Elaborado: *"I think technology is good because it helps people communicate. For example, my grandmother, who lives in another city, can video-call us every week, which she couldn't do ten years ago."*
 
 A segunda versão é mais longa porque tem um **exemplo concreto**, não porque enrola: é esse exemplo que eleva a coerência aos olhos da IA.
 
@@ -147,11 +146,11 @@ Speaking se ganha ou se perde aqui. A estratégia (Parte 2) diz **o que** fazer;
 | 5 | **/ʌ/** | vira /a/ ou /u/ | but, cut, done, love, money, enough, culture, budget, function | vogal **central e relaxada**, boca semiaberta: o "u" de "but" não é o de "put" |
 | 6 | **/ɜːr/** (bird) | vira "er" silabado ou "ir" | word, work, first, learn, term, research, prefer, occur, concern | um som só, contínuo, com a língua enrolada (rótico) |
 | 7 | **vogais epentéticas** | adiciona vogal ao final ou entre consoantes | speak→speak**i**, work→work**i**, last→last**i**, test→test**i**, film→fil**m**i | **pare a palavra na consoante**: feche a boca ali, não "abra" depois |
-| 8 | **clusters de consoante** | quebra o grupo com vogal | *strong* → "estrong", *desks* → "deskis", *asked* → "askeed", *sixth* → "sixt" | pratique o grupo devagar, sem vogal no meio: /s-t-r/, /s-k-s/ |
-| 9 | **/h/** | some (*"I 'ave"*) ou aparece onde não deve (*"h-egg"*) | have, house, hard, ahead, behind vs. *hour, honest* (mudo) | um sopro leve; não confunda com o "h" mudo do português |
-| 10 | **/r/ americano** | vira tap (/ɾ/, "caro") ou "h" ("hato" para *rat*) | red, road, around, three, práctically, very, story, problem | língua **enrolada para trás**, não toca o céu da boca; nada de vibração |
+| 8 | **clusters de consoante** | quebra o grupo com vogal | *strong* → "estrong", *desks* → "deskis", *asked* → "áskid", *texts* → "textis" | pratique o grupo devagar, sem vogal no meio: /s-t-r/, /s-k-s/ |
+| 9 | **/h/ e o "h" mudo** | pronuncia o *h* que é mudo (*hour, honest, honor, heir*) ou, mais raro, engole o *h* que soa (*"I 'ave"*) | hour, honest, honor, heir, vehicle × have, house, hard, ahead, behind | nas cinco primeiras o *h* não soa: *hour* = /ˈaʊər/, igual a *our*; nas outras é um sopro leve, parecido com o "r" de "rato" |
+| 10 | **/r/ americano** | vira tap (/ɾ/, "caro") ou "h" ("hato" para *rat*) | red, road, around, three, practically, very, story, problem | língua **enrolada para trás**, não toca o céu da boca; nada de vibração |
 | 11 | **dark L** (L final) | vira /w/ ("sosiaw" para *social*) | all, feel, school, full, people, social, political, critical, level, model | a ponta da língua **tenta** tocar o palato atrás dos dentes, mesmo que não chegue |
-| 12 | **/w/ vs /v/** | troca os dois (*"wery"* / *"vindow"*) | very/wary, vine/wine, vest/west, invest, involve, view | /v/ = dentes no lábio inferior; /w/ = lábios arredondados, sem tocar os dentes |
+| 12 | **/t/ e /d/ antes de "i"** | viram "tch" e "dj" (*"tchi"* para *tea*, *"djifficult"*) | tea, team, ticket, teacher, difficult, did, dinner, dish | ponta da língua na gengiva logo atrás dos dentes de cima, som seco: o /t/ e o /d/ de "tatu" e "dado", nunca os de "tia" e "dia" como a maioria dos brasileiros pronuncia |
 
 **Terminações -ED (a regra das 3 pronúncias):**
 
@@ -176,7 +175,7 @@ O brasileiro erra o acento de cognatos porque projeta o padrão do português. A
 | en-gi-NE-er | en-gi-**NEER** |
 | e-co-NO-my / e-CO-no-mic | e-**CO**-no-my mas e-co-**NO**-mic |
 | a-na-LY-sis | a-**NA**-ly-sis |
-| en-VI-ron-ment | en-**VY**-ron-ment (4 sílabas) |
+| en-vi-RON-ment | en-**VY**-ron-ment (4 sílabas) |
 | par-ti-CU-lar-ly | par-**TI**-cu-lar-ly |
 | tech-no-LO-gy | tech-**NO**-lo-gy |
 | ne-ce-SSA-ry | **NE**-ce-ssa-ry |
@@ -184,7 +183,7 @@ O brasileiro erra o acento de cognatos porque projeta o padrão do português. A
 
 **Regras úteis:**
 
-- Palavras terminadas em **-tion, -sion, -ic, -ical, -ity, -ify, -graphy** →
+- Palavras terminadas em **-tion, -sion, -ic, -ical, -ity, -ify, -graphy, -cracy** →
 acento na sílaba **imediatamente antes** do sufixo: *inforMAtion*, *speCIfic*, *aBIlity*, *phoTOgraphy*, *deMOcracy*.
 - Pares substantivo/verbo de 2 sílabas → substantivo com acento na **1ª**, verbo
 na **2ª**: *a REcord* × *to reCORD*; *a PREsent* × *to preSENT*; *an INcrease* × *to inCREASE*; *CONtent* (n.) × *conTENT* (adj., "satisfeito").
@@ -214,7 +213,7 @@ Numa frase, o inglês **acentua as palavras de conteúdo** (substantivos, verbos
 | Pergunta sim/não | **sobe** ↗ | *Did you finish it?↗* |
 | Lista | sobe em cada item ↗, desce no último ↘ | *We need paper↗, pens↗, and a folder.↘* |
 | Reserva / "sim, mas..." | **fall-rise** ↘↗ | *The idea is fine↘↗ (...but I have doubts).* |
-| Pergunta indireta (dentro de frase) | **desce** ↘ (não sobe) | *Could you tell me where the office is?↘* |
+| Pergunta indireta (dentro de declaração) | **desce** ↘ | *I'm not sure where the office is.↘* / *She asked where the office was.↘* |
 
 **Erro brasileiro nº 1 de entonação:** subir no fim de declarações, o que faz elas soarem como perguntas ou insegurança. Force a voz a **cair** na última palavra de conteúdo de cada declaração.
 
@@ -268,7 +267,7 @@ completo: *"...so, as I was saying, the main point is..."*
 | **Prever** | *"I'd expect...", "Chances are...", "It's likely that...", "Over the next few years..."* |
 | **Sugerir** | *"I'd say you should...", "It might be worth...", "One option would be to...", "If it were me, I'd..."* |
 | **Concessão / contraponto** | *"That said...", "On the other hand...", "There's a case for the opposite, but...", "I can see why someone would disagree, though..."* |
-| **Fechar** | *"So, all things considered...", "That's basically where I land.", "So yeah: [reafirma a posição]."* |
+| **Fechar** | *"So, all things considered...", "That's basically where I land.", "So that's my take.", "So yeah: [reafirma a posição]."* |
 
 ### 3.8 Rubrica de autoavaliação da gravação
 
@@ -314,10 +313,10 @@ gramatical exata** (tempo verbal, concordância), que se perde quando a memória
 
 **Repetição fraca (A2–B1):**
 > *"The committee decide to... postpone the... um... vote until more information is available."*
-- Hesitação (*um*), pausa não-sintática (*"the..."*), substituição lexical (*is*
-em vez de *became*: parafraseou por não ter retido a forma exata).
-- Cada uma dessas três ocorrências é penalizada separadamente: disfluência,
-quebra de ritmo, infidelidade lexical/gramatical.
+- Erro de forma (*decide* em vez de *decided*), hesitação (*um*), pausa não
+sintática (*"the..."*), substituição lexical (*is* em vez de *became*: parafraseou por não ter retido a forma exata).
+- Cada uma dessas quatro ocorrências é penalizada separadamente: erro
+gramatical, disfluência, quebra de ritmo, infidelidade ao alvo.
 
 > **O padrão geral:** a diferença entre bandas aqui não é "quão bem você fala inglês" em abstrato · é **quanto da frase-fonte sobreviveu intacta** na sua reprodução.
 
@@ -325,7 +324,7 @@ quebra de ritmo, infidelidade lexical/gramatical.
 
 **Pergunta (função: opinião):** *"Do you think it is better for university students to live on campus or off campus?"*
 
-> **Segundos 1–4: reconheça e planeje.** Função = opinião. Esqueleto: posição →
+> **Segundos 1–2: reconheça e já comece.** Função = opinião. Esqueleto: posição →
 > razão central → contraponto refutado. Posição: **on campus, no primeiro ano**.
 > Razão: proximidade e integração. Contraponto: custo/privacidade, mas o primeiro
 > ano compensa.
@@ -333,12 +332,12 @@ quebra de ritmo, infidelidade lexical/gramatical.
 > **Resposta (fala, ~40 s):**
 >
 > *"For me, living on campus is the better choice, at least for the first year.
-> The main reason is that everything you need: classes, the library, other
-> students: is a few minutes away, so it's much easier to get involved in
+> The main reason is that everything you need — classes, the library, other
+> students — is a few minutes away, so it's much easier to get involved in
 > campus life before you've built a routine. In my own case, most of the friends
 > I still have from university are people I met in my first-year dorm. Living off
 > campus is usually cheaper and gives you more privacy, and I'd probably choose
-> it later on: but in that first year, the trade-off clearly favours being
+> it later on, but in that first year, the trade-off clearly favors being
 > close to everything."*
 >
 > **Por que pontua alto:**
@@ -348,15 +347,15 @@ quebra de ritmo, infidelidade lexical/gramatical.
 >   genérica.
 > - Exemplo concreto e pessoal (*"the friends I still have"*).
 > - Contraponto reconhecido e **integrado**, não apenas contradito.
-> - Subordinação natural (*"so it's much easier..."*, *"before you've..."*,
->   concessiva com travessão).
-> - Vocabulário variado (*get involved, routine, trade-off, favours*), sem
+> - Subordinação natural (*"that everything you need..."*, *"before you've..."*,
+>   *"people I met..."*) e uma concessão integrada com *but*.
+> - Vocabulário variado (*get involved, routine, trade-off, favors*), sem
 >   repetição.
 > - Começou a falar em ~2 s, ritmo estável, fecho claro.
 
 **Segundo exemplo · função: narração.** *"Tell me about a time you had to learn something new quickly."*
 
-> **Plano (4 s):** situar → 2–3 eventos com conectores → resultado/aprendizado.
+> **Plano (1–2 s):** situar → 2–3 eventos com conectores → resultado/aprendizado.
 >
 > *"Last year, my team's project manager left the company two weeks before a big
 > deadline, and I ended up taking over part of his role with almost no notice.
@@ -402,13 +401,13 @@ Estes conjuntos são **treino por nível**, não o formato da prova: as frases n
 6. *My brother is studying engineering at a public university.*
 7. *I would like to schedule an appointment for next Tuesday.*
 
-> **Foco:** stress na sílaba de conteúdo de cada palavra; redução de *is, to, at, for* a schwa; consoante final sem vogal extra (*homework*, não *homework-i*).
+> **Foco:** tônica nas palavras de conteúdo; *to, at, for* reduzidos com schwa (/tə/, /ət/, /fər/) e *is* colado à palavra anterior (*"brother's"*); consoante final sem vogal extra (*homework*, não *homework-i*).
 
 ---
 
 #### A2: nível B1–B2 (uma subordinada)
 
-1. *The store closes at nine, so we should leave soon.*
+1. *We should leave soon because the store closes at nine.*
 2. *I didn't realize that the meeting had been moved.*
 3. *She said she would call me when she got home.*
 4. *The book that you lent me was really helpful.*
@@ -416,7 +415,7 @@ Estes conjuntos são **treino por nível**, não o formato da prova: as frases n
 6. *He asked me whether I had seen the report.*
 7. *We can't decide where to have dinner tonight.*
 
-> **Foco:** *th* em *that / whether / the*; entonação descendente nas declarações; redução de *that had been* → */ðət-əd-bɪn/*.
+> **Foco:** *th* em *that / whether / the*; entonação descendente nas declarações; redução de *the meeting had been moved* → */ðə ˈmiːtɪŋ əd bɪn ˈmuːvd/*.
 
 ---
 
@@ -434,7 +433,7 @@ Estes conjuntos são **treino por nível**, não o formato da prova: as frases n
 
 ---
 
-#### A4 · nível C1 (foco: armadilhas de ritmo do brasileiro)
+#### A4: nível B2 (foco: armadilhas de ritmo do brasileiro)
 
 1. *I could have called you earlier if I had remembered.*
 *(cadeia de modais + reduções: "could've", "if I'd")*
@@ -443,7 +442,7 @@ Estes conjuntos são **treino por nível**, não o formato da prova: as frases n
 3. *We should've asked for directions before we left the hotel.*
 *(contração modal + preposições átonas)*
 4. *The teacher, who had taught there for twenty years, retired last spring.*
-*(relativa não-restritiva isolada: a pausa correta é a chave)*
+*(relativa não restritiva isolada: a pausa correta é a chave)*
 5. *It would be better if they had waited a little longer.*
 *(condicional composto com múltiplas reduções)*
 6. *There's nothing we can do about it now.*
@@ -460,7 +459,7 @@ Estes conjuntos são **treino por nível**, não o formato da prova: as frases n
 3. *Given how quickly the situation was evolving, any recommendation issued that morning would almost certainly have been obsolete by the afternoon.*
 4. *The proposal, ambitious as it was, rested on assumptions that few of the experts in the room were prepared to accept.*
 
-> **Foco:** manter o compasso acentual por 25+ palavras sem "silabar"; agrupar em blocos sintáticos e respirar só entre eles.
+> **Foco:** manter o compasso acentual por cerca de 20 palavras sem "silabar"; agrupar em blocos sintáticos e respirar só entre eles.
 
 ---
 
@@ -549,14 +548,14 @@ Quatro entrevistas de quatro perguntas, como na prova. Toque em **Ouvir**: quand
 
 #### B8: SIMULAÇÃO COMPLETA (4 itens, cronometrada)
 
-Simule a task real: 4 perguntas em sequência, 45 segundos para cada resposta, sem tempo de preparo entre elas. Grave tudo.
+Simule a task real: um tema só, quatro perguntas em escada, 45 segundos para cada resposta, sem tempo de preparo entre elas. Grave tudo.
 
-| # | Função | Pergunta |
+| # | Degrau | Pergunta |
 |---|---|---|
-| 1 | Descrição | *"Describe a skill you would like to learn in the future."* |
-| 2 | Previsão | *"How do you think AI will change the way students study?"* |
-| 3 | Sugestão | *"A coworker keeps missing deadlines. What advice would you give them?"* |
-| 4 | Narração | *"Tell me about a decision you made that you were initially unsure about."* |
+| 1 | Fato pessoal | *"What kinds of things do you usually read in a normal week?"* |
+| 2 | Reação + porquê | *"Do you prefer reading on paper or on a screen? Why?"* |
+| 3 | Concordar/discordar | *"Some people say that young people today read less than earlier generations did. Do you agree? Why or why not?"* |
+| 4 | Medida pública | *"Should cities spend more public money on libraries, even if it means less money for other services? Why or why not?"* |
 
 Depois, ouça as 4 em sequência e aplique a rubrica de 3.8 a cada uma. Se qualquer resposta ficar abaixo de 8/12, refaça-a antes de repetir a simulação.
 
@@ -597,10 +596,10 @@ a prosódia divergiu?
 **Banda ~5 (B2–C1) · modelo de referência:**
 > *"Yes, I do: I think one required course outside the major is worth it. The main reason is that it teaches skills you don't get in your own field. For example, an engineering student who takes a writing course learns to explain technical ideas to people who aren't engineers, and that's useful almost anywhere. I understand the argument that students are already busy, but one course over a whole degree isn't a big burden, and the payoff is bigger than the cost."*
 
-*Por que pontua alto:* posição imediata; razão específica (*"skills you don't get in your own field"*); exemplo concreto e desenvolvido; contraponto reconhecido e refutado numa frase; subordinação (*who takes...*, *that's useful...*, *"I understand the argument that..."*); vocabulário preciso (*payoff, burden*), sem repetição.
+*Por que pontua alto:* posição imediata; razão específica (*"skills you don't get in your own field"*); exemplo concreto e desenvolvido; contraponto reconhecido e refutado numa frase; subordinação (*who takes...*, *who aren't engineers*, *"I understand the argument that..."*); vocabulário preciso (*payoff, burden*), sem repetição.
 
 **Banda ~6 (C1–C2):**
-> *"I'd say yes, though I'd frame it less as a rule and more as a design choice. What a course outside your field really trains isn't the content: it's the transfer. An engineer who has had to argue a case in a history seminar tends to write sharper technical reports afterwards, and that habit of mind is hard to build inside one discipline. The workload objection is fair, but it points to a design problem, not a reason to drop the idea · cap it at one course, let it count as an elective, and the cost mostly disappears."*
+> *"I'd say yes, though I'd frame it less as a rule and more as a design choice. What a course outside your field really trains isn't the content: it's the transfer. An engineer who has had to argue a case in a history seminar tends to write sharper technical reports afterwards, and that habit of mind is hard to build inside one discipline. The workload objection is fair, but it points to a design problem, not a reason to drop the idea: cap it at one course, let it count as an elective, and the cost mostly disappears."*
 
 *Diferença:* abre com uma nuance (não um sim/não simples), razão mecanística (*"not the content · the transfer"*), engajamento sofisticado com o contraponto, fecho com uma solução concreta.
 

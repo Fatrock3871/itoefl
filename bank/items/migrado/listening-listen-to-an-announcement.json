@@ -241,7 +241,7 @@
       "audio_ref": null
     },
     "group": "mod2-c2",
-    "prompt": "Connecting content. What has changed this year?",
+    "prompt": "Detail. What has changed this year?",
     "text_format": "html",
     "options": {
       "A": "Registration now opens earlier in the day",
