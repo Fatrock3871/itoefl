@@ -54,7 +54,7 @@ ESTÁGIO 2 — MÓDULO (~18–21 minutos)
 **O que isso significa na prática:**
 
 - **O router decide seu teto.** Ir bem qualifica você pro Módulo Superior, que tem os itens das bandas 5 a 6 (C1 a C2). Ir mal prende você no Módulo Inferior, com teto **estruturalmente mais baixo**. Não importa quão bem você vá depois: o teto perdido não volta.
-- **A transição router → módulo é invisível.** Você não sabe, durante a prova, qual item ainda é router. Por isso trate **cada item, do primeiro ao último, com o mesmo rigor.**
+- **Você não sabe para qual módulo foi roteado.** O segundo bloco não avisa se é o inferior ou o superior. Por isso trate **cada item, do primeiro ao último, com o mesmo rigor.**
 - **Não "aqueça" e não "economize".** Chutar rápido no início pra ganhar tempo te roteia pra baixo. Desacelerar de propósito "pra controlar o ritmo" também não ajuda. O sistema recompensa acurácia consistente sob o tempo dado, não cautela artificial.
 
 > Pense no router como a fase de classificação de uma competição: longe de ser "aquecimento", ele define contra quem você compete na fase seguinte.
@@ -65,7 +65,7 @@ ESTÁGIO 2 — MÓDULO (~18–21 minutos)
 
 | Tipo | O que exige | Itens | CEFR |
 |---|---|---|---|
-| **Complete the Words** | Reconstruir um texto coeso combinando ordem de palavras + conhecimento lexical + compreensão | **30** (60% da seção) | B1–C1+ |
+| **Complete the Words** | Digitar o final de palavras cortadas num parágrafo acadêmico: gramática da posição + vocabulário + compreensão | **30** (60% da seção) | B1–C1+ |
 | **Read in Daily Life** (conjuntos de **2 e de 3 itens**) | Compreender textos curtos e funcionais do cotidiano (placa, cardápio, e-mail, post, aviso, formulário) | 5–15 | A1–C1 |
 | **Read an Academic Passage** | Ideia principal, detalhe, inferência, relação entre ideias, estrutura retórica, vocabulário em contexto | 5–15 | B1–C2 |
 
@@ -207,8 +207,8 @@ descartável": o sistema avalia desde o item 1.
 rápido: só risco de errar por pressa.
 3. **Não desacelere de propósito.** Task adaptativa recompensa acurácia
 consistente, não cautela artificial.
-4. **Gerencie a ansiedade, não o relógio.** Você não sabe quando o router
-acaba; a variável que você controla é a consistência mental item a item.
+4. **Gerencie a ansiedade, não o relógio.** Você não sabe para qual módulo
+foi roteado; a variável que você controla é a consistência mental item a item.
 
 ---
 
@@ -225,8 +225,8 @@ No CTW você digita o final da palavra, e muitas vezes as letras visíveis serve
 | um modal (*will, would, can, could, should, must, may, might*) | **base** (sem *to*, sem *-s*, sem *-ing*) | *The crew will **finish** the work by Monday.* |
 | *to* (infinitivo) | **base** | *We need **to check** the equipment.* |
 | uma preposição (*of, on, in, for, about, before, after, without, by*) | **gerúndio** (*-ing*) | *Thank you for **letting** us know.* / *before **leaving** the office* |
-| *be* (am/is/are/was/were/been/being) + para voz passiva | **particípio** (*-ed* / 3ª coluna) | *The report **will be** **completed** before Monday.* |
-| *have / has / had* (tempos perfeitos) | **particípio** | *As you already **have** **seen**...* → *As you already know* (presente) vs. *have known* (perfeito) |
+| *be* (am/is/are/was/were/been/being), na voz passiva | **particípio** (*-ed* / 3ª coluna) | *The report **will be** **completed** before Monday.* |
+| *have / has / had* (tempos perfeitos) | **particípio** | *As you **have** already **seen**...* · *The team **has** **finished** the report.* |
 | um substantivo, para modificá-lo | **particípio como adjetivo** | *the **extended** deadline* · *a **broken** window* · *the **proposed** policy* |
 | *don't / doesn't / didn't* (imperativo ou negativa) | **base** | *Don't **hesitate** to ask.* |
 
@@ -234,7 +234,7 @@ No CTW você digita o final da palavra, e muitas vezes as letras visíveis serve
 
 ### 3.2 Concordância sujeito–verbo (subject–verb agreement)
 
-O -s da 3ª pessoa do singular no presente é a única marca de concordância no inglês e é a que o falante de português mais esquece.
+O -s da 3ª pessoa do singular no presente é praticamente a única marca de concordância dos verbos comuns em inglês (o verbo *be* tem as suas: am/is/are, was/were), e é a que o falante de português mais esquece.
 
 | Sujeito | Verbo | Exemplo |
 |---|---|---|
@@ -243,7 +243,7 @@ O -s da 3ª pessoa do singular no presente é a única marca de concordância no
 | **everyone, everybody, someone, each, either, neither, nobody** | tratado como **singular** (+ -s) | *Everyone **comes** back on Monday.* · *Each of them **is** ready.* |
 | **the number of** + plural | singular | *The number of applicants **has** risen.* |
 | **a number of** + plural | plural | *A number of applicants **have** withdrawn.* |
-| substantivos incontáveis (*information, research, advice, equipment*) | **singular**, **sem "an"**, **sem plural** | *The research **shows**...* (nunca *"a research"*, *"researches"*) |
+| substantivos incontáveis (*information, research, advice, equipment*) | **singular**, **sem *a/an***, **sem plural** | *The research **shows**...* (nunca *"a research"*, *"researches"*) |
 
 ### 3.3 Ordem de palavras
 
@@ -268,7 +268,7 @@ O português usa artigo definido com substantivos abstratos e genéricos ("**A**
 | Substantivo contável singular, primeira menção, não específico → **a / an** (*an* antes de som de vogal) | *"He is engineer."* · *"It took hour."* | *He is **an** engineer.* · *It took **an** hour.* |
 | Substantivo já mencionado, ou único no contexto → **the** | — | *I saw **a** dog. **The** dog was barking.* · ***The** sun*, ***the** government* |
 
-### 3.5 As 50 collocations de maior frequência no Reading
+### 3.5 Collocations essenciais, por verbo âncora
 
 Combinações que nativos usam automaticamente. O CTW testa se você as reconhece. Memorize por **verbo âncora**.
 
@@ -368,8 +368,8 @@ pressed in_ _ ice.
 > pressed into ice."* Gramatical, lógico, coerente com a primeira frase. ✅
 >
 > **O que você digita:** *rm*, *ow*, *er*, *nd*, *to*. Repare que três das
-> cinco lacunas eram palavras de função (*over*, *and*, *into*). É a proporção
-> normal da prova.
+> cinco lacunas eram palavras de função (*over*, *and*, *into*). Palavras de
+> função aparecem muito na prova: não as subestime.
 
 ### 4.2 Read an Academic Passage: 3 tipos de pergunta narrados
 
@@ -507,7 +507,7 @@ This does not mean nothing (4)_____ be done. It means the solution lies elsewher
 
 **TEXT: Sign at a nature reserve trailhead**
 
-> **RIDGELINE TRAIL: PLEASE READ BEFORE ENTERING** • Trail open sunrise to sunset. Overnight camping is not permitted anywhere   on the reserve. • Dogs welcome on a leash no longer than 6 feet. The upper loop (marked in   red) is closed to dogs from April 1 to July 15 to protect ground-nesting   birds. • No bicycles. E-bikes and mobility scooters are exempt from this rule. • Pack out all trash. There are no trash cans beyond this point.
+> **RIDGELINE TRAIL: PLEASE READ BEFORE ENTERING** • Trail open sunrise to sunset. Overnight camping is not permitted anywhere on the reserve. • Dogs welcome on a leash no longer than 6 feet. The upper loop (marked in red) is closed to dogs from April 1 to July 15 to protect ground-nesting birds. • No bicycles. E-bikes and mobility scooters are exempt from this rule. • Pack out all trash. There are no trash cans beyond this point.
 
 **Item B1.1**: A visitor with a dog on May 20 may walk:
 - (A) anywhere on the reserve
@@ -527,7 +527,7 @@ This does not mean nothing (4)_____ be done. It means the solution lies elsewher
 
 **TEXT: Café lunch menu (extract)**
 
-> **SANDWICHES**: all served on sourdough with a side salad (swap for fries +$2) • **Garden** · roasted vegetables, hummus, arugula · $9 · *vegan* • **Classic Club** (chicken, bacon, egg, lettuce) · $12 • **Halloumi Stack** · grilled halloumi, tomato, pesto · $11 · *vegetarian*   *(contains nuts)* **SOUPS** · served with bread · $7 · soup of the day is always vegetarian; ask staff whether today's is vegan. *A 10% discount applies to all lunch orders placed before noon.*
+> **SANDWICHES**: all served on sourdough with a side salad (swap for fries +$2) • **Garden** · roasted vegetables, hummus, arugula · $9 · *vegan* • **Classic Club** (chicken, bacon, egg, lettuce) · $12 • **Halloumi Stack** · grilled halloumi, tomato, pesto · $11 · *vegetarian (contains nuts)* • **SOUPS** · served with bread · $7 · soup of the day is always vegetarian; ask staff whether today's is vegan. *A 10% discount applies to all lunch orders placed before noon.*
 
 **Item B2.1**: A customer who is vegan and allergic to nuts could safely order:
 - (A) the Halloumi Stack
@@ -649,12 +649,6 @@ This does not mean nothing (4)_____ be done. It means the solution lies elsewher
 - (C) They have not been decided yet
 - (D) They will be shortened
 
-**Item B5.4**: The overall tone of the post is:
-- (A) formal and apologetic
-- (B) friendly and informative
-- (C) urgent and cautionary
-- (D) neutral and impersonal
-
 ---
 
 ### GRUPO C: READ AN ACADEMIC PASSAGE (3 passagens, áreas diferentes)
@@ -674,8 +668,8 @@ What makes bioluminescence especially interesting to evolutionary biologists is 
 **C1.1: Ideia principal.** What is the main idea of the passage?
 - (A) Bioluminescence is a rare adaptation found only in a few deep-sea species.
 - (B) Bioluminescence is a widespread, chemically efficient trait that serves multiple functions and evolved independently many times.
-- (C) The anglerfish is the most important example of bioluminescence.
-- (D) Bioluminescent light is less efficient than artificial light.
+- (C) The anglerfish, which uses a glowing lure to catch its prey, is the most important example of bioluminescence.
+- (D) Bioluminescent light is less efficient than artificial light because much of its energy is lost as heat.
 
 **C1.2: Detalhe.** Why is bioluminescent light sometimes called "cold light"?
 - (A) It only occurs in cold, deep-sea environments.
@@ -793,15 +787,15 @@ The finding has been extended well beyond job-hunting. Weak ties have been linke
 
 **C3.3: Detalhe.** According to the passage, close friends tend to give us information that:
 - (A) is completely new to us
-- (B) we have often already heard, because they move in the same circles we do
+- (B) we have often already heard
 - (C) is always more trustworthy and therefore more useful
-- (D) comes from outside our network
+- (D) comes from distant parts of the network that we cannot reach ourselves
 
 **C3.4: Inferência.** It can be inferred that a person whose contacts are ALL close friends would:
 - (A) have access to a wider range of information than average
-- (B) be more likely to hear the same information repeatedly and less likely to hear news from distant parts of the network
+- (B) tend to hear the same information over and over
 - (C) never be able to find a job
-- (D) be more innovative at work
+- (D) be more innovative at work, since close-knit teams produce more original work
 
 **C3.5: Propósito retórico.** Why does the author mention innovation within companies in paragraph 3?
 - (A) To give an example of how the weak-ties finding applies beyond job-hunting
@@ -905,15 +899,13 @@ The finding has been extended well beyond job-hunting. Weak ties have been linke
 **B5.1: (B).** O post inteiro gira em torno de um anúncio: abrir mais cedo nos dias de semana. (A) inverte; (C) não pede desculpas; (D) nenhum pão novo.
 **B5.2: (C).** *"will now go into the oven the night before"*. (A) o texto diz *"still be baked fresh daily"*; (B)/(D) não constam.
 **B5.3: (B).** *"Weekend hours are unchanged"*. (A)/(D) contradizem; (C) já está decidido.
-**B5.4: (B).** Emojis, *"Big news, everyone!"*, *"Come say hi"*, tom positivo.
-
 ### GRUPO C: Read an Academic Passage
 
-**C1.1: (B).** Cobre os três eixos (o que é + eficiência, funções, evolução independente). (A) contradiz *"remarkably common"*; (C) é detalhe; (D) inverte a comparação com a lâmpada.
+**C1.1: (B).** Cobre os três eixos (o que é + eficiência, funções, evolução independente). (A) contradiz *"remarkably common"*; (C) é detalhe, e o texto diz *"perhaps the most famous"*, não "o mais importante"; (D) inverte a comparação com a lâmpada.
 **C1.2: (C).** Relação causal explícita: *"Because so little energy is lost as heat..."*. (A)/(B) confundem o nome com temperatura ambiente; (D) infere cor sem base.
 **C1.3: (D).** O parágrafo 2 lista defesa, caça e comunicação/atração de parceiros. Regulação de temperatura nunca aparece.
 **C1.4: (B).** *"In the deep sea, darkness is nearly absolute, so visual signals cannot rely on ambient light at all"* → produzir a própria luz supre a ausência de luz ambiente. (A) *"impossible for any species"* é extremo; (C)/(D) sem base.
-**C1.5: (B).** A frase é seguida por *"...one of its most striking examples"* · serve para embasar o conceito de evolução convergente.
+**C1.5: (B).** A frase abre o parágrafo e prepara a definição de evolução convergente, que vem duas frases depois: serve para apresentar e embasar a tese de que a bioluminescência é um exemplo notável desse padrão. (A), (C) e (D) não têm base no texto.
 **C1.6: (B) notable.** *"one of its most striking examples"* = exemplo notável. (A)/(C)/(D) pertencem a outros campos ou invertem o tom.
 **C1.7: (B).** A frase original define evolução convergente (organismos não relacionados desenvolvem o mesmo traço independentemente) e diz que a bioluminescência é um exemplo marcante. (B) preserva as duas ideias. (A) exagera ("all sea creatures"); (C) inventa exclusividade; (D) inventa controvérsia.
 
@@ -927,8 +919,8 @@ The finding has been extended well beyond job-hunting. Weak ties have been linke
 
 **C3.1 · (B).** Tese central: weak ties frequentemente trazem informação mais nova porque conectam a outras partes da rede. (A) contradiz o achado; (C)/(D) distorcem.
 **C3.2: (C).** *"Most had heard about it not from a close friend but from an acquaintance."*
-**C3.3: (B).** *"they are exposed to more or less the same information you already have; what they can tell you, you have often already heard."*
-**C3.4: (B).** Se todos os contatos são amigos próximos, que circulam nos mesmos círculos → informação repetida, pouca novidade de partes distantes. (A) inverte; (C)/(D) exageram.
+**C3.3: (B).** *"they are exposed to more or less the same information you already have; what they can tell you, you have often already heard."* (D) descreve os conhecidos, não os amigos próximos.
+**C3.4: (B).** Se todos os contatos são amigos próximos, que circulam nos mesmos círculos → informação repetida, pouca novidade de partes distantes. (A) inverte; (C) exagera; (D) contradiz o parágrafo 3, que liga a inovação a equipes conectadas a muitos grupos de fora.
 **C3.5: (A).** O parágrafo 3 lista extensões do achado além da busca de emprego; a inovação nas empresas é um desses exemplos.
 **C3.6: (B) connection.** *"a bridge to parts of the network you could not otherwise reach"* = uma ponte/conexão.
 **C3.7: (A), (B), (D).** São as três ideias principais que parágrafos inteiros sustentam. (C) é de outra passagem (coffee houses) · distrator de resumo clássico; (E) contradiz o texto (*"they carry less trust"*); (F) é um detalhe numérico inventado.
@@ -937,15 +929,15 @@ The finding has been extended well beyond job-hunting. Weak ties have been linke
 
 ### SCORE CONSOLIDADO DOS DRILLS
 
-Some seus acertos: Grupo A (**32 itens**), Grupo B (**14 itens**), Grupo C (**21 itens**). Total: **67 itens**.
+Some seus acertos: Grupo A (**32 itens**), Grupo B (**13 itens**), Grupo C (**21 itens**). Total: **66 itens**.
 
 | % de acerto | Banda CEFR estimada (Reading) | Ação |
 |---|---|---|
-| 86–100% | 5,5–6 (C1–C2) | Vá para o Módulo 2. Refaça só os tipos com 1 erro. |
-| 71–85% | 4,5–5,5 (B2–C1) | Releia a Parte 3 (Laboratório) nos pontos que você errou. Refaça o Grupo C. |
-| 56–70% | 4–4,5 (B2) | O método está entrando, mas a base de língua não. Estude a Parte 3 inteira e refaça os Grupos A e C. |
-| 41–55% | 3–3,5 (B1) | Refaça a Parte 2 e a Parte 3 do zero. Foque em formas verbais (3.1) e collocations (3.5) antes de voltar aos drills. |
-| ≤40% | ≤3 (A2–B1) | Trabalhe a Parte 3 durante uma semana (10–15 min/dia) antes de retornar. |
+| 86–100% | 6 (C2) | Vá para o Módulo 2. Refaça só os tipos com 1 erro. |
+| 71–85% | 5–5.5 (C1) | Releia a Parte 3 (Laboratório) nos pontos que você errou. Refaça o Grupo C. |
+| 56–70% | 4–4.5 (B2) | O método está entrando, mas a base de língua não. Estude a Parte 3 inteira e refaça os Grupos A e C. |
+| 41–55% | 3–3.5 (B1) | Refaça a Parte 2 e a Parte 3 do zero. Foque em formas verbais (3.1) e collocations (3.5) antes de voltar aos drills. |
+| ≤40% | 1–2.5 (A1–A2) | Trabalhe a Parte 3 durante uma semana (10–15 min/dia) antes de retornar. |
 
 ---
 

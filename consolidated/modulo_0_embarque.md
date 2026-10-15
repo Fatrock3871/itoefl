@@ -18,7 +18,7 @@ Este é o TOEFL iBT nas especificações oficiais da ETS, vigentes desde janeiro
 
 Você não está estudando inglês. Está construindo um **ativo de admissão**: um número que abre ou fecha porta de universidade, bolsa, visto, processo seletivo.
 
-O TOEFL iBT 2026 é curto e adaptativo: a dificuldade muda em tempo real conforme você responde Reading e Listening. Não existe gordura pra queimar.
+O TOEFL iBT 2026 é curto e adaptativo: no Reading e no Listening, o seu desempenho no primeiro bloco decide se o segundo bloco será mais fácil ou mais difícil. Não existe gordura pra queimar.
 
 O tempo de fala e escrita também encolheu. Não dá pra "empurrar com o corpo" uma resposta capenga. Ela precisa sair certa já na primeira tentativa.
 
@@ -63,11 +63,11 @@ A partir de 2026 seu resultado sai em **duas escalas ao mesmo tempo**, e a ETS e
 | **Tempo total do exame** | **1h23min – 1h29min** |
 | **Total de itens** | 120 itens (Reading e Listening incluem itens-piloto não pontuados) |
 | **Total de pontos brutos** | 145 pontos (Reading 35 + Listening 35 + Writing 20 + Speaking 55) |
-| **Correção** | 108 itens corrigidos por máquina + 12 por IA |
+| **Correção** | 108 itens corrigidos por máquina + 12 por IA, segundo o total da ETS (as linhas da própria tabela da ETS, reproduzidas na Parte 2.3, somam 107 e 13) |
 | **Reading / Listening** | Design **adaptativo em 2 estágios** (router + módulo inferior ou superior conforme desempenho) |
 | **Writing / Speaking** | Design **linear** (todos os candidatos recebem as mesmas tasks) |
 
-> Fonte oficial: *ETS · TOEFL iBT Test: 2026 Update Test Blueprint and Specifications Document*. Detalhamento completo em `docs/ets-blueprint-2026.md`.
+> Fonte oficial: *ETS · TOEFL iBT Test: 2026 Update Test Blueprint and Specifications Document*, disponível no site da ETS (ets.org).
 
 ### 2.2 As 4 Seções: Estrutura Nova
 
@@ -93,7 +93,7 @@ Repara no Speaking: só 8 minutos, mas 55 pontos brutos, quase o triplo do Writi
 #### Reading
 | Task | Itens | O que testa | CEFR |
 |---|---|---|---|
-| **Complete the Words** | 30 (1pt cada) | Ordenação lexical + compreensão leitora para construir texto coerente | B1–C1+ |
+| **Complete the Words** | 30 (1pt cada) | Completar o final de palavras cortadas em parágrafos curtos (10 por parágrafo): gramática, forma e ortografia da palavra, compreensão | B1–C1+ |
 | **Read in Daily Life** | 5–15 (1pt cada) | Textos curtos não-acadêmicos (placa, cardápio, e-mail, post) | A1–C1 |
 | **Read an Academic Passage** | 5–15 (1pt cada) | Ideia principal, detalhes, inferência, estrutura retórica | B1–C2 |
 
@@ -109,7 +109,7 @@ Repara no Speaking: só 8 minutos, mas 55 pontos brutos, quase o triplo do Writi
 | Task | Itens | O que testa | CEFR | Corretor |
 |---|---|---|---|---|
 | **Build a Sentence** | 10 (1pt cada) | Reconstruir estruturas de frase (contexto social/interpessoal) | A1–C2 | Máquina |
-| **Write an Email** | 1 (5pts) | Texto multi-frase em resposta a situação navegacional acadêmica | B1–C2 | IA |
+| **Write an Email** | 1 (5pts) | E-mail curto em resposta a uma situação do dia a dia ou da vida universitária, cobrindo 3 pontos pedidos | B1–C2 | IA |
 | **Write for an Academic Discussion** | 1 (5pts) | Parágrafo acadêmico com argumento sustentado, gramática e vocabulário variados | B1–C2 | IA |
 
 #### Speaking
@@ -125,7 +125,7 @@ Speaking tem só 2 formatos: Listen and Repeat e Take an Interview. Não tem esp
 Entender essa lógica muda como você treina. Decora isso:
 - **Listen and Repeat** paga por **fidelidade exata** ao que você ouviu, som e gramática. "Ter algo pra dizer" não vale nada aqui: não tem espaço pra parafrasear.
 - **Take an Interview** quer resposta **curta, direta, coerente na hora**. Esquece introdução-desenvolvimento-conclusão.
-- **Write an Email** e **Write for an Academic Discussion** são textos objetivos de poucas frases, não redação longa.
+- **Write an Email** (7 minutos) e **Write for an Academic Discussion** (10 minutos, 100 palavras ou mais) são textos curtos e objetivos, não redação longa.
 - **Build a Sentence** é gramática pura e imediata: cada erro de estrutura tira ponto na cara.
 
 Resumindo: o que pontua é precisão instantânea, prosódia natural, gramática automática. Isso vem de repetição deliberada, não de decorar script pronto pra "encher linguiça".
@@ -158,7 +158,7 @@ Ou seja: esse não é um teste "à parte". É o esqueleto que sustenta tudo que 
 
 **Questão 3: Vocabulário acadêmico** The committee's decision to postpone the vote was widely seen as an attempt to ______ growing public criticism.
 
-(A) defer (B) exacerbate (C) circumvent (D) endorse
+(A) defer (B) exacerbate (C) deflect (D) endorse
 
 **Questão 4: Gramática (subjunctive/conditional)** If the funding request ______ approved last quarter, the lab would already have hired two new researchers.
 
@@ -170,7 +170,7 @@ Ou seja: esse não é um teste "à parte". É o esqueleto que sustenta tudo que 
 
 **Questão 6: Conectivos (causa/consequência lógica)** Coral reefs are highly sensitive to temperature change; ______, even a one-degree rise can trigger mass bleaching events.
 
-(A) nevertheless (B) in contrast (C) accordingly (D) meanwhile
+(A) nevertheless (B) in contrast (C) consequently (D) meanwhile
 
 **Questão 7: Vocabulário acadêmico (collocation)** The professor asked students to ______ their arguments with at least two peer-reviewed sources.
 
@@ -182,9 +182,9 @@ Ou seja: esse não é um teste "à parte". É o esqueleto que sustenta tudo que 
 
 **Questão 9: Registro e função comunicativa (relevante para Write an Email)** Choose the sentence with the register most appropriate for a formal email to a university admissions office requesting a deadline extension:
 
-(A) Hey, just wondering if I could get a bit more time to send my stuff over? (B) I am writing to respectfully request a short extension to the submission deadline due to a documented medical circumstance. (C) Give me more time please, it's urgent and I really need it. (D) So I was thinking maybe you guys could push the date back for me?
+(A) Hey, just wondering if I could get a bit more time to send my stuff over? (B) I am writing to respectfully request a short extension to the submission deadline due to a documented medical condition. (C) Give me more time please, it's urgent and I really need it. (D) So I was thinking maybe you guys could push the date back for me?
 
-**Questão 10: Compreensão inferencial (relevante para Read an Academic Passage / Listen to an Academic Talk)** "Although the pilot program showed promising results in urban districts, researchers cautioned against broad conclusions, noting that participation rates in rural areas remained too low to generalize."
+**Questão 10: Compreensão inferencial (relevante para Read an Academic Passage / Listen to an Academic Talk)** "Although the pilot program showed promising results in urban districts, researchers cautioned against broad conclusions, noting that participation rates in rural areas remained too low for the results to be generalized."
 
 What can be inferred from this statement?
 
@@ -198,24 +198,27 @@ What can be inferred from this statement?
 |---|---|---|---|
 | **1** | **(C)** will have been writing | Futuro perfeito contínuo: ação iniciada no passado, contínua até um ponto futuro específico ("by the time... next Monday"), com ênfase na duração ("for over three weeks"). | (A) presente simples ignora a duração; (B) presente perfeito contínuo não projeta para o futuro; (D) passado contínuo não conecta com o marco temporal futuro. |
 | **2** | **(C)** paradoxically | O conector precisa sinalizar contraste + ironia entre a intenção da política (reduzir custos) e o resultado real (aumentou custos): "paradoxically" captura essa contradição inesperada. | (A) e (B) são de continuidade/consequência lógica, incompatíveis com contraste; (D) sinaliza semelhança, o oposto do que a frase exige. |
-| **3** | **(C)** circumvent | "Circumvent" (contornar/evitar) encaixa com a lógica de adiar o voto para não enfrentar diretamente a crítica pública. | (A) "defer" é próximo mas não captura a ideia de "evitar/desviar" a crítica em si: refere-se a adiar algo, não contornar algo; (B) significa piorar, sentido oposto; (D) significa endossar, sentido oposto. |
-| **4** | **(C)** had been | Condicional tipo 3 (passado hipotético): a oração principal usa "would have hired" implícito na lógica ("would already have hired"), exigindo past perfect na condicional ("had been approved"). | (A) e (B) são formas de passado simples/subjuntivo incompatíveis com a estrutura de tipo 3; (D) é present perfect, tempo errado para hipótese no passado. |
+| **3** | **(C)** deflect | "Deflect criticism" = desviar a crítica de si, a collocation natural: adiar a votação foi um jeito de tirar o foco da crítica. | (A) "defer" atrai por lembrar "adiar a votação", mas "defer criticism" não se usa; (B) "exacerbate" = agravar, o contrário da intenção; (D) "endorse" = apoiar, não faz sentido com "criticism". |
+| **4** | **(C)** had been | Condicional tipo 3 (hipótese sobre o passado): a oração principal tem "would already have hired", o que exige past perfect na oração com "if": "had been approved". "Last quarter" confirma o passado. | (A) e (B) são formas de passado simples/subjuntivo incompatíveis com a estrutura de tipo 3; (D) é present perfect, tempo errado para hipótese no passado. |
 | **5** | **(B)** facing numerous setbacks | Ordem correta: verbo no gerúndio + objeto ("facing numerous setbacks") após "despite", seguindo a estrutura padrão preposição + gerúndio + complemento. | (A) inverte adjetivo e verbo de forma não natural; (C) e (D) quebram a ordem sintática do inglês (adjetivo deve preceder o substantivo, verbo deve preceder o objeto). |
-| **6** | **(C)** accordingly | A segunda oração é uma consequência lógica direta da sensibilidade térmica mencionada na primeira: "accordingly" (consequentemente) é o conector de causa-efeito correto. | (A) e (B) sinalizam contraste, incompatível com a relação de causa-efeito; (D) sinaliza simultaneidade, não consequência. |
+| **6** | **(C)** accordingly | A segunda oração é uma consequência lógica direta da sensibilidade térmica mencionada na primeira: "consequently" (consequentemente) é o conector de causa e efeito correto. | (A) e (B) sinalizam contraste, incompatível com a relação de causa-efeito; (D) sinaliza simultaneidade, não consequência. |
 | **7** | **(A)** substantiate | "Substantiate an argument" é a collocation acadêmica padrão para "sustentar/comprovar um argumento com evidências". | (B) significa fabricar/inventar, sentido oposto ao contexto acadêmico legítimo; (C) significa aliviar, sem relação; (D) significa diminuir, sentido oposto. |
 | **8** | **(C)** whose | "Whose" é o pronome relativo possessivo correto para conectar "the proposal" a "its implications" sem repetir "its". | (A) "that its" é gramaticalmente incorreto (that não aceita possessivo desta forma); (B) "which its" repete a posse de forma redundante e incorreta; (D) "who's" é contração de "who is", não um possessivo. |
-| **9** | **(B)** | Registro formal, verbos modais de cortesia ("I am writing to respectfully request"), justificativa objetiva: adequado para comunicação institucional, exatamente o padrão exigido em Write an Email. | (A), (C) e (D) usam registro coloquial, contrações e informalidade excessiva ("just wondering", "you guys", "please" isolado): inadequados para o contexto navegacional acadêmico formal. |
+| **9** | **(B)** | Fórmula de abertura formal ("I am writing to..."), advérbio de cortesia ("respectfully") e justificativa objetiva: adequado para comunicação institucional, exatamente o padrão exigido em Write an Email. | (A), (C) e (D) usam registro coloquial ("Hey", "just wondering", "stuff", "you guys") e tom de cobrança ("it's urgent"): inadequados para um e-mail formal a uma instituição. |
 | **10** | **(C)** | O texto explicitamente qualifica os resultados como não-generalizáveis devido à baixa participação rural: a inferência lógica direta é que os resultados podem não representar a população total. | (A) contradiz o texto (resultados foram "promissores", não um fracasso); (B) exagera: "baixa participação" não é "exclusão total"; (D) é uma conclusão não sustentada pelo texto, que apenas pede cautela, não cancelamento. |
 
 ### 3.4 Diagnóstico de Nível CEFR
 
 | Acertos (de 10) | Banda CEFR estimada | Faixa 0–120 comparável | Leitura do resultado |
 |---|---|---|---|
-| 0–2 | A2 (2–2.5) | 24–43 | Fundamentos com lacunas amplas: priorize gramática básica e vocabulário de alta frequência antes de avançar nos módulos de task |
-| 3–5 | B1 (3–3.5) | 44–71 | Base intermediária: pronta para o Sistema, mas exige disciplina reforçada nos Módulos 1–4 |
-| 6–7 | B2 (4–4.5) | 72–94 | Intermediário-avançado: foco em precisão e nuance, não em fundamentos | 
-| 8–9 | C1 (5–5.5) | 95–113 | Avançado: foco total em estratégia de teste, timing e polimento de registro | 
-| 10 | C2 (6) | 114–120 | Teto de proficiência: foco exclusivo em performance sob pressão e simulados cronometrados |
+| 0–2 | A1 (1–1.5) | 0–23 | Fundamentos ausentes: comece por gramática básica e vocabulário de alta frequência antes dos módulos de task |
+| 3–4 | A2 (2–2.5) | 24–43 | Fundamentos com lacunas amplas: priorize gramática básica e vocabulário de alta frequência antes de avançar nos módulos de task |
+| 5 | B1 (3–3.5) | 44–71 | Base intermediária: pronta para o Sistema, mas exige disciplina reforçada nos Módulos 1–4 |
+| 6–7 | B2 (4–4.5) | 72–94 | Intermediário-avançado: foco em precisão e nuance, não em fundamentos |
+| 8 | C1 (5–5.5) | 95–113 | Avançado: foco total em estratégia de teste, timing e polimento de registro |
+| 9–10 | C2 (6) | 114–120 | Teto de proficiência: foco exclusivo em performance sob pressão e simulados cronometrados |
+
+> A régua é a mesma da tabela da Parte 4.2 (cada acerto vale 10%), e é a que o site usa para mostrar a sua banda ao fim do diagnóstico.
 
 > 🎯 Guarde seu resultado: ele é o ponto de partida do seu **Weekly Performance Dashboard** (Parte 5) e define qual cronograma de estudo (Parte 6) faz mais sentido para você.
 
@@ -227,7 +230,7 @@ What can be inferred from this statement?
 
 Sendo direto: a ETS não publica conversão oficial entre acertos e banda CEFR. Não existe fórmula secreta pra você calcular sozinho.
 
-E no desenho adaptativo (Reading e Listening), o mesmo número de acertos pode virar bandas diferentes: depende se você foi roteado pro módulo inferior ou superior. Item do módulo superior vale mais porque é mais difícil.
+E no desenho adaptativo (Reading e Listening), o mesmo número de acertos pode virar bandas diferentes: depende se você foi roteado pro módulo inferior ou superior. Cada item vale 1 ponto, mas o mesmo número de acertos no módulo superior vira uma banda mais alta, porque os itens são mais difíceis.
 
 Por isso a calculadora abaixo é uma **estimativa pedagógica**, não um placar oficial. Serve pra você enxergar se está melhorando, não pra prever seu score exato no dia da prova.
 
@@ -286,7 +289,7 @@ Preenche esse quadro toda semana, sempre no mesmo dia da semana. O que importa a
 | Queda de % acerto após módulo teoricamente dominado | Fadiga ou falta de prática espaçada | Revisão espaçada (spaced repetition) do módulo |
 | Nota qualitativa de Writing/Speaking estagnada apesar de mais prática | Prática sem feedback corretivo | Buscar correção externa ou usar rubricas oficiais dos Módulos 3 e 4 |
 | % de fidelidade em Listen and Repeat abaixo de 70% | Déficit de escuta ativa e memória de curto prazo para estruturas complexas | Intensificar drills de shadowing (Módulo 3: Speaking) |
-| Banda geral estagnada por 3+ semanas | Plano de estudo desalinhado com o nível real | Reexecutar o Teste de Nivelamento e recalibrar cronograma |
+| Banda geral estagnada por 3+ semanas | Plano de estudo desalinhado com o nível real | Fazer um bloco de simulado do Módulo 7 e recalibrar o cronograma |
 
 ---
 
@@ -313,11 +316,11 @@ Preenche esse quadro toda semana, sempre no mesmo dia da semana. O que importa a
 | 7 | Speaking completo (Listen and Repeat, Take an Interview) | Módulo 3 | % de fidelidade e nota qualitativa estabilizadas |
 | 8 | Simulados completos + revisão integrada + ajuste fino | Módulo 7 | 2 simulados completos cronometrados |
 
-### 6.3 Completo: 90 Dias (recomendado para quem parte de B1 ou tem meta C1/C2)
+### 6.3 Completo: 90 Dias (recomendado para quem parte de B1 ou abaixo)
 
 | Semanas | Foco principal | Módulos | Marco |
 |---|---|---|---|
-| 1–3 | Fundamentos intensivos: gramática, vocabulário acadêmico, conectivos | Módulo 0 | Reteste do Nivelamento Express · meta: +2 questões |
+| 1–3 | Fundamentos intensivos: gramática, vocabulário acadêmico, conectivos | Módulo 0 | Bloco de simulado do Módulo 7 (ou um teste prático oficial da ETS), com meta de banda +0.5 |
 | 4–6 | Reading completo + reforço de vocabulário de alta frequência | Módulo 1 | Banda 4.0+ em simulados de Reading |
 | 7–9 | Listening completo + treino de discurso conectado/idiomático | Módulo 2 | Banda 4.0+ em simulados de Listening |
 | 10–11 | Writing completo com ciclos de correção e reescrita | Módulo 4 | Nota qualitativa 4.5+ consistente |
@@ -332,7 +335,7 @@ Preenche esse quadro toda semana, sempre no mesmo dia da semana. O que importa a
 
 ### 7.1 Quando Usar
 
-Ative esse protocolo se: (a) faltam menos de 7 dias pra prova e você está atrasado no cronograma, ou (b) o dashboard mostrou estagnação séria numa semana e a prova está próxima.
+Ative esse protocolo se: (a) faltam cerca de 7 dias pra prova e você está atrasado no cronograma, ou (b) o dashboard mostrou estagnação séria numa semana e a prova está próxima.
 
 ### 7.2 O Princípio de Pareto Aplicado ao TOEFL 2026
 
@@ -352,7 +355,7 @@ Ative esse protocolo se: (a) faltam menos de 7 dias pra prova e você está atra
 
 | Dia | Ação |
 |---|---|
-| **1** | Reteste do Nivelamento Express + revisão do gabarito comentado (Parte 3) |
+| **1** | Bloco de simulado do Módulo 7 + revisão dos erros pelo gabarito comentado |
 | **2** | Sessão intensiva: Complete the Words (Módulo 1) · 3 sets cronometrados |
 | **3** | Sessão intensiva: Listen and Choose a Response + Listen to Academic Talk (Módulo 2) |
 | **4** | Sessão intensiva: Build a Sentence + Write an Email (Módulo 4) · 5 e-mails com correção |
@@ -374,11 +377,11 @@ Consistência bate intensidade, sempre. O iTOEFL usa sequências (streaks) pra v
 
 | Desafio | Duração | Critério de sucesso | Recompensa sugerida |
 |---|---|---|---|
-| **Streak de Ignição** | 7 dias | Estudo ativo (mínimo 30min) todos os dias, sem falha | Desbloqueio do Módulo 2 com folga no cronograma |
+| **Streak de Ignição** | 7 dias | Estudo ativo (mínimo 30min) todos os dias, sem falha | Começar o Módulo 2 com folga no cronograma |
 | **Streak de Consistência** | 14 dias | Dashboard semanal preenchido nas 2 semanas + pelo menos 1 simulado parcial por semana | Sessão de revisão de erros com foco personalizado |
 | **Streak de Elite** | 30 dias | Sequência completa sem interrupção + 2 simulados completos cronometrados no período | Certificação interna de "Preparação Completa" do Sistema |
 
-> **Dica de execução:** registre seu streak visivelmente (aplicativo de hábitos, planilha, agenda física). A perda de um streak longo é o maior preditor comportamental de abandono do plano de estudos · proteja-o como protegeria qualquer outro ativo de alto valor.
+> **Dica de execução:** registre seu streak visivelmente (aplicativo de hábitos, planilha, agenda física). Perder uma sequência longa desanima, e é aí que muita gente abandona o plano. Proteja seu streak como protegeria qualquer outro ativo de alto valor.
 
 ---
 

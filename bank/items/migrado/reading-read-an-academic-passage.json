@@ -21,11 +21,11 @@
     "options": {
       "A": "Bioluminescence is a rare adaptation found only in a few deep-sea species.",
       "B": "Bioluminescence is a widespread, chemically efficient trait that serves multiple functions and evolved independently many times.",
-      "C": "The anglerfish is the most important example of bioluminescence.",
-      "D": "Bioluminescent light is less efficient than artificial light."
+      "C": "The anglerfish, which uses a glowing lure to catch its prey, is the most important example of bioluminescence.",
+      "D": "Bioluminescent light is less efficient than artificial light because much of its energy is lost as heat."
     },
     "answer": "B",
-    "explanation": "Cobre os três eixos (o que é + eficiência, funções, evolução independente). (A) contradiz \"remarkably common\"; (C) é detalhe; (D) inverte a comparação com a lâmpada.",
+    "explanation": "Cobre os três eixos (o que é + eficiência, funções, evolução independente). (A) contradiz \"remarkably common\"; (C) é detalhe, e o texto diz \"perhaps the most famous\", não \"o mais importante\"; (D) inverte a comparação com a lâmpada.",
     "hint": null,
     "trap_codes": [],
     "tags": [],
@@ -205,7 +205,7 @@
       "D": "To compare bioluminescence with the evolution of eyesight in mammals"
     },
     "answer": "B",
-    "explanation": "A frase é seguida por \"...one of its most striking examples\": serve para embasar o conceito de evolução convergente.",
+    "explanation": "A frase abre o parágrafo e prepara a definição de evolução convergente, que vem duas frases depois: serve para apresentar e embasar a tese de que a bioluminescência é um exemplo notável desse padrão. (A), (C) e (D) não têm base no texto.",
     "hint": null,
     "trap_codes": [],
     "tags": [],
@@ -735,12 +735,12 @@
     "text_format": "html",
     "options": {
       "A": "is completely new to us",
-      "B": "we have often already heard, because they move in the same circles we do",
+      "B": "we have often already heard",
       "C": "is always more trustworthy and therefore more useful",
-      "D": "comes from outside our network"
+      "D": "comes from distant parts of the network that we cannot reach ourselves"
     },
     "answer": "B",
-    "explanation": "\"They are exposed to more or less the same information you already have; what they can tell you, you have often already heard.\"",
+    "explanation": "\"They are exposed to more or less the same information you already have; what they can tell you, you have often already heard.\" (D) descreve os conhecidos, não os amigos próximos.",
     "hint": null,
     "trap_codes": [],
     "tags": [],
@@ -780,12 +780,12 @@
     "text_format": "html",
     "options": {
       "A": "have access to a wider range of information than average",
-      "B": "be more likely to hear the same information repeatedly and less likely to hear news from distant parts of the network",
+      "B": "tend to hear the same information over and over",
       "C": "never be able to find a job",
-      "D": "be more innovative at work"
+      "D": "be more innovative at work, since close-knit teams produce more original work"
     },
     "answer": "B",
-    "explanation": "Se todos os contatos são amigos próximos, que circulam nos mesmos círculos → informação repetida, pouca novidade de partes distantes. (A) inverte; (C)/(D) exageram.",
+    "explanation": "Se todos os contatos são amigos próximos, que circulam nos mesmos círculos → informação repetida, pouca novidade de partes distantes. (A) inverte; (C) exagera; (D) contradiz o parágrafo 3, que liga a inovação a equipes conectadas a muitos grupos de fora.",
     "hint": null,
     "trap_codes": [],
     "tags": [],

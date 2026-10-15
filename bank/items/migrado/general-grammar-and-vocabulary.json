@@ -97,11 +97,11 @@
     "options": {
       "A": "defer",
       "B": "exacerbate",
-      "C": "circumvent",
+      "C": "deflect",
       "D": "endorse"
     },
     "answer": "C",
-    "explanation": "<strong>Por que certa:</strong> \"Circumvent\" (contornar/evitar) encaixa com a lógica de adiar o voto para não enfrentar diretamente a crítica pública.<br><strong>Por que as outras erram:</strong> (A) \"defer\" é próximo mas não captura a ideia de \"evitar/desviar\" a crítica em si: refere-se a adiar algo, não contornar algo; (B) significa piorar, sentido oposto; (D) significa endossar, sentido oposto.",
+    "explanation": "<strong>Por que certa:</strong> \"Deflect criticism\" = desviar a crítica de si, a collocation natural: adiar a votação foi um jeito de tirar o foco da crítica.<br><strong>Por que as outras erram:</strong> (A) \"defer\" atrai por lembrar \"adiar a votação\", mas \"defer criticism\" não se usa; (B) \"exacerbate\" = agravar, o contrário da intenção; (D) \"endorse\" = apoiar, não faz sentido com \"criticism\".",
     "hint": null,
     "trap_codes": [],
     "tags": [
@@ -142,7 +142,7 @@
       "D": "has been"
     },
     "answer": "C",
-    "explanation": "<strong>Por que certa:</strong> Condicional tipo 3 (passado hipotético): a oração principal usa \"would have hired\" implícito na lógica (\"would already have hired\"), exigindo past perfect na condicional (\"had been approved\").<br><strong>Por que as outras erram:</strong> (A) e (B) são formas de passado simples/subjuntivo incompatíveis com a estrutura de tipo 3; (D) é present perfect, tempo errado para hipótese no passado.",
+    "explanation": "<strong>Por que certa:</strong> Condicional tipo 3 (hipótese sobre o passado): a oração principal tem \"would already have hired\", o que exige past perfect na oração com \"if\": \"had been approved\". \"Last quarter\" confirma o passado.<br><strong>Por que as outras erram:</strong> (A) e (B) são formas de passado simples/subjuntivo incompatíveis com a estrutura de tipo 3; (D) é present perfect, tempo errado para hipótese no passado.",
     "hint": null,
     "trap_codes": [],
     "tags": [
@@ -220,11 +220,11 @@
     "options": {
       "A": "nevertheless",
       "B": "in contrast",
-      "C": "accordingly",
+      "C": "consequently",
       "D": "meanwhile"
     },
     "answer": "C",
-    "explanation": "<strong>Por que certa:</strong> A segunda oração é uma consequência lógica direta da sensibilidade térmica mencionada na primeira: \"accordingly\" (consequentemente) é o conector de causa-efeito correto.<br><strong>Por que as outras erram:</strong> (A) e (B) sinalizam contraste, incompatível com a relação de causa-efeito; (D) sinaliza simultaneidade, não consequência.",
+    "explanation": "<strong>Por que certa:</strong> A segunda oração é uma consequência lógica direta da sensibilidade térmica mencionada na primeira: \"consequently\" (consequentemente) é o conector de causa e efeito correto.<br><strong>Por que as outras erram:</strong> (A) e (B) sinalizam contraste, incompatível com a relação de causa-efeito; (D) sinaliza simultaneidade, não consequência.",
     "hint": null,
     "trap_codes": [],
     "tags": [
@@ -342,12 +342,12 @@
     "text_format": "html",
     "options": {
       "A": "Hey, just wondering if I could get a bit more time to send my stuff over?",
-      "B": "I am writing to respectfully request a short extension to the submission deadline due to a documented medical circumstance.",
+      "B": "I am writing to respectfully request a short extension to the submission deadline due to a documented medical condition.",
       "C": "Give me more time please, it's urgent and I really need it.",
       "D": "So I was thinking maybe you guys could push the date back for me?"
     },
     "answer": "B",
-    "explanation": "<strong>Por que certa:</strong> Registro formal, verbos modais de cortesia (\"I am writing to respectfully request\"), justificativa objetiva: adequado para comunicação institucional, exatamente o padrão exigido em Write an Email.<br><strong>Por que as outras erram:</strong> (A), (C) e (D) usam registro coloquial, contrações e informalidade excessiva (\"just wondering\", \"you guys\", \"please\" isolado), inadequados para o contexto navegacional acadêmico formal.",
+    "explanation": "<strong>Por que certa:</strong> Fórmula de abertura formal (\"I am writing to...\"), advérbio de cortesia (\"respectfully\") e justificativa objetiva: adequado para comunicação institucional, exatamente o padrão exigido em Write an Email.<br><strong>Por que as outras erram:</strong> (A), (C) e (D) usam registro coloquial (\"Hey\", \"just wondering\", \"stuff\", \"you guys\") e tom de cobrança (\"it's urgent\"): inadequados para um e-mail formal a uma instituição.",
     "hint": null,
     "trap_codes": [],
     "tags": [
@@ -379,7 +379,7 @@
     "cefr_max": null,
     "stimulus": null,
     "group": "mod0-diag",
-    "prompt": "\"Although the pilot program showed promising results in urban districts, researchers cautioned against broad conclusions, noting that participation rates in rural areas remained too low to generalize.\"\n\nWhat can be inferred from this statement?",
+    "prompt": "\"Although the pilot program showed promising results in urban districts, researchers cautioned against broad conclusions, noting that participation rates in rural areas remained too low for the results to be generalized.\"\n\nWhat can be inferred from this statement?",
     "text_format": "html",
     "options": {
       "A": "The pilot program failed in urban districts.",

@@ -487,10 +487,10 @@
       "live_on_site": true,
       "answer_letter": "origem",
       "build_map": {
-        "A": "A",
-        "B": "D",
-        "C": "C",
-        "D": "B"
+        "A": "B",
+        "B": "A",
+        "C": "D",
+        "D": "C"
       }
     }
   },
@@ -532,10 +532,10 @@
       "live_on_site": true,
       "answer_letter": "origem",
       "build_map": {
-        "A": "C",
+        "A": "B",
         "B": "D",
-        "C": "A",
-        "D": "B"
+        "C": "C",
+        "D": "A"
       }
     }
   },
@@ -581,51 +581,6 @@
         "B": "B",
         "C": "A",
         "D": "C"
-      }
-    }
-  },
-  {
-    "id": "mod1-b5.b5.4",
-    "section": "reading",
-    "task_type": "Read in Daily Life",
-    "exam_format": true,
-    "format": "mcq",
-    "skill": null,
-    "cefr_min": "A2",
-    "cefr_max": "B1",
-    "stimulus": {
-      "kind": "text",
-      "format": "html",
-      "title": "Drill B5 · Post de rede social · alvo: 3 min",
-      "content": "<p><strong>TEXT: A social media post from a local bakery</strong></p>\n<blockquote><p>🥐 <strong>Riverside Bakery</strong> · Posted 2 hours ago</p>\n<p>Big news, everyone! Starting next Tuesday, we're extending our weekday hours — open at 6:30 AM instead of 7:00 AM, so early risers can grab their coffee and croissants before work. 🌅</p>\n<p>Quick heads-up though: because of the earlier opening, our weekday sourdough batch will now go into the oven the night before instead of first thing in the morning. It'll still be baked fresh daily, just on a slightly different schedule — so if you're used to grabbing a loaf warm out of the oven at 8 AM, you'll now find it ready on the shelf as soon as we open. Come say hi and let us know what you think of the new hours!</p>\n<p>Weekend hours are unchanged (8 AM–3 PM, same as always).</p></blockquote>",
-      "audio_ref": null
-    },
-    "group": "mod1-b5",
-    "prompt": "The overall tone of the post is:",
-    "text_format": "html",
-    "options": {
-      "A": "formal and apologetic",
-      "B": "friendly and informative",
-      "C": "urgent and cautionary",
-      "D": "neutral and impersonal"
-    },
-    "answer": "B",
-    "explanation": "Emojis, \"Big news, everyone!\", \"Come say hi\", tom positivo.",
-    "hint": null,
-    "trap_codes": [],
-    "tags": [],
-    "status": "rascunho",
-    "source": {
-      "kind": "migrado",
-      "file": "app/drills_data.py",
-      "ref": "MOD1_ACTION_DRILLS_B:mod1-b5#B5.4",
-      "live_on_site": true,
-      "answer_letter": "origem",
-      "build_map": {
-        "A": "B",
-        "B": "C",
-        "C": "D",
-        "D": "A"
       }
     }
   },

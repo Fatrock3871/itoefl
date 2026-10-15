@@ -133,7 +133,7 @@ MOD1_ACTION_DRILLS_A = [
 ]
 
 # PARTE 5 (Action Drills) do M1, Grupo B: Read in Daily Life — 5 textos
-# curtos, 14 itens ao todo.
+# curtos, 13 itens ao todo (conjuntos de 2 ou 3, como na prova).
 MOD1_ACTION_DRILLS_B = [
     {
         "id": "mod1-b1",
@@ -243,9 +243,6 @@ MOD1_ACTION_DRILLS_B = [
             {"num": "B5.3", "prompt": "What does the post say about the weekend hours?",
              "options": {"A": "They will also move to 6:30 AM", "B": "They stay the same as before this announcement", "C": "They have not been decided yet", "D": "They will be shortened"},
              "correct": "B", "explanation": "\"Weekend hours are unchanged\". (A)/(D) contradizem; (C) já está decidido."},
-            {"num": "B5.4", "prompt": "The overall tone of the post is:",
-             "options": {"A": "formal and apologetic", "B": "friendly and informative", "C": "urgent and cautionary", "D": "neutral and impersonal"},
-             "correct": "B", "explanation": "Emojis, \"Big news, everyone!\", \"Come say hi\", tom positivo."},
         ],
     },
 ]
@@ -264,8 +261,8 @@ MOD1_ACTION_DRILLS_C = [
 <p>What makes bioluminescence especially interesting to evolutionary biologists is that it did not evolve just once. Genetic and biochemical evidence indicates that the capacity for bioluminescence has arisen independently dozens of times across unrelated lineages, using different chemical pathways to achieve a similar outcome. This pattern, in which unrelated organisms evolve similar traits independently, is known as convergent evolution, and bioluminescence is considered one of its most striking examples.</p>""",
         "items": [
             {"num": "C1.1", "prompt": "Ideia principal. What is the main idea of the passage?",
-             "options": {"A": "Bioluminescence is a rare adaptation found only in a few deep-sea species.", "B": "Bioluminescence is a widespread, chemically efficient trait that serves multiple functions and evolved independently many times.", "C": "The anglerfish is the most important example of bioluminescence.", "D": "Bioluminescent light is less efficient than artificial light."},
-             "correct": "B", "explanation": "Cobre os três eixos (o que é + eficiência, funções, evolução independente). (A) contradiz \"remarkably common\"; (C) é detalhe; (D) inverte a comparação com a lâmpada."},
+             "options": {"A": "Bioluminescence is a rare adaptation found only in a few deep-sea species.", "B": "Bioluminescence is a widespread, chemically efficient trait that serves multiple functions and evolved independently many times.", "C": "The anglerfish, which uses a glowing lure to catch its prey, is the most important example of bioluminescence.", "D": "Bioluminescent light is less efficient than artificial light because much of its energy is lost as heat."},
+             "correct": "B", "explanation": "Cobre os três eixos (o que é + eficiência, funções, evolução independente). (A) contradiz \"remarkably common\"; (C) é detalhe, e o texto diz \"perhaps the most famous\", não \"o mais importante\"; (D) inverte a comparação com a lâmpada."},
             {"num": "C1.2", "prompt": "Detalhe. Why is bioluminescent light sometimes called \"cold light\"?",
              "options": {"A": "It only occurs in cold, deep-sea environments.", "B": "It is produced by organisms that live in low-temperature waters.", "C": "The reaction that produces it wastes very little energy as heat.", "D": "It appears blue or white, resembling ice."},
              "correct": "C", "explanation": "Relação causal explícita: \"Because so little energy is lost as heat...\". (A)/(B) confundem o nome com temperatura ambiente; (D) infere cor sem base."},
@@ -277,7 +274,7 @@ MOD1_ACTION_DRILLS_C = [
              "correct": "B", "explanation": "\"In the deep sea, darkness is nearly absolute, so visual signals cannot rely on ambient light at all\" → produzir a própria luz supre a ausência de luz ambiente. (A) é extremo; (C)/(D) sem base."},
             {"num": "C1.5", "prompt": "Propósito retórico. Why does the author state that bioluminescence \"did not evolve just once\"?",
              "options": {"A": "To argue that bioluminescence is less significant than previously thought", "B": "To introduce and support the claim that it is a notable example of convergent evolution", "C": "To explain why some marine species have gone extinct", "D": "To compare bioluminescence with the evolution of eyesight in mammals"},
-             "correct": "B", "explanation": "A frase é seguida por \"...one of its most striking examples\": serve para embasar o conceito de evolução convergente."},
+             "correct": "B", "explanation": "A frase abre o parágrafo e prepara a definição de evolução convergente, que vem duas frases depois: serve para apresentar e embasar a tese de que a bioluminescência é um exemplo notável desse padrão. (A), (C) e (D) não têm base no texto."},
             {"num": "C1.6", "prompt": "Vocabulário em contexto. The word \"striking\" in paragraph 3 is closest in meaning to:",
              "options": {"A": "violent", "B": "notable", "C": "accidental", "D": "doubtful"},
              "correct": "B", "explanation": "\"One of its most striking examples\" = exemplo notável. (A)/(C)/(D) pertencem a outros campos ou invertem o tom."},
@@ -336,11 +333,11 @@ MOD1_ACTION_DRILLS_C = [
              "options": {"A": "a family member", "B": "a close friend", "C": "an acquaintance they saw only occasionally", "D": "a recruitment agency"},
              "correct": "C", "explanation": "\"Most had heard about it not from a close friend but from an acquaintance.\""},
             {"num": "C3.3", "prompt": "Detalhe. According to the passage, close friends tend to give us information that:",
-             "options": {"A": "is completely new to us", "B": "we have often already heard, because they move in the same circles we do", "C": "is always more trustworthy and therefore more useful", "D": "comes from outside our network"},
-             "correct": "B", "explanation": "\"They are exposed to more or less the same information you already have; what they can tell you, you have often already heard.\""},
+             "options": {"A": "is completely new to us", "B": "we have often already heard", "C": "is always more trustworthy and therefore more useful", "D": "comes from distant parts of the network that we cannot reach ourselves"},
+             "correct": "B", "explanation": "\"They are exposed to more or less the same information you already have; what they can tell you, you have often already heard.\" (D) descreve os conhecidos, não os amigos próximos."},
             {"num": "C3.4", "prompt": "Inferência. It can be inferred that a person whose contacts are ALL close friends would:",
-             "options": {"A": "have access to a wider range of information than average", "B": "be more likely to hear the same information repeatedly and less likely to hear news from distant parts of the network", "C": "never be able to find a job", "D": "be more innovative at work"},
-             "correct": "B", "explanation": "Se todos os contatos são amigos próximos, que circulam nos mesmos círculos → informação repetida, pouca novidade de partes distantes. (A) inverte; (C)/(D) exageram."},
+             "options": {"A": "have access to a wider range of information than average", "B": "tend to hear the same information over and over", "C": "never be able to find a job", "D": "be more innovative at work, since close-knit teams produce more original work"},
+             "correct": "B", "explanation": "Se todos os contatos são amigos próximos, que circulam nos mesmos círculos → informação repetida, pouca novidade de partes distantes. (A) inverte; (C) exagera; (D) contradiz o parágrafo 3, que liga a inovação a equipes conectadas a muitos grupos de fora."},
             {"num": "C3.5", "prompt": "Propósito retórico. Why does the author mention innovation within companies in paragraph 3?",
              "options": {"A": "To give an example of how the weak-ties finding applies beyond job-hunting", "B": "To argue that companies should fire employees with weak ties", "C": "To contradict Granovetter's original study", "D": "To explain how companies are structured"},
              "correct": "A", "explanation": "O parágrafo 3 lista extensões do achado além da busca de emprego; a inovação nas empresas é um desses exemplos."},
