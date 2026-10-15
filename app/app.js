@@ -753,8 +753,8 @@
       : "Banda " + band.code + " (" + band.label + ")") + " · " + tail;
   }
   function updateLiveScorePanel(){
-    renderLiveScoreSection("mod1-", "liveScoreReadingPct", "liveScoreReadingBand", "Responda os Action Drills do Módulo 1 para calcular");
-    renderLiveScoreSection("mod2-", "liveScoreListeningPct", "liveScoreListeningBand", "Responda os Action Drills do Módulo 2 para calcular");
+    renderLiveScoreSection("mod1-", "liveScoreReadingPct", "liveScoreReadingBand", "Responda aos Action Drills do Módulo 1 para calcular");
+    renderLiveScoreSection("mod2-", "liveScoreListeningPct", "liveScoreListeningBand", "Responda aos Action Drills do Módulo 2 para calcular");
     renderLiveScoreSection("extra:bsq", "liveScoreWritingPct", "liveScoreWritingBand", "Faça o drill interativo do Módulo 4 para calcular");
     renderLiveScoreSection("extra:exam", "liveScoreExamPct", "liveScoreExamBand", "Entregue um bloco de simulado do Módulo 7 para calcular");
   }
@@ -2321,7 +2321,7 @@
       if(gateEl) gateEl.hidden = true;
       box.hidden = false;
       var m = document.getElementById("authMsg");
-      m.textContent = "Biblioteca do Supabase não carregou (sem internet ou CDN bloqueado). App em modo offline.";
+      m.textContent = "Não foi possível conectar ao servidor (sem internet ou rede bloqueada). O app segue funcionando offline.";
       m.style.color = "var(--danger)";
       m.hidden = false;
       return;
@@ -2959,7 +2959,7 @@
         if(!newPassword || newPassword.length < 6) return;
         accountMsg("Salvando...", "ok");
         client.auth.updateUser({ password: newPassword }).then(function(res){
-          if(res.error){ accountMsg("Erro ao salvar: " + res.error.message, "err"); return; }
+          if(res.error){ accountMsg(friendlyError(res.error.message), "err"); return; }
           passwordForm.reset();
           accountMsg("Senha atualizada.", "ok");
         }).catch(function(){ accountMsg("Erro de conexão. Tente de novo.", "err"); });
@@ -3254,7 +3254,7 @@
 
       var band = computeBandEstimate();
       bandEl.textContent = band
-        ? "Banda " + cefrBandFromPct(band.pct).code + " (" + cefrBandFromPct(band.pct).label + ") · com base em " + band.source
+        ? "Banda " + cefrBandFromPct(band.pct).code + " (" + cefrBandFromPct(band.pct).label + ") · fonte: " + band.source
         : "Complete o diagnóstico do Módulo 0 pra ver sua estimativa.";
 
       var prog = computeOverallProgress();
@@ -3729,7 +3729,7 @@
       if(!force && label === lastLevel && listEl.children.length) return; // não troca a sessão no meio do estudo
       lastLevel = label;
       var session = pick(ORDER.indexOf(label));
-      statusEl.textContent = "Nível estimado: " + label + " (pelo " + est.source + "). Sessão sorteada para esse nível:";
+      statusEl.textContent = "Nível estimado: " + label + " (fonte: " + est.source + "). Sessão sorteada para esse nível:";
       listEl.innerHTML = "";
       session.forEach(function(el){
         var li = document.createElement("li");
@@ -3981,9 +3981,9 @@
       var a = computeQuizAccuracy("mod0-diag");
       if(a.confirmed < a.total){
         titleEl.textContent = "Faça o diagnóstico antes de ler qualquer coisa";
-        textEl.textContent = "São 10 questões e levam uns 10 minutos. O resultado define o seu nível de partida e qual cronograma de estudo seguir.";
+        textEl.textContent = "São 10 questões, que levam cerca de 12 minutos. O resultado define o seu nível de partida e qual cronograma de estudo seguir.";
         setSteps([
-          "Responda as 10 questões do diagnóstico.",
+          "Responda às 10 questões do diagnóstico.",
           "Veja o seu nível estimado e o cronograma indicado.",
           "Siga os módulos na ordem ou vá direto ao que mais precisa: a navegação é livre."
         ]);

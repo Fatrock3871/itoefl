@@ -3,14 +3,14 @@
 **Última atualização:** 14 de outubro de 2026
 
 Estes termos valem para todo mundo que cria uma conta ou compra acesso ao
-iTOEFL. Ao criar a conta você declara que leu e concorda com eles e com a
+iTOEFL. Ao criar a conta, você declara que os leu e que concorda com eles e com a
 [Política de Privacidade](privacidade.html).
 
 ## 1. Quem somos
 
 O iTOEFL é uma plataforma de estudo para o TOEFL iBT, mantida por
-[PREENCHER: nome completo ou razão social do responsável], inscrito sob o
-[PREENCHER: CPF ou CNPJ], com contato pelo e-mail
+[PREENCHER: nome completo ou razão social do responsável], inscrito no
+[PREENCHER: CPF ou CNPJ] sob o nº [PREENCHER: número], com contato pelo e-mail
 [PREENCHER: e-mail de contato].
 
 ## 2. O iTOEFL é uma preparação independente

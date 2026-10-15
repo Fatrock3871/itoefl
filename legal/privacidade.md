@@ -9,7 +9,8 @@ Dados (Lei 13.709/2018, a LGPD).
 ## 1. Quem é o responsável pelos seus dados
 
 O controlador dos dados é [PREENCHER: nome completo ou razão social do
-responsável], inscrito sob o [PREENCHER: CPF ou CNPJ].
+responsável], inscrito no [PREENCHER: CPF ou CNPJ] sob o nº
+[PREENCHER: número].
 
 Para qualquer assunto de privacidade, escreva para
 [PREENCHER: e-mail de contato].
@@ -18,7 +19,7 @@ Para qualquer assunto de privacidade, escreva para
 
 | Dado | Quando | Para quê |
 |---|---|---|
-| E-mail e senha | Ao criar a conta | Identificar você e permitir o login. A senha é guardada de forma cifrada pelo serviço de autenticação. Ninguém da equipe consegue lê-la |
+| E-mail e senha | Ao criar a conta | Identificar você e permitir o login. A senha não é guardada como texto: o serviço de autenticação guarda só uma versão embaralhada de forma irreversível (hash). Ninguém da equipe consegue lê-la |
 | Nome, e-mail e foto do perfil Google | Se você entrar com Google | Login e exibição do seu avatar |
 | Nome para o certificado | Se você gerar o certificado | Imprimir seu nome no certificado de conclusão |
 | Foto de perfil enviada por você | Se você trocar o avatar | Mostrar sua foto na plataforma |
