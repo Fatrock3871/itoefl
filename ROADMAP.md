@@ -62,6 +62,11 @@ Nada das etapas seguintes anda sem esta. Ordem sugerida de cima para baixo.
       usam as chaves novas (`supabase/functions/_shared/keys.ts`) e têm
       `verify_jwt = false` com a checagem do token no próprio código;
       (3) testar compra e excluir conta; (4) desativar as chaves antigas.
+      Feito até o (2) em 2026-10-14: usuário trocou a `sb_secret`, e as 5
+      functions foram publicadas (create-checkout v16, mp-webhook v9,
+      delete-account v6, submit-essay v1, review-essay v1), com o código
+      novo conferido no ar e as 5 respondendo sem erro de chave.
+      Falta o (3) e o (4), com o usuário.
       Não revogar o Legacy JWT secret: não é preciso, ele não vazou.
 - [ ] (U) Apagar do banco a função `email_for_username` (só as linhas 97 a
       100 do `schema.sql`, não o arquivo inteiro). Em 2026-10-14 ela ainda
