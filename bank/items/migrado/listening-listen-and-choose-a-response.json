@@ -6,8 +6,8 @@
     "exam_format": true,
     "format": "mcq",
     "skill": null,
-    "cefr_min": "A2",
-    "cefr_max": "B1",
+    "cefr_min": "B1",
+    "cefr_max": "B2",
     "stimulus": {
       "kind": "audio",
       "format": "html",
@@ -51,8 +51,8 @@
     "exam_format": true,
     "format": "mcq",
     "skill": null,
-    "cefr_min": "A2",
-    "cefr_max": "B1",
+    "cefr_min": "B1",
+    "cefr_max": "B2",
     "stimulus": {
       "kind": "audio",
       "format": "html",
@@ -96,8 +96,8 @@
     "exam_format": true,
     "format": "mcq",
     "skill": null,
-    "cefr_min": "A2",
-    "cefr_max": "B1",
+    "cefr_min": "B1",
+    "cefr_max": "B2",
     "stimulus": {
       "kind": "audio",
       "format": "html",
@@ -141,8 +141,8 @@
     "exam_format": true,
     "format": "mcq",
     "skill": null,
-    "cefr_min": "A2",
-    "cefr_max": "B1",
+    "cefr_min": "B1",
+    "cefr_max": "B2",
     "stimulus": {
       "kind": "audio",
       "format": "html",
@@ -186,8 +186,8 @@
     "exam_format": true,
     "format": "mcq",
     "skill": null,
-    "cefr_min": "A2",
-    "cefr_max": "B1",
+    "cefr_min": "B1",
+    "cefr_max": "B2",
     "stimulus": {
       "kind": "audio",
       "format": "html",
@@ -205,7 +205,7 @@
       "D": "I haven't registered for anything yet."
     },
     "answer": "B",
-    "explanation": "Informação nova (mudança de horário) → interesse + pedido de detalhe. (A)/(D) confundem <em>register</em> (matricular-se) com <em>hours</em>. (C) é verdade, mas não é o que foi dito.",
+    "explanation": "Informação nova (mudança de horário) → interesse + pedido de detalhe. (A) e (D) reaproveitam o som de <em>registrar</em> em <em>register</em> (matricular-se), mas não reagem à notícia; (C) dá a localização do escritório, que ninguém perguntou.",
     "hint": null,
     "trap_codes": [],
     "tags": [],
@@ -231,8 +231,8 @@
     "exam_format": true,
     "format": "mcq",
     "skill": null,
-    "cefr_min": "A2",
-    "cefr_max": "B1",
+    "cefr_min": "B1",
+    "cefr_max": "B2",
     "stimulus": {
       "kind": "audio",
       "format": "html",
@@ -247,10 +247,10 @@
       "A": "I ran three miles this morning.",
       "B": "Sure — are you free around four?",
       "C": "The meeting's been moved to Thursday.",
-      "D": "I've given that presentation twice already."
+      "D": "I gave my first presentation in high school."
     },
     "answer": "B",
-    "explanation": "\"Run X by me\" = me mostrar antes. Resposta natural marca um horário. (A) toma \"run\" ao pé da letra; (C) muda o foco; (D) ignora o pedido.",
+    "explanation": "\"Run X by me\" = me mostrar antes. Resposta natural marca um horário. (A) toma \"run\" ao pé da letra; (C) muda o foco; (D) reaproveita <em>presentation</em> sem responder ao pedido.",
     "hint": null,
     "trap_codes": [],
     "tags": [],
@@ -276,8 +276,8 @@
     "exam_format": true,
     "format": "mcq",
     "skill": null,
-    "cefr_min": "A2",
-    "cefr_max": "B1",
+    "cefr_min": "B1",
+    "cefr_max": "B2",
     "stimulus": {
       "kind": "audio",
       "format": "html",
@@ -321,8 +321,8 @@
     "exam_format": true,
     "format": "mcq",
     "skill": null,
-    "cefr_min": "A2",
-    "cefr_max": "B1",
+    "cefr_min": "B1",
+    "cefr_max": "B2",
     "stimulus": {
       "kind": "audio",
       "format": "html",
@@ -334,7 +334,7 @@
     "prompt": "Choose the best response.",
     "text_format": "html",
     "options": {
-      "A": "I presented last time.",
+      "A": "The last presentation ran over time.",
       "B": "Last, if that's an option — I need time to prepare.",
       "C": "The presentation is worth 20% of the grade.",
       "D": "First place goes to the best presentation."
@@ -366,8 +366,8 @@
     "exam_format": true,
     "format": "mcq",
     "skill": null,
-    "cefr_min": "A2",
-    "cefr_max": "B1",
+    "cefr_min": "B1",
+    "cefr_max": "B2",
     "stimulus": {
       "kind": "audio",
       "format": "html",
@@ -411,8 +411,8 @@
     "exam_format": true,
     "format": "mcq",
     "skill": null,
-    "cefr_min": "A2",
-    "cefr_max": "B1",
+    "cefr_min": "B1",
+    "cefr_max": "B2",
     "stimulus": {
       "kind": "audio",
       "format": "html",
@@ -456,8 +456,8 @@
     "exam_format": true,
     "format": "mcq",
     "skill": null,
-    "cefr_min": "A2",
-    "cefr_max": "B1",
+    "cefr_min": "B1",
+    "cefr_max": "B2",
     "stimulus": {
       "kind": "audio",
       "format": "html",
@@ -501,8 +501,8 @@
     "exam_format": true,
     "format": "mcq",
     "skill": null,
-    "cefr_min": "A2",
-    "cefr_max": "B1",
+    "cefr_min": "B1",
+    "cefr_max": "B2",
     "stimulus": {
       "kind": "audio",
       "format": "html",

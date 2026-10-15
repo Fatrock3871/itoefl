@@ -143,15 +143,15 @@ MOD1_ACTION_DRILLS_B = [
         "passage_html": """<p><strong>TEXT: Sign at a nature reserve trailhead</strong></p>
 <blockquote><p><strong>RIDGELINE TRAIL: PLEASE READ BEFORE ENTERING</strong></p>
 <p>• Trail open sunrise to sunset. Overnight camping is not permitted anywhere on the reserve.<br>
-• Dogs welcome on a leash no longer than 2 metres. The upper loop (marked in red) is closed to dogs from 1 April to 15 July to protect ground-nesting birds.<br>
+• Dogs welcome on a leash no longer than 6 feet. The upper loop (marked in red) is closed to dogs from April 1 to July 15 to protect ground-nesting birds.<br>
 • No bicycles. E-bikes and mobility scooters are exempt from this rule.<br>
-• Pack out all rubbish. There are no bins beyond this point.</p></blockquote>""",
+• Pack out all trash. There are no trash cans beyond this point.</p></blockquote>""",
         "items": [
-            {"num": "B1.1", "prompt": "A visitor with a dog on 20 May may walk:",
+            {"num": "B1.1", "prompt": "A visitor with a dog on May 20 may walk:",
              "options": {"A": "anywhere on the reserve", "B": "on all trails except the upper loop", "C": "only on the upper loop", "D": "nowhere, because dogs are banned in summer"},
              "correct": "B", "explanation": "Cães de coleira são permitidos; o <em>upper loop</em> é fechado a cães de 1/abr a 15/jul, e 20 de maio cai nesse período → todas as trilhas <strong>exceto</strong> o upper loop. (A) ignora a restrição; (C) inverte; (D) exagera: cães não são banidos, só do upper loop."},
             {"num": "B1.2", "prompt": "Which of the following is allowed on the trail?",
-             "options": {"A": "A regular bicycle", "B": "An overnight tent", "C": "A mobility scooter", "D": "Leaving food scraps in a bin"},
+             "options": {"A": "A regular bicycle", "B": "An overnight tent", "C": "A mobility scooter", "D": "Leaving food scraps in a trash can"},
              "correct": "C", "explanation": "\"E-bikes and mobility scooters are exempt\" da proibição de bicicletas. (A) bicicleta comum é proibida; (B) camping é proibido; (D) não há lixeiras além daquele ponto."},
         ],
     },
@@ -162,7 +162,7 @@ MOD1_ACTION_DRILLS_B = [
         "objective": "Leia o texto e responda às questões de compreensão. Tempo alvo: 3 minutos.",
         "passage_html": """<p><strong>TEXT: Café lunch menu (extract)</strong></p>
 <blockquote><p><strong>SANDWICHES</strong>: all served on sourdough with a side salad (swap for fries +$2)</p>
-<p>• <strong>Garden</strong> — roasted vegetables, hummus, rocket · $9 · <em>vegan</em><br>
+<p>• <strong>Garden</strong> — roasted vegetables, hummus, arugula · $9 · <em>vegan</em><br>
 • <strong>Classic Club</strong> (chicken, bacon, egg, lettuce) · $12<br>
 • <strong>Halloumi Stack</strong> — grilled halloumi, tomato, pesto · $11 · <em>vegetarian (contains nuts)</em></p>
 <p><strong>SOUPS</strong> · served with bread · $7 · soup of the day is always vegetarian; ask staff whether today's is vegan.</p>
@@ -172,8 +172,8 @@ MOD1_ACTION_DRILLS_B = [
              "options": {"A": "the Halloumi Stack", "B": "the Garden sandwich", "C": "the soup of the day, no questions asked", "D": "the Classic Club without bacon"},
              "correct": "B", "explanation": "<em>Garden</em> é vegan e não tem aviso de nozes. (A) Halloumi Stack tem queijo (não vegan) e <em>contains nuts</em>; (C) a sopa é sempre vegetariana mas <strong>pode não ser vegana</strong>: o texto manda perguntar; (D) Classic Club tem frango e ovo."},
             {"num": "B2.2", "prompt": "A customer orders a Classic Club with fries at 11:45 a.m. Before any discount, the price is:",
-             "options": {"A": "$12", "B": "$14", "C": "$9", "D": "$16"},
-             "correct": "B", "explanation": "$12 do sanduíche + $2 pela troca por fries = $14. O desconto de 10% (pedido antes do meio-dia) se aplica <strong>depois</strong>, mas a pergunta é o preço <strong>antes</strong> do desconto."},
+             "options": {"A": "$12", "B": "$14", "C": "$12.60", "D": "$16"},
+             "correct": "B", "explanation": "$12 do sanduíche + $2 pela troca por fries = $14. O desconto de 10% (pedido antes do meio-dia) se aplica <strong>depois</strong>, mas a pergunta é o preço <strong>antes</strong> do desconto. (C) $12.60 é o valor <strong>com</strong> o desconto, que a pergunta exclui; (A) esquece a troca por fries."},
             {"num": "B2.3", "prompt": "According to the menu, the soup of the day:",
              "options": {"A": "is always vegan", "B": "is always vegetarian, and may or may not be vegan", "C": "never contains bread", "D": "costs more than any sandwich"},
              "correct": "B", "explanation": "\"Soup of the day is always vegetarian; ask staff whether today's is vegan\": sempre vegetariana, veganidade varia."},
@@ -189,16 +189,16 @@ MOD1_ACTION_DRILLS_B = [
 <p><strong>Subject: Re: Request to submit Assignment 2 late</strong></p>
 <p>Dear Bruna,</p>
 <p>Thank you for letting me know about your situation in advance rather than after the deadline. I'm sorry to hear you've been unwell.</p>
-<p>Our department policy does not allow me to grant extensions longer than 48 hours without a medical certificate. If you're able to provide one, I can extend your deadline to the following Monday. If not, I can still accept the assignment up to 48 hours late, though the standard 10% late penalty would apply in that case.</p>
+<p>Our department policy does not allow me to grant an extension without a doctor's note. If you're able to provide one, I can extend your deadline to next Monday. If not, I can still accept the assignment up to 48 hours late, though the standard 10% late penalty would apply in that case.</p>
 <p>Please let me know which option you'd prefer by Thursday so I can update the system.</p>
 <p>Best regards,<br>Dr. Okafor</p>
 </blockquote>""",
         "items": [
             {"num": "B3.1", "prompt": "What is the main purpose of this email?",
-             "options": {"A": "To refuse Bruna's request", "B": "To explain the options available and ask Bruna to choose", "C": "To inform Bruna that her assignment is now overdue", "D": "To apologise for a mistake the department made"},
+             "options": {"A": "To refuse Bruna's request", "B": "To explain the options available and ask Bruna to choose", "C": "To inform Bruna that her assignment is now overdue", "D": "To apologize for a mistake the department made"},
              "correct": "B", "explanation": "O e-mail lista duas opções (com ou sem atestado) e pede que Bruna escolha até quinta. (A) não recusa, oferece alternativas; (C) o trabalho ainda não está atrasado; (D) não houve erro do departamento."},
-            {"num": "B3.2", "prompt": "If Bruna does NOT provide a medical certificate, she can:",
-             "options": {"A": "submit the assignment by the following Monday with no penalty", "B": "submit up to 48 hours late, losing 10% of the marks", "C": "not submit the assignment at all", "D": "choose her own new deadline"},
+            {"num": "B3.2", "prompt": "If Bruna does NOT provide a doctor's note, she can:",
+             "options": {"A": "submit the assignment by next Monday with no penalty", "B": "submit up to 48 hours late, losing 10% of the grade", "C": "not submit the assignment at all", "D": "choose her own new deadline"},
              "correct": "B", "explanation": "Sem atestado: aceita até 48h de atraso com penalidade padrão de 10%. (A) descreve a opção <strong>com</strong> atestado; (C)/(D) não constam."},
             {"num": "B3.3", "prompt": "Dr. Okafor's tone is best described as:",
              "options": {"A": "annoyed and dismissive", "B": "formal but sympathetic and helpful", "C": "uncertain and apologetic", "D": "casual and friendly"},
@@ -213,14 +213,14 @@ MOD1_ACTION_DRILLS_B = [
         "passage_html": """<p><strong>TEXT: Shuttle timetable notice</strong></p>
 <blockquote><p><strong>CAMPUS ↔ STATION SHUTTLE</strong></p>
 <p>Departs Campus Gate: on the hour and at half past, 7:00–19:00, Mon–Fri. Departs Station: at quarter past and quarter to, same times. Journey time: approximately 20 minutes.</p>
-<p><em>The half-past and quarter-to services do not run after 17:00: the last half-past departure from Campus Gate is at 16:30. Weekend and holiday service runs on the hour only.</em></p></blockquote>""",
+<p><em>The half-past and quarter-to services do not run after 17:00: the last half-past departure from Campus Gate is at 16:30. On weekends and holidays, shuttles leave both stops on the hour only.</em></p></blockquote>""",
         "items": [
             {"num": "B4.1", "prompt": "A student wants to leave Campus Gate on a Tuesday at 17:30. On that day there is:",
              "options": {"A": "no 17:30 service — after 17:00 the shuttle leaves on the hour only", "B": "a 17:30 service that arrives at the station around 17:50", "C": "a shuttle only if it is a holiday", "D": "a 17:30 service that takes about 45 minutes"},
              "correct": "A", "explanation": "A nota de rodapé é explícita: \"the last half-past departure from Campus Gate is at 16:30\" e, depois das 17:00, o serviço é \"on the hour only\". Logo, não existe 17:30 na terça-feira. Este item treina a leitura da <strong>nota de rodapé</strong>: quem responde (B) leu só a linha principal e ignorou a exceção."},
             {"num": "B4.2", "prompt": "On a Sunday, a shuttle leaves the Station at:",
              "options": {"A": "quarter past and quarter to every hour", "B": "on the hour only", "C": "half past every hour", "D": "the timetable does not say"},
-             "correct": "B", "explanation": "Fim de semana: \"Weekend and holiday service runs on the hour only\". A tabela <em>quarter past / quarter to</em> da estação vale só de segunda a sexta."},
+             "correct": "B", "explanation": "Fim de semana: \"On weekends and holidays, shuttles leave both stops on the hour only\". A tabela <em>quarter past / quarter to</em> da estação vale só de segunda a sexta."},
         ],
     },
     {
@@ -231,16 +231,16 @@ MOD1_ACTION_DRILLS_B = [
         "passage_html": """<p><strong>TEXT: A social media post from a local bakery</strong></p>
 <blockquote><p>🥐 <strong>Riverside Bakery</strong> · Posted 2 hours ago</p>
 <p>Big news, everyone! Starting next Tuesday, we're extending our weekday hours — open at 6:30 AM instead of 7:00 AM, so early risers can grab their coffee and croissants before work. 🌅</p>
-<p>Quick heads-up though: because of the earlier opening, our weekday sourdough batch will now go into the oven the night before instead of first thing in the morning. It'll still be baked fresh daily, just on a slightly different schedule — so if you're used to catching it warm right out of the oven at 8 AM, it might be ready a little earlier now. Come say hi and let us know what you think of the new hours!</p>
+<p>Quick heads-up though: because of the earlier opening, our weekday sourdough batch will now go into the oven the night before instead of first thing in the morning. It'll still be baked fresh daily, just on a slightly different schedule — so if you're used to grabbing a loaf warm out of the oven at 8 AM, you'll now find it ready on the shelf as soon as we open. Come say hi and let us know what you think of the new hours!</p>
 <p>Weekend hours are unchanged (8 AM–3 PM, same as always).</p></blockquote>""",
         "items": [
             {"num": "B5.1", "prompt": "What is the main purpose of this post?",
-             "options": {"A": "To announce that the bakery is closing early on weekdays", "B": "To inform customers about a change to weekday opening hours", "C": "To apologise for a delay in the sourdough baking schedule", "D": "To advertise a new type of bread"},
+             "options": {"A": "To announce that the bakery is closing early on weekdays", "B": "To inform customers about a change to weekday opening hours", "C": "To apologize for a delay in the sourdough baking schedule", "D": "To advertise a new type of bread"},
              "correct": "B", "explanation": "O post inteiro gira em torno de um anúncio: abrir mais cedo nos dias de semana. (A) inverte; (C) não pede desculpas; (D) nenhum pão novo."},
             {"num": "B5.2", "prompt": "According to the post, the weekday sourdough will:",
              "options": {"A": "no longer be baked fresh every day", "B": "only be available on weekends", "C": "be baked the night before instead of the same morning", "D": "be replaced with a different bread"},
              "correct": "C", "explanation": "\"Will now go into the oven the night before\". (A) o texto diz \"still be baked fresh daily\"; (B)/(D) não constam."},
-            {"num": "B5.3", "prompt": "What can be inferred about the weekend hours?",
+            {"num": "B5.3", "prompt": "What does the post say about the weekend hours?",
              "options": {"A": "They will also move to 6:30 AM", "B": "They stay the same as before this announcement", "C": "They have not been decided yet", "D": "They will be shortened"},
              "correct": "B", "explanation": "\"Weekend hours are unchanged\". (A)/(D) contradizem; (C) já está decidido."},
             {"num": "B5.4", "prompt": "The overall tone of the post is:",
@@ -259,8 +259,8 @@ MOD1_ACTION_DRILLS_C = [
         "level": "B2–C1",
         "objective": "Leia a passagem completa uma vez. Responda às 7 questões. Tempo alvo: 6 minutos.",
         "passage_html": """<p><strong>PASSAGE: Bioluminescence in Marine Organisms</strong></p>
-<p>Bioluminescence (the production and emission of light by a living organism) is remarkably common in the ocean, appearing in bacteria, jellyfish, fish, and even some sharks. Unlike the light produced by a bulb, which wastes most of its energy as heat, bioluminescent light is generated through a highly efficient chemical reaction, typically involving a light-emitting molecule called luciferin and an enzyme called luciferase. Because so little energy is lost as heat, biologists sometimes refer to this phenomenon as "cold light."</p>
-<p>The functions of bioluminescence vary considerably across species, though three purposes appear again and again. Some organisms use light defensively: certain species of squid release a luminous cloud instead of ink, startling predators and buying time to escape. Others use it as a hunting tool. The anglerfish, perhaps the most famous example, dangles a glowing lure above its mouth to attract smaller prey close enough to seize. Still others use light for communication, particularly in the deep sea, where darkness is nearly absolute and visual signals cannot rely on ambient light. Certain species of ostracods, tiny crustaceans, produce synchronized light displays to attract mates.</p>
+<p>Bioluminescence (the production and emission of light by a living organism) is remarkably common in the ocean, appearing in bacteria, jellyfish, fish, and even some sharks. Unlike the light produced by an incandescent bulb, which wastes most of its energy as heat, bioluminescent light is generated through a highly efficient chemical reaction, typically involving a light-emitting molecule called luciferin and an enzyme called luciferase. Because so little energy is lost as heat, biologists sometimes refer to this phenomenon as "cold light."</p>
+<p>The functions of bioluminescence vary considerably across species, though three purposes appear again and again. Some organisms use light defensively: certain species of squid release a luminous cloud instead of ink, startling predators and buying time to escape. Others use it as a hunting tool. The anglerfish, perhaps the most famous example, dangles a glowing lure above its mouth to attract smaller prey close enough to seize. Still others use light for communication. In the deep sea, darkness is nearly absolute, so visual signals cannot rely on ambient light at all. Even in shallow water at night, certain ostracods, tiny crustaceans, produce synchronized light displays to attract mates.</p>
 <p>What makes bioluminescence especially interesting to evolutionary biologists is that it did not evolve just once. Genetic and biochemical evidence indicates that the capacity for bioluminescence has arisen independently dozens of times across unrelated lineages, using different chemical pathways to achieve a similar outcome. This pattern, in which unrelated organisms evolve similar traits independently, is known as convergent evolution, and bioluminescence is considered one of its most striking examples.</p>""",
         "items": [
             {"num": "C1.1", "prompt": "Ideia principal. What is the main idea of the passage?",
@@ -274,7 +274,7 @@ MOD1_ACTION_DRILLS_C = [
              "correct": "D", "explanation": "O parágrafo 2 lista defesa, caça e comunicação/atração de parceiros. Regulação de temperatura nunca aparece."},
             {"num": "C1.4", "prompt": "Inferência. It can be inferred from paragraph 2 that in deep-sea environments:",
              "options": {"A": "visual communication is impossible for any species", "B": "organisms rely on producing their own light because there is little to no ambient light", "C": "most species have lost their sense of sight entirely", "D": "bioluminescence is used only for hunting"},
-             "correct": "B", "explanation": "\"Where darkness is nearly absolute and visual signals cannot rely on ambient light\" → produzir a própria luz supre a ausência de luz ambiente. (A) é extremo; (C)/(D) sem base."},
+             "correct": "B", "explanation": "\"In the deep sea, darkness is nearly absolute, so visual signals cannot rely on ambient light at all\" → produzir a própria luz supre a ausência de luz ambiente. (A) é extremo; (C)/(D) sem base."},
             {"num": "C1.5", "prompt": "Propósito retórico. Why does the author state that bioluminescence \"did not evolve just once\"?",
              "options": {"A": "To argue that bioluminescence is less significant than previously thought", "B": "To introduce and support the claim that it is a notable example of convergent evolution", "C": "To explain why some marine species have gone extinct", "D": "To compare bioluminescence with the evolution of eyesight in mammals"},
              "correct": "B", "explanation": "A frase é seguida por \"...one of its most striking examples\": serve para embasar o conceito de evolução convergente."},
@@ -292,21 +292,21 @@ MOD1_ACTION_DRILLS_C = [
         "level": "B2–C1",
         "objective": "Leia a passagem completa uma vez. Responda às 7 questões. Tempo alvo: 6 minutos.",
         "passage_html": """<p><strong>PASSAGE: Coffee Houses in Seventeenth-Century England</strong></p>
-<p>The first English coffee house opened in Oxford in 1650; within two decades, London alone had hundreds. <strong>[■A]</strong> For the price of a single cup (a penny) a customer could sit for hours, read the newspapers provided by the house, and join whatever conversation was underway. <strong>[■B]</strong> Because admission was cheap and open to any man who could pay, the coffee house mixed people who rarely met elsewhere: merchants, scholars, clergymen, and minor gentry sat at the same long tables. <strong>[■C]</strong></p>
-<p>This mixing had consequences that reached well beyond casual talk. Particular houses became known for particular subjects. Men interested in maritime insurance gathered at Lloyd's; those following scientific debates went to the houses near the Royal Society. <strong>[■D]</strong> Information that had once circulated slowly, by letter or rumour, now moved quickly through these rooms. Some historians argue that the coffee house functioned as an early public sphere: a space where opinion could form through discussion rather than being handed down by church or crown.</p>
+<p>The first English coffee house opened in Oxford in 1650; within two decades, London alone had hundreds. <strong>[■A]</strong> For the price of a single cup (a penny), a customer could sit for hours, read the newspapers provided by the house, and join whatever conversation was underway. <strong>[■B]</strong> Because admission was cheap and open to any man who could pay, the coffee house mixed people who rarely met elsewhere: merchants, scholars, clergymen, and minor gentry sat at the same long tables. <strong>[■C]</strong></p>
+<p>This mixing had consequences that reached well beyond casual talk. Particular houses became known for particular subjects. Men interested in maritime insurance gathered at Lloyd's; those following scientific debates went to the houses near the Royal Society. <strong>[■D]</strong> Information that had once circulated slowly, by letter or rumor, now moved quickly through these rooms. Some historians argue that the coffee house functioned as an early public sphere: a space where opinion could form through discussion rather than being handed down by church or crown.</p>
 <p>The authorities were not comfortable with this. In 1675, the king issued a proclamation ordering the coffee houses closed, on the grounds that they spread "false, malicious and scandalous reports." The order provoked such immediate opposition that it was withdrawn within days. The houses continued to operate for another century, gradually giving way to private clubs and, eventually, to the institutions that had first taken shape around their tables.</p>""",
         "items": [
             {"num": "C2.1", "prompt": "Ideia principal. The passage is mainly about:",
-             "options": {"A": "how coffee was first imported into England", "B": "how English coffee houses became important centres of information and public discussion", "C": "why the king disliked coffee", "D": "the architecture of seventeenth-century London"},
+             "options": {"A": "how coffee was first imported into England", "B": "how English coffee houses became important centers of information and public discussion", "C": "why the king disliked coffee", "D": "the architecture of seventeenth-century London"},
              "correct": "B", "explanation": "O texto traça como as coffee houses viraram centros de informação e discussão pública. (A)/(C)/(D) são detalhes ou não constam."},
             {"num": "C2.2", "prompt": "Detalhe. According to the passage, a customer who paid a penny could:",
              "options": {"A": "buy unlimited cups of coffee", "B": "stay for hours, read the newspapers, and take part in conversation", "C": "join the Royal Society", "D": "rent a private room"},
              "correct": "B", "explanation": "\"Could sit for hours, read the newspapers provided by the house, and join whatever conversation was underway\"."},
             {"num": "C2.3", "prompt": "Inferência. It can be inferred that before coffee houses existed, information among these groups:",
-             "options": {"A": "did not exist at all", "B": "travelled more slowly and less widely", "C": "was controlled entirely by merchants", "D": "was freely available to everyone"},
-             "correct": "B", "explanation": "\"Information that had once circulated slowly, by letter or rumour, now moved quickly\" → antes, mais devagar e menos amplamente. (A) exagera; (C)/(D) sem base."},
+             "options": {"A": "did not exist at all", "B": "traveled more slowly and less widely", "C": "was controlled entirely by merchants", "D": "was freely available to everyone"},
+             "correct": "B", "explanation": "\"Information that had once circulated slowly, by letter or rumor, now moved quickly\" → antes, mais devagar e menos amplamente. (A) exagera; (C)/(D) sem base."},
             {"num": "C2.4", "prompt": "Propósito retórico. Why does the author mention Lloyd's and the houses near the Royal Society?",
-             "options": {"A": "To show that different coffee houses specialised in different topics", "B": "To argue that Lloyd's was the most important coffee house", "C": "To explain how coffee houses were decorated", "D": "To prove that scientists disliked merchants"},
+             "options": {"A": "To show that different coffee houses specialized in different topics", "B": "To argue that Lloyd's was the most important coffee house", "C": "To explain how coffee houses were decorated", "D": "To prove that scientists disliked merchants"},
              "correct": "A", "explanation": "\"Particular houses became known for particular subjects\": Lloyd's e as casas perto da Royal Society ilustram a especialização por tema."},
             {"num": "C2.5", "prompt": "Detalhe. The king's 1675 proclamation was:",
              "options": {"A": "enforced for a century", "B": "withdrawn within days after strong opposition", "C": "welcomed by most coffee house owners", "D": "never actually issued"},
@@ -325,16 +325,16 @@ MOD1_ACTION_DRILLS_C = [
         "level": "C1",
         "objective": "Leia a passagem completa uma vez. Responda às 7 questões (a última pede 3 respostas). Tempo alvo: 6 minutos.",
         "passage_html": """<p><strong>PASSAGE: The Strength of Weak Ties</strong></p>
-<p>When people look for a new job, common sense suggests they should turn to their closest contacts: family and good friends who know them well and want to help. In a study of professionals who had recently changed jobs, the sociologist Mark Granovetter found the opposite. Most had heard about their new position not from a close friend but from an acquaintance: someone they saw only occasionally and would not have described as part of their inner circle.</p>
+<p>When people look for a new job, common sense suggests they should turn to their closest contacts: family and good friends who know them well and want to help. In a study of professionals who had recently changed jobs, the sociologist Mark Granovetter found the opposite. Of those who had found their new position through a personal contact, most had heard about it not from a close friend but from an acquaintance — someone they saw only occasionally and would not have described as part of their inner circle.</p>
 <p>Granovetter's explanation rests on how information moves through social networks. Your close friends tend to know one another and to move in the same circles you do. As a result, they are exposed to more or less the same information you already have; what they can tell you, you have often already heard. An acquaintance, by contrast, moves in a different circle, encounters different people, and hears different news. A weak tie is therefore a bridge to parts of the network you could not otherwise reach.</p>
-<p>The finding has been extended well beyond job-hunting. Weak ties have been linked to the spread of new ideas between organisations, to the circulation of information during emergencies, and to innovation within companies, where teams connected to many outside groups tend to produce more original work. Critics note that weak ties are not always advantageous: they carry less trust, and acting on information from a near-stranger involves more risk. But the core insight has held up: the contacts most likely to tell you something genuinely new are often the ones you know least well.</p>""",
+<p>The finding has been extended well beyond job-hunting. Weak ties have been linked to the spread of new ideas between organizations, to the circulation of information during emergencies, and to innovation within companies, where teams connected to many outside groups tend to produce more original work. Critics note that weak ties are not always advantageous: they carry less trust, and acting on information from a near-stranger involves more risk. But the core insight has held up: the contacts most likely to tell you something genuinely new are often the ones you know least well.</p>""",
         "items": [
             {"num": "C3.1", "prompt": "Ideia principal. The main idea of the passage is that:",
-             "options": {"A": "close friends are the best source of job information", "B": "acquaintances (\"weak ties\") are often better than close contacts at providing genuinely new information, because they connect us to other parts of a social network", "C": "social networks have no effect on how people find jobs", "D": "Granovetter's study has been completely disproved"},
+             "options": {"A": "close friends are usually the most reliable source of job leads, since they know us well and want to help", "B": "weak ties often supply new information because they link us to other parts of a network", "C": "social networks have no effect on how people find jobs", "D": "Granovetter's study has been completely disproved"},
              "correct": "B", "explanation": "Tese central: weak ties frequentemente trazem informação mais nova porque conectam a outras partes da rede. (A) contradiz o achado; (C)/(D) distorcem."},
-            {"num": "C3.2", "prompt": "Detalhe. In Granovetter's study, most professionals heard about their new job from:",
+            {"num": "C3.2", "prompt": "Detalhe. In Granovetter's study, most of those who found a job through a personal contact heard about it from:",
              "options": {"A": "a family member", "B": "a close friend", "C": "an acquaintance they saw only occasionally", "D": "a recruitment agency"},
-             "correct": "C", "explanation": "\"Most had heard about their new position not from a close friend but from an acquaintance.\""},
+             "correct": "C", "explanation": "\"Most had heard about it not from a close friend but from an acquaintance.\""},
             {"num": "C3.3", "prompt": "Detalhe. According to the passage, close friends tend to give us information that:",
              "options": {"A": "is completely new to us", "B": "we have often already heard, because they move in the same circles we do", "C": "is always more trustworthy and therefore more useful", "D": "comes from outside our network"},
              "correct": "B", "explanation": "\"They are exposed to more or less the same information you already have; what they can tell you, you have often already heard.\""},
@@ -369,7 +369,7 @@ MOD2_ACTION_DRILLS_A = [
     {
         "id": "mod2-a",
         "title": None,
-        "level": "A2–B1",
+        "level": "B1–B2",
         "objective": "Escolha a resposta mais natural e pragmaticamente adequada a cada fala. Tempo alvo: 12 segundos por item.",
         "passage_html": None,
         "items": [
@@ -387,15 +387,15 @@ MOD2_ACTION_DRILLS_A = [
              "correct": "A", "explanation": "Pergunta retórica = alerta educado sobre ir a pé com esse tempo. A resposta natural revisa o plano. (B) só reaproveita <em>weather</em>; (C)/(D) falam de outro momento e ignoram o alerta."},
             {"num": "A5", "prompt": "\"I heard the registrar's office changed their hours.\"",
              "options": {"A": "I registered for four classes this term.", "B": "Really? Do you know the new schedule?", "C": "The office is on the second floor.", "D": "I haven't registered for anything yet."},
-             "correct": "B", "explanation": "Informação nova (mudança de horário) → interesse + pedido de detalhe. (A)/(D) confundem <em>register</em> (matricular-se) com <em>hours</em>. (C) é verdade, mas não é o que foi dito."},
+             "correct": "B", "explanation": "Informação nova (mudança de horário) → interesse + pedido de detalhe. (A) e (D) reaproveitam o som de <em>registrar</em> em <em>register</em> (matricular-se), mas não reagem à notícia; (C) dá a localização do escritório, que ninguém perguntou."},
             {"num": "A6", "prompt": "\"Could you run your presentation by me before the meeting?\"",
-             "options": {"A": "I ran three miles this morning.", "B": "Sure — are you free around four?", "C": "The meeting's been moved to Thursday.", "D": "I've given that presentation twice already."},
-             "correct": "B", "explanation": "\"Run X by me\" = me mostrar antes. Resposta natural marca um horário. (A) toma \"run\" ao pé da letra; (C) muda o foco; (D) ignora o pedido."},
+             "options": {"A": "I ran three miles this morning.", "B": "Sure — are you free around four?", "C": "The meeting's been moved to Thursday.", "D": "I gave my first presentation in high school."},
+             "correct": "B", "explanation": "\"Run X by me\" = me mostrar antes. Resposta natural marca um horário. (A) toma \"run\" ao pé da letra; (C) muda o foco; (D) reaproveita <em>presentation</em> sem responder ao pedido."},
             {"num": "A7", "prompt": "\"I thought the lab report was due next week, not tomorrow.\"",
              "options": {"A": "So did I — let me double-check the syllabus.", "B": "The lab is on the ground floor.", "C": "I finished my report last month.", "D": "Next week works better for me too."},
              "correct": "A", "explanation": "Divergência sobre a data → confirmar juntos, checar o syllabus. (B)/(C)/(D) ignoram a divergência."},
             {"num": "A8", "prompt": "\"Would you rather present first or last?\"",
-             "options": {"A": "I presented last time.", "B": "Last, if that's an option — I need time to prepare.", "C": "The presentation is worth 20% of the grade.", "D": "First place goes to the best presentation."},
+             "options": {"A": "The last presentation ran over time.", "B": "Last, if that's an option — I need time to prepare.", "C": "The presentation is worth 20% of the grade.", "D": "First place goes to the best presentation."},
              "correct": "B", "explanation": "Pergunta de preferência (primeiro ou último) → escolher e justificar. (A)/(C)/(D) não respondem à escolha oferecida."},
             {"num": "A9", "prompt": "\"This bus is taking forever. We should've left earlier.\"",
              "options": {"A": "The bus stop is right over there.", "B": "Tell me about it — I hate cutting it this close.", "C": "I take this bus every day.", "D": "I left my umbrella on the bus once."},
@@ -426,7 +426,7 @@ MOD2_ACTION_DRILLS_B = [
 <p><strong>Advisor:</strong> Let me check... okay, Data Visualization has space. But it has Statistics as a prerequisite — have you completed that?</p>
 <p><strong>Student:</strong> No, that's why I wanted to switch — I was hoping to take Data Visualization first and Statistics later.</p>
 <p><strong>Advisor:</strong> Ah. Unfortunately that's not possible; the prerequisite is enforced by the system. You'd need to finish Statistics first, or get a written waiver from the Data Visualization instructor.</p>
-<p><strong>Student:</strong> Is it worth asking her directly, or is that rarely approved?</p>
+<p><strong>Student:</strong> Is it worth asking the instructor directly, or is that rarely approved?</p>
 <p><strong>Advisor:</strong> It's approved sometimes, especially if you have relevant experience — a coding background, say. Do you have any?</p>
 <p><strong>Student:</strong> I do, actually — I took two programming courses last year.</p>
 <p><strong>Advisor:</strong> Then it's worth emailing her. I'll send you her contact information now.</p>""",
@@ -497,7 +497,7 @@ MOD2_ACTION_DRILLS_B = [
             {"num": "B3.3", "prompt": "Detail. What balance between summary and evaluation does the professor recommend?",
              "options": {"A": "Half summary, half evaluation", "B": "All evaluation, no summary", "C": "About one-third summary, two-thirds evaluation", "D": "A brief summary followed by a personal opinion"},
              "correct": "C", "explanation": "\"Maybe a third summary, two-thirds evaluation.\""},
-            {"num": "B3.4", "prompt": "Attitude. What does the professor mean by \"Don't pad it\"?",
+            {"num": "B3.4", "prompt": "Meaning of an expression. What does the professor mean by \"Don't pad it\"?",
              "options": {"A": "Write more than 1,500 words to be safe", "B": "Don't add filler just to reach the word count", "C": "Use larger margins and spacing", "D": "Include as many quotations as possible"},
              "correct": "B", "explanation": "\"Don't pad it\" = não encher linguiça para bater a contagem de palavras. (A) é o oposto; (C)/(D) estão fora do que foi dito."},
         ],
@@ -545,7 +545,7 @@ MOD2_ACTION_DRILLS_C = [
              "correct": "B", "explanation": "\"The add/drop period... has been shortened from two weeks to one.\" (A)/(C)/(D) não ditos."},
             {"num": "C2.4", "prompt": "Inference. Why does the speaker emphasize finalizing the schedule before the term?",
              "options": {"A": "Because instructors will not answer email during the term", "B": "Because there will be less time to change courses once classes start", "C": "Because spring courses are harder than fall courses", "D": "Because registration reopens midway through the term"},
-             "correct": "B", "explanation": "Add/drop mais curto → menos tempo para ajustar depois que as aulas começam. (A) é verdade em outro contexto, mas não é o que foi dito; (C)/(D) sem base."},
+             "correct": "B", "explanation": "Add/drop mais curto → menos tempo para ajustar depois que as aulas começam. (A), (C) e (D) não são ditos no anúncio."},
         ],
     },
     {
@@ -583,8 +583,8 @@ MOD2_ACTION_DRILLS_D = [
         "passage_html": """<p><em>Narrator: Listen to part of a talk in a psychology class.</em></p>
 <p><strong>Professor:</strong> We've been discussing decision-making, and today I want to bring up something researchers call the paradox of choice. The idea is counterintuitive: you'd think more options would always make us happier, but past a certain point it does the opposite.</p>
 <p>A classic example. In one well-known study, researchers set up a tasting table in a grocery store: first with six varieties of jam, then with twenty-four. You'd expect the bigger display to sell more. Actually, the smaller display generated significantly more purchases. The larger one attracted more browsers, but far fewer of them bought anything.</p>
-<p>Why? Two things: decision fatigue and anticipated regret. With more options, comparing them mentally becomes exhausting — that's the fatigue. And once you pick, you start second-guessing whether one of the other twenty-three would've been better — that's the regret. Ironically, more choices can leave people feeling back to square one, unable to commit at all.</p>
-<p>Now, this doesn't mean choice is bad: a complete absence of options is its own problem. The point is there's a sweet spot, and past it, additional options stop helping and start working against us.</p>""",
+<p>Why? Two things: decision fatigue and anticipated regret. With more options, comparing them mentally becomes exhausting — that's the fatigue. And even before you pick, you start worrying that one of the other twenty-three might be better and that you'll regret your choice — that's the regret. Ironically, more choices can leave people feeling back to square one, unable to commit at all.</p>
+<p>Now, this doesn't mean choice is bad: a complete absence of options is its own problem. The point is there's a sweet spot, and past it, additional options stop helping and start working against us. To be fair, later studies haven't always replicated the jam result, so the size of the effect is still debated.</p>""",
         "items": [
             {"num": "D1.1", "prompt": "Gist-content. What is the talk mainly about?",
              "options": {"A": "Grocery stores should minimize the products they display", "B": "Beyond a point, more options can reduce satisfaction and hinder decisions", "C": "Consumers always prefer smaller displays", "D": "Decision fatigue affects only in-store shoppers"},
@@ -595,7 +595,7 @@ MOD2_ACTION_DRILLS_D = [
             {"num": "D1.3", "prompt": "Organization. Why does the professor describe the grocery store study in detail?",
              "options": {"A": "To criticize the researchers' methodology", "B": "To give concrete evidence for the paradox of choice", "C": "To introduce an unrelated topic about marketing", "D": "To explain how stores design displays"},
              "correct": "B", "explanation": "Exemplo empírico logo após o conceito abstrato. (A)/(C)/(D) sem base."},
-            {"num": "D1.4", "prompt": "Inference. What is the professor's view on having zero options?",
+            {"num": "D1.4", "prompt": "Detail. What does the professor say about having zero options?",
              "options": {"A": "It is preferable to having too many", "B": "It is also a problem, just as too many options are", "C": "It has never been studied", "D": "It applies only to grocery shopping"},
              "correct": "B", "explanation": "\"A complete absence of options is its own problem.\" (A) inverte o sentido."},
             {"num": "D1.5", "prompt": "Idiom in context. What does \"back to square one\" mean here?",
@@ -610,7 +610,7 @@ MOD2_ACTION_DRILLS_D = [
         "objective": "Leia a palestra (ou peça pra alguém ler em voz alta) e responda às 5 questões. Tempo alvo: 4 minutos.",
         "passage_html": """<p><em>Narrator: Listen to part of a talk in a biology class.</em></p>
 <p><strong>Professor:</strong> When we picture a forest, we tend to see individual trees competing — for light, for water, for space. And that's real. But over the last thirty years, research has revealed something the old picture missed: the trees are also <strong>connected</strong>, underground, through fungi.</p>
-<p>Here's how. The roots of most trees are wrapped in a network of fungal threads called mycorrhizae. The fungi pull in water and minerals the tree's roots can't reach efficiently, and hand them to the tree. In return, the tree gives the fungi sugars it makes through photosynthesis. So far, a simple trade.</p>
+<p>Here's how. The roots of most trees are wrapped in a network of fungal threads; this partnership between root and fungus is called a mycorrhiza. The fungi pull in water and minerals the tree's roots can't reach efficiently, and hand them to the tree. In return, the tree gives the fungi sugars it makes through photosynthesis. So far, a simple trade.</p>
 <p>The surprising part is that a single fungal network can link <strong>many</strong> trees at once — even trees of different species. And things move along those links. Experiments using radioactive tracers have shown carbon flowing from a tree standing in full sun to a shaded seedling of another species nearby. Some researchers describe old, well-connected trees as "hub trees" that support younger ones around them.</p>
 <p>Now, a word of caution. This work has captured the public imagination, and some popular accounts overstate it: talking about forests as single cooperative organisms. The jury's still out on how deliberate or widespread the sharing really is. What's solid is that the connections exist and that resources can move through them. How much that reshapes our model of the forest is still being worked out.</p>""",
         "items": [
@@ -638,7 +638,7 @@ MOD2_ACTION_DRILLS_D = [
         "objective": "Leia a palestra (ou peça pra alguém ler em voz alta) e responda às 6 questões. Tempo alvo: 4 minutos.",
         "passage_html": """<p><em>Narrator: Listen to part of a talk in a history of technology class.</em></p>
 <p><strong>Professor:</strong> Look at your keyboard. The top row of letters spells Q-W-E-R-T-Y. It's an odd arrangement — the most common letters aren't under your strongest fingers. So why has it survived, essentially unchanged, for a hundred and fifty years?</p>
-<p>The layout dates from the 1870s, from early mechanical typewriters. The common story is that QWERTY was designed to <em>slow typists down</em> so the metal type-bars wouldn't jam. That's probably an oversimplification (the real design pressures were more mixed) but the key point is that the layout was shaped by the constraints of 1870s <strong>machinery</strong>, constraints that vanished decades ago.</p>
+<p>The layout dates from the 1870s, from early mechanical typewriters. The common story is that QWERTY was designed to <em>slow typists down</em> so the metal type-bars wouldn't jam. That's probably an oversimplification (the real design pressures were more mixed), but the key point is that the layout was shaped by the constraints of 1870s <strong>machinery</strong>, constraints that vanished decades ago.</p>
 <p>Better layouts have been proposed. The best known, Dvorak, was patented in 1936 and, in some studies, allows modestly faster and more comfortable typing. Yet it never caught on. Why not?</p>
 <p>This is a textbook case of what economists call <strong>path dependence</strong>, or sometimes "lock-in." Once QWERTY became the standard, everything organized itself around that standard: typewriters were built for it, typing was taught on it, and every new typist learned it because that's what the machines used — and machines used it because that's what typists knew. To switch, a single person gains little unless nearly everyone switches at once. The cost of coordinating that switch is enormous, and no one bears it. So an arrangement that made sense only for 1870s hardware is still, quietly, on every device you own.</p>""",
         "items": [
@@ -651,15 +651,15 @@ MOD2_ACTION_DRILLS_D = [
             {"num": "D3.3", "prompt": "Detail. According to the talk, what happened to the Dvorak layout?",
              "options": {"A": "It became the new standard in the 1940s", "B": "It was patented in 1936 but never caught on", "C": "It was proven to be slower than QWERTY", "D": "It is now used on most smartphones"},
              "correct": "B", "explanation": "\"Patented in 1936... Yet it never caught on.\" (A)/(C)/(D) contradizem."},
-            {"num": "D3.4", "prompt": "Organization. Why does the professor describe the cycle of \"typists learned QWERTY because machines used it, and machines used it because typists knew it\"?",
+            {"num": "D3.4", "prompt": "Organization. Why does the professor describe how typists learned QWERTY because machines used it, and machines used it because typists knew it?",
              "options": {"A": "To illustrate how lock-in makes a standard self-reinforcing and hard to change", "B": "To criticize typewriter manufacturers", "C": "To explain how mechanical type-bars work", "D": "To argue that QWERTY is actually well designed"},
-             "correct": "A", "explanation": "O ciclo ilustra como o padrão se auto-reforça (<em>lock-in</em>). (B)/(C)/(D) sem base."},
-            {"num": "D3.5", "prompt": "Inference. What can be inferred about why an individual rarely switches to Dvorak?",
-             "options": {"A": "Dvorak keyboards are illegal in most countries", "B": "The benefit to one person is small unless almost everyone switches together", "C": "Dvorak is much harder to learn than any other layout", "D": "Employers forbid it"},
-             "correct": "B", "explanation": "\"A single person gains little unless nearly everyone switches at once.\" (A)/(C)/(D) exageram ou não são ditos."},
-            {"num": "D3.6", "prompt": "Idiom in context. When the professor says the old arrangement is \"still, quietly, on every device you own,\" the word \"quietly\" suggests that:",
-             "options": {"A": "keyboards make no sound", "B": "most people use QWERTY without noticing that it is an outdated design", "C": "the layout is a secret", "D": "typing should be done silently"},
-             "correct": "B", "explanation": "\"Quietly\" sugere que as pessoas usam QWERTY sem perceber que é um design obsoleto. (A)/(C)/(D) tomam a palavra ao pé da letra ou fora de contexto."},
+             "correct": "A", "explanation": "O ciclo ilustra como o padrão se autorreforça (<em>lock-in</em>). (B)/(C)/(D) sem base."},
+            {"num": "D3.5", "prompt": "Detail. According to the professor, why does an individual rarely switch to Dvorak?",
+             "options": {"A": "Dvorak has never been tested against QWERTY", "B": "The benefit to one person is small unless almost everyone switches together", "C": "Dvorak keyboards are no longer manufactured", "D": "Most people find Dvorak uncomfortable"},
+             "correct": "B", "explanation": "\"A single person gains little unless nearly everyone switches at once.\" (A) e (D) contradizem a palestra (\"in some studies, allows modestly faster and more comfortable typing\"); (C) não é dito."},
+            {"num": "D3.6", "prompt": "Word in context. When the professor says the old arrangement is \"still, quietly, on every device you own,\" the word \"quietly\" suggests that:",
+             "options": {"A": "the change from typewriters to computers happened slowly", "B": "most people use QWERTY without noticing that it is an outdated design", "C": "manufacturers have hidden the layout's origins", "D": "QWERTY is gradually disappearing from new devices"},
+             "correct": "B", "explanation": "\"Quietly\" sugere que as pessoas usam QWERTY sem perceber que é um design obsoleto. (A) não tem relação com a palavra; (C) lê \"quietly\" como segredo, ideia que a palestra não sustenta; (D) contradiz \"on every device you own\"."},
         ],
     },
 ]

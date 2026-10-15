@@ -464,11 +464,11 @@ Anotar palavra por palavra é lento demais. Use símbolos.
 
 **A5.** *"I heard the registrar's office changed their hours."* (A) "I registered for four classes this term." (B) "Really? Do you know the new schedule?" (C) "The office is on the second floor." (D) "I haven't registered for anything yet."
 
-**A6.** *"Could you run your presentation by me before the meeting?"* (A) "I ran three miles this morning." (B) "Sure: are you free around four?" (C) "The meeting's been moved to Thursday." (D) "I've given that presentation twice already."
+**A6.** *"Could you run your presentation by me before the meeting?"* (A) "I ran three miles this morning." (B) "Sure: are you free around four?" (C) "The meeting's been moved to Thursday." (D) "I gave my first presentation in high school."
 
 **A7.** *"I thought the lab report was due next week, not tomorrow."* (A) "So did I: let me double-check the syllabus." (B) "The lab is on the ground floor." (C) "I finished my report last month." (D) "Next week works better for me too."
 
-**A8.** *"Would you rather present first or last?"* (A) "I presented last time." (B) "Last, if that's an option: I need time to prepare." (C) "The presentation is worth 20% of the grade." (D) "First place goes to the best presentation."
+**A8.** *"Would you rather present first or last?"* (A) "The last presentation ran over time." (B) "Last, if that's an option: I need time to prepare." (C) "The presentation is worth 20% of the grade." (D) "First place goes to the best presentation."
 
 **A9.** *"This bus is taking forever. We should've left earlier."* (A) "The bus stop is right over there." (B) "Tell me about it: I hate cutting it this close." (C) "I take this bus every day." (D) "I left my umbrella on the bus once."
 
@@ -496,7 +496,7 @@ Anotar palavra por palavra é lento demais. Use símbolos.
 
 **Advisor:** Ah. Unfortunately that's not possible; the prerequisite is enforced by the system. You'd need to finish Statistics first, or get a written waiver from the Data Visualization instructor.
 
-**Student:** Is it worth asking her directly, or is that rarely approved?
+**Student:** Is it worth asking the instructor directly, or is that rarely approved?
 
 **Advisor:** It's approved sometimes, especially if you have relevant experience · a coding background, say. Do you have any?
 
@@ -568,7 +568,7 @@ Anotar palavra por palavra é lento demais. Use símbolos.
 
 **B3.3: Detail.** What balance between summary and evaluation does the professor recommend? (A) Half summary, half evaluation (B) All evaluation, no summary (C) About one-third summary, two-thirds evaluation (D) A brief summary followed by a personal opinion
 
-**B3.4: Attitude.** What does the professor mean by "Don't pad it"? (A) Write more than 1,500 words to be safe (B) Don't add filler just to reach the word count (C) Use larger margins and spacing (D) Include as many quotations as possible
+**B3.4: Meaning of an expression.** What does the professor mean by "Don't pad it"? (A) Write more than 1,500 words to be safe (B) Don't add filler just to reach the word count (C) Use larger margins and spacing (D) Include as many quotations as possible
 
 ---
 
@@ -634,9 +634,9 @@ Anotar palavra por palavra é lento demais. Use símbolos.
 
 A classic example. In one well-known study, researchers set up a tasting table in a grocery store: first with six varieties of jam, then with twenty-four. You'd expect the bigger display to sell more. Actually, the smaller display generated significantly more purchases. The larger one attracted more browsers, but far fewer of them bought anything.
 
-Why? Two things: decision fatigue and anticipated regret. With more options, comparing them mentally becomes exhausting · that's the fatigue. And once you pick, you start second-guessing whether one of the other twenty-three would've been better · that's the regret. Ironically, more choices can leave people feeling back to square one, unable to commit at all.
+Why? Two things: decision fatigue and anticipated regret. With more options, comparing them mentally becomes exhausting · that's the fatigue. And even before you pick, you start worrying that one of the other twenty-three might be better and that you'll regret your choice — that's the regret. Ironically, more choices can leave people feeling back to square one, unable to commit at all.
 
-Now, this doesn't mean choice is bad: a complete absence of options is its own problem. The point is there's a sweet spot, and past it, additional options stop helping and start working against us.
+Now, this doesn't mean choice is bad: a complete absence of options is its own problem. The point is there's a sweet spot, and past it, additional options stop helping and start working against us. To be fair, later studies haven't always replicated the jam result, so the size of the effect is still debated.
 
 **D1.1: Gist-content.** What is the talk mainly about? (A) Grocery stores should minimize the products they display (B) Beyond a point, more options can reduce satisfaction and hinder decisions (C) Consumers always prefer smaller displays (D) Decision fatigue affects only in-store shoppers
 
@@ -644,7 +644,7 @@ Now, this doesn't mean choice is bad: a complete absence of options is its own p
 
 **D1.3: Organization.** Why does the professor describe the grocery store study in detail? (A) To criticize the researchers' methodology (B) To give concrete evidence for the paradox of choice (C) To introduce an unrelated topic about marketing (D) To explain how stores design displays
 
-**D1.4: Inference.** What is the professor's view on having zero options? (A) It is preferable to having too many (B) It is also a problem, just as too many options are (C) It has never been studied (D) It applies only to grocery shopping
+**D1.4: Detail.** What does the professor say about having zero options? (A) It is preferable to having too many (B) It is also a problem, just as too many options are (C) It has never been studied (D) It applies only to grocery shopping
 
 **D1.5: Idiom in context.** What does *"back to square one"* mean here? (A) Making a confident final decision (B) Returning to a starting point without real progress (C) Choosing the first option presented (D) Comparing two options systematically
 
@@ -656,7 +656,7 @@ Now, this doesn't mean choice is bad: a complete absence of options is its own p
 
 **Professor:** When we picture a forest, we tend to see individual trees competing · for light, for water, for space. And that's real. But over the last thirty years, research has revealed something the old picture missed: the trees are also **connected**, underground, through fungi.
 
-Here's how. The roots of most trees are wrapped in a network of fungal threads called mycorrhizae. The fungi pull in water and minerals the tree's roots can't reach efficiently, and hand them to the tree. In return, the tree gives the fungi sugars it makes through photosynthesis. So far, a simple trade.
+Here's how. The roots of most trees are wrapped in a network of fungal threads; this partnership between root and fungus is called a mycorrhiza. The fungi pull in water and minerals the tree's roots can't reach efficiently, and hand them to the tree. In return, the tree gives the fungi sugars it makes through photosynthesis. So far, a simple trade.
 
 The surprising part is that a single fungal network can link **many** trees at once: even trees of different species. And things move along those links. Experiments using radioactive tracers have shown carbon flowing from a tree standing in full sun to a shaded seedling of another species nearby. Some researchers describe old, well-connected trees as "hub trees" that support younger ones around them.
 
@@ -680,7 +680,7 @@ Now, a word of caution. This work has captured the public imagination, and some 
 
 **Professor:** Look at your keyboard. The top row of letters spells Q-W-E-R-T-Y. It's an odd arrangement · the most common letters aren't under your strongest fingers. So why has it survived, essentially unchanged, for a hundred and fifty years?
 
-The layout dates from the 1870s, from early mechanical typewriters. The common story is that QWERTY was designed to *slow typists down* so the metal type-bars wouldn't jam. That's probably an oversimplification (the real design pressures were more mixed) but the key point is that the layout was shaped by the constraints of 1870s **machinery**, constraints that vanished decades ago.
+The layout dates from the 1870s, from early mechanical typewriters. The common story is that QWERTY was designed to *slow typists down* so the metal type-bars wouldn't jam. That's probably an oversimplification (the real design pressures were more mixed), but the key point is that the layout was shaped by the constraints of 1870s **machinery**, constraints that vanished decades ago.
 
 Better layouts have been proposed. The best known, Dvorak, was patented in 1936 and, in some studies, allows modestly faster and more comfortable typing. Yet it never caught on. Why not?
 
@@ -692,11 +692,11 @@ This is a textbook case of what economists call **path dependence**, or sometime
 
 **D3.3: Detail.** According to the talk, what happened to the Dvorak layout? (A) It became the new standard in the 1940s (B) It was patented in 1936 but never caught on (C) It was proven to be slower than QWERTY (D) It is now used on most smartphones
 
-**D3.4: Organization.** Why does the professor describe the cycle of "typists learned QWERTY because machines used it, and machines used it because typists knew it"? (A) To illustrate how lock-in makes a standard self-reinforcing and hard to change (B) To criticize typewriter manufacturers (C) To explain how mechanical type-bars work (D) To argue that QWERTY is actually well designed
+**D3.4: Organization.** Why does the professor describe how typists learned QWERTY because machines used it, and machines used it because typists knew it? (A) To illustrate how lock-in makes a standard self-reinforcing and hard to change (B) To criticize typewriter manufacturers (C) To explain how mechanical type-bars work (D) To argue that QWERTY is actually well designed
 
-**D3.5: Inference.** What can be inferred about why an individual rarely switches to Dvorak? (A) Dvorak keyboards are illegal in most countries (B) The benefit to one person is small unless almost everyone switches together (C) Dvorak is much harder to learn than any other layout (D) Employers forbid it
+**D3.5: Detail.** According to the professor, why does an individual rarely switch to Dvorak? (A) Dvorak has never been tested against QWERTY (B) The benefit to one person is small unless almost everyone switches together (C) Dvorak keyboards are no longer manufactured (D) Most people find Dvorak uncomfortable
 
-**D3.6: Idiom in context.** When the professor says the old arrangement is "still, quietly, on every device you own," the word *"quietly"* suggests that: (A) keyboards make no sound (B) most people use QWERTY without noticing that it is an outdated design (C) the layout is a secret (D) typing should be done silently
+**D3.6: Word in context.** When the professor says the old arrangement is "still, quietly, on every device you own," the word *"quietly"* suggests that: (A) the change from typewriters to computers happened slowly (B) most people use QWERTY without noticing that it is an outdated design (C) manufacturers have hidden the layout's origins (D) QWERTY is gradually disappearing from new devices
 
 ---
 
@@ -710,8 +710,8 @@ This is a textbook case of what economists call **path dependence**, or sometime
 | A2 | **A** | Pedido direto → resposta direta de concessão + plano. (B) é gentil mas não responde ao pedido; (C) reaproveita *borrow* e (D) reaproveita *Tuesday*: **CORRECT WORDS, WRONG MEANING**. |
 | A3 | **B** | Insegurança sobre o rascunho → resposta busca o problema específico. (A) reaproveita *ready* sem tratar da preocupação: **CORRECT WORDS, WRONG MEANING**; (C)(D) ignoram a preocupação. |
 | A4 | **A** | Pergunta retórica = alerta educado sobre ir a pé com esse tempo. A resposta natural revisa o plano. (B) reaproveita *weather*: **CORRECT WORDS, WRONG MEANING**; (C)(D) falam de outro momento e ignoram o alerta. |
-| A5 | **B** | Informação nova (mudança de horário) → interesse + pedido de detalhe. (A)(D) confundem *register* (matricular-se) com *hours*: **CORRECT WORDS, WRONG MEANING**. (C) é **TRUE BUT NOT SAID**. |
-| A6 | **B** | *"run X by me"* = me mostrar antes. Resposta natural marca um horário. (A) toma *"run"* ao pé da letra: **CORRECT WORDS, WRONG MEANING**. (C) muda o foco; (D) ignora o pedido. |
+| A5 | **B** | Informação nova (mudança de horário) → interesse + pedido de detalhe. (A)(D) reaproveitam o som de *registrar* em *register* (matricular-se), mas não reagem à notícia: **CORRECT WORDS, WRONG MEANING**. (C) dá a localização do escritório, que ninguém perguntou: **WRONG FOCUS**. |
+| A6 | **B** | *"run X by me"* = me mostrar antes. Resposta natural marca um horário. (A) toma *"run"* ao pé da letra: **CORRECT WORDS, WRONG MEANING**. (C) muda o foco; (D) reaproveita *presentation* sem responder ao pedido. |
 | A7 | **A** | Divergência sobre a data → confirmar juntos, checar o syllabus. (B) muda o foco (localização); (C)(D) ignoram a divergência. |
 | A8 | **B** | Pergunta de preferência (primeiro ou último) → escolher e justificar. (A)(C)(D) não respondem à escolha oferecida. |
 | A9 | **B** | Reclamação sobre a demora → *"Tell me about it"* concorda enfaticamente + acrescenta. (A)(C)(D) reaproveitam *bus*/*left* sem reagir à reclamação. |
@@ -745,7 +745,7 @@ This is a textbook case of what economists call **path dependence**, or sometime
 **C2.1: (B).** *"closes the following Wednesday at midnight."* (A) é a abertura; (C)(D) confundem com o add/drop.
 **C2.2: (C).** *"add yourself to the waitlist rather than emailing the instructor."* (A) explicitamente desaconselhado.
 **C2.3: (B).** *"the add/drop period... has been shortened from two weeks to one."* (A)(C)(D) não ditos.
-**C2.4: (B).** Add/drop mais curto → menos tempo para ajustar depois que as aulas começam. (A) **TRUE BUT NOT SAID**; (C)(D) sem base.
+**C2.4: (B).** Add/drop mais curto → menos tempo para ajustar depois que as aulas começam. (A)(C)(D) não são ditos no anúncio.
 
 **C3.1: (C).** *"from 10 to 4."* (A) é a abertura da estação de revisão de currículo; (B) é o workshop.
 **C3.2: (B).** *"Business-casual dress is recommended, not required."*
@@ -769,9 +769,9 @@ This is a textbook case of what economists call **path dependence**, or sometime
 **D3.1: (B).** A pergunta central é por que um layout ultrapassado sobreviveu · e a resposta é *path dependence*. (A)(D) **WRONG FOCUS / EXTREME**; (C) é contexto, não o tema.
 **D3.2: (B).** *"That's probably an oversimplification... but the layout was shaped by 1870s machinery."*
 **D3.3: (B).** *"patented in 1936... Yet it never caught on."* (A)(C)(D) contradizem.
-**D3.4: (A).** O ciclo ilustra como o padrão se auto-reforça (lock-in). (B)(C)(D) sem base.
-**D3.5: (B).** *"a single person gains little unless nearly everyone switches at once."* (A)(C)(D) **EXTREME / não ditos**.
-**D3.6: (B).** *"quietly"* sugere que as pessoas usam QWERTY sem perceber que é um design obsoleto. (A)(C)(D) tomam a palavra ao pé da letra ou fora de contexto.
+**D3.4: (A).** O ciclo ilustra como o padrão se autorreforça (lock-in). (B)(C)(D) sem base.
+**D3.5: (B).** *"a single person gains little unless nearly everyone switches at once."* (A)(D) contradizem a palestra (*"in some studies, allows modestly faster and more comfortable typing"*): **OPPOSITE**; (C) não dito.
+**D3.6: (B).** *"quietly"* sugere que as pessoas usam QWERTY sem perceber que é um design obsoleto. (A) não tem relação com a palavra; (C) lê *"quietly"* como segredo, ideia que a palestra não sustenta; (D) contradiz *"on every device you own"*: **OPPOSITE**.
 
 ---
 

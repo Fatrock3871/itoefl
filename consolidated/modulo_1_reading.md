@@ -507,9 +507,9 @@ This does not mean nothing (4)_____ be done. It means the solution lies elsewher
 
 **TEXT: Sign at a nature reserve trailhead**
 
-> **RIDGELINE TRAIL: PLEASE READ BEFORE ENTERING** • Trail open sunrise to sunset. Overnight camping is not permitted anywhere   on the reserve. • Dogs welcome on a leash no longer than 2 metres. The upper loop (marked in   red) is closed to dogs from 1 April to 15 July to protect ground-nesting   birds. • No bicycles. E-bikes and mobility scooters are exempt from this rule. • Pack out all rubbish. There are no bins beyond this point.
+> **RIDGELINE TRAIL: PLEASE READ BEFORE ENTERING** • Trail open sunrise to sunset. Overnight camping is not permitted anywhere   on the reserve. • Dogs welcome on a leash no longer than 6 feet. The upper loop (marked in   red) is closed to dogs from April 1 to July 15 to protect ground-nesting   birds. • No bicycles. E-bikes and mobility scooters are exempt from this rule. • Pack out all trash. There are no trash cans beyond this point.
 
-**Item B1.1**: A visitor with a dog on 20 May may walk:
+**Item B1.1**: A visitor with a dog on May 20 may walk:
 - (A) anywhere on the reserve
 - (B) on all trails except the upper loop
 - (C) only on the upper loop
@@ -519,7 +519,7 @@ This does not mean nothing (4)_____ be done. It means the solution lies elsewher
 - (A) A regular bicycle
 - (B) An overnight tent
 - (C) A mobility scooter
-- (D) Leaving food scraps in a bin
+- (D) Leaving food scraps in a trash can
 
 ---
 
@@ -527,7 +527,7 @@ This does not mean nothing (4)_____ be done. It means the solution lies elsewher
 
 **TEXT: Café lunch menu (extract)**
 
-> **SANDWICHES**: all served on sourdough with a side salad (swap for fries +$2) • **Garden** · roasted vegetables, hummus, rocket · $9 · *vegan* • **Classic Club** (chicken, bacon, egg, lettuce · $12 • **Halloumi Stack**) grilled halloumi, tomato, pesto · $11 · *vegetarian*   *(contains nuts)* **SOUPS** · served with bread · $7 · soup of the day is always vegetarian; ask staff whether today's is vegan. *A 10% discount applies to all lunch orders placed before noon.*
+> **SANDWICHES**: all served on sourdough with a side salad (swap for fries +$2) • **Garden** · roasted vegetables, hummus, arugula · $9 · *vegan* • **Classic Club** (chicken, bacon, egg, lettuce) · $12 • **Halloumi Stack** · grilled halloumi, tomato, pesto · $11 · *vegetarian*   *(contains nuts)* **SOUPS** · served with bread · $7 · soup of the day is always vegetarian; ask staff whether today's is vegan. *A 10% discount applies to all lunch orders placed before noon.*
 
 **Item B2.1**: A customer who is vegan and allergic to nuts could safely order:
 - (A) the Halloumi Stack
@@ -538,7 +538,7 @@ This does not mean nothing (4)_____ be done. It means the solution lies elsewher
 **Item B2.2**: A customer orders a Classic Club with fries at 11:45 a.m. Before any discount, the price is:
 - (A) $12
 - (B) $14
-- (C) $9
+- (C) $12.60
 - (D) $16
 
 **Item B2.3**: According to the menu, the soup of the day:
@@ -560,9 +560,9 @@ This does not mean nothing (4)_____ be done. It means the solution lies elsewher
 > Thank you for letting me know about your situation in advance rather than
 > after the deadline. I'm sorry to hear you've been unwell.
 >
-> Our department policy does not allow me to grant extensions longer than 48
-> hours without a medical certificate. If you're able to provide one, I can
-> extend your deadline to the following Monday. If not, I can still accept the
+> Our department policy does not allow me to grant an extension without a
+> doctor's note. If you're able to provide one, I can extend your deadline to
+> next Monday. If not, I can still accept the
 > assignment up to 48 hours late, though the standard 10% late penalty would
 > apply in that case.
 >
@@ -576,11 +576,11 @@ This does not mean nothing (4)_____ be done. It means the solution lies elsewher
 - (A) To refuse Bruna's request
 - (B) To explain the options available and ask Bruna to choose
 - (C) To inform Bruna that her assignment is now overdue
-- (D) To apologise for a mistake the department made
+- (D) To apologize for a mistake the department made
 
-**Item B3.2**: If Bruna does **not** provide a medical certificate, she can:
-- (A) submit the assignment by the following Monday with no penalty
-- (B) submit up to 48 hours late, losing 10% of the marks
+**Item B3.2**: If Bruna does **not** provide a doctor's note, she can:
+- (A) submit the assignment by next Monday with no penalty
+- (B) submit up to 48 hours late, losing 10% of the grade
 - (C) not submit the assignment at all
 - (D) choose her own new deadline
 
@@ -596,7 +596,7 @@ This does not mean nothing (4)_____ be done. It means the solution lies elsewher
 
 **TEXT: Shuttle timetable notice**
 
-> **CAMPUS ↔ STATION SHUTTLE** Departs Campus Gate: on the hour and at half past, 7:00–19:00, Mon–Fri. Departs Station: at quarter past and quarter to, same times. Journey time: approximately 20 minutes. *The half-past and quarter-to services do not run after 17:00: the last half-past departure from Campus Gate is at 16:30. Weekend and holiday service runs on the hour only.*
+> **CAMPUS ↔ STATION SHUTTLE** Departs Campus Gate: on the hour and at half past, 7:00–19:00, Mon–Fri. Departs Station: at quarter past and quarter to, same times. Journey time: approximately 20 minutes. *The half-past and quarter-to services do not run after 17:00: the last half-past departure from Campus Gate is at 16:30. On weekends and holidays, shuttles leave both stops on the hour only.*
 
 **Item B4.1**: A student wants to leave Campus Gate on a Tuesday at 17:30. On that day there is:
 - (A) no 17:30 service · after 17:00 the shuttle leaves on the hour only
@@ -625,16 +625,16 @@ This does not mean nothing (4)_____ be done. It means the solution lies elsewher
 > Quick heads-up though: because of the earlier opening, our weekday sourdough
 > batch will now go into the oven the night before instead of first thing in
 > the morning. It'll still be baked fresh daily, just on a slightly different
-> schedule: so if you're used to catching it warm right out of the oven at 8
-> AM, it might be ready a little earlier now. Come say hi and let us know what
-> you think of the new hours!
+> schedule — so if you're used to grabbing a loaf warm out of the oven at 8
+> AM, you'll now find it ready on the shelf as soon as we open. Come say hi and
+> let us know what you think of the new hours!
 >
 > Weekend hours are unchanged (8 AM–3 PM, same as always).
 
 **Item B5.1**: What is the main purpose of this post?
 - (A) To announce that the bakery is closing early on weekdays
 - (B) To inform customers about a change to weekday opening hours
-- (C) To apologise for a delay in the sourdough baking schedule
+- (C) To apologize for a delay in the sourdough baking schedule
 - (D) To advertise a new type of bread
 
 **Item B5.2**: According to the post, the weekday sourdough will:
@@ -643,7 +643,7 @@ This does not mean nothing (4)_____ be done. It means the solution lies elsewher
 - (C) be baked the night before instead of the same morning
 - (D) be replaced with a different bread
 
-**Item B5.3**: What can be inferred about the weekend hours?
+**Item B5.3**: What does the post say about the weekend hours?
 - (A) They will also move to 6:30 AM
 - (B) They stay the same as before this announcement
 - (C) They have not been decided yet
@@ -665,9 +665,9 @@ This does not mean nothing (4)_____ be done. It means the solution lies elsewher
 
 **PASSAGE: Bioluminescence in Marine Organisms**
 
-Bioluminescence (the production and emission of light by a living organism) is remarkably common in the ocean, appearing in bacteria, jellyfish, fish, and even some sharks. Unlike the light produced by a bulb, which wastes most of its energy as heat, bioluminescent light is generated through a highly efficient chemical reaction, typically involving a light-emitting molecule called luciferin and an enzyme called luciferase. Because so little energy is lost as heat, biologists sometimes refer to this phenomenon as "cold light."
+Bioluminescence (the production and emission of light by a living organism) is remarkably common in the ocean, appearing in bacteria, jellyfish, fish, and even some sharks. Unlike the light produced by an incandescent bulb, which wastes most of its energy as heat, bioluminescent light is generated through a highly efficient chemical reaction, typically involving a light-emitting molecule called luciferin and an enzyme called luciferase. Because so little energy is lost as heat, biologists sometimes refer to this phenomenon as "cold light."
 
-The functions of bioluminescence vary considerably across species, though three purposes appear again and again. Some organisms use light defensively: certain species of squid release a luminous cloud instead of ink, startling predators and buying time to escape. Others use it as a hunting tool. The anglerfish, perhaps the most famous example, dangles a glowing lure above its mouth to attract smaller prey close enough to seize. Still others use light for communication, particularly in the deep sea, where darkness is nearly absolute and visual signals cannot rely on ambient light. Certain species of ostracods, tiny crustaceans, produce synchronized light displays to attract mates.
+The functions of bioluminescence vary considerably across species, though three purposes appear again and again. Some organisms use light defensively: certain species of squid release a luminous cloud instead of ink, startling predators and buying time to escape. Others use it as a hunting tool. The anglerfish, perhaps the most famous example, dangles a glowing lure above its mouth to attract smaller prey close enough to seize. Still others use light for communication. In the deep sea, darkness is nearly absolute, so visual signals cannot rely on ambient light at all. Even in shallow water at night, certain ostracods, tiny crustaceans, produce synchronized light displays to attract mates.
 
 What makes bioluminescence especially interesting to evolutionary biologists is that it did not evolve just once. Genetic and biochemical evidence indicates that the capacity for bioluminescence has arisen independently dozens of times across unrelated lineages, using different chemical pathways to achieve a similar outcome. This pattern, in which unrelated organisms evolve similar traits independently, is known as convergent evolution, and bioluminescence is considered one of its most striking examples.
 
@@ -719,15 +719,15 @@ What makes bioluminescence especially interesting to evolutionary biologists is 
 
 **PASSAGE: Coffee Houses in Seventeenth-Century England**
 
-The first English coffee house opened in Oxford in 1650; within two decades, London alone had hundreds. **[■A]** For the price of a single cup (a penny) a customer could sit for hours, read the newspapers provided by the house, and join whatever conversation was underway. **[■B]** Because admission was cheap and open to any man who could pay, the coffee house mixed people who rarely met elsewhere: merchants, scholars, clergymen, and minor gentry sat at the same long tables. **[■C]**
+The first English coffee house opened in Oxford in 1650; within two decades, London alone had hundreds. **[■A]** For the price of a single cup (a penny), a customer could sit for hours, read the newspapers provided by the house, and join whatever conversation was underway. **[■B]** Because admission was cheap and open to any man who could pay, the coffee house mixed people who rarely met elsewhere: merchants, scholars, clergymen, and minor gentry sat at the same long tables. **[■C]**
 
-This mixing had consequences that reached well beyond casual talk. Particular houses became known for particular subjects. Men interested in maritime insurance gathered at Lloyd's; those following scientific debates went to the houses near the Royal Society. **[■D]** Information that had once circulated slowly, by letter or rumour, now moved quickly through these rooms. Some historians argue that the coffee house functioned as an early public sphere: a space where opinion could form through discussion rather than being handed down by church or crown.
+This mixing had consequences that reached well beyond casual talk. Particular houses became known for particular subjects. Men interested in maritime insurance gathered at Lloyd's; those following scientific debates went to the houses near the Royal Society. **[■D]** Information that had once circulated slowly, by letter or rumor, now moved quickly through these rooms. Some historians argue that the coffee house functioned as an early public sphere: a space where opinion could form through discussion rather than being handed down by church or crown.
 
 The authorities were not comfortable with this. In 1675, the king issued a proclamation ordering the coffee houses closed, on the grounds that they spread "false, malicious and scandalous reports." The order provoked such immediate opposition that it was withdrawn within days. The houses continued to operate for another century, gradually giving way to private clubs and, eventually, to the institutions (the stock exchange, the scientific society, the newspaper office) that had first taken shape around their tables.
 
 **C2.1: Ideia principal.** The passage is mainly about:
 - (A) how coffee was first imported into England
-- (B) how English coffee houses became important centres of information and public discussion
+- (B) how English coffee houses became important centers of information and public discussion
 - (C) why the king disliked coffee
 - (D) the architecture of seventeenth-century London
 
@@ -739,12 +739,12 @@ The authorities were not comfortable with this. In 1675, the king issued a procl
 
 **C2.3: Inferência.** It can be inferred that before coffee houses existed, information among these groups:
 - (A) did not exist at all
-- (B) travelled more slowly and less widely
+- (B) traveled more slowly and less widely
 - (C) was controlled entirely by merchants
 - (D) was freely available to everyone
 
 **C2.4: Propósito retórico.** Why does the author mention Lloyd's and the houses near the Royal Society?
-- (A) To show that different coffee houses specialised in different topics
+- (A) To show that different coffee houses specialized in different topics
 - (B) To argue that Lloyd's was the most important coffee house
 - (C) To explain how coffee houses were decorated
 - (D) To prove that scientists disliked merchants
@@ -773,19 +773,19 @@ The authorities were not comfortable with this. In 1675, the king issued a procl
 
 **PASSAGE: The Strength of Weak Ties**
 
-When people look for a new job, common sense suggests they should turn to their closest contacts: family and good friends who know them well and want to help. In a study of professionals who had recently changed jobs, the sociologist Mark Granovetter found the opposite. Most had heard about their new position not from a close friend but from an acquaintance: someone they saw only occasionally and would not have described as part of their inner circle.
+When people look for a new job, common sense suggests they should turn to their closest contacts: family and good friends who know them well and want to help. In a study of professionals who had recently changed jobs, the sociologist Mark Granovetter found the opposite. Of those who had found their new position through a personal contact, most had heard about it not from a close friend but from an acquaintance — someone they saw only occasionally and would not have described as part of their inner circle.
 
 Granovetter's explanation rests on how information moves through social networks. Your close friends tend to know one another and to move in the same circles you do. As a result, they are exposed to more or less the same information you already have; what they can tell you, you have often already heard. An acquaintance, by contrast, moves in a different circle, encounters different people, and hears different news. A weak tie is therefore a bridge to parts of the network you could not otherwise reach.
 
-The finding has been extended well beyond job-hunting. Weak ties have been linked to the spread of new ideas between organisations, to the circulation of information during emergencies, and to innovation within companies, where teams connected to many outside groups tend to produce more original work. Critics note that weak ties are not always advantageous: they carry less trust, and acting on information from a near-stranger involves more risk. But the core insight has held up: the contacts most likely to tell you something genuinely new are often the ones you know least well.
+The finding has been extended well beyond job-hunting. Weak ties have been linked to the spread of new ideas between organizations, to the circulation of information during emergencies, and to innovation within companies, where teams connected to many outside groups tend to produce more original work. Critics note that weak ties are not always advantageous: they carry less trust, and acting on information from a near-stranger involves more risk. But the core insight has held up: the contacts most likely to tell you something genuinely new are often the ones you know least well.
 
 **C3.1: Ideia principal.** The main idea of the passage is that:
-- (A) close friends are the best source of job information
-- (B) acquaintances ("weak ties") are often better than close contacts at providing genuinely new information, because they connect us to other parts of a social network
+- (A) close friends are usually the most reliable source of job leads, since they know us well and want to help
+- (B) weak ties often supply new information because they link us to other parts of a network
 - (C) social networks have no effect on how people find jobs
 - (D) Granovetter's study has been completely disproved
 
-**C3.2: Detalhe.** In Granovetter's study, most professionals heard about their new job from:
+**C3.2: Detalhe.** In Granovetter's study, most of those who found a job through a personal contact heard about it from:
 - (A) a family member
 - (B) a close friend
 - (C) an acquaintance they saw only occasionally
@@ -892,7 +892,7 @@ The finding has been extended well beyond job-hunting. Weak ties have been linke
 **B1.2: (C).** *"E-bikes and mobility scooters are exempt"* da proibição de bicicletas. (A) bicicleta comum é proibida; (B) camping proibido; (D) não há lixeiras além daquele ponto.
 
 **B2.1: (B).** *Garden* é *vegan* e não tem aviso de nozes. (A) *Halloumi Stack* tem queijo (não vegan) e *contains nuts*; (C) a sopa é sempre vegetariana mas **pode não ser vegana** · o texto manda perguntar; (D) *Classic Club* tem frango e ovo.
-**B2.2: (B) $14.** $12 do sanduíche + $2 pela troca por fries = $14. O desconto de 10% (pedido antes do meio-dia) se aplica **depois**, mas a pergunta é o preço **antes** do desconto.
+**B2.2: (B) $14.** $12 do sanduíche + $2 pela troca por fries = $14. O desconto de 10% (pedido antes do meio-dia) se aplica **depois**, mas a pergunta é o preço **antes** do desconto. (C) $12.60 é o valor **com** o desconto, que a pergunta exclui; (A) esquece a troca por fries.
 **B2.3: (B).** *"soup of the day is always vegetarian; ask staff whether today's is vegan"* · sempre vegetariana, veganidade varia.
 
 **B3.1: (B).** O e-mail lista duas opções (com ou sem atestado) e pede que Bruna escolha até quinta. (A) não recusa · oferece alternativas; (C) o trabalho ainda não está atrasado; (D) não houve erro do departamento.
@@ -900,7 +900,7 @@ The finding has been extended well beyond job-hunting. Weak ties have been linke
 **B3.3: (B).** Registro formal (*Dear... Best regards, Dr. Okafor*), mas empático (*I'm sorry to hear you've been unwell*) e prestativo (oferece soluções). (A)/(C)/(D) não batem com o texto.
 
 **B4.1: (A).** A nota de rodapé é explícita: *"the last half-past departure from Campus Gate is at 16:30"* e, depois das 17:00, o serviço é *"on the hour only"*. Logo, não existe 17:30 na terça-feira. Este item treina a leitura da **nota de rodapé** · quem responde (B) leu só a linha principal (*"on the hour and at half past"*) e ignorou a exceção.
-**B4.2 · (B).** Fim de semana: *"Weekend and holiday service runs on the hour only"*. A tabela *quarter past / quarter to* da estação vale só de segunda a sexta.
+**B4.2 · (B).** Fim de semana: *"On weekends and holidays, shuttles leave both stops on the hour only"*. A tabela *quarter past / quarter to* da estação vale só de segunda a sexta.
 
 **B5.1: (B).** O post inteiro gira em torno de um anúncio: abrir mais cedo nos dias de semana. (A) inverte; (C) não pede desculpas; (D) nenhum pão novo.
 **B5.2: (C).** *"will now go into the oven the night before"*. (A) o texto diz *"still be baked fresh daily"*; (B)/(D) não constam.
@@ -912,21 +912,21 @@ The finding has been extended well beyond job-hunting. Weak ties have been linke
 **C1.1: (B).** Cobre os três eixos (o que é + eficiência, funções, evolução independente). (A) contradiz *"remarkably common"*; (C) é detalhe; (D) inverte a comparação com a lâmpada.
 **C1.2: (C).** Relação causal explícita: *"Because so little energy is lost as heat..."*. (A)/(B) confundem o nome com temperatura ambiente; (D) infere cor sem base.
 **C1.3: (D).** O parágrafo 2 lista defesa, caça e comunicação/atração de parceiros. Regulação de temperatura nunca aparece.
-**C1.4: (B).** *"where darkness is nearly absolute and visual signals cannot rely on ambient light"* → produzir a própria luz supre a ausência de luz ambiente. (A) *"impossible for any species"* é extremo; (C)/(D) sem base.
+**C1.4: (B).** *"In the deep sea, darkness is nearly absolute, so visual signals cannot rely on ambient light at all"* → produzir a própria luz supre a ausência de luz ambiente. (A) *"impossible for any species"* é extremo; (C)/(D) sem base.
 **C1.5: (B).** A frase é seguida por *"...one of its most striking examples"* · serve para embasar o conceito de evolução convergente.
 **C1.6: (B) notable.** *"one of its most striking examples"* = exemplo notável. (A)/(C)/(D) pertencem a outros campos ou invertem o tom.
 **C1.7: (B).** A frase original define evolução convergente (organismos não relacionados desenvolvem o mesmo traço independentemente) e diz que a bioluminescência é um exemplo marcante. (B) preserva as duas ideias. (A) exagera ("all sea creatures"); (C) inventa exclusividade; (D) inventa controvérsia.
 
 **C2.1: (B).** O texto traça como as coffee houses viraram centros de informação e discussão pública. (A)/(C)/(D) são detalhes ou não constam.
 **C2.2: (B).** *"could sit for hours, read the newspapers provided by the house, and join whatever conversation was underway"*.
-**C2.3: (B).** *"Information that had once circulated slowly, by letter or rumour, now moved quickly"* → antes, mais devagar e menos amplamente. (A) exagera; (C)/(D) sem base.
+**C2.3: (B).** *"Information that had once circulated slowly, by letter or rumor, now moved quickly"* → antes, mais devagar e menos amplamente. (A) exagera; (C)/(D) sem base.
 **C2.4: (A).** *"Particular houses became known for particular subjects"*: Lloyd's e as casas perto da Royal Society ilustram a especialização por tema.
 **C2.5: (B).** *"The order provoked such immediate opposition that it was withdrawn within days."*
 **C2.6: (B) caused.** *"provoked such... opposition"* = causou/gerou oposição.
 **C2.7: (B) At [■B].** A frase estende a ideia dos *newspapers provided by the house*: *"the sheets"* retoma *"the newspapers"*, e *"read aloud at the tables"* continua a descrição do que os clientes faziam. [■A] vem **antes** de os jornais serem mencionados · o pronome *"the sheets"* não teria referente. [■C] separaria a ideia de "misturar pessoas" da sua consequência. [■D] está no parágrafo errado (que trata de especialização por tema).
 
 **C3.1 · (B).** Tese central: weak ties frequentemente trazem informação mais nova porque conectam a outras partes da rede. (A) contradiz o achado; (C)/(D) distorcem.
-**C3.2: (C).** *"Most had heard about their new position not from a close friend but from an acquaintance."*
+**C3.2: (C).** *"Most had heard about it not from a close friend but from an acquaintance."*
 **C3.3: (B).** *"they are exposed to more or less the same information you already have; what they can tell you, you have often already heard."*
 **C3.4: (B).** Se todos os contatos são amigos próximos, que circulam nos mesmos círculos → informação repetida, pouca novidade de partes distantes. (A) inverte; (C)/(D) exageram.
 **C3.5: (A).** O parágrafo 3 lista extensões do achado além da busca de emprego; a inovação nas empresas é um desses exemplos.
