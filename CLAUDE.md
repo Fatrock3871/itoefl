@@ -71,6 +71,7 @@ supabase/schema.sql       Backend: profiles, user_state (jsonb), entitlements, p
 supabase/migrations/      Mudanças de banco para aplicar num projeto que já existe (SQL Editor, com autorização)
 supabase/functions/       Edge functions: create-checkout, mp-webhook, delete-account
 supabase/functions/_shared/plans.ts   Preço cobrado e prazo de cada plano (servidor). Tem de bater com app/plans.json
+supabase/functions/_shared/keys.ts    Chaves novas (publishable e secret) para as functions. Nenhuma function usa anon nem service_role
 supabase/config.toml      Config das functions (mp-webhook roda sem verificação de JWT)
 supabase/schema-bank.sql  Banco de questões: tabelas items e attempts com RLS. ESCRITO, NUNCA EXECUTADO
 bank/                     Banco de questões em JSON (formato, schema, validador, 228 itens migrados). Ver bank/README.md

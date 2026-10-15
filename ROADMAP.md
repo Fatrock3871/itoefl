@@ -54,7 +54,18 @@ Nada das etapas seguintes anda sem esta. Ordem sugerida de cima para baixo.
 - [ ] (U) Trocar a senha do banco do Supabase e a senha da conta Google
       admin. As duas apareceram em texto puro num chat em 2026-09-22.
 - [ ] (U) Confirmar que a `sb_secret` e a `service_role` coladas por engano
-      na fase do Supabase foram rotacionadas.
+      na fase do Supabase foram rotacionadas. O projeto já migrou para as
+      JWT Signing Keys, então a `service_role` não se troca mais gerando
+      outro JWT secret: ela morre ao desativar as chaves antigas em
+      Settings > API Keys (reversível). Ordem: (1) `sb_secret` nova e a
+      antiga apagada; (2) publicar as 5 functions, que desde 2026-10-14 só
+      usam as chaves novas (`supabase/functions/_shared/keys.ts`) e têm
+      `verify_jwt = false` com a checagem do token no próprio código;
+      (3) testar compra e excluir conta; (4) desativar as chaves antigas.
+      Não revogar o Legacy JWT secret: não é preciso, ele não vazou.
+- [ ] (U) Apagar do banco a função `email_for_username` (só as linhas 97 a
+      100 do `schema.sql`, não o arquivo inteiro). Em 2026-10-14 ela ainda
+      existia em produção.
 - [ ] (U) Religar "Confirm email" no Supabase (desligado para teste).
 - [ ] (U+C) Configurar um SMTP próprio no Supabase. O limite de envio do
       plano grátis já estourou só com testes, e com alunos reais vai travar

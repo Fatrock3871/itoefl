@@ -79,9 +79,10 @@ supabase functions deploy mp-webhook
 supabase functions deploy delete-account
 ```
 
-`SUPABASE_URL`, `SUPABASE_ANON_KEY` e `SUPABASE_SERVICE_ROLE_KEY` já existem
-automaticamente no ambiente de toda edge function do projeto — não precisa
-configurar esses três.
+`SUPABASE_URL`, `SUPABASE_PUBLISHABLE_KEYS` e `SUPABASE_SECRET_KEYS` já
+existem automaticamente no ambiente de toda edge function do projeto: não
+precisa configurar esses três. As functions não usam mais `SUPABASE_ANON_KEY`
+nem `SUPABASE_SERVICE_ROLE_KEY` (ver `supabase/functions/_shared/keys.ts`).
 
 **O `mp-webhook` precisa aceitar chamada sem login.** O Mercado Pago não manda
 header de autenticação, então a verificação de JWT dessa function fica

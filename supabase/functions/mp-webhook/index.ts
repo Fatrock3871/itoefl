@@ -15,14 +15,15 @@
 //
 // Segredos necessários (configurar com `supabase secrets set`):
 //   MP_ACCESS_TOKEN
-// (SUPABASE_URL e SUPABASE_SERVICE_ROLE_KEY já existem automaticamente.)
+// (SUPABASE_URL e a chave secreta já existem automaticamente; ver
+// ../_shared/keys.ts.)
 
 import { createClient } from "https://esm.sh/@supabase/supabase-js@2";
 import { parseReference } from "../_shared/plans.ts";
+import { SECRET_KEY } from "../_shared/keys.ts";
 
 const MP_ACCESS_TOKEN = Deno.env.get("MP_ACCESS_TOKEN")!;
 const SUPABASE_URL = Deno.env.get("SUPABASE_URL")!;
-const SERVICE_ROLE_KEY = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!;
 
 // status do Mercado Pago que tiram o acesso dado por um pagamento. Reembolso
 // parcial não entra: o MP mantém o status "approved" nesse caso.
@@ -65,7 +66,7 @@ Deno.serve(async (req) => {
       return new Response("ok", { status: 200 });
     }
 
-    const supabase = createClient(SUPABASE_URL, SERVICE_ROLE_KEY);
+    const supabase = createClient(SUPABASE_URL, SECRET_KEY);
     const { error } = await supabase.rpc("apply_payment", {
       p_payment_id: String(payment.id),
       p_user: ref.userId,

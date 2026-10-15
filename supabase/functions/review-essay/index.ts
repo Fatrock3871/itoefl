@@ -1,5 +1,5 @@
 // Ações do painel do corretor sobre uma redação enviada. Só para quem tem
-// linha na tabela `admins` (conferido aqui, com a service_role, e não pelo
+// linha na tabela `admins` (conferido aqui, com a chave secreta, e não pelo
 // que o navegador diz).
 //
 //   { action: "start",  id }            na_fila -> em_correcao (o corretor abriu)
@@ -17,10 +17,9 @@
 import { createClient } from "https://esm.sh/@supabase/supabase-js@2";
 import { redacaoNivel, redacaoNotaFinal, redacaoValidaDevolutiva } from "../_shared/redacao.js";
 import { sendMail } from "../_shared/mail.ts";
+import { PUBLISHABLE_KEY, SECRET_KEY } from "../_shared/keys.ts";
 
 const SUPABASE_URL = Deno.env.get("SUPABASE_URL")!;
-const SUPABASE_ANON_KEY = Deno.env.get("SUPABASE_ANON_KEY")!;
-const SERVICE_ROLE_KEY = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!;
 const SITE_URL = Deno.env.get("SITE_URL") || "";
 
 const CORS_HEADERS = {
@@ -48,7 +47,7 @@ Deno.serve(async (req) => {
 
   try {
     const authHeader = req.headers.get("Authorization") || "";
-    const asUser = createClient(SUPABASE_URL, SUPABASE_ANON_KEY, {
+    const asUser = createClient(SUPABASE_URL, PUBLISHABLE_KEY, {
       global: { headers: { Authorization: authHeader } },
     });
     const { data: { user }, error: userErr } = await asUser.auth.getUser();
@@ -56,7 +55,7 @@ Deno.serve(async (req) => {
       return json({ error: "Não autenticado." }, 401);
     }
 
-    const admin = createClient(SUPABASE_URL, SERVICE_ROLE_KEY, {
+    const admin = createClient(SUPABASE_URL, SECRET_KEY, {
       auth: { autoRefreshToken: false, persistSession: false },
     });
     const { data: adminRow } = await admin.from("admins").select("user_id").eq("user_id", user.id).maybeSingle();

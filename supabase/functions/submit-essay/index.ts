@@ -14,10 +14,11 @@
 // trava a conta e reconfere o intervalo (dois cliques ao mesmo tempo não
 // passam os dois).
 //
-// (SUPABASE_URL, SUPABASE_ANON_KEY e SUPABASE_SERVICE_ROLE_KEY já existem
-// automaticamente no ambiente de toda edge function do projeto.)
+// (SUPABASE_URL e as chaves pública e secreta já existem automaticamente no
+// ambiente de toda edge function do projeto; ver ../_shared/keys.ts.)
 
 import { createClient } from "https://esm.sh/@supabase/supabase-js@2";
+import { PUBLISHABLE_KEY, SECRET_KEY } from "../_shared/keys.ts";
 import {
   REDACAO_REGRAS,
   redacaoBloqueio,
@@ -26,8 +27,6 @@ import {
 } from "../_shared/redacao.js";
 
 const SUPABASE_URL = Deno.env.get("SUPABASE_URL")!;
-const SUPABASE_ANON_KEY = Deno.env.get("SUPABASE_ANON_KEY")!;
-const SERVICE_ROLE_KEY = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!;
 
 const CORS_HEADERS = {
   "Access-Control-Allow-Origin": "*",
@@ -58,7 +57,7 @@ Deno.serve(async (req) => {
 
   try {
     const authHeader = req.headers.get("Authorization") || "";
-    const asUser = createClient(SUPABASE_URL, SUPABASE_ANON_KEY, {
+    const asUser = createClient(SUPABASE_URL, PUBLISHABLE_KEY, {
       global: { headers: { Authorization: authHeader } },
     });
     const { data: { user }, error: userErr } = await asUser.auth.getUser();
@@ -96,7 +95,7 @@ Deno.serve(async (req) => {
     const rawSeconds = Number(body.seconds);
     const seconds = Number.isFinite(rawSeconds) ? Math.min(limit, Math.max(0, Math.round(rawSeconds))) : limit;
 
-    const admin = createClient(SUPABASE_URL, SERVICE_ROLE_KEY, {
+    const admin = createClient(SUPABASE_URL, SECRET_KEY, {
       auth: { autoRefreshToken: false, persistSession: false },
     });
 

@@ -9,15 +9,15 @@
 //
 // Segredos necessários (configurar com `supabase secrets set`, nunca aqui):
 //   MP_ACCESS_TOKEN — Access Token de produção da sua conta Mercado Pago
-// (SUPABASE_URL e SUPABASE_ANON_KEY já existem automaticamente no ambiente
-// de toda edge function do projeto — não precisa configurar.)
+// (SUPABASE_URL e a chave pública já existem automaticamente no ambiente de
+// toda edge function do projeto; ver ../_shared/keys.ts.)
 
 import { createClient } from "https://esm.sh/@supabase/supabase-js@2";
 import { buildReference, findPlan } from "../_shared/plans.ts";
+import { PUBLISHABLE_KEY } from "../_shared/keys.ts";
 
 const MP_ACCESS_TOKEN = Deno.env.get("MP_ACCESS_TOKEN")!;
 const SUPABASE_URL = Deno.env.get("SUPABASE_URL")!;
-const SUPABASE_ANON_KEY = Deno.env.get("SUPABASE_ANON_KEY")!;
 
 const CORS_HEADERS = {
   "Access-Control-Allow-Origin": "*",
@@ -39,7 +39,7 @@ Deno.serve(async (req) => {
 
   try {
     const authHeader = req.headers.get("Authorization") || "";
-    const supabase = createClient(SUPABASE_URL, SUPABASE_ANON_KEY, {
+    const supabase = createClient(SUPABASE_URL, PUBLISHABLE_KEY, {
       global: { headers: { Authorization: authHeader } },
     });
     const { data: { user }, error: userErr } = await supabase.auth.getUser();

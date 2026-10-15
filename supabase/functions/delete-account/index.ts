@@ -1,6 +1,6 @@
 // Exclui a conta do aluno autenticado que pediu a exclusão em "Minha conta".
 // Precisa rodar no servidor: apagar um usuário do Supabase Auth exige a
-// service_role, que nunca pode ir pro navegador.
+// chave secreta, que nunca pode ir pro navegador.
 //
 // Quem é apagado é SEMPRE o dono do token que fez a chamada -- a function não
 // aceita id de usuário no corpo, então não há como um aluno apagar outro.
@@ -10,14 +10,13 @@
 // essay_submissions e admins. Ou seja, somem também as redações e o registro
 // de pagamento, e o acesso comprado é perdido.
 //
-// (SUPABASE_URL, SUPABASE_ANON_KEY e SUPABASE_SERVICE_ROLE_KEY já existem
-// automaticamente no ambiente de toda edge function do projeto.)
+// (SUPABASE_URL e as chaves pública e secreta já existem automaticamente no
+// ambiente de toda edge function do projeto; ver ../_shared/keys.ts.)
 
 import { createClient } from "https://esm.sh/@supabase/supabase-js@2";
+import { PUBLISHABLE_KEY, SECRET_KEY } from "../_shared/keys.ts";
 
 const SUPABASE_URL = Deno.env.get("SUPABASE_URL")!;
-const SUPABASE_ANON_KEY = Deno.env.get("SUPABASE_ANON_KEY")!;
-const SERVICE_ROLE_KEY = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!;
 
 const CORS_HEADERS = {
   "Access-Control-Allow-Origin": "*",
@@ -42,7 +41,7 @@ Deno.serve(async (req) => {
 
   try {
     const authHeader = req.headers.get("Authorization") || "";
-    const asUser = createClient(SUPABASE_URL, SUPABASE_ANON_KEY, {
+    const asUser = createClient(SUPABASE_URL, PUBLISHABLE_KEY, {
       global: { headers: { Authorization: authHeader } },
     });
     const { data: { user }, error: userErr } = await asUser.auth.getUser();
@@ -61,7 +60,7 @@ Deno.serve(async (req) => {
       return json({ error: "Confirmação ausente." }, 400);
     }
 
-    const admin = createClient(SUPABASE_URL, SERVICE_ROLE_KEY, {
+    const admin = createClient(SUPABASE_URL, SECRET_KEY, {
       auth: { autoRefreshToken: false, persistSession: false },
     });
     const { error: delErr } = await admin.auth.admin.deleteUser(user.id);
