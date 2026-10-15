@@ -113,14 +113,14 @@ READING                                  LISTENING
 
 ### As 8 Regras que se Aplicam a Todos os Simulados
 
-| # | Regra | Por quê importa no formato 2026 |
+| # | Regra | Por que importa no formato 2026 |
 |---|---|---|
 | **1** | Realize cada simulado em sessão única e ininterrupta | O teste real dura ~1h23–1h29min sem nenhuma pausa programada entre as seções: fragmentar o treino elimina o efeito de foco sustentado que você está calibrando |
 | **2** | Trate cada item do **módulo router** (Reading e Listening) com o mesmo cuidado que um item de alto peso | O router decide sua rota de dificuldade: um erro por pressa no início pode rebaixar o teto de banda disponível no restante da seção |
 | **3** | Use papel para anotações de Listening e Speaking (não digite no computador) | Simula o material físico do centro de testes |
 | **4** | No Simulado 2: consulte os frameworks de Speaking (Módulo 3) e os templates de Writing (Módulo 4) abertamente | A fixação de estrutura é o objetivo, não há mérito em travar sem referência nesta fase |
 | **5** | No Simulado 3 e 4: nenhuma consulta a qualquer material | A pressão real (e o comportamento do router sob pressão) só aparece sem rede de segurança |
-| **6** | Grave TODAS as respostas de Speaking (app de gravação no celular) | Speaking agora é 100% corrigido por IA (SpeechRater) com foco em fidelidade e elaboração: sem gravação, sua auto-avaliação é sistematicamente otimista |
+| **6** | Grave TODAS as respostas de Speaking (app de gravação no celular) | Speaking agora é 100% corrigido por IA (SpeechRater) com foco em fidelidade e elaboração: sem gravação, sua autoavaliação é sistematicamente otimista |
 | **7** | Preencha o Protocolo de Análise de Erros (Parte 6) imediatamente após | Análise fria e imediata é mais precisa do que retrospectiva de dois dias depois |
 | **8** | Registre o score estimado (banda CEFR **e** score legado 0–120) no Dashboard (Parte 8) | A curva de evolução entre simulados é o dado mais importante do sistema: e as duas escalas contam histórias complementares até 2028 |
 
@@ -191,7 +191,7 @@ Um simulado só rende se a semana seguinte for de reparo direcionado. Não faça
 (A) surrounded  (B) surprised  (C) surveyed  (D) surrendered
 
 4. The committee's decision was **unani_____**: every member voted in favor of the proposed budget revision.
-(A) unanimous  (B) unannounced  (C) unification  (D) uniform
+(A) unanimous  (B) unanimity  (C) unanimously  (D) unanimousness
 
 5. The instructions were **amb_____**, and half the class interpreted the task differently from the other half.
 (A) ambitious  (B) ambient  (C) ambiguous  (D) amiable
@@ -218,7 +218,7 @@ Um simulado só rende se a semana seguinte for de reparo direcionado. Não faça
 
 <details class="reveal"><summary>Ver as respostas da Parte 2</summary>11 <strong>confirmed</strong> · 12 <strong>logically</strong>. Cada traço é uma letra que falta.</details>
 
-**Gabarito:** 1-B ("market share" que cai depois de "initial success"; *decorate*, *declare* e *deceive* não cabem) · 2-B ("touch and manipulate" = interativo) · 3-B (descoberta inesperada) · 4-A ("every member voted in favor") · 5-C ("interpreted differently" = ambíguo) · 6-B ("not to generalize... to the whole population") · 7-A (advérbio; "one department at a time") · 8-B (advérbio modificando "higher") · 9-A ("structurally unsafe") · 10-C ("small sample, not replicated" = tentativo) · 11 **confirmed** · 12 **logically**
+**Gabarito:** 1-B ("market share" que cai depois de "initial success"; *decorate*, *declare* e *deceive* não cabem) · 2-B ("touch and manipulate" = interativo) · 3-B (descoberta inesperada) · 4-A (depois de "was" vem adjetivo: *unanimous*; "every member voted in favor") · 5-C ("interpreted differently" = ambíguo) · 6-B ("not to generalize... to the whole population") · 7-A (advérbio; "one department at a time") · 8-B (advérbio modificando "higher") · 9-A ("structurally unsafe") · 10-C ("small sample, not replicated" = provisório) · 11 **confirmed** · 12 **logically**
 
 > 💡 No teste real, **todos** os 30 itens de *Complete the Words* são digitação livre (formato C-test) dentro de um texto corrido: nunca múltipla escolha. As Partes 1 e 2 acima treinam as duas habilidades: reconhecer o padrão (MC) e produzir a forma exata (digitação). O drill completo de digitação está no Módulo 1 (Reading), Parte 5.
 
@@ -252,7 +252,7 @@ Um simulado só rende se a semana seguinte for de reparo direcionado. Não faça
 
 **QUESTÃO 1:** What is the main purpose of this email?
 - (A) To cancel the group meeting
-- (B) To inform the group of a change of location and confirm attendance
+- (B) To let the group know that the meeting has moved to a new location
 - (C) To assign new sections of the project
 - (D) To complain about the library booking system
 
@@ -283,15 +283,15 @@ Coral reefs, despite occupying less than one percent of the ocean floor, support
 - (D) resistance to temperature change
 
 **QUESTÃO 2 · Vocabulary in Context:** The word "severs" is closest in meaning to:
-- (A) strengthens  (B) cuts off  (C) gradually reduces  (D) temporarily interrupts
+- (A) strengthens  (B) cuts off  (C) gradually reduces  (D) redirects
 
-**QUESTÃO 3 · Inference:** It can be inferred that repeated, closely spaced bleaching events are especially dangerous because:
+**QUESTÃO 3 · Factual Information:** According to the passage, why are repeated bleaching events especially dangerous?
 - (A) they permanently alter the coral's genetic structure
 - (B) they leave reefs less time to recover before the next episode
 - (C) they only affect coral in tropical regions
 - (D) they eliminate zooxanthellae permanently from the ecosystem
 
-**Gabarito:** 1-B; 2-B (contraste com "does not kill immediately" indica corte abrupto do fluxo, não redução gradual · descarta (D)); 3-B (afirmado diretamente na última frase)
+**Gabarito:** 1-B; 2-B ("sever" é cortar, romper: *cuts off*. (C) fala em redução gradual e (D) muda o sentido do verbo); 3-B (afirmado diretamente na última frase)
 
 **PASSAGE 2: The Printing Press and the Standardization of Language**
 
@@ -299,7 +299,7 @@ Before the spread of print in fifteenth-century Europe, a single language could 
 
 The printing press changed the economics of this situation. A printer who set a book in type was making a substantial investment and needed to sell copies across as wide an area as possible to recover the cost. This gave printers a direct financial incentive to choose forms of spelling and grammar that the largest number of readers would accept. Over several decades, the dialect of the commercially dominant region (often the capital or the largest trading city) tended to become the basis of the printed standard, not because it was linguistically superior, but because it reached the biggest market.
 
-This standardizing effect was not entirely welcome. Writers who spoke regional varieties found their own usage increasingly marked as incorrect, and forms of the language that were never printed came to be seen as mere "dialect" rather than legitimate versions of the language. Historians of language now generally agree that the "standard" form of many European languages is less a natural centre of the language than an accident of which city happened to dominate early commercial printing.
+This standardizing effect was not entirely welcome. Writers who spoke regional varieties found their own usage increasingly marked as incorrect, and forms of the language that were never printed came to be seen as mere "dialect" rather than legitimate versions of the language. Many historians of language now argue that the "standard" form of many European languages owes less to any natural center of the language than to which city happened to dominate early commercial printing.
 
 **QUESTÃO 1 · Main Idea:** The passage is primarily concerned with:
 - (A) how handwriting was replaced by typesetting
@@ -374,7 +374,7 @@ This standardizing effect was not entirely welcome. Writers who spoke regional v
 - (A) "The class is at ten."
 - (B) "Focus on the intro and the conclusion: that's usually enough to follow the discussion."
 - (C) "I bought the book last semester."
-- (D) "Forty pages isn't very long."
+- (D) "There are forty students in that class."
 
 **Gabarito:** 1-A (resposta direta ao pedido) · 2-B · 3-C · 4-B
 
@@ -398,7 +398,7 @@ This standardizing effect was not entirely welcome. Writers who spoke regional v
 
 #### Listen to an Announcement
 
-**TRANSCRIÇÃO:** "Attention students: due to a scheduled power maintenance on Saturday, the main library building will be closed from 8:00 AM to 2:00 PM. The east-wing study annex will remain open during this time with limited seating. Students with reserved group study rooms in the main building should contact the circulation desk to relocate their reservation."
+**TRANSCRIÇÃO:** "Attention students: due to scheduled electrical maintenance on Saturday, the main library building will be closed from 8:00 AM to 2:00 PM. The east-wing study annex will remain open during this time with limited seating. Students with reserved group study rooms in the main building should contact the circulation desk to relocate their reservation."
 
 **QUESTÃO:** What should a student with a reserved group study room in the main library do?
 - (A) Cancel the reservation entirely
@@ -410,7 +410,7 @@ This standardizing effect was not entirely welcome. Writers who spoke regional v
 
 #### Listen to an Academic Talk
 
-**TRANSCRIÇÃO (trecho de palestra · Introdução à Sociologia):** "Today we're discussing the concept of social capital · the networks of relationships and mutual trust that allow individuals and communities to function effectively. Unlike financial capital, social capital isn't stored in a bank account; it exists in the quality and density of a person's relationships. Researchers distinguish between two types: bonding social capital, which strengthens ties within a tightly knit group (like an extended family or a close friend circle) and bridging social capital, which connects individuals across different groups, such as different professions or social classes. Communities strong in bonding capital but weak in bridging capital often show high internal solidarity but limited access to outside resources and opportunities."
+**TRANSCRIÇÃO (trecho de palestra · Introdução à Sociologia):** "Today we're discussing the concept of social capital · the networks of relationships and mutual trust that allow individuals and communities to function effectively. Unlike financial capital, social capital isn't stored in a bank account; it exists in the quality and density of a person's relationships. Researchers distinguish between two types: bonding social capital, which strengthens ties within a tightly knit group (like an extended family or a close circle of friends), and bridging social capital, which connects individuals across different groups, such as different professions or social classes. Communities strong in bonding capital but weak in bridging capital often show high internal solidarity but limited access to outside resources and opportunities."
 
 **QUESTÃO 1:** According to the talk, what distinguishes bridging social capital from bonding social capital?
 - (A) Bridging capital exists only in professional settings
@@ -428,7 +428,7 @@ This standardizing effect was not entirely welcome. Writers who spoke regional v
 
 #### Listen to a Conversation (2)
 
-**TRANSCRIÇÃO:** **Student:** "I'm here about the library fine on my account · it says forty dollars, but I returned the books on time." **Librarian:** "Let me look... Ah, I see what happened. The books were returned to the wrong branch, so the system logged them as late until they were transferred back. That took about a week." **Student:** "But there's a drop box at the north branch · I've used it before without a problem." **Librarian:** "You have, and normally that's fine. The issue is that these were course-reserve items, and those can only go back to the main desk. It's a rule most people don't know about. I can waive the fine this time since it was an honest mistake, but I'd note it for next time."
+**TRANSCRIÇÃO:** **Student:** "I'm here about the library fine on my account · it says forty dollars, but I returned the books on time." **Librarian:** "Let me look... Ah, I see what happened. The books were returned to the wrong branch, so the system logged them as late until they were transferred back. That took about a week." **Student:** "But there's a drop box at the north branch · I've used it before without a problem." **Librarian:** "You have, and normally that's fine. The issue is that these were course-reserve items, and those can only go back to the main desk. It's a rule most people don't know about. I can waive the fine this time since it was an honest mistake, but keep it in mind for next time."
 
 **QUESTÃO 1:** Why was the student charged a fine?
 - (A) The books were genuinely returned late
@@ -470,7 +470,7 @@ This standardizing effect was not entirely welcome. Writers who spoke regional v
 
 #### Listen to an Academic Talk (2)
 
-**TRANSCRIÇÃO (trecho · Introdução à Biologia):** "So far we've treated the cell membrane as a simple barrier, but that picture is misleading. The membrane is better thought of as a busy checkpoint. It's selectively permeable · some molecules, like oxygen and water, pass through freely; others, like glucose or charged ions, can only cross with help, through specific protein channels or pumps. And here's the key point for today: some of those pumps run *against* the concentration gradient. They move a substance from where it's scarce to where it's already abundant, which costs energy. This is called active transport, and it's how a nerve cell, for example, maintains the sharp difference in ion concentration across its membrane that makes a nerve impulse possible."
+**TRANSCRIÇÃO (trecho · Introdução à Biologia):** "So far we've treated the cell membrane as a simple barrier, but that picture is misleading. The membrane is better thought of as a busy checkpoint. It's selectively permeable · some molecules, like oxygen and carbon dioxide, pass through freely; others, like glucose or charged ions, can only cross with help, through specific protein channels or pumps. And here's the key point for today: some of those pumps run *against* the concentration gradient. They move a substance from where it's scarce to where it's already abundant, which costs energy. This is called active transport, and it's how a nerve cell, for example, maintains the sharp difference in ion concentration across its membrane that makes a nerve impulse possible."
 
 **QUESTÃO 1:** According to the professor, why is calling the membrane a "simple barrier" misleading?
 - (A) The membrane has no effect on what enters the cell
@@ -478,7 +478,7 @@ This standardizing effect was not entirely welcome. Writers who spoke regional v
 - (C) The membrane only blocks water
 - (D) The membrane dissolves in the presence of glucose
 
-**QUESTÃO 2:** What distinguishes active transport from the free movement of oxygen and water?
+**QUESTÃO 2:** What distinguishes active transport from the free movement of oxygen and carbon dioxide?
 - (A) Active transport moves substances against the concentration gradient and requires energy
 - (B) Active transport is faster
 - (C) Active transport only occurs in nerve cells
@@ -500,21 +500,25 @@ This standardizing effect was not entirely welcome. Writers who spoke regional v
 
 #### Build a Sentence (exemplos)
 
-Reordene os fragmentos para formar uma frase gramaticalmente correta e natural.
+Reordene os fragmentos para formar uma frase gramaticalmente correta e natural. Na prova, cada item é a resposta a uma fala: quando houver *Context*, monte a resposta a ele. Nos itens 3 e 4 sobra um bloco que não entra na frase, como às vezes acontece na prova.
 
 1. `has become / over the past decade. / Renewable energy / significantly more affordable`
 **Resposta modelo:** *Renewable energy has become significantly more affordable over the past decade.*
 
-2. `the negotiations / before the deadline. / Despite / concluded successfully / repeated delays,`
+2. Context: "How did the trade talks end?"
+`the negotiations / before the deadline. / Despite / concluded successfully / repeated delays,`
 **Resposta modelo:** *Despite repeated delays, the negotiations concluded successfully before the deadline.*
 
-3. `that / the report / suggests / consumer confidence / is beginning to recover`
-**Resposta modelo:** *The report suggests that consumer confidence is beginning to recover.*
+3. Context: "I have to return these books before Monday."
+`if / on Sunday? / does / Do you know / opens / the library`
+**Resposta modelo:** *Do you know if the library opens on Sunday? (sobra o bloco "does")*
 
-4. `the more / a language / you practise speaking / the faster / your fluency improves`
-**Resposta modelo:** *The more you practise speaking a language, the faster your fluency improves.*
+4. Context: "I think I left my umbrella in the lecture hall."
+`the lost and found / is / Can you tell me / is? / where`
+**Resposta modelo:** *Can you tell me where the lost and found is? (sobra um "is": na pergunta indireta, o verbo vai para o fim)*
 
-5. `the results / had been reviewed, / Once / the committee / released its final report.`
+5. Context: "When did the committee publish its report?"
+`the results / had been reviewed, / Once / the committee / released its final report.`
 **Resposta modelo:** *Once the results had been reviewed, the committee released its final report.*
 
 6. Context: "Were the investors upset about the cost?"
@@ -527,19 +531,23 @@ Reordene os fragmentos para formar uma frase gramaticalmente correta e natural.
 8. `Having read / the instructions / she / carefully, / began the experiment.`
 **Resposta modelo:** *Having read the instructions carefully, she began the experiment.*
 
-> **Como se autoavaliar:** compare cada frase com a modelo usando a rubrica de *Build a Sentence* da Parte 7. Erro de ordem, concordância ou fragmento faltando/sobrando = item errado, mesmo que o sentido "dê para entender".
+> **Como se autoavaliar:** compare cada frase com a modelo usando a rubrica de *Build a Sentence* da Parte 7. Erro de ordem, concordância, fragmento faltando ou bloco extra usado = item errado, mesmo que o sentido "dê para entender".
 
-#### Write an Email (contexto navegacional acadêmico)
+#### Write an Email (situação prática da vida universitária)
 
 **PROMPT:**
-> You registered for a study-abroad information session, but you have just learned of a scheduling conflict with a required lab session. Write an email to the study-abroad office explaining the situation and requesting either a different session time or alternative materials.
+> You registered for a study-abroad information session, but you have just learned that it conflicts with a required lab session. Write an email to the study-abroad office. In your email:
+>
+> - explain the scheduling conflict
+> - ask whether another session time is available
+> - ask whether the presentation materials can be shared
 
 **Resposta modelo (esqueleto orientador: desenvolva com o template do Módulo 4):**
 > Subject: Scheduling Conflict · Study Abroad Info Session
 >
 > Dear Study Abroad Office,
 >
-> I am writing to let you know that I registered for the study-abroad information session on [date], but I have just discovered it conflicts with a mandatory lab session for one of my courses. Would it be possible to attend a different session, or could you share the presentation materials so I don't miss the information? I would greatly appreciate any guidance you can offer.
+> I am writing to let you know that I registered for the study-abroad information session on [date], but I have just discovered it conflicts with a mandatory lab session for one of my courses. Would it be possible to attend a different session, or could you share the presentation materials so that I do not miss the information? I would greatly appreciate any guidance you can offer.
 >
 > Thank you for your time.
 >
@@ -573,12 +581,14 @@ Reordene os fragmentos para formar uma frase gramaticalmente correta e natural.
 
 Repita cada frase com o máximo de fidelidade e naturalidade prosódica possível. Grave e avalie com a rubrica de fidelidade da Parte 7.
 
-1. *"She left early."*
-2. *"He usually arrives before the meeting starts."*
-3. *"The train was delayed, so we missed the first session."*
-4. *"Although the results were disappointing, the team remained optimistic about next quarter."*
-5. *"Most of the students who signed up for the workshop had never used the software before."*
-6. *"The professor, who had published extensively on the topic, decided to revise her original hypothesis after reviewing the new data."*
+Cenário: a visita guiada à biblioteca do campus. Como na prova, as frases são do mesmo cenário e crescem de tamanho (na prova são 7; aqui, 6).
+
+1. *"Welcome to the main library."*
+2. *"Please keep your student ID with you."*
+3. *"The quiet study area is on the second floor."*
+4. *"You can borrow up to ten books at a time."*
+5. *"Laptops and phone chargers can be checked out at the front desk."*
+6. *"Group study rooms on the third floor can be reserved online up to a week in advance."*
 
 #### Take an Interview (elicitação variada)
 
@@ -591,7 +601,7 @@ Você tem 45 segundos para cada resposta, sem preparo, como na prova. Grave toda
 5. **(Explicação)** "Why do you think some people find it hard to keep a regular study routine?"
 6. **(Narração)** "Tell me about a time you changed your mind about something important. What made you change it?"
 
-**Esqueleto de banda 4–5 (aplicável a qualquer função):** posição/resposta direta em 1 frase → razão específica (não genérica) → um exemplo ou detalhe concreto → fecho de uma linha. Ver Módulo 3, Parte 4, e Módulo 5, Parte 5.1.
+**Esqueleto de banda 4–5 (aplicável a qualquer função):** posição/resposta direta em 1 frase → razão específica (não genérica) → um exemplo ou detalhe concreto → fecho de uma linha. Ver Módulo 3, Parte 2.3, e Módulo 5, Parte 5.1.
 
 ---
 
@@ -627,15 +637,15 @@ Você tem 45 segundos para cada resposta, sem preparo, como na prova. Grave toda
 (A) complete  (B) complicated  (C) complementary  (D) complimentary
 
 6. The author's tone throughout the essay is **skept_____**, questioning claims that other writers accept without comment.
-(A) skeptical  (B) sketchy  (C) skilful  (D) scattered
+(A) skeptical  (B) skepticism  (C) skeptically  (D) skeptic
 
 7. Enrollment has been **decl_____** for three consecutive years, prompting a review of the department's course offerings.
-(A) declared  (B) declining  (C) decoding  (D) dedicating
+(A) declared  (B) declining  (C) declaring  (D) declension
 
 8. The safety protocol is **manda_____**; there are no exceptions, regardless of experience level.
 (A) mandatory  (B) managerial  (C) mandate  (D) mandarin
 
-**Gabarito:** 1-B · 2-C · 3-D ("no other company... had ever" = sem igual; nada no texto fala em risco, o que descarta *unsustainable*) · 4-B · 5-C ("not contradictory... different aspect" = complementares; cuidado: *complimentary* = elogioso/grátis) · 6-A · 7-B ("for three consecutive years" + tempo contínuo) · 8-A (depois de "is" vem adjetivo; *mandate* é substantivo ou verbo, e *mandarin* não faz sentido)
+**Gabarito:** 1-B · 2-C · 3-D ("no other company... had ever" = sem igual; nada no texto fala em risco, o que descarta *unsustainable*) · 4-B · 5-C ("not contradictory... different aspect" = complementares; cuidado: *complimentary* = elogioso/grátis) · 6-A (depois de "is" vem adjetivo; *skepticism* e *skeptic* são substantivos, *skeptically* é advérbio) · 7-B ("for three consecutive years" + tempo contínuo; *declared* e *declaring* não fazem sentido com "enrollment" como sujeito, e *declension* é substantivo) · 8-A (depois de "is" vem adjetivo; *mandate* é substantivo ou verbo, e *mandarin* não faz sentido)
 
 #### Bloco B · Read in Daily Life (alvo: 2 min)
 
@@ -746,7 +756,7 @@ Critics of this narrative, however, caution against treating network effects as 
 
 #### Listen to an Academic Talk
 
-**TRANSCRIÇÃO:** "Let's turn to a phenomenon economists call 'loss aversion' · the tendency for people to feel the pain of a loss more intensely than the pleasure of an equivalent gain. Classic experiments show that people typically demand roughly twice as much to give something up as they were willing to pay to acquire it in the first place · a pattern known as the endowment effect. This has real consequences outside the lab. Investors, for instance, often hold onto losing stocks far longer than rational analysis would justify, simply because selling would mean formally realizing the loss. The discomfort of that realization outweighs, for many people, the objective financial logic of cutting their losses early."
+**TRANSCRIÇÃO:** "Let's turn to a phenomenon economists call 'loss aversion' · the tendency for people to feel the pain of a loss more intensely than the pleasure of an equivalent gain. Classic experiments show that people who have just been given an object typically demand roughly twice as much to give it up as others are willing to pay to acquire it · a pattern known as the endowment effect. This has real consequences outside the lab. Investors, for instance, often hold onto losing stocks far longer than rational analysis would justify, simply because selling would mean formally realizing the loss. The discomfort of that realization outweighs, for many people, the objective financial logic of cutting their losses early."
 
 **QUESTÃO 1:** According to the talk, what does the endowment effect describe?
 - (A) People valuing something they own more than they would pay to acquire it
@@ -768,16 +778,22 @@ Critics of this narrative, however, caution against treating network effects as 
 
 #### Build a Sentence
 
-1. `had / the funding / If / been approved earlier, / launched on schedule. / the project / would have`
+1. Context: "Why did the project launch so late?"
+`had / the funding / If / been approved earlier, / launched on schedule. / the project / would have`
 **Resposta modelo:** *If the funding had been approved earlier, the project would have launched on schedule.*
 
-2. `not only / but also / customer satisfaction. / The policy / significantly improved / reduced costs`
+2. Context: "Did the new policy make any difference?"
+`not only / but also / customer satisfaction. / The policy / significantly improved / reduced costs`
 **Resposta modelo:** *The policy not only reduced costs but also significantly improved customer satisfaction.*
 
 #### Write an Email
 
 **PROMPT:**
-> Your academic advising appointment was scheduled for a day the office will be closed for a university holiday you were not aware of. Write an email requesting to reschedule and asking whether virtual appointments are available.
+> Your academic advising appointment is scheduled for a day when the office will be closed for a university holiday that you did not know about. Write an email to your academic advisor. In your email:
+>
+> - explain the problem with the appointment date
+> - ask to reschedule and suggest two times that work for you
+> - ask whether virtual appointments are available
 
 #### Write for an Academic Discussion
 
@@ -794,19 +810,23 @@ Critics of this narrative, however, caution against treating network effects as 
 
 #### Listen and Repeat
 
-1. *"The meeting starts at noon."*
-2. *"They rescheduled the flight because of the storm."*
-3. *"Even though she disagreed with the proposal, she voted in favor of it to maintain team unity."*
-4. *"The committee, having reviewed the evidence from multiple independent sources, concluded that the original findings could not be reliably replicated."*
+Cenário: o primeiro dia de um novo assistente no laboratório de química. Conjunto abreviado (na prova são 7 frases), com o mesmo crescimento de tamanho.
+
+1. *"Welcome to the chemistry lab."*
+2. *"Safety goggles must be worn at all times."*
+3. *"Never leave a running experiment unattended, even for a few minutes."*
+4. *"If a chemical touches your skin, rinse the area under running water for fifteen minutes."*
 
 #### Take an Interview
 
-1. **(Narração)** "Tell me about a time you had to learn something new very quickly. How did you approach it?"
-2. **(Explicação)** "Why do you think it's important for cities to invest in public transportation?"
-3. **(Opinião)** "Do you think remote work is generally better or worse for employees than working in an office?"
-4. **(Previsão)** "How do you think higher education will change over the next twenty years?"
+Cenário: uma pesquisa sobre transporte na sua cidade. As quatro perguntas sobem em escada, como na prova (Módulo 3, Parte 2.3).
 
-> **Autoavaliação obrigatória (S3):** ao ouvir cada gravação, atribua um código de triagem (SS-phon / SS-rhythm / SS-flu / SS-gram / SS-struct) ao erro predominante e anote-o na planilha da Parte 6. Sob timing real, o erro que mais aparece raramente é o mesmo que aparecia sem cronômetro · normalmente **SS-flu** e **SS-gram** sobem.
+1. **(Fato pessoal)** "How do you usually get around your city?"
+2. **(Reação)** "What do you like or dislike about getting around that way? Why?"
+3. **(Concordar ou discordar)** "Some people say cities should ban cars from downtown areas. Do you agree or disagree? Why?"
+4. **(Medida pública)** "Should the government make public transportation free for everyone? Why or why not?"
+
+> **Autoavaliação obrigatória (S3):** ao ouvir cada gravação, atribua um código de triagem (SS-phon / SS-stress / SS-rhythm / SS-flu / SS-gram / SS-struct) ao erro predominante e anote-o na planilha da Parte 6. Sob timing real, o erro que mais aparece raramente é o mesmo que aparecia sem cronômetro · normalmente **SS-flu** e **SS-gram** sobem.
 
 ---
 
@@ -824,7 +844,7 @@ Critics of this narrative, however, caution against treating network effects as 
 | **Simulados pagos da ETS** | ets.org/toefl, área de preparação: confira lá o nome e o preço atuais | O que a ETS estiver vendendo no formato 2026 na data da sua prova |
 | **Guias oficiais atualizados da ETS** | ETS | Priorize sempre o material mais recente publicado pela ETS |
 
-**Se não tiver acesso a materiais oficiais atualizados para o Simulado 4:** Combine o Reading do Simulado 3 (não reutilizado) + o bloco de Listening deste módulo (Parte 4, sob timing simulado) + os prompts de Speaking e Writing do Simulado 3 · execute tudo na sequência oficial abaixo, em condições de tempo estrito, sem pausas não previstas.
+**Se você já usou os quatro testes oficiais:** refaça o que você fez há mais tempo, com pelo menos três semanas de intervalo, em condições reais e na sequência oficial abaixo. Não use o Simulado 3 como Simulado 4: você já conhece as respostas.
 
 ### Sequência Oficial do Simulado 4 (2026)
 
@@ -881,7 +901,7 @@ Os códigos abaixo espelham 1-a-1 os protocolos dos módulos. A última coluna �
 | **SR-q** | Respondeu certo, mas para outra pergunta (deu gist quando pediram detalhe) | **M1 → R1** |
 | **SR-dist** | Caiu num distrator: opção verdadeira mas específica demais, extrema, ou fora do texto | **M1 → R2** |
 | **SR-ctw** | *Complete the Words*: forma verbal, concordância, ordem ou artigo errados | **M1 → R3** + **M6 → V1** (morfologia) |
-| **SR-lex** | Palavra desconhecida travou a compreensão, ou quebrou uma collocation | **M1 → R4** + **M6 → V3** |
+| **SR-lex** | Palavra desconhecida travou a compreensão, ou quebrou uma collocation | **M1 → R4** + **M6 → V2** |
 | **SR-time** | Sabia responder, mas chutou por falta de tempo | **M1 → R5** + pacing da Parte 2 |
 | **SR-att** | Errou o que sabia: ignorou um *not*, marcou o oposto, pulou uma linha | **M1 → R6** |
 
@@ -901,6 +921,7 @@ Os códigos abaixo espelham 1-a-1 os protocolos dos módulos. A última coluna �
 | Código | Falha | → Reparo |
 |---|---|---|
 | **SS-phon** | *Listen and Repeat*: fonema/segmento comprometendo inteligibilidade (*th*, *ship/sheep*, cluster quebrado) | **M3 → S1** |
+| **SS-stress** | Tônica errada em palavra (cognato: *DEvelop*, *comforTAble*) | **M3 → S2** |
 | **SS-rhythm** | Fala "silabada", átonas não comprimidas, prosódia robótica | **M3 → S3** |
 | **SS-flu** | Demorou >2s para começar, *"uh/um"* frequente, pausas no meio de sintagmas | **M3 → S4** |
 | **SS-gram** | 3ª pessoa -s some ao falar rápido, tempo verbal inconsistente na narração | **M3 → S5** + **M9** |
@@ -943,11 +964,11 @@ TOP 3 PADRÕES DE ERRO NO ROUTER (Reading + Listening):
 2. Código: ___ | Frequência: ___ | Módulo de reparo: ___
 3. Código: ___ | Frequência: ___ | Módulo de reparo: ___
 
-SPEAKING (auto-avaliação por item — use a rubrica da Parte 7):
+SPEAKING (autoavaliação por item — use a rubrica da Parte 7):
 Listen and Repeat — Fidelidade média (1–6): ___ | Erro predominante (código): ___
 Take an Interview — Elaboração média (1–6): ___ | Erro predominante (código): ___
 
-WRITING (auto-avaliação por item):
+WRITING (autoavaliação por item):
 Build a Sentence — Acertos: ___/10 | Erro predominante (código): ___
 Write an Email — Banda estimada (1–6): ___ | Erro predominante (código): ___
 Write for an Academic Discussion — Banda estimada (1–6): ___ | Erro predominante (código): ___
@@ -968,11 +989,11 @@ Depois de **dois** simulados analisados, some as frequências de cada código de
 | Erros espalhados por muitos códigos numa seção | Falta de volume de prática | Mais drills daquele módulo, sem pressa; a precisão vem antes da velocidade |
 | **SX** recorrente | Você perde acesso ao módulo superior por pressa no router | Treino de ritmo dos primeiros 5–7 itens (Parte 2): trate-os como itens de peso |
 | **SL-dec** recorrente | O gargalo é decodificação de áudio: o mais comum em brasileiros | M2 Parte 3 (Laboratório de Escuta) + shadowing diário 10 min antes de qualquer outro reparo |
-| Códigos de *language* (SS-gram, SW-verb, SW-form) recorrentes nas duas escalas | Um erro gramatical sistemático está custando banda em Speaking **e** Writing | M9 (Brazilian Trap Library) vira o foco único da semana |
+| Códigos de *language* (SS-gram, SW-verb, SW-form) recorrentes nas duas seções | Um erro gramatical sistemático está custando banda em Speaking **e** Writing | M9 (Brazilian Trap Library) vira o foco único da semana |
 
 ---
 
-## PARTE 7: RUBRICA DE AUTO-AVALIAÇÃO · SPEAKING E WRITING (Escala CEFR 1–6)
+## PARTE 7: RUBRICA DE AUTOAVALIAÇÃO · SPEAKING E WRITING (Escala CEFR 1–6)
 
 ### 🎤 Speaking: Listen and Repeat (Checklist de Fidelidade)
 
@@ -1018,7 +1039,7 @@ Ouça sua gravação item a item e marque:
 |---|---|
 | Ordem sintática final é gramaticalmente correta | |
 | Concordância verbal e nominal preservada | |
-| Nenhum fragmento sobrando ou faltando | |
+| Nenhum fragmento faltando, e o bloco extra (quando há) ficou de fora | |
 | Sentido lógico da frase original mantido | |
 
 **Conversão:** ≥9/10 itens corretos → Banda 5–6 | 6–8/10 → Banda 3–4 | 3–5/10 → Banda 2–3 | ≤2/10 → Banda 1
@@ -1027,10 +1048,10 @@ Ouça sua gravação item a item e marque:
 
 | Critério | ✅/❌ |
 |---|---|
-| Registro apropriado ao contexto navegacional (nem informal demais, nem excessivamente formal) | |
+| Registro apropriado à situação (nem informal demais, nem excessivamente formal) | |
 | Propósito do e-mail comunicado claramente na primeira ou segunda frase | |
 | Estrutura multi-frase coerente, com abertura e fechamento apropriados | |
-| Pedido/pergunta específica claramente formulada | |
+| Os três pontos do prompt cobertos, cada pedido claramente formulado | |
 | Erros gramaticais sistemáticos ausentes | |
 
 **Conversão:** 5/5 ✅ → Banda 5–6 | 3–4/5 ✅ → Banda 3–4 | 1–2/5 ✅ → Banda 2–3 | 0/5 ✅ → Banda 1
@@ -1082,7 +1103,7 @@ Ouça sua gravação item a item e marque:
 |---|---|---|
 | **S1→S2→S3 crescendo, S4 estável** | Progresso sólido e consolidado: pronto para o exame | Foco no Módulo 8 (Exam Day Protocol) |
 | **S2 alto, S3 cai** | Mecânica de item funciona sem pressão, mas desmorona sob timing real e router ativo | Drills cronometrados diários + revisão do protocolo do router (Parte 2) |
-| **Muitos erros classificados como R1 (Router Failure)** | O candidato está perdendo acesso ao módulo superior por pressa nos primeiros itens | Treino específico de ritmo nos primeiros 5–7 itens de Reading/Listening |
+| **Muitos erros classificados como SX (router)** | O candidato está perdendo acesso ao módulo superior por pressa nos primeiros itens | Treino específico de ritmo nos primeiros 5–7 itens de Reading/Listening |
 | **S1→S4 flat (sem crescimento de banda)** | O conteúdo estudado não está sendo ativado nos simulados | Revise os erros com a Taxonomia (Parte 6): pode estar estudando o que não está errando |
 | **Uma seção específica não sobe de banda** | Lacuna estrutural naquela seção | Retorne ao módulo da seção correspondente e refaça os drills daquele tipo de item |
 | **Banda geral consistentemente abaixo da meta** | Meta pode precisar de ajuste, ou o cronograma precisa ser estendido | Revise o Plano Catch-Up (Módulo 0) |

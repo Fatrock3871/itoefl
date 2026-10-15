@@ -703,7 +703,7 @@
       "A": "\"The class is at ten.\"",
       "B": "\"Focus on the intro and the conclusion: that's usually enough to follow the discussion.\"",
       "C": "\"I bought the book last semester.\"",
-      "D": "\"Forty pages isn't very long.\""
+      "D": "\"There are forty students in that class.\""
     },
     "answer": "B",
     "explanation": "",
@@ -763,7 +763,7 @@
     "source": {
       "kind": "migrado",
       "file": "consolidated/modulo_7_simulados.md",
-      "ref": "linha 709",
+      "ref": "linha 719",
       "live_on_site": true,
       "answer_letter": "origem",
       "build_map": {

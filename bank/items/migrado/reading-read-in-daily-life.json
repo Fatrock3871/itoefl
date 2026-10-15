@@ -699,7 +699,7 @@
     "text_format": "markdown",
     "options": {
       "A": "To cancel the group meeting",
-      "B": "To inform the group of a change of location and confirm attendance",
+      "B": "To let the group know that the meeting has moved to a new location",
       "C": "To assign new sections of the project",
       "D": "To complain about the library booking system"
     },
@@ -855,7 +855,7 @@
     "source": {
       "kind": "migrado",
       "file": "consolidated/modulo_7_simulados.md",
-      "ref": "linha 644",
+      "ref": "linha 654",
       "live_on_site": true,
       "answer_letter": "origem",
       "build_map": {

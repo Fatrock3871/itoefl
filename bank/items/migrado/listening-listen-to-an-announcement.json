@@ -507,7 +507,7 @@
       "kind": "audio",
       "format": "markdown",
       "title": "Listen to an Announcement",
-      "content": "**TRANSCRIÇÃO:** \"Attention students: due to a scheduled power maintenance on Saturday, the main library building will be closed from 8:00 AM to 2:00 PM. The east-wing study annex will remain open during this time with limited seating. Students with reserved group study rooms in the main building should contact the circulation desk to relocate their reservation.\"",
+      "content": "**TRANSCRIÇÃO:** \"Attention students: due to scheduled electrical maintenance on Saturday, the main library building will be closed from 8:00 AM to 2:00 PM. The east-wing study annex will remain open during this time with limited seating. Students with reserved group study rooms in the main building should contact the circulation desk to relocate their reservation.\"",
       "audio_ref": null
     },
     "group": "mod7-b8",
@@ -671,7 +671,7 @@
     "source": {
       "kind": "migrado",
       "file": "consolidated/modulo_7_simulados.md",
-      "ref": "linha 739",
+      "ref": "linha 749",
       "live_on_site": true,
       "answer_letter": "origem",
       "build_map": {

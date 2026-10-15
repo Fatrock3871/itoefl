@@ -1186,8 +1186,17 @@ def content_review_checks():
 
     m7 = (ROOT / "consolidated" / "modulo_7_simulados.md").read_text(encoding="utf-8")
     pairs = re.findall(r"`([^`\n]+ / [^`\n]+)`\n\*\*Resposta modelo:\*\* \*([^*\n]+)\*", m7)
+    # Item com bloco que sobra (como na prova): o modelo termina com a nota
+    # "(sobra ...)", e os blocos são as palavras do modelo mais um bloco inteiro.
+    def uses_chunks(chunks, model):
+        model = re.sub(r"\s*\(sobra [^)]*\)\s*$", "", model)
+        if words(chunks.replace("/", " ")) == words(model):
+            return True
+        parts = [c.strip() for c in chunks.split(" / ")]
+        return any(words(" ".join(parts[:i] + parts[i + 1:])) == words(model) for i in range(len(parts)))
+
     out["review_m7_build_models_use_the_chunks"] = (len(pairs) == 10 and all(
-        words(chunks.replace("/", " ")) == words(model) for chunks, model in pairs))
+        uses_chunks(chunks, model) for chunks, model in pairs))
     # a resposta nao vem impressa no enunciado nem como dica ao lado das opcoes
     out["review_m7_no_answer_in_prompt"] = all(s not in m7 for s in (
         '"confirmed")', '"logically")', "(D) decrease", "(C) mandated", "(considerando o contexto positivo"))

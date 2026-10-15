@@ -1011,10 +1011,10 @@
       "A": "strengthens",
       "B": "cuts off",
       "C": "gradually reduces",
-      "D": "temporarily interrupts"
+      "D": "redirects"
     },
     "answer": "B",
-    "explanation": "contraste com \"does not kill immediately\" indica corte abrupto do fluxo, não redução gradual · descarta (D)",
+    "explanation": "\"sever\" é cortar, romper: *cuts off*. (C) fala em redução gradual e (D) muda o sentido do verbo",
     "hint": null,
     "trap_codes": [],
     "tags": [
@@ -1041,7 +1041,7 @@
     "task_type": "Read an Academic Passage",
     "exam_format": true,
     "format": "mcq",
-    "skill": "Inference",
+    "skill": "Factual Information",
     "cefr_min": null,
     "cefr_max": null,
     "stimulus": {
@@ -1052,7 +1052,7 @@
       "audio_ref": null
     },
     "group": "mod7-b4",
-    "prompt": "It can be inferred that repeated, closely spaced bleaching events are especially dangerous because:",
+    "prompt": "According to the passage, why are repeated bleaching events especially dangerous?",
     "text_format": "markdown",
     "options": {
       "A": "they permanently alter the coral's genetic structure",
@@ -1095,7 +1095,7 @@
       "kind": "text",
       "format": "markdown",
       "title": "Bloco C: Read an Academic Passage (versão abreviada)",
-      "content": "**PASSAGE 2: The Printing Press and the Standardization of Language**\n\nBefore the spread of print in fifteenth-century Europe, a single language could vary so much from region to region that speakers a few hundred kilometers apart struggled to read one another's writing. Scribes copied texts by hand, and each copy absorbed the copyist's own spelling habits, regional vocabulary, and errors. There was no strong pressure toward a single written standard, because the audience for any given manuscript was small and usually local.\n\nThe printing press changed the economics of this situation. A printer who set a book in type was making a substantial investment and needed to sell copies across as wide an area as possible to recover the cost. This gave printers a direct financial incentive to choose forms of spelling and grammar that the largest number of readers would accept. Over several decades, the dialect of the commercially dominant region (often the capital or the largest trading city) tended to become the basis of the printed standard, not because it was linguistically superior, but because it reached the biggest market.\n\nThis standardizing effect was not entirely welcome. Writers who spoke regional varieties found their own usage increasingly marked as incorrect, and forms of the language that were never printed came to be seen as mere \"dialect\" rather than legitimate versions of the language. Historians of language now generally agree that the \"standard\" form of many European languages is less a natural centre of the language than an accident of which city happened to dominate early commercial printing.",
+      "content": "**PASSAGE 2: The Printing Press and the Standardization of Language**\n\nBefore the spread of print in fifteenth-century Europe, a single language could vary so much from region to region that speakers a few hundred kilometers apart struggled to read one another's writing. Scribes copied texts by hand, and each copy absorbed the copyist's own spelling habits, regional vocabulary, and errors. There was no strong pressure toward a single written standard, because the audience for any given manuscript was small and usually local.\n\nThe printing press changed the economics of this situation. A printer who set a book in type was making a substantial investment and needed to sell copies across as wide an area as possible to recover the cost. This gave printers a direct financial incentive to choose forms of spelling and grammar that the largest number of readers would accept. Over several decades, the dialect of the commercially dominant region (often the capital or the largest trading city) tended to become the basis of the printed standard, not because it was linguistically superior, but because it reached the biggest market.\n\nThis standardizing effect was not entirely welcome. Writers who spoke regional varieties found their own usage increasingly marked as incorrect, and forms of the language that were never printed came to be seen as mere \"dialect\" rather than legitimate versions of the language. Many historians of language now argue that the \"standard\" form of many European languages owes less to any natural center of the language than to which city happened to dominate early commercial printing.",
       "audio_ref": null
     },
     "group": "mod7-b5",
@@ -1142,7 +1142,7 @@
       "kind": "text",
       "format": "markdown",
       "title": "Bloco C: Read an Academic Passage (versão abreviada)",
-      "content": "**PASSAGE 2: The Printing Press and the Standardization of Language**\n\nBefore the spread of print in fifteenth-century Europe, a single language could vary so much from region to region that speakers a few hundred kilometers apart struggled to read one another's writing. Scribes copied texts by hand, and each copy absorbed the copyist's own spelling habits, regional vocabulary, and errors. There was no strong pressure toward a single written standard, because the audience for any given manuscript was small and usually local.\n\nThe printing press changed the economics of this situation. A printer who set a book in type was making a substantial investment and needed to sell copies across as wide an area as possible to recover the cost. This gave printers a direct financial incentive to choose forms of spelling and grammar that the largest number of readers would accept. Over several decades, the dialect of the commercially dominant region (often the capital or the largest trading city) tended to become the basis of the printed standard, not because it was linguistically superior, but because it reached the biggest market.\n\nThis standardizing effect was not entirely welcome. Writers who spoke regional varieties found their own usage increasingly marked as incorrect, and forms of the language that were never printed came to be seen as mere \"dialect\" rather than legitimate versions of the language. Historians of language now generally agree that the \"standard\" form of many European languages is less a natural centre of the language than an accident of which city happened to dominate early commercial printing.",
+      "content": "**PASSAGE 2: The Printing Press and the Standardization of Language**\n\nBefore the spread of print in fifteenth-century Europe, a single language could vary so much from region to region that speakers a few hundred kilometers apart struggled to read one another's writing. Scribes copied texts by hand, and each copy absorbed the copyist's own spelling habits, regional vocabulary, and errors. There was no strong pressure toward a single written standard, because the audience for any given manuscript was small and usually local.\n\nThe printing press changed the economics of this situation. A printer who set a book in type was making a substantial investment and needed to sell copies across as wide an area as possible to recover the cost. This gave printers a direct financial incentive to choose forms of spelling and grammar that the largest number of readers would accept. Over several decades, the dialect of the commercially dominant region (often the capital or the largest trading city) tended to become the basis of the printed standard, not because it was linguistically superior, but because it reached the biggest market.\n\nThis standardizing effect was not entirely welcome. Writers who spoke regional varieties found their own usage increasingly marked as incorrect, and forms of the language that were never printed came to be seen as mere \"dialect\" rather than legitimate versions of the language. Many historians of language now argue that the \"standard\" form of many European languages owes less to any natural center of the language than to which city happened to dominate early commercial printing.",
       "audio_ref": null
     },
     "group": "mod7-b5",
@@ -1189,7 +1189,7 @@
       "kind": "text",
       "format": "markdown",
       "title": "Bloco C: Read an Academic Passage (versão abreviada)",
-      "content": "**PASSAGE 2: The Printing Press and the Standardization of Language**\n\nBefore the spread of print in fifteenth-century Europe, a single language could vary so much from region to region that speakers a few hundred kilometers apart struggled to read one another's writing. Scribes copied texts by hand, and each copy absorbed the copyist's own spelling habits, regional vocabulary, and errors. There was no strong pressure toward a single written standard, because the audience for any given manuscript was small and usually local.\n\nThe printing press changed the economics of this situation. A printer who set a book in type was making a substantial investment and needed to sell copies across as wide an area as possible to recover the cost. This gave printers a direct financial incentive to choose forms of spelling and grammar that the largest number of readers would accept. Over several decades, the dialect of the commercially dominant region (often the capital or the largest trading city) tended to become the basis of the printed standard, not because it was linguistically superior, but because it reached the biggest market.\n\nThis standardizing effect was not entirely welcome. Writers who spoke regional varieties found their own usage increasingly marked as incorrect, and forms of the language that were never printed came to be seen as mere \"dialect\" rather than legitimate versions of the language. Historians of language now generally agree that the \"standard\" form of many European languages is less a natural centre of the language than an accident of which city happened to dominate early commercial printing.",
+      "content": "**PASSAGE 2: The Printing Press and the Standardization of Language**\n\nBefore the spread of print in fifteenth-century Europe, a single language could vary so much from region to region that speakers a few hundred kilometers apart struggled to read one another's writing. Scribes copied texts by hand, and each copy absorbed the copyist's own spelling habits, regional vocabulary, and errors. There was no strong pressure toward a single written standard, because the audience for any given manuscript was small and usually local.\n\nThe printing press changed the economics of this situation. A printer who set a book in type was making a substantial investment and needed to sell copies across as wide an area as possible to recover the cost. This gave printers a direct financial incentive to choose forms of spelling and grammar that the largest number of readers would accept. Over several decades, the dialect of the commercially dominant region (often the capital or the largest trading city) tended to become the basis of the printed standard, not because it was linguistically superior, but because it reached the biggest market.\n\nThis standardizing effect was not entirely welcome. Writers who spoke regional varieties found their own usage increasingly marked as incorrect, and forms of the language that were never printed came to be seen as mere \"dialect\" rather than legitimate versions of the language. Many historians of language now argue that the \"standard\" form of many European languages owes less to any natural center of the language than to which city happened to dominate early commercial printing.",
       "audio_ref": null
     },
     "group": "mod7-b5",
@@ -1236,7 +1236,7 @@
       "kind": "text",
       "format": "markdown",
       "title": "Bloco C: Read an Academic Passage (versão abreviada)",
-      "content": "**PASSAGE 2: The Printing Press and the Standardization of Language**\n\nBefore the spread of print in fifteenth-century Europe, a single language could vary so much from region to region that speakers a few hundred kilometers apart struggled to read one another's writing. Scribes copied texts by hand, and each copy absorbed the copyist's own spelling habits, regional vocabulary, and errors. There was no strong pressure toward a single written standard, because the audience for any given manuscript was small and usually local.\n\nThe printing press changed the economics of this situation. A printer who set a book in type was making a substantial investment and needed to sell copies across as wide an area as possible to recover the cost. This gave printers a direct financial incentive to choose forms of spelling and grammar that the largest number of readers would accept. Over several decades, the dialect of the commercially dominant region (often the capital or the largest trading city) tended to become the basis of the printed standard, not because it was linguistically superior, but because it reached the biggest market.\n\nThis standardizing effect was not entirely welcome. Writers who spoke regional varieties found their own usage increasingly marked as incorrect, and forms of the language that were never printed came to be seen as mere \"dialect\" rather than legitimate versions of the language. Historians of language now generally agree that the \"standard\" form of many European languages is less a natural centre of the language than an accident of which city happened to dominate early commercial printing.",
+      "content": "**PASSAGE 2: The Printing Press and the Standardization of Language**\n\nBefore the spread of print in fifteenth-century Europe, a single language could vary so much from region to region that speakers a few hundred kilometers apart struggled to read one another's writing. Scribes copied texts by hand, and each copy absorbed the copyist's own spelling habits, regional vocabulary, and errors. There was no strong pressure toward a single written standard, because the audience for any given manuscript was small and usually local.\n\nThe printing press changed the economics of this situation. A printer who set a book in type was making a substantial investment and needed to sell copies across as wide an area as possible to recover the cost. This gave printers a direct financial incentive to choose forms of spelling and grammar that the largest number of readers would accept. Over several decades, the dialect of the commercially dominant region (often the capital or the largest trading city) tended to become the basis of the printed standard, not because it was linguistically superior, but because it reached the biggest market.\n\nThis standardizing effect was not entirely welcome. Writers who spoke regional varieties found their own usage increasingly marked as incorrect, and forms of the language that were never printed came to be seen as mere \"dialect\" rather than legitimate versions of the language. Many historians of language now argue that the \"standard\" form of many European languages owes less to any natural center of the language than to which city happened to dominate early commercial printing.",
       "audio_ref": null
     },
     "group": "mod7-b5",
@@ -1283,7 +1283,7 @@
       "kind": "text",
       "format": "markdown",
       "title": "Bloco C: Read an Academic Passage (versão abreviada)",
-      "content": "**PASSAGE 2: The Printing Press and the Standardization of Language**\n\nBefore the spread of print in fifteenth-century Europe, a single language could vary so much from region to region that speakers a few hundred kilometers apart struggled to read one another's writing. Scribes copied texts by hand, and each copy absorbed the copyist's own spelling habits, regional vocabulary, and errors. There was no strong pressure toward a single written standard, because the audience for any given manuscript was small and usually local.\n\nThe printing press changed the economics of this situation. A printer who set a book in type was making a substantial investment and needed to sell copies across as wide an area as possible to recover the cost. This gave printers a direct financial incentive to choose forms of spelling and grammar that the largest number of readers would accept. Over several decades, the dialect of the commercially dominant region (often the capital or the largest trading city) tended to become the basis of the printed standard, not because it was linguistically superior, but because it reached the biggest market.\n\nThis standardizing effect was not entirely welcome. Writers who spoke regional varieties found their own usage increasingly marked as incorrect, and forms of the language that were never printed came to be seen as mere \"dialect\" rather than legitimate versions of the language. Historians of language now generally agree that the \"standard\" form of many European languages is less a natural centre of the language than an accident of which city happened to dominate early commercial printing.",
+      "content": "**PASSAGE 2: The Printing Press and the Standardization of Language**\n\nBefore the spread of print in fifteenth-century Europe, a single language could vary so much from region to region that speakers a few hundred kilometers apart struggled to read one another's writing. Scribes copied texts by hand, and each copy absorbed the copyist's own spelling habits, regional vocabulary, and errors. There was no strong pressure toward a single written standard, because the audience for any given manuscript was small and usually local.\n\nThe printing press changed the economics of this situation. A printer who set a book in type was making a substantial investment and needed to sell copies across as wide an area as possible to recover the cost. This gave printers a direct financial incentive to choose forms of spelling and grammar that the largest number of readers would accept. Over several decades, the dialect of the commercially dominant region (often the capital or the largest trading city) tended to become the basis of the printed standard, not because it was linguistically superior, but because it reached the biggest market.\n\nThis standardizing effect was not entirely welcome. Writers who spoke regional varieties found their own usage increasingly marked as incorrect, and forms of the language that were never printed came to be seen as mere \"dialect\" rather than legitimate versions of the language. Many historians of language now argue that the \"standard\" form of many European languages owes less to any natural center of the language than to which city happened to dominate early commercial printing.",
       "audio_ref": null
     },
     "group": "mod7-b5",
@@ -1330,7 +1330,7 @@
       "kind": "text",
       "format": "markdown",
       "title": "Bloco C: Read an Academic Passage (versão abreviada)",
-      "content": "**PASSAGE 2: The Printing Press and the Standardization of Language**\n\nBefore the spread of print in fifteenth-century Europe, a single language could vary so much from region to region that speakers a few hundred kilometers apart struggled to read one another's writing. Scribes copied texts by hand, and each copy absorbed the copyist's own spelling habits, regional vocabulary, and errors. There was no strong pressure toward a single written standard, because the audience for any given manuscript was small and usually local.\n\nThe printing press changed the economics of this situation. A printer who set a book in type was making a substantial investment and needed to sell copies across as wide an area as possible to recover the cost. This gave printers a direct financial incentive to choose forms of spelling and grammar that the largest number of readers would accept. Over several decades, the dialect of the commercially dominant region (often the capital or the largest trading city) tended to become the basis of the printed standard, not because it was linguistically superior, but because it reached the biggest market.\n\nThis standardizing effect was not entirely welcome. Writers who spoke regional varieties found their own usage increasingly marked as incorrect, and forms of the language that were never printed came to be seen as mere \"dialect\" rather than legitimate versions of the language. Historians of language now generally agree that the \"standard\" form of many European languages is less a natural centre of the language than an accident of which city happened to dominate early commercial printing.",
+      "content": "**PASSAGE 2: The Printing Press and the Standardization of Language**\n\nBefore the spread of print in fifteenth-century Europe, a single language could vary so much from region to region that speakers a few hundred kilometers apart struggled to read one another's writing. Scribes copied texts by hand, and each copy absorbed the copyist's own spelling habits, regional vocabulary, and errors. There was no strong pressure toward a single written standard, because the audience for any given manuscript was small and usually local.\n\nThe printing press changed the economics of this situation. A printer who set a book in type was making a substantial investment and needed to sell copies across as wide an area as possible to recover the cost. This gave printers a direct financial incentive to choose forms of spelling and grammar that the largest number of readers would accept. Over several decades, the dialect of the commercially dominant region (often the capital or the largest trading city) tended to become the basis of the printed standard, not because it was linguistically superior, but because it reached the biggest market.\n\nThis standardizing effect was not entirely welcome. Writers who spoke regional varieties found their own usage increasingly marked as incorrect, and forms of the language that were never printed came to be seen as mere \"dialect\" rather than legitimate versions of the language. Many historians of language now argue that the \"standard\" form of many European languages owes less to any natural center of the language than to which city happened to dominate early commercial printing.",
       "audio_ref": null
     },
     "group": "mod7-b5",
@@ -1400,7 +1400,7 @@
     "source": {
       "kind": "migrado",
       "file": "consolidated/modulo_7_simulados.md",
-      "ref": "linha 664",
+      "ref": "linha 674",
       "live_on_site": true,
       "answer_letter": "origem",
       "build_map": {
@@ -1447,7 +1447,7 @@
     "source": {
       "kind": "migrado",
       "file": "consolidated/modulo_7_simulados.md",
-      "ref": "linha 670",
+      "ref": "linha 680",
       "live_on_site": true,
       "answer_letter": "origem",
       "build_map": {
@@ -1494,7 +1494,7 @@
     "source": {
       "kind": "migrado",
       "file": "consolidated/modulo_7_simulados.md",
-      "ref": "linha 676",
+      "ref": "linha 686",
       "live_on_site": true,
       "answer_letter": "origem",
       "build_map": {
@@ -1541,7 +1541,7 @@
     "source": {
       "kind": "migrado",
       "file": "consolidated/modulo_7_simulados.md",
-      "ref": "linha 679",
+      "ref": "linha 689",
       "live_on_site": true,
       "answer_letter": "origem",
       "build_map": {
@@ -1588,7 +1588,7 @@
     "source": {
       "kind": "migrado",
       "file": "consolidated/modulo_7_simulados.md",
-      "ref": "linha 685",
+      "ref": "linha 695",
       "live_on_site": true,
       "answer_letter": "origem",
       "build_map": {
@@ -1635,7 +1635,7 @@
     "source": {
       "kind": "migrado",
       "file": "consolidated/modulo_7_simulados.md",
-      "ref": "linha 691",
+      "ref": "linha 701",
       "live_on_site": true,
       "answer_letter": "origem",
       "build_map": {
