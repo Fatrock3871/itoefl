@@ -601,7 +601,7 @@ a prosódia divergiu?
 **Banda ~6 (C1–C2):**
 > *"I'd say yes, though I'd frame it less as a rule and more as a design choice. What a course outside your field really trains isn't the content: it's the transfer. An engineer who has had to argue a case in a history seminar tends to write sharper technical reports afterwards, and that habit of mind is hard to build inside one discipline. The workload objection is fair, but it points to a design problem, not a reason to drop the idea: cap it at one course, let it count as an elective, and the cost mostly disappears."*
 
-*Diferença:* abre com uma nuance (não um sim/não simples), razão mecanística (*"not the content · the transfer"*), engajamento sofisticado com o contraponto, fecho com uma solução concreta.
+*Diferença:* abre com uma nuance (não um sim/não simples), razão mecanística (*"not the content — the transfer"*), engajamento sofisticado com o contraponto, fecho com uma solução concreta.
 
 ---
 

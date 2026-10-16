@@ -1121,6 +1121,25 @@ def bank_checks():
     return out
 
 
+PT_MARKER = re.compile(r"[à-úÀ-Ú]|\b(?:de|do|da|que|para|com|em|um|uma|os|as|ou|se|no|na|ao|por)\b")
+
+
+def english_dot_checks():
+    """Revisao de 2026-10-13, rodada 2: dentro de frase em ingles o "·" nao e
+    pontuacao. Linha de consolidated/*.md sem nenhum sinal de portugues (acento
+    ou palavra funcional) nao pode ter "<palavra> · <minuscula>"; o travessao
+    (ou ponto e virgula) e o certo. Rotulos e listas em portugues ficam fora."""
+    bad = []
+    for md in sorted((APP_DIR.parent / "consolidated").glob("modulo_*.md")):
+        for n, line in enumerate(md.read_text(encoding="utf-8").split("\n"), 1):
+            line = re.sub(r"\*\*[^*]*\*\*", "", line)  # rotulos em negrito
+            if line.startswith(("#", "|")) or line.count(" · ") != 1:
+                continue  # titulos (Drill B1 · ...), tabelas e listas de palavras
+            if re.search(r"\w · [a-z]", line) and not PT_MARKER.search(line):
+                bad.append(f"{md.name}:{n}")
+    return {"english_has_no_middle_dot": not bad, "english_has_no_middle_dot__error": ", ".join(bad[:10])}
+
+
 def content_review_checks():
     """Revisao de conteudo de 2026-10-13, rodada 1: o gabarito corrigido e as
     alternativas que deixavam o item com duas respostas nao podem voltar."""
@@ -1435,6 +1454,7 @@ def main():
     results.update(deep_markup_checks())
     results.update(bank_checks())
     results.update(content_review_checks())
+    results.update(english_dot_checks())
 
     # quarta passada: Chrome de verdade por http://127.0.0.1 (recarregar,
     # tela de celular, contraste, service worker). Ver scripts/smoke_browser.py

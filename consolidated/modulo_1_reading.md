@@ -486,7 +486,7 @@ Visitors are (4)_____ to move through the rooms in order, since the layout follo
 
 **TEXT: Excerpt from an editorial**
 
-For decades, the standard response to traffic congestion (1)_____ been to add lanes. The logic seems sound. Yet a growing body of research points to the opposite (2)_____: added lanes tend to attract additional drivers until, within a few years, traffic returns to its former level · a phenomenon known as induced demand. Rarely (3)_____ a policy so intuitive prove so consistently ineffective.
+For decades, the standard response to traffic congestion (1)_____ been to add lanes. The logic seems sound. Yet a growing body of research points to the opposite (2)_____: added lanes tend to attract additional drivers until, within a few years, traffic returns to its former level — a phenomenon known as induced demand. Rarely (3)_____ a policy so intuitive prove so consistently ineffective.
 
 This does not mean nothing (4)_____ be done. It means the solution lies elsewhere: in reliable public transit, in pricing that reflects the true cost of road use, and in land-use decisions that reduce the (5)_____ to drive in the first place. None of these is as politically straightforward as pouring concrete, which is (6)_____ they are so often postponed.
 
@@ -599,7 +599,7 @@ This does not mean nothing (4)_____ be done. It means the solution lies elsewher
 > **CAMPUS ↔ STATION SHUTTLE** Departs Campus Gate: on the hour and at half past, 7:00–19:00, Mon–Fri. Departs Station: at quarter past and quarter to, same times. Journey time: approximately 20 minutes. *The half-past and quarter-to services do not run after 17:00: the last half-past departure from Campus Gate is at 16:30. On weekends and holidays, shuttles leave both stops on the hour only.*
 
 **Item B4.1**: A student wants to leave Campus Gate on a Tuesday at 17:30. On that day there is:
-- (A) no 17:30 service · after 17:00 the shuttle leaves on the hour only
+- (A) no 17:30 service; after 17:00 the shuttle leaves on the hour only
 - (B) a 17:30 service that arrives at the station around 17:50
 - (C) a shuttle only if it is a holiday
 - (D) a 17:30 service that takes about 45 minutes

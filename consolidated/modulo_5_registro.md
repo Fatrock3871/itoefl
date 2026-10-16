@@ -661,7 +661,7 @@ Para cada frase B1, escreva a versão B2 e a versão C1.
 
 1. B2: *"Technology matters because it lets people work far more efficiently than before."* · C1: *"What makes technology decisive is less speed than scale: it lets a small team do work that once needed a department."*
 2. B2: *"Exam-related stress is widespread and affects performance."* · C1: *"The prevalence of exam stress is itself a signal that the assessment design, not the students, may be the problem."*
-3. B2: *"Remote work has clear benefits, though isolation is a real cost."* · C1: *"Remote work trades the friction of the commute for a subtler cost · the erosion of the informal contact that keeps teams cohesive."*
+3. B2: *"Remote work has clear benefits, though isolation is a real cost."* · C1: *"Remote work trades the friction of the commute for a subtler cost — the erosion of the informal contact that keeps teams cohesive."*
 4. B2: *"After the city opened a new park, outdoor exercise rose noticeably."* · C1: *"The new park did more than add green space; it made exercise the default for a neighborhood that had none within walking distance."*
 5. B2: *"A second language is a substantial advantage in the job market."* · C1: *"What a second language signals to an employer is less the language itself than the capacity to see a problem from another frame."*
 6. B2: *"Social media strengthens connection but also accelerates the spread of misinformation."* · C1: *"The same architecture that lets social media connect people at scale is what lets falsehoods travel at that scale."*

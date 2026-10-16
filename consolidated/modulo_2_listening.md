@@ -429,7 +429,7 @@ Anotar palavra por palavra é lento demais. Use símbolos.
 
 ### 4.2 Academic Talk: 3 tipos de questão narrados
 
-**Trecho:** *"...and here's where it gets interesting. You'd expect the older, more established firms to adopt the new technology first · they have the money, after all. But study after study finds the opposite: it's the smaller, newer companies that move first, and the big firms follow only once the technology is proven. Why? Part of it is that a large firm has more to lose. Its existing operations already work; a failed experiment disrupts something profitable. A startup, by contrast, has little to disrupt."*
+**Trecho:** *"...and here's where it gets interesting. You'd expect the older, more established firms to adopt the new technology first — they have the money, after all. But study after study finds the opposite: it's the smaller, newer companies that move first, and the big firms follow only once the technology is proven. Why? Part of it is that a large firm has more to lose. Its existing operations already work; a failed experiment disrupts something profitable. A startup, by contrast, has little to disrupt."*
 
 **Pergunta A · Detail:** *"According to the professor, which firms typically adopt a new technology first?"* (A) Older, more established firms, because they have more money. (B) Smaller, newer firms. (C) Firms of all sizes at roughly the same time. (D) Only firms that have already failed once.
 
@@ -491,7 +491,7 @@ Anotar palavra por palavra é lento demais. Use símbolos.
 
 **Student:** Hi, I wanted to ask about switching one of my electives. I'm in Intro to Statistics, but I'd rather take Data Visualization this term.
 
-**Advisor:** Let me check... okay, Data Visualization has space. But it has Statistics as a prerequisite · have you completed that?
+**Advisor:** Let me check... okay, Data Visualization has space. But it has Statistics as a prerequisite — have you completed that?
 
 **Student:** No, I'm taking it right now. I was hoping to take Data Visualization first and Statistics later.
 
@@ -499,7 +499,7 @@ Anotar palavra por palavra é lento demais. Use símbolos.
 
 **Student:** Is it worth asking the instructor directly, or is that rarely approved?
 
-**Advisor:** It's approved sometimes, especially if you have relevant experience · a coding background, say. Do you have any?
+**Advisor:** It's approved sometimes, especially if you have relevant experience — a coding background, say. Do you have any?
 
 **Student:** I do, actually · I took two programming courses last year.
 
@@ -523,7 +523,7 @@ Anotar palavra por palavra é lento demais. Use símbolos.
 
 **Librarian:** Let me look... yes, we have two copies on reserve. Reserve items are two-hour loans, in-library use only. You can't take them out of the building.
 
-**Student:** Oh. I was hoping to take it home for the weekend · the essay's due Monday.
+**Student:** Oh. I was hoping to take it home for the weekend — the essay's due Monday.
 
 **Librarian:** For reserve items, no, sorry. But here's an option: there's a circulating copy in the stacks, on the fourth floor. That one you *can* take out, for three weeks.
 
@@ -559,7 +559,7 @@ Anotar palavra por palavra é lento demais. Use símbolos.
 
 **Professor:** Right. A summary shows you understood it. Evaluation shows you can think about it. Aim for maybe a third summary, two-thirds evaluation.
 
-**Student:** Got it. And length · still fifteen hundred words?
+**Student:** Got it. And length — still fifteen hundred words?
 
 **Professor:** Fifteen hundred, give or take a hundred. Don't pad it.
 
@@ -581,7 +581,7 @@ Anotar palavra por palavra é lento demais. Use símbolos.
 
 *Narrator: Listen to an announcement about a change to library services.*
 
-**Speaker:** Attention, students. Starting next Monday, the Main Library's third-floor reading room will be closed for renovation through the end of the month. During this period you can use the East Wing reading room instead, which keeps its regular hours. Reserved study rooms originally booked for the third floor have already been transferred automatically to the East Wing · you don't need to rebook. However, if your reservation was for a room with audiovisual equipment, please double-check availability, since not all East Wing rooms are equipped. Questions go to the circulation desk.
+**Speaker:** Attention, students. Starting next Monday, the Main Library's third-floor reading room will be closed for renovation through the end of the month. During this period you can use the East Wing reading room instead, which keeps its regular hours. Reserved study rooms originally booked for the third floor have already been transferred automatically to the East Wing — you don't need to rebook. However, if your reservation was for a room with audiovisual equipment, please double-check availability, since not all East Wing rooms are equipped. Questions go to the circulation desk.
 
 **C1.1: Detail.** When does the closure begin? (A) Today  (B) Next Monday  (C) At the end of the month  (D) Next semester
 
@@ -595,7 +595,7 @@ Anotar palavra por palavra é lento demais. Use símbolos.
 
 *Narrator: Listen to an announcement about course registration.*
 
-**Speaker:** A reminder to all second-year students: registration for spring courses opens this Thursday at 8 a.m. and closes the following Wednesday at midnight. Register early · popular courses fill within hours. If a course you need is full, add yourself to the waitlist rather than emailing the instructor; the system releases spots automatically as students drop, and it works strictly in waitlist order. One change this year: the add/drop period after classes begin has been shortened from two weeks to one, so finalize your schedule before the term starts, not after.
+**Speaker:** A reminder to all second-year students: registration for spring courses opens this Thursday at 8 a.m. and closes the following Wednesday at midnight. Register early — popular courses fill within hours. If a course you need is full, add yourself to the waitlist rather than emailing the instructor; the system releases spots automatically as students drop, and it works strictly in waitlist order. One change this year: the add/drop period after classes begin has been shortened from two weeks to one, so finalize your schedule before the term starts, not after.
 
 **C2.1: Detail.** When does registration close? (A) Thursday at 8 a.m. (B) The following Wednesday at midnight (C) One week after classes begin (D) Two weeks after classes begin
 
@@ -635,7 +635,7 @@ Anotar palavra por palavra é lento demais. Use símbolos.
 
 A classic example. In one well-known study, researchers set up a tasting table in a grocery store: first with six varieties of jam, then with twenty-four. You'd expect the bigger display to sell more. Actually, the smaller display generated significantly more purchases. The larger one attracted more browsers, but far fewer of them bought anything.
 
-Why? Two things: decision fatigue and anticipated regret. With more options, comparing them mentally becomes exhausting · that's the fatigue. And even before you pick, you start worrying that one of the other twenty-three might be better and that you'll regret your choice — that's the regret. Ironically, more choices can leave people stuck at square one, unable to commit at all.
+Why? Two things: decision fatigue and anticipated regret. With more options, comparing them mentally becomes exhausting — that's the fatigue. And even before you pick, you start worrying that one of the other twenty-three might be better and that you'll regret your choice — that's the regret. Ironically, more choices can leave people stuck at square one, unable to commit at all.
 
 Now, this doesn't mean choice is bad: a complete absence of options is its own problem. The point is there's a sweet spot, and past it, additional options stop helping and start working against us. To be fair, later studies haven't always replicated the jam result, so the size of the effect is still debated.
 
@@ -655,7 +655,7 @@ Now, this doesn't mean choice is bad: a complete absence of options is its own p
 
 *Narrator: Listen to part of a talk in a biology class.*
 
-**Professor:** When we picture a forest, we tend to see individual trees competing · for light, for water, for space. And that's real. But over the last thirty years, research has revealed something the old picture missed: the trees are also **connected**, underground, through fungi.
+**Professor:** When we picture a forest, we tend to see individual trees competing — for light, for water, for space. And that's real. But over the last thirty years, research has revealed something the old picture missed: the trees are also **connected**, underground, through fungi.
 
 Here's how. The roots of most trees are wrapped in a network of fungal threads; this partnership between root and fungus is called a mycorrhiza. The fungi pull in water and minerals the tree's roots can't reach efficiently, and hand them to the tree. In return, the tree gives the fungi sugars it makes through photosynthesis. So far, a simple trade.
 
@@ -665,7 +665,7 @@ Now, a word of caution. This work has captured the public imagination, and some 
 
 **D2.1: Gist-content.** What is the main point of the talk? (A) Trees in a forest only compete, never cooperate (B) Trees are connected underground through fungal networks, and resources can move between them (C) Mycorrhizal fungi are harmful to most trees (D) Forests are single cooperative organisms
 
-**D2.2: Detail.** What does the tree give the fungi in the relationship? (A) Water it pulls from deep soil (B) Minerals from its leaves (C) Sugars made through photosynthesis (D) Nothing · the relationship is one-directional
+**D2.2: Detail.** What does the tree give the fungi in the relationship? (A) Water it pulls from deep soil (B) Minerals from its leaves (C) Sugars made through photosynthesis (D) Nothing — the relationship is one-directional
 
 **D2.3: Detail.** What did the radioactive-tracer experiments show? (A) That fungi kill shaded seedlings (B) That carbon can flow from a sunlit tree to a shaded seedling of another species (C) That only trees of the same species can be connected (D) That the networks do not actually transfer anything
 
@@ -679,13 +679,13 @@ Now, a word of caution. This work has captured the public imagination, and some 
 
 *Narrator: Listen to part of a talk in a history of technology class.*
 
-**Professor:** Look at your keyboard. The top row of letters spells Q-W-E-R-T-Y. It's an odd arrangement · the most common letters aren't under your strongest fingers. So why has it survived, essentially unchanged, for a hundred and fifty years?
+**Professor:** Look at your keyboard. The top row of letters spells Q-W-E-R-T-Y. It's an odd arrangement — the most common letters aren't under your strongest fingers. So why has it survived, essentially unchanged, for a hundred and fifty years?
 
 The layout dates from the 1870s, from early mechanical typewriters. The common story is that QWERTY was designed to *slow typists down* so the metal type-bars wouldn't jam. That's probably an oversimplification (the real design pressures were more mixed), but the key point is that the layout was shaped by the constraints of 1870s **machinery**, constraints that vanished decades ago.
 
 Better layouts have been proposed. The best known, Dvorak, was patented in 1936 and, in some studies, allows modestly faster and more comfortable typing. Yet it never caught on. Why not?
 
-This is a textbook case of what economists call **path dependence**, or sometimes "lock-in." Once QWERTY became the standard, everything organized itself around that standard: typewriters were built for it, typing was taught on it, and every new typist learned it because that's what the machines used · and machines used it because that's what typists knew. To switch, a single person gains little unless nearly everyone switches at once. The cost of coordinating that switch is enormous, and no one bears it. So an arrangement that made sense only for 1870s hardware is still, quietly, on every device you own.
+This is a textbook case of what economists call **path dependence**, or sometimes "lock-in." Once QWERTY became the standard, everything organized itself around that standard: typewriters were built for it, typing was taught on it, and every new typist learned it because that's what the machines used — and machines used it because that's what typists knew. To switch, a single person gains little unless nearly everyone switches at once. The cost of coordinating that switch is enormous, and no one bears it. So an arrangement that made sense only for 1870s hardware is still, quietly, on every device you own.
 
 **D3.1: Gist-content.** What is the talk mainly about? (A) How to type faster using the Dvorak layout (B) Why an outdated keyboard layout has persisted, as an example of path dependence (C) The mechanical design of 19th-century typewriters (D) Why Dvorak is objectively the best possible layout
 
@@ -740,7 +740,7 @@ This is a textbook case of what economists call **path dependence**, or sometime
 ### GRUPO C: Listen to an Announcement
 
 **C1.1: (B).** *"Starting next Monday..."* (C) confunde início com fim do período · **CONFUSED REASONING**.
-**C1.2: (B).** *"transferred automatically to the East Wing · you don't need to rebook."* (A) o oposto; (D) adiciona condição não dita.
+**C1.2: (B).** *"transferred automatically to the East Wing — you don't need to rebook."* (A) o oposto; (D) adiciona condição não dita.
 **C1.3: (C).** Aviso prático de que *"not all East Wing rooms are equipped"*. (A)(D) **EXTREME**; (B) **OUT OF SCOPE**.
 
 **C2.1: (B).** *"closes the following Wednesday at midnight."* (A) é a abertura; (C)(D) confundem com o add/drop.

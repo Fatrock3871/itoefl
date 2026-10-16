@@ -248,7 +248,7 @@ Um simulado só rende se a semana seguinte for de reparo direcionado. Não faça
 > **To: Group 4 · Marketing Project**
 > **Subject: Moving our Thursday meeting**
 >
-> Hi everyone: the library study rooms are fully booked Thursday, so I've moved our meeting to the Student Center, room 210, same time (4 PM). If you can't make it in person, I'll set up a video link · just reply and let me know by Wednesday noon so I can send it. Bring your section drafts either way.
+> Hi everyone: the library study rooms are fully booked Thursday, so I've moved our meeting to the Student Center, room 210, same time (4 PM). If you can't make it in person, I'll set up a video link — just reply and let me know by Wednesday noon so I can send it. Bring your section drafts either way.
 
 **QUESTÃO 1:** What is the main purpose of this email?
 - (A) To cancel the group meeting
@@ -274,7 +274,7 @@ Um simulado só rende se a semana seguinte for de reparo direcionado. Não faça
 
 **PASSAGE: Coral Bleaching and Thermal Stress**
 
-Coral reefs, despite occupying less than one percent of the ocean floor, support roughly a quarter of all known marine species. This disproportionate biodiversity depends on a delicate symbiotic relationship between coral polyps and microscopic algae called zooxanthellae, which live within coral tissue and supply the majority of the coral's energy through photosynthesis. When ocean temperatures rise even slightly above a coral's tolerance threshold: often by as little as one or two degrees Celsius sustained over several weeks · the algae are expelled, leaving the coral's white calcium carbonate skeleton visible. This phenomenon, known as bleaching, does not itself kill the coral immediately, but it severs the primary energy supply, leaving the organism vulnerable to starvation and disease. Recovery is possible if temperatures normalize quickly, but repeated bleaching events, now increasingly common under sustained ocean warming, leave reefs with progressively less time to recover between episodes.
+Coral reefs, despite occupying less than one percent of the ocean floor, support roughly a quarter of all known marine species. This disproportionate biodiversity depends on a delicate symbiotic relationship between coral polyps and microscopic algae called zooxanthellae, which live within coral tissue and supply the majority of the coral's energy through photosynthesis. When ocean temperatures rise even slightly above a coral's tolerance threshold: often by as little as one or two degrees Celsius sustained over several weeks — the algae are expelled, leaving the coral's white calcium carbonate skeleton visible. This phenomenon, known as bleaching, does not itself kill the coral immediately, but it severs the primary energy supply, leaving the organism vulnerable to starvation and disease. Recovery is possible if temperatures normalize quickly, but repeated bleaching events, now increasingly common under sustained ocean warming, leave reefs with progressively less time to recover between episodes.
 
 **QUESTÃO 1 · Factual Information:** According to the passage, zooxanthellae primarily provide coral with:
 - (A) protection from predators
@@ -368,7 +368,7 @@ This standardizing effect was not entirely welcome. Writers who spoke regional v
 
 *(nota: (C) dá uma causa provável e uma ação. (A) e (B) reaproveitam o assunto "professor/e-mail" sem responder à queixa.)*
 
-**ÁUDIO 4:** **Woman:** "This reading is forty pages · there's no way I'll finish it before class."
+**ÁUDIO 4:** **Woman:** "This reading is forty pages — there's no way I'll finish it before class."
 
 **QUESTÃO:** Best response:
 - (A) "The class is at ten."
@@ -410,7 +410,7 @@ This standardizing effect was not entirely welcome. Writers who spoke regional v
 
 #### Listen to an Academic Talk
 
-**TRANSCRIÇÃO (trecho de palestra · Introdução à Sociologia):** "Today we're discussing the concept of social capital · the networks of relationships and mutual trust that allow individuals and communities to function effectively. Unlike financial capital, social capital isn't stored in a bank account; it exists in the quality and density of a person's relationships. Researchers distinguish between two types: bonding social capital, which strengthens ties within a tightly knit group (like an extended family or a close circle of friends), and bridging social capital, which connects individuals across different groups, such as different professions or social classes. Communities strong in bonding capital but weak in bridging capital often show high internal solidarity but limited access to outside resources and opportunities."
+**TRANSCRIÇÃO (trecho de palestra · Introdução à Sociologia):** "Today we're discussing the concept of social capital — the networks of relationships and mutual trust that allow individuals and communities to function effectively. Unlike financial capital, social capital isn't stored in a bank account; it exists in the quality and density of a person's relationships. Researchers distinguish between two types: bonding social capital, which strengthens ties within a tightly knit group (like an extended family or a close circle of friends), and bridging social capital, which connects individuals across different groups, such as different professions or social classes. Communities strong in bonding capital but weak in bridging capital often show high internal solidarity but limited access to outside resources and opportunities."
 
 **QUESTÃO 1:** According to the talk, what distinguishes bridging social capital from bonding social capital?
 - (A) Bridging capital exists only in professional settings
@@ -428,7 +428,7 @@ This standardizing effect was not entirely welcome. Writers who spoke regional v
 
 #### Listen to a Conversation (2)
 
-**TRANSCRIÇÃO:** **Student:** "I'm here about the library fine on my account · it says forty dollars, but I returned the books on time." **Librarian:** "Let me look... Ah, I see what happened. The books were returned to the wrong branch, so the system logged them as late until they were transferred back. That took about a week." **Student:** "But there's a drop box at the north branch · I've used it before without a problem." **Librarian:** "You have, and normally that's fine. The issue is that these were course-reserve items, and those can only go back to the main desk. It's a rule most people don't know about. I can waive the fine this time since it was an honest mistake, but keep it in mind for next time."
+**TRANSCRIÇÃO:** **Student:** "I'm here about the library fine on my account — it says forty dollars, but I returned the books on time." **Librarian:** "Let me look... Ah, I see what happened. The books were returned to the wrong branch, so the system logged them as late until they were transferred back. That took about a week." **Student:** "But there's a drop box at the north branch · I've used it before without a problem." **Librarian:** "You have, and normally that's fine. The issue is that these were course-reserve items, and those can only go back to the main desk. It's a rule most people don't know about. I can waive the fine this time since it was an honest mistake, but keep it in mind for next time."
 
 **QUESTÃO 1:** Why was the student charged a fine?
 - (A) The books were genuinely returned late
@@ -470,7 +470,7 @@ This standardizing effect was not entirely welcome. Writers who spoke regional v
 
 #### Listen to an Academic Talk (2)
 
-**TRANSCRIÇÃO (trecho · Introdução à Biologia):** "So far we've treated the cell membrane as a simple barrier, but that picture is misleading. The membrane is better thought of as a busy checkpoint. It's selectively permeable · some molecules, like oxygen and carbon dioxide, pass through freely; others, like glucose or charged ions, can only cross with help, through specific protein channels or pumps. And here's the key point for today: some of those pumps run *against* the concentration gradient. They move a substance from where it's scarce to where it's already abundant, which costs energy. This is called active transport, and it's how a nerve cell, for example, maintains the sharp difference in ion concentration across its membrane that makes a nerve impulse possible."
+**TRANSCRIÇÃO (trecho · Introdução à Biologia):** "So far we've treated the cell membrane as a simple barrier, but that picture is misleading. The membrane is better thought of as a busy checkpoint. It's selectively permeable — some molecules, like oxygen and carbon dioxide, pass through freely; others, like glucose or charged ions, can only cross with help, through specific protein channels or pumps. And here's the key point for today: some of those pumps run *against* the concentration gradient. They move a substance from where it's scarce to where it's already abundant, which costs energy. This is called active transport, and it's how a nerve cell, for example, maintains the sharp difference in ion concentration across its membrane that makes a nerve impulse possible."
 
 **QUESTÃO 1:** According to the professor, why is calling the membrane a "simple barrier" misleading?
 - (A) The membrane has no effect on what enters the cell
@@ -560,11 +560,11 @@ Reordene os fragmentos para formar uma frase gramaticalmente correta e natural. 
 > "This week we've discussed how organizations balance short-term efficiency with long-term innovation. In your view, should companies prioritize immediate productivity gains or long-term investment in innovation, even when it temporarily reduces efficiency? Explain your reasoning."
 
 **Classmate posts (para você responder/engajar):**
-- **Jordan:** "I think efficiency should come first · a company that isn't profitable today won't survive long enough to innovate tomorrow."
+- **Jordan:** "I think efficiency should come first — a company that isn't profitable today won't survive long enough to innovate tomorrow."
 - **Priya:** "I'd disagree. Companies that only chase short-term efficiency often get disrupted by competitors willing to take innovation risks."
 
 **Resposta-modelo · banda 5 (C1):**
-> "Jordan's point about survival is fair, but I think it frames the choice too starkly. What makes long-term innovation worth protecting is that the cost of falling behind is rarely visible until it is too late to recover: by the time a disruptive competitor appears, the efficient-but-stagnant firm has no capacity left to respond. That said, Priya's position also needs a limit: innovation spending that ignores the balance sheet entirely is how promising companies run out of runway. The workable answer is a protected minimum · a fixed share of budget and attention reserved for longer-horizon work · while the rest of the organization optimizes for the present. That way efficiency funds the company today without being allowed to consume its future."
+> "Jordan's point about survival is fair, but I think it frames the choice too starkly. What makes long-term innovation worth protecting is that the cost of falling behind is rarely visible until it is too late to recover: by the time a disruptive competitor appears, the efficient-but-stagnant firm has no capacity left to respond. That said, Priya's position also needs a limit: innovation spending that ignores the balance sheet entirely is how promising companies run out of runway. The workable answer is a protected minimum — a fixed share of budget and attention reserved for longer-horizon work — while the rest of the organization optimizes for the present. That way efficiency funds the company today without being allowed to consume its future."
 
 **Resposta-modelo: banda 3 (B1), para comparação:**
 > "I agree more with Priya. Companies need new ideas or other companies will pass them. Efficiency is good but it is not enough. For example, some big companies did not change and then they lost customers. So I think companies should invest in innovation even if it costs money now. But they should also not spend too much."
@@ -726,7 +726,7 @@ Critics of this narrative, however, caution against treating network effects as 
 
 #### Listen to a Conversation
 
-**TRANSCRIÇÃO:** **Student:** "I wanted to ask about switching my thesis advisor. It's not personal, I just think my research interests have shifted toward a different subfield." **Faculty Coordinator:** "That happens more than you'd think. Do you have someone specific in mind?" **Student:** "Dr. Watanabe, actually · her recent work overlaps a lot more with where I want to take my project." **Faculty Coordinator:** "She's taken on a lot of advisees this year, so it might take a conversation to see if she has capacity. I'd recommend emailing her directly first, and if she agrees in principle, we can process the paperwork quickly."
+**TRANSCRIÇÃO:** **Student:** "I wanted to ask about switching my thesis advisor. It's not personal, I just think my research interests have shifted toward a different subfield." **Faculty Coordinator:** "That happens more than you'd think. Do you have someone specific in mind?" **Student:** "Dr. Watanabe, actually — her recent work overlaps a lot more with where I want to take my project." **Faculty Coordinator:** "She's taken on a lot of advisees this year, so it might take a conversation to see if she has capacity. I'd recommend emailing her directly first, and if she agrees in principle, we can process the paperwork quickly."
 
 **QUESTÃO 1:** Why does the student want to change advisors?
 - (A) A personal conflict with the current advisor
@@ -756,7 +756,7 @@ Critics of this narrative, however, caution against treating network effects as 
 
 #### Listen to an Academic Talk
 
-**TRANSCRIÇÃO:** "Let's turn to a phenomenon economists call 'loss aversion' · the tendency for people to feel the pain of a loss more intensely than the pleasure of an equivalent gain. Classic experiments show that people who have just been given an object typically demand roughly twice as much to give it up as others are willing to pay to acquire it · a pattern known as the endowment effect. This has real consequences outside the lab. Investors, for instance, often hold onto losing stocks far longer than rational analysis would justify, simply because selling would mean formally realizing the loss. The discomfort of that realization outweighs, for many people, the objective financial logic of cutting their losses early."
+**TRANSCRIÇÃO:** "Let's turn to a phenomenon economists call 'loss aversion' — the tendency for people to feel the pain of a loss more intensely than the pleasure of an equivalent gain. Classic experiments show that people who have just been given an object typically demand roughly twice as much to give it up as others are willing to pay to acquire it — a pattern known as the endowment effect. This has real consequences outside the lab. Investors, for instance, often hold onto losing stocks far longer than rational analysis would justify, simply because selling would mean formally realizing the loss. The discomfort of that realization outweighs, for many people, the objective financial logic of cutting their losses early."
 
 **QUESTÃO 1:** According to the talk, what does the endowment effect describe?
 - (A) People valuing something they own more than they would pay to acquire it
