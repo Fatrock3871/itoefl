@@ -262,7 +262,10 @@ Pequenas, independentes entre si, podem entrar em qualquer intervalo.
         só em português) e C (drills legados apagados). 77 de 79 aplicados,
         2 adiados para a rodada 2, nenhum recusado. A lista item a item
         está em `itoefl-gerencia/revisao/APLICADO-rodada1.md`.
-  - [ ] Rodada 2: os importantes, a decisão B (tirar Sentence
+  - [x] Rodada 2 concluída em 2026-10-16 (importantes, pontuação do inglês e
+        as 2 Sentence Simplification do M7; fica de fora encurtar as
+        passagens; lista em `itoefl-gerencia/revisao/APLICADO-rodada2.md`).
+        Escopo original: os importantes, a decisão B (tirar Sentence
         Simplification, Insert a Sentence, Prose Summary e arrastar para a
         tabela; encurtar as passagens para o padrão da prova) e devolver a
         pontuação do inglês onde o travessão virou ":" ou "·". Inclui os 2
