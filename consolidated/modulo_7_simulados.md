@@ -322,11 +322,11 @@ This standardizing effect was not entirely welcome. Writers who spoke regional v
 - (C) books would have contained more errors
 - (D) handwriting would have survived longer
 
-**QUESTÃO 5 · Sentence Simplification:** *"This gave printers a direct financial incentive to choose forms of spelling and grammar that the largest number of readers would accept."*
-- (A) Printers were legally obligated to use standard spelling.
-- (B) Because printers needed wide sales, they had a money-based reason to pick spelling and grammar most readers would accept.
-- (C) Readers refused to buy books with unfamiliar spelling.
-- (D) Printers preferred grammar that was easiest to typeset.
+**QUESTÃO 5 · Factual Information:** According to paragraph 1, why was there little pressure toward a single written standard before print?
+- (A) Scribes were forbidden from changing the texts they copied
+- (B) The audience for any given manuscript was small and usually local
+- (C) Regional languages were too different to be compared
+- (D) Few people could afford to hire scribes
 
 **QUESTÃO 6 · Rhetorical Purpose:** In paragraph 3, the author mentions writers whose usage was "marked as incorrect" in order to:
 - (A) show that standardization also had costs
@@ -698,11 +698,8 @@ Critics of this narrative, however, caution against treating network effects as 
 - (C) To criticize users who maintain accounts on multiple platforms
 - (D) To explain why regulators should ignore network effects entirely
 
-**QUESTÃO 6 · Sentence Simplification:** *"Because users generally prefer the platform with the largest existing network, early leaders in markets with strong network effects tend to compound their advantage rapidly."*
-- (A) Regulators prefer platforms that grow slowly and predictably.
-- (B) Early market leaders in network-effect industries tend to see their advantage grow faster, since users favor the biggest existing network.
-- (C) Users are legally required to use the largest platform available.
-- (D) Market leadership in these industries is determined entirely by product quality.
+**QUESTÃO 6 · Vocabulary in Context:** The word "peripheral" in paragraph 1 is closest in meaning to:
+- (A) essential  (B) of minor importance  (C) openly hostile  (D) newly discovered
 
 **Gabarito:** 1-B; 2-B; 3-B; 4-A; 5-B; 6-B
 

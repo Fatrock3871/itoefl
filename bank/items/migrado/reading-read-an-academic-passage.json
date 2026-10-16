@@ -1276,7 +1276,7 @@
     "task_type": "Read an Academic Passage",
     "exam_format": true,
     "format": "mcq",
-    "skill": "Sentence Simplification",
+    "skill": "Factual Information",
     "cefr_min": null,
     "cefr_max": null,
     "stimulus": {
@@ -1287,13 +1287,13 @@
       "audio_ref": null
     },
     "group": "mod7-b5",
-    "prompt": "*\"This gave printers a direct financial incentive to choose forms of spelling and grammar that the largest number of readers would accept.\"*",
+    "prompt": "According to paragraph 1, why was there little pressure toward a single written standard before print?",
     "text_format": "markdown",
     "options": {
-      "A": "Printers were legally obligated to use standard spelling.",
-      "B": "Because printers needed wide sales, they had a money-based reason to pick spelling and grammar most readers would accept.",
-      "C": "Readers refused to buy books with unfamiliar spelling.",
-      "D": "Printers preferred grammar that was easiest to typeset."
+      "A": "Scribes were forbidden from changing the texts they copied",
+      "B": "The audience for any given manuscript was small and usually local",
+      "C": "Regional languages were too different to be compared",
+      "D": "Few people could afford to hire scribes"
     },
     "answer": "B",
     "explanation": "",
@@ -1605,7 +1605,7 @@
     "task_type": "Read an Academic Passage",
     "exam_format": true,
     "format": "mcq",
-    "skill": "Sentence Simplification",
+    "skill": "Vocabulary in Context",
     "cefr_min": null,
     "cefr_max": null,
     "stimulus": {
@@ -1616,13 +1616,13 @@
       "audio_ref": null
     },
     "group": "mod7-b15",
-    "prompt": "*\"Because users generally prefer the platform with the largest existing network, early leaders in markets with strong network effects tend to compound their advantage rapidly.\"*",
+    "prompt": "The word \"peripheral\" in paragraph 1 is closest in meaning to:",
     "text_format": "markdown",
     "options": {
-      "A": "Regulators prefer platforms that grow slowly and predictably.",
-      "B": "Early market leaders in network-effect industries tend to see their advantage grow faster, since users favor the biggest existing network.",
-      "C": "Users are legally required to use the largest platform available.",
-      "D": "Market leadership in these industries is determined entirely by product quality."
+      "A": "essential",
+      "B": "of minor importance",
+      "C": "openly hostile",
+      "D": "newly discovered"
     },
     "answer": "B",
     "explanation": "",
