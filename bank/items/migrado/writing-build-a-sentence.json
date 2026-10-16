@@ -63,18 +63,16 @@
       "audio_ref": null
     },
     "group": "m4build2",
-    "prompt": "{1} {2} {3} {4} {5}?",
+    "prompt": "{1} time {2} {3} {4}?",
     "text_format": "plain",
     "options": [
       "does",
       "it",
       "open",
-      "time",
       "What"
     ],
     "answer": [
       "What",
-      "time",
       "does",
       "it",
       "open"
@@ -110,17 +108,15 @@
       "audio_ref": null
     },
     "group": "m4build2",
-    "prompt": "{1} {2} {3} {4} {5}?",
+    "prompt": "Did {1} {2} {3} {4}?",
     "text_format": "plain",
     "options": [
-      "Did",
       "in",
       "look",
       "you",
       "your bag"
     ],
     "answer": [
-      "Did",
       "you",
       "look",
       "in",
@@ -153,21 +149,19 @@
       "kind": "text",
       "format": "plain",
       "title": null,
-      "content": "We watched a movie last night.",
+      "content": "We watched one of the movies you recommended.",
       "audio_ref": null
     },
     "group": "m4build2",
-    "prompt": "{1} {2} {3} {4} {5}?",
+    "prompt": "Which {1} {2} {3} {4}?",
     "text_format": "plain",
     "options": [
       "did",
       "movie",
       "watch",
-      "Which",
       "you"
     ],
     "answer": [
-      "Which",
       "movie",
       "did",
       "you",
@@ -251,17 +245,15 @@
       "audio_ref": null
     },
     "group": "m4build2",
-    "prompt": "{1} {2} {3} {4} {5}?",
+    "prompt": "How {1} {2} {3} {4}?",
     "text_format": "plain",
     "options": [
       "a membership",
       "cost",
       "does",
-      "How",
       "much"
     ],
     "answer": [
-      "How",
       "much",
       "does",
       "a membership",
@@ -298,19 +290,17 @@
       "audio_ref": null
     },
     "group": "m4build2",
-    "prompt": "{1} {2} {3} {4} {5}?",
+    "prompt": "{1} {2} you {3} {4}?",
     "text_format": "plain",
     "options": [
       "about",
       "the change",
       "told",
-      "Who",
-      "you"
+      "Who"
     ],
     "answer": [
       "Who",
       "told",
-      "you",
       "about",
       "the change"
     ],
@@ -341,16 +331,16 @@
       "kind": "text",
       "format": "plain",
       "title": null,
-      "content": "I baked a cake for the party.",
+      "content": "I'm hosting a party on Saturday.",
       "audio_ref": null
     },
     "group": "m4build2",
-    "prompt": "{1} {2} {3} {4} {5}?",
+    "prompt": "{1} {2} {3} I {4} {5}?",
     "text_format": "plain",
     "options": [
       "anything",
       "bring",
-      "I can",
+      "can",
       "Is",
       "there"
     ],
@@ -358,7 +348,7 @@
       "Is",
       "there",
       "anything",
-      "I can",
+      "can",
       "bring"
     ],
     "explanation": "\"Is there\" inverte na pergunta. \"I can bring\" é oração relativa sem pronome: anything (that) I can bring.",
@@ -439,7 +429,7 @@
       "audio_ref": null
     },
     "group": "m4build2",
-    "prompt": "The bus {1} {2} {3} {4} {5} late.",
+    "prompt": "The bus {1} {2} {3} {4} {5} late this morning.",
     "text_format": "plain",
     "options": [
       "I",
@@ -489,17 +479,15 @@
       "audio_ref": null
     },
     "group": "m4build2",
-    "prompt": "{1} {2} {3} {4} {5}?",
+    "prompt": "Do {1} {2} {3} {4}?",
     "text_format": "plain",
     "options": [
-      "Do",
       "it closes",
       "know",
       "what time",
       "you"
     ],
     "answer": [
-      "Do",
       "you",
       "know",
       "what time",
@@ -893,7 +881,7 @@
       "people",
       "tried"
     ],
-    "explanation": "\"I wonder\" introduz pergunta indireta e a frase termina com ponto final, não interrogação.",
+    "explanation": "\"I wonder\" introduz pergunta indireta e a frase termina com ponto final, não com ponto de interrogação.",
     "hint": null,
     "trap_codes": [],
     "tags": [],
@@ -961,8 +949,8 @@
     "exam_format": true,
     "format": "build_sentence",
     "skill": null,
-    "cefr_min": "C1",
-    "cefr_max": "C1",
+    "cefr_min": "B2",
+    "cefr_max": "B2",
     "stimulus": {
       "kind": "text",
       "format": "plain",
@@ -1062,8 +1050,8 @@
     "exam_format": true,
     "format": "build_sentence",
     "skill": null,
-    "cefr_min": "C1",
-    "cefr_max": "C1",
+    "cefr_min": "B2",
+    "cefr_max": "B2",
     "stimulus": {
       "kind": "text",
       "format": "plain",
@@ -1159,8 +1147,8 @@
     "exam_format": true,
     "format": "build_sentence",
     "skill": null,
-    "cefr_min": "C1",
-    "cefr_max": "C1",
+    "cefr_min": "B2",
+    "cefr_max": "B2",
     "stimulus": {
       "kind": "text",
       "format": "plain",
@@ -1216,9 +1204,10 @@
       "audio_ref": null
     },
     "group": "m4build2",
-    "prompt": "{1} {2} {3} {4}, {5} no reason was given.",
+    "prompt": "{1} {2} {3} {4}, {5} they {6} refused to explain why.",
     "text_format": "plain",
     "options": [
+      "also",
       "but",
       "Not only",
       "rejected",
@@ -1230,7 +1219,8 @@
       "was",
       "the application",
       "rejected",
-      "but"
+      "but",
+      "also"
     ],
     "explanation": "\"Not only\" no início da frase obriga a inversão: was the application rejected.",
     "hint": null,
@@ -1253,8 +1243,8 @@
     "exam_format": true,
     "format": "build_sentence",
     "skill": null,
-    "cefr_min": "C1",
-    "cefr_max": "C1",
+    "cefr_min": "B2",
+    "cefr_max": "B2",
     "stimulus": {
       "kind": "text",
       "format": "plain",
@@ -1300,8 +1290,8 @@
     "exam_format": true,
     "format": "build_sentence",
     "skill": null,
-    "cefr_min": "C1",
-    "cefr_max": "C1",
+    "cefr_min": "B2",
+    "cefr_max": "B2",
     "stimulus": {
       "kind": "text",
       "format": "plain",
@@ -1404,19 +1394,17 @@
       "audio_ref": null
     },
     "group": "m4build2",
-    "prompt": "{1} {2} {3} {4} {5} you will learn.",
+    "prompt": "{1} {2} most {3} {4} you will learn.",
     "text_format": "plain",
     "options": [
       "how much",
       "is",
       "matters",
-      "most",
       "What"
     ],
     "answer": [
       "What",
       "matters",
-      "most",
       "is",
       "how much"
     ],

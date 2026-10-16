@@ -72,16 +72,16 @@
   {
     "num": 6,
     "topic": "Conectivos (causa/consequência lógica)",
-    "prompt": "Coral reefs are highly sensitive to temperature change; ______, even a one-degree rise can trigger mass bleaching events.",
+    "prompt": "Coral reefs are highly sensitive to temperature change; ______, rising ocean temperatures have already caused mass bleaching in many regions.",
     "options": {
       "A": "nevertheless",
       "B": "in contrast",
       "C": "consequently",
-      "D": "meanwhile"
+      "D": "similarly"
     },
     "correct": "C",
-    "why_right": "A segunda oração é uma consequência lógica direta da sensibilidade térmica mencionada na primeira: \"consequently\" (consequentemente) é o conector de causa e efeito correto.",
-    "why_wrong": "(A) e (B) sinalizam contraste, incompatível com a relação de causa-efeito; (D) sinaliza simultaneidade, não consequência."
+    "why_right": "A segunda oração é consequência direta da primeira: como os recifes são sensíveis, o aquecimento já causou branqueamento. \"Consequently\" marca essa relação de causa e efeito.",
+    "why_wrong": "(A) e (B) sinalizam contraste, incompatível com causa e efeito; (D) sinaliza semelhança, mas a segunda oração não compara nada."
   },
   {
     "num": 7,
@@ -108,7 +108,7 @@
       "D": "who's"
     },
     "correct": "C",
-    "why_right": "\"Whose\" é o pronome relativo possessivo correto para conectar \"the proposal\" a \"its implications\" sem repetir \"its\".",
+    "why_right": "\"Whose\" é o pronome relativo possessivo e vale também para coisas, não só para pessoas: \"whose implications\" equivale a \"its implications\", sem repetir \"its\".",
     "why_wrong": "(A) \"that its\" é gramaticalmente incorreto (that não aceita possessivo desta forma); (B) \"which its\" repete a posse de forma redundante e incorreta; (D) \"who's\" é contração de \"who is\", não um possessivo."
   },
   {
@@ -136,7 +136,7 @@
       "D": "Researchers recommend canceling the program."
     },
     "correct": "C",
-    "why_right": "O texto explicitamente qualifica os resultados como não-generalizáveis devido à baixa participação rural: a inferência lógica direta é que os resultados podem não representar a população total.",
+    "why_right": "O texto diz que a participação rural foi baixa demais para generalizar; logo, os resultados podem não representar a população como um todo.",
     "why_wrong": "(A) contradiz o texto (resultados foram \"promissores\", não um fracasso); (B) exagera: \"baixa participação\" não é \"exclusão total\"; (D) é uma conclusão não sustentada pelo texto, que apenas pede cautela, não cancelamento."
   }
 ]

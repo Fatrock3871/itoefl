@@ -26,7 +26,7 @@ LISTEN_REPEAT_SETS = [
             "Quiet study rooms are on the second floor near the stairs.",
             "You can print documents here, but you will need your student card.",
             "If a book is not on the shelf, ask a staff member to check the system.",
-            "Students who return books late may lose the right to borrow new ones for a month.",
+            "Students who return books late may not be allowed to borrow new ones for a whole month.",
         ],
     },
     {
@@ -41,7 +41,7 @@ LISTEN_REPEAT_SETS = [
             "Every drink can be made with regular or plant-based milk.",
             "Please write the customer's name on the cup before you start.",
             "Fresh pastries arrive each morning, and they usually sell out before noon.",
-            "If someone has a food allergy, check the ingredient list and tell the manager right away.",
+            "If someone has a food allergy, check the ingredient list and tell me right away.",
         ],
     },
     {
@@ -70,8 +70,8 @@ LISTEN_REPEAT_SETS = [
             "Long hair should be tied back before you begin.",
             "Never taste a chemical or smell it directly from the container.",
             "Label every sample clearly so that other students know what it contains.",
-            "If something spills, tell the instructor immediately instead of trying to clean it yourself.",
-            "Before you leave, make sure that all equipment has been washed, dried, and returned to the correct shelf.",
+            "If something spills, tell the instructor immediately instead of trying to clean it up yourself.",
+            "Before you leave, make sure all equipment has been washed, dried, and returned to the correct shelf.",
         ],
     },
     {
@@ -80,12 +80,12 @@ LISTEN_REPEAT_SETS = [
         "title": "Cenário 5 · Hotel front desk",
         "scenario": "You are learning to work at a hotel front desk. Listen to your supervisor and repeat what she says. Repeat only once.",
         "items": [
-            "Check-in begins at three.",
+            "Check-in begins at three o'clock.",
             "Breakfast is served until ten o'clock.",
             "The pool and the gym are on the ground floor.",
             "Guests can leave their luggage with us after they check out.",
             "A shuttle to the airport leaves from the front entrance every half hour.",
-            "If guests need a late checkout, they should let the front desk know the night before.",
+            "If guests need a late checkout, they should let us know the night before.",
             "Although the restaurant is closed on Mondays, room service remains available throughout the day and evening.",
         ],
     },
@@ -111,7 +111,7 @@ INTERVIEW_SETS = [
         "scenario": "You have agreed to take part in a survey about transportation in your area. You will have a short online interview with a researcher.",
         "items": [
             "Thanks for your time. I'm collecting opinions about transportation. First, how do you usually get around: by car, by public transportation, or on foot?",
-            "OK. Some people enjoy their daily commute, and others find it stressful. How do you feel about yours, and why do you think you feel that way?",
+            "OK. Some people enjoy their daily commute, and others find it stressful. How do you feel about yours, and why?",
             "I see. Some people argue that owning a car is no longer necessary for someone who lives in a big city. Do you agree? Why or why not?",
             "Good. Here is my final question. A few cities have made public transportation free for everyone. Do you think more cities should do the same? Why or why not?",
         ],

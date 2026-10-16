@@ -1452,14 +1452,14 @@
       "kind": "text",
       "format": "plain",
       "title": "Texto 1 · Honeybees",
-      "content": "Honeybees live in large colonies that can contain tens of thousands of insects. Each [[bee]] has a [[job]] that changes [[as]] it grows [[older]]. Young workers [[clean]] the hive [[and]] feed the [[larvae]], while older [[ones]] leave the [[nest]] to collect [[food]]. A single queen lays all the eggs, sometimes more than a thousand in one day. This division of labor allows the colony to survive cold winters and long periods without flowers.",
+      "content": "Honeybees live in large colonies that can contain tens of thousands of insects. Each [[worker]] has a [[job]] that changes [[as]] it grows [[older]]. Young workers [[clean]] the hive [[and]] feed the [[larvae]], while older [[ones]] fly out to [[gather]] [[food]]. A single queen lays all the eggs, sometimes more than a thousand in one day. This division of labor allows the colony to survive cold winters and long periods without flowers.",
       "audio_ref": null
     },
     "prompt": "Fill in the missing letters to complete the words in the paragraph.",
     "text_format": "plain",
     "options": null,
     "answer": [
-      "bee",
+      "worker",
       "job",
       "as",
       "older",
@@ -1467,10 +1467,10 @@
       "and",
       "larvae",
       "ones",
-      "nest",
+      "gather",
       "food"
     ],
-    "explanation": "Palavras curtas de conteúdo e duas palavras de função (as, and). Repare em \"ones\": o inglês usa esse pronome para não repetir \"workers\".",
+    "explanation": "Palavras de conteúdo do tema e três palavras de função (as, and, ones). Repare em \"ones\": o inglês usa esse pronome para não repetir \"workers\".",
     "hint": null,
     "trap_codes": [],
     "tags": [],
@@ -1605,7 +1605,7 @@
       "more",
       "storage"
     ],
-    "explanation": "Metade das lacunas é palavra de função (the, are, is, while, more). São as que mais derrubam quem lê só as palavras \"importantes\".",
+    "explanation": "Seis das dez lacunas são palavras de função (the duas vezes, are, is, while, more). São as que mais derrubam quem lê só as palavras \"importantes\".",
     "hint": null,
     "trap_codes": [],
     "tags": [],
@@ -1677,7 +1677,7 @@
       "kind": "text",
       "format": "plain",
       "title": "Texto 6 · Supply and demand",
-      "content": "The price of a product depends largely on the relationship between supply and demand. When [[buyers]] want more [[of]] a good [[than]] producers can [[offer]], its price [[tends]] to rise. [[Higher]] prices then [[encourage]] companies to [[increase]] production, which [[eventually]] brings the [[market]] back toward balance. Governments sometimes interrupt this process by setting maximum prices. Economists warn that such limits often create shortages instead of helping consumers.",
+      "content": "The price of a product depends largely on the relationship between supply and demand. When [[buyers]] want more [[of]] a good than producers [[can]] offer, [[its]] price [[tends]] to rise. [[Higher]] prices then [[encourage]] companies to [[increase]] production, which [[eventually]] brings the [[market]] back toward balance. Governments sometimes interfere with this process by setting maximum prices. Economists warn that such limits often create shortages instead of helping consumers.",
       "audio_ref": null
     },
     "prompt": "Fill in the missing letters to complete the words in the paragraph.",
@@ -1686,8 +1686,8 @@
     "answer": [
       "buyers",
       "of",
-      "than",
-      "offer",
+      "can",
+      "its",
       "tends",
       "Higher",
       "encourage",
@@ -1695,7 +1695,7 @@
       "eventually",
       "market"
     ],
-    "explanation": "Estrutura comparativa (more of ... than) e verbos acadêmicos com seus complementos: \"tends to rise\", \"encourage companies to increase\".",
+    "explanation": "Estrutura comparativa (more of ... than), modal + verbo na base (can offer) e verbos acadêmicos com seus complementos: \"tends to rise\", \"encourage companies to increase\".",
     "hint": null,
     "trap_codes": [],
     "tags": [],
@@ -1740,7 +1740,7 @@
       "tissues",
       "much"
     ],
-    "explanation": "Passiva com agente (are built by), relativo possessivo (whose) e vocabulário científico longo, em que ortografia decide o ponto.",
+    "explanation": "Passiva com agente (are built by), relativo possessivo (whose) e vocabulário científico longo, em que a ortografia decide o ponto.",
     "hint": null,
     "trap_codes": [],
     "tags": [],

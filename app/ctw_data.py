@@ -18,13 +18,13 @@ CTW_SETS = [
         "level": "B1",
         "text": (
             "Honeybees live in large colonies that can contain tens of thousands of insects. "
-            "Each [[bee]] has a [[job]] that changes [[as]] it grows [[older]]. Young workers "
-            "[[clean]] the hive [[and]] feed the [[larvae]], while older [[ones]] leave the "
-            "[[nest]] to collect [[food]]. A single queen lays all the eggs, sometimes more than "
+            "Each [[worker]] has a [[job]] that changes [[as]] it grows [[older]]. Young workers "
+            "[[clean]] the hive [[and]] feed the [[larvae]], while older [[ones]] fly out to "
+            "[[gather]] [[food]]. A single queen lays all the eggs, sometimes more than "
             "a thousand in one day. This division of labor allows the colony to survive cold "
             "winters and long periods without flowers."
         ),
-        "note": "Palavras curtas de conteúdo e duas palavras de função (as, and). "
+        "note": "Palavras de conteúdo do tema e três palavras de função (as, and, ones). "
                 "Repare em \"ones\": o inglês usa esse pronome para não repetir \"workers\".",
     },
     {
@@ -69,7 +69,7 @@ CTW_SETS = [
             "usually remember more than those who stay awake. For this reason, researchers "
             "advise against studying all night before an exam."
         ),
-        "note": "Metade das lacunas é palavra de função (the, are, is, while, more). "
+        "note": "Seis das dez lacunas são palavras de função (the duas vezes, are, is, while, more). "
                 "São as que mais derrubam quem lê só as palavras \"importantes\".",
     },
     {
@@ -93,13 +93,13 @@ CTW_SETS = [
         "level": "B2–C1",
         "text": (
             "The price of a product depends largely on the relationship between supply and "
-            "demand. When [[buyers]] want more [[of]] a good [[than]] producers can [[offer]], "
-            "its price [[tends]] to rise. [[Higher]] prices then [[encourage]] companies to "
+            "demand. When [[buyers]] want more [[of]] a good than producers [[can]] offer, "
+            "[[its]] price [[tends]] to rise. [[Higher]] prices then [[encourage]] companies to "
             "[[increase]] production, which [[eventually]] brings the [[market]] back toward "
-            "balance. Governments sometimes interrupt this process by setting maximum prices. "
+            "balance. Governments sometimes interfere with this process by setting maximum prices. "
             "Economists warn that such limits often create shortages instead of helping consumers."
         ),
-        "note": "Estrutura comparativa (more of ... than) e verbos acadêmicos com seus "
+        "note": "Estrutura comparativa (more of ... than), modal + verbo na base (can offer) e verbos acadêmicos com seus "
                 "complementos: \"tends to rise\", \"encourage companies to increase\".",
     },
     {
@@ -116,7 +116,7 @@ CTW_SETS = [
             "not recover."
         ),
         "note": "Passiva com agente (are built by), relativo possessivo (whose) e vocabulário "
-                "científico longo, em que ortografia decide o ponto.",
+                "científico longo, em que a ortografia decide o ponto.",
     },
     {
         "id": "mod1-ctw8",
