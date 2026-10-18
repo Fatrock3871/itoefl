@@ -20,10 +20,10 @@ A lógica de progressão dos 4 simulados existe para treinar precisão desde o p
 
 - **Reading e Listening são adaptativos em 2 estágios** (router → módulo inferior ou superior): seu desempenho nos primeiros itens determina o teto de dificuldade (e de score) do resto da seção.
 - **Os itens são curtos e numerosos** (50 em Reading, 47 em Listening): a velocidade de leitura e decisão item a item importa mais do que a resistência para uma passagem isolada e longa.
-- **Speaking tem 11 itens curtos**: repetição fiel e entrevista: o que conta é precisão e fidelidade imediatas, não "encher o tempo" com conteúdo.
+- **Speaking tem 11 itens curtos** (repetição fiel e entrevista). O que conta é precisão e fidelidade imediatas, não "encher o tempo" com conteúdo.
 - **Writing inclui um componente 100% gramatical** (Build a Sentence), além de e-mail e discussão acadêmica: 12 itens ao todo.
 
-A conclusão estratégica é direta: **o TOEFL pune começos fracos com mais severidade, e recompensa consistência item a item mais do que resistência de maratona.** A sequência de 4 simulados existe pra treinar exatamente isso.
+A conclusão estratégica é direta: **o TOEFL pune começos fracos com mais severidade e recompensa consistência item a item mais do que resistência de maratona.** A sequência de 4 simulados existe pra treinar exatamente isso.
 
 ### A Sequência em 4 Etapas
 
@@ -34,7 +34,7 @@ A conclusão estratégica é direta: **o TOEFL pune começos fracos com mais sev
 | **3** | Avançado | Reproduzir a dinâmica real do exame adaptativo: tempo estrito, router ativo, pressão contínua | **Cronômetro obrigatório** | Após Módulo 6 |
 | **4** | Final (Exam Day) | Simulação idêntica ao teste real da ETS: as 4 seções na sequência oficial, zero consultas | **Cronômetro + condições reais** | 7–10 dias antes da prova |
 
-> 📌 **Nota sobre o Simulado 1:** o Teste de Nivelamento Express (Módulo 0) constitui o Simulado 1 · Diagnóstico. Ele já converteu seu desempenho em uma estimativa de banda CEFR (1–6) por seção. Retome esses resultados antes de iniciar o Simulado 2 · eles definem quais tipos de item merecem mais repetição neste módulo.
+> 📌 **Nota sobre o Simulado 1:** o Teste de Nivelamento Express (Módulo 0) constitui o Simulado 1 · Diagnóstico. Ele já converteu seu desempenho em uma estimativa de banda CEFR (1–6) por seção. Retome esses resultados antes de iniciar o Simulado 2: eles definem quais tipos de item merecem mais repetição neste módulo.
 
 ### Pré-requisitos de Cada Simulado
 
@@ -60,7 +60,7 @@ A ETS publica quatro testes práticos gratuitos em PDF, já no formato de 2026, 
 **Como usar:**
 
 - **Quando:** guarde-os para depois do Simulado 2. Um bom encaixe é um teste oficial antes do Simulado 3 e outro entre o 3 e o 4. Não gaste os quatro no começo.
-- **Listening e Speaking vêm transcritos, sem áudio.** Não leia as falas: peça para alguém ler em voz alta ou cole o trecho num leitor de texto, e só olhe as alternativas depois de ouvir.
+- **Listening e Speaking vêm transcritos, sem áudio.** Não leia as falas: peça para alguém ler em voz alta ou cole o trecho num leitor de voz (texto para fala), e só olhe as alternativas depois de ouvir.
 - **Não há rubrica nem resposta-modelo** para o e-mail, a discussão e a entrevista. Avalie-se com as rubricas da Parte 7 deste módulo.
 - **O teste em papel não é adaptativo.** Cada seção traz dois módulos fixos; na prova o segundo depende do seu desempenho no primeiro.
 - **Triagem:** passe os erros pelo protocolo da Parte 6, como em qualquer simulado.
@@ -105,7 +105,7 @@ READING                                  LISTENING
 └─────────────────┘      └──────────────┘ └──────────────────┘    └──────────────┘
 ```
 
-**Implicação prática e não negociável:** trate cada item do módulo router como se já valesse a nota final · porque, de forma indireta, ele vale. Um candidato que "aquece" nos primeiros itens do router e erra por desatenção pode ser roteado para o módulo inferior e perder acesso às bandas mais altas (5–6) mesmo tendo capacidade para elas. A Parte 2 formaliza essa regra no protocolo de execução.
+**Implicação prática e não negociável:** trate cada item do módulo router como se já valesse a nota final, porque, de forma indireta, ele vale. Um candidato que "aquece" nos primeiros itens do router e erra por desatenção pode ser roteado para o módulo inferior e perder acesso às bandas mais altas (5–6) mesmo tendo capacidade para elas. A Parte 2 formaliza essa regra no protocolo de execução.
 
 ---
 
@@ -118,11 +118,11 @@ READING                                  LISTENING
 | **1** | Realize cada simulado em sessão única e ininterrupta | O teste real dura ~1h23–1h29min sem nenhuma pausa programada entre as seções: fragmentar o treino elimina o efeito de foco sustentado que você está calibrando |
 | **2** | Trate cada item do **módulo router** (Reading e Listening) com o mesmo cuidado que um item de alto peso | O router decide sua rota de dificuldade: um erro por pressa no início pode rebaixar o teto de banda disponível no restante da seção |
 | **3** | Use papel para anotações de Listening e Speaking (não digite no computador) | Simula o material físico do centro de testes |
-| **4** | No Simulado 2: consulte os frameworks de Speaking (Módulo 3) e os templates de Writing (Módulo 4) abertamente | A fixação de estrutura é o objetivo, não há mérito em travar sem referência nesta fase |
+| **4** | No Simulado 2: consulte os frameworks de Speaking (Módulo 3) e os templates de Writing (Módulo 4) abertamente | A fixação de estrutura é o objetivo: não há mérito em travar sem referência nesta fase |
 | **5** | No Simulado 3 e 4: nenhuma consulta a qualquer material | A pressão real (e o comportamento do router sob pressão) só aparece sem rede de segurança |
 | **6** | Grave TODAS as respostas de Speaking (app de gravação no celular) | Speaking agora é 100% corrigido por IA (SpeechRater) com foco em fidelidade e elaboração: sem gravação, sua autoavaliação é sistematicamente otimista |
 | **7** | Preencha o Protocolo de Análise de Erros (Parte 6) imediatamente após | Análise fria e imediata é mais precisa do que retrospectiva de dois dias depois |
-| **8** | Registre o score estimado (banda CEFR **e** score legado 0–120) no Dashboard (Parte 8) | A curva de evolução entre simulados é o dado mais importante do sistema: e as duas escalas contam histórias complementares até 2028 |
+| **8** | Registre o score estimado (banda CEFR **e** score legado 0–120) no Dashboard (Parte 8) | A curva de evolução entre simulados é o dado mais importante do sistema, e as duas escalas contam histórias complementares até 2028 |
 
 ### Timing por Seção: Referência para os Simulados 3 e 4
 
@@ -133,7 +133,7 @@ READING                                  LISTENING
 | **Writing** | ~23 min | 10 itens Build a Sentence + 1 Write an Email + 1 Write for an Academic Discussion | Tempo total da seção |
 | **Speaking** | ~8 min | 7 itens Listen and Repeat + 4 itens Take an Interview | Tempo de resposta por item: cada item tem janela fixa |
 
-**Regra de ouro:** os itens são curtos, numerosos e sequenciais, e não há tempo de sobra para revisar tudo no final. Treine para decidir rápido e seguir em frente · revisão extensa de itens já respondidos não é o uso mais eficiente dos minutos que você tem.
+**Regra de ouro:** os itens são curtos, numerosos e sequenciais, e não há tempo de sobra para revisar tudo no final. Treine para decidir rápido e seguir em frente. Revisão extensa de itens já respondidos não é o uso mais eficiente dos minutos que você tem.
 
 ### Como Tratar o Router na Prática (Reading e Listening)
 
@@ -169,7 +169,7 @@ Um simulado só rende se a semana seguinte for de reparo direcionado. Não faça
 
 ## PARTE 3: SIMULADO 2 · INTERMEDIÁRIO (Sem Cronômetro, Fixação de Estrutura)
 
-> **Objetivo:** Fixar a mecânica de cada tipo de item novo do formato 2026 sem a pressão do cronômetro. Consulte os frameworks de Speaking (Módulo 3) e de Writing (Módulo 4) abertamente durante essas seções. Para Reading e Listening, não consulte materiais · mas releia o gabarito imediatamente após cada seção. Este é um conjunto **abreviado** (amostra representativa de cada tipo de item, não a seção completa).
+> **Objetivo:** Fixar a mecânica de cada tipo de item novo do formato 2026 sem a pressão do cronômetro. Consulte os frameworks de Speaking (Módulo 3) e de Writing (Módulo 4) abertamente durante essas seções. Para Reading e Listening, não consulte materiais, mas releia o gabarito imediatamente após cada seção. Este é um conjunto **abreviado** (amostra representativa de cada tipo de item, não a seção completa).
 
 ---
 
@@ -248,7 +248,9 @@ Um simulado só rende se a semana seguinte for de reparo direcionado. Não faça
 > **To: Group 4 · Marketing Project**
 > **Subject: Moving our Thursday meeting**
 >
-> Hi everyone: the library study rooms are fully booked Thursday, so I've moved our meeting to the Student Center, room 210, same time (4 PM). If you can't make it in person, I'll set up a video link — just reply and let me know by Wednesday noon so I can send it. Bring your section drafts either way.
+> Hi everyone,
+>
+> The library study rooms are fully booked Thursday, so I've moved our meeting to the Student Center, room 210, same time (4 PM). If you can't make it in person, I'll set up a video link — just reply and let me know by Wednesday noon so I can send it. Bring your section drafts either way.
 
 **QUESTÃO 1:** What is the main purpose of this email?
 - (A) To cancel the group meeting
@@ -496,7 +498,7 @@ This standardizing effect was not entirely welcome. Writers who spoke regional v
 
 ### ✍️ WRITING: SIMULADO 2
 
-**Condição:** Consulte os templates e frameworks do Módulo 4 (Writing) abertamente. Sem cronômetro nesta fase · mas anote o tempo gasto.
+**Condição:** Consulte os templates e frameworks do Módulo 4 (Writing) abertamente. Sem cronômetro nesta fase, mas anote o tempo gasto.
 
 #### Build a Sentence (exemplos)
 
@@ -543,7 +545,7 @@ Reordene os fragmentos para formar uma frase gramaticalmente correta e natural. 
 > - ask whether the presentation materials can be shared
 
 **Resposta modelo (esqueleto orientador: desenvolva com o template do Módulo 4):**
-> Subject: Scheduling Conflict · Study Abroad Info Session
+> Subject: Scheduling Conflict with Study Abroad Info Session
 >
 > Dear Study Abroad Office,
 >
@@ -563,19 +565,19 @@ Reordene os fragmentos para formar uma frase gramaticalmente correta e natural. 
 - **Jordan:** "I think efficiency should come first — a company that isn't profitable today won't survive long enough to innovate tomorrow."
 - **Priya:** "I'd disagree. Companies that only chase short-term efficiency often get disrupted by competitors willing to take innovation risks."
 
-**Resposta-modelo · banda 5 (C1):**
+**Resposta-modelo, banda 5 (C1):**
 > "Jordan's point about survival is fair, but I think it frames the choice too starkly. What makes long-term innovation worth protecting is that the cost of falling behind is rarely visible until it is too late to recover: by the time a disruptive competitor appears, the efficient-but-stagnant firm has no capacity left to respond. That said, Priya's position also needs a limit: innovation spending that ignores the balance sheet entirely is how promising companies run out of runway. The workable answer is a protected minimum — a fixed share of budget and attention reserved for longer-horizon work — while the rest of the organization optimizes for the present. That way efficiency funds the company today without being allowed to consume its future."
 
 **Resposta-modelo: banda 3 (B1), para comparação:**
 > "I agree more with Priya. Companies need new ideas or other companies will pass them. Efficiency is good but it is not enough. For example, some big companies did not change and then they lost customers. So I think companies should invest in innovation even if it costs money now. But they should also not spend too much."
 
-*Diferença: a versão banda 5 abre com concessão, dá um mecanismo específico ("the cost of falling behind is rarely visible"), limita os dois colegas e propõe uma síntese. A versão B1 está correta e clara, mas cada frase carrega uma ideia só e o exemplo é genérico. Ver Módulo 5, Parte 6.*
+*Diferença: a versão banda 5 abre com concessão, dá um mecanismo específico ("the cost of falling behind is rarely visible"), aponta o limite da posição de cada colega e propõe uma síntese. A versão B1 está correta e clara, mas cada frase carrega uma ideia só e o exemplo é genérico. Ver Módulo 5, Parte 6.*
 
 ---
 
 ### 🎤 SPEAKING: SIMULADO 2
 
-**Condição:** Grave todas as respostas. Consulte os frameworks do Módulo 3 (Speaking · esqueletos de resposta por função discursiva) antes de começar.
+**Condição:** Grave todas as respostas. Consulte os frameworks do Módulo 3 (Speaking: esqueletos de resposta por função discursiva) antes de começar.
 
 #### Listen and Repeat (progressão de complexidade)
 
@@ -707,7 +709,7 @@ Critics of this narrative, however, caution against treating network effects as 
 
 ### LISTENING · SIMULADO 3 (Tempo total: ~25–29 min, com router)
 
-**Instrução:** Ouça (ou leia a transcrição uma única vez, sem pausar) e responda sem retroceder · o áudio real não permite replay.
+**Instrução:** Ouça (ou leia a transcrição uma única vez, sem pausar) e responda sem retroceder: o áudio real não permite replay.
 
 #### Listen and Choose a Response
 
@@ -823,7 +825,7 @@ Cenário: uma pesquisa sobre transporte na sua cidade. As quatro perguntas sobem
 3. **(Concordar ou discordar)** "Some people say cities should ban cars from downtown areas. Do you agree or disagree? Why?"
 4. **(Medida pública)** "Should the government make public transportation free for everyone? Why or why not?"
 
-> **Autoavaliação obrigatória (S3):** ao ouvir cada gravação, atribua um código de triagem (SS-phon / SS-stress / SS-rhythm / SS-flu / SS-gram / SS-struct) ao erro predominante e anote-o na planilha da Parte 6. Sob timing real, o erro que mais aparece raramente é o mesmo que aparecia sem cronômetro · normalmente **SS-flu** e **SS-gram** sobem.
+> **Autoavaliação obrigatória (S3):** ao ouvir cada gravação, atribua um código de triagem (SS-phon / SS-stress / SS-rhythm / SS-flu / SS-gram / SS-struct) ao erro predominante e anote-o na planilha da Parte 6. Sob timing real, o erro que mais aparece raramente é o mesmo que aparecia sem cronômetro: normalmente **SS-flu** e **SS-gram** sobem.
 
 ---
 
@@ -889,7 +891,7 @@ O papel do Simulado é **triagem**. Para cada questão errada, você primeiro cl
 
 ### Taxonomia de Triagem do Simulado (Formato 2026)
 
-Os códigos abaixo espelham 1-a-1 os protocolos dos módulos. A última coluna é para onde você vai fazer o reparo.
+Os códigos abaixo espelham um a um os protocolos dos módulos. A última coluna é para onde você vai fazer o reparo.
 
 **Reading** (espelha M1 R1–R6):
 
@@ -961,14 +963,14 @@ TOP 3 PADRÕES DE ERRO NO ROUTER (Reading + Listening):
 2. Código: ___ | Frequência: ___ | Módulo de reparo: ___
 3. Código: ___ | Frequência: ___ | Módulo de reparo: ___
 
-SPEAKING (autoavaliação por item — use a rubrica da Parte 7):
-Listen and Repeat — Fidelidade média (1–6): ___ | Erro predominante (código): ___
-Take an Interview — Elaboração média (1–6): ___ | Erro predominante (código): ___
+SPEAKING (autoavaliação por item; use a rubrica da Parte 7):
+Listen and Repeat, fidelidade média (1–6): ___ | Erro predominante (código): ___
+Take an Interview, elaboração média (1–6): ___ | Erro predominante (código): ___
 
 WRITING (autoavaliação por item):
-Build a Sentence — Acertos: ___/10 | Erro predominante (código): ___
-Write an Email — Banda estimada (1–6): ___ | Erro predominante (código): ___
-Write for an Academic Discussion — Banda estimada (1–6): ___ | Erro predominante (código): ___
+Build a Sentence, acertos: ___/10 | Erro predominante (código): ___
+Write an Email, banda estimada (1–6): ___ | Erro predominante (código): ___
+Write for an Academic Discussion, banda estimada (1–6): ___ | Erro predominante (código): ___
 
 PLANO DE REPARO ANTES DO PRÓXIMO SIMULADO:
 Prioridade 1: Rever _____________________ (código ___ → Módulo ___, Parte ___)
@@ -1073,25 +1075,25 @@ Ouça sua gravação item a item e marque:
 > Preencha após cada simulado. Registre as **duas escalas**: a banda CEFR (1–6, com meios pontos) é a régua oficial do formato 2026; o score comparável 0–120 segue sendo reportado durante o período de transição (até ~2028) e é útil para comparação com metas de instituições que ainda pedem a escala antiga.
 
 ```
-╔═══════════════════════════════════════════════════════════════════════════╗
-║              DASHBOARD DE PROGRESSO — ITOEFL              ║
-╠═══════════════════╦═══════════╦═══════════╦═══════════╦══════════════════╣
-║ SEÇÃO              ║ S1 (M0)   ║ S2        ║ S3        ║ S4 (FINAL)       ║
-╠═══════════════════╬═══════════╬═══════════╬═══════════╬══════════════════╣
-║ Reading  (banda 1–6)║           ║           ║           ║                  ║
-║ Listening(banda 1–6)║           ║           ║           ║                  ║
-║ Writing  (banda 1–6)║           ║           ║           ║                  ║
-║ Speaking (banda 1–6)║           ║           ║           ║                  ║
-╠═══════════════════╬═══════════╬═══════════╬═══════════╬══════════════════╣
-║ BANDA GERAL (média)║           ║           ║           ║                  ║
-║ Score 0–120 (legado)║           ║           ║           ║                  ║
-║ META (banda)        ║           ║           ║           ║                  ║
-║ GAP (meta − atual)  ║           ║           ║           ║                  ║
-╠═══════════════════╬═══════════╬═══════════╬═══════════╬══════════════════╣
+╔═════════════════════════════════════════════════════════════════════════════╗
+║                       DASHBOARD DE PROGRESSO · ITOEFL                       ║
+╠══════════════════════╦═══════════╦═══════════╦═══════════╦══════════════════╣
+║ SEÇÃO                ║ S1 (M0)   ║ S2        ║ S3        ║ S4 (FINAL)       ║
+╠══════════════════════╬═══════════╬═══════════╬═══════════╬══════════════════╣
+║ Reading   (banda 1–6)║           ║           ║           ║                  ║
+║ Listening (banda 1–6)║           ║           ║           ║                  ║
+║ Writing   (banda 1–6)║           ║           ║           ║                  ║
+║ Speaking  (banda 1–6)║           ║           ║           ║                  ║
+╠══════════════════════╬═══════════╬═══════════╬═══════════╬══════════════════╣
+║ BANDA GERAL (média)  ║           ║           ║           ║                  ║
+║ Score 0–120 (legado) ║           ║           ║           ║                  ║
+║ META (banda)         ║           ║           ║           ║                  ║
+║ GAP (meta − atual)   ║           ║           ║           ║                  ║
+╠══════════════════════╬═══════════╬═══════════╬═══════════╬══════════════════╣
 ║ Erros no ROUTER      ║           ║           ║           ║                  ║
 ║ Data de realização   ║           ║           ║           ║                  ║
 ║ Top erro (código)    ║           ║           ║           ║                  ║
-╚═══════════════════╩═══════════╩═══════════╩═══════════╩══════════════════╝
+╚══════════════════════╩═══════════╩═══════════╩═══════════╩══════════════════╝
 ```
 
 ### Interpretação da Curva de Progresso
@@ -1101,7 +1103,7 @@ Ouça sua gravação item a item e marque:
 | **S1→S2→S3 crescendo, S4 estável** | Progresso sólido e consolidado: pronto para o exame | Foco no Módulo 8 (Exam Day Protocol) |
 | **S2 alto, S3 cai** | Mecânica de item funciona sem pressão, mas desmorona sob timing real e router ativo | Drills cronometrados diários + revisão do protocolo do router (Parte 2) |
 | **Muitos erros classificados como SX (router)** | O candidato está perdendo acesso ao módulo superior por pressa nos primeiros itens | Treino específico de ritmo nos primeiros 5–7 itens de Reading/Listening |
-| **S1→S4 flat (sem crescimento de banda)** | O conteúdo estudado não está sendo ativado nos simulados | Revise os erros com a Taxonomia (Parte 6): pode estar estudando o que não está errando |
+| **S1→S4 estagnado (sem crescimento de banda)** | O conteúdo estudado não está sendo ativado nos simulados | Revise os erros com a Taxonomia (Parte 6): pode estar estudando o que não está errando |
 | **Uma seção específica não sobe de banda** | Lacuna estrutural naquela seção | Retorne ao módulo da seção correspondente e refaça os drills daquele tipo de item |
 | **Banda geral consistentemente abaixo da meta** | Meta pode precisar de ajuste, ou o cronograma precisa ser estendido | Revise o Plano Catch-Up (Módulo 0) |
 
@@ -1122,7 +1124,7 @@ Um cronograma-base assumindo que você já fez o Simulado 1 (Módulo 0) e tem ~8
 | **7** | Reparo dos 3 gaps do Simulado 3 + M8 Exam Day (leitura) | Mini-simulados cronometrados dos tipos que caíram | Ciclo de reparo |
 | **8** | Apenas os 3 maiores gaps. Nada novo. | Leve: flashcards, releitura do M5, 1 resposta de cada task por dia | **Simulado 4** 7–10 dias antes da prova; depois só M8 |
 
-> Se você tem menos de 8 semanas: mantenha os 4 simulados e o ciclo de reparo, mas reduza o tempo de "foco de conteúdo" · a análise pós-simulado tem prioridade sobre estudar módulo novo. Se tem menos de 4 semanas: faça o Simulado 2 e o Simulado 4, pule o 3, e concentre todo o reparo no código de triagem mais frequente.
+> Se você tem menos de 8 semanas: mantenha os 4 simulados e o ciclo de reparo, mas reduza o tempo de "foco de conteúdo": a análise pós-simulado tem prioridade sobre estudar módulo novo. Se tem menos de 4 semanas: faça o Simulado 2 e o Simulado 4, pule o 3, e concentre todo o reparo no código de triagem mais frequente.
 
 ---
 
