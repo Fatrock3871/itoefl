@@ -1,4 +1,4 @@
-# ITOEFL
+# iTOEFL
 ---
 
 # MÓDULO 0
@@ -10,7 +10,7 @@ Este é o TOEFL iBT nas especificações oficiais da ETS, vigentes desde janeiro
 
 ---
 
-## PARTE 1: O TARGET MATRIX · O QUE ESTÁ EM JOGO
+## PARTE 1: O QUE ESTÁ EM JOGO
 
 > 📌 **Este módulo em dois minutos.** Ele faz quatro coisas, nesta ordem: (1) explica como a prova de 2026 funciona e como ela é pontuada (Partes 1 e 2); (2) mede o seu nível com um teste de 10 questões (Parte 3); (3) transforma percentual de acerto em banda estimada, com uma calculadora (Parte 4); (4) entrega um cronograma de 30, 60 ou 90 dias de acordo com o seu nível (Parte 6). Com pouco tempo, faça a Parte 3 agora e vá direto para a Parte 6. O resto é referência para consultar depois.
 
@@ -22,7 +22,7 @@ O TOEFL iBT 2026 é curto e adaptativo: no Reading e no Listening, o seu desempe
 
 O tempo de fala e escrita também encolheu. Não dá pra "empurrar com o corpo" uma resposta capenga. Ela precisa sair certa já na primeira tentativa.
 
-Pergunta pra responder com honestidade agora: se o exame começasse amanhã, sua primeira resposta em cada seção sairia assim, de primeira? Se a resposta for não, é exatamente esse gap que os próximos módulos fecham.
+Pergunta pra responder com honestidade agora: se o exame começasse amanhã, sua primeira resposta em cada seção sairia certa? Se a resposta for não, é exatamente essa lacuna que os próximos módulos fecham.
 
 > 📌 **Princípio fundamental do Sistema:** O TOEFL 2026 recompensa precisão imediata, não volume de esforço. Quem entende a arquitetura do teste (e treina exatamente para ela) sai na frente de quem apenas "estuda inglês em geral".
 
@@ -39,7 +39,7 @@ A partir de 2026 seu resultado sai em **duas escalas ao mesmo tempo**, e a ETS e
 
 ### 1.3 Tabela CEFR × 0–120 (concordância oficial da ETS)
 
-> 📌 A ETS publica a concordância entre as bandas 1–6 e a escala 0–120 (página *TOEFL Score Scale Update* e *Updated TOEFL iBT Test Overview*, Tabela 3). Cada banda corresponde a uma faixa do 0–120, e o boletim traz o ponto médio dessa faixa: uma banda 4,5, por exemplo, sai acompanhada de 90. As faixas abaixo juntam as duas meias bandas de cada nível CEFR. O perfil de candidato é leitura nossa.
+> 📌 A ETS publica a concordância entre as bandas 1–6 e a escala 0–120 (página *TOEFL Score Scale Update* e *Updated TOEFL iBT Test Overview*, Tabela 3). Cada banda corresponde a uma faixa do 0–120, e o boletim traz o ponto médio dessa faixa: uma banda 4.5, por exemplo, sai acompanhada de 90. As faixas abaixo juntam as duas meias bandas de cada nível CEFR. O perfil de candidato é leitura nossa.
 
 | Banda CEFR | Nível | Faixa comparável 0–120 (ETS) | Perfil de candidato |
 |---|---|---|---|
@@ -86,7 +86,7 @@ A partir de 2026 seu resultado sai em **duas escalas ao mesmo tempo**, e a ETS e
 >
 > Um aviso sobre as fontes: o *Test Overview* da ETS tem uma tabela de pontos brutos em que Reading e Listening aparecem como "0–30", enquanto o *Test Blueprint and Specifications* dá 35 para cada uma. Os dois documentos concordam em Writing (20) e Speaking (55). Este curso segue o Blueprint, que é o documento que detalha quantos itens contam ponto em cada seção. Para o seu estudo não muda nada: o que você acompanha é a banda.
 
-Repara no Speaking: só 8 minutos, mas 55 pontos brutos, quase o triplo do Writing, espremidos em 11 itens curtos. Cada resposta pesa muito mais do que parece, e não tem chance de "esquentar": a primeira já precisa sair boa.
+Repare no Speaking: só 8 minutos, mas 55 pontos brutos, quase o triplo do Writing, espremidos em 11 itens curtos. Cada resposta pesa muito mais do que parece, e não tem chance de "esquentar": a primeira já precisa sair boa.
 
 ### 2.3 Os Tipos de Item: Mapa Completo
 
@@ -94,7 +94,7 @@ Repara no Speaking: só 8 minutos, mas 55 pontos brutos, quase o triplo do Writi
 | Task | Itens | O que testa | CEFR |
 |---|---|---|---|
 | **Complete the Words** | 30 (1pt cada) | Completar o final de palavras cortadas em parágrafos curtos (10 por parágrafo): gramática, forma e ortografia da palavra, compreensão | B1–C1+ |
-| **Read in Daily Life** | 5–15 (1pt cada) | Textos curtos não-acadêmicos (placa, cardápio, e-mail, post) | A1–C1 |
+| **Read in Daily Life** | 5–15 (1pt cada) | Textos curtos não acadêmicos (placa, cardápio, e-mail, post) | A1–C1 |
 | **Read an Academic Passage** | 5–15 (1pt cada) | Ideia principal, detalhes, inferência, estrutura retórica | B1–C2 |
 
 #### Listening
@@ -122,11 +122,11 @@ Speaking tem só 2 formatos: Listen and Repeat e Take an Interview. Não tem esp
 
 ### 2.4 A Lógica do Speaking e Writing
 
-Entender essa lógica muda como você treina. Decora isso:
+Entender essa lógica muda como você treina. Grave isto:
 - **Listen and Repeat** paga por **fidelidade exata** ao que você ouviu, som e gramática. "Ter algo pra dizer" não vale nada aqui: não tem espaço pra parafrasear.
-- **Take an Interview** quer resposta **curta, direta, coerente na hora**. Esquece introdução-desenvolvimento-conclusão.
+- **Take an Interview** quer resposta **curta, direta, coerente na hora**. Esqueça introdução-desenvolvimento-conclusão.
 - **Write an Email** (7 minutos) e **Write for an Academic Discussion** (10 minutos, 100 palavras ou mais) são textos curtos e objetivos, não redação longa.
-- **Build a Sentence** é gramática pura e imediata: cada erro de estrutura tira ponto na cara.
+- **Build a Sentence** é gramática pura e imediata: cada erro de estrutura zera o item.
 
 Resumindo: o que pontua é precisão instantânea, prosódia natural, gramática automática. Isso vem de repetição deliberada, não de decorar script pronto pra "encher linguiça".
 
@@ -136,13 +136,13 @@ Resumindo: o que pontua é precisão instantânea, prosódia natural, gramática
 
 ### 3.1 Como Usar Este Diagnóstico
 
-Essas 10 questões medem seus fundamentos: **gramática, vocabulário e conectivos acadêmicos**. É a base que sustenta as 4 seções do exame novo.
+Estas 10 questões medem seus fundamentos: **gramática, vocabulário e conectivos acadêmicos**. É a base das 4 seções do exame novo.
 
-Ela aparece em Complete the Words (Reading), na decodificação de fala conectada (Listening), em Build a Sentence e nos textos de Writing, e na precisão gramatical que Listen and Repeat e Take an Interview cobram no Speaking.
+Essa base aparece em Complete the Words (Reading), na decodificação de fala conectada (Listening), em Build a Sentence e nos textos de Writing, e na precisão gramatical que Listen and Repeat e Take an Interview cobram no Speaking.
 
-Ou seja: esse não é um teste "à parte". É o esqueleto que sustenta tudo que vem depois.
+Ou seja: não é um teste "à parte". É o esqueleto de tudo que vem depois.
 
-> ⏱️ **Tempo sugerido:** 12 minutos, sem consulta. Responda tudo antes de conferir o gabarito · o diagnóstico só é confiável se refletir seu nível real, não o que você consegue pesquisar.
+> ⏱️ **Tempo sugerido:** 12 minutos, sem consulta. Responda a tudo antes de conferir o gabarito: o diagnóstico só é confiável se refletir seu nível real, não o que você consegue pesquisar.
 
 ---
 
@@ -205,7 +205,7 @@ What can be inferred from this statement?
 | **7** | **(A)** substantiate | "Substantiate an argument" é a collocation acadêmica padrão para "sustentar/comprovar um argumento com evidências". | (B) significa fabricar/inventar, sentido oposto ao contexto acadêmico legítimo; (C) significa aliviar, sem relação; (D) significa diminuir, sentido oposto. |
 | **8** | **(C)** whose | "Whose" é o pronome relativo possessivo correto para conectar "the proposal" a "its implications" sem repetir "its". | (A) "that its" é gramaticalmente incorreto (that não aceita possessivo desta forma); (B) "which its" repete a posse de forma redundante e incorreta; (D) "who's" é contração de "who is", não um possessivo. |
 | **9** | **(B)** | Fórmula de abertura formal ("I am writing to..."), advérbio de cortesia ("respectfully") e justificativa objetiva: adequado para comunicação institucional, exatamente o padrão exigido em Write an Email. | (A), (C) e (D) usam registro coloquial ("Hey", "just wondering", "stuff", "you guys") e tom de cobrança ("it's urgent"): inadequados para um e-mail formal a uma instituição. |
-| **10** | **(C)** | O texto explicitamente qualifica os resultados como não-generalizáveis devido à baixa participação rural: a inferência lógica direta é que os resultados podem não representar a população total. | (A) contradiz o texto (resultados foram "promissores", não um fracasso); (B) exagera: "baixa participação" não é "exclusão total"; (D) é uma conclusão não sustentada pelo texto, que apenas pede cautela, não cancelamento. |
+| **10** | **(C)** | O texto diz que a participação rural foi baixa demais para generalizar; logo, os resultados podem não representar a população como um todo. | (A) contradiz o texto (resultados foram "promissores", não um fracasso); (B) exagera: "baixa participação" não é "exclusão total"; (D) é uma conclusão não sustentada pelo texto, que apenas pede cautela, não cancelamento. |
 
 ### 3.4 Diagnóstico de Nível CEFR
 
@@ -245,7 +245,7 @@ Por isso a calculadora abaixo é uma **estimativa pedagógica**, não um placar 
 | 71–85% | 5 – 5.5 (C1) | Alta consistência, poucos erros sistemáticos |
 | 86–100% | 6 (C2) | Domínio quase completo |
 
-Reading e Listening são adaptativos, então calcule o "% de acerto" separado pro módulo inferior e pro superior, quando der pra saber qual foi o seu. E guarda isso: só de ser roteado pro módulo superior já é sinal de que você passou de B1/B2 no router.
+Reading e Listening são adaptativos, então calcule o "% de acerto" separado pro módulo inferior e pro superior, quando der pra saber qual foi o seu. E guarde isto: só de ser roteado pro módulo superior já é sinal de que você passou de B1/B2 no router.
 
 Em Writing e Speaking a IA (e-rater / SpeechRater) olha gramática, coesão, vocabulário e, no Speaking, prosódia e inteligibilidade. Não é "certo ou errado" simples. Trate o % dessas seções como aproximado, e confie mais no feedback qualitativo dos Módulos 3 e 4 do que num número isolado.
 
@@ -256,7 +256,7 @@ Score Geral (CEFR) = (Reading + Listening + Writing + Speaking) ÷ 4, arredondad
 Score Comparável 0–120 = faixa da banda geral na concordância oficial da ETS (tabela 1.3)
 ```
 
-**Exemplo de cálculo:** Reading 4.5 + Listening 4.0 + Writing 4.0 + Speaking 3.5 = 16 ÷ 4 = **Banda geral 4.0 (B2)** → Faixa comparável na concordância da ETS: 72–85 na escala 0–120 (86 já é banda 4,5).
+**Exemplo de cálculo:** Reading 4.5 + Listening 4.0 + Writing 4.0 + Speaking 3.5 = 16 ÷ 4 = **Banda geral 4.0 (B2)** → Faixa comparável na concordância da ETS: 72–85 na escala 0–120 (86 já é banda 4.5).
 
 ---
 
@@ -264,7 +264,7 @@ Score Comparável 0–120 = faixa da banda geral na concordância oficial da ETS
 
 ### 5.1 Template de Acompanhamento Semanal
 
-Preenche esse quadro toda semana, sempre no mesmo dia da semana. O que importa aqui não é o número isolado. É a tendência.
+Preencha este quadro uma vez por semana, sempre no mesmo dia. O que importa aqui não é o número isolado. É a tendência.
 
 | Métrica | Semana 1 | Semana 2 | Semana 3 | Semana 4 | Meta |
 |---|---|---|---|---|---|
@@ -280,7 +280,7 @@ Preenche esse quadro toda semana, sempre no mesmo dia da semana. O que importa a
 | **Banda CEFR geral estimada** | | | | | 5.0–6.0 |
 | **Horas de estudo deliberado na semana** | | | | | conforme cronograma |
 
-> ⚡ **Regra de ouro do dashboard:** uma métrica estagnada por 2 semanas seguidas é um sinal de alerta, não espere a semana 4 para agir. Revisite o Módulo correspondente e ajuste o plano de estudo imediatamente.
+> ⚡ **Regra de ouro do dashboard:** uma métrica estagnada por 2 semanas seguidas é sinal de alerta: não espere a semana 4 para agir. Revisite o Módulo correspondente e ajuste o plano de estudo imediatamente.
 
 ### 5.2 Sinais de Alerta (Red Flags)
 
@@ -339,7 +339,7 @@ Ative esse protocolo se: (a) faltam cerca de 7 dias pra prova e você está atra
 
 ### 7.2 O Princípio de Pareto Aplicado ao TOEFL 2026
 
-> 🎯 **80% do seu ganho de banda vem de 20% dos ajustes.** Com o exame agora em apenas 1h23–1h29min, não há tempo (nem no teste, nem na sua preparação restante) para dispersão. Foque nos 5 alavancadores abaixo: eles cobrem a maior parte da pontuação bruta disponível.
+> 🎯 **Boa parte do seu ganho de banda vem de poucos ajustes.** Com o exame agora em apenas 1h23–1h29min, não há tempo (nem no teste, nem na sua preparação restante) para dispersão. Foque nos 5 alavancadores abaixo: eles cobrem a maior parte da pontuação bruta disponível.
 
 ### 7.3 Os 5 Alavancadores do Pareto (Atualizados para 2026)
 
@@ -363,7 +363,7 @@ Ative esse protocolo se: (a) faltam cerca de 7 dias pra prova e você está atra
 | **6** | Sessão intensiva: Take an Interview (Módulo 3) · 8 perguntas simuladas |
 | **7** | Simulado completo cronometrado (1h23–1h29min) + registro no Dashboard |
 
-> ⚠️ **Regra do plano de emergência:** nunca pule o simulado final do Dia 7, mesmo que o tempo esteja curtíssimo. Familiaridade com o timing real do exame adaptativo é, por si, um ganho de pontos.
+> ⚠️ **Regra do plano de emergência:** nunca pule o simulado final do Dia 7, mesmo que o tempo esteja curtíssimo. Familiaridade com o timing real do exame adaptativo é, por si só, um ganho de pontos.
 
 ---
 
@@ -371,7 +371,7 @@ Ative esse protocolo se: (a) faltam cerca de 7 dias pra prova e você está atra
 
 ### 8.1 Por Que Gamificar
 
-Consistência bate intensidade, sempre. O iTOEFL usa sequências (streaks) pra virar disciplina em hábito automático, especialmente nos drills de Listen and Repeat e Build a Sentence, que só rendem de verdade com repetição diária.
+Consistência bate intensidade, sempre. O iTOEFL usa sequências (streaks) pra transformar disciplina em hábito automático, especialmente nos drills de Listen and Repeat e Build a Sentence, que só rendem de verdade com repetição diária.
 
 ### 8.2 Os 3 Desafios
 

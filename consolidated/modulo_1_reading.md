@@ -24,7 +24,7 @@ O Reading abre a prova, e é um **exame adaptativo em dois estágios**. Isso mud
 | **Penalidade por erro** | Nenhuma: **responda sempre a todos os itens** |
 | **Tipos de item** | 3: Complete the Words · Read in Daily Life · Read an Academic Passage |
 
-**Comprimento dos textos (oficial):** os fáceis têm ~15–50 palavras; os mais complexos chegam a ~200 palavras. Não existe mais a passagem longa de 700 palavras do formato antigo · as passagens acadêmicas de 2026 são **compactas e densas**. Todos os textos ficam **visíveis na tela** enquanto você responde.
+**Comprimento dos textos (oficial):** os fáceis têm ~15–50 palavras; os mais complexos chegam a ~200 palavras. Não existe mais a passagem longa de 700 palavras do formato antigo: as passagens acadêmicas de 2026 são **compactas e densas**. Todos os textos ficam **visíveis na tela** enquanto você responde.
 
 **Formatos de estímulo (oficial):** placa, cardápio, e-mail, post de rede social, aviso, formulário (para os textos do cotidiano); passagens expositivas e argumentativas de nível universitário (para os acadêmicos).
 
@@ -35,7 +35,7 @@ O Reading abre a prova, e é um **exame adaptativo em dois estágios**. Isso mud
 ### 1.2 O design adaptativo em dois estágios
 
 ```
-ESTÁGIO 1 — ROUTER (~9 minutos)
+ESTÁGIO 1: ROUTER (~9 minutos)
 ├── conjunto inicial de itens de dificuldade mista
 ├── o sistema mede seu desempenho EM TEMPO REAL
 └── ao final, você é roteado para um de dois caminhos:
@@ -47,7 +47,7 @@ ESTÁGIO 1 — ROUTER (~9 minutos)
      │  TETO DE BANDA MENOR   │        │  acesso às bandas 5–6  │
      └───────────────────────┘        └───────────────────────┘
 
-ESTÁGIO 2 — MÓDULO (~18–21 minutos)
+ESTÁGIO 2: MÓDULO (~18–21 minutos)
 └── você responde aos itens restantes dentro do módulo para o qual foi roteado
 ```
 
@@ -97,7 +97,7 @@ Cada passagem acadêmica traz uma combinação destes tipos. Reconhecer o tipo *
 
 ### 1.5 Por que o Reading vem primeiro
 
-Você enfrenta o Reading no pico de energia cognitiva. Essa é sua vantagem, use bem. Como a seção é adaptativa e curta, a pressão de tempo por item já é alta no router. Gerenciar ansiedade nos primeiros minutos não é "seria bom": é **estruturalmente decisivo** para o seu teto.
+Você enfrenta o Reading no pico de energia cognitiva. Essa é sua vantagem: use-a bem. Como a seção é adaptativa e curta, a pressão de tempo por item já é alta no router. Gerenciar a ansiedade nos primeiros minutos não é detalhe: é **estruturalmente decisivo** para o seu teto.
 
 ---
 
@@ -254,7 +254,7 @@ O -s da 3ª pessoa do singular no presente é praticamente a única marca de con
 | Objeto direto + indireto | V + Obj. indireto + Obj. direto, **OU** V + Obj. direto + *to/for* + Obj. indireto | *"gave to me the book"* → *"gave me the book"* / *"gave the book to me"* |
 | Pergunta indireta (dentro de outra frase) | ordem afirmativa: *"...where the library is"*, **não** *"...where is the library"* | *"Could you tell me where is the office?"* → *"...where the office is?"* |
 | Phrasal verb separável + pronome | V + **pronome** + partícula | *"turn off it"* → *turn **it** off* |
-| Oração subordinada antes da principal | Conjunção + subordinada **, vírgula ,** principal | *"If it rains we stay"* → *If it rains**,** we stay* |
+| Oração subordinada antes da principal | Conjunção + subordinada + **vírgula** + principal | *"If it rains we stay"* → *If it rains**,** we stay* |
 | Inversão após negativo no início (C1+) | Advérbio negativo + **auxiliar** + sujeito + verbo | *Rarely **does** one see such dedication.* · *Not only **did** he arrive late, but...* |
 
 ### 3.4 Artigos: a armadilha brasileira
@@ -301,7 +301,9 @@ Itens de propósito retórico e de detalhe frequentemente giram em torno do cone
 | **Condição** | *if, unless (= if not), provided that, as long as* | estabelece a condição |
 | **Ênfase / esclarecimento** | *indeed, in fact, notably* | reforça ou corrige para cima |
 
-**Falsos amigos:** *eventually* = "no final / com o tempo" (não "eventualmente"); *actually* = "na verdade" (não "atualmente" → *currently*); *besides* = "além disso" (≠ *beside* = "ao lado de").
+**Falsos amigos:** *eventually* = "no final / com o tempo" (não "eventualmente"); *actually* = "na verdade" (não "atualmente" → *currently*).
+
+**Par confundível:** *besides* = "além disso" ≠ *beside* = "ao lado de".
 
 ### 3.7 Decodificar palavras desconhecidas: prefixos e sufixos
 
@@ -838,7 +840,7 @@ The finding has been extended well beyond job-hunting. Weak ties have been linke
 
 | Item | Resp. | Por quê |
 |---|---|---|
-| 1 | **A** *is* | *"the main pool ___ closed"* · voz passiva no presente: **is + particípio** (*closed*). |
+| 1 | **A** *is* | *"the main pool ___ closed"*: voz passiva no presente: **is + particípio** (*closed*). |
 | 2 | **B** *to be* | *"We expect the work ___ completed"*: *expect* + objeto + **to + infinitivo** (aqui infinitivo passivo *to be completed*). |
 | 3 | **A** *may* | modal simples; *"members may still use"*. (B) *"may to"* é agramatical: modal nunca leva *to*. |
 | 4 | **B** *remains* | sujeito *which* retoma *the smaller training pool* (singular) → **+ -s**. |
@@ -864,8 +866,8 @@ The finding has been extended well beyond job-hunting. Weak ties have been linke
 |---|---|---|
 | 1 | **B** *collected* | *"objects ___ over four decades"*: particípio reduzido de *"objects that were collected"*. |
 | 2 | **B** *have* | sujeito *Many of them* (plural) + presente perfeito → *"have never been displayed"*. (A) *has* quebra a concordância; (C) *had* mudaria para passado perfeito sem marco; (D) *having* não fecha o tempo. |
-| 3 | **A** *window* | *"a rare ___ into daily life"* · collocation fixa: *a window into/onto* = uma janela para (uma visão de). (B)/(C)/(D) não colocam com *into daily life* nesse sentido. |
-| 4 | **B** *encouraged* | *"Visitors are ___ to move"* · voz passiva: *are encouraged to*. (C) *encouraging* mudaria o sujeito; (A)/(D) não formam o passivo. |
+| 3 | **A** *window* | *"a rare ___ into daily life"*: collocation fixa: *a window into/onto* = uma janela para (uma visão de). (B)/(C)/(D) não formam collocation com *into daily life* nesse sentido. |
+| 4 | **B** *encouraged* | *"Visitors are ___ to move"*: voz passiva: *are encouraged to*. (C) *encouraging* mudaria o sujeito; (A)/(D) não formam o passivo. |
 | 5 | **A** *delve* | *"wish to ___ deeper into any single object"*: *delve into* = aprofundar-se em. (B) *fall*, (C) *drop*, (D) *sink* não colocam com *deeper into [a topic]* no sentido de investigar. |
 | 6 | **A** *is* | *"Photography without flash ___ permitted"*: sujeito *Photography* (incontável, singular) → **is**. |
 
@@ -876,25 +878,25 @@ The finding has been extended well beyond job-hunting. Weak ties have been linke
 | 1 | **A** *has* | Sujeito *"the standard response"* = **singular** → *"has been"* (presente perfeito: *"For decades... has been"*). (B) *have* quebra a concordância; (C) *had* pediria um marco no passado; (D) *having* não fecha o tempo. |
 | 2 | **A** *conclusion* | *"points to the opposite ___"*: *point to a conclusion* é a collocation. (B) *decision*, (C) *opinion*, (D) *suggestion* não colocam com *research points to the opposite ___*. |
 | 3 | **A** *does* | inversão após *Rarely* no início da frase → **auxiliar** *does* + sujeito + base (*prove*). *"Rarely does a policy... prove..."* |
-| 4 | **A** *can* | *"This does not mean nothing ___ be done"* · modal + *be done* (passiva): *"não significa que nada **pode** ser feito"*. (B) inverteria o sentido; (C) e (D) não podem vir antes de *be* (*"is be"* e *"has be"* são agramaticais). |
+| 4 | **A** *can* | *"This does not mean nothing ___ be done"*: modal + *be done* (passiva): *"não significa que nada **pode** ser feito"*. (B) inverteria o sentido; (C) e (D) não podem vir antes de *be* (*"is be"* e *"has be"* são agramaticais). |
 | 5 | **A** *need* | *"reduce the ___ to drive"*: *the need to (do something)* = a necessidade de. *want/wish/hope* não colocam com *reduce the ___ to drive* nesse sentido estrutural. |
 | 6 | **A** *why* | *"which is ___ they are so often postponed"*: *"which is why..."* = "razão pela qual". (B) *because* precisaria de outra estrutura; (C)/(D) não fecham a relativa. |
 
 ### GRUPO B: Read in Daily Life
 
-**B1.1: (B).** Dogs on a leash são permitidos; o *upper loop* é fechado a cães de 1/abr a 15/jul, e 20 de maio cai nesse período → todas as trilhas **exceto** o upper loop. (A) ignora a restrição; (C) inverte; (D) exagera · cães não são banidos, só do upper loop.
+**B1.1: (B).** Dogs on a leash são permitidos; o *upper loop* é fechado a cães de 1/abr a 15/jul, e 20 de maio cai nesse período → todas as trilhas **exceto** o upper loop. (A) ignora a restrição; (C) inverte; (D) exagera: cães não são banidos, só do upper loop.
 **B1.2: (C).** *"E-bikes and mobility scooters are exempt"* da proibição de bicicletas. (A) bicicleta comum é proibida; (B) camping proibido; (D) não há lixeiras além daquele ponto.
 
-**B2.1: (B).** *Garden* é *vegan* e não tem aviso de nozes. (A) *Halloumi Stack* tem queijo (não vegan) e *contains nuts*; (C) a sopa é sempre vegetariana mas **pode não ser vegana** · o texto manda perguntar; (D) *Classic Club* tem frango e ovo.
+**B2.1: (B).** *Garden* é *vegan* e não tem aviso de nozes. (A) *Halloumi Stack* tem queijo (não vegan) e *contains nuts*; (C) a sopa é sempre vegetariana mas **pode não ser vegana**: o texto manda perguntar; (D) *Classic Club* tem frango e ovo.
 **B2.2: (B) $14.** $12 do sanduíche + $2 pela troca por fries = $14. O desconto de 10% (pedido antes do meio-dia) se aplica **depois**, mas a pergunta é o preço **antes** do desconto. (C) $12.60 é o valor **com** o desconto, que a pergunta exclui; (A) esquece a troca por fries.
-**B2.3: (B).** *"soup of the day is always vegetarian; ask staff whether today's is vegan"* · sempre vegetariana, veganidade varia.
+**B2.3: (B).** *"soup of the day is always vegetarian; ask staff whether today's is vegan"*: sempre vegetariana, veganidade varia.
 
-**B3.1: (B).** O e-mail lista duas opções (com ou sem atestado) e pede que Bruna escolha até quinta. (A) não recusa · oferece alternativas; (C) o trabalho ainda não está atrasado; (D) não houve erro do departamento.
-**B3.2 · (B).** Sem atestado: aceita até 48h de atraso com penalidade padrão de 10%. (A) descreve a opção **com** atestado; (C)/(D) não constam.
+**B3.1: (B).** O e-mail lista duas opções (com ou sem atestado) e pede que Bruna escolha até quinta. (A) não recusa: oferece alternativas; (C) o trabalho ainda não está atrasado; (D) não houve erro do departamento.
+**B3.2: (B).** Sem atestado: aceita até 48h de atraso com penalidade padrão de 10%. (A) descreve a opção **com** atestado; (C)/(D) não constam.
 **B3.3: (B).** Registro formal (*Dear... Best regards, Dr. Okafor*), mas empático (*I'm sorry to hear you've been unwell*) e prestativo (oferece soluções). (A)/(C)/(D) não batem com o texto.
 
-**B4.1: (A).** A nota de rodapé é explícita: *"the last half-past departure from Campus Gate is at 16:30"* e, depois das 17:00, o serviço é *"on the hour only"*. Logo, não existe 17:30 na terça-feira. Este item treina a leitura da **nota de rodapé** · quem responde (B) leu só a linha principal (*"on the hour and at half past"*) e ignorou a exceção.
-**B4.2 · (B).** Fim de semana: *"On weekends and holidays, shuttles leave both stops on the hour only"*. A tabela *quarter past / quarter to* da estação vale só de segunda a sexta.
+**B4.1: (A).** A nota de rodapé é explícita: *"the last half-past departure from Campus Gate is at 16:30"* e, depois das 17:00, o serviço é *"on the hour only"*. Logo, não existe 17:30 na terça-feira. Este item treina a leitura da **nota de rodapé**: quem responde (B) leu só a linha principal (*"on the hour and at half past"*) e ignorou a exceção.
+**B4.2: (B).** Fim de semana: *"On weekends and holidays, shuttles leave both stops on the hour only"*. A tabela *quarter past / quarter to* da estação vale só de segunda a sexta.
 
 **B5.1: (B).** O post inteiro gira em torno de um anúncio: abrir mais cedo nos dias de semana. (A) inverte; (C) não pede desculpas; (D) nenhum pão novo.
 **B5.2: (C).** *"will now go into the oven the night before"*. (A) o texto diz *"still be baked fresh daily"*; (B)/(D) não constam.
@@ -915,15 +917,15 @@ The finding has been extended well beyond job-hunting. Weak ties have been linke
 **C2.4: (A).** *"Particular houses became known for particular subjects"*: Lloyd's e as casas perto da Royal Society ilustram a especialização por tema.
 **C2.5: (B).** *"The order provoked such immediate opposition that it was withdrawn within days."*
 **C2.6: (B) caused.** *"provoked such... opposition"* = causou/gerou oposição.
-**C2.7: (B) At [■B].** A frase estende a ideia dos *newspapers provided by the house*: *"the sheets"* retoma *"the newspapers"*, e *"read aloud at the tables"* continua a descrição do que os clientes faziam. [■A] vem **antes** de os jornais serem mencionados · o pronome *"the sheets"* não teria referente. [■C] separaria a ideia de "misturar pessoas" da sua consequência. [■D] está no parágrafo errado (que trata de especialização por tema).
+**C2.7: (B) At [■B].** A frase estende a ideia dos *newspapers provided by the house*: *"the sheets"* retoma *"the newspapers"*, e *"read aloud at the tables"* continua a descrição do que os clientes faziam. [■A] vem **antes** de os jornais serem mencionados: o pronome *"the sheets"* não teria referente. [■C] separaria a ideia de "misturar pessoas" da sua consequência. [■D] está no parágrafo errado (que trata de especialização por tema).
 
-**C3.1 · (B).** Tese central: weak ties frequentemente trazem informação mais nova porque conectam a outras partes da rede. (A) contradiz o achado; (C)/(D) distorcem.
+**C3.1: (B).** Tese central: weak ties frequentemente trazem informação mais nova porque conectam a outras partes da rede. (A) contradiz o achado; (C)/(D) distorcem.
 **C3.2: (C).** *"Most had heard about it not from a close friend but from an acquaintance."*
 **C3.3: (B).** *"they are exposed to more or less the same information you already have; what they can tell you, you have often already heard."* (D) descreve os conhecidos, não os amigos próximos.
 **C3.4: (B).** Se todos os contatos são amigos próximos, que circulam nos mesmos círculos → informação repetida, pouca novidade de partes distantes. (A) inverte; (C) exagera; (D) contradiz o parágrafo 3, que liga a inovação a equipes conectadas a muitos grupos de fora.
 **C3.5: (A).** O parágrafo 3 lista extensões do achado além da busca de emprego; a inovação nas empresas é um desses exemplos.
 **C3.6: (B) connection.** *"a bridge to parts of the network you could not otherwise reach"* = uma ponte/conexão.
-**C3.7: (A), (B), (D).** São as três ideias principais que parágrafos inteiros sustentam. (C) é de outra passagem (coffee houses) · distrator de resumo clássico; (E) contradiz o texto (*"they carry less trust"*); (F) é um detalhe numérico inventado.
+**C3.7: (A), (B), (D).** São as três ideias principais que parágrafos inteiros sustentam. (C) é de outra passagem (coffee houses): distrator de resumo clássico; (E) contradiz o texto (*"they carry less trust"*); (F) é um detalhe numérico inventado.
 
 ---
 
@@ -943,7 +945,7 @@ Some seus acertos: Grupo A (**32 itens**), Grupo B (**13 itens**), Grupo C (**21
 
 ## PARTE 7: PROTOCOLO DE ANÁLISE DE ERROS DE READING
 
-Toda vez que você errar um item (em drill, simulado ou material da ETS) classifique o erro numa destas categorias **antes** de seguir em frente. Erros não classificados se repetem.
+Toda vez que você errar um item (em drill, simulado ou material da ETS), classifique o erro numa destas categorias **antes** de seguir em frente. Erros não classificados se repetem.
 
 | Código | Categoria | Sinal | O que fazer |
 |---|---|---|---|
