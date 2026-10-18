@@ -7,6 +7,25 @@ falta" do `ROADMAP.md`. Sessão nova entra no topo.
 
 ---
 
+## Sessão 2026-10-18: passagens e Listening no tamanho da prova
+
+Última parte da decisão B da revisão de conteúdo.
+
+- `99876de` M1: as 3 passagens do Grupo C com 197 a 220 palavras e 5
+  perguntas (saíram simplificação, inserir frase, resumo e um detalhe
+  repetido em cada); tabelas 1.4 e 2.3 e o exemplo 4.2 sem os tipos
+  extintos. Script `scripts/passage_stats.py`.
+- `54a7980` M2: 2 perguntas por conversa e por anúncio, 4 por fala (51 -> 36
+  itens no módulo).
+- `e3e0985` M7: Printing Press (220 palavras) e Network Effects (217, três
+  parágrafos) com 5 perguntas, Conversation (2) com 2. `M7_EXPECTED_ITEMS`
+  62 -> 59.
+- Checagem `passage_checks` no smoke test. Banco 227 -> 203 itens.
+
+Smoke test: Tudo passou. Sem SQL, sem deploy, sem publicar.
+
+---
+
 ## Sessão 2026-10-17: versão gratuita (modelo B)
 
 O dono aprovou o freemium por conteúdo, com a amostra recomendada em

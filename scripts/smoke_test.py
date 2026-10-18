@@ -1303,6 +1303,25 @@ def english_dot_checks():
     return {"english_has_no_middle_dot": not bad, "english_has_no_middle_dot__error": ", ".join(bad[:10])}
 
 
+def passage_checks():
+    """Decisão B da revisão (2026-10-18): passagem de Read an Academic Passage
+    com até 230 palavras e 5 perguntas, e Listening com as perguntas por áudio
+    da prova (2 por conversa e por anúncio, 4 por fala acadêmica). Os números
+    saem de scripts/passage_stats.py, que também lista tudo quando rodado sozinho."""
+    import passage_stats
+    texts = passage_stats.all_texts()
+    academic = [t for t in texts if t["kind"] == "academic"]
+    bad = passage_stats.problems(texts)
+    return {
+        # a contagem tem de achar as passagens, senão a checagem passa no vazio
+        "passages_found": len(academic) >= 6 and all(k in {t["kind"] for t in texts} for k in passage_stats.MAX_QUESTIONS),
+        "passages_within_exam_length": not [b for b in bad if "palavras" in b],
+        "passages_within_exam_question_count": not [b for b in bad if "palavras" not in b],
+        "passages_within_exam_length__error": "; ".join(b for b in bad if "palavras" in b),
+        "passages_within_exam_question_count__error": "; ".join(b for b in bad if "palavras" not in b),
+    }
+
+
 def content_review_checks():
     """Revisao de conteudo de 2026-10-13, rodada 1: o gabarito corrigido e as
     alternativas que deixavam o item com duas respostas nao podem voltar."""
@@ -1644,6 +1663,7 @@ def main():
     results.update(bank_checks())
     results.update(content_review_checks())
     results.update(english_dot_checks())
+    results.update(passage_checks())
 
     # quarta passada: Chrome de verdade por http://127.0.0.1 (recarregar,
     # tela de celular, contraste, service worker). Ver scripts/smoke_browser.py

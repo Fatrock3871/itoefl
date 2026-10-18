@@ -281,7 +281,7 @@ Pequenas, independentes entre si, podem entrar em qualquer intervalo.
       interface de `app/app.js` e `app/build.py`. Não foi olhado caso a caso.
       Só o que estiver em português: no inglês o travessão fica (decisão de
       2026-10-13).
-- [ ] (C) **Revisão de conteúdo de 2026-10-13** (professor de inglês; 79
+- [x] (C) **Revisão de conteúdo de 2026-10-13** (professor de inglês; 79
       críticos, 346 importantes, 187 de estilo; relatórios fora do
       repositório, em `itoefl-gerencia/revisao/`). Entra em três rodadas:
   - [x] Rodada 1 (2026-10-13): os críticos, mais as decisões A (travessão
@@ -298,6 +298,21 @@ Pequenas, independentes entre si, podem entrar em qualquer intervalo.
         críticos adiados: o Grupo A2 do M1 (lacunas com alternativas, que
         não é o formato da prova) e os tipos extintos nos drills do M1.
   - [x] Rodada 3 (estilo) concluída em 2026-10-18: 151 itens aplicados, 2 recusados, o resto já estava feito; lista em `itoefl-gerencia/revisao/APLICADO-rodada3.md`.
+  - [x] Decisão B, última parte (2026-10-18): passagens acadêmicas de 180 a
+        220 palavras com 5 perguntas (3 do M1 e 2 do M7) e Listening com 2
+        perguntas por conversa e por anúncio e 4 por fala. 24 perguntas
+        saíram (M1 6, M2 15, M7 3); M7 com 59 itens; banco 227 -> 203.
+        Checagem nova no smoke test (`passage_checks`, via
+        `scripts/passage_stats.py`). Lista em
+        `itoefl-gerencia/revisao/APLICADO-passagens.md`.
+- [ ] (C) Transcrições do M2 mais longas que as da prova: os anúncios têm
+      de 90 a 108 palavras (prova: cerca de 60) e as falas acadêmicas de 210
+      a 234 (prova: 170 a 200). As perguntas já estão no número da prova.
+      `python scripts/passage_stats.py` mostra os tamanhos.
+- [ ] (D) Banda com vírgula ou ponto: a interface (`app/level.js`,
+      apresentação, calculadora) mostra "4–4,5" e restam alguns "x,5" em M2,
+      M5 e M7; os módulos revisados usam ponto, como a escala da ETS.
+      Decidir uma vez e uniformizar (pendência da rodada 3).
 - [x] (C) Mover o histórico de sessões deste arquivo para
       `docs/historico-sessoes.md` (2026-10-07). Aqui ficam só esta lista e as
       decisões travadas.
