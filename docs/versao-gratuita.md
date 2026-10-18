@@ -1,8 +1,10 @@
 # Versão gratuita de teste: opções e recomendação
 
 **Escrito em:** 2026-10-08
-**Estado:** só plano. Nada daqui foi implementado. Espera decisão do dono
-(item (D) no `ROADMAP.md`).
+**Estado:** o dono aprovou o modelo B (freemium, amostra fixa sem prazo) com
+a amostra recomendada na seção 2, sem simulado e sem correção de redação.
+Construído em 2026-10-17: ver a seção 11. As seções 1 a 10 ficam como o
+plano que levou à decisão.
 
 ## 1. De onde se parte
 
@@ -239,3 +241,98 @@ e o teste deixa de ser uma cópia grátis.
 3. Se A ou C: 3 ou 7 dias, e se os dias de teste somam ao plano comprado.
 4. Conta gratuita conta progresso só sobre as Partes abertas?
 5. Qual ferramenta de medição, se alguma, pode entrar no site.
+
+Respostas (2026-10-17): 1) B. 2) A amostra da seção 2, como está, sem
+simulado; a correção de redação fica fora. 3) Não se aplica. 4) Seguiu a
+sugestão da seção 4: sim. 5) Nenhuma nesta rodada.
+
+## 11. O que foi feito (2026-10-17)
+
+**A amostra.** `app/free_sample.json` é a fonte única: por módulo, as
+Partes abertas (`"todas"` no M0, `[1]` nos outros nove), e os exercícios
+abertos em Partes trancadas: `mod1-ctw1` (1 texto de Complete the Words),
+`mod2-a` (1 drill de Listening), `mod3-lr1` (1 conjunto de Listen and
+Repeat) e `m4build2` com `"itens": 3` (os 3 primeiros dos 30 itens de Build
+a Sentence). São 18 Partes de 86. Nenhum simulado: o build recusa Parte
+aberta com `data-exam`.
+
+**Build** (`app/build.py`). Confere a lista contra o conteúdo (módulo,
+número da Parte, id do exercício que aparece uma vez só, quantidade de
+itens) e falha se algo não bater. Monta o resumo em português
+(`FREE_SUMMARY`) usado no login, na faixa, na apresentação e em Minha
+conta; se a forma da lista de Partes mudar, o build para e pede para
+reescrever o resumo. Embute a lista no `index.html` como
+`<script type="application/json" id="freeSample">`.
+
+Diferença em relação à seção 4: os `.section-card` são montados pelo
+`app.js` na carga, então a marcação `data-locked` também é feita lá, a
+partir do JSON embutido, e não no build.
+
+**Runtime** (`app/app.js`).
+
+- Nível de acesso: `full` (plano em dia, conta admin, site sem Supabase) ou
+  `free` (logado sem plano em dia: nunca comprou, ou o plano venceu). Quem
+  decide é `checkEntitlement()`, como antes. A tela de compra deixou de
+  cobrir o site da conta grátis; ela só aparece sozinha na volta do
+  checkout (`?mp=`), para dizer como ficou o pagamento, agora com
+  "Voltar para a plataforma".
+- Parte trancada: cartão "🔒 Curso completo" logo abaixo do título, com o
+  motivo ("Esta Parte é do curso completo", "Os simulados são do curso
+  completo" ou, na Parte com exercício da amostra, "O texto desta Parte é
+  do curso completo. Na conta grátis, fica aberto aqui: ...") e o botão
+  "Ver os planos", que abre a tela de planos que já existia, com o motivo e
+  "Voltar". O conteúdo trancado ganha `data-locked` e o CSS o esconde só
+  com `body.acc-free`. O paginador mostra o cadeado no título.
+- Exercício da amostra numa Parte trancada fica à vista com o título e a
+  instrução logo acima dele. No Build a Sentence, os itens 4 a 30 ficam
+  trancados, com o cartão "Os outros 27 itens deste exercício são do curso
+  completo", e o placar conta 3 itens.
+- Redação: as caixas de escrita e a chamada da correção ficam em Partes
+  trancadas do M4; o botão "Correção de redação" de Minha conta (e qualquer
+  outro caminho que abra a tela de envio) leva à tela de planos com "A
+  correção de redação é do curso completo". A function `submit-essay` já
+  recusava quem não tem plano em dia.
+- Progresso: na conta grátis, a porcentagem do módulo conta só as Partes
+  abertas ("Seu progresso na amostra deste módulo"), o placar do M0 e o
+  treino por nível ignoram o que está trancado, e o certificado não
+  aparece.
+- Faixa no topo do conteúdo: "Conta grátis: você tem ... O resto do curso
+  aparece trancado", com "Ver os planos". Com plano vencido, diz quando
+  venceu e oferece "Renovar".
+- Sem login: a tela de entrar ganhou o convite "Ainda não tem conta? A
+  conta grátis abre ..., sem prazo e sem cartão", com o botão "Criar conta
+  grátis"; a aba de criar conta repete o resumo.
+- Minha conta: "Conta grátis: você tem ... Os simulados, a correção de
+  redação e o resto do curso são liberados por um plano", com "Ver os
+  planos". Plano vencido acrescenta que a conta segue grátis.
+- Conta paga: nada muda. A marcação existe na página, mas sem
+  `body.acc-free` nenhum cartão aparece e nada some.
+
+**Apresentação.** Seção "Comece com a conta grátis" (com o resumo e o botão
+para criar a conta), botão "Criar conta grátis" no resultado do
+diagnóstico, pergunta frequente "O que a conta grátis inclui?" e a
+resposta sobre plano vencido corrigida.
+
+**Termos de Uso.** Uma linha no item 6 (Sua conta): o que a conta grátis
+inclui hoje e que pode mudar. Marcada `REVISAR (advogado)`. As seções já
+marcadas para o advogado não foram tocadas.
+
+**Banco.** Nada. Conta sem linha em `entitlements` já era a conta grátis.
+
+**Smoke test.** 19 checagens novas: as 16 `free_*` e `paid_sees_everything`
+no Chrome headless (amostra vista, resto trancado, simulados e caixas de
+escrita trancados, envio de redação trancado, botões para os planos,
+progresso, Minha conta, plano vencido, conta paga vendo tudo),
+`landing_says_what_free_account_includes` e `terms_mention_free_account`.
+
+**Limitação, sem mudança.** Enquanto o curso for dentro do `index.html`, o
+bloqueio é de interface: quem abre o código da página lê tudo (seção 5).
+Só a Etapa 2 (conteúdo servido do banco) torna o bloqueio real.
+
+**Fora desta rodada.** Contador de visitas e medição de uso (seção 7);
+captcha e "Confirm email" (seção 8, etapa 2); degustação por tempo.
+
+**Para mudar a amostra.** Editar `app/free_sample.json`. Se mudar só os
+exercícios, o resumo se ajusta sozinho pelo `rotulo`. Se mudar as Partes,
+reescrever `FREE_SUMMARY` em `app/build.py` (o build avisa), a linha dos
+Termos e as checagens `free_*` do `scripts/smoke_test.py`.

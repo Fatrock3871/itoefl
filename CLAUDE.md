@@ -67,6 +67,7 @@ artifact/privacidade.html
 artifact/apresentacao.html  Tela de apresentação, pública, antes do login (gerada pelo build.py; não editar)
 artifact/manifest.json, sw.js, icons/   PWA (gerados pelo build.py; não editar)
 app/plans.json            Os três planos de preço como o site mostra (tela de compra e apresentação)
+app/free_sample.json      Amostra da conta grátis (Partes e exercícios abertos sem plano). Ver docs/versao-gratuita.md, seção 11
 supabase/schema.sql       Backend: profiles, user_state (jsonb), entitlements, payments, coupons, com RLS
 supabase/migrations/      Mudanças de banco para aplicar num projeto que já existe (SQL Editor, com autorização)
 supabase/functions/       Edge functions: create-checkout, mp-webhook, delete-account

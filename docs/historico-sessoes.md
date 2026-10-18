@@ -7,6 +7,25 @@ falta" do `ROADMAP.md`. Sessão nova entra no topo.
 
 ---
 
+## Sessão 2026-10-17: versão gratuita (modelo B)
+
+O dono aprovou o freemium por conteúdo, com a amostra recomendada em
+`docs/versao-gratuita.md`, sem simulado e sem correção de redação.
+
+- `b392ade` `app/free_sample.json` e o bloqueio por Parte e por exercício na
+  conta logada sem plano em dia: cartão com motivo e "Ver os planos", faixa
+  no topo, redação trancada, progresso só da amostra, convite no login,
+  Minha conta. 17 checagens novas.
+- `c541eb9` Apresentação: seção da conta grátis, botão no resultado do
+  diagnóstico, pergunta frequente.
+- `8b5e682` Termos: uma linha sobre a conta grátis no item 6, marcada para o
+  advogado.
+- Documentação: seção 11 de `docs/versao-gratuita.md`, ROADMAP e CLAUDE.md.
+
+Smoke test: 276 checagens, Tudo passou. Sem SQL, sem deploy, sem publicar.
+
+---
+
 ## Sessão 2026-10-13: rodada 1 da revisão de conteúdo (os críticos)
 
 Sessão do desenvolvedor a pedido do gerente (Hermes). Um professor de inglês

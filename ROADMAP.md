@@ -220,13 +220,21 @@ Pequenas, independentes entre si, podem entrar em qualquer intervalo.
       `localStorage` guardava o nome (a recomendação é recalculada do
       diagnóstico e o id das subseções é por posição), então não houve
       migração.
-- [ ] (D) Versão gratuita de teste. Opções, riscos e esforço em
-      `docs/versao-gratuita.md` (só plano, nada implementado). Recomendação:
-      freemium por conteúdo agora (M0 inteiro, Parte 1 de cada módulo e um
-      exercício por seção, 18 Partes de 86), e degustação por tempo só
-      depois da Etapa 2, porque hoje o curso inteiro vai dentro do HTML e um
-      teste de acesso completo entregaria o produto. Decidir: qual modelo, a
-      amostra, 3 ou 7 dias se houver teste, e se pode entrar medição de uso.
+- [x] (C) Versão gratuita (2026-10-17). O dono aprovou o modelo B
+      (freemium, amostra fixa sem prazo). Feito: `app/free_sample.json`
+      (M0 inteiro, Parte 1 de cada módulo, 1 Complete the Words, 1 drill de
+      Listening, 1 Listen and Repeat, 3 Build a Sentence, nenhum simulado),
+      bloqueio por Parte e por exercício na conta logada sem plano em dia,
+      com motivo e botão para os planos, envio de redação trancado,
+      progresso contando só a amostra, convite no login, seção na
+      apresentação, Minha conta e uma linha nos Termos. Detalhes na seção 11
+      de `docs/versao-gratuita.md`. O bloqueio é de interface até a Etapa 2.
+- [ ] (U) Ler a linha nova da conta grátis nos Termos (item 6, marcada
+      REVISAR para o advogado) e conferir a conta grátis com uma conta de
+      teste sem plano depois de publicar.
+- [ ] (D) Versão gratuita, o que ficou para depois: contador de visitas ou
+      medição de uso (seção 7 de `docs/versao-gratuita.md`), e a degustação
+      por tempo (modelo C) só depois da Etapa 2.
 - [ ] (D) O site diz que Speaking e Writing são corrigidos "100% por IA" e
       cita e-rater e SpeechRater; a ETS de 2026 não nomeia os motores. Ver a
       seção 4 de `docs/conferencia-conteudo-2026-10.md`, com os outros pontos
@@ -506,6 +514,7 @@ Não foram pedidos, apareceram ao consolidar a lista.
 | Precificação | Três planos. **Sprint**, 30 dias, R$ 39,90: prova já marcada, só simulado e plano de emergência (Pareto). **Standard**, 90 dias, R$ 89,90: o mais vendido, tempo para os 4 pilares com calma. **Premium (Passaporte)**, vitalício, R$ 149,90: quem vai tentar a prova várias vezes ou planeja com mais de um ano de antecedência. Substitui o R$ 9,90 vitalício | 2026-10-07 |
 | Nomes dos cronogramas do M0 | **Intensivo** (30 dias), **Regular** (60 dias), **Completo** (90 dias). "Sprint", "Standard" e "Premium" ficam só para os planos de preço | 2026-10-08 |
 | Diagnóstico grátis | As 10 questões do M0 abertas na tela de apresentação, **sem conta**, com o resultado de banda | 2026-10-08 |
+| Versão gratuita | **Modelo B**, freemium por conteúdo, sem prazo: M0 inteiro, Parte 1 de cada módulo, 1 Complete the Words, 1 drill de Listening, 1 Listen and Repeat, 3 Build a Sentence, nenhum simulado, sem correção de redação. Lista em `app/free_sample.json` | 2026-10-17 |
 | Reembolso | **7 dias** em todos os planos, pelo direito de arrependimento do CDC (art. 49) | 2026-10-08 |
 | Selo na tabela de planos | **"Recomendado"** no Standard. Nunca "mais escolhido" ou "mais vendido": sem dado de venda seria afirmação falsa | 2026-10-08 |
 | Travessão | A regra "sem travessão como pausa" vale **só para texto em português**. Em texto em inglês (passagens, transcrições, respostas-modelo, exemplos) o travessão é pontuação correta e permitido | 2026-10-13 |
