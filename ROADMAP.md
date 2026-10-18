@@ -113,21 +113,39 @@ Nada das etapas seguintes anda sem esta. Ordem sugerida de cima para baixo.
 
 **0.4 Publicar**
 
-- [ ] (D) Onde hospedar e com qual endereço. O plano escrito é GitHub Pages.
+- [ ] (D) Onde hospedar e com qual endereço. Recomendação: Cloudflare
+      Pages (grátis, aceita repositório privado, HTTPS e domínio próprio).
       Um domínio próprio vale a pena desde já: o endereço entra nas
       configurações de Supabase, Google, gateway e, depois, nas lojas, e
       trocar depois dá retrabalho em todos.
+- [x] (C) Site pronto para publicar, sem publicar (2026-10-17). Passo a
+      passo do dono em `docs/publicar.md`. O endereço mora só em
+      `app/site.json` (`SITE_URL`; a variável de ambiente vence) e sai em
+      canonical, og:url, `robots.txt` e `sitemap.xml`. O build gera o
+      `artifact/_headers` (segurança, CSP, `sw.js` e manifesto sem cache) e
+      aceita `SUPABASE_URL` e `SUPABASE_PUBLISHABLE_KEY` do ambiente para o
+      build de CI. O service worker regrava limpa a resposta redirecionada
+      do pré-cache. A `create-checkout` usa o secret `SITE_URL` para a volta
+      do pagamento (falta deploy). `scripts/prepublish_check.py` reprova
+      enquanto houver `[PREENCHER]`, `SITE_URL` local, chave secreta no
+      `supabase_config.json`, credencial `TEST-` ou smoke test falhando; o
+      smoke test mostra o resultado só como aviso.
+- [ ] (D) Raiz do site: no Cloudflare Pages `/` abre o app e a apresentação
+      fica em `/apresentacao`. Para a raiz abrir a apresentação é preciso
+      renomear o arquivo do app (o Cloudflare manda `/index.html` para `/`).
 - [x] (U) Criar o repositório no GitHub e configurar o remoto. Feito em
       2026-10-06: `https://github.com/Fatrock3871/itoefl`, privado, branch
       `main` (a antiga `master` foi renomeada). Repositório privado não
       publica no GitHub Pages gratuito, o que pesa na decisão de
       hospedagem acima.
-- [ ] (C) Publicar o `artifact/` buildado. Checklist completo na Fase 6 de
-      `docs/historico-sessoes.md`.
+- [ ] (C) Publicar o `artifact/` buildado, seguindo `docs/publicar.md`
+      (trocar `SITE_URL`, `prepublish_check.py` passando, secret `SITE_URL`
+      e deploy de `create-checkout` e `review-essay`).
 - [ ] (U) Supabase: trocar Site URL e Redirect URLs de `localhost:8000` para
-      o endereço final.
-- [ ] (U) Google Cloud: adicionar a URI de callback nova e tirar o app do
-      modo "Testing", senão só testadores cadastrados logam com Google.
+      o endereço final (passo 9 de `docs/publicar.md`).
+- [ ] (U) Google Cloud: adicionar o endereço final nas origens autorizadas
+      e tirar o app do modo "Testing", senão só testadores cadastrados logam
+      com Google (passos 11 e 12 de `docs/publicar.md`).
 - [x] (C) Página de termos de uso e política de privacidade. Escritas em
       `legal/*.md`, geradas pelo build como `artifact/termos.html` e
       `artifact/privacidade.html`, com link no cadastro, na compra, em Minha

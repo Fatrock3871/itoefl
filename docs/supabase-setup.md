@@ -67,7 +67,7 @@ aparece na sidebar (biblioteca `supabase-js@2` carrega e aceita a chave).
 2. **Authentication** → **URL Configuration**:
    - **Site URL:** o endereço onde o app vai rodar. Para testar localmente:
      `http://localhost:8000`. Quando publicar, troque para a URL final
-     (ex.: `https://seu-usuario.github.io/itoefl`).
+     (ex.: `https://itoefl.com.br`; passo a passo em `docs/publicar.md`).
    - **Redirect URLs:** adicione o mesmo endereço (e qualquer outro de onde
      você for abrir o app).
 3. O plano grátis usa o serviço de e-mail do próprio Supabase, com um limite

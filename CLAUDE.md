@@ -83,6 +83,10 @@ scripts/smoke_test.py     Suíte de checagens automáticas (rodar antes de commi
 scripts/smoke_browser.py  Passada do smoke test num Chrome de verdade: recarga, 375 px, contraste, service worker
 scripts/cdp.py            Cliente mínimo do DevTools (só biblioteca padrão) usado pela passada acima
 scripts/build_teste.py    Gera _teste/: o site sem login nem pagamento, completo e instalável
+scripts/prepublish_check.py  Reprova a publicação ([PREENCHER], SITE_URL local, chave secreta, TEST-, smoke). O smoke test mostra só como aviso
+app/site.json             SITE_URL: o endereço público, num lugar só (a variável de ambiente vence). Lido por app/site_config.py
+artifact/_headers, robots.txt, sitemap.xml   Hospedagem (Cloudflare Pages), gerados pelo build.py; não editar
+docs/publicar.md          Passo a passo do dono para publicar (Cloudflare Pages, domínio, Supabase, Google, gateway, SMTP)
 docs/                     Análises e notas de decisão
 _archive/                 Versão pré-2026: index.html monolítico + os 10 .md antigos
 _snapshots/               Cópias com timestamp antes de mudanças estruturais
