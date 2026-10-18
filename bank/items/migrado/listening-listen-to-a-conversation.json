@@ -282,7 +282,7 @@
       "kind": "audio",
       "format": "markdown",
       "title": "Listen to a Conversation",
-      "content": "**TRANSCRIÇÃO:** **Student:** \"Hi, I registered for the wrong section of Psych 101 · I need the Tuesday/Thursday one, not Monday/Wednesday/Friday.\" **Advisor:** \"Let me check... the Tuesday/Thursday section is actually full right now, but there's a waitlist. I can add you to it, though I should mention the professor teaching that section is different · Dr. Alvarez instead of Dr. Chen.\" **Student:** \"Oh, I didn't realize that. Does it matter much which professor I have?\" **Advisor:** \"Honestly, both are excellent, but Dr. Alvarez's exams tend to be more essay-based, while Dr. Chen's are mostly multiple choice. Something to keep in mind.\"",
+      "content": "**TRANSCRIÇÃO:** **Student:** \"Hi, I registered for the wrong section of Psych 101 — I need the Tuesday/Thursday one, not Monday/Wednesday/Friday.\" **Advisor:** \"Let me check... the Tuesday/Thursday section is actually full right now, but there's a waitlist. I can add you to it, though I should mention the professor teaching that section is different — Dr. Alvarez instead of Dr. Chen.\" **Student:** \"Oh, I didn't realize that. Does it matter much which professor I have?\" **Advisor:** \"Honestly, both are excellent, but Dr. Alvarez's exams tend to be more essay-based, while Dr. Chen's are mostly multiple choice. Something to keep in mind.\"",
       "audio_ref": null
     },
     "group": "mod7-b7",
@@ -305,7 +305,7 @@
     "source": {
       "kind": "migrado",
       "file": "consolidated/modulo_7_simulados.md",
-      "ref": "linha 387",
+      "ref": "linha 381",
       "live_on_site": true,
       "answer_letter": "origem",
       "build_map": {
@@ -329,7 +329,7 @@
       "kind": "audio",
       "format": "markdown",
       "title": "Listen to a Conversation",
-      "content": "**TRANSCRIÇÃO:** **Student:** \"Hi, I registered for the wrong section of Psych 101 · I need the Tuesday/Thursday one, not Monday/Wednesday/Friday.\" **Advisor:** \"Let me check... the Tuesday/Thursday section is actually full right now, but there's a waitlist. I can add you to it, though I should mention the professor teaching that section is different · Dr. Alvarez instead of Dr. Chen.\" **Student:** \"Oh, I didn't realize that. Does it matter much which professor I have?\" **Advisor:** \"Honestly, both are excellent, but Dr. Alvarez's exams tend to be more essay-based, while Dr. Chen's are mostly multiple choice. Something to keep in mind.\"",
+      "content": "**TRANSCRIÇÃO:** **Student:** \"Hi, I registered for the wrong section of Psych 101 — I need the Tuesday/Thursday one, not Monday/Wednesday/Friday.\" **Advisor:** \"Let me check... the Tuesday/Thursday section is actually full right now, but there's a waitlist. I can add you to it, though I should mention the professor teaching that section is different — Dr. Alvarez instead of Dr. Chen.\" **Student:** \"Oh, I didn't realize that. Does it matter much which professor I have?\" **Advisor:** \"Honestly, both are excellent, but Dr. Alvarez's exams tend to be more essay-based, while Dr. Chen's are mostly multiple choice. Something to keep in mind.\"",
       "audio_ref": null
     },
     "group": "mod7-b7",
@@ -352,7 +352,7 @@
     "source": {
       "kind": "migrado",
       "file": "consolidated/modulo_7_simulados.md",
-      "ref": "linha 393",
+      "ref": "linha 387",
       "live_on_site": true,
       "answer_letter": "origem",
       "build_map": {
@@ -376,7 +376,7 @@
       "kind": "audio",
       "format": "markdown",
       "title": "Listen to a Conversation (2)",
-      "content": "**TRANSCRIÇÃO:** **Student:** \"I'm here about the library fine on my account — it says forty dollars, but I returned the books on time.\" **Librarian:** \"Let me look... Ah, I see what happened. The books were returned to the wrong branch, so the system logged them as late until they were transferred back. That took about a week.\" **Student:** \"But there's a drop box at the north branch · I've used it before without a problem.\" **Librarian:** \"You have, and normally that's fine. The issue is that these were course-reserve items, and those can only go back to the main desk. It's a rule most people don't know about. I can waive the fine this time since it was an honest mistake, but keep it in mind for next time.\"",
+      "content": "**TRANSCRIÇÃO:** **Student:** \"I'm here about the library fine on my account — it says forty dollars, but I returned the books on time.\" **Librarian:** \"Let me look... Ah, I see what happened. The books were returned to the wrong branch, so the system logged them as late until they were transferred back. That took about a week.\" **Student:** \"But there's a drop box at the north branch — I've used it before without a problem.\" **Librarian:** \"You have, and normally that's fine. The issue is that these were course-reserve items, and those can only go back to the main desk. It's a rule most people don't know about. I can waive the fine this time since it was an honest mistake, but keep it in mind for next time.\"",
       "audio_ref": null
     },
     "group": "mod7-b10",
@@ -399,7 +399,7 @@
     "source": {
       "kind": "migrado",
       "file": "consolidated/modulo_7_simulados.md",
-      "ref": "linha 435",
+      "ref": "linha 429",
       "live_on_site": true,
       "answer_letter": "origem",
       "build_map": {
@@ -423,54 +423,7 @@
       "kind": "audio",
       "format": "markdown",
       "title": "Listen to a Conversation (2)",
-      "content": "**TRANSCRIÇÃO:** **Student:** \"I'm here about the library fine on my account — it says forty dollars, but I returned the books on time.\" **Librarian:** \"Let me look... Ah, I see what happened. The books were returned to the wrong branch, so the system logged them as late until they were transferred back. That took about a week.\" **Student:** \"But there's a drop box at the north branch · I've used it before without a problem.\" **Librarian:** \"You have, and normally that's fine. The issue is that these were course-reserve items, and those can only go back to the main desk. It's a rule most people don't know about. I can waive the fine this time since it was an honest mistake, but keep it in mind for next time.\"",
-      "audio_ref": null
-    },
-    "group": "mod7-b10",
-    "prompt": "What does the librarian agree to do?",
-    "text_format": "markdown",
-    "options": {
-      "A": "Charge only half the fine",
-      "B": "Waive the fine this time as an honest mistake",
-      "C": "Transfer the student to another branch",
-      "D": "Report the student to the department"
-    },
-    "answer": "B",
-    "explanation": "",
-    "hint": null,
-    "trap_codes": [],
-    "tags": [
-      "simulado-2"
-    ],
-    "status": "rascunho",
-    "source": {
-      "kind": "migrado",
-      "file": "consolidated/modulo_7_simulados.md",
-      "ref": "linha 441",
-      "live_on_site": true,
-      "answer_letter": "origem",
-      "build_map": {
-        "A": "A",
-        "B": "B",
-        "C": "D",
-        "D": "C"
-      }
-    }
-  },
-  {
-    "id": "mod7-b10.3",
-    "section": "listening",
-    "task_type": "Listen to a Conversation",
-    "exam_format": true,
-    "format": "mcq",
-    "skill": null,
-    "cefr_min": null,
-    "cefr_max": null,
-    "stimulus": {
-      "kind": "audio",
-      "format": "markdown",
-      "title": "Listen to a Conversation (2)",
-      "content": "**TRANSCRIÇÃO:** **Student:** \"I'm here about the library fine on my account — it says forty dollars, but I returned the books on time.\" **Librarian:** \"Let me look... Ah, I see what happened. The books were returned to the wrong branch, so the system logged them as late until they were transferred back. That took about a week.\" **Student:** \"But there's a drop box at the north branch · I've used it before without a problem.\" **Librarian:** \"You have, and normally that's fine. The issue is that these were course-reserve items, and those can only go back to the main desk. It's a rule most people don't know about. I can waive the fine this time since it was an honest mistake, but keep it in mind for next time.\"",
+      "content": "**TRANSCRIÇÃO:** **Student:** \"I'm here about the library fine on my account — it says forty dollars, but I returned the books on time.\" **Librarian:** \"Let me look... Ah, I see what happened. The books were returned to the wrong branch, so the system logged them as late until they were transferred back. That took about a week.\" **Student:** \"But there's a drop box at the north branch — I've used it before without a problem.\" **Librarian:** \"You have, and normally that's fine. The issue is that these were course-reserve items, and those can only go back to the main desk. It's a rule most people don't know about. I can waive the fine this time since it was an honest mistake, but keep it in mind for next time.\"",
       "audio_ref": null
     },
     "group": "mod7-b10",
@@ -493,14 +446,14 @@
     "source": {
       "kind": "migrado",
       "file": "consolidated/modulo_7_simulados.md",
-      "ref": "linha 447",
+      "ref": "linha 435",
       "live_on_site": true,
       "answer_letter": "origem",
       "build_map": {
-        "A": "D",
-        "B": "C",
-        "C": "B",
-        "D": "A"
+        "A": "A",
+        "B": "B",
+        "C": "D",
+        "D": "C"
       }
     }
   },
@@ -540,7 +493,7 @@
     "source": {
       "kind": "migrado",
       "file": "consolidated/modulo_7_simulados.md",
-      "ref": "linha 730",
+      "ref": "linha 713",
       "live_on_site": true,
       "answer_letter": "origem",
       "build_map": {
@@ -587,7 +540,7 @@
     "source": {
       "kind": "migrado",
       "file": "consolidated/modulo_7_simulados.md",
-      "ref": "linha 736",
+      "ref": "linha 719",
       "live_on_site": true,
       "answer_letter": "origem",
       "build_map": {

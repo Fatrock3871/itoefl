@@ -276,7 +276,7 @@ Um simulado só rende se a semana seguinte for de reparo direcionado. Não faça
 
 **PASSAGE: Coral Bleaching and Thermal Stress**
 
-Coral reefs, despite occupying less than one percent of the ocean floor, support roughly a quarter of all known marine species. This disproportionate biodiversity depends on a delicate symbiotic relationship between coral polyps and microscopic algae called zooxanthellae, which live within coral tissue and supply the majority of the coral's energy through photosynthesis. When ocean temperatures rise even slightly above a coral's tolerance threshold: often by as little as one or two degrees Celsius sustained over several weeks — the algae are expelled, leaving the coral's white calcium carbonate skeleton visible. This phenomenon, known as bleaching, does not itself kill the coral immediately, but it severs the primary energy supply, leaving the organism vulnerable to starvation and disease. Recovery is possible if temperatures normalize quickly, but repeated bleaching events, now increasingly common under sustained ocean warming, leave reefs with progressively less time to recover between episodes.
+Coral reefs, despite occupying less than one percent of the ocean floor, support roughly a quarter of all known marine species. This disproportionate biodiversity depends on a delicate symbiotic relationship between coral polyps and microscopic algae called zooxanthellae, which live within coral tissue and supply the majority of the coral's energy through photosynthesis. When ocean temperatures rise even slightly above a coral's tolerance threshold — often by as little as one or two degrees Celsius sustained over several weeks — the algae are expelled, leaving the coral's white calcium carbonate skeleton visible. This phenomenon, known as bleaching, does not itself kill the coral immediately, but it severs the primary energy supply, leaving the organism vulnerable to starvation and disease. Recovery is possible if temperatures normalize quickly, but repeated bleaching events, now increasingly common under sustained ocean warming, leave reefs with progressively less time to recover between episodes.
 
 **QUESTÃO 1 · Factual Information:** According to the passage, zooxanthellae primarily provide coral with:
 - (A) protection from predators
@@ -297,11 +297,11 @@ Coral reefs, despite occupying less than one percent of the ocean floor, support
 
 **PASSAGE 2: The Printing Press and the Standardization of Language**
 
-Before the spread of print in fifteenth-century Europe, a single language could vary so much from region to region that speakers a few hundred kilometers apart struggled to read one another's writing. Scribes copied texts by hand, and each copy absorbed the copyist's own spelling habits, regional vocabulary, and errors. There was no strong pressure toward a single written standard, because the audience for any given manuscript was small and usually local.
+Before the spread of print in fifteenth-century Europe, a single language could vary so much from region to region that speakers a few hundred kilometers apart struggled to read one another's writing. Scribes copied texts by hand, and each copy absorbed the copyist's own spelling habits and regional vocabulary.
 
-The printing press changed the economics of this situation. A printer who set a book in type was making a substantial investment and needed to sell copies across as wide an area as possible to recover the cost. This gave printers a direct financial incentive to choose forms of spelling and grammar that the largest number of readers would accept. Over several decades, the dialect of the commercially dominant region (often the capital or the largest trading city) tended to become the basis of the printed standard, not because it was linguistically superior, but because it reached the biggest market.
+The printing press changed the economics of this situation. A printer who set a book in type was making a substantial investment and needed to sell copies across as wide an area as possible to recover the cost. Printers therefore had a direct financial incentive to choose spelling and grammar that the largest number of readers would accept. Over several decades, the dialect of the commercially dominant region (often the capital or the largest trading city) tended to become the basis of the printed standard, not because it was linguistically superior, but because it reached the biggest market.
 
-This standardizing effect was not entirely welcome. Writers who spoke regional varieties found their own usage increasingly marked as incorrect, and forms of the language that were never printed came to be seen as mere "dialect" rather than legitimate versions of the language. Many historians of language now argue that the "standard" form of many European languages owes less to any natural center of the language than to which city happened to dominate early commercial printing.
+This standardizing effect was not entirely welcome. Writers who spoke regional varieties found their own usage increasingly marked as incorrect, and forms of the language that were never printed came to be seen as mere "dialect" rather than legitimate versions of the language. Many historians now argue that the "standard" form of many European languages owes less to any natural center of the language than to which city happened to dominate early printing.
 
 **QUESTÃO 1 · Main Idea:** The passage is primarily concerned with:
 - (A) how handwriting was replaced by typesetting
@@ -324,19 +324,13 @@ This standardizing effect was not entirely welcome. Writers who spoke regional v
 - (C) books would have contained more errors
 - (D) handwriting would have survived longer
 
-**QUESTÃO 5 · Factual Information:** According to paragraph 1, why was there little pressure toward a single written standard before print?
-- (A) Scribes were forbidden from changing the texts they copied
-- (B) The audience for any given manuscript was small and usually local
-- (C) Regional languages were too different to be compared
-- (D) Few people could afford to hire scribes
-
-**QUESTÃO 6 · Rhetorical Purpose:** In paragraph 3, the author mentions writers whose usage was "marked as incorrect" in order to:
+**QUESTÃO 5 · Rhetorical Purpose:** In paragraph 3, the author mentions writers whose usage was "marked as incorrect" in order to:
 - (A) show that standardization also had costs
 - (B) argue that regional dialects were genuinely inferior
 - (C) explain how typesetting worked
 - (D) praise the efficiency of the printing press
 
-**Gabarito:** 1-B · 2-C · 3-B · 4-B · 5-B · 6-A
+**Gabarito:** 1-B · 2-C · 3-B · 4-B · 5-A
 
 ---
 
@@ -382,7 +376,7 @@ This standardizing effect was not entirely welcome. Writers who spoke regional v
 
 #### Listen to a Conversation
 
-**TRANSCRIÇÃO:** **Student:** "Hi, I registered for the wrong section of Psych 101 · I need the Tuesday/Thursday one, not Monday/Wednesday/Friday." **Advisor:** "Let me check... the Tuesday/Thursday section is actually full right now, but there's a waitlist. I can add you to it, though I should mention the professor teaching that section is different · Dr. Alvarez instead of Dr. Chen." **Student:** "Oh, I didn't realize that. Does it matter much which professor I have?" **Advisor:** "Honestly, both are excellent, but Dr. Alvarez's exams tend to be more essay-based, while Dr. Chen's are mostly multiple choice. Something to keep in mind."
+**TRANSCRIÇÃO:** **Student:** "Hi, I registered for the wrong section of Psych 101 — I need the Tuesday/Thursday one, not Monday/Wednesday/Friday." **Advisor:** "Let me check... the Tuesday/Thursday section is actually full right now, but there's a waitlist. I can add you to it, though I should mention the professor teaching that section is different — Dr. Alvarez instead of Dr. Chen." **Student:** "Oh, I didn't realize that. Does it matter much which professor I have?" **Advisor:** "Honestly, both are excellent, but Dr. Alvarez's exams tend to be more essay-based, while Dr. Chen's are mostly multiple choice. Something to keep in mind."
 
 **QUESTÃO 1:** What is the student's main purpose in this conversation?
 - (A) To drop the course entirely
@@ -430,7 +424,7 @@ This standardizing effect was not entirely welcome. Writers who spoke regional v
 
 #### Listen to a Conversation (2)
 
-**TRANSCRIÇÃO:** **Student:** "I'm here about the library fine on my account — it says forty dollars, but I returned the books on time." **Librarian:** "Let me look... Ah, I see what happened. The books were returned to the wrong branch, so the system logged them as late until they were transferred back. That took about a week." **Student:** "But there's a drop box at the north branch · I've used it before without a problem." **Librarian:** "You have, and normally that's fine. The issue is that these were course-reserve items, and those can only go back to the main desk. It's a rule most people don't know about. I can waive the fine this time since it was an honest mistake, but keep it in mind for next time."
+**TRANSCRIÇÃO:** **Student:** "I'm here about the library fine on my account — it says forty dollars, but I returned the books on time." **Librarian:** "Let me look... Ah, I see what happened. The books were returned to the wrong branch, so the system logged them as late until they were transferred back. That took about a week." **Student:** "But there's a drop box at the north branch — I've used it before without a problem." **Librarian:** "You have, and normally that's fine. The issue is that these were course-reserve items, and those can only go back to the main desk. It's a rule most people don't know about. I can waive the fine this time since it was an honest mistake, but keep it in mind for next time."
 
 **QUESTÃO 1:** Why was the student charged a fine?
 - (A) The books were genuinely returned late
@@ -438,19 +432,13 @@ This standardizing effect was not entirely welcome. Writers who spoke regional v
 - (C) The student lost one of the books
 - (D) The north branch drop box was broken
 
-**QUESTÃO 2:** What does the librarian agree to do?
-- (A) Charge only half the fine
-- (B) Waive the fine this time as an honest mistake
-- (C) Transfer the student to another branch
-- (D) Report the student to the department
-
-**QUESTÃO 3:** What does the librarian imply about the north branch drop box?
+**QUESTÃO 2:** What does the librarian imply about the north branch drop box?
 - (A) It should never be used
 - (B) It is fine for regular items but not for course-reserve materials
 - (C) It is being removed next semester
 - (D) It only works during staffed hours
 
-**Gabarito:** 1-B · 2-B · 3-B
+**Gabarito:** 1-B · 2-B
 
 #### Listen to an Announcement (2)
 
@@ -661,17 +649,15 @@ Você tem 45 segundos para cada resposta, sem preparo, como na prova. Grave toda
 
 **Gabarito:** B
 
-#### Bloco C: Read an Academic Passage (alvo: 12–14 min)
+#### Bloco C: Read an Academic Passage (alvo: 6 min)
 
 **PASSAGE: The Economics of Network Effects**
 
-A network effect occurs when the value of a product or service increases as more people use it. The telephone is the textbook example: a single telephone is useless, but as adoption grows, each additional user increases the value of the network for everyone already connected to it. This dynamic, largely peripheral to economic theory for much of the twentieth century, has become central to understanding digital markets, where platforms (social networks, marketplaces, operating systems) often derive their value primarily from the size and engagement of their user base rather than from the intrinsic quality of the underlying product.
+A network effect occurs when a product or service becomes more valuable as more people use it. The telephone is the textbook example: a single telephone is useless, but each new user adds value for everyone already connected. Such effects can be direct or indirect. Direct network effects arise among users of the *same* product: a messaging app is more useful as more of one's contacts join it. Indirect network effects arise between two distinct but interdependent groups: a ride-sharing platform becomes more attractive to riders as more drivers join, and more attractive to drivers as more riders join.
 
-Network effects can be direct or indirect. Direct network effects occur when the value to a user increases as a function of other users of the *same* product: a messaging app is more useful as more of one's contacts join it. Indirect network effects occur across two distinct but interdependent user groups: a ride-sharing platform becomes more attractive to riders as more drivers join, and simultaneously more attractive to drivers as more riders join. This two-sided dynamic creates a powerful feedback loop that, once initiated, can be extraordinarily difficult for competitors to disrupt.
+Because users generally prefer the platform with the largest existing network, early leaders in such markets tend to compound their advantage rapidly, often keeping dominant positions even when competitors offer superior technology. This "winner-take-most" dynamic has generated significant regulatory concern, particularly about whether dominant platforms use their market power in ways that stifle competition rather than simply reflecting superior efficiency.
 
-This difficulty of disruption is often described as a "winner-take-most" dynamic. Because users generally prefer the platform with the largest existing network, early leaders in markets with strong network effects tend to compound their advantage rapidly, often achieving dominant market positions that persist even when competitors offer superior underlying technology. This has generated significant regulatory concern, particularly regarding whether dominant platforms leverage network-effect-driven market power in ways that stifle competition rather than simply reflecting superior efficiency.
-
-Critics of this narrative, however, caution against treating network effects as an insurmountable barrier to entry. History offers counterexamples: several dominant platforms have been displaced by newer entrants offering a sufficiently differentiated experience, suggesting that network effects, while powerful, are not absolute. Low switching costs, multi-homing behavior (where users maintain accounts on multiple competing platforms simultaneously), and shifts in user preference can erode even substantial network advantages over time.
+Critics of this narrative, however, caution against treating network effects as an insurmountable barrier to entry. Several dominant platforms have been displaced by newer entrants offering a sufficiently different experience. Low switching costs, multi-homing behavior (where users maintain accounts on multiple competing platforms at once), and shifts in user preference can erode even substantial network advantages over time.
 
 **QUESTÃO 1 · Gist/Main Idea:** What is the primary purpose of this passage?
 - (A) To argue that network effects make competition in digital markets impossible
@@ -679,16 +665,16 @@ Critics of this narrative, however, caution against treating network effects as 
 - (C) To criticize regulators for failing to break up dominant technology platforms
 - (D) To describe the history of the telephone as a communication technology
 
-**QUESTÃO 2 · Factual Information:** According to paragraph 2, an indirect network effect is best illustrated by:
+**QUESTÃO 2 · Factual Information:** According to paragraph 1, an indirect network effect is best illustrated by:
 - (A) a messaging app becoming more useful as more contacts join
 - (B) a ride-sharing platform becoming more attractive to both riders and drivers as each group grows
 - (C) a telephone network growing in value as adoption increases
 - (D) a social network losing value as user growth slows
 
-**QUESTÃO 3 · Vocabulary in Context:** The word "insurmountable" in paragraph 4 is closest in meaning to:
+**QUESTÃO 3 · Vocabulary in Context:** The word "insurmountable" in paragraph 3 is closest in meaning to:
 - (A) temporary  (B) impossible to overcome  (C) financially costly  (D) legally questionable
 
-**QUESTÃO 4 · Inference:** It can be inferred from paragraph 3 that regulatory concern about dominant platforms centers on whether:
+**QUESTÃO 4 · Inference:** It can be inferred from paragraph 2 that regulatory concern about dominant platforms centers on whether:
 - (A) their market power reflects genuine efficiency or anticompetitive advantage
 - (B) they charge unfairly high prices to consumers
 - (C) they violate international trade agreements
@@ -700,10 +686,7 @@ Critics of this narrative, however, caution against treating network effects as 
 - (C) To criticize users who maintain accounts on multiple platforms
 - (D) To explain why regulators should ignore network effects entirely
 
-**QUESTÃO 6 · Vocabulary in Context:** The word "peripheral" in paragraph 1 is closest in meaning to:
-- (A) essential  (B) of minor importance  (C) openly hostile  (D) newly discovered
-
-**Gabarito:** 1-B; 2-B; 3-B; 4-A; 5-B; 6-B
+**Gabarito:** 1-B; 2-B; 3-B; 4-A; 5-B
 
 ---
 

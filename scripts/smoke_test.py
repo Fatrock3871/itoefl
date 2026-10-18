@@ -342,9 +342,9 @@ check("scalc_exists", function(){ return !!document.getElementById("scoreCalc") 
   check("scalc_rejects_out_of_range", function(){ return bandOf("speaking") === "use de 0 a 100"; });
 })();
 
-// Simulados do M7: 19 blocos, 62 itens, correcao so na entrega
+// Simulados do M7: 19 blocos, 59 itens, correcao so na entrega
 var exams = document.querySelectorAll(".exam");
-check("exam_19_blocks_62_items", function(){ return exams.length === 19 && document.querySelectorAll(".exam-item").length === 62; });
+check("exam_19_blocks_59_items", function(){ return exams.length === 19 && document.querySelectorAll(".exam-item").length === 59; });
 check("exam_no_answer_key_left_as_text", function(){ return document.getElementById("panel-mod7").textContent.indexOf("Gabarito:") === -1; });
 if(exams.length){
   var ex = exams[0], exItems = ex.querySelectorAll(".exam-item");

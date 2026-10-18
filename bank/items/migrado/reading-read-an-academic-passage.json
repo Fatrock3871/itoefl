@@ -687,7 +687,7 @@
       "kind": "text",
       "format": "markdown",
       "title": "Bloco C: Read an Academic Passage (versão abreviada)",
-      "content": "**PASSAGE: Coral Bleaching and Thermal Stress**\n\nCoral reefs, despite occupying less than one percent of the ocean floor, support roughly a quarter of all known marine species. This disproportionate biodiversity depends on a delicate symbiotic relationship between coral polyps and microscopic algae called zooxanthellae, which live within coral tissue and supply the majority of the coral's energy through photosynthesis. When ocean temperatures rise even slightly above a coral's tolerance threshold: often by as little as one or two degrees Celsius sustained over several weeks — the algae are expelled, leaving the coral's white calcium carbonate skeleton visible. This phenomenon, known as bleaching, does not itself kill the coral immediately, but it severs the primary energy supply, leaving the organism vulnerable to starvation and disease. Recovery is possible if temperatures normalize quickly, but repeated bleaching events, now increasingly common under sustained ocean warming, leave reefs with progressively less time to recover between episodes.",
+      "content": "**PASSAGE: Coral Bleaching and Thermal Stress**\n\nCoral reefs, despite occupying less than one percent of the ocean floor, support roughly a quarter of all known marine species. This disproportionate biodiversity depends on a delicate symbiotic relationship between coral polyps and microscopic algae called zooxanthellae, which live within coral tissue and supply the majority of the coral's energy through photosynthesis. When ocean temperatures rise even slightly above a coral's tolerance threshold — often by as little as one or two degrees Celsius sustained over several weeks — the algae are expelled, leaving the coral's white calcium carbonate skeleton visible. This phenomenon, known as bleaching, does not itself kill the coral immediately, but it severs the primary energy supply, leaving the organism vulnerable to starvation and disease. Recovery is possible if temperatures normalize quickly, but repeated bleaching events, now increasingly common under sustained ocean warming, leave reefs with progressively less time to recover between episodes.",
       "audio_ref": null
     },
     "group": "mod7-b4",
@@ -734,7 +734,7 @@
       "kind": "text",
       "format": "markdown",
       "title": "Bloco C: Read an Academic Passage (versão abreviada)",
-      "content": "**PASSAGE: Coral Bleaching and Thermal Stress**\n\nCoral reefs, despite occupying less than one percent of the ocean floor, support roughly a quarter of all known marine species. This disproportionate biodiversity depends on a delicate symbiotic relationship between coral polyps and microscopic algae called zooxanthellae, which live within coral tissue and supply the majority of the coral's energy through photosynthesis. When ocean temperatures rise even slightly above a coral's tolerance threshold: often by as little as one or two degrees Celsius sustained over several weeks — the algae are expelled, leaving the coral's white calcium carbonate skeleton visible. This phenomenon, known as bleaching, does not itself kill the coral immediately, but it severs the primary energy supply, leaving the organism vulnerable to starvation and disease. Recovery is possible if temperatures normalize quickly, but repeated bleaching events, now increasingly common under sustained ocean warming, leave reefs with progressively less time to recover between episodes.",
+      "content": "**PASSAGE: Coral Bleaching and Thermal Stress**\n\nCoral reefs, despite occupying less than one percent of the ocean floor, support roughly a quarter of all known marine species. This disproportionate biodiversity depends on a delicate symbiotic relationship between coral polyps and microscopic algae called zooxanthellae, which live within coral tissue and supply the majority of the coral's energy through photosynthesis. When ocean temperatures rise even slightly above a coral's tolerance threshold — often by as little as one or two degrees Celsius sustained over several weeks — the algae are expelled, leaving the coral's white calcium carbonate skeleton visible. This phenomenon, known as bleaching, does not itself kill the coral immediately, but it severs the primary energy supply, leaving the organism vulnerable to starvation and disease. Recovery is possible if temperatures normalize quickly, but repeated bleaching events, now increasingly common under sustained ocean warming, leave reefs with progressively less time to recover between episodes.",
       "audio_ref": null
     },
     "group": "mod7-b4",
@@ -781,7 +781,7 @@
       "kind": "text",
       "format": "markdown",
       "title": "Bloco C: Read an Academic Passage (versão abreviada)",
-      "content": "**PASSAGE: Coral Bleaching and Thermal Stress**\n\nCoral reefs, despite occupying less than one percent of the ocean floor, support roughly a quarter of all known marine species. This disproportionate biodiversity depends on a delicate symbiotic relationship between coral polyps and microscopic algae called zooxanthellae, which live within coral tissue and supply the majority of the coral's energy through photosynthesis. When ocean temperatures rise even slightly above a coral's tolerance threshold: often by as little as one or two degrees Celsius sustained over several weeks — the algae are expelled, leaving the coral's white calcium carbonate skeleton visible. This phenomenon, known as bleaching, does not itself kill the coral immediately, but it severs the primary energy supply, leaving the organism vulnerable to starvation and disease. Recovery is possible if temperatures normalize quickly, but repeated bleaching events, now increasingly common under sustained ocean warming, leave reefs with progressively less time to recover between episodes.",
+      "content": "**PASSAGE: Coral Bleaching and Thermal Stress**\n\nCoral reefs, despite occupying less than one percent of the ocean floor, support roughly a quarter of all known marine species. This disproportionate biodiversity depends on a delicate symbiotic relationship between coral polyps and microscopic algae called zooxanthellae, which live within coral tissue and supply the majority of the coral's energy through photosynthesis. When ocean temperatures rise even slightly above a coral's tolerance threshold — often by as little as one or two degrees Celsius sustained over several weeks — the algae are expelled, leaving the coral's white calcium carbonate skeleton visible. This phenomenon, known as bleaching, does not itself kill the coral immediately, but it severs the primary energy supply, leaving the organism vulnerable to starvation and disease. Recovery is possible if temperatures normalize quickly, but repeated bleaching events, now increasingly common under sustained ocean warming, leave reefs with progressively less time to recover between episodes.",
       "audio_ref": null
     },
     "group": "mod7-b4",
@@ -828,7 +828,7 @@
       "kind": "text",
       "format": "markdown",
       "title": "Bloco C: Read an Academic Passage (versão abreviada)",
-      "content": "**PASSAGE 2: The Printing Press and the Standardization of Language**\n\nBefore the spread of print in fifteenth-century Europe, a single language could vary so much from region to region that speakers a few hundred kilometers apart struggled to read one another's writing. Scribes copied texts by hand, and each copy absorbed the copyist's own spelling habits, regional vocabulary, and errors. There was no strong pressure toward a single written standard, because the audience for any given manuscript was small and usually local.\n\nThe printing press changed the economics of this situation. A printer who set a book in type was making a substantial investment and needed to sell copies across as wide an area as possible to recover the cost. This gave printers a direct financial incentive to choose forms of spelling and grammar that the largest number of readers would accept. Over several decades, the dialect of the commercially dominant region (often the capital or the largest trading city) tended to become the basis of the printed standard, not because it was linguistically superior, but because it reached the biggest market.\n\nThis standardizing effect was not entirely welcome. Writers who spoke regional varieties found their own usage increasingly marked as incorrect, and forms of the language that were never printed came to be seen as mere \"dialect\" rather than legitimate versions of the language. Many historians of language now argue that the \"standard\" form of many European languages owes less to any natural center of the language than to which city happened to dominate early commercial printing.",
+      "content": "**PASSAGE 2: The Printing Press and the Standardization of Language**\n\nBefore the spread of print in fifteenth-century Europe, a single language could vary so much from region to region that speakers a few hundred kilometers apart struggled to read one another's writing. Scribes copied texts by hand, and each copy absorbed the copyist's own spelling habits and regional vocabulary.\n\nThe printing press changed the economics of this situation. A printer who set a book in type was making a substantial investment and needed to sell copies across as wide an area as possible to recover the cost. Printers therefore had a direct financial incentive to choose spelling and grammar that the largest number of readers would accept. Over several decades, the dialect of the commercially dominant region (often the capital or the largest trading city) tended to become the basis of the printed standard, not because it was linguistically superior, but because it reached the biggest market.\n\nThis standardizing effect was not entirely welcome. Writers who spoke regional varieties found their own usage increasingly marked as incorrect, and forms of the language that were never printed came to be seen as mere \"dialect\" rather than legitimate versions of the language. Many historians now argue that the \"standard\" form of many European languages owes less to any natural center of the language than to which city happened to dominate early printing.",
       "audio_ref": null
     },
     "group": "mod7-b5",
@@ -855,8 +855,8 @@
       "live_on_site": true,
       "answer_letter": "origem",
       "build_map": {
-        "A": "D",
-        "B": "C",
+        "A": "C",
+        "B": "D",
         "C": "A",
         "D": "B"
       }
@@ -875,7 +875,7 @@
       "kind": "text",
       "format": "markdown",
       "title": "Bloco C: Read an Academic Passage (versão abreviada)",
-      "content": "**PASSAGE 2: The Printing Press and the Standardization of Language**\n\nBefore the spread of print in fifteenth-century Europe, a single language could vary so much from region to region that speakers a few hundred kilometers apart struggled to read one another's writing. Scribes copied texts by hand, and each copy absorbed the copyist's own spelling habits, regional vocabulary, and errors. There was no strong pressure toward a single written standard, because the audience for any given manuscript was small and usually local.\n\nThe printing press changed the economics of this situation. A printer who set a book in type was making a substantial investment and needed to sell copies across as wide an area as possible to recover the cost. This gave printers a direct financial incentive to choose forms of spelling and grammar that the largest number of readers would accept. Over several decades, the dialect of the commercially dominant region (often the capital or the largest trading city) tended to become the basis of the printed standard, not because it was linguistically superior, but because it reached the biggest market.\n\nThis standardizing effect was not entirely welcome. Writers who spoke regional varieties found their own usage increasingly marked as incorrect, and forms of the language that were never printed came to be seen as mere \"dialect\" rather than legitimate versions of the language. Many historians of language now argue that the \"standard\" form of many European languages owes less to any natural center of the language than to which city happened to dominate early commercial printing.",
+      "content": "**PASSAGE 2: The Printing Press and the Standardization of Language**\n\nBefore the spread of print in fifteenth-century Europe, a single language could vary so much from region to region that speakers a few hundred kilometers apart struggled to read one another's writing. Scribes copied texts by hand, and each copy absorbed the copyist's own spelling habits and regional vocabulary.\n\nThe printing press changed the economics of this situation. A printer who set a book in type was making a substantial investment and needed to sell copies across as wide an area as possible to recover the cost. Printers therefore had a direct financial incentive to choose spelling and grammar that the largest number of readers would accept. Over several decades, the dialect of the commercially dominant region (often the capital or the largest trading city) tended to become the basis of the printed standard, not because it was linguistically superior, but because it reached the biggest market.\n\nThis standardizing effect was not entirely welcome. Writers who spoke regional varieties found their own usage increasingly marked as incorrect, and forms of the language that were never printed came to be seen as mere \"dialect\" rather than legitimate versions of the language. Many historians now argue that the \"standard\" form of many European languages owes less to any natural center of the language than to which city happened to dominate early printing.",
       "audio_ref": null
     },
     "group": "mod7-b5",
@@ -902,10 +902,10 @@
       "live_on_site": true,
       "answer_letter": "origem",
       "build_map": {
-        "A": "B",
-        "B": "A",
-        "C": "D",
-        "D": "C"
+        "A": "C",
+        "B": "B",
+        "C": "A",
+        "D": "D"
       }
     }
   },
@@ -922,7 +922,7 @@
       "kind": "text",
       "format": "markdown",
       "title": "Bloco C: Read an Academic Passage (versão abreviada)",
-      "content": "**PASSAGE 2: The Printing Press and the Standardization of Language**\n\nBefore the spread of print in fifteenth-century Europe, a single language could vary so much from region to region that speakers a few hundred kilometers apart struggled to read one another's writing. Scribes copied texts by hand, and each copy absorbed the copyist's own spelling habits, regional vocabulary, and errors. There was no strong pressure toward a single written standard, because the audience for any given manuscript was small and usually local.\n\nThe printing press changed the economics of this situation. A printer who set a book in type was making a substantial investment and needed to sell copies across as wide an area as possible to recover the cost. This gave printers a direct financial incentive to choose forms of spelling and grammar that the largest number of readers would accept. Over several decades, the dialect of the commercially dominant region (often the capital or the largest trading city) tended to become the basis of the printed standard, not because it was linguistically superior, but because it reached the biggest market.\n\nThis standardizing effect was not entirely welcome. Writers who spoke regional varieties found their own usage increasingly marked as incorrect, and forms of the language that were never printed came to be seen as mere \"dialect\" rather than legitimate versions of the language. Many historians of language now argue that the \"standard\" form of many European languages owes less to any natural center of the language than to which city happened to dominate early commercial printing.",
+      "content": "**PASSAGE 2: The Printing Press and the Standardization of Language**\n\nBefore the spread of print in fifteenth-century Europe, a single language could vary so much from region to region that speakers a few hundred kilometers apart struggled to read one another's writing. Scribes copied texts by hand, and each copy absorbed the copyist's own spelling habits and regional vocabulary.\n\nThe printing press changed the economics of this situation. A printer who set a book in type was making a substantial investment and needed to sell copies across as wide an area as possible to recover the cost. Printers therefore had a direct financial incentive to choose spelling and grammar that the largest number of readers would accept. Over several decades, the dialect of the commercially dominant region (often the capital or the largest trading city) tended to become the basis of the printed standard, not because it was linguistically superior, but because it reached the biggest market.\n\nThis standardizing effect was not entirely welcome. Writers who spoke regional varieties found their own usage increasingly marked as incorrect, and forms of the language that were never printed came to be seen as mere \"dialect\" rather than legitimate versions of the language. Many historians now argue that the \"standard\" form of many European languages owes less to any natural center of the language than to which city happened to dominate early printing.",
       "audio_ref": null
     },
     "group": "mod7-b5",
@@ -949,9 +949,9 @@
       "live_on_site": true,
       "answer_letter": "origem",
       "build_map": {
-        "A": "B",
-        "B": "A",
-        "C": "C",
+        "A": "A",
+        "B": "C",
+        "C": "B",
         "D": "D"
       }
     }
@@ -969,7 +969,7 @@
       "kind": "text",
       "format": "markdown",
       "title": "Bloco C: Read an Academic Passage (versão abreviada)",
-      "content": "**PASSAGE 2: The Printing Press and the Standardization of Language**\n\nBefore the spread of print in fifteenth-century Europe, a single language could vary so much from region to region that speakers a few hundred kilometers apart struggled to read one another's writing. Scribes copied texts by hand, and each copy absorbed the copyist's own spelling habits, regional vocabulary, and errors. There was no strong pressure toward a single written standard, because the audience for any given manuscript was small and usually local.\n\nThe printing press changed the economics of this situation. A printer who set a book in type was making a substantial investment and needed to sell copies across as wide an area as possible to recover the cost. This gave printers a direct financial incentive to choose forms of spelling and grammar that the largest number of readers would accept. Over several decades, the dialect of the commercially dominant region (often the capital or the largest trading city) tended to become the basis of the printed standard, not because it was linguistically superior, but because it reached the biggest market.\n\nThis standardizing effect was not entirely welcome. Writers who spoke regional varieties found their own usage increasingly marked as incorrect, and forms of the language that were never printed came to be seen as mere \"dialect\" rather than legitimate versions of the language. Many historians of language now argue that the \"standard\" form of many European languages owes less to any natural center of the language than to which city happened to dominate early commercial printing.",
+      "content": "**PASSAGE 2: The Printing Press and the Standardization of Language**\n\nBefore the spread of print in fifteenth-century Europe, a single language could vary so much from region to region that speakers a few hundred kilometers apart struggled to read one another's writing. Scribes copied texts by hand, and each copy absorbed the copyist's own spelling habits and regional vocabulary.\n\nThe printing press changed the economics of this situation. A printer who set a book in type was making a substantial investment and needed to sell copies across as wide an area as possible to recover the cost. Printers therefore had a direct financial incentive to choose spelling and grammar that the largest number of readers would accept. Over several decades, the dialect of the commercially dominant region (often the capital or the largest trading city) tended to become the basis of the printed standard, not because it was linguistically superior, but because it reached the biggest market.\n\nThis standardizing effect was not entirely welcome. Writers who spoke regional varieties found their own usage increasingly marked as incorrect, and forms of the language that were never printed came to be seen as mere \"dialect\" rather than legitimate versions of the language. Many historians now argue that the \"standard\" form of many European languages owes less to any natural center of the language than to which city happened to dominate early printing.",
       "audio_ref": null
     },
     "group": "mod7-b5",
@@ -1009,53 +1009,6 @@
     "task_type": "Read an Academic Passage",
     "exam_format": true,
     "format": "mcq",
-    "skill": "Factual Information",
-    "cefr_min": null,
-    "cefr_max": null,
-    "stimulus": {
-      "kind": "text",
-      "format": "markdown",
-      "title": "Bloco C: Read an Academic Passage (versão abreviada)",
-      "content": "**PASSAGE 2: The Printing Press and the Standardization of Language**\n\nBefore the spread of print in fifteenth-century Europe, a single language could vary so much from region to region that speakers a few hundred kilometers apart struggled to read one another's writing. Scribes copied texts by hand, and each copy absorbed the copyist's own spelling habits, regional vocabulary, and errors. There was no strong pressure toward a single written standard, because the audience for any given manuscript was small and usually local.\n\nThe printing press changed the economics of this situation. A printer who set a book in type was making a substantial investment and needed to sell copies across as wide an area as possible to recover the cost. This gave printers a direct financial incentive to choose forms of spelling and grammar that the largest number of readers would accept. Over several decades, the dialect of the commercially dominant region (often the capital or the largest trading city) tended to become the basis of the printed standard, not because it was linguistically superior, but because it reached the biggest market.\n\nThis standardizing effect was not entirely welcome. Writers who spoke regional varieties found their own usage increasingly marked as incorrect, and forms of the language that were never printed came to be seen as mere \"dialect\" rather than legitimate versions of the language. Many historians of language now argue that the \"standard\" form of many European languages owes less to any natural center of the language than to which city happened to dominate early commercial printing.",
-      "audio_ref": null
-    },
-    "group": "mod7-b5",
-    "prompt": "According to paragraph 1, why was there little pressure toward a single written standard before print?",
-    "text_format": "markdown",
-    "options": {
-      "A": "Scribes were forbidden from changing the texts they copied",
-      "B": "The audience for any given manuscript was small and usually local",
-      "C": "Regional languages were too different to be compared",
-      "D": "Few people could afford to hire scribes"
-    },
-    "answer": "B",
-    "explanation": "",
-    "hint": null,
-    "trap_codes": [],
-    "tags": [
-      "simulado-2"
-    ],
-    "status": "rascunho",
-    "source": {
-      "kind": "migrado",
-      "file": "consolidated/modulo_7_simulados.md",
-      "ref": "linha 327",
-      "live_on_site": true,
-      "answer_letter": "origem",
-      "build_map": {
-        "A": "A",
-        "B": "B",
-        "C": "C",
-        "D": "D"
-      }
-    }
-  },
-  {
-    "id": "mod7-b5.6",
-    "section": "reading",
-    "task_type": "Read an Academic Passage",
-    "exam_format": true,
-    "format": "mcq",
     "skill": "Rhetorical Purpose",
     "cefr_min": null,
     "cefr_max": null,
@@ -1063,7 +1016,7 @@
       "kind": "text",
       "format": "markdown",
       "title": "Bloco C: Read an Academic Passage (versão abreviada)",
-      "content": "**PASSAGE 2: The Printing Press and the Standardization of Language**\n\nBefore the spread of print in fifteenth-century Europe, a single language could vary so much from region to region that speakers a few hundred kilometers apart struggled to read one another's writing. Scribes copied texts by hand, and each copy absorbed the copyist's own spelling habits, regional vocabulary, and errors. There was no strong pressure toward a single written standard, because the audience for any given manuscript was small and usually local.\n\nThe printing press changed the economics of this situation. A printer who set a book in type was making a substantial investment and needed to sell copies across as wide an area as possible to recover the cost. This gave printers a direct financial incentive to choose forms of spelling and grammar that the largest number of readers would accept. Over several decades, the dialect of the commercially dominant region (often the capital or the largest trading city) tended to become the basis of the printed standard, not because it was linguistically superior, but because it reached the biggest market.\n\nThis standardizing effect was not entirely welcome. Writers who spoke regional varieties found their own usage increasingly marked as incorrect, and forms of the language that were never printed came to be seen as mere \"dialect\" rather than legitimate versions of the language. Many historians of language now argue that the \"standard\" form of many European languages owes less to any natural center of the language than to which city happened to dominate early commercial printing.",
+      "content": "**PASSAGE 2: The Printing Press and the Standardization of Language**\n\nBefore the spread of print in fifteenth-century Europe, a single language could vary so much from region to region that speakers a few hundred kilometers apart struggled to read one another's writing. Scribes copied texts by hand, and each copy absorbed the copyist's own spelling habits and regional vocabulary.\n\nThe printing press changed the economics of this situation. A printer who set a book in type was making a substantial investment and needed to sell copies across as wide an area as possible to recover the cost. Printers therefore had a direct financial incentive to choose spelling and grammar that the largest number of readers would accept. Over several decades, the dialect of the commercially dominant region (often the capital or the largest trading city) tended to become the basis of the printed standard, not because it was linguistically superior, but because it reached the biggest market.\n\nThis standardizing effect was not entirely welcome. Writers who spoke regional varieties found their own usage increasingly marked as incorrect, and forms of the language that were never printed came to be seen as mere \"dialect\" rather than legitimate versions of the language. Many historians now argue that the \"standard\" form of many European languages owes less to any natural center of the language than to which city happened to dominate early printing.",
       "audio_ref": null
     },
     "group": "mod7-b5",
@@ -1086,7 +1039,7 @@
     "source": {
       "kind": "migrado",
       "file": "consolidated/modulo_7_simulados.md",
-      "ref": "linha 333",
+      "ref": "linha 327",
       "live_on_site": true,
       "answer_letter": "origem",
       "build_map": {
@@ -1109,8 +1062,8 @@
     "stimulus": {
       "kind": "text",
       "format": "markdown",
-      "title": "Bloco C: Read an Academic Passage (alvo: 12–14 min)",
-      "content": "**PASSAGE: The Economics of Network Effects**\n\nA network effect occurs when the value of a product or service increases as more people use it. The telephone is the textbook example: a single telephone is useless, but as adoption grows, each additional user increases the value of the network for everyone already connected to it. This dynamic, largely peripheral to economic theory for much of the twentieth century, has become central to understanding digital markets, where platforms (social networks, marketplaces, operating systems) often derive their value primarily from the size and engagement of their user base rather than from the intrinsic quality of the underlying product.\n\nNetwork effects can be direct or indirect. Direct network effects occur when the value to a user increases as a function of other users of the *same* product: a messaging app is more useful as more of one's contacts join it. Indirect network effects occur across two distinct but interdependent user groups: a ride-sharing platform becomes more attractive to riders as more drivers join, and simultaneously more attractive to drivers as more riders join. This two-sided dynamic creates a powerful feedback loop that, once initiated, can be extraordinarily difficult for competitors to disrupt.\n\nThis difficulty of disruption is often described as a \"winner-take-most\" dynamic. Because users generally prefer the platform with the largest existing network, early leaders in markets with strong network effects tend to compound their advantage rapidly, often achieving dominant market positions that persist even when competitors offer superior underlying technology. This has generated significant regulatory concern, particularly regarding whether dominant platforms leverage network-effect-driven market power in ways that stifle competition rather than simply reflecting superior efficiency.\n\nCritics of this narrative, however, caution against treating network effects as an insurmountable barrier to entry. History offers counterexamples: several dominant platforms have been displaced by newer entrants offering a sufficiently differentiated experience, suggesting that network effects, while powerful, are not absolute. Low switching costs, multi-homing behavior (where users maintain accounts on multiple competing platforms simultaneously), and shifts in user preference can erode even substantial network advantages over time.",
+      "title": "Bloco C: Read an Academic Passage (alvo: 6 min)",
+      "content": "**PASSAGE: The Economics of Network Effects**\n\nA network effect occurs when a product or service becomes more valuable as more people use it. The telephone is the textbook example: a single telephone is useless, but each new user adds value for everyone already connected. Such effects can be direct or indirect. Direct network effects arise among users of the *same* product: a messaging app is more useful as more of one's contacts join it. Indirect network effects arise between two distinct but interdependent groups: a ride-sharing platform becomes more attractive to riders as more drivers join, and more attractive to drivers as more riders join.\n\nBecause users generally prefer the platform with the largest existing network, early leaders in such markets tend to compound their advantage rapidly, often keeping dominant positions even when competitors offer superior technology. This \"winner-take-most\" dynamic has generated significant regulatory concern, particularly about whether dominant platforms use their market power in ways that stifle competition rather than simply reflecting superior efficiency.\n\nCritics of this narrative, however, caution against treating network effects as an insurmountable barrier to entry. Several dominant platforms have been displaced by newer entrants offering a sufficiently different experience. Low switching costs, multi-homing behavior (where users maintain accounts on multiple competing platforms at once), and shifts in user preference can erode even substantial network advantages over time.",
       "audio_ref": null
     },
     "group": "mod7-b15",
@@ -1133,7 +1086,7 @@
     "source": {
       "kind": "migrado",
       "file": "consolidated/modulo_7_simulados.md",
-      "ref": "linha 676",
+      "ref": "linha 662",
       "live_on_site": true,
       "answer_letter": "origem",
       "build_map": {
@@ -1156,12 +1109,12 @@
     "stimulus": {
       "kind": "text",
       "format": "markdown",
-      "title": "Bloco C: Read an Academic Passage (alvo: 12–14 min)",
-      "content": "**PASSAGE: The Economics of Network Effects**\n\nA network effect occurs when the value of a product or service increases as more people use it. The telephone is the textbook example: a single telephone is useless, but as adoption grows, each additional user increases the value of the network for everyone already connected to it. This dynamic, largely peripheral to economic theory for much of the twentieth century, has become central to understanding digital markets, where platforms (social networks, marketplaces, operating systems) often derive their value primarily from the size and engagement of their user base rather than from the intrinsic quality of the underlying product.\n\nNetwork effects can be direct or indirect. Direct network effects occur when the value to a user increases as a function of other users of the *same* product: a messaging app is more useful as more of one's contacts join it. Indirect network effects occur across two distinct but interdependent user groups: a ride-sharing platform becomes more attractive to riders as more drivers join, and simultaneously more attractive to drivers as more riders join. This two-sided dynamic creates a powerful feedback loop that, once initiated, can be extraordinarily difficult for competitors to disrupt.\n\nThis difficulty of disruption is often described as a \"winner-take-most\" dynamic. Because users generally prefer the platform with the largest existing network, early leaders in markets with strong network effects tend to compound their advantage rapidly, often achieving dominant market positions that persist even when competitors offer superior underlying technology. This has generated significant regulatory concern, particularly regarding whether dominant platforms leverage network-effect-driven market power in ways that stifle competition rather than simply reflecting superior efficiency.\n\nCritics of this narrative, however, caution against treating network effects as an insurmountable barrier to entry. History offers counterexamples: several dominant platforms have been displaced by newer entrants offering a sufficiently differentiated experience, suggesting that network effects, while powerful, are not absolute. Low switching costs, multi-homing behavior (where users maintain accounts on multiple competing platforms simultaneously), and shifts in user preference can erode even substantial network advantages over time.",
+      "title": "Bloco C: Read an Academic Passage (alvo: 6 min)",
+      "content": "**PASSAGE: The Economics of Network Effects**\n\nA network effect occurs when a product or service becomes more valuable as more people use it. The telephone is the textbook example: a single telephone is useless, but each new user adds value for everyone already connected. Such effects can be direct or indirect. Direct network effects arise among users of the *same* product: a messaging app is more useful as more of one's contacts join it. Indirect network effects arise between two distinct but interdependent groups: a ride-sharing platform becomes more attractive to riders as more drivers join, and more attractive to drivers as more riders join.\n\nBecause users generally prefer the platform with the largest existing network, early leaders in such markets tend to compound their advantage rapidly, often keeping dominant positions even when competitors offer superior technology. This \"winner-take-most\" dynamic has generated significant regulatory concern, particularly about whether dominant platforms use their market power in ways that stifle competition rather than simply reflecting superior efficiency.\n\nCritics of this narrative, however, caution against treating network effects as an insurmountable barrier to entry. Several dominant platforms have been displaced by newer entrants offering a sufficiently different experience. Low switching costs, multi-homing behavior (where users maintain accounts on multiple competing platforms at once), and shifts in user preference can erode even substantial network advantages over time.",
       "audio_ref": null
     },
     "group": "mod7-b15",
-    "prompt": "According to paragraph 2, an indirect network effect is best illustrated by:",
+    "prompt": "According to paragraph 1, an indirect network effect is best illustrated by:",
     "text_format": "markdown",
     "options": {
       "A": "a messaging app becoming more useful as more contacts join",
@@ -1180,7 +1133,7 @@
     "source": {
       "kind": "migrado",
       "file": "consolidated/modulo_7_simulados.md",
-      "ref": "linha 682",
+      "ref": "linha 668",
       "live_on_site": true,
       "answer_letter": "origem",
       "build_map": {
@@ -1203,12 +1156,12 @@
     "stimulus": {
       "kind": "text",
       "format": "markdown",
-      "title": "Bloco C: Read an Academic Passage (alvo: 12–14 min)",
-      "content": "**PASSAGE: The Economics of Network Effects**\n\nA network effect occurs when the value of a product or service increases as more people use it. The telephone is the textbook example: a single telephone is useless, but as adoption grows, each additional user increases the value of the network for everyone already connected to it. This dynamic, largely peripheral to economic theory for much of the twentieth century, has become central to understanding digital markets, where platforms (social networks, marketplaces, operating systems) often derive their value primarily from the size and engagement of their user base rather than from the intrinsic quality of the underlying product.\n\nNetwork effects can be direct or indirect. Direct network effects occur when the value to a user increases as a function of other users of the *same* product: a messaging app is more useful as more of one's contacts join it. Indirect network effects occur across two distinct but interdependent user groups: a ride-sharing platform becomes more attractive to riders as more drivers join, and simultaneously more attractive to drivers as more riders join. This two-sided dynamic creates a powerful feedback loop that, once initiated, can be extraordinarily difficult for competitors to disrupt.\n\nThis difficulty of disruption is often described as a \"winner-take-most\" dynamic. Because users generally prefer the platform with the largest existing network, early leaders in markets with strong network effects tend to compound their advantage rapidly, often achieving dominant market positions that persist even when competitors offer superior underlying technology. This has generated significant regulatory concern, particularly regarding whether dominant platforms leverage network-effect-driven market power in ways that stifle competition rather than simply reflecting superior efficiency.\n\nCritics of this narrative, however, caution against treating network effects as an insurmountable barrier to entry. History offers counterexamples: several dominant platforms have been displaced by newer entrants offering a sufficiently differentiated experience, suggesting that network effects, while powerful, are not absolute. Low switching costs, multi-homing behavior (where users maintain accounts on multiple competing platforms simultaneously), and shifts in user preference can erode even substantial network advantages over time.",
+      "title": "Bloco C: Read an Academic Passage (alvo: 6 min)",
+      "content": "**PASSAGE: The Economics of Network Effects**\n\nA network effect occurs when a product or service becomes more valuable as more people use it. The telephone is the textbook example: a single telephone is useless, but each new user adds value for everyone already connected. Such effects can be direct or indirect. Direct network effects arise among users of the *same* product: a messaging app is more useful as more of one's contacts join it. Indirect network effects arise between two distinct but interdependent groups: a ride-sharing platform becomes more attractive to riders as more drivers join, and more attractive to drivers as more riders join.\n\nBecause users generally prefer the platform with the largest existing network, early leaders in such markets tend to compound their advantage rapidly, often keeping dominant positions even when competitors offer superior technology. This \"winner-take-most\" dynamic has generated significant regulatory concern, particularly about whether dominant platforms use their market power in ways that stifle competition rather than simply reflecting superior efficiency.\n\nCritics of this narrative, however, caution against treating network effects as an insurmountable barrier to entry. Several dominant platforms have been displaced by newer entrants offering a sufficiently different experience. Low switching costs, multi-homing behavior (where users maintain accounts on multiple competing platforms at once), and shifts in user preference can erode even substantial network advantages over time.",
       "audio_ref": null
     },
     "group": "mod7-b15",
-    "prompt": "The word \"insurmountable\" in paragraph 4 is closest in meaning to:",
+    "prompt": "The word \"insurmountable\" in paragraph 3 is closest in meaning to:",
     "text_format": "markdown",
     "options": {
       "A": "temporary",
@@ -1227,7 +1180,7 @@
     "source": {
       "kind": "migrado",
       "file": "consolidated/modulo_7_simulados.md",
-      "ref": "linha 688",
+      "ref": "linha 674",
       "live_on_site": true,
       "answer_letter": "origem",
       "build_map": {
@@ -1250,12 +1203,12 @@
     "stimulus": {
       "kind": "text",
       "format": "markdown",
-      "title": "Bloco C: Read an Academic Passage (alvo: 12–14 min)",
-      "content": "**PASSAGE: The Economics of Network Effects**\n\nA network effect occurs when the value of a product or service increases as more people use it. The telephone is the textbook example: a single telephone is useless, but as adoption grows, each additional user increases the value of the network for everyone already connected to it. This dynamic, largely peripheral to economic theory for much of the twentieth century, has become central to understanding digital markets, where platforms (social networks, marketplaces, operating systems) often derive their value primarily from the size and engagement of their user base rather than from the intrinsic quality of the underlying product.\n\nNetwork effects can be direct or indirect. Direct network effects occur when the value to a user increases as a function of other users of the *same* product: a messaging app is more useful as more of one's contacts join it. Indirect network effects occur across two distinct but interdependent user groups: a ride-sharing platform becomes more attractive to riders as more drivers join, and simultaneously more attractive to drivers as more riders join. This two-sided dynamic creates a powerful feedback loop that, once initiated, can be extraordinarily difficult for competitors to disrupt.\n\nThis difficulty of disruption is often described as a \"winner-take-most\" dynamic. Because users generally prefer the platform with the largest existing network, early leaders in markets with strong network effects tend to compound their advantage rapidly, often achieving dominant market positions that persist even when competitors offer superior underlying technology. This has generated significant regulatory concern, particularly regarding whether dominant platforms leverage network-effect-driven market power in ways that stifle competition rather than simply reflecting superior efficiency.\n\nCritics of this narrative, however, caution against treating network effects as an insurmountable barrier to entry. History offers counterexamples: several dominant platforms have been displaced by newer entrants offering a sufficiently differentiated experience, suggesting that network effects, while powerful, are not absolute. Low switching costs, multi-homing behavior (where users maintain accounts on multiple competing platforms simultaneously), and shifts in user preference can erode even substantial network advantages over time.",
+      "title": "Bloco C: Read an Academic Passage (alvo: 6 min)",
+      "content": "**PASSAGE: The Economics of Network Effects**\n\nA network effect occurs when a product or service becomes more valuable as more people use it. The telephone is the textbook example: a single telephone is useless, but each new user adds value for everyone already connected. Such effects can be direct or indirect. Direct network effects arise among users of the *same* product: a messaging app is more useful as more of one's contacts join it. Indirect network effects arise between two distinct but interdependent groups: a ride-sharing platform becomes more attractive to riders as more drivers join, and more attractive to drivers as more riders join.\n\nBecause users generally prefer the platform with the largest existing network, early leaders in such markets tend to compound their advantage rapidly, often keeping dominant positions even when competitors offer superior technology. This \"winner-take-most\" dynamic has generated significant regulatory concern, particularly about whether dominant platforms use their market power in ways that stifle competition rather than simply reflecting superior efficiency.\n\nCritics of this narrative, however, caution against treating network effects as an insurmountable barrier to entry. Several dominant platforms have been displaced by newer entrants offering a sufficiently different experience. Low switching costs, multi-homing behavior (where users maintain accounts on multiple competing platforms at once), and shifts in user preference can erode even substantial network advantages over time.",
       "audio_ref": null
     },
     "group": "mod7-b15",
-    "prompt": "It can be inferred from paragraph 3 that regulatory concern about dominant platforms centers on whether:",
+    "prompt": "It can be inferred from paragraph 2 that regulatory concern about dominant platforms centers on whether:",
     "text_format": "markdown",
     "options": {
       "A": "their market power reflects genuine efficiency or anticompetitive advantage",
@@ -1274,7 +1227,7 @@
     "source": {
       "kind": "migrado",
       "file": "consolidated/modulo_7_simulados.md",
-      "ref": "linha 691",
+      "ref": "linha 677",
       "live_on_site": true,
       "answer_letter": "origem",
       "build_map": {
@@ -1297,8 +1250,8 @@
     "stimulus": {
       "kind": "text",
       "format": "markdown",
-      "title": "Bloco C: Read an Academic Passage (alvo: 12–14 min)",
-      "content": "**PASSAGE: The Economics of Network Effects**\n\nA network effect occurs when the value of a product or service increases as more people use it. The telephone is the textbook example: a single telephone is useless, but as adoption grows, each additional user increases the value of the network for everyone already connected to it. This dynamic, largely peripheral to economic theory for much of the twentieth century, has become central to understanding digital markets, where platforms (social networks, marketplaces, operating systems) often derive their value primarily from the size and engagement of their user base rather than from the intrinsic quality of the underlying product.\n\nNetwork effects can be direct or indirect. Direct network effects occur when the value to a user increases as a function of other users of the *same* product: a messaging app is more useful as more of one's contacts join it. Indirect network effects occur across two distinct but interdependent user groups: a ride-sharing platform becomes more attractive to riders as more drivers join, and simultaneously more attractive to drivers as more riders join. This two-sided dynamic creates a powerful feedback loop that, once initiated, can be extraordinarily difficult for competitors to disrupt.\n\nThis difficulty of disruption is often described as a \"winner-take-most\" dynamic. Because users generally prefer the platform with the largest existing network, early leaders in markets with strong network effects tend to compound their advantage rapidly, often achieving dominant market positions that persist even when competitors offer superior underlying technology. This has generated significant regulatory concern, particularly regarding whether dominant platforms leverage network-effect-driven market power in ways that stifle competition rather than simply reflecting superior efficiency.\n\nCritics of this narrative, however, caution against treating network effects as an insurmountable barrier to entry. History offers counterexamples: several dominant platforms have been displaced by newer entrants offering a sufficiently differentiated experience, suggesting that network effects, while powerful, are not absolute. Low switching costs, multi-homing behavior (where users maintain accounts on multiple competing platforms simultaneously), and shifts in user preference can erode even substantial network advantages over time.",
+      "title": "Bloco C: Read an Academic Passage (alvo: 6 min)",
+      "content": "**PASSAGE: The Economics of Network Effects**\n\nA network effect occurs when a product or service becomes more valuable as more people use it. The telephone is the textbook example: a single telephone is useless, but each new user adds value for everyone already connected. Such effects can be direct or indirect. Direct network effects arise among users of the *same* product: a messaging app is more useful as more of one's contacts join it. Indirect network effects arise between two distinct but interdependent groups: a ride-sharing platform becomes more attractive to riders as more drivers join, and more attractive to drivers as more riders join.\n\nBecause users generally prefer the platform with the largest existing network, early leaders in such markets tend to compound their advantage rapidly, often keeping dominant positions even when competitors offer superior technology. This \"winner-take-most\" dynamic has generated significant regulatory concern, particularly about whether dominant platforms use their market power in ways that stifle competition rather than simply reflecting superior efficiency.\n\nCritics of this narrative, however, caution against treating network effects as an insurmountable barrier to entry. Several dominant platforms have been displaced by newer entrants offering a sufficiently different experience. Low switching costs, multi-homing behavior (where users maintain accounts on multiple competing platforms at once), and shifts in user preference can erode even substantial network advantages over time.",
       "audio_ref": null
     },
     "group": "mod7-b15",
@@ -1321,7 +1274,7 @@
     "source": {
       "kind": "migrado",
       "file": "consolidated/modulo_7_simulados.md",
-      "ref": "linha 697",
+      "ref": "linha 683",
       "live_on_site": true,
       "answer_letter": "origem",
       "build_map": {
@@ -1329,53 +1282,6 @@
         "B": "A",
         "C": "B",
         "D": "D"
-      }
-    }
-  },
-  {
-    "id": "mod7-b15.6",
-    "section": "reading",
-    "task_type": "Read an Academic Passage",
-    "exam_format": true,
-    "format": "mcq",
-    "skill": "Vocabulary in Context",
-    "cefr_min": null,
-    "cefr_max": null,
-    "stimulus": {
-      "kind": "text",
-      "format": "markdown",
-      "title": "Bloco C: Read an Academic Passage (alvo: 12–14 min)",
-      "content": "**PASSAGE: The Economics of Network Effects**\n\nA network effect occurs when the value of a product or service increases as more people use it. The telephone is the textbook example: a single telephone is useless, but as adoption grows, each additional user increases the value of the network for everyone already connected to it. This dynamic, largely peripheral to economic theory for much of the twentieth century, has become central to understanding digital markets, where platforms (social networks, marketplaces, operating systems) often derive their value primarily from the size and engagement of their user base rather than from the intrinsic quality of the underlying product.\n\nNetwork effects can be direct or indirect. Direct network effects occur when the value to a user increases as a function of other users of the *same* product: a messaging app is more useful as more of one's contacts join it. Indirect network effects occur across two distinct but interdependent user groups: a ride-sharing platform becomes more attractive to riders as more drivers join, and simultaneously more attractive to drivers as more riders join. This two-sided dynamic creates a powerful feedback loop that, once initiated, can be extraordinarily difficult for competitors to disrupt.\n\nThis difficulty of disruption is often described as a \"winner-take-most\" dynamic. Because users generally prefer the platform with the largest existing network, early leaders in markets with strong network effects tend to compound their advantage rapidly, often achieving dominant market positions that persist even when competitors offer superior underlying technology. This has generated significant regulatory concern, particularly regarding whether dominant platforms leverage network-effect-driven market power in ways that stifle competition rather than simply reflecting superior efficiency.\n\nCritics of this narrative, however, caution against treating network effects as an insurmountable barrier to entry. History offers counterexamples: several dominant platforms have been displaced by newer entrants offering a sufficiently differentiated experience, suggesting that network effects, while powerful, are not absolute. Low switching costs, multi-homing behavior (where users maintain accounts on multiple competing platforms simultaneously), and shifts in user preference can erode even substantial network advantages over time.",
-      "audio_ref": null
-    },
-    "group": "mod7-b15",
-    "prompt": "The word \"peripheral\" in paragraph 1 is closest in meaning to:",
-    "text_format": "markdown",
-    "options": {
-      "A": "essential",
-      "B": "of minor importance",
-      "C": "openly hostile",
-      "D": "newly discovered"
-    },
-    "answer": "B",
-    "explanation": "",
-    "hint": null,
-    "trap_codes": [],
-    "tags": [
-      "simulado-3"
-    ],
-    "status": "rascunho",
-    "source": {
-      "kind": "migrado",
-      "file": "consolidated/modulo_7_simulados.md",
-      "ref": "linha 703",
-      "live_on_site": true,
-      "answer_letter": "origem",
-      "build_map": {
-        "A": "A",
-        "B": "B",
-        "C": "D",
-        "D": "C"
       }
     }
   }

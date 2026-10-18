@@ -479,7 +479,7 @@ def build_mod4():
 # (resposta do bloco inteiro, correção só na entrega). As questões continuam
 # no .md: render_exam.convert_exam_blocks lê o texto e o gabarito de lá.
 M7_EXPECTED_BLOCKS = 19
-M7_EXPECTED_ITEMS = 62
+M7_EXPECTED_ITEMS = 59  # 62 até 2026-10-18: passagens do S2 e do S3 com 5 perguntas, conversa com 2
 
 
 # Writing e Speaking dos simulados: o texto do .md continua igual; aqui, já
@@ -623,7 +623,7 @@ def main():
         "mod4": build_mod4(),  # Build a Sentence + registro de erros
         "mod5": build_mod5(),  # formulário de registro de erros (Parte 9)
         "mod6": build_mod6(),  # SRS + registro de erros (Parte 11)
-        "mod7": build_mod7(),  # blocos de simulado interativos, 62 itens
+        "mod7": build_mod7(),  # blocos de simulado interativos, 59 itens
         "mod8": build_plain(f"{SRC}/modulo_8_examday.md"),
         "mod9": build_plain(f"{SRC}/modulo_9_braziliantraps.md"),
     }

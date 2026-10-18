@@ -236,7 +236,7 @@ Implicações que o conteúdo deve respeitar:
 | M4 | Writing | ✅ formato 2026: 30 itens de Build a Sentence no molde da prova + 12 caixas de escrita |
 | M5 | Registro & Sofisticação Retórica | ✅ reescrito para 2026 — camada transversal de elevação de banda (Atlas Linguístico em bandas CEFR + 10 marcadores + aplicação por task) |
 | M6 | Vocabulário acadêmico | ✅ portado para 2026 — 100 entradas de léxico + arsenal cross-temático + kit de 50 palavras |
-| M7 | Simulados progressivos | ✅ formato 2026: 19 blocos interativos (62 questões), correção só na entrega |
+| M7 | Simulados progressivos | ✅ formato 2026: 19 blocos interativos (59 questões), correção só na entrega |
 | M8 | Exam Day Protocol | ✅ portado — Parte 6 (seção a seção) reescrita para as 4 seções de 2026 |
 | M9 | Brazilian Trap Library | ✅ portado — referências a tasks extintas atualizadas |
 
