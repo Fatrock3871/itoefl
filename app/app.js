@@ -101,7 +101,7 @@
       if(!head || head.nextElementSibling && head.nextElementSibling.classList.contains("speak-hint")) return;
       var hint = document.createElement("div");
       hint.className = "speak-hint";
-      hint.innerHTML = '<span class="speak-hint-icon" aria-hidden="true">🔊</span><span>Toque nesse ícone sempre que aparecer pra ouvir a pronúncia em inglês da palavra, caso fique com dúvida.</span>';
+      hint.innerHTML = '<span class="speak-hint-icon" aria-hidden="true">🔊</span><span>Toque neste ícone para ouvir a pronúncia da palavra em inglês sempre que tiver dúvida.</span>';
       head.parentNode.insertBefore(hint, head.nextSibling);
     });
 
@@ -1486,7 +1486,7 @@
       }catch(e){}
       if(navigator.clipboard){
         navigator.clipboard.writeText(text).then(
-          function(){ flash("Baixado + copiado para a área de transferência."); },
+          function(){ flash("Arquivo baixado e copiado para a área de transferência."); },
           function(){ flash("Arquivo baixado."); }
         );
       }else{
@@ -2122,7 +2122,7 @@
 
     area.addEventListener("input", function(){
       renderCount();
-      statusEl.textContent = "Salvando...";
+      statusEl.textContent = "Salvando…";
       if(saveTimer) clearTimeout(saveTimer);
       saveTimer = setTimeout(save, 600);
     });
@@ -2391,7 +2391,7 @@
         text: "Seu acesso vai até " + fmtDate(st.until) + ". Sprint e Standard somam os dias ao fim desse prazo. O Premium troca o prazo por acesso vitalício." };
     }
     return { kicker: "Acesso pago", title: "Libere seu acesso",
-      text: "Sua conta está conectada, mas o conteúdo completo da plataforma só libera depois da compra." };
+      text: "Sua conta está conectada. O conteúdo completo fica disponível depois da compra." };
   }
   function selectedPlan(){
     return document.querySelector("#planPick input:checked");
@@ -2572,10 +2572,10 @@
         // não barra por file.type (alguns navegadores/SO não preenchem o MIME
         // corretamente) — deixa o próprio <img> decidir se consegue decodificar
         resizeAvatar(file, function(dataUrl){
-          if(!dataUrl){ msg("Não consegui ler essa imagem. Tente um JPG ou PNG.", "err"); return; }
+          if(!dataUrl){ msg("Não foi possível ler essa imagem. Tente um JPG ou PNG.", "err"); return; }
           safeSet(AVATAR_KEY, dataUrl);
           if(safeGet(AVATAR_KEY) !== dataUrl){
-            msg("Não consegui salvar a foto (armazenamento cheio ou bloqueado).", "err");
+            msg("Não foi possível salvar a foto (armazenamento cheio ou bloqueado).", "err");
             return;
           }
           renderAvatar(emailEl.textContent);
@@ -2678,10 +2678,10 @@
           // -- tenta de novo umas poucas vezes antes de deixar o aluno preso
           // olhando "não pago" logo depois de pagar de verdade
           if(params.get("mp") === "success" && (attempt || 0) < 6){
-            payGateMsg("Pagamento recebido, confirmando acesso...", "ok");
+            payGateMsg("Pagamento recebido, confirmando acesso…", "ok");
             setTimeout(function(){ checkEntitlement(session, (attempt || 0) + 1); }, 2500);
           } else if(params.get("mp") === "success"){
-            payGateMsg("O pagamento foi recebido mas a liberação está demorando. Atualize a página em alguns minutos.", "err");
+            payGateMsg("O pagamento foi recebido, mas a liberação está demorando. Atualize a página em alguns minutos.", "err");
           } else if(params.get("mp") === "pending"){
             payGateMsg("Pagamento pendente de confirmação.", "err");
           } else if(params.get("mp") === "failure"){
@@ -2692,7 +2692,7 @@
     if(payBtn){
       payBtn.addEventListener("click", function(){
         payBtn.disabled = true;
-        payGateMsg("Abrindo checkout...", "ok");
+        payGateMsg("Abrindo a página de pagamento…", "ok");
         // functions.invoke() nem sempre anexa o token de sessão sozinho
         // (dependendo da versão da lib carregada pelo CDN) -- a edge
         // function então recebe a chamada sem Authorization e responde
@@ -2718,7 +2718,7 @@
               (ctx && typeof ctx.json === "function" ? ctx.json().catch(function(){ return null; }) : Promise.resolve(null))
                 .then(function(body){
                   var reason = (body && body.error) || (res.error ? res.error.message : "resposta inválida");
-                  payGateMsg("Erro ao abrir checkout: " + reason, "err");
+                  payGateMsg("Erro ao abrir a página de pagamento: " + reason, "err");
                 });
               return;
             }
@@ -2727,9 +2727,9 @@
           .catch(function(){
             // rejeição de verdade (ex.: sem internet, DNS falhou antes de
             // chegar no Supabase) -- sem isso o botão ficava travado em
-            // "Abrindo checkout..." pra sempre, sem erro e sem como tentar de novo
+            // "Abrindo a página de pagamento…" pra sempre, sem erro e sem como tentar de novo
             payBtn.disabled = false;
-            payGateMsg("Erro de conexão ao abrir checkout. Tente de novo.", "err");
+            payGateMsg("Erro de conexão ao abrir a página de pagamento. Tente de novo.", "err");
           });
       });
     }
@@ -2900,7 +2900,7 @@
       var email = document.getElementById("loginEmail").value.trim();
       var password = document.getElementById("loginPassword").value;
       if(!email || !password) return;
-      gateMsg("Entrando...", "ok");
+      gateMsg("Entrando…", "ok");
       client.auth.signInWithPassword({ email: email, password: password }).then(function(r){
         if(r.error) gateMsg(friendlyError(r.error.message), "err");
       }).catch(function(){ gateMsg("Erro de conexão. Tente de novo.", "err"); });
@@ -2910,7 +2910,7 @@
       e.preventDefault();
       var email = document.getElementById("signupEmail").value.trim();
       var password = document.getElementById("signupPassword").value;
-      gateMsg("Criando conta...", "ok");
+      gateMsg("Criando conta…", "ok");
       client.auth.signUp({ email: email, password: password }).then(function(res){
         if(res.error){ gateMsg(friendlyError(res.error.message), "err"); return; }
         if(res.data && res.data.session){
@@ -2923,7 +2923,7 @@
         // "confira seu e-mail" mente pra quem já tem conta.
         var identities = res.data && res.data.user && res.data.user.identities;
         if(identities && identities.length === 0){
-          gateMsg("Esse e-mail já tem conta. Use a aba Entrar, ou clique em \"Esqueci minha senha\" se não lembrar a senha.", "err");
+          gateMsg("Esse e-mail já tem conta. Use a aba Entrar ou, se não lembrar a senha, clique em \"Esqueci minha senha\".", "err");
           return;
         }
         gateMsg("Conta criada! Confira seu e-mail para confirmar antes de entrar.", "ok");
@@ -2974,10 +2974,10 @@
       e.preventDefault();
       var newPassword = document.getElementById("newPassword").value;
       if(!newPassword || newPassword.length < 6) return;
-      gateMsg("Salvando...", "ok");
+      gateMsg("Salvando…", "ok");
       client.auth.updateUser({ password: newPassword }).then(function(res){
         if(res.error){ gateMsg(friendlyError(res.error.message), "err"); return; }
-        gateMsg("Senha atualizada! Entrando...", "ok");
+        gateMsg("Senha atualizada! Entrando…", "ok");
         showLoginView();
       });
     });
@@ -3037,7 +3037,7 @@
         if(renewBtn) renewBtn.hidden = true;
         if(!user){ setAccess("Não deu pra verificar agora.", ""); return; }
         if(isAdmin({ user: user })){ setAccess("Conta de administrador: acesso liberado, sem cobrança.", "is-paid"); return; }
-        setAccess("Verificando...", "");
+        setAccess("Verificando…", "");
         fetchEntitlement(user.id)
           .then(function(res){
             if(res.error){ setAccess("Não deu pra verificar agora. Feche e abra esta tela pra tentar de novo.", ""); return; }
@@ -3080,7 +3080,7 @@
         accountMsgEl.hidden = true;
         emailInput.value = "";
         resetDeleteForm();
-        setAccess("Verificando...", "");
+        setAccess("Verificando…", "");
         client.auth.getUser().then(function(res){
           var user = res.data && res.data.user;
           emailInput.value = (user && user.email) || "";
@@ -3108,7 +3108,7 @@
             accountMsg("Esse já é o seu e-mail atual.", "ok");
             return;
           }
-          accountMsg("Salvando...", "ok");
+          accountMsg("Salvando…", "ok");
           client.auth.updateUser({ email: email }).then(function(res){
             if(res.error){ accountMsg(friendlyError(res.error.message), "err"); return; }
             // o Supabase manda link de confirmação pro endereço NOVO (e, se
@@ -3123,7 +3123,7 @@
         e.preventDefault();
         var newPassword = document.getElementById("accountNewPassword").value;
         if(!newPassword || newPassword.length < 6) return;
-        accountMsg("Salvando...", "ok");
+        accountMsg("Salvando…", "ok");
         client.auth.updateUser({ password: newPassword }).then(function(res){
           if(res.error){ accountMsg(friendlyError(res.error.message), "err"); return; }
           passwordForm.reset();
@@ -3197,7 +3197,7 @@
           deleteSubmit.disabled = true;
           deleteCancel.disabled = true;
           deleteConfirm.disabled = true;
-          deleteMsg("Excluindo sua conta...", "ok");
+          deleteMsg("Excluindo sua conta…", "ok");
           function fail(text){
             deleteConfirm.disabled = false;
             deleteCancel.disabled = false;
@@ -3408,7 +3408,7 @@
     function render(){
       var streak = computeStreak();
       streakEl.textContent = streak.count === 0
-        ? "Comece hoje pra iniciar sua sequência."
+        ? "Estude hoje para começar uma sequência."
         : streak.count + (streak.count === 1 ? " dia seguido estudando" : " dias seguidos estudando") +
           (streak.today ? "" : " (continue hoje pra manter)");
 
@@ -3416,7 +3416,7 @@
       goalFillEl.style.width = Math.min(100, Math.round(100 * goal.count / goal.target)) + "%";
       goalTextEl.textContent = goal.done
         ? "Meta batida hoje! " + goal.count + (goal.count === 1 ? " atividade concluída." : " atividades concluídas.")
-        : "Nenhuma atividade concluída hoje. Feche uma Parte ou entregue um exercício.";
+        : "Nenhuma atividade concluída hoje. Conclua uma Parte ou entregue um exercício.";
 
       var band = computeBandEstimate();
       bandEl.textContent = band
@@ -3428,7 +3428,7 @@
       progressTextEl.textContent = prog.pct + "% · " + prog.modsDone + " de " + prog.totalMods + " módulos concluídos";
 
       var weak = computeWeakSpots();
-      weakListEl.innerHTML = weak.length ? "" : '<p class="dash-empty">Nenhum erro registrado ainda. Use o "Registre esta sessão" no fim dos módulos M1–M6.</p>';
+      weakListEl.innerHTML = weak.length ? "" : '<p class="dash-empty">Nenhum erro registrado ainda. Use o quadro "Registre esta sessão", no fim dos módulos M1 a M6.</p>';
       weak.forEach(function(w){
         var row = document.createElement("div");
         row.className = "dash-weak-row";
@@ -3443,7 +3443,7 @@
         var target = moduleForErrorCode(top.code);
         if(target){
           planTextEl.textContent = "Seu erro mais frequente é \"" + top.label + "\" (" + top.code + ", " + top.count +
-            "x). Revise no Módulo: " + target.title + ".";
+            "×). Revise o módulo de " + target.title + ".";
           planBtnEl.hidden = false;
           planBtnEl.onclick = function(){
             close();
@@ -4157,7 +4157,7 @@
         setSteps([
           "Responda às 10 questões do diagnóstico.",
           "Veja o seu nível estimado e o cronograma indicado.",
-          "Siga os módulos na ordem ou vá direto ao que mais precisa: a navegação é livre."
+          "Siga os módulos na ordem ou vá direto ao ponto em que mais precisa melhorar: a navegação é livre."
         ]);
         goBtn.textContent = a.confirmed ? "Continuar o diagnóstico (" + a.confirmed + " de " + a.total + ")" : "Fazer o diagnóstico agora";
         goBtn.onclick = function(){ goToPart(3, diag); };

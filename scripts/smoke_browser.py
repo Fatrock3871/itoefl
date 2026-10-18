@@ -516,7 +516,7 @@ def run():
                 # mesma chave que o app le
                 res = b.eval(LANDING_ANSWER)
                 check("landing_free_diagnostic_gives_band",
-                      "Você acertou 7 de 10." in res["text"] and "Nível estimado: B2, banda 4–4,5" in res["text"]
+                      "Você acertou 7 de 10." in res["text"] and "Nível estimado: banda 4–4,5 (B2)" in res["text"]
                       and "Cronograma Regular (60 dias)" in res["text"] and res["saved"] == 10 and res["verdicts"] == 10
                       and not res["hidden"], res)
                 b.reload(settle=1)

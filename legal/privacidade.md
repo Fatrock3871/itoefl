@@ -2,7 +2,7 @@
 
 **Última atualização:** 14 de outubro de 2026
 
-Esta política explica quais dados o iTOEFL coleta, para que usa, com quem
+Esta política explica quais dados o iTOEFL coleta, para que os usa, com quem os
 compartilha e como você exerce seus direitos pela Lei Geral de Proteção de
 Dados (Lei 13.709/2018, a LGPD).
 
@@ -89,7 +89,7 @@ progresso volta da nuvem no próximo acesso.
 - **Cumprimento de obrigação legal** (art. 7º, II): registros que a lei exige
   guardar.
 - **Consentimento** (art. 7º, I): foto de perfil e nome no certificado, que
-  você fornece se quiser e pode remover quando quiser, e a análise das
+  você fornece por escolha própria e pode remover a qualquer momento, e a análise das
   redações enviadas para correção com ferramenta de IA de terceiros (seção 4).
 
 ## 7. Com quem compartilhamos
@@ -131,7 +131,7 @@ Pela LGPD você pode pedir, a qualquer momento:
 
 Parte disso você faz sozinho na plataforma:
 
-- **Corrigir e-mail e senha:** em Minha conta.
+- **Alterar e-mail e senha:** em Minha conta.
 - **Baixar seu progresso:** botão Exportar progresso, no menu lateral.
 - **Excluir a conta e os dados:** em Minha conta, Excluir conta.
 

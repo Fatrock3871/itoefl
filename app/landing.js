@@ -88,7 +88,7 @@
       var pct = Math.round(100 * correct / total);
       var band = ToeflLevel.band(pct);
       document.getElementById("lpResultScore").textContent = "Você acertou " + correct + " de " + total + ".";
-      document.getElementById("lpResultBand").textContent = "Nível estimado: " + band.label + ", banda " + band.code;
+      document.getElementById("lpResultBand").textContent = "Nível estimado: banda " + band.code + " (" + band.label + ")";
       document.getElementById("lpResultDesc").textContent = band.desc.charAt(0).toUpperCase() + band.desc.slice(1) + ".";
       document.getElementById("lpResultSched").textContent = ToeflLevel.schedule(pct).split(" · ")[0];
     }

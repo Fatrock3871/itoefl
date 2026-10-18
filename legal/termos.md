@@ -122,7 +122,7 @@ muda é por quanto tempo.
   vitalício. Os dias que ainda restavam do plano anterior não viram crédito
   nem desconto.
 - **Conta com acesso vitalício** não precisa de outro plano, e a tela de
-  compra não permite a compra.
+  compra não oferece novos planos para ela.
 - **Acesso vitalício** quer dizer acesso sem mensalidade e sem prazo de
   validade, enquanto a plataforma estiver em operação. Não é uma promessa de
   que o serviço existirá para sempre. Se a plataforma for encerrada, avisaremos
@@ -144,15 +144,15 @@ Você pode desistir de qualquer compra, em qualquer um dos três planos, em até
 É o direito de arrependimento do artigo 49 do Código de Defesa do Consumidor.
 O prazo vale para cada compra, inclusive renovação e troca de plano.
 
-- **Como pedir.** Escreva para o e-mail de contato a partir do endereço da sua
-  conta, dizendo que quer desistir da compra.
+- **Como pedir.** Escreva para o e-mail de contato usando o e-mail cadastrado na
+  sua conta, dizendo que quer desistir da compra.
 - **O que é devolvido.** O valor inteiro pago naquela compra, pelo mesmo meio
   de pagamento usado. Pedimos a devolução ao Mercado Pago assim que
   confirmamos o pedido. O tempo até o valor aparecer na fatura ou na conta
   depende do meio de pagamento.
 - **O que acontece com o acesso.** O acesso dado por aquela compra é
-  encerrado. Se a conta tinha outra compra anterior, o prazo volta a ser o
-  que era sem a compra devolvida.
+  encerrado. Se a conta tinha uma compra anterior, o prazo volta a ser o
+  que seria sem a compra devolvida.
 - **Depois dos 7 dias.** Não há reembolso proporcional aos dias não usados.
   Isso não afeta os outros direitos que a lei garante ao consumidor.
 

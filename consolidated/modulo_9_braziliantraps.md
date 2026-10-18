@@ -76,7 +76,7 @@ Inglês e português raramente concordam em qual preposição usar com o mesmo v
 | *"contribute **for**"* | contribuir **para** | **contribute to** | ✍️ |
 | *"to access **to** the site"* | acessar **o** site / ter acesso **ao** site | **access** the site (verbo, sem preposição); o substantivo leva *to*: *access to the internet* | ✍️ |
 
-> **Drill de fixação:** escreva 5 frases usando "depend on", "consist of", "arrive at/in", "insist on", "responsible for" e "based on" sobre tópicos do TOEFL (educação, tecnologia, meio ambiente). Releia em voz alta. Repita até saírem automaticamente. Erro aqui = código **SW-form** → **M4 W3**.
+> **Drill de fixação:** escreva 6 frases, uma com cada expressão: "depend on", "consist of", "arrive at/in", "insist on", "responsible for" e "based on" sobre tópicos do TOEFL (educação, tecnologia, meio ambiente). Releia em voz alta. Repita até saírem automaticamente. Erro aqui = código **SW-form** → **M4 W3**.
 
 ### 2.2 Expressões idiomáticas de risco fatal
 
@@ -108,7 +108,7 @@ Aqui a tradução direta do português produz inglês gramaticalmente errado ou 
 
 **A. Artigo definido com substantivos abstratos e genéricos:**
 
-O português usa "the" (o/a) com abstratos: "A vida é bela." Em inglês, abstratos/ genéricos tipicamente **não** levam artigo.
+O português usa artigo definido (o/a) com abstratos: "A vida é bela." Em inglês, abstratos e genéricos tipicamente **não** levam artigo.
 
 | Errado (transferência PT) | Correto (EN) |
 |---|---|
@@ -300,7 +300,7 @@ O português usa o presente para situações que começaram no passado e continu
 
 **🚨 TRAP 4: SENSIBLE / COMPREHENSIVE / SYMPATHETIC**
 
-Uma família de erros de registro que aparece especialmente em *Write for an Academic Discussion*, ao descrever características humanas.
+Uma família de erros de sentido que aparece especialmente em *Write for an Academic Discussion*, ao descrever características humanas.
 
 | Quero dizer | NÃO use | USE |
 |---|---|---|
@@ -326,7 +326,7 @@ Uma família de erros de registro que aparece especialmente em *Write for an Aca
 
 > O SpeechRater da ETS (correção 100% IA no Speaking de 2026) processa padrões acústicos mensuráveis. Os erros abaixo são os mais frequentes em falantes de português. São também os que mais impactam a nota de **inteligibilidade e prosódia**, exatamente os critérios de *Listen and Repeat* e *Take an Interview*.
 
-### 4.1 Os 9 fonemas críticos
+### 4.1 Os 9 pontos críticos de pronúncia
 
 **FONEMA 1 · /θ/ (TH surdo): o mais famoso**
 
@@ -334,7 +334,7 @@ Uma família de erros de registro que aparece especialmente em *Write for an Aca
 |---|---|---|
 | "th" em "think": língua entre os dentes, ar sem vibração | /t/ ("tink"), /f/ ("fink"), /s/ ("sink") | **think, through, thank, theory, hypothesis, throughout, method, both, health, growth, worth** |
 
-**Como praticar:** ponta da língua levemente entre os dentes; sopre ar sem fechar; toque leve, sem pressão. Pratique *"think through both methods"* · todas com /θ/.
+**Como praticar:** ponta da língua levemente entre os dentes; sopre ar sem fechar; toque leve, sem pressão. Pratique *"think through both methods"*: todas com /θ/.
 
 **Em *Listen and Repeat*:** frases com "the", "this", "think" e "although" são comuns em qualquer cenário. Reproduzir o /θ/ e o /ð/ com precisão é diretamente pontuado como inteligibilidade.
 
@@ -368,7 +368,7 @@ Uma família de erros de registro que aparece especialmente em *Write for an Aca
 |---|---|---|
 | Em inglês americano, o L final é "dark L": a ponta da língua encosta na gengiva logo atrás dos dentes de cima e o fundo da língua sobe, dando um som "escuro" | Em PT-BR, L final = /w/ (vocalizado) | **all, feel, school, full, special, social, political, technological, critical, central** |
 
-**Impacto:** "social" dito como "sossiáu" soa muito diferente de /ˈsoʊʃəl/ · o SpeechRater pode não reconhecer a palavra. A ponta da língua deve **tentar** tocar a gengiva atrás dos dentes de cima, mesmo sem chegar completamente.
+**Impacto:** "social" dito como "sossiáu" soa muito diferente de /ˈsoʊʃəl/, e o SpeechRater pode não reconhecer a palavra. A ponta da língua deve **tentar** tocar a gengiva atrás dos dentes de cima, mesmo sem chegar completamente.
 
 **FONEMA 6: terminações -ED (a regra das 3 pronúncias)**
 
@@ -378,7 +378,7 @@ Uma família de erros de registro que aparece especialmente em *Write for an Aca
 | Sons sonoros + vogais | /d/ (sem vogal extra) | *argued* /ˈɑːrɡjuːd/, *challenged* /ˈtʃælɪndʒd/, *showed* /ʃoʊd/ |
 | Sons /t/ e /d/ | /ɪd/ (1 sílaba extra) | *suggested* /səˈdʒɛstɪd/, *conducted* /kənˈdʌktɪd/, *indicated* /ˈɪndɪkeɪtɪd/ |
 
-> **Erro mais comum:** produzir /ɪd/ para todos os verbos no passado ("looked-id, discussed-id") · detectado como erro fonológico sistemático.
+> **Erro mais comum:** produzir /ɪd/ para todos os verbos no passado ("looked-id, discussed-id"), o que é detectado como erro fonológico sistemático.
 
 **Drill:** *"The author **argued** that the researchers **conducted** a study and **indicated** that the results **showed** a pattern."* · *conducted* e *indicated* ganham /ɪd/ (sílaba extra); *argued* e *showed* terminam em /d/, sem vogal extra.
 
@@ -386,9 +386,9 @@ Uma família de erros de registro que aparece especialmente em *Write for an Aca
 
 | O que é | Como brasileiros produzem | Pares mínimos de alto risco |
 |---|---|---|
-| /ɪ/ = curto e relaxado (*bit*); /iː/ = longo e tenso (*beat*) | tudo vira /i/ do português (só o longo) | **live**/leave · **it**/eat · **sit**/seat · **bit**/beat · **fill**/feel · **this**/these · **rich**/reach · **ship**/sheep |
+| /ɪ/ = curto e relaxado (*bit*); /iː/ = longo e tenso (*beat*) | tudo vira /i/ do português (só o longo) | **live**/leave · **it**/eat · **sit**/seat · **bit**/beat · **fill**/feel · **hill**/heal · **rich**/reach · **ship**/sheep |
 
-**Por que penaliza:** *"I want to live"* vs. *"I want to leave"* · sentidos opostos. Em *Listen and Repeat*, o SpeechRater compara com o alvo; trocar /ɪ/ por /iː/ conta como palavra errada.
+**Por que penaliza:** *"I want to live"* vs. *"I want to leave"*: sentidos opostos. Em *Listen and Repeat*, o SpeechRater compara com o alvo; trocar /ɪ/ por /iː/ conta como palavra errada.
 
 **FONEMA 8: /ʌ/ (o "u" de *but*)**
 
@@ -406,7 +406,7 @@ Uma família de erros de registro que aparece especialmente em *Write for an Aca
 
 ### 4.1b Acento de palavra em cognatos: a tônica que migra
 
-Cognatos português↔inglês quase sempre têm a **sílaba tônica em posição diferente**. Errar a tônica de uma palavra que o avaliador espera ouvir (código **SS-phon** → M3 S2) é um dos sinais mais fortes de sotaque.
+Muitos cognatos português↔inglês têm a **sílaba tônica em posição diferente**. Errar a tônica de uma palavra que o avaliador espera ouvir (código **SS-phon** → M3 S2) é um dos sinais mais fortes de sotaque.
 
 | Palavra | ❌ tônica PT | ✅ tônica EN |
 |---|---|---|
@@ -421,7 +421,7 @@ Cognatos português↔inglês quase sempre têm a **sílaba tônica em posição
 | **adolescent** | a-do-les-CEN-te | a-do-**LES**-cent |
 | **preferable** | pre-fe-RÍ-vel | **PRE**-fe-ra-ble |
 | **admirable** | ad-mi-RÁ-vel | **AD**-mi-ra-ble |
-| **colleague** | col-LE-ga | **COL**-league |
+| **colleague** | co-LE-ga | **COL**-league |
 | **percent** | PER-cent | per-**CENT** |
 | **hotel / event** | (varia) | ho-**TEL** / e-**VENT** (tônica final) |
 
@@ -445,7 +445,7 @@ Já apresentado no Módulo 3 (Speaking), revisitado aqui com foco na correção.
 | Pergunta direta: *"Where is the library?"* | ↗️ ascendente | ↗️ ascendente (correto) |
 | Pergunta indireta dentro de afirmação: *"I'm not sure where the library **is**."* | ↘️ descendente | ↗️ ascendente (transferência PT) |
 
-**Por que importa:** em *Take an Interview*, candidatos frequentemente incorporam perguntas indiretas nas respostas. Entonação ascendente nelas soa como incerteza · o SpeechRater pode classificar como entonação incorreta.
+**Por que importa:** em *Take an Interview*, candidatos frequentemente incorporam perguntas indiretas nas respostas. Entonação ascendente nelas soa como incerteza, e o SpeechRater pode classificá-la como incorreta.
 
 **Drill** (entonação descendente na última palavra):
 - *"The lecture explains **why** students need feedback↘"*
@@ -506,7 +506,7 @@ Além da transferência oral, o Writing tem os próprios padrões de interferên
 | *"In my point of view"* | no meu ponto de vista | **From my perspective / In my view** |
 | *"According to my opinion"* | de acordo com minha opinião | **In my opinion** (sem "according to") |
 | *"The text makes a critique of"* | o texto faz uma crítica de | **The text critiques / criticizes** |
-| *"As we can see"* | como podemos ver | evite · coloquial demais. Use: **As demonstrated / As the evidence shows** |
+| *"As we can see"* | como podemos ver | evite: coloquial demais. Use: **As demonstrated / As the evidence shows** |
 | *"Concluding"* (para concluir) | concluindo | **In conclusion / To conclude / Ultimately** |
 | *"I will talk about"* | vou falar sobre | **This response will address / I will discuss** |
 | *"Let clear that"* / *"leave clear that"* | deixar claro que | **make it clear that / clarify** |
@@ -522,7 +522,7 @@ Além da transferência oral, o Writing tem os próprios padrões de interferên
 | *"etc." / "and so on"* numa lista | etc. | feche a lista ou use **"among others"** |
 | *"In the actual context"* | no contexto atual | **"In the current context" / "Today"** |
 
-> **No *Write an Email*:** a armadilha inversa também vale · excesso de formalidade e rodeios ("I would like to take this opportunity to humbly request if it would perhaps be possible...") soam como ruído, não registro alto. C1 no e-mail é **direto e educado**. Ver Módulo 5, Parte 5.2 (código **SW-reg**).
+> **No *Write an Email*:** a armadilha inversa também vale: excesso de formalidade e rodeios ("I would like to take this opportunity to humbly request if it would perhaps be possible...") soam como ruído, não registro alto. C1 no e-mail é **direto e educado**. Ver Módulo 5, Parte 5.2 (código **SW-reg**).
 
 ### 5.1 Mini-banco de frases seguras para o e-mail
 
@@ -570,8 +570,8 @@ Frases prontas, de registro certo, para cada movimento do *Write an Email*: evit
 
 **Pronúncia · meus pontos críticos:**
 ```
-☐ /θ/ (th surdo — think, hypothesis, throughout)
-☐ /ð/ (th sonoro — the, this, that, although)
+☐ /θ/ (th surdo: think, hypothesis, throughout)
+☐ /ð/ (th sonoro: the, this, that, although)
 ☐ /æ/ (short a — can, that, academic, challenge)
 ☐ /ɪ/ vs /iː/ (live/leave, it/eat, ship/sheep)
 ☐ /ʌ/ (but, much, result, study, discussion)
@@ -672,7 +672,7 @@ Depois de um simulado, quando você classificar um erro com um código de triage
 | **SW-verb** | M4 → W2 | 3ª pessoa -s; incontáveis; present perfect × passado; gerúndio × infinitivo | Parte 2.3-B, C, E, H |
 | **SW-synt** | M4 → W1 | ordem das palavras; sujeito duplo; adjetivo no plural; *since... so* | Parte 2.3-G, I; Parte 5 |
 | **SW-reg** | M4 → W4 + M5 → RG1/RG2 | over-formality no e-mail; *"in my opinion, I think"*; *"as we can see"* | Parte 5, Parte 5.1 |
-| **SW-lex** / **SR-lex** | M6 → V3/V6 | falsos cognatos (sentido trocado); *diverse* = vários; *consistent* = substancial | Parte 3 |
+| **SW-lex** / **SR-lex** | M6 → V3/V6 | falsos cognatos (sentido trocado); *diverse* = vários; *consistent* = substancial | Parte 3; Parte 5 (*diverse*) |
 | **SS-phon** | M3 → S1 / S2 | /θ/, /ð/, /æ/, /ɪ/–/iː/, /ʌ/, L final, epêntese, -ED; acento de palavra em cognatos | Parte 4.1, 4.1b |
 | **SS-rhythm** | M3 → S3 | ritmo silábico; entonação ascendente em declarações | Parte 4.2 |
 | **SS-gram** | M3 → S5 | 3ª pessoa -s sob pressão | Parte 2.3-C |
@@ -694,7 +694,7 @@ Este módulo tem material demais para "estudar de uma vez". O que funciona de ve
 | **10** | Ritmo + entonação | Shadowing de 1 áudio (M2), focando tônicas longas e queda final |
 | **11** | E-mail | Escreva 2 e-mails usando só o banco da Parte 5.1; cace cerimônia e contração |
 | **12–13** | Simulado parcial | Speaking + Writing de um simulado do M7; classifique cada erro com código |
-| **14** | Revisão | Os traps que ainda apareceram no dia 12–13 → lista curta para os dias finais |
+| **14** | Revisão | Os traps que ainda apareceram nos dias 12 e 13 → lista curta para os dias finais |
 
 > Depois do sprint, você **não** relê este módulo inteiro de novo. Você monitora a sua lista curta em cada simulado e, no dia D, roda só a Parte 6 marcada.
 

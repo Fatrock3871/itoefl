@@ -82,7 +82,7 @@ MODS = [
     ("mod3","03","Speaking","modulo_3_speaking.md",
      "Fonética, prosódia e respostas por função para o SpeechRater."),
     ("mod4","04","Writing","modulo_4_writing.md",
-     "Frases precisas, e-mail navegacional e discussão acadêmica."),
+     "Frases precisas, e-mail direto e educado e discussão acadêmica."),
     ("mod5","05","Registro & Retórica","modulo_5_registro.md",
      "A camada que separa 'correto' de 'banda alta': registro e densidade."),
     ("mod6","06","Vocabulário","modulo_6_vocabulary.md",
@@ -396,7 +396,7 @@ pay_gate = (
     '</div>'
     '<span class="auth-gate-kicker" id="payGateKicker">Acesso pago</span>'
     '<h2 id="payGateTitle">Libere seu acesso</h2>'
-    '<p id="payGateText">Sua conta está conectada, mas o conteúdo completo da plataforma só libera depois da compra.</p>'
+    '<p id="payGateText">Sua conta está conectada. O conteúdo completo fica disponível depois da compra.</p>'
     '<fieldset class="plan-pick" id="planPick">'
     '<legend class="auth-label">Escolha o plano</legend>'
     f'{plan_options}'
@@ -681,7 +681,7 @@ html = f'''<!DOCTYPE html>
       <p class="pwa-ios-hint" id="pwaIosHint" hidden>No iPhone ou iPad: toque em <b>Compartilhar</b> e depois em <b>Adicionar à Tela de Início</b>.</p>
     </div>
     <button type="button" class="reset-btn" id="resetBtn">↺ Reiniciar todo o progresso</button>
-    <div class="foot-note">Preparação independente baseada nas especificações ETS vigentes desde 21/jan/2026. Não afiliada à ETS. Seu progresso é salvo neste navegador.
+    <div class="foot-note">Preparação independente baseada nas especificações da ETS vigentes desde 21/jan/2026. Não afiliada à ETS. Seu progresso é salvo neste navegador.
       <span class="legal-links">{LEGAL_LINKS}</span></div>
   </aside>
 
@@ -713,7 +713,7 @@ html = f'''<!DOCTYPE html>
       <p class="mr-note" id="mrNote" hidden></p>
       <div class="mr-controls">
         <button type="button" id="mrToggleBtn" class="st-primary">● Gravar</button>
-        <button type="button" id="mrClear" hidden>Nova</button>
+        <button type="button" id="mrClear" hidden>Nova gravação</button>
       </div>
     </div>
     <button class="st-toggle" id="mrToggle" type="button" aria-label="Gravador de voz">
@@ -724,11 +724,11 @@ html = f'''<!DOCTYPE html>
     <div class="st-panel">
       <div class="st-display" id="stDisplay">30:00</div>
       <div class="st-presets" id="stPresets">
-        <button type="button" data-min="30" class="active">Reading 30′</button>
-        <button type="button" data-min="29">Listening 29′</button>
-        <button type="button" data-min="23">Writing 23′</button>
-        <button type="button" data-min="8">Speaking 8′</button>
-        <button type="button" data-min="89">Prova completa 89′</button>
+        <button type="button" data-min="30" class="active">Reading 30 min</button>
+        <button type="button" data-min="29">Listening 29 min</button>
+        <button type="button" data-min="23">Writing 23 min</button>
+        <button type="button" data-min="8">Speaking 8 min</button>
+        <button type="button" data-min="89">Prova completa 89 min</button>
       </div>
       <div class="st-controls">
         <button type="button" id="stStart" class="st-primary">Iniciar</button>
@@ -950,10 +950,10 @@ _landing = f'''<!DOCTYPE html>
   <ul class="lp-stats">{lp_stats}</ul>
   <div class="lp-feats">
     <div class="lp-feat"><h3>As quatro seções, no molde da prova</h3>
-      <p>Reading, Listening, Writing e Speaking, com os tipos de tarefa de 2026: Complete the Words de digitar,
+      <p>Reading, Listening, Writing e Speaking, com os tipos de tarefa de 2026: Complete the Words com digitação,
       Build a Sentence, Write an Email, Listen and Repeat, Take an Interview.</p></div>
     <div class="lp-feat"><h3>Explicação em português, treino em inglês</h3>
-      <p>Cada questão corrigida mostra por que a resposta está certa e por que as outras erram. Um módulo inteiro
+      <p>Cada questão corrigida mostra por que a resposta está certa e por que as outras estão erradas. Um módulo inteiro
       trata dos erros típicos de quem fala português.</p></div>
     <div class="lp-feat"><h3>Simulados e acompanhamento</h3>
       <p>Simulados progressivos com correção só na entrega, cronômetro por seção, gravador para o Speaking,
