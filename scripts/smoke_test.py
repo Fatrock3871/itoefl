@@ -1227,6 +1227,14 @@ def landing_checks():
     ]
     out["landing_numbers_match_the_site"] = announced == real and all(n > 0 for n in real)
     out["landing_linked_from_login"] = 'href="apresentacao.html"' in index or "ITOEFL_SUPABASE" not in index
+    # conta grátis: a seção, o botão no resultado do diagnóstico e a pergunta
+    # frequente dizem o mesmo resumo que o app mostra
+    summary = json.loads(re.search(r'<script type="application/json" id="freeSample">(.*?)</script>', index, re.S).group(1))["resumo"]
+    out["landing_says_what_free_account_includes"] = (
+        'id="gratis"' in page and f"A conta grátis abre {summary}." in page
+        and page.count('href="index.html#criar-conta">Criar conta grátis</a>') == 2
+        and "<summary>O que a conta grátis inclui?</summary>" in page and "pode mudar" in page
+    )
     return out
 
 

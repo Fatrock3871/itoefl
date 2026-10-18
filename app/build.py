@@ -881,9 +881,12 @@ LP_FAQ = [
      "A plataforma é um site: abre no navegador do celular, do tablet e do computador, e o progresso acompanha a sua conta."),
     ("O pagamento é mensal?",
      "Não. Cada plano é pago uma vez só, pelo Mercado Pago. Não há renovação automática nem cobrança recorrente."),
+    ("O que a conta grátis inclui?",
+     f"{FREE_SUMMARY[0].upper() + FREE_SUMMARY[1:]}. Não tem prazo e não pede cartão. Os simulados, a correção de redação e "
+     "o resto do curso são liberados por um plano. O que entra na conta grátis pode mudar, como dizem os Termos de Uso."),
     ("E se o meu acesso vencer?",
-     "O conteúdo fica bloqueado, mas a conta e o progresso continuam salvos. Se você comprar outro plano, retoma de onde parou. "
-     "Quem renova antes de vencer soma os dias ao prazo que já tinha."),
+     "O curso completo volta a ficar trancado, mas a conta, o progresso e a amostra da conta grátis continuam. Se você comprar "
+     "outro plano, retoma de onde parou. Quem renova antes de vencer soma os dias ao prazo que já tinha."),
     ("Tem reembolso?",
      f"Sim. Você pode desistir da compra em até {REFUND_DAYS} dias corridos e receber o valor inteiro de volta, sem precisar "
      "justificar. É o direito de arrependimento do artigo 49 do Código de Defesa do Consumidor, e vale para os três planos."),
@@ -922,6 +925,7 @@ _landing = f'''<!DOCTYPE html>
   <a class="legal-brand" href="apresentacao.html" aria-label="iTOEFL, início"><span class="logo">{LOGO_SVG}</span><span class="name">iTOEFL</span></a>
   <nav class="lp-nav" aria-label="Seções da página">
     <a href="#diagnostico">Diagnóstico grátis</a>
+    <a href="#gratis">Conta grátis</a>
     <a href="#planos">Planos</a>
     <a href="#duvidas">Dúvidas</a>
   </nav>
@@ -971,8 +975,19 @@ _landing = f'''<!DOCTYPE html>
     A estimativa vem de 10 questões de gramática e vocabulário: serve para escolher por onde começar, não para prever a nota da prova.</p>
     <div class="lp-cta">
       <a class="lp-btn lp-btn-main" href="#planos">Ver os planos</a>
+      <a class="lp-btn" href="index.html#criar-conta">Criar conta grátis</a>
       <button type="button" class="lp-btn" id="lpRetry">Refazer o diagnóstico</button>
     </div>
+  </div>
+</section>
+
+<section class="lp-section" id="gratis" aria-labelledby="lpFreeTitle">
+  <h2 id="lpFreeTitle">Comece com a conta grátis</h2>
+  <p class="lp-lead">A conta grátis abre {FREE_SUMMARY}. Não tem prazo e não pede cartão. Os simulados, a correção de
+  redação e o resto do curso são liberados por um plano. Se você fez o diagnóstico aqui, ele já aparece respondido na
+  conta criada neste navegador.</p>
+  <div class="lp-cta">
+    <a class="lp-btn lp-btn-main" href="index.html#criar-conta">Criar conta grátis</a>
   </div>
 </section>
 

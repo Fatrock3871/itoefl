@@ -503,7 +503,7 @@ def run():
                 b.reload(settle=1.2)
                 lp = b.eval(LANDING_STATE)
                 check("landing_desktop_has_all_sections",
-                      lp["h1"] == 1 and lp["sections"] == ["diagnostico", "planos", "duvidas"] and lp["qcards"] == 10
+                      lp["h1"] == 1 and lp["sections"] == ["diagnostico", "gratis", "planos", "duvidas"] and lp["qcards"] == 10
                       and lp["enter"] == "index.html" and lp["legal"] and lp["faq"] >= 6 and lp["resultHidden"]
                       and lp["docW"] <= lp["vw"] and not lp["over"], lp)
                 check("landing_plans_side_by_side_standard_recommended",
