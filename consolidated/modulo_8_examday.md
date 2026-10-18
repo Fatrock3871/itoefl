@@ -65,12 +65,12 @@
 
 ### D-1: dia de preservação
 
-> **Regra de ouro do D-1:** nenhum estudo novo. Nenhuma tentativa de revisar tudo. O que você não aprendeu não entra em 24 horas · mas o estresse de tentar compromete o que já está consolidado.
+> **Regra de ouro do D-1:** nenhum estudo novo. Nenhuma tentativa de revisar tudo. O que você não aprendeu não entra em 24 horas, mas o estresse de tentar compromete o que já está consolidado.
 
 | Período | Atividade | Duração |
 |---|---|---|
 | **Manhã** | Atividade fisicamente agradável e não cognitiva: caminhada, música, culinária, série. Zero TOEFL | — |
-| **Tarde** | **Ensaio mental:** feche os olhos por 10 minutos e visualize a sequência do dia seguinte · chegada ao centro, entrada, fone de ouvido, primeiro item do router de Reading, executando com calma | 10 min |
+| **Tarde** | **Ensaio mental:** feche os olhos por 10 minutos e visualize a sequência do dia seguinte: chegada ao centro, entrada, fone de ouvido, primeiro item do router de Reading, e você executando tudo com calma | 10 min |
 | **Jantar** | Refeição consistente com o que você planeja comer amanhã de manhã. Nada pesado, nada experimental | — |
 | **21h** | Desconecte-se de telas. Prepare o material: documento de identidade, confirmação de inscrição, água para a manhã | — |
 | **Meta de sono** | Deitar no horário que você vem mantendo na semana. Acordar com folga: mínimo 90 minutos antes de sair | 7–9h |
@@ -84,17 +84,17 @@
 ```
 ACORDAR (mínimo 2h antes do horário de chegada ao centro)
   ↓
-HIDRATAÇÃO IMEDIATA — 500ml de água ao acordar, antes de qualquer outra coisa
+HIDRATAÇÃO IMEDIATA: 500ml de água ao acordar, antes de qualquer outra coisa
   ↓
-CAFÉ DA MANHÃ (detalhes na Parte 3) — 90–120 minutos antes do início da prova
+CAFÉ DA MANHÃ (detalhes na Parte 3): 90–120 minutos antes do início da prova
   ↓
-CAFEÍNA (se for sua prática habitual) — 45–60 minutos antes do início
+CAFEÍNA (se for sua prática habitual): 45–60 minutos antes do início
   ↓
 REVISÃO MENTAL FINAL (10 minutos, máximo)
   Releia apenas os frameworks de abertura do Módulo 3 e os 10 marcadores do Módulo 5
   Repita sua Anchor Phrase pessoal (veja Parte 4)
   ↓
-SAÍDA COM ANTECEDÊNCIA — chegada ao centro 30 minutos antes do horário marcado
+SAÍDA COM ANTECEDÊNCIA: chegada ao centro 30 minutos antes do horário marcado
 ```
 
 ### No centro de testes
@@ -107,7 +107,7 @@ CHEGADA (30 min antes)
 CHECK-IN E SETUP (~15–20 min antes)
   Biometria (foto/digital)
   Receba folhas de rascunho + lápis
-  Ajuste o fone de ouvido — teste o volume antes de começar
+  Ajuste o fone de ouvido e teste o volume antes de começar
   ↓
 ANTES DE CLICAR EM "INICIAR"
   3 respirações profundas
@@ -133,10 +133,10 @@ Nenhum suplemento, técnica de estudo ou estratégia de prova supera os efeitos 
 
 **Protocolo de sono para os 7 dias:**
 - **D-7 a D-1:** durma e acorde em horários fixos, alinhados ao horário da prova; se ela for cedo, antecipe a hora de deitar aos poucos ao longo da semana.
-- **D-3 e D-2:** prioridade máxima · são as noites de consolidação.
+- **D-3 e D-2:** prioridade máxima: são as noites de consolidação.
 - **D-1:** é normal ter sono mais fragmentado por ansiedade. **Não entre em pânico.**
 - **Higiene de sono nos 3 dias finais:** telas desligadas 60 min antes de deitar;
-quarto frio (18–20°C); mesma hora de dormir e acordar.
+quarto fresco (18–20 °C); mesma hora de dormir e acordar.
 
 ### 🍳 Nutrição pré-exame: estabilidade glicêmica é tudo
 
@@ -175,7 +175,7 @@ O cérebro opera primariamente a partir de glicose. Alimentos de alto índice gl
 - Desidratação de apenas **1% do peso corporal** (~700ml para 70kg) produz queda
 mensurável em atenção, velocidade de resposta e memória de trabalho.
 - **Protocolo:** 500ml ao acordar; 250ml com o café; 200–300ml no trajeto.
-**Pare com grandes volumes 30 min antes do exame** (evitar ir ao banheiro durante as seções).
+**Pare com grandes volumes 30 min antes do exame** (para não precisar ir ao banheiro durante a prova).
 - **Durante a prova:** não há intervalo programado (ETS, *Information Bulletin 2026-2027*), e comida e bebida não entram na sala. A água fica para antes e depois.
 
 ### 🥜 Snack antes de entrar (a prova não tem pausa oficial)
@@ -234,7 +234,7 @@ SEGURE por 4 segundos
 [Repita 2–3 ciclos]
 ```
 
-**Use quando:** na transição entre seções e antes de clicar em "INICIAR" pela primeira vez.
+**Use:** na transição entre seções e antes de clicar em "INICIAR" pela primeira vez.
 
 ### 🚪 Protocolo 3: o selo de seção
 
@@ -244,7 +244,7 @@ A maior ameaça ao desempenho multi-seção é a contaminação emocional: uma s
 Quando uma seção terminar:
 1. Diga mentalmente: "Esta seção está selada."
 2. Suspiro fisiológico (1 ciclo)
-3. Role os ombros uma vez
+3. Gire os ombros uma vez
 4. Anchor Phrase
 5. Clique em "PRÓXIMO"
 ```
@@ -261,14 +261,14 @@ Quando perceber que errou um item ou ficou preso:
 4. Avance.
 ```
 
-> ⚠️ **Em Reading e Listening de 2026 (adaptativos):** normalmente não há como voltar a itens já respondidos dentro de um módulo. Isso torna o reset ainda mais essencial · ruminação sobre um item passado só prejudica os próximos, que você ainda pode acertar.
+> ⚠️ **Em Reading e Listening de 2026 (adaptativos):** normalmente não há como voltar a itens já respondidos dentro de um módulo. Isso torna o reset ainda mais essencial: ruminação sobre um item passado só prejudica os próximos, que você ainda pode acertar.
 
 ### ⚙️ Ensaie os protocolos ANTES, não estreie no dia D
 
 Nenhum protocolo desta parte funciona se a primeira vez que você o usa é na prova real. Integre-os aos Simulados 3 e 4 (Módulo 7):
 
 - **Suspiro fisiológico:** use uma vez ao trocar de seção em todo simulado, mesmo sem ansiedade. Vira automático.
-- **Selo de seção:** execute os 5 passos ao fim de cada seção do simulado. Cronometre · deve levar < 15 s.
+- **Selo de seção:** execute os 5 passos ao fim de cada seção do simulado. Cronometre: deve levar < 15 s.
 - **Anchor Phrase:** escolha-a **agora**, nesta semana, e repita-a no início de cada seção de cada simulado. Não invente uma frase nova no dia D.
 - **Reset de item:** toda vez que perceber que travou num item durante um drill cronometrado, diga "próximo item, página em branco" e avance. Treine a mão a clicar.
 
@@ -278,7 +278,7 @@ Nenhum protocolo desta parte funciona se a primeira vez que você o usa é na pr
 
 | Padrão | Sintoma | Protocolo |
 |---|---|---|
-| **Antecipatória** | Noite anterior, não consegue dormir, pensamentos em loop | D-1: visualização + respiração em caixa antes de deitar. Aceite que o sono será leve · e estará bem assim |
+| **Antecipatória** | Noite anterior, não consegue dormir, pensamentos em loop | D-1: visualização + respiração em caixa antes de deitar. Aceite que o sono será leve; tudo bem |
 | **De ativação** | Coração dispara ao clicar em "Iniciar" no Reading | Antes de iniciar: 3 ciclos de box breathing + Anchor Phrase + "Eu treinei para o router" |
 | **De performance** | Fica preso em itens difíceis e entra em espiral | Protocolo de reset de item. Hard rule: máximo de ~45–60 segundos por item (a média do Reading é de cerca de 35 s por item) |
 | **De resultado** | Fica pensando na nota durante o exame | Âncora de presença: *"Right here, right now. This item only."* O resultado não existe durante a prova |
@@ -290,7 +290,7 @@ Nenhum protocolo desta parte funciona se a primeira vez que você o usa é na pr
 
 > Surpresas logísticas drenam energia cognitiva antes da primeira questão. Elimine-as com antecedência.
 
-### ✅ Checklist do dia anterior (complete em D-2)
+### ✅ Checklist de véspera (complete em D-2, para ter um dia de folga)
 
 **Documentação:**
 - [ ] Documento de identidade aceito pela ETS para o seu país de prova e a sua nacionalidade: confira na página de documentos da ETS (ets.org/toefl, em *Register* → *ID requirements*), porque a regra muda de país para país. Em todos os casos o documento tem de ser **original e físico** (documento digital no celular não vale), **dentro da validade**, com **foto recente** e **assinatura**. Passaporte válido é a escolha mais segura
@@ -331,7 +331,7 @@ Muitos candidatos brasileiros fazem a prova em casa. É o **mesmo teste e o mesm
 
 | Item | Exigência |
 |---|---|
-| Sistema | Desktop ou notebook (Windows ou macOS), **não** é permitido tablet/celular/Chromebook. A versão mínima do sistema muda com o tempo: confira o requisito atual na [página de requisitos da Home Edition, no site da ETS](https://www.ets.org/toefl/test-takers/ibt/register/at-home-requirements.html) e rode a checagem de equipamento com antecedência |
+| Sistema | Desktop ou notebook (Windows ou macOS); tablet, celular e Chromebook **não** são permitidos. A versão mínima do sistema muda com o tempo: confira o requisito atual na [página de requisitos da Home Edition, no site da ETS](https://www.ets.org/toefl/test-takers/ibt/register/at-home-requirements.html) e rode a checagem de equipamento com antecedência |
 | Aplicativo | O **TOEFL Test App**, baixado antes pelo painel *My TOEFL Home*; é nele que roda a checagem de equipamento (*equipment check*) |
 | Câmera | Webcam funcional; você precisará **mostrar o ambiente e o seu documento** por ela |
 | Microfone | Externo ou embutido, desde que não seja o de um fone; testado na checagem de equipamento |
@@ -340,7 +340,7 @@ Muitos candidatos brasileiros fazem a prova em casa. É o **mesmo teste e o mesm
 
 **Ambiente da sala (o proctor verifica por câmera antes de liberar):**
 
-- Sala fechada, sozinho, porta fechada; ninguém pode entrar durante a prova
+- Você sozinho na sala, porta fechada; ninguém pode entrar durante a prova
 - Mesa e paredes livres: sem papéis, pôsteres, quadros, post-its
 - Nada nos ouvidos, nada no colo, nada no bolso
 - **Anotações:** papel comum **não** é permitido na Home Edition. As duas opções aceitas pela ETS são: (a) um **quadro branco pequeno, de mesa**, com marcador apagável, ou (b) **uma folha em branco dentro de um plástico transparente**, com marcador apagável, e a folha não pode sair do plástico em nenhum momento. Conte com mostrar o material em branco para a câmera no início e apagar tudo diante dela no fim
@@ -356,8 +356,8 @@ Muitos candidatos brasileiros fazem a prova em casa. É o **mesmo teste e o mesm
 **Durante a prova:**
 
 - **Sem pausa nenhuma:** a prova não tem intervalo programado e, na Home Edition, pausa não programada não é permitida (ETS, *Information Bulletin 2026-2027*). Vá ao banheiro antes do check-in
-- Não leia os enunciados em voz alta (exceto quando o Speaking pede): o proctor pode interpretar como ajuda externa
-- Se a conexão cair: normalmente você reconecta e retoma; **não feche o aplicativo** · aguarde a instrução
+- Não leia os enunciados em voz alta (fale só nas respostas do Speaking): o proctor pode interpretar como ajuda externa
+- Se a conexão cair: normalmente você reconecta e retoma; **não feche o aplicativo**; aguarde a instrução
 
 **Checklist Home Edition (fazer em D-2):**
 
@@ -377,7 +377,7 @@ T-40 min → Sala pronta: mesa limpa, porta fechada, celular ou espelho à mão 
 T-30 min → Abrir o TOEFL Test App e deixar tudo pronto
 T-15 min → Iniciar o check-in (a ETS só libera a partir de 15 min antes; depois do horário marcado você ainda tem 30 min, e passando disso a prova é cancelada sem reembolso)
 T-12 min → Proctor: verificação de identidade + room scan + quadro branco
-T-10 min → Aguardando liberação (pode variar — proctor libera quando o ambiente está OK)
+T-10 min → Aguardando liberação (pode variar: o proctor libera quando o ambiente está OK)
 T-05 min → 3 ciclos de box breathing + Anchor Phrase
 T-00 min → INÍCIO
 ```
@@ -401,7 +401,7 @@ Sequência oficial: **Reading → Listening → Writing → Speaking**, sem inte
 
 ### READING (~27–30 min: router + módulo adaptativo)
 
-**Estado mental:** você está no pico de energia cognitiva, e o **router** decide sua rota de dificuldade. Trate cada item do início da seção como se já valesse a nota · porque, indiretamente, vale.
+**Estado mental:** você está no pico de energia cognitiva, e o **router** decide sua rota de dificuldade. Trate cada item do início da seção como se já valesse a nota, porque, indiretamente, vale.
 
 **Protocolo de entrada:**
 - Leia o enunciado de cada task antes de começar
@@ -418,7 +418,7 @@ Sequência oficial: **Reading → Listening → Writing → Speaking**, sem inte
 
 ### LISTENING (~25–29 min: router + módulo adaptativo)
 
-**Estado mental:** modo de captura ativa · lápis na mão antes de o áudio começar. Cada áudio toca **uma única vez**.
+**Estado mental:** modo de captura ativa, lápis na mão antes de o áudio começar. Cada áudio toca **uma única vez**.
 
 **Protocolo de entrada:**
 - Leia o contexto na tela antes de o áudio iniciar (tipo de task, nº de itens)
@@ -460,7 +460,7 @@ reset acontece na tela de instruções entre uma seção e outra, sentado.
 
 ### ✍️ WRITING (~23 min: 12 itens, correção por IA)
 
-**Estado mental:** a estrutura é sua âncora. Você já treinou cada task · execute o esqueleto, não improvise.
+**Estado mental:** a estrutura é sua âncora. Você já treinou cada task: execute o esqueleto, não improvise.
 
 **Build a Sentence (10 itens, ~6 min):**
 - Corrigido por máquina, quase binário: a estrutura está certa ou não está
@@ -483,7 +483,7 @@ reset acontece na tela de instruções entre uma seção e outra, sentado.
 
 ### 🎤 SPEAKING (~8 min: 11 itens, correção 100% IA)
 
-**Estado mental:** modo de produção. O sistema motor de fala é diferente do de leitura · o Speaking vem logo após o Writing, sem pausa, e você entra "frio": articule 2–3 frases baixinho na tela de transição antes do primeiro item (na Home Edition, sem som).
+**Estado mental:** modo de produção. O sistema motor de fala é diferente do de leitura: o Speaking vem logo após o Writing, sem pausa, e você entra "frio": articule 2–3 frases baixinho na tela de transição antes do primeiro item (na Home Edition, sem som).
 
 **Listen and Repeat (7 itens):**
 - Não parafraseie. Reproduza exatamente o que ouviu: inclusive artigos e preposições
@@ -498,7 +498,7 @@ reset acontece na tela de instruções entre uma seção e outra, sentado.
 - Sem preparação e sem segunda tentativa: comece a falar imediatamente
 - Resposta rasa → código **SS-struct** (M7 Parte 6 → M3 S6 + M5 RG6)
 
-**Entre os itens:** 1 respiração + Anchor Phrase. Não avalie o item anterior · está selado.
+**Entre os itens:** 1 respiração + Anchor Phrase. Não avalie o item anterior: está selado.
 
 **Ao terminar:** é a última seção. Mantenha o ritmo até o último item: muitos afrouxam nos dois últimos (10 e 11) e perdem banda no fim.
 
@@ -510,14 +510,14 @@ reset acontece na tela de instruções entre uma seção e outra, sentado.
 
 | Cenário | O que fazer |
 |---|---|
-| **"Estou em branco no começo do Reading"** | Não fixe no primeiro item. Respire uma vez, leia o enunciado da task com calma e ataque o primeiro item de verdade: o contexto ativa a compreensão |
+| **"Estou em branco no começo do Reading"** | Não se prenda ao primeiro item. Respire uma vez, leia o enunciado da task com calma e ataque o primeiro item de verdade: o contexto ativa a compreensão |
 | **"Vi 3 alternativas plausíveis no mesmo item"** | Volte ao texto: a resposta está lá. Se não achar, elimine a mais extrema e escolha entre as 2 restantes. Não gaste mais de 60 segundos |
 | **"Acho que fui mal no router do Reading/Listening"** | Selo de seção. Você não sabe para qual módulo foi roteado, e a percepção durante a prova é sistematicamente pessimista. Ataque a próxima seção como se nada tivesse acontecido |
 | **"Não peguei a frase inteira em Listen and Repeat"** | Diga o máximo que reteve, com ritmo e entonação naturais. Uma reprodução parcial com boa prosódia pontua; o silêncio, não |
 | **"Travei em Take an Interview: 5 segundos de silêncio"** | Diga a primeira frase do esqueleto da função: *"I think..."* / *"In my experience..."*. O sistema motor de fala inicia e o resto segue |
-| **"Estou sem tempo na Academic Discussion"** | Feche o parágrafo agora: 1 frase de restatement da posição + 1 razão. Um parágrafo curto e completo pontua melhor que um longo interrompido |
-| **"O computador travou / problema técnico"** | **Centro:** levante a mão imediatamente, não tente resolver. **Home Edition:** não feche o aplicativo; aguarde o proctor pelo chat. Incidentes técnicos têm protocolo · você não é penalizado por algo fora do seu controle |
-| **"Não consegui dormir na noite anterior"** | Relembre: D-3 e D-2 foram bem dormidos. Uma noite leve depois de semanas de sono adequado não destrói a performance. O pânico sobre o sono é mais prejudicial que o sono ruim. Hidrate, coma bem, siga o plano |
+| **"Estou sem tempo na Academic Discussion"** | Feche o parágrafo agora: 1 frase que retoma a posição + 1 razão. Um parágrafo curto e completo pontua melhor que um longo interrompido |
+| **"O computador travou / problema técnico"** | **Centro:** levante a mão imediatamente, não tente resolver. **Home Edition:** não feche o aplicativo; aguarde o proctor pelo chat. Incidentes técnicos têm protocolo: você não é penalizado por algo fora do seu controle |
+| **"Não consegui dormir na noite anterior"** | Lembre-se: você dormiu bem em D-3 e D-2. Uma noite leve depois de semanas de sono adequado não destrói a performance. O pânico sobre o sono é mais prejudicial que o sono ruim. Hidrate, coma bem, siga o plano |
 | **"Cheguei atrasado ao centro"** | A regra da ETS é dura: quem chega ou faz o check-in depois do horário marcado não faz a prova e não recebe a taxa de volta. Não conte com tolerância no centro (ela só existe na Home Edition, de 30 minutos). Por isso o plano B de transporte da Parte 5 não é opcional. Se acontecer, vá assim mesmo e fale com a recepção: é a única chance |
 | **"O nome no meu documento tem uma diferença pequena da inscrição"** | Isso barra o acesso, e a ETS não devolve a taxa de quem não apresenta o documento exigido. Resolva **antes** do dia: corrija o nome na sua conta ETS assim que perceber. Um segundo documento com foto e assinatura ajuda quando falta a assinatura no principal, mas não conserta nome diferente |
 | **"Barulho começou no meio da prova (Home Edition)"** | Continue: o áudio da prova está nos alto-falantes e o Listening não pausa. Se ficar impossível, use o chat do proctor para registrar; há protocolo para interrupção de ambiente |
@@ -567,7 +567,7 @@ No fim da prova a tela pergunta se você quer **reportar** ou **cancelar** os sc
 **Quando esperar mais (1 mês+):**
 
 - O gap é de mais de meia banda em duas ou mais seções
-- O erro dominante é estrutural (ex.: **SL-dec** sistemático, ou gramática sob pressão) · isso não muda em uma semana
+- O erro dominante é estrutural (ex.: **SL-dec** sistemático, ou gramática sob pressão): isso não muda em uma semana
 
 ### 🏆 Os 7 comportamentos dos campeões: resumo final
 
@@ -585,12 +585,12 @@ No fim da prova a tela pergunta se você quer **reportar** ou **cancelar** os sc
 
 ## PARTE 9: A COLA MENTAL · UMA PÁGINA PARA O T-5 MIN
 
-Não é permitido levar nada para a prova. Esta página é o que você deve **memorizar** e rodar mentalmente nos 5 minutos antes de clicar em INICIAR, e de novo em cada transição entre seções. Releia-a todo dia na semana final até saber de cor.
+Não é permitido levar material de consulta para a sala. Esta página é o que você deve **memorizar** e rodar mentalmente nos 5 minutos antes de clicar em INICIAR, e de novo em cada transição entre seções. Releia-a todo dia na semana final até saber de cor.
 
 **Antes de INICIAR (e entre seções):**
 
 1. 3 ciclos de respiração em caixa (4-4-4-4)
-2. Anchor Phrase: _______________________ (a sua · escolhida na semana 1)
+2. Anchor Phrase: _______________________ (a sua, escolhida nesta semana)
 3. "Um item de cada vez. Eu treinei para isto."
 
 **Reading (~27–30 min):** router = peso máximo, sem "aquecer devagar". 3 filtros no *Complete the Words* (gramática → léxico → sentido). Item negativo: localize o NOT antes das opções. Ritmo constante, sem reler tudo no fim. Selo ao terminar.

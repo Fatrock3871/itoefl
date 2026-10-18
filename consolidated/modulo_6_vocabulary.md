@@ -19,7 +19,7 @@ O maior erro de preparação de vocabulário é estudar palavras que você **rec
 | **High-Frequency TOEFL Vocabulary** | Palavras que aparecem nos textos e áudios do exame | **Compreensão imediata**: entender na hora, sem hesitar | Reading (*Read an Academic Passage*, *Complete the Words*) + Listening (*Listen to an Academic Talk*) |
 | **Low-Frequency High-Impact Vocabulary** | Termos sofisticados que **você** insere para ativar os gatilhos de pontuação | **Produção ativa**: usar com precisão sob pressão | Speaking (*Take an Interview*: variedade lexical) + Writing (*Write for an Academic Discussion*: sofisticação lexical do e-rater) |
 
-> ⚠️ **Regra de ativação:** uma palavra só deve ser usada em *Take an Interview* quando você consegue empregá-la em uma frase completa e correta em menos de 3 segundos. Se precisar pensar mais que isso, ela ainda é passiva · continue usando-a só no Writing até atingir automaticidade.
+> ⚠️ **Regra de ativação:** uma palavra só deve ser usada em *Take an Interview* quando você consegue empregá-la em uma frase completa e correta em menos de 3 segundos. Se precisar pensar mais que isso, ela ainda é passiva: continue usando-a só no Writing até atingir automaticidade.
 
 ### O protocolo de 4 níveis de domínio
 
@@ -49,11 +49,11 @@ O maior erro de preparação de vocabulário é estudar palavras que você **rec
 |---|---|---|---|---|
 | **curriculum** | n. | grade curricular; conjunto estruturado de conteúdos de um curso | syllabus; course of study | *"A well-designed curriculum not only sequences content logically but actively scaffolds the development of higher-order thinking skills."* |
 | **assessment** | n. | avaliação (de aprendizagem ou desempenho) | evaluation; appraisal | *"Formative assessment, when integrated continuously into instruction, provides educators with actionable data to adjust pedagogy in real time."* |
-| **pedagogy** | n. | metodologia e prática de ensino | teaching methodology; instructional approach | *"Progressive pedagogy emphasizes student agency and inquiry over passive reception of pre-determined content."* |
+| **pedagogy** | n. | metodologia e prática de ensino | teaching methodology; instructional approach | *"Progressive pedagogy emphasizes student agency and inquiry over passive reception of predetermined content."* |
 | **cognitive** | adj. | cognitivo; relativo a processos mentais | intellectual; mental | *"The cognitive demands of simultaneous note-taking and active listening are substantially greater in a second language than in one's native tongue."* |
 | **facilitate** | v. | facilitar; tornar possível ou mais fácil | to enable; to foster | *"Digital platforms facilitate collaborative learning across geographic boundaries, effectively democratizing access to high-quality instruction."* |
 | **retention** | n. | retenção; capacidade de lembrar informação aprendida | recall; consolidation | *"Spaced repetition is consistently shown to enhance long-term retention by leveraging the brain's natural memory consolidation processes."* |
-| **intervention** | n. | intervenção educacional; programa deliberado de melhoria | program; remediation | *"Early literacy interventions targeting children between ages three and five yield disproportionately large returns in academic achievement over the long term."* |
+| **intervention** | n. | intervenção educacional; programa deliberado de melhoria | program; remediation | *"Early literacy interventions targeting children between the ages of three and five yield disproportionately large returns in academic achievement over the long term."* |
 | **inquiry-based** | adj. | baseado em investigação ativa pelo aluno | investigative; student-directed | *"Inquiry-based learning environments cultivate intellectual curiosity by positioning students as active generators of knowledge rather than passive recipients."* |
 | **collaboration** | n. | colaboração; trabalho conjunto entre indivíduos ou grupos | teamwork; joint effort | *"Structured collaboration among students not only deepens conceptual understanding but also develops the interpersonal competencies that professional contexts increasingly demand."* |
 | **standardized** | adj. | padronizado; desenvolvido para aplicação uniforme | uniform; regulated | *"Critics argue that standardized testing, by design, privileges test-taking proficiency over authentic academic competence."* |
@@ -62,7 +62,7 @@ O maior erro de preparação de vocabulário é estudar palavras que você **rec
 
 | Palavra | Cat. | Significado (PT) | Sinônimo acadêmico | Exemplo: nível nota máxima |
 |---|---|---|---|---|
-| **productivity** | n. | produtividade; eficiência na geração de output | output efficiency | *"Remote work arrangements have, in many documented cases, increased individual productivity while simultaneously reducing organizational overhead costs."* |
+| **productivity** | n. | produtividade; eficiência na geração de resultados | output efficiency | *"Remote work arrangements have, in many documented cases, increased individual productivity while simultaneously reducing organizational overhead costs."* |
 | **innovation** | n. | inovação; introdução de novos processos, produtos ou ideias | advancement; novelty | *"Sustained innovation in any sector requires not merely creative talent but institutional conditions that tolerate and even reward productive failure."* |
 | **stakeholder** | n. | parte interessada; quem é afetado ou tem interesse numa organização | interested party; constituent | *"Effective corporate governance requires systematically accounting for the interests of all stakeholders, not solely those of shareholders."* |
 | **viable** | adj. | viável; capaz de funcionar de forma sustentável | feasible; workable | *"For a renewable energy transition to be economically viable, the per-unit cost of clean energy must reach parity with (or fall below) that of fossil fuels."* |
@@ -130,7 +130,7 @@ O maior erro de preparação de vocabulário é estudar palavras que você **rec
 |---|---|---|---|---|
 | **metacognition** | n. | metacognição; consciência e controle dos próprios processos de pensamento | self-awareness of thinking | *"Students who develop metacognitive skills (the capacity to monitor and regulate their own learning processes) consistently outperform peers of comparable baseline ability."* |
 | **scaffolding** | n. | andaime pedagógico; suporte gradualmente removido conforme o aluno ganha autonomia | structured support | *"Effective instructional scaffolding demands that teachers accurately diagnose the learner's current capability and calibrate the degree of support accordingly."* |
-| **inculcate** | v. | inculcar; instalar crenças, valores ou habilidades através de repetição | to instill; to teach firmly | *"The most enduring contribution of education may not be the transmission of specific knowledge but the inculcation of intellectual habits that outlast the content itself."* |
+| **inculcate** | v. | inculcar; incutir crenças, valores ou hábitos por repetição | to instill; to teach firmly | *"The most enduring contribution of education may not be the transmission of specific knowledge but the inculcation of intellectual habits that outlast the content itself."* |
 | **epistemic** | adj. | epistêmico; relativo à natureza, validade e limites do conhecimento | knowledge-related | *"A curriculum that neglects epistemic humility (the acknowledgment that knowledge is provisional) risks producing graduates who mistake certainty for understanding."* |
 | **autodidactic** | adj. | autodidata; relativo a quem se instrui de forma independente | self-taught | *"The proliferation of high-quality open educational resources has created genuinely viable pathways for autodidactic learners to acquire skills previously accessible only through formal enrollment."* |
 | **heuristic** | n./adj. | heurística; abordagem prática de resolução de problemas sem garantia de solução ótima | rule of thumb | *"Expert practitioners rely less on exhaustive analysis and more on heuristics (refined through experience) that reliably identify productive approaches to familiar problems."* |
@@ -160,11 +160,11 @@ O maior erro de preparação de vocabulário é estudar palavras que você **rec
 |---|---|---|---|---|
 | **confounding variable** | n. | variável de confundimento; fator que influencia tanto a variável independente quanto a dependente, distorcendo resultados | hidden factor | *"The persistent failure to control for socioeconomic status as a confounding variable has undermined the conclusions of a significant portion of educational psychology research."* |
 | **extrapolate** | v. | extrapolar; estender dados conhecidos para prever resultados desconhecidos | to project; to infer beyond | *"Caution is warranted when extrapolating findings from laboratory settings to real-world contexts, as ecological validity is rarely guaranteed."* |
-| **substantiate** | v. | substanciar; fornecer evidências concretas para apoiar uma afirmação | to support; to corroborate | *"Before a scientific claim can be incorporated into policy, it must be substantiated by multiple independent lines of evidence gathered under methodologically rigorous conditions."* |
+| **substantiate** | v. | fundamentar, comprovar; fornecer evidências concretas para apoiar uma afirmação | to support; to corroborate | *"Before a scientific claim can be incorporated into policy, it must be substantiated by multiple independent lines of evidence gathered under methodologically rigorous conditions."* |
 | **counterintuitive** | adj. | contraintuitivo; contrário ao esperado pelo senso comum | surprising; paradoxical | *"One of the most counterintuitive findings in behavioral economics is that providing individuals with more choices frequently reduces, rather than enhances, their overall satisfaction."* |
 | **robust** | adj. | robusto; forte, confiável e resistente a erros metodológicos | reliable; sound | *"The causal claim gains credibility when supported by robust findings across multiple independent studies employing distinct methodological approaches."* |
 | **elucidate** | v. | elucidar; tornar algo claro através de explicação cuidadosa | to clarify; to illuminate | *"The lecture's primary purpose is to elucidate the mechanism by which the phenomenon described in the reading passage actually operates at the molecular level."* |
-| **corollary** | n. | corolário; consequência direta e lógica de uma proposição anterior | logical result | *"A direct corollary of the findings on sleep deprivation is that educational institutions which begin classes at earlier hours are, by design, undermining the cognitive performance of the students they serve."* |
+| **corollary** | n. | corolário; consequência direta e lógica de uma proposição anterior | logical result | *"A direct corollary of the findings on sleep deprivation is that educational institutions that begin classes at earlier hours are, by design, undermining the cognitive performance of the students they serve."* |
 | **posit** | v. | postular; propor ou assumir como verdadeiro para fins de argumento | to propose; to assert | *"The professor posits that the simultaneous emergence of agriculture across geographically distant regions reflects a universal threshold in human cognitive complexity rather than cultural diffusion."* |
 | **tenuous** | adj. | tênue; fraco, pouco convincente, facilmente contestável | weak; fragile | *"The connection between screen time and adverse mental health outcomes in adolescents remains statistically tenuous once pre-existing conditions are rigorously controlled for."* |
 | **corroborate** | v. | corroborar; confirmar uma afirmação através de evidência independente | to confirm; to verify | *"The lecture's experimental evidence directly corroborates the theoretical prediction made in the reading, providing the empirical grounding that the model alone could not supply."* |
@@ -327,7 +327,7 @@ O *Complete the Words* traz um parágrafo acadêmico curto (cerca de 70 palavras
 | **counter- / contra-** | contra | *counterargument, counterproductive, counterintuitive* |
 | **inter-** | entre | *interdependent, interdisciplinary, interoperability* |
 | **pre- / post-** | antes / depois | *predate, precondition, post-industrial, postpone* |
-| **sub-** | abaixo / parte de | *subset, subsequent, substandard, subsidiary* |
+| **sub-** | abaixo / parte de | *subset, subcategory, substandard, subsidiary* |
 | **co- / con-** | junto | *coexist, coherent, converge, collaborate* |
 
 ### 5.3 Sufixos que definem a classe da palavra (para *Complete the Words*)
@@ -353,7 +353,7 @@ O *Complete the Words* traz um parágrafo acadêmico curto (cerca de 70 palavras
 
 | Par | Diferença | Uso correto |
 |---|---|---|
-| **affect / effect** | *affect* = verbo (influenciar); *effect* = substantivo (resultado): *effect* como verbo = "causar/implementar", raro | *"The policy **affected** enrollment"; "the **effect** on enrollment was small"* |
+| **affect / effect** | *affect* = verbo (influenciar); *effect* = substantivo (resultado); *effect* como verbo = "causar/implementar", raro | *"The policy **affected** enrollment"; "the **effect** on enrollment was small"* |
 | **imply / infer** | quem fala **implies** (sugere); quem ouve **infers** (deduz) | *"The author implies X; from this the reader infers Y."* |
 | **comprise / compose / constitute** | o todo **comprises** as partes; as partes **compose/constitute** o todo | *"The report comprises four sections"; "four sections constitute the report"*: nunca *"is comprised of"* em registro alto |
 | **among / between** | *between* = 2 (ou relações par-a-par); *among* = grupo indistinto | *"a distinction between the two"; "common among students"* |
@@ -467,7 +467,7 @@ O Listening usa muito phrasal verb onde o brasileiro espera o verbo latino. Reco
 
 ## PARTE 8: O KIT DE EMERGÊNCIA · AS 50 PALAVRAS DE MAIOR ROI
 
-> Para quem tem pouco tempo: as 50 palavras com maior retorno por hora de estudo · combinando frequência no exame e impacto na pontuação quando usadas por você. Priorize-as acima de qualquer outra lista.
+> Para quem tem pouco tempo: as 50 palavras com maior retorno por hora de estudo, combinando frequência no exame e impacto na pontuação quando usadas por você. Priorize-as acima de qualquer outra lista.
 
 | # | Palavra | Cat. | Use no Speaking quando... | Use no Writing quando... |
 |---|---|---|---|---|
@@ -643,7 +643,7 @@ Para cada frase, escolha o verbo que combina com a postura indicada entre colche
 
 ### DRILL 8: Ativação (inserção no início da frase)
 
-Para cada palavra, escreva **uma** frase própria em que ela apareça **nas primeiras 4 palavras**. Cronometre: 15 segundos por frase. Se passar disso, a palavra ainda é passiva · mantenha-a só no Writing.
+Para cada palavra, escreva **uma** frase própria em que ela apareça **nas primeiras 4 palavras**. Cronometre: 15 segundos por frase. Se passar disso, a palavra ainda é passiva: mantenha-a só no Writing.
 
 *proliferation · counterintuitive · exacerbate · pervasive · underscore · viable · systemic · inherent*
 
@@ -654,7 +654,7 @@ Para cada palavra, escreva **uma** frase própria em que ela apareça **nas prim
 Cada frase tem **um** erro de vocabulário (forma, colocação, falso cognato ou nuance). Encontre e corrija.
 
 1. "Eventually, the study has three limitations that the authors admit."
-2. "The data is comprised of responses from 400 students."
+2. "The data are comprised of responses from 400 students."
 3. "This raises a concern about if the method is valid."
 4. "The professor pretends that the effect is purely cultural."
 5. "The two results corroborate to each other."
@@ -665,7 +665,7 @@ Cada frase tem **um** erro de vocabulário (forma, colocação, falso cognato ou
 **Gabarito:**
 
 1. *Eventually* → **"The study has three limitations..."** (falso cognato: *eventually* = "no fim"; o aluno pensou em "eventualmente". Se a ideia era "possivelmente", use *possibly*; aqui o mais limpo é cortar)
-2. *is comprised of* → **"comprises"** ou **"is composed of"**
+2. *are comprised of* → **"comprise"** ou **"are composed of"**
 3. *about if* → **"about whether"**
 4. *pretends* → **"claims"** ou **"argues"** (falso cognato: *pretend* = fingir)
 5. *corroborate to each other* → **"corroborate each other"** (sem preposição)
@@ -700,11 +700,11 @@ A frase começa **com** a palavra de impacto, não termina nela.
 
 - **Reading / Listening:** o vocabulário da Parte 2 aparece nos textos e áudios.
 Reconhecimento lento = pontos perdidos em *Read an Academic Passage* e *Listen to an Academic Talk*, além de dificuldade em *Complete the Words*.
-- **Take an Interview:** a rubrica premia **variedade lexical** · 2 a 3 palavras
+- **Take an Interview:** a rubrica premia **variedade lexical**: 2 a 3 palavras
 da Parte 3/8 por resposta, inseridas no começo da frase, elevam a banda sem custar fluência.
 - **Write an Email:** vocabulário navegacional preciso (*request an extension,
 clarify the requirements, reschedule*), não termos acadêmicos raros.
-- **Write for an Academic Discussion:** é onde a Parte 3 rende mais · há tempo
+- **Write for an Academic Discussion:** é onde a Parte 3 rende mais: há tempo
 para inserir 4 a 6 termos de impacto com precisão.
 
 ---
@@ -730,7 +730,7 @@ Depois de cada drill de produção (Speaking/Writing), classifique cada erro lex
 | | | | | |
 | | | | | |
 
-> Se **V5** domina, você está tentando ativar palavras cedo demais: recue para menos palavras, mais repetição. Se **V1/V2** dominam, o problema é forma e colocação, não repertório: foque as Seções 4 e 5, não em aprender palavras novas.
+> Se **V5** domina, você está tentando ativar palavras cedo demais: recue para menos palavras, mais repetição. Se **V1/V2** dominam, o problema é forma e colocação, não repertório: concentre-se nas Partes 4 e 5, não em aprender palavras novas.
 
 ---
 
@@ -741,7 +741,7 @@ Depois de cada drill de produção (Speaking/Writing), classifique cada erro lex
 - [ ] Sei aprender por **família de palavras**, não por palavra solta, e identificar a forma pela função sintática
 - [ ] Conheço os prefixos/sufixos que me deixam adivinhar palavras novas em Reading
 - [ ] Não caio mais nos falsos cognatos acadêmicos (*eventually, actually, pretend, realize, comprehensive, sensible*)
-- [ ] Sei que o verbo de reporte (*claim / argue / demonstrate / concede*) carrega postura: e escolho o certo
+- [ ] Sei que o verbo de reporte (*claim / argue / demonstrate / concede*) carrega postura e escolho o certo
 - [ ] Reconheço os sinalizadores de estrutura em palestras e os phrasal verbs de conversas de campus
 - [ ] Escolhi as 50 palavras do Kit de Emergência como prioridade
 - [ ] Comecei o plano de 30 dias de ativação
