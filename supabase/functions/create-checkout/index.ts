@@ -56,6 +56,10 @@ Deno.serve(async (req) => {
       if (typeof body?.coupon === "string") couponCode = body.coupon.trim();
       planId = body?.plan;
     } catch { /* corpo vazio cai na recusa de plano abaixo */ }
+    // Com SITE_URL definido (secret do Supabase), o retorno do pagamento vai
+    // sempre para o site oficial e ignora o que o navegador mandou.
+    const siteUrl = (Deno.env.get("SITE_URL") || "").trim().replace(/\/+$/, "");
+    if (siteUrl) origin = siteUrl;
 
     const plan = findPlan(planId);
     if (!plan) {

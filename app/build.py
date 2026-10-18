@@ -212,6 +212,12 @@ except FileNotFoundError:
     pass
 except (json.JSONDecodeError, OSError) as _e:
     print(f"supabase: config invalida ({_e}), seguindo offline")
+# build de CI (Cloudflare Pages ligado ao repositório): o supabase_config.json
+# não vai para o Git, então os mesmos dois valores públicos podem vir do ambiente
+if not (supa_url and supa_key):
+    import os as _os
+    supa_url = _os.environ.get("SUPABASE_URL", "").strip()
+    supa_key = _os.environ.get("SUPABASE_PUBLISHABLE_KEY", "").strip()
 
 SUPA_HEAD = ""
 if supa_url and supa_key:
