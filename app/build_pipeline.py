@@ -618,7 +618,7 @@ def main():
     frag = {
         "mod0": build_mod0(),
         "mod1": build_mod1(),  # Grupos A/B/C (Action Drills) interativos, 67 itens
-        "mod2": build_mod2(),  # Grupos A/B/C/D (Action Drills) interativos, 51 itens
+        "mod2": build_mod2(),  # Grupos A/B/C/D (Action Drills) interativos, 36 itens
         "mod3": build_mod3(),  # formulário de registro de erros (Parte 7)
         "mod4": build_mod4(),  # Build a Sentence + registro de erros
         "mod5": build_mod5(),  # formulário de registro de erros (Parte 9)

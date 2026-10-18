@@ -387,13 +387,13 @@ MOD2_ACTION_DRILLS_A = [
 ]
 
 # PARTE 5 (Action Drills) do M2, Grupo B: Listen to a Conversation — 3
-# diálogos, 12 itens ao todo.
+# diálogos com 2 perguntas cada (6 itens), como na prova de 2026.
 MOD2_ACTION_DRILLS_B = [
     {
         "id": "mod2-b1",
         "title": "Drill B1 · Advising Office · alvo: 3 min",
         "level": "B1–B2",
-        "objective": "Leia o diálogo (ou peça pra alguém ler em voz alta) e responda às 4 questões. Tempo-alvo: 3 minutos.",
+        "objective": "Leia o diálogo (ou peça pra alguém ler em voz alta) e responda às 2 questões. Tempo-alvo: 3 minutos.",
         "passage_html": """<p><em>Narrator: Listen to a conversation between a student and an academic advisor.</em></p>
 <p><strong>Student:</strong> Hi, I wanted to ask about switching one of my electives. I'm in Intro to Statistics, but I'd rather take Data Visualization this term.</p>
 <p><strong>Advisor:</strong> Let me check... okay, Data Visualization has space. But it has Statistics as a prerequisite — have you completed that?</p>
@@ -407,22 +407,16 @@ MOD2_ACTION_DRILLS_B = [
             {"num": "B1.1", "prompt": "Gist-purpose. Why does the student visit the advising office?",
              "options": {"A": "To complain about a scheduling conflict between two required courses", "B": "To request a change from one elective to another", "C": "To register for classes for the first time", "D": "To find out why she was removed from a course"},
              "correct": "B", "explanation": "A estudante quer \"switch one of my electives\". (A) sem conflito de horário; (C) já está matriculada; (D) está fora do que foi dito."},
-            {"num": "B1.2", "prompt": "Detail. What problem does the advisor identify?",
-             "options": {"A": "Data Visualization is already full", "B": "The student failed Statistics once already", "C": "Data Visualization requires Statistics, which the student hasn't completed", "D": "The student can't take electives outside her major"},
-             "correct": "C", "explanation": "\"It has Statistics as a prerequisite... You'd need to finish Statistics first.\" (A) é o oposto (há vaga); (B)/(D) não ditos."},
-            {"num": "B1.3", "prompt": "Function. Why does the advisor ask whether the student has a coding background?",
+            {"num": "B1.2", "prompt": "Function. Why does the advisor ask whether the student has a coding background?",
              "options": {"A": "To check whether she qualifies for a scholarship", "B": "To suggest she switch majors", "C": "To assess whether the instructor might realistically grant a waiver", "D": "To recommend a different course"},
              "correct": "C", "explanation": "A pergunta avalia se a professora poderia dar um <em>waiver</em>. (A)/(B)/(D) sem base no diálogo."},
-            {"num": "B1.4", "prompt": "Detail. What does the advisor do at the end?",
-             "options": {"A": "Enrolls the student in Data Visualization", "B": "Gives the student the instructor's contact information", "C": "Schedules a follow-up meeting", "D": "Tells the student to wait until next semester"},
-             "correct": "B", "explanation": "\"I'll send you her contact information now.\" (A) a matrícula não é feita ali; (C)/(D) não ditos."},
         ],
     },
     {
         "id": "mod2-b2",
         "title": "Drill B2 · Library Reserve Desk · alvo: 3 min",
         "level": "B1–B2",
-        "objective": "Leia o diálogo (ou peça pra alguém ler em voz alta) e responda às 4 questões. Tempo-alvo: 3 minutos.",
+        "objective": "Leia o diálogo (ou peça pra alguém ler em voz alta) e responda às 2 questões. Tempo-alvo: 3 minutos.",
         "passage_html": """<p><em>Narrator: Listen to a conversation between a student and a librarian.</em></p>
 <p><strong>Student:</strong> Hi — I'm looking for a book my professor put on reserve for the history seminar. It's <em>The Making of the Atlantic World</em>.</p>
 <p><strong>Librarian:</strong> Let me look... yes, we have two copies on reserve. Reserve items are two-hour loans, in-library use only. You can't take them out of the building.</p>
@@ -432,16 +426,10 @@ MOD2_ACTION_DRILLS_B = [
 <p><strong>Librarian:</strong> The catalog says one copy is in. If it's not on the shelf, come back and I'll place a hold on the reserve copy for you to use here.</p>
 <p><strong>Student:</strong> Thanks — I'll check the stacks first.</p>""",
         "items": [
-            {"num": "B2.1", "prompt": "Gist-purpose. What is the student trying to do?",
-             "options": {"A": "Return an overdue book", "B": "Get a book she needs for an essay due Monday", "C": "Renew a book she already borrowed", "D": "Report that a reserve book is missing"},
-             "correct": "B", "explanation": "Ela quer um livro para um ensaio com prazo na segunda. (A) não é devolução; (C) não é renovação; (D) o livro não está perdido."},
-            {"num": "B2.2", "prompt": "Detail. What is the rule for reserve items?",
+            {"num": "B2.1", "prompt": "Detail. What is the rule for reserve items?",
              "options": {"A": "They can be borrowed for three weeks", "B": "They are two-hour loans, for use inside the library only", "C": "They cannot be used by undergraduates", "D": "They must be requested 24 hours in advance"},
              "correct": "B", "explanation": "\"Two-hour loans, in-library use only... can't take them out of the building.\" (A) descreve o exemplar da circulação; (C)/(D) não ditos."},
-            {"num": "B2.3", "prompt": "Detail. What does the librarian suggest instead?",
-             "options": {"A": "Buying the book at the campus bookstore", "B": "Borrowing the circulating copy from the fourth-floor stacks", "C": "Asking the professor for a personal copy", "D": "Waiting until Monday when more copies arrive"},
-             "correct": "B", "explanation": "\"There's a circulating copy in the stacks, on the fourth floor. That one you can take out.\" (A)/(C)/(D) não sugeridos."},
-            {"num": "B2.4", "prompt": "Inference. What will the student probably do next?",
+            {"num": "B2.2", "prompt": "Inference. What will the student probably do next?",
              "options": {"A": "Place a hold on the reserve copy immediately", "B": "Go to the fourth floor to look for the circulating copy", "C": "Leave the library without the book", "D": "Ask the professor to extend the deadline"},
              "correct": "B", "explanation": "\"I'll check the stacks first.\" Inferência direta. (A) só se não achar; (C)/(D) contradizem a intenção declarada."},
         ],
@@ -450,7 +438,7 @@ MOD2_ACTION_DRILLS_B = [
         "id": "mod2-b3",
         "title": "Drill B3 · After Class · alvo: 3 min",
         "level": "B1–B2",
-        "objective": "Leia o diálogo (ou peça pra alguém ler em voz alta) e responda às 4 questões. Tempo-alvo: 3 minutos.",
+        "objective": "Leia o diálogo (ou peça pra alguém ler em voz alta) e responda às 2 questões. Tempo-alvo: 3 minutos.",
         "passage_html": """<p><em>Narrator: Listen to a conversation between a student and a professor.</em></p>
 <p><strong>Student:</strong> Professor, do you have a minute? I'm a bit lost on the second essay prompt.</p>
 <p><strong>Professor:</strong> Of course. Which part?</p>
@@ -461,16 +449,10 @@ MOD2_ACTION_DRILLS_B = [
 <p><strong>Student:</strong> Got it. And length — still fifteen hundred words?</p>
 <p><strong>Professor:</strong> Fifteen hundred, give or take a hundred. Don't pad it.</p>""",
         "items": [
-            {"num": "B3.1", "prompt": "Gist-purpose. Why does the student talk to the professor?",
-             "options": {"A": "To ask for an extension on the essay", "B": "To clarify what the essay prompt is asking for", "C": "To dispute a grade on the first essay", "D": "To request a different topic"},
-             "correct": "B", "explanation": "\"I'm a bit lost on the second essay prompt.\" (A) não pede prazo; (C) não é sobre nota; (D) não pede outro tema."},
-            {"num": "B3.2", "prompt": "Detail. According to the professor, what does \"evaluate\" mean here?",
+            {"num": "B3.1", "prompt": "Detail. According to the professor, what does \"evaluate\" mean here?",
              "options": {"A": "Summarize the argument accurately", "B": "Simply agree or disagree with the argument", "C": "Weigh the argument's strengths, weaknesses, and use of evidence", "D": "Compare the argument with another author's"},
              "correct": "C", "explanation": "\"Weigh the argument: where is it strong, where is it weak, and does the evidence actually support the conclusion?\" (A)/(B) o professor diz que \"evaluate\" é <strong>nenhum</strong> dos dois; (D) não dito."},
-            {"num": "B3.3", "prompt": "Detail. What balance between summary and evaluation does the professor recommend?",
-             "options": {"A": "Half summary, half evaluation", "B": "All evaluation, no summary", "C": "About one-third summary, two-thirds evaluation", "D": "A brief summary followed by a personal opinion"},
-             "correct": "C", "explanation": "\"Maybe a third summary, two-thirds evaluation.\""},
-            {"num": "B3.4", "prompt": "Meaning of an expression. What does the professor mean by \"Don't pad it\"?",
+            {"num": "B3.2", "prompt": "Meaning of an expression. What does the professor mean by \"Don't pad it\"?",
              "options": {"A": "Write more than 1,500 words to be safe", "B": "Don't add filler just to reach the word count", "C": "Use larger margins and spacing", "D": "Include as many quotations as possible"},
              "correct": "B", "explanation": "\"Don't pad it\" = não encher linguiça para bater a contagem de palavras. (A) é o oposto; (C)/(D) estão fora do que foi dito."},
         ],
@@ -478,23 +460,20 @@ MOD2_ACTION_DRILLS_B = [
 ]
 
 # PARTE 5 (Action Drills) do M2, Grupo C: Listen to an Announcement — 3
-# anúncios, 11 itens ao todo.
+# anúncios com 2 perguntas cada (6 itens), como na prova de 2026.
 MOD2_ACTION_DRILLS_C = [
     {
         "id": "mod2-c1",
         "title": "Drill C1 · Library Services · alvo: 2 min",
         "level": "B1",
-        "objective": "Leia o anúncio (ou peça pra alguém ler em voz alta) e responda às 3 questões. Tempo-alvo: 2 minutos.",
+        "objective": "Leia o anúncio (ou peça pra alguém ler em voz alta) e responda às 2 questões. Tempo-alvo: 2 minutos.",
         "passage_html": """<p><em>Narrator: Listen to an announcement about a change to library services.</em></p>
 <p><strong>Speaker:</strong> Attention, students. Starting next Monday, the Main Library's third-floor reading room will be closed for renovation through the end of the month. During this period you can use the East Wing reading room instead, which keeps its regular hours. Reserved study rooms originally booked for the third floor have already been transferred automatically to the East Wing — you don't need to rebook. However, if your reservation was for a room with audiovisual equipment, please double-check availability, since not all East Wing rooms are equipped. Questions go to the circulation desk.</p>""",
         "items": [
-            {"num": "C1.1", "prompt": "Detail. When does the closure begin?",
-             "options": {"A": "Today", "B": "Next Monday", "C": "At the end of the month", "D": "Next semester"},
-             "correct": "B", "explanation": "\"Starting next Monday...\" (C) confunde início com fim do período."},
-            {"num": "C1.2", "prompt": "Detail. What happens to previously reserved study rooms?",
+            {"num": "C1.1", "prompt": "Detail. What happens to previously reserved study rooms?",
              "options": {"A": "They are canceled and must be rebooked", "B": "They are automatically transferred to the East Wing", "C": "They stay on the third floor", "D": "They are honored only if confirmed by email"},
              "correct": "B", "explanation": "\"Transferred automatically to the East Wing — you don't need to rebook.\" (A) é o oposto; (D) adiciona uma condição não dita."},
-            {"num": "C1.3", "prompt": "Function. Why does the speaker mention audiovisual equipment?",
+            {"num": "C1.2", "prompt": "Function. Why does the speaker mention audiovisual equipment?",
              "options": {"A": "To announce that all AV equipment is being removed", "B": "To tell students to avoid using AV equipment during renovations", "C": "To warn that not every transferred room has the same equipment as before", "D": "To advertise a new AV rental service"},
              "correct": "C", "explanation": "Aviso prático de que \"not all East Wing rooms are equipped\". (A)/(D) exageram; (B) está fora do que foi dito."},
         ],
@@ -503,20 +482,14 @@ MOD2_ACTION_DRILLS_C = [
         "id": "mod2-c2",
         "title": "Drill C2 · Course Registration · alvo: 2 min",
         "level": "B1",
-        "objective": "Leia o anúncio (ou peça pra alguém ler em voz alta) e responda às 4 questões. Tempo-alvo: 2 minutos.",
+        "objective": "Leia o anúncio (ou peça pra alguém ler em voz alta) e responda às 2 questões. Tempo-alvo: 2 minutos.",
         "passage_html": """<p><em>Narrator: Listen to an announcement about course registration.</em></p>
 <p><strong>Speaker:</strong> A reminder to all second-year students: registration for spring courses opens this Thursday at 8 a.m. and closes the following Wednesday at midnight. Register early — popular courses fill within hours. If a course you need is full, add yourself to the waitlist rather than emailing the instructor; the system releases spots automatically as students drop, and it works strictly in waitlist order. One change this year: the add/drop period after classes begin has been shortened from two weeks to one, so finalize your schedule before the term starts, not after.</p>""",
         "items": [
-            {"num": "C2.1", "prompt": "Detail. When does registration close?",
-             "options": {"A": "Thursday at 8 a.m.", "B": "The following Wednesday at midnight", "C": "One week after classes begin", "D": "Two weeks after classes begin"},
-             "correct": "B", "explanation": "\"Closes the following Wednesday at midnight.\" (A) é a abertura; (C)/(D) confundem com o add/drop."},
-            {"num": "C2.2", "prompt": "Detail. What should a student do if a course is full?",
+            {"num": "C2.1", "prompt": "Detail. What should a student do if a course is full?",
              "options": {"A": "Email the instructor to ask for a spot", "B": "Register for a different course permanently", "C": "Add themselves to the waitlist", "D": "Wait until the add/drop period"},
              "correct": "C", "explanation": "\"Add yourself to the waitlist rather than emailing the instructor.\" (A) é explicitamente desaconselhado."},
-            {"num": "C2.3", "prompt": "Detail. What has changed this year?",
-             "options": {"A": "Registration now opens earlier in the day", "B": "The add/drop period has been shortened from two weeks to one", "C": "Waitlists are no longer used", "D": "Second-year students register last"},
-             "correct": "B", "explanation": "\"The add/drop period... has been shortened from two weeks to one.\" (A)/(C)/(D) não ditos."},
-            {"num": "C2.4", "prompt": "Inference. Why does the speaker emphasize finalizing the schedule before the term?",
+            {"num": "C2.2", "prompt": "Inference. Why does the speaker emphasize finalizing the schedule before the term?",
              "options": {"A": "Because instructors will not answer email during the term", "B": "Because there will be less time to change courses once classes start", "C": "Because spring courses are harder than fall courses", "D": "Because registration reopens midway through the term"},
              "correct": "B", "explanation": "Add/drop mais curto → menos tempo para ajustar depois que as aulas começam. (A), (C) e (D) não são ditos no anúncio."},
         ],
@@ -525,34 +498,28 @@ MOD2_ACTION_DRILLS_C = [
         "id": "mod2-c3",
         "title": "Drill C3 · Campus Event · alvo: 2 min",
         "level": "B1",
-        "objective": "Leia o anúncio (ou peça pra alguém ler em voz alta) e responda às 4 questões. Tempo-alvo: 2 minutos.",
+        "objective": "Leia o anúncio (ou peça pra alguém ler em voz alta) e responda às 2 questões. Tempo-alvo: 2 minutos.",
         "passage_html": """<p><em>Narrator: Listen to an announcement about a career event.</em></p>
 <p><strong>Speaker:</strong> The annual Career Fair takes place next Wednesday from 10 to 4 in the main gymnasium. Over eighty employers will attend, mostly in engineering, healthcare, and education. A few reminders. Bring several printed copies of your résumé — most recruiters still expect a paper copy. Business-casual dress is recommended, not required. The résumé-review station near the entrance will be open from 9, an hour before the fair, and it operates first-come, first-served, so arrive early if you want feedback before talking to employers. Finally, the 9:30 workshop on interview skills is now full; a recording will be posted next week for those who missed it.</p>""",
         "items": [
             {"num": "C3.1", "prompt": "Detail. What time does the Career Fair itself begin?",
              "options": {"A": "9 a.m.", "B": "9:30 a.m.", "C": "10 a.m.", "D": "4 p.m."},
              "correct": "C", "explanation": "\"From 10 to 4.\" (A) é a abertura da estação de revisão de currículo; (B) é o workshop."},
-            {"num": "C3.2", "prompt": "Detail. What does the speaker say about dress?",
-             "options": {"A": "Business formal is required", "B": "Business-casual is recommended but not required", "C": "There is no dress guidance", "D": "Recruiters will provide name tags and jackets"},
-             "correct": "B", "explanation": "\"Business-casual dress is recommended, not required.\""},
-            {"num": "C3.3", "prompt": "Connecting content. A student wants résumé feedback before speaking to employers. What should they do?",
+            {"num": "C3.2", "prompt": "Connecting content. A student wants résumé feedback before speaking to employers. What should they do?",
              "options": {"A": "Attend the 9:30 workshop", "B": "Arrive at the résumé-review station around 9, since it is first-come, first-served", "C": "Email their résumé to a recruiter in advance", "D": "Wait until after 4 p.m."},
              "correct": "B", "explanation": "A estação abre às 9, é <em>first-come, first-served</em> → chegar cedo. (A) o workshop é de habilidades de entrevista, não revisão de currículo; (C)/(D) não sugeridos."},
-            {"num": "C3.4", "prompt": "Detail. What is true of the 9:30 interview-skills workshop?",
-             "options": {"A": "It has open spots", "B": "It is full, but a recording will be posted next week", "C": "It has been moved to next Wednesday", "D": "It requires advance payment"},
-             "correct": "B", "explanation": "\"The 9:30 workshop... is now full; a recording will be posted next week.\""},
         ],
     },
 ]
 
 # PARTE 5 (Action Drills) do M2, Grupo D: Listen to an Academic Talk — 3
-# palestras, 16 itens ao todo.
+# palestras com 4 perguntas cada (12 itens), como na prova de 2026.
 MOD2_ACTION_DRILLS_D = [
     {
         "id": "mod2-d1",
         "title": "Drill D1 · Psicologia · alvo: 4 min",
         "level": "B2–C1",
-        "objective": "Leia a palestra (ou peça pra alguém ler em voz alta) e responda às 5 questões. Tempo-alvo: 4 minutos.",
+        "objective": "Leia a palestra (ou peça pra alguém ler em voz alta) e responda às 4 questões. Tempo-alvo: 4 minutos.",
         "passage_html": """<p><em>Narrator: Listen to part of a talk in a psychology class.</em></p>
 <p><strong>Professor:</strong> We've been discussing decision-making, and today I want to bring up something researchers call the paradox of choice. The idea is counterintuitive: you'd think more options would always make us happier, but past a certain point it does the opposite.</p>
 <p>A classic example. In one well-known study, researchers set up a tasting table in a grocery store: first with six varieties of jam, then with twenty-four. You'd expect the bigger display to sell more. Actually, the smaller display generated significantly more purchases. The larger one attracted more browsers, but far fewer of them bought anything.</p>
@@ -568,10 +535,7 @@ MOD2_ACTION_DRILLS_D = [
             {"num": "D1.3", "prompt": "Organization. Why does the professor describe the grocery store study in detail?",
              "options": {"A": "To criticize the researchers' methodology", "B": "To give concrete evidence for the paradox of choice", "C": "To introduce an unrelated topic about marketing", "D": "To explain how stores design displays"},
              "correct": "B", "explanation": "Exemplo empírico logo após o conceito abstrato. (A)/(C)/(D) sem base."},
-            {"num": "D1.4", "prompt": "Detail. What does the professor say about having zero options?",
-             "options": {"A": "It is preferable to having too many", "B": "It is also a problem, just as too many options are", "C": "It has never been studied", "D": "It applies only to grocery shopping"},
-             "correct": "B", "explanation": "\"A complete absence of options is its own problem.\" (A) inverte o sentido."},
-            {"num": "D1.5", "prompt": "Idiom in context. What does \"stuck at square one\" mean here?",
+            {"num": "D1.4", "prompt": "Idiom in context. What does \"stuck at square one\" mean here?",
              "options": {"A": "Making a confident final decision", "B": "Unable to make any progress toward a decision", "C": "Choosing the first option presented", "D": "Comparing two options systematically"},
              "correct": "B", "explanation": "\"Stuck at square one\" = sem sair do ponto de partida. (A) é o oposto; (C)/(D) distorcem."},
         ],
@@ -580,7 +544,7 @@ MOD2_ACTION_DRILLS_D = [
         "id": "mod2-d2",
         "title": "Drill D2 · Biologia · alvo: 4 min",
         "level": "B2–C1",
-        "objective": "Leia a palestra (ou peça pra alguém ler em voz alta) e responda às 5 questões. Tempo-alvo: 4 minutos.",
+        "objective": "Leia a palestra (ou peça pra alguém ler em voz alta) e responda às 4 questões. Tempo-alvo: 4 minutos.",
         "passage_html": """<p><em>Narrator: Listen to part of a talk in a biology class.</em></p>
 <p><strong>Professor:</strong> When we picture a forest, we tend to see individual trees competing — for light, for water, for space. And that's real. But over the last thirty years, research has revealed something the old picture missed: the trees are also <strong>connected</strong>, underground, through fungi.</p>
 <p>Here's how. The roots of most trees are wrapped in a network of fungal threads; this partnership between root and fungus is called a mycorrhiza. The fungi pull in water and minerals the tree's roots can't reach efficiently, and hand them to the tree. In return, the tree gives the fungi sugars it makes through photosynthesis. So far, a simple trade.</p>
@@ -593,13 +557,10 @@ MOD2_ACTION_DRILLS_D = [
             {"num": "D2.2", "prompt": "Detail. What does the tree give the fungi in the relationship?",
              "options": {"A": "Water it pulls from deep soil", "B": "Minerals from its leaves", "C": "Sugars made through photosynthesis", "D": "Nothing — the relationship is one-directional"},
              "correct": "C", "explanation": "\"The tree gives the fungi sugars it makes through photosynthesis.\" (A)/(B) são o que os fungos fazem pela árvore; (D) é o oposto."},
-            {"num": "D2.3", "prompt": "Detail. What did the radioactive-tracer experiments show?",
-             "options": {"A": "That fungi kill shaded seedlings", "B": "That carbon can flow from a sunlit tree to a shaded seedling of another species", "C": "That only trees of the same species can be connected", "D": "That the networks do not actually transfer anything"},
-             "correct": "B", "explanation": "\"Carbon flowing from a tree standing in full sun to a shaded seedling of another species.\""},
-            {"num": "D2.4", "prompt": "Attitude / Organization. Why does the professor add \"a word of caution\" near the end?",
+            {"num": "D2.3", "prompt": "Attitude / Organization. Why does the professor add \"a word of caution\" near the end?",
              "options": {"A": "To retract everything said earlier in the talk", "B": "To distinguish what the evidence firmly supports from claims that popular accounts exaggerate", "C": "To argue that the research is worthless", "D": "To introduce a completely different topic"},
              "correct": "B", "explanation": "Ele separa o que a evidência sustenta firmemente do que relatos populares exageram (\"forests as single cooperative organisms\"). (A)/(C) exageram; (D) está fora do que foi dito."},
-            {"num": "D2.5", "prompt": "Idiom in context. What does the professor mean by \"the jury's still out\"?",
+            {"num": "D2.4", "prompt": "Idiom in context. What does the professor mean by \"the jury's still out\"?",
              "options": {"A": "The question has been definitively settled", "B": "There is not yet a firm conclusion on the matter", "C": "A court case is involved in the research", "D": "The researchers have stopped studying it"},
              "correct": "B", "explanation": "\"The jury's still out\" = ainda não há conclusão firme. (A) é o oposto; (C) é literal demais; (D) não é dito."},
         ],
@@ -608,7 +569,7 @@ MOD2_ACTION_DRILLS_D = [
         "id": "mod2-d3",
         "title": "Drill D3 · História da tecnologia · alvo: 4 min",
         "level": "B2–C1",
-        "objective": "Leia a palestra (ou peça pra alguém ler em voz alta) e responda às 6 questões. Tempo-alvo: 4 minutos.",
+        "objective": "Leia a palestra (ou peça pra alguém ler em voz alta) e responda às 4 questões. Tempo-alvo: 4 minutos.",
         "passage_html": """<p><em>Narrator: Listen to part of a talk in a history of technology class.</em></p>
 <p><strong>Professor:</strong> Look at your keyboard. The top row of letters spells Q-W-E-R-T-Y. It's an odd arrangement — the most common letters aren't under your strongest fingers. So why has it survived, essentially unchanged, for a hundred and fifty years?</p>
 <p>The layout dates from the 1870s, from early mechanical typewriters. The common story is that QWERTY was designed to <em>slow typists down</em> so the metal type-bars wouldn't jam. That's probably an oversimplification (the real design pressures were more mixed), but the key point is that the layout was shaped by the constraints of 1870s <strong>machinery</strong>, constraints that vanished decades ago.</p>
@@ -621,16 +582,10 @@ MOD2_ACTION_DRILLS_D = [
             {"num": "D3.2", "prompt": "Detail. What does the professor say about the \"common story\" that QWERTY was designed to slow typists down?",
              "options": {"A": "It is completely accurate", "B": "It is probably an oversimplification, though the layout was shaped by 1870s machinery", "C": "It was invented by economists", "D": "It explains why Dvorak succeeded"},
              "correct": "B", "explanation": "\"That's probably an oversimplification... but the layout was shaped by 1870s machinery.\""},
-            {"num": "D3.3", "prompt": "Detail. According to the talk, what happened to the Dvorak layout?",
-             "options": {"A": "It became the new standard in the 1940s", "B": "It was patented in 1936 but never caught on", "C": "It was proven to be slower than QWERTY", "D": "It is now used on most smartphones"},
-             "correct": "B", "explanation": "\"Patented in 1936... Yet it never caught on.\" (A)/(C)/(D) contradizem."},
-            {"num": "D3.4", "prompt": "Organization. Why does the professor describe how typists learned QWERTY because machines used it, and machines used it because typists knew it?",
+            {"num": "D3.3", "prompt": "Organization. Why does the professor describe how typists learned QWERTY because machines used it, and machines used it because typists knew it?",
              "options": {"A": "To illustrate how lock-in makes a standard self-reinforcing and hard to change", "B": "To criticize typewriter manufacturers", "C": "To explain how mechanical type-bars work", "D": "To argue that QWERTY is actually well designed"},
              "correct": "A", "explanation": "O ciclo ilustra como o padrão se autorreforça (<em>lock-in</em>). (B)/(C)/(D) sem base."},
-            {"num": "D3.5", "prompt": "Detail. According to the professor, why does an individual rarely switch to Dvorak?",
-             "options": {"A": "Dvorak has never been tested against QWERTY", "B": "The benefit to one person is small unless almost everyone switches together", "C": "Dvorak keyboards are no longer manufactured", "D": "Most people find Dvorak uncomfortable"},
-             "correct": "B", "explanation": "\"A single person gains little unless nearly everyone switches at once.\" (A) e (D) contradizem a palestra (\"in some studies, allows modestly faster and more comfortable typing\"); (C) não é dito."},
-            {"num": "D3.6", "prompt": "Word in context. When the professor says the old arrangement is \"still, quietly, on every device you own,\" the word \"quietly\" suggests that:",
+            {"num": "D3.4", "prompt": "Word in context. When the professor says the old arrangement is \"still, quietly, on every device you own,\" the word \"quietly\" suggests that:",
              "options": {"A": "the change from typewriters to computers happened slowly", "B": "most people use QWERTY without noticing that it is an outdated design", "C": "manufacturers have hidden the layout's origins", "D": "QWERTY is gradually disappearing from new devices"},
              "correct": "B", "explanation": "\"Quietly\" sugere que as pessoas usam QWERTY sem perceber que é um design obsoleto. (A) não tem relação com a palavra; (C) lê \"quietly\" como segredo, ideia que a palestra não sustenta; (D) contradiz \"on every device you own\"."},
         ],

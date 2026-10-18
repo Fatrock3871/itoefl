@@ -37,9 +37,9 @@
       "live_on_site": true,
       "answer_letter": "origem",
       "build_map": {
-        "A": "B",
-        "B": "A",
-        "C": "C",
+        "A": "A",
+        "B": "C",
+        "C": "B",
         "D": "D"
       }
     }
@@ -128,59 +128,14 @@
       "answer_letter": "origem",
       "build_map": {
         "A": "D",
-        "B": "C",
-        "C": "A",
-        "D": "B"
+        "B": "A",
+        "C": "B",
+        "D": "C"
       }
     }
   },
   {
     "id": "mod2-d1.d1.4",
-    "section": "listening",
-    "task_type": "Listen to an Academic Talk",
-    "exam_format": true,
-    "format": "mcq",
-    "skill": null,
-    "cefr_min": "B2",
-    "cefr_max": "C1",
-    "stimulus": {
-      "kind": "audio",
-      "format": "html",
-      "title": "Drill D1 · Psicologia · alvo: 4 min",
-      "content": "<p><em>Narrator: Listen to part of a talk in a psychology class.</em></p>\n<p><strong>Professor:</strong> We've been discussing decision-making, and today I want to bring up something researchers call the paradox of choice. The idea is counterintuitive: you'd think more options would always make us happier, but past a certain point it does the opposite.</p>\n<p>A classic example. In one well-known study, researchers set up a tasting table in a grocery store: first with six varieties of jam, then with twenty-four. You'd expect the bigger display to sell more. Actually, the smaller display generated significantly more purchases. The larger one attracted more browsers, but far fewer of them bought anything.</p>\n<p>Why? Two things: decision fatigue and anticipated regret. With more options, comparing them mentally becomes exhausting — that's the fatigue. And even before you pick, you start worrying that one of the other twenty-three might be better and that you'll regret your choice — that's the regret. Ironically, more choices can leave people stuck at square one, unable to commit at all.</p>\n<p>Now, this doesn't mean choice is bad: a complete absence of options is its own problem. The point is there's a sweet spot, and past it, additional options stop helping and start working against us. To be fair, later studies haven't always replicated the jam result, so the size of the effect is still debated.</p>",
-      "audio_ref": null
-    },
-    "group": "mod2-d1",
-    "prompt": "Detail. What does the professor say about having zero options?",
-    "text_format": "html",
-    "options": {
-      "A": "It is preferable to having too many",
-      "B": "It is also a problem, just as too many options are",
-      "C": "It has never been studied",
-      "D": "It applies only to grocery shopping"
-    },
-    "answer": "B",
-    "explanation": "\"A complete absence of options is its own problem.\" (A) inverte o sentido.",
-    "hint": null,
-    "trap_codes": [],
-    "tags": [],
-    "status": "rascunho",
-    "source": {
-      "kind": "migrado",
-      "file": "app/drills_data.py",
-      "ref": "MOD2_ACTION_DRILLS_D:mod2-d1#D1.4",
-      "live_on_site": true,
-      "answer_letter": "origem",
-      "build_map": {
-        "A": "C",
-        "B": "A",
-        "C": "B",
-        "D": "D"
-      }
-    }
-  },
-  {
-    "id": "mod2-d1.d1.5",
     "section": "listening",
     "task_type": "Listen to an Academic Talk",
     "exam_format": true,
@@ -213,14 +168,14 @@
     "source": {
       "kind": "migrado",
       "file": "app/drills_data.py",
-      "ref": "MOD2_ACTION_DRILLS_D:mod2-d1#D1.5",
+      "ref": "MOD2_ACTION_DRILLS_D:mod2-d1#D1.4",
       "live_on_site": true,
       "answer_letter": "origem",
       "build_map": {
-        "A": "A",
+        "A": "C",
         "B": "B",
-        "C": "D",
-        "D": "C"
+        "C": "A",
+        "D": "D"
       }
     }
   },
@@ -262,8 +217,8 @@
       "live_on_site": true,
       "answer_letter": "origem",
       "build_map": {
-        "A": "B",
-        "B": "A",
+        "A": "A",
+        "B": "B",
         "C": "C",
         "D": "D"
       }
@@ -309,8 +264,8 @@
       "build_map": {
         "A": "D",
         "B": "C",
-        "C": "B",
-        "D": "A"
+        "C": "A",
+        "D": "B"
       }
     }
   },
@@ -331,16 +286,16 @@
       "audio_ref": null
     },
     "group": "mod2-d2",
-    "prompt": "Detail. What did the radioactive-tracer experiments show?",
+    "prompt": "Attitude / Organization. Why does the professor add \"a word of caution\" near the end?",
     "text_format": "html",
     "options": {
-      "A": "That fungi kill shaded seedlings",
-      "B": "That carbon can flow from a sunlit tree to a shaded seedling of another species",
-      "C": "That only trees of the same species can be connected",
-      "D": "That the networks do not actually transfer anything"
+      "A": "To retract everything said earlier in the talk",
+      "B": "To distinguish what the evidence firmly supports from claims that popular accounts exaggerate",
+      "C": "To argue that the research is worthless",
+      "D": "To introduce a completely different topic"
     },
     "answer": "B",
-    "explanation": "\"Carbon flowing from a tree standing in full sun to a shaded seedling of another species.\"",
+    "explanation": "Ele separa o que a evidência sustenta firmemente do que relatos populares exageram (\"forests as single cooperative organisms\"). (A)/(C) exageram; (D) está fora do que foi dito.",
     "hint": null,
     "trap_codes": [],
     "tags": [],
@@ -376,51 +331,6 @@
       "audio_ref": null
     },
     "group": "mod2-d2",
-    "prompt": "Attitude / Organization. Why does the professor add \"a word of caution\" near the end?",
-    "text_format": "html",
-    "options": {
-      "A": "To retract everything said earlier in the talk",
-      "B": "To distinguish what the evidence firmly supports from claims that popular accounts exaggerate",
-      "C": "To argue that the research is worthless",
-      "D": "To introduce a completely different topic"
-    },
-    "answer": "B",
-    "explanation": "Ele separa o que a evidência sustenta firmemente do que relatos populares exageram (\"forests as single cooperative organisms\"). (A)/(C) exageram; (D) está fora do que foi dito.",
-    "hint": null,
-    "trap_codes": [],
-    "tags": [],
-    "status": "rascunho",
-    "source": {
-      "kind": "migrado",
-      "file": "app/drills_data.py",
-      "ref": "MOD2_ACTION_DRILLS_D:mod2-d2#D2.4",
-      "live_on_site": true,
-      "answer_letter": "origem",
-      "build_map": {
-        "A": "C",
-        "B": "A",
-        "C": "D",
-        "D": "B"
-      }
-    }
-  },
-  {
-    "id": "mod2-d2.d2.5",
-    "section": "listening",
-    "task_type": "Listen to an Academic Talk",
-    "exam_format": true,
-    "format": "mcq",
-    "skill": null,
-    "cefr_min": "B2",
-    "cefr_max": "C1",
-    "stimulus": {
-      "kind": "audio",
-      "format": "html",
-      "title": "Drill D2 · Biologia · alvo: 4 min",
-      "content": "<p><em>Narrator: Listen to part of a talk in a biology class.</em></p>\n<p><strong>Professor:</strong> When we picture a forest, we tend to see individual trees competing — for light, for water, for space. And that's real. But over the last thirty years, research has revealed something the old picture missed: the trees are also <strong>connected</strong>, underground, through fungi.</p>\n<p>Here's how. The roots of most trees are wrapped in a network of fungal threads; this partnership between root and fungus is called a mycorrhiza. The fungi pull in water and minerals the tree's roots can't reach efficiently, and hand them to the tree. In return, the tree gives the fungi sugars it makes through photosynthesis. So far, a simple trade.</p>\n<p>The surprising part is that a single fungal network can link <strong>many</strong> trees at once — even trees of different species. And things move along those links. Experiments using radioactive tracers have shown carbon flowing from a tree standing in full sun to a shaded seedling of another species nearby. Some researchers describe old, well-connected trees as \"hub trees\" that support younger ones around them.</p>\n<p>Now, a word of caution. This work has captured the public imagination, and some popular accounts overstate it: talking about forests as single cooperative organisms. The jury's still out on how deliberate or widespread the sharing really is. What's solid is that the connections exist and that resources can move through them. How much that reshapes our model of the forest is still being worked out.</p>",
-      "audio_ref": null
-    },
-    "group": "mod2-d2",
     "prompt": "Idiom in context. What does the professor mean by \"the jury's still out\"?",
     "text_format": "html",
     "options": {
@@ -438,14 +348,14 @@
     "source": {
       "kind": "migrado",
       "file": "app/drills_data.py",
-      "ref": "MOD2_ACTION_DRILLS_D:mod2-d2#D2.5",
+      "ref": "MOD2_ACTION_DRILLS_D:mod2-d2#D2.4",
       "live_on_site": true,
       "answer_letter": "origem",
       "build_map": {
-        "A": "A",
+        "A": "B",
         "B": "D",
         "C": "C",
-        "D": "B"
+        "D": "A"
       }
     }
   },
@@ -532,8 +442,8 @@
       "live_on_site": true,
       "answer_letter": "origem",
       "build_map": {
-        "A": "C",
-        "B": "B",
+        "A": "B",
+        "B": "C",
         "C": "D",
         "D": "A"
       }
@@ -556,16 +466,16 @@
       "audio_ref": null
     },
     "group": "mod2-d3",
-    "prompt": "Detail. According to the talk, what happened to the Dvorak layout?",
+    "prompt": "Organization. Why does the professor describe how typists learned QWERTY because machines used it, and machines used it because typists knew it?",
     "text_format": "html",
     "options": {
-      "A": "It became the new standard in the 1940s",
-      "B": "It was patented in 1936 but never caught on",
-      "C": "It was proven to be slower than QWERTY",
-      "D": "It is now used on most smartphones"
+      "A": "To illustrate how lock-in makes a standard self-reinforcing and hard to change",
+      "B": "To criticize typewriter manufacturers",
+      "C": "To explain how mechanical type-bars work",
+      "D": "To argue that QWERTY is actually well designed"
     },
-    "answer": "B",
-    "explanation": "\"Patented in 1936... Yet it never caught on.\" (A)/(C)/(D) contradizem.",
+    "answer": "A",
+    "explanation": "O ciclo ilustra como o padrão se autorreforça (<em>lock-in</em>). (B)/(C)/(D) sem base.",
     "hint": null,
     "trap_codes": [],
     "tags": [],
@@ -601,96 +511,6 @@
       "audio_ref": null
     },
     "group": "mod2-d3",
-    "prompt": "Organization. Why does the professor describe how typists learned QWERTY because machines used it, and machines used it because typists knew it?",
-    "text_format": "html",
-    "options": {
-      "A": "To illustrate how lock-in makes a standard self-reinforcing and hard to change",
-      "B": "To criticize typewriter manufacturers",
-      "C": "To explain how mechanical type-bars work",
-      "D": "To argue that QWERTY is actually well designed"
-    },
-    "answer": "A",
-    "explanation": "O ciclo ilustra como o padrão se autorreforça (<em>lock-in</em>). (B)/(C)/(D) sem base.",
-    "hint": null,
-    "trap_codes": [],
-    "tags": [],
-    "status": "rascunho",
-    "source": {
-      "kind": "migrado",
-      "file": "app/drills_data.py",
-      "ref": "MOD2_ACTION_DRILLS_D:mod2-d3#D3.4",
-      "live_on_site": true,
-      "answer_letter": "origem",
-      "build_map": {
-        "A": "A",
-        "B": "D",
-        "C": "B",
-        "D": "C"
-      }
-    }
-  },
-  {
-    "id": "mod2-d3.d3.5",
-    "section": "listening",
-    "task_type": "Listen to an Academic Talk",
-    "exam_format": true,
-    "format": "mcq",
-    "skill": null,
-    "cefr_min": "B2",
-    "cefr_max": "C1",
-    "stimulus": {
-      "kind": "audio",
-      "format": "html",
-      "title": "Drill D3 · História da tecnologia · alvo: 4 min",
-      "content": "<p><em>Narrator: Listen to part of a talk in a history of technology class.</em></p>\n<p><strong>Professor:</strong> Look at your keyboard. The top row of letters spells Q-W-E-R-T-Y. It's an odd arrangement — the most common letters aren't under your strongest fingers. So why has it survived, essentially unchanged, for a hundred and fifty years?</p>\n<p>The layout dates from the 1870s, from early mechanical typewriters. The common story is that QWERTY was designed to <em>slow typists down</em> so the metal type-bars wouldn't jam. That's probably an oversimplification (the real design pressures were more mixed), but the key point is that the layout was shaped by the constraints of 1870s <strong>machinery</strong>, constraints that vanished decades ago.</p>\n<p>Better layouts have been proposed. The best known, Dvorak, was patented in 1936 and, in some studies, allows modestly faster and more comfortable typing. Yet it never caught on. Why not?</p>\n<p>This is a textbook case of what economists call <strong>path dependence</strong>, or sometimes \"lock-in.\" Once QWERTY became the standard, everything organized itself around that standard: typewriters were built for it, typing was taught on it, and every new typist learned it because that's what the machines used — and machines used it because that's what typists knew. To switch, a single person gains little unless nearly everyone switches at once. The cost of coordinating that switch is enormous, and no one bears it. So an arrangement that made sense only for 1870s hardware is still, quietly, on every device you own.</p>",
-      "audio_ref": null
-    },
-    "group": "mod2-d3",
-    "prompt": "Detail. According to the professor, why does an individual rarely switch to Dvorak?",
-    "text_format": "html",
-    "options": {
-      "A": "Dvorak has never been tested against QWERTY",
-      "B": "The benefit to one person is small unless almost everyone switches together",
-      "C": "Dvorak keyboards are no longer manufactured",
-      "D": "Most people find Dvorak uncomfortable"
-    },
-    "answer": "B",
-    "explanation": "\"A single person gains little unless nearly everyone switches at once.\" (A) e (D) contradizem a palestra (\"in some studies, allows modestly faster and more comfortable typing\"); (C) não é dito.",
-    "hint": null,
-    "trap_codes": [],
-    "tags": [],
-    "status": "rascunho",
-    "source": {
-      "kind": "migrado",
-      "file": "app/drills_data.py",
-      "ref": "MOD2_ACTION_DRILLS_D:mod2-d3#D3.5",
-      "live_on_site": true,
-      "answer_letter": "origem",
-      "build_map": {
-        "A": "A",
-        "B": "B",
-        "C": "C",
-        "D": "D"
-      }
-    }
-  },
-  {
-    "id": "mod2-d3.d3.6",
-    "section": "listening",
-    "task_type": "Listen to an Academic Talk",
-    "exam_format": true,
-    "format": "mcq",
-    "skill": null,
-    "cefr_min": "B2",
-    "cefr_max": "C1",
-    "stimulus": {
-      "kind": "audio",
-      "format": "html",
-      "title": "Drill D3 · História da tecnologia · alvo: 4 min",
-      "content": "<p><em>Narrator: Listen to part of a talk in a history of technology class.</em></p>\n<p><strong>Professor:</strong> Look at your keyboard. The top row of letters spells Q-W-E-R-T-Y. It's an odd arrangement — the most common letters aren't under your strongest fingers. So why has it survived, essentially unchanged, for a hundred and fifty years?</p>\n<p>The layout dates from the 1870s, from early mechanical typewriters. The common story is that QWERTY was designed to <em>slow typists down</em> so the metal type-bars wouldn't jam. That's probably an oversimplification (the real design pressures were more mixed), but the key point is that the layout was shaped by the constraints of 1870s <strong>machinery</strong>, constraints that vanished decades ago.</p>\n<p>Better layouts have been proposed. The best known, Dvorak, was patented in 1936 and, in some studies, allows modestly faster and more comfortable typing. Yet it never caught on. Why not?</p>\n<p>This is a textbook case of what economists call <strong>path dependence</strong>, or sometimes \"lock-in.\" Once QWERTY became the standard, everything organized itself around that standard: typewriters were built for it, typing was taught on it, and every new typist learned it because that's what the machines used — and machines used it because that's what typists knew. To switch, a single person gains little unless nearly everyone switches at once. The cost of coordinating that switch is enormous, and no one bears it. So an arrangement that made sense only for 1870s hardware is still, quietly, on every device you own.</p>",
-      "audio_ref": null
-    },
-    "group": "mod2-d3",
     "prompt": "Word in context. When the professor says the old arrangement is \"still, quietly, on every device you own,\" the word \"quietly\" suggests that:",
     "text_format": "html",
     "options": {
@@ -708,13 +528,13 @@
     "source": {
       "kind": "migrado",
       "file": "app/drills_data.py",
-      "ref": "MOD2_ACTION_DRILLS_D:mod2-d3#D3.6",
+      "ref": "MOD2_ACTION_DRILLS_D:mod2-d3#D3.4",
       "live_on_site": true,
       "answer_letter": "origem",
       "build_map": {
-        "A": "A",
+        "A": "C",
         "B": "D",
-        "C": "C",
+        "C": "A",
         "D": "B"
       }
     }
