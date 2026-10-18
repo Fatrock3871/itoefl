@@ -1018,7 +1018,6 @@ def pwa_checks():
         "X-Content-Type-Options: nosniff" in hdr and "Content-Security-Policy:" in hdr
         and "frame-ancestors 'none'" in hdr and bool(sw_rule) and "no-cache" in sw_rule.group(1)
     )
-    out.update(vercel_checks(hdr))
     site_url = json.loads((ARTIFACT.parent.parent / "app" / "site.json").read_text(encoding="utf-8-sig"))["SITE_URL"].rstrip("/")
     sitemap_path = art / "sitemap.xml"
     sitemap = sitemap_path.read_text(encoding="utf-8") if sitemap_path.exists() else ""
@@ -1034,35 +1033,6 @@ def pwa_checks():
         and f"Sitemap: {site_url}/sitemap.xml" in robots
     )
     return out
-
-
-def vercel_checks(hdr):
-    """vercel.json (hospedagem do beta): builda com o mesmo pipeline, publica
-    artifact/ e manda os mesmos cabeçalhos de segurança do _headers gerado
-    para o Cloudflare, com sw.js, manifesto e HTML sem cache velho."""
-    try:
-        cfg = json.loads((ROOT / "vercel.json").read_text(encoding="utf-8"))
-    except (OSError, ValueError):
-        return {"vercel_config_valid": False}
-    rules = {r["source"]: {h["key"]: h["value"] for h in r["headers"]} for r in cfg.get("headers", [])}
-    block = re.search(r"^/\*\n((?:[ \t]+.*\n)+)", hdr, re.M)
-    cf = dict(line.strip().split(": ", 1) for line in block.group(1).splitlines()) if block else {}
-    req = (ROOT / "requirements.txt").read_text(encoding="utf-8") if (ROOT / "requirements.txt").exists() else ""
-    no_cache_html = "public, max-age=0, must-revalidate"
-    return {
-        "vercel_config_valid": (
-            cfg.get("outputDirectory") == "artifact" and cfg.get("framework") is None
-            and "build_pipeline.py" in cfg.get("buildCommand", "") and "build.py" in cfg.get("buildCommand", "")
-            and "requirements.txt" in cfg.get("installCommand", "") and bool(re.search(r"^markdown==\d", req, re.M))
-        ),
-        "vercel_headers_match_cloudflare": bool(cf) and rules.get("/(.*)") == cf,
-        "vercel_cache_rules": (
-            rules.get("/sw.js", {}).get("Cache-Control") == "no-cache"
-            and rules.get("/manifest.json", {}).get("Cache-Control") == "no-cache"
-            and rules.get("/", {}).get("Cache-Control") == no_cache_html
-            and rules.get("/(index|termos|privacidade|apresentacao)(\\.html)?", {}).get("Cache-Control") == no_cache_html
-        ),
-    }
 
 
 def plans_checks():

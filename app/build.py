@@ -1047,12 +1047,10 @@ _sw = open("sw.js", encoding="utf-8").read().replace("__BUILD_VERSION__", _sw_ve
 open("../artifact/sw.js", "w", encoding="utf-8").write(_sw)
 print("written sw.js, versao", _sw_version)
 
-# ---- Hospedagem: _headers, robots e sitemap ----
+# ---- Hospedagem (Cloudflare Pages): _headers, robots e sitemap ----
 # Tudo gerado aqui, nunca à mão em artifact/. _headers é o formato do
-# Cloudflare Pages (e do Netlify). A Vercel (hospedagem do beta, decisão de
-# 2026-10-18) lê as mesmas regras do vercel.json, na raiz do repositório, que
-# não pode ser gerado porque a Vercel o lê antes do build: o smoke test
-# reprova se os cabeçalhos dos dois divergirem. Sem _redirects de
+# Cloudflare Pages (e do Netlify); em outra hospedagem, traduza as mesmas
+# regras: cabeçalhos de segurança e sw.js sem cache. Sem _redirects de
 # propósito: o Cloudflare serve index.html em / e redireciona /index.html
 # para /, então reescrever a raiz para a apresentação deixaria o app inalcançável.
 _CSP = "; ".join([
