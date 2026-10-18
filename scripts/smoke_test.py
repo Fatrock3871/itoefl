@@ -1106,6 +1106,22 @@ def plans_checks():
                             "function public.apply_payment", "from public, anon, authenticated")
     )
 
+    # Stripe (2026-10-18): migração espelhada, assinatura vale até o fim do
+    # período pago, e as tabelas novas não aceitam escrita do navegador
+    stripe_sql = (ROOT / "supabase" / "migrations" / "20261018_stripe.sql").read_text(encoding="utf-8")
+    stripe_body = stripe_sql[stripe_sql.index("-- ============ payments: período pago da assinatura"):]
+    stripe_policies = re.findall(r'create policy "(\w+)" on (\w+)\s+for (\w+)', stripe_sql)
+    out["stripe_migration_mirrored_and_locked"] = (
+        stripe_body in schema and schema.index(body) < schema.index(stripe_body)
+        and "period_end timestamptz" in stripe_body and "r.period_end + interval '1 day'" in stripe_body
+        and "drop function if exists public.apply_payment(text, uuid, text, int, numeric, text, timestamptz);" in stripe_body
+        and stripe_policies == [("billing_select_own", "billing", "select")]
+        and "alter table billing enable row level security" in stripe_body
+        and "alter table stripe_events enable row level security" in stripe_body
+        and len(re.findall(r"^revoke all on function .* from public, anon, authenticated;$", stripe_body, re.M)) == 3
+        and "excluded.event_at >= billing.event_at" in stripe_body
+    )
+
     terms = (ARTIFACT.parent / "termos.html").read_text(encoding="utf-8")
     out["plans_terms_cover_plans_and_refund"] = (
         all(s in terms for s in ("Sprint", "Standard", "Premium", "30 dias", "90 dias", "Vitalício",
