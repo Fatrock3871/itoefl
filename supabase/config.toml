@@ -7,6 +7,12 @@ project_id = "itfosjcymqfzjsftvjey"
 [functions.mp-webhook]
 verify_jwt = false
 
+# O Stripe também chama sem token do Supabase. A segurança vem da assinatura
+# (cabeçalho Stripe-Signature, conferido com STRIPE_WEBHOOK_SECRET) e de reler
+# cada objeto na API do Stripe.
+[functions.stripe-webhook]
+verify_jwt = false
+
 # As outras quatro são chamadas pelo site com o token do aluno, e cada uma
 # confere esse token no próprio código (auth.getUser) antes de fazer qualquer
 # coisa. A verificação do gateway fica desligada porque ela só entende JWT

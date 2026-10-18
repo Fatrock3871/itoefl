@@ -616,7 +616,7 @@ create table if not exists billing (
   subscription_status text,          -- como o Stripe diz: active, past_due, canceled, incomplete...
   cancel_at_period_end boolean not null default false,
   current_period_end timestamptz,
-  event_at timestamptz,              -- data do evento do Stripe que gravou esta situação
+  event_at timestamptz,              -- quando esta situação foi lida da API do Stripe
   updated_at timestamptz not null default now()
 );
 
@@ -626,8 +626,9 @@ alter table billing enable row level security;
 drop policy if exists "billing_select_own" on billing;
 create policy "billing_select_own" on billing for select using (auth.uid() = user_id);
 
--- grava a situação da assinatura. O Stripe não garante a ordem dos avisos:
--- um evento mais antigo que o último gravado não sobrescreve nada. Campo
+-- grava a situação da assinatura. O Stripe não garante a ordem dos avisos,
+-- e o stripe-webhook relê a assinatura na API: uma leitura mais antiga que
+-- a última gravada não sobrescreve nada. Campo
 -- null não apaga o que já havia (o checkout só sabe o cliente, por exemplo).
 create or replace function public.apply_billing(
   p_user uuid,

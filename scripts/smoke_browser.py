@@ -16,14 +16,19 @@ Chamado por scripts/smoke_test.py. Sozinho: python scripts\\smoke_browser.py
 """
 
 import functools
+import hashlib
+import hmac
 import http.server
 import json
+import os
 import re
 import sys
 import tempfile
 import threading
+import time
 from pathlib import Path
 
+ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 import build_teste  # noqa: E402
 from cdp import Browser  # noqa: E402
@@ -281,6 +286,160 @@ LANDING_ANSWER = r"""
 """
 
 
+# Teste de unidade do webhook do Stripe (supabase/functions/_shared/stripe.js),
+# numa página servida por http://127.0.0.1 (o crypto.subtle só existe em
+# contexto seguro). As assinaturas boas são calculadas aqui em Python, com
+# hmac, e não pelo próprio código testado. O fluxo usa uma API do Stripe e um
+# banco de mentira; o banco imita a regra de recompute_entitlement() da
+# migração 20261018_stripe.sql (o SQL em si não roda aqui).
+STRIPE_TEST = r"""
+(async function(P){
+  var out = {};
+  var DAY = 86400000, NOW = P.now * 1000;
+  var V = stripeVerifySignature;
+  out.sig_good = await V(P.payload, P.goodHeader, P.secret, P.now);
+  out.sig_bad = await V(P.payload, P.badHeader, P.secret, P.now);
+  out.sig_tampered = await V(P.payload.replace("invoice.paid", "invoice.paiD"), P.goodHeader, P.secret, P.now);
+  out.sig_wrong_secret = await V(P.payload, P.goodHeader, P.secret + "x", P.now);
+  out.sig_old = await V(P.payload, P.oldHeader, P.secret, P.now);
+  out.sig_empty = await V(P.payload, "", P.secret, P.now);
+  out.sig_no_secret = await V(P.payload, P.goodHeader, "", P.now);
+
+  // ---- banco de mentira: payments + billing, com a regra do SQL ----
+  var payments = {}, billing = {}, canceled = [];
+  function entitlement(user){
+    var rows = Object.keys(payments).map(function(k){ return payments[k]; })
+      .filter(function(r){ return r.user === user && r.status === "approved"; })
+      .sort(function(a, b){ return a.approvedAt < b.approvedAt ? -1 : a.approvedAt > b.approvedAt ? 1 : 0; });
+    if(!rows.length) return { paid: false, expires_at: null };
+    var life = false, exp = null;
+    rows.forEach(function(r){
+      if(r.days == null && r.periodEnd == null){ life = true; return; }
+      if(life) return;
+      if(r.periodEnd != null){ var end = Date.parse(r.periodEnd) + DAY; exp = Math.max(exp == null ? end : exp, end); }
+      else { var base = Math.max(exp == null ? Date.parse(r.approvedAt) : exp, Date.parse(r.approvedAt)); exp = base + r.days * DAY; }
+    });
+    return { paid: true, expires_at: life ? null : new Date(exp).toISOString() };
+  }
+  function active(row){ return row.paid && (!row.expires_at || Date.parse(row.expires_at) > NOW); }
+  var api = {};
+  var deps = {
+    get: function(path){ if(!api[path]) throw new Error("sem objeto " + path); return Promise.resolve(JSON.parse(JSON.stringify(api[path]))); },
+    cancelSubscription: function(id){ canceled.push(id); return Promise.resolve(); },
+    now: function(){ return new Date(NOW).toISOString(); },
+    plan: function(id){ return { mensal: { id: "mensal", interval: "month" }, vitalicio: { id: "vitalicio", interval: null } }[id] || null; },
+    findBilling: function(u){ return Promise.resolve(billing[u] ? { subscription_id: billing[u].subscription, subscription_status: billing[u].status } : null); },
+    applyPayment: function(a){
+      if(a.status === "approved"){ if(!payments[a.id]) payments[a.id] = JSON.parse(JSON.stringify(a)); }
+      else if(payments[a.id]) payments[a.id].status = "refunded";
+      return Promise.resolve();
+    },
+    applyBilling: function(a){
+      var b = billing[a.user] || {};
+      ["customer", "subscription", "status", "periodEnd"].forEach(function(k){ if(a[k] != null) b[k] = a[k]; });
+      if(a.cancelAtPeriodEnd != null) b.cancel = a.cancelAtPeriodEnd;
+      billing[a.user] = b;
+      return Promise.resolve();
+    }
+  };
+  function ev(type, id){ return { id: "evt_" + Math.random(), type: type, created: P.now, data: { object: { id: id } } }; }
+  var U1 = "11111111-1111-4111-8111-111111111111", U2 = "22222222-2222-4222-8222-222222222222";
+  var end1 = P.now + 30 * 86400;
+
+  // ---- Mensal: checkout de assinatura, depois o invoice.paid repetido ----
+  api["/v1/checkout/sessions/cs_m"] = { id: "cs_m", mode: "subscription", client_reference_id: U1, customer: "cus_1", subscription: "sub_1", metadata: { user_id: U1, plan_id: "mensal" } };
+  api["/v1/subscriptions/sub_1"] = { id: "sub_1", status: "active", customer: "cus_1", cancel_at_period_end: false, current_period_end: end1, latest_invoice: "in_1", metadata: { user_id: U1, plan_id: "mensal" } };
+  api["/v1/invoices/in_1"] = { id: "in_1", status: "paid", subscription: "sub_1", customer: "cus_1", amount_paid: 3990, status_transitions: { paid_at: P.now }, lines: { data: [{ period: { start: P.now, end: end1 } }] } };
+  out.free_before = !active(entitlement(U1));
+  await stripeHandleEvent(ev("checkout.session.completed", "cs_m"), deps);
+  var e1 = entitlement(U1);
+  out.monthly_grants = active(e1) && e1.expires_at === new Date((end1 * 1000) + DAY).toISOString() &&
+    payments["stripe:in_1"].plan === "mensal" && payments["stripe:in_1"].amount === 39.9 &&
+    billing[U1].status === "active" && billing[U1].customer === "cus_1" && billing[U1].subscription === "sub_1";
+  await stripeHandleEvent(ev("invoice.paid", "in_1"), deps);
+  await stripeHandleEvent(ev("invoice.paid", "in_1"), deps);
+  out.monthly_idempotent = Object.keys(payments).length === 1 && entitlement(U1).expires_at === e1.expires_at;
+  // o mês seguinte: fatura nova estende até o novo fim de período
+  var end2 = end1 + 30 * 86400;
+  api["/v1/invoices/in_2"] = { id: "in_2", status: "paid", subscription: "sub_1", amount_paid: 3990, lines: { data: [{ period: { start: end1, end: end2 } }] } };
+  await stripeHandleEvent(ev("invoice.paid", "in_2"), deps);
+  out.monthly_renews = entitlement(U1).expires_at === new Date(end2 * 1000 + DAY).toISOString();
+  // fatura ainda não paga não dá acesso
+  api["/v1/invoices/in_open"] = { id: "in_open", status: "open", subscription: "sub_1", amount_paid: 0, lines: { data: [] } };
+  await stripeHandleEvent(ev("invoice.paid", "in_open"), deps);
+  out.monthly_unpaid_ignored = !payments["stripe:in_open"];
+  // cancelamento marcado para o fim do mês: o acesso fica
+  api["/v1/subscriptions/sub_1"].cancel_at_period_end = true;
+  await stripeHandleEvent(ev("customer.subscription.updated", "sub_1"), deps);
+  out.monthly_cancel_keeps_access = billing[U1].cancel === true && active(entitlement(U1));
+  // recusa de cobrança: só a situação muda
+  api["/v1/subscriptions/sub_1"].status = "past_due";
+  await stripeHandleEvent(ev("invoice.payment_failed", "in_open"), deps);
+  out.monthly_failed_marks_past_due = billing[U1].status === "past_due" && active(entitlement(U1));
+  // reembolso parcial não tira; total tira o mês e cancela a assinatura
+  api["/v1/charges/ch_p"] = { id: "ch_p", refunded: false, invoice: "in_2", payment_intent: "pi_in2" };
+  await stripeHandleEvent(ev("charge.refunded", "ch_p"), deps);
+  out.refund_partial_keeps = payments["stripe:in_2"].status === "approved" && canceled.length === 0;
+  api["/v1/charges/ch_2"] = { id: "ch_2", refunded: true, invoice: "in_2", payment_intent: "pi_in2" };
+  await stripeHandleEvent(ev("charge.refunded", "ch_2"), deps);
+  out.refund_total_revokes_month = payments["stripe:in_2"].status === "refunded" &&
+    entitlement(U1).expires_at === e1.expires_at && canceled.join() === "sub_1";
+
+  // ---- Vitalício: pagamento único; cancela o Mensal que a conta tinha ----
+  billing[U2] = { subscription: "sub_9", status: "active" };
+  api["/v1/checkout/sessions/cs_v"] = { id: "cs_v", mode: "payment", payment_status: "paid", client_reference_id: U2, customer: "cus_2", payment_intent: "pi_v", amount_total: 15990, metadata: { user_id: U2, plan_id: "vitalicio" } };
+  await stripeHandleEvent(ev("checkout.session.completed", "cs_v"), deps);
+  await stripeHandleEvent(ev("checkout.session.completed", "cs_v"), deps);
+  var e2 = entitlement(U2);
+  out.lifetime_grants = active(e2) && e2.expires_at === null && payments["stripe:pi_v"].plan === "vitalicio" &&
+    payments["stripe:pi_v"].amount === 159.9 && Object.keys(payments).filter(function(k){ return payments[k].user === U2; }).length === 1;
+  out.lifetime_cancels_monthly = canceled.indexOf("sub_9") !== -1;
+  // aviso atrasado da assinatura velha não apaga a situação da conta
+  api["/v1/subscriptions/sub_old"] = { id: "sub_old", status: "canceled", metadata: { user_id: U2 } };
+  billing[U2] = { subscription: "sub_new", status: "active" };
+  await stripeHandleEvent(ev("customer.subscription.deleted", "sub_old"), deps);
+  out.old_subscription_does_not_overwrite = billing[U2].subscription === "sub_new" && billing[U2].status === "active";
+  api["/v1/charges/ch_v"] = { id: "ch_v", refunded: true, invoice: null, payment_intent: "pi_v" };
+  await stripeHandleEvent(ev("charge.refunded", "ch_v"), deps);
+  out.lifetime_refund_revokes = !active(entitlement(U2));
+
+  // ---- o que não pode liberar nada ----
+  var before = Object.keys(payments).length;
+  api["/v1/checkout/sessions/cs_unpaid"] = { id: "cs_unpaid", mode: "payment", payment_status: "unpaid", client_reference_id: U2, payment_intent: "pi_u", metadata: { plan_id: "vitalicio" } };
+  api["/v1/checkout/sessions/cs_nouser"] = { id: "cs_nouser", mode: "payment", payment_status: "paid", client_reference_id: "nao-e-uuid", payment_intent: "pi_n", metadata: { plan_id: "vitalicio" } };
+  api["/v1/checkout/sessions/cs_wrongplan"] = { id: "cs_wrongplan", mode: "payment", payment_status: "paid", client_reference_id: U2, payment_intent: "pi_w", metadata: { plan_id: "mensal" } };
+  await stripeHandleEvent(ev("checkout.session.completed", "cs_unpaid"), deps);
+  await stripeHandleEvent(ev("checkout.session.completed", "cs_nouser"), deps);
+  await stripeHandleEvent(ev("checkout.session.completed", "cs_wrongplan"), deps);
+  out.bad_checkouts_grant_nothing = Object.keys(payments).length === before;
+  return out;
+})(%s)
+"""
+
+
+def _stripe_params():
+    """Corpo de evento e cabeçalhos Stripe-Signature (bom, ruim e velho)."""
+    secret = "whsec_teste_" + os.urandom(8).hex()
+    now = int(time.time())
+    payload = json.dumps({"id": "evt_1", "type": "invoice.paid", "data": {"object": {"id": "in_1"}}})
+
+    def sig(t):
+        return hmac.new(secret.encode(), f"{t}.{payload}".encode(), hashlib.sha256).hexdigest()
+    return {
+        "secret": secret, "now": now, "payload": payload,
+        "goodHeader": f"t={now},v1={sig(now)}",
+        "badHeader": f"t={now},v1={'0' * 64}",
+        "oldHeader": f"t={now - 1000},v1={sig(now - 1000)}",
+    }
+
+
+def _write_stripe_page(site):
+    src = (ROOT / "supabase" / "functions" / "_shared" / "stripe.js").read_text(encoding="utf-8")
+    src = re.sub(r"^export ", "", src, flags=re.M)
+    (site / "stripe_test.html").write_text(f'<!DOCTYPE html><html><head><link rel="icon" href="data:,"></head><body><script>\n{src}\n</script></body></html>',
+                                           encoding="utf-8")
+
+
 def run():
     """Devolve (resultados, detalhes): nome -> bool, e nome -> texto do que falhou."""
     out, why = {}, {}
@@ -301,9 +460,31 @@ def run():
         missing = [u for u in urls + ["manifest.json", "sw.js"] if not (site / u).exists()]
         check("teste_build_is_installable", urls and not missing, f"faltando em _teste: {missing}")
 
+        _write_stripe_page(site)
         srv, base = _serve(site)
         page = base + "/index.html"
         try:
+            # webhook do Stripe: assinatura e fluxo de cada evento
+            with Browser() as b:
+                b.goto(base + "/stripe_test.html", settle=0.3)
+                s = b.eval(STRIPE_TEST % json.dumps(_stripe_params()))
+                s = s if isinstance(s, dict) else {}
+                check("stripe_webhook_accepts_valid_signature", s.get("sig_good") is True, s)
+                check("stripe_webhook_rejects_invalid_signature",
+                      s and not any(s.get(k) for k in ("sig_bad", "sig_tampered", "sig_wrong_secret", "sig_old",
+                                                       "sig_empty", "sig_no_secret")), s)
+                check("stripe_flow_monthly_grants_access", s.get("free_before") and s.get("monthly_grants")
+                      and s.get("monthly_renews") and s.get("monthly_unpaid_ignored"), s)
+                check("stripe_flow_monthly_cancel_and_failure_keep_paid_month",
+                      s.get("monthly_cancel_keeps_access") and s.get("monthly_failed_marks_past_due"), s)
+                check("stripe_flow_lifetime_grants_access", s.get("lifetime_grants") and s.get("lifetime_cancels_monthly"), s)
+                check("stripe_flow_idempotent", s.get("monthly_idempotent") and s.get("lifetime_grants"), s)
+                check("stripe_flow_refund_revokes", s.get("refund_partial_keeps") and s.get("refund_total_revokes_month")
+                      and s.get("lifetime_refund_revokes"), s)
+                check("stripe_flow_rejects_bad_input", s.get("bad_checkouts_grant_nothing")
+                      and s.get("old_subscription_does_not_overwrite"), s)
+                check("stripe_test_no_js_errors", not b.errors, b.errors)
+
             with Browser() as b:
                 b.goto(page, settle=0.5)
                 b.eval('localStorage.setItem("toefl_theme_v1", "light")')

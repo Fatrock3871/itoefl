@@ -1122,6 +1122,26 @@ def plans_checks():
         and "excluded.event_at >= billing.event_at" in stripe_body
     )
 
+    # stripe-webhook: confere a assinatura antes de ler o corpo ou o banco,
+    # segredos só do ambiente, evento repetido não é reprocessado, e trata
+    # exatamente os seis eventos combinados
+    hook = (fn_dir / "stripe-webhook" / "index.ts").read_text(encoding="utf-8")
+    logic = (fn_dir / "_shared" / "stripe.js").read_text(encoding="utf-8")
+    events = re.search(r"STRIPE_EVENTS = \[(.*?)\];", logic, re.S)
+    out["stripe_webhook_order_is_safe"] = (
+        hook.index("stripeVerifySignature(") < hook.index("JSON.parse(payload)") < hook.index('from("stripe_events")')
+        < hook.index("stripeHandleEvent(") < hook.index(".upsert({ id: event.id")
+        and 'return text("assinatura inválida", 400)' in hook
+        and 'Deno.env.get("STRIPE_WEBHOOK_SECRET")' in hook
+        and 'if (seen) return text("já processado", 200)' in hook
+        and bool(events) and set(re.findall(r'"([a-z_.]+)"', events.group(1))) == {
+            "checkout.session.completed", "invoice.paid", "invoice.payment_failed",
+            "customer.subscription.updated", "customer.subscription.deleted", "charge.refunded"}
+        and "[functions.stripe-webhook]\nverify_jwt = false" in (ROOT / "supabase" / "config.toml").read_text(encoding="utf-8")
+    )
+    api = (fn_dir / "_shared" / "stripe_api.ts").read_text(encoding="utf-8")
+    out["stripe_secret_only_from_env"] = 'Deno.env.get("STRIPE_SECRET_KEY")' in api and "Stripe-Version" in api
+
     terms = (ARTIFACT.parent / "termos.html").read_text(encoding="utf-8")
     out["plans_terms_cover_plans_and_refund"] = (
         all(s in terms for s in ("Sprint", "Standard", "Premium", "30 dias", "90 dias", "Vitalício",
@@ -1129,6 +1149,24 @@ def plans_checks():
         and "REVISAR" not in terms
     )
     return out
+
+
+SECRET_PATTERNS = re.compile(
+    r"sk_(?:live|test)_[0-9A-Za-z]{16,}|rk_(?:live|test)_[0-9A-Za-z]{16,}|whsec_[0-9A-Za-z]{16,}"
+    r"|sb_secret_[0-9A-Za-z_-]{16,}|APP_USR-\d{6,}")
+
+
+def secrets_checks():
+    """Nenhuma chave secreta de pagamento ou do Supabase em arquivo do Git."""
+    files = subprocess.run(["git", "ls-files", "-z"], cwd=ROOT, capture_output=True, check=True).stdout.decode().split("\0")
+    hits = []
+    for name in filter(None, files):
+        path = ROOT / name
+        if path.suffix.lower() in {".png", ".jpg", ".ico", ".mp3", ".wav", ".pdf"} or not path.is_file():
+            continue
+        if SECRET_PATTERNS.search(path.read_text(encoding="utf-8", errors="ignore")):
+            hits.append(name)
+    return {"no_secret_keys_in_git": not hits, "no_secret_keys_in_git__error": ", ".join(hits)}
 
 
 def essay_server_checks():
@@ -1702,6 +1740,7 @@ def main():
     results.update(legal_page_checks())
     results.update(pwa_checks())
     results.update(plans_checks())
+    results.update(secrets_checks())
     results.update(essay_server_checks())
     results.update(essay_topic_checks())
     results.update(landing_checks())
