@@ -32,7 +32,7 @@ Um candidato B1 e um candidato C1 podem escrever frases igualmente **corretas**.
 - **B2:** uma a duas ideias por frase com elaboração, conectores de registro médio, algum vocabulário acadêmico preciso.
 - **C1–C2:** duas a três ideias integradas por frase, subordinação natural, nominalizações, hedging calibrado, frases curtas usadas de propósito para impacto.
 
-> 📌 **Princípio central deste módulo:** você não sobe de banda aprendendo palavras difíceis · sobe aprendendo a **empacotar mais sentido por frase, com controle**. Sofisticação sem controle (tentar C2 e travar) pontua **abaixo** de B2 limpo.
+> 📌 **Princípio central deste módulo:** você não sobe de banda aprendendo palavras difíceis. Sobe aprendendo a **empacotar mais sentido por frase, com controle**. Sofisticação sem controle (tentar C2 e travar) pontua **abaixo** de B2 limpo.
 
 ### 1.3 Regra de ouro da seleção de banda-alvo
 
@@ -67,7 +67,7 @@ Registro é escolher a voz certa pra situação, não uma escala fixa de "formal
 
 ## PARTE 2: O ATLAS LINGUÍSTICO
 
-A tabela mestra de referência. Antes de qualquer drill, identifique em qual banda você está operando e quais marcadores deveria estar usando. As colunas trocam a antiga tierização por score (20+/25+/28+) pelas bandas CEFR.
+A tabela mestra de referência. Antes de qualquer drill, identifique em qual banda você está operando e quais marcadores deveria estar usando.
 
 | Elemento linguístico | B1 (banda 3–3.5) | B2 (banda 4–4.5) | C1–C2 (banda 5–6) |
 |---|---|---|---|
@@ -172,7 +172,7 @@ O Atlas acima dá **um** exemplo por elemento. Abaixo, o inventário de trabalho
 
 Estes dez marcadores são os que mais rápido movem uma resposta de B2 para C1/C2 aos olhos do e-rater e do SpeechRater. Cada um abaixo tem: a função retórica, duas reescritas antes → depois, o uso indevido mais comum do brasileiro, e quando **não** usar.
 
-### Marcador 1 · *wh-cleft* de valor: *"What makes X significant is..."*
+### Marcador 1: *wh-cleft* de valor: *"What makes X significant is..."*
 
 **Função:** foca a atenção do leitor no *porquê*, não no *quê*. Sinaliza análise, não descrição.
 
@@ -181,26 +181,26 @@ Estes dez marcadores são os que mais rápido movem uma resposta de B2 para C1/C
 - "Technology is important because it saves time." → *"What makes technology decisive is not the time it saves but the scale it unlocks."*
 - "This policy is good because it helps poor families." → *"What gives the policy its force is that it reaches the families least able to absorb the cost."*
 
-**Uso indevido:** encaixar sem completar o contraste · *"What makes X important is that it is important."* Circular. O molde exige **informação nova** depois do *is*.
+**Uso indevido:** encaixar sem completar o contraste: *"What makes X important is that it is important."* Circular. O molde exige **informação nova** depois do *is*.
 
 **Quando não usar:** na fala rápida, se você ainda hesita para montar a segunda metade. Um *"X matters mainly because..."* fluido rende mais.
 
 ### Marcador 2: correlativo *"Not only does X, but Y also..."*
 
-**Função:** empacota duas ideias numa estrutura só e força inversão · sinal sintático forte.
+**Função:** empacota duas ideias numa estrutura só e força inversão, um sinal sintático forte.
 
 **Antes → depois:**
 
 - "It is cheaper. It is also faster." → *"Not only is it cheaper, but it is also faster to deploy."*
 - "The course teaches theory and gives practice." → *"Not only does the course cover the theory, but it also builds the habit of applying it."*
 
-**Uso indevido:** esquecer a inversão · ❌ *"Not only it is cheaper..."* → ✔ *"Not only **is it** cheaper..."*
+**Uso indevido:** esquecer a inversão. ❌ *"Not only it is cheaper..."* → ✔ *"Not only **is it** cheaper..."*
 
 **Quando não usar:** mais de uma vez por resposta. Repetido, vira tique.
 
-### Marcador 3 · projeção de implicação: *"The implications of X extend to..."*
+### Marcador 3: projeção de implicação: *"The implications of X extend to..."*
 
-**Função:** move da afirmação para a consequência de segunda ordem · mostra alcance de raciocínio.
+**Função:** move da afirmação para a consequência de segunda ordem e mostra alcance de raciocínio.
 
 **Antes → depois:**
 
@@ -209,9 +209,9 @@ Estes dez marcadores são os que mais rápido movem uma resposta de B2 para C1/C
 
 **Uso indevido:** anunciar implicações e não nomear nenhuma. O molde é uma promessa que a frase precisa cumprir.
 
-**Quando não usar:** quando a implicação é óbvia e pequena · soa inflado.
+**Quando não usar:** quando a implicação é óbvia e pequena: soa inflado.
 
-### Marcador 4 · crítica calibrada: *"X fails to account for / overlooks / underestimates Y."*
+### Marcador 4: crítica calibrada: *"X fails to account for / overlooks / underestimates Y."*
 
 **Função:** discorda sem ser rude; nomeia exatamente o que falta no argumento oposto. Essencial na Academic Discussion.
 
@@ -222,35 +222,35 @@ Estes dez marcadores são os que mais rápido movem uma resposta de B2 para C1/C
 
 **Uso indevido:** usar como insulto genérico (*"this argument fails"*) sem dizer **o que** o argumento deixa de considerar.
 
-**Quando não usar:** contra um ponto que você, no fim, aceita · aí use concessão (Marcador 5), não crítica.
+**Quando não usar:** contra um ponto que você, no fim, aceita. Aí use concessão (Marcador 5), não crítica.
 
-### Marcador 5 · concessão integrada: *"Notwithstanding X, Y..."* / *"While X is fair, Y..."*
+### Marcador 5: concessão integrada: *"Notwithstanding X, Y..."* / *"While X is fair, Y..."*
 
-**Função:** admite o outro lado **dentro da mesma frase** da sua tese · mais forte que anexar "but" depois.
+**Função:** admite o outro lado **dentro da mesma frase** da sua tese, o que é mais forte que anexar "but" depois.
 
 **Antes → depois:**
 
 - "Some people say it's expensive. But it's worth it." → *"While the upfront cost is real, the return over five years clearly justifies it."*
 - "Critics worry about privacy. The benefits are bigger." → *"Notwithstanding legitimate privacy concerns, the aggregate benefit to public health is substantial."*
 
-**Uso indevido:** *"Notwithstanding"* seguido de oração completa · ❌ *"Notwithstanding that it is expensive"* soa arcaico. Prefira *"Notwithstanding the cost, ..."* (sintagma nominal).
+**Uso indevido:** *"Notwithstanding"* seguido de oração completa. ❌ *"Notwithstanding that it is expensive"* soa arcaico. Prefira *"Notwithstanding the cost, ..."* (sintagma nominal).
 
 **Quando não usar:** abrir **todo** parágrafo com concessão. Uma por resposta.
 
-### Marcador 6: nominalização de processo · *"the rise of / the erosion of / the shift toward"*
+### Marcador 6: nominalização de processo, *"the rise of / the erosion of / the shift toward"*
 
-**Função:** comprime um processo inteiro num sintagma nominal que pode virar sujeito da frase · densidade máxima.
+**Função:** comprime um processo inteiro num sintagma nominal que pode virar sujeito da frase. Densidade máxima.
 
 **Antes → depois:**
 
 - "Fewer people trust the news, and this is dangerous." → *"The erosion of trust in the press carries real democratic risk."*
 - "Cities are growing faster than roads can handle." → *"The mismatch between urban growth and infrastructure is the core problem."*
 
-**Uso indevido:** nominalizar e apagar quem age quando o agente importa · *"mistakes were made"* evasivo. Ver Parte 4.1.
+**Uso indevido:** nominalizar e apagar quem age quando o agente importa: *"mistakes were made"* é evasivo. Ver Parte 4.1.
 
 **Quando não usar:** na fala rápida (difícil de produzir sem travar) e quando o leitor precisa saber **quem** fez.
 
-### Marcador 7 · reenquadramento: *"This is not merely a matter of X: it reflects Y."*
+### Marcador 7: reenquadramento: *"This is not merely a matter of X: it reflects Y."*
 
 **Função:** eleva o nível de abstração; mostra que você vê o padrão por trás do caso.
 
@@ -263,7 +263,7 @@ Estes dez marcadores são os que mais rápido movem uma resposta de B2 para C1/C
 
 **Quando não usar:** quando o assunto é literalmente só X. Não force profundidade onde não há.
 
-### Marcador 8 · fechamento de síntese: *"Taken together, these points..."*
+### Marcador 8: fechamento de síntese: *"Taken together, these points..."*
 
 **Função:** sinaliza que você está integrando, não só listando. Fecho de banda alta.
 
@@ -274,9 +274,9 @@ Estes dez marcadores são os que mais rápido movem uma resposta de B2 para C1/C
 
 **Uso indevido:** usar *"Taken together"* quando só houve **um** ponto. Precisa de ≥2 antes.
 
-**Quando não usar:** respostas muito curtas de Take an Interview · um *"So overall, X."* basta.
+**Quando não usar:** respostas muito curtas de Take an Interview: um *"So overall, X."* basta.
 
-### Marcador 9 · condicional invertido: *"Were X to happen, Y would..."*
+### Marcador 9: condicional invertido: *"Were X to happen, Y would..."*
 
 **Função:** hipótese formal sem *"if"*; sinal sintático de C1.
 
@@ -285,11 +285,11 @@ Estes dez marcadores são os que mais rápido movem uma resposta de B2 para C1/C
 - "If the school cut the program, students would lose access." → *"Were the school to cut the program, the students with the fewest alternatives would lose the most."*
 - "If we ignored this, it would get worse." → *"Were the trend left unaddressed, the cost of fixing it later would only grow."*
 
-**Uso indevido:** misturar tempos · ❌ *"Were X to happen, Y will..."* → ✔ *"...Y **would**..."*
+**Uso indevido:** misturar tempos. ❌ *"Were X to happen, Y will..."* → ✔ *"...Y **would**..."*
 
 **Quando não usar:** mais de uma vez seguida; e na fala, se a construção não sai limpa.
 
-### Marcador 10 · *it-cleft* de causa: *"It is because of X that Y."*
+### Marcador 10: *it-cleft* de causa: *"It is because of X that Y."*
 
 **Função:** põe a causa em posição de foco; enfatiza o elo causal.
 
@@ -298,7 +298,7 @@ Estes dez marcadores são os que mais rápido movem uma resposta de B2 para C1/C
 - "Students improve because of feedback, not tests." → *"It is targeted feedback, not testing, that drives improvement."*
 - "The city recovered because of the investment." → *"It was the sustained investment, more than any single project, that turned the city around."*
 
-**Uso indevido:** clivar quando não há contraste implícito · *"It is X that Y"* sem um "não-Y" no ar soa pesado.
+**Uso indevido:** clivar quando não há contraste implícito: *"It is X that Y"* sem um "não-Y" no ar soa pesado.
 
 **Quando não usar:** quando a frase simples já enfatiza bem. Cleft é um recurso de destaque, não o padrão.
 
@@ -337,7 +337,7 @@ Uma nominalização transforma um verbo ou adjetivo numa palavra-substantivo, qu
 
 ### 4.2 Hedging calibrado: afirmar com a força certa
 
-Hedging é modular a certeza da afirmação. Banda baixa não hedge nada (afirmações absolutas); banda baixa **também** perde por hedge demais (soa evasivo). C1 calibra.
+Hedging é modular a certeza da afirmação. Banda baixa não modaliza nada (afirmações absolutas); banda baixa **também** perde por modalizar demais (soa evasivo). C1 calibra.
 
 **Inventário, do mais forte ao mais fraco:**
 
@@ -349,13 +349,13 @@ Hedging é modular a certeza da afirmação. Banda baixa não hedge nada (afirma
 | Baixa certeza | *may, might, could, arguably, it is possible that* |
 | Escopo limitado | *in many cases, broadly, for the most part, to some extent, in part* |
 
-**Quando hedge (obrigatório em banda alta):**
+**Quando usar hedging (obrigatório em banda alta):**
 
 - afirmação causal forte: *"Social media **may** contribute to..."* (não *"causes"*)
 - generalização ampla: *"Students **tend to** learn more when..."*
 - previsão: *"This **is likely to** intensify over the next decade."*
 
-**Quando NÃO hedge:**
+**Quando NÃO usar hedging:**
 
 - sua opinião, pedida diretamente ("Do you think...?"): *"I think"* já é hedge. Empilhar *"I think it might possibly perhaps be..."* soa inseguro, não cauteloso.
 - fatos estabelecidos no prompt.
@@ -383,7 +383,7 @@ Banda baixa = muitas frases curtas. Banda alta = as mesmas ideias em menos frase
 | aposto | *Granovetter is a sociologist. He argued that...* | *Granovetter, a sociologist, argued that...* |
 | preposição + nominalização | *After they discussed it, they voted.* | *After discussion, they voted.* |
 
-**Armadilha:** o particípio solto (*dangling participle*) · *"Walking into the room, the lights were off."* Quem entrou? Sujeito da oração principal tem que ser o agente do particípio: *"Walking into the room, I found the lights off."*
+**Armadilha:** o particípio solto (*dangling participle*): *"Walking into the room, the lights were off."* Quem entrou? Sujeito da oração principal tem que ser o agente do particípio: *"Walking into the room, I found the lights off."*
 
 ### 4.4 Cleft, fronting e inversão: recursos de foco
 
@@ -521,7 +521,7 @@ Você tem **45 segundos** para responder cada pergunta, e os testes práticos of
 
 *Nota: na função de sugestão, C1 acrescenta o **porquê** de cada recomendação ("because fluency only comes from production") e prioriza ("the single most useful thing"), em vez de listar.*
 
-> Para **previsão** (*"How do you think X will change...?"*), o marcador que mais rende na fala é o hedge calibrado: *"It's likely to..."*, *"I'd expect X to..."* · nunca *"X will definitely..."*.
+> Para **previsão** (*"How do you think X will change...?"*), o marcador que mais rende na fala é o hedge calibrado: *"It's likely to..."*, *"I'd expect X to..."*, nunca *"X will definitely..."*.
 
 ### 5.2 Write an Email: registro é cortesia e precisão, não floreio
 
@@ -573,22 +573,22 @@ O e-mail navegacional acadêmico é curto (4–8 frases). Aqui, sofisticação =
 
 *O que muda: a concessão abre o parágrafo (marcador 5), a razão é específica e mecanística ("not the content itself but the transfer"), há um exemplo concreto e desenvolvido, e o engajamento com os dois colegas é explícito e integrado, não anexado.*
 
-**► EXEMPLO: quando você discorda dos dois colegas (síntese):** *Prompt: "Is it better to save money or to spend it on experiences while young?" Colega A: poupar, por segurança. Colega B: gastar em experiências, que não voltam.*
+**► EXEMPLO: quando você discorda dos dois colegas (síntese):** *Prompt: "Is it better to save money or to spend it on experiences while young?" Colega Ana: poupar, por segurança. Colega Rafael: gastar em experiências, que não voltam.*
 
 **C1/C2:**
 > "Both Ana and Rafael frame this as a choice, but I'm not sure it is one. Rafael is right that certain experiences (living abroad, say) are far harder to have later; Ana is right that starting to save early compounds in a way that starting at forty never catches up to. The resolution is not to pick a side but to protect a floor for each: a fixed, automatic savings rate, small if necessary, and everything above it free for experiences without guilt. What sinks people is not the split but the absence of any rule at all."
 
-*Discordar de ambos, quando feito com controle, sinaliza raciocínio independente: desde que você reconheça o que cada um acerta antes de reenquadrar.*
+*Discordar de ambos, quando feito com controle, sinaliza raciocínio independente, desde que você reconheça o que cada um acerta antes de reenquadrar.*
 
 ---
 
-## PARTE 6 · EXEMPLO RESOLVIDO: A ELEVAÇÃO NARRADA
+## PARTE 6: EXEMPLO RESOLVIDO: A ELEVAÇÃO NARRADA
 
 Aqui você acompanha o processo de elevação **decisão por decisão**, não só o antes e o depois.
 
 ### 6.1 Academic Discussion: de B1 a C1, frase a frase
 
-**Prompt:** *"Some schools are replacing paper textbooks with tablets. Is this a good change?"* · Colega "Lía": contra (distração, custo); colega "Otto": a favor (peso, atualização de conteúdo).
+**Prompt:** *"Some schools are replacing paper textbooks with tablets. Is this a good change?"* Colega "Lía": contra (distração, custo); colega "Otto": a favor (peso, atualização de conteúdo).
 
 **Rascunho B1 do aluno:**
 > "I think tablets are good. Books are heavy and tablets are light. Also you can update the content easily. Some people say tablets are a distraction but students can be responsible. I agree with Otto. Schools should use tablets."
@@ -771,7 +771,7 @@ Reescreva o parágrafo elevando o registro lexical (Parte 4.6). Alvo: 1–2 lati
 
 ### DRILL 8: Calibrar o hedging
 
-**Parte A: hedge o que está afirmado forte demais:**
+**Parte A: modalize o que está afirmado forte demais:**
 > "Video games cause violence. Every child who plays them becomes aggressive. Technology destroys family communication completely."
 
 **Parte B: firme o que está evasivo demais:**
@@ -794,22 +794,22 @@ Pegue qualquer resposta de Writing que você já escreveu. Sublinhe cada palavra
 - *think* → *believe, hold, contend, maintain, argue*
 - *people* → *individuals, students, users, the public* (seja específico)
 
-### DRILL 10 · Take an Interview: resposta em 3 bandas (cronometrado)
+### DRILL 10: Take an Interview: resposta em 3 bandas (cronometrado)
 
-Grave-se respondendo à pergunta abaixo três vezes: uma mirando B1, uma B2, uma C1. Cada resposta em até 45 segundos, sem preparo. Ouça e confirme que a versão C1 **não tem mais hesitação** que a B2 · se tiver, você está mirando alto demais para o seu nível atual de fluência. Repita com uma pergunta de sugestão e uma de previsão.
+Grave-se respondendo à pergunta abaixo três vezes: uma mirando B1, uma B2, uma C1. Cada resposta em até 45 segundos, sem preparo. Ouça e confirme que a versão C1 **não tem mais hesitação** que a B2. Se tiver, você está mirando alto demais para o seu nível atual de fluência. Repita com uma pergunta de sugestão e uma de previsão.
 
 *"Tell me about a place you like to spend time in. Why do you enjoy it?"*
 
-### DRILL 11 · Academic Discussion: elevação de parágrafo inteiro
+### DRILL 11: Academic Discussion: elevação de parágrafo inteiro
 
 Escreva uma resposta B1 (curta, simples) a cada prompt. Depois reescreva em C1 aplicando: concessão na abertura (Marcador 5), uma razão mecanística (*"what makes X valuable is..."*), um exemplo concreto e desenvolvido, e engajamento explícito com um colega.
 
-**Prompt A:** *"Is it better for a company to promote from within or to hire experienced people from outside?"* Colega A: "Promoting from within keeps morale high and preserves company knowledge." Colega B: "Outside hires bring fresh ideas and challenge groupthink."
+**Prompt A:** *"Is it better for a company to promote from within or to hire experienced people from outside?"* Colega Daniel: "Promoting from within keeps morale high and preserves company knowledge." Colega Mei: "Outside hires bring fresh ideas and challenge groupthink."
 
-**Prompt B:** *"Should high schools require every student to learn a musical instrument?"* Colega A: "Yes (it builds discipline and teaches a skill that lasts." Colega B: "No) not every student is interested, and the time is better spent elsewhere."
+**Prompt B:** *"Should high schools require every student to learn a musical instrument?"* Colega Lucas: "Yes — it builds discipline and teaches a skill that lasts." Colega Aisha: "No — not every student is interested, and the time is better spent elsewhere."
 
 **Modelo C1 (Prompt A):**
-> "While Colleague A is right that internal promotion protects institutional memory, the stronger position is a deliberate mix. What makes an outside hire valuable is not the 'fresh ideas' in the abstract but the fact that they have not yet learned which questions the organization has stopped asking. A team that has only ever promoted from within tends to optimize the process it already has; someone from outside is the one who asks why that process exists at all. The morale cost is real, but it is manageable if internal candidates are given a genuine path and outside hires are reserved for roles where the current thinking has visibly stalled."
+> "While Daniel is right that internal promotion protects institutional memory, the stronger position is a deliberate mix. What makes an outside hire valuable is not the 'fresh ideas' in the abstract but the fact that they have not yet learned which questions the organization has stopped asking. A team that has only ever promoted from within tends to optimize the process it already has; someone from outside is the one who asks why that process exists at all. The morale cost is real, but it is manageable if internal candidates are given a genuine path and outside hires are reserved for roles where the current thinking has visibly stalled."
 
 ### DRILL 12: Coesão por substantivo sumarizador
 

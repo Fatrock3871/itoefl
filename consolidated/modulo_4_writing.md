@@ -3,10 +3,10 @@
 > **iTOEFL**
 >
 > Este módulo (formato oficial completo: Módulo 0, Parte 2) tem sete partes:
-> as regras, como a IA corrige, o **Laboratório de Produção Escrita** (a
-> língua que você precisa produzir certo, não só reconhecer), um exemplo
-> resolvido, os drills, o gabarito com respostas-modelo por banda, e o
-> protocolo de erros.
+> as regras (incluindo como a IA corrige), a estratégia por tarefa, o
+> **Laboratório de Produção Escrita** (a língua que você precisa produzir
+> certo, não só reconhecer), um exemplo resolvido, os drills, o gabarito com
+> respostas-modelo por banda e o protocolo de erros.
 
 ---
 
@@ -46,7 +46,7 @@ Write an Email:                       5/20 pontos (25%)
 Write for an Academic Discussion:     5/20 pontos (25%)
 ```
 
-**Insight estratégico:** metade da nota bruta do Writing vem de 10 itens rápidos e mecânicos de gramática. Domine estrutura de frase com precisão cirúrgica (Parte 3), depois entregue dois textos curtos impecáveis. Quem só treina a escrita longa e ignora Build a Sentence já deixa metade da pontuação na mesa, antes mesmo de escrever a primeira palavra própria.
+**Insight estratégico:** metade da nota bruta do Writing vem de 10 itens rápidos e mecânicos de gramática. Domine a estrutura de frase com precisão (Parte 3), depois entregue dois textos curtos impecáveis. Quem só treina a escrita longa e ignora Build a Sentence já abre mão de metade da pontuação, antes mesmo de escrever a primeira palavra própria.
 
 ### 1.4 Como a IA (e-rater) corrige de verdade
 
@@ -60,9 +60,9 @@ O e-rater não "entende" seu texto como um humano. Ele extrai **features mensur�
 | **Escolha lexical / estilo** | Variedade de vocabulário; ausência de repetição; registro adequado; precisão | Não repetir a mesma palavra de conteúdo 3+ vezes; vocabulário preciso; registro consistente (formal no Email, acadêmico na Discussion) |
 | **Organização** | Presença de abertura, corpo, fechamento; conectores; progressão lógica | Estrutura visível; conectores corretos e bem pontuados |
 | **Desenvolvimento** | Cada afirmação é seguida de razão, exemplo ou consequência? | Nenhuma frase genérica isolada: sempre uma camada de especificidade |
-| **Relevância ao tema** | O texto responde ao prompt? | Endereça **todos** os elementos pedidos (no Email: os três pontos que o enunciado manda incluir) |
+| **Relevância ao tema** | O texto responde ao prompt? | Aborda **todos** os elementos pedidos (no Email: os três pontos que o enunciado manda incluir) |
 
-**A implicação prática mais importante:** num texto curto, 4 a 8 frases no Email, 1 parágrafo na Discussion, **cada frase pesa muito**. Não tem volume pra "diluir" um erro. Precisão vale mais que ambição: uma resposta B2 impecável pontua mais que uma tentativa de C2 cheia de erros.
+**A implicação prática mais importante:** num texto curto (4 a 8 frases no Email, 1 parágrafo na Discussion), **cada frase pesa muito**. Não tem volume pra "diluir" um erro. Precisão vale mais que ambição: uma resposta B2 impecável pontua mais que uma tentativa de C2 cheia de erros.
 
 ---
 
@@ -109,7 +109,7 @@ Progressão de dificuldade (A1 → C2): o que Build a Sentence cobra em cada fai
 
 ### 2.2 Write an Email: registro e template
 
-O e-rater avalia adequação de registro, clareza de propósito, estrutura (abertura/corpo/fechamento) e correção gramatical, num texto curto. O enunciado sempre manda incluir **3 elementos específicos** (ex.: *explique a situação, peça uma alternativa, e proponha um horário*). **Endereçar todos os elementos é a primeira coisa que o e-rater checa.**
+O e-rater avalia adequação de registro, clareza de propósito, estrutura (abertura/corpo/fechamento) e correção gramatical, num texto curto. O enunciado sempre manda incluir **3 elementos específicos** (ex.: *explique a situação, peça uma alternativa, e proponha um horário*). **Abordar todos os elementos é a primeira coisa que o e-rater checa.**
 
 **As três partes obrigatórias:**
 
@@ -129,7 +129,7 @@ I am writing to [propósito claro: ask about / request / inform you that] ___.
 
 [1–2 frases de apoio com um detalhe concreto: data, motivo, contexto.]
 
-[Segundo elemento pedido, se houver: uma pergunta direta e educada —
+[Segundo elemento pedido, se houver: uma pergunta direta e educada:
 "Would it be possible to...?" / "Could you let me know...?"]
 
 Thank you for your time and consideration. I look forward to your reply.
@@ -162,7 +162,7 @@ O e-rater avalia desenvolvimento de argumento, clareza de posição, variedade g
 
 ```
 In my opinion, [posição clara sobre a pergunta da discussão].
-This is mainly because [razão central — o principal motor lógico].
+This is mainly because [razão central: o principal motor lógico].
 For example, [exemplo específico, experiência pessoal, ou consequência lógica
 que ilustra o raciocínio].
 While [breve reconhecimento de uma visão alternativa ou do ponto de um colega],
@@ -196,7 +196,7 @@ Estes padrões são os mais penalizados pelo e-rater em candidatos brasileiros. 
 
 Ler inglês certo é uma coisa; **produzir** inglês certo em 23 minutos, sob pressão, é outra. Esta parte é a referência da gramática que você precisa ter **automática** para o Build a Sentence e para não perder banda por erro nos dois textos. Estude uma vez a fundo; depois volte aqui sempre que o protocolo de erros (Parte 7) apontar um padrão.
 
-### 3.1 Os 4 tipos de frase: e como não emendar orações
+### 3.1 Os 4 tipos de frase e como não emendar orações
 
 | Tipo | Estrutura | Exemplo |
 |---|---|---|
@@ -222,7 +222,7 @@ started early.*
 5. Transformar uma em subordinada: *Because the deadline is Friday, I started
 early.*
 
-> ⚠️ *however, therefore, moreover, nevertheless, thus* **não** são conjunções coordenativas, não podem ligar duas orações só com vírgula. ❌ *It rained, however we went out.*  ✅ *It rained**; however,** we went out.* / *It rained. However, we went out.*
+> ⚠️ *however, therefore, moreover, nevertheless, thus* **não** são conjunções coordenativas e não podem ligar duas orações só com vírgula. ❌ *It rained, however we went out.*  ✅ *It rained**; however,** we went out.* / *It rained. However, we went out.*
 
 ### 3.2 Fragmentos (frase incompleta)
 
@@ -407,7 +407,7 @@ Reordene / complete. Respostas na Parte 6, seção "Laboratório".
 
 > **Planejamento (60 s):** Posição: presença **obrigatória**, mas com
 > nuance. Razão: o valor não está só no conteúdo (que se grava), está na
-> interação. Exemplo: seminários. Engajamento · reconhecer o ponto de Ana
+> interação. Exemplo: seminários. Engajamento: reconhecer o ponto de Ana
 > sobre alunos motivados, mas virá-lo.
 >
 > **Rascunho:**
@@ -649,7 +649,7 @@ me to complete the term paper by Friday. I would like to request a short extensi
 **Banda ~3 (B1): posição clara, desenvolvimento fraco:**
 > *I think universities should require unrelated courses. It is good for students. Students learn new things and it is important to know many subjects. I agree with Jordan. So universities should require these courses.*
 
-*Diagnóstico:* posição presente, mas sem razão específica nem exemplo · só afirmações genéricas repetidas (*"it is good"*, *"it is important"*); vocabulário limitado; nenhum engajamento real com Maria; e, com cerca de 35 palavras, fica muito abaixo do mínimo de 100 indicado na prova.
+*Diagnóstico:* posição presente, mas sem razão específica nem exemplo, só afirmações genéricas repetidas (*"it is good"*, *"it is important"*); vocabulário limitado; nenhum engajamento real com Maria; e, com cerca de 35 palavras, fica muito abaixo do mínimo de 100 indicado na prova.
 
 **Banda ~5 (C1) · modelo de referência:**
 > *In my opinion, universities should require every student to take at least one course outside their major. This is mainly because education should prepare students not only for a single job but for a working life in which roles keep changing. For example, an engineering student who takes a communications course may develop the ability to explain technical ideas to non-specialists: a skill that is valuable in almost any workplace. While Maria is right that students already carry a heavy load, one course over an entire degree is a small cost, and the workload problem is really an argument for designing the requirement carefully, not for removing it.*
@@ -696,10 +696,10 @@ razão = ganho de gestão de tempo vs. custo em horas de estudo · exemplo = sua
 
 | % | Banda estimada | Ação |
 |---|---|---|
-| 90–100% | 5,5–6 | Avance. Refaça só as estruturas C1 que errou (3.9 I–K). |
-| 75–89% | 4,5–5,5 | Releia a Parte 3 nos pontos fracos; refaça o Drill A3. |
-| 60–74% | 4–4,5 | Estruturas B2 não estão automáticas: 3.4, 3.5, 3.9 A–H. Refaça A2 e A3. |
-| <60% | ≤3,5 | Comece pela Parte 3.1–3.3 (tipos de frase, run-on, paralelismo) e 3.9 A–D. |
+| 90–100% | 5.5–6 | Avance. Refaça só as estruturas C1 que errou (3.9 I–K). |
+| 75–89% | 4.5–5.5 | Releia a Parte 3 nos pontos fracos; refaça o Drill A3. |
+| 60–74% | 4–4.5 | Estruturas B2 não estão automáticas: 3.4, 3.5, 3.9 A–H. Refaça A2 e A3. |
+| <60% | ≤3.5 | Comece pela Parte 3.1–3.3 (tipos de frase, run-on, paralelismo) e 3.9 A–D. |
 
 **Email + Academic Discussion:** compare cada texto seu com o modelo de banda 5. Marque: (a) abordei todos os elementos? (b) posição/propósito claro na 1ª frase? (c) quantos erros por 100 palavras? (d) repetição lexical? Se (c) > 3 ou (d) presente, o problema é a Parte 3, não a estratégia.
 
@@ -728,7 +728,7 @@ Padrão dominante desta semana: _______________________
 Ação para a próxima sessão: __________________________
 ```
 
-**Protocolo de revisão dos 60–90 segundos finais** (Email e Discussion): não adicione conteúdo novo · **só cace erro**, nesta ordem:
+**Protocolo de revisão dos 60–90 segundos finais** (Email e Discussion): não adicione conteúdo novo; **só cace erro**, nesta ordem:
 1. 3ª pessoa do singular no presente tem `-s`? (W2)
 2. Algum substantivo genérico com *the* indevido, ou específico sem artigo? (W3)
 3. O tempo verbal é consistente do início ao fim? (W2)
