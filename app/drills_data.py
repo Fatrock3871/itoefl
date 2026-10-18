@@ -248,83 +248,73 @@ MOD1_ACTION_DRILLS_B = [
 ]
 
 # PARTE 5 (Action Drills) do M1, Grupo C: Read an Academic Passage — 3
-# passagens, 21 itens ao todo. C3.7 é múltipla seleção (marcar 3 de 6).
+# passagens de 180 a 220 palavras com 5 perguntas cada (15 itens), como na
+# prova de 2026. Os tipos do formato antigo (simplificação de frase, inserir
+# frase e resumo) saíram em 2026-10-18.
 MOD1_ACTION_DRILLS_C = [
     {
         "id": "mod1-c1",
         "title": "Drill C1 · Ciências naturais · alvo: 6 min",
         "level": "B2–C1",
-        "objective": "Leia a passagem completa uma vez. Responda às 7 questões. Tempo-alvo: 6 minutos.",
+        "objective": "Leia a passagem completa uma vez. Responda às 5 questões. Tempo-alvo: 6 minutos.",
         "passage_html": """<p><strong>PASSAGE: Bioluminescence in Marine Organisms</strong></p>
-<p>Bioluminescence (the production and emission of light by a living organism) is remarkably common in the ocean, appearing in bacteria, jellyfish, fish, and even some sharks. Unlike the light produced by an incandescent bulb, which wastes most of its energy as heat, bioluminescent light is generated through a highly efficient chemical reaction, typically involving a light-emitting molecule called luciferin and an enzyme called luciferase. Because so little energy is lost as heat, biologists sometimes refer to this phenomenon as "cold light."</p>
-<p>The functions of bioluminescence vary considerably across species, though three purposes appear again and again. Some organisms use light defensively: certain species of squid release a luminous cloud instead of ink, startling predators and buying time to escape. Others use it as a hunting tool. The anglerfish, perhaps the most famous example, dangles a glowing lure above its mouth to attract smaller prey close enough to seize. Still others use light for communication. In the deep sea, darkness is nearly absolute, so visual signals cannot rely on ambient light at all. Even in shallow water at night, certain ostracods, tiny crustaceans, produce synchronized light displays to attract mates.</p>
-<p>What makes bioluminescence especially interesting to evolutionary biologists is that it did not evolve just once. Genetic and biochemical evidence indicates that the capacity for bioluminescence has arisen independently dozens of times across unrelated lineages, using different chemical pathways to achieve a similar outcome. This pattern, in which unrelated organisms evolve similar traits independently, is known as convergent evolution, and bioluminescence is considered one of its most striking examples.</p>""",
+<p>Bioluminescence, the production of light by a living organism, is remarkably common in the ocean, appearing in bacteria, jellyfish, fish, and even some sharks. Unlike an incandescent bulb, which wastes most of its energy as heat, bioluminescent light comes from a highly efficient chemical reaction between a molecule called luciferin and an enzyme called luciferase. Because so little energy is lost as heat, biologists sometimes call it "cold light."</p>
+<p>Organisms use this light in several ways. Some use it defensively: certain squid release a glowing cloud instead of ink, startling predators long enough to escape. Others use it to hunt. The anglerfish, perhaps the most famous example, dangles a glowing lure above its mouth to attract prey close enough to seize. Still others use light to communicate. In the deep sea, darkness is nearly absolute, so visual signals cannot rely on ambient light at all, and even in shallow water at night, tiny crustaceans called ostracods produce synchronized displays to attract mates.</p>
+<p>What especially interests evolutionary biologists is that bioluminescence did not evolve just once. Genetic and biochemical evidence shows that it has arisen independently dozens of times in unrelated lineages, often through different chemical pathways. This pattern, in which unrelated organisms evolve similar traits independently, is known as convergent evolution, and bioluminescence is one of its most striking examples.</p>""",
         "items": [
             {"num": "C1.1", "prompt": "Ideia principal. What is the main idea of the passage?",
              "options": {"A": "Bioluminescence is a rare adaptation found only in a few deep-sea species.", "B": "Bioluminescence is a widespread, chemically efficient trait that serves multiple functions and evolved independently many times.", "C": "The anglerfish, which uses a glowing lure to catch its prey, is the most important example of bioluminescence.", "D": "Bioluminescent light is less efficient than artificial light because much of its energy is lost as heat."},
              "correct": "B", "explanation": "Cobre os três eixos (o que é + eficiência, funções, evolução independente). (A) contradiz \"remarkably common\"; (C) é detalhe, e o texto diz \"perhaps the most famous\", não \"o mais importante\"; (D) inverte a comparação com a lâmpada."},
-            {"num": "C1.2", "prompt": "Detalhe. Why is bioluminescent light sometimes called \"cold light\"?",
-             "options": {"A": "It only occurs in cold, deep-sea environments.", "B": "It is produced by organisms that live in low-temperature waters.", "C": "The reaction that produces it wastes very little energy as heat.", "D": "It appears blue or white, resembling ice."},
-             "correct": "C", "explanation": "Relação causal explícita: \"Because so little energy is lost as heat...\". (A)/(B) confundem o nome com temperatura ambiente; (D) infere cor sem base."},
-            {"num": "C1.3", "prompt": "Detalhe negativo. Which is NOT mentioned as a function of bioluminescence?",
+            {"num": "C1.2", "prompt": "Detalhe negativo. Which is NOT mentioned as a function of bioluminescence?",
              "options": {"A": "Startling predators", "B": "Attracting prey", "C": "Attracting mates", "D": "Regulating body temperature"},
              "correct": "D", "explanation": "O parágrafo 2 lista defesa, caça e comunicação/atração de parceiros. Regulação de temperatura nunca aparece."},
-            {"num": "C1.4", "prompt": "Inferência. It can be inferred from paragraph 2 that in deep-sea environments:",
+            {"num": "C1.3", "prompt": "Inferência. It can be inferred from paragraph 2 that in deep-sea environments:",
              "options": {"A": "visual communication is impossible for any species", "B": "organisms rely on producing their own light because there is little to no ambient light", "C": "most species have lost their sense of sight entirely", "D": "bioluminescence is used only for hunting"},
              "correct": "B", "explanation": "\"In the deep sea, darkness is nearly absolute, so visual signals cannot rely on ambient light at all\" → produzir a própria luz supre a ausência de luz ambiente. (A) é extremo; (C)/(D) sem base."},
-            {"num": "C1.5", "prompt": "Propósito retórico. Why does the author state that bioluminescence \"did not evolve just once\"?",
+            {"num": "C1.4", "prompt": "Propósito retórico. Why does the author state that bioluminescence \"did not evolve just once\"?",
              "options": {"A": "To argue that bioluminescence is less significant than previously thought", "B": "To introduce and support the claim that it is a notable example of convergent evolution", "C": "To explain why some marine species have gone extinct", "D": "To compare bioluminescence with the evolution of eyesight in mammals"},
              "correct": "B", "explanation": "A frase abre o parágrafo e prepara a definição de evolução convergente, que vem duas frases depois: serve para apresentar e embasar a tese de que a bioluminescência é um exemplo notável desse padrão. (A), (C) e (D) não têm base no texto."},
-            {"num": "C1.6", "prompt": "Vocabulário em contexto. The word \"striking\" in paragraph 3 is closest in meaning to:",
+            {"num": "C1.5", "prompt": "Vocabulário em contexto. The word \"striking\" in paragraph 3 is closest in meaning to:",
              "options": {"A": "violent", "B": "notable", "C": "accidental", "D": "doubtful"},
              "correct": "B", "explanation": "\"One of its most striking examples\" = exemplo notável. (A)/(C)/(D) pertencem a outros campos ou invertem o tom."},
-            {"num": "C1.7", "prompt": "Simplificação de frase. Which best expresses the essential information in the highlighted sentence? <em>\"This pattern, in which unrelated organisms evolve similar traits independently, is known as convergent evolution, and bioluminescence is considered one of its most striking examples.\"</em>",
-             "options": {"A": "Convergent evolution explains why all sea creatures glow.", "B": "When unrelated organisms independently develop the same trait, the process is called convergent evolution, and bioluminescence is a prime example of it.", "C": "Bioluminescence is the only known case of convergent evolution.", "D": "Evolutionary biologists disagree about whether bioluminescence is truly convergent."},
-             "correct": "B", "explanation": "A frase original define evolução convergente e diz que a bioluminescência é um exemplo marcante. (B) preserva as duas ideias. (A) exagera (\"all sea creatures\"); (C) inventa exclusividade; (D) inventa controvérsia."},
         ],
     },
     {
         "id": "mod1-c2",
         "title": "Drill C2 · História · alvo: 6 min",
         "level": "B2–C1",
-        "objective": "Leia a passagem completa uma vez. Responda às 7 questões. Tempo-alvo: 6 minutos.",
+        "objective": "Leia a passagem completa uma vez. Responda às 5 questões. Tempo-alvo: 6 minutos.",
         "passage_html": """<p><strong>PASSAGE: Coffee Houses in Seventeenth-Century England</strong></p>
-<p>The first English coffee house opened in Oxford in 1650; within two decades, London alone had hundreds. <strong>[■A]</strong> For the price of a single cup (a penny), a customer could sit for hours, read the newspapers provided by the house, and join whatever conversation was underway. <strong>[■B]</strong> Because admission was cheap and open to any man who could pay, the coffee house mixed people who rarely met elsewhere: merchants, scholars, clergymen, and minor gentry sat at the same long tables. <strong>[■C]</strong></p>
-<p>This mixing had consequences that reached well beyond casual talk. Particular houses became known for particular subjects. Men interested in maritime insurance gathered at Lloyd's; those following scientific debates went to the houses near the Royal Society. <strong>[■D]</strong> Information that had once circulated slowly, by letter or rumor, now moved quickly through these rooms. Some historians argue that the coffee house functioned as an early public sphere: a space where opinion could form through discussion rather than being handed down by church or crown.</p>
-<p>The authorities were not comfortable with this. In 1675, the king issued a proclamation ordering the coffee houses closed, on the grounds that they spread "false, malicious and scandalous reports." The order provoked such immediate opposition that it was withdrawn within days. The houses continued to operate for another century, gradually giving way to private clubs and, eventually, to the institutions that had first taken shape around their tables.</p>""",
+<p>The first English coffee house opened in Oxford in 1650; within two decades, London alone had hundreds. For the price of a single cup, a customer could sit for hours, read the newspapers provided by the house, and join whatever conversation was underway. Because admission was cheap and open to any man who could pay, merchants, scholars, clergymen, and minor gentry sat at the same long tables.</p>
+<p>This mixing had consequences well beyond casual talk. Particular houses became known for particular subjects: men interested in maritime insurance gathered at Lloyd's, while those following scientific debates went to the houses near the Royal Society. Information that had once circulated slowly, by letter or rumor, now moved quickly through these rooms. Some historians argue that the coffee house functioned as an early public sphere: a space where opinion could form through discussion rather than being handed down by church or crown.</p>
+<p>The authorities were uneasy. In 1675, the king issued a proclamation ordering the coffee houses closed, on the grounds that they spread "false, malicious and scandalous reports." The order provoked such immediate opposition that it was withdrawn within days, and the houses continued to operate for another century.</p>""",
         "items": [
             {"num": "C2.1", "prompt": "Ideia principal. The passage is mainly about:",
              "options": {"A": "how coffee was first imported into England", "B": "how English coffee houses became important centers of information and public discussion", "C": "why the king disliked coffee", "D": "the architecture of seventeenth-century London"},
              "correct": "B", "explanation": "O texto traça como as coffee houses viraram centros de informação e discussão pública. (A)/(C)/(D) são detalhes ou não constam."},
-            {"num": "C2.2", "prompt": "Detalhe. According to the passage, a customer who paid a penny could:",
-             "options": {"A": "buy unlimited cups of coffee", "B": "stay for hours, read the newspapers, and take part in conversation", "C": "join the Royal Society", "D": "rent a private room"},
-             "correct": "B", "explanation": "\"Could sit for hours, read the newspapers provided by the house, and join whatever conversation was underway\"."},
-            {"num": "C2.3", "prompt": "Inferência. It can be inferred that before coffee houses existed, information among these groups:",
+            {"num": "C2.2", "prompt": "Inferência. It can be inferred that before coffee houses existed, information among these groups:",
              "options": {"A": "did not exist at all", "B": "traveled more slowly and less widely", "C": "was controlled entirely by merchants", "D": "was freely available to everyone"},
              "correct": "B", "explanation": "\"Information that had once circulated slowly, by letter or rumor, now moved quickly\" → antes, mais devagar e menos amplamente. (A) exagera; (C)/(D) sem base."},
-            {"num": "C2.4", "prompt": "Propósito retórico. Why does the author mention Lloyd's and the houses near the Royal Society?",
+            {"num": "C2.3", "prompt": "Propósito retórico. Why does the author mention Lloyd's and the houses near the Royal Society?",
              "options": {"A": "To show that different coffee houses specialized in different topics", "B": "To argue that Lloyd's was the most important coffee house", "C": "To explain how coffee houses were decorated", "D": "To prove that scientists disliked merchants"},
              "correct": "A", "explanation": "\"Particular houses became known for particular subjects\": Lloyd's e as casas perto da Royal Society ilustram a especialização por tema."},
-            {"num": "C2.5", "prompt": "Detalhe. The king's 1675 proclamation was:",
+            {"num": "C2.4", "prompt": "Detalhe. The king's 1675 proclamation was:",
              "options": {"A": "enforced for a century", "B": "withdrawn within days after strong opposition", "C": "welcomed by most coffee house owners", "D": "never actually issued"},
-             "correct": "B", "explanation": "\"The order provoked such immediate opposition that it was withdrawn within days.\""},
-            {"num": "C2.6", "prompt": "Vocabulário em contexto. The word \"provoked\" in paragraph 3 is closest in meaning to:",
+             "correct": "B", "explanation": "\"The order provoked such immediate opposition that it was withdrawn within days\". (A) troca a ordem pelas casas, que continuaram funcionando por mais um século; (C) não tem base, e (D) contradiz \"the king issued a proclamation\"."},
+            {"num": "C2.5", "prompt": "Vocabulário em contexto. The word \"provoked\" in paragraph 3 is closest in meaning to:",
              "options": {"A": "prevented", "B": "caused", "C": "delayed", "D": "forgave"},
              "correct": "B", "explanation": "\"Provoked such... opposition\" = causou/gerou oposição."},
-            {"num": "C2.7", "prompt": "Inserir frase. Where would the following sentence best fit? <em>\"Even those who could not read had access to the news, since the sheets were often read aloud at the tables.\"</em>",
-             "options": {"A": "At [■A]", "B": "At [■B]", "C": "At [■C]", "D": "At [■D]"},
-             "correct": "B", "explanation": "A frase estende a ideia dos <em>newspapers provided by the house</em>: \"the sheets\" retoma \"the newspapers\", e \"read aloud at the tables\" continua a descrição do que os clientes faziam. [■A] vem <strong>antes</strong> de os jornais serem mencionados: o pronome \"the sheets\" não teria referente. [■C] separaria a ideia de \"misturar pessoas\" da sua consequência. [■D] está no parágrafo errado."},
         ],
     },
     {
         "id": "mod1-c3",
         "title": "Drill C3 · Ciências sociais · alvo: 6 min",
         "level": "C1",
-        "objective": "Leia a passagem completa uma vez. Responda às 7 questões (a última pede 3 respostas). Tempo-alvo: 6 minutos.",
+        "objective": "Leia a passagem completa uma vez. Responda às 5 questões. Tempo-alvo: 6 minutos.",
         "passage_html": """<p><strong>PASSAGE: The Strength of Weak Ties</strong></p>
-<p>When people look for a new job, common sense suggests they should turn to their closest contacts: family and good friends who know them well and want to help. In a study of professionals who had recently changed jobs, the sociologist Mark Granovetter found the opposite. Of those who had found their new position through a personal contact, most had heard about it not from a close friend but from an acquaintance — someone they saw only occasionally and would not have described as part of their inner circle.</p>
-<p>Granovetter's explanation rests on how information moves through social networks. Your close friends tend to know one another and to move in the same circles you do. As a result, they are exposed to more or less the same information you already have; what they can tell you, you have often already heard. An acquaintance, by contrast, moves in a different circle, encounters different people, and hears different news. A weak tie is therefore a bridge to parts of the network you could not otherwise reach.</p>
-<p>The finding has been extended well beyond job-hunting. Weak ties have been linked to the spread of new ideas between organizations, to the circulation of information during emergencies, and to innovation within companies, where teams connected to many outside groups tend to produce more original work. Critics note that weak ties are not always advantageous: they carry less trust, and acting on information from a near-stranger involves more risk. But the core insight has held up: the contacts most likely to tell you something genuinely new are often the ones you know least well.</p>""",
+<p>When people look for a new job, common sense suggests they should turn to their closest contacts: family and good friends who know them well and want to help. Yet when the sociologist Mark Granovetter studied professionals who had recently changed jobs, he found the opposite. Of those who had found their position through a personal contact, most had heard about it not from a close friend but from an acquaintance — someone they saw only occasionally.</p>
+<p>Granovetter's explanation rests on how information moves through social networks. Your close friends tend to know one another and move in the same circles you do, so they mostly hear the same news you already have. An acquaintance, by contrast, moves in a different circle and hears different news. A weak tie is therefore a bridge to parts of the network you could not otherwise reach.</p>
+<p>The finding has been extended beyond job-hunting: weak ties have been linked to the spread of new ideas between organizations and to innovation within companies, where teams connected to many outside groups tend to produce more original work. Critics note that weak ties carry less trust, so acting on their information involves more risk. But the core insight has held up: the contacts most likely to tell you something new are often the ones you know least well.</p>""",
         "items": [
             {"num": "C3.1", "prompt": "Ideia principal. The main idea of the passage is that:",
              "options": {"A": "close friends are usually the most reliable source of job leads, since they know us well and want to help", "B": "weak ties often supply new information because they link us to other parts of a network", "C": "social networks have no effect on how people find jobs", "D": "Granovetter's study has been completely disproved"},
@@ -332,29 +322,15 @@ MOD1_ACTION_DRILLS_C = [
             {"num": "C3.2", "prompt": "Detalhe. In Granovetter's study, most of those who found a job through a personal contact heard about it from:",
              "options": {"A": "a family member", "B": "a close friend", "C": "an acquaintance they saw only occasionally", "D": "a recruitment agency"},
              "correct": "C", "explanation": "\"Most had heard about it not from a close friend but from an acquaintance.\""},
-            {"num": "C3.3", "prompt": "Detalhe. According to the passage, close friends tend to give us information that:",
-             "options": {"A": "is completely new to us", "B": "we have often already heard", "C": "is always more trustworthy and therefore more useful", "D": "comes from distant parts of the network that we cannot reach ourselves"},
-             "correct": "B", "explanation": "\"They are exposed to more or less the same information you already have; what they can tell you, you have often already heard.\" (D) descreve os conhecidos, não os amigos próximos."},
-            {"num": "C3.4", "prompt": "Inferência. It can be inferred that a person whose contacts are ALL close friends would:",
+            {"num": "C3.3", "prompt": "Inferência. It can be inferred that a person whose contacts are ALL close friends would:",
              "options": {"A": "have access to a wider range of information than average", "B": "tend to hear the same information over and over", "C": "never be able to find a job", "D": "be more innovative at work, since close-knit teams produce more original work"},
              "correct": "B", "explanation": "Se todos os contatos são amigos próximos, que circulam nos mesmos círculos → informação repetida, pouca novidade de partes distantes. (A) inverte; (C) exagera; (D) contradiz o parágrafo 3, que liga a inovação a equipes conectadas a muitos grupos de fora."},
-            {"num": "C3.5", "prompt": "Propósito retórico. Why does the author mention innovation within companies in paragraph 3?",
+            {"num": "C3.4", "prompt": "Propósito retórico. Why does the author mention innovation within companies in paragraph 3?",
              "options": {"A": "To give an example of how the weak-ties finding applies beyond job-hunting", "B": "To argue that companies should fire employees with weak ties", "C": "To contradict Granovetter's original study", "D": "To explain how companies are structured"},
              "correct": "A", "explanation": "O parágrafo 3 lista extensões do achado além da busca de emprego; a inovação nas empresas é um desses exemplos."},
-            {"num": "C3.6", "prompt": "Vocabulário em contexto. The word \"bridge\" in paragraph 2 is closest in meaning to:",
+            {"num": "C3.5", "prompt": "Vocabulário em contexto. The word \"bridge\" in paragraph 2 is closest in meaning to:",
              "options": {"A": "obstacle", "B": "connection", "C": "copy", "D": "competitor"},
              "correct": "B", "explanation": "\"A bridge to parts of the network you could not otherwise reach\" = uma ponte/conexão."},
-            {"num": "C3.7", "prompt": "Resumo (marque as 3 ideias principais). Introductory sentence: <em>\"Granovetter's research challenged the assumption that close contacts are the most useful source of information.\"</em> Select the THREE choices that express the most important ideas.",
-             "options": {
-                 "A": "His study found that most job-changers had heard about their position from an acquaintance rather than a close friend.",
-                 "B": "Weak ties are valuable because they connect us to circles (and information) we could not otherwise reach.",
-                 "C": "The first English coffee house opened in Oxford in 1650.",
-                 "D": "The finding applies well beyond job-hunting, including to the spread of ideas and to workplace innovation.",
-                 "E": "Acquaintances are always more trustworthy than close friends.",
-                 "F": "Granovetter interviewed exactly one hundred professionals.",
-             },
-             "correct": "A,B,D", "multi": 3,
-             "explanation": "(A), (B) e (D) são as três ideias principais que parágrafos inteiros sustentam. (C) é de outra passagem (coffee houses), distrator clássico de resumo; (E) contradiz o texto (\"they carry less trust\"); (F) é um detalhe numérico inventado, não consta no texto."},
         ],
     },
 ]

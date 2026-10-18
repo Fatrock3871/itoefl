@@ -268,10 +268,6 @@ if(spk0){
       return Array.prototype.every.call(c.querySelectorAll(".optref"), function(r){ return r.textContent === "(" + map[r.dataset.ref] + ")"; });
     }) && document.querySelectorAll(".qcard .optref").length > 100;
   });
-  check("shuffle_skips_insertion_items", function(){
-    var fixed = document.querySelectorAll(".qcard[data-noshuffle]");
-    return fixed.length >= 1 && Array.prototype.every.call(fixed, function(c){ var o = order(c, ".opt"); return o === o.split("").sort().join(""); });
-  });
   // responder certo depois de embaralhar: clica na alternativa pela letra de origem
   var probe = cards[cards.length - 1], drill = probe.closest(".quiz-drill");
   probe.querySelector('.opt[data-letter="' + probe.dataset.correct + '"]').click();
@@ -1444,6 +1440,19 @@ Parágrafo de **exemplo**, só para testar a infraestrutura.
 
 """
 
+# item de inserção ([■A]): a letra tem sentido próprio, então nem o build nem
+# a tela embaralham as alternativas. O conteúdo de verdade não tem mais item
+# assim (o formato de 2026 não usa inserção), por isso ele só existe aqui
+FIXTURE_INSERTION_DRILL = '''
+MOD1_ACTION_DRILLS_C.append({
+    "id": "mod1-cfix", "title": "Drill de exemplo", "level": "B2", "objective": "Exemplo.",
+    "passage_html": "<p>One sentence. <strong>[■A]</strong> Another sentence. <strong>[■B]</strong></p>",
+    "items": [{"num": "F1", "prompt": "Where would the new sentence best fit?",
+               "options": {"A": "At [■A]", "B": "At [■B]", "C": "At [■C]", "D": "At [■D]"},
+               "correct": "B", "explanation": "(B) liga as duas frases."}],
+})
+'''
+
 FIXTURE_TEST_JS = r"""
 <script>
 window.__errors = [];
@@ -1535,6 +1544,13 @@ check("trail_complete_opens_blocks", function(){
 });
 trailBtn("rapida").click();
 check("trail_fast_closes_blocks", function(){ return deep.open === false && localStorage.getItem("toefl_trilha_v1") === "rapida"; });
+check("shuffle_skips_insertion_items", function(){
+  var fixed = document.querySelectorAll('.quiz-drill[data-drill="mod1-cfix"] .qcard[data-noshuffle]');
+  return fixed.length === 1 && Array.prototype.every.call(fixed, function(c){
+    var o = Array.prototype.map.call(c.querySelectorAll(".opt"), function(x){ return x.dataset.letter; }).join("");
+    return o === "ABCD";
+  });
+});
 check("fixture_no_js_errors", function(){ return window.__errors.length === 0; });
 results.__jsErrors = window.__errors;
 document.title = JSON.stringify(results);
@@ -1555,6 +1571,8 @@ def build_fixture(work):
     if text.count(FIXTURE_DEEP_ANCHOR) != 1:
         raise SystemExit(f"Fixture: nao achei {FIXTURE_DEEP_ANCHOR!r} no M3. Ajuste FIXTURE_DEEP_ANCHOR em scripts/smoke_test.py.")
     m3.write_text(text.replace(FIXTURE_DEEP_ANCHOR, FIXTURE_DEEP_BLOCK + FIXTURE_DEEP_ANCHOR), encoding="utf-8", newline="\n")
+    drills = work / "app" / "drills_data.py"
+    drills.write_text(drills.read_text(encoding="utf-8") + FIXTURE_INSERTION_DRILL, encoding="utf-8")
     for script in ("build_pipeline.py", "build.py"):
         subprocess.run([sys.executable, script], cwd=work / "app", check=True, capture_output=True)
     return work / "artifact" / "index.html"

@@ -339,7 +339,6 @@ def build_mod1():
     html_b = to_html(before_b) + "<h3>Grupo B: Read in Daily Life — exercícios interativos</h3>" + widgets_b
 
     # PARTE 5, Grupo C: troca as 3 passagens acadêmicas pelos widgets
-    # (C3.7 é múltipla seleção — "multi": 3 no item, suportado pelo widget)
     before_c, rest = slice_lines(rest, "### GRUPO C: READ AN ACADEMIC PASSAGE", "## PARTE 6: GABARITO COMENTADO")
     widgets_c = "".join(
         render_quiz_drill(d["id"], d["title"], d["objective"], d.get("passage_html"), rebalance_items(d["items"], d["id"]), level=d.get("level"))

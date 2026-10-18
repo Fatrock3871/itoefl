@@ -230,7 +230,7 @@ Implicações que o conteúdo deve respeitar:
 | ID | Módulo | Estado |
 |---|---|---|
 | M0 | Embarque & Diagnóstico | ✅ formato 2026, 10 questões, calculadora de score, treino por nível |
-| M1 | Reading | ✅ formato 2026: 8 textos de Complete the Words de digitar (80 lacunas) + 67 itens de múltipla escolha |
+| M1 | Reading | ✅ formato 2026: 8 textos de Complete the Words de digitar (80 lacunas) + 60 itens de múltipla escolha (3 passagens acadêmicas de até 220 palavras, 5 perguntas cada) |
 | M2 | Listening | ✅ formato 2026, 4 drills |
 | M3 | Speaking | ✅ formato 2026: 5 cenários de Listen and Repeat e 4 entrevistas, com áudio |
 | M4 | Writing | ✅ formato 2026: 30 itens de Build a Sentence no molde da prova + 12 caixas de escrita |
