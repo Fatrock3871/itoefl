@@ -1779,6 +1779,21 @@ li > .reveal{margin:6px 0 4px;}
 .essay-cta .essay-cta-kicker{font-weight:800; text-transform:uppercase; letter-spacing:0.06em; font-size:12px; color:var(--accent-strong);}
 .essay-open{padding:10px 16px; min-height:44px; border-radius:8px; border:2px solid var(--edge); background:var(--accent-fill); color:#fff; font-family:inherit; font-size:13.5px; font-weight:700; cursor:pointer;}
 .essay-open:hover{background:var(--accent-fill-hover);}
+/* conta grátis (app/free_sample.json): o app.js marca o que fica trancado e
+   liga body.acc-free; sem a classe, nada disto aparece */
+.fs-lock, .fs-bar{display:none;}
+body.acc-free [data-locked]{display:none !important;}
+body.acc-free .fs-lock{display:block; margin:18px 0; padding:16px 18px; border-radius:var(--radius); border:2px solid var(--edge); background:var(--accent-wash); box-shadow:var(--shadow-hard);}
+.fs-lock p{margin:0 0 10px; color:var(--ink);}
+.fs-lock .fs-lock-kicker{font-weight:800; text-transform:uppercase; letter-spacing:0.06em; font-size:12px; color:var(--accent-strong);}
+.fs-lock-btn{padding:10px 16px; min-height:44px; border-radius:8px; border:2px solid var(--edge); background:var(--accent-fill); color:#fff; font-family:inherit; font-size:13.5px; font-weight:700; cursor:pointer;}
+.fs-lock-btn:hover{background:var(--accent-fill-hover);}
+body.acc-free .fs-bar{display:flex; align-items:center; gap:12px 16px; flex-wrap:wrap; margin:0 0 16px; padding:12px 16px; border-radius:var(--radius); border:2px solid var(--edge); background:var(--accent-wash);}
+.fs-bar p{margin:0; flex:1 1 280px; font-size:14px; line-height:1.5; color:var(--ink);}
+body.acc-free .part-pager.is-locked .part-pager-title::before{content:"🔒 ";}
+.account-access.is-free{color:var(--ink);}
+.auth-free-note{margin:0 0 14px; font-size:13.5px; line-height:1.5; color:var(--ink-2);}
+.auth-free-note .auth-link{font-weight:700;}
 .essay-badge{display:inline-block; margin:8px 0 0; padding:3px 10px; border-radius:99px; background:var(--accent-fill); color:#fff; font-size:12px; font-weight:800;}
 #authIn .account-gear{position:relative;}
 .essay-dot{position:absolute; top:-2px; right:-2px; width:10px; height:10px; border-radius:50%; background:var(--accent); border:2px solid var(--paper);}

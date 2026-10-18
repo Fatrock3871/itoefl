@@ -751,6 +751,136 @@ check("essay_queue_sorted_by_due_with_today_highlight", function(){
     $e("reviewStatus").textContent === "2 redações na fila, 1 vencendo hoje ou atrasadas.";
 });
 
+// ---- conta grátis (app/free_sample.json, 2026-10-17) ----
+// O nível de acesso é ligado à mão aqui (sem sessão real do Supabase).
+var FS = JSON.parse(document.getElementById("freeSample").textContent);
+var FS_IDS = FS.exercicios.map(function(e){ return e.id; });
+var FS_WIDGETS = "[data-ctw],[data-drill],[data-spk],[data-bsq],[data-exam],[data-wbox],[data-srs]";
+function fsId(w){ return w.dataset.ctw || w.dataset.drill || w.dataset.spk || w.dataset.bsq || w.dataset.exam || w.dataset.wbox || w.dataset.srs; }
+// visível dentro da Parte: nada entre o elemento e o .section-card está com
+// display none. A Parte em si pode estar escondida pela paginação, e a
+// subseção (.h3-body) pode estar só recolhida: as duas abrem com um clique.
+function fsShown(el){
+  for(var n = el; n && !n.classList.contains("section-card"); n = n.parentElement){
+    if(!n.classList.contains("h3-body") && getComputedStyle(n).display === "none") return false;
+  }
+  return true;
+}
+function fsCards(mod){ return Array.prototype.slice.call(document.querySelectorAll('.panel[data-panel="' + mod + '"] .section-card')); }
+check("free_login_invites_free_account", function(){
+  var note = document.getElementById("authFreeNote");
+  return !!note && !note.hidden && note.textContent.indexOf("A conta grátis abre o Módulo 0 inteiro, a Parte 1 de cada um dos outros nove módulos") !== -1 &&
+    note.textContent.indexOf("3 itens de Build a Sentence") !== -1 && !!document.getElementById("authFreeSignup");
+});
+check("free_nothing_locked_before_level_is_known", function(){
+  return !document.body.classList.contains("acc-free") && getComputedStyle(document.getElementById("freeBar")).display === "none" &&
+    Array.prototype.every.call(document.querySelectorAll(".fs-lock"), function(l){ return getComputedStyle(l).display === "none"; });
+});
+ACC.setLevel("free", ACC.state(null, NOW));
+check("free_bar_says_what_is_included", function(){
+  var bar = document.getElementById("freeBar");
+  return getComputedStyle(bar).display !== "none" && document.getElementById("freeBarText").textContent.indexOf("Conta grátis: você tem o Módulo 0 inteiro") === 0;
+});
+check("free_sees_module0_whole", function(){
+  var cards = fsCards("mod0");
+  return cards.length === 9 && cards.every(function(c){ return !c.classList.contains("fs-part-locked") && !c.querySelector("[data-locked], .fs-lock"); }) &&
+    fsShown(document.querySelector('[data-drill="mod0-diag"]'));
+});
+check("free_sees_part1_and_locks_the_rest", function(){
+  return ["mod1", "mod2", "mod3", "mod4", "mod5", "mod6", "mod7", "mod8", "mod9"].every(function(mod){
+    var cards = fsCards(mod);
+    if(cards.length < 2 || cards[0].classList.contains("fs-part-locked") || cards[0].querySelector("[data-locked], .fs-lock")) return false;
+    return cards.slice(1).every(function(c){
+      // o cartão da Parte é filho direto; o do Build a Sentence fica dentro do widget
+      var locks = Array.prototype.filter.call(c.children, function(k){ return k.classList.contains("fs-lock"); });
+      var locked = Array.prototype.slice.call(c.querySelectorAll("[data-locked]"));
+      var done = c.querySelector(".mark-done");
+      return c.classList.contains("fs-part-locked") && locks.length === 1 && fsShown(locks[0]) &&
+        !!locks[0].querySelector(".fs-lock-btn") && locked.length > 0 &&
+        locked.every(function(k){ return getComputedStyle(k).display === "none"; }) &&
+        (!done || !fsShown(done));
+    });
+  });
+});
+check("free_sample_exercises_open_and_others_locked", function(){
+  var all = Array.prototype.slice.call(document.querySelectorAll(FS_WIDGETS));
+  var shown = all.filter(fsShown).map(fsId);
+  var inOpenParts = all.filter(function(w){ return !w.closest(".fs-part-locked"); }).map(fsId);
+  return FS_IDS.join() === "mod1-ctw1,mod2-a,mod3-lr1,m4build2" &&
+    shown.sort().join() === inOpenParts.concat(FS_IDS).sort().join() &&
+    inOpenParts.every(function(id){ return id.indexOf("mod0") === 0; });
+});
+check("free_build_sentence_opens_3_of_30", function(){
+  var bsq = document.querySelector('[data-bsq="m4build2"]');
+  var cards = Array.prototype.slice.call(bsq.querySelectorAll(".bsq-card"));
+  var open = cards.filter(fsShown);
+  var lock = bsq.querySelector(".fs-lock");
+  return cards.length === 30 && open.map(function(c){ return c.dataset.num; }).join() === "1,2,3" &&
+    / de 3 verificadas$/.test(bsq.querySelector(".quiz-score").textContent) &&
+    !!lock && fsShown(lock) && lock.textContent.indexOf("Os outros 27 itens deste exercício são do curso completo.") !== -1;
+});
+check("free_locked_part_with_sample_names_it", function(){
+  var lock = document.querySelector('[data-ctw="mod1-ctw1"]').closest(".section-card").querySelector(".fs-lock");
+  return lock.textContent.indexOf("O texto desta Parte é do curso completo. Na conta grátis, fica aberto aqui: 1 texto de Complete the Words.") !== -1;
+});
+check("free_simulados_locked", function(){
+  var exams = Array.prototype.slice.call(document.querySelectorAll("[data-exam]"));
+  return exams.length === 19 && exams.every(function(e){
+    return !fsShown(e) && e.closest(".section-card").querySelector(".fs-lock").textContent.indexOf("Os simulados são do curso completo.") !== -1;
+  });
+});
+check("free_writing_boxes_and_essay_cta_locked", function(){
+  return Array.prototype.every.call(document.querySelectorAll("[data-wbox]"), function(w){ return !fsShown(w); }) &&
+    document.querySelectorAll(".essay-open").length > 0 &&
+    Array.prototype.every.call(document.querySelectorAll(".essay-open"), function(b){ return !fsShown(b); });
+});
+var fsGate = document.getElementById("payGate");
+fsGate.hidden = true;
+document.getElementById("accountEssay").click();
+check("free_essay_submission_locked", function(){
+  return document.getElementById("essayModal").hidden === true && fsGate.hidden === false &&
+    document.getElementById("payGateText").textContent.indexOf("A correção de redação é do curso completo.") === 0 &&
+    document.getElementById("payGateBack").hidden === false && document.getElementById("paySignOut").hidden === true;
+});
+document.getElementById("payGateBack").click();
+check("free_plans_back_returns_to_sample", function(){ return fsGate.hidden === true; });
+fsCards("mod1")[1].querySelector(".fs-lock-btn").click();
+check("free_lock_button_opens_plans_with_reason", function(){
+  return fsGate.hidden === false && document.getElementById("payGateTitle").textContent === "Libere o curso completo" &&
+    document.getElementById("payGateText").textContent.indexOf("Esta Parte é do curso completo.") === 0;
+});
+document.getElementById("payGateBack").click();
+check("free_progress_counts_only_the_sample", function(){
+  // M1 na conta grátis: só a Parte 1 conta, então ela sozinha vale 0% ou 100%
+  var pct = document.getElementById("phPct-mod1").textContent;
+  return (pct === "0%" || pct === "100%") && document.getElementById("certBtn").hidden === true &&
+    document.getElementById("liveScoreExamBand").textContent === "Os simulados são do curso completo." &&
+    document.querySelector('#panel-mod1 .ph-progress-label span').textContent === "Seu progresso na amostra deste módulo";
+});
+check("free_account_text_says_what_is_included", function(){
+  var line = ACC.text(ACC.state(null, NOW), null);
+  var exp = ACC.text(ACC.state({ paid: true, plan: "sprint", expires_at: new Date(NOW - 1000).toISOString() }, NOW), null);
+  return line.cls === "is-free" && line.text.indexOf("Conta grátis: você tem o Módulo 0 inteiro") === 0 &&
+    line.text.indexOf("simulados, a correção de redação") !== -1 && exp.text.indexOf("A conta segue grátis, com o Módulo 0 inteiro") !== -1;
+});
+ACC.setLevel("free", ACC.state({ paid: true, plan: "sprint", expires_at: new Date(NOW - 1000).toISOString() }, NOW));
+check("free_bar_after_plan_expired", function(){
+  return document.getElementById("freeBarText").textContent.indexOf("O plano Sprint venceu em ") === 0 &&
+    document.getElementById("freeBarBtn").textContent === "Renovar";
+});
+ACC.setLevel("full");
+check("paid_sees_everything", function(){
+  return !document.body.classList.contains("acc-free") && getComputedStyle(document.getElementById("freeBar")).display === "none" &&
+    Array.prototype.every.call(document.querySelectorAll(".fs-lock"), function(l){ return getComputedStyle(l).display === "none"; }) &&
+    Array.prototype.every.call(document.querySelectorAll("[data-locked]"), function(el){
+      // subseção recolhida pelo acordeão some por outro motivo, que não é o cadeado
+      return el.hidden || el.classList.contains("h3-collapsed") || getComputedStyle(el).display !== "none";
+    }) &&
+    Array.prototype.every.call(document.querySelectorAll(FS_WIDGETS), fsShown) &&
+    / de 30 verificadas$/.test(document.querySelector('[data-bsq="m4build2"] .quiz-score').textContent) &&
+    document.querySelector('#panel-mod1 .ph-progress-label span').textContent === "Seu progresso neste módulo";
+});
+
 check("no_js_errors", function(){ return window.__errors.length === 0; });
 results.__jsErrors = window.__errors;
 
@@ -1328,8 +1458,12 @@ check("video_opener_before_first_part", function(){
 });
 check("video_part_inside_its_part", function(){
   var card = partVid.closest(".section-card");
+  // entre o título e o vídeo pode estar o cartão de cadeado da conta grátis,
+  // que fora dela não aparece
+  var next = card.querySelector("h2").nextElementSibling;
+  if(next && next.classList.contains("fs-lock")) next = next.nextElementSibling;
   return partVid.dataset.vid === "exemplo-parte2" && card.querySelector("h2 .htext").textContent.indexOf("PARTE 2") === 0 &&
-         card.querySelector("h2").nextElementSibling === partVid;
+         next === partVid;
 });
 check("video_lazy_no_player_before_click", function(){ return document.querySelectorAll(".vid iframe, .vid video").length === 0; });
 check("video_transcript_collapsed", function(){

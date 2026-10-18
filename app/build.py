@@ -157,6 +157,48 @@ frag, VIDEO_OPENERS = render_video.inject(frag, VIDEOS)
 for _w in render_video.warnings(VIDEOS):
     print("AVISO:", _w)
 
+# ---- conta grátis: a amostra (app/free_sample.json) ----
+# O app.js lê a lista do JSON embutido e tranca o resto na conta logada sem
+# acesso pago. Aqui só se confere a lista contra o conteúdo de verdade.
+import re as _re_fs
+with open("free_sample.json", encoding="utf-8") as _f:
+    FREE_SAMPLE = json.load(_f)
+
+
+def _fs_parts(mod):
+    """HTML de cada Parte (do <h2> até o próximo) do fragmento do módulo."""
+    return _re_fs.split(r"(?=<h2[\s>])", frag[mod])[1:]
+
+
+if set(FREE_SAMPLE["partes"]) != {k for k, *_ in MODS}:
+    raise SystemExit("free_sample.json: a lista de Partes tem de citar os 10 módulos")
+for _mod, _open in FREE_SAMPLE["partes"].items():
+    _parts = _fs_parts(_mod)
+    _nums = range(1, len(_parts) + 1) if _open == "todas" else _open
+    for _n in _nums:
+        if not 1 <= _n <= len(_parts):
+            raise SystemExit(f"free_sample.json: {_mod} não tem Parte {_n} (tem {len(_parts)})")
+        if "data-exam=" in _parts[_n - 1]:
+            raise SystemExit(f"free_sample.json: a Parte {_n} de {_mod} tem simulado, e simulado não entra na amostra")
+_all_frag = "".join(frag.values())
+for _ex in FREE_SAMPLE["exercicios"]:
+    _hits = len(_re_fs.findall(r'data-(?:ctw|drill|spk|bsq)="' + _re_fs.escape(_ex["id"]) + '"', _all_frag))
+    if _hits != 1:
+        raise SystemExit(f"free_sample.json: exercício {_ex['id']} aparece {_hits} vez(es) no site, devia ser 1")
+    if "itens" in _ex:
+        _w = _all_frag.split(f'data-bsq="{_ex["id"]}"', 1)[1].split('class="quiz-summary"', 1)[0]
+        if _ex["itens"] > _w.count('class="bsq-card"') or not _ex["rotulo"].startswith(f'{_ex["itens"]} '):
+            raise SystemExit(f"free_sample.json: {_ex['id']} abre {_ex['itens']} itens, e o rótulo ou o widget não batem")
+# o resumo é escrito à mão para soar natural; se a lista mudar de forma, o
+# build para em vez de anunciar uma amostra que não é a de verdade
+if FREE_SAMPLE["partes"] != {"mod0": "todas", **{k: [1] for k, *_ in MODS if k != "mod0"}}:
+    raise SystemExit("free_sample.json: a amostra de Partes mudou. Reescreva FREE_SUMMARY em app/build.py")
+_rot = [e["rotulo"] for e in FREE_SAMPLE["exercicios"]]
+FREE_SUMMARY = ("o Módulo 0 inteiro, a Parte 1 de cada um dos outros nove módulos e um exercício de cada tipo ("
+                + ", ".join(_rot[:-1]) + " e " + _rot[-1] + ")")
+FREE_JSON = json.dumps({"partes": FREE_SAMPLE["partes"], "exercicios": FREE_SAMPLE["exercicios"],
+                        "resumo": FREE_SUMMARY}, ensure_ascii=False).replace("</", "<\\/")
+
 panels = "\n".join(
     f'<section class="panel" data-panel="{k}" id="panel-{k}" {"hidden" if k != "mod0" else ""}>'
     f'<div class="panel-inner">'
@@ -242,6 +284,8 @@ gate = (
     '</div>'
     '<h2 id="authGateTitle">Entre para continuar</h2>'
     '<p id="authGateSubtitle"></p>'
+    f'<p class="auth-free-note" id="authFreeNote">Ainda não tem conta? A conta grátis abre {FREE_SUMMARY}, '
+    'sem prazo e sem cartão. <button type="button" class="auth-link" id="authFreeSignup">Criar conta grátis</button></p>'
 
     '<div class="auth-tabs" id="authTabs">'
     '<span class="auth-tab-indicator" id="authTabIndicator"></span>'
@@ -644,7 +688,13 @@ html = f'''<!DOCTYPE html>
   <main id="mainArea" tabindex="-1">
     {journey}
     <div class="content-grid">
-      <div class="content-col">{panels}</div>
+      <div class="content-col">
+        <div class="fs-bar" id="freeBar" role="status">
+          <p id="freeBarText">Conta grátis: você tem {FREE_SUMMARY}. O resto do curso aparece trancado.</p>
+          <button type="button" class="fs-lock-btn" id="freeBarBtn">Ver os planos</button>
+        </div>
+        {panels}
+      </div>
     </div>
   </main>
 </div>
@@ -697,6 +747,7 @@ html = f'''<!DOCTYPE html>
   <button type="button" id="pwaUpdateBtn">Recarregar</button>
   <button type="button" id="pwaUpdateLater" aria-label="Depois">Depois</button>
 </div>
+<script type="application/json" id="freeSample">{FREE_JSON}</script>
 <script>
 {JS}
 </script>

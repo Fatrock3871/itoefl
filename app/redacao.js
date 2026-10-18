@@ -511,6 +511,9 @@
 
   // ---------- abrir e fechar ----------
   function open(){
+    // conta grátis: a correção é do curso completo (o submit-essay também
+    // recusa quem não tem plano em dia; aqui é só a interface)
+    if(APP.isFree && APP.isFree()){ APP.openPlans(); return; }
     modal.hidden = false;
     document.body.classList.add("menu-open");
     draft = loadDraft();

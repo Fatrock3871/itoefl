@@ -175,6 +175,93 @@
     container.appendChild(frag);
   });
 
+  // ---------- Conta grátis: o que é amostra (app/free_sample.json) ----------
+  // Marca uma vez, na carga, o que fica trancado para a conta logada sem
+  // acesso pago: as Partes fora da lista ganham um cartão de cadeado, e o
+  // conteúdo delas ganha data-locked. Quem esconde é o CSS, só com
+  // body.acc-free; sem essa classe (conta paga, admin, modo offline) o site
+  // fica igual a antes. Numa Parte trancada, o exercício da amostra fica à
+  // vista com o título e a instrução logo acima dele.
+  // O conteúdo continua dentro da página: é um bloqueio de interface, como o
+  // da tela de compra (docs/versao-gratuita.md, seção 5).
+  var FREE = (function(){
+    var el = document.getElementById("freeSample");
+    try { return el ? JSON.parse(el.textContent) : null; } catch(e){ return null; }
+  })();
+  var accessFree = false;
+  function isFree(){ return accessFree; }
+  function isLockedNow(el){ return accessFree && !!el.closest("[data-locked]"); }
+  var FREE_REASON = {
+    part: "Esta Parte é do curso completo.",
+    partial: "O texto desta Parte é do curso completo.",
+    exam: "Os simulados são do curso completo.",
+    essay: "A correção de redação é do curso completo."
+  };
+  var WIDGET_ATTRS = ["data-ctw", "data-drill", "data-spk", "data-bsq", "data-exam", "data-wbox", "data-srs"];
+  function isWidget(el){
+    return WIDGET_ATTRS.some(function(a){ return el.hasAttribute(a) || !!el.querySelector("[" + a + "]"); });
+  }
+  function widgetSel(id){
+    return WIDGET_ATTRS.map(function(a){ return "[" + a + '="' + id + '"]'; }).join(",");
+  }
+  function lockCard(reason, extra){
+    var box = document.createElement("div");
+    box.className = "fs-lock";
+    var kicker = document.createElement("p");
+    kicker.className = "fs-lock-kicker";
+    kicker.textContent = "🔒 Curso completo";
+    var text = document.createElement("p");
+    text.textContent = reason + (extra ? " " + extra : "") + " Com um plano, você libera os 10 módulos inteiros, todos os exercícios, os simulados e a correção de redação.";
+    var btn = document.createElement("button");
+    btn.type = "button";
+    btn.className = "fs-lock-btn";
+    btn.textContent = "Ver os planos";
+    btn.addEventListener("click", function(){ openPlans(reason); });
+    box.appendChild(kicker); box.appendChild(text); box.appendChild(btn);
+    return box;
+  }
+  if(FREE){
+    Array.prototype.forEach.call(document.querySelectorAll(".panel"), function(panel){
+      var open = FREE.partes[panel.dataset.panel] || [];
+      Array.prototype.forEach.call(panel.querySelectorAll(".section-card"), function(card, i){
+        if(open === "todas" || open.indexOf(i + 1) !== -1) return;
+        card.classList.add("fs-part-locked");
+        var keep = [], labels = [];
+        FREE.exercicios.forEach(function(ex){
+          var w = card.querySelector(widgetSel(ex.id));
+          if(!w) return;
+          labels.push(ex.rotulo);
+          var top = w;
+          while(top.parentNode !== card) top = top.parentNode;
+          keep.push(top);
+          // leva junto o título e a instrução logo acima, até o h3 anterior
+          for(var prev = top.previousElementSibling; prev && prev.tagName !== "H2" && !isWidget(prev); prev = prev.previousElementSibling){
+            keep.push(prev);
+            if(prev.tagName === "H3") break;
+          }
+        });
+        Array.prototype.forEach.call(card.children, function(ch){
+          if(ch.tagName !== "H2" && keep.indexOf(ch) === -1) ch.setAttribute("data-locked", "");
+        });
+        var reason = card.querySelector("[data-exam]") ? FREE_REASON.exam : labels.length ? FREE_REASON.partial : FREE_REASON.part;
+        var extra = labels.length ? "Na conta grátis, fica aberto aqui: " + labels.join(", ") + "." : "";
+        var h2 = card.querySelector("h2");
+        card.insertBefore(lockCard(reason, extra), h2 ? h2.nextSibling : card.firstChild);
+      });
+    });
+    // exercício aberto só em parte (Build a Sentence): os primeiros itens
+    FREE.exercicios.forEach(function(ex){
+      if(!ex.itens) return;
+      var w = document.querySelector(widgetSel(ex.id));
+      var items = w ? w.querySelectorAll(".bsq-card") : [];
+      if(items.length <= ex.itens) return;
+      Array.prototype.forEach.call(items, function(it, i){ if(i >= ex.itens) it.setAttribute("data-locked", ""); });
+      var more = items.length - ex.itens;
+      items[ex.itens - 1].parentNode.insertBefore(
+        lockCard("Os outros " + more + " itens deste exercício são do curso completo."), items[ex.itens]);
+    });
+  }
+
   // espelha o client do Supabase e o uid logado pra fora do bloco de auth
   // (que é seu próprio IIFE) -- o certificado precisa ler/gravar
   // profiles.display_name e não tinha como chegar em `client`/`uid` de lá
@@ -521,7 +608,10 @@
 
   function updateBadges(){
     var byMod = {};
-    allChecks.forEach(function(c){
+    // na conta grátis, a porcentagem mede a amostra: Parte trancada não conta
+    // (docs/versao-gratuita.md, seção 4). O certificado continua exigindo o
+    // curso inteiro, e por isso não aparece na conta grátis.
+    allChecks.filter(function(c){ return !isLockedNow(c); }).forEach(function(c){
       var mod = moduleKeyFromPid(c.dataset.pid);
       byMod[mod] = byMod[mod] || {total:0, done:0};
       byMod[mod].total++;
@@ -543,13 +633,16 @@
     document.getElementById("opPct").textContent = pct + "%";
     document.getElementById("opFill").style.width = pct + "%";
     var opCount = document.getElementById("opCount");
-    if(opCount) opCount.innerHTML = "<b>" + modsDone + "</b> de " + modOrder.length + " módulos concluídos";
+    if(opCount) opCount.innerHTML = "<b>" + modsDone + "</b> de " + modOrder.length + (accessFree ? " módulos com a amostra concluída" : " módulos concluídos");
+    Array.prototype.forEach.call(document.querySelectorAll(".ph-progress-label span:first-child"), function(s){
+      s.textContent = accessFree ? "Seu progresso na amostra deste módulo" : "Seu progresso neste módulo";
+    });
 
     // curso inteiro concluído (todos os módulos + o quiz do último, já que o
     // gate de avanço só valida o módulo ANTERIOR ao entrar no próximo — o
     // último nunca passa por essa checagem sozinho)
     var lastMod = modOrder[modOrder.length - 1];
-    var courseDone = modsDone === modOrder.length && moduleQuizPct(lastMod) >= 100;
+    var courseDone = !accessFree && modsDone === modOrder.length && moduleQuizPct(lastMod) >= 100;
     var certBtn = document.getElementById("certBtn");
     if(certBtn) certBtn.hidden = !courseDone;
     if(courseDone && !safeGet("toefl_cert_date_v1")){
@@ -670,7 +763,8 @@
   // confirmados em todos os .quiz-drill cujo id começa com um prefixo
   // (mod1- = Reading, mod2- = Listening), sem depender de estar na aba certa
   function computeQuizAccuracy(prefix){
-    var drills = Array.prototype.slice.call(document.querySelectorAll('.quiz-drill[data-drill^="' + prefix + '"]'));
+    // na conta grátis, só o que está aberto (isLockedNow)
+    var drills = Array.prototype.filter.call(document.querySelectorAll('.quiz-drill[data-drill^="' + prefix + '"]'), function(d){ return !isLockedNow(d); });
     var total = 0, confirmed = 0, correct = 0;
     drills.forEach(function(drillEl){
       var st = {};
@@ -699,6 +793,7 @@
     function read(key){ try { return JSON.parse(safeGet(key) || "{}") || {}; } catch(e){ return {}; } }
     if(kind === "ctw"){
       Array.prototype.forEach.call(document.querySelectorAll(".ctw"), function(root){
+        if(isLockedNow(root)) return;
         var inputs = root.querySelectorAll(".ctw-in");
         var st = read("toefl_ctw_" + root.dataset.ctw + "_v1");
         total += inputs.length;
@@ -712,6 +807,7 @@
       Array.prototype.forEach.call(document.querySelectorAll(".bsq"), function(root){
         var st = read("toefl_bsq_" + root.dataset.bsq + "_v1");
         Array.prototype.forEach.call(root.querySelectorAll(".bsq-card"), function(card){
+          if(isLockedNow(card)) return;
           total++;
           var s = st[card.dataset.num];
           if(s && s.checked){ confirmed++; if(s.ok) correct++; }
@@ -719,6 +815,7 @@
       });
     } else if(kind === "exam"){
       Array.prototype.forEach.call(document.querySelectorAll(".exam"), function(root){
+        if(isLockedNow(root)) return;
         var st = read("toefl_exam_" + root.dataset.exam + "_v1");
         Array.prototype.forEach.call(root.querySelectorAll(".exam-item"), function(it){
           total++;
@@ -756,7 +853,8 @@
     renderLiveScoreSection("mod1-", "liveScoreReadingPct", "liveScoreReadingBand", "Responda aos Action Drills do Módulo 1 para calcular");
     renderLiveScoreSection("mod2-", "liveScoreListeningPct", "liveScoreListeningBand", "Responda aos Action Drills do Módulo 2 para calcular");
     renderLiveScoreSection("extra:bsq", "liveScoreWritingPct", "liveScoreWritingBand", "Faça o drill interativo do Módulo 4 para calcular");
-    renderLiveScoreSection("extra:exam", "liveScoreExamPct", "liveScoreExamBand", "Entregue um bloco de simulado do Módulo 7 para calcular");
+    renderLiveScoreSection("extra:exam", "liveScoreExamPct", "liveScoreExamBand",
+      accessFree ? FREE_REASON.exam : "Entregue um bloco de simulado do Módulo 7 para calcular");
   }
 
   // melhor estimativa disponível da banda CEFR atual do aluno: prioriza o
@@ -1152,6 +1250,7 @@
       btn.className = "drill-timer-btn";
       btn.textContent = "⏱ Iniciar cronômetro (" + mins + " min)";
       btn.addEventListener("click", function(){ setDrillTimerMinutes(mins); });
+      if(node.hasAttribute("data-locked")) btn.setAttribute("data-locked", ""); // drill fora da amostra grátis
       node.parentNode.insertBefore(btn, node.nextSibling);
     });
   })();
@@ -1489,9 +1588,11 @@
       }
     }
 
+    // na conta grátis só contam os itens abertos (app/free_sample.json)
+    function liveCards(){ return cards.filter(function(c){ return !isLockedNow(c); }); }
     function renderSummary(){
-      var total = cards.length, checked = 0, right = 0;
-      cards.forEach(function(card){
+      var live = liveCards(), total = live.length, checked = 0, right = 0;
+      live.forEach(function(card){
         var s = state[card.dataset.num];
         if(s && s.checked){ checked++; if(s.ok) right++; }
       });
@@ -1571,7 +1672,7 @@
         renderSummary();
         updateLiveScorePanel();
         // o conjunto inteiro verificado conta como uma atividade do dia
-        if(cards.every(function(c){ return state[c.dataset.num] && state[c.dataset.num].checked; })) markDailyGoalProgress();
+        if(liveCards().every(function(c){ return state[c.dataset.num] && state[c.dataset.num].checked; })) markDailyGoalProgress();
       });
 
       // restaura estado salvo
@@ -1598,6 +1699,7 @@
       });
     }
     renderSummary();
+    document.addEventListener("toefl-access", renderSummary);
   });
 
   // ---------- Complete the Words — formato da prova (M1) ----------
@@ -2270,10 +2372,12 @@
       return { text: label + (name ? ": acesso" : "") + " liberado até " + fmtDate(st.until) + " (" + daysLeftText(st.daysLeft) + ").",
                cls: st.daysLeft <= 7 ? "is-ending" : "is-paid" };
     }
+    var free = FREE ? " A conta segue grátis, com " + FREE.resumo + "." : "";
     if(st.expired){
-      return { text: (name ? "O plano " + name : "O seu acesso") + " venceu em " + fmtDate(st.until) + ". Seu progresso continua salvo.", cls: "is-unpaid" };
+      return { text: (name ? "O plano " + name : "O seu acesso") + " venceu em " + fmtDate(st.until) + ". Seu progresso continua salvo." + free, cls: "is-unpaid" };
     }
-    return { text: "Sem acesso: esta conta ainda não tem compra confirmada.", cls: "is-unpaid" };
+    return { text: FREE ? "Conta grátis: você tem " + FREE.resumo + ". Os simulados, a correção de redação e o resto do curso são liberados por um plano."
+                        : "Sem acesso: esta conta ainda não tem compra confirmada.", cls: "is-free" };
   }
   // título e parágrafo da tela de compra, conforme a situação da conta
   function gateCopy(st){
@@ -2306,7 +2410,53 @@
     var input = wanted ? pick.querySelector('input[value="' + wanted.replace(/[^a-z0-9_-]/gi, "") + '"]') : null;
     if(input){ input.checked = true; sync(); }
   })();
-  window.__toeflAccess = { state: accessState, text: accessText, gateCopy: gateCopy }; // gancho do smoke test
+  // Tela de compra aberta por quem está na conta grátis (cadeado, faixa do
+  // topo, Minha conta, redação): diz o motivo e tem "Voltar", porque a
+  // amostra continua aberta por baixo.
+  function openPlans(reason){
+    var gate = document.getElementById("payGate");
+    if(!gate) return;
+    var set = function(id, t){ var el = document.getElementById(id); if(el) el.textContent = t; };
+    set("payGateKicker", "Curso completo");
+    set("payGateTitle", "Libere o curso completo");
+    set("payGateText", (reason ? reason + " " : "") +
+      "Um plano libera os 10 módulos inteiros, todos os exercícios, os simulados e a correção de redação. A sua conta grátis e o seu progresso continuam como estão.");
+    var back = document.getElementById("payGateBack"), out = document.getElementById("paySignOut");
+    var m = document.getElementById("payGateMsg");
+    if(back) back.hidden = false;
+    if(out) out.hidden = true;
+    if(m) m.hidden = true;
+    gate.hidden = false;
+  }
+  (function(){
+    var back = document.getElementById("payGateBack");
+    if(back) back.addEventListener("click", function(){ document.getElementById("payGate").hidden = true; });
+    var barBtn = document.getElementById("freeBarBtn");
+    if(barBtn) barBtn.addEventListener("click", function(){ openPlans(""); });
+  })();
+  // Nível de acesso: "full" (pago, admin, ou site sem Supabase) ou "free"
+  // (logado, sem plano em dia). st: o accessState() da conta, para a faixa
+  // dizer quando o plano venceu.
+  function setAccessLevel(level, st){
+    accessFree = level === "free";
+    document.body.classList.toggle("acc-free", accessFree);
+    var barText = document.getElementById("freeBarText"), barBtn = document.getElementById("freeBarBtn");
+    if(accessFree && barText && FREE){
+      if(st && st.expired){
+        barText.textContent = (planName(st.plan) ? "O plano " + planName(st.plan) : "O seu acesso") + " venceu em " + fmtDate(st.until) +
+          ". O seu progresso continua salvo, e a conta segue com a amostra grátis: " + FREE.resumo + ".";
+        if(barBtn) barBtn.textContent = "Renovar";
+      } else {
+        barText.textContent = "Conta grátis: você tem " + FREE.resumo + ". O resto do curso aparece trancado.";
+        if(barBtn) barBtn.textContent = "Ver os planos";
+      }
+    }
+    updateBadges();
+    updateLiveScorePanel();
+    document.dispatchEvent(new Event("toefl-access"));
+    if(window.__toeflRefreshLevelPractice) window.__toeflRefreshLevelPractice(true);
+  }
+  window.__toeflAccess = { state: accessState, text: accessText, gateCopy: gateCopy, setLevel: setAccessLevel, openPlans: openPlans }; // gancho do smoke test
 
   // ---------- Contas + sincronização (Supabase) ----------
   (function(){
@@ -2484,6 +2634,7 @@
         });
     }
     var payGateBack = document.getElementById("payGateBack");
+    // o clique do "Voltar" fica junto do openPlans(), fora deste bloco
     function setGateCopy(st, canGoBack){
       var copy = gateCopy(st);
       var kicker = document.getElementById("payGateKicker");
@@ -2497,12 +2648,9 @@
       if(payGateBack) payGateBack.hidden = !canGoBack;
       if(paySignOutBtn) paySignOutBtn.hidden = !!canGoBack;
     }
-    if(payGateBack){
-      payGateBack.addEventListener("click", function(){ payGateEl.hidden = true; });
-    }
     function checkEntitlement(session, attempt){
       if(!payGateEl) return;
-      if(isAdmin(session)){ payGateEl.hidden = true; return; }
+      if(isAdmin(session)){ payGateEl.hidden = true; setAccessLevel("full"); return; }
       fetchEntitlement(session.user.id)
         .then(function(res){
           if(res.error){
@@ -2517,14 +2665,18 @@
             return;
           }
           var st = accessState(res.data, Date.now());
-          payGateEl.hidden = st.active;
-          if(st.active) return;
-          setGateCopy(st, false);
+          // sem plano em dia (nunca comprou, ou venceu): conta grátis, com a
+          // amostra aberta e o resto trancado. A tela de compra só cobre o
+          // site na volta do checkout, para dizer como ficou o pagamento.
+          setAccessLevel(st.active ? "full" : "free", st);
+          var params = new URLSearchParams(location.search);
+          payGateEl.hidden = st.active || !params.get("mp");
+          if(payGateEl.hidden) return;
+          setGateCopy(st, true);
           // volta de um checkout recém-aprovado: o webhook do Mercado Pago é
           // assíncrono e pode demorar alguns segundos a mais que o redirect
           // -- tenta de novo umas poucas vezes antes de deixar o aluno preso
           // olhando "não pago" logo depois de pagar de verdade
-          var params = new URLSearchParams(location.search);
           if(params.get("mp") === "success" && (attempt || 0) < 6){
             payGateMsg("Pagamento recebido, confirmando acesso...", "ok");
             setTimeout(function(){ checkEntitlement(session, (attempt || 0) + 1); }, 2500);
@@ -2693,6 +2845,7 @@
       signedIn.hidden = true;
       if(gateEl) gateEl.hidden = false;
       if(payGateEl) payGateEl.hidden = true;
+      if(accessFree) setAccessLevel("full"); // a tela de login cobre tudo; a amostra volta a valer no próximo login sem plano
       if(window.__toeflEssayOffline) window.__toeflEssayOffline();
     }
 
@@ -2709,7 +2862,16 @@
       document.getElementById("authGateGoogleWrap").hidden = false;
       authGateTitle.textContent = "Entre para continuar";
       authGateSubtitle.textContent = "";
+      setFreeNote(true);
     }
+    // convite da conta grátis: na tela de entrar é um parágrafo com botão; na
+    // de criar conta vira o subtítulo
+    function setFreeNote(on){
+      var note = document.getElementById("authFreeNote");
+      if(note) note.hidden = !on;
+    }
+    var freeSignupBtn = document.getElementById("authFreeSignup");
+    if(freeSignupBtn) freeSignupBtn.addEventListener("click", function(){ showSignupView(); });
     function showSignupView(){
       loginForm.hidden = true; signupForm.hidden = false; resetPasswordForm.hidden = true;
       authTabs.hidden = false; authTabs.classList.add("is-signup");
@@ -2717,8 +2879,9 @@
       document.getElementById("authLinks").hidden = true;
       document.getElementById("authGateDivider").hidden = false;
       document.getElementById("authGateGoogleWrap").hidden = false;
-      authGateTitle.textContent = "Criar conta";
-      authGateSubtitle.textContent = "";
+      authGateTitle.textContent = "Criar conta grátis";
+      authGateSubtitle.textContent = FREE ? "A conta grátis abre " + FREE.resumo + ", sem prazo e sem cartão." : "";
+      setFreeNote(false);
     }
     function showResetPasswordView(){
       loginForm.hidden = true; signupForm.hidden = true; resetPasswordForm.hidden = false;
@@ -2728,6 +2891,7 @@
       document.getElementById("authGateGoogleWrap").hidden = true;
       authGateTitle.textContent = "Escolha uma nova senha";
       authGateSubtitle.textContent = "";
+      setFreeNote(false);
       if(gateEl) gateEl.hidden = false; // aparece mesmo se o app estava "logado" na sessão de recuperação
     }
 
@@ -2880,13 +3044,15 @@
             var st = accessState(res.data, Date.now());
             var line = accessText(st, res.data && res.data.paid_at);
             setAccess(line.text, line.cls);
-            // renovar ou trocar de plano: só para quem tem prazo correndo.
-            // Vitalício não tem o que comprar; vencido ou sem compra já está
-            // na tela de compra.
+            // renovar ou trocar de plano para quem tem prazo correndo; ver os
+            // planos para a conta grátis (nunca comprou ou venceu). Vitalício
+            // não tem o que comprar.
             if(renewBtn){
-              renewBtn.hidden = !(st.active && !st.lifetime);
+              renewBtn.hidden = st.lifetime;
+              renewBtn.textContent = st.active ? "Renovar ou mudar de plano" : "Ver os planos";
               renewBtn.onclick = function(){
                 close();
+                if(!st.active){ openPlans(""); return; }
                 setGateCopy(st, true);
                 if(payGateMsgEl) payGateMsgEl.hidden = true;
                 payGateEl.hidden = false;
@@ -3463,6 +3629,9 @@
         if(hasWidget || !nodes.length) return;
         var body = document.createElement("div");
         body.className = "h3-body h3-collapsed";
+        // subseção trancada na conta grátis: o corpo (e a caixa de concluída
+        // que entra nele) some junto com o título
+        if(h3.hasAttribute("data-locked")) body.setAttribute("data-locked", "");
         nodes.forEach(function(n){ body.appendChild(n); });
         h3.parentNode.insertBefore(body, node);
         h3.classList.add("h3-toggle", "collapsed");
@@ -3676,7 +3845,7 @@
     function pool(){
       return Array.prototype.filter.call(document.querySelectorAll("[data-level][data-lp-title]"), function(el){
         var panel = el.closest(".panel");
-        return panel && MOD_NAMES[panel.dataset.panel];
+        return panel && MOD_NAMES[panel.dataset.panel] && !isLockedNow(el);
       });
     }
     function pick(lvl){
@@ -3750,7 +3919,8 @@
       shuffleBtn.hidden = session.length === 0;
     }
     shuffleBtn.addEventListener("click", function(){ render(true); });
-    window.__toeflRefreshLevelPractice = function(){ render(false); };
+    // force: sorteia de novo (a conta grátis muda o que pode entrar na sessão)
+    window.__toeflRefreshLevelPractice = function(force){ render(!!force); };
     render(true);
   })();
 
@@ -3833,6 +4003,8 @@
         // "Parte 1 de 9" já diz o número: o título entra sem o "PARTE 1:"
         pager.querySelector(".part-pager-count").textContent = "Parte " + (idx + 1) + " de " + cards.length;
         pager.querySelector(".part-pager-title").textContent = shortTitles[idx];
+        // o CSS põe o cadeado no título só na conta grátis
+        pager.classList.toggle("is-locked", cards[idx].classList.contains("fs-part-locked"));
         setBarPart(modKey, "Parte " + (idx + 1) + " de " + cards.length);
         pager.querySelector(".part-prev").disabled = idx === 0;
         var topNextBtn = pager.querySelector(".part-next");
@@ -4207,6 +4379,9 @@
     safeSet: safeSet,
     client: function(){ return supaClient; },
     uid: function(){ return supaUid; },
+    // conta grátis: a redação abre a tela de planos em vez do envio
+    isFree: isFree,
+    openPlans: function(){ openPlans(FREE_REASON.essay); },
     // abre o módulo na Parte n (prioridade de estudo da devolutiva)
     openPart: function(mod, n){
       navTo(mod);

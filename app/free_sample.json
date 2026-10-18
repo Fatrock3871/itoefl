@@ -1,0 +1,21 @@
+{
+  "_leia": "Amostra da conta grátis (modelo B de docs/versao-gratuita.md, aprovado pelo dono em 2026-10-17). partes: por módulo, 'todas' ou a lista dos números das Partes abertas. exercicios: id do widget (data-ctw, data-drill, data-spk ou data-bsq), o rótulo que aparece no site e, no Build a Sentence, quantos itens abrem (os primeiros). O build falha se citar Parte ou exercício que não existe, se abrir simulado ou se o texto do resumo no build.py deixar de bater com esta lista.",
+  "partes": {
+    "mod0": "todas",
+    "mod1": [1],
+    "mod2": [1],
+    "mod3": [1],
+    "mod4": [1],
+    "mod5": [1],
+    "mod6": [1],
+    "mod7": [1],
+    "mod8": [1],
+    "mod9": [1]
+  },
+  "exercicios": [
+    {"id": "mod1-ctw1", "rotulo": "1 texto de Complete the Words"},
+    {"id": "mod2-a", "rotulo": "1 drill de Listening"},
+    {"id": "mod3-lr1", "rotulo": "1 conjunto de Listen and Repeat"},
+    {"id": "m4build2", "rotulo": "3 itens de Build a Sentence", "itens": 3}
+  ]
+}
