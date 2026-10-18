@@ -1514,6 +1514,17 @@ def main():
     if js_errors:
         print(f"\n  Erros de JS capturados durante a execucao: {js_errors}")
 
+    # pré-publicação: só aviso, não reprova o smoke test (scripts/prepublish_check.py)
+    try:
+        from prepublish_check import problems as _prepublish_problems
+        _pending = _prepublish_problems(run_smoke=False)
+    except Exception as e:  # o aviso nunca derruba o smoke test
+        _pending = [f"checagem de pré-publicação não rodou: {e}"]
+    if _pending:
+        print(f"\n  AVISO pré-publicação ({len(_pending)}), não publicar ainda:")
+        for _p in _pending:
+            print(f"    - {_p}")
+
     print()
     if failed:
         print(f"FALHOU: {len(failed)} checagem(ns): {', '.join(failed)}")
