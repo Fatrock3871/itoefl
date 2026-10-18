@@ -16,6 +16,9 @@ artifact/apresentacao.html
 artifact/manifest.json
 artifact/sw.js
 artifact/icons/
+artifact/_headers
+artifact/robots.txt
+artifact/sitemap.xml
 
 # Credenciais do Supabase (a anon key é pública, mas fica fora do repo por higiene)
 app/supabase_config.json

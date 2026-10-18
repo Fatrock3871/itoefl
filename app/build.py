@@ -1,4 +1,8 @@
 import json
+from site_config import load_site_url
+
+SITE_URL = load_site_url()
+print("SITE_URL:", SITE_URL)
 
 frag = json.load(open("module_fragments_final.json", encoding="utf-8"))
 
@@ -733,6 +737,7 @@ for _slug, _title in LEGAL_PAGES:
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>{_title} · iTOEFL</title>
+<link rel="canonical" href="{SITE_URL}/{_slug}">
 <link rel="icon" type="image/png" sizes="192x192" href="icons/icon-192.png">
 <meta name="theme-color" content="#ef5a1f">
 {FONT_LINKS}
@@ -844,6 +849,8 @@ _landing = f'''<!DOCTYPE html>
 <meta property="og:title" content="iTOEFL: preparação para o TOEFL iBT no formato 2026">
 <meta property="og:description" content="{_lp_desc}">
 <meta property="og:type" content="website">
+<meta property="og:url" content="{SITE_URL}/apresentacao">
+<link rel="canonical" href="{SITE_URL}/apresentacao">
 <link rel="icon" type="image/png" sizes="192x192" href="icons/icon-192.png">
 <meta name="theme-color" content="#ef5a1f">
 {FONT_LINKS}
@@ -967,3 +974,56 @@ _sw_version = _h.hexdigest()[:12]
 _sw = open("sw.js", encoding="utf-8").read().replace("__BUILD_VERSION__", _sw_version)
 open("../artifact/sw.js", "w", encoding="utf-8").write(_sw)
 print("written sw.js, versao", _sw_version)
+
+# ---- Hospedagem (Cloudflare Pages): _headers, robots e sitemap ----
+# Tudo gerado aqui, nunca à mão em artifact/. _headers é o formato do
+# Cloudflare Pages (e do Netlify); em outra hospedagem, traduza as mesmas
+# regras: cabeçalhos de segurança e sw.js sem cache. Sem _redirects de
+# propósito: o Cloudflare serve index.html em / e redireciona /index.html
+# para /, então reescrever a raiz para a apresentação deixaria o app inalcançável.
+_CSP = "; ".join([
+    "default-src 'self'",
+    "script-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net",
+    "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com",
+    "font-src 'self' https://fonts.gstatic.com",
+    "img-src 'self' data: blob:",
+    "media-src 'self' data: blob:",
+    "connect-src 'self' https://*.supabase.co wss://*.supabase.co https://cdn.jsdelivr.net "
+    "https://fonts.googleapis.com https://fonts.gstatic.com",
+    "frame-src https://www.youtube-nocookie.com",
+    "object-src 'none'",
+    "base-uri 'self'",
+    "form-action 'self'",
+    "frame-ancestors 'none'",
+])
+_HEADERS = f"""# Gerado por app/build.py. Nao editar.
+/*
+  X-Content-Type-Options: nosniff
+  X-Frame-Options: DENY
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: microphone=(self), camera=(), geolocation=(), payment=()
+  Strict-Transport-Security: max-age=31536000
+  Content-Security-Policy: {_CSP}
+
+# Paginas HTML ja saem do Cloudflare Pages com max-age=0 + revalidacao. O
+# service worker e o manifesto tambem nao podem ficar em cache, senao a versao
+# nova nao chega.
+/sw.js
+  Cache-Control: no-cache
+/manifest.json
+  Cache-Control: no-cache
+
+# Icones so mudam quando o arquivo muda.
+/icons/*
+  Cache-Control: public, max-age=604800
+"""
+open("../artifact/_headers", "w", encoding="utf-8", newline="\n").write(_HEADERS)
+
+open("../artifact/robots.txt", "w", encoding="utf-8", newline="\n").write(
+    f"User-agent: *\nAllow: /\nSitemap: {SITE_URL}/sitemap.xml\n")
+open("../artifact/sitemap.xml", "w", encoding="utf-8", newline="\n").write(
+    '<?xml version="1.0" encoding="UTF-8"?>\n'
+    '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
+    + "".join(f"  <url><loc>{SITE_URL}{_p}</loc></url>\n" for _p in ["/apresentacao", "/termos", "/privacidade"])
+    + "</urlset>\n")
+print("written _headers, robots.txt, sitemap.xml")

@@ -14,6 +14,7 @@ Sai com codigo 0 se tudo passar, 1 se alguma checagem falhar.
 """
 
 import json
+import os
 import re
 import shutil
 import subprocess
@@ -877,6 +878,30 @@ def pwa_checks():
     block = re.search(r"var PRECACHE = \[(.*?)\];", sw, re.S)
     urls = re.findall(r'"\./([^"]+)"', block.group(1)) if block else []
     out["pwa_sw_precache_files_exist"] = bool(urls) and all((art / u).exists() for u in urls)
+
+    # hospedagem: _headers com seguranca e sw.js sem cache; sitemap e canonical
+    # usam o SITE_URL do build (app/site.json), nao um endereco fixo
+    hdr_path = art / "_headers"
+    hdr = hdr_path.read_text(encoding="utf-8") if hdr_path.exists() else ""
+    sw_rule = re.search(r"^/sw\.js\n((?:[ \t]+.*\n?)+)", hdr, re.M)
+    out["host_headers_security_and_sw_nocache"] = (
+        "X-Content-Type-Options: nosniff" in hdr and "Content-Security-Policy:" in hdr
+        and "frame-ancestors 'none'" in hdr and bool(sw_rule) and "no-cache" in sw_rule.group(1)
+    )
+    site_url = json.loads((ARTIFACT.parent.parent / "app" / "site.json").read_text(encoding="utf-8-sig"))["SITE_URL"].rstrip("/")
+    sitemap_path = art / "sitemap.xml"
+    sitemap = sitemap_path.read_text(encoding="utf-8") if sitemap_path.exists() else ""
+    landing_path = art / "apresentacao.html"
+    landing = landing_path.read_text(encoding="utf-8") if landing_path.exists() else ""
+    robots_path = art / "robots.txt"
+    robots = robots_path.read_text(encoding="utf-8") if robots_path.exists() else ""
+    if os.environ.get("SITE_URL"):  # build de CI com outro endereco: so confere o formato
+        site_url = os.environ["SITE_URL"].strip().rstrip("/")
+    out["host_site_url_in_generated_files"] = (
+        f"<loc>{site_url}/apresentacao</loc>" in sitemap
+        and f'rel="canonical" href="{site_url}/apresentacao"' in landing
+        and f"Sitemap: {site_url}/sitemap.xml" in robots
+    )
     return out
 
 

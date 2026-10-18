@@ -1,0 +1,4 @@
+{
+  "_comment": "Endereco publico do site, em um unico lugar. O build le SITE_URL daqui (a variavel de ambiente SITE_URL, se existir, vence). Sem barra no fim e sem caminho. Para publicar, troque pelo endereco final (ex.: https://itoefl.com.br). Em desenvolvimento fica localhost; scripts/prepublish_check.py reprova a publicacao enquanto for localhost. Nas edge functions do Supabase o mesmo valor vai em `supabase secrets set SITE_URL=...`.",
+  "SITE_URL": "http://localhost:8000"
+}

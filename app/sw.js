@@ -37,7 +37,18 @@ self.addEventListener("install", function(event){
   event.waitUntil(
     caches.open(CACHE).then(function(cache){
       // cache: "reload" ignora o cache HTTP, garante a versão recém-publicada
-      return cache.addAll(PRECACHE.map(function(u){ return new Request(u, { cache: "reload" }); }));
+      // Cloudflare Pages redireciona /index.html para /. O navegador recusa
+      // servir resposta que passou por redirecionamento a uma navegação, então
+      // essas são regravadas limpas antes de entrar no cache.
+      return Promise.all(PRECACHE.map(function(u){
+        return fetch(new Request(u, { cache: "reload" })).then(function(res){
+          if(!res.ok) throw new Error("precache " + u + ": " + res.status);
+          if(!res.redirected) return cache.put(u, res);
+          return res.blob().then(function(b){
+            return cache.put(u, new Response(b, { status: 200, headers: res.headers }));
+          });
+        });
+      }));
     })
   );
 });
