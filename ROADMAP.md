@@ -297,7 +297,7 @@ Pequenas, independentes entre si, podem entrar em qualquer intervalo.
         pontuação do inglês onde o travessão virou ":" ou "·". Inclui os 2
         críticos adiados: o Grupo A2 do M1 (lacunas com alternativas, que
         não é o formato da prova) e os tipos extintos nos drills do M1.
-  - [ ] Rodada 3: estilo.
+  - [x] Rodada 3 (estilo) concluída em 2026-10-18: 151 itens aplicados, 2 recusados, o resto já estava feito; lista em `itoefl-gerencia/revisao/APLICADO-rodada3.md`.
 - [x] (C) Mover o histórico de sessões deste arquivo para
       `docs/historico-sessoes.md` (2026-10-07). Aqui ficam só esta lista e as
       decisões travadas.
