@@ -982,6 +982,10 @@ def legal_page_checks():
         data = path.read_text(encoding="utf-8")
         out[key] = ("<h1>" in data and data.count("<h2>") >= 8 and 'href="index.html"' in data
                     and 'rel="icon"' in data and "@import" not in data)
+    # a conta grátis está nos Termos: o que inclui e que pode mudar
+    terms = " ".join((ARTIFACT.parent / "termos.html").read_text(encoding="utf-8").split())
+    out["terms_mention_free_account"] = ("<strong>Conta grátis.</strong>" in terms and "sem os simulados e sem a correção de redação" in terms
+                                         and "pode mudar a qualquer momento" in terms)
     return out
 
 

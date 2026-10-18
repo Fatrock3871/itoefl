@@ -82,6 +82,12 @@ corrigir. O envio faz parte do plano e não tem custo à parte.
   de contato se notar uso indevido.
 - Menores de 18 anos devem usar a plataforma com autorização do responsável
   legal.
+<!-- REVISAR (advogado): linha nova de 2026-10-17, sobre a conta grátis (o que inclui e que pode mudar). -->
+- **Conta grátis.** Criar a conta não custa nada. Sem um plano em dia, ela
+  dá acesso a uma amostra do curso, sem prazo: hoje, o Módulo 0 inteiro, a
+  Parte 1 de cada um dos outros módulos e um exercício de cada tipo, sem os
+  simulados e sem a correção de redação. O que entra na amostra pode mudar a
+  qualquer momento.
 
 ## 7. Planos, pagamento e validade
 
