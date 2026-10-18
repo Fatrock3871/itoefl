@@ -9,7 +9,7 @@ MOD1_ACTION_DRILLS_A = [
         "id": "mod1-a1",
         "title": "Drill A1 · alvo: 4 min",
         "level": "A2–B1",
-        "objective": "Leia o texto e escolha a opção que completa cada lacuna corretamente. Tempo alvo: 4 minutos.",
+        "objective": "Leia o texto e escolha a opção que completa cada lacuna corretamente. Tempo-alvo: 4 minutos.",
         "passage_html": """<p><strong>TEXT: A message to a friend</strong></p>
 <p>Hi Marco,</p>
 <p>I'm really sorry, but I have to (1)_____ our plans for Saturday. My sister (2)_____ from Recife that morning and I have to pick her up at the airport. I know we (3)_____ this dinner for weeks, and I feel terrible about it.</p>
@@ -35,7 +35,7 @@ MOD1_ACTION_DRILLS_A = [
         "id": "mod1-a2",
         "title": "Drill A2 · alvo: 4 min",
         "level": "B1",
-        "objective": "Leia o texto e escolha a opção que completa cada lacuna corretamente. Tempo alvo: 4 minutos.",
+        "objective": "Leia o texto e escolha a opção que completa cada lacuna corretamente. Tempo-alvo: 4 minutos.",
         "passage_html": """<p><strong>TEXT: Notice at a community pool</strong></p>
 <p>Starting Monday, the main pool (1)_____ closed for its annual maintenance. We expect the work (2)_____ completed by Friday afternoon. During this period, members (3)_____ still use the smaller training pool, which (4)_____ open at its usual hours.</p>
 <p>We apologize for any (5)_____ this may cause. If you have questions about your membership or class schedule, please (6)_____ to speak with the front desk staff, who will be happy to help.</p>""",
@@ -58,7 +58,7 @@ MOD1_ACTION_DRILLS_A = [
         "id": "mod1-a3",
         "title": "Drill A3 · alvo: 5 min",
         "level": "B2",
-        "objective": "Leia o texto e escolha a opção que completa cada lacuna corretamente. Tempo alvo: 5 minutos.",
+        "objective": "Leia o texto e escolha a opção que completa cada lacuna corretamente. Tempo-alvo: 5 minutos.",
         "passage_html": """<p><strong>TEXT: A message from the office manager</strong></p>
 <p>Hi team,</p>
 <p>I wanted to send a quick note before the long weekend. As most of you already (1)_____, the building's heating system will be shut down for scheduled maintenance from Friday evening through Monday morning. Please make sure you (2)_____ any equipment that shouldn't be left running unattended, and take home anything that might be sensitive to temperature changes over the weekend.</p>
@@ -88,7 +88,7 @@ MOD1_ACTION_DRILLS_A = [
         "id": "mod1-a4",
         "title": "Drill A4 · alvo: 5 min",
         "level": "B2–C1",
-        "objective": "Leia o texto e escolha a opção que completa cada lacuna corretamente. Tempo alvo: 5 minutos.",
+        "objective": "Leia o texto e escolha a opção que completa cada lacuna corretamente. Tempo-alvo: 5 minutos.",
         "passage_html": """<p><strong>TEXT: Museum exhibit information card</strong></p>
 <p>This exhibit brings together more than two hundred objects (1)_____ over four decades of fieldwork in the region. Many of them (2)_____ never been displayed publicly before. Together, they offer a rare (3)_____ into daily life in a community that written records largely overlooked.</p>
 <p>Visitors are (4)_____ to move through the rooms in order, since the layout follows a rough chronology. Labels have been kept deliberately brief; those who wish to (5)_____ deeper into any single object will find extended notes on the tablets provided at the entrance. Photography without flash (6)_____ permitted throughout, except in the final room, where the light-sensitive textiles require complete darkness.</p>""",
@@ -98,11 +98,11 @@ MOD1_ACTION_DRILLS_A = [
             {"num": "2", "prompt": "Lacuna (2)", "options": {"A": "has", "B": "have", "C": "had", "D": "having"},
              "correct": "B", "explanation": "Sujeito <em>Many of them</em> (plural) + presente perfeito → \"have never been displayed\". (A) quebra a concordância; (C) mudaria para passado perfeito sem marco; (D) não fecha o tempo."},
             {"num": "3", "prompt": "Lacuna (3)", "options": {"A": "window", "B": "door", "C": "mirror", "D": "bridge"},
-             "correct": "A", "explanation": "\"A rare ___ into daily life\": collocation fixa: <em>a window into/onto</em> = uma janela para (uma visão de). As outras opções não colocam com \"into daily life\" nesse sentido."},
+             "correct": "A", "explanation": "\"A rare ___ into daily life\": collocation fixa: <em>a window into/onto</em> = uma janela para (uma visão de). As outras opções não formam collocation com \"into daily life\" nesse sentido."},
             {"num": "4", "prompt": "Lacuna (4)", "options": {"A": "encourage", "B": "encouraged", "C": "encouraging", "D": "encouragement"},
              "correct": "B", "explanation": "\"Visitors are ___ to move\": voz passiva: <em>are encouraged to</em>. (C) mudaria o sujeito; (A)/(D) não formam o passivo."},
             {"num": "5", "prompt": "Lacuna (5)", "options": {"A": "delve", "B": "fall", "C": "drop", "D": "sink"},
-             "correct": "A", "explanation": "\"Wish to ___ deeper into any single object\": <em>delve into</em> = aprofundar-se em. As outras opções não colocam com \"deeper into [um tema]\" no sentido de investigar."},
+             "correct": "A", "explanation": "\"Wish to ___ deeper into any single object\": <em>delve into</em> = aprofundar-se em. As outras opções não formam collocation com \"deeper into [um tema]\" no sentido de investigar."},
             {"num": "6", "prompt": "Lacuna (6)", "options": {"A": "is", "B": "are", "C": "being", "D": "be"},
              "correct": "A", "explanation": "\"Photography without flash ___ permitted\": sujeito <em>Photography</em> (incontável, singular) → <strong>is</strong>."},
         ],
@@ -111,7 +111,7 @@ MOD1_ACTION_DRILLS_A = [
         "id": "mod1-a5",
         "title": "Drill A5 · alvo: 5 min",
         "level": "C1",
-        "objective": "Leia o texto e escolha a opção que completa cada lacuna corretamente. Tempo alvo: 5 minutos.",
+        "objective": "Leia o texto e escolha a opção que completa cada lacuna corretamente. Tempo-alvo: 5 minutos.",
         "passage_html": """<p><strong>TEXT: Excerpt from an editorial</strong></p>
 <p>For decades, the standard response to traffic congestion (1)_____ been to add lanes. The logic seems sound. Yet a growing body of research points to the opposite (2)_____: added lanes tend to attract additional drivers until, within a few years, traffic returns to its former level — a phenomenon known as induced demand. Rarely (3)_____ a policy so intuitive prove so consistently ineffective.</p>
 <p>This does not mean nothing (4)_____ be done. It means the solution lies elsewhere: in reliable public transit, in pricing that reflects the true cost of road use, and in land-use decisions that reduce the (5)_____ to drive in the first place. None of these is as politically straightforward as pouring concrete, which is (6)_____ they are so often postponed.</p>""",
@@ -119,13 +119,13 @@ MOD1_ACTION_DRILLS_A = [
             {"num": "1", "prompt": "Lacuna (1)", "options": {"A": "has", "B": "have", "C": "had", "D": "having"},
              "correct": "A", "explanation": "Sujeito \"the standard response\" = <strong>singular</strong> → \"has been\" (presente perfeito: \"For decades... has been\"). (B) quebra a concordância; (C) pediria um marco no passado; (D) não fecha o tempo."},
             {"num": "2", "prompt": "Lacuna (2)", "options": {"A": "conclusion", "B": "decision", "C": "opinion", "D": "suggestion"},
-             "correct": "A", "explanation": "\"Points to the opposite ___\": <em>point to a conclusion</em> é a collocation. As outras opções não colocam com \"research points to the opposite ___\"."},
+             "correct": "A", "explanation": "\"Points to the opposite ___\": <em>point to a conclusion</em> é a collocation. As outras opções não formam collocation com \"research points to the opposite ___\"."},
             {"num": "3", "prompt": "Lacuna (3)", "options": {"A": "does", "B": "do", "C": "is", "D": "has"},
              "correct": "A", "explanation": "Inversão após <em>Rarely</em> no início da frase → auxiliar <strong>does</strong> + sujeito + base (<em>prove</em>). \"Rarely does a policy... prove...\""},
             {"num": "4", "prompt": "Lacuna (4)", "options": {"A": "can", "B": "can't", "C": "is", "D": "has"},
              "correct": "A", "explanation": "\"This does not mean nothing ___ be done\": modal + <em>be done</em> (passiva): \"não significa que nada pode ser feito\". (B) inverteria o sentido; (C) e (D) não podem vir antes de \"be\" (\"is be\" e \"has be\" são agramaticais)."},
             {"num": "5", "prompt": "Lacuna (5)", "options": {"A": "need", "B": "want", "C": "wish", "D": "hope"},
-             "correct": "A", "explanation": "\"Reduce the ___ to drive\": <em>the need to (do something)</em> = a necessidade de. As outras opções não colocam com essa estrutura."},
+             "correct": "A", "explanation": "\"Reduce the ___ to drive\": <em>the need to (do something)</em> = a necessidade de. As outras opções não formam collocation com essa estrutura."},
             {"num": "6", "prompt": "Lacuna (6)", "options": {"A": "why", "B": "because", "C": "how", "D": "what"},
              "correct": "A", "explanation": "\"Which is ___ they are so often postponed\": \"which is why...\" = \"razão pela qual\". (B) precisaria de outra estrutura; (C)/(D) não fecham a relativa."},
         ],
@@ -139,7 +139,7 @@ MOD1_ACTION_DRILLS_B = [
         "id": "mod1-b1",
         "title": "Drill B1 · Placa / aviso · alvo: 2 min",
         "level": "A2–B1",
-        "objective": "Leia o texto e responda às questões de compreensão. Tempo alvo: 2 minutos.",
+        "objective": "Leia o texto e responda às questões de compreensão. Tempo-alvo: 2 minutos.",
         "passage_html": """<p><strong>TEXT: Sign at a nature reserve trailhead</strong></p>
 <blockquote><p><strong>RIDGELINE TRAIL: PLEASE READ BEFORE ENTERING</strong></p>
 <p>• Trail open sunrise to sunset. Overnight camping is not permitted anywhere on the reserve.<br>
@@ -159,7 +159,7 @@ MOD1_ACTION_DRILLS_B = [
         "id": "mod1-b2",
         "title": "Drill B2 · Cardápio · alvo: 3 min",
         "level": "A2–B1",
-        "objective": "Leia o texto e responda às questões de compreensão. Tempo alvo: 3 minutos.",
+        "objective": "Leia o texto e responda às questões de compreensão. Tempo-alvo: 3 minutos.",
         "passage_html": """<p><strong>TEXT: Café lunch menu (extract)</strong></p>
 <blockquote><p><strong>SANDWICHES</strong>: all served on sourdough with a side salad (swap for fries +$2)</p>
 <p>• <strong>Garden</strong> — roasted vegetables, hummus, arugula · $9 · <em>vegan</em><br>
@@ -183,7 +183,7 @@ MOD1_ACTION_DRILLS_B = [
         "id": "mod1-b3",
         "title": "Drill B3 · E-mail formal · alvo: 3 min",
         "level": "B1–B2",
-        "objective": "Leia o texto e responda às questões de compreensão. Tempo alvo: 3 minutos.",
+        "objective": "Leia o texto e responda às questões de compreensão. Tempo-alvo: 3 minutos.",
         "passage_html": """<p><strong>TEXT: Email from a course coordinator</strong></p>
 <blockquote>
 <p><strong>Subject: Re: Request to submit Assignment 2 late</strong></p>
@@ -209,7 +209,7 @@ MOD1_ACTION_DRILLS_B = [
         "id": "mod1-b4",
         "title": "Drill B4 · Horário / tabela · alvo: 2 min",
         "level": "B1–B2",
-        "objective": "Leia o texto e responda às questões de compreensão. Tempo alvo: 2 minutos.",
+        "objective": "Leia o texto e responda às questões de compreensão. Tempo-alvo: 2 minutos.",
         "passage_html": """<p><strong>TEXT: Shuttle timetable notice</strong></p>
 <blockquote><p><strong>CAMPUS ↔ STATION SHUTTLE</strong></p>
 <p>Departs Campus Gate: on the hour and at half past, 7:00–19:00, Mon–Fri. Departs Station: at quarter past and quarter to, same times. Journey time: approximately 20 minutes.</p>
@@ -227,7 +227,7 @@ MOD1_ACTION_DRILLS_B = [
         "id": "mod1-b5",
         "title": "Drill B5 · Post de rede social · alvo: 3 min",
         "level": "A2–B1",
-        "objective": "Leia o texto e responda às questões de compreensão. Tempo alvo: 3 minutos.",
+        "objective": "Leia o texto e responda às questões de compreensão. Tempo-alvo: 3 minutos.",
         "passage_html": """<p><strong>TEXT: A social media post from a local bakery</strong></p>
 <blockquote><p>🥐 <strong>Riverside Bakery</strong> · Posted 2 hours ago</p>
 <p>Big news, everyone! Starting next Tuesday, we're extending our weekday hours — open at 6:30 AM instead of 7:00 AM, so early risers can grab their coffee and croissants before work. 🌅</p>
@@ -254,7 +254,7 @@ MOD1_ACTION_DRILLS_C = [
         "id": "mod1-c1",
         "title": "Drill C1 · Ciências naturais · alvo: 6 min",
         "level": "B2–C1",
-        "objective": "Leia a passagem completa uma vez. Responda às 7 questões. Tempo alvo: 6 minutos.",
+        "objective": "Leia a passagem completa uma vez. Responda às 7 questões. Tempo-alvo: 6 minutos.",
         "passage_html": """<p><strong>PASSAGE: Bioluminescence in Marine Organisms</strong></p>
 <p>Bioluminescence (the production and emission of light by a living organism) is remarkably common in the ocean, appearing in bacteria, jellyfish, fish, and even some sharks. Unlike the light produced by an incandescent bulb, which wastes most of its energy as heat, bioluminescent light is generated through a highly efficient chemical reaction, typically involving a light-emitting molecule called luciferin and an enzyme called luciferase. Because so little energy is lost as heat, biologists sometimes refer to this phenomenon as "cold light."</p>
 <p>The functions of bioluminescence vary considerably across species, though three purposes appear again and again. Some organisms use light defensively: certain species of squid release a luminous cloud instead of ink, startling predators and buying time to escape. Others use it as a hunting tool. The anglerfish, perhaps the most famous example, dangles a glowing lure above its mouth to attract smaller prey close enough to seize. Still others use light for communication. In the deep sea, darkness is nearly absolute, so visual signals cannot rely on ambient light at all. Even in shallow water at night, certain ostracods, tiny crustaceans, produce synchronized light displays to attract mates.</p>
@@ -287,7 +287,7 @@ MOD1_ACTION_DRILLS_C = [
         "id": "mod1-c2",
         "title": "Drill C2 · História · alvo: 6 min",
         "level": "B2–C1",
-        "objective": "Leia a passagem completa uma vez. Responda às 7 questões. Tempo alvo: 6 minutos.",
+        "objective": "Leia a passagem completa uma vez. Responda às 7 questões. Tempo-alvo: 6 minutos.",
         "passage_html": """<p><strong>PASSAGE: Coffee Houses in Seventeenth-Century England</strong></p>
 <p>The first English coffee house opened in Oxford in 1650; within two decades, London alone had hundreds. <strong>[■A]</strong> For the price of a single cup (a penny), a customer could sit for hours, read the newspapers provided by the house, and join whatever conversation was underway. <strong>[■B]</strong> Because admission was cheap and open to any man who could pay, the coffee house mixed people who rarely met elsewhere: merchants, scholars, clergymen, and minor gentry sat at the same long tables. <strong>[■C]</strong></p>
 <p>This mixing had consequences that reached well beyond casual talk. Particular houses became known for particular subjects. Men interested in maritime insurance gathered at Lloyd's; those following scientific debates went to the houses near the Royal Society. <strong>[■D]</strong> Information that had once circulated slowly, by letter or rumor, now moved quickly through these rooms. Some historians argue that the coffee house functioned as an early public sphere: a space where opinion could form through discussion rather than being handed down by church or crown.</p>
@@ -320,7 +320,7 @@ MOD1_ACTION_DRILLS_C = [
         "id": "mod1-c3",
         "title": "Drill C3 · Ciências sociais · alvo: 6 min",
         "level": "C1",
-        "objective": "Leia a passagem completa uma vez. Responda às 7 questões (a última pede 3 respostas). Tempo alvo: 6 minutos.",
+        "objective": "Leia a passagem completa uma vez. Responda às 7 questões (a última pede 3 respostas). Tempo-alvo: 6 minutos.",
         "passage_html": """<p><strong>PASSAGE: The Strength of Weak Ties</strong></p>
 <p>When people look for a new job, common sense suggests they should turn to their closest contacts: family and good friends who know them well and want to help. In a study of professionals who had recently changed jobs, the sociologist Mark Granovetter found the opposite. Of those who had found their new position through a personal contact, most had heard about it not from a close friend but from an acquaintance — someone they saw only occasionally and would not have described as part of their inner circle.</p>
 <p>Granovetter's explanation rests on how information moves through social networks. Your close friends tend to know one another and to move in the same circles you do. As a result, they are exposed to more or less the same information you already have; what they can tell you, you have often already heard. An acquaintance, by contrast, moves in a different circle, encounters different people, and hears different news. A weak tie is therefore a bridge to parts of the network you could not otherwise reach.</p>
@@ -367,7 +367,7 @@ MOD2_ACTION_DRILLS_A = [
         "id": "mod2-a",
         "title": None,
         "level": "B1–B2",
-        "objective": "Escolha a resposta mais natural e pragmaticamente adequada a cada fala. Tempo alvo: 12 segundos por item.",
+        "objective": "Escolha a resposta mais natural e pragmaticamente adequada a cada fala. Tempo-alvo: 12 segundos por item.",
         "passage_html": None,
         "items": [
             {"num": "A1", "prompt": "\"I was going to grab lunch before the seminar, but there's no time now.\"",
@@ -417,7 +417,7 @@ MOD2_ACTION_DRILLS_B = [
         "id": "mod2-b1",
         "title": "Drill B1 · Advising Office · alvo: 3 min",
         "level": "B1–B2",
-        "objective": "Leia o diálogo (ou peça pra alguém ler em voz alta) e responda às 4 questões. Tempo alvo: 3 minutos.",
+        "objective": "Leia o diálogo (ou peça pra alguém ler em voz alta) e responda às 4 questões. Tempo-alvo: 3 minutos.",
         "passage_html": """<p><em>Narrator: Listen to a conversation between a student and an academic advisor.</em></p>
 <p><strong>Student:</strong> Hi, I wanted to ask about switching one of my electives. I'm in Intro to Statistics, but I'd rather take Data Visualization this term.</p>
 <p><strong>Advisor:</strong> Let me check... okay, Data Visualization has space. But it has Statistics as a prerequisite — have you completed that?</p>
@@ -446,7 +446,7 @@ MOD2_ACTION_DRILLS_B = [
         "id": "mod2-b2",
         "title": "Drill B2 · Library Reserve Desk · alvo: 3 min",
         "level": "B1–B2",
-        "objective": "Leia o diálogo (ou peça pra alguém ler em voz alta) e responda às 4 questões. Tempo alvo: 3 minutos.",
+        "objective": "Leia o diálogo (ou peça pra alguém ler em voz alta) e responda às 4 questões. Tempo-alvo: 3 minutos.",
         "passage_html": """<p><em>Narrator: Listen to a conversation between a student and a librarian.</em></p>
 <p><strong>Student:</strong> Hi — I'm looking for a book my professor put on reserve for the history seminar. It's <em>The Making of the Atlantic World</em>.</p>
 <p><strong>Librarian:</strong> Let me look... yes, we have two copies on reserve. Reserve items are two-hour loans, in-library use only. You can't take them out of the building.</p>
@@ -474,7 +474,7 @@ MOD2_ACTION_DRILLS_B = [
         "id": "mod2-b3",
         "title": "Drill B3 · After Class · alvo: 3 min",
         "level": "B1–B2",
-        "objective": "Leia o diálogo (ou peça pra alguém ler em voz alta) e responda às 4 questões. Tempo alvo: 3 minutos.",
+        "objective": "Leia o diálogo (ou peça pra alguém ler em voz alta) e responda às 4 questões. Tempo-alvo: 3 minutos.",
         "passage_html": """<p><em>Narrator: Listen to a conversation between a student and a professor.</em></p>
 <p><strong>Student:</strong> Professor, do you have a minute? I'm a bit lost on the second essay prompt.</p>
 <p><strong>Professor:</strong> Of course. Which part?</p>
@@ -508,7 +508,7 @@ MOD2_ACTION_DRILLS_C = [
         "id": "mod2-c1",
         "title": "Drill C1 · Library Services · alvo: 2 min",
         "level": "B1",
-        "objective": "Leia o anúncio (ou peça pra alguém ler em voz alta) e responda às 3 questões. Tempo alvo: 2 minutos.",
+        "objective": "Leia o anúncio (ou peça pra alguém ler em voz alta) e responda às 3 questões. Tempo-alvo: 2 minutos.",
         "passage_html": """<p><em>Narrator: Listen to an announcement about a change to library services.</em></p>
 <p><strong>Speaker:</strong> Attention, students. Starting next Monday, the Main Library's third-floor reading room will be closed for renovation through the end of the month. During this period you can use the East Wing reading room instead, which keeps its regular hours. Reserved study rooms originally booked for the third floor have already been transferred automatically to the East Wing — you don't need to rebook. However, if your reservation was for a room with audiovisual equipment, please double-check availability, since not all East Wing rooms are equipped. Questions go to the circulation desk.</p>""",
         "items": [
@@ -527,7 +527,7 @@ MOD2_ACTION_DRILLS_C = [
         "id": "mod2-c2",
         "title": "Drill C2 · Course Registration · alvo: 2 min",
         "level": "B1",
-        "objective": "Leia o anúncio (ou peça pra alguém ler em voz alta) e responda às 4 questões. Tempo alvo: 2 minutos.",
+        "objective": "Leia o anúncio (ou peça pra alguém ler em voz alta) e responda às 4 questões. Tempo-alvo: 2 minutos.",
         "passage_html": """<p><em>Narrator: Listen to an announcement about course registration.</em></p>
 <p><strong>Speaker:</strong> A reminder to all second-year students: registration for spring courses opens this Thursday at 8 a.m. and closes the following Wednesday at midnight. Register early — popular courses fill within hours. If a course you need is full, add yourself to the waitlist rather than emailing the instructor; the system releases spots automatically as students drop, and it works strictly in waitlist order. One change this year: the add/drop period after classes begin has been shortened from two weeks to one, so finalize your schedule before the term starts, not after.</p>""",
         "items": [
@@ -549,7 +549,7 @@ MOD2_ACTION_DRILLS_C = [
         "id": "mod2-c3",
         "title": "Drill C3 · Campus Event · alvo: 2 min",
         "level": "B1",
-        "objective": "Leia o anúncio (ou peça pra alguém ler em voz alta) e responda às 4 questões. Tempo alvo: 2 minutos.",
+        "objective": "Leia o anúncio (ou peça pra alguém ler em voz alta) e responda às 4 questões. Tempo-alvo: 2 minutos.",
         "passage_html": """<p><em>Narrator: Listen to an announcement about a career event.</em></p>
 <p><strong>Speaker:</strong> The annual Career Fair takes place next Wednesday from 10 to 4 in the main gymnasium. Over eighty employers will attend, mostly in engineering, healthcare, and education. A few reminders. Bring several printed copies of your résumé — most recruiters still expect a paper copy. Business-casual dress is recommended, not required. The résumé-review station near the entrance will be open from 9, an hour before the fair, and it operates first-come, first-served, so arrive early if you want feedback before talking to employers. Finally, the 9:30 workshop on interview skills is now full; a recording will be posted next week for those who missed it.</p>""",
         "items": [
@@ -576,7 +576,7 @@ MOD2_ACTION_DRILLS_D = [
         "id": "mod2-d1",
         "title": "Drill D1 · Psicologia · alvo: 4 min",
         "level": "B2–C1",
-        "objective": "Leia a palestra (ou peça pra alguém ler em voz alta) e responda às 5 questões. Tempo alvo: 4 minutos.",
+        "objective": "Leia a palestra (ou peça pra alguém ler em voz alta) e responda às 5 questões. Tempo-alvo: 4 minutos.",
         "passage_html": """<p><em>Narrator: Listen to part of a talk in a psychology class.</em></p>
 <p><strong>Professor:</strong> We've been discussing decision-making, and today I want to bring up something researchers call the paradox of choice. The idea is counterintuitive: you'd think more options would always make us happier, but past a certain point it does the opposite.</p>
 <p>A classic example. In one well-known study, researchers set up a tasting table in a grocery store: first with six varieties of jam, then with twenty-four. You'd expect the bigger display to sell more. Actually, the smaller display generated significantly more purchases. The larger one attracted more browsers, but far fewer of them bought anything.</p>
@@ -604,7 +604,7 @@ MOD2_ACTION_DRILLS_D = [
         "id": "mod2-d2",
         "title": "Drill D2 · Biologia · alvo: 4 min",
         "level": "B2–C1",
-        "objective": "Leia a palestra (ou peça pra alguém ler em voz alta) e responda às 5 questões. Tempo alvo: 4 minutos.",
+        "objective": "Leia a palestra (ou peça pra alguém ler em voz alta) e responda às 5 questões. Tempo-alvo: 4 minutos.",
         "passage_html": """<p><em>Narrator: Listen to part of a talk in a biology class.</em></p>
 <p><strong>Professor:</strong> When we picture a forest, we tend to see individual trees competing — for light, for water, for space. And that's real. But over the last thirty years, research has revealed something the old picture missed: the trees are also <strong>connected</strong>, underground, through fungi.</p>
 <p>Here's how. The roots of most trees are wrapped in a network of fungal threads; this partnership between root and fungus is called a mycorrhiza. The fungi pull in water and minerals the tree's roots can't reach efficiently, and hand them to the tree. In return, the tree gives the fungi sugars it makes through photosynthesis. So far, a simple trade.</p>
@@ -632,7 +632,7 @@ MOD2_ACTION_DRILLS_D = [
         "id": "mod2-d3",
         "title": "Drill D3 · História da tecnologia · alvo: 4 min",
         "level": "B2–C1",
-        "objective": "Leia a palestra (ou peça pra alguém ler em voz alta) e responda às 6 questões. Tempo alvo: 4 minutos.",
+        "objective": "Leia a palestra (ou peça pra alguém ler em voz alta) e responda às 6 questões. Tempo-alvo: 4 minutos.",
         "passage_html": """<p><em>Narrator: Listen to part of a talk in a history of technology class.</em></p>
 <p><strong>Professor:</strong> Look at your keyboard. The top row of letters spells Q-W-E-R-T-Y. It's an odd arrangement — the most common letters aren't under your strongest fingers. So why has it survived, essentially unchanged, for a hundred and fifty years?</p>
 <p>The layout dates from the 1870s, from early mechanical typewriters. The common story is that QWERTY was designed to <em>slow typists down</em> so the metal type-bars wouldn't jam. That's probably an oversimplification (the real design pressures were more mixed), but the key point is that the layout was shaped by the constraints of 1870s <strong>machinery</strong>, constraints that vanished decades ago.</p>
