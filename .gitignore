@@ -29,5 +29,8 @@ supabase/.temp/
 # Versão de teste sem login (python scripts/build_teste.py)
 _teste/
 
+# Pacotes do build na Vercel (vercel.json, installCommand)
+.pydeps/
+
 # Saída do smoke test redirecionada para arquivo
 _smoke*.log

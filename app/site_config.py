@@ -3,6 +3,10 @@
 Unico ponto de verdade para tudo que precisa de URL absoluta: canonical,
 og:url, sitemap, robots. A variavel de ambiente SITE_URL, se existir, vence
 o arquivo (util num build de CI). Trocar de hospedagem = trocar este valor.
+
+Na Vercel, sem SITE_URL definido nas variaveis de ambiente, vale o endereco
+de producao do projeto (VERCEL_PROJECT_PRODUCTION_URL, que a Vercel poe no
+build). Serve para o primeiro deploy, antes de existir dominio proprio.
 """
 import json
 import os
@@ -14,6 +18,9 @@ _FILE = Path(__file__).with_name("site.json")
 
 def load_site_url():
     raw = os.environ.get("SITE_URL", "").strip()
+    vercel = os.environ.get("VERCEL_PROJECT_PRODUCTION_URL", "").strip()
+    if not raw and vercel:
+        raw = "https://" + vercel
     if not raw:
         raw = (json.loads(_FILE.read_text(encoding="utf-8-sig")).get("SITE_URL") or "").strip()
     raw = raw.rstrip("/")
