@@ -40,8 +40,8 @@ O Speaking é **curto e denso**: 8 minutos, 55 pontos brutos, quase o triplo dos
 longos com verbos compostos, orações subordinadas/relativas e sintagmas nominais complexos.
 - **Take an Interview:** de afirmações factuais breves a expressões elaboradas de
 opinião, explicação, previsão e narração. As 6 funções eliciadas: **descrições, explicações, opiniões, sugestões, previsões, narrações.**
-- **Tópicos:** domínios "academic navigational" acessíveis · *life sciences,
-história, negócios*. Vocabulário calibrado ao nível, com contrações naturais.
+- **Tópicos:** domínios "academic navigational" acessíveis: ciências da vida,
+história, negócios. Vocabulário calibrado ao nível, com contrações naturais.
 
 **Apoio ao candidato (oficial):** cada task abre com uma **introdução de cenário, dita em áudio E impressa na tela**, com elementos visuais (imagens, mapas, formulários, fotos dos falantes).
 
@@ -55,7 +55,7 @@ Isso muda onde você investe suas horas. Quem ignora Listen and Repeat pra focar
 
 ---
 
-## PARTE 2: COMO A IA PONTUA (O HACK DO SPEECHRATER)
+## PARTE 2: COMO A IA PONTUA
 
 ### 2.1 O que a IA de fato mede
 
@@ -74,7 +74,7 @@ Motores do tipo SpeechRater não "entendem" conteúdo como um humano. Eles extra
 
 **Como a tarefa é na prova:** as sete frases pertencem a **um mesmo cenário** (por exemplo, as instruções de um supervisor no primeiro dia de um emprego) e **crescem em tamanho**, de umas 5 palavras na primeira até umas 17 na última. Você **só ouve**, não lê, e repete **uma única vez**, sem tempo de preparo. O Grupo A da Parte 5 tem cinco cenários nesse formato, com áudio.
 
-**A IA compara sua transcrição contra o áudio-fonte, palavra por palavra, sílaba por sílaba.** Parafrasear é o erro mais caro que existe nesta task. Se você trocar *"purchase"* por *"buy"* porque "soou mais natural", você **não** ganha ponto por fluência. Você **perde** ponto por infidelidade ao alvo.
+**A IA compara sua transcrição com o áudio-fonte, palavra por palavra, sílaba por sílaba.** Parafrasear é o erro mais caro que existe nesta task. Se você trocar *"purchase"* por *"buy"* porque "soou mais natural", você **não** ganha ponto por fluência. Você **perde** ponto por infidelidade ao alvo.
 
 **O que a pontuação recompensa:**
 
@@ -85,14 +85,14 @@ sons "certos" mas no ritmo errado soa não nativa para a IA: prosódia é parâm
 3. **Entonação de acordo com a função**: sobe em perguntas, desce em
 declarações, ênfase em palavras de conteúdo.
 
-**Técnica do "chunking sintático":** repetir uma frase de 15 a 20 palavras ouvida uma vez testa **memória de trabalho fonológica**, mais do que audição pura. Em vez de memorizar palavra por palavra, treine-se a reter **blocos sintáticos** (grupo sujeito / sintagma verbal / oração subordinada) como unidades únicas. *"The company that was founded in 1998"* vira um único bloco mental, não sete palavras soltas. É assim que nativos processam fala.
+**Técnica do "chunking sintático":** repetir uma frase de 15 a 20 palavras ouvida uma vez testa **memória de trabalho fonológica**, mais do que audição pura. Em vez de memorizar palavra por palavra, treine reter **blocos sintáticos** (grupo sujeito / sintagma verbal / oração subordinada) como unidades únicas. *"The company that was founded in 1998"* vira um único bloco mental, não sete palavras soltas. É assim que nativos processam fala.
 
 **Protocolo de shadowing progressivo (15 min/dia):**
 
 1. Ouça uma frase de um podcast/vídeo nativo. Pause.
 2. Repita de memória, o mais próximo possível do original.
-3. Toque o áudio de novo e compare: palavra por palavra, sílaba de stress por
-sílaba de stress.
+3. Toque o áudio de novo e compare: palavra por palavra, sílaba tônica por
+sílaba tônica.
 4. Aumente o comprimento das frases ao longo das semanas, replicando a
 progressão do próprio teste.
 
@@ -102,7 +102,7 @@ progressão do próprio teste.
 
 Quatro perguntas, cada uma pedindo uma resposta **imediata, coerente e elaborada**. A pergunta pode pedir qualquer uma das 6 funções: você precisa reconhecer qual, em **segundos**.
 
-**Framework de resposta rápida por função:** para cada função, tenha um **esqueleto automatizado**, não um script decorado, mas um padrão que seu cérebro aciona no instante em que reconhece o tipo de pergunta.
+**Framework de resposta rápida por função:** para cada função, tenha um **esqueleto automatizado**: não um script decorado, mas um padrão que seu cérebro aciona no instante em que reconhece o tipo de pergunta.
 
 | Função | Gatilho típico | Esqueleto (2–4 frases) |
 |---|---|---|
@@ -123,9 +123,9 @@ A segunda versão é mais longa porque tem um **exemplo concreto**, não porque 
 
 ### 2.4 O erro estrutural do falante de português: ritmo silábico
 
-O português brasileiro é uma língua de **ritmo silábico**: cada sílaba recebe duração e peso semelhantes. O inglês é de **ritmo acentual** · as sílabas tônicas ocorrem em intervalos relativamente regulares, e as átonas são comprimidas e reduzidas (schwa /ə/) para caber no compasso.
+O português brasileiro é uma língua de **ritmo silábico**: cada sílaba recebe duração e peso semelhantes. O inglês é de **ritmo acentual**: as sílabas tônicas ocorrem em intervalos relativamente regulares, e as átonas são comprimidas e reduzidas (schwa /ə/) para caber no compasso.
 
-É por isso que brasileiros soam "robóticos" ou "silabados" em inglês, mesmo com vocabulário e gramática impecáveis: e é exatamente o desvio de prosódia que a IA de inteligibilidade captura em Listen and Repeat.
+É por isso que brasileiros soam "robóticos" ou "silabados" em inglês, mesmo com vocabulário e gramática impecáveis. E é exatamente o desvio de prosódia que a IA de inteligibilidade captura em Listen and Repeat.
 
 > **Diagnóstico:** grave-se dizendo *"I would have gone to the party if I had known about it"* e compare o tempo entre as sílabas tônicas (GONE, PAR-ty, KNOWN, a-BOUT) com um áudio nativo. Se você dá o mesmo peso a *"would have"* e a *"gone"*, está no ritmo silábico: o *"would have"* precisa encolher para algo como *"I'd-uv"*, quase inaudível (*"I'd-uv GONE"*). As seções 3.3 e 3.5 treinam isso.
 
@@ -145,7 +145,7 @@ Speaking se ganha ou se perde aqui. A estratégia (Parte 2) diz **o que** fazer;
 | 4 | **/æ/** (short a) | vira /ɛ/ ("fez") ou /a/ ("faz") | cat, bad, man, plan, have, actually, language, academic, grammar, natural | abra mais a boca que em "fez", língua para baixo e para frente. Par mínimo: *bed* (/ɛ/) × *bad* (/æ/) |
 | 5 | **/ʌ/** | vira /a/ ou /u/ | but, cut, done, love, money, enough, culture, budget, function | vogal **central e relaxada**, boca semiaberta: o "u" de "but" não é o de "put" |
 | 6 | **/ɜːr/** (bird) | vira "er" silabado ou "ir" | word, work, first, learn, term, research, prefer, occur, concern | um som só, contínuo, com a língua enrolada (rótico) |
-| 7 | **vogais epentéticas** | adiciona vogal ao final ou entre consoantes | speak→speak**i**, work→work**i**, last→last**i**, test→test**i**, film→fil**m**i | **pare a palavra na consoante**: feche a boca ali, não "abra" depois |
+| 7 | **vogais epentéticas** | adiciona vogal ao final ou entre consoantes | speak→speak**i**, work→work**i**, last→last**i**, test→test**i**, film→film**i** | **pare a palavra na consoante**: feche a boca ali, não "abra" depois |
 | 8 | **clusters de consoante** | quebra o grupo com vogal | *strong* → "estrong", *desks* → "deskis", *asked* → "áskid", *texts* → "textis" | pratique o grupo devagar, sem vogal no meio: /s-t-r/, /s-k-s/ |
 | 9 | **/h/ e o "h" mudo** | pronuncia o *h* que é mudo (*hour, honest, honor, heir*) ou, mais raro, engole o *h* que soa (*"I 'ave"*) | hour, honest, honor, heir, vehicle × have, house, hard, ahead, behind | nas cinco primeiras o *h* não soa: *hour* = /ˈaʊər/, igual a *our*; nas outras é um sopro leve, parecido com o "r" de "rato" |
 | 10 | **/r/ americano** | vira tap (/ɾ/, "caro") ou "h" ("hato" para *rat*) | red, road, around, three, practically, very, story, problem | língua **enrolada para trás**, não toca o céu da boca; nada de vibração |
@@ -186,7 +186,7 @@ O brasileiro erra o acento de cognatos porque projeta o padrão do português. A
 - Palavras terminadas em **-tion, -sion, -ic, -ical, -ity, -ify, -graphy, -cracy** →
 acento na sílaba **imediatamente antes** do sufixo: *inforMAtion*, *speCIfic*, *aBIlity*, *phoTOgraphy*, *deMOcracy*.
 - Pares substantivo/verbo de 2 sílabas → substantivo com acento na **1ª**, verbo
-na **2ª**: *a REcord* × *to reCORD*; *a PREsent* × *to preSENT*; *an INcrease* × *to inCREASE*; *CONtent* (n.) × *conTENT* (adj., "satisfeito").
+na **2ª**: *a REcord* × *to reCORD*; *a PREsent* × *to preSENT*; *an INcrease* × *to inCREASE*; *an OBject* × *to obJECT*.
 - Verbos terminados em **-ate** → acento 2 sílabas antes do *-ate*:
 *comMUnicate*, *inVEStigate*, *DEMonstrate*.
 
@@ -215,7 +215,7 @@ Numa frase, o inglês **acentua as palavras de conteúdo** (substantivos, verbos
 | Reserva / "sim, mas..." | **fall-rise** ↘↗ | *The idea is fine↘↗ (...but I have doubts).* |
 | Pergunta indireta (dentro de declaração) | **desce** ↘ | *I'm not sure where the office is.↘* / *She asked where the office was.↘* |
 
-**Erro brasileiro nº 1 de entonação:** subir no fim de declarações, o que faz elas soarem como perguntas ou insegurança. Force a voz a **cair** na última palavra de conteúdo de cada declaração.
+**Erro brasileiro nº 1 de entonação:** subir no fim de declarações, o que as faz soar como perguntas ou insegurança. Force a voz a **cair** na última palavra de conteúdo de cada declaração.
 
 ### 3.5 Formas fracas que você deve *usar* ao falar
 
@@ -228,7 +228,7 @@ Reconhecer é o Módulo 2. Aqui você **produz**, para soar natural e bater o ri
 | and | /ən/ | *"back /ən/ forth"* |
 | for | /fər/ | *"This is /fər/ you."* |
 | have / has (auxiliar) | /əv/ /əz/ | *"They /əv/ finished."* |
-| can (afirmativo) | /kən/ | *"I /kən/ help."* (curto: vs. *can't* /kænt/ forte) |
+| can (afirmativo) | /kən/ | *"I /kən/ help."* (curto, contra *can't* /kænt/, forte) |
 | going to / want to / got to | gonna / wanna / gotta | *"I'm gonna check."*: **ok e natural** em Take an Interview |
 | the | /ðə/ (antes de consoante), /ði/ (antes de vogal) | */ðə/ book*, */ði/ answer* |
 
@@ -251,14 +251,14 @@ uma frase-ponte (*"That's an interesting one."*).
 de um sintagma. Pausa **antes** de *"because"*, não depois: *"I prefer mornings / because I focus better"*.
 3. **Ritmo médio, estável.** Rápido demais derruba a inteligibilidade; devagar
 demais sinaliza baixa fluência.
-4. **Se travar no meio, não recomece do zero**: retome do último bloco
+4. **Se travar no meio, não recomece do zero.** Retome do último bloco
 completo: *"...so, as I was saying, the main point is..."*
 
 ### 3.7 As 40 frases úteis para respostas faladas
 
 | Função | Frases |
 |---|---|
-| **Ponte / ganhar 2 s** | *"That's a good question.", "Interesting: let me think.", "There are a couple of ways to look at this."* |
+| **Ponte / ganhar 2 s** | *"That's a good question.", "Interesting, let me think.", "There are a couple of ways to look at this."* |
 | **Opinião** | *"If you ask me...", "The way I see it...", "For me, it comes down to...", "I'd have to say...", "Personally, I lean toward..."* |
 | **Dar razão** | *"The main reason is...", "This matters because...", "What makes the difference is...", "It really comes down to..."* |
 | **Exemplo** | *"Take X, for instance.", "A good example is...", "Just the other day...", "In my own case..."* |
@@ -274,13 +274,13 @@ completo: *"...so, as I was saying, the main point is..."*
 Depois de cada resposta gravada, ouça-a e dê nota de 0 a 2 em cada linha (0 = ruim, 1 = ok, 2 = forte). Abaixo de 8/12, refaça.
 
 ```
-[  ] Pronúncia — fonemas próximos do alvo, sem vogais epentéticas   (0–2)
-[  ] Acento de palavra — cognatos com a tônica certa                (0–2)
-[  ] Ritmo — comprimi as átonas, o compasso soou regular            (0–2)
-[  ] Fluência — comecei em ≤2s, poucas hesitações, pausas nas
+[  ] Pronúncia: fonemas próximos do alvo, sem vogais epentéticas    (0–2)
+[  ] Acento de palavra: cognatos com a tônica certa                 (0–2)
+[  ] Ritmo: comprimi as átonas, o compasso soou regular             (0–2)
+[  ] Fluência: comecei em ≤2s, poucas hesitações, pausas nas
      fronteiras certas                                              (0–2)
-[  ] Gramática — sem erro sistemático (3ª pessoa -s, tempo verbal)   (0–2)
-[  ] Estrutura — posição/alvo na 1ª frase, uma camada de exemplo,
+[  ] Gramática: sem erro sistemático (3ª pessoa -s, tempo verbal)    (0–2)
+[  ] Estrutura: posição/alvo na 1ª frase, uma camada de exemplo,
      fecho claro                                                    (0–2)
                                                           TOTAL: __ /12
 ```
@@ -307,8 +307,8 @@ avaliado.**
 > *"The committee **decide** to postpone the vote until more information **become** available."*
 - Dois erros de concordância/tempo (*decide* → *decided*, *become* → *became*).
 - A pronúncia pode estar clara, mas a IA compara a **transcrição** do que foi
-dito contra o áudio-fonte, e essas duas palavras não batem.
-- **Lição:** erros de repetição não são só de pronúncia · são também de **forma
+dito com o áudio-fonte, e essas duas palavras não batem.
+- **Lição:** erros de repetição não são só de pronúncia: são também de **forma
 gramatical exata** (tempo verbal, concordância), que se perde quando a memória de trabalho falha sob pressão.
 
 **Repetição fraca (A2–B1):**
@@ -318,7 +318,7 @@ sintática (*"the..."*), substituição lexical (*is* em vez de *became*: parafr
 - Cada uma dessas quatro ocorrências é penalizada separadamente: erro
 gramatical, disfluência, quebra de ritmo, infidelidade ao alvo.
 
-> **O padrão geral:** a diferença entre bandas aqui não é "quão bem você fala inglês" em abstrato · é **quanto da frase-fonte sobreviveu intacta** na sua reprodução.
+> **O padrão geral:** a diferença entre bandas aqui não é "quão bem você fala inglês" em abstrato: é **quanto da frase-fonte sobreviveu intacta** na sua reprodução.
 
 ### 4.2 Take an Interview: resposta construída ao vivo
 
@@ -573,7 +573,7 @@ imediatamente (shadowing clássico).
 4. Grave sua 3ª passada e avalie: quantas palavras reproduziu com precisão? Onde
 a prosódia divergiu?
 
-**É o exercício de maior retorno para Listen and Repeat**: treina exatamente a habilidade cobrada: reter e reproduzir fala em tempo real com fidelidade.
+**É o exercício de maior retorno para Listen and Repeat.** Ele treina exatamente a habilidade cobrada: reter e reproduzir fala em tempo real com fidelidade.
 
 ---
 
@@ -599,9 +599,9 @@ a prosódia divergiu?
 *Por que pontua alto:* posição imediata; razão específica (*"skills you don't get in your own field"*); exemplo concreto e desenvolvido; contraponto reconhecido e refutado numa frase; subordinação (*who takes...*, *who aren't engineers*, *"I understand the argument that..."*); vocabulário preciso (*payoff, burden*), sem repetição.
 
 **Banda ~6 (C1–C2):**
-> *"I'd say yes, though I'd frame it less as a rule and more as a design choice. What a course outside your field really trains isn't the content: it's the transfer. An engineer who has had to argue a case in a history seminar tends to write sharper technical reports afterwards, and that habit of mind is hard to build inside one discipline. The workload objection is fair, but it points to a design problem, not a reason to drop the idea: cap it at one course, let it count as an elective, and the cost mostly disappears."*
+> *"I'd say yes, though I'd frame it less as a rule and more as a design choice. What a course outside your field really trains isn't the content — it's the transfer. An engineer who has had to argue a case in a history seminar tends to write sharper technical reports afterwards, and that habit of mind is hard to build inside one discipline. The workload objection is fair, but it points to a design problem, not a reason to drop the idea: cap it at one course, let it count as an elective, and the cost mostly disappears."*
 
-*Diferença:* abre com uma nuance (não um sim/não simples), razão mecanística (*"not the content — the transfer"*), engajamento sofisticado com o contraponto, fecho com uma solução concreta.
+*Diferença:* abre com uma nuance (não um sim/não simples), razão mecanística (*"isn't the content — it's the transfer"*), engajamento sofisticado com o contraponto, fecho com uma solução concreta.
 
 ---
 
@@ -610,7 +610,7 @@ a prosódia divergiu?
 **Banda ~5:**
 > *"If it were me, I'd tell them to pick one activity and do it every single day, rather than trying to cover everything. For 30 minutes, I'd suggest listening (a podcast or a short video) and then repeating parts of it out loud, because that works on listening and speaking at the same time. The main thing is consistency: 30 minutes every day beats three hours once a week, since the language stays fresh."*
 
-*Estrutura de sugestão aplicada: recomendação direta com modal → razão prática → consequência positiva. Conector causal (*because, since*), exemplo do que fazer.*
+Estrutura de sugestão aplicada: recomendação direta com modal → razão prática → consequência positiva. Conector causal (*because, since*), exemplo do que fazer.
 
 ---
 
@@ -619,7 +619,7 @@ a prosódia divergiu?
 **Banda ~5:**
 > *"I'd expect AI to take over a lot of the routine parts of studying: things like summarizing readings, generating practice questions, or explaining a concept in a different way when the textbook isn't clear. The likely result is that students spend less time gathering information and more time actually using it: discussing, arguing, applying it. That said, there's a risk that students lean on it too much and stop building the skills themselves, so how universities set the rules will matter a lot."*
 
-*Marcador de futuro (*I'd expect*, *The likely result*), base lógica (tendência atual), ressalva (*That said... there's a risk*). Vocabulário variado.*
+Marcador de futuro (*I'd expect*, *The likely result*), base lógica (tendência atual), ressalva (*That said... there's a risk*). Vocabulário variado.
 
 ---
 
@@ -648,7 +648,7 @@ Não há "resposta" a comparar além do próprio texto-alvo. Ao ouvir sua grava�
 | Situação | Banda estimada (Speaking) | Ação |
 |---|---|---|
 | L&R ≥85% e Interview ≥9/12 | 5–6 | Avance para o Módulo 4. Refaça só os conjuntos A com erro. |
-| L&R 70–85% ou Interview 7–8/12 | 4–5 | Identifique o eixo fraco (pronúncia? ritmo? estrutura da resposta?) e trabalhe a seção da Parte 3 correspondente. Shadowing diário. |
+| L&R 70–84% ou Interview 7–8/12 | 4–5 | Identifique o eixo fraco (pronúncia? ritmo? estrutura da resposta?) e trabalhe a seção da Parte 3 correspondente. Shadowing diário. |
 | L&R <70% | ≤4 | Foque nos fonemas (3.1) e no ritmo (3.3, 3.5). Shadowing 20 min/dia por 2 semanas antes de voltar. |
 | Interview <7/12 com L&R ok | 4 | Sua fala é inteligível, mas a **estrutura da resposta** falha: reveja 2.3 e os modelos da Parte 6. Grave o Grupo B7 e B8 até acionar o esqueleto automaticamente. |
 
@@ -676,7 +676,7 @@ Fonema/estrutura mais problemático: _______________________
 Ação para a próxima sessão: __________________________
 ```
 
-> **Prioridade:** se **S1 ou S3** aparecem em quase toda gravação, eles vêm antes de tudo · nenhum ganho de estrutura de resposta compensa uma fala que a IA classifica como pouco inteligível. São 20 min/dia de shadowing e drill de fonema que resolvem, ouvindo e gravando.
+> **Prioridade:** se **S1 ou S3** aparecem em quase toda gravação, eles vêm antes de tudo: nenhum ganho de estrutura de resposta compensa uma fala que a IA classifica como pouco inteligível. São 20 min/dia de shadowing e drill de fonema que resolvem, ouvindo e gravando.
 
 ---
 

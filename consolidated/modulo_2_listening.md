@@ -39,12 +39,12 @@ Grava isso: o Listening **não** é "ouça um áudio longo e responda um bloco d
 ### 1.2 O mecanismo adaptativo
 
 ```
-ESTÁGIO 1 — ROUTER (~18 min)
+ESTÁGIO 1: ROUTER (~18 min)
 ├── mistura de itens de dificuldade variada
 ├── o sistema estima seu nível CEFR aproximado
 └── direciona para o Módulo Inferior OU Superior
 
-ESTÁGIO 2A — MÓDULO INFERIOR (~7 min)     ESTÁGIO 2B — MÓDULO SUPERIOR (~11 min)
+ESTÁGIO 2A: MÓDULO INFERIOR (~7 min)      ESTÁGIO 2B: MÓDULO SUPERIOR (~11 min)
 ├── dificuldade moderada                   ├── dificuldade alta
 ├── TETO DE BANDA MAIS BAIXO               ├── mais itens de Academic Talk
 └── confirma a banda inferior              └── distingue as bandas C1/C2
@@ -132,10 +132,10 @@ Em áudio curto, o marcador aponta para a **própria resposta**, não para uma s
 | Função | Marcadores | Ação |
 |---|---|---|
 | **Correção / mudança de posição** | *"Actually...", "Wait, I mean...", "On second thought...", "Come to think of it..."* | A resposta reflete a versão **corrigida**, não a inicial |
-| **Tom pragmático** | *"I guess...", "Sure, if you say so...", "Well, technically...", "I suppose so"* | Sinaliza relutância, ironia, concordância parcial, não tome ao pé da letra |
-| **Instrução / ação requerida** | *"Please make sure to...", "Don't forget...", "You'll need to...", "Be sure to..."* | Fato de altíssima chance de ser testado: é o "core" do anúncio |
+| **Tom pragmático** | *"I guess...", "Sure, if you say so...", "Well, technically...", "I suppose so"* | Sinaliza relutância, ironia ou concordância parcial: não tome ao pé da letra |
+| **Instrução / ação requerida** | *"Please make sure to...", "Don't forget...", "You'll need to...", "Be sure to..."* | Fato de altíssima chance de ser testado: é o núcleo do anúncio |
 | **Ênfase** | *"The key thing is...", "What matters here is...", "This is important:"* | Marque mentalmente ou em 2–3 palavras |
-| **Contraste rápido** | *"but", "though", "except that", "having said that"* | Um único *"but"* pode inverter o item inteiro, não relaxe perto do fim |
+| **Contraste rápido** | *"but", "though", "except that", "having said that"* | Um único *"but"* pode inverter o item inteiro. Não relaxe perto do fim |
 | **Concessão + retorno à tese** | *"Sure, X, but the point is Y"* | A resposta é **Y**, não X |
 | **Exemplificação** | *"Take X, for instance", "Here's a case:", "Say you..."* | O que vem a seguir é exemplo de apoio, não ideia nova |
 | **Digressão e volta** | *"Anyway...", "Where was I?", "Getting back to..."* | O que veio no meio é secundário; a linha principal retoma aqui |
@@ -144,18 +144,18 @@ Em áudio curto, o marcador aponta para a **própria resposta**, não para uma s
 ### 2.4 Estratégia por task type
 
 **Choose a Response**: você testa **pragmática**, não conteúdo. A pergunta real: "o que uma pessoa fluente responderia aqui, naturalmente?"
-- Descarte respostas gramaticalmente corretas mas **socialmente estranhas**.
+- Descarte respostas gramaticalmente corretas, mas **socialmente estranhas**.
 - Cheque o **registro** (gíria com um professor = descartável).
 - **Trap:** resposta que repete palavras do áudio mas não responde à intenção
 (a fala era um convite; a resposta trata como pergunta factual).
 
-**Conversation** · identifique em 1–2 s: **quem fala com quem, sobre o quê, qual é o obstáculo/pedido**. A "virada" (resolução/decisão) costuma vir na segunda metade · atenção redobrada ali. Escala 1 de anotação.
+**Conversation**: identifique em 1–2 s: **quem fala com quem, sobre o quê, qual é o obstáculo/pedido**. A "virada" (resolução/decisão) costuma vir na segunda metade, então redobre a atenção ali. Escala 1 de anotação.
 
 **Announcement**: trate como **checklist auditiva**: data · local · ação requerida · exceção/condição. Estrutura típica: contexto → informação principal → instrução prática → (às vezes) contato/prazo.
 - **Trap:** o anúncio menciona duas datas ou dois locais (o antigo e o novo); o
 distrator usa o **desatualizado**.
 
-**Academic Talk**: único task type onde a Escala 2 se justifica. Escute em 4 níveis, versão compacta:
+**Academic Talk**: único task type em que a Escala 2 se justifica. Escute em 4 níveis, versão compacta:
 
 | Nível | O que escutar | Onde anotar |
 |---|---|---|
@@ -207,7 +207,7 @@ O maior obstáculo do brasileiro no Listening **não** é vocabulário. É que o
 
 ### 3.1 Formas fracas e reduções: o que o áudio realmente "diz"
 
-Palavras de função (auxiliares, preposições, artigos, pronomes) são ditas **rápido, curto e sem tônica**. Se você espera ouvi-las "por extenso", você não as ouve: e perde a estrutura da frase.
+Palavras de função (auxiliares, preposições, artigos, pronomes) são ditas **rápido, curto e sem tônica**. Se você espera ouvi-las "por extenso", você não as ouve e perde a estrutura da frase.
 
 | Escrito | Falado (o que você ouve) | Exemplo |
 |---|---|---|
@@ -233,7 +233,7 @@ Palavras de função (auxiliares, preposições, artigos, pronomes) são ditas *
 | him / her / them | **/əm/ /ər/ /əm/** (após consoante) | *"tell him"* → *"tell /əm/"*; *"ask her"* → *"ask /ər/"* |
 | can (afirmativo) | **/kən/** (átono, curto): vs. **can't** /kænt/ (tônico, longo) | *"I /kən/ do it"* vs. *"I **can't** do it"* |
 
-> ⚠️ **A confusão can / can't:** no inglês americano, a diferença muitas vezes **não** é o /t/ (que quase some) · é que *can't* é **tônico e a vogal é longa/clara** (/æ/), enquanto *can* afirmativo é **átono e reduzido** (/kən/). Se a vogal soou forte, provavelmente é *can't*.
+> ⚠️ **A confusão can / can't:** no inglês americano, a diferença muitas vezes **não** é o /t/ (que quase some): é que *can't* é **tônico e a vogal é longa/clara** (/æ/), enquanto *can* afirmativo é **átono e reduzido** (/kən/). Se a vogal soou forte, provavelmente é *can't*.
 
 ### 3.2 Linking e sons que somem
 
@@ -421,7 +421,7 @@ Anotar palavra por palavra é lento demais. Use símbolos.
 > - (C) usa as palavras *"drove downtown"* do original, mas não responde ao
 >   alerta: reforça o comportamento problemático. **CORRECT WORDS, WRONG
 >   MEANING.**
-> - (D) muda de assunto para gosto por futebol. **OUT OF SCOPE.**
+> - (D) muda de assunto para a torcida pelo time. **OUT OF SCOPE.**
 >
 > **Resposta: (B).** O erro típico do brasileiro aqui é ouvir *"driving
 > downtown"* e escolher (C) por reconhecimento de palavras, sem processar que a
@@ -433,7 +433,7 @@ Anotar palavra por palavra é lento demais. Use símbolos.
 
 **Pergunta A · Detail:** *"According to the professor, which firms typically adopt a new technology first?"* (A) Older, more established firms, because they have more money. (B) Smaller, newer firms. (C) Firms of all sizes at roughly the same time. (D) Only firms that have already failed once.
 
-> O professor diz explicitamente: *"it's the smaller, newer companies that move first."* → **(B)**. (A) é o que você *"esperaria"* · e o professor usa isso como contraste (*"You'd expect... But..."*). **OPPOSITE.** Cuidado com distratores que repetem a parte "esperada" da frase.
+> O professor diz explicitamente: *"it's the smaller, newer companies that move first."* → **(B)**. (A) é o que você *"esperaria"*, e o professor usa isso como contraste (*"You'd expect... But..."*). **OPPOSITE.** Cuidado com distratores que repetem a parte "esperada" da frase.
 
 **Pergunta B · Organization:** *"Why does the professor say that a large firm 'has more to lose'?"* (A) To criticize large firms for being too cautious. (B) To explain why established firms adopt new technology later. (C) To introduce a new, unrelated topic about company finances. (D) To argue that startups always outperform large firms.
 
@@ -485,7 +485,7 @@ Anotar palavra por palavra é lento demais. Use símbolos.
 
 ---
 
-#### DRILL B1 · Advising Office · alvo: 3 min
+#### DRILL B1: Advising Office · alvo: 3 min
 
 *Narrator: Listen to a conversation between a student and an academic advisor.*
 
@@ -543,7 +543,7 @@ Anotar palavra por palavra é lento demais. Use símbolos.
 
 ---
 
-#### DRILL B3 · After Class · alvo: 3 min
+#### DRILL B3: After Class · alvo: 3 min
 
 *Narrator: Listen to a conversation between a student and a professor.*
 
@@ -577,7 +577,7 @@ Anotar palavra por palavra é lento demais. Use símbolos.
 
 ---
 
-#### DRILL C1 · Library Services · alvo: 2 min
+#### DRILL C1: Library Services · alvo: 2 min
 
 *Narrator: Listen to an announcement about a change to library services.*
 
@@ -607,7 +607,7 @@ Anotar palavra por palavra é lento demais. Use símbolos.
 
 ---
 
-#### DRILL C3 · Campus Event · alvo: 2 min
+#### DRILL C3: Campus Event · alvo: 2 min
 
 *Narrator: Listen to an announcement about a career event.*
 
@@ -627,7 +627,7 @@ Anotar palavra por palavra é lento demais. Use símbolos.
 
 ---
 
-#### DRILL D1 · Psicologia · alvo: 4 min
+#### DRILL D1: Psicologia · alvo: 4 min
 
 *Narrator: Listen to part of a talk in a psychology class.*
 
@@ -651,7 +651,7 @@ Now, this doesn't mean choice is bad: a complete absence of options is its own p
 
 ---
 
-#### DRILL D2 · Biologia · alvo: 4 min
+#### DRILL D2: Biologia · alvo: 4 min
 
 *Narrator: Listen to part of a talk in a biology class.*
 
@@ -739,7 +739,7 @@ This is a textbook case of what economists call **path dependence**, or sometime
 
 ### GRUPO C: Listen to an Announcement
 
-**C1.1: (B).** *"Starting next Monday..."* (C) confunde início com fim do período · **CONFUSED REASONING**.
+**C1.1: (B).** *"Starting next Monday..."* (C) confunde início com fim do período: **CONFUSED REASONING**.
 **C1.2: (B).** *"transferred automatically to the East Wing — you don't need to rebook."* (A) o oposto; (D) adiciona condição não dita.
 **C1.3: (C).** Aviso prático de que *"not all East Wing rooms are equipped"*. (A)(D) **EXTREME**; (B) **OUT OF SCOPE**.
 
@@ -751,12 +751,12 @@ This is a textbook case of what economists call **path dependence**, or sometime
 **C3.1: (C).** *"from 10 to 4."* (A) é a abertura da estação de revisão de currículo; (B) é o workshop.
 **C3.2: (B).** *"Business-casual dress is recommended, not required."*
 **C3.3: (B).** A estação abre às 9, é *first-come, first-served* → chegar cedo. (A) o workshop é de habilidades de entrevista, não revisão de currículo; (C)(D) não sugeridos.
-**C3.4 · (B).** *"the 9:30 workshop... is now full; a recording will be posted next week."*
+**C3.4: (B).** *"the 9:30 workshop... is now full; a recording will be posted next week."*
 
 ### GRUPO D: Listen to an Academic Talk
 
 **D1.1: (B).** Tese anunciada no início e no fechamento. (A) **EXTREME**; (C) **EXTREME** (*always*) e generaliza um único estudo; (D) **OUT OF SCOPE**.
-**D1.2: (A).** *"attracted more browsers, but far fewer of them bought anything."* (B) o oposto · **OPPOSITE**.
+**D1.2: (A).** *"attracted more browsers, but far fewer of them bought anything."* (B) o oposto: **OPPOSITE**.
 **D1.3: (B).** Exemplo empírico logo após o conceito abstrato. (A)(C)(D) sem base.
 **D1.4: (B).** *"a complete absence of options is its own problem."* (A) inverte.
 **D1.5: (B).** *"stuck at square one"* = sem sair do ponto de partida. (A) o oposto; (C)(D) distorcem.
@@ -767,7 +767,7 @@ This is a textbook case of what economists call **path dependence**, or sometime
 **D2.4: (B).** Ele separa o que a evidência sustenta firmemente do que relatos populares exageram (*"forests as single cooperative organisms"*). (A)(C) **EXTREME**; (D) **OUT OF SCOPE**.
 **D2.5: (B).** *"the jury's still out"* = ainda não há conclusão firme. (A) o oposto; (C) literal demais; (D) não dito.
 
-**D3.1: (B).** A pergunta central é por que um layout ultrapassado sobreviveu · e a resposta é *path dependence*. (A)(D) **WRONG FOCUS / EXTREME**; (C) é contexto, não o tema.
+**D3.1: (B).** A pergunta central é por que um layout ultrapassado sobreviveu, e a resposta é *path dependence*. (A)(D) **WRONG FOCUS / EXTREME**; (C) é contexto, não o tema.
 **D3.2: (B).** *"That's probably an oversimplification... but the layout was shaped by 1870s machinery."*
 **D3.3: (B).** *"patented in 1936... Yet it never caught on."* (A)(C)(D) contradizem.
 **D3.4: (A).** O ciclo ilustra como o padrão se autorreforça (lock-in). (B)(C)(D) sem base.
