@@ -13,13 +13,16 @@ verify_jwt = false
 [functions.stripe-webhook]
 verify_jwt = false
 
-# As outras quatro são chamadas pelo site com o token do aluno, e cada uma
+# As outras cinco são chamadas pelo site com o token do aluno, e cada uma
 # confere esse token no próprio código (auth.getUser) antes de fazer qualquer
 # coisa. A verificação do gateway fica desligada porque ela só entende JWT
 # assinado pelo segredo antigo do projeto: no dia em que a assinatura passar
 # para as chaves novas (JWT Signing Keys), ela recusaria todo aluno. Guia do
 # Supabase: docs/guides/getting-started/migrating-to-new-api-keys, passo 4.
 [functions.create-checkout]
+verify_jwt = false
+
+[functions.stripe-portal]
 verify_jwt = false
 
 [functions.delete-account]

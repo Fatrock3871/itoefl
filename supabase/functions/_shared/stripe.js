@@ -97,7 +97,7 @@ function stripeMoney(cents) {
 //   applyPayment(args)        rpc apply_payment: { id, user, plan, days, amount, status, approvedAt, periodEnd }
 //   applyBilling(args)        rpc apply_billing: { user, customer, subscription, status, cancelAtPeriodEnd, periodEnd, at }
 //   findBilling(user)         linha de billing da conta, ou null
-//   plan(id)                  plano de ../_shared/plans.ts ({ id, interval }), ou null
+//   plan(id)                  plano de ./plans.ts ({ id, interval, days }), ou null
 //   now()                     data ISO de agora
 // Devolve a lista do que foi feito, em texto (vai para o log da function).
 export async function stripeHandleEvent(event, deps) {
@@ -126,9 +126,10 @@ export async function stripeHandleEvent(event, deps) {
   }
 }
 
-// Checkout concluído. Vitalício (mode=payment): o pagamento está confirmado
-// aqui mesmo. Mensal (mode=subscription): grava a assinatura e a 1ª fatura,
-// sem esperar o invoice.paid (que também chega e não muda nada).
+// Checkout concluído. Plano de dias (mode=payment): o pagamento está
+// confirmado aqui mesmo e os dias somam ao fim do acesso atual. Mensal
+// (mode=subscription): grava a assinatura e a 1ª fatura, sem esperar o
+// invoice.paid (que também chega e não muda nada).
 async function stripeOnCheckout(session, at, deps) {
   var user = stripeUser(session.client_reference_id) || stripeUser(session.metadata && session.metadata.user_id);
   if (!user) return ["checkout " + session.id + " sem id de usuário válido: nada gravado"];
@@ -138,25 +139,17 @@ async function stripeOnCheckout(session, at, deps) {
   if (session.mode === "payment") {
     if (session.payment_status !== "paid") return ["checkout " + session.id + " ainda sem pagamento confirmado"];
     var plan = deps.plan(session.metadata && session.metadata.plan_id);
-    if (!plan || plan.interval) return ["checkout " + session.id + " de pagamento único sem plano vitalício: nada gravado"];
+    if (!plan || plan.interval || !(plan.days > 0)) return ["checkout " + session.id + " de pagamento único sem plano de dias: nada gravado"];
     var pi = stripeId(session.payment_intent);
     if (!pi) return ["checkout " + session.id + " sem payment_intent: nada gravado"];
-    // a assinatura que a conta tinha é lida antes de gravar: o Vitalício
-    // substitui o Mensal, que é cancelado para não cobrar de novo
-    var before = await deps.findBilling(user);
     if (customer) {
       await deps.applyBilling({ user: user, customer: customer, subscription: null, status: null,
                                 cancelAtPeriodEnd: null, periodEnd: null, at: deps.now() });
     }
-    await deps.applyPayment({ id: "stripe:" + pi, user: user, plan: plan.id, days: null,
+    await deps.applyPayment({ id: "stripe:" + pi, user: user, plan: plan.id, days: plan.days,
                               amount: stripeMoney(session.amount_total), status: "approved",
                               approvedAt: at, periodEnd: null });
-    done.push("vitalício gravado: stripe:" + pi);
-    if (before && before.subscription_id && STRIPE_LIVE_STATUSES.indexOf(before.subscription_status) !== -1) {
-      await deps.cancelSubscription(before.subscription_id);
-      done.push("assinatura " + before.subscription_id + " cancelada (comprou o vitalício)");
-    }
-    return done;
+    return ["plano " + plan.id + " gravado: stripe:" + pi + " (" + plan.days + " dias)"];
   }
 
   if (session.mode === "subscription") {
@@ -174,7 +167,8 @@ async function stripeOnCheckout(session, at, deps) {
   return ["checkout " + session.id + " em modo " + session.mode + ": ignorado"];
 }
 
-// Fatura paga da assinatura: um mês de acesso, até o fim do período pago.
+// Fatura paga da assinatura: os dias do período pago (28 a 31), somados ao
+// fim do acesso que a conta ainda tem (regra 7 da migração do Stripe).
 async function stripeOnInvoice(inv, at, deps, sub, fallbackUser) {
   if (inv.status !== "paid") return ["fatura " + inv.id + " em " + inv.status + ": nada gravado"];
   var subId = stripeId(inv.subscription);
@@ -186,22 +180,31 @@ async function stripeOnInvoice(inv, at, deps, sub, fallbackUser) {
   var plan = deps.plan(meta.plan_id);
   if (!plan || plan.interval !== "month") return ["fatura " + inv.id + ": assinatura sem plano mensal: nada gravado"];
 
-  // fim do período pago: a maior data de fim entre as linhas da fatura; se
-  // a fatura não trouxer, o fim do período atual da assinatura
-  var periodEnd = 0;
+  // período pago: a linha da fatura que termina mais tarde; se a fatura não
+  // trouxer, o período atual da assinatura
+  var periodStart = 0, periodEnd = 0;
   ((inv.lines && inv.lines.data) || []).forEach(function (line) {
-    var end = line && line.period && line.period.end;
-    if (typeof end === "number" && end > periodEnd) periodEnd = end;
+    var p = (line && line.period) || {};
+    if (typeof p.end === "number" && typeof p.start === "number" && p.end > periodEnd) {
+      periodEnd = p.end;
+      periodStart = p.start;
+    }
   });
-  if (!periodEnd) periodEnd = sub.current_period_end;
+  if (!periodEnd) {
+    periodStart = sub.current_period_start;
+    periodEnd = sub.current_period_end;
+  }
   var periodIso = stripeIso(periodEnd);
-  if (!periodIso) return ["fatura " + inv.id + " sem fim de período: nada gravado"];
+  if (!periodIso || !(periodStart > 0) || periodEnd <= periodStart) {
+    return ["fatura " + inv.id + " sem período válido: nada gravado"];
+  }
+  var days = Math.max(1, Math.round((periodEnd - periodStart) / 86400));
 
   var paidAt = stripeIso(inv.status_transitions && inv.status_transitions.paid_at) || at;
-  await deps.applyPayment({ id: "stripe:" + inv.id, user: user, plan: plan.id, days: null,
+  await deps.applyPayment({ id: "stripe:" + inv.id, user: user, plan: plan.id, days: days,
                             amount: stripeMoney(inv.amount_paid), status: "approved",
                             approvedAt: paidAt, periodEnd: periodIso });
-  return ["mês gravado: stripe:" + inv.id + " até " + periodIso];
+  return ["mês gravado: stripe:" + inv.id + " (" + days + " dias, período até " + periodIso + ")"];
 }
 
 // Situação da assinatura (ativa, atrasada, cancelada, cancelamento marcado

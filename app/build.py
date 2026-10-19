@@ -1,8 +1,23 @@
 import json
-from site_config import load_site_url
+from urllib.parse import quote as _quote
+from site_config import load_beta, load_site_url
 
 SITE_URL = load_site_url()
 print("SITE_URL:", SITE_URL)
+
+# faixa "Versão de teste" (lançamento de teste, 2026-10-18): ligada pela
+# chave BETA de app/site.json. O link "Enviar sugestão" abre o e-mail do
+# aluno com o assunto pronto; não há formulário nem dado guardado aqui.
+BETA, FEEDBACK_EMAIL = load_beta()
+BETA_BAR = ""
+if BETA:
+    _fb = (f' <a href="mailto:{FEEDBACK_EMAIL}?subject={_quote("Sugestão para o iTOEFL (versão de teste)")}">'
+           'Enviar sugestão</a>') if FEEDBACK_EMAIL else ""
+    BETA_BAR = (f'<div class="beta-bar" id="betaBar" role="note"><strong>Versão de teste.</strong> '
+                f'Pode haver ajustes e alguma falha.{_fb}</div>')
+    if not FEEDBACK_EMAIL:
+        print("AVISO: BETA ligado sem FEEDBACK_EMAIL em app/site.json: a faixa sai sem o link de sugestão")
+print("beta:", "ligado" if BETA else "desligado")
 
 frag = json.load(open("module_fragments_final.json", encoding="utf-8"))
 
@@ -349,16 +364,26 @@ gate = (
     '</div>'
 )
 
-# ---- os três planos de preço (app/plans.json) ----
-# Só o que o site MOSTRA sai daqui. O valor cobrado e o prazo gravado saem de
-# supabase/functions/_shared/plans.ts, no servidor; o smoke test reprova se os
-# dois arquivos divergirem.
-with open("plans.json", encoding="utf-8") as _f:
+# ---- os planos de preço ----
+# Mensal (assinatura no cartão), 60 dias, 90 dias e Anual (pagamento único),
+# decisão do dono de 2026-10-18. Preço, duração e destaque moram num arquivo
+# só, no servidor: supabase/functions/_shared/plans.json, o mesmo que as edge
+# functions leem para cobrar. Aqui só se mostra.
+with open("../supabase/functions/_shared/plans.json", encoding="utf-8") as _f:
     _plans_cfg = json.load(_f)
 PLANS = _plans_cfg["plans"]
 REFUND_DAYS = _plans_cfg["refund_days"]
-if [p["id"] for p in PLANS if p.get("recommended")] != ["standard"]:
-    raise SystemExit("plans.json: o selo Recomendado tem de estar no Standard, e só nele (decisão de 2026-10-08)")
+PIX_MP = bool(_plans_cfg.get("pix_mercado_pago"))
+HIGHLIGHT_LABEL = _plans_cfg["highlight_label"]
+if len([p for p in PLANS if p.get("highlight")]) != 1:
+    raise SystemExit("plans.json: exatamente um plano tem de ter highlight: true")
+for _p in PLANS:
+    if _p["interval"] not in ("month", None):
+        raise SystemExit(f"plans.json: {_p['id']} tem interval inválido")
+    if _p["interval"] == "month" and _p["days"] is not None:
+        raise SystemExit(f"plans.json: {_p['id']} é assinatura e não pode ter days")
+    if _p["interval"] is None and not (isinstance(_p["days"], int) and _p["days"] > 0):
+        raise SystemExit(f"plans.json: {_p['id']} é pagamento único e precisa de days")
 
 
 def brl(cents):
@@ -366,26 +391,72 @@ def brl(cents):
     return f"R$ {cents // 100},{cents % 100:02d}"
 
 
-# o selo é "Recomendado" e nunca "mais escolhido" ou "mais vendido": sem dado
-# de venda seria afirmação falsa
-PLAN_BADGE = '<span class="plan-badge">Recomendado</span>'
+def per_month_cents(p):
+    """Equivalente por mês de um plano de dias, calculado do preço: meses =
+    dias / 30 arredondado (60 -> 2, 90 -> 3, 365 -> 12), e o centavo
+    arredondado para cima a partir da metade. None na assinatura (já é por mês)."""
+    if p["interval"] == "month":
+        return None
+    months = max(1, round(p["days"] / 30))
+    return (2 * p["price_cents"] + months) // (2 * months)
 
-plan_options = "".join(
-    f'<label class="plan-opt"><input type="radio" name="plan" value="{p["id"]}" data-name="{p["name"]}" '
-    f'data-price="{brl(p["price_cents"])}"{" checked" if p.get("recommended") else ""}>'
-    '<span class="plan-opt-body">'
-    f'<span class="plan-opt-name">{p["name"]}{PLAN_BADGE if p.get("recommended") else ""}</span>'
-    f'<span class="plan-opt-access">{p["access"]}</span>'
-    '</span>'
-    f'<span class="plan-opt-price">{brl(p["price_cents"])}</span></label>'
-    for p in PLANS
-)
-_plan_default = next(p for p in PLANS if p.get("recommended"))
+
+def plan_price(p):
+    """Preço com a unidade: 'R$ 29,90/mês' ou 'R$ 49,90'."""
+    return brl(p["price_cents"]) + ("/mês" if p["interval"] == "month" else "")
+
+
+def plan_month_note(p):
+    """'equivale a R$ 24,95/mês' nos planos de dias; vazio na assinatura."""
+    pm = per_month_cents(p)
+    return f"equivale a {brl(pm)}/mês" if pm is not None else ""
+
+
+def plan_cta(p):
+    """Texto do botão de compra para o plano."""
+    if p["interval"] == "month":
+        return f'Assinar o {p["name"]}: {brl(p["price_cents"])} por mês'
+    return f'Comprar o plano {p["name"]}: {brl(p["price_cents"])}'
+
+
+PLAN_BADGE = f'<span class="plan-badge">{HIGHLIGHT_LABEL}</span>'
+
+
+def _plan_option(p):
+    note = plan_month_note(p)
+    return (
+        f'<label class="plan-opt"><input type="radio" name="plan" value="{p["id"]}" data-name="{p["name"]}" '
+        f'data-price="{brl(p["price_cents"])}" data-interval="{p["interval"] or ""}" data-cta="{plan_cta(p)}"'
+        f'{" checked" if p.get("highlight") else ""}>'
+        '<span class="plan-opt-body">'
+        f'<span class="plan-opt-name">{p["name"]}{PLAN_BADGE if p.get("highlight") else ""}</span>'
+        f'<span class="plan-opt-access">{p["access"]}</span>'
+        '</span>'
+        f'<span class="plan-opt-price">{plan_price(p)}'
+        + (f'<span class="plan-opt-month">{note}</span>' if note else "")
+        + '</span></label>'
+    )
+
+
+plan_options = "".join(_plan_option(p) for p in PLANS)
+_plan_default = next(p for p in PLANS if p.get("highlight"))
+# meio de pagamento: aparece só com um plano sem renovação marcado, enquanto o
+# Pix vier pelo Mercado Pago (o Stripe no Brasil só dá Pix por convite)
+pay_method = (
+    '<fieldset class="plan-pick" id="payMethod" hidden>'
+    '<legend class="auth-label">Como pagar</legend>'
+    '<label class="plan-opt"><input type="radio" name="paymethod" value="card" checked>'
+    '<span class="plan-opt-body"><span class="plan-opt-name">Cartão de crédito</span></span></label>'
+    '<label class="plan-opt"><input type="radio" name="paymethod" value="pix">'
+    '<span class="plan-opt-body"><span class="plan-opt-name">Pix</span>'
+    '<span class="plan-opt-access">Pago pelo Mercado Pago</span></span></label>'
+    '</fieldset>'
+) if PIX_MP else ""
 
 # gate de pagamento: aparece depois do login se a conta não tem acesso em dia
 # (nunca comprou, ou o plano venceu) e não é a conta admin, ver ADMIN_EMAIL em
 # app.js. Os textos do título e do parágrafo são trocados pelo app.js conforme
-# a situação (gateCopy). O preço mostrado aqui vem de plans.json.
+# a situação (gateCopy). O preço mostrado aqui vem de _shared/plans.json.
 pay_gate = (
     '<div class="auth-gate" id="payGate" hidden>'
     f'{AUTH_BG_DECOR}'
@@ -401,14 +472,17 @@ pay_gate = (
     '<legend class="auth-label">Escolha o plano</legend>'
     f'{plan_options}'
     '</fieldset>'
+    f'{pay_method}'
     '<div class="auth-field">'
     '<label class="auth-label" for="couponInput">Cupom de desconto (opcional)</label>'
     '<input type="text" class="auth-input" id="couponInput" autocomplete="off" placeholder="Ex.: LANCAMENTO20">'
     '</div>'
     '<div class="auth-gate-actions">'
-    f'<button type="button" id="payBtn">Comprar {_plan_default["name"]}: {brl(_plan_default["price_cents"])}</button>'
+    f'<button type="button" id="payBtn">{plan_cta(_plan_default)}</button>'
     '</div>'
-    f'<p class="pay-terms">Pagamento único, sem renovação automática. Você pode desistir em até {REFUND_DAYS} dias '
+    '<p class="pay-terms">Mensal: cobrado todo mês no cartão, com renovação automática, até você cancelar em 1 clique '
+    'em Minha conta. 60 dias, 90 dias e Anual: pagamento único, sem renovação automática; comprar com o acesso ainda '
+    f'valendo soma os dias ao fim dele. Na primeira cobrança de cada compra, você pode desistir em até {REFUND_DAYS} dias '
     'e receber o valor de volta.</p>'
     '<span id="payGateMsg" class="auth-gate-msg" hidden></span>'
     '<button type="button" id="payGateBack" class="pay-signout" hidden>Voltar para a plataforma</button>'
@@ -489,7 +563,11 @@ account_modal = (
     '<div class="account-section">'
     '<span class="account-section-label"><span class="account-section-icon">🎟️</span>Acesso</span>'
     '<p class="account-access" id="accountAccess">Verificando...</p>'
-    '<button type="button" class="account-renew" id="accountRenew" hidden>Renovar ou mudar de plano</button>'
+    # assinatura Mensal (tabela billing): situação e o Customer Portal do
+    # Stripe, onde o aluno cancela em 1 clique e troca o cartão
+    '<p class="account-access" id="accountSub" hidden></p>'
+    '<button type="button" class="account-renew" id="accountManage" hidden>Gerenciar ou cancelar a assinatura</button>'
+    '<button type="button" class="account-renew" id="accountRenew" hidden>Comprar mais dias</button>'
     '</div>'
 
     # redações para correção (app/redacao.js): o selo aparece quando há
@@ -619,6 +697,7 @@ html = f'''<!DOCTYPE html>
 </head>
 <body>
 <a class="skip-link" href="#mainArea">Pular para o conteúdo</a>
+{BETA_BAR}
 {gate}
 {pay_gate}
 {cert_modal}
@@ -856,19 +935,29 @@ if any(n <= 0 for n, _ in LP_STATS):
     raise SystemExit(f"apresentacao: contagem zerada em LP_STATS: {LP_STATS}")
 lp_stats = "".join(f'<li><span class="lp-stat-n">{n}</span><span class="lp-stat-t">{t}</span></li>' for n, t in LP_STATS)
 
-lp_plans = "".join(
-    f'<article class="lp-plan{" is-recommended" if p.get("recommended") else ""}" data-plan="{p["id"]}">'
-    f'{PLAN_BADGE if p.get("recommended") else ""}'
-    f'<h3>{p["name"]}</h3>'
-    f'<p class="lp-plan-price">{brl(p["price_cents"])}</p>'
-    f'<p class="lp-plan-access">{p["access"]}</p>'
-    f'<p class="lp-plan-for">{p["audience"]}</p>'
-    f'<p class="lp-plan-detail">{p["detail"]}</p>'
-    f'<a class="lp-btn{" lp-btn-main" if p.get("recommended") else ""}" href="index.html#criar-conta" '
-    f'data-plan-pick="{p["id"]}">Escolher o {p["name"]}</a>'
-    '</article>'
-    for p in PLANS
-)
+def _lp_plan(p):
+    hl = p.get("highlight")
+    note = "por mês, renovação automática" if p["interval"] == "month" else plan_month_note(p)
+    action = f'Assinar o {p["name"]}' if p["interval"] == "month" else f'Escolher o plano {p["name"]}'
+    return (
+        f'<article class="lp-plan{" is-highlight" if hl else ""}" data-plan="{p["id"]}">'
+        f'{PLAN_BADGE if hl else ""}'
+        f'<h3>{p["name"]}</h3>'
+        f'<p class="lp-plan-price">{brl(p["price_cents"])}</p>'
+        f'<p class="lp-plan-note">{note}</p>'
+        f'<p class="lp-plan-access">{p["access"]}</p>'
+        f'<p class="lp-plan-for">{p["audience"]}</p>'
+        f'<p class="lp-plan-detail">{p["detail"]}</p>'
+        f'<a class="lp-btn{" lp-btn-main" if hl else ""}" href="index.html#criar-conta" '
+        f'data-plan-pick="{p["id"]}">{action}</a>'
+        '</article>'
+    )
+
+
+lp_plans = "".join(_lp_plan(p) for p in PLANS)
+_monthly = next(p for p in PLANS if p["interval"] == "month")
+_one_time = [p for p in PLANS if p["interval"] is None]
+_one_time_names = ", ".join(p["name"] for p in _one_time[:-1]) + " e " + _one_time[-1]["name"]
 
 LP_FAQ = [
     ("O iTOEFL é oficial da ETS?",
@@ -879,17 +968,23 @@ LP_FAQ = [
      "plataforma são estimativas de treino, não notas oficiais."),
     ("Funciona no celular?",
      "A plataforma é um site: abre no navegador do celular, do tablet e do computador, e o progresso acompanha a sua conta."),
-    ("O pagamento é mensal?",
-     "Não. Cada plano é pago uma vez só, pelo Mercado Pago. Não há renovação automática nem cobrança recorrente."),
+    ("Como funciona o pagamento?",
+     f"O {_monthly['name']} é uma assinatura no cartão: {brl(_monthly['price_cents'])} por mês, com renovação automática, "
+     f"até você cancelar em 1 clique em Minha conta. Os planos {_one_time_names} são pagos uma vez só"
+     + (", no cartão ou no Pix," if PIX_MP else ", no cartão,") + " e não renovam sozinhos."),
+    ("E se eu comprar outro plano antes de vencer?",
+     "Você não perde nenhum dia: os dias do plano novo somam ao fim do acesso que você já tem."),
+    ("E se o meu acesso vencer ou eu cancelar a assinatura?",
+     "Ao cancelar, nada mais é cobrado e o acesso continua até o fim do que já foi pago. Quando o acesso termina, o curso "
+     "completo volta a ficar trancado, mas a conta, o progresso e a amostra da conta grátis continuam. Com um plano novo, "
+     "você retoma de onde parou."),
     ("O que a conta grátis inclui?",
      f"{FREE_SUMMARY[0].upper() + FREE_SUMMARY[1:]}. Não tem prazo e não pede cartão. Os simulados, a correção de redação e "
      "o resto do curso são liberados por um plano. O que entra na conta grátis pode mudar, como dizem os Termos de Uso."),
-    ("E se o meu acesso vencer?",
-     "O curso completo volta a ficar trancado, mas a conta, o progresso e a amostra da conta grátis continuam. Se você comprar "
-     "outro plano, retoma de onde parou. Quem renova antes de vencer soma os dias ao prazo que já tinha."),
     ("Tem reembolso?",
-     f"Sim. Você pode desistir da compra em até {REFUND_DAYS} dias corridos e receber o valor inteiro de volta, sem precisar "
-     "justificar. É o direito de arrependimento do artigo 49 do Código de Defesa do Consumidor, e vale para os três planos."),
+     f"Sim. Na primeira cobrança de cada compra, você pode desistir em até {REFUND_DAYS} dias corridos e receber o valor "
+     "inteiro de volta, sem precisar justificar. É o direito de arrependimento do artigo 49 do Código de Defesa do "
+     "Consumidor. As renovações seguintes do Mensal não são reembolsadas, mas você cancela quando quiser e não é cobrado de novo."),
     ("O que acontece com as respostas do diagnóstico grátis?",
      "Ficam guardadas só neste navegador, sem conta e sem envio para o servidor. Se você criar a conta neste mesmo navegador, "
      "o Módulo 0 já abre com o diagnóstico respondido."),
@@ -921,6 +1016,7 @@ _landing = f'''<!DOCTYPE html>
 </head>
 <body class="lp-page">
 <a class="skip-link" href="#lpMain">Pular para o conteúdo</a>
+{BETA_BAR}
 <header class="lp-top">
   <a class="legal-brand" href="apresentacao.html" aria-label="iTOEFL, início"><span class="logo">{LOGO_SVG}</span><span class="name">iTOEFL</span></a>
   <nav class="lp-nav" aria-label="Seções da página">
@@ -993,14 +1089,13 @@ _landing = f'''<!DOCTYPE html>
 
 <section class="lp-section" id="planos" aria-labelledby="lpPlansTitle">
   <h2 id="lpPlansTitle">Planos</h2>
-  <p class="lp-lead">Os três planos dão acesso ao mesmo material. O que muda é por quanto tempo. Pagamento único,
-  sem renovação automática.</p>
+  <p class="lp-lead">Todos os planos dão acesso ao mesmo material. O {_monthly["name"]} é uma assinatura no cartão, que
+  você cancela quando quiser. Os planos {_one_time_names} são pagos uma vez só e não renovam sozinhos; comprar outro
+  antes de vencer soma os dias.</p>
   <div class="lp-plans">{lp_plans}</div>
-  <p class="lp-why">Por que o Standard é o recomendado: o cronograma de estudo que o curso indica para a maioria
-  dos alunos tem 60 dias, e o mais longo tem 90. Os 90 dias do Standard cobrem os dois.</p>
-  <p class="lp-refund"><strong>Reembolso em {REFUND_DAYS} dias.</strong> Em qualquer plano, você pode desistir da compra
-  em até {REFUND_DAYS} dias corridos e receber o valor inteiro de volta, sem justificar (artigo 49 do Código de Defesa do
-  Consumidor). Detalhes nos <a href="termos.html">Termos de Uso</a>.</p>
+  <p class="lp-refund"><strong>Reembolso em {REFUND_DAYS} dias.</strong> Na primeira cobrança de cada compra, você pode
+  desistir em até {REFUND_DAYS} dias corridos e receber o valor inteiro de volta, sem justificar (artigo 49 do Código de
+  Defesa do Consumidor). Detalhes nos <a href="termos.html">Termos de Uso</a>.</p>
 </section>
 
 <section class="lp-section" id="duvidas" aria-labelledby="lpFaqTitle">

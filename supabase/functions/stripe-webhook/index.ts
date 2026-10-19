@@ -1,5 +1,5 @@
 // Recebe os avisos (eventos) do Stripe e mantém o acesso do aluno em dia:
-// compra do Vitalício, cada mês pago do Mensal, cobrança recusada,
+// compra de um plano de dias, cada mês pago do Mensal, cobrança recusada,
 // assinatura alterada ou cancelada, e reembolso. Endpoint público: o Stripe
 // não manda token do Supabase (por isso verify_jwt = false em config.toml).
 //
@@ -77,7 +77,7 @@ Deno.serve(async (req) => {
     now: () => new Date().toISOString(),
     plan: (id: unknown) => {
       const p = findPlan(id);
-      return p ? { id: p.id, interval: p.interval } : null;
+      return p ? { id: p.id, interval: p.interval, days: p.days } : null;
     },
     findBilling: async (user: string) => {
       const { data, error } = await db.from("billing").select("subscription_id, subscription_status").eq("user_id", user).maybeSingle();

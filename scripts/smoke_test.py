@@ -98,30 +98,58 @@ check("lock_message_removed", function(){ return !document.getElementById("lockM
 
 // ---- planos: escolha na tela de compra e validade do acesso ----
 var planInputs = Array.prototype.slice.call(document.querySelectorAll("#planPick input[name=plan]"));
-check("plans_three_options_standard_default", function(){
+function pickPlan(id){
+  var input = document.querySelector('#planPick input[value="' + id + '"]');
+  input.checked = true; input.dispatchEvent(new Event("change", { bubbles: true }));
+}
+check("plans_four_options_90_default", function(){
   var checked = planInputs.filter(function(i){ return i.checked; });
-  return planInputs.map(function(i){ return i.value; }).join() === "sprint,standard,premium" &&
-    checked.length === 1 && checked[0].value === "standard" &&
-    document.getElementById("payBtn").textContent === "Comprar Standard: R$ 89,90";
+  return planInputs.map(function(i){ return i.value; }).join() === "mensal,60dias,90dias,anual" &&
+    checked.length === 1 && checked[0].value === "90dias" &&
+    document.getElementById("payBtn").textContent === "Comprar o plano 90 dias: R$ 59,90";
 });
-check("plans_recommended_badge_only_on_standard", function(){
+check("plans_highlight_badge_only_on_90", function(){
   var badges = document.querySelectorAll("#planPick .plan-badge");
-  return badges.length === 1 && badges[0].textContent === "Recomendado" &&
-    badges[0].closest(".plan-opt").querySelector("input").value === "standard" &&
-    !/mais (escolhido|vendido)/i.test(document.body.textContent);
+  return badges.length === 1 && badges[0].textContent === "Mais escolhido" &&
+    badges[0].closest(".plan-opt").querySelector("input").value === "90dias";
+});
+// equivalente por mês calculado no build a partir do preço (2026-10-18)
+check("plans_month_equivalent_computed", function(){
+  var notes = Array.prototype.map.call(document.querySelectorAll("#planPick .plan-opt-month"), function(n){ return n.textContent; });
+  var mensal = document.querySelector('#planPick input[value="mensal"]').closest(".plan-opt").querySelector(".plan-opt-price").textContent;
+  return notes.join("|") === "equivale a R$ 24,95/mês|equivale a R$ 19,97/mês|equivale a R$ 10,83/mês" && mensal === "R$ 29,90/mês";
 });
 check("plans_button_follows_choice", function(){
   var btn = document.getElementById("payBtn"), out = [];
-  ["sprint", "premium", "standard"].forEach(function(id){
-    var input = document.querySelector('#planPick input[value="' + id + '"]');
-    input.checked = true; input.dispatchEvent(new Event("change", { bubbles: true }));
-    out.push(btn.textContent);
-  });
-  return out.join("|") === "Comprar Sprint: R$ 39,90|Comprar Premium: R$ 149,90|Comprar Standard: R$ 89,90";
+  ["mensal", "60dias", "anual", "90dias"].forEach(function(id){ pickPlan(id); out.push(btn.textContent); });
+  return out.join("|") === "Assinar o Mensal: R$ 29,90 por mês|Comprar o plano 60 dias: R$ 49,90|" +
+    "Comprar o plano Anual: R$ 129,90|Comprar o plano 90 dias: R$ 59,90";
 });
-check("plans_gate_states_refund_and_single_payment", function(){
+// Pix pelo Mercado Pago: só nos planos de pagamento único
+check("plans_pix_only_on_one_time_plans", function(){
+  var box = document.getElementById("payMethod"), btn = document.getElementById("payBtn");
+  pickPlan("mensal"); var hiddenOnMonthly = box.hidden;
+  pickPlan("anual"); var shownOnAnnual = !box.hidden;
+  var pix = box.querySelector('input[value="pix"]'); pix.checked = true; pix.dispatchEvent(new Event("change", { bubbles: true }));
+  var pixText = btn.textContent;
+  pickPlan("mensal"); var backToCard = btn.textContent === "Assinar o Mensal: R$ 29,90 por mês" && box.hidden;
+  box.querySelector('input[value="card"]').checked = true;
+  pickPlan("90dias");
+  return hiddenOnMonthly && shownOnAnnual && pixText === "Pagar o plano Anual com Pix: R$ 129,90" && backToCard;
+});
+check("plans_gate_states_refund_renewal_and_sum", function(){
   var t = document.querySelector("#payGate .pay-terms").textContent;
-  return t.indexOf("7 dias") !== -1 && t.indexOf("sem renovação automática") !== -1;
+  return t.indexOf("7 dias") !== -1 && t.indexOf("renovação automática") !== -1 && t.indexOf("sem renovação automática") !== -1 &&
+    t.indexOf("soma os dias") !== -1 && t.indexOf("1 clique") !== -1;
+});
+check("account_subscription_text", function(){
+  var S = window.__toeflAccess.subText, end = "2026-11-08T12:00:00Z";
+  var act = S({ subscription_id: "sub_1", subscription_status: "active", current_period_end: end });
+  var canc = S({ subscription_id: "sub_1", subscription_status: "active", cancel_at_period_end: true, current_period_end: end });
+  var late = S({ subscription_id: "sub_1", subscription_status: "past_due" });
+  return act.text.indexOf("Assinatura Mensal ativa: renova em ") === 0 && act.cls === "is-paid" &&
+    canc.text.indexOf("não haverá nova cobrança") !== -1 && late.cls === "is-unpaid" && S(null) === null &&
+    document.getElementById("accountManage").hidden === true;
 });
 var ACC = window.__toeflAccess, NOW = Date.UTC(2026, 9, 8, 12, 0, 0), DAY = 86400000;
 check("access_none_without_purchase", function(){
@@ -129,26 +157,26 @@ check("access_none_without_purchase", function(){
     ACC.gateCopy(ACC.state(null, NOW)).title === "Libere seu acesso";
 });
 check("access_lifetime_without_expiry", function(){
-  // linha antiga, sem as colunas dos planos, e Premium: as duas sem prazo
+  // linha antiga, sem as colunas dos planos, e Premium antigo: as duas sem prazo
   var old = ACC.state({ paid: true }, NOW), prem = ACC.state({ paid: true, plan: "premium", expires_at: null }, NOW);
   return old.active && old.lifetime && prem.active && prem.lifetime &&
-    ACC.text(prem, null).text === "Plano Premium: acesso vitalício liberado." && ACC.text(old, null).text === "Acesso vitalício liberado.";
+    ACC.text(prem, null).text === "Acesso vitalício liberado." && ACC.text(old, null).text === "Acesso vitalício liberado.";
 });
 check("access_active_until_expiry_with_days_left", function(){
-  var st = ACC.state({ paid: true, plan: "standard", expires_at: new Date(NOW + 10 * DAY).toISOString() }, NOW);
-  var line = ACC.text(st, null);
+  var st = ACC.state({ paid: true, plan: "90dias", expires_at: new Date(NOW + 10 * DAY).toISOString() }, NOW);
+  var line = ACC.text(st, null), copy = ACC.gateCopy(st);
   return st.active && !st.lifetime && st.daysLeft === 10 && line.cls === "is-paid" &&
-    line.text.indexOf("Plano Standard: acesso liberado até ") === 0 && line.text.indexOf("(faltam 10 dias)") !== -1 &&
-    ACC.gateCopy(st).title === "Renovar ou mudar de plano";
+    line.text.indexOf("Plano 90 dias: acesso liberado até ") === 0 && line.text.indexOf("(faltam 10 dias)") !== -1 &&
+    copy.title === "Comprar mais dias" && copy.text.indexOf("soma os dias") !== -1;
 });
 check("access_last_week_is_flagged", function(){
-  var st = ACC.state({ paid: true, plan: "sprint", expires_at: new Date(NOW + DAY / 2).toISOString() }, NOW);
+  var st = ACC.state({ paid: true, plan: "mensal", expires_at: new Date(NOW + DAY / 2).toISOString() }, NOW);
   return st.active && st.daysLeft === 1 && ACC.text(st, null).cls === "is-ending" && ACC.text(st, null).text.indexOf("(falta 1 dia)") !== -1;
 });
 check("access_expired_blocks_and_says_so", function(){
-  var st = ACC.state({ paid: true, plan: "sprint", expires_at: new Date(NOW - 1000).toISOString() }, NOW);
+  var st = ACC.state({ paid: true, plan: "60dias", expires_at: new Date(NOW - 1000).toISOString() }, NOW);
   var line = ACC.text(st, null), copy = ACC.gateCopy(st);
-  return !st.active && st.expired && line.cls === "is-unpaid" && line.text.indexOf("O plano Sprint venceu em ") === 0 &&
+  return !st.active && st.expired && line.cls === "is-unpaid" && line.text.indexOf("O plano 60 dias venceu em ") === 0 &&
     copy.title === "Seu acesso venceu" && copy.text.indexOf("progresso continua salvo") !== -1;
 });
 check("access_bad_date_stays_locked", function(){
@@ -855,13 +883,13 @@ check("free_progress_counts_only_the_sample", function(){
 });
 check("free_account_text_says_what_is_included", function(){
   var line = ACC.text(ACC.state(null, NOW), null);
-  var exp = ACC.text(ACC.state({ paid: true, plan: "sprint", expires_at: new Date(NOW - 1000).toISOString() }, NOW), null);
+  var exp = ACC.text(ACC.state({ paid: true, plan: "60dias", expires_at: new Date(NOW - 1000).toISOString() }, NOW), null);
   return line.cls === "is-free" && line.text.indexOf("Conta grátis: você tem o Módulo 0 inteiro") === 0 &&
     line.text.indexOf("simulados, a correção de redação") !== -1 && exp.text.indexOf("A conta segue grátis, com o Módulo 0 inteiro") !== -1;
 });
-ACC.setLevel("free", ACC.state({ paid: true, plan: "sprint", expires_at: new Date(NOW - 1000).toISOString() }, NOW));
+ACC.setLevel("free", ACC.state({ paid: true, plan: "60dias", expires_at: new Date(NOW - 1000).toISOString() }, NOW));
 check("free_bar_after_plan_expired", function(){
-  return document.getElementById("freeBarText").textContent.indexOf("O plano Sprint venceu em ") === 0 &&
+  return document.getElementById("freeBarText").textContent.indexOf("O plano 60 dias venceu em ") === 0 &&
     document.getElementById("freeBarBtn").textContent === "Renovar";
 });
 ACC.setLevel("full");
@@ -1036,35 +1064,53 @@ def pwa_checks():
 
 
 def plans_checks():
-    """Os tres planos: o que o site mostra (app/plans.json) bate com o que o
-    servidor cobra (supabase/functions/_shared/plans.ts), o preco nunca vem
-    do navegador, a migracao esta espelhada no schema.sql e os termos falam
-    dos planos e do reembolso."""
+    """Os quatro planos (2026-10-18): preço, dias e destaque num arquivo só,
+    no servidor (supabase/functions/_shared/plans.json), lido pelo plans.ts e
+    pelo build do site; o preço nunca vem do navegador; Stripe em
+    mode=subscription só no Mensal; Pix só nos planos de pagamento único; as
+    migrações estão espelhadas no schema.sql e os termos falam dos planos e do
+    reembolso."""
     out = {}
-    site = json.loads((APP_DIR / "plans.json").read_text(encoding="utf-8"))
     fn_dir = ROOT / "supabase" / "functions"
+    cfg = json.loads((fn_dir / "_shared" / "plans.json").read_text(encoding="utf-8"))
     shared = (fn_dir / "_shared" / "plans.ts").read_text(encoding="utf-8")
-    server = [
-        (m.group(1), m.group(2), None if m.group(3) == "null" else int(m.group(3)), int(m.group(4)))
-        for m in re.finditer(r'\{ id: "(\w+)", name: "(\w+)", days: (null|\d+), priceCents: (\d+) \}', shared)
-    ]
-    out["plans_server_matches_site"] = len(server) == 3 and server == [
-        (p["id"], p["name"], p["days"], p["price_cents"]) for p in site["plans"]
-    ]
-    out["plans_prices_are_the_decided_ones"] = server == [
-        ("sprint", "Sprint", 30, 3990), ("standard", "Standard", 90, 8990), ("premium", "Premium", None, 14990),
-    ]
+    build_src = (APP_DIR / "build.py").read_text(encoding="utf-8")
+    plans = [(p["id"], p["name"], p["interval"], p["days"], p["price_cents"]) for p in cfg["plans"]]
+    out["plans_prices_are_the_decided_ones"] = plans == [
+        ("mensal", "Mensal", "month", None, 2990), ("60dias", "60 dias", None, 60, 4990),
+        ("90dias", "90 dias", None, 90, 5990), ("anual", "Anual", None, 365, 12990),
+    ] and [p["id"] for p in cfg["plans"] if p.get("highlight")] == ["90dias"] and cfg["refund_days"] == 7
+    # um lugar só: o plans.ts importa o JSON e não tem preço escrito; o site lê o mesmo arquivo
+    out["plans_single_config_file"] = (
+        'import CONFIG from "./plans.json" with { type: "json" }' in shared
+        and not re.search(r"(priceCents|days|price_cents):\s*\d", shared)
+        and '"../supabase/functions/_shared/plans.json"' in build_src
+        and not (APP_DIR / "plans.json").exists()
+        and isinstance(cfg.get("pix_mercado_pago"), bool)
+    )
 
     checkout = (fn_dir / "create-checkout" / "index.ts").read_text(encoding="utf-8")
     out["plans_checkout_price_comes_from_server"] = (
-        "findPlan(planId)" in checkout and "unit_price: priceCents / 100" in checkout
-        and "plan.priceCents * (100 - coupon.percent)" in checkout
+        "findPlan(planId)" in checkout and '"line_items[0][price_data][unit_amount]": plan.priceCents' in checkout
+        and "plan.priceCents * (100 - percent)" in checkout
+        and 'mode: plan.interval ? "subscription" : "payment"' in checkout
+        and "client_reference_id: user.id" in checkout and '"subscription_data[metadata][user_id]"' in checkout
+        and '"payment_intent_data[metadata][user_id]"' in checkout
+        and 'method === "pix" && (plan.interval || !PIX_VIA_MERCADO_PAGO)' in checkout
         and not re.search(r"body\??\.(price|amount|unit_price|days)", checkout)
     )
     webhook = (fn_dir / "mp-webhook" / "index.ts").read_text(encoding="utf-8")
     out["plans_webhook_records_term"] = (
         'rpc("apply_payment"' in webhook and "p_days: ref.plan.days" in webhook
+        and "if (ref.plan.interval || !ref.plan.days)" in webhook
         and "parseReference(payment.external_reference)" in webhook
+    )
+    portal = (fn_dir / "stripe-portal" / "index.ts").read_text(encoding="utf-8")
+    delete = (fn_dir / "delete-account" / "index.ts").read_text(encoding="utf-8")
+    out["stripe_portal_and_delete_cancel"] = (
+        '"/v1/billing_portal/sessions"' in portal and 'from("billing")' in portal and "auth.getUser()" in portal
+        and "[functions.stripe-portal]\nverify_jwt = false" in (ROOT / "supabase" / "config.toml").read_text(encoding="utf-8")
+        and delete.index("stripeCancelSubscription(") < delete.index("admin.auth.admin.deleteUser(")
     )
 
     # o corpo da migracao (da primeira secao em diante) tem de estar igual no schema.sql
@@ -1076,14 +1122,17 @@ def plans_checks():
                             "function public.apply_payment", "from public, anon, authenticated")
     )
 
-    # Stripe (2026-10-18): migração espelhada, assinatura vale até o fim do
-    # período pago, e as tabelas novas não aceitam escrita do navegador
+    # Stripe (2026-10-18): migração espelhada, todo pagamento (inclusive o
+    # mês da assinatura) soma dias, e as tabelas novas não aceitam escrita do
+    # navegador
     stripe_sql = (ROOT / "supabase" / "migrations" / "20261018_stripe.sql").read_text(encoding="utf-8")
     stripe_body = stripe_sql[stripe_sql.index("-- ============ payments: período pago da assinatura"):]
     stripe_policies = re.findall(r'create policy "(\w+)" on (\w+)\s+for (\w+)', stripe_sql)
     out["stripe_migration_mirrored_and_locked"] = (
         stripe_body in schema and schema.index(body) < schema.index(stripe_body)
-        and "period_end timestamptz" in stripe_body and "r.period_end + interval '1 day'" in stripe_body
+        and "period_end timestamptz" in stripe_body
+        and "greatest(coalesce(v_expires, r.approved_at), r.approved_at)\n                   + make_interval(days => r.days)" in stripe_body
+        and "when v_sub_last then v_expires + interval '1 day'" in stripe_body
         and "drop function if exists public.apply_payment(text, uuid, text, int, numeric, text, timestamptz);" in stripe_body
         and stripe_policies == [("billing_select_own", "billing", "select")]
         and "alter table billing enable row level security" in stripe_body
@@ -1114,9 +1163,12 @@ def plans_checks():
 
     terms = (ARTIFACT.parent / "termos.html").read_text(encoding="utf-8")
     out["plans_terms_cover_plans_and_refund"] = (
-        all(s in terms for s in ("Sprint", "Standard", "Premium", "30 dias", "90 dias", "Vitalício",
-                                 "7 dias corridos", "artigo 49", "renovação automática"))
+        all(s in terms for s in ("Mensal", "60 dias", "90 dias", "Anual", "365 dias", "renovação automática",
+                                 "Pagamento único", "somados ao fim do acesso", "7 dias corridos", "artigo 49",
+                                 "primeira cobrança", "Stripe", "GB Corporation"))
+        and not any(s in terms for s in ("Sprint", "Standard", "Premium |", "Vitalício |"))
         and "REVISAR" not in terms
+        and "REVISAR (advogado): seção reescrita em 2026-10-18" in (ROOT / "legal" / "termos.md").read_text(encoding="utf-8")
     )
     return out
 
@@ -1646,9 +1698,29 @@ def build_fixture(work):
     m3.write_text(text.replace(FIXTURE_DEEP_ANCHOR, FIXTURE_DEEP_BLOCK + FIXTURE_DEEP_ANCHOR), encoding="utf-8", newline="\n")
     drills = work / "app" / "drills_data.py"
     drills.write_text(drills.read_text(encoding="utf-8") + FIXTURE_INSERTION_DRILL, encoding="utf-8")
+    # o exemplo builda com a faixa de teste desligada (beta_checks confere)
+    env = {**os.environ, "BETA": "0"}
     for script in ("build_pipeline.py", "build.py"):
-        subprocess.run([sys.executable, script], cwd=work / "app", check=True, capture_output=True)
+        subprocess.run([sys.executable, script], cwd=work / "app", check=True, capture_output=True, env=env)
     return work / "artifact" / "index.html"
+
+
+def beta_checks(work):
+    """Faixa "Versão de teste": aparece no app e na apresentação com BETA
+    ligado (o site de verdade, app/site.json), some com BETA desligado (o build
+    de exemplo) e, com FEEDBACK_EMAIL, leva o link "Enviar sugestão"."""
+    real = ARTIFACT.read_text(encoding="utf-8"), (ARTIFACT.parent / "apresentacao.html").read_text(encoding="utf-8")
+    off = (work / "artifact" / "index.html").read_text(encoding="utf-8"), (work / "artifact" / "apresentacao.html").read_text(encoding="utf-8")
+    env = {**os.environ, "BETA": "1", "FEEDBACK_EMAIL": "sugestoes@example.com"}
+    subprocess.run([sys.executable, "build.py"], cwd=work / "app", check=True, capture_output=True, env=env)
+    on = (work / "artifact" / "index.html").read_text(encoding="utf-8")
+    beta_on = json.loads((APP_DIR / "site.json").read_text(encoding="utf-8-sig")).get("BETA") is True
+    return {
+        "beta_bar_shown_when_on": beta_on and all('id="betaBar"' in h and "Versão de teste." in h for h in real),
+        "beta_bar_hidden_when_off": all('id="betaBar"' not in h and "beta-bar\"" not in h for h in off),
+        "beta_bar_feedback_link": ('href="mailto:sugestoes@example.com?subject=' in on and ">Enviar sugestão</a>" in on
+                                   and on.count('id="betaBar"') == 1),
+    }
 
 
 def run_browser_checks(test_js=TEST_JS, prelude="", source=None):
@@ -1705,6 +1777,7 @@ def main():
     results.update(ios)
     with tempfile.TemporaryDirectory(prefix="itoefl_fixture_") as tmp:
         fixture = run_browser_checks(FIXTURE_TEST_JS, source=build_fixture(Path(tmp)))
+        results.update(beta_checks(Path(tmp)))
     results["__jsErrors"] += fixture.pop("__jsErrors", None) or []
     results.update(fixture)
     results.update(legal_page_checks())

@@ -1,0 +1,49 @@
+{
+  "_leia": "UNICO lugar com preco, duracao e destaque dos planos (decisao do dono, 2026-10-18). O servidor le daqui (plans.ts: create-checkout, stripe-webhook, mp-webhook) e o site tambem (app/build.py monta a tela de compra e a apresentacao). price_cents em centavos. interval month = assinatura no cartao com renovacao automatica (Stripe, mode=subscription); interval null = pagamento unico de days dias, sem renovacao (Stripe mode=payment, ou Pix pelo Mercado Pago). O equivalente por mes que o site mostra e calculado no build a partir do preco e dos dias, nunca escrito aqui. highlight: o plano com o selo highlight_label, que a tela de compra abre marcado. pix_mercado_pago: oferece Pix pelo Mercado Pago nos planos de pagamento unico; trocar para false quando o Stripe liberar o Pix. Mudar algo aqui: rebuildar o site e publicar de novo create-checkout, stripe-webhook e mp-webhook. Assinatura ja existente continua no preco antigo.",
+  "refund_days": 7,
+  "pix_mercado_pago": true,
+  "highlight_label": "Mais escolhido",
+  "plans": [
+    {
+      "id": "mensal",
+      "name": "Mensal",
+      "interval": "month",
+      "days": null,
+      "price_cents": 2990,
+      "access": "Renova sozinho todo mês no cartão. Cancele quando quiser, em 1 clique.",
+      "audience": "Para quem quer começar já e decidir mês a mês",
+      "detail": "O curso completo enquanto a assinatura estiver ativa. Ao cancelar, o acesso vai até o fim do mês já pago e nada mais é cobrado."
+    },
+    {
+      "id": "60dias",
+      "name": "60 dias",
+      "interval": null,
+      "days": 60,
+      "price_cents": 4990,
+      "access": "60 dias de acesso, sem renovação automática",
+      "audience": "Para quem já tem a prova marcada",
+      "detail": "Dois meses para rodar os simulados e os pontos que mais pesam na nota. Cartão ou Pix."
+    },
+    {
+      "id": "90dias",
+      "name": "90 dias",
+      "interval": null,
+      "days": 90,
+      "price_cents": 5990,
+      "highlight": true,
+      "access": "90 dias de acesso, sem renovação automática",
+      "audience": "Para quem quer preparar as quatro seções com calma",
+      "detail": "Três meses: tempo para Reading, Listening, Writing e Speaking, com os simulados no fim. Cartão ou Pix."
+    },
+    {
+      "id": "anual",
+      "name": "Anual",
+      "interval": null,
+      "days": 365,
+      "price_cents": 12990,
+      "access": "365 dias de acesso, sem renovação automática",
+      "audience": "Para quem planeja com antecedência ou pode repetir a prova",
+      "detail": "Um ano inteiro de acesso, pago uma vez. Cartão ou Pix."
+    }
+  ]
+}

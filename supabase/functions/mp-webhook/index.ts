@@ -1,6 +1,8 @@
 // Recebe a notificação do Mercado Pago depois de um pagamento e libera o
-// acesso do aluno. Endpoint público (o Mercado Pago não manda nenhum header
-// de autenticação) -- a segurança vem de SEMPRE reconferir o pagamento direto
+// acesso do aluno. Desde 2026-10-18 só passa por aqui o Pix dos planos de
+// pagamento único (o cartão é pelo Stripe, ver stripe-webhook). Endpoint
+// público (o Mercado Pago não manda nenhum header de autenticação): a
+// segurança vem de SEMPRE reconferir o pagamento direto
 // na API do MP com o access token secreto, nunca confiar só no que a
 // notificação em si diz.
 //
@@ -66,12 +68,19 @@ Deno.serve(async (req) => {
       return new Response("ok", { status: 200 });
     }
 
+    // desde 2026-10-18 o Mercado Pago só vende, no Pix, os planos de
+    // pagamento único (60 dias, 90 dias, Anual); o Mensal é só no cartão
+    if (ref.plan.interval || !ref.plan.days) {
+      console.error("mp-webhook: plano com renovação não é vendido pelo Mercado Pago", payment.id, ref.plan.id);
+      return new Response("ok", { status: 200 });
+    }
+
     const supabase = createClient(SUPABASE_URL, SECRET_KEY);
     const { error } = await supabase.rpc("apply_payment", {
       p_payment_id: String(payment.id),
       p_user: ref.userId,
       p_plan: ref.plan.id,
-      p_days: ref.plan.days,
+      p_days: ref.plan.days, // somados ao fim do acesso que a conta ainda tem
       p_amount: typeof payment.transaction_amount === "number" ? payment.transaction_amount : null,
       p_status: approved ? "approved" : "refunded",
       p_approved_at: payment.date_approved || new Date().toISOString(),

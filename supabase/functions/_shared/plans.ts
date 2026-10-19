@@ -1,27 +1,36 @@
-// Os três planos de preço, do lado do servidor. É daqui que sai o valor
-// cobrado (create-checkout) e o prazo gravado (mp-webhook): o navegador manda
-// só o id do plano, nunca o preço.
+// Os planos de preço, do lado do servidor. Preço, duração e destaque moram
+// em ./plans.json, o ÚNICO arquivo com esses valores (decisão do dono,
+// 2026-10-18): o servidor lê daqui e o site (app/build.py) lê o mesmo
+// arquivo. O navegador manda só o id do plano, nunca o preço.
 //
-// Tem de dizer o mesmo que app/plans.json, que alimenta as telas do site
-// (o smoke test compara id, dias e preço dos dois arquivos). Mudar preço ou
-// prazo: editar os dois, rebuildar o site e publicar de novo create-checkout
-// e mp-webhook.
+//   interval "month"  assinatura no cartão (Stripe, mode=subscription)
+//   interval null     pagamento único de `days` dias, sem renovação
+//                     (Stripe mode=payment, ou Pix pelo Mercado Pago)
 //
 // priceCents em centavos, para não fazer conta de dinheiro com ponto
-// flutuante. days null = acesso sem prazo (vitalício).
+// flutuante.
+
+import CONFIG from "./plans.json" with { type: "json" };
 
 export type Plan = {
   id: string;
   name: string;
+  interval: "month" | null;
   days: number | null;
   priceCents: number;
 };
 
-export const PLANS: Plan[] = [
-  { id: "sprint", name: "Sprint", days: 30, priceCents: 3990 },
-  { id: "standard", name: "Standard", days: 90, priceCents: 8990 },
-  { id: "premium", name: "Premium", days: null, priceCents: 14990 },
-];
+export const PLANS: Plan[] = CONFIG.plans.map((p) => ({
+  id: p.id,
+  name: p.name,
+  interval: p.interval === "month" ? "month" : null,
+  days: typeof p.days === "number" ? p.days : null,
+  priceCents: p.price_cents,
+}));
+
+// Pix pelo Mercado Pago nos planos de pagamento único, enquanto o Stripe não
+// libera o Pix na conta. Trocar em ./plans.json ("pix_mercado_pago").
+export const PIX_VIA_MERCADO_PAGO: boolean = CONFIG.pix_mercado_pago === true;
 
 export function findPlan(id: unknown): Plan | null {
   if (typeof id !== "string") return null;

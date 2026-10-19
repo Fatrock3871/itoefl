@@ -1,6 +1,6 @@
 # Termos de Uso
 
-**Última atualização:** 14 de outubro de 2026
+**Última atualização:** 18 de outubro de 2026
 
 Estes termos valem para todo mundo que cria uma conta ou compra acesso ao
 iTOEFL. Ao criar a conta, você declara que os leu e que concorda com eles e com a
@@ -91,68 +91,77 @@ corrigir. O envio faz parte do plano e não tem custo à parte.
 
 ## 7. Planos, pagamento e validade
 
-<!-- REVISAR (advogado): seção nova de 2026-10-08, com os três planos, a contagem do prazo e a regra de renovação e troca de plano. -->
+<!-- REVISAR (advogado): seção reescrita em 2026-10-18, com a assinatura Mensal de renovação automática e cancelamento pelo portal do Stripe, os três planos de pagamento único, a soma dos dias e os processadores (Stripe no cartão, Mercado Pago no Pix). -->
 
-O acesso é vendido em três planos. Todos dão acesso ao mesmo material: o que
-muda é por quanto tempo.
+O acesso é vendido em quatro planos. Todos dão acesso ao mesmo material: o que
+muda é a forma de pagar e por quanto tempo. Os preços são os da tela de compra.
 
-| Plano | Validade do acesso |
-|---|---|
-| Sprint | 30 dias |
-| Standard | 90 dias |
-| Premium | Vitalício |
+| Plano | Cobrança | Validade do acesso |
+|---|---|---|
+| Mensal | Assinatura no cartão, renovada todo mês | Enquanto a assinatura estiver em dia |
+| 60 dias | Pagamento único | 60 dias |
+| 90 dias | Pagamento único | 90 dias |
+| Anual | Pagamento único | 365 dias |
 
-- **Pagamento único.** Cada plano é pago uma vez só. Não há mensalidade,
-  renovação automática nem cobrança recorrente: nada é cobrado de novo sem
-  que você faça outra compra.
-- **Preço.** Vale o preço mostrado na tela de compra no momento da compra.
-  Cupons de desconto, quando existirem, são um percentual sobre o preço do
-  plano escolhido e são aplicados nessa tela.
+- **Mensal: renovação automática.** O valor é cobrado no cartão no dia da
+  assinatura e de novo a cada mês, até você cancelar. Cada mês pago acrescenta
+  ao acesso os dias daquele período.
+- **Como cancelar o Mensal.** Em Minha conta, no botão de gerenciar a
+  assinatura, que abre a página segura do Stripe. O cancelamento leva um
+  clique, vale para as cobranças seguintes e não exige justificativa. O acesso
+  continua até o fim do período já pago.
+- **Cobrança recusada.** Se a renovação não passar no cartão, o Stripe tenta de
+  novo por alguns dias. Você pode trocar o cartão na mesma página. Sem
+  pagamento, a assinatura é encerrada e o acesso termina no fim do período
+  que já tinha sido pago.
+- **60 dias, 90 dias e Anual: pagamento único.** São pagos uma vez só, no
+  cartão ou no Pix, sem renovação automática: nada é cobrado de novo sem que
+  você faça outra compra.
+- **Preço.** Vale o preço mostrado na tela de compra no momento da compra. Na
+  assinatura, o preço de cada renovação é o da contratação; se ele mudar,
+  avisaremos antes, e você pode cancelar. Cupons de desconto, quando
+  existirem, são um percentual aplicado na primeira cobrança.
 - **Quando o prazo começa.** A validade é contada em dias corridos a partir
   da confirmação do pagamento. A data em que o acesso termina aparece em Minha
   conta.
-- **Quando o prazo termina.** O acesso ao conteúdo é bloqueado até uma nova
-  compra. A conta e o progresso salvo continuam guardados, e você retoma de
-  onde parou se comprar outro plano.
-- **Renovar antes de vencer.** Se você comprar o Sprint ou o Standard com um
-  acesso ainda em vigor, os dias do plano novo são somados ao fim do prazo
-  que você já tinha. Se o acesso já tiver vencido, o prazo novo conta a partir
-  da confirmação do novo pagamento.
-- **Passar para o Premium.** A compra do Premium troca o prazo por acesso
-  vitalício. Os dias que ainda restavam do plano anterior não viram crédito
-  nem desconto.
-- **Conta com acesso vitalício** não precisa de outro plano, e a tela de
-  compra não oferece novos planos para ela.
-- **Acesso vitalício** quer dizer acesso sem mensalidade e sem prazo de
-  validade, enquanto a plataforma estiver em operação. Não é uma promessa de
-  que o serviço existirá para sempre. Se a plataforma for encerrada, avisaremos
-  com antecedência razoável pelo e-mail cadastrado.
-- **Compras feitas antes da criação dos planos** foram vendidas como acesso
-  vitalício e continuam assim.
-- O pagamento é processado pelo Mercado Pago. Não recebemos nem guardamos os
-  dados do seu cartão.
+- **Comprar com o acesso ainda valendo.** Os dias do plano novo, ou do mês
+  novo da assinatura, são somados ao fim do acesso que você já tinha. Nenhum
+  dia se perde. Se o acesso já tiver vencido, o prazo novo conta a partir da
+  confirmação do novo pagamento.
+- **Quando o prazo termina.** O acesso ao curso completo é bloqueado até uma
+  nova compra. A conta e o progresso salvo continuam guardados, e você retoma
+  de onde parou.
+- **Compras feitas antes destes planos** continuam valendo como foram
+  vendidas, inclusive as vendidas como acesso sem prazo.
+- **Quem processa o pagamento.** No cartão, o Stripe; na fatura, a cobrança
+  aparece em nome de GB Corporation. No Pix, o Mercado Pago. Não recebemos nem
+  guardamos os dados do seu cartão.
 - Recursos novos que tenham custo próprio por uso podem ser oferecidos à
   parte, com preço e condições informados antes da contratação. Eles não fazem
   parte do acesso já comprado, a não ser que isso seja dito expressamente.
 
 ## 8. Arrependimento e reembolso
 
-<!-- REVISAR (advogado): reembolso de 7 dias em todos os planos (art. 49 do CDC), efeito do reembolso sobre o prazo e ausência de reembolso proporcional depois dos 7 dias. -->
+<!-- REVISAR (advogado): reescrito em 2026-10-18. Reembolso de 7 dias na primeira cobrança de cada compra (art. 49 do CDC), renovações do Mensal sem reembolso mas com cancelamento livre, efeito do reembolso sobre o prazo e sobre a assinatura. -->
 
-Você pode desistir de qualquer compra, em qualquer um dos três planos, em até
-7 dias corridos a partir da confirmação do pagamento, sem precisar justificar.
-É o direito de arrependimento do artigo 49 do Código de Defesa do Consumidor.
-O prazo vale para cada compra, inclusive renovação e troca de plano.
+Você pode desistir de qualquer compra em até 7 dias corridos a partir da
+confirmação da primeira cobrança, sem precisar justificar. É o direito de
+arrependimento do artigo 49 do Código de Defesa do Consumidor. Vale para cada
+compra: a assinatura Mensal (na primeira cobrança) e cada compra dos planos de
+60 dias, 90 dias ou Anual.
 
 - **Como pedir.** Escreva para o e-mail de contato usando o e-mail cadastrado na
   sua conta, dizendo que quer desistir da compra.
-- **O que é devolvido.** O valor inteiro pago naquela compra, pelo mesmo meio
-  de pagamento usado. Pedimos a devolução ao Mercado Pago assim que
-  confirmamos o pedido. O tempo até o valor aparecer na fatura ou na conta
-  depende do meio de pagamento.
-- **O que acontece com o acesso.** O acesso dado por aquela compra é
-  encerrado. Se a conta tinha uma compra anterior, o prazo volta a ser o
-  que seria sem a compra devolvida.
+- **O que é devolvido.** O valor inteiro pago naquela cobrança, pelo mesmo meio
+  de pagamento usado. Pedimos a devolução ao Stripe (cartão) ou ao Mercado
+  Pago (Pix) assim que confirmamos o pedido. O tempo até o valor aparecer na
+  fatura ou na conta depende do meio de pagamento.
+- **O que acontece com o acesso.** Os dias dados por aquela cobrança saem da
+  conta. Se havia outra compra, o prazo volta a ser o que seria sem a
+  cobrança devolvida. No Mensal, o reembolso também cancela a assinatura.
+- **Renovações do Mensal.** As cobranças mensais depois da primeira não são
+  reembolsadas, mas você pode cancelar a qualquer momento, e nada mais é
+  cobrado.
 - **Depois dos 7 dias.** Não há reembolso proporcional aos dias não usados.
   Isso não afeta os outros direitos que a lei garante ao consumidor.
 
@@ -189,7 +198,8 @@ sincronização entre aparelhos exige internet.
 
 Você pode excluir sua conta a qualquer momento em Minha conta. A exclusão
 apaga seus dados da plataforma, incluindo as redações enviadas e o registro do pagamento, e o acesso
-comprado é perdido. Excluir a conta fora do prazo do item 8 não gera
+comprado é perdido. Se houver assinatura Mensal, ela é cancelada antes, e
+nada mais é cobrado. Excluir a conta fora do prazo do item 8 não gera
 reembolso.
 
 ## 13. Mudanças nestes termos

@@ -250,7 +250,8 @@ LANDING_STATE = r"""
     if(r.height && r.height < 44) small.push(e.textContent.trim().slice(0, 30) + ":" + Math.round(r.height));
   });
   var text = document.body.textContent;
-  var banned = [/mais (escolhido|vendido|popular)/i, /milhares|centenas de alunos|\d+ alunos/i, /aprova[çc][ãa]o garantida/i,
+  // "Mais escolhido" (selo do plano de 90 dias) foi decisão do dono em 2026-10-18
+  var banned = [/mais (vendido|popular)/i, /milhares|centenas de alunos|\d+ alunos/i, /aprova[çc][ãa]o garantida/i,
                 /garant(imos|e) (a |sua |uma )?(nota|aprova)/i, /nota garantida/i, /melhor curso/i, /n[úu]mero 1|#1/i, /oficial da ETS\./i];
   return {
     h1: document.querySelectorAll("h1").length,
@@ -264,6 +265,7 @@ LANDING_STATE = r"""
     plans: Array.prototype.map.call(document.querySelectorAll(".lp-plan"), function(p){
       var b = p.querySelector(".plan-badge");
       return { id: p.dataset.plan, price: p.querySelector(".lp-plan-price").textContent, badge: b ? b.textContent : "",
+               note: p.querySelector(".lp-plan-note").textContent,
                top: Math.round(p.getBoundingClientRect().top + scrollY) };
     }),
     claims: banned.filter(function(re){ return re.test(text); }).map(String),
@@ -312,14 +314,15 @@ STRIPE_TEST = r"""
       .filter(function(r){ return r.user === user && r.status === "approved"; })
       .sort(function(a, b){ return a.approvedAt < b.approvedAt ? -1 : a.approvedAt > b.approvedAt ? 1 : 0; });
     if(!rows.length) return { paid: false, expires_at: null };
-    var life = false, exp = null;
+    var life = false, exp = null, subLast = false;
     rows.forEach(function(r){
-      if(r.days == null && r.periodEnd == null){ life = true; return; }
+      if(r.days == null){ life = true; return; }
       if(life) return;
-      if(r.periodEnd != null){ var end = Date.parse(r.periodEnd) + DAY; exp = Math.max(exp == null ? end : exp, end); }
-      else { var base = Math.max(exp == null ? Date.parse(r.approvedAt) : exp, Date.parse(r.approvedAt)); exp = base + r.days * DAY; }
+      var base = Math.max(exp == null ? Date.parse(r.approvedAt) : exp, Date.parse(r.approvedAt));
+      exp = base + r.days * DAY;
+      subLast = r.periodEnd != null;
     });
-    return { paid: true, expires_at: life ? null : new Date(exp).toISOString() };
+    return { paid: true, expires_at: life ? null : new Date(exp + (subLast ? DAY : 0)).toISOString() };
   }
   function active(row){ return row.paid && (!row.expires_at || Date.parse(row.expires_at) > NOW); }
   var api = {};
@@ -327,7 +330,8 @@ STRIPE_TEST = r"""
     get: function(path){ if(!api[path]) throw new Error("sem objeto " + path); return Promise.resolve(JSON.parse(JSON.stringify(api[path]))); },
     cancelSubscription: function(id){ canceled.push(id); return Promise.resolve(); },
     now: function(){ return new Date(NOW).toISOString(); },
-    plan: function(id){ return { mensal: { id: "mensal", interval: "month" }, vitalicio: { id: "vitalicio", interval: null } }[id] || null; },
+    plan: function(id){ return { mensal: { id: "mensal", interval: "month", days: null }, "60dias": { id: "60dias", interval: null, days: 60 },
+                                 "90dias": { id: "90dias", interval: null, days: 90 }, anual: { id: "anual", interval: null, days: 365 } }[id] || null; },
     findBilling: function(u){ return Promise.resolve(billing[u] ? { subscription_id: billing[u].subscription, subscription_status: billing[u].status } : null); },
     applyPayment: function(a){
       if(a.status === "approved"){ if(!payments[a.id]) payments[a.id] = JSON.parse(JSON.stringify(a)); }
@@ -349,19 +353,19 @@ STRIPE_TEST = r"""
   // ---- Mensal: checkout de assinatura, depois o invoice.paid repetido ----
   api["/v1/checkout/sessions/cs_m"] = { id: "cs_m", mode: "subscription", client_reference_id: U1, customer: "cus_1", subscription: "sub_1", metadata: { user_id: U1, plan_id: "mensal" } };
   api["/v1/subscriptions/sub_1"] = { id: "sub_1", status: "active", customer: "cus_1", cancel_at_period_end: false, current_period_end: end1, latest_invoice: "in_1", metadata: { user_id: U1, plan_id: "mensal" } };
-  api["/v1/invoices/in_1"] = { id: "in_1", status: "paid", subscription: "sub_1", customer: "cus_1", amount_paid: 3990, status_transitions: { paid_at: P.now }, lines: { data: [{ period: { start: P.now, end: end1 } }] } };
+  api["/v1/invoices/in_1"] = { id: "in_1", status: "paid", subscription: "sub_1", customer: "cus_1", amount_paid: 2990, status_transitions: { paid_at: P.now }, lines: { data: [{ period: { start: P.now, end: end1 } }] } };
   out.free_before = !active(entitlement(U1));
   await stripeHandleEvent(ev("checkout.session.completed", "cs_m"), deps);
   var e1 = entitlement(U1);
   out.monthly_grants = active(e1) && e1.expires_at === new Date((end1 * 1000) + DAY).toISOString() &&
-    payments["stripe:in_1"].plan === "mensal" && payments["stripe:in_1"].amount === 39.9 &&
+    payments["stripe:in_1"].plan === "mensal" && payments["stripe:in_1"].amount === 29.9 && payments["stripe:in_1"].days === 30 &&
     billing[U1].status === "active" && billing[U1].customer === "cus_1" && billing[U1].subscription === "sub_1";
   await stripeHandleEvent(ev("invoice.paid", "in_1"), deps);
   await stripeHandleEvent(ev("invoice.paid", "in_1"), deps);
   out.monthly_idempotent = Object.keys(payments).length === 1 && entitlement(U1).expires_at === e1.expires_at;
   // o mês seguinte: fatura nova estende até o novo fim de período
   var end2 = end1 + 30 * 86400;
-  api["/v1/invoices/in_2"] = { id: "in_2", status: "paid", subscription: "sub_1", amount_paid: 3990, lines: { data: [{ period: { start: end1, end: end2 } }] } };
+  api["/v1/invoices/in_2"] = { id: "in_2", status: "paid", subscription: "sub_1", amount_paid: 2990, lines: { data: [{ period: { start: end1, end: end2 } }] } };
   await stripeHandleEvent(ev("invoice.paid", "in_2"), deps);
   out.monthly_renews = entitlement(U1).expires_at === new Date(end2 * 1000 + DAY).toISOString();
   // fatura ainda não paga não dá acesso
@@ -385,28 +389,36 @@ STRIPE_TEST = r"""
   out.refund_total_revokes_month = payments["stripe:in_2"].status === "refunded" &&
     entitlement(U1).expires_at === e1.expires_at && canceled.join() === "sub_1";
 
-  // ---- Vitalício: pagamento único; cancela o Mensal que a conta tinha ----
-  billing[U2] = { subscription: "sub_9", status: "active" };
-  api["/v1/checkout/sessions/cs_v"] = { id: "cs_v", mode: "payment", payment_status: "paid", client_reference_id: U2, customer: "cus_2", payment_intent: "pi_v", amount_total: 15990, metadata: { user_id: U2, plan_id: "vitalicio" } };
+  // ---- planos de dias (pagamento único): liberam e somam ao fim do acesso ----
+  api["/v1/checkout/sessions/cs_v"] = { id: "cs_v", mode: "payment", payment_status: "paid", client_reference_id: U2, customer: "cus_2", payment_intent: "pi_v", amount_total: 5990, metadata: { user_id: U2, plan_id: "90dias" } };
   await stripeHandleEvent(ev("checkout.session.completed", "cs_v"), deps);
   await stripeHandleEvent(ev("checkout.session.completed", "cs_v"), deps);
   var e2 = entitlement(U2);
-  out.lifetime_grants = active(e2) && e2.expires_at === null && payments["stripe:pi_v"].plan === "vitalicio" &&
-    payments["stripe:pi_v"].amount === 159.9 && Object.keys(payments).filter(function(k){ return payments[k].user === U2; }).length === 1;
-  out.lifetime_cancels_monthly = canceled.indexOf("sub_9") !== -1;
+  out.days_plan_grants = active(e2) && e2.expires_at === new Date(NOW + 90 * DAY).toISOString() && payments["stripe:pi_v"].plan === "90dias" &&
+    payments["stripe:pi_v"].days === 90 && payments["stripe:pi_v"].amount === 59.9 &&
+    Object.keys(payments).filter(function(k){ return payments[k].user === U2; }).length === 1;
+  // comprar outro plano com o acesso valendo soma os dias (90 + 60)
+  api["/v1/checkout/sessions/cs_v2"] = { id: "cs_v2", mode: "payment", payment_status: "paid", client_reference_id: U2, payment_intent: "pi_v2", amount_total: 4990, metadata: { user_id: U2, plan_id: "60dias" } };
+  await stripeHandleEvent(ev("checkout.session.completed", "cs_v2"), deps);
+  out.days_plans_add_up = entitlement(U2).expires_at === new Date(NOW + 150 * DAY).toISOString();
+  // a conta do Mensal (30 dias pagos) compra o Anual: 30 + 365, sem perder o mês
+  api["/v1/checkout/sessions/cs_a"] = { id: "cs_a", mode: "payment", payment_status: "paid", client_reference_id: U1, payment_intent: "pi_a", amount_total: 12990, metadata: { user_id: U1, plan_id: "anual" } };
+  await stripeHandleEvent(ev("checkout.session.completed", "cs_a"), deps);
+  out.days_plan_adds_to_monthly = entitlement(U1).expires_at === new Date(NOW + 395 * DAY).toISOString() && canceled.join() === "sub_1";
   // aviso atrasado da assinatura velha não apaga a situação da conta
   api["/v1/subscriptions/sub_old"] = { id: "sub_old", status: "canceled", metadata: { user_id: U2 } };
   billing[U2] = { subscription: "sub_new", status: "active" };
   await stripeHandleEvent(ev("customer.subscription.deleted", "sub_old"), deps);
   out.old_subscription_does_not_overwrite = billing[U2].subscription === "sub_new" && billing[U2].status === "active";
+  // reembolso de uma compra tira só os dias dela (sobram os 60 da outra)
   api["/v1/charges/ch_v"] = { id: "ch_v", refunded: true, invoice: null, payment_intent: "pi_v" };
   await stripeHandleEvent(ev("charge.refunded", "ch_v"), deps);
-  out.lifetime_refund_revokes = !active(entitlement(U2));
+  out.days_refund_removes_only_that_purchase = entitlement(U2).expires_at === new Date(NOW + 60 * DAY).toISOString();
 
   // ---- o que não pode liberar nada ----
   var before = Object.keys(payments).length;
-  api["/v1/checkout/sessions/cs_unpaid"] = { id: "cs_unpaid", mode: "payment", payment_status: "unpaid", client_reference_id: U2, payment_intent: "pi_u", metadata: { plan_id: "vitalicio" } };
-  api["/v1/checkout/sessions/cs_nouser"] = { id: "cs_nouser", mode: "payment", payment_status: "paid", client_reference_id: "nao-e-uuid", payment_intent: "pi_n", metadata: { plan_id: "vitalicio" } };
+  api["/v1/checkout/sessions/cs_unpaid"] = { id: "cs_unpaid", mode: "payment", payment_status: "unpaid", client_reference_id: U2, payment_intent: "pi_u", metadata: { plan_id: "60dias" } };
+  api["/v1/checkout/sessions/cs_nouser"] = { id: "cs_nouser", mode: "payment", payment_status: "paid", client_reference_id: "nao-e-uuid", payment_intent: "pi_n", metadata: { plan_id: "60dias" } };
   api["/v1/checkout/sessions/cs_wrongplan"] = { id: "cs_wrongplan", mode: "payment", payment_status: "paid", client_reference_id: U2, payment_intent: "pi_w", metadata: { plan_id: "mensal" } };
   await stripeHandleEvent(ev("checkout.session.completed", "cs_unpaid"), deps);
   await stripeHandleEvent(ev("checkout.session.completed", "cs_nouser"), deps);
@@ -477,10 +489,11 @@ def run():
                       and s.get("monthly_renews") and s.get("monthly_unpaid_ignored"), s)
                 check("stripe_flow_monthly_cancel_and_failure_keep_paid_month",
                       s.get("monthly_cancel_keeps_access") and s.get("monthly_failed_marks_past_due"), s)
-                check("stripe_flow_lifetime_grants_access", s.get("lifetime_grants") and s.get("lifetime_cancels_monthly"), s)
-                check("stripe_flow_idempotent", s.get("monthly_idempotent") and s.get("lifetime_grants"), s)
+                check("stripe_flow_days_plans_grant_access", s.get("days_plan_grants"), s)
+                check("stripe_flow_purchases_add_days", s.get("days_plans_add_up") and s.get("days_plan_adds_to_monthly"), s)
+                check("stripe_flow_idempotent", s.get("monthly_idempotent") and s.get("days_plan_grants"), s)
                 check("stripe_flow_refund_revokes", s.get("refund_partial_keeps") and s.get("refund_total_revokes_month")
-                      and s.get("lifetime_refund_revokes"), s)
+                      and s.get("days_refund_removes_only_that_purchase"), s)
                 check("stripe_flow_rejects_bad_input", s.get("bad_checkouts_grant_nothing")
                       and s.get("old_subscription_does_not_overwrite"), s)
                 check("stripe_test_no_js_errors", not b.errors, b.errors)
@@ -687,10 +700,12 @@ def run():
                       lp["h1"] == 1 and lp["sections"] == ["diagnostico", "gratis", "planos", "duvidas"] and lp["qcards"] == 10
                       and lp["enter"] == "index.html" and lp["legal"] and lp["faq"] >= 6 and lp["resultHidden"]
                       and lp["docW"] <= lp["vw"] and not lp["over"], lp)
-                check("landing_plans_side_by_side_standard_recommended",
-                      [p["id"] for p in lp["plans"]] == ["sprint", "standard", "premium"]
-                      and [p["price"] for p in lp["plans"]] == ["R$ 39,90", "R$ 89,90", "R$ 149,90"]
-                      and [p["badge"] for p in lp["plans"]] == ["", "Recomendado", ""]
+                check("landing_four_plans_side_by_side_90_highlighted",
+                      [p["id"] for p in lp["plans"]] == ["mensal", "60dias", "90dias", "anual"]
+                      and [p["price"] for p in lp["plans"]] == ["R$ 29,90", "R$ 49,90", "R$ 59,90", "R$ 129,90"]
+                      and [p["note"] for p in lp["plans"]] == ["por mês, renovação automática", "equivale a R$ 24,95/mês",
+                                                               "equivale a R$ 19,97/mês", "equivale a R$ 10,83/mês"]
+                      and [p["badge"] for p in lp["plans"]] == ["", "", "Mais escolhido", ""]
                       and len({p["top"] for p in lp["plans"]}) == 1 and lp["refund"], lp)
                 check("landing_makes_no_unprovable_claims", not lp["claims"], lp["claims"])
                 # 7 certas de 10: B2, cronograma Regular, e o estado fica na
@@ -703,9 +718,9 @@ def run():
                 b.reload(settle=1)
                 again = b.eval('(function(){ var r = document.getElementById("lpResult"); return { hidden: r.hidden, text: r.textContent }; })()')
                 check("landing_diagnostic_survives_reload", not again["hidden"] and "B2" in again["text"], again)
-                pick = b.eval('(function(){ var a = document.querySelector(\'.lp-plan[data-plan="sprint"] a\'); a.addEventListener("click", function(e){ e.preventDefault(); });'
+                pick = b.eval('(function(){ var a = document.querySelector(\'.lp-plan[data-plan="60dias"] a\'); a.addEventListener("click", function(e){ e.preventDefault(); });'
                               ' a.click(); return { href: a.getAttribute("href"), saved: localStorage.getItem("toefl_plan_pick_v1") }; })()')
-                check("landing_plan_click_carries_choice", pick == {"href": "index.html#criar-conta", "saved": "sprint"}, pick)
+                check("landing_plan_click_carries_choice", pick == {"href": "index.html#criar-conta", "saved": "60dias"}, pick)
                 for theme in ("light", "dark"):
                     b.eval('document.documentElement.setAttribute("data-theme", %s)' % json.dumps(theme))
                     b.pump(0.3)
@@ -716,16 +731,16 @@ def run():
                 b.reload(settle=1)
                 lp = b.eval(LANDING_STATE)
                 tops = {p["id"]: p["top"] for p in lp["plans"]}
-                check("landing_mobile_375_fits_and_stacks_standard_first",
-                      lp["docW"] <= 375 and not lp["over"] and len(tops) == 3
-                      and tops["standard"] < tops["sprint"] < tops["premium"] and lp["smallTargets"] == [], lp)
+                check("landing_mobile_375_fits_and_stacks_highlight_first",
+                      lp["docW"] <= 375 and not lp["over"] and len(tops) == 4
+                      and tops["90dias"] < tops["mensal"] < tops["60dias"] < tops["anual"] and lp["smallTargets"] == [], lp)
                 check("landing_no_js_errors", not b.errors, b.errors)
-                # o plano clicado la (Sprint) chega marcado na tela de compra do app
+                # o plano clicado la (60 dias) chega marcado na tela de compra do app
                 b.goto(page, settle=1)
                 carried = b.eval('(function(){ var p = document.querySelector("#planPick input:checked");'
                                  ' return { plan: p && p.value, btn: document.getElementById("payBtn").textContent }; })()')
                 check("landing_choice_preselects_plan_in_app",
-                      carried == {"plan": "sprint", "btn": "Comprar Sprint: R$ 39,90"}, carried)
+                      carried == {"plan": "60dias", "btn": "Comprar o plano 60 dias: R$ 49,90"}, carried)
 
             # service worker: navegador novo, sem cache nenhum
             with Browser() as b:

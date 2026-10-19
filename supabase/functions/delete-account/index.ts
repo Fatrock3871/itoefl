@@ -7,14 +7,18 @@
 //
 // Apagar a linha de auth.users leva junto, por `on delete cascade` (ver
 // supabase/schema.sql): profiles, user_state, entitlements, payments,
-// essay_submissions e admins. Ou seja, somem também as redações e o registro
-// de pagamento, e o acesso comprado é perdido.
+// billing, essay_submissions e admins. Ou seja, somem também as redações e o
+// registro de pagamento, e o acesso comprado é perdido. Antes disso, a
+// assinatura Mensal, se houver, é cancelada no Stripe.
 //
+// Segredo: STRIPE_SECRET_KEY (só usado se a conta tiver assinatura).
 // (SUPABASE_URL e as chaves pública e secreta já existem automaticamente no
 // ambiente de toda edge function do projeto; ver ../_shared/keys.ts.)
 
 import { createClient } from "https://esm.sh/@supabase/supabase-js@2";
 import { PUBLISHABLE_KEY, SECRET_KEY } from "../_shared/keys.ts";
+import { STRIPE_LIVE_STATUSES } from "../_shared/stripe.js";
+import { stripeCancelSubscription } from "../_shared/stripe_api.ts";
 
 const SUPABASE_URL = Deno.env.get("SUPABASE_URL")!;
 
@@ -63,6 +67,29 @@ Deno.serve(async (req) => {
     const admin = createClient(SUPABASE_URL, SECRET_KEY, {
       auth: { autoRefreshToken: false, persistSession: false },
     });
+
+    // assinatura Mensal ainda cobrando: cancela no Stripe ANTES de apagar,
+    // senão o cartão seguiria sendo cobrado sem conta para usar. Se o
+    // cancelamento falhar, a conta não é apagada. Banco sem a tabela billing
+    // (migração do Stripe não rodada) não tem assinatura para cancelar.
+    const { data: bill, error: billErr } = await admin
+      .from("billing")
+      .select("subscription_id, subscription_status")
+      .eq("user_id", user.id)
+      .maybeSingle();
+    if (billErr && !/does not exist|schema cache/i.test(billErr.message)) {
+      console.error("delete-account: falha ao ler billing", user.id, billErr.message);
+      return json({ error: "Não foi possível excluir a conta agora. Tente de novo em alguns minutos." }, 500);
+    }
+    if (bill?.subscription_id && STRIPE_LIVE_STATUSES.includes(bill.subscription_status)) {
+      try {
+        await stripeCancelSubscription(bill.subscription_id);
+      } catch (e) {
+        console.error("delete-account: falha ao cancelar a assinatura", user.id, String(e));
+        return json({ error: "Não foi possível cancelar a sua assinatura agora, então a conta não foi excluída. Tente de novo em alguns minutos." }, 502);
+      }
+    }
+
     const { error: delErr } = await admin.auth.admin.deleteUser(user.id);
     if (delErr) {
       console.error("Falha ao excluir usuário", user.id, delErr.message);

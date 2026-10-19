@@ -22,5 +22,18 @@ def load_site_url():
     return raw
 
 
+_EMAIL_RE = re.compile(r"[^@\s<>\"']+@[^@\s<>\"']+\.[a-z]{2,}", re.I)
+
+
+def load_beta():
+    """(beta ligado?, e-mail das sugestoes). Ambiente BETA e FEEDBACK_EMAIL
+    vencem o app/site.json; e-mail fora do formato vira vazio."""
+    cfg = json.loads(_FILE.read_text(encoding="utf-8-sig"))
+    env = os.environ.get("BETA", "").strip().lower()
+    beta = env in ("1", "true", "sim") if env else bool(cfg.get("BETA"))
+    email = os.environ.get("FEEDBACK_EMAIL", "").strip() or (cfg.get("FEEDBACK_EMAIL") or "").strip()
+    return beta, email if _EMAIL_RE.fullmatch(email) else ""
+
+
 def is_local(url):
     return bool(re.match(r"https?://(localhost|127\.0\.0\.1|0\.0\.0\.0|\[::1\])(:|$)", url))

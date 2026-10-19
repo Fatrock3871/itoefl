@@ -1,6 +1,8 @@
 # Política de Privacidade
 
-**Última atualização:** 14 de outubro de 2026
+**Última atualização:** 18 de outubro de 2026
+
+<!-- REVISAR (advogado): mudanças de 2026-10-18 nas seções 2, 3, 7 e 8, com o Stripe como processador do cartão e da assinatura, o Mercado Pago só no Pix e o Cloudflare como hospedagem. -->
 
 Esta política explica quais dados o iTOEFL coleta, para que os usa, com quem os
 compartilha e como você exerce seus direitos pela Lei Geral de Proteção de
@@ -24,7 +26,7 @@ Para qualquer assunto de privacidade, escreva para
 | Nome para o certificado | Se você gerar o certificado | Imprimir seu nome no certificado de conclusão |
 | Foto de perfil enviada por você | Se você trocar o avatar | Mostrar sua foto na plataforma |
 | Progresso de estudo | Enquanto você usa a plataforma | Guardar e sincronizar entre aparelhos: itens concluídos, respostas dos exercícios, flashcards, registro de erros, sequência de dias, metas |
-| Situação do pagamento | Depois de uma compra | Liberar o acesso. Guardamos o plano comprado, o valor pago, a data, até quando o acesso vale e o identificador do pagamento no Mercado Pago |
+| Situação do pagamento | Depois de uma compra | Liberar o acesso. Guardamos o plano comprado, o valor pago, a data, até quando o acesso vale, o identificador do pagamento no Stripe ou no Mercado Pago e, na assinatura Mensal, o identificador de cliente e de assinatura no Stripe e a situação dela |
 | Cupom informado | Na tela de compra | Calcular o desconto |
 | Redações enviadas para correção | Quando você envia uma redação | Corrigir e devolver a nota e os comentários. Guardamos o texto, o tema, a contagem de palavras, o tempo usado, as datas de envio e de devolução, a devolutiva e a data do seu consentimento |
 
@@ -34,8 +36,8 @@ Para qualquer assunto de privacidade, escreva para
   apresentação funciona sem conta. As respostas ficam guardadas só no seu
   navegador e não são enviadas a nós. Se você criar uma conta depois, no
   mesmo navegador, elas passam a fazer parte do seu progresso de estudo.
-- **Dados de cartão.** O pagamento acontece no ambiente do Mercado Pago. O
-  número do cartão nunca passa pelos nossos sistemas.
+- **Dados de cartão.** O pagamento acontece no ambiente do Stripe (cartão) ou
+  do Mercado Pago (Pix). O número do cartão nunca passa pelos nossos sistemas.
 - **Suas gravações de voz.** O áudio gravado no gravador de Speaking fica só
   no seu aparelho e é descartado quando você fecha ou recarrega a página. Ele
   não é enviado para os nossos servidores.
@@ -99,7 +101,9 @@ Só com os fornecedores necessários para a plataforma funcionar:
 | Fornecedor | Papel | O que recebe |
 |---|---|---|
 | Supabase | Banco de dados e autenticação, com os dados hospedados em São Paulo | Conta, progresso e situação do pagamento |
-| Mercado Pago | Processamento do pagamento | Seu e-mail, o valor e os dados de pagamento que você informar a ele |
+| Stripe | Processamento do pagamento no cartão e da assinatura Mensal | Seu e-mail, o valor, o identificador da sua conta e os dados de cartão que você informar a ele |
+| Mercado Pago | Processamento do pagamento no Pix | Seu e-mail, o valor e os dados de pagamento que você informar a ele |
+| Cloudflare | Hospedagem do site | Seu endereço IP e dados técnicos do acesso, ao abrir as páginas |
 | Google | Login com Google, se você escolher essa opção, e fontes tipográficas | Dados do login. Ao carregar as fontes, seu endereço IP |
 | jsDelivr | Entrega de uma biblioteca de código usada pelo site | Seu endereço IP, ao carregar a página |
 | [PREENCHER: nome da ferramenta de IA usada na correção] | Apoio à correção das redações, se você enviar alguma | O enunciado e o texto da redação, sem nome, e-mail ou outro dado da conta |
@@ -113,8 +117,8 @@ competente.
 
 Enquanto a sua conta existir. Quando você exclui a conta, apagamos dos nossos
 sistemas o cadastro, o progresso, as redações enviadas com as devolutivas e
-o registro do pagamento. O Mercado Pago
-mantém os próprios registros da transação, pelos prazos que a lei exige dele.
+o registro do pagamento. O Stripe e o Mercado Pago
+mantêm os próprios registros da transação, pelos prazos que a lei exige deles.
 Cópias de segurança do banco de dados podem levar algum tempo para serem
 sobrescritas.
 

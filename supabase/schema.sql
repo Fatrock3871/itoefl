@@ -469,7 +469,7 @@ grant execute on function public.create_essay_submission(uuid, text, text, text,
 --   delete from essay_submissions where id = '<uuid do envio>';
 
 -- ============ PAGAMENTO PELO STRIPE (2026-10-18) ============
--- Planos Mensal (assinatura) e Vitalício. O bloco abaixo é o mesmo de
+-- Planos Mensal (assinatura), 60 dias, 90 dias e Anual. O bloco abaixo é o mesmo de
 -- supabase/migrations/20261018_stripe.sql, que é o arquivo a rodar num
 -- projeto que já existe. Regras no cabeçalho da migração.
 
@@ -478,9 +478,9 @@ grant execute on function public.create_essay_submission(uuid, text, text, text,
 alter table payments add column if not exists period_end timestamptz;
 
 comment on column payments.period_end is
-  'Fim do periodo pago por esta fatura (assinatura Mensal). null nos pagamentos unicos.';
+  'Fim do periodo pago por esta fatura (assinatura Mensal). null nos pagamentos unicos. Os dias da fatura estao em days.';
 comment on column entitlements.plan is
-  'Plano do ultimo pagamento que contou: mensal, vitalicio; ou sprint, standard, premium, legado (antigos).';
+  'Plano do ultimo pagamento que contou: mensal, 60dias, 90dias, anual; ou sprint, standard, premium, legado (antigos).';
 
 -- ============ recalcular o acesso de uma conta a partir do extrato ============
 
@@ -497,7 +497,7 @@ declare
   v_plan text := null;
   v_first timestamptz := null;
   v_last_id text := null;
-  v_end timestamptz;
+  v_sub_last boolean := false;
 begin
   -- uma conta por vez: dois avisos simultâneos para o mesmo aluno não podem
   -- ler o extrato pela metade
@@ -511,19 +511,16 @@ begin
     v_any := true;
     v_first := coalesce(v_first, r.approved_at);
     v_last_id := r.mp_payment_id;
-    if r.days is null and r.period_end is null then
+    if r.days is null then
+      -- compra antiga sem prazo (Premium, legado)
       v_lifetime := true;
       v_plan := r.plan;
     elsif not v_lifetime then
-      if r.period_end is not null then
-        -- assinatura: vale até o fim do período pago, com 1 dia de tolerância
-        v_end := r.period_end + interval '1 day';
-        v_expires := greatest(coalesce(v_expires, v_end), v_end);
-      else
-        -- plano antigo com dias: soma ao fim do prazo que ainda valia
-        v_expires := greatest(coalesce(v_expires, r.approved_at), r.approved_at)
-                     + make_interval(days => r.days);
-      end if;
+      -- plano de dias ou mês da assinatura: soma ao fim do prazo que ainda
+      -- valia; se já tinha vencido (ou é o primeiro), conta da data do pagamento
+      v_expires := greatest(coalesce(v_expires, r.approved_at), r.approved_at)
+                   + make_interval(days => r.days);
+      v_sub_last := r.period_end is not null;
       v_plan := r.plan;
     end if;
   end loop;
@@ -537,7 +534,9 @@ begin
 
   insert into entitlements (user_id, paid, paid_at, mp_payment_id, plan, expires_at, updated_at)
   values (p_user, true, v_first, v_last_id, v_plan,
-          case when v_lifetime then null else v_expires end, now())
+          case when v_lifetime then null
+               when v_sub_last then v_expires + interval '1 day'  -- tolerância da renovação
+               else v_expires end, now())
   on conflict (user_id) do update set
     paid = true,
     paid_at = excluded.paid_at,
@@ -607,7 +606,7 @@ grant execute on function public.apply_payment(text, uuid, text, int, numeric, t
 -- Uma linha por conta que já abriu um pagamento no Stripe. Não decide
 -- acesso (quem decide é payments -> entitlements): serve para o "Gerenciar
 -- assinatura" de Minha conta, para recusar uma segunda assinatura e para
--- cancelar a assinatura quando a conta é excluída ou compra o Vitalício.
+-- cancelar a assinatura quando a conta é excluída ou pede reembolso.
 
 create table if not exists billing (
   user_id uuid primary key references auth.users(id) on delete cascade,
@@ -686,5 +685,5 @@ alter table stripe_events enable row level security;
 -- Últimos eventos do Stripe processados:
 --   select * from stripe_events order by processed_at desc limit 20;
 -- Dar um mês na mão (cortesia), sem passar pelo Stripe:
---   select public.apply_payment('manual-2026-10-18-fulano', '<uuid>', 'mensal', null, 0,
---                               'approved', now(), now() + interval '30 days');
+--   select public.apply_payment('manual-2026-10-18-fulano', '<uuid>', '60dias', 60, 0,
+--                               'approved', now(), null);

@@ -2387,8 +2387,8 @@
           ". O seu progresso continua salvo: escolha um plano para voltar a estudar de onde parou." };
     }
     if(st.active && !st.lifetime){
-      return { kicker: "Seu plano", title: "Renovar ou mudar de plano",
-        text: "Seu acesso vai até " + fmtDate(st.until) + ". Sprint e Standard somam os dias ao fim desse prazo. O Premium troca o prazo por acesso vitalício." };
+      return { kicker: "Seu plano", title: "Comprar mais dias",
+        text: "Seu acesso vai até " + fmtDate(st.until) + ". Um plano novo soma os dias ao fim desse prazo: nenhum dia se perde." };
     }
     return { kicker: "Acesso pago", title: "Libere seu acesso",
       text: "Sua conta está conectada. O conteúdo completo fica disponível depois da compra." };
@@ -2396,15 +2396,51 @@
   function selectedPlan(){
     return document.querySelector("#planPick input:checked");
   }
+  // meio de pagamento: Pix (Mercado Pago) só nos planos de pagamento único;
+  // sem o bloco #payMethod no HTML (Pix desligado no plans.json), é cartão
+  function selectedMethod(){
+    var box = document.getElementById("payMethod");
+    var m = box && !box.hidden ? box.querySelector("input:checked") : null;
+    return m ? m.value : "card";
+  }
+  // Situação da assinatura Mensal (linha de `billing`) em texto, para Minha
+  // conta. null quando não há assinatura para mostrar.
+  function subscriptionText(row){
+    if(!row || !row.subscription_id || !row.subscription_status) return null;
+    var end = row.current_period_end ? new Date(row.current_period_end) : null;
+    var when = end && !isNaN(end.getTime()) ? fmtDate(end) : "";
+    var s = row.subscription_status;
+    if(s === "active" || s === "trialing"){
+      if(row.cancel_at_period_end){
+        return { text: "Assinatura Mensal cancelada: não haverá nova cobrança" + (when ? ", e o mês pago vai até " + when : "") + ".", cls: "is-ending" };
+      }
+      return { text: "Assinatura Mensal ativa" + (when ? ": renova em " + when : "") + ". Cancele quando quiser.", cls: "is-paid" };
+    }
+    if(s === "past_due" || s === "unpaid" || s === "incomplete"){
+      return { text: "A última cobrança da assinatura Mensal não passou. Atualize o cartão em Gerenciar ou cancelar a assinatura.", cls: "is-unpaid" };
+    }
+    if(s === "canceled" || s === "incomplete_expired"){
+      return { text: "Assinatura Mensal encerrada. Nada mais é cobrado.", cls: "" };
+    }
+    return null;
+  }
   (function(){
     var pick = document.getElementById("planPick");
     var btn = document.getElementById("payBtn");
     if(!pick || !btn) return;
+    var methodBox = document.getElementById("payMethod");
     function sync(){
       var p = selectedPlan();
-      if(p) btn.textContent = "Comprar " + p.dataset.name + ": " + p.dataset.price;
+      if(!p) return;
+      var oneTime = !p.dataset.interval;
+      if(methodBox) methodBox.hidden = !oneTime;
+      btn.textContent = oneTime && selectedMethod() === "pix"
+        ? "Pagar o plano " + p.dataset.name + " com Pix: " + p.dataset.price
+        : p.dataset.cta;
     }
     pick.addEventListener("change", sync);
+    if(methodBox) methodBox.addEventListener("change", sync);
+    sync();
     // plano clicado na tela de apresentação (landing.js): já vem marcado
     var wanted = safeGet("toefl_plan_pick_v1");
     var input = wanted ? pick.querySelector('input[value="' + wanted.replace(/[^a-z0-9_-]/gi, "") + '"]') : null;
@@ -2456,7 +2492,8 @@
     document.dispatchEvent(new Event("toefl-access"));
     if(window.__toeflRefreshLevelPractice) window.__toeflRefreshLevelPractice(true);
   }
-  window.__toeflAccess = { state: accessState, text: accessText, gateCopy: gateCopy, setLevel: setAccessLevel, openPlans: openPlans }; // gancho do smoke test
+  window.__toeflAccess = { state: accessState, text: accessText, gateCopy: gateCopy, setLevel: setAccessLevel, openPlans: openPlans,
+    subText: subscriptionText }; // gancho do smoke test
 
   // ---------- Contas + sincronização (Supabase) ----------
   (function(){
@@ -2669,23 +2706,26 @@
           // amostra aberta e o resto trancado. A tela de compra só cobre o
           // site na volta do checkout, para dizer como ficou o pagamento.
           setAccessLevel(st.active ? "full" : "free", st);
+          // volta do pagamento: ?pay= (Stripe: success ou cancel) ou ?mp=
+          // (Mercado Pago, Pix: success, pending ou failure)
           var params = new URLSearchParams(location.search);
-          payGateEl.hidden = st.active || !params.get("mp");
+          var ret = params.get("pay") || params.get("mp");
+          payGateEl.hidden = st.active || !ret;
           if(payGateEl.hidden) return;
           setGateCopy(st, true);
-          // volta de um checkout recém-aprovado: o webhook do Mercado Pago é
-          // assíncrono e pode demorar alguns segundos a mais que o redirect
-          // -- tenta de novo umas poucas vezes antes de deixar o aluno preso
-          // olhando "não pago" logo depois de pagar de verdade
-          if(params.get("mp") === "success" && (attempt || 0) < 6){
+          // volta de um checkout recém-aprovado: o webhook é assíncrono e
+          // pode demorar alguns segundos a mais que o redirect -- tenta de
+          // novo umas poucas vezes antes de deixar o aluno preso olhando
+          // "não pago" logo depois de pagar de verdade
+          if(ret === "success" && (attempt || 0) < 6){
             payGateMsg("Pagamento recebido, confirmando acesso…", "ok");
             setTimeout(function(){ checkEntitlement(session, (attempt || 0) + 1); }, 2500);
-          } else if(params.get("mp") === "success"){
+          } else if(ret === "success"){
             payGateMsg("O pagamento foi recebido, mas a liberação está demorando. Atualize a página em alguns minutos.", "err");
-          } else if(params.get("mp") === "pending"){
+          } else if(ret === "pending"){
             payGateMsg("Pagamento pendente de confirmação.", "err");
-          } else if(params.get("mp") === "failure"){
-            payGateMsg("Pagamento não concluído. Tente novamente.", "err");
+          } else if(ret === "failure" || ret === "cancel"){
+            payGateMsg("Pagamento não concluído. Nada foi cobrado. Tente novamente quando quiser.", "err");
           }
         });
     }
@@ -2702,8 +2742,8 @@
           var token = sessionRes && sessionRes.data && sessionRes.data.session && sessionRes.data.session.access_token;
           var coupon = couponInput ? couponInput.value.trim() : "";
           var chosen = selectedPlan();
-          // vai só o id do plano: o preço é decidido no servidor
-          var opts = { body: { origin: location.origin, coupon: coupon, plan: chosen ? chosen.value : "" } };
+          // vai só o id do plano e o meio: o preço é decidido no servidor
+          var opts = { body: { origin: location.origin, coupon: coupon, plan: chosen ? chosen.value : "", method: selectedMethod() } };
           if(token) opts.headers = { Authorization: "Bearer " + token };
           return client.functions.invoke("create-checkout", opts);
         })
@@ -3024,11 +3064,57 @@
       var accountMsgEl = document.getElementById("accountMsg");
       var accessEl = document.getElementById("accountAccess");
       var renewBtn = document.getElementById("accountRenew");
+      var subEl = document.getElementById("accountSub");
+      var manageBtn = document.getElementById("accountManage");
 
       function setAccess(text, cls){
         if(!accessEl) return;
         accessEl.textContent = text;
         accessEl.className = "account-access" + (cls ? " " + cls : "");
+      }
+      // assinatura Mensal: a linha de `billing` (só leitura, RLS da própria
+      // conta). Banco sem a tabela (migração do Stripe não rodada) só não
+      // mostra nada. O botão abre o Customer Portal do Stripe (stripe-portal).
+      function loadSubscription(user){
+        if(subEl) subEl.hidden = true;
+        if(manageBtn) manageBtn.hidden = true;
+        if(!subEl || !manageBtn) return;
+        client.from("billing").select("stripe_customer_id, subscription_id, subscription_status, cancel_at_period_end, current_period_end")
+          .eq("user_id", user.id).maybeSingle()
+          .then(function(res){
+            if(res.error || !res.data) return;
+            var line = subscriptionText(res.data);
+            if(line){
+              subEl.textContent = line.text;
+              subEl.className = "account-access" + (line.cls ? " " + line.cls : "");
+              subEl.hidden = false;
+            }
+            manageBtn.hidden = !res.data.stripe_customer_id || !res.data.subscription_id;
+          }).catch(function(){});
+      }
+      if(manageBtn){
+        manageBtn.addEventListener("click", function(){
+          manageBtn.disabled = true;
+          accountMsg("Abrindo o gerenciamento da assinatura…", "ok");
+          client.auth.getSession().then(function(sessionRes){
+            var token = sessionRes && sessionRes.data && sessionRes.data.session && sessionRes.data.session.access_token;
+            var opts = { body: { origin: location.origin } };
+            if(token) opts.headers = { Authorization: "Bearer " + token };
+            return client.functions.invoke("stripe-portal", opts);
+          }).then(function(res){
+            manageBtn.disabled = false;
+            if(res.error || !res.data || !res.data.url){
+              var ctx = res.error && res.error.context;
+              (ctx && typeof ctx.json === "function" ? ctx.json().catch(function(){ return null; }) : Promise.resolve(null))
+                .then(function(body){ accountMsg((body && body.error) || "Não deu para abrir agora. Tente de novo em instantes.", "err"); });
+              return;
+            }
+            location.href = res.data.url;
+          }).catch(function(){
+            manageBtn.disabled = false;
+            accountMsg("Erro de conexão. Tente de novo.", "err");
+          });
+        });
       }
       // mostra o que a tabela `entitlements` diz desta conta. É só leitura:
       // quem libera ou bloqueia o conteúdo continua sendo checkEntitlement().
@@ -3044,12 +3130,13 @@
             var st = accessState(res.data, Date.now());
             var line = accessText(st, res.data && res.data.paid_at);
             setAccess(line.text, line.cls);
-            // renovar ou trocar de plano para quem tem prazo correndo; ver os
-            // planos para a conta grátis (nunca comprou ou venceu). Vitalício
-            // não tem o que comprar.
+            loadSubscription(user);
+            // comprar mais dias para quem tem prazo correndo (somam ao fim);
+            // ver os planos para a conta grátis (nunca comprou ou venceu).
+            // Compra antiga sem prazo não tem o que comprar.
             if(renewBtn){
               renewBtn.hidden = st.lifetime;
-              renewBtn.textContent = st.active ? "Renovar ou mudar de plano" : "Ver os planos";
+              renewBtn.textContent = st.active ? "Comprar mais dias" : "Ver os planos";
               renewBtn.onclick = function(){
                 close();
                 if(!st.active){ openPlans(""); return; }

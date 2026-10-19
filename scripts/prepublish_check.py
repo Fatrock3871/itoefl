@@ -27,7 +27,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT / "app"))
-from site_config import is_local, load_site_url  # noqa: E402
+from site_config import is_local, load_beta, load_site_url  # noqa: E402
 
 MP_TEST = re.compile(r"\bTEST-[0-9a-f]{4,}[0-9a-f-]*", re.I)
 
@@ -59,6 +59,10 @@ def problems(run_smoke=True):
             out.append(f"SITE_URL sem https ({url})")
     except SystemExit as e:
         out.append(str(e))
+
+    beta, feedback = load_beta()
+    if beta and not feedback:
+        out.append("BETA ligado sem FEEDBACK_EMAIL em app/site.json: a faixa de teste sai sem o link de sugestão")
 
     cfg_path = ROOT / "app" / "supabase_config.json"
     if cfg_path.exists():
