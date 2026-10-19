@@ -66,14 +66,14 @@ artifact/termos.html      Páginas legais (geradas pelo build.py; não editar)
 artifact/privacidade.html
 artifact/apresentacao.html  Tela de apresentação, pública, antes do login (gerada pelo build.py; não editar)
 artifact/manifest.json, sw.js, icons/   PWA (gerados pelo build.py; não editar)
-app/plans.json            Os três planos de preço como o site mostra (tela de compra e apresentação)
 app/free_sample.json      Amostra da conta grátis (Partes e exercícios abertos sem plano). Ver docs/versao-gratuita.md, seção 11
 supabase/schema.sql       Backend: profiles, user_state (jsonb), entitlements, payments, coupons, com RLS
 supabase/migrations/      Mudanças de banco para aplicar num projeto que já existe (SQL Editor, com autorização)
-supabase/functions/       Edge functions: create-checkout, mp-webhook, delete-account
-supabase/functions/_shared/plans.ts   Preço cobrado e prazo de cada plano (servidor). Tem de bater com app/plans.json
+supabase/functions/       Edge functions: create-checkout, stripe-webhook, stripe-portal, mp-webhook (Pix), delete-account
+supabase/functions/_shared/plans.json Único lugar com preço, dias e destaque dos planos. Servidor e site leem daqui
+supabase/functions/_shared/stripe.js  Lógica do Stripe (assinatura do webhook, eventos). JS puro, testado no smoke test
 supabase/functions/_shared/keys.ts    Chaves novas (publishable e secret) para as functions. Nenhuma function usa anon nem service_role
-supabase/config.toml      Config das functions (mp-webhook roda sem verificação de JWT)
+supabase/config.toml      Config das functions (os webhooks rodam sem verificação de JWT)
 supabase/schema-bank.sql  Banco de questões: tabelas items e attempts com RLS. ESCRITO, NUNCA EXECUTADO
 bank/                     Banco de questões em JSON (formato, schema, validador, 228 itens migrados). Ver bank/README.md
 supabase/schema-content-optional.sql   Tabelas de conteúdo — só se um dia servir do banco
@@ -87,7 +87,8 @@ scripts/build_teste.py    Gera _teste/: o site sem login nem pagamento, completo
 scripts/prepublish_check.py  Reprova a publicação ([PREENCHER], SITE_URL local, chave secreta, TEST-, smoke). O smoke test mostra só como aviso
 app/site.json             SITE_URL: o endereço público, num lugar só (a variável de ambiente vence). Lido por app/site_config.py
 artifact/_headers, robots.txt, sitemap.xml   Hospedagem (Cloudflare Pages), gerados pelo build.py; não editar
-docs/publicar.md          Passo a passo do dono para publicar (Cloudflare Pages, domínio, Supabase, Google, gateway, SMTP)
+docs/publicar.md          Passo a passo do dono para publicar (Cloudflare Pages, domínio, Supabase, Google, Stripe, Pix, SMTP)
+app/site.json             Também BETA (faixa "Versão de teste") e FEEDBACK_EMAIL (link "Enviar sugestão")
 docs/                     Análises e notas de decisão
 _archive/                 Versão pré-2026: index.html monolítico + os 10 .md antigos
 _snapshots/               Cópias com timestamp antes de mudanças estruturais
@@ -247,19 +248,20 @@ removido; os originais pré-2026 dos 10 módulos seguem em
 ## Tela de apresentação
 
 `artifact/apresentacao.html` é montada no fim do `app/build.py`: chamada, o
-que tem dentro, diagnóstico grátis sem conta, os três planos e perguntas
+que tem dentro, diagnóstico grátis sem conta, os quatro planos e perguntas
 frequentes. "Entrar" e "Criar conta" levam ao `index.html`. Quando o site for
 publicado, o endereço público deve abrir nela.
 
 - **Só entra o que dá para provar.** Os números saem do próprio build
-  (`LP_STATS`), o selo do Standard é "Recomendado" e nunca "mais escolhido",
-  e não há promessa de nota nem contagem de alunos. O smoke test tem uma
-  lista de frases proibidas (`landing_makes_no_unprovable_claims`).
+  (`LP_STATS`) e não há promessa de nota nem contagem de alunos. O smoke
+  test tem uma lista de frases proibidas (`landing_makes_no_unprovable_claims`).
+  Exceção decidida pelo dono em 2026-10-18: o selo "Mais escolhido" no plano
+  de 90 dias (vem de `highlight_label` no `plans.json`).
 - **Diagnóstico:** é o mesmo HTML das 10 questões do M0, tirado do fragmento
   do pipeline, e grava na mesma chave do app (`toefl_quiz_mod0-diag_v1`).
   Quem cria a conta no mesmo navegador encontra o M0 já respondido. A banda
   e o cronograma saem de `app/level.js`, igual ao app.
-- **Planos:** vêm de `app/plans.json`. O plano clicado fica em
+- **Planos:** vêm de `supabase/functions/_shared/plans.json`. O plano clicado fica em
   `toefl_plan_pick_v1` e a tela de compra do app abre com ele marcado.
 - A página não entra no pré-cache do service worker: não precisa abrir
   offline.
@@ -322,20 +324,25 @@ chaves sincronizadas são empacotadas num blob e salvas em `user_state.state`.
 `safeSet` marca `toefl_dirty` e agenda um push debounced. Setup:
 `docs/supabase-setup.md`.
 
-**Conta e acesso pago:** três planos, Sprint (30 dias), Standard (90 dias) e
-Premium (vitalício). O navegador manda só o id do plano; o preço e o prazo
-saem de `supabase/functions/_shared/plans.ts`. `payments` é o extrato (uma
-linha por pagamento) e `entitlements` é sempre recalculada dele: `paid` mais
-`expires_at` (null = sem prazo). Só o `service_role` escreve nas duas (via
-`mp-webhook`, que chama a função de banco `apply_payment`). A regra de
-renovação, troca de plano e reembolso está no cabeçalho de
-`supabase/migrations/20261008_planos.sql`. No site, `accessState()` em
-`app.js` decide se o acesso está em dia. "Minha conta" mostra o plano e a
-validade, oferece renovar, e permite excluir a conta, o que chama a function
-`delete-account` e apaga em cascata `profiles`, `user_state`, `entitlements`
-e `payments`. O bloqueio de quem não pagou ou venceu é só uma camada visual:
-o conteúdo vai embutido no HTML. **Os planos estão escritos e não
-publicados:** `docs/deploy-planos.md` é o passo a passo para o dono.
+**Conta e acesso pago (2026-10-18):** quatro planos. Mensal (assinatura no
+cartão, Stripe `mode=subscription`, cancelamento pelo Customer Portal) e 60
+dias, 90 dias e Anual (pagamento único, Stripe `mode=payment`, ou Pix pelo
+Mercado Pago enquanto `pix_mercado_pago` for true). Preço, dias e destaque
+moram **só** em `supabase/functions/_shared/plans.json`: o `plans.ts` das
+functions e o `app/build.py` leem dali; o equivalente por mês é calculado no
+build. O navegador manda só o id do plano e o meio. `payments` é o extrato e
+`entitlements` é sempre recalculada dele: toda compra, inclusive cada mês da
+assinatura, soma dias ao fim do acesso; reembolso tira os dias daquela
+cobrança. `billing` guarda cliente e assinatura do Stripe; `stripe_events`
+dá a idempotência. Só o `service_role` escreve (via `stripe-webhook`, que
+confere o `Stripe-Signature`, e `mp-webhook`, pelas funções `apply_payment`
+e `apply_billing`). Regras no cabeçalho de
+`supabase/migrations/20261018_stripe.sql`. A lógica dos eventos fica em
+`supabase/functions/_shared/stripe.js`, testada no smoke test. "Minha conta"
+mostra plano, validade e situação da assinatura, abre o portal
+(`stripe-portal`) e exclui a conta (`delete-account` cancela a assinatura
+antes). O bloqueio é só visual: o conteúdo vai embutido no HTML. **Nada disso
+foi publicado:** `docs/publicar.md` é o passo a passo do dono.
 
 Os botões Exportar/Importar na sidebar empacotam todas as chaves `toefl_*` em
 JSON. Ao mudar o formato do estado, escrever migração — não descartar progresso.

@@ -1,5 +1,12 @@
 # Configurar o acesso pago (Mercado Pago)
 
+> **Desde 2026-10-18 o Mercado Pago cuida só do Pix** dos planos de
+> pagamento único (60 dias, 90 dias e Anual). O cartão, em todos os planos,
+> é pelo Stripe. Preços em `supabase/functions/_shared/plans.json` (não mais
+> em `app/plans.json`). Passo a passo atual em `docs/publicar.md`; o texto
+> abaixo é a configuração antiga, útil para as credenciais e o ambiente de
+> teste do Mercado Pago.
+
 Desde 2026-09-17, o app tem uma segunda tela depois do login: quem não pagou
 vê a tela de compra (`#payGate`) em vez do conteúdo. **Sua conta
 (`pietrooliveiramarquespp@gmail.com`) sempre passa direto, sem checar

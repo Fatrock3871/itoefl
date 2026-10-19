@@ -1,5 +1,12 @@
 # Publicar os três planos: passo a passo para o dono
 
+> **Substituído em 2026-10-18.** Os planos Sprint, Standard e Premium e o
+> cartão pelo Mercado Pago saíram. Os planos agora são Mensal, 60 dias,
+> 90 dias e Anual, com cartão pelo Stripe e Pix pelo Mercado Pago. O passo a
+> passo que vale está em `docs/publicar.md`. Este arquivo fica só como
+> histórico; a migração `20261008_planos.sql` continua necessária e roda
+> antes da `20261018_stripe.sql`.
+
 **Escrito em:** 2026-10-08
 **Estado:** o código está pronto e commitado. **Nada foi executado fora do
 repositório:** nenhum SQL rodou, nenhuma function foi publicada, nenhuma

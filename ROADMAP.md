@@ -78,9 +78,23 @@ Nada das etapas seguintes anda sem esta. Ordem sugerida de cima para baixo.
 
 **0.3 Pagamento**
 
-- [ ] (D) Ficar no Mercado Pago ou trocar de gateway. Aberto desde
-      2026-09-24. Decidir junto com o modelo de cobrança da correção por IA
-      (Etapa 3), porque assinatura muda o requisito.
+- [x] (D) Ficar no Mercado Pago ou trocar de gateway. Decidido em
+      2026-10-18: Stripe no cartão, Mercado Pago só no Pix dos planos de
+      pagamento único (ver "Decisões travadas").
+- [x] (C) Stripe e os quatro planos, **em código, sem publicar**
+      (2026-10-18). `create-checkout` cria a Checkout Session
+      (`mode=subscription` no Mensal, `mode=payment` nos outros; Pix pelo
+      Mercado Pago), `stripe-webhook` confere a assinatura e é idempotente,
+      `stripe-portal` abre o Customer Portal, `delete-account` cancela a
+      assinatura antes de apagar. Migração `20261018_stripe.sql` escrita e
+      **não executada**. Telas, termos e privacidade atualizados (com
+      REVISAR). Smoke test cobre o fluxo simulado dos 4 planos. As functions
+      nunca rodaram (sem Deno na máquina): a primeira execução é o deploy.
+- [ ] (U) Seguir a parte do Stripe em `docs/publicar.md`: conta em modo de
+      teste, chaves nos Secrets do Supabase, endpoint do webhook com os 6
+      eventos, Customer Portal, pedir o Pix; depois, com autorização, rodar
+      a migração e publicar as functions; compra de teste com o cartão 4242
+      em cada plano; só então as chaves reais.
 - [x] (D) Preço de lançamento. Decidido em 2026-10-07: três planos, ver
       "Decisões travadas". O preço único de R$ 9,90 vitalício sai.
 - [x] (C) Implementar os três planos, **em código, sem publicar**
@@ -93,30 +107,31 @@ Nada das etapas seguintes anda sem esta. Ordem sugerida de cima para baixo.
       reembolso de 7 dias. Regra: renovar antes de vencer soma os dias,
       Premium troca o prazo por vitalício, reembolso recalcula. As functions
       nunca rodaram (a máquina não tem Deno): a primeira execução é o deploy.
-- [ ] (U) Publicar os planos, seguindo `docs/deploy-planos.md` na ordem:
-      rodar `supabase/migrations/20261008_planos.sql`, publicar
-      `create-checkout` e `mp-webhook`, conferir a versão publicada e fazer a
-      compra de teste de cada plano (inclui vencimento, aviso repetido e
-      reembolso).
-- [ ] (U) Passar por advogado os dois trechos de `legal/termos.md` marcados
-      `REVISAR (advogado)`: seção 6 (planos, validade, renovação) e seção 7
-      (reembolso de 7 dias, sem reembolso proporcional depois). O build
-      avisa enquanto a marca existir.
-- [ ] (U) Concluir a compra de teste em aba anônima, sem extensão nenhuma,
-      e ver o acesso ser liberado de ponta a ponta. Dados do cartão de teste
-      na Sessão 2026-09-24 de `docs/historico-sessoes.md`.
+- [ ] (U) Publicar os planos: rodar `supabase/migrations/20261008_planos.sql`
+      e depois `20261018_stripe.sql`, publicar `create-checkout`,
+      `stripe-webhook`, `stripe-portal`, `mp-webhook` e `delete-account` e
+      conferir a versão publicada. Passo a passo em `docs/publicar.md`
+      (o `docs/deploy-planos.md` antigo ficou só como histórico).
+- [ ] (U) Passar por advogado os trechos de `legal/termos.md` e
+      `legal/privacidade.md` marcados `REVISAR (advogado)`, em especial a
+      seção 7 (assinatura com renovação automática, soma dos dias, GB
+      Corporation na fatura), a seção 8 (reembolso de 7 dias na primeira
+      cobrança) e o selo "Mais escolhido". O build avisa enquanto a marca
+      existir.
 - [ ] (U) Resolver a validação da conta real do Mercado Pago (a criação de
-      checkout com ela foi bloqueada pelo antifraude) e trocar as
-      credenciais de teste pelas de produção.
+      checkout com ela foi bloqueada pelo antifraude). Agora só é preciso
+      para o Pix; o cartão vai pelo Stripe.
+- [ ] (U) Preencher `FEEDBACK_EMAIL` em `app/site.json` (e-mail que recebe
+      as sugestões da versão de teste). Sem ele a faixa sai sem o link.
 - [x] (C) Mostrar "Pago" ou "Sem acesso" em Minha conta (a tabela
       `entitlements` já existe).
 
 **0.4 Publicar**
 
-- [ ] (D) Onde hospedar e com qual endereço. Recomendação: Cloudflare
-      Pages (grátis, aceita repositório privado, HTTPS e domínio próprio).
-      Um domínio próprio vale a pena desde já: o endereço entra nas
-      configurações de Supabase, Google, gateway e, depois, nas lojas, e
+- [x] (D) Onde hospedar. Decidido em 2026-10-18: Cloudflare Pages, no
+      teste e no lançamento pago.
+- [ ] (D) Qual endereço (domínio). Vale a pena desde já: o endereço entra
+      nas configurações de Supabase, Google, Stripe e, depois, nas lojas, e
       trocar depois dá retrabalho em todos.
 - [x] (C) Site pronto para publicar, sem publicar (2026-10-17). Passo a
       passo do dono em `docs/publicar.md`. O endereço mora só em
@@ -526,12 +541,15 @@ Não foram pedidos, apareceram ao consolidar a lista.
 | Fonte da verdade | `consolidated/*.md` (texto) + `app/*.json` e `drills_data.py` (widgets) | 2026-09-02 |
 | Backend Supabase | Sim, mas **depois** do conteúdo dos 10 módulos | 2026-09-02 |
 | Ferramental | Python 3.13 + Git 2.55 + pacote `markdown` | 2026-09-02 |
-| Precificação | Três planos. **Sprint**, 30 dias, R$ 39,90: prova já marcada, só simulado e plano de emergência (Pareto). **Standard**, 90 dias, R$ 89,90: o mais vendido, tempo para os 4 pilares com calma. **Premium (Passaporte)**, vitalício, R$ 149,90: quem vai tentar a prova várias vezes ou planeja com mais de um ano de antecedência. Substitui o R$ 9,90 vitalício | 2026-10-07 |
+| Precificação | Quatro planos, sem vitalício. **Mensal** R$ 29,90 (assinatura no cartão, renova todo mês, cancela em 1 clique no Customer Portal do Stripe). **60 dias** R$ 49,90, **90 dias** R$ 59,90 (selo "Mais escolhido") e **Anual** R$ 129,90 (365 dias), os três em pagamento único, sem renovação. A tela mostra o equivalente por mês calculado do preço. Comprar com acesso valendo soma os dias. Preço, dias e destaque só em `supabase/functions/_shared/plans.json`. Substitui Sprint/Standard/Premium (2026-10-07) e Mensal/Vitalício (proposta da mesma manhã) | 2026-10-18 |
+| Hospedagem | **Cloudflare Pages**, no teste e no lançamento pago (grátis e permite uso comercial). Vercel descartada | 2026-10-18 |
+| Gateway | **Stripe** (conta brasileira, BRL, cartão) em todos os planos: `mode=subscription` no Mensal, `mode=payment` nos outros. **Pix pelo Mercado Pago** só nos planos de pagamento único, até o Stripe liberar o Pix (no Brasil é por convite); chave `pix_mercado_pago` no `plans.json` desliga. Nome na fatura: GB Corporation | 2026-10-18 |
+| Lançamento de teste | Faixa "Versão de teste" com "Enviar sugestão" (mailto), ligada pela chave `BETA` de `app/site.json` | 2026-10-18 |
 | Nomes dos cronogramas do M0 | **Intensivo** (30 dias), **Regular** (60 dias), **Completo** (90 dias). "Sprint", "Standard" e "Premium" ficam só para os planos de preço | 2026-10-08 |
 | Diagnóstico grátis | As 10 questões do M0 abertas na tela de apresentação, **sem conta**, com o resultado de banda | 2026-10-08 |
 | Versão gratuita | **Modelo B**, freemium por conteúdo, sem prazo: M0 inteiro, Parte 1 de cada módulo, 1 Complete the Words, 1 drill de Listening, 1 Listen and Repeat, 3 Build a Sentence, nenhum simulado, sem correção de redação. Lista em `app/free_sample.json` | 2026-10-17 |
-| Reembolso | **7 dias** em todos os planos, pelo direito de arrependimento do CDC (art. 49) | 2026-10-08 |
-| Selo na tabela de planos | **"Recomendado"** no Standard. Nunca "mais escolhido" ou "mais vendido": sem dado de venda seria afirmação falsa | 2026-10-08 |
+| Reembolso | **7 dias** na primeira cobrança de cada compra, pelo direito de arrependimento do CDC (art. 49). Renovações do Mensal não são reembolsadas, mas o cancelamento é livre | 2026-10-18 |
+| Selo na tabela de planos | **"Mais escolhido"** no plano de 90 dias, por decisão do dono (substitui o "Recomendado" de 2026-10-08). Ponto para o advogado: a frase precisa ser verdadeira quando houver vendas (CDC, publicidade) | 2026-10-18 |
 | Travessão | A regra "sem travessão como pausa" vale **só para texto em português**. Em texto em inglês (passagens, transcrições, respostas-modelo, exemplos) o travessão é pontuação correta e permitido | 2026-10-13 |
 | Tipos de pergunta extintos | **Remover** Sentence Simplification, Insert a Sentence, Prose Summary e arrastar para a tabela, e **encurtar as passagens** para o padrão da prova de 2026. Entra na rodada 2 da revisão de conteúdo | 2026-10-13 |
 | Drills legados | **Apagar** `MOD1_DRILLS` e `MOD2_DRILLS` de `app/drills_data.py`: não apareciam no site | 2026-10-13 |

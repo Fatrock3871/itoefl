@@ -7,6 +7,30 @@ falta" do `ROADMAP.md`. Sessão nova entra no topo.
 
 ---
 
+## Sessão 2026-10-18 (tarde): lançamento de teste, Stripe e quatro planos
+
+Pedido do dono, corrigido no meio da sessão: a Vercel saiu (o commit dela
+foi desfeito, a hospedagem fica no Cloudflare Pages) e os planos passaram a
+ser Mensal R$ 29,90 (assinatura), 60 dias R$ 49,90, 90 dias R$ 59,90 ("Mais
+escolhido") e Anual R$ 129,90.
+
+- Preço, dias e destaque num arquivo só, no servidor
+  (`supabase/functions/_shared/plans.json`); o build do site lê o mesmo
+  arquivo e calcula o equivalente por mês (24,95, 19,97 e 10,83).
+- Stripe: `create-checkout` (subscription no Mensal, payment nos outros, Pix
+  pelo Mercado Pago nos de pagamento único), `stripe-webhook` (assinatura
+  conferida, objetos relidos na API, idempotente), `stripe-portal`
+  (Customer Portal) e `delete-account` cancelando a assinatura antes.
+- Migração `20261018_stripe.sql`, escrita e não executada: toda compra,
+  inclusive cada mês da assinatura, soma dias; tabelas `billing` e
+  `stripe_events`.
+- Telas de compra, apresentação e Minha conta; termos e privacidade com
+  REVISAR (advogado); faixa "Versão de teste" pela chave `BETA`.
+- Smoke test: fluxo simulado dos 4 planos no Chrome (assinaturas HMAC
+  calculadas em Python), arquivo único de preços, faixa beta ligada e
+  desligada, nenhuma chave secreta no Git.
+- Nada publicado, nenhum SQL rodado, nada criado no Stripe.
+
 ## Sessão 2026-10-18: passagens e Listening no tamanho da prova
 
 Última parte da decisão B da revisão de conteúdo.
