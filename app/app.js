@@ -2337,6 +2337,9 @@
   // test roda sem login. Quem grava o prazo é o servidor (mp-webhook); aqui
   // só se lê e se explica.
   var DAY_MS = 86400000;
+  // volta do checkout: quantas vezes e de quanto em quanto tempo a conta é
+  // consultada até o webhook liberar o acesso (20 x 3 s: cerca de 60 s)
+  var PAY_RETRY_MS = 3000, PAY_RETRY_TRIES = 20;
   // row: a linha de `entitlements` da conta (ou null). Banco que ainda não
   // tem a coluna expires_at devolve só `paid`: vale como acesso sem prazo,
   // que é o que toda compra anterior aos planos era.
@@ -2493,7 +2496,7 @@
     if(window.__toeflRefreshLevelPractice) window.__toeflRefreshLevelPractice(true);
   }
   window.__toeflAccess = { state: accessState, text: accessText, gateCopy: gateCopy, setLevel: setAccessLevel, openPlans: openPlans,
-    subText: subscriptionText }; // gancho do smoke test
+    subText: subscriptionText, payRetryMs: PAY_RETRY_MS * PAY_RETRY_TRIES }; // gancho do smoke test
 
   // ---------- Contas + sincronização (Supabase) ----------
   (function(){
@@ -2714,14 +2717,14 @@
           if(payGateEl.hidden) return;
           setGateCopy(st, true);
           // volta de um checkout recém-aprovado: o webhook é assíncrono e
-          // pode demorar alguns segundos a mais que o redirect -- tenta de
-          // novo umas poucas vezes antes de deixar o aluno preso olhando
-          // "não pago" logo depois de pagar de verdade
-          if(ret === "success" && (attempt || 0) < 6){
-            payGateMsg("Pagamento recebido, confirmando acesso…", "ok");
-            setTimeout(function(){ checkEntitlement(session, (attempt || 0) + 1); }, 2500);
+          // pode chegar bem depois do redirect (o do Stripe às vezes leva
+          // dezenas de segundos). Tenta de novo durante cerca de 1 minuto
+          // (PAY_RETRY_TRIES x PAY_RETRY_MS) antes de dizer que demorou.
+          if(ret === "success" && (attempt || 0) < PAY_RETRY_TRIES){
+            payGateMsg("Pagamento recebido. Estou liberando o seu acesso, isso pode levar até um minuto.", "ok");
+            setTimeout(function(){ checkEntitlement(session, (attempt || 0) + 1); }, PAY_RETRY_MS);
           } else if(ret === "success"){
-            payGateMsg("O pagamento foi recebido, mas a liberação está demorando. Atualize a página em alguns minutos.", "err");
+            payGateMsg("Recebemos o pagamento, mas a liberação está demorando mais que o normal. Atualize a página daqui a alguns minutos.", "err");
           } else if(ret === "pending"){
             payGateMsg("Pagamento pendente de confirmação.", "err");
           } else if(ret === "failure" || ret === "cancel"){

@@ -139,7 +139,7 @@ def from_quiz_mod0():
     data = json.loads((APP / "quiz_mod0.json").read_text(encoding="utf-8"))
     # mesma montagem do build_mod0() em build_pipeline.py, para o rebalance
     # receber exatamente o que o build recebe
-    as_built = [{"num": q["num"], "prompt": f"Questão {q['num']} — {q['topic']}<br>{q['prompt']}",
+    as_built = [{"num": q["num"], "prompt": f"Questão {q['num']}: {q['topic']}<br>{q['prompt']}",
                  "options": q["options"], "correct": q["correct"],
                  "explanation": f"<strong>Por que certa:</strong> {q['why_right']}<br>"
                                 f"<strong>Por que as outras erram:</strong> {q['why_wrong']}"}

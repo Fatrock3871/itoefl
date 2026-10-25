@@ -13,6 +13,7 @@ estrutural sem precisar testar tudo na mao a cada mudanca.
 Sai com codigo 0 se tudo passar, 1 se alguma checagem falhar.
 """
 
+import html.parser
 import json
 import os
 import re
@@ -182,6 +183,9 @@ check("access_expired_blocks_and_says_so", function(){
 check("access_bad_date_stays_locked", function(){
   return !ACC.state({ paid: true, expires_at: "nao-e-data" }, NOW).active;
 });
+// item 10 de 2026-10-25: o webhook do Stripe pode demorar; o aviso de
+// "está demorando" só vem depois de cerca de 1 minuto de novas tentativas
+check("pay_return_waits_about_a_minute", function(){ return ACC.payRetryMs >= 55000 && ACC.payRetryMs <= 75000; });
 check("account_renew_button_starts_hidden", function(){
   var b = document.getElementById("accountRenew");
   return !!b && b.hidden === true;
@@ -1409,6 +1413,74 @@ def english_dot_checks():
     return {"english_has_no_middle_dot": not bad, "english_has_no_middle_dot__error": ", ".join(bad[:10])}
 
 
+class _BlockText(html.parser.HTMLParser):
+    """Texto de cada bloco (p, li, td, título, botão...) de uma página gerada,
+    sem script, style e svg, marcando o que está dentro de lang="en"."""
+    BLOCK = {"p", "li", "td", "th", "h1", "h2", "h3", "h4", "h5", "h6", "summary", "button", "label",
+             "blockquote", "dd", "dt", "figcaption", "legend", "option", "span", "a", "div"}
+    VOID = {"br", "img", "input", "hr", "meta", "link", "source", "track", "wbr", "col", "area", "base", "embed", "param"}
+
+    def __init__(self):
+        super().__init__(convert_charrefs=True)
+        self.stack, self.blocks, self.skip = [], [], 0
+
+    def handle_starttag(self, tag, attrs):
+        if tag in self.VOID:
+            return
+        self.stack.append((tag, dict(attrs).get("lang"), []))
+        if tag in ("script", "style", "svg"):
+            self.skip += 1
+
+    def handle_endtag(self, tag):
+        while self.stack:
+            t, lang, buf = self.stack.pop()
+            if t in ("script", "style", "svg"):
+                self.skip -= 1
+            text = "".join(buf)
+            english = lang == "en" or any(l == "en" for _, l, _ in self.stack)
+            if t in self.BLOCK and text.strip():
+                self.blocks.append((text.strip(), english))
+                text = ""  # bloco já contado: o pai não o repete
+            if self.stack:
+                self.stack[-1][2].append(text)
+            if t == tag:
+                break
+
+    def handle_data(self, data):
+        if not self.skip and self.stack:
+            self.stack[-1][2].append(data)
+
+
+# português perto do travessão: letra acentuada típica (o "é" fica de fora por
+# causa de résumé e café no inglês) ou palavra funcional que o inglês não usa
+PT_NEAR_DASH = re.compile(r"[ãõçáíóúâêôàÃÕÇÁÍÓÚÂÊÔÀ]|\b(?:não|você|que|para|com|uma|dos|das|pelo|pela|são|ou|os|em|de|da)\b", re.I)
+
+
+def portuguese_dash_checks():
+    """Item 8 de 2026-10-25: travessão em texto em português gerado pelo
+    código (pipeline, build, renderizadores) escapava da checagem dos .md. Aqui
+    se lê o HTML pronto. Fica de fora o inglês: bloco com lang="en" e trecho
+    entre aspas (fala, transcrição, frase citada), onde o travessão é pontuação
+    correta (decisão de 2026-10-13)."""
+    bad = []
+    for name in ("index.html", "apresentacao.html", "termos.html", "privacidade.html"):
+        page = ARTIFACT.parent / name
+        if not page.exists():
+            bad.append(f"{name} não existe")
+            continue
+        parser = _BlockText()
+        parser.feed(page.read_text(encoding="utf-8"))
+        for text, english in parser.blocks:
+            if english or "—" not in text:
+                continue
+            bare = re.sub(r'"[^"]*"|“[^”]*”', " ", text)
+            for m in re.finditer("—", bare):
+                if PT_NEAR_DASH.search(bare[max(0, m.start() - 40): m.end() + 40]):
+                    bad.append(f"{name}: {text[:90]}")
+                    break
+    return {"html_portuguese_has_no_dash": not bad, "html_portuguese_has_no_dash__error": " | ".join(bad[:6])}
+
+
 def passage_checks():
     """Decisão B da revisão (2026-10-18): passagem de Read an Academic Passage
     com até 230 palavras e 5 perguntas, e Listening com as perguntas por áudio
@@ -1791,6 +1863,7 @@ def main():
     results.update(bank_checks())
     results.update(content_review_checks())
     results.update(english_dot_checks())
+    results.update(portuguese_dash_checks())
     results.update(passage_checks())
 
     # quarta passada: Chrome de verdade por http://127.0.0.1 (recarregar,

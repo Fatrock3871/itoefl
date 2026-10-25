@@ -247,11 +247,18 @@ nav.modnav{display:flex; flex-direction:column; gap:1px;}
 
 /* tela de login obrigatória antes do conteúdo (só existe se o Supabase
    estiver configurado — sem ele o app segue 100% offline como sempre) */
+/* a tela rola quando o cartão não cabe (celular deitado, notebook baixo):
+   antes era overflow:hidden com align-items:center, e o fim do formulário
+   (Google, Termos) ficava cortado e inalcançável. Com align-items no topo e
+   margin:auto no cartão, ele continua centralizado quando cabe e encosta no
+   alto quando não cabe, sem cortar o começo. */
 .auth-gate{
   position:fixed; inset:0; z-index:300; background:var(--bg);
-  display:flex; align-items:center; justify-content:center; padding:20px; overflow:hidden;
+  display:flex; align-items:flex-start; justify-content:center; padding:20px;
+  overflow-x:hidden; overflow-y:auto; -webkit-overflow-scrolling:touch; overscroll-behavior:contain;
 }
-.auth-gate-bg{position:absolute; inset:0; z-index:0; pointer-events:none; overflow:hidden;}
+.auth-gate > .auth-gate-card{margin:auto;}
+.auth-gate-bg{position:fixed; inset:0; z-index:0; pointer-events:none; overflow:hidden;}
 .bgicon{position:absolute; color:var(--hair); opacity:0.85;}
 .bgicon.bgicon-1{width:120px; height:120px; top:8%; left:6%; transform:rotate(-8deg);}
 .bgicon.bgicon-2{width:150px; height:150px; top:12%; right:-3%; transform:rotate(18deg);}
@@ -387,8 +394,6 @@ nav.modnav{display:flex; flex-direction:column; gap:1px;}
 /* escolha de plano na tela de compra: três linhas de rádio. Com elas o
    cartão fica mais alto que a tela do celular, então esta tela rola (a de
    login não precisa). */
-#payGate{overflow-y:auto; align-items:flex-start;}
-#payGate .auth-gate-card{margin:auto;}
 #payGate .auth-field{margin-bottom:14px; text-align:left;}
 .plan-pick{border:none; padding:0; margin:0 0 18px; min-width:0; display:flex; flex-direction:column; gap:8px; text-align:left;}
 .plan-pick legend{padding:0; margin-bottom:8px;}

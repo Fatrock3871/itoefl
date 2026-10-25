@@ -219,7 +219,7 @@ def build_mod0():
 
     quiz_json = json.load(open("quiz_mod0.json", encoding="utf-8"))
     items = [{
-        "num": q["num"], "prompt": f"Questão {q['num']} — {q['topic']}<br>{q['prompt']}",
+        "num": q["num"], "prompt": f"Questão {q['num']}: {q['topic']}<br>{q['prompt']}",
         "options": q["options"], "correct": q["correct"],
         "explanation": f"<strong>Por que certa:</strong> {q['why_right']}<br><strong>Por que as outras erram:</strong> {q['why_wrong']}",
     } for q in quiz_json]
@@ -227,7 +227,7 @@ def build_mod0():
     items = rebalance_items(items, "mod0-diag")
     widget = render_quiz_drill(
         "mod0-diag", None,
-        "Teste de Nivelamento Express — 10 questões de gramática, vocabulário e conectivos acadêmicos. Responda, confirme cada resposta para ver o gabarito, e refaça quando quiser.",
+        "Teste de Nivelamento Express: 10 questões de gramática, vocabulário e conectivos acadêmicos. Responda, confirme cada resposta para ver o gabarito, e refaça quando quiser.",
         None, items,
     )
 
@@ -336,7 +336,7 @@ def build_mod1():
         render_quiz_drill(d["id"], d["title"], d["objective"], d.get("passage_html"), rebalance_items(d["items"], d["id"]), level=d.get("level"))
         for d in MOD1_ACTION_DRILLS_B
     )
-    html_b = to_html(before_b) + "<h3>Grupo B: Read in Daily Life — exercícios interativos</h3>" + widgets_b
+    html_b = to_html(before_b) + "<h3>Grupo B: Read in Daily Life, exercícios interativos</h3>" + widgets_b
 
     # PARTE 5, Grupo C: troca as 3 passagens acadêmicas pelos widgets
     before_c, rest = slice_lines(rest, "### GRUPO C: READ AN ACADEMIC PASSAGE", "## PARTE 6: GABARITO COMENTADO")
@@ -344,7 +344,7 @@ def build_mod1():
         render_quiz_drill(d["id"], d["title"], d["objective"], d.get("passage_html"), rebalance_items(d["items"], d["id"]), level=d.get("level"))
         for d in MOD1_ACTION_DRILLS_C
     )
-    html_c = to_html(before_c) + "<h3>Grupo C: Read an Academic Passage — exercícios interativos</h3>" + widgets_c
+    html_c = to_html(before_c) + "<h3>Grupo C: Read an Academic Passage, exercícios interativos</h3>" + widgets_c
 
     # PARTE 6: remove as 3 tabelas de gabarito redundantes (a explicação já
     # aparece inline em cada widget acima); mantém o Score Consolidado
@@ -375,7 +375,7 @@ def build_mod2():
             render_quiz_drill(d["id"], d["title"], d["objective"], d.get("passage_html"), rebalance_items(d["items"], d["id"]), listen=True, level=d.get("level"))
             for d in drills
         )
-        return to_html(before) + f"<h3>{label} — exercícios interativos</h3>" + widgets, rest
+        return to_html(before) + f"<h3>{label}, exercícios interativos</h3>" + widgets, rest
 
     rest = raw
     html_a, rest = swap_group(rest, "### GRUPO A: LISTEN AND CHOOSE A RESPONSE", "### GRUPO B: LISTEN TO A CONVERSATION", "Grupo A: Listen and Choose a Response", MOD2_ACTION_DRILLS_A)

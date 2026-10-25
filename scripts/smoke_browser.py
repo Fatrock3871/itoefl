@@ -274,6 +274,28 @@ LANDING_STATE = r"""
 })()
 """
 
+# Tela de login aberta numa tela baixa: o cartão é mais alto que a janela, a
+# tela rola até o fim e o título fica visível no começo (nada cortado em cima).
+GATE_SCROLL = r"""
+(function(){
+  var g = document.getElementById("authGate");
+  g.hidden = false;
+  g.scrollTop = 0;
+  function inView(el){ var r = el.getBoundingClientRect(); return r.height > 0 && r.top >= 0 && r.bottom <= innerHeight + 1; }
+  var card = g.querySelector(".auth-gate-card");
+  var o = { tall: card.getBoundingClientRect().height > innerHeight, topIn: inView(document.getElementById("authGateTitle")) };
+  var google = document.getElementById("authSignInGoogle");
+  var terms = g.querySelector('.legal-links a[href="termos.html"]');
+  google.scrollIntoView({ block: "nearest" });
+  o.googleIn = inView(google);
+  terms.scrollIntoView({ block: "nearest" });
+  o.termsIn = inView(terms);
+  o.scrolled = g.scrollTop > 0;
+  g.hidden = true;
+  return o;
+})()
+"""
+
 LANDING_ANSWER = r"""
 (function(){
   Array.prototype.forEach.call(document.querySelectorAll("#diagnostico .qcard"), function(c, k){
@@ -689,6 +711,17 @@ def run():
                     low = b.eval(CONTRAST)
                     check("contrast_aa_" + theme, not low, low)
                 check("real_no_js_errors_after_use", not b.errors, b.errors)
+
+            # tela de login em tela baixa: rola até o fim e o botão do Google e
+            # o link dos Termos ficam alcançáveis (item 20 de 2026-10-25: o
+            # cartão era centralizado com overflow:hidden e o fim sumia)
+            with Browser() as b:
+                for w, h, mobile in ((390, 600, True), (1280, 500, False)):
+                    b.viewport(w, h, mobile=mobile)
+                    b.goto(page, settle=0.8)
+                    gate = b.eval(GATE_SCROLL)
+                    check(f"login_gate_scrolls_{w}x{h}",
+                          gate["tall"] and gate["scrolled"] and gate["googleIn"] and gate["termsIn"] and gate["topIn"], gate)
 
             # tela de apresentacao: pagina publica, antes do login
             with Browser() as b:
