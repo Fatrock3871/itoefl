@@ -2914,7 +2914,7 @@
       });
     }
     if(paySignOutBtn){
-      paySignOutBtn.addEventListener("click", function(){ client.auth.signOut().then(goOffline); });
+      paySignOutBtn.addEventListener("click", function(){ client.auth.signOut().then(signedOut); });
     }
 
     function msg(text, kind){
@@ -3013,6 +3013,12 @@
       // redações (app/redacao.js): histórico, selo de devolutiva nova e,
       // para conta corretora, o painel
       if(window.__toeflEssayOnline) window.__toeflEssayOnline(session);
+    }
+    // "Sair": a pessoa volta para a tela de apresentação, a mesma que vê
+    // quem abre o site sem login (item 23 de 2026-10-25)
+    function signedOut(){
+      goOffline();
+      if(location.protocol !== "file:") location.replace("apresentacao.html");
     }
     function goOffline(){
       uid = null;
@@ -3187,7 +3193,7 @@
       });
     }
     signOutBtn.addEventListener("click", function(){
-      client.auth.signOut().then(goOffline);
+      client.auth.signOut().then(signedOut);
     });
 
     // ---- "Minha conta": situação do acesso, troca de e-mail/senha e

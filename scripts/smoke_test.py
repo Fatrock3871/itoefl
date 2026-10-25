@@ -1681,6 +1681,7 @@ def content_review_checks():
 # cadastradas). Serve para testar a infraestrutura sem deixar exemplo no ar:
 # artifact/ e as fontes reais nao sao tocados.
 FIXTURE_VIDEOS = {
+    "apresentacao": {"title": "Vídeo de exemplo da apresentação", "duration": "2 min", "provider": "youtube", "src": "zyxwvutsrqp"},
     "videos": [
         {"id": "exemplo-abertura", "module": "mod3", "part": None, "title": "Aula de exemplo: abertura",
          "duration": "8 min", "provider": "youtube", "src": "abcdefghijk",
@@ -1855,7 +1856,16 @@ def beta_checks(work):
     subprocess.run([sys.executable, "build.py"], cwd=work / "app", check=True, capture_output=True, env=env)
     on = (work / "artifact" / "index.html").read_text(encoding="utf-8")
     beta_on = json.loads((APP_DIR / "site.json").read_text(encoding="utf-8-sig")).get("BETA") is True
+    # vídeo explicativo da apresentação: com a chave "apresentacao" cadastrada
+    # (build de exemplo) a capa aparece no topo, sem player antes do clique;
+    # no site de verdade (sem vídeo) o espaço não existe
+    lp_off = off[1]
+    lp_real = real[1]
+    hero = lp_off.split('class="lp-hero"', 1)[1].split("</section>", 1)[0] if 'class="lp-hero"' in lp_off else ""
+    landing_video = ('id="lpVideo"' in hero and 'data-src="zyxwvutsrqp"' in hero and "<iframe" not in lp_off
+                     and "Vídeo de exemplo da apresentação" in hero and 'id="lpVideo"' not in lp_real)
     return {
+        "landing_video_slot_from_videos_json": landing_video,
         "beta_bar_shown_when_on": beta_on and all('id="betaBar"' in h and "Versão de teste." in h for h in real),
         "beta_bar_hidden_when_off": all('id="betaBar"' not in h and "beta-bar\"" not in h for h in off),
         "beta_bar_feedback_link": ('href="mailto:sugestoes@example.com?subject=' in on and ">Enviar sugestão</a>" in on

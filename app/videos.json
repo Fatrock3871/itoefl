@@ -6,7 +6,9 @@
     "provider 'youtube': src é o id de 11 caracteres do vídeo. A legenda vem do próprio YouTube, em pt-BR quando existir.",
     "provider 'file': src é a URL https do arquivo de vídeo e captions é a URL do arquivo de legenda .vtt.",
     "Opcionais: duration (texto, ex. '8 min'), poster (imagem de capa), transcript (texto da aula, aceita Markdown).",
-    "Exemplo: {\"id\": \"m3-abertura\", \"module\": \"mod3\", \"part\": null, \"title\": \"Como o Speaking é pontuado\", \"duration\": \"8 min\", \"provider\": \"youtube\", \"src\": \"XXXXXXXXXXX\", \"transcript\": \"Texto da aula...\"}"
+    "Exemplo: {\"id\": \"m3-abertura\", \"module\": \"mod3\", \"part\": null, \"title\": \"Como o Speaking é pontuado\", \"duration\": \"8 min\", \"provider\": \"youtube\", \"src\": \"XXXXXXXXXXX\", \"transcript\": \"Texto da aula...\"}",
+    "apresentacao: o vídeo explicativo do topo da tela de apresentação. null: o espaço não aparece. Objeto com title, provider, src e os opcionais acima (sem id, module e part). Exemplo: {\"title\": \"O que é a plataforma\", \"duration\": \"2 min\", \"provider\": \"youtube\", \"src\": \"XXXXXXXXXXX\"}"
   ],
+  "apresentacao": null,
   "videos": []
 }

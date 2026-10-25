@@ -259,6 +259,13 @@ LANDING_STATE = r"""
     sections: Array.prototype.map.call(document.querySelectorAll("section[id]"), function(s){ return s.id; }),
     qcards: document.querySelectorAll("#diagnostico .qcard").length,
     enter: document.querySelector(".lp-enter").getAttribute("href"),
+    start: document.querySelector(".lp-top .lp-start").getAttribute("href"),
+    heroMain: document.querySelector(".lp-hero .lp-btn-main").getAttribute("href"),
+    logo: Math.round(document.querySelector(".lp-top .logo").getBoundingClientRect().height),
+    navFont: parseFloat(getComputedStyle(document.querySelector(".lp-nav a")).fontSize),
+    kicker: (function(){ var s = getComputedStyle(document.querySelector(".lp-kicker"));
+      return { size: parseFloat(s.fontSize), straight: s.transform === "none" }; })(),
+    video: !!document.getElementById("lpVideo"),
     legal: !!document.querySelector('.lp-foot a[href="termos.html"]') && !!document.querySelector('.lp-foot a[href="privacidade.html"]'),
     faq: document.querySelectorAll(".lp-faq-item").length,
     resultHidden: document.getElementById("lpResult").hidden,
@@ -806,6 +813,31 @@ def run():
                     check(f"login_gate_scrolls_{w}x{h}",
                           gate["tall"] and gate["scrolled"] and gate["googleIn"] and gate["termsIn"] and gate["topIn"], gate)
 
+            # apresentacao antes do login: o script do <head> do app (com
+            # Supabase configurado) manda quem nao tem sessao para a
+            # apresentacao, e deixa passar quem tem sessao, quem veio por
+            # "Entrar" e a volta do pagamento
+            real_index = (ROOT / "artifact" / "index.html").read_text(encoding="utf-8")
+            redir = re.search(r'<script id="landingRedirect">.*?</script>', real_index, re.S)
+            check("landing_redirect_in_real_build", redir or "ITOEFL_SUPABASE" not in real_index,
+                  "artifact/index.html tem Supabase e não tem o script landingRedirect")
+            if redir:
+                (site / "redirect_test.html").write_text(
+                    '<!DOCTYPE html><html><head><link rel="icon" href="data:,">' + redir.group(0) + '</head><body>app</body></html>',
+                    encoding="utf-8")
+                with Browser() as b:
+                    where = {}
+                    for case, url, session in (("sem_sessao", "/redirect_test.html", False), ("com_sessao", "/redirect_test.html", True),
+                                               ("entrar", "/redirect_test.html#entrar", False),
+                                               ("pagamento", "/redirect_test.html?pay=success", False)):
+                        b.goto(base + "/stripe_test.html", settle=0.2)
+                        b.eval('localStorage.clear()' + ('; localStorage.setItem("sb-abc-auth-token", "{}")' if session else ""))
+                        b.goto(base + url, settle=0.8)
+                        where[case] = b.eval("location.pathname")
+                    check("landing_before_login_for_visitors",
+                          where == {"sem_sessao": "/apresentacao.html", "com_sessao": "/redirect_test.html",
+                                    "entrar": "/redirect_test.html", "pagamento": "/redirect_test.html"}, where)
+
             # tela de apresentacao: pagina publica, antes do login
             with Browser() as b:
                 b.goto(base + "/apresentacao.html", settle=0.5)
@@ -813,9 +845,16 @@ def run():
                 b.reload(settle=1.2)
                 lp = b.eval(LANDING_STATE)
                 check("landing_desktop_has_all_sections",
-                      lp["h1"] == 1 and lp["sections"] == ["diagnostico", "gratis", "planos", "duvidas"] and lp["qcards"] == 10
-                      and lp["enter"] == "index.html" and lp["legal"] and lp["faq"] >= 6 and lp["resultHidden"]
-                      and lp["docW"] <= lp["vw"] and not lp["over"], lp)
+                      lp["h1"] == 1 and lp["sections"] == ["como-funciona", "diagnostico", "gratis", "planos", "duvidas"]
+                      and lp["qcards"] == 10 and lp["enter"] == "index.html#entrar" and lp["legal"] and lp["faq"] >= 6
+                      and lp["resultHidden"] and lp["docW"] <= lp["vw"] and not lp["over"], lp)
+                # topo com presença: logo e menu maiores, "Começar grátis" como
+                # ação principal, selo do formato legível e reto; sem vídeo
+                # cadastrado, o espaço do vídeo não aparece
+                check("landing_top_has_presence",
+                      lp["start"] == "index.html#criar-conta" and lp["heroMain"] == "index.html#criar-conta"
+                      and lp["logo"] >= 40 and lp["navFont"] >= 15 and lp["kicker"]["size"] >= 14 and lp["kicker"]["straight"]
+                      and not lp["video"], lp)
                 check("landing_four_plans_side_by_side_90_highlighted",
                       [p["id"] for p in lp["plans"]] == ["mensal", "60dias", "90dias", "anual"]
                       and [p["price"] for p in lp["plans"]] == ["R$ 29,90", "R$ 49,90", "R$ 59,90", "R$ 129,90"]

@@ -109,6 +109,62 @@ def render_video(v):
     )
 
 
+LANDING_ALLOWED = {"title", "duration", "provider", "src", "captions", "poster", "transcript"}
+
+
+def load_landing_video(path="videos.json"):
+    """Vídeo explicativo do topo da tela de apresentação: a chave
+    "apresentacao" de videos.json (objeto como os outros, sem id, module e
+    part). null ou ausente: o espaço não aparece. Erro de cadastro derruba o build."""
+    data = json.loads(open(path, encoding="utf-8").read())
+    v = data.get("apresentacao") if isinstance(data, dict) else None
+    if v is None:
+        return None
+    where = "videos.json, apresentacao"
+    if not isinstance(v, dict):
+        raise ValueError(f"{where}: deve ser um objeto ou null")
+    extra = set(v) - LANDING_ALLOWED
+    if extra:
+        raise ValueError(f"{where}: campo desconhecido {sorted(extra)}")
+    for field in ("title", "provider", "src"):
+        if not isinstance(v.get(field), str) or not v[field].strip():
+            raise ValueError(f"{where}: falta o campo {field!r}")
+    if v["provider"] not in PROVIDERS:
+        raise ValueError(f"{where}: provider deve ser um de {PROVIDERS}")
+    if v["provider"] == "youtube" and not YOUTUBE_ID_RE.match(v["src"]):
+        raise ValueError(f"{where}: em provider youtube, src é o id de 11 caracteres do vídeo, não a URL")
+    for field in ("src", "captions", "poster") if v["provider"] == "file" else ("captions", "poster"):
+        if v.get(field) is not None and not (isinstance(v[field], str) and URL_RE.match(v[field])):
+            raise ValueError(f"{where}: {field} deve ser URL https ou caminho relativo")
+    return v
+
+
+def render_landing_video(v):
+    """Capa do vídeo da apresentação. O player nasce no clique (landing.js),
+    como nas videoaulas: nada de fora carrega antes disso."""
+    if not v:
+        return ""
+    esc = lambda s: html.escape(s or "", quote=True)
+    attrs = f'data-provider="{esc(v["provider"])}" data-src="{esc(v["src"])}"'
+    if v.get("captions"):
+        attrs += f' data-captions="{esc(v["captions"])}"'
+    poster = (f'<img class="vid-poster" src="{esc(v["poster"])}" alt="" loading="lazy">' if v.get("poster") else "")
+    duration = f'<span class="vid-dur">{esc(v["duration"])}</span>' if v.get("duration") else ""
+    transcript = ""
+    if (v.get("transcript") or "").strip():
+        body = markdown.markdown(v["transcript"], extensions=["extra"])
+        transcript = (f'<details class="vid-transcript"><summary>Transcrição do vídeo</summary>'
+                      f'<div class="vid-transcript-body">{body}</div></details>')
+    return (
+        f'<div class="vid lp-video" id="lpVideo" {attrs}>'
+        f'<button type="button" class="vid-cover" aria-label="Assistir ao vídeo: {esc(v["title"])}">'
+        f'{poster}<span class="vid-play" aria-hidden="true">▶</span>'
+        f'<span class="vid-meta"><span class="vid-kicker">Conheça em vídeo</span>'
+        f'<span class="vid-title">{esc(v["title"])}</span>{duration}</span></button>'
+        f'<div class="vid-frame" hidden></div>{transcript}</div>'
+    )
+
+
 def inject(frag, videos):
     """frag: {mod: html do módulo}. Devolve ({mod: html com os vídeos de
     Parte}, {mod: html do vídeo de abertura}). Falha se o módulo ou a Parte

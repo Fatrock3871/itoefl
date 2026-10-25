@@ -161,5 +161,37 @@
     a.addEventListener("click", function(){ safeSet("toefl_plan_pick_v1", a.getAttribute("data-plan-pick")); });
   });
 
+  // ---------- vídeo explicativo do topo (videos.json, chave "apresentacao") ----------
+  // O player nasce no clique, como nas videoaulas do app: nada de fora
+  // carrega antes disso.
+  var video = document.getElementById("lpVideo");
+  if(video){
+    video.querySelector(".vid-cover").addEventListener("click", function(){
+      var frame = video.querySelector(".vid-frame"), player;
+      if(video.dataset.provider === "youtube"){
+        player = document.createElement("iframe");
+        player.src = "https://www.youtube-nocookie.com/embed/" + encodeURIComponent(video.dataset.src) +
+          "?autoplay=1&rel=0&cc_load_policy=1&cc_lang_pref=pt-BR&hl=pt-BR";
+        player.allow = "accelerometer; autoplay; encrypted-media; picture-in-picture; fullscreen";
+        player.allowFullscreen = true;
+        player.referrerPolicy = "strict-origin-when-cross-origin";
+        player.title = "Vídeo de apresentação";
+      } else {
+        player = document.createElement("video");
+        player.controls = true; player.autoplay = true; player.playsInline = true; player.preload = "metadata";
+        player.src = video.dataset.src;
+        if(video.dataset.captions){
+          var track = document.createElement("track");
+          track.kind = "captions"; track.srclang = "pt-BR"; track.label = "Português";
+          track.src = video.dataset.captions; track.default = true;
+          player.appendChild(track);
+        }
+      }
+      frame.appendChild(player);
+      frame.hidden = false;
+      video.querySelector(".vid-cover").hidden = true;
+    });
+  }
+
   window.__toeflLanding = { ready: true }; // gancho do smoke test
 })();

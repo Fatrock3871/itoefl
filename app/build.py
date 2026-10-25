@@ -311,6 +311,25 @@ if not (supa_url and supa_key):
     supa_url = _os.environ.get("SUPABASE_URL", "").strip()
     supa_key = _os.environ.get("SUPABASE_PUBLISHABLE_KEY", "").strip()
 
+# Apresentação antes do login (itens 22 e 23 de 2026-10-25): quem abre o app
+# (site ou instalado) sem sessão do Supabase guardada vai para a tela de
+# apresentação; quem tem sessão segue direto para o curso. Fica no <head>,
+# antes de pintar a página. Não redireciona: com #entrar ou #criar-conta
+# (links "Entrar" e "Começar grátis" da apresentação), na volta do login com
+# Google ou da recuperação de senha (token na URL), na volta do pagamento
+# (?pay= ou ?mp=), sem internet (a apresentação não fica no cache) e em
+# file:// (o arquivo aberto direto no computador, para teste).
+LANDING_REDIRECT_JS = (
+    '<script id="landingRedirect">(function(){try{'
+    'if(location.protocol==="file:")return;'
+    'var h=location.hash,q=location.search;'
+    'if(/^#(entrar|criar-conta)/.test(h))return;'
+    'if(/access_token|refresh_token|error_description|type=recovery/.test(h)||/[?&](code|pay|mp|error)=/.test(q))return;'
+    'for(var i=0;i<localStorage.length;i++){if(/^sb-.+-auth-token$/.test(localStorage.key(i)))return;}'
+    'if(navigator.onLine===false)return;'
+    'location.replace("apresentacao.html");'
+    '}catch(e){}})();</script>'
+)
 SUPA_HEAD = ""
 if supa_url and supa_key:
     SUPA_HEAD = (
@@ -393,7 +412,7 @@ gate = (
     '</div>'
 
     '<span id="authGateMsg" class="auth-gate-msg" hidden></span>'
-    '<p class="legal-links"><a href="apresentacao.html">Conhecer a plataforma e os planos</a></p>'
+    '<p class="legal-links"><a href="apresentacao.html">Voltar para a apresentação: o curso e os planos</a></p>'
     f'<p class="legal-links">{LEGAL_LINKS}</p>'
     '</div>'
     '</div>'
@@ -725,6 +744,7 @@ html = f'''<!DOCTYPE html>
 <meta name="mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-title" content="iTOEFL">
 <meta name="apple-mobile-web-app-status-bar-style" content="default">
+{LANDING_REDIRECT_JS if (supa_url and supa_key) else ""}
 {FONT_LINKS}
 <style>
 {CSS}
@@ -1039,6 +1059,9 @@ LP_FAQ = [
 lp_faq = "".join(f'<details class="lp-faq-item"><summary>{q}</summary><p>{a}</p></details>' for q, a in LP_FAQ)
 
 LANDING_JS = LEVEL_JS + "\n" + open("landing.js", encoding="utf-8").read()
+# vídeo explicativo do topo (chave "apresentacao" de app/videos.json); sem
+# vídeo cadastrado, nada entra na página
+LANDING_VIDEO = render_video.render_landing_video(render_video.load_landing_video())
 _lp_desc = ("Preparação em português para o TOEFL iBT no formato 2026: 10 módulos, exercícios no molde da prova e simulados. "
             "Faça o diagnóstico grátis, sem criar conta.")
 _landing = f'''<!DOCTYPE html>
@@ -1065,14 +1088,19 @@ _landing = f'''<!DOCTYPE html>
 <a class="skip-link" href="#lpMain">Pular para o conteúdo</a>
 {BETA_BAR}
 <header class="lp-top">
-  <a class="legal-brand" href="apresentacao.html" aria-label="iTOEFL, início"><span class="logo">{LOGO_SVG}</span><span class="name">iTOEFL</span></a>
-  <nav class="lp-nav" aria-label="Seções da página">
-    <a href="#diagnostico">Diagnóstico grátis</a>
-    <a href="#gratis">Conta grátis</a>
-    <a href="#planos">Planos</a>
-    <a href="#duvidas">Dúvidas</a>
-  </nav>
-  <a class="lp-btn lp-enter" href="index.html">Entrar</a>
+  <div class="lp-top-in">
+    <a class="legal-brand lp-brand" href="apresentacao.html" aria-label="iTOEFL, início"><span class="logo">{LOGO_SVG}</span><span class="name">iTOEFL</span></a>
+    <nav class="lp-nav" aria-label="Seções da página">
+      <a href="#como-funciona">Como funciona</a>
+      <a href="#diagnostico">Diagnóstico grátis</a>
+      <a href="#planos">Planos</a>
+      <a href="#duvidas">Dúvidas</a>
+    </nav>
+    <div class="lp-top-actions">
+      <a class="lp-btn lp-enter" href="index.html#entrar">Entrar</a>
+      <a class="lp-btn lp-btn-main lp-start" href="index.html#criar-conta">Começar grátis</a>
+    </div>
+  </div>
 </header>
 
 <main id="lpMain" tabindex="-1">
@@ -1082,13 +1110,15 @@ _landing = f'''<!DOCTYPE html>
   <p class="lp-sub">A prova mudou em janeiro de 2026: menos de 1h30, Reading e Listening adaptativos, nota de 1 a 6.
   Este curso foi escrito para ela.</p>
   <div class="lp-cta">
-    <a class="lp-btn lp-btn-main" href="#planos">Ver os planos</a>
+    <a class="lp-btn lp-btn-main lp-btn-big" href="index.html#criar-conta">Começar grátis</a>
     <a class="lp-btn" href="#diagnostico">Fazer o diagnóstico grátis</a>
+    <a class="lp-btn" href="#planos">Ver os planos</a>
   </div>
-  <p class="lp-note">O diagnóstico tem 10 questões, leva cerca de 12 minutos e não pede conta.</p>
+  <p class="lp-note">A conta grátis não pede cartão. O diagnóstico tem 10 questões, leva cerca de 12 minutos e dá para fazer aqui mesmo, sem conta.</p>
+  {LANDING_VIDEO}
 </section>
 
-<section class="lp-section" aria-labelledby="lpInsideTitle">
+<section class="lp-section" id="como-funciona" aria-labelledby="lpInsideTitle">
   <h2 id="lpInsideTitle">O que tem dentro</h2>
   <ul class="lp-stats">{lp_stats}</ul>
   <div class="lp-feats">
@@ -1154,7 +1184,7 @@ _landing = f'''<!DOCTYPE html>
 <footer class="lp-foot">
   <p>Preparação independente, baseada nas especificações públicas da prova. Não afiliada à ETS.
   TOEFL e TOEFL iBT são marcas registradas da ETS.</p>
-  <p><a href="termos.html">Termos de Uso</a><span aria-hidden="true"> · </span><a href="privacidade.html">Política de Privacidade</a><span aria-hidden="true"> · </span><a href="termos.html">Contato (nos Termos de Uso)</a><span aria-hidden="true"> · </span><a href="index.html">Entrar</a></p>
+  <p><a href="termos.html">Termos de Uso</a><span aria-hidden="true"> · </span><a href="privacidade.html">Política de Privacidade</a><span aria-hidden="true"> · </span><a href="termos.html">Contato (nos Termos de Uso)</a><span aria-hidden="true"> · </span><a href="index.html#entrar">Entrar</a></p>
 </footer>
 <script>
 {LANDING_JS}
