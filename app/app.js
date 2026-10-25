@@ -401,31 +401,27 @@
     return { count: n, today: !!days[todayStr(new Date())] };
   }
 
-  // ---------- Meta diária (1 seção concluída por dia) ----------
-  // Conta só transições de não-concluída -> concluída (ver o listener de
-  // checkbox mais abaixo), então marcar/desmarcar a mesma seção repetidas
-  // vezes no mesmo dia não infla o contador.
+  // ---------- Registro do dia: atividades concluídas ----------
+  // count: Partes e exercícios concluídos hoje (só a transição para
+  // concluído conta, então marcar e desmarcar não infla). ex: data do último
+  // exercício feito, que a meta de hoje usa. plan: a lista da meta de hoje,
+  // congelada no primeiro cálculo do dia (ver "Plano de estudo" mais abaixo).
   var LS_DAILY_GOAL = "toefl_dailygoal_v1";
-  var DAILY_GOAL_TARGET = 1;
-  function markDailyGoalProgress(){
-    var data = {}; try { data = JSON.parse(safeGet(LS_DAILY_GOAL) || "{}"); } catch(e){}
-    var t = todayStr();
-    if(data.date !== t){ data.date = t; data.count = 0; }
+  function readDay(){
+    var data = {};
+    try { data = JSON.parse(safeGet(LS_DAILY_GOAL) || "{}") || {}; } catch(e){}
+    if(data.date !== todayStr()) data = { date: todayStr(), count: 0 };
+    return data;
+  }
+  function markDailyGoalProgress(isExercise){
+    var data = readDay();
     data.count = (data.count || 0) + 1;
+    if(isExercise) data.ex = data.date;
     safeSet(LS_DAILY_GOAL, JSON.stringify(data));
     updateDailyGoalUI();
   }
-  function getDailyGoal(){
-    var data = {}; try { data = JSON.parse(safeGet(LS_DAILY_GOAL) || "{}"); } catch(e){}
-    var count = (data.date === todayStr()) ? (data.count || 0) : 0;
-    return { count: count, target: DAILY_GOAL_TARGET, done: count >= DAILY_GOAL_TARGET };
-  }
   function updateDailyGoalUI(){
-    var g = getDailyGoal();
-    var countEl = document.getElementById("dgCount");
-    var fillEl = document.getElementById("dgFill");
-    if(countEl) countEl.textContent = Math.min(g.count, g.target) + "/" + g.target;
-    if(fillEl) fillEl.style.width = Math.min(100, Math.round(100 * g.count / g.target)) + "%";
+    if(typeof window.__toeflRefreshPlan === "function") window.__toeflRefreshPlan();
     // sequência de dias à vista na gaveta (antes só dentro do Painel, que
     // só abre com login)
     var streakEl = document.getElementById("streakLine");
@@ -788,6 +784,7 @@
       progressState[M0_ORDER_KEY] = M0_ORDER; // já na ordem nova do M0 (ver migrateM0Order)
       safeSet(LS_PROGRESS, JSON.stringify(progressState));
       updateBadges();
+      if(!c.checked) updateDailyGoalUI(); // desmarcar também mexe na meta de hoje
     });
   });
   updateBadges();
@@ -1130,6 +1127,7 @@
       }
       if(drillId === "mod0-diag" && typeof window.__toeflRefreshStart === "function") window.__toeflRefreshStart();
       if(drillId === "mod0-diag" && typeof window.__toeflRefreshDiag === "function") window.__toeflRefreshDiag();
+      if(drillId === "mod0-diag" && typeof window.__toeflRefreshPlan === "function") window.__toeflRefreshPlan();
       if(drillId.indexOf("mod1-") === 0 || drillId.indexOf("mod2-") === 0){
         updateLiveScorePanel();
       }
@@ -1234,6 +1232,8 @@
           var wasDone = allConfirmed();
           s.confirmed = true;
           saveState();
+          // exercício inteiro respondido conta na meta de hoje
+          if(!wasDone && allConfirmed()) markDailyGoalProgress(true);
           if(revealAtEnd && !wasDone && allConfirmed()){
             // a última: corrige todas de uma vez e mostra o resultado
             qcards.forEach(applyCardState);
@@ -1809,7 +1809,7 @@
         renderSummary();
         updateLiveScorePanel();
         // o conjunto inteiro verificado conta como uma atividade do dia
-        if(liveCards().every(function(c){ return state[c.dataset.num] && state[c.dataset.num].checked; })) markDailyGoalProgress();
+        if(liveCards().every(function(c){ return state[c.dataset.num] && state[c.dataset.num].checked; })) markDailyGoalProgress(true);
       });
 
       // restaura estado salvo
@@ -1905,7 +1905,7 @@
 
     checkBtn.addEventListener("click", function(){
       persist(true); grade();
-      markDailyGoalProgress();
+      markDailyGoalProgress(true);
       updateLiveScorePanel();
       updateLevelRecommendations();
     });
@@ -2184,7 +2184,7 @@
     });
     submitBtn.addEventListener("click", function(){
       state.done = true; persist(); grade();
-      markDailyGoalProgress();
+      markDailyGoalProgress(true);
       updateLiveScorePanel();
     });
     retryBtn.addEventListener("click", function(){
@@ -3639,11 +3639,12 @@
         : streak.count + (streak.count === 1 ? " dia seguido estudando" : " dias seguidos estudando") +
           (streak.today ? "" : " (continue hoje pra manter)");
 
-      var goal = getDailyGoal();
-      goalFillEl.style.width = Math.min(100, Math.round(100 * goal.count / goal.target)) + "%";
-      goalTextEl.textContent = goal.done
-        ? "Meta batida hoje! " + goal.count + (goal.count === 1 ? " atividade concluída." : " atividades concluídas.")
-        : "Nenhuma atividade concluída hoje. Conclua uma Parte ou entregue um exercício.";
+      // a mesma meta de hoje da gaveta e da faixa do topo (plano de estudo)
+      var today = window.__toeflToday ? window.__toeflToday() : null;
+      goalFillEl.style.width = today ? Math.round(100 * Math.min(today.doneCount, today.total) / today.total) + "%" : "0%";
+      goalTextEl.textContent = !today ? "" : today.done
+        ? "Meta batida hoje! " + today.doneCount + " de " + today.total + " feitos."
+        : today.text + ". Feito até agora: " + today.doneCount + " de " + today.total + ".";
 
       var band = computeBandEstimate();
       bandEl.textContent = band
@@ -4642,6 +4643,162 @@
       }
     });
     window.__toeflRefreshDiag = render;
+    render();
+  })();
+
+  // ---------- Plano de estudo e meta de hoje (item 5 de 2026-10-25) ----------
+  // A meta deixa de ser "1 Parte por dia". Ela sai do cronograma da meta do
+  // aluno (toefl_goal_v1: nota, data da prova, 30/60/90 dias e início):
+  // 1. PLAN_PHASES segue as tabelas do M0, Parte 6 (semanas -> módulos), com
+  //    M5, M6, M8 e M9 encaixados onde o cronograma fala de registro,
+  //    vocabulário, armadilhas e véspera. Módulo que aparece em duas fases
+  //    divide as Partes entre elas.
+  // 2. Cada Parte de teoria, prática ou simulado (referência fica de fora:
+  //    é para consultar) ganha um dia, pelo tempo estimado de app/partes.json.
+  //    Se a prova vem antes do fim do cronograma, os dias encolhem.
+  // 3. A meta de hoje são as Partes previstas até hoje e ainda não
+  //    concluídas (no máximo 3, ou 120 min), mais 1 exercício quando nenhuma
+  //    delas é de prática. Quem atrasou recebe as atrasadas primeiro; quem
+  //    está em dia recebe a próxima. A lista fica congelada no dia.
+  // Sem diagnóstico, a meta é fazer o diagnóstico; sem a meta, é montá-la.
+  var PLAN_PHASES = {
+    30: [[7, ["mod0", "mod1"]], [7, ["mod2", "mod4"]], [7, ["mod4", "mod3"]], [9, ["mod3", "mod7", "mod8"]]],
+    60: [[14, ["mod0", "mod1"]], [14, ["mod2"]], [14, ["mod4", "mod5"]], [7, ["mod3", "mod6", "mod9"]], [11, ["mod7", "mod8"]]],
+    90: [[21, ["mod0", "mod6", "mod9"]], [21, ["mod1"]], [21, ["mod2"]], [14, ["mod4", "mod5"]], [7, ["mod3"]], [6, ["mod7", "mod8"]]]
+  };
+  var PLAN_MAX_PARTS = 3, PLAN_MAX_MIN = 120, PLAN_EXERCISE_MIN = 10;
+  function partDoneBox(card){ return card.querySelector(".mark-done .pchk"); }
+  function planParts(goal){
+    var phases = PLAN_PHASES[goal.sched] || PLAN_PHASES[60], occ = {}, seen = {}, out = [], start = 0;
+    phases.forEach(function(ph){ ph[1].forEach(function(m){ occ[m] = (occ[m] || 0) + 1; }); });
+    phases.forEach(function(ph){
+      var items = [];
+      ph[1].forEach(function(m){
+        var list = [];
+        partCards(m).forEach(function(card, i){
+          var p = partInfo(m, i + 1), chk = partDoneBox(card);
+          if(!p || p.tipo === "referencia" || !chk) return;
+          if(accessFree && card.classList.contains("fs-part-locked")) return; // conta grátis: só a amostra
+          list.push({ mod: m, n: i + 1, pid: chk.dataset.pid, min: p.min, tipo: p.tipo });
+        });
+        var j = seen[m] = (seen[m] || 0) + 1;
+        items = items.concat(list.slice(Math.floor(list.length * (j - 1) / occ[m]), Math.floor(list.length * j / occ[m])));
+      });
+      var total = items.reduce(function(s, x){ return s + x.min; }, 0) || 1, acc = 0;
+      items.forEach(function(x){ x.day = start + Math.floor(acc / total * ph[0]); acc += x.min; out.push(x); });
+      start += ph[0];
+    });
+    return { parts: out, length: start };
+  }
+  function partLabel(x){ return "M" + x.mod.slice(3) + " Parte " + x.n; }
+  function joinPt(list){ return list.length > 1 ? list.slice(0, -1).join(", ") + " e " + list[list.length - 1] : (list[0] || ""); }
+
+  // a meta de hoje: { kind: "diag" | "goal" | "plan" | "done", text, items,
+  // needEx, exDone, done, total, doneCount, min, meta, next, go }
+  function computeToday(){
+    var d = diagStats();
+    if(!d) return null;
+    if(!d.done){
+      return { kind: "diag", text: "Hoje: fazer o diagnóstico (15 min)", total: 1, doneCount: 0, done: false,
+        next: "Depois: dizer a nota que você precisa e a data da prova, para eu montar o seu plano.",
+        go: function(){ openPart("mod0", 1); } };
+    }
+    var g = readGoal(), lvl = cefrBandFromPct(d.pct);
+    if(!g){
+      return { kind: "goal", text: "Hoje: montar o seu plano, com a nota que você precisa e a data da prova (2 min)",
+        total: 1, doneCount: 0, done: false, meta: "Seu nível estimado: " + lvl.label + ".",
+        next: "Depois: seguir a meta de cada dia, tirada do cronograma.",
+        go: function(){
+          openPart("mod0", 1);
+          setTimeout(function(){ var el = document.getElementById("diagGoal"); if(el) el.scrollIntoView({ behavior: "smooth", block: "center" }); }, 120);
+        } };
+    }
+    var plan = planParts(g), startDay = parseDay(g.start) || parseDay(todayStr());
+    var toExam = Math.round((parseDay(g.exam) - startDay) / 86400000);
+    var span = Math.max(1, Math.min(plan.length, toExam > 0 ? toExam : plan.length));
+    var t = Math.max(0, Math.round((parseDay(todayStr()) - startDay) / 86400000));
+    plan.parts.forEach(function(x){ x.due = Math.floor(x.day * span / plan.length); });
+    var pending = plan.parts.filter(function(x){ return !progressState[x.pid]; });
+    var late = pending.filter(function(x){ return x.due < t; }).length;
+    var left = daysUntil(g.exam);
+    var meta = (left > 1 ? "Prova em " + left + " dias" : left === 1 ? "Prova amanhã" : left === 0 ? "Prova hoje" : "A data da prova já passou") +
+      ". Você: " + lvl.label + ". Meta: " + ToeflLevel.cefrOf(g.target) + " (banda " + ToeflLevel.fmt(g.target) + ").";
+
+    // a lista do dia, congelada no primeiro cálculo de hoje
+    var key = [g.start, g.sched, g.exam, accessFree ? "free" : "full"].join("|");
+    var day = readDay(), pids;
+    if(day.plan && day.plan.key === key) pids = day.plan.pids;
+    else {
+      var pick = [], mins = 0;
+      pending.filter(function(x){ return x.due <= t; }).some(function(x){
+        if(pick.length && (pick.length >= PLAN_MAX_PARTS || mins + x.min > PLAN_MAX_MIN)) return true;
+        pick.push(x); mins += x.min; return false;
+      });
+      if(!pick.length && pending.length) pick.push(pending[0]); // em dia: adianta a próxima
+      pids = pick.map(function(x){ return x.pid; });
+      day.plan = { key: key, pids: pids };
+      try { localStorage.setItem(LS_DAILY_GOAL, JSON.stringify(day)); } catch(e){} // sem safeSet: calcular não é estudar
+    }
+    var byPid = {};
+    plan.parts.forEach(function(x){ byPid[x.pid] = x; });
+    var items = pids.map(function(p){ return byPid[p]; }).filter(Boolean);
+    if(!items.length){
+      return { kind: "done", text: "Hoje: o cronograma está cumprido. Faça um bloco de simulado do Módulo 7 para manter o ritmo.",
+        total: 1, doneCount: 0, done: false, meta: meta, next: "", go: function(){ openPart("mod7", 3); } };
+    }
+    var needEx = !items.some(function(x){ return x.tipo === "pratica" || x.tipo === "simulado"; });
+    var exDone = day.ex === day.date;
+    var doneParts = items.filter(function(x){ return progressState[x.pid]; }).length;
+    var min = items.reduce(function(s, x){ return s + x.min; }, 0) + (needEx ? PLAN_EXERCISE_MIN : 0);
+    var names = items.map(partLabel);
+    if(needEx) names.push("1 exercício");
+    var nextPart = pending.filter(function(x){ return pids.indexOf(x.pid) === -1; })[0];
+    var next = late > items.length
+      ? "Você está " + late + " Partes atrás do cronograma. A meta de hoje já começa pelas atrasadas; se o atraso crescer, use o Plano de Emergência (M0, Parte 7)."
+      : nextPart ? "Depois: " + partLabel(nextPart) + " (" + kindText(partInfo(nextPart.mod, nextPart.n)) + ")." : "Depois disso, o cronograma está cumprido.";
+    var firstOpen = items.filter(function(x){ return !progressState[x.pid]; })[0];
+    return {
+      kind: "plan", items: items, needEx: needEx, exDone: exDone, late: late,
+      text: "Hoje: " + joinPt(names) + " (" + min + " min)",
+      total: items.length + (needEx ? 1 : 0), doneCount: doneParts + (needEx && exDone ? 1 : 0),
+      done: doneParts === items.length && (!needEx || exDone), meta: meta, next: next,
+      go: function(){
+        if(firstOpen) openPart(firstOpen.mod, firstOpen.n);
+        else { navTo("mod0"); var lp = document.getElementById("levelPractice"); if(lp){ var c = lp.closest(".section-card"); if(c && window.__toeflShowPart.mod0) window.__toeflShowPart.mod0(c, { noScroll: true }); setTimeout(function(){ lp.scrollIntoView({ behavior: "smooth", block: "start" }); }, 60); } }
+      }
+    };
+  }
+
+  (function(){
+    var $ = function(id){ return document.getElementById(id); };
+    var current = null;
+    function setText(id, text){ var el = $(id); if(!el) return; el.textContent = text || ""; el.hidden = !text; }
+    function render(){
+      var td = computeToday();
+      current = td;
+      var bar = $("todayBar");
+      if(!td){ if(bar) bar.hidden = true; return; }
+      var doneText = "Meta de hoje cumprida. Mais um passo dado, e ele conta.";
+      setText("dgText", td.done ? doneText : td.text);
+      setText("dgMeta", td.meta);
+      setText("dgNext", td.next);
+      $("dgCount").textContent = Math.min(td.doneCount, td.total) + "/" + td.total;
+      $("dgFill").style.width = Math.round(100 * Math.min(td.doneCount, td.total) / td.total) + "%";
+      $("dgGo").textContent = td.done ? "Continuar estudando" : td.kind === "goal" ? "Montar meu plano" : "Começar";
+      if(bar){
+        bar.hidden = false;
+        bar.classList.toggle("is-done", !!td.done);
+        setText("todayText", td.done ? doneText : td.text);
+        setText("todayMeta", td.meta ? td.meta + (td.done ? "" : " " + td.doneCount + " de " + td.total + " feitos.") : "");
+        $("todayGo").textContent = $("dgGo").textContent;
+      }
+    }
+    function go(){ if(current && current.go){ setSidebarOpen(false); current.go(); } }
+    $("dgGo").addEventListener("click", go);
+    $("todayGo").addEventListener("click", go);
+    window.__toeflRefreshPlan = render;
+    window.__toeflToday = computeToday; // gancho do smoke test e do Painel
+    document.addEventListener("toefl-access", render);
     render();
   })();
 

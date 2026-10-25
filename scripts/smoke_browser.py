@@ -600,6 +600,32 @@ def run():
                       and goal["sched"].startswith("Cronograma indicado: Intensivo, de 30 dias (Parte 6.1)")
                       and goal["saved"]["target"] == 5 and goal["saved"]["sched"] == 30 and goal["saved"]["start"] == goal["today"]
                       and "Plano de Emergência" in goal["sched2"], goal)
+                # meta de hoje tirada do cronograma (Intensivo, 45 dias até a
+                # prova): Partes de M0/M1 com minutos, prova e nível x meta
+                today = b.eval(r"""(function(){
+                  var o = { text: document.getElementById("todayText").textContent, meta: document.getElementById("todayMeta").textContent,
+                            side: document.getElementById("dgText").textContent, next: document.getElementById("dgNext").textContent };
+                  // 12 dias atrás no mesmo cronograma: a meta cresce com as atrasadas
+                  var g = JSON.parse(localStorage.getItem("toefl_goal_v1"));
+                  var d = new Date(); d.setDate(d.getDate() - 12); var p = function(x){ return (x < 10 ? "0" : "") + x; };
+                  g.start = d.getFullYear() + "-" + p(d.getMonth() + 1) + "-" + p(d.getDate());
+                  localStorage.setItem("toefl_goal_v1", JSON.stringify(g));
+                  window.__toeflRefreshPlan();
+                  o.lateText = document.getElementById("todayText").textContent; o.lateNext = document.getElementById("dgNext").textContent;
+                  o.lateItems = window.__toeflToday().items.length;
+                  // volta ao plano de hoje
+                  g.start = %s;
+                  localStorage.setItem("toefl_goal_v1", JSON.stringify(g));
+                  window.__toeflRefreshPlan();
+                  document.getElementById("todayGo").click();
+                  o.went = document.querySelector(".tabbtn.active").dataset.tab;
+                  return o;
+                })()""" % json.dumps(goal["today"]))
+                check("real_today_goal_follows_schedule",
+                      re.match(r"^Hoje: M[01] Parte \d", today["text"]) and re.search(r"\(\d+ min\)$", today["text"])
+                      and today["side"] == today["text"] and "Prova em 45 dias. Você: B2. Meta: C1 (banda 5)." in today["meta"]
+                      and today["next"].startswith("Depois: ") and today["lateItems"] > 1 and "atrás do cronograma" in today["lateNext"]
+                      and today["went"] in ("mod0", "mod1"), today)
                 b.pump(1.2)  # a caixa de escrita salva com atraso
                 start2 = b.eval('({ title: document.querySelector("#startCard .start-title").textContent,'
                                 ' go: document.querySelector("#startCard .start-go").textContent })')
@@ -666,7 +692,8 @@ def run():
                     '           band: document.getElementById("dashBand").textContent };'
                     ' document.getElementById("dashboardClose").click(); return o; })()')
                 check("real_dashboard_reads_progress",
-                      "Meta batida" in dash["goal"] and "/1" not in dash["goal"] and "R1" in dash["weak"] and "B2" in dash["band"], dash)
+                      (dash["goal"].startswith("Hoje: ") or "Meta batida" in dash["goal"]) and "/1" not in dash["goal"]
+                      and "R1" in dash["weak"] and "B2" in dash["band"], dash)
 
                 # teclado: Enter no titulo de uma subsecao abre e fecha; a
                 # janela do painel recebe o foco, fecha com Esc e devolve o foco

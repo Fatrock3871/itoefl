@@ -763,7 +763,11 @@ html = f'''<!DOCTYPE html>
     </div>
     <div class="daily-goal" id="dailyGoal">
       <div class="op-label"><span>🎯 Meta de hoje</span><span id="dgCount">0/1</span></div>
+      <p class="dg-text" id="dgText"></p>
       <div class="op-bar"><div class="op-fill" id="dgFill"></div></div>
+      <button type="button" class="dg-go" id="dgGo">Começar</button>
+      <p class="dg-meta" id="dgMeta" hidden></p>
+      <p class="dg-next" id="dgNext" hidden></p>
       <div class="op-count" id="streakLine"></div>
     </div>
     <div class="level-badge" id="levelBadge" hidden>
@@ -803,6 +807,13 @@ html = f'''<!DOCTYPE html>
     {journey}
     <div class="content-grid">
       <div class="content-col">
+        <section class="today-bar" id="todayBar" aria-label="Meta de hoje" hidden>
+          <div class="today-main">
+            <p class="today-text" id="todayText"></p>
+            <p class="today-meta" id="todayMeta" hidden></p>
+          </div>
+          <button type="button" class="today-go" id="todayGo">Começar</button>
+        </section>
         <div class="fs-bar" id="freeBar" role="status">
           <p id="freeBarText">Conta grátis: você tem {FREE_SUMMARY}. O resto do curso aparece trancado.</p>
           <button type="button" class="fs-lock-btn" id="freeBarBtn">Ver os planos</button>

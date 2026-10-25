@@ -61,10 +61,17 @@ var authIn = document.getElementById("authIn"); if(authIn) authIn.hidden = false
 });
 
 check("checkbox_exists", function(){ return !!document.querySelector(".pchk"); });
+// meta de hoje sem diagnóstico feito: fazer o diagnóstico (item 5 de 2026-10-25)
+check("today_goal_without_diagnostic_is_the_diagnostic", function(){
+  return !document.getElementById("todayBar").hidden && document.getElementById("todayText").textContent.indexOf("Hoje: fazer o diagnóstico") === 0 &&
+    document.getElementById("dgText").textContent.indexOf("Hoje: fazer o diagnóstico") === 0 && document.getElementById("dgCount").textContent === "0/1";
+});
 var chk = document.querySelector(".pchk");
-var dgBefore = document.getElementById("dgCount").textContent;
 if(chk){ chk.checked = true; chk.dispatchEvent(new Event("change", { bubbles: true })); }
-check("daily_goal_updates", function(){ return document.getElementById("dgCount").textContent !== dgBefore; });
+check("daily_goal_updates", function(){
+  var d = JSON.parse(localStorage.getItem("toefl_dailygoal_v1") || "{}");
+  return d.count === 1;
+});
 
 var dashBtn = document.getElementById("dashboardBtn");
 if(dashBtn) dashBtn.click();
