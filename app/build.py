@@ -790,6 +790,7 @@ html = f'''<!DOCTYPE html>
       <p class="dg-next" id="dgNext" hidden></p>
       <div class="op-count" id="streakLine"></div>
     </div>
+    <button type="button" class="side-reviewer" id="sideReviewer" hidden></button>
     <div class="level-badge" id="levelBadge" hidden>
       <span class="level-badge-tag">Nível estimado (diagnóstico)</span>
       <span class="level-badge-band" id="levelBadgeBand"></span>
@@ -827,6 +828,10 @@ html = f'''<!DOCTYPE html>
     {journey}
     <div class="content-grid">
       <div class="content-col">
+        <div class="reviewer-bar" id="reviewerBar" role="status" hidden>
+          <p id="reviewerBarText"></p>
+          <button type="button" class="reviewer-go" id="reviewerBarGo">Abrir o Painel do corretor</button>
+        </div>
         <section class="today-bar" id="todayBar" aria-label="Meta de hoje" hidden>
           <div class="today-main">
             <p class="today-text" id="todayText"></p>

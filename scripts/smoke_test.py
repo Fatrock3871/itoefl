@@ -785,6 +785,26 @@ check("essay_queue_sorted_by_due_with_today_highlight", function(){
     items[0].textContent.indexOf("D4") !== -1 && items[1].textContent.indexOf("E3") !== -1 &&
     $e("reviewStatus").textContent === "2 redações na fila, 1 vencendo hoje ou atrasadas.";
 });
+// item 19 de 2026-10-25: aviso da fila para o corretor, no topo e no menu,
+// com atalho para o painel; aluno comum não vê nada disso
+check("essay_queue_notice_hidden_for_students", function(){ return $e("reviewerBar").hidden && $e("sideReviewer").hidden; });
+ES.setReviewer(true);
+ES.queueNotice([
+  { id: "a", due_on: redacaoHoje(Date.now()) }, { id: "b", due_on: "2999-01-01" }, { id: "c", due_on: "2000-01-01" }
+]);
+check("essay_queue_notice_for_reviewer", function(){
+  return !$e("reviewerBar").hidden && $e("reviewerBarText").textContent === "Redações na fila: 3 (1 vence hoje, 1 atrasada)." &&
+    !$e("sideReviewer").hidden && $e("sideReviewer").textContent.indexOf("Redações na fila: 3") !== -1 &&
+    $e("reviewerBar").classList.contains("is-due");
+});
+$e("reviewerBarGo").click();
+check("essay_queue_notice_opens_panel", function(){ return $e("reviewModal").hidden === false; });
+ES.setReviewer(false);
+check("essay_queue_notice_goes_away", function(){ return $e("reviewerBar").hidden && $e("sideReviewer").hidden && $e("reviewModal").hidden; });
+check("essay_student_confirmation_says_until_when", function(){
+  var t = ES.doneText({ topic_id: "E3", due_on: "2026-11-03", next_at: "2026-11-01T12:00:00Z" });
+  return t.indexOf("Recebemos sua redação (E3") === 0 && t.indexOf("Ela será corrigida até 03/11") !== -1;
+});
 
 // ---- conta grátis (app/free_sample.json, 2026-10-17) ----
 // O nível de acesso é ligado à mão aqui (sem sessão real do Supabase).

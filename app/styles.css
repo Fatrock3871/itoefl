@@ -183,6 +183,16 @@ body.menu-open{overflow:hidden;}
 .dg-meta, .dg-next{margin:9px 0 0; font-size:11.5px; color:var(--rail-dim); line-height:1.45;}
 .dg-meta{color:var(--rail-ink); font-weight:700;}
 
+/* aviso da fila de redações, só para a conta corretora */
+.reviewer-bar{display:flex; flex-wrap:wrap; align-items:center; gap:10px 14px; margin:0 0 14px; padding:10px 16px;
+  border:2px solid var(--edge); border-radius:var(--radius); background:var(--paper);}
+.reviewer-bar.is-due{background:var(--danger-wash);}
+.reviewer-bar p{flex:1; min-width:0; margin:0 !important; font-weight:800; font-size:14.5px !important; max-width:none !important;}
+.reviewer-go{min-height:44px; padding:8px 16px; border-radius:99px; border:2px solid var(--edge); background:var(--paper); color:var(--ink);
+  font:inherit; font-size:14px; font-weight:800; cursor:pointer;}
+.side-reviewer{display:block; width:100%; margin-top:10px; padding:10px 12px; border-radius:10px; border:1.5px solid var(--accent);
+  background:rgba(249,122,61,0.14); color:var(--rail-ink); font-family:inherit; font-size:12.5px; font-weight:800; text-align:left; cursor:pointer;}
+
 /* faixa "Hoje" no topo do conteúdo, em todos os módulos */
 .today-bar{display:flex; align-items:center; gap:14px; margin:0 0 18px; padding:12px 16px; border:2px solid var(--edge);
   border-radius:var(--radius); background:var(--paper); box-shadow:var(--shadow-hard);}

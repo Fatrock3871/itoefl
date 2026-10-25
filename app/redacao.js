@@ -332,6 +332,13 @@
     m.classList.toggle("is-err", !!isErr);
     m.hidden = false;
   }
+  // confirmação depois do envio (item 19 de 2026-10-25): o que aconteceu,
+  // até quando sai a correção e onde ela aparece
+  function doneText(row){
+    return "Recebemos sua redação (" + topicLabel(row.topic_id) + "). Ela será corrigida até " + fmtIso(row.due_on) +
+      ", em até " + R.prazoDiasUteis + " dias úteis. A devolutiva aparece aqui, em Correção de redação, com um aviso em Minha conta." +
+      (row.next_at ? " Próximo envio liberado em " + fmtDMH(new Date(row.next_at).getTime()) + "." : "");
+  }
   function send(){
     var client = APP.client();
     if(!client || sendBlockers().length) return;
@@ -355,12 +362,10 @@
           });
         return;
       }
-      var row = res.data, label = topicLabel(row.topic_id);
+      var row = res.data;
       clearDraft();
       state.history = [row].concat(state.history || []);
-      $("essayDoneText").textContent = "Recebemos a sua redação (" + label + "). A devolutiva está prevista para " +
-        fmtIso(row.due_on) + " (até " + R.prazoDiasUteis + " dias úteis). Próximo envio liberado em " +
-        fmtDMH(new Date(row.next_at).getTime()) + ".";
+      $("essayDoneText").textContent = doneText(row);
       show("essayDone");
       loadHistory();
     }).catch(function(){
@@ -575,6 +580,36 @@
     var btn = $("accountReviewer");
     if(btn) btn.hidden = !state.reviewer;
     if(!state.reviewer && review) closeReviewer();
+    if(state.reviewer) loadQueueNotice(); else renderQueueNotice(null);
+  }
+
+  // ---- aviso da fila para o corretor (item 19 de 2026-10-25) ----
+  // No topo do app e no menu: "Redações na fila: N (X vencem hoje)", com
+  // atalho direto para o Painel do corretor. Só para conta corretora.
+  function queueSummary(rows){
+    var today = redacaoHoje(Date.now());
+    var hoje = rows.filter(function(r){ return r.due_on === today; }).length;
+    var late = rows.filter(function(r){ return r.due_on < today; }).length;
+    return "Redações na fila: " + rows.length + " (" + hoje + (hoje === 1 ? " vence hoje" : " vencem hoje") +
+      (late ? ", " + late + (late === 1 ? " atrasada" : " atrasadas") : "") + ")";
+  }
+  function renderQueueNotice(rows){
+    var on = state.reviewer && !!rows, bar = $("reviewerBar"), side = $("sideReviewer");
+    var today = redacaoHoje(Date.now());
+    if(bar){
+      bar.hidden = !on;
+      if(on){
+        $("reviewerBarText").textContent = queueSummary(rows) + ".";
+        bar.classList.toggle("is-due", rows.some(function(r){ return r.due_on <= today; }));
+      }
+    }
+    if(side){ side.hidden = !on; if(on) side.textContent = "✍️ " + queueSummary(rows); }
+  }
+  function loadQueueNotice(){
+    var client = APP.client();
+    if(!client) return;
+    client.from("essay_submissions").select("id, due_on, status").neq("status", "devolvida")
+      .then(function(res){ if(!res.error) renderQueueNotice(res.data || []); });
   }
   window.__toeflReviewerCheck = function(){
     var client = APP.client(), uid = APP.uid();
@@ -743,6 +778,7 @@
       return a.due_on === b.due_on ? (a.submitted_at < b.submitted_at ? -1 : 1) : (a.due_on < b.due_on ? -1 : 1);
     });
     var box = $("reviewQueue"), today = redacaoHoje(Date.now());
+    renderQueueNotice(rows); // o aviso do topo acompanha a fila aberta
     box.textContent = "";
     var hoje = rows.filter(function(r){ return r.due_on <= today; }).length;
     $("reviewStatus").textContent = rows.length
@@ -892,6 +928,14 @@
   }
   var revBtn = $("accountReviewer");
   if(revBtn) revBtn.addEventListener("click", function(){ var c = $("accountClose"); if(c) c.click(); openReviewer(); });
+  ["reviewerBarGo", "sideReviewer"].forEach(function(id){
+    var b = $(id);
+    if(b) b.addEventListener("click", function(){
+      var side = $("sideClose");
+      if(side && document.body.classList.contains("menu-open")) side.click();
+      openReviewer();
+    });
+  });
   $("reviewClose").addEventListener("click", closeReviewer);
   $("reviewBackdrop").addEventListener("click", closeReviewer);
   document.addEventListener("keydown", function(e){ if(e.key === "Escape" && !review.hidden) closeReviewer(); });
@@ -901,6 +945,7 @@
     open: open, close: close, tick: tick, setHistory: setHistory, sendBlockers: sendBlockers,
     draft: function(){ return draft; }, state: function(){ return state; },
     openReviewer: openReviewer, buildPrompt: buildPrompt, parsePasted: parsePasted,
-    fillForm: fillForm, readForm: readForm, refreshForm: refreshForm, renderQueue: renderQueue
+    fillForm: fillForm, readForm: readForm, refreshForm: refreshForm, renderQueue: renderQueue,
+    setReviewer: setReviewer, queueNotice: renderQueueNotice, doneText: doneText
   };
 })();
