@@ -273,7 +273,7 @@
 
   // chaves que sincronizam com o Supabase (progresso real do aluno).
   // ficam de fora: toefl_theme_v1, toefl_active_tab, toefl_timer_preset, toefl_sync_*
-  var SYNC_PREFIXES = ["toefl_progress", "toefl_srs_", "toefl_bsq_", "toefl_quiz_", "toefl_avatar", "toefl_errlog_", "toefl_cert_", "toefl_streak", "toefl_dailygoal", "toefl_weeklydash", "toefl_h3progress", "toefl_ctw_", "toefl_spk_", "toefl_write_", "toefl_exam_", "toefl_scorecalc", "toefl_essay_seen"];
+  var SYNC_PREFIXES = ["toefl_progress", "toefl_srs_", "toefl_bsq_", "toefl_quiz_", "toefl_avatar", "toefl_errlog_", "toefl_cert_", "toefl_streak", "toefl_dailygoal", "toefl_weeklydash", "toefl_h3progress", "toefl_ctw_", "toefl_spk_", "toefl_write_", "toefl_exam_", "toefl_scorecalc", "toefl_essay_seen", "toefl_goal"];
   function isSyncedKey(key){
     if(!key || key.indexOf("toefl_") !== 0) return false;
     for(var i = 0; i < SYNC_PREFIXES.length; i++){
@@ -347,6 +347,23 @@
     d = d || new Date();
     var m = d.getMonth() + 1, day = d.getDate();
     return d.getFullYear() + "-" + (m < 10 ? "0" : "") + m + "-" + (day < 10 ? "0" : "") + day;
+  }
+  // "aaaa-mm-dd" -> Date local à meia-noite (ou null), e dias de hoje até lá
+  function parseDay(s){
+    var m = /^(\d{4})-(\d{2})-(\d{2})$/.exec(s || "");
+    return m ? new Date(+m[1], +m[2] - 1, +m[3]) : null;
+  }
+  function daysUntil(s){
+    var d = parseDay(s);
+    return d ? Math.round((d - parseDay(todayStr())) / 86400000) : null;
+  }
+  // meta do aluno, gravada na tela de resultado do diagnóstico:
+  // { target: banda 1 a 6, exam: "aaaa-mm-dd", sched: 30|60|90, start: "aaaa-mm-dd" }
+  var LS_GOAL = "toefl_goal_v1";
+  function readGoal(){
+    var g = null;
+    try { g = JSON.parse(safeGet(LS_GOAL) || "null"); } catch(e){}
+    return g && typeof g === "object" && g.target && g.exam ? g : null;
   }
   function markStreakToday(){
     var data = {}; try { data = JSON.parse(safeGet(LS_STREAK) || "{}"); } catch(e){}
@@ -896,6 +913,29 @@
       accessFree ? FREE_REASON.exam : "Entregue um bloco de simulado do Módulo 7 para calcular");
   }
 
+  // diagnóstico do M0 lido do estado salvo: acertos no total e por área
+  // (data-area de cada questão, ver quiz_mod0.json). done: as 10 respondidas.
+  function diagStats(){
+    var drill = document.querySelector('.quiz-drill[data-drill="mod0-diag"]');
+    if(!drill) return null;
+    var st = {};
+    try { st = JSON.parse(safeGet("toefl_quiz_mod0-diag_v1") || "{}") || {}; } catch(e){}
+    var out = { total: 0, confirmed: 0, correct: 0, areas: {} };
+    Array.prototype.forEach.call(drill.querySelectorAll(".qcard"), function(c){
+      var a = c.dataset.area || "outros", s = st[c.dataset.num];
+      out.total++;
+      out.areas[a] = out.areas[a] || { ok: 0, n: 0 };
+      out.areas[a].n++;
+      if(s && s.confirmed){
+        out.confirmed++;
+        if(isCardCorrect(c, s.picked)){ out.correct++; out.areas[a].ok++; }
+      }
+    });
+    out.done = out.total > 0 && out.confirmed === out.total;
+    out.pct = out.total ? Math.round(100 * out.correct / out.total) : 0;
+    return out;
+  }
+
   // melhor estimativa disponível da banda CEFR atual do aluno: prioriza o
   // diagnóstico do Módulo 0 (se completo), senão usa o agregado dos Action
   // Drills de Reading/Listening já respondidos. Movida pro escopo
@@ -1025,6 +1065,24 @@
     try { state = JSON.parse(safeGet(lsKey) || "{}"); } catch(e){ state = {}; }
 
     var qcards = Array.prototype.slice.call(drillEl.querySelectorAll(".qcard"));
+    // data-reveal="end" (diagnóstico do M0): a resposta confirmada fica
+    // guardada sem correção, e o gabarito com as explicações aparece em todas
+    // as questões de uma vez, depois da última (item 2 de 2026-10-25)
+    var revealAtEnd = drillEl.dataset.reveal === "end";
+    function allConfirmed(){
+      return qcards.every(function(c){ return state[c.dataset.num] && state[c.dataset.num].confirmed; });
+    }
+    function setPending(card, on){
+      var note = card.querySelector(".qpending");
+      if(!on){ if(note) note.parentNode.removeChild(note); return; }
+      if(!note){
+        note = document.createElement("p");
+        note.className = "qpending";
+        note.setAttribute("role", "status");
+        note.textContent = "Resposta guardada. O gabarito aparece no fim, depois da última questão.";
+        card.appendChild(note);
+      }
+    }
 
     function saveState(){ safeSet(lsKey, JSON.stringify(state)); }
 
@@ -1056,6 +1114,7 @@
         updateLevelBadge(correct, total);
       }
       if(drillId === "mod0-diag" && typeof window.__toeflRefreshStart === "function") window.__toeflRefreshStart();
+      if(drillId === "mod0-diag" && typeof window.__toeflRefreshDiag === "function") window.__toeflRefreshDiag();
       if(drillId.indexOf("mod1-") === 0 || drillId.indexOf("mod2-") === 0){
         updateLiveScorePanel();
       }
@@ -1075,6 +1134,22 @@
       if(!s || !s.confirmed){
         opts.forEach(function(o){ setOptTag(o, ""); });
         if(fb) setVerdict(fb, null, null);
+      }
+      var pending = revealAtEnd && !!s && s.confirmed && !allConfirmed();
+      setPending(card, pending);
+      if(pending){
+        var mine = multi ? (s.picked || []) : [s.picked];
+        opts.forEach(function(o){
+          var on = mine.indexOf(o.dataset.letter) !== -1;
+          o.disabled = true;
+          o.classList.remove("correct", "wrong");
+          o.classList.toggle("picked", on);
+          o.setAttribute("aria-pressed", on ? "true" : "false");
+          setOptTag(o, on ? "sua resposta" : "", "pending");
+        });
+        if(confirmBtn) confirmBtn.hidden = true;
+        if(fb){ setVerdict(fb, null, null); fb.hidden = true; }
+        return;
       }
       if(!s){
         opts.forEach(function(o){ o.disabled = false; o.classList.remove("correct","wrong","picked"); o.setAttribute("aria-pressed", "false"); });
@@ -1141,8 +1216,16 @@
           var s = state[num];
           var pickedCount = s ? (multi ? (s.picked || []).length : (s.picked ? 1 : 0)) : 0;
           if(pickedCount !== need) return;
+          var wasDone = allConfirmed();
           s.confirmed = true;
           saveState();
+          if(revealAtEnd && !wasDone && allConfirmed()){
+            // a última: corrige todas de uma vez e mostra o resultado
+            qcards.forEach(applyCardState);
+            renderSummary();
+            drillEl.dispatchEvent(new CustomEvent("toefl-reveal", { bubbles: true }));
+            return;
+          }
           applyCardState(card);
           renderSummary();
         });
@@ -1574,7 +1657,7 @@
       // tudo que é progresso de estudo. Ficam de fora, de propósito: a
       // sequência de dias e a meta de hoje (histórico de constância), a foto
       // e as preferências do aparelho (tema, cronômetro, trilha).
-      var RESET_PREFIXES = ["toefl_progress", "toefl_h3progress", "toefl_srs_", "toefl_bsq_", "toefl_quiz_", "toefl_errlog_", "toefl_cert_", "toefl_ctw_", "toefl_spk_", "toefl_write_", "toefl_exam_", "toefl_scorecalc", "toefl_weeklydash", "toefl_partpos", "toefl_lastpos"];
+      var RESET_PREFIXES = ["toefl_progress", "toefl_h3progress", "toefl_srs_", "toefl_bsq_", "toefl_quiz_", "toefl_errlog_", "toefl_cert_", "toefl_ctw_", "toefl_spk_", "toefl_write_", "toefl_exam_", "toefl_scorecalc", "toefl_weeklydash", "toefl_partpos", "toefl_lastpos", "toefl_goal"];
       resetBtn.addEventListener("click", function(){
         var ok = window.confirm(
           "Isso apaga TODO o seu progresso no curso (partes e subseções marcadas, questões respondidas, " +
@@ -4314,6 +4397,149 @@
     });
     window.__toeflRefreshStart = render;
     document.addEventListener("toefl-part", function(e){ if(e.detail.mod === "mod0") render(); });
+    render();
+  })();
+
+  // abre uma Parte de um módulo e, se pedido, a subseção cujo título começa
+  // com `h3code` (ex. "6.2"), rolando até ela
+  function openPart(mod, n, h3code){
+    navTo(mod);
+    var panel = document.getElementById("panel-" + mod);
+    var card = panel && panel.querySelectorAll(".section-card")[n - 1];
+    if(!card) return;
+    var showPart = window.__toeflShowPart && window.__toeflShowPart[mod];
+    if(showPart) showPart(card, { noScroll: true });
+    var target = card;
+    if(h3code){
+      var h3 = Array.prototype.filter.call(card.querySelectorAll("h3.h3-toggle"), function(h){
+        return h.textContent.replace("✓", "").trim().indexOf(h3code + " ") === 0;
+      })[0];
+      if(h3){
+        h3.classList.remove("collapsed");
+        var body = h3.nextElementSibling;
+        if(body && body.classList.contains("h3-body")) body.classList.remove("h3-collapsed");
+        target = h3;
+      }
+    }
+    setTimeout(function(){ target.scrollIntoView({ behavior: "smooth", block: "start" }); }, 60);
+  }
+
+  // ---------- Resultado do diagnóstico e a meta (M0, Parte 1) ----------
+  // Aparece logo abaixo da décima questão quando ela é confirmada: nível
+  // estimado, acertos por área, pontos fortes e a melhorar, e o formulário da
+  // meta (nota que o aluno precisa e data da prova). Com a meta, mostra a
+  // distância e o cronograma indicado (ToeflLevel.recommend, regras do M0,
+  // Parte 6) e grava em toefl_goal_v1, que a meta de hoje usa.
+  (function(){
+    var box = document.getElementById("diagResult");
+    if(!box) return;
+    var $ = function(id){ return document.getElementById(id); };
+    var AREAS = {};
+    try { AREAS = JSON.parse($("diagAreas").textContent); } catch(e){}
+    var sel = $("goalTarget"), dateIn = $("goalDate"), msg = $("goalMsg");
+    var blank = document.createElement("option");
+    blank.value = ""; blank.textContent = "Escolha a banda";
+    sel.appendChild(blank);
+    ToeflLevel.SCALE.forEach(function(s, i){
+      var o = document.createElement("option");
+      o.value = String(s.band); o.textContent = ToeflLevel.scaleLabel(i);
+      sel.appendChild(o);
+    });
+    dateIn.min = todayStr();
+
+    function bandText(b){ return "banda " + b.code.replace("–", " a "); }
+    function say(text, err){ msg.textContent = text; msg.classList.toggle("is-err", !!err); msg.hidden = !text; }
+    function item(list, text, mod){
+      var li = document.createElement("li");
+      li.appendChild(document.createTextNode(text));
+      if(mod){
+        var b = document.createElement("button");
+        b.type = "button"; b.className = "diag-link"; b.textContent = "Abrir o módulo";
+        b.addEventListener("click", function(){ navTo(mod); });
+        li.appendChild(document.createTextNode(" "));
+        li.appendChild(b);
+      }
+      list.appendChild(li);
+    }
+    function daysText(n){
+      if(n === null) return "";
+      if(n < 0) return " A data da prova já passou: atualize a data.";
+      if(n === 0) return " A prova é hoje.";
+      if(n === 1) return " A prova é amanhã.";
+      return " Faltam " + n + " dias para a prova.";
+    }
+
+    function renderPlan(d){
+      var g = readGoal(), plan = $("diagPlan");
+      if(g){ sel.value = String(g.target); dateIn.value = g.exam; }
+      if(!g){ plan.hidden = true; return; }
+      var lvl = cefrBandFromPct(d.pct), left = daysUntil(g.exam);
+      var rec = ToeflLevel.recommend(d.pct, g.target, left);
+      var want = ToeflLevel.cefrOf(g.target) + " (banda " + ToeflLevel.fmt(g.target) + ")";
+      $("diagPlanGap").textContent = (rec.gap <= 0
+        ? "Você está em " + lvl.label + " (" + bandText(lvl) + ") e a sua meta é " + want + ": você já está na faixa."
+        : "Você está em " + lvl.label + " (" + bandText(lvl) + ") e precisa de " + want + ".") + daysText(left);
+      $("diagPlanSched").textContent = "Cronograma indicado: " + rec.name + ", de " + rec.days + " dias (Parte " + rec.part +
+        "), porque " + rec.reason + "." +
+        (rec.emergency ? " Com menos de 30 dias até a prova, siga o Intensivo junto com o Plano de Emergência da Parte 7."
+          : rec.squeezed ? " A prova chega antes do fim de um cronograma mais longo, então fica o que cabe no prazo." : "");
+      $("diagPlanGo").onclick = function(){ openPart("mod0", 6, rec.part); };
+      plan.hidden = false;
+    }
+
+    function render(){
+      var d = diagStats();
+      if(!d || !d.done){ box.hidden = true; return; }
+      box.hidden = false;
+      var lvl = cefrBandFromPct(d.pct);
+      $("diagResultTitle").textContent = "Nível estimado: " + lvl.label + ", " + bandText(lvl);
+      $("diagScore").textContent = "Você acertou " + d.correct + " de " + d.total +
+        ". Isso não é uma nota, é um mapa: agora dá para saber por onde começar.";
+      var list = $("diagAreaList"), strong = $("diagStrong"), weak = $("diagWeak");
+      list.innerHTML = ""; strong.innerHTML = ""; weak.innerHTML = "";
+      Object.keys(AREAS).forEach(function(k){
+        var a = d.areas[k];
+        if(!a) return;
+        var li = document.createElement("li");
+        li.className = "diag-area " + (a.ok === a.n ? "is-ok" : a.ok === 0 ? "is-bad" : "is-mid");
+        var name = document.createElement("span"); name.className = "diag-area-name"; name.textContent = AREAS[k].nome;
+        var n = document.createElement("span"); n.className = "diag-area-n"; n.textContent = a.ok + " de " + a.n;
+        var bar = document.createElement("span"); bar.className = "diag-area-bar";
+        var fill = document.createElement("span"); fill.style.width = Math.round(100 * a.ok / a.n) + "%";
+        bar.appendChild(fill);
+        li.appendChild(name); li.appendChild(n); li.appendChild(bar);
+        list.appendChild(li);
+        if(a.ok === a.n) item(strong, AREAS[k].nome + ": " + a.ok + " de " + a.n + ".");
+        else item(weak, AREAS[k].nome + ": " + a.ok + " de " + a.n + ". Onde treinar: " + AREAS[k].onde + ".", AREAS[k].mod);
+      });
+      if(!strong.children.length) item(strong, "Ainda nenhuma área completa. Tudo bem: é exatamente isso que o curso vai construir.");
+      if(!weak.children.length) item(weak, "Você acertou todas as áreas. O foco agora é estratégia e tempo de prova.");
+      renderPlan(d);
+    }
+
+    $("goalSave").addEventListener("click", function(){
+      var d = diagStats();
+      var target = parseFloat(sel.value), exam = dateIn.value, left = daysUntil(exam);
+      if(!target){ say("Escolha a nota que você precisa.", true); sel.focus(); return; }
+      if(left === null){ say("Informe a data da prova.", true); dateIn.focus(); return; }
+      if(left < 0){ say("Essa data já passou. Confira a data da prova.", true); dateIn.focus(); return; }
+      var rec = ToeflLevel.recommend(d.pct, target, left), old = readGoal();
+      safeSet(LS_GOAL, JSON.stringify({ target: target, exam: exam, sched: rec.days,
+        start: old && old.sched === rec.days && old.start ? old.start : todayStr() }));
+      say("Plano salvo. A meta de hoje já segue este cronograma.");
+      renderPlan(d);
+      if(typeof window.__toeflRefreshPlan === "function") window.__toeflRefreshPlan();
+    });
+
+    document.addEventListener("toefl-reveal", function(e){
+      if(!e.target.matches || !e.target.matches('[data-drill="mod0-diag"]')) return;
+      render();
+      if(!box.hidden){
+        box.focus({ preventScroll: true });
+        box.scrollIntoView({ behavior: "smooth", block: "start" });
+      }
+    });
+    window.__toeflRefreshDiag = render;
     render();
   })();
 

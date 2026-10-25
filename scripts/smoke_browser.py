@@ -130,6 +130,7 @@ SNAP = r"""
   function t(sel){ var e = document.querySelector(sel); return e ? (e.hidden ? "[oculto] " : "") + e.textContent.trim().replace(/\s+/g, " ").slice(0, 90) : null; }
   return {
     diag: t('.quiz-drill[data-drill="mod0-diag"] .quiz-summary-text'), nivel: t("#levelBadgeBand"), cronograma: t("#levelBadgeSched"),
+    resultado: t("#diagResultTitle"), plano: t("#diagPlanGap"),
     quizM1: t("#panel-mod1 .quiz-drill .quiz-score"), erradasM1: document.querySelectorAll("#panel-mod1 .opt.wrong").length,
     ctw: t(".ctw .ctw-result"), ctwParcial: document.querySelectorAll(".ctw")[1].querySelector(".ctw-in").value,
     bsq: document.querySelector(".bsq-card").className, bsqScore: t(".bsq .quiz-score"),
@@ -233,7 +234,7 @@ SW_STATE = """(async function(){
 
 MODS = ["mod%d" % i for i in range(10)]
 RESET_KEYS = ["toefl_progress", "toefl_h3progress", "toefl_srs_", "toefl_bsq_", "toefl_quiz_", "toefl_errlog_", "toefl_ctw_",
-              "toefl_spk_", "toefl_write_", "toefl_exam_", "toefl_scorecalc", "toefl_weeklydash"]
+              "toefl_spk_", "toefl_write_", "toefl_exam_", "toefl_scorecalc", "toefl_weeklydash", "toefl_goal"]
 
 
 # Tela de apresentacao: o que esta na pagina, o que estoura na largura e o
@@ -549,7 +550,56 @@ def run():
                 check("real_start_card_leads_to_diagnostic",
                       start["shown"] and start["go"] == "Fazer o diagnóstico agora" and start["beforePager"] and start["partOpen"], start)
 
+                # diagnostico: 3 respostas confirmadas, nenhuma corrigida ainda
+                pend = b.eval(r"""(function(){
+                  var d = document.querySelector('.quiz-drill[data-drill="mod0-diag"]');
+                  Array.prototype.slice.call(d.querySelectorAll(".qcard"), 0, 3).forEach(function(c){
+                    c.querySelector('.opt[data-letter="' + c.dataset.correct + '"]').click(); c.querySelector(".qconfirm").click();
+                  });
+                  return { verdicts: d.querySelectorAll(".verdict").length, marked: d.querySelectorAll(".opt.correct, .opt.wrong").length,
+                    explained: Array.prototype.filter.call(d.querySelectorAll(".qfeedback"), function(f){ return !f.hidden; }).length,
+                    pending: d.querySelectorAll(".qpending").length, result: document.getElementById("diagResult").hidden };
+                })()""")
+                check("real_diagnostic_hides_key_until_the_end",
+                      pend == {"verdicts": 0, "marked": 0, "explained": 0, "pending": 3, "result": True}, pend)
+
                 failed = b.eval(ACT)
+                # 7 de 10: resultado no lugar, com áreas, fortes e a melhorar
+                res = b.eval(r"""(function(){
+                  var d = document.querySelector('.quiz-drill[data-drill="mod0-diag"]'), r = document.getElementById("diagResult");
+                  return { hidden: r.hidden, title: document.getElementById("diagResultTitle").textContent,
+                    score: document.getElementById("diagScore").textContent, areas: r.querySelectorAll(".diag-area").length,
+                    strong: document.getElementById("diagStrong").children.length, weak: document.getElementById("diagWeak").children.length,
+                    verdicts: d.querySelectorAll(".verdict").length, pending: d.querySelectorAll(".qpending").length,
+                    afterQuiz: !!(d.compareDocumentPosition(r) & Node.DOCUMENT_POSITION_FOLLOWING),
+                    targets: document.querySelectorAll("#goalTarget option").length };
+                })()""")
+                check("real_diagnostic_result_screen",
+                      not res["hidden"] and "B2" in res["title"] and "banda 4 a 4,5" in res["title"]
+                      and res["score"].startswith("Você acertou 7 de 10.") and res["areas"] == 6 and res["strong"] >= 1
+                      and res["weak"] >= 1 and res["verdicts"] == 10 and res["pending"] == 0 and res["afterQuiz"]
+                      and res["targets"] == 12, res)
+                goal = b.eval(r"""(function(){
+                  function day(n){ var d = new Date(); d.setDate(d.getDate() + n); var p = function(x){ return (x < 10 ? "0" : "") + x; };
+                    return d.getFullYear() + "-" + p(d.getMonth() + 1) + "-" + p(d.getDate()); }
+                  var out = {};
+                  document.getElementById("goalTarget").value = "5"; document.getElementById("goalDate").value = day(45);
+                  document.getElementById("goalSave").click();
+                  out.gap = document.getElementById("diagPlanGap").textContent; out.sched = document.getElementById("diagPlanSched").textContent;
+                  out.saved = JSON.parse(localStorage.getItem("toefl_goal_v1"));
+                  out.today = day(0);
+                  document.getElementById("goalTarget").value = "6"; document.getElementById("goalDate").value = day(20);
+                  document.getElementById("goalSave").click();
+                  out.sched2 = document.getElementById("diagPlanSched").textContent;
+                  document.getElementById("goalTarget").value = "5"; document.getElementById("goalDate").value = day(45);
+                  document.getElementById("goalSave").click();
+                  return out;
+                })()""")
+                check("real_goal_gives_distance_and_schedule",
+                      "Você está em B2 (banda 4 a 4,5) e precisa de C1 (banda 5)." in goal["gap"] and "Faltam 45 dias" in goal["gap"]
+                      and goal["sched"].startswith("Cronograma indicado: Intensivo, de 30 dias (Parte 6.1)")
+                      and goal["saved"]["target"] == 5 and goal["saved"]["sched"] == 30 and goal["saved"]["start"] == goal["today"]
+                      and "Plano de Emergência" in goal["sched2"], goal)
                 b.pump(1.2)  # a caixa de escrita salva com atraso
                 start2 = b.eval('({ title: document.querySelector("#startCard .start-title").textContent,'
                                 ' go: document.querySelector("#startCard .start-go").textContent })')
@@ -749,6 +799,14 @@ def run():
                 check("landing_makes_no_unprovable_claims", not lp["claims"], lp["claims"])
                 # 7 certas de 10: B2, cronograma Regular, e o estado fica na
                 # mesma chave que o app le
+                early = b.eval(r"""(function(){
+                  Array.prototype.slice.call(document.querySelectorAll("#diagnostico .qcard"), 0, 3).forEach(function(c){
+                    c.querySelector('.opt[data-letter="' + c.dataset.correct + '"]').click(); c.querySelector(".qconfirm").click();
+                  });
+                  return { verdicts: document.querySelectorAll("#diagnostico .verdict").length,
+                    pending: document.querySelectorAll("#diagnostico .qpending").length };
+                })()""")
+                check("landing_diagnostic_hides_key_until_the_end", early == {"verdicts": 0, "pending": 3}, early)
                 res = b.eval(LANDING_ANSWER)
                 check("landing_free_diagnostic_gives_band",
                       "Você acertou 7 de 10." in res["text"] and "Nível estimado: banda 4–4,5 (B2)" in res["text"]

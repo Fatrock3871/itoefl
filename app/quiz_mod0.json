@@ -2,6 +2,7 @@
   {
     "num": 1,
     "topic": "Gramática (verb tense/aspect)",
+    "area": "gramatica",
     "prompt": "By the time the seminar starts next Monday, Dr. Alvarez ______ her final report for over three weeks.",
     "options": {
       "A": "writes",
@@ -16,6 +17,7 @@
   {
     "num": 2,
     "topic": "Conectivos (contraste)",
+    "area": "conectivos",
     "prompt": "The new policy was designed to reduce administrative costs; ______, early data suggests it has increased them.",
     "options": {
       "A": "furthermore",
@@ -30,6 +32,7 @@
   {
     "num": 3,
     "topic": "Vocabulário acadêmico",
+    "area": "vocabulario",
     "prompt": "The committee's decision to postpone the vote was widely seen as an attempt to ______ growing public criticism.",
     "options": {
       "A": "defer",
@@ -44,6 +47,7 @@
   {
     "num": 4,
     "topic": "Gramática (subjunctive/conditional)",
+    "area": "gramatica",
     "prompt": "If the funding request ______ approved last quarter, the lab would already have hired two new researchers.",
     "options": {
       "A": "was",
@@ -58,6 +62,7 @@
   {
     "num": 5,
     "topic": "Ordem das palavras (base de Build a Sentence)",
+    "area": "ordem",
     "prompt": "Choose the option that best completes the sentence with correct word order and meaning:\nDespite ______, the research team published their findings ahead of schedule.",
     "options": {
       "A": "numerous setbacks facing",
@@ -72,6 +77,7 @@
   {
     "num": 6,
     "topic": "Conectivos (causa/consequência lógica)",
+    "area": "conectivos",
     "prompt": "Coral reefs are highly sensitive to temperature change; ______, rising ocean temperatures have already caused mass bleaching in many regions.",
     "options": {
       "A": "nevertheless",
@@ -86,6 +92,7 @@
   {
     "num": 7,
     "topic": "Vocabulário acadêmico (collocation)",
+    "area": "vocabulario",
     "prompt": "The professor asked students to ______ their arguments with at least two peer-reviewed sources.",
     "options": {
       "A": "substantiate",
@@ -100,6 +107,7 @@
   {
     "num": 8,
     "topic": "Gramática (relative clauses / estrutura complexa, relevante para Listen and Repeat)",
+    "area": "gramatica",
     "prompt": "The proposal, ______ implications had not been fully considered, was rejected by the board.",
     "options": {
       "A": "that its",
@@ -114,6 +122,7 @@
   {
     "num": 9,
     "topic": "Registro e função comunicativa (relevante para Write an Email)",
+    "area": "registro",
     "prompt": "Choose the sentence with the register most appropriate for a formal email to a university admissions office requesting a deadline extension:",
     "options": {
       "A": "Hey, just wondering if I could get a bit more time to send my stuff over?",
@@ -128,6 +137,7 @@
   {
     "num": 10,
     "topic": "Compreensão inferencial (relevante para Read an Academic Passage / Listen to an Academic Talk)",
+    "area": "compreensao",
     "prompt": "\"Although the pilot program showed promising results in urban districts, researchers cautioned against broad conclusions, noting that participation rates in rural areas remained too low for the results to be generalized.\"\n\nWhat can be inferred from this statement?",
     "options": {
       "A": "The pilot program failed in urban districts.",

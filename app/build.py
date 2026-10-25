@@ -911,7 +911,7 @@ for _slug, _title in LEGAL_PAGES:
 # as 10 questões do diagnóstico, já com as letras redistribuídas pelo
 # pipeline: o mesmo HTML do Módulo 0, sem o rodapé de "refazer" (a página tem
 # o próprio painel de resultado)
-_diag = _re.search(r'<div class="quiz-drill" data-drill="mod0-diag">.*?(?=<div class="quiz-summary")', frag["mod0"], flags=_re.S)
+_diag = _re.search(r'<div class="quiz-drill" data-drill="mod0-diag"[^>]*>.*?(?=<div class="quiz-summary")', frag["mod0"], flags=_re.S)
 if not _diag or _diag.group(0).count('class="qcard"') != 10:
     raise SystemExit("apresentacao: nao achei as 10 questoes do diagnostico no fragmento do M0")
 DIAG_HTML = _diag.group(0) + "</div>"

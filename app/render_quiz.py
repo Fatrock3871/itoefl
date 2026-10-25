@@ -4,7 +4,11 @@
 from rebalance import tag_refs, fixed_order
 
 
-def render_quiz_drill(drill_id, title, objective, passage_html, items, listen=False, level=None):
+def render_quiz_drill(drill_id, title, objective, passage_html, items, listen=False, level=None, reveal_at_end=False):
+    # reveal_at_end=True (diagnóstico do M0): cada resposta confirmada fica
+    # guardada sem correção; o gabarito e as explicações aparecem juntos
+    # depois da última questão (app.js lê data-reveal="end"). O item pode
+    # trazer "area", que vira data-area e alimenta os acertos por área.
     # listen=True (só M2, Listening): acrescenta um botão de ouvir em voz
     # alta (Web Speech API, sem áudio gravado) -- o item/passagem vira som
     # de verdade em vez de só transcrição lida em silêncio. Não mexe em M1
@@ -21,6 +25,8 @@ def render_quiz_drill(drill_id, title, objective, passage_html, items, listen=Fa
             for L, txt in it["options"].items()
         )
         multi_attr = f' data-multi="{it["multi"]}"' if it.get("multi") else ""
+        if it.get("area"):
+            multi_attr += f' data-area="{it["area"]}"'
         # o app.js embaralha a ordem das alternativas a cada sessão; itens
         # cuja letra tem significado próprio ficam na ordem original
         if fixed_order(it["prompt"], it["explanation"], *it["options"].values()):
@@ -50,6 +56,8 @@ def render_quiz_drill(drill_id, title, objective, passage_html, items, listen=Fa
     level_badge = f'<span class="drill-level" data-level-badge-for="{drill_id}">Nível {level}</span>' if level else ""
     heading = f'<h3>{title}{level_badge}</h3>' if title else (f'<p class="quiz-level-standalone">{level_badge}</p>' if level_badge else "")
     level_attr = f' data-level="{level}"' if level else ""
+    if reveal_at_end:
+        level_attr += ' data-reveal="end"'
     if level and title:
         import html as _html
         level_attr += f' data-lp-title="{_html.escape(title, quote=True)}"'

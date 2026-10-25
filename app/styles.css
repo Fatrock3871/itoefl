@@ -1171,6 +1171,48 @@ main{max-width:1320px; margin:0 auto; padding:0 30px 120px; min-width:0;}
 .otag-bad{color:var(--danger);}
 .otag-ok::before{content:"✓ ";}
 .otag-bad::before{content:"✗ ";}
+.otag-pending{color:var(--ink-2);}
+/* diagnóstico: resposta guardada, gabarito só no fim */
+.qpending{font-size:13.5px !important; color:var(--ink-2) !important; margin:10px 0 0 !important; font-weight:600;}
+
+/* tela de resultado do diagnóstico (M0, Parte 1) */
+.diag-result{background:var(--paper); border:2px solid var(--edge); border-radius:var(--radius); box-shadow:var(--shadow-hard);
+  padding:20px 22px 22px; margin:22px 0 26px; scroll-margin-top:80px;}
+.diag-result:focus{outline:none;}
+.diag-kicker{font-family:'Bricolage Grotesque',sans-serif; font-size:12px !important; font-weight:800; text-transform:uppercase;
+  letter-spacing:0.06em; color:var(--accent-strong) !important; margin:0 0 4px !important;}
+.diag-result .diag-title{font-size:22px; margin:0 0 6px; font-family:'Bricolage Grotesque',sans-serif; font-weight:800;}
+.diag-score{font-size:15px !important; margin:0 0 16px !important; max-width:none !important;}
+.diag-block h4, .diag-goal h4{font-size:14px; margin:14px 0 8px; font-family:'Bricolage Grotesque',sans-serif; font-weight:800;}
+.diag-areas{list-style:none; margin:0 !important; padding:0 !important; display:grid; gap:8px;}
+.diag-area{display:grid; grid-template-columns:minmax(0,1fr) auto; gap:4px 12px; align-items:center; margin:0 !important;}
+.diag-area-name{font-weight:700; font-size:14px;}
+.diag-area-n{font-size:13.5px; color:var(--ink-2);}
+.diag-area-bar{grid-column:1 / -1; height:8px; border-radius:99px; background:var(--hair); overflow:hidden;}
+.diag-area-bar span{display:block; height:100%; background:var(--accent);}
+.diag-area.is-bad .diag-area-bar span{background:var(--danger);}
+.diag-sw{display:grid; grid-template-columns:repeat(auto-fit, minmax(220px, 1fr)); gap:4px 22px;}
+.diag-list{margin:0 !important; padding-left:20px !important;}
+.diag-list li{font-size:14px; margin:0 0 6px !important;}
+.diag-link{background:none; border:none; padding:2px 0; font:inherit; font-size:13.5px; font-weight:700; color:var(--accent-strong);
+  text-decoration:underline; text-underline-offset:3px; cursor:pointer;}
+.diag-goal{margin-top:18px; padding-top:14px; border-top:2px dashed var(--hair);}
+.diag-goal p{font-size:14px !important; max-width:none !important;}
+.diag-goal-fields{display:grid; grid-template-columns:repeat(auto-fit, minmax(220px, 1fr)); gap:12px; margin:0 0 14px;}
+.diag-field{display:flex; flex-direction:column; gap:6px; font-size:13.5px; font-weight:700;}
+.diag-field select, .diag-field input{min-height:44px; padding:8px 10px; border:2px solid var(--edge); border-radius:10px;
+  background:var(--bg); color:var(--ink); font:inherit; font-weight:600; min-width:0; width:100%;}
+.diag-btn{min-height:44px; padding:10px 20px; border-radius:99px; border:2px solid var(--edge); background:var(--paper); color:var(--ink);
+  font-family:'Bricolage Grotesque',sans-serif; font-size:14.5px; font-weight:800; cursor:pointer;}
+.diag-btn-main{background:var(--accent-fill); color:#fff; box-shadow:3px 3px 0 var(--edge);}
+.diag-btn-main:hover{background:var(--accent-fill-hover);}
+.diag-msg{font-size:13.5px !important; margin:10px 0 0 !important; color:var(--ink-2) !important;}
+.diag-msg.is-err{color:var(--danger) !important;}
+.diag-plan{margin-top:16px; padding:14px 16px; border-radius:12px; background:var(--accent-wash); border:2px solid var(--edge);}
+.diag-plan p{font-size:14.5px !important; margin:0 0 8px !important; max-width:none !important;}
+.diag-plan-gap{font-weight:700;}
+.diag-actions{display:flex; flex-wrap:wrap; gap:10px; margin-top:6px;}
+.diag-note{font-size:13px !important; color:var(--ink-2) !important; margin:16px 0 0 !important;}
 @media(max-width:480px){ .opt, .exam-opt{flex-wrap:wrap;} }
 .verdict{
   font-family:'Bricolage Grotesque',sans-serif; font-size:15.5px !important; font-weight:800;

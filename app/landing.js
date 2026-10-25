@@ -44,6 +44,10 @@
       v.textContent = (ok ? "✓ " : "✗ ") + text;
     }
 
+    // gabarito e explicações só depois da décima resposta, como no app
+    function allDone(){
+      return cards.every(function(c){ return state[c.dataset.num] && state[c.dataset.num].confirmed; });
+    }
     function applyCard(card){
       var s = state[card.dataset.num];
       var key = card.dataset.correct;
@@ -51,6 +55,29 @@
       var confirmBtn = card.querySelector(".qconfirm");
       var fb = card.querySelector(".qfeedback");
       var done = !!(s && s.confirmed);
+      var note = card.querySelector(".qpending");
+      if(done && !allDone()){
+        opts.forEach(function(o){
+          var on = s.picked === o.dataset.letter;
+          o.disabled = true;
+          o.classList.remove("correct", "wrong");
+          o.classList.toggle("picked", on);
+          o.setAttribute("aria-pressed", on ? "true" : "false");
+          setTag(o, on ? "sua resposta" : "", "pending");
+        });
+        confirmBtn.hidden = true;
+        fb.hidden = true;
+        setVerdict(fb, null);
+        if(!note){
+          note = document.createElement("p");
+          note.className = "qpending";
+          note.setAttribute("role", "status");
+          note.textContent = "Resposta guardada. O gabarito aparece no fim, depois da última questão.";
+          card.appendChild(note);
+        }
+        return;
+      }
+      if(note) note.parentNode.removeChild(note);
       opts.forEach(function(o){
         var L = o.dataset.letter, picked = !!s && s.picked === L;
         o.disabled = done;
@@ -108,7 +135,7 @@
         if(!s || !s.picked) return;
         s.confirmed = true;
         save();
-        applyCard(card);
+        if(allDone()) cards.forEach(applyCard); else applyCard(card);
         renderResult();
         if(!resultEl.hidden) resultEl.focus();
       });

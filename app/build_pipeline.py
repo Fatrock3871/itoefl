@@ -198,6 +198,57 @@ def slice_lines(text, start_marker, end_marker):
 
 
 # ---------- Módulo 0: diagnostic quiz ----------
+# Áreas do diagnóstico (campo "area" de quiz_mod0.json): nome na tela e onde
+# treinar cada uma. O app.js lê o JSON embutido na tela de resultado.
+DIAG_AREAS = {
+    "gramatica": {"nome": "Gramática", "mod": "mod4", "onde": "Módulo 4, Writing (Build a Sentence)"},
+    "conectivos": {"nome": "Conectivos", "mod": "mod5", "onde": "Módulo 5, Registro e Retórica"},
+    "vocabulario": {"nome": "Vocabulário", "mod": "mod6", "onde": "Módulo 6, Vocabulário"},
+    "ordem": {"nome": "Ordem das palavras", "mod": "mod4", "onde": "Módulo 4, Writing (Build a Sentence)"},
+    "registro": {"nome": "Registro", "mod": "mod5", "onde": "Módulo 5, Registro e Retórica"},
+    "compreensao": {"nome": "Compreensão", "mod": "mod1", "onde": "Módulo 1, Reading"},
+}
+
+
+def render_diag_result():
+    """Tela de resultado do diagnóstico, logo abaixo da décima questão. Sai
+    vazia e escondida; o app.js preenche quando a última resposta é
+    confirmada. Tem também o formulário da meta (nota e data da prova)."""
+    areas = json.dumps(DIAG_AREAS, ensure_ascii=False).replace("</", "<\\/")
+    return (
+        '<div class="diag-result" id="diagResult" tabindex="-1" role="region" aria-labelledby="diagResultTitle" hidden>'
+        f'<script type="application/json" id="diagAreas">{areas}</script>'
+        '<p class="diag-kicker">Seu resultado</p>'
+        '<h3 class="diag-title" id="diagResultTitle"></h3>'
+        '<p class="diag-score" id="diagScore"></p>'
+        '<div class="diag-block"><h4>Acertos por área</h4><ul class="diag-areas" id="diagAreaList"></ul></div>'
+        '<div class="diag-sw">'
+        '<div class="diag-block"><h4>Pontos fortes</h4><ul class="diag-list" id="diagStrong"></ul></div>'
+        '<div class="diag-block"><h4>Para melhorar</h4><ul class="diag-list" id="diagWeak"></ul></div>'
+        '</div>'
+        '<div class="diag-goal" id="diagGoal">'
+        '<h4>Próximo passo: o seu plano</h4>'
+        '<p>Diga a nota que você precisa e quando é a prova. Com isso eu calculo a distância até a meta e indico o '
+        'cronograma de 30, 60 ou 90 dias.</p>'
+        '<div class="diag-goal-fields">'
+        '<label class="diag-field"><span>Nota que você precisa</span><select id="goalTarget"></select></label>'
+        '<label class="diag-field"><span>Data da prova</span><input type="date" id="goalDate"></label>'
+        '</div>'
+        '<button type="button" class="diag-btn diag-btn-main" id="goalSave">Montar meu plano</button>'
+        '<p class="diag-msg" id="goalMsg" role="status" hidden></p>'
+        '</div>'
+        '<div class="diag-plan" id="diagPlan" hidden>'
+        '<p class="diag-plan-gap" id="diagPlanGap"></p>'
+        '<p class="diag-plan-sched" id="diagPlanSched"></p>'
+        '<div class="diag-actions">'
+        '<button type="button" class="diag-btn diag-btn-main" id="diagPlanGo">Ver o cronograma</button>'
+        '</div>'
+        '</div>'
+        '<p class="diag-note">As explicações de cada questão estão logo acima, questão por questão.</p>'
+        '</div>'
+    )
+
+
 def build_mod0():
     raw = open(f"{SRC}/modulo_0_embarque.md", encoding="utf-8").read()
     raw = strip_title_banner(raw)
@@ -220,18 +271,21 @@ def build_mod0():
     html_after = to_html(after)
 
     quiz_json = json.load(open("quiz_mod0.json", encoding="utf-8"))
+    if {q["area"] for q in quiz_json} != set(DIAG_AREAS):
+        raise ValueError(f"quiz_mod0.json: as áreas das questões têm de ser {sorted(DIAG_AREAS)}")
     items = [{
         "num": q["num"], "prompt": f"Questão {q['num']}: {q['topic']}<br>{q['prompt']}",
-        "options": q["options"], "correct": q["correct"],
+        "options": q["options"], "correct": q["correct"], "area": q["area"],
         "explanation": f"<strong>Por que certa:</strong> {q['why_right']}<br><strong>Por que as outras erram:</strong> {q['why_wrong']}",
     } for q in quiz_json]
     # 7 das 10 respostas do diagnóstico eram "C" na origem (ver rebalance.py)
     items = rebalance_items(items, "mod0-diag")
     widget = render_quiz_drill(
         "mod0-diag", None,
-        "Teste de Nivelamento Express: 10 questões de gramática, vocabulário e conectivos acadêmicos. Responda, confirme cada resposta para ver o gabarito, e refaça quando quiser.",
-        None, items,
-    )
+        "Teste de Nivelamento Express: 10 questões de gramática, vocabulário, conectivos, ordem das palavras, registro e "
+        "compreensão. Responda e confirme cada uma. O gabarito e as explicações aparecem juntos no fim, depois da décima.",
+        None, items, reveal_at_end=True,
+    ) + render_diag_result()
 
     # painel "Seu desempenho real até agora" (Parte 4, depois de 4.3): soma os
     # acertos dos Action Drills interativos de M1/M2 (JS calcula em tempo real,
