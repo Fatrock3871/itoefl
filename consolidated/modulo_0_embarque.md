@@ -10,143 +10,23 @@ Este é o TOEFL iBT nas especificações oficiais da ETS, vigentes desde janeiro
 
 ---
 
-## PARTE 1: O QUE ESTÁ EM JOGO
+## PARTE 1: TESTE DE NIVELAMENTO EXPRESS
 
-> 📌 **Este módulo em dois minutos.** Ele faz quatro coisas, nesta ordem: (1) explica como a prova de 2026 funciona e como ela é pontuada (Partes 1 e 2); (2) mede o seu nível com um teste de 10 questões (Parte 3); (3) transforma percentual de acerto em banda estimada, com uma calculadora (Parte 4); (4) entrega um cronograma de 30, 60 ou 90 dias de acordo com o seu nível (Parte 6). Com pouco tempo, faça a Parte 3 agora e vá direto para a Parte 6. O resto é referência para consultar depois.
+> 📌 **Este módulo em dois minutos.** Ele faz quatro coisas, nesta ordem: (1) mede o seu nível com um teste de 10 questões (esta Parte 1); (2) explica como a prova de 2026 funciona e como ela é pontuada (Partes 2 e 3); (3) transforma percentual de acerto em banda estimada, com uma calculadora (Parte 4); (4) entrega um cronograma de 30, 60 ou 90 dias de acordo com o seu nível (Parte 6). Com pouco tempo, faça o diagnóstico logo abaixo: no fim dele você já vê o seu nível e o cronograma indicado. O resto é referência para consultar depois.
 
-### 1.1 Por Que Você Está Aqui
+### 1.1 Como Usar Este Diagnóstico
 
-Você não está estudando inglês. Está construindo um **ativo de admissão**: um número que abre ou fecha porta de universidade, bolsa, visto, processo seletivo.
-
-O TOEFL iBT 2026 é curto e adaptativo: no Reading e no Listening, o seu desempenho no primeiro bloco decide se o segundo bloco será mais fácil ou mais difícil. Não existe gordura pra queimar.
-
-O tempo de fala e escrita também encolheu. Não dá pra "empurrar com o corpo" uma resposta capenga. Ela precisa sair certa já na primeira tentativa.
-
-Pergunta pra responder com honestidade agora: se o exame começasse amanhã, sua primeira resposta em cada seção sairia certa? Se a resposta for não, é exatamente essa lacuna que os próximos módulos fecham.
-
-> 📌 **Princípio fundamental do Sistema:** O TOEFL 2026 recompensa precisão imediata, não volume de esforço. Quem entende a arquitetura do teste (e treina exatamente para ela) sai na frente de quem apenas "estuda inglês em geral".
-
-### 1.2 A Nova Régua: Duas Escalas, Um Só Objetivo
-
-A partir de 2026 seu resultado sai em **duas escalas ao mesmo tempo**, e a ETS estima que essa transição dure até aproximadamente 2028:
-
-| Escala | O que é | Status |
-|---|---|---|
-| **CEFR Bands 1–6** (com meios pontos: 1, 1.5, 2, 2.5 ... 6) | Nova régua oficial principal, uma banda por seção (Reading, Listening, Writing, Speaking) + banda geral (média das 4) | **Escala primária a partir de 2026** |
-| **0–120 (legada)** | Score comparável, calculado estatisticamente a partir do desempenho na nova prova | Reportado em paralelo até ~2028, depois descontinuado |
-
-> ⚡ **Por que isso importa para você:** Universidades e programas de bolsa ainda estão migrando seus critérios de corte. Nos próximos 1–2 anos, muitas instituições vão aceitar equivalências entre as duas escalas. Você precisa entender e conseguir comunicar **ambas**, não apenas para o teste, mas para preencher formulários de admissão corretamente.
-
-### 1.3 Tabela CEFR × 0–120 (concordância oficial da ETS)
-
-> 📌 A ETS publica a concordância entre as bandas 1–6 e a escala 0–120 (página *TOEFL Score Scale Update* e *Updated TOEFL iBT Test Overview*, Tabela 3). Cada banda corresponde a uma faixa do 0–120, e o boletim traz o ponto médio dessa faixa: uma banda 4.5, por exemplo, sai acompanhada de 90. As faixas abaixo juntam as duas meias bandas de cada nível CEFR. O perfil de candidato é leitura nossa.
-
-| Banda CEFR | Nível | Faixa comparável 0–120 (ETS) | Perfil de candidato |
-|---|---|---|---|
-| 1 – 1.5 | A1 | 0–23 | Iniciante, não apto ao exame ainda |
-| 2 – 2.5 | A2 | 24–43 | Básico: fundamentos incompletos |
-| 3 – 3.5 | B1 | 44–71 | Intermediário: base para começar preparação séria |
-| 4 – 4.5 | B2 | 72–94 | Intermediário-avançado: faixa de aprovação da maioria dos programas de graduação |
-| 5 – 5.5 | C1 | 95–113 | Avançado: faixa-alvo de bolsas competitivas e pós-graduação em universidades de elite |
-| 6 | C2 | 114–120 | Proficiência plena: teto do exame |
-
-> 🎯 **Meta do iTOEFL:** levar você à banda **5–6 (C1–C2)**, equivalente à faixa alta historicamente exigida por Ivy League, G5 britânico e programas de mestrado/doutorado competitivos.
-
----
-
-## PARTE 2: RADIOGRAFIA DO NOVO EXAME (2026)
-
-### 2.1 Visão Geral em Números
-
-| Elemento | Dado 2026 |
-|---|---|
-| **Tempo total do exame** | **1h23min – 1h29min** |
-| **Total de itens** | 120 itens (Reading e Listening incluem itens-piloto não pontuados) |
-| **Total de pontos brutos** | 145 pontos (Reading 35 + Listening 35 + Writing 20 + Speaking 55) |
-| **Correção** | 108 itens corrigidos por máquina + 12 por IA, segundo o total da ETS (as linhas da própria tabela da ETS, reproduzidas na Parte 2.3, somam 107 e 13) |
-| **Reading / Listening** | Design **adaptativo em 2 estágios** (router + módulo inferior ou superior conforme desempenho) |
-| **Writing / Speaking** | Design **linear** (todos os candidatos recebem as mesmas tasks) |
-
-> Fonte oficial: *ETS · TOEFL iBT Test: 2026 Update Test Blueprint and Specifications Document*, disponível no site da ETS (ets.org).
-
-### 2.2 As 4 Seções: Estrutura Nova
-
-| Seção | Duração | Itens | Pontos brutos | Adaptativo? |
-|---|---|---|---|---|
-| **Reading** | ~18–21 min + 9 min router | 50 itens (~35 pontuados + ~15 piloto) | 35 | Sim (2 estágios) |
-| **Listening** | ~25–29 min (router ~18 + inferior 7 / superior 11) | 47 itens (~35 pontuados + ~12 piloto) | 35 | Sim (2 estágios) |
-| **Writing** | ~23 min | 12 itens | 20 | Não (linear) |
-| **Speaking** | ~8 min | 11 itens | 55 | Não (linear) |
-
-> 📌 **Três números que não se misturam.**
->
-> 1. **Pontos brutos** (a coluna acima: 35, 35, 20 e 55). É a soma dos itens que contam ponto, antes de qualquer conversão. Esse número não aparece no seu resultado.
-> 2. **Banda de 1 a 6.** É a nota oficial de cada seção e a geral, de meio em meio ponto.
-> 3. **Escala antiga, de 0 a 30 por seção e 0 a 120 no total.** Aparece no relatório de notas só como referência, por dois anos, para quem ainda pensa na escala anterior (a equivalência das bandas com o 0 a 120 está na Parte 1.3). Esse "0 a 30" **não** é ponto bruto.
->
-> Um aviso sobre as fontes: o *Test Overview* da ETS tem uma tabela de pontos brutos em que Reading e Listening aparecem como "0–30", enquanto o *Test Blueprint and Specifications* dá 35 para cada uma. Os dois documentos concordam em Writing (20) e Speaking (55). Este curso segue o Blueprint, que é o documento que detalha quantos itens contam ponto em cada seção. Para o seu estudo não muda nada: o que você acompanha é a banda.
-
-Repare no Speaking: só 8 minutos, mas 55 pontos brutos, quase o triplo do Writing, espremidos em 11 itens curtos. Cada resposta pesa muito mais do que parece, e não tem chance de "esquentar": a primeira já precisa sair boa.
-
-### 2.3 Os Tipos de Item: Mapa Completo
-
-#### Reading
-| Task | Itens | O que testa | CEFR |
-|---|---|---|---|
-| **Complete the Words** | 30 (1pt cada) | Completar o final de palavras cortadas em parágrafos curtos (10 por parágrafo): gramática, forma e ortografia da palavra, compreensão | B1–C1+ |
-| **Read in Daily Life** | 5–15 (1pt cada) | Textos curtos não acadêmicos (placa, cardápio, e-mail, post) | A1–C1 |
-| **Read an Academic Passage** | 5–15 (1pt cada) | Ideia principal, detalhes, inferência, estrutura retórica | B1–C2 |
-
-#### Listening
-| Task | Itens | O que testa | CEFR |
-|---|---|---|---|
-| **Listen and Choose a Response** | 15–19 (1pt cada) | Diálogo de troca única entre duas pessoas | A1–B2 |
-| **Listen to a Conversation** | 10 (1pt cada) | Conversas curtas entre duas pessoas | A2–C1 |
-| **Listen to an Announcement** | 6–10 (1pt cada) | Anúncios de sala/campus | A2–C1 |
-| **Listen to an Academic Talk** | 8–16 (1pt cada) | Palestra acadêmica: ideia central, inferência, vocabulário idiomático | A2–C2 |
-
-#### Writing
-| Task | Itens | O que testa | CEFR | Corretor |
-|---|---|---|---|---|
-| **Build a Sentence** | 10 (1pt cada) | Reconstruir estruturas de frase (contexto social/interpessoal) | A1–C2 | Máquina |
-| **Write an Email** | 1 (5pts) | E-mail curto em resposta a uma situação do dia a dia ou da vida universitária, cobrindo 3 pontos pedidos | B1–C2 | IA |
-| **Write for an Academic Discussion** | 1 (5pts) | Parágrafo acadêmico com argumento sustentado, gramática e vocabulário variados | B1–C2 | IA |
-
-#### Speaking
-| Task | Itens | O que testa | CEFR | Corretor |
-|---|---|---|---|---|
-| **Listen and Repeat** | 7 (5pts cada) | Repetir frases com precisão e inteligibilidade: progride de orações simples a estruturas complexas | A1–C2 | IA (SpeechRater) |
-| **Take an Interview** | 4 (5pts cada) | Responder perguntas com elaboração clara, gramática precisa, prosódia inteligível: descrições, opiniões, previsões, narrações | A1–C2 | IA (SpeechRater) |
-
-Speaking tem só 2 formatos: Listen and Repeat e Take an Interview. Não tem espaço, nem tempo, pra discurso longo estruturado.
-
-### 2.4 A Lógica do Speaking e Writing
-
-Entender essa lógica muda como você treina. Grave isto:
-- **Listen and Repeat** paga por **fidelidade exata** ao que você ouviu, som e gramática. "Ter algo pra dizer" não vale nada aqui: não tem espaço pra parafrasear.
-- **Take an Interview** quer resposta **curta, direta, coerente na hora**. Esqueça introdução-desenvolvimento-conclusão.
-- **Write an Email** (7 minutos) e **Write for an Academic Discussion** (10 minutos, 100 palavras ou mais) são textos curtos e objetivos, não redação longa.
-- **Build a Sentence** é gramática pura e imediata: cada erro de estrutura zera o item.
-
-Resumindo: o que pontua é precisão instantânea, prosódia natural, gramática automática. Isso vem de repetição deliberada, não de decorar script pronto pra "encher linguiça".
-
----
-
-## PARTE 3: TESTE DE NIVELAMENTO EXPRESS
-
-### 3.1 Como Usar Este Diagnóstico
-
-Estas 10 questões medem seus fundamentos: **gramática, vocabulário e conectivos acadêmicos**. É a base das 4 seções do exame novo.
+Estas 10 questões medem seus fundamentos: **gramática, vocabulário, conectivos, ordem das palavras, registro e compreensão**. É a base das 4 seções do exame novo.
 
 Essa base aparece em Complete the Words (Reading), na decodificação de fala conectada (Listening), em Build a Sentence e nos textos de Writing, e na precisão gramatical que Listen and Repeat e Take an Interview cobram no Speaking.
 
 Ou seja: não é um teste "à parte". É o esqueleto de tudo que vem depois.
 
-> ⏱️ **Tempo sugerido:** 12 minutos, sem consulta. Responda a tudo antes de conferir o gabarito: o diagnóstico só é confiável se refletir seu nível real, não o que você consegue pesquisar.
+> ⏱️ **Tempo sugerido:** 12 minutos, sem consulta. O gabarito e as explicações aparecem no fim, depois da décima resposta: o diagnóstico só é confiável se refletir seu nível real, não o que você consegue pesquisar.
 
 ---
 
-### 3.2 As 10 Questões
+### 1.2 As 10 Questões
 
 **Questão 1: Gramática (verb tense/aspect)** By the time the seminar starts next Monday, Dr. Alvarez ______ her final report for over three weeks.
 
@@ -192,7 +72,7 @@ What can be inferred from this statement?
 
 ---
 
-### 3.3 Gabarito Comentado
+### 1.3 Gabarito Comentado
 
 | Q | Resposta | Por que está certa | Por que os distratores erram |
 |---|---|---|---|
@@ -207,7 +87,7 @@ What can be inferred from this statement?
 | **9** | **(B)** | Fórmula de abertura formal ("I am writing to..."), advérbio de cortesia ("respectfully") e justificativa objetiva: adequado para comunicação institucional, exatamente o padrão exigido em Write an Email. | (A), (C) e (D) usam registro coloquial ("Hey", "just wondering", "stuff", "you guys") e tom de cobrança ("it's urgent"): inadequados para um e-mail formal a uma instituição. |
 | **10** | **(C)** | O texto diz que a participação rural foi baixa demais para generalizar; logo, os resultados podem não representar a população como um todo. | (A) contradiz o texto (resultados foram "promissores", não um fracasso); (B) exagera: "baixa participação" não é "exclusão total"; (D) é uma conclusão não sustentada pelo texto, que apenas pede cautela, não cancelamento. |
 
-### 3.4 Diagnóstico de Nível CEFR
+### 1.4 Diagnóstico de Nível CEFR
 
 | Acertos (de 10) | Banda CEFR estimada | Faixa 0–120 comparável | Leitura do resultado |
 |---|---|---|---|
@@ -221,6 +101,126 @@ What can be inferred from this statement?
 > A régua é a mesma da tabela da Parte 4.2 (cada acerto vale 10%), e é a que o site usa para mostrar a sua banda ao fim do diagnóstico.
 
 > 🎯 Guarde seu resultado: ele é o ponto de partida do seu **Weekly Performance Dashboard** (Parte 5) e define qual cronograma de estudo (Parte 6) faz mais sentido para você.
+
+---
+
+## PARTE 2: O QUE ESTÁ EM JOGO
+
+### 2.1 Por Que Você Está Aqui
+
+Você não está estudando inglês. Está construindo um **ativo de admissão**: um número que abre ou fecha porta de universidade, bolsa, visto, processo seletivo.
+
+O TOEFL iBT 2026 é curto e adaptativo: no Reading e no Listening, o seu desempenho no primeiro bloco decide se o segundo bloco será mais fácil ou mais difícil. Não existe gordura pra queimar.
+
+O tempo de fala e escrita também encolheu. Não dá pra "empurrar com o corpo" uma resposta capenga. Ela precisa sair certa já na primeira tentativa.
+
+Pergunta pra responder com honestidade agora: se o exame começasse amanhã, sua primeira resposta em cada seção sairia certa? Se a resposta for não, é exatamente essa lacuna que os próximos módulos fecham.
+
+> 📌 **Princípio fundamental do Sistema:** O TOEFL 2026 recompensa precisão imediata, não volume de esforço. Quem entende a arquitetura do teste (e treina exatamente para ela) sai na frente de quem apenas "estuda inglês em geral".
+
+### 2.2 A Nova Régua: Duas Escalas, Um Só Objetivo
+
+A partir de 2026 seu resultado sai em **duas escalas ao mesmo tempo**, e a ETS estima que essa transição dure até aproximadamente 2028:
+
+| Escala | O que é | Status |
+|---|---|---|
+| **CEFR Bands 1–6** (com meios pontos: 1, 1.5, 2, 2.5 ... 6) | Nova régua oficial principal, uma banda por seção (Reading, Listening, Writing, Speaking) + banda geral (média das 4) | **Escala primária a partir de 2026** |
+| **0–120 (legada)** | Score comparável, calculado estatisticamente a partir do desempenho na nova prova | Reportado em paralelo até ~2028, depois descontinuado |
+
+> ⚡ **Por que isso importa para você:** Universidades e programas de bolsa ainda estão migrando seus critérios de corte. Nos próximos 1–2 anos, muitas instituições vão aceitar equivalências entre as duas escalas. Você precisa entender e conseguir comunicar **ambas**, não apenas para o teste, mas para preencher formulários de admissão corretamente.
+
+### 2.3 Tabela CEFR × 0–120 (concordância oficial da ETS)
+
+> 📌 A ETS publica a concordância entre as bandas 1–6 e a escala 0–120 (página *TOEFL Score Scale Update* e *Updated TOEFL iBT Test Overview*, Tabela 3). Cada banda corresponde a uma faixa do 0–120, e o boletim traz o ponto médio dessa faixa: uma banda 4.5, por exemplo, sai acompanhada de 90. As faixas abaixo juntam as duas meias bandas de cada nível CEFR. O perfil de candidato é leitura nossa.
+
+| Banda CEFR | Nível | Faixa comparável 0–120 (ETS) | Perfil de candidato |
+|---|---|---|---|
+| 1 – 1.5 | A1 | 0–23 | Iniciante, não apto ao exame ainda |
+| 2 – 2.5 | A2 | 24–43 | Básico: fundamentos incompletos |
+| 3 – 3.5 | B1 | 44–71 | Intermediário: base para começar preparação séria |
+| 4 – 4.5 | B2 | 72–94 | Intermediário-avançado: faixa de aprovação da maioria dos programas de graduação |
+| 5 – 5.5 | C1 | 95–113 | Avançado: faixa-alvo de bolsas competitivas e pós-graduação em universidades de elite |
+| 6 | C2 | 114–120 | Proficiência plena: teto do exame |
+
+> 🎯 **Meta do iTOEFL:** levar você à banda **5–6 (C1–C2)**, equivalente à faixa alta historicamente exigida por Ivy League, G5 britânico e programas de mestrado/doutorado competitivos.
+
+---
+
+## PARTE 3: RADIOGRAFIA DO NOVO EXAME (2026)
+
+### 3.1 Visão Geral em Números
+
+| Elemento | Dado 2026 |
+|---|---|
+| **Tempo total do exame** | **1h23min – 1h29min** |
+| **Total de itens** | 120 itens (Reading e Listening incluem itens-piloto não pontuados) |
+| **Total de pontos brutos** | 145 pontos (Reading 35 + Listening 35 + Writing 20 + Speaking 55) |
+| **Correção** | 108 itens corrigidos por máquina + 12 por IA, segundo o total da ETS (as linhas da própria tabela da ETS, reproduzidas na Parte 3.3, somam 107 e 13) |
+| **Reading / Listening** | Design **adaptativo em 2 estágios** (router + módulo inferior ou superior conforme desempenho) |
+| **Writing / Speaking** | Design **linear** (todos os candidatos recebem as mesmas tasks) |
+
+> Fonte oficial: *ETS · TOEFL iBT Test: 2026 Update Test Blueprint and Specifications Document*, disponível no site da ETS (ets.org).
+
+### 3.2 As 4 Seções: Estrutura Nova
+
+| Seção | Duração | Itens | Pontos brutos | Adaptativo? |
+|---|---|---|---|---|
+| **Reading** | ~18–21 min + 9 min router | 50 itens (~35 pontuados + ~15 piloto) | 35 | Sim (2 estágios) |
+| **Listening** | ~25–29 min (router ~18 + inferior 7 / superior 11) | 47 itens (~35 pontuados + ~12 piloto) | 35 | Sim (2 estágios) |
+| **Writing** | ~23 min | 12 itens | 20 | Não (linear) |
+| **Speaking** | ~8 min | 11 itens | 55 | Não (linear) |
+
+> 📌 **Três números que não se misturam.**
+>
+> 1. **Pontos brutos** (a coluna acima: 35, 35, 20 e 55). É a soma dos itens que contam ponto, antes de qualquer conversão. Esse número não aparece no seu resultado.
+> 2. **Banda de 1 a 6.** É a nota oficial de cada seção e a geral, de meio em meio ponto.
+> 3. **Escala antiga, de 0 a 30 por seção e 0 a 120 no total.** Aparece no relatório de notas só como referência, por dois anos, para quem ainda pensa na escala anterior (a equivalência das bandas com o 0 a 120 está na Parte 2.3). Esse "0 a 30" **não** é ponto bruto.
+>
+> Um aviso sobre as fontes: o *Test Overview* da ETS tem uma tabela de pontos brutos em que Reading e Listening aparecem como "0–30", enquanto o *Test Blueprint and Specifications* dá 35 para cada uma. Os dois documentos concordam em Writing (20) e Speaking (55). Este curso segue o Blueprint, que é o documento que detalha quantos itens contam ponto em cada seção. Para o seu estudo não muda nada: o que você acompanha é a banda.
+
+Repare no Speaking: só 8 minutos, mas 55 pontos brutos, quase o triplo do Writing, espremidos em 11 itens curtos. Cada resposta pesa muito mais do que parece, e não tem chance de "esquentar": a primeira já precisa sair boa.
+
+### 3.3 Os Tipos de Item: Mapa Completo
+
+#### Reading
+| Task | Itens | O que testa | CEFR |
+|---|---|---|---|
+| **Complete the Words** | 30 (1pt cada) | Completar o final de palavras cortadas em parágrafos curtos (10 por parágrafo): gramática, forma e ortografia da palavra, compreensão | B1–C1+ |
+| **Read in Daily Life** | 5–15 (1pt cada) | Textos curtos não acadêmicos (placa, cardápio, e-mail, post) | A1–C1 |
+| **Read an Academic Passage** | 5–15 (1pt cada) | Ideia principal, detalhes, inferência, estrutura retórica | B1–C2 |
+
+#### Listening
+| Task | Itens | O que testa | CEFR |
+|---|---|---|---|
+| **Listen and Choose a Response** | 15–19 (1pt cada) | Diálogo de troca única entre duas pessoas | A1–B2 |
+| **Listen to a Conversation** | 10 (1pt cada) | Conversas curtas entre duas pessoas | A2–C1 |
+| **Listen to an Announcement** | 6–10 (1pt cada) | Anúncios de sala/campus | A2–C1 |
+| **Listen to an Academic Talk** | 8–16 (1pt cada) | Palestra acadêmica: ideia central, inferência, vocabulário idiomático | A2–C2 |
+
+#### Writing
+| Task | Itens | O que testa | CEFR | Corretor |
+|---|---|---|---|---|
+| **Build a Sentence** | 10 (1pt cada) | Reconstruir estruturas de frase (contexto social/interpessoal) | A1–C2 | Máquina |
+| **Write an Email** | 1 (5pts) | E-mail curto em resposta a uma situação do dia a dia ou da vida universitária, cobrindo 3 pontos pedidos | B1–C2 | IA |
+| **Write for an Academic Discussion** | 1 (5pts) | Parágrafo acadêmico com argumento sustentado, gramática e vocabulário variados | B1–C2 | IA |
+
+#### Speaking
+| Task | Itens | O que testa | CEFR | Corretor |
+|---|---|---|---|---|
+| **Listen and Repeat** | 7 (5pts cada) | Repetir frases com precisão e inteligibilidade: progride de orações simples a estruturas complexas | A1–C2 | IA (SpeechRater) |
+| **Take an Interview** | 4 (5pts cada) | Responder perguntas com elaboração clara, gramática precisa, prosódia inteligível: descrições, opiniões, previsões, narrações | A1–C2 | IA (SpeechRater) |
+
+Speaking tem só 2 formatos: Listen and Repeat e Take an Interview. Não tem espaço, nem tempo, pra discurso longo estruturado.
+
+### 3.4 A Lógica do Speaking e Writing
+
+Entender essa lógica muda como você treina. Grave isto:
+- **Listen and Repeat** paga por **fidelidade exata** ao que você ouviu, som e gramática. "Ter algo pra dizer" não vale nada aqui: não tem espaço pra parafrasear.
+- **Take an Interview** quer resposta **curta, direta, coerente na hora**. Esqueça introdução-desenvolvimento-conclusão.
+- **Write an Email** (7 minutos) e **Write for an Academic Discussion** (10 minutos, 100 palavras ou mais) são textos curtos e objetivos, não redação longa.
+- **Build a Sentence** é gramática pura e imediata: cada erro de estrutura zera o item.
+
+Resumindo: o que pontua é precisão instantânea, prosódia natural, gramática automática. Isso vem de repetição deliberada, não de decorar script pronto pra "encher linguiça".
 
 ---
 
@@ -253,7 +253,7 @@ Em Writing e Speaking a IA (e-rater / SpeechRater) olha gramática, coesão, voc
 
 ```
 Score Geral (CEFR) = (Reading + Listening + Writing + Speaking) ÷ 4, arredondado para a meia banda mais próxima
-Score Comparável 0–120 = faixa da banda geral na concordância oficial da ETS (tabela 1.3)
+Score Comparável 0–120 = faixa da banda geral na concordância oficial da ETS (tabela 2.3)
 ```
 
 **Exemplo de cálculo:** Reading 4.5 + Listening 4.0 + Writing 4.0 + Speaking 3.5 = 16 ÷ 4 = **Banda geral 4.0 (B2)** → Faixa comparável na concordância da ETS: 72–85 na escala 0–120 (86 já é banda 4.5).

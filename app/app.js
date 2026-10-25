@@ -294,6 +294,44 @@
     }
   }
 
+  // ---------- Migração: o diagnóstico virou a Parte 1 do M0 (2026-10-25) ----------
+  // Até 2026-10-25 a ordem era 1 O que está em jogo, 2 Radiografia, 3
+  // Diagnóstico. Agora é 1 Diagnóstico, 2 O que está em jogo, 3 Radiografia.
+  // O progresso das Partes (pid "mod0-N", por posição) e a Parte aberta
+  // (índice) foram gravados na ordem antiga. Os objetos gravados daqui em
+  // diante levam a marca M0_ORDER_KEY; objeto sem a marca (deste aparelho,
+  // de backup importado ou vindo da nuvem) é da ordem antiga e é remapeado
+  // uma vez. As subseções (h3-mod0-N) não mudam: a do diagnóstico nunca teve id.
+  var M0_ORDER_KEY = "_ordem_m0", M0_ORDER = 2;
+  var M0_PID_MAP = { "mod0-1": "mod0-2", "mod0-2": "mod0-3", "mod0-3": "mod0-1" };
+  var M0_IDX_MAP = { 0: 1, 1: 2, 2: 0 };
+  function migrateM0Order(){
+    function fix(key, remap){
+      var raw = null, obj;
+      try { raw = localStorage.getItem(key); } catch(e){}
+      if(!raw) return;
+      try { obj = JSON.parse(raw); } catch(e){ return; }
+      if(!obj || typeof obj !== "object" || obj[M0_ORDER_KEY] === M0_ORDER) return;
+      remap(obj);
+      obj[M0_ORDER_KEY] = M0_ORDER;
+      try { localStorage.setItem(key, JSON.stringify(obj)); } catch(e){}
+      return true;
+    }
+    var progressMoved = fix("toefl_progress_v1", function(o){
+      var old = {};
+      Object.keys(M0_PID_MAP).forEach(function(k){ if(k in o){ old[k] = o[k]; delete o[k]; } });
+      Object.keys(old).forEach(function(k){ o[M0_PID_MAP[k]] = old[k]; });
+    });
+    fix("toefl_partpos_v1", function(o){
+      if(typeof o.mod0 === "number" && o.mod0 in M0_IDX_MAP) o.mod0 = M0_IDX_MAP[o.mod0];
+    });
+    // a nuvem ainda tem a ordem antiga: marca para subir a versão nova (sem
+    // passar pelo safeSet, que contaria a carga da página como dia de estudo)
+    if(progressMoved){ try { localStorage.setItem("toefl_dirty", "1"); } catch(e){} }
+  }
+  migrateM0Order();
+  window.__toeflMigrateM0 = migrateM0Order; // gancho do smoke test
+
   // ---------- Sequência de dias estudando (streak) ----------
   // Marca o dia de hoje sempre que qualquer chave sincronizada é escrita
   // (checkbox de progresso, quiz, SRS, registro de erro etc.) -- ou seja,
@@ -715,6 +753,7 @@
         var t = lbl.querySelector(".mark-done-label");
         if(t) t.textContent = c.checked ? "Parte concluída" : "Marcar esta parte como concluída";
       }
+      progressState[M0_ORDER_KEY] = M0_ORDER; // já na ordem nova do M0 (ver migrateM0Order)
       safeSet(LS_PROGRESS, JSON.stringify(progressState));
       updateBadges();
     });
@@ -4031,6 +4070,7 @@
     function savePartPos(modKey, idx){
       var obj = readPartPos();
       obj[modKey] = idx;
+      obj[M0_ORDER_KEY] = M0_ORDER; // já na ordem nova do M0 (ver migrateM0Order)
       safeSet("toefl_partpos_v1", JSON.stringify(obj));
     }
     Array.prototype.slice.call(document.querySelectorAll(".panel")).forEach(function(panel){
@@ -4108,6 +4148,8 @@
           } else { btn.hidden = false; btn.textContent = "Próxima parte: " + titles[idx + 1] + " →"; }
         });
         savePartPos(modKey, idx);
+        // quem depende da Parte visível (cartão "Comece aqui", selos) escuta isto
+        document.dispatchEvent(new CustomEvent("toefl-part", { detail: { mod: modKey, idx: idx } }));
         if(!opts.noScroll){
           window.scrollTo(0, 0);
           var ma = document.getElementById("mainArea"); if(ma) ma.scrollTop = 0;
@@ -4237,9 +4279,11 @@
       stepsEl.innerHTML = "";
       items.forEach(function(t){ var li = document.createElement("li"); li.textContent = t; stepsEl.appendChild(li); });
     }
+    // o diagnóstico é a Parte 1: com ela aberta, o cartão não aparece por
+    // cima dele (item 4 de 2026-10-25). Nas outras Partes do M0 ele volta.
+    var diagCard = diag.closest(".section-card");
     function render(){
-      if(safeGet(LS_WELCOME) === "1"){ card.hidden = true; return; }
-      card.hidden = false;
+      card.hidden = safeGet(LS_WELCOME) === "1" || (!!diagCard && !diagCard.hidden);
       var a = computeQuizAccuracy("mod0-diag");
       if(a.confirmed < a.total){
         titleEl.textContent = "Faça o diagnóstico antes de ler qualquer coisa";
@@ -4250,7 +4294,7 @@
           "Siga os módulos na ordem ou vá direto ao ponto em que mais precisa melhorar: a navegação é livre."
         ]);
         goBtn.textContent = a.confirmed ? "Continuar o diagnóstico (" + a.confirmed + " de " + a.total + ")" : "Fazer o diagnóstico agora";
-        goBtn.onclick = function(){ goToPart(3, diag); };
+        goBtn.onclick = function(){ goToPart(1, diag); };
       } else {
         var band = cefrBandFromPct(Math.round(100 * a.correct / a.total));
         titleEl.textContent = "Diagnóstico feito: nível estimado " + band.label;
@@ -4269,6 +4313,7 @@
       render();
     });
     window.__toeflRefreshStart = render;
+    document.addEventListener("toefl-part", function(e){ if(e.detail.mod === "mod0") render(); });
     render();
   })();
 

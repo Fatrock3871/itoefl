@@ -909,6 +909,34 @@ check("paid_sees_everything", function(){
     document.querySelector('#panel-mod1 .ph-progress-label span').textContent === "Seu progresso neste módulo";
 });
 
+// o diagnóstico virou a Parte 1 do M0 (2026-10-25): progresso e Parte aberta
+// gravados na ordem antiga são remapeados uma vez, sem perder nada
+(function(){
+  var keep = {};
+  ["toefl_progress_v1", "toefl_partpos_v1", "toefl_dirty"].forEach(function(k){ keep[k] = localStorage.getItem(k); });
+  localStorage.setItem("toefl_progress_v1", JSON.stringify({ "mod0-1": true, "mod0-3": true, "mod1-2": true }));
+  localStorage.setItem("toefl_partpos_v1", JSON.stringify({ mod0: 2, mod1: 4 }));
+  localStorage.removeItem("toefl_dirty");
+  window.__toeflMigrateM0();
+  window.__toeflMigrateM0(); // de novo: não pode remapear duas vezes
+  var p = JSON.parse(localStorage.getItem("toefl_progress_v1")), q = JSON.parse(localStorage.getItem("toefl_partpos_v1"));
+  var dirty = localStorage.getItem("toefl_dirty");
+  check("m0_old_order_progress_is_migrated", function(){
+    return p["mod0-1"] === true && p["mod0-2"] === true && !("mod0-3" in p) && p["mod1-2"] === true && p._ordem_m0 === 2 &&
+      q.mod0 === 0 && q.mod1 === 4 && q._ordem_m0 === 2 && dirty === "1";
+  });
+  Object.keys(keep).forEach(function(k){ if(keep[k] === null) localStorage.removeItem(k); else localStorage.setItem(k, keep[k]); });
+})();
+check("m0_diagnostic_is_part_1", function(){
+  var cards = document.querySelectorAll("#panel-mod0 .section-card");
+  return !!cards[0].querySelector('[data-drill="mod0-diag"]') && /^PARTE 1: TESTE DE NIVELAMENTO/.test(cards[0].querySelector("h2 .htext").textContent) &&
+    /^PARTE 2: O QUE ESTÁ EM JOGO/.test(cards[1].querySelector("h2 .htext").textContent);
+});
+check("m7_says_what_the_diagnostic_measures", function(){
+  var t = document.getElementById("panel-mod7").textContent;
+  return t.indexOf("Ele não dá nota por seção.") !== -1 && t.indexOf("banda CEFR (1–6) por seção") === -1;
+});
+
 check("no_js_errors", function(){ return window.__errors.length === 0; });
 results.__jsErrors = window.__errors;
 

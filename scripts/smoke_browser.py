@@ -530,16 +530,22 @@ def run():
                 idle = b.eval('Object.keys(localStorage).filter(function(k){ return /^toefl_(streak|dailygoal|dirty|scorecalc)/.test(k); })')
                 check("real_opening_the_site_marks_nothing", not idle, idle)
 
-                # "Comece aqui": aluno novo ve o cartao e o botao leva ao diagnostico
+                # o diagnostico e a Parte 1 do M0: aluno novo cai nele, sem o
+                # cartao "Comece aqui" por cima; em outra Parte do M0 o cartao
+                # aparece e o botao leva de volta ao diagnostico
                 start = b.eval(r"""(function(){
                   var c = document.getElementById("startCard");
-                  var o = { shown: !!c && !c.hidden, go: c.querySelector(".start-go").textContent,
-                            beforePager: c.nextElementSibling.classList.contains("part-pager") };
-                  c.querySelector(".start-go").click();
                   var diagCard = document.querySelector('.quiz-drill[data-drill="mod0-diag"]').closest(".section-card");
-                  o.partOpen = !diagCard.hidden && document.getElementById("jtPart").textContent === "Parte 3 de 9";
+                  var o = { firstIsDiag: !diagCard.hidden && document.getElementById("jtPart").textContent === "Parte 1 de 9",
+                            hiddenOverDiag: c.hidden };
+                  document.querySelector("#panel-mod0 .part-next").click();
+                  o.shown = !c.hidden; o.go = c.querySelector(".start-go").textContent;
+                  o.beforePager = c.nextElementSibling.classList.contains("part-pager");
+                  c.querySelector(".start-go").click();
+                  o.partOpen = !diagCard.hidden && document.getElementById("jtPart").textContent === "Parte 1 de 9" && c.hidden;
                   return o;
                 })()""")
+                check("real_diagnostic_is_part_1_without_start_card", start["firstIsDiag"] and start["hiddenOverDiag"], start)
                 check("real_start_card_leads_to_diagnostic",
                       start["shown"] and start["go"] == "Fazer o diagnóstico agora" and start["beforePager"] and start["partOpen"], start)
 
@@ -667,7 +673,7 @@ def run():
                 # importar: restaura e deixa marcado para subir a nuvem
                 backup = Path(tmp) / "backup.json"
                 backup.write_text(json.dumps({"app": "iTOEFL", "data": {
-                    "toefl_progress_v1": json.dumps({pid: True}), "toefl_sync_at": "2020-01-01T00:00:00Z", "outra_chave": "x"}}), encoding="utf-8")
+                    "toefl_progress_v1": json.dumps({pid: True, "_ordem_m0": 2}), "toefl_sync_at": "2020-01-01T00:00:00Z", "outra_chave": "x"}}), encoding="utf-8")
                 b.eval('localStorage.removeItem("toefl_dirty")')
                 b.set_files("#dataFile", [backup])
                 b.wait_for('!!document.querySelector("#panel-mod0 .pchk") && document.querySelector("#panel-mod0 .pchk").checked', timeout=15)

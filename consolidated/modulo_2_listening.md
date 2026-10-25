@@ -2,7 +2,7 @@
 
 > **iTOEFL**
 >
-> Este módulo (formato oficial completo: Módulo 0, Parte 2) tem sete partes:
+> Este módulo (formato oficial completo: Módulo 0, Parte 3) tem sete partes:
 > as regras, a estratégia, o **Laboratório de Escuta** (o inglês falado de
 > verdade: o que o texto não te ensina), um exemplo resolvido, os drills, o
 > gabarito e o protocolo de erros.

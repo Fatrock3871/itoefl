@@ -29,12 +29,12 @@ A conclusão estratégica é direta: **o TOEFL pune começos fracos com mais sev
 
 | Simulado | Nome | Foco Principal | Condição de Tempo | Momento Ideal |
 |---|---|---|---|---|
-| **1** | Diagnóstico | Mapear nível atual (bandas CEFR 1–6) em todas as seções, sem viés de preparação | Sem cronômetro | Semana 1 (Módulo 0: já realizado) |
+| **1** | Diagnóstico | Estimar o nível de partida com 10 questões de base (gramática, vocabulário, conectivos, ordem das palavras, registro e compreensão), antes de qualquer preparação | Sem cronômetro | Semana 1 (Módulo 0, Parte 1: já realizado) |
 | **2** | Intermediário | Fixar a estrutura e a mecânica de cada tipo de item novo, com liberdade de consulta | Sem cronômetro | Após Módulos 1–5 |
 | **3** | Avançado | Reproduzir a dinâmica real do exame adaptativo: tempo estrito, router ativo, pressão contínua | **Cronômetro obrigatório** | Após Módulo 6 |
 | **4** | Final (Exam Day) | Simulação idêntica ao teste real da ETS: as 4 seções na sequência oficial, zero consultas | **Cronômetro + condições reais** | 7–10 dias antes da prova |
 
-> 📌 **Nota sobre o Simulado 1:** o Teste de Nivelamento Express (Módulo 0) constitui o Simulado 1 · Diagnóstico. Ele já converteu seu desempenho em uma estimativa de banda CEFR (1–6) por seção. Retome esses resultados antes de iniciar o Simulado 2: eles definem quais tipos de item merecem mais repetição neste módulo.
+> 📌 **Nota sobre o Simulado 1:** o Simulado 1 é o Teste de Nivelamento Express, a Parte 1 do Módulo 0. Ele não dá nota por seção. São 10 questões de base (gramática, vocabulário, conectivos, ordem das palavras, registro e compreensão) que estimam um nível geral de partida, em CEFR e em banda de 1 a 6, e indicam o cronograma. Antes do Simulado 2, retome as áreas em que você errou no diagnóstico: elas mostram onde vale repetir mais exercícios.
 
 ### Pré-requisitos de Cada Simulado
 
@@ -69,7 +69,7 @@ O planejador de estudos de 8 semanas que a ETS também oferece de graça ainda d
 
 ### Conversão Banda CEFR ↔ Score Legado 0–120
 
-O formato 2026 reporta **bandas CEFR de 1 a 6** (com meios pontos). Durante o período de transição (até ~2028) a ETS também fornece um score comparável na escala antiga de 0–120. A tabela abaixo segue a **concordância publicada pela ETS** (a mesma do Módulo 0, Parte 1.3), agrupada por nível. Cada faixa junta a banda cheia e a meia banda seguinte: banda 4 e 4,5 são B2, por exemplo.
+O formato 2026 reporta **bandas CEFR de 1 a 6** (com meios pontos). Durante o período de transição (até ~2028) a ETS também fornece um score comparável na escala antiga de 0–120. A tabela abaixo segue a **concordância publicada pela ETS** (a mesma do Módulo 0, Parte 2.3), agrupada por nível. Cada faixa junta a banda cheia e a meia banda seguinte: banda 4 e 4,5 são B2, por exemplo.
 
 | Banda CEFR | Nível | Faixa 0–120 (total) | Leitura em uma frase |
 |---|---|---|---|

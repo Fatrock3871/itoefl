@@ -201,7 +201,9 @@ def slice_lines(text, start_marker, end_marker):
 def build_mod0():
     raw = open(f"{SRC}/modulo_0_embarque.md", encoding="utf-8").read()
     raw = strip_title_banner(raw)
-    before, after = slice_lines(raw, "### 3.2 As 10 Questões", "## PARTE 4")
+    # o diagnóstico é a Parte 1 (até 2026-10-25 era a 3): as questões e o
+    # gabarito do .md (1.2 a 1.4) saem e o widget entra no lugar
+    before, after = slice_lines(raw, "### 1.2 As 10 Questões", "## PARTE 2")
 
     # Parte 5.1: troca a tabela estática de acompanhamento semanal (células
     # em branco pra preencher à mão -- não faz sentido numa página web sem
@@ -260,7 +262,7 @@ def build_mod0():
     level_practice = (
         '<div class="lvlp" id="levelPractice">'
         '<p class="lvlp-title">Treino no seu nível</p>'
-        '<p class="lvlp-status" id="lvlpStatus">Termine as 10 questões do diagnóstico (Parte 3) para liberar uma sessão '
+        '<p class="lvlp-status" id="lvlpStatus">Termine as 10 questões do diagnóstico (Parte 1) para liberar uma sessão '
         'de exercícios escolhidos para o seu nível.</p>'
         '<ol class="lvlp-list" id="lvlpList"></ol>'
         '<button type="button" class="lvlp-shuffle" id="lvlpShuffle" hidden>Sortear outra sessão</button>'

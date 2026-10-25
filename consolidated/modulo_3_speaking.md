@@ -2,7 +2,7 @@
 
 > **iTOEFL**
 >
-> Este módulo (formato oficial completo: Módulo 0, Parte 2) tem sete partes:
+> Este módulo (formato oficial completo: Módulo 0, Parte 3) tem sete partes:
 > as regras, como a IA pontua, o **Laboratório de Fala** (fonemas, acento,
 > ritmo, entonação, fluência: o que o texto não te ensina), um exemplo
 > resolvido, os drills, o gabarito com respostas-modelo por banda, e o

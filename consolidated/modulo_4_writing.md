@@ -2,7 +2,7 @@
 
 > **iTOEFL**
 >
-> Este módulo (formato oficial completo: Módulo 0, Parte 2) tem sete partes:
+> Este módulo (formato oficial completo: Módulo 0, Parte 3) tem sete partes:
 > as regras (incluindo como a IA corrige), a estratégia por tarefa, o
 > **Laboratório de Produção Escrita** (a língua que você precisa produzir
 > certo, não só reconhecer), um exemplo resolvido, os drills, o gabarito com
