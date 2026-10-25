@@ -262,6 +262,21 @@
     });
   }
 
+  // ---------- Tipo e tempo de cada Parte (app/partes.json, embutido) ----------
+  // { mod0: [{ tipo: "pratica", min: 15 }, ...], ... }, na ordem das Partes.
+  var PART_KINDS = (function(){
+    var el = document.getElementById("partKinds");
+    try { return el ? JSON.parse(el.textContent) : {}; } catch(e){ return {}; }
+  })();
+  var KIND_NAME = { teoria: "Teoria", pratica: "Prática", simulado: "Simulado", referencia: "Referência" };
+  function partInfo(mod, n){ var l = PART_KINDS[mod]; return (l && l[n - 1]) || null; }
+  function kindText(p){ return p ? KIND_NAME[p.tipo] + " · " + p.min + " min" : ""; }
+  function partCards(mod){ return Array.prototype.slice.call(document.querySelectorAll('.panel[data-panel="' + mod + '"] .section-card')); }
+  function partShortTitle(card){
+    var h = card && card.querySelector("h2 .htext");
+    return h ? h.textContent.trim().replace(/^PARTE\s+\d+\s*[:·]\s*/i, "") : "";
+  }
+
   // espelha o client do Supabase e o uid logado pra fora do bloco de auth
   // (que é seu próprio IIFE) -- o certificado precisa ler/gravar
   // profiles.display_name e não tinha como chegar em `client`/`uid` de lá
@@ -4260,6 +4275,93 @@
       window.__toeflShowPart[modKey] = showPart;
       var saved = readPartPos()[modKey];
       showPartIdx(typeof saved === "number" ? saved : 0, { noScroll: true });
+    });
+  })();
+
+  // ---------- Selo de tipo: paginação, mapa do módulo, "Agora pratique" ----------
+  // O selo no topo de cada Parte já vem do build (p.part-kind). Aqui: o tipo
+  // ao lado do título na paginação, o "Mapa do módulo" (todas as Partes com
+  // tipo, tempo e ✓) e, no fim de cada Parte, o atalho entre teoria e
+  // prática do mesmo módulo (item 13 de 2026-10-25).
+  (function(){
+    function jumpTarget(mod, i){
+      var p = partInfo(mod, i + 1), list = PART_KINDS[mod] || [];
+      if(!p) return null;
+      if(p.tipo === "teoria"){
+        if(p.pratica) return { n: p.pratica, label: "Agora pratique" };
+        for(var j = i + 1; j < list.length; j++) if(list[j].tipo === "pratica" || list[j].tipo === "simulado") return { n: j + 1, label: "Agora pratique" };
+      } else if(p.tipo === "pratica" || p.tipo === "simulado"){
+        if(p.teoria) return { n: p.teoria, label: "Rever a teoria" };
+        for(var k = i - 1; k >= 0; k--) if(list[k].tipo === "teoria") return { n: k + 1, label: "Rever a teoria" };
+      }
+      return null;
+    }
+    Array.prototype.forEach.call(document.querySelectorAll(".panel"), function(panel){
+      var mod = panel.dataset.panel, cards = partCards(mod);
+      var show = window.__toeflShowPart && window.__toeflShowPart[mod];
+      if(cards.length < 2 || !show || !PART_KINDS[mod]) return;
+      var pager = panel.querySelector(".part-pager");
+
+      // tipo na paginação
+      var kindEl = document.createElement("span");
+      kindEl.className = "part-pager-kind";
+      pager.querySelector(".part-pager-label").appendChild(kindEl);
+      function syncPager(){
+        var idx = cards.findIndex(function(c){ return !c.hidden; }), p = partInfo(mod, idx + 1);
+        kindEl.textContent = kindText(p);
+        kindEl.className = "part-pager-kind" + (p ? " kind-" + p.tipo : "");
+      }
+
+      // mapa do módulo
+      var map = document.createElement("details");
+      map.className = "part-map";
+      var sum = document.createElement("summary");
+      sum.textContent = "Mapa do módulo: " + cards.length + " Partes";
+      var ol = document.createElement("ol");
+      map.appendChild(sum); map.appendChild(ol);
+      pager.parentNode.insertBefore(map, pager.nextSibling);
+      var rows = cards.map(function(card, i){
+        var p = partInfo(mod, i + 1);
+        var li = document.createElement("li");
+        var b = document.createElement("button");
+        b.type = "button"; b.className = "part-map-item";
+        var t = document.createElement("span"); t.className = "part-map-title"; t.textContent = "Parte " + (i + 1) + ": " + partShortTitle(card);
+        var k = document.createElement("span"); k.className = "part-kind-tag kind-" + (p ? p.tipo : ""); k.textContent = kindText(p);
+        b.appendChild(t); b.appendChild(k);
+        b.addEventListener("click", function(){ show(card); map.open = false; });
+        li.appendChild(b); ol.appendChild(li);
+        return li;
+      });
+      function syncMap(){
+        var cur = cards.findIndex(function(c){ return !c.hidden; });
+        rows.forEach(function(li, i){
+          li.classList.toggle("is-done", cards[i].classList.contains("done"));
+          li.classList.toggle("is-current", i === cur);
+        });
+      }
+
+      // atalho no fim de cada Parte
+      cards.forEach(function(card, i){
+        var to = jumpTarget(mod, i), target = to && cards[to.n - 1];
+        if(!target) return;
+        var box = document.createElement("div");
+        box.className = "part-jump part-jump-" + (to.label === "Agora pratique" ? "practice" : "theory");
+        if(card.classList.contains("fs-part-locked")) box.setAttribute("data-locked", "");
+        var lbl = document.createElement("span"); lbl.className = "part-jump-label"; lbl.textContent = to.label;
+        var btn = document.createElement("button");
+        btn.type = "button"; btn.className = "part-jump-btn";
+        btn.textContent = "Parte " + to.n + ": " + partShortTitle(target) + " (" + kindText(partInfo(mod, to.n)) + ")";
+        btn.addEventListener("click", function(){ show(target); });
+        box.appendChild(lbl); box.appendChild(btn);
+        // fim da Parte, logo antes do botão "Próxima parte" (filho direto do
+        // cartão; o "concluída" pode estar dentro da última subseção)
+        var next = Array.prototype.filter.call(card.children, function(c){ return c.classList.contains("part-next-bottom"); })[0];
+        card.insertBefore(box, next || null);
+      });
+
+      document.addEventListener("toefl-part", function(e){ if(e.detail.mod === mod){ syncPager(); syncMap(); } });
+      panel.addEventListener("change", function(e){ if(e.target.classList.contains("pchk")) syncMap(); });
+      syncPager(); syncMap();
     });
   })();
 

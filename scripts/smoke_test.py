@@ -932,6 +932,39 @@ check("m0_diagnostic_is_part_1", function(){
   return !!cards[0].querySelector('[data-drill="mod0-diag"]') && /^PARTE 1: TESTE DE NIVELAMENTO/.test(cards[0].querySelector("h2 .htext").textContent) &&
     /^PARTE 2: O QUE ESTÁ EM JOGO/.test(cards[1].querySelector("h2 .htext").textContent);
 });
+// selo de tipo por Parte (app/partes.json): topo da Parte, paginação, mapa e atalhos
+try { (function(){
+  var KINDS = JSON.parse(document.getElementById("partKinds").textContent);
+  var cards = document.querySelectorAll(".section-card"), chips = document.querySelectorAll(".section-card > .part-kind");
+  check("part_kind_badge_on_every_part", function(){
+    var total = Object.keys(KINDS).reduce(function(n, k){ return n + KINDS[k].length; }, 0);
+    var ok = cards.length === 86 && total === 86 && chips.length === 86;
+    Array.prototype.forEach.call(document.querySelectorAll(".panel"), function(p){
+      Array.prototype.forEach.call(p.querySelectorAll(".section-card"), function(c, i){
+        var k = KINDS[p.dataset.panel][i], chip = c.querySelector(".part-kind");
+        if(!chip || chip.className.indexOf("kind-" + k.tipo) === -1 || chip.textContent.indexOf(k.min + " min") === -1) ok = false;
+      });
+    });
+    return ok;
+  });
+  var m1 = document.querySelectorAll("#panel-mod1 .section-card");
+  window.__toeflShowPart.mod1(m1[1]);
+  check("part_kind_in_pager_and_map", function(){
+    var map = document.querySelectorAll("#panel-mod1 .part-map li");
+    return document.querySelector("#panel-mod1 .part-pager-kind").textContent === "Teoria · 10 min" && map.length === 7 &&
+      map[4].textContent.indexOf("Prática · 65 min") !== -1 && map[1].classList.contains("is-current");
+  });
+  var go = m1[1].querySelector(".part-jump-practice .part-jump-btn");
+  if(go) go.click();
+  var back = m1[4].querySelector(".part-jump-theory .part-jump-btn");
+  check("part_theory_leads_to_practice_and_back", function(){
+    var ok1 = !!go && go.textContent.indexOf("Parte 5:") === 0 && !m1[4].hidden && m1[1].hidden;
+    if(back) back.click();
+    return ok1 && !!back && back.textContent.indexOf("Parte 2:") === 0 && !m1[1].hidden &&
+      document.querySelector("#panel-mod1 .part-pager-kind").textContent === "Teoria · 10 min";
+  });
+  window.__toeflShowPart.mod1(m1[0]);
+})(); } catch(ex){ check("part_kind_checks_ran", function(){ throw ex; }); }
 check("m7_says_what_the_diagnostic_measures", function(){
   var t = document.getElementById("panel-mod7").textContent;
   return t.indexOf("Ele não dá nota por seção.") !== -1 && t.indexOf("banda CEFR (1–6) por seção") === -1;

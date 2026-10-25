@@ -1,0 +1,109 @@
+{
+  "_leia": "Tipo e tempo estimado de cada Parte, na ordem do módulo (item 13 de 2026-10-25; base: itoefl-gerencia/mapa-teoria-pratica.md, revisado). tipo: teoria (ler e entender), pratica (exercícios com correção), simulado (prova cronometrada) ou referencia (consultar quando precisar). min: minutos estimados. Opcional: pratica (número da Parte para onde o 'Agora pratique' de uma Parte de teoria leva) e teoria (número da Parte para onde o 'Rever a teoria' de uma Parte de prática leva). Sem eles, vale a Parte de prática ou simulado mais próxima depois, e a de teoria mais próxima antes. O build falha se a lista não tiver uma entrada por Parte.",
+  "mod0": [
+    {"tipo": "pratica", "min": 15},
+    {"tipo": "teoria", "min": 5},
+    {"tipo": "teoria", "min": 10},
+    {"tipo": "referencia", "min": 5},
+    {"tipo": "referencia", "min": 5},
+    {"tipo": "referencia", "min": 5},
+    {"tipo": "referencia", "min": 5},
+    {"tipo": "teoria", "min": 5},
+    {"tipo": "referencia", "min": 5}
+  ],
+  "mod1": [
+    {"tipo": "teoria", "min": 5},
+    {"tipo": "teoria", "min": 10},
+    {"tipo": "teoria", "min": 15},
+    {"tipo": "teoria", "min": 5},
+    {"tipo": "pratica", "min": 65, "teoria": 2},
+    {"tipo": "referencia", "min": 5},
+    {"tipo": "referencia", "min": 5}
+  ],
+  "mod2": [
+    {"tipo": "teoria", "min": 5},
+    {"tipo": "teoria", "min": 10},
+    {"tipo": "teoria", "min": 15},
+    {"tipo": "teoria", "min": 5},
+    {"tipo": "pratica", "min": 45, "teoria": 2},
+    {"tipo": "referencia", "min": 5},
+    {"tipo": "referencia", "min": 5}
+  ],
+  "mod3": [
+    {"tipo": "teoria", "min": 5},
+    {"tipo": "teoria", "min": 10},
+    {"tipo": "teoria", "min": 15},
+    {"tipo": "teoria", "min": 5},
+    {"tipo": "pratica", "min": 35, "teoria": 2},
+    {"tipo": "referencia", "min": 5},
+    {"tipo": "referencia", "min": 5}
+  ],
+  "mod4": [
+    {"tipo": "teoria", "min": 5},
+    {"tipo": "teoria", "min": 10},
+    {"tipo": "teoria", "min": 15},
+    {"tipo": "teoria", "min": 5},
+    {"tipo": "pratica", "min": 25, "teoria": 2},
+    {"tipo": "referencia", "min": 15},
+    {"tipo": "referencia", "min": 5}
+  ],
+  "mod5": [
+    {"tipo": "teoria", "min": 5},
+    {"tipo": "teoria", "min": 5},
+    {"tipo": "teoria", "min": 10},
+    {"tipo": "teoria", "min": 15},
+    {"tipo": "teoria", "min": 10},
+    {"tipo": "teoria", "min": 5},
+    {"tipo": "pratica", "min": 25, "teoria": 4},
+    {"tipo": "referencia", "min": 5},
+    {"tipo": "referencia", "min": 5},
+    {"tipo": "referencia", "min": 5}
+  ],
+  "mod6": [
+    {"tipo": "teoria", "min": 5},
+    {"tipo": "teoria", "min": 15},
+    {"tipo": "teoria", "min": 20},
+    {"tipo": "teoria", "min": 15},
+    {"tipo": "teoria", "min": 5},
+    {"tipo": "teoria", "min": 5},
+    {"tipo": "teoria", "min": 5},
+    {"tipo": "pratica", "min": 20, "teoria": 4},
+    {"tipo": "pratica", "min": 15, "teoria": 5},
+    {"tipo": "referencia", "min": 5},
+    {"tipo": "referencia", "min": 5},
+    {"tipo": "referencia", "min": 5}
+  ],
+  "mod7": [
+    {"tipo": "teoria", "min": 10},
+    {"tipo": "referencia", "min": 5},
+    {"tipo": "simulado", "min": 50, "teoria": 1},
+    {"tipo": "simulado", "min": 90, "teoria": 1},
+    {"tipo": "simulado", "min": 90, "teoria": 1},
+    {"tipo": "referencia", "min": 10},
+    {"tipo": "referencia", "min": 5},
+    {"tipo": "referencia", "min": 5},
+    {"tipo": "referencia", "min": 5}
+  ],
+  "mod8": [
+    {"tipo": "teoria", "min": 5},
+    {"tipo": "referencia", "min": 5},
+    {"tipo": "teoria", "min": 5},
+    {"tipo": "teoria", "min": 5},
+    {"tipo": "teoria", "min": 5},
+    {"tipo": "referencia", "min": 10},
+    {"tipo": "teoria", "min": 5},
+    {"tipo": "referencia", "min": 5},
+    {"tipo": "referencia", "min": 5}
+  ],
+  "mod9": [
+    {"tipo": "teoria", "min": 5},
+    {"tipo": "teoria", "min": 10},
+    {"tipo": "teoria", "min": 5},
+    {"tipo": "teoria", "min": 10},
+    {"tipo": "teoria", "min": 5},
+    {"tipo": "referencia", "min": 5},
+    {"tipo": "referencia", "min": 5},
+    {"tipo": "referencia", "min": 5},
+    {"tipo": "teoria", "min": 5}
+  ]
+}

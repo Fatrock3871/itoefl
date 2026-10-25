@@ -163,6 +163,41 @@ side_jtrack = (
     f'<div class="jtrack-wrap"><div class="jtrack">{journey_nodes}</div></div>'
 )
 
+# ---- tipo e tempo de cada Parte (app/partes.json, item 13 de 2026-10-25) ----
+# Selo "Teoria · 10 min" logo abaixo do título de cada Parte. O app.js usa o
+# mesmo JSON (embutido) no mapa do módulo, na paginação, no "Agora pratique"
+# e na meta de hoje. Entra antes dos vídeos, que ficam colados no título.
+import re as _re_pt
+with open("partes.json", encoding="utf-8") as _f:
+    PARTES = {k: v for k, v in json.load(_f).items() if not k.startswith("_")}
+PART_KINDS = {"teoria": "Teoria", "pratica": "Prática", "simulado": "Simulado", "referencia": "Referência"}
+if set(PARTES) != {k for k, *_ in MODS}:
+    raise SystemExit("partes.json: tem de listar os 10 módulos")
+for _mod, _list in PARTES.items():
+    _n = len(_re_pt.findall(r"<h2[\s>]", frag[_mod]))
+    if len(_list) != _n:
+        raise SystemExit(f"partes.json: {_mod} tem {_n} Partes e a lista tem {len(_list)}")
+    for _i, _p in enumerate(_list, 1):
+        if _p.get("tipo") not in PART_KINDS or not isinstance(_p.get("min"), int) or _p["min"] <= 0:
+            raise SystemExit(f"partes.json: {_mod} Parte {_i} precisa de tipo válido e min > 0")
+        for _ref in ("teoria", "pratica"):
+            if _ref in _p and not (1 <= _p[_ref] <= _n and _p[_ref] != _i):
+                raise SystemExit(f"partes.json: {_mod} Parte {_i} aponta {_ref} para uma Parte que não existe")
+
+
+def _kind_chip(p):
+    return (f'<p class="part-kind kind-{p["tipo"]}"><span class="part-kind-tag">{PART_KINDS[p["tipo"]]}</span>'
+            f'<span class="part-kind-min">{p["min"]} min</span></p>')
+
+
+def _add_kind_chips(mod, html_frag):
+    parts = iter(PARTES[mod])
+    return _re_pt.sub(r"(<h2[\s>].*?</h2>)", lambda m: m.group(1) + _kind_chip(next(parts)), html_frag, flags=_re_pt.S)
+
+
+frag = {k: _add_kind_chips(k, v) for k, v in frag.items()}
+PARTES_JSON = json.dumps(PARTES, ensure_ascii=False).replace("</", "<\\/")
+
 # videoaulas (app/videos.json): vídeo de Parte entra no fragmento, logo abaixo
 # do <h2>; a aula de abertura entra abaixo do cabeçalho do módulo. Com a lista
 # vazia, frag e o HTML saem iguais aos de antes.
@@ -827,6 +862,7 @@ html = f'''<!DOCTYPE html>
   <button type="button" id="pwaUpdateLater" aria-label="Depois">Depois</button>
 </div>
 <script type="application/json" id="freeSample">{FREE_JSON}</script>
+<script type="application/json" id="partKinds">{PARTES_JSON}</script>
 <script>
 {JS}
 </script>
