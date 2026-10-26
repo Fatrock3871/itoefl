@@ -770,16 +770,48 @@ def run():
                 check("real_resume_label_has_no_checkmark", bool(label) and "✓" not in label, label)
                 check("real_start_card_stays_dismissed", b.eval('document.getElementById("startCard").hidden'))
 
-                # gaveta: o mapa do curso aparece (ja saiu com altura zero)
+                # gaveta: uma lista só dos 10 módulos, cada um com o progresso
+                # (item 27; o "mapa do curso" repetia a lista)
                 b.eval('document.getElementById("sideToggle").click()')
                 b.pump(0.4)
-                check("real_sidebar_map_is_visible", b.eval(
-                    '(function(){ var w = document.querySelector(".side .jtrack-wrap").getBoundingClientRect(); return w.height >= 30; })()'))
+                side = b.eval(r"""(function(){
+                  var s = document.getElementById("sideRail"), tabs = s.querySelectorAll(".tabbtn");
+                  return { lists: s.querySelectorAll(".modnav, .jtrack").length, tabs: tabs.length,
+                    bars: s.querySelectorAll(".tabbtn .tab-bar-fill").length,
+                    pct: Array.prototype.every.call(tabs, function(t){ return /\d+%/.test(t.querySelector(".pbadge").textContent); }),
+                    visible: tabs[9].getBoundingClientRect().height > 0,
+                    settingsClosed: !document.getElementById("sideSettings").open };
+                })()""")
+                check("sidebar_single_module_list_with_progress",
+                      side == {"lists": 1, "tabs": 10, "bars": 10, "pct": True, "visible": True, "settingsClosed": True}, side)
+                # texto de sincronização: logado, "Sincronizado na sua conta"
+                sync = b.eval(r"""(function(){
+                  var el = document.getElementById("syncNote"), o = { off: el.textContent };
+                  window.__toeflSyncNote(true); o.on = el.textContent; window.__toeflSyncNote(false);
+                  o.keys = ["toefl_goal_v1", "toefl_quiz_mod0-diag_v1", "toefl_dailygoal_v1", "toefl_streak_v1", "toefl_progress_v1",
+                            "toefl_h3progress_v1"].every(window.__toeflIsSynced);
+                  return o;
+                })()""")
+                check("sidebar_sync_text_for_logged_in",
+                      sync["off"] == "Seu progresso é salvo neste navegador." and sync["on"].startswith("Sincronizado na sua conta")
+                      and sync["keys"], sync)
                 b.eval('document.getElementById("sideClose").click()')
 
-                # reiniciar: apaga todo o progresso e recarrega
+                # reiniciar: só depois da segunda confirmação (item 28); apaga
+                # todo o progresso e recarrega
                 pid = b.eval('document.querySelector("#panel-mod0 .pchk").dataset.pid')
-                b.eval('window.confirm = function(){ return true; }; document.getElementById("resetBtn").click()')
+                steps = b.eval(r"""(function(){
+                  function kept(){ return localStorage.getItem("toefl_progress_v1") !== null; }
+                  document.getElementById("sideSettings").open = true;
+                  var o = {};
+                  document.getElementById("resetBtn").click(); o.first = kept() && !document.getElementById("resetConfirm").hidden;
+                  document.getElementById("resetCancel").click(); o.cancel = kept() && document.getElementById("resetConfirm").hidden;
+                  document.getElementById("resetBtn").click(); document.getElementById("resetYes").click();
+                  o.second = kept() && document.getElementById("resetYes").textContent === "Apagar tudo agora";
+                  return o;
+                })()""")
+                check("reset_needs_double_confirmation", steps == {"first": True, "cancel": True, "second": True}, steps)
+                b.eval('document.getElementById("resetYes").click()')
                 b.wait_for('localStorage.getItem("toefl_progress_v1") === null && document.readyState === "complete"', timeout=15)
                 b.pump(1.5)
                 left = b.eval('Object.keys(localStorage).filter(function(k){ return %s.some(function(p){ return k.indexOf(p) === 0; }); })' % json.dumps(RESET_KEYS))

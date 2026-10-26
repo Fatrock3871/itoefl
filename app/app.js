@@ -301,6 +301,14 @@
     }
     return false;
   }
+  // texto do rodapé do menu: logado, o progresso vai para a conta (item 25)
+  function setSyncNote(online){
+    var el = document.getElementById("syncNote");
+    if(el) el.textContent = online ? "Sincronizado na sua conta: seu progresso aparece em qualquer aparelho em que você entrar."
+                                   : "Seu progresso é salvo neste navegador.";
+  }
+  window.__toeflSyncNote = setSyncNote;   // ganchos do smoke test
+  window.__toeflIsSynced = isSyncedKey;
   var onSyncedWrite = null; // atribuído pelo módulo de sync quando logado
   var forceSyncPush = null; // idem, mas sem debounce e devolvendo a Promise -- usado pelo reset de progresso, que precisa confirmar que a nuvem já ficou vazia antes de recarregar (senão o pull() do próximo load reidrata o estado antigo)
 
@@ -743,6 +751,8 @@
       if(pbadgeEl){
         pbadgeEl.textContent = (unlocked && byMod[key] && byMod[key].total) ? modPct[key] + "%" : "";
       }
+      var tabFill = document.getElementById("tabFill-" + key);
+      if(tabFill) tabFill.style.width = (modPct[key] || 0) + "%";
     });
     // mapa da jornada: done (✓) / reached (linha preenchida) / locked (🔒, mas
     // com o número sempre visível — mesma lógica da sidebar acima)
@@ -1687,12 +1697,34 @@
       // sequência de dias e a meta de hoje (histórico de constância), a foto
       // e as preferências do aparelho (tema, cronômetro, trilha).
       var RESET_PREFIXES = ["toefl_progress", "toefl_h3progress", "toefl_srs_", "toefl_bsq_", "toefl_quiz_", "toefl_errlog_", "toefl_cert_", "toefl_ctw_", "toefl_spk_", "toefl_write_", "toefl_exam_", "toefl_scorecalc", "toefl_weeklydash", "toefl_partpos", "toefl_lastpos", "toefl_goal"];
-      resetBtn.addEventListener("click", function(){
-        var ok = window.confirm(
-          "Isso apaga TODO o seu progresso no curso (partes e subseções marcadas, questões respondidas, " +
-          "flashcards, textos escritos, calculadora, painel semanal, registro de erros) e não pode ser desfeito. Continuar?"
-        );
-        if(!ok) return;
+      // confirmação dupla (item 28 de 2026-10-25): o botão abre um aviso, o
+      // aviso pede uma segunda confirmação, e só ela apaga
+      var confirmBox = document.getElementById("resetConfirm");
+      var confirmText = document.getElementById("resetConfirmText");
+      var yesBtn = document.getElementById("resetYes");
+      var step = 0;
+      function setStep(n){
+        step = n;
+        confirmBox.hidden = n === 0;
+        resetBtn.hidden = n !== 0;
+        if(n === 1){
+          confirmText.textContent = "Isso apaga todo o seu progresso no curso: Partes e subseções marcadas, questões respondidas, " +
+            "flashcards, textos escritos, a sua meta e o registro de erros.";
+          yesBtn.textContent = "Quero apagar";
+          yesBtn.className = "side-action";
+        } else if(n === 2){
+          confirmText.textContent = "Tem certeza? Depois de apagar, não dá para desfazer. Se quiser guardar uma cópia, use Exportar progresso antes.";
+          yesBtn.textContent = "Apagar tudo agora";
+          yesBtn.className = "side-action is-danger";
+        }
+        if(n) yesBtn.focus();
+      }
+      resetBtn.addEventListener("click", function(){ setStep(1); });
+      document.getElementById("resetCancel").addEventListener("click", function(){ setStep(0); resetBtn.focus(); });
+      yesBtn.addEventListener("click", function(){
+        if(step === 1){ setStep(2); return; }
+        if(step !== 2) return;
+        setStep(0);
         var keys = [];
         try{
           for(var i = 0; i < localStorage.length; i++){
@@ -3023,6 +3055,7 @@
       checkEntitlement(session);
       onSyncedWrite = schedulePush;
       forceSyncPush = push;
+      setSyncNote(true);
       pull();
       // redações (app/redacao.js): histórico, selo de devolutiva nova e,
       // para conta corretora, o painel
@@ -3040,6 +3073,7 @@
       googleAvatarUrl = null;
       onSyncedWrite = null;
       forceSyncPush = null;
+      setSyncNote(false);
       setGateFormsHidden(false);
       showLoginView();
       signedIn.hidden = true;

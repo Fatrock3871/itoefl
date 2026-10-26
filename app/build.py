@@ -114,23 +114,13 @@ MODS = [
 nav_items = "\n".join(
     f'<button class="tabbtn" data-tab="{k}" data-title="{t}">'
     f'<span class="num-badge" data-n="{n}">{n}</span>'
-    f'<span class="lbl">{t}</span>'
+    f'<span class="lbl">{t}<span class="tab-bar" aria-hidden="true"><span class="tab-bar-fill" id="tabFill-{k}"></span></span></span>'
     f'<span class="pbadge" id="badge-{k}"></span></button>'
     for k, n, t, _, _tag in MODS
 )
 
-# mapa da jornada (roadmap fixo no topo do conteúdo)
-JOURNEY_SHORT = {
-    "mod0": "Embarque", "mod1": "Reading", "mod2": "Listening", "mod3": "Speaking",
-    "mod4": "Writing", "mod5": "Registro", "mod6": "Vocabulário", "mod7": "Simulados",
-    "mod8": "Exam Day", "mod9": "Traps",
-}
-journey_nodes = "\n".join(
-    f'<button class="jnode" data-tab="{k}" data-title="{t}">'
-    f'<span class="jdot" data-n="{n}">{n}</span>'
-    f'<span class="jlbl">{JOURNEY_SHORT[k]}</span></button>'
-    for k, n, t, _, _tag in MODS
-)
+# barra do topo. O "mapa do curso" (bolinhas dos 10 módulos) saiu da gaveta
+# em 2026-10-25 (item 27): repetia a lista de módulos logo abaixo dele.
 journey = (
     '<nav class="journey" id="journey" aria-label="Mapa do curso">'
     '<button class="hamburger" id="sideToggle" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="sideRail">'
@@ -164,10 +154,6 @@ journey = (
     '<span id="authMsg" class="auth-msg" hidden></span></div>'
     '</div></div>'
     '</nav>'
-)
-side_jtrack = (
-    '<p class="side-section-label">Mapa do curso</p>'
-    f'<div class="jtrack-wrap"><div class="jtrack">{journey_nodes}</div></div>'
 )
 
 # ---- tipo e tempo de cada Parte (app/partes.json, item 13 de 2026-10-25) ----
@@ -814,7 +800,7 @@ html = f'''<!DOCTYPE html>
       <span class="level-badge-sched" id="levelBadgeSched"></span>
     </div>
     <button type="button" class="cert-btn" id="certBtn" hidden>Ver certificado de conclusão</button>
-    {side_jtrack}
+    <p class="side-section-label">Módulos</p>
     <nav class="modnav" id="modnav" aria-label="Módulos">
       {nav_items}
     </nav>
@@ -826,18 +812,32 @@ html = f'''<!DOCTYPE html>
       </div>
       <p class="trail-hint" id="trailHint"></p>
     </div>
-    <div class="data-tools">
-      <button type="button" id="dataExport">↓ Exportar progresso</button>
-      <button type="button" id="dataImport">↑ Importar</button>
-      <input type="file" id="dataFile" accept="application/json,.json" hidden>
-      <span id="dataMsg" class="data-msg" hidden></span>
-    </div>
     <div class="pwa-tools" id="pwaTools" hidden>
       <button type="button" class="pwa-install-btn" id="pwaInstall" hidden>⤓ Instalar app</button>
       <p class="pwa-ios-hint" id="pwaIosHint" hidden>No iPhone ou iPad: toque em <b>Compartilhar</b> e depois em <b>Adicionar à Tela de Início</b>.</p>
     </div>
-    <button type="button" class="reset-btn" id="resetBtn">↺ Reiniciar todo o progresso</button>
-    <div class="foot-note">Preparação independente baseada nas especificações da ETS vigentes desde 21/jan/2026. Não afiliada à ETS. Seu progresso é salvo neste navegador.
+    <!-- Configurações (item 28): o que mexe nos dados fica aqui, fechado, e
+         reiniciar o progresso pede duas confirmações -->
+    <details class="side-settings" id="sideSettings">
+      <summary>{icon("settings")} Configurações</summary>
+      <div class="side-settings-body">
+        <div class="data-tools">
+          <button type="button" id="dataExport">↓ Exportar progresso</button>
+          <button type="button" id="dataImport">↑ Importar</button>
+          <input type="file" id="dataFile" accept="application/json,.json" hidden>
+          <span id="dataMsg" class="data-msg" hidden></span>
+        </div>
+        <button type="button" class="reset-btn" id="resetBtn">↺ Reiniciar todo o progresso</button>
+        <div class="reset-confirm" id="resetConfirm" role="alertdialog" aria-labelledby="resetConfirmText" hidden>
+          <p id="resetConfirmText"></p>
+          <div class="reset-actions">
+            <button type="button" id="resetCancel">Cancelar</button>
+            <button type="button" id="resetYes"></button>
+          </div>
+        </div>
+      </div>
+    </details>
+    <div class="foot-note">Preparação independente baseada nas especificações da ETS vigentes desde 21/jan/2026. Não afiliada à ETS. <span id="syncNote">Seu progresso é salvo neste navegador.</span>
       <span class="legal-links">{LEGAL_LINKS}</span></div>
   </aside>
 

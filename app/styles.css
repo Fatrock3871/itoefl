@@ -2008,5 +2008,28 @@ body.acc-free .part-pager.is-locked .part-pager-title::before{content:"🔒 ";}
 .cert-edit-name:hover, .lvlp-go:hover, .drill-timer-btn:hover, .diag-btn:not(.diag-btn-main):hover, .quiz-retry:hover,
 .auth-gate-actions button:hover{background:var(--accent-wash) !important; color:var(--ink) !important; border-color:var(--edge) !important;}
 .drill-timer-btn, .cert-print{display:inline-flex; align-items:center; justify-content:center; gap:8px;}
+/* ---- Menu lateral (itens 25, 27 e 28) ---- */
+/* lista única dos módulos, cada um com a barrinha do próprio progresso */
+.tabbtn .lbl{display:flex; flex-direction:column; gap:5px;}
+.tab-bar{display:block; height:3px; border-radius:99px; background:rgba(255,255,255,0.10); overflow:hidden;}
+.tab-bar-fill{display:block; height:100%; width:0; background:var(--accent); border-radius:99px; transition:width .4s ease;}
+.tabbtn.active .tab-bar{background:rgba(0,0,0,0.22);} .tabbtn.active .tab-bar-fill{background:#fff;}
+/* Configurações: fechadas por padrão; reiniciar pede duas confirmações */
+.side-settings{border:1px solid var(--rail-line); border-radius:10px; background:rgba(255,255,255,0.04);}
+.side-settings > summary{display:flex; align-items:center; gap:8px; min-height:44px; padding:8px 12px; cursor:pointer; list-style:none;
+  font-family:'Bricolage Grotesque',sans-serif; font-size:13px; font-weight:800; color:var(--rail-ink);}
+.side-settings > summary::-webkit-details-marker{display:none;}
+.side-settings > summary::after{content:"+"; margin-left:auto; font-family:var(--mono); color:var(--accent-2);}
+.side-settings[open] > summary::after{content:"−";}
+.side-settings-body{display:flex; flex-direction:column; gap:12px; padding:4px 12px 14px;}
+.side-settings .reset-btn{margin:0; color:#eea08f; border-color:rgba(238,160,143,0.7);}
+.reset-confirm{padding:12px; border-radius:9px; border:1.5px solid rgba(224,125,103,0.85); background:rgba(224,125,103,0.12);}
+.reset-confirm p{margin:0 0 10px; font-size:12px; line-height:1.5; color:var(--rail-ink);}
+.reset-actions{display:flex; flex-wrap:wrap; gap:8px;}
+.reset-actions button{flex:1 1 auto; min-height:44px; padding:8px 12px; border-radius:99px; font-family:'Bricolage Grotesque',sans-serif;
+  font-size:12.5px; font-weight:800; cursor:pointer; border:2px solid var(--rail-line); background:rgba(255,255,255,0.06); color:var(--rail-ink);}
+.reset-actions .side-action{border-color:var(--accent-fill) !important; background:var(--accent-fill); color:#fff;}
+.reset-actions .side-action.is-danger{border-color:var(--danger-fill) !important; background:var(--danger-fill);}
+
 /* na gaveta escura o contorno preto some: a borda é a do próprio laranja */
 .dg-go, .pwa-install-btn{border:2px solid var(--accent-fill) !important;}
