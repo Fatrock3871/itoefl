@@ -1,5 +1,10 @@
 (function(){
   "use strict";
+  // ícone de interface: o mesmo <use> do sprite que o build põe no <body>
+  // (app/icons.py). Devolve o HTML, para innerHTML.
+  function toeflIcon(name, cls){
+    return '<svg class="' + (cls || "ico") + '" aria-hidden="true" focusable="false"><use href="#i-' + name + '"/></svg>';
+  }
   // wrap tables so wide tables scroll inside themselves, not the page
   Array.prototype.slice.call(document.querySelectorAll(".panel table")).forEach(function(t){
     var wrap = document.createElement("div");
@@ -84,7 +89,7 @@
           btn.type = "button";
           btn.className = "speak-btn";
           btn.setAttribute("aria-label", "Ouvir pronúncia de " + text);
-          btn.textContent = "🔊";
+          btn.innerHTML = toeflIcon("volume");
           btn.addEventListener("click", function(){ speakText(text); });
           cell.appendChild(btn);
         });
@@ -101,7 +106,7 @@
       if(!head || head.nextElementSibling && head.nextElementSibling.classList.contains("speak-hint")) return;
       var hint = document.createElement("div");
       hint.className = "speak-hint";
-      hint.innerHTML = '<span class="speak-hint-icon" aria-hidden="true">🔊</span><span>Toque neste ícone para ouvir a pronúncia da palavra em inglês sempre que tiver dúvida.</span>';
+      hint.innerHTML = '<span class="speak-hint-icon" aria-hidden="true">' + toeflIcon("volume") + '</span><span>Toque neste ícone para ouvir a pronúncia da palavra em inglês sempre que tiver dúvida.</span>';
       head.parentNode.insertBefore(hint, head.nextSibling);
     });
 
@@ -209,7 +214,7 @@
     box.className = "fs-lock";
     var kicker = document.createElement("p");
     kicker.className = "fs-lock-kicker";
-    kicker.textContent = "🔒 Curso completo";
+    kicker.innerHTML = toeflIcon("lock") + " Curso completo";
     var text = document.createElement("p");
     text.textContent = reason + (extra ? " " + extra : "") + " Com um plano, você libera os 10 módulos inteiros, todos os exercícios, os simulados e a correção de redação.";
     var btn = document.createElement("button");
@@ -425,6 +430,8 @@
     // sequência de dias à vista na gaveta (antes só dentro do Painel, que
     // só abre com login)
     var streakEl = document.getElementById("streakLine");
+    var topStreak = document.getElementById("topStreak");
+    if(topStreak) topStreak.textContent = computeStreak().count;
     if(streakEl){
       var s = computeStreak();
       streakEl.innerHTML = "";
@@ -499,6 +506,8 @@
     });
   }
   if(sideCloseBtn){ sideCloseBtn.addEventListener("click", function(){ setSidebarOpen(false); }); }
+  var topChip = document.getElementById("topChip");
+  if(topChip) topChip.addEventListener("click", function(){ setSidebarOpen(true); });
   if(sideBackdrop){ sideBackdrop.addEventListener("click", function(){ setSidebarOpen(false); }); }
   document.addEventListener("keydown", function(e){
     if(e.key === "Escape") setSidebarOpen(false);
@@ -1390,7 +1399,7 @@
       var btn = document.createElement("button");
       btn.type = "button";
       btn.className = "drill-timer-btn";
-      btn.textContent = "⏱ Iniciar cronômetro (" + mins + " min)";
+      btn.innerHTML = toeflIcon("timer") + " Iniciar cronômetro (" + mins + " min)";
       btn.addEventListener("click", function(){ setDrillTimerMinutes(mins); });
       if(node.hasAttribute("data-locked")) btn.setAttribute("data-locked", ""); // drill fora da amostra grátis
       node.parentNode.insertBefore(btn, node.nextSibling);
@@ -2344,7 +2353,7 @@
         btn.type = "button";
         btn.className = "speak-btn speak-btn-inline";
         btn.setAttribute("aria-label", "Ouvir pronúncia");
-        btn.textContent = "🔊";
+        btn.innerHTML = toeflIcon("volume");
         btn.addEventListener("click", function(){ speakText(srsSpeakWord); });
         wordEl.appendChild(btn);
       });
@@ -3129,7 +3138,7 @@
         var shown = target.type === "text";
         target.type = shown ? "password" : "text";
         btn.classList.toggle("is-shown", !shown);
-        btn.textContent = shown ? "👁" : "🙈";
+        btn.innerHTML = toeflIcon(shown ? "eye" : "eye-off");
         btn.setAttribute("aria-label", shown ? "Mostrar senha" : "Ocultar senha");
       });
     });
@@ -4227,7 +4236,7 @@
       var modDoneNote = nextModKey ? null : (function(){
         var el = document.createElement("p");
         el.className = "part-next-bottom part-next-bottom-done";
-        el.textContent = "🎉 Última parte do curso!";
+        el.textContent = "Esta é a última Parte do curso. Você chegou ao fim do caminho.";
         return el;
       })();
       if(modDoneNote){ cards[cards.length - 1].appendChild(modDoneNote); }
@@ -4797,6 +4806,14 @@
       setText("dgMeta", td.meta);
       setText("dgNext", td.next);
       $("dgCount").textContent = Math.min(td.doneCount, td.total) + "/" + td.total;
+      // o selo do topo repete a conta, ao lado do perfil (item 29)
+      if($("topGoal")) $("topGoal").textContent = $("dgCount").textContent;
+      var chip = $("topChip");
+      if(chip){
+        chip.classList.toggle("is-done", !!td.done);
+        chip.setAttribute("aria-label", "Meta de hoje: " + $("dgCount").textContent + ". Sequência: " +
+          computeStreak().count + " dias. Abrir o menu");
+      }
       $("dgFill").style.width = Math.round(100 * Math.min(td.doneCount, td.total) / td.total) + "%";
       $("dgGo").textContent = td.done ? "Continuar estudando" : td.kind === "goal" ? "Montar meu plano" : "Começar";
       if(bar){

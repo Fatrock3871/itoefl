@@ -2,6 +2,7 @@
 
 
 from rebalance import tag_refs, fixed_order
+from icons import icon
 
 
 def render_quiz_drill(drill_id, title, objective, passage_html, items, listen=False, level=None, reveal_at_end=False):
@@ -14,7 +15,7 @@ def render_quiz_drill(drill_id, title, objective, passage_html, items, listen=Fa
     # de verdade em vez de só transcrição lida em silêncio. Não mexe em M1
     # (Reading é treino de leitura silenciosa de propósito).
     item_listen_btn = (
-        '<button type="button" class="speak-btn quiz-item-speak" aria-label="Ouvir">🔊</button>'
+        '<button type="button" class="speak-btn quiz-item-speak" aria-label="Ouvir">' + icon("volume") + '</button>'
         if (listen and not passage_html) else ""
     )
     cards = []
@@ -42,7 +43,7 @@ def render_quiz_drill(drill_id, title, objective, passage_html, items, listen=Fa
   </div>
 </div>''')
     passage_listen_btn = (
-        '<button type="button" class="speak-btn quiz-passage-speak">🔊 Ouvir áudio</button>'
+        '<button type="button" class="speak-btn quiz-passage-speak">' + icon("volume") + ' Ouvir áudio</button>'
         if (listen and passage_html) else ""
     )
     passage_block = (

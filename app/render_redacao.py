@@ -17,6 +17,7 @@ from redacao_data import (
     INTERVALO_DIAS, PRAZO_DIAS_UTEIS, MINUTOS, MIN_PALAVRAS_DISCUSSAO,
 )
 from render_wbox import render_essay_box
+from icons import icon
 
 TASK_NAME = {"email": "Write an Email", "discussion": "Write for an Academic Discussion"}
 
@@ -200,8 +201,8 @@ def render_review_modal():
 <div class="account-modal essay-modal" id="reviewModal" role="dialog" aria-modal="true" aria-label="Painel do corretor" hidden>
 <div class="account-modal-backdrop" id="reviewBackdrop"></div>
 <div class="account-card essay-card">
-<button type="button" class="account-close" id="reviewClose" aria-label="Fechar">✕</button>
-<div class="account-head"><span class="account-head-icon">🖊️</span>
+<button type="button" class="account-close" id="reviewClose" aria-label="Fechar">{icon("close")}</button>
+<div class="account-head"><span class="account-head-icon">{icon("pen")}</span>
 <div><p class="account-kicker">Equipe</p><h2 class="account-title">Painel do corretor</h2></div></div>
 
 <section class="essay-view" id="reviewList">
@@ -254,8 +255,8 @@ def render_essay_modal(parts):
 <div class="account-modal essay-modal" id="essayModal" role="dialog" aria-modal="true" aria-label="Correção de redação" hidden>
 <div class="account-modal-backdrop" id="essayBackdrop"></div>
 <div class="account-card essay-card">
-<button type="button" class="account-close" id="essayClose" aria-label="Fechar">✕</button>
-<div class="account-head"><span class="account-head-icon">✍️</span>
+<button type="button" class="account-close" id="essayClose" aria-label="Fechar">{icon("close")}</button>
+<div class="account-head"><span class="account-head-icon">{icon("pen")}</span>
 <div><p class="account-kicker">Writing</p><h2 class="account-title" id="essayTitle">Correção de redação</h2></div></div>
 <script type="application/json" id="essayData">{topics_json(parts)}</script>
 

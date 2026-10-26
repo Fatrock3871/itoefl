@@ -225,6 +225,33 @@ CONTRAST = r"""
 })()
 """
 
+# Cabeçalho (itens 24, 29 e 31 de 2026-10-25): o botão do menu fica abaixo da
+# faixa "Versão de teste", o ✕ da gaveta aberta não cai sobre a foto, o selo
+# da meta e da sequência está no topo, e o número do módulo está colado ao título.
+HEADER = r"""
+(function(){
+  function r(el){ return el.getBoundingClientRect(); }
+  function hit(a, b){ return a.left < b.right && b.left < a.right && a.top < b.bottom && b.top < a.bottom; }
+  window.scrollTo(0, 0);
+  document.getElementById("authBox").hidden = false; document.getElementById("authIn").hidden = false;
+  var beta = document.getElementById("betaBar"), ham = document.getElementById("sideToggle"), av = document.getElementById("authAvatar");
+  var chip = document.getElementById("topChip"), panel = document.querySelector(".panel:not([hidden])");
+  var o = { betaClear: !beta || r(ham).top >= r(beta).bottom, chipShown: !!chip && r(chip).width > 0 && r(chip).top < 120,
+            chipClearOfAvatar: !hit(r(chip), r(av)), noOverlay: !document.querySelector(".auth-avatar-wrap button + button") };
+  var num = panel.querySelector(".ph-num"), h1 = panel.querySelector(".panel-head h1");
+  o.numNearTitle = Math.abs(r(num).top - r(h1).top) < 30 && r(h1).left - r(num).right < 40 && r(h1).left > r(num).right - 1;
+  var rail = document.getElementById("sideRail");
+  rail.style.transition = "none";
+  ham.click();
+  var close = document.getElementById("sideClose");
+  o.closeClearOfAvatar = !hit(r(close), r(av)) && r(close).width > 0;
+  close.click();
+  rail.style.transition = "";
+  document.getElementById("authBox").hidden = true;
+  return o;
+})()
+"""
+
 SW_STATE = """(async function(){
   var reg = await navigator.serviceWorker.getRegistration();
   return { controller: !!navigator.serviceWorker.controller, waiting: !!(reg && reg.waiting),
@@ -537,6 +564,8 @@ def run():
                 # alteracao pendente de sincronizacao so pela carga da pagina
                 idle = b.eval('Object.keys(localStorage).filter(function(k){ return /^toefl_(streak|dailygoal|dirty|scorecalc)/.test(k); })')
                 check("real_opening_the_site_marks_nothing", not idle, idle)
+                head = b.eval(HEADER)
+                check("header_no_overlap_desktop", all(head.values()), head)
 
                 # o diagnostico e a Parte 1 do M0: aluno novo cai nele, sem o
                 # cartao "Comece aqui" por cima; em outra Parte do M0 o cartao
@@ -779,6 +808,8 @@ def run():
                     if bad:
                         over[key] = bad
                 check("mobile_375_no_horizontal_overflow", not over, over)
+                head = b.eval(HEADER)
+                check("header_no_overlap_mobile", all(head.values()), head)
 
                 # barra do topo: gruda no alto, cobre o botao do menu (que
                 # antes flutuava sobre o texto) e diz onde o aluno esta

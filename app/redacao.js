@@ -603,7 +603,7 @@
         bar.classList.toggle("is-due", rows.some(function(r){ return r.due_on <= today; }));
       }
     }
-    if(side){ side.hidden = !on; if(on) side.textContent = "✍️ " + queueSummary(rows); }
+    if(side){ side.hidden = !on; if(on) side.textContent = queueSummary(rows); }
   }
   function loadQueueNotice(){
     var client = APP.client();

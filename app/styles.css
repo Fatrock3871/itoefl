@@ -127,11 +127,12 @@ body.menu-open{overflow:hidden;}
 }
 .side-close:hover{color:#fff; border-color:var(--accent); background:rgba(255,255,255,0.09);}
 
-/* --- O botão hamburger (fica na barra da jornada, sempre visível) --- */
+/* --- O botão hamburger: dentro da barra do topo, no fluxo dela. Antes era
+   fixo no canto da janela e invadia a faixa "Versão de teste" (item 24). --- */
 .hamburger{
-  position:fixed; top:16px; left:16px; z-index:60;
-  flex:none; width:34px; height:34px; border-radius:8px; border:2px solid var(--edge);
-  background:var(--paper); cursor:pointer; box-shadow:var(--shadow-hard);
+  position:relative; margin-right:14px;
+  flex:none; width:44px; height:44px; border-radius:99px; border:2px solid var(--edge);
+  background:var(--paper); cursor:pointer;
   display:flex; flex-direction:column; align-items:center; justify-content:center; gap:4px; transition:.12s;
 }
 .hamburger span{display:block; width:15px; height:2px; background:var(--ink); border-radius:2px; transition:.2s;}
@@ -470,7 +471,7 @@ nav.modnav{display:flex; flex-direction:column; gap:1px;}
   border:1.5px solid var(--hair); background:var(--paper); color:var(--ink-2); font-size:12px; cursor:pointer; z-index:2;
 }
 .cert-close:hover{border-color:var(--accent); color:var(--accent);}
-.cert-ornament{font-size:38px; margin-bottom:10px;}
+.cert-ornament{margin-bottom:10px; color:var(--accent-strong);} .cert-ornament .ico{width:44px; height:44px;}
 .cert-kicker{
   font-family:'Bricolage Grotesque',sans-serif; font-size:11px; font-weight:800; text-transform:uppercase;
   letter-spacing:0.18em; color:var(--accent-strong); margin:0 0 14px !important;
@@ -565,7 +566,7 @@ nav.modnav{display:flex; flex-direction:column; gap:1px;}
   font-size:11.5px; font-weight:800; text-transform:uppercase; letter-spacing:0.08em;
   color:var(--ink-2); margin-bottom:12px;
 }
-.account-section-icon{font-size:14px;}
+.account-section-icon{width:16px; height:16px;}
 .account-card .auth-form{margin-bottom:0; gap:10px;}
 .account-card .auth-input{background:var(--bg); border-color:var(--hair); color:var(--ink);}
 .account-card .auth-input::placeholder{color:var(--ink-2);}
@@ -690,7 +691,7 @@ nav.modnav{display:flex; flex-direction:column; gap:1px;}
 .dash-stat-b{background:rgba(247,183,51,0.16);}
 :root[data-theme="dark"] .dash-stat-b{background:rgba(247,183,51,0.1);}
 @media (prefers-color-scheme:dark){ :root:not([data-theme="light"]) .dash-stat-b{background:rgba(247,183,51,0.1);} }
-.dash-stat-icon{font-size:19px; line-height:1;}
+.dash-stat-icon{display:flex; color:var(--accent-strong);} .dash-stat-icon .ico{width:20px; height:20px;}
 .dash-stat-label{
   font-family:'Bricolage Grotesque',sans-serif; font-size:10px; font-weight:800;
   text-transform:uppercase; letter-spacing:0.06em; color:var(--ink-2);
@@ -709,7 +710,7 @@ nav.modnav{display:flex; flex-direction:column; gap:1px;}
   font-size:11.5px; font-weight:800; text-transform:uppercase; letter-spacing:0.08em;
   color:var(--ink-2); margin-bottom:10px;
 }
-.dash-section-icon{font-size:14px;}
+.dash-section-icon{width:16px; height:16px;}
 .dash-weak-list{display:flex; flex-direction:column; gap:7px;}
 .dash-weak-row{
   display:flex; align-items:center; gap:9px; padding:8px 10px; border-radius:8px;
@@ -807,7 +808,7 @@ main{max-width:1320px; margin:0 auto; padding:0 30px 120px; min-width:0;}
 .journey{
   position:sticky; top:0; z-index:55;
   background:var(--bg); border-bottom:2px solid var(--edge);
-  margin:0 -30px 6px; padding:11px 30px 11px 72px; min-height:66px;
+  margin:0 -30px 6px; padding:10px 30px; min-height:66px;
   display:flex; align-items:center;
 }
 .journey-row{display:flex; align-items:center; justify-content:flex-end; gap:14px; flex:1; min-width:0;}
@@ -825,7 +826,8 @@ main{max-width:1320px; margin:0 auto; padding:0 30px 120px; min-width:0;}
 /* rolagem até um título para logo abaixo da barra, não embaixo dela */
 .panel h2, .panel h3, .panel [data-lp-title], .panel .ctw, .panel .quiz-drill{scroll-margin-top:84px;}
 @media(max-width:640px){
-  .journey{margin:0 -16px 6px; padding:9px 16px 9px 62px; min-height:62px;}
+  .journey{margin:0 -16px 6px; padding:8px 12px; min-height:60px;}
+  .hamburger{margin-right:10px;}
   .auth-email{display:none;}
   #authIn{flex-wrap:nowrap; gap:6px;}
   .jt-mod{font-size:14px;}
@@ -890,11 +892,13 @@ main{max-width:1320px; margin:0 auto; padding:0 30px 120px; min-width:0;}
 .panel-inner > *:first-child{margin-top:0;}
 
 .panel-head{position:relative; margin:6px 0 34px; padding-bottom:26px; border-bottom:2px solid var(--edge);}
+/* o número do módulo fica colado ao título, na mesma linha (item 31): antes
+   era um "00" enorme na ponta direita, com um vazio no meio */
+.ph-title{display:flex; align-items:center; gap:16px; margin:0 0 14px;}
 .panel-head .ph-num{
-  font-family:'Bricolage Grotesque',sans-serif; font-weight:800; font-size:150px; line-height:0.8;
-  letter-spacing:-0.05em; color:transparent;
-  -webkit-text-stroke:2px var(--accent); text-stroke:2px var(--accent);
-  position:absolute; top:-18px; right:-6px; z-index:0; pointer-events:none; opacity:0.9;
+  flex:none; font-family:'Bricolage Grotesque',sans-serif; font-weight:800; font-size:64px; line-height:0.82;
+  letter-spacing:-0.04em; color:transparent;
+  -webkit-text-stroke:2px var(--accent); text-stroke:2px var(--accent); pointer-events:none;
 }
 .panel-head .ph-text{position:relative; z-index:1;}
 .panel-head .ph-kicker{
@@ -904,10 +908,10 @@ main{max-width:1320px; margin:0 auto; padding:0 30px 120px; min-width:0;}
   padding:4px 10px; margin-bottom:14px; transform:rotate(-1.5deg);
 }
 .panel-head h1{
-  font-size:36px; font-weight:800; font-style:italic; text-transform:uppercase;
-  margin:0 0 8px; max-width:16ch; letter-spacing:-0.01em;
+  font-size:36px; font-weight:800; font-style:italic;
+  margin:0; letter-spacing:-0.01em; line-height:1.05;
 }
-.ph-progress{max-width:280px; margin:0 0 16px;}
+.ph-progress{max-width:520px; margin:0 0 16px;}
 .ph-progress-label{
   display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;
   font-family:'Bricolage Grotesque',sans-serif; font-size:10.5px; font-weight:800; letter-spacing:0.1em;
@@ -918,8 +922,9 @@ main{max-width:1320px; margin:0 auto; padding:0 30px 120px; min-width:0;}
 .ph-progress-fill{height:100%; width:0%; background:var(--accent); border-radius:99px; transition:width .4s ease;}
 .panel-head p{margin:0; color:var(--ink-2); font-size:15.5px; line-height:1.55; max-width:52ch;}
 @media(max-width:640px){
-  .panel-head .ph-num{font-size:88px; top:-6px;}
-  .panel-head h1{font-size:27px;}
+  .panel-head .ph-num{font-size:44px;}
+  .ph-title{gap:12px;}
+  .panel-head h1{font-size:26px;}
 }
 
 /* "Comece aqui": primeiro passo, no topo do Módulo 0 */
@@ -1693,7 +1698,8 @@ li > .reveal{margin:6px 0 4px;}
 }
 /* os ícones de olho e de usuário do login são emoji escuros: no tema escuro
    sumiam dentro do campo */
-:root[data-theme="dark"] .auth-eye, :root[data-theme="dark"] .auth-input-icon{filter:grayscale(1) invert(1);}
+/* (os ícones de olho e de usuário eram emoji escuros e precisavam de filtro
+   no tema escuro; agora são SVG na cor do texto) */
 
 /* ================= Tela de apresentação (apresentacao.html) =================
    Página pública antes do login, montada no fim de app/build.py. Usa as
@@ -1948,3 +1954,59 @@ body.acc-free .part-pager.is-locked .part-pager-title::before{content:"🔒 ";}
 .review-final{margin:14px 0 0; font-weight:800; color:var(--accent-strong);}
 @media(max-width:480px){ .essay-summary{grid-template-columns:1fr;} .essay-actions button{flex:1 1 100%;} }
 @media print{ .essay-modal{display:none !important;} }
+
+/* =====================================================================
+   Etapa 2 (2026-10-25): visual e navegação. Itens de pendencias-correcao.md
+   ===================================================================== */
+
+/* ---- Ícones de interface (app/icons.py): SVG de traço na cor do texto ---- */
+.ico{width:1.15em; height:1.15em; flex:none; vertical-align:-0.2em; fill:none; stroke:currentColor;
+  stroke-width:2; stroke-linecap:round; stroke-linejoin:round;}
+.side-close .ico, .account-close .ico, .dash-close .ico, .cert-close .ico{width:16px; height:16px;}
+.account-gear .ico, .account-head-icon .ico, .dash-head-icon .ico{width:20px; height:20px;}
+.st-toggle .ico{width:24px; height:24px;}
+.speak-btn .ico{width:15px; height:15px;}
+.auth-input-icon .ico, .auth-eye .ico{width:18px; height:18px; color:var(--ink);}
+.speak-hint-icon .ico{width:14px; height:14px;}
+
+/* ---- Selo da meta de hoje e da sequência, na barra do topo (item 29) ---- */
+.top-chip{display:inline-flex; align-items:center; gap:12px; min-height:44px; padding:6px 14px; border-radius:99px;
+  border:2px solid var(--edge); background:var(--paper); color:var(--ink); cursor:pointer;
+  font-family:'Bricolage Grotesque',sans-serif; font-size:14px; font-weight:800; line-height:1;}
+.top-chip:hover{background:var(--accent-wash);}
+.top-chip-item{display:inline-flex; align-items:center; gap:5px;}
+.top-chip-item .ico{color:var(--accent-strong);}
+.top-chip.is-done{background:var(--accent-wash);}
+@media(max-width:640px){ .top-chip{gap:8px; padding:6px 10px; font-size:13px;} }
+
+/* ---- Um padrão único de botão (item 32) ----
+   Pílula com borda de 2 px, sem sombra deslocada. Principal: laranja de
+   preenchimento com texto branco. Secundário: papel com texto escuro. A
+   sombra dura fica só nos cartões. */
+.today-go, .start-go, .dg-go, .part-next-bottom:not(.part-next-bottom-done), .part-jump-practice .part-jump-btn, .qconfirm, .bsq-check,
+.ctw-check, .ctw-retry, .exam-submit, .exam-retry, .srs-flip, .diag-btn-main, .essay-primary, .fs-lock-btn, .auth-gate-submit,
+.cert-print, .pwa-install-btn, .st-primary, .dash-plan-btn, .errlog-submit, .lp-btn-main,
+.part-nav-btn, .part-jump-btn, .reviewer-go, .essay-secondary, .account-renew, .cert-edit-name, .lvlp-go, .drill-timer-btn,
+.diag-btn, .quiz-retry, .cert-btn, .auth-gate-actions button, .lp-btn, .pwa-update button, .side-action{
+  border-radius:99px !important; box-shadow:none !important; transform:none !important;
+  font-family:'Bricolage Grotesque',sans-serif; font-weight:800; min-height:44px;
+}
+.today-go, .start-go, .part-next-bottom:not(.part-next-bottom-done), .part-jump-practice .part-jump-btn, .qconfirm, .bsq-check,
+.ctw-check, .ctw-retry, .exam-submit, .exam-retry, .srs-flip, .diag-btn-main, .essay-primary, .fs-lock-btn, .auth-gate-submit,
+.cert-print, .st-primary, .dash-plan-btn, .errlog-submit, .lp-btn-main{
+  border:2px solid var(--edge) !important; background:var(--accent-fill) !important; color:#fff !important;
+}
+.today-go:hover, .start-go:hover, .part-next-bottom:not(.part-next-bottom-done):hover, .part-jump-practice .part-jump-btn:hover,
+.qconfirm:not(:disabled):hover, .bsq-check:not(:disabled):hover, .ctw-check:hover, .ctw-retry:hover, .exam-submit:hover, .exam-retry:hover,
+.srs-flip:hover, .diag-btn-main:hover, .essay-primary:hover, .fs-lock-btn:hover, .auth-gate-submit:hover, .cert-print:hover,
+.st-primary:hover, .dash-plan-btn:hover, .errlog-submit:hover, .lp-btn-main:hover{background:var(--accent-fill-hover) !important; filter:none;}
+.part-nav-btn, .part-jump-btn, .reviewer-go, .essay-secondary, .account-renew, .cert-edit-name, .lvlp-go, .drill-timer-btn,
+.diag-btn:not(.diag-btn-main), .quiz-retry, .auth-gate-actions button{
+  border:2px solid var(--edge) !important; background:var(--paper) !important; color:var(--ink) !important;
+}
+.part-nav-btn:hover:not(:disabled), .part-jump-btn:hover, .reviewer-go:hover, .essay-secondary:hover, .account-renew:hover,
+.cert-edit-name:hover, .lvlp-go:hover, .drill-timer-btn:hover, .diag-btn:not(.diag-btn-main):hover, .quiz-retry:hover,
+.auth-gate-actions button:hover{background:var(--accent-wash) !important; color:var(--ink) !important; border-color:var(--edge) !important;}
+.drill-timer-btn, .cert-print{display:inline-flex; align-items:center; justify-content:center; gap:8px;}
+/* na gaveta escura o contorno preto some: a borda é a do próprio laranja */
+.dg-go, .pwa-install-btn{border:2px solid var(--accent-fill) !important;}

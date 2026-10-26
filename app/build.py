@@ -1,6 +1,7 @@
 import json
 from urllib.parse import quote as _quote
 from site_config import load_beta, load_site_url
+from icons import icon, sprite as icon_sprite
 
 SITE_URL = load_site_url()
 print("SITE_URL:", SITE_URL)
@@ -140,6 +141,13 @@ journey = (
     '<button type="button" class="journey-title" id="journeyTitle" aria-label="Abrir o menu de módulos">'
     '<span class="jt-mod" id="jtMod"></span><span class="jt-part" id="jtPart"></span></button>'
     '<div class="journey-tools">'
+    # selo compacto da meta de hoje e da sequência, ao lado do perfil (item
+    # 29 de 2026-10-25). O app.js preenche; clicar abre o menu, onde está a
+    # meta inteira.
+    '<button type="button" class="top-chip" id="topChip" aria-label="Meta de hoje e sequência de estudo">'
+    f'<span class="top-chip-item" title="Meta de hoje">{icon("target")}<span id="topGoal">0/1</span></span>'
+    f'<span class="top-chip-item" title="Dias de estudo seguidos">{icon("flame")}<span id="topStreak">0</span></span>'
+    '</button>'
     '<div class="auth-box" id="authBox" hidden>'
     '<div id="authIn" hidden>'
     '<span class="auth-avatar-wrap">'
@@ -147,12 +155,11 @@ journey = (
     '<img id="authAvatarImg" alt="" hidden>'
     '<span id="authAvatarLetter"></span>'
     '</button>'
-    '<button type="button" class="auth-avatar-remove" id="authAvatarRemove" aria-label="Remover foto" title="Remover foto" hidden>✕</button>'
     '</span>'
     '<input type="file" id="authAvatarFile" accept="image/*" hidden>'
     '<span id="authEmail" class="auth-email"></span>'
-    '<button type="button" id="dashboardBtn" class="account-gear" aria-label="Meu painel" title="Meu painel">📊</button>'
-    '<button type="button" id="accountBtn" class="account-gear" aria-label="Minha conta" title="Minha conta">⚙️</button>'
+    f'<button type="button" id="dashboardBtn" class="account-gear" aria-label="Meu painel" title="Meu painel">{icon("chart")}</button>'
+    f'<button type="button" id="accountBtn" class="account-gear" aria-label="Minha conta" title="Minha conta">{icon("gear")}</button>'
     '<button type="button" id="authSignOut">Sair</button></div>'
     '<span id="authMsg" class="auth-msg" hidden></span></div>'
     '</div></div>'
@@ -252,8 +259,8 @@ FREE_JSON = json.dumps({"partes": FREE_SAMPLE["partes"], "exercicios": FREE_SAMP
 panels = "\n".join(
     f'<section class="panel" data-panel="{k}" id="panel-{k}" {"hidden" if k != "mod0" else ""}>'
     f'<div class="panel-inner">'
-    f'<header class="panel-head"><span class="ph-num">{n}</span>'
-    f'<span class="ph-text"><h1>{t}</h1>'
+    # o número do módulo fica colado ao título, na mesma linha (item 31)
+    f'<header class="panel-head"><span class="ph-text"><span class="ph-title"><span class="ph-num" aria-hidden="true">{n}</span><h1>{t}</h1></span>'
     '<div class="ph-progress">'
     f'<div class="ph-progress-label"><span>Seu progresso neste módulo</span><span class="ph-progress-pct" id="phPct-{k}">0%</span></div>'
     f'<div class="ph-progress-bar"><div class="ph-progress-fill" id="phFill-{k}"></div></div>'
@@ -365,13 +372,13 @@ gate = (
     '<form class="auth-form" id="loginForm">'
     '<label class="auth-field"><span class="auth-label">E-mail</span>'
     '<span class="auth-input-wrap has-icon">'
-    '<span class="auth-input-icon" aria-hidden="true">👤</span>'
+    f'<span class="auth-input-icon" aria-hidden="true">{icon("user")}</span>'
     '<input type="email" id="loginEmail" class="auth-input" placeholder="voce@exemplo.com" autocomplete="email" required>'
     '</span></label>'
     '<label class="auth-field"><span class="auth-label">Senha</span>'
     '<span class="auth-input-wrap">'
     '<input type="password" id="loginPassword" class="auth-input" placeholder="••••••••" autocomplete="current-password" required>'
-    '<button type="button" class="auth-eye" data-target="loginPassword" aria-label="Mostrar senha">👁</button>'
+    '<button type="button" class="auth-eye" data-target="loginPassword" aria-label="Mostrar senha">' + icon("eye") + '</button>'
     '</span></label>'
     '<button type="submit" class="auth-gate-submit">Entrar</button>'
     '</form>'
@@ -382,7 +389,7 @@ gate = (
     '<label class="auth-field"><span class="auth-label">Senha</span>'
     '<span class="auth-input-wrap">'
     '<input type="password" id="signupPassword" class="auth-input" placeholder="mínimo 6 caracteres" autocomplete="new-password" required minlength="6">'
-    '<button type="button" class="auth-eye" data-target="signupPassword" aria-label="Mostrar senha">👁</button>'
+    '<button type="button" class="auth-eye" data-target="signupPassword" aria-label="Mostrar senha">' + icon("eye") + '</button>'
     '</span>'
     '<span class="auth-strength" id="signupStrength" hidden><span class="auth-strength-bar"><span id="signupStrengthFill"></span></span>'
     '<span class="auth-strength-label" id="signupStrengthLabel"></span></span>'
@@ -397,7 +404,7 @@ gate = (
     '<label class="auth-field"><span class="auth-label">Nova senha</span>'
     '<span class="auth-input-wrap">'
     '<input type="password" id="newPassword" class="auth-input" placeholder="mínimo 6 caracteres" autocomplete="new-password" required minlength="6">'
-    '<button type="button" class="auth-eye" data-target="newPassword" aria-label="Mostrar senha">👁</button>'
+    '<button type="button" class="auth-eye" data-target="newPassword" aria-label="Mostrar senha">' + icon("eye") + '</button>'
     '</span></label>'
     '<button type="submit" class="auth-gate-submit">Salvar nova senha</button>'
     '</form>'
@@ -552,12 +559,12 @@ cert_modal = (
     '<div class="cert-modal" id="certModal" role="dialog" aria-modal="true" aria-label="Certificado de conclusão" hidden>'
     '<div class="cert-modal-backdrop" id="certModalBackdrop"></div>'
     '<div class="cert-card">'
-    '<button type="button" class="cert-close" id="certClose" aria-label="Fechar">✕</button>'
+    f'<button type="button" class="cert-close" id="certClose" aria-label="Fechar">{icon("close")}</button>'
 
     # passo 1: pede o nome completo antes de gerar (só na primeira vez --
     # depois fica salvo em profiles.display_name e este passo não aparece mais)
     '<div class="cert-name-step" id="certNameStep">'
-    '<div class="cert-ornament">🎓</div>'
+    f'<div class="cert-ornament">{icon("cap")}</div>'
     '<p class="cert-kicker">Antes de gerar seu certificado</p>'
     '<h2 class="cert-step-title">Como seu nome deve aparecer?</h2>'
     '<p class="cert-step-hint">Use seu nome completo: é o que vai sair impresso no certificado.</p>'
@@ -570,7 +577,7 @@ cert_modal = (
     # passo 2: o certificado em si
     '<div class="cert-view" id="certView" hidden>'
     '<div class="cert-frame">'
-    '<div class="cert-ornament">🎓</div>'
+    f'<div class="cert-ornament">{icon("cap")}</div>'
     '<p class="cert-kicker">Certificado de Conclusão</p>'
     '<h2 class="cert-name" id="certName">Aluno(a) iTOEFL</h2>'
     '<p class="cert-body">concluiu com êxito a preparação completa para o <strong>TOEFL iBT</strong> '
@@ -585,7 +592,7 @@ cert_modal = (
     '<p class="cert-disclaimer">Registra a conclusão do curso no iTOEFL. Não é documento oficial da ETS e não atesta nível de proficiência.</p>'
     '<div class="cert-actions">'
     '<button type="button" class="cert-edit-name" id="certEditName">Editar nome</button>'
-    '<button type="button" class="cert-print" id="certPrint">🖨 Imprimir / salvar como PDF</button>'
+    f'<button type="button" class="cert-print" id="certPrint">{icon("printer")} Imprimir ou salvar como PDF</button>'
     '</div>'
     '</div>'
     '</div>'
@@ -599,23 +606,32 @@ account_modal = (
     '<div class="account-modal" id="accountModal" role="dialog" aria-modal="true" aria-label="Minha conta" hidden>'
     '<div class="account-modal-backdrop" id="accountModalBackdrop"></div>'
     '<div class="account-card">'
-    '<button type="button" class="account-close" id="accountClose" aria-label="Fechar">✕</button>'
+    f'<button type="button" class="account-close" id="accountClose" aria-label="Fechar">{icon("close")}</button>'
     '<div class="account-head">'
-    '<span class="account-head-icon">⚙️</span>'
+    f'<span class="account-head-icon">{icon("gear")}</span>'
     '<div><p class="account-kicker">Minha conta</p><h2 class="account-title">Configurações</h2></div>'
     '</div>'
 
     '<div class="account-section">'
-    '<span class="account-section-label"><span class="account-section-icon">🎨</span>Aparência</span>'
+    f'<span class="account-section-label">{icon("palette", "ico account-section-icon")}Aparência</span>'
     '<div class="auth-tabs" id="accountThemeTabs">'
     '<span class="auth-tab-indicator" id="accountThemeIndicator"></span>'
-    '<button type="button" id="accountThemeLight" class="auth-tab">☀️ Claro</button>'
-    '<button type="button" id="accountThemeDark" class="auth-tab">🌙 Escuro</button>'
+    f'<button type="button" id="accountThemeLight" class="auth-tab">{icon("sun")} Claro</button>'
+    f'<button type="button" id="accountThemeDark" class="auth-tab">{icon("moon")} Escuro</button>'
     '</div>'
     '</div>'
 
+    # foto de perfil: o "remover" era um ✕ por cima da foto, no topo, e
+    # parecia o fechar do menu (item 24 de 2026-10-25). Trocar a foto
+    # continua sendo tocar nela.
+    '<div class="account-section" id="accountPhoto">'
+    f'<span class="account-section-label">{icon("user", "ico account-section-icon")}Foto de perfil</span>'
+    '<p class="account-access">Para trocar a foto, toque nela, no alto da tela.</p>'
+    '<button type="button" class="account-renew" id="authAvatarRemove" hidden>Remover a foto</button>'
+    '</div>'
+
     '<div class="account-section">'
-    '<span class="account-section-label"><span class="account-section-icon">🎟️</span>Acesso</span>'
+    f'<span class="account-section-label">{icon("ticket", "ico account-section-icon")}Acesso</span>'
     '<p class="account-access" id="accountAccess">Verificando...</p>'
     # assinatura Mensal (tabela billing): situação e o Customer Portal do
     # Stripe, onde o aluno cancela em 1 clique e troca o cartão
@@ -628,7 +644,7 @@ account_modal = (
     # devolutiva que o aluno ainda não abriu. "Painel do corretor" só aparece
     # para conta com linha na tabela `admins` do banco.
     '<div class="account-section">'
-    '<span class="account-section-label"><span class="account-section-icon">✍️</span>Redações</span>'
+    f'<span class="account-section-label">{icon("pen", "ico account-section-icon")}Redações</span>'
     '<p class="account-access">Envie uma redação no tempo da prova e receba nota, nível e comentários em até 3 dias úteis.</p>'
     '<span class="essay-badge" id="accountEssayBadge" hidden></span>'
     '<button type="button" class="account-renew" id="accountEssay">Correção de redação</button>'
@@ -636,7 +652,7 @@ account_modal = (
     '</div>'
 
     '<div class="account-section">'
-    '<span class="account-section-label"><span class="account-section-icon">📧</span>E-mail</span>'
+    f'<span class="account-section-label">{icon("mail", "ico account-section-icon")}E-mail</span>'
     '<form class="auth-form" id="accountEmailForm">'
     '<span class="auth-field">'
     '<input type="email" id="accountEmail" class="auth-input" required>'
@@ -647,11 +663,11 @@ account_modal = (
     '</div>'
 
     '<div class="account-section">'
-    '<span class="account-section-label"><span class="account-section-icon">🔑</span>Senha</span>'
+    f'<span class="account-section-label">{icon("key", "ico account-section-icon")}Senha</span>'
     '<form class="auth-form" id="accountPasswordForm">'
     '<span class="auth-input-wrap">'
     '<input type="password" id="accountNewPassword" class="auth-input" placeholder="mínimo 6 caracteres" autocomplete="new-password" required minlength="6">'
-    '<button type="button" class="auth-eye" data-target="accountNewPassword" aria-label="Mostrar senha">👁</button>'
+    '<button type="button" class="auth-eye" data-target="accountNewPassword" aria-label="Mostrar senha">' + icon("eye") + '</button>'
     '</span>'
     '<button type="submit" class="auth-gate-submit">Salvar senha</button>'
     '</form>'
@@ -662,7 +678,7 @@ account_modal = (
     # depois de um clique, e o envio exige digitar EXCLUIR (conferido de
     # novo no servidor, em supabase/functions/delete-account).
     '<div class="account-section account-danger">'
-    '<span class="account-section-label"><span class="account-section-icon">🗑️</span>Excluir conta</span>'
+    f'<span class="account-section-label">{icon("trash", "ico account-section-icon")}Excluir conta</span>'
     '<p class="account-danger-text">Apaga de vez sua conta, seu progresso, suas redações e o registro do seu pagamento. '
     'O acesso comprado é perdido e não dá pra desfazer.</p>'
     '<button type="button" class="account-danger-open" id="accountDeleteOpen">Quero excluir minha conta</button>'
@@ -689,40 +705,40 @@ dashboard_modal = (
     '<div class="dash-modal" id="dashboardModal" role="dialog" aria-modal="true" aria-label="Painel de progresso" hidden>'
     '<div class="dash-modal-backdrop" id="dashboardModalBackdrop"></div>'
     '<div class="dash-card">'
-    '<button type="button" class="dash-close" id="dashboardClose" aria-label="Fechar">✕</button>'
+    f'<button type="button" class="dash-close" id="dashboardClose" aria-label="Fechar">{icon("close")}</button>'
     '<div class="dash-head">'
-    '<span class="dash-head-icon">📊</span>'
+    f'<span class="dash-head-icon">{icon("chart")}</span>'
     '<div><p class="dash-kicker">Seu progresso</p><h2 class="dash-title">Painel</h2></div>'
     '</div>'
 
     '<div class="dash-stats-grid">'
     '<div class="dash-stat dash-stat-a">'
-    '<span class="dash-stat-icon">🔥</span><span class="dash-stat-label">Sequência</span>'
+    f'<span class="dash-stat-icon">{icon("flame")}</span><span class="dash-stat-label">Sequência</span>'
     '<p class="dash-value" id="dashStreak">—</p>'
     '</div>'
     '<div class="dash-stat dash-stat-b">'
-    '<span class="dash-stat-icon">✅</span><span class="dash-stat-label">Meta de hoje</span>'
+    f'<span class="dash-stat-icon">{icon("check-circle")}</span><span class="dash-stat-label">Meta de hoje</span>'
     '<div class="op-bar dash-bar"><div class="op-fill" id="dashGoalFill"></div></div>'
     '<p class="dash-value dash-value-sm" id="dashGoalText"></p>'
     '</div>'
     '<div class="dash-stat dash-stat-a">'
-    '<span class="dash-stat-icon">🎯</span><span class="dash-stat-label">Banda estimada</span>'
+    f'<span class="dash-stat-icon">{icon("target")}</span><span class="dash-stat-label">Banda estimada</span>'
     '<p class="dash-value dash-value-sm" id="dashBand">—</p>'
     '</div>'
     '<div class="dash-stat dash-stat-b">'
-    '<span class="dash-stat-icon">📈</span><span class="dash-stat-label">Progresso geral</span>'
+    f'<span class="dash-stat-icon">{icon("trend")}</span><span class="dash-stat-label">Progresso geral</span>'
     '<div class="op-bar dash-bar"><div class="op-fill" id="dashProgressFill"></div></div>'
     '<p class="dash-value dash-value-sm" id="dashProgressText"></p>'
     '</div>'
     '</div>'
 
     '<div class="dash-callout dash-callout-warn">'
-    '<span class="dash-section-label"><span class="dash-section-icon">⚠️</span>Pontos fracos</span>'
+    f'<span class="dash-section-label">{icon("alert", "ico dash-section-icon")}Pontos fracos</span>'
     '<div id="dashWeakSpots" class="dash-weak-list"></div>'
     '</div>'
 
     '<div class="dash-callout dash-callout-accent">'
-    '<span class="dash-section-label"><span class="dash-section-icon">🧭</span>Plano sugerido</span>'
+    f'<span class="dash-section-label">{icon("compass", "ico dash-section-icon")}Plano sugerido</span>'
     '<p class="dash-value" id="dashPlanText"></p>'
     '<button type="button" class="dash-plan-btn" id="dashPlanBtn" hidden>Ir para o módulo</button>'
     '</div>'
@@ -752,6 +768,7 @@ html = f'''<!DOCTYPE html>
 </head>
 <body>
 <a class="skip-link" href="#mainArea">Pular para o conteúdo</a>
+{icon_sprite()}
 {BETA_BAR}
 {gate}
 {pay_gate}
@@ -770,7 +787,7 @@ html = f'''<!DOCTYPE html>
           <span class="mark">Preparação independente</span>
         </span>
       </div>
-      <button class="side-close" id="sideClose" type="button" aria-label="Fechar menu">✕</button>
+      <button class="side-close" id="sideClose" type="button" aria-label="Fechar menu">{icon("close")}</button>
     </div>
     <div class="overall-progress">
       <div class="op-label"><span>Progresso geral</span><span id="opPct">0%</span></div>
@@ -782,7 +799,7 @@ html = f'''<!DOCTYPE html>
       </button>
     </div>
     <div class="daily-goal" id="dailyGoal">
-      <div class="op-label"><span>🎯 Meta de hoje</span><span id="dgCount">0/1</span></div>
+      <div class="op-label"><span>{icon("target")} Meta de hoje</span><span id="dgCount">0/1</span></div>
       <p class="dg-text" id="dgText"></p>
       <div class="op-bar"><div class="op-fill" id="dgFill"></div></div>
       <button type="button" class="dg-go" id="dgGo">Começar</button>
@@ -867,7 +884,7 @@ html = f'''<!DOCTYPE html>
       </div>
     </div>
     <button class="st-toggle" id="mrToggle" type="button" aria-label="Gravador de voz">
-      <span>🎙</span>
+      {icon("mic")}
     </button>
   </div>
   <div id="secTimer" class="sec-timer collapsed">
@@ -886,7 +903,7 @@ html = f'''<!DOCTYPE html>
       </div>
     </div>
     <button class="st-toggle" id="stToggle" type="button" aria-label="Cronômetro de seção">
-      <span id="stFace">⏱</span>
+      <span id="stFace">{icon("timer")}</span>
     </button>
   </div>
 </div>
