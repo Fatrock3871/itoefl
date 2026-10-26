@@ -797,7 +797,12 @@
   // A tabela mora em app/level.js (ToeflLevel), que o build cola antes deste
   // arquivo: a tela de apresentação usa a mesma no diagnóstico sem conta.
   function cefrBandFromPct(pct){ return ToeflLevel.band(pct); }
-  function scheduleFromPct(pct){ return ToeflLevel.schedule(pct); }
+  // cronograma do aluno: o da meta salva (nota e data da prova) quando há
+  // meta; sem ela, o indicado só pelo nível do diagnóstico
+  function scheduleFromPct(pct){
+    var g = readGoal(), p = g && ToeflLevel.PLANS[g.sched];
+    return p ? "Cronograma " + p.name + " (" + p.days + " dias) · Módulo 0, Parte " + p.part : ToeflLevel.schedule(pct);
+  }
   function updateLevelBadge(correct, total){
     var badge = document.getElementById("levelBadge");
     var bandEl = document.getElementById("levelBadgeBand");
@@ -4637,6 +4642,8 @@
         start: old && old.sched === rec.days && old.start ? old.start : todayStr() }));
       say("Plano salvo. A meta de hoje já segue este cronograma.");
       renderPlan(d);
+      updateLevelBadge(d.correct, d.total); // o selo da gaveta passa a citar o cronograma da meta
+      if(typeof window.__toeflRefreshStart === "function") window.__toeflRefreshStart();
       if(typeof window.__toeflRefreshPlan === "function") window.__toeflRefreshPlan();
     });
 
@@ -4684,6 +4691,7 @@
         partCards(m).forEach(function(card, i){
           var p = partInfo(m, i + 1), chk = partDoneBox(card);
           if(!p || p.tipo === "referencia" || !chk) return;
+          if(card.querySelector('[data-drill="mod0-diag"]')) return; // o diagnóstico já foi feito para chegar aqui
           if(accessFree && card.classList.contains("fs-part-locked")) return; // conta grátis: só a amostra
           list.push({ mod: m, n: i + 1, pid: chk.dataset.pid, min: p.min, tipo: p.tipo });
         });

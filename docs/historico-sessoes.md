@@ -7,6 +7,20 @@ falta" do `ROADMAP.md`. Sessão nova entra no topo.
 
 ---
 
+## Sessão 2026-10-25: correção, Etapa 1 (estrutura e fluxo)
+
+Itens 1 a 5, 8, 10, 13, 19, 20, 22 e 23 de
+`itoefl-gerencia/pendencias-correcao.md`, aprovados pelo dono. Login rola em
+tela baixa; diagnóstico vira a Parte 1 do M0 (progresso antigo migrado), com
+gabarito só no fim e tela de resultado com áreas, nota desejada, data da
+prova e cronograma; meta de hoje sai do cronograma; selo de tipo e tempo nas
+86 Partes (`app/partes.json`); apresentação antes do login; aviso da fila de
+redações para o corretor; sem travessão no HTML em português (checado no
+smoke). Nenhuma mudança de banco. Relato item a item em
+`itoefl-gerencia/revisao/APLICADO-etapa1.md`.
+
+---
+
 ## Sessão 2026-10-18 (tarde): lançamento de teste, Stripe e quatro planos
 
 Pedido do dono, corrigido no meio da sessão: a Vercel saiu (o commit dela

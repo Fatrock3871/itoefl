@@ -48,12 +48,13 @@ app/render_speaking.py    Renderizador dos conjuntos de Speaking com áudio (M3)
 app/render_wbox.py        Caixa de escrita com cronômetro e contador (M4)
 app/render_exam.py        Blocos de simulado do M7: lê as questões e o gabarito do próprio .md
 app/rebalance.py          Redistribui a letra correta no build e marca as citações "(B)"
-app/videos.json           Cadastro das videoaulas (começa vazio: sem vídeo, nada aparece)
+app/videos.json           Cadastro das videoaulas e, na chave "apresentacao", do vídeo do topo da apresentação (null: nada aparece)
 app/render_video.py       Valida o videos.json e injeta os players no topo do módulo e das Partes
 app/render_errorlog.py    Renderizador do formulário de Registro de erros (M1 a M6)
 app/render_weeklydash.py  Renderizador do dashboard semanal (M0)
 app/app.js                Runtime: tema, abas, progresso (checkboxes + badges), quizzes
-app/level.js              Resultado do diagnóstico -> banda CEFR e cronograma. O build cola antes do app.js e do landing.js
+app/level.js              Resultado do diagnóstico -> banda CEFR, régua 0 a 120 da ETS e cronograma indicado (ToeflLevel.recommend). O build cola antes do app.js e do landing.js
+app/partes.json           Tipo (teoria, prática, simulado, referência) e minutos de cada uma das 86 Partes: selo, mapa do módulo, "Agora pratique" e meta de hoje. O build falha se não bater com as Partes
 app/landing.js            Runtime da tela de apresentação: diagnóstico sem conta e plano clicado
 app/styles.css            Estilo (tema claro/escuro/sistema)
 app/manifest.json         Manifesto da PWA (o build copia para artifact/)
@@ -97,7 +98,10 @@ _snapshots/               Cópias com timestamp antes de mudanças estruturais
 ### Regra central de conteúdo
 
 - **Texto corrido de um módulo** → editar o `.md` em `consolidated/`.
-- **Questões do diagnóstico** → `app/quiz_mod0.json`.
+- **Questões do diagnóstico** → `app/quiz_mod0.json` (cada uma com `area`,
+  usada nos acertos por área). O diagnóstico é a **Parte 1 do M0** desde
+  2026-10-25 e só mostra o gabarito depois da décima resposta.
+- **Tipo e tempo de cada Parte** → `app/partes.json`.
 - **Drills de Reading/Listening** → `app/drills_data.py`.
 - **Itens de Build a Sentence (M4)** → `app/build_sentence_data.py`.
 - **Parágrafos de Complete the Words (M1)** → `app/ctw_data.py`.
@@ -249,8 +253,13 @@ removido; os originais pré-2026 dos 10 módulos seguem em
 
 `artifact/apresentacao.html` é montada no fim do `app/build.py`: chamada, o
 que tem dentro, diagnóstico grátis sem conta, os quatro planos e perguntas
-frequentes. "Entrar" e "Criar conta" levam ao `index.html`. Quando o site for
-publicado, o endereço público deve abrir nela.
+frequentes. "Entrar" leva a `index.html#entrar` e "Começar grátis" a
+`index.html#criar-conta`. **Ela vem antes do login (2026-10-25):** com
+Supabase configurado, um script no `<head>` do `index.html`
+(`LANDING_REDIRECT_JS`) manda para a apresentação quem abre o app sem sessão
+guardada; passam direto a sessão do Supabase, `#entrar`/`#criar-conta`, a
+volta do login e do pagamento (`?pay=`, `?mp=`), sem internet e `file://`.
+"Sair" também leva à apresentação.
 
 - **Só entra o que dá para provar.** Os números saem do próprio build
   (`LP_STATS`) e não há promessa de nota nem contagem de alunos. O smoke
@@ -309,7 +318,12 @@ das subseções), `toefl_quiz_<drillId>_v1`, `toefl_srs_kit50_v1`,
 (simulados do M7), `toefl_scorecalc_v1`, `toefl_errlog_<módulo>_v1` (registro
 de erros),
 `toefl_cert_date_v1`, `toefl_streak_v1`, `toefl_dailygoal_v1`,
-`toefl_weeklydash_v1`, `toefl_avatar_v1`.
+`toefl_weeklydash_v1`, `toefl_avatar_v1`, `toefl_goal_v1` (meta do aluno:
+banda, data da prova, cronograma e início; dela sai a meta de hoje).
+
+`toefl_progress_v1` e `toefl_partpos_v1` levam a marca `_ordem_m0`: objeto
+sem ela é da ordem antiga do M0 (diagnóstico na Parte 3) e o `app.js` o
+remapeia uma vez (`migrateM0Order`).
 
 Sempre locais, por aparelho: `toefl_theme_v1`, `toefl_active_tab`,
 `toefl_timer_preset`, `toefl_partpos_v1` (Parte aberta em cada módulo),

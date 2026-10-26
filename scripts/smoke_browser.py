@@ -600,12 +600,14 @@ def run():
                   out.sched2 = document.getElementById("diagPlanSched").textContent;
                   document.getElementById("goalTarget").value = "5"; document.getElementById("goalDate").value = day(45);
                   document.getElementById("goalSave").click();
+                  out.badge = document.getElementById("levelBadgeSched").textContent;
                   return out;
                 })()""")
                 check("real_goal_gives_distance_and_schedule",
                       "Você está em B2 (banda 4 a 4,5) e precisa de C1 (banda 5)." in goal["gap"] and "Faltam 45 dias" in goal["gap"]
                       and goal["sched"].startswith("Cronograma indicado: Intensivo, de 30 dias (Parte 6.1)")
                       and goal["saved"]["target"] == 5 and goal["saved"]["sched"] == 30 and goal["saved"]["start"] == goal["today"]
+                      and goal["badge"].startswith("Cronograma Intensivo (30 dias)")
                       and "Plano de Emergência" in goal["sched2"], goal)
                 # meta de hoje tirada do cronograma (Intensivo, 45 dias até a
                 # prova): Partes de M0/M1 com minutos, prova e nível x meta
@@ -630,6 +632,7 @@ def run():
                 })()""" % json.dumps(goal["today"]))
                 check("real_today_goal_follows_schedule",
                       re.match(r"^Hoje: M[01] Parte \d", today["text"]) and re.search(r"\(\d+ min\)$", today["text"])
+                      and not re.search(r"M0 Parte 1\b", today["text"])
                       and today["side"] == today["text"] and "Prova em 45 dias. Você: B2. Meta: C1 (banda 5)." in today["meta"]
                       and today["next"].startswith("Depois: ") and today["lateItems"] > 1 and "atrás do cronograma" in today["lateNext"]
                       and today["went"] in ("mod0", "mod1"), today)

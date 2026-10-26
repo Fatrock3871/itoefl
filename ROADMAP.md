@@ -2,7 +2,7 @@
 
 Memória entre sessões. Atualizar ao concluir cada etapa.
 
-**Última atualização:** 2026-10-13
+**Última atualização:** 2026-10-25
 **O que tem neste arquivo:** a lista única de pendências ("Tudo que falta") e
 as decisões travadas. Nada mais.
 **Histórico:** o que cada sessão fez, as fases antigas e o mapa de pendências
@@ -145,9 +145,9 @@ Nada das etapas seguintes anda sem esta. Ordem sugerida de cima para baixo.
       enquanto houver `[PREENCHER]`, `SITE_URL` local, chave secreta no
       `supabase_config.json`, credencial `TEST-` ou smoke test falhando; o
       smoke test mostra o resultado só como aviso.
-- [ ] (D) Raiz do site: no Cloudflare Pages `/` abre o app e a apresentação
-      fica em `/apresentacao`. Para a raiz abrir a apresentação é preciso
-      renomear o arquivo do app (o Cloudflare manda `/index.html` para `/`).
+- [x] (D) Raiz do site: resolvido em 2026-10-25 sem renomear arquivo. `/`
+      continua servindo o app, mas quem não tem sessão é mandado para
+      `/apresentacao` por um script no `<head>` (ver "Decisões travadas").
 - [x] (U) Criar o repositório no GitHub e configurar o remoto. Feito em
       2026-10-06: `https://github.com/Fatrock3871/itoefl`, privado, branch
       `main` (a antiga `master` foi renomeada). Repositório privado não
@@ -375,6 +375,32 @@ do banco de questões, porque define o formato de dois tipos de item.
       Sentence do M7 continua no molde antigo, de reordenar e escrever.
 - [ ] (C) Geração de questões por nível: depende do banco (Etapa 2).
 
+### Correção de 2026-10-25, Etapa 1: estrutura e fluxo
+
+Lista de problemas em `itoefl-gerencia/pendencias-correcao.md` (os números
+abaixo são os itens dela). Relato item a item em
+`itoefl-gerencia/revisao/APLICADO-etapa1.md`.
+
+- [x] (C) Item 20: tela de login rola em tela baixa (c023080).
+- [x] (C) Itens 8 e 10: sem travessão no HTML gerado em português, com
+      checagem no smoke; aviso de demora do pagamento só depois de ~60 s (c023080).
+- [x] (C) Itens 1 a 4: diagnóstico vira a Parte 1 do M0, com migração do
+      progresso (322699d); gabarito só no fim, tela de resultado com áreas,
+      nota desejada, data da prova e cronograma (0cc1363); M7 corrigido.
+- [x] (C) Item 13: selo de tipo e tempo nas 86 Partes, mapa do módulo,
+      "Agora pratique" e "Rever a teoria" (404d96d). `app/partes.json`.
+- [x] (C) Item 5: meta de hoje tirada do cronograma e da data (2e00aec).
+- [x] (C) Itens 22 e 23: apresentação antes do login, topo novo, espaço
+      para vídeo (a32f5fa).
+- [x] (C) Item 19: aviso da fila para o corretor e confirmação com prazo
+      para o aluno (e5ce542).
+- [ ] (U) Ler a classificação de `app/partes.json` e o encaixe dos módulos
+      M5, M6, M8 e M9 nos cronogramas (`PLAN_PHASES` em `app/app.js`).
+- [ ] (U) Gravar o vídeo da apresentação e cadastrar na chave
+      `apresentacao` de `app/videos.json`.
+- [ ] (C) Etapas seguintes da correção: visual (itens 7, 14, 15, 18) e
+      texto (6, 9, 16, 17, 18).
+
 ### Etapa 1: app instalável e videoaulas
 
 Detalhe em `docs/roadmap-expansao.md`, seções 3 e 4.
@@ -553,4 +579,8 @@ Não foram pedidos, apareceram ao consolidar a lista.
 | Travessão | A regra "sem travessão como pausa" vale **só para texto em português**. Em texto em inglês (passagens, transcrições, respostas-modelo, exemplos) o travessão é pontuação correta e permitido | 2026-10-13 |
 | Tipos de pergunta extintos | **Remover** Sentence Simplification, Insert a Sentence, Prose Summary e arrastar para a tabela, e **encurtar as passagens** para o padrão da prova de 2026. Entra na rodada 2 da revisão de conteúdo | 2026-10-13 |
 | Drills legados | **Apagar** `MOD1_DRILLS` e `MOD2_DRILLS` de `app/drills_data.py`: não apareciam no site | 2026-10-13 |
+| Diagnóstico e metas | Diagnóstico é a **Parte 1 do M0**, com gabarito só no fim e tela de resultado (nível, áreas, fortes e a melhorar). O aluno informa a banda que precisa e a data da prova; o site indica 30, 60 ou 90 dias pelas regras da Parte 6 e a **meta de hoje sai desse cronograma**, ajustando se o aluno atrasar | 2026-10-25 |
+| Teoria x prática | Cada Parte tem selo **Teoria, Prática, Simulado ou Referência** e tempo estimado (`app/partes.json`), no topo, na paginação e no mapa do módulo, com "Agora pratique" e "Rever a teoria" | 2026-10-25 |
+| Apresentação antes do login | Quem abre o site ou o app sem sessão vê primeiro a apresentação; "Entrar" no topo e "Começar grátis" como ação principal; quem está logado vai direto ao curso. Espaço para vídeo no topo (`videos.json`, chave `apresentacao`) | 2026-10-25 |
+| Redação | Conta corretora vê "Redações na fila: N (X vencem hoje)" no topo e no menu, com atalho ao Painel do corretor; o aluno recebe a data até a qual a redação será corrigida | 2026-10-25 |
 | Revisão de conteúdo de 2026-10-13 | Entra em **3 rodadas**: 1) críticos, 2) importantes + tipos extintos + pontuação do inglês, 3) estilo | 2026-10-13 |
