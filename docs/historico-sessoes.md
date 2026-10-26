@@ -7,6 +7,23 @@ falta" do `ROADMAP.md`. Sessão nova entra no topo.
 
 ---
 
+## Sessão 2026-10-25/26: correção, Etapa 2 (visual e navegação)
+
+Itens 7, 14, 15, 18 (componente) e 24 a 34 de
+`itoefl-gerencia/pendencias-correcao.md`, com a auditoria de UI/UX do Gemini.
+Barra do topo abaixo da faixa de teste, selo de meta e sequência, número do
+módulo junto ao título, botão único em pílula e ícones SVG (`app/icons.py`);
+menu com uma lista só de módulos, Configurações e reinício em duas
+confirmações, texto "Sincronizado na sua conta"; texto com cerca de 70
+caracteres, coluna "Nesta Parte" no computador e barra no celular, subseção
+lida com ✓ ao rolar até o fim, "Próxima Parte: título", títulos de Parte em
+formato de frase só na tela; caixas em 7 tipos; tabelas leves e em cartões
+no celular; balão de tradução `[[inglês::tradução]]` com 5 exemplos no M0.
+Smoke: 339 checagens. Nenhuma mudança de banco. Relato em
+`itoefl-gerencia/revisao/APLICADO-etapa2.md`.
+
+---
+
 ## Sessão 2026-10-25: correção, Etapa 1 (estrutura e fluxo)
 
 Itens 1 a 5, 8, 10, 13, 19, 20, 22 e 23 de

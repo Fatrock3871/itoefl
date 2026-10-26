@@ -398,8 +398,17 @@ abaixo são os itens dela). Relato item a item em
       M5, M6, M8 e M9 nos cronogramas (`PLAN_PHASES` em `app/app.js`).
 - [ ] (U) Gravar o vídeo da apresentação e cadastrar na chave
       `apresentacao` de `app/videos.json`.
-- [ ] (C) Etapas seguintes da correção: visual (itens 7, 14, 15, 18) e
-      texto (6, 9, 16, 17, 18).
+- [x] (C) Etapa 2, visual e navegação (2026-10-25), itens 7, 14, 15, 18
+      (só o componente), 24 a 34. Relato em
+      `itoefl-gerencia/revisao/APLICADO-etapa2.md`. Topo, botões e ícones
+      (62fee15); menu e Configurações (e0f7f8c); leitura e coluna "Nesta
+      Parte" (cbdb622); caixas e tabelas (8b8fc23); balão de tradução (60d3780).
+- [ ] (C) Etapa 3, texto: tom, pontuação, traduções em todo o conteúdo,
+      marca TOEFL® e nome num lugar só, decimais (itens 6, 9, 16, 17, 18).
+      Inclui os títulos das Partes nos `.md` em formato de frase (hoje só a
+      tela converte) e rótulos para as caixas que ficaram neutras.
+- [ ] (U) Olhar a regra das caixas (`calloutType` em `app/app.js`): 79 das
+      182 caixas ficam neutras por não ter marcador no texto.
 
 ### Etapa 1: app instalável e videoaulas
 
