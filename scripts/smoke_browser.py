@@ -341,6 +341,45 @@ TABLES = r"""
 })()
 """
 
+# Balão de tradução (item 18): abre pelo foco e pelo toque, fecha com Esc,
+# toque de novo e saída do foco; desligado em exercício ainda não respondido
+# e pelo interruptor "Traduções".
+TRANSLATE = r"""
+(function(){
+  var tip = document.getElementById("trTip"), spans = document.querySelectorAll("#panel-mod0 .tr[data-tr]");
+  var o = { count: spans.length, marked: Array.prototype.every.call(spans, function(s){
+    return s.getAttribute("lang") === "en" && s.dataset.tr && s.getAttribute("tabindex") === "0"; }) };
+  var s = spans[0];
+  document.querySelector('.tabbtn[data-tab="mod0"]').click();
+  window.__toeflShowPart.mod0(s.closest(".section-card"), { noScroll: true });
+  var body = s.closest(".h3-body"); if(body) body.classList.remove("h3-collapsed");
+  s.focus();
+  // Chrome sem janela em primeiro plano não dispara o evento de foco sozinho
+  if(!document.hasFocus()) s.dispatchEvent(new FocusEvent("focusin", { bubbles: true }));
+  o.focusOpens = !tip.hidden && tip.textContent === s.dataset.tr && s.getAttribute("aria-describedby") === "trTip";
+  s.dispatchEvent(new KeyboardEvent("keydown", { key: "Escape", bubbles: true }));
+  o.escCloses = tip.hidden;
+  s.blur();
+  s.dispatchEvent(new PointerEvent("pointerdown", { pointerType: "touch", bubbles: true }));
+  s.click(); o.tapOpens = !tip.hidden;
+  s.dispatchEvent(new PointerEvent("pointerdown", { pointerType: "touch", bubbles: true }));
+  s.click(); o.tapAgainCloses = tip.hidden;
+  s.click(); document.body.click(); o.outsideCloses = tip.hidden;
+  // dentro de uma questão do diagnóstico ainda sem resposta: desligado
+  var q = document.querySelector('.quiz-drill[data-drill="mod0-diag"] .qcard:not(:has(.verdict)) .qprompt');
+  var fake = document.createElement("span"); fake.className = "tr"; fake.dataset.tr = "teste"; fake.lang = "en"; fake.textContent = "test";
+  q.appendChild(fake); window.__toeflTr.refresh(); window.__toeflTr.show(fake);
+  o.offInExercise = tip.hidden && fake.classList.contains("tr-off") && !fake.hasAttribute("tabindex");
+  fake.remove();
+  var t = document.getElementById("trToggle"); t.checked = false; t.dispatchEvent(new Event("change", { bubbles: true }));
+  window.__toeflTr.show(s);
+  o.switchOff = tip.hidden && s.classList.contains("tr-off") && localStorage.getItem("toefl_tr_v1") === "off";
+  t.checked = true; t.dispatchEvent(new Event("change", { bubbles: true }));
+  o.switchOn = !s.classList.contains("tr-off");
+  return o;
+})()
+"""
+
 SW_STATE = """(async function(){
   var reg = await navigator.serviceWorker.getRegistration();
   return { controller: !!navigator.serviceWorker.controller, waiting: !!(reg && reg.waiting),
@@ -665,6 +704,9 @@ def run():
                 check("pager_says_next_part_and_titles_in_sentence_case",
                       rd["pager"].startswith("Próxima Parte: ") and rd["bottom"].startswith("Próxima Parte: ")
                       and rd["sentence"] == "Parte 2: O atlas linguístico", rd)
+                tr = b.eval(TRANSLATE)
+                check("translation_balloon_opens_closes_and_is_off_in_exercises",
+                      tr.pop("count") == 5 and all(tr.values()), tr)
                 co = b.eval(CALLOUTS)
                 check("callouts_seven_types", all(co.values()), co)
                 tb = b.eval(TABLES)

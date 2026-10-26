@@ -4640,6 +4640,95 @@
     render();
   })();
 
+  // ---------- Balão de tradução (item 18 de 2026-10-25) ----------
+  // O build transforma [[inglês::tradução]] dos .md em <span class="tr">. A
+  // tradução aparece num balão: mouse por cima (computador), toque (celular;
+  // tocar de novo ou fora fecha) ou foco pelo teclado (Esc fecha). Dentro de
+  // exercício, diagnóstico e simulado fica desligada até o aluno responder
+  // aquele item. O interruptor "Traduções" das Configurações vale para o
+  // site todo e fica no aparelho (toefl_tr_v1), como o tema.
+  (function(){
+    var tip = document.getElementById("trTip"), toggle = document.getElementById("trToggle");
+    if(!tip) return;
+    var LS_TR = "toefl_tr_v1", on = safeGet(LS_TR) !== "off", cur = null;
+    if(toggle) toggle.checked = on;
+    var EXERCISE = ".qcard, .exam, .ctw, .bsq-card, .spk-item, .wbox, .srs";
+    function answered(el){
+      var w = el.closest(EXERCISE);
+      if(!w) return true;
+      if(w.classList.contains("ctw")) return w.classList.contains("is-checked");
+      if(w.classList.contains("exam")) return w.classList.contains("is-submitted") || !!w.querySelector(".verdict");
+      return !!w.querySelector(".verdict") || w.classList.contains("is-checked") || w.classList.contains("checked");
+    }
+    function allowed(el){ return on && answered(el); }
+    function refresh(){
+      Array.prototype.forEach.call(document.querySelectorAll(".tr[data-tr]"), function(t){
+        var ok = allowed(t);
+        t.classList.toggle("tr-off", !ok);
+        if(ok) t.setAttribute("tabindex", "0"); else t.removeAttribute("tabindex");
+      });
+      if(cur && !allowed(cur)) hide();
+    }
+    function place(t){
+      var r = t.getBoundingClientRect(), w = tip.offsetWidth, h = tip.offsetHeight;
+      var top = r.bottom + 8;
+      if(top + h > window.innerHeight - 8) top = Math.max(8, r.top - h - 8);
+      tip.style.top = Math.round(top) + "px";
+      tip.style.left = Math.round(Math.max(8, Math.min(r.left, window.innerWidth - w - 8))) + "px";
+    }
+    function show(t){
+      if(!allowed(t)) return;
+      if(cur && cur !== t) hide();
+      cur = t;
+      tip.textContent = t.dataset.tr;
+      tip.hidden = false;
+      place(t);
+      t.setAttribute("aria-describedby", "trTip");
+      t.classList.add("tr-open");
+    }
+    function hide(){
+      if(!cur) return;
+      cur.removeAttribute("aria-describedby");
+      cur.classList.remove("tr-open");
+      cur = null;
+      tip.hidden = true;
+    }
+    document.addEventListener("pointerover", function(e){
+      if(e.pointerType !== "mouse") return;
+      var t = e.target.closest && e.target.closest(".tr[data-tr]");
+      if(t) show(t);
+    });
+    document.addEventListener("pointerout", function(e){
+      if(e.pointerType !== "mouse" || !cur) return;
+      var t = e.target.closest && e.target.closest(".tr[data-tr]");
+      if(t === cur && !cur.contains(e.relatedTarget) && document.activeElement !== cur) hide();
+    });
+    document.addEventListener("focusin", function(e){ var t = e.target.closest && e.target.closest(".tr[data-tr]"); if(t) show(t); });
+    document.addEventListener("focusout", function(e){ if(cur && e.target === cur) hide(); });
+    var lastPointer = "";
+    document.addEventListener("pointerdown", function(e){ lastPointer = e.pointerType; }, true);
+    document.addEventListener("click", function(e){
+      var t = e.target.closest && e.target.closest(".tr[data-tr]");
+      // mouse: o balão já abriu ao passar por cima e fica; toque: alterna
+      if(t){ if(cur === t && lastPointer !== "mouse") hide(); else show(t); }
+      else if(cur) hide();
+      setTimeout(refresh, 0); // uma resposta pode ter liberado as traduções do item
+    });
+    document.addEventListener("keydown", function(e){
+      if(e.key === "Escape" && cur){ hide(); return; }
+      var t = e.target.closest && e.target.closest(".tr[data-tr]");
+      if(t && (e.key === "Enter" || e.key === " ")){ e.preventDefault(); if(cur === t) hide(); else show(t); }
+    });
+    window.addEventListener("scroll", hide, { passive: true });
+    if(toggle) toggle.addEventListener("change", function(){
+      on = toggle.checked;
+      safeSet(LS_TR, on ? "on" : "off");
+      refresh();
+    });
+    window.__toeflTr = { show: show, hide: hide, refresh: refresh }; // gancho do smoke test
+    refresh();
+  })();
+
   // ---------- Janelas (painel, conta, certificado): foco e teclado ----------
   // Ao abrir, o foco entra na janela; Tab fica preso nela; Esc fecha; ao
   // fechar, o foco volta para o botão que abriu. Quem abre e fecha cada

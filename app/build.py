@@ -863,6 +863,11 @@ html = f'''<!DOCTYPE html>
     <details class="side-settings" id="sideSettings">
       <summary>{icon("settings")} Configurações</summary>
       <div class="side-settings-body">
+        <label class="side-switch">
+          <input type="checkbox" id="trToggle" checked>
+          <span class="side-switch-track" aria-hidden="true"></span>
+          <span class="side-switch-text"><b>Traduções</b> Palavras e frases em inglês com sublinhado pontilhado mostram a tradução ao passar o mouse ou tocar.</span>
+        </label>
         <div class="data-tools">
           <button type="button" id="dataExport">↓ Exportar progresso</button>
           <button type="button" id="dataImport">↑ Importar</button>
@@ -969,6 +974,7 @@ html = f'''<!DOCTYPE html>
 </div>
 
 {SUPA_HEAD}
+<div class="tr-tip" id="trTip" role="tooltip" hidden></div>
 <div class="pwa-update" id="pwaUpdate" role="status" hidden>
   <span>Nova versão disponível.</span>
   <button type="button" id="pwaUpdateBtn">Recarregar</button>

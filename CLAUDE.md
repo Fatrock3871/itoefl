@@ -57,6 +57,7 @@ app/level.js              Resultado do diagnóstico -> banda CEFR, régua 0 a 12
 app/partes.json           Tipo (teoria, prática, simulado, referência) e minutos de cada uma das 86 Partes: selo, mapa do módulo, "Agora pratique" e meta de hoje. O build falha se não bater com as Partes
 app/landing.js            Runtime da tela de apresentação: diagnóstico sem conta e plano clicado
 app/styles.css            Estilo (tema claro/escuro/sistema)
+app/icons.py              Ícones de interface (SVG de traço): o build põe o sprite no <body>; o app.js usa toeflIcon(nome)
 app/manifest.json         Manifesto da PWA (o build copia para artifact/)
 app/sw.js                 Service worker da PWA; o build troca __BUILD_VERSION__ por um hash do conteúdo
 app/icons/                Ícones da PWA, gerados por scripts/make_icons.py e versionados
@@ -148,6 +149,30 @@ build. O bloco não conta no progresso. O seletor "Trilha de estudo" da
 sidebar (rápida: blocos fechados; completa: abertos) só aparece quando existe
 ao menos um bloco no site. Hoje não existe nenhum: o exemplo usado no teste
 vive só no `scripts/smoke_test.py`, que o cola numa cópia temporária do M3.
+
+**Balão de tradução:** palavra ou frase em inglês com tradução, em qualquer
+`.md` de `consolidated/` (também dentro de tabela):
+
+```
+[[Take an Interview::Faça uma entrevista]]
+```
+
+O separador é `::`. A tradução é texto simples (sem Markdown). O pipeline
+troca por `<span class="tr" data-tr="..." lang="en">` e o `app.js` mostra o
+balão ao passar o mouse, tocar (tocar de novo ou fora fecha) ou focar pelo
+teclado (Esc fecha). Dentro de exercício, diagnóstico e simulado o balão
+fica desligado até o aluno responder aquele item. O interruptor
+"Traduções" (Configurações, no menu) vale para o site todo e fica no
+aparelho (`toefl_tr_v1`). Marcação aberta e não fechada derruba o build.
+Hoje há 5 exemplos, na tabela da Parte 3.3 do M0; o resto é a etapa 3.
+
+**Caixas explicativas:** os blocos de citação (`>`) viram um de 7 tipos no
+`app.js` (dica, atenção, exemplo, erro comum, resumo, regra da ETS,
+resposta-modelo) pelo rótulo em negrito do começo (`**Erro comum:**`,
+`**Dica de execução:**`), pelo emoji do começo (💡 ⚠️ 📌 🎯 ⚡ ⏱️ ✅) ou,
+para inglês, pelo parágrafo de cima ("Resposta-modelo", "Banda ~5", "B1:").
+Sem marcador, a caixa fica neutra. Texto de prova dentro de exercício não
+muda. A regra está em `calloutType()`.
 
 **Formato real das tarefas:** antes de criar ou mudar exercício, ler
 `docs/ets-materiais-oficiais.md`. Ele descreve o molde de cada tarefa visto
@@ -304,7 +329,18 @@ CSS.
 
 Passes de DOM na carga, antes de qualquer widget: (1) `.table-wrap` em toda
 `.panel table`; (2) `.section-card` — agrupa o conteúdo de cada `<h2>` até o
-próximo `<h2>` num card, estilo "unit card". Não tocam nos `.md`.
+próximo `<h2>` num card, estilo "unit card"; (3) caixas explicativas com
+tipo e tabelas de 3 colunas ou mais com `data-label` (no celular viram
+cartões). Não tocam nos `.md`.
+
+Leitura (etapa 2, 2026-10-25): no computador (1100 px ou mais) o texto fica
+num bloco de 720 px e a coluna "Nesta Parte" (`#partRail`) mostra a Parte
+aberta, as subseções com ✓, o tempo e o único botão "Marcar Parte como
+concluída" (o `.mark-done` do fim da Parte some ali); abaixo de 1100 px a
+coluna vira uma barra fina no topo que abre o sumário. Subseção conta como
+lida quando o aluno rola até o fim dela aberta (`toefl_h3progress_v1`); não
+há caixa por subseção. Títulos de Parte aparecem em formato de frase
+(`sentence_case` em `build.py`; o `.md` segue em caixa alta até a etapa 3).
 
 ## Estado e progresso do usuário (runtime)
 
@@ -330,6 +366,7 @@ Sempre locais, por aparelho: `toefl_theme_v1`, `toefl_active_tab`,
 `toefl_lastpos_v1` (alvo do "Continuar de onde parei"), `toefl_trilha_v1`
 (trilha rápida ou completa: preferência de leitura, não progresso),
 `toefl_welcome_v1` (cartão "Comece aqui" do M0 dispensado),
+`toefl_tr_v1` (interruptor "Traduções": `off` desliga o balão),
 `toefl_plan_pick_v1` (plano clicado na tela de apresentação). `toefl_sync_at` e
 `toefl_dirty` são internos do sync.
 

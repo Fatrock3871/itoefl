@@ -2117,6 +2117,24 @@ body.acc-free .part-pager.is-locked .part-pager-title::before{content:"🔒 ";}
   table.t-cards td[data-label]::before{content:attr(data-label); display:block; font-size:12.5px; font-weight:800; color:var(--ink-2);}
 }
 
+/* ---- Balão de tradução (item 18) ---- */
+.tr{text-decoration:underline dotted var(--accent); text-decoration-thickness:2px; text-underline-offset:4px; cursor:help; border-radius:3px;}
+.tr:focus-visible{outline:2px solid var(--accent); outline-offset:2px;}
+.tr.tr-open{background:var(--accent-wash);}
+.tr.tr-off{text-decoration:none; cursor:inherit;}
+.tr-tip{position:fixed; z-index:500; max-width:min(320px, calc(100vw - 16px)); padding:8px 12px; border-radius:8px;
+  background:var(--ink); color:var(--bg); font-size:14.5px; font-weight:600; line-height:1.45; pointer-events:none;
+  box-shadow:0 6px 18px rgba(0,0,0,0.22);}
+.side-switch{display:flex; align-items:flex-start; gap:10px; cursor:pointer; min-height:44px;}
+.side-switch input{position:absolute; opacity:0; width:1px; height:1px;}
+.side-switch-track{flex:none; position:relative; width:38px; height:22px; margin-top:2px; border-radius:99px; background:rgba(255,255,255,0.18); transition:background .15s;}
+.side-switch-track::after{content:""; position:absolute; top:3px; left:3px; width:16px; height:16px; border-radius:50%; background:#fff; transition:transform .15s;}
+.side-switch input:checked + .side-switch-track{background:var(--accent-fill);}
+.side-switch input:checked + .side-switch-track::after{transform:translateX(16px);}
+.side-switch input:focus-visible + .side-switch-track{outline:2px solid var(--accent-2); outline-offset:2px;}
+.side-switch-text{font-size:12px; line-height:1.45; color:var(--rail-dim);}
+.side-switch-text b{display:block; font-size:13px; color:var(--rail-ink);}
+
 /* ---- Menu lateral (itens 25, 27 e 28) ---- */
 /* lista única dos módulos, cada um com a barrinha do próprio progresso */
 .tabbtn .lbl{display:flex; flex-direction:column; gap:5px;}

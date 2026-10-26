@@ -670,6 +670,25 @@ def add_progress_hooks(html, modkey):
     return re.sub(r"<(h2)>(.*?)</\1>", repl, html)
 
 
+# Balão de tradução (item 18 de 2026-10-25). No .md: [[texto em inglês::tradução]].
+# Vira <span class="tr" data-tr="tradução" lang="en">texto em inglês</span>; o
+# app.js mostra a tradução num balão (mouse, toque ou foco do teclado). O
+# separador é "::" e não "|" porque a marcação pode ficar dentro de tabela.
+TR_RE = re.compile(r"\[\[([^\[\]\n]+?)::([^\[\]\n]+?)\]\]")
+
+
+def add_translations(html_in):
+    def repl(m):
+        en, pt = m.group(1).strip(), re.sub(r"<[^>]+>", "", m.group(2)).strip()
+        if not en or not pt:
+            raise ValueError(f"tradução vazia em {m.group(0)!r}")
+        return f'<span class="tr" data-tr="{html_lib.escape(html_lib.unescape(pt), quote=True)}" lang="en">{en}</span>'
+    out = TR_RE.sub(repl, html_in)
+    if re.search(r"\[\[[^\]\n]*::", out):
+        raise ValueError("tradução: marcação [[inglês::tradução]] incompleta (fechou com ]]?)")
+    return out
+
+
 def main():
     frag = {
         "mod0": build_mod0(),
@@ -683,7 +702,7 @@ def main():
         "mod8": build_plain(f"{SRC}/modulo_8_examday.md"),
         "mod9": build_plain(f"{SRC}/modulo_9_braziliantraps.md"),
     }
-    final = {k: add_progress_hooks(v, k) for k, v in frag.items()}
+    final = {k: add_translations(add_progress_hooks(v, k)) for k, v in frag.items()}
     json.dump(final, open("module_fragments_final.json", "w", encoding="utf-8"), ensure_ascii=False)
     print("built:", {k: len(v) for k, v in final.items()})
     print("leftover %%% placeholders:", any("%%%" in v for v in final.values()))

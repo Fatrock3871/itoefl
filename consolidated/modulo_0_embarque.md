@@ -187,14 +187,14 @@ Repare no Speaking: só 8 minutos, mas 55 pontos brutos, quase o triplo do Writi
 #### Reading
 | Task | Itens | O que testa | CEFR |
 |---|---|---|---|
-| **Complete the Words** | 30 (1pt cada) | Completar o final de palavras cortadas em parágrafos curtos (10 por parágrafo): gramática, forma e ortografia da palavra, compreensão | B1–C1+ |
-| **Read in Daily Life** | 5–15 (1pt cada) | Textos curtos não acadêmicos (placa, cardápio, e-mail, post) | A1–C1 |
+| **[[Complete the Words::Complete as palavras]]** | 30 (1pt cada) | Completar o final de palavras cortadas em parágrafos curtos (10 por parágrafo): gramática, forma e ortografia da palavra, compreensão | B1–C1+ |
+| **[[Read in Daily Life::Leia textos do dia a dia]]** | 5–15 (1pt cada) | Textos curtos não acadêmicos (placa, cardápio, e-mail, post) | A1–C1 |
 | **Read an Academic Passage** | 5–15 (1pt cada) | Ideia principal, detalhes, inferência, estrutura retórica | B1–C2 |
 
 #### Listening
 | Task | Itens | O que testa | CEFR |
 |---|---|---|---|
-| **Listen and Choose a Response** | 15–19 (1pt cada) | Diálogo de troca única entre duas pessoas | A1–B2 |
+| **[[Listen and Choose a Response::Ouça e escolha uma resposta]]** | 15–19 (1pt cada) | Diálogo de troca única entre duas pessoas | A1–B2 |
 | **Listen to a Conversation** | 10 (1pt cada) | Conversas curtas entre duas pessoas | A2–C1 |
 | **Listen to an Announcement** | 6–10 (1pt cada) | Anúncios de sala/campus | A2–C1 |
 | **Listen to an Academic Talk** | 8–16 (1pt cada) | Palestra acadêmica: ideia central, inferência, vocabulário idiomático | A2–C2 |
@@ -209,8 +209,8 @@ Repare no Speaking: só 8 minutos, mas 55 pontos brutos, quase o triplo do Writi
 #### Speaking
 | Task | Itens | O que testa | CEFR | Corretor |
 |---|---|---|---|---|
-| **Listen and Repeat** | 7 (5pts cada) | Repetir frases com precisão e inteligibilidade: progride de orações simples a estruturas complexas | A1–C2 | IA (SpeechRater) |
-| **Take an Interview** | 4 (5pts cada) | Responder perguntas com elaboração clara, gramática precisa, prosódia inteligível: descrições, opiniões, previsões, narrações | A1–C2 | IA (SpeechRater) |
+| **[[Listen and Repeat::Ouça e repita]]** | 7 (5pts cada) | Repetir frases com precisão e inteligibilidade: progride de orações simples a estruturas complexas | A1–C2 | IA (SpeechRater) |
+| **[[Take an Interview::Faça uma entrevista]]** | 4 (5pts cada) | Responder perguntas com elaboração clara, gramática precisa, prosódia inteligível: descrições, opiniões, previsões, narrações | A1–C2 | IA (SpeechRater) |
 
 Speaking tem só 2 formatos: Listen and Repeat e Take an Interview. Não tem espaço, nem tempo, pra discurso longo estruturado.
 
