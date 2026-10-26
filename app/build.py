@@ -189,6 +189,44 @@ def _add_kind_chips(mod, html_frag):
 
 
 frag = {k: _add_kind_chips(k, v) for k, v in frag.items()}
+
+# ---- títulos das Partes em formato de frase (item 14 de 2026-10-25) ----
+# Nos .md os títulos de Parte estão em caixa alta ("PARTE 2: O QUE ESTÁ EM
+# JOGO"). Aqui, só na tela, viram "Parte 2: O que está em jogo": minúsculas,
+# com maiúscula no começo e depois de ":" e "·". Siglas, nomes de tarefa e
+# seção da prova e palavras com número ficam como devem ser. O texto do .md
+# não muda (a reescrita do conteúdo é outra etapa).
+_KEEP_CASE = {
+    "TOEFL": "TOEFL", "ETS": "ETS", "CEFR": "CEFR", "IA": "IA", "ROI": "ROI", "IBT": "iBT",
+    "READING": "Reading", "LISTENING": "Listening", "SPEAKING": "Speaking", "WRITING": "Writing",
+    "SPEECHRATER": "SpeechRater",
+}
+_KEEP_PHRASES = {"COMPLETE THE WORDS": "Complete the Words", "THE EXAM DAY": "The Exam Day"}
+
+
+def sentence_case(title):
+    if not _re_pt.search(r"[A-ZÁÉÍÓÚÂÊÔÃÕÇ]{3}", title) or title != title.upper() and "(" not in title:
+        return title
+    out, cap = [], True
+    for tok in _re_pt.split(r"(\s+|[:·(])", title):
+        word = tok.strip(".,)")
+        if tok in (":", "·"):
+            cap = True
+        elif not tok.strip() or tok == "(" or not _re_pt.search(r"\w", tok):
+            pass  # espaço, parêntese ou emoji: a maiúscula passa para a palavra seguinte
+        elif word.upper() in _KEEP_CASE:
+            tok = tok.replace(word, _KEEP_CASE[word.upper()]); cap = False
+        elif _re_pt.search(r"\d", tok) and tok == tok.upper():
+            cap = False
+        else:
+            low = tok.lower()
+            tok = low[:1].upper() + low[1:] if cap else low
+            cap = False
+        out.append(tok)
+    text = _re_pt.sub(r"\bmódulo (\d)", r"Módulo \1", "".join(out))
+    for k, v in _KEEP_PHRASES.items():
+        text = _re_pt.sub(_re_pt.escape(k), v, text, flags=_re_pt.I)
+    return text
 PARTES_JSON = json.dumps(PARTES, ensure_ascii=False).replace("</", "<\\/")
 
 # videoaulas (app/videos.json): vídeo de Parte entra no fragmento, logo abaixo
@@ -197,6 +235,10 @@ PARTES_JSON = json.dumps(PARTES, ensure_ascii=False).replace("</", "<\\/")
 import render_video
 VIDEOS = render_video.load_videos()
 frag, VIDEO_OPENERS = render_video.inject(frag, VIDEOS)
+# depois dos vídeos: o render_video acha a Parte pelo "PARTE N" do título
+frag = {k: _re_pt.sub(r'(<h2[^>]*>.*?<span class="htext">)(.*?)(</span>)',
+                      lambda m: m.group(1) + sentence_case(m.group(2)) + m.group(3), v, flags=_re_pt.S)
+        for k, v in frag.items()}
 for _w in render_video.warnings(VIDEOS):
     print("AVISO:", _w)
 
@@ -844,6 +886,24 @@ html = f'''<!DOCTYPE html>
   <main id="mainArea" tabindex="-1">
     {journey}
     <div class="content-grid">
+      <!-- "Nesta Parte" (itens 15, 26 e 30): no computador, coluna fixa à
+           direita do texto; no celular, barra fina no topo que abre o
+           sumário. O app.js preenche a cada troca de Parte. -->
+      <aside class="part-rail" id="partRail" aria-label="Nesta Parte" hidden>
+        <button type="button" class="rail-head" id="railToggle" aria-expanded="false" aria-controls="railBody">
+          <span class="rail-kicker" id="railKicker"></span>
+          <span class="rail-title" id="railTitle"></span>
+          <span class="rail-count" id="railCount"></span>
+          {icon("chevron", "ico rail-chevron")}
+        </button>
+        <div class="rail-body" id="railBody">
+          <div class="rail-bar"><div class="rail-bar-fill" id="railFill"></div></div>
+          <p class="rail-time" id="railTime"></p>
+          <p class="rail-label">Subseções</p>
+          <ol class="rail-toc" id="railToc"></ol>
+          <button type="button" class="rail-done" id="railDone" aria-pressed="false">Marcar Parte como concluída</button>
+        </div>
+      </aside>
       <div class="content-col">
         <div class="reviewer-bar" id="reviewerBar" role="status" hidden>
           <p id="reviewerBarText"></p>

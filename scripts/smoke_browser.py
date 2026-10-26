@@ -114,7 +114,7 @@ ACT = r"""
   step("progresso", function(){
     // clica no TEXTO de "Marcar esta parte como concluída", não na caixinha
     document.querySelector("#panel-mod0 .mark-done .mark-done-label").click();
-    var h = document.querySelector("#panel-mod0 .h3chk"); h.checked = true; h.dispatchEvent(new Event("change", { bubbles: true }));
+    window.__toeflSetH3Done(document.querySelector("#panel-mod0 h3.h3-toggle"), true);
   });
   step("paginacao", function(){
     document.querySelector('.tabbtn[data-tab="mod1"]').click();
@@ -248,6 +248,54 @@ HEADER = r"""
   close.click();
   rail.style.transition = "";
   document.getElementById("authBox").hidden = true;
+  return o;
+})()
+"""
+
+# Leitura e navegação na Parte (itens 14, 15, 26 e 30): texto com cerca de 70
+# caracteres por linha; a coluna "Nesta Parte" (computador) ou a barra fina
+# (celular) com as subseções, o ✓ das lidas mesmo fechadas, o botão único de
+# concluir e a paginação que diz "Próxima Parte".
+READING = r"""
+(function(){
+  document.querySelector('.tabbtn[data-tab="mod5"]').click();
+  var cards = document.querySelectorAll("#panel-mod5 .section-card");
+  window.__toeflShowPart.mod5(cards[1], { noScroll: true });
+  var card = cards[1], rail = document.getElementById("partRail"), col = document.querySelector(".content-col");
+  // caracteres por linha nos parágrafos longos que estão à vista
+  Array.prototype.forEach.call(card.querySelectorAll(".h3-toggle.collapsed .h3-btn"), function(b){ b.click(); });
+  var widths = [];
+  Array.prototype.forEach.call(card.querySelectorAll(".h3-body > p"), function(p){
+    var lh = parseFloat(getComputedStyle(p).lineHeight), lines = Math.round(p.getBoundingClientRect().height / lh);
+    if(lines >= 3) widths.push(p.textContent.length / lines);
+  });
+  widths.sort(function(a, b){ return a - b; });
+  var cpl = widths.length ? Math.round(widths[Math.floor(widths.length / 2)]) : 0;
+  var h3s = card.querySelectorAll("h3.h3-toggle"), h = h3s[0];
+  window.__toeflSetH3Done(h, true);
+  if(!h.classList.contains("collapsed")) h.querySelector(".h3-btn").click();
+  var dot = h.querySelector(".h3-done-dot");
+  var rr = rail.getBoundingClientRect(), cr = col.getBoundingClientRect();
+  var o = { cpl: cpl, items: document.querySelectorAll("#railToc .rail-sub").length, h3: h3s.length,
+    railRight: rr.left >= cr.right - 1, sticky: getComputedStyle(rail).position === "sticky", railH: Math.round(rr.height),
+    checkClosed: h.classList.contains("collapsed") && dot.getBoundingClientRect().width > 0,
+    railCheck: document.querySelector("#railToc .rail-sub").classList.contains("is-done"),
+    count: document.getElementById("railCount").textContent,
+    pager: document.querySelector("#panel-mod5 .part-next").textContent,
+    bottom: card.querySelector(".part-next-bottom").textContent,
+    arrowNear: (function(){ var b = h.querySelector(".h3-btn"), t = b.querySelector(".h3-text").getBoundingClientRect(),
+      c = b.querySelector(".h3-chevron").getBoundingClientRect(); return c.left - t.right < 16 && b.getBoundingClientRect().width > t.width; })(),
+    sentence: card.querySelector("h2 .htext").textContent };
+  var bodyShown = getComputedStyle(document.getElementById("railBody")).display !== "none";
+  o.bodyShown = bodyShown;
+  if(!bodyShown){ document.getElementById("railToggle").click(); o.opens = getComputedStyle(document.getElementById("railBody")).display !== "none"; document.getElementById("railToggle").click(); }
+  // o botão único conclui a Parte (mesma caixa .pchk do fim dela)
+  var chk = card.querySelector(".mark-done .pchk"), was = chk.checked;
+  document.getElementById("railDone").click();
+  o.doneWorks = chk.checked !== was && document.getElementById("railDone").getAttribute("aria-pressed") === String(chk.checked);
+  document.getElementById("railDone").click();
+  o.markDoneVisible = card.querySelector(".mark-done").getBoundingClientRect().height > 0;
+  window.__toeflShowPart.mod5(cards[0], { noScroll: true }); // volta à Parte 1, como os outros testes esperam
   return o;
 })()
 """
@@ -566,6 +614,18 @@ def run():
                 check("real_opening_the_site_marks_nothing", not idle, idle)
                 head = b.eval(HEADER)
                 check("header_no_overlap_desktop", all(head.values()), head)
+                rd = b.eval(READING)
+                check("reading_text_about_70_chars_per_line", 55 <= rd["cpl"] <= 80, rd)
+                check("part_rail_desktop_column",
+                      rd["railRight"] and rd["sticky"] and rd["bodyShown"] and rd["items"] == rd["h3"] > 0
+                      and rd["doneWorks"] and not rd["markDoneVisible"], rd)
+                check("subsection_read_check_when_closed",
+                      rd["checkClosed"] and rd["railCheck"] and rd["count"].startswith("1 de ") and rd["arrowNear"], rd)
+                check("pager_says_next_part_and_titles_in_sentence_case",
+                      rd["pager"].startswith("Próxima Parte: ") and rd["bottom"].startswith("Próxima Parte: ")
+                      and rd["sentence"] == "Parte 2: O atlas linguístico", rd)
+                b.eval('document.querySelector(\'.tabbtn[data-tab="mod0"]\').click()')
+                b.reload(settle=1.2)
 
                 # o diagnostico e a Parte 1 do M0: aluno novo cai nele, sem o
                 # cartao "Comece aqui" por cima; em outra Parte do M0 o cartao
@@ -815,7 +875,7 @@ def run():
                 b.wait_for('localStorage.getItem("toefl_progress_v1") === null && document.readyState === "complete"', timeout=15)
                 b.pump(1.5)
                 left = b.eval('Object.keys(localStorage).filter(function(k){ return %s.some(function(p){ return k.indexOf(p) === 0; }); })' % json.dumps(RESET_KEYS))
-                clean = b.eval('document.querySelectorAll(".pchk:checked, .h3chk:checked").length === 0 && document.getElementById("opPct").textContent === "0%"')
+                clean = b.eval('document.querySelectorAll(".pchk:checked, h3.h3-done").length === 0 && document.getElementById("opPct").textContent === "0%"')
                 check("real_reset_clears_all_progress", not left and clean, left)
 
                 # importar: restaura e deixa marcado para subir a nuvem
@@ -842,6 +902,11 @@ def run():
                 check("mobile_375_no_horizontal_overflow", not over, over)
                 head = b.eval(HEADER)
                 check("header_no_overlap_mobile", all(head.values()), head)
+                rd = b.eval(READING)
+                check("part_rail_mobile_thin_bar",
+                      not rd["bodyShown"] and rd.get("opens") and rd["railH"] <= 80 and rd["items"] == rd["h3"] > 0
+                      and rd["doneWorks"] and rd["markDoneVisible"], rd)
+                b.reload(settle=1.2)
 
                 # barra do topo: gruda no alto, cobre o botao do menu (que
                 # antes flutuava sobre o texto) e diz onde o aluno esta

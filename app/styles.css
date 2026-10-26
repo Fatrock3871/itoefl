@@ -2008,6 +2008,75 @@ body.acc-free .part-pager.is-locked .part-pager-title::before{content:"🔒 ";}
 .cert-edit-name:hover, .lvlp-go:hover, .drill-timer-btn:hover, .diag-btn:not(.diag-btn-main):hover, .quiz-retry:hover,
 .auth-gate-actions button:hover{background:var(--accent-wash) !important; color:var(--ink) !important; border-color:var(--edge) !important;}
 .drill-timer-btn, .cert-print{display:inline-flex; align-items:center; justify-content:center; gap:8px;}
+/* ---- Leitura e espaço (itens 14 e 15) ----
+   Texto corrido com cerca de 70 caracteres por linha, num bloco de leitura
+   centralizado. No computador (1100 px ou mais) a área livre à direita vira
+   a coluna "Nesta Parte", fixa ao rolar. Abaixo disso, ela vira uma barra
+   fina no topo, que abre o sumário. */
+.content-grid{display:block;}
+@media(min-width:1100px){
+  .content-grid{display:grid; grid-template-columns:minmax(0, 720px) 272px; justify-content:center; gap:40px; align-items:start;}
+  .content-col{grid-column:1; grid-row:1;}
+  .part-rail{grid-column:2; grid-row:1;}
+  .panel-inner{max-width:none; margin:0;}
+  /* o "concluída" fica só na coluna: um único controle por Parte */
+  .content-grid .section-card > .mark-done{display:none;}
+}
+.panel p, .panel ul, .panel ol, .panel blockquote{max-width:none;}
+.section-card{max-width:720px; margin-left:auto; margin-right:auto;}
+
+.part-rail{position:sticky; top:76px; z-index:40; margin:0 0 18px;}
+.rail-head{display:flex; flex-direction:column; align-items:flex-start; gap:2px; width:100%; padding:0; border:0; background:none;
+  color:var(--ink); font-family:inherit; text-align:left; cursor:default;}
+.rail-kicker{font-size:11.5px; font-weight:800; letter-spacing:0.06em; text-transform:uppercase; color:var(--accent-strong);}
+.part-rail .rail-title{font-family:'Bricolage Grotesque',sans-serif; font-size:17px; font-weight:800; line-height:1.25;
+  text-transform:none; letter-spacing:-0.01em; color:var(--ink); margin:0;}
+.rail-count{font-size:13px; font-weight:700; color:var(--ink-2);}
+.rail-chevron{display:none;}
+.rail-body{margin-top:12px;}
+.rail-bar{height:6px; border-radius:99px; background:var(--sand); border:1px solid var(--hair); overflow:hidden;}
+.rail-bar-fill{height:100%; width:0; background:var(--accent); border-radius:99px; transition:width .3s ease;}
+.rail-time{margin:8px 0 14px !important; font-size:13px !important; color:var(--ink-2) !important;}
+.rail-label{margin:0 0 6px !important; font-size:11.5px !important; font-weight:800; letter-spacing:0.06em; text-transform:uppercase; color:var(--ink-2) !important;}
+.rail-toc{list-style:none; margin:0 0 16px; padding:0; max-height:calc(100vh - 360px); overflow-y:auto; border-left:2px solid var(--hair);}
+.rail-toc li{margin:0;}
+.rail-sub{display:flex; align-items:flex-start; gap:6px; width:100%; min-height:40px; padding:8px 8px 8px 10px; margin-left:-2px;
+  border:0; border-left:2px solid transparent; background:none; color:var(--ink); font:inherit; font-size:13.5px; font-weight:600;
+  line-height:1.35; text-align:left; cursor:pointer;}
+.rail-sub:hover{background:var(--accent-wash); border-left-color:var(--accent);}
+.rail-sub-mark{flex:none; width:14px; color:var(--accent-strong); font-weight:800;}
+.rail-sub.is-done{color:var(--ink-2);}
+.rail-done{width:100%; min-height:44px; padding:10px 14px; border-radius:99px; border:2px solid var(--edge); background:var(--accent-fill);
+  color:#fff; font-family:'Bricolage Grotesque',sans-serif; font-size:14px; font-weight:800; cursor:pointer;}
+.rail-done:hover{background:var(--accent-fill-hover);}
+.rail-done.is-done{background:var(--paper); color:var(--accent-strong);}
+@media(max-width:1099px){
+  /* barra fina no topo: logo abaixo da barra do módulo */
+  .part-rail{top:66px; margin:0 0 16px; background:var(--paper); border:2px solid var(--edge); border-radius:var(--radius);}
+  .rail-head{display:grid; grid-template-columns:1fr auto; column-gap:10px; min-height:48px; padding:8px 14px; cursor:pointer;}
+  .rail-kicker{grid-column:1;} .rail-title{display:none;}
+  .rail-count{grid-column:1; font-size:12.5px;}
+  .rail-chevron{display:block; grid-column:2; grid-row:1 / span 2; align-self:center; width:20px; height:20px; transition:transform .15s;}
+  .part-rail.is-open .rail-chevron{transform:rotate(180deg);}
+  .rail-body{display:none; margin:0; padding:4px 14px 14px; border-top:1px solid var(--hair); max-height:60vh; overflow-y:auto;}
+  .part-rail.is-open .rail-body{display:block;}
+  .rail-toc{max-height:none;}
+}
+@media(max-width:640px){ .part-rail{top:60px;} }
+
+/* paginação: o título da próxima Parte cabe no botão, cortado se for longo */
+.part-nav-btn{max-width:100%; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;}
+@media(max-width:640px){ .part-pager .part-nav-btn{flex:1 1 0; min-width:0;} }
+
+/* subseção: a seta colada ao título e a linha toda clicável (item 15) */
+.section-card h3.h3-toggle{padding-right:0;}
+.section-card h3.h3-toggle::after{content:none;}
+.h3-btn{display:flex; align-items:center; gap:8px; min-height:44px;}
+.h3-text{min-width:0;}
+.h3-chevron{width:18px; height:18px; color:var(--accent); transition:transform .15s ease;}
+.section-card h3.h3-toggle.collapsed .h3-chevron{transform:rotate(-90deg);}
+.h3-end{display:block; height:1px;}
+
 /* ---- Menu lateral (itens 25, 27 e 28) ---- */
 /* lista única dos módulos, cada um com a barrinha do próprio progresso */
 .tabbtn .lbl{display:flex; flex-direction:column; gap:5px;}

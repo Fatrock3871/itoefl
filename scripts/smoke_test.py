@@ -956,8 +956,8 @@ check("paid_sees_everything", function(){
 })();
 check("m0_diagnostic_is_part_1", function(){
   var cards = document.querySelectorAll("#panel-mod0 .section-card");
-  return !!cards[0].querySelector('[data-drill="mod0-diag"]') && /^PARTE 1: TESTE DE NIVELAMENTO/.test(cards[0].querySelector("h2 .htext").textContent) &&
-    /^PARTE 2: O QUE ESTÁ EM JOGO/.test(cards[1].querySelector("h2 .htext").textContent);
+  return !!cards[0].querySelector('[data-drill="mod0-diag"]') && /^Parte 1: Teste de nivelamento/.test(cards[0].querySelector("h2 .htext").textContent) &&
+    /^Parte 2: O que está em jogo/.test(cards[1].querySelector("h2 .htext").textContent);
 });
 // selo de tipo por Parte (app/partes.json): topo da Parte, paginação, mapa e atalhos
 try { (function(){
@@ -1769,7 +1769,7 @@ check("video_part_inside_its_part", function(){
   // que fora dela não aparece
   var next = card.querySelector("h2").nextElementSibling;
   if(next && next.classList.contains("fs-lock")) next = next.nextElementSibling;
-  return partVid.dataset.vid === "exemplo-parte2" && card.querySelector("h2 .htext").textContent.indexOf("PARTE 2") === 0 &&
+  return partVid.dataset.vid === "exemplo-parte2" && card.querySelector("h2 .htext").textContent.indexOf("Parte 2") === 0 &&
          next === partVid;
 });
 check("video_lazy_no_player_before_click", function(){ return document.querySelectorAll(".vid iframe, .vid video").length === 0; });
@@ -1816,7 +1816,7 @@ check("deep_example_rendered", function(){
          !!deep.querySelector(".deep-body h4") && m3.textContent.indexOf(":::") === -1;
 });
 check("deep_inside_part_2_no_new_part", function(){
-  return deep.closest(".section-card").querySelector("h2 .htext").textContent.indexOf("PARTE 2") === 0 &&
+  return deep.closest(".section-card").querySelector("h2 .htext").textContent.indexOf("Parte 2") === 0 &&
          m3.querySelectorAll(".section-card").length === 7;
 });
 check("trail_selector_shown_with_blocks", function(){ return trailBox.hidden === false && document.getElementById("trailHint").textContent.length > 0; });

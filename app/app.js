@@ -590,6 +590,8 @@
     links.forEach(function(l){ railObserver.observe(l.heading); });
   }
   function populateRailToc(key){
+    // a coluna "Nesta Parte" (montada mais abaixo) acompanha a troca de módulo
+    if(window.__toeflRenderRail) window.__toeflRenderRail();
     if(!railToc) return;
     railToc.innerHTML = "";
     var panel = document.querySelector('.panel[data-panel="' + key + '"]');
@@ -3888,10 +3890,20 @@
     if(done) obj[id] = true; else delete obj[id];
     safeSet("toefl_h3progress_v1", JSON.stringify(obj));
   }
+  // marca a subseção como lida (ou não), no título e no armazenamento, e
+  // avisa a coluna "Nesta Parte"
+  function setH3Done(h3, done){
+    if(h3.classList.contains("h3-done") === !!done) return;
+    setH3Progress(h3.id, done);
+    h3.classList.toggle("h3-done", !!done);
+    document.dispatchEvent(new CustomEvent("toefl-h3", { detail: { id: h3.id } }));
+  }
+  window.__toeflSetH3Done = setH3Done; // gancho do smoke test
 
   (function(){
     var cards = Array.prototype.slice.call(document.querySelectorAll(".section-card"));
     var allH3 = [];
+    var h3Ends = []; // o fim de cada subseção: chegar nele marca como lida
     var h3Seq = {}; // contador por módulo, pra dar um id estável a cada h3
     var h3Done = readH3Progress();
     cards.forEach(function(card){
@@ -3901,7 +3913,9 @@
       h3s.forEach(function(h3){
         var nodes = [];
         var node = h3.nextSibling;
-        while(node && !(node.nodeType === 1 && node.tagName === "H3")){
+        // o "concluída" da Parte fica fora da última subseção: visível mesmo
+        // com ela fechada
+        while(node && !(node.nodeType === 1 && (node.tagName === "H3" || node.classList.contains("mark-done")))){
           nodes.push(node);
           node = node.nextSibling;
         }
@@ -3929,45 +3943,71 @@
         var dot = document.createElement("span");
         dot.className = "h3-done-dot";
         dot.textContent = "✓";
+        dot.setAttribute("aria-label", "lida");
         h3.insertBefore(dot, h3.firstChild);
 
         // o título inteiro vira um <button> dentro do <h3>: continua sendo
         // título para leitor de tela, mas ganha foco de teclado, Enter e
         // Espaço, e anuncia aberto ou fechado. O clique sobe para o h3, que
-        // é quem abre e fecha.
+        // é quem abre e fecha. A seta vai colada ao texto (item 15), e a
+        // linha toda é clicável.
         var hbtn = document.createElement("button");
         hbtn.type = "button";
         hbtn.className = "h3-btn";
-        while(h3.firstChild) hbtn.appendChild(h3.firstChild);
+        var htxt = document.createElement("span");
+        htxt.className = "h3-text";
+        while(h3.firstChild) htxt.appendChild(h3.firstChild);
+        hbtn.appendChild(htxt);
+        hbtn.insertAdjacentHTML("beforeend", toeflIcon("chevron", "ico h3-chevron"));
         hbtn.setAttribute("aria-expanded", "false");
         h3.appendChild(hbtn);
 
-        var doneWrap = document.createElement("label");
-        doneWrap.className = "prog-check h3-done-check";
-        var chk = document.createElement("input");
-        chk.type = "checkbox";
-        chk.className = "h3chk";
-        var box = document.createElement("span");
-        box.className = "box";
-        var lbl = document.createElement("span");
-        lbl.className = "h3-done-label";
-        lbl.textContent = "Marcar esta subseção como concluída";
-        doneWrap.appendChild(chk);
-        doneWrap.appendChild(box);
-        doneWrap.appendChild(lbl);
-        body.appendChild(doneWrap);
-
-        if(h3Done[h3.id]){ chk.checked = true; h3.classList.add("h3-done"); }
-        chk.addEventListener("change", function(){
-          setH3Progress(h3.id, chk.checked);
-          h3.classList.toggle("h3-done", chk.checked);
-          if(chk.checked && !h3.classList.contains("collapsed")){
-            h3.classList.add("collapsed");
-            body.classList.add("h3-collapsed");
-          }
-        });
+        // lida: o aluno chegou ao fim da subseção aberta (item 26). Sem
+        // caixa de marcar em cada uma; o ✓ fica no título, mesmo fechada.
+        var end = document.createElement("span");
+        end.className = "h3-end";
+        end.setAttribute("aria-hidden", "true");
+        body.appendChild(end);
+        h3Ends.push({ end: end, h3: h3, body: body });
+        if(h3Done[h3.id]) h3.classList.add("h3-done");
       });
     });
+
+    // só conta quando o aluno rola a página: abrir o site (ou uma subseção
+    // curta que cabe inteira na tela) não é ler, e não pode marcar nada nem
+    // contar como dia de estudo
+    if(h3Ends.length && "IntersectionObserver" in window){
+      var inView = [];
+      var endObserver = new IntersectionObserver(function(entries){
+        entries.forEach(function(entry){
+          var it = h3Ends.filter(function(x){ return x.end === entry.target; })[0];
+          if(!it) return;
+          var at = inView.indexOf(it);
+          if(entry.isIntersecting && at === -1) inView.push(it);
+          if(!entry.isIntersecting && at !== -1) inView.splice(at, 1);
+        });
+      }, { threshold: 0 });
+      h3Ends.forEach(function(x){ endObserver.observe(x.end); });
+      // rolagem do próprio navegador (ao recarregar, ao trocar de Parte) não
+      // conta: só depois de o aluno mexer (roda, toque, teclado, clique)
+      var engaged = false;
+      ["wheel", "touchmove", "keydown", "pointerdown"].forEach(function(ev){
+        window.addEventListener(ev, function(){ engaged = true; }, { passive: true });
+      });
+      var pending = false;
+      window.addEventListener("scroll", function(){
+        if(pending || !engaged) return;
+        pending = true;
+        setTimeout(function(){
+          pending = false;
+          inView.forEach(function(it){
+            if(it.body.classList.contains("h3-collapsed") || it.h3.classList.contains("h3-done")) return;
+            if(it.h3.closest("[hidden]")) return;
+            setH3Done(it.h3, true);
+          });
+        }, 250);
+      }, { passive: true });
+    }
 
     // "continuar de onde parei": guarda a última subseção que o aluno leu
     // (a que entrou na faixa de leitura no meio da tela), pra sidebar
@@ -4241,9 +4281,9 @@
       var pager = document.createElement("div");
       pager.className = "part-pager";
       pager.innerHTML =
-        '<button type="button" class="part-nav-btn part-prev" aria-label="Parte anterior">‹ Anterior</button>' +
+        '<button type="button" class="part-nav-btn part-prev">‹ Parte anterior</button>' +
         '<span class="part-pager-label"><span class="part-pager-count"></span><b class="part-pager-title"></b></span>' +
-        '<button type="button" class="part-nav-btn part-next" aria-label="Próxima parte">Próxima ›</button>';
+        '<button type="button" class="part-nav-btn part-next">Próxima Parte ›</button>';
       if(head && head.parentNode === inner){ head.parentNode.insertBefore(pager, head.nextSibling); }
       else if(inner){ inner.insertBefore(pager, inner.firstChild); }
 
@@ -4292,13 +4332,16 @@
         pager.querySelector(".part-prev").disabled = idx === 0;
         var topNextBtn = pager.querySelector(".part-next");
         topNextBtn.disabled = idx === cards.length - 1 && !nextModKey;
-        topNextBtn.textContent = (idx === cards.length - 1 && nextModKey) ? "Próximo módulo ›" : "Próxima ›";
+        // deixa claro que vai para outra Parte, não para a próxima subseção (item 30)
+        topNextBtn.textContent = idx === cards.length - 1 ? (nextModKey ? "Próximo módulo: " + nextModTitle + " ›" : "Última Parte")
+                                                         : "Próxima Parte: " + shortTitles[idx + 1] + " ›";
+        topNextBtn.title = topNextBtn.textContent;
         bottomBtns.forEach(function(btn, i){
           if(i !== idx) return;
           if(idx === cards.length - 1){
             if(nextModKey){ btn.hidden = false; btn.textContent = "Módulo concluído! Próximo: " + nextModTitle + " →"; }
             else { btn.hidden = true; }
-          } else { btn.hidden = false; btn.textContent = "Próxima parte: " + titles[idx + 1] + " →"; }
+          } else { btn.hidden = false; btn.textContent = "Próxima Parte: " + shortTitles[idx + 1] + " →"; }
         });
         savePartPos(modKey, idx);
         // quem depende da Parte visível (cartão "Comece aqui", selos) escuta isto
@@ -4420,6 +4463,96 @@
     });
   })();
 
+  // ---------- "Nesta Parte": coluna lateral (computador) e barra (celular) ----------
+  // Itens 15, 26 e 30 de 2026-10-25. Mostra a Parte aberta: número, tipo,
+  // título, subseções com ✓ (cada uma leva até ela), quantas foram lidas, o
+  // tempo e um único botão "Marcar Parte como concluída", que mexe na mesma
+  // caixa .pchk do fim da Parte. No celular a coluna vira uma barra fina no
+  // topo, que abre o sumário.
+  (function(){
+    var rail = document.getElementById("partRail");
+    if(!rail) return;
+    var $ = function(id){ return document.getElementById(id); };
+    var toggle = $("railToggle"), toc = $("railToc"), doneBtn = $("railDone");
+    var current = null;
+    function isBar(){ return !(window.matchMedia && window.matchMedia("(min-width: 1100px)").matches); }
+    function setOpen(open){
+      rail.classList.toggle("is-open", open);
+      toggle.setAttribute("aria-expanded", open ? "true" : "false");
+    }
+    function openH3(h3){
+      if(h3.classList.contains("collapsed")){
+        h3.classList.remove("collapsed");
+        var body = h3.nextElementSibling;
+        if(body && body.classList.contains("h3-body")) body.classList.remove("h3-collapsed");
+      }
+      if(isBar()) setOpen(false);
+      h3.scrollIntoView({ behavior: "smooth", block: "start" });
+      var b = h3.querySelector(".h3-btn"); if(b) b.focus({ preventScroll: true });
+    }
+    function render(){
+      var panel = document.querySelector(".panel:not([hidden])");
+      var mod = panel && panel.dataset.panel, cards = mod ? partCards(mod) : [];
+      var idx = cards.findIndex(function(c){ return !c.hidden; });
+      var card = cards[idx];
+      if(!card){ rail.hidden = true; current = null; return; }
+      current = card;
+      var p = partInfo(mod, idx + 1), chk = partDoneBox(card), partDone = !!(chk && chk.checked);
+      var h3s = Array.prototype.filter.call(card.querySelectorAll("h3.h3-toggle"), function(h){ return !isLockedNow(h); });
+      var read = h3s.filter(function(h){ return h.classList.contains("h3-done"); }).length;
+      $("railKicker").textContent = "Parte " + (idx + 1) + " de " + cards.length + (p ? " · " + KIND_NAME[p.tipo] : "");
+      $("railTitle").textContent = partShortTitle(card) || (card.querySelector("h2") || {}).textContent || "";
+      $("railCount").textContent = partDone ? "Parte concluída" : h3s.length ? read + " de " + h3s.length + " subseções lidas" : (p ? p.min + " min" : "");
+      $("railFill").style.width = (partDone ? 100 : h3s.length ? Math.round(100 * read / h3s.length) : 0) + "%";
+      var left = p && h3s.length && read ? Math.max(1, Math.round(p.min * (h3s.length - read) / h3s.length)) : null;
+      $("railTime").textContent = !p ? "" : partDone ? "Tempo previsto: " + p.min + " min. Feito." :
+        "Tempo previsto: " + p.min + " min" + (left !== null && read < h3s.length ? ". Faltam cerca de " + left + " min." : ".");
+      toc.innerHTML = "";
+      h3s.forEach(function(h){
+        var li = document.createElement("li");
+        var b = document.createElement("button");
+        b.type = "button";
+        b.className = "rail-sub" + (h.classList.contains("h3-done") ? " is-done" : "");
+        var mark = document.createElement("span");
+        mark.className = "rail-sub-mark";
+        mark.textContent = h.classList.contains("h3-done") ? "✓" : "";
+        var t = document.createElement("span");
+        t.textContent = (h.querySelector(".h3-text") || h).textContent.replace(/^✓/, "").trim();
+        b.appendChild(mark); b.appendChild(t);
+        if(h.classList.contains("h3-done")) b.setAttribute("aria-label", t.textContent + " (lida)");
+        b.addEventListener("click", function(){ openH3(h); });
+        li.appendChild(b); toc.appendChild(li);
+      });
+      toc.previousElementSibling.hidden = !h3s.length;
+      doneBtn.hidden = !chk || card.classList.contains("fs-part-locked") && accessFree;
+      doneBtn.textContent = partDone ? "✓ Parte concluída" : "Marcar Parte como concluída";
+      doneBtn.setAttribute("aria-pressed", partDone ? "true" : "false");
+      doneBtn.classList.toggle("is-done", partDone);
+      rail.hidden = false;
+    }
+    doneBtn.addEventListener("click", function(){
+      var chk = current && partDoneBox(current);
+      if(!chk) return;
+      chk.checked = !chk.checked;
+      chk.dispatchEvent(new Event("change", { bubbles: true }));
+    });
+    toggle.addEventListener("click", function(){ if(isBar()) setOpen(!rail.classList.contains("is-open")); });
+    // Parte concluída: as subseções dela contam como lidas
+    document.addEventListener("change", function(e){
+      var c = e.target;
+      if(!c.classList || !c.classList.contains("pchk") || c.classList.contains("vid-chk")) return;
+      var card = c.closest(".section-card");
+      if(c.checked && card) Array.prototype.forEach.call(card.querySelectorAll("h3.h3-toggle"), function(h){ window.__toeflSetH3Done(h, true); });
+      render();
+    });
+    document.addEventListener("toefl-part", render);
+    document.addEventListener("toefl-h3", render);
+    document.addEventListener("toefl-access", render);
+    document.addEventListener("keydown", function(e){ if(e.key === "Escape" && rail.classList.contains("is-open")){ setOpen(false); toggle.focus(); } });
+    window.__toeflRenderRail = render;
+    render();
+  })();
+
   // ---------- Janelas (painel, conta, certificado): foco e teclado ----------
   // Ao abrir, o foco entra na janela; Tab fica preso nela; Esc fecha; ao
   // fechar, o foco volta para o botão que abriu. Quem abre e fecha cada
@@ -4499,14 +4632,13 @@
       '<p class="start-kicker">Comece aqui</p>' +
       '<h2 class="start-title"></h2>' +
       '<p class="start-text"></p>' +
-      '<ol class="start-steps"></ol>' +
       '<div class="start-actions">' +
       '<button type="button" class="start-go"></button>' +
       '<button type="button" class="start-skip">Dispensar este aviso</button>' +
       '</div>';
     head.parentNode.insertBefore(card, head.nextSibling);
     var titleEl = card.querySelector(".start-title"), textEl = card.querySelector(".start-text");
-    var stepsEl = card.querySelector(".start-steps"), goBtn = card.querySelector(".start-go");
+    var goBtn = card.querySelector(".start-go");
 
     function partCard(n){ return panel.querySelectorAll(".section-card")[n - 1]; }
     function goToPart(n, target){
@@ -4514,10 +4646,6 @@
       var showPart = window.__toeflShowPart && window.__toeflShowPart.mod0;
       if(showPart && partCard(n)) showPart(partCard(n), { noScroll: true });
       setTimeout(function(){ (target || partCard(n)).scrollIntoView({ behavior: "smooth", block: "start" }); }, 60);
-    }
-    function setSteps(items){
-      stepsEl.innerHTML = "";
-      items.forEach(function(t){ var li = document.createElement("li"); li.textContent = t; stepsEl.appendChild(li); });
     }
     // o diagnóstico é a Parte 1: com ela aberta, o cartão não aparece por
     // cima dele (item 4 de 2026-10-25). Nas outras Partes do M0 ele volta.
@@ -4527,23 +4655,14 @@
       var a = computeQuizAccuracy("mod0-diag");
       if(a.confirmed < a.total){
         titleEl.textContent = "Faça o diagnóstico antes de ler qualquer coisa";
-        textEl.textContent = "São 10 questões, que levam cerca de 12 minutos. O resultado define o seu nível de partida e qual cronograma de estudo seguir.";
-        setSteps([
-          "Responda às 10 questões do diagnóstico.",
-          "Veja o seu nível estimado e o cronograma indicado.",
-          "Siga os módulos na ordem ou vá direto ao ponto em que mais precisa melhorar: a navegação é livre."
-        ]);
+        textEl.textContent = "São 10 questões, cerca de 12 minutos. O resultado mostra o seu nível de partida e o cronograma que mais combina com você.";
         goBtn.textContent = a.confirmed ? "Continuar o diagnóstico (" + a.confirmed + " de " + a.total + ")" : "Fazer o diagnóstico agora";
         goBtn.onclick = function(){ goToPart(1, diag); };
       } else {
         var band = cefrBandFromPct(Math.round(100 * a.correct / a.total));
         titleEl.textContent = "Diagnóstico feito: nível estimado " + band.label;
-        textEl.textContent = "Você acertou " + a.correct + " de " + a.total + ". Próximo passo: abrir o cronograma indicado para o seu nível e marcar a data da prova.";
-        setSteps([
-          scheduleFromPct(Math.round(100 * a.correct / a.total)).split(" · ")[0] + ".",
-          "O botão de três traços, no alto à esquerda, abre o menu com os 10 módulos e o seu progresso.",
-          "Ao fim de cada Parte, marque como concluída: é isso que faz o progresso andar."
-        ]);
+        textEl.textContent = "Você acertou " + a.correct + " de " + a.total + ". " +
+          scheduleFromPct(Math.round(100 * a.correct / a.total)).split(" · ")[0] + ". O próximo passo é abrir esse cronograma.";
         goBtn.textContent = "Ver o meu cronograma";
         goBtn.onclick = function(){ goToPart(6); };
       }
