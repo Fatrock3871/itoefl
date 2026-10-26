@@ -2077,6 +2077,46 @@ body.acc-free .part-pager.is-locked .part-pager-title::before{content:"🔒 ";}
 .section-card h3.h3-toggle.collapsed .h3-chevron{transform:rotate(-90deg);}
 .h3-end{display:block; height:1px;}
 
+/* ---- Caixas explicativas: 7 tipos (item 7) ----
+   Leves: fio de cor à esquerda, ícone e título curto, sem fundo pesado. A
+   cor fica no fio e no ícone; o texto continua na cor de leitura. */
+:root{--c-dica:#d08a00; --c-atencao:#bd3722; --c-exemplo:#2f6f8f; --c-erro:#a3245b; --c-resumo:#6b5c4b; --c-ets:#2e6b45; --c-modelo:#cc4610;}
+:root[data-theme="dark"]{--c-dica:#f7b733; --c-atencao:#ef7d63; --c-exemplo:#6fb3d2; --c-erro:#e67aa6; --c-resumo:#c7b8a4; --c-ets:#6cc08f; --c-modelo:#ff9256;}
+@media (prefers-color-scheme:dark){ :root:not([data-theme="light"]){--c-dica:#f7b733; --c-atencao:#ef7d63; --c-exemplo:#6fb3d2; --c-erro:#e67aa6; --c-resumo:#c7b8a4; --c-ets:#6cc08f; --c-modelo:#ff9256;} }
+.panel blockquote.callout{background:none; border:0; border-left:4px solid var(--c, var(--hair)); border-radius:0;
+  padding:2px 0 2px 18px; margin:0 0 20px;}
+.panel blockquote.callout p{font-size:17px;}
+.callout-head{display:flex; align-items:center; gap:7px; margin:0 0 6px !important; font-family:'Bricolage Grotesque',sans-serif;
+  font-size:13px !important; font-weight:800; letter-spacing:0.04em; text-transform:uppercase; color:var(--ink) !important;}
+.callout-ico{width:18px; height:18px; color:var(--c, var(--ink-2));}
+.callout-dica{--c:var(--c-dica);} .callout-atencao{--c:var(--c-atencao);} .callout-exemplo{--c:var(--c-exemplo);}
+.callout-erro{--c:var(--c-erro);} .callout-resumo{--c:var(--c-resumo);} .callout-ets{--c:var(--c-ets);} .callout-modelo{--c:var(--c-modelo);}
+.panel blockquote.callout-modelo{background:var(--sand); padding:12px 16px 12px 18px; border-radius:0 8px 8px 0;}
+.panel blockquote.callout-neutro{--c:var(--hair);}
+
+/* ---- Tabelas leves (item 14) ----
+   Sem borda grossa, cabeçalho discreto em caixa normal, fio fino entre as
+   linhas. No celular, a tabela de 3 colunas ou mais vira cartões, com o nome
+   da coluna dentro de cada um. */
+.table-wrap{border:1px solid var(--hair); border-radius:8px; background:var(--paper);}
+.panel th{background:none; color:var(--ink-2); text-transform:none; letter-spacing:0; font-size:13.5px; font-weight:800;
+  border-bottom:2px solid var(--hair); padding:10px 12px;}
+.panel tbody tr:nth-child(even){background:none;}
+.panel td{border-bottom:1px solid var(--hair);}
+.table-note{margin:-8px 0 20px !important; font-size:14px !important; color:var(--ink-2) !important;}
+.tag-design{display:inline-block; margin-right:6px; padding:1px 9px; border-radius:99px; border:1.5px solid currentColor;
+  font-size:12.5px; font-weight:800; line-height:1.6; white-space:nowrap;}
+.tag-design.is-adaptive{color:var(--accent-strong);}
+.tag-design.is-linear{color:var(--ink-2);}
+@media(max-width:640px){
+  .table-wrap:has(> table.t-cards){border:0; background:none; overflow:visible;}
+  table.t-cards, table.t-cards tbody, table.t-cards tr, table.t-cards td{display:block; width:100%;}
+  table.t-cards thead{display:none;}
+  table.t-cards tr{margin:0 0 12px; padding:10px 14px; border:1px solid var(--hair); border-radius:8px; background:var(--paper);}
+  table.t-cards td{border:0; padding:4px 0; font-size:15.5px;}
+  table.t-cards td[data-label]::before{content:attr(data-label); display:block; font-size:12.5px; font-weight:800; color:var(--ink-2);}
+}
+
 /* ---- Menu lateral (itens 25, 27 e 28) ---- */
 /* lista única dos módulos, cada um com a barrinha do próprio progresso */
 .tabbtn .lbl{display:flex; flex-direction:column; gap:5px;}

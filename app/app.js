@@ -282,6 +282,93 @@
     return h ? h.textContent.trim().replace(/^PARTE\s+\d+\s*[:·]\s*/i, "") : "";
   }
 
+  // ---------- Caixas explicativas: 7 tipos (item 7 de 2026-10-25) ----------
+  // Os blocos de citação dos .md viram caixas com tipo: dica, atenção,
+  // exemplo, erro comum, resumo, regra da ETS e resposta-modelo. O tipo sai
+  // do que já está no texto: o rótulo em negrito do começo ("Erro comum:",
+  // "Dica de execução:"), o emoji do começo (💡 ⚠️ 📌 🎯 ⚡ ⏱️ ✅) e, para
+  // inglês entre aspas, o parágrafo de cima ("Resposta-modelo", "B1:").
+  // Caixa sem marcador fica neutra. O emoji do começo dá lugar ao ícone.
+  // Blocos dentro de exercício (texto de prova) não mudam.
+  var CALLOUT_TYPES = {
+    dica: ["Dica", "bulb"], atencao: ["Atenção", "alert"], exemplo: ["Exemplo", "book"], erro: ["Erro comum", "x-circle"],
+    resumo: ["Resumo", "list"], ets: ["Regra da ETS", "shield"], modelo: ["Resposta-modelo", "quote"]
+  };
+  var CALLOUT_SKIP = ".quiz-drill, .exam, .ctw, .bsq, .spk, .wbox, .srs, .diag-result";
+  // palavras de ligação do português (acento não serve: nomes como Tomás)
+  var PT_STOP = /\s(não|que|para|uma|você|de|do|os|da|com|em|é|um)\s/i;
+  function calloutType(bq, simulado){
+    var first = bq.firstElementChild, text = bq.textContent.trim();
+    var lead = (text.match(/^[^\p{L}\p{N}"“'(\[*]+/u) || [""])[0].trim();
+    var bare = text.slice(lead.length).trim();
+    var strong = first && first.firstElementChild && first.firstElementChild.tagName === "STRONG" &&
+      first.textContent.trim().slice(lead.length).trim().indexOf(first.firstElementChild.textContent.trim()) === 0
+      ? first.firstElementChild.textContent.trim().toLowerCase() : "";
+    if(/\berro\b|armadilha|\bnunca\b/.test(strong)) return "erro";
+    if(/exemplo|passo \d|minuto \d|segundos \d|plano \(|planejamento/.test(strong)) return "exemplo";
+    if(/^(a ets|fonte oficial)/i.test(bare) || /\bets\b/.test(strong)) return "ets";
+    if(/resumo|em dois minutos|padrão geral|princípio|regra de ouro|três números|checklist|^regra:/.test(strong)) return "resumo";
+    if(/atenção|cuidado|disclaimer|exceção|impacto|importa|confusão|fadiga|o que é fixo|regra de ativação|detectado/.test(strong)) return "atencao";
+    if(/dica|foco|como usar|como se autoavaliar|prioridade|objetivo|tempo sugerido|regra prática|meta|grave-se|drill|diagnóstico/.test(strong)) return "dica";
+    if(/⚠/.test(lead)) return "atencao";
+    if(/💡|🎯|⚡|⏱/.test(lead)) return "dica";
+    if(/📌|✅/.test(lead)) return "resumo";
+    // texto em inglês (fala, e-mail, parágrafo): exemplo curto ou
+    // resposta-modelo. Caixa com rótulo em negrito em inglês é texto de
+    // prova (aviso, cardápio, e-mail do exercício) e fica neutra; enunciado
+    // de exercício ("Reescreva", "Complete") também.
+    if(!strong && /^(["“]|[A-Z][a-z])/.test(bare) && !PT_STOP.test(" " + bare + " ") && !/\(\d\)/.test(bare)){
+      var prev = bq.previousElementSibling, label = prev ? prev.textContent.trim() : "";
+      if(/reescreva|complete|transforme/i.test(label)) return "";
+      if(bq.closest("details.reveal") || /modelo|resposta|banda/i.test(label)) return "modelo";
+      if(simulado) return "";
+      if(/^(A1|A2|B1|B2|C1|C2)\b/.test(label)) return "exemplo";
+      return bare.split(/\s+/).length >= 45 ? "modelo" : "exemplo";
+    }
+    return "";
+  }
+  function stripLead(bq){
+    var w = document.createTreeWalker(bq, NodeFilter.SHOW_TEXT, null), n;
+    while((n = w.nextNode())){
+      if(!n.nodeValue.trim()) continue;
+      n.nodeValue = n.nodeValue.replace(/^[^\p{L}\p{N}"“'(\[*]+/u, function(m){ return /\S/.test(m) ? "" : m; });
+      return;
+    }
+  }
+  Array.prototype.forEach.call(document.querySelectorAll(".panel blockquote"), function(bq){
+    if(bq.closest(CALLOUT_SKIP)) return;
+    var card = bq.closest(".section-card"), panel = bq.closest(".panel"), simulado = false;
+    if(card && panel){
+      var cards = Array.prototype.slice.call(panel.querySelectorAll(".section-card"));
+      var kinds = (function(){ try { return JSON.parse(document.getElementById("partKinds").textContent); } catch(e){ return {}; } })();
+      var p = (kinds[panel.dataset.panel] || [])[cards.indexOf(card)];
+      simulado = !!p && p.tipo === "simulado";
+    }
+    var type = calloutType(bq, simulado);
+    bq.classList.add("callout", "callout-" + (type || "neutro"));
+    if(!type) return;
+    bq.dataset.callout = type;
+    stripLead(bq);
+    var head = document.createElement("p");
+    head.className = "callout-head";
+    head.innerHTML = toeflIcon(CALLOUT_TYPES[type][1], "ico callout-ico") + "<span></span>";
+    head.lastChild.textContent = CALLOUT_TYPES[type][0];
+    bq.insertBefore(head, bq.firstChild);
+  });
+
+  // ---------- Tabelas: no celular, as largas viram cartões (item 14) ----------
+  // Cada célula leva o nome da sua coluna (data-label), que o CSS mostra
+  // dentro do cartão quando a tela é estreita. Tabela de 2 colunas cabe e
+  // continua tabela.
+  Array.prototype.forEach.call(document.querySelectorAll(".panel table"), function(t){
+    var heads = Array.prototype.map.call(t.querySelectorAll("thead th"), function(th){ return th.textContent.trim(); });
+    if(heads.length < 3 || t.closest(CALLOUT_SKIP)) return;
+    t.classList.add("t-cards");
+    Array.prototype.forEach.call(t.querySelectorAll("tbody tr"), function(tr){
+      Array.prototype.forEach.call(tr.children, function(td, i){ if(heads[i]) td.setAttribute("data-label", heads[i]); });
+    });
+  });
+
   // espelha o client do Supabase e o uid logado pra fora do bloco de auth
   // (que é seu próprio IIFE) -- o certificado precisa ler/gravar
   // profiles.display_name e não tinha como chegar em `client`/`uid` de lá

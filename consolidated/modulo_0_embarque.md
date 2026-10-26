@@ -155,20 +155,22 @@ A partir de 2026 seu resultado sai em **duas escalas ao mesmo tempo**, e a ETS e
 | **Tempo total do exame** | **1h23min – 1h29min** |
 | **Total de itens** | 120 itens (Reading e Listening incluem itens-piloto não pontuados) |
 | **Total de pontos brutos** | 145 pontos (Reading 35 + Listening 35 + Writing 20 + Speaking 55) |
-| **Correção** | 108 itens corrigidos por máquina + 12 por IA, segundo o total da ETS (as linhas da própria tabela da ETS, reproduzidas na Parte 3.3, somam 107 e 13) |
-| **Reading / Listening** | Design **adaptativo em 2 estágios** (router + módulo inferior ou superior conforme desempenho) |
-| **Writing / Speaking** | Design **linear** (todos os candidatos recebem as mesmas tasks) |
+| **Correção** | 108 itens corrigidos por máquina + 12 por IA¹ |
+| **Reading / Listening** | <span class="tag-design is-adaptive">Adaptativo</span> 2 estágios: router + módulo inferior ou superior conforme desempenho |
+| **Writing / Speaking** | <span class="tag-design is-linear">Linear</span> Todos os candidatos recebem as mesmas tasks |
+
+<p class="table-note">¹ Total informado pela ETS. As linhas da própria tabela da ETS, reproduzidas na Parte 3.3, somam 107 e 13.</p>
 
 > Fonte oficial: *ETS · TOEFL iBT Test: 2026 Update Test Blueprint and Specifications Document*, disponível no site da ETS (ets.org).
 
 ### 3.2 As 4 Seções: Estrutura Nova
 
-| Seção | Duração | Itens | Pontos brutos | Adaptativo? |
+| Seção | Duração | Itens | Pontos brutos | Design |
 |---|---|---|---|---|
-| **Reading** | ~18–21 min + 9 min router | 50 itens (~35 pontuados + ~15 piloto) | 35 | Sim (2 estágios) |
-| **Listening** | ~25–29 min (router ~18 + inferior 7 / superior 11) | 47 itens (~35 pontuados + ~12 piloto) | 35 | Sim (2 estágios) |
-| **Writing** | ~23 min | 12 itens | 20 | Não (linear) |
-| **Speaking** | ~8 min | 11 itens | 55 | Não (linear) |
+| **Reading** | ~18–21 min + 9 min router | 50 itens (~35 pontuados + ~15 piloto) | 35 | <span class="tag-design is-adaptive">Adaptativo</span> 2 estágios |
+| **Listening** | ~25–29 min (router ~18 + inferior 7 / superior 11) | 47 itens (~35 pontuados + ~12 piloto) | 35 | <span class="tag-design is-adaptive">Adaptativo</span> 2 estágios |
+| **Writing** | ~23 min | 12 itens | 20 | <span class="tag-design is-linear">Linear</span> |
+| **Speaking** | ~8 min | 11 itens | 55 | <span class="tag-design is-linear">Linear</span> |
 
 > 📌 **Três números que não se misturam.**
 >

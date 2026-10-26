@@ -300,6 +300,47 @@ READING = r"""
 })()
 """
 
+# Caixas explicativas (item 7): os 7 tipos existem, cada um com ícone e
+# título; sem marcador fica neutra; texto de prova dentro de exercício não muda.
+CALLOUTS = r"""
+(function(){
+  var types = ["dica", "atencao", "exemplo", "erro", "resumo", "ets", "modelo"], o = {};
+  types.forEach(function(t){
+    var b = document.querySelectorAll('.panel blockquote[data-callout="' + t + '"]');
+    o[t] = b.length > 0 && Array.prototype.every.call(b, function(x){
+      var h = x.querySelector(".callout-head"); return !!h && !!h.querySelector("svg use") && h === x.firstElementChild; });
+  });
+  var neutral = document.querySelectorAll(".panel blockquote.callout-neutro");
+  o.neutral = neutral.length > 0 && !Array.prototype.some.call(neutral, function(x){ return !!x.querySelector(".callout-head"); });
+  o.examUntouched = !document.querySelector(".quiz-drill blockquote.callout, .exam blockquote.callout");
+  var tip = document.querySelector('.panel blockquote[data-callout="dica"]'), s = getComputedStyle(tip);
+  o.light = parseFloat(s.borderLeftWidth) >= 3 && parseFloat(s.borderTopWidth) === 0;
+  o.noLeadEmoji = !/^[☀-➿\uD83C-\uDBFF]/.test(tip.querySelector(".callout-head").nextSibling.textContent.trim());
+  return o;
+})()
+"""
+
+# Tabelas (itens 14 e 34): cabeçalho discreto; no celular, a tabela larga vira
+# cartões que cabem na tela; a tabela do formato da prova tem selos e nota de rodapé.
+TABLES = r"""
+(function(){
+  document.querySelector('.tabbtn[data-tab="mod0"]').click();
+  var cards = document.querySelectorAll("#panel-mod0 .section-card");
+  window.__toeflShowPart.mod0(cards[2], { noScroll: true });
+  Array.prototype.forEach.call(cards[2].querySelectorAll(".h3-body"), function(b){ b.classList.remove("h3-collapsed"); });
+  var t = Array.prototype.filter.call(cards[2].querySelectorAll("table.t-cards"), function(x){ return /Design/.test(x.textContent); })[0];
+  var wrap = t.parentNode, th = t.querySelector("th"), td = t.querySelector("tbody td");
+  var o = { tags: cards[2].querySelectorAll(".tag-design.is-adaptive").length + "/" + cards[2].querySelectorAll(".tag-design.is-linear").length,
+    note: !!cards[2].querySelector(".table-note") && !/107 e 13/.test(t.closest(".h3-body").querySelector("table").textContent),
+    thCase: getComputedStyle(th).textTransform, thVisible: th.getBoundingClientRect().height > 0,
+    tdBlock: getComputedStyle(td).display, label: getComputedStyle(td, "::before").content,
+    fits: wrap.scrollWidth <= wrap.clientWidth + 1 && t.getBoundingClientRect().right <= document.documentElement.clientWidth + 1,
+    font: parseFloat(getComputedStyle(td).fontSize) };
+  window.__toeflShowPart.mod0(cards[0], { noScroll: true });
+  return o;
+})()
+"""
+
 SW_STATE = """(async function(){
   var reg = await navigator.serviceWorker.getRegistration();
   return { controller: !!navigator.serviceWorker.controller, waiting: !!(reg && reg.waiting),
@@ -624,6 +665,11 @@ def run():
                 check("pager_says_next_part_and_titles_in_sentence_case",
                       rd["pager"].startswith("Próxima Parte: ") and rd["bottom"].startswith("Próxima Parte: ")
                       and rd["sentence"] == "Parte 2: O atlas linguístico", rd)
+                co = b.eval(CALLOUTS)
+                check("callouts_seven_types", all(co.values()), co)
+                tb = b.eval(TABLES)
+                check("tables_light_with_design_tags_and_footnote",
+                      tb["tags"] == "3/3" and tb["note"] and tb["thCase"] == "none" and tb["thVisible"] and tb["tdBlock"] != "block", tb)
                 b.eval('document.querySelector(\'.tabbtn[data-tab="mod0"]\').click()')
                 b.reload(settle=1.2)
 
@@ -906,6 +952,10 @@ def run():
                 check("part_rail_mobile_thin_bar",
                       not rd["bodyShown"] and rd.get("opens") and rd["railH"] <= 80 and rd["items"] == rd["h3"] > 0
                       and rd["doneWorks"] and rd["markDoneVisible"], rd)
+                tb = b.eval(TABLES)
+                check("tables_readable_on_mobile_as_cards",
+                      not tb["thVisible"] and tb["tdBlock"] == "block" and "Seção" in tb["label"]
+                      and tb["fits"] and tb["font"] >= 14, tb)
                 b.reload(settle=1.2)
 
                 # barra do topo: gruda no alto, cobre o botao do menu (que
