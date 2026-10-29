@@ -1,38 +1,31 @@
-# MÓDULO 2: LISTENING
+# Módulo 2: Listening
 
-> **iTOEFL**
->
-> Este módulo (formato oficial completo: Módulo 0, Parte 3) tem sete partes:
-> as regras, a estratégia, o **Laboratório de Escuta** (o inglês falado de
-> verdade: o que o texto não te ensina), um exemplo resolvido, os drills, o
-> gabarito e o protocolo de erros.
->
-> ⚠️ Os drills usam **transcrições**. No exame o áudio é falado, com entonação,
-> hesitação e prosódia. Use os drills para treinar reconhecimento de task type,
-> triagem de anotação, padrões de distrator e os itens do Laboratório. Para
-> áudio real, use o *TOEFL iBT Free Practice Test* da ETS e a Parte 3 deste
-> módulo (ouvindo, não lendo).
+> **Resumo:** Este módulo reúne sete partes, que vão das regras da seção e da estratégia de anotação ao Laboratório de Escuta (com o inglês falado de verdade), além de um exemplo resolvido, dos exercícios práticos, do gabarito comentado e do passo a passo de análise de erros.
+
+Se você quiser rever os números gerais da prova antes de começar, eles estão no **Módulo 0**, Parte 3. Aqui vamos olhar de perto para o funcionamento do Listening e treinar cada formato de questão passo a passo.
+
+> **Atenção:** Os exercícios deste módulo usam transcrições para você treinar o reconhecimento de cada tarefa, a triagem de anotações e os padrões de distrator. Como no exame o áudio é falado, com entonação, hesitação e ritmo reais, complemente o treino ouvindo o *TOEFL iBT Free Practice Test* da ETS e praticando a Parte 3 em voz alta.
 
 ---
 
-## PARTE 1: AS REGRAS DO JOGO
+## Parte 1: As regras do jogo
 
 ### 1.1 Radiografia oficial da seção
 
-O Listening é a **segunda seção**. Assim como o Reading, usa **design adaptativo em dois estágios**: a dificuldade dos itens muda em tempo real conforme seu desempenho.
+Passar do Reading para o Listening pede uma virada rápida de atenção, porque agora você ouve cada faixa apenas uma vez em vez de reler na tela. Assim como o Reading, esta segunda seção da prova usa um **formato adaptativo** em dois estágios, em que a dificuldade das questões se ajusta em tempo real ao seu desempenho.
 
 | Elemento | Dado oficial (ETS 2026) |
 |---|---|
 | **Posição** | 2ª seção (após o Reading) |
-| **Tempo** | Router ~18 min + módulo inferior ~7 min **ou** superior ~11 min ≈ **~25–29 min** |
-| **Total de itens** | 47 (~35 pontuados + ~12 itens-piloto, indistinguíveis) |
-| **Pontuação bruta** | 35 pontos (máx. **1 pt por item**) → banda **1–6** (CEFR) |
-| **Cada áudio toca** | **Uma vez**: sem repetição (salvo replays embutidos em certos itens) |
-| **Duração dos áudios** | De enunciados curtos (≤ 6 sílabas tônicas) a monólogos de **até 250 palavras**; intermediários 35–100 palavras |
-| **Vozes** | **Áudio gerado por IA + às vezes atores humanos.** Sotaques: EUA/Canadá, Austrália, Reino Unido |
-| **Apoio visual** | Cada áudio traz uma **imagem do(s) falante(s)** na tela |
+| **Tempo** | [[Router::Bloco inicial de nivelamento]] de ~18 min + módulo inferior de ~7 min **ou** superior de ~11 min, somando **~25–29 min** |
+| **Total de itens** | 47 (~35 pontuados + ~12 itens-piloto, que não se distinguem dos demais) |
+| **Pontuação bruta** | 35 pontos (máximo de **1 ponto por item**), convertidos em banda de **1 a 6** ([[CEFR::Quadro Europeu Comum de Referência]]) |
+| **Cada áudio toca** | **Uma única vez**, sem repetição, salvo pequenos [[replays::trechos repetidos]] embutidos em certos itens |
+| **Duração dos áudios** | De falas curtas (até 6 sílabas tônicas) a monólogos de **até 250 palavras**, com faixas intermediárias de 35 a 100 palavras |
+| **Vozes** | **Áudio gerado por IA e, às vezes, atores humanos**, com sotaques dos Estados Unidos, Canadá, Austrália e Reino Unido |
+| **Apoio visual** | Cada áudio vem acompanhado na tela por uma **imagem de quem fala** |
 
-Grava isso: o Listening **não** é "ouça um áudio longo e responda um bloco de questões". É um **fluxo contínuo de itens majoritariamente curtos**, e cada resposta pode influenciar a dificuldade do próximo bloco. Memória de longo prazo importa menos. **Velocidade de processamento e precisão item a item** importam mais.
+Vale guardar uma diferença importante em relação ao exame antigo. O Listening de 2026 não consiste mais em ouvir uma palestra longa para responder a um grande bloco de perguntas depois. Ele funciona como um **fluxo contínuo** de itens em sua maioria curtos, em que cada resposta ajuda a calibrar o bloco seguinte, e por isso a velocidade de processamento e a precisão item a item importam mais do que a memória de longo prazo.
 
 ---
 
@@ -50,69 +43,69 @@ ESTÁGIO 2A: MÓDULO INFERIOR (~7 min)      ESTÁGIO 2B: MÓDULO SUPERIOR (~11 m
 └── confirma a banda inferior              └── distingue as bandas C1/C2
 ```
 
-Errar demais nos primeiros itens, mesmo os "fáceis" e curtos, pode te colocar no módulo inferior. O teto dele é estruturalmente mais baixo: mesmo acertando tudo ali, você não alcança as bandas mais altas. **Não existe "aquecer aos poucos" no Listening.** Pico de atenção desde o item 1.
+Errar várias questões logo nos primeiros itens, mesmo nas falas curtas e aparentemente simples, pode encaminhar você para o módulo inferior. Como o **teto de banda** desse caminho é estruturalmente mais baixo, acertar tudo ali não basta para alcançar as notas mais altas. Por isso, entre com atenção total desde o item 1, porque não há espaço para aquecer aos poucos no Listening.
 
 ---
 
-### 1.3 Os 4 tipos de task
+### 1.3 Os 4 formatos de tarefa
 
-| # | Task type | O que testa | Itens | CEFR | Áudio |
+| # | Formato de tarefa | O que avalia | Itens | CEFR | Áudio |
 |---|---|---|---|---|---|
-| 1 | **Listen and Choose a Response** | Escolher a resposta natural a uma fala isolada (pragmática: intenção, tom, registro) | **15–19** | A1–B2 | 1 fala isolada, muito curta |
-| 2 | **Listen to a Conversation** | Propósito, detalhe, relação entre os falantes numa conversa curta | 10 | A2–C1 | 4–9 falas curtas, cotidiano ou campus |
-| 3 | **Listen to an Announcement** | Detalhe factual (data, local, ação, exceção) num anúncio | 6–10 | A2–C1 | monólogo informativo curto |
-| 4 | **Listen to an Academic Talk** | Ideia principal, apoio, inferência, organização, **vocabulário idiomático** | 8–16 | A2–C2 | monólogo acadêmico, até 250 palavras |
+| 1 | **[[Listen and Choose a Response::Ouça e escolha uma resposta]]** | Escolher a resposta natural a uma fala isolada, observando intenção, tom e registro | **15–19** | A1–B2 | 1 fala isolada, muito curta |
+| 2 | **[[Listen to a Conversation::Ouça uma conversa]]** | Propósito, detalhe e relação entre os falantes numa conversa curta | 10 | A2–C1 | 4–9 falas curtas, no cotidiano ou no campus |
+| 3 | **[[Listen to an Announcement::Ouça um anúncio]]** | Detalhe factual (data, local, ação ou exceção) num aviso falado | 6–10 | A2–C1 | monólogo informativo curto |
+| 4 | **[[Listen to an Academic Talk::Ouça uma aula ou palestra acadêmica]]** | Ideia principal, detalhe de apoio, inferência, organização e **vocabulário idiomático** | 8–16 | A2–C2 | monólogo acadêmico, até 250 palavras |
 
-Pensa nisso como uma escada de complexidade: da troca de uma frase (**Choose a Response**) até o monólogo acadêmico (**Academic Talk**). O router mistura os quatro tipos. Os módulos depois concentram volume proporcional ao que está na tabela.
+Você pode enxergar esses formatos como uma **escada de complexidade**, que vai da resposta a uma única frase (*Choose a Response*) até o monólogo universitário (*Academic Talk*). O router mistura os quatro tipos, e o módulo seguinte distribui o volume de questões na proporção mostrada na tabela.
 
 ---
 
-### 1.4 Os tipos de PERGUNTA
+### 1.4 Os tipos de pergunta
 
-Cada item testa uma habilidade específica. Reconhecer o tipo pelo enunciado **antes** de olhar as opções já resolve metade.
+Cada questão avalia uma habilidade específica. Quando você reconhece o tipo de pergunta pelo enunciado **antes** de olhar as alternativas, já resolve metade do caminho com muito mais clareza.
 
 | Tipo | Enunciado típico | O que a resposta certa faz |
 |---|---|---|
-| **Gist-content** | *"What is the talk mainly about?"* | Sintetiza o áudio inteiro; não é um detalhe |
-| **Gist-purpose** | *"Why does the student go to see the advisor?"* | Diz o **objetivo** da conversa, não o assunto de fundo |
-| **Detail** | *"According to the speaker, when...?"* | Está **explícita** no áudio, geralmente parafraseada |
-| **Function / "Why does the speaker say X?"** | *"Why does the woman say: [replay]?"* | Descreve a **intenção** por trás da fala (concordar, discordar, ironizar, corrigir, dar exemplo): o sentido **literal** não é a resposta |
-| **Attitude / stance** | *"What is the professor's opinion of...?"* / *"How does the man feel about...?"* | Capta o **tom** (aprova / duvida / se surpreende / minimiza) a partir de escolha de palavras e entonação |
-| **Organization** | *"Why does the professor mention X?"* / *"How does the professor introduce the topic?"* | Diz a **função estrutural** do trecho (exemplo de apoio, contraste, digressão, transição) |
-| **Inference** | *"What can be inferred about...?"* / *"What does the professor imply?"* | Um passo lógico além do dito: nunca dois; alternativas com *always/never/only/impossible* quase sempre saem |
-| **Connecting content** | *"What is the likely outcome of...?"* | Junta duas informações ditas em pontos diferentes do áudio |
-| **Prediction / what's next** | *"What will the professor probably discuss next?"* | Segue a pista dada no fim do áudio (*"Next time, we'll look at..."*, *"Let's turn to..."*) |
-| **Vocabulary / idiom in context** | *"What does the speaker mean by 'X'?"* | O sentido **daquela expressão naquele contexto**: o literal é distrator |
+| **[[Gist-content::Ideia principal do conteúdo]]** | *"[[What is the talk mainly about?::Sobre o que é a palestra principalmente?]]"* | Sintetiza o áudio inteiro, sem se prender a um detalhe isolado |
+| **[[Gist-purpose::Objetivo principal]]** | *"[[Why does the student go to see the advisor?::Por que o estudante vai falar com o orientador?]]"* | Indica o **objetivo** da conversa, e não apenas o assunto de fundo |
+| **[[Detail::Detalhe factual]]** | *"[[According to the speaker, when...?::De acordo com quem fala, quando...?]]"* | Traz uma informação **explícita** do áudio, quase sempre dita com outras palavras |
+| **[[Function::Função comunicativa]]** | *"Why does the woman say: [replay]?"* | Descreve a **intenção** por trás da fala (concordar, discordar, ironizar, corrigir ou exemplificar), fugindo do sentido literal |
+| **[[Attitude::Atitude ou tom]]** | *"[[What is the professor's opinion of...?::Qual é a opinião do professor sobre...?]]"* ou *"[[How does the man feel about...?::Como o homem se sente em relação a...?]]"* | Capta o **tom** (aprova, duvida, surpreende-se ou minimiza) pela escolha de palavras e pela entonação |
+| **[[Organization::Organização estrutural]]** | *"[[Why does the professor mention X?::Por que o professor menciona X?]]"* ou *"[[How does the professor introduce the topic?::Como o professor apresenta o tema?]]"* | Aponta a **função estrutural** do trecho (exemplo de apoio, contraste, digressão ou transição) |
+| **[[Inference::Inferência]]** | *"[[What can be inferred about...?::O que pode ser inferido sobre...?]]"* ou *"[[What does the professor imply?::O que o professor sugere?]]"* | Dá um único passo lógico além do que foi dito, nunca dois; desconfie de opções com *[[always::sempre]]*, *[[never::nunca]]*, *[[only::apenas]]* ou *[[impossible::impossível]]* |
+| **[[Connecting content::Conexão de informações]]** | *"[[What is the likely outcome of...?::Qual é o resultado provável de...?]]"* | Junta duas informações ditas em momentos diferentes do áudio |
+| **[[Prediction::Previsão do próximo tópico]]** | *"[[What will the professor probably discuss next?::O que o professor provavelmente vai discutir a seguir?]]"* | Segue a pista deixada no fim do áudio, como *"[[Next time, we'll look at...::Na próxima vez, vamos olhar para...]]"* ou *"[[Let's turn to...::Vamos passar para...]]"* |
+| **[[Vocabulary or idiom in context::Vocabulário ou expressão idiomática em contexto]]** | *"[[What does the speaker mean by 'X'?::O que quem fala quer dizer com 'X'?]]"* | Mostra o sentido **daquela expressão naquele contexto**, enquanto o sentido ao pé da letra funciona como distrator |
 
 ---
 
 ### 1.5 Gestão de tempo
 
-Com 47 itens em ~25–29 min, sua margem média por item (áudio mais resposta) fica em torno de **32 a 37 segundos**. Não tem conversa longa pra você se situar aos poucos. É sprint constante, do primeiro ao último item.
+Com 47 itens em cerca de 25 a 29 minutos, a sua margem média por questão (somando o áudio e a resposta) fica entre **32 e 37 segundos**. Como não há conversas longas para você se situar aos poucos, a seção pede um ritmo constante do primeiro ao último item.
 
-- Menos tempo total significa menos margem pra recuperar um lapso de atenção.
-- Itens curtos pedem decisão rápida, com menos anotação e mais **processamento auditivo automático**. É exatamente isso que a Parte 3 treina.
-- O Academic Talk ainda pede nota estruturada, só que em escala reduzida.
+- **Atenção contínua protege seus pontos:** menos tempo total significa menos margem para recuperar um momento de distração.
+- **Processamento auditivo automático nos itens curtos:** questões rápidas pedem decisão imediata e quase nenhuma anotação, que é exatamente a habilidade treinada na Parte 3.
+- **Anotação enxuta nas palestras:** o Listen to an Academic Talk ainda pede notas organizadas, mas em escala reduzida.
 
 ---
 
-## PARTE 2: A ESTRATÉGIA
+## Parte 2: A estratégia
 
 ### 2.1 Por que anotar tudo não funciona
 
-A maioria dos itens (Choose a Response, boa parte de Conversation e Announcement) tem áudio curto o bastante pra caber na memória de trabalho, se você estiver em atenção plena. Um sistema de note-taking pensado pra palestra longa simplesmente não se aplica aqui.
+Na maioria das questões (*Choose a Response* e boa parte de *Conversation* e *Announcement*), o áudio é curto o suficiente para caber na sua **memória de trabalho** se você estiver ouvindo com atenção total. Por isso, tentar aplicar um método de anotação feito para palestras longas acaba atrapalhando mais do que ajuda.
 
-A habilidade central é **triagem instantânea**: decidir, nos primeiros segundos, se o item pede memória bruta (não anota nada) ou estrutura (anota rápido e seletivo). Tomar notas bem feitas é consequência dessa decisão, não o objetivo em si.
+A habilidade central aqui é a **triagem instantânea**: decidir, logo nos primeiros segundos, se o item pede apenas escuta focada (sem escrever nada) ou anotação seletiva de estrutura. Tomar boas notas é consequência dessa decisão inicial, e não o objetivo em si.
 
 ### 2.2 O sistema de anotações escalonado
 
-| Escala | Quando | Task types | O que fazer |
+| Escala | Quando usar | Formatos de tarefa | O que fazer |
 |---|---|---|---|
-| **0: Sem anotação** | fala isolada | Choose a Response | Nada escrito. Concentre-se só em **tom, registro e intenção**. Cada segundo escrevendo é atenção roubada. |
-| **1: Nota mínima (3–5 palavras)** | diálogo curto / anúncio | Conversation, Announcement | Só o essencial: **QUEM + O QUÊ + AÇÃO/PRAZO**. Ex.: `"Sara → sala trocada, B204, seg"`. Nunca frases completas. |
-| **2: Template de duas zonas** | monólogo acadêmico | Academic Talk | Versão compacta do template clássico, dimensionada para ~150–250 palavras. |
+| **0: Sem anotação** | fala isolada | *Choose a Response* | Não escreva nada. Concentre-se em **tom, registro e intenção**, porque cada segundo olhando para o papel tira atenção do áudio. |
+| **1: Nota mínima (3–5 palavras)** | diálogo curto ou anúncio | *Conversation* e *Announcement* | Anote apenas **quem, o quê e ação ou prazo** (por exemplo, `"Sara, sala trocada, B204, segunda"`), sem escrever frases completas. |
+| **2: Modelo de duas zonas** | monólogo acadêmico | *Academic Talk* | Use uma versão compacta do modelo clássico de notas, ajustada para faixas de 150 a 250 palavras. |
 
-**Template · Escala 2 (Academic Talk):**
+**Modelo da Escala 2 (Academic Talk):**
 
 ```
 TÓPICO: ______________     IDEIA PRINCIPAL: ______________
@@ -123,280 +116,283 @@ PONTO 2: __________        ATITUDE DO PROFESSOR ( + / − / ? ):
 EXPRESSÃO IDIOMÁTICA/CHAVE: _______  (sentido em contexto: _______)
 ```
 
-O campo de expressão idiomática existe porque o blueprint **destaca explicitamente** vocabulário idiomático como alvo em Academic Talk. Sempre que ouvir algo não literal (*"that's a stretch"*, *"the jury's still out"*), anote a expressão e o contexto: é candidata quase certa a questão.
+Esse campo final merece cuidado especial porque as especificações da prova destacam o **vocabulário idiomático** como alvo frequente em *Academic Talk*. Sempre que você ouvir uma expressão figurada, como *"[[that's a stretch::isso é um exagero]]"* ou *"[[the jury's still out::ainda não há uma conclusão]]"*, anote uma palavra-chave do contexto, pois há grande chance de ela virar pergunta.
 
-### 2.3 Discourse markers: o sinal aponta direto para a resposta
+### 2.3 Marcadores de discurso: o sinal aponta direto para a resposta
 
-Em áudio curto, o marcador aponta para a **própria resposta**, não para uma seção futura. Perder um marcador = perder o item.
+Em áudios curtos, os [[discourse markers::marcadores de discurso]] apontam diretamente para a **resposta da questão**, e não apenas para uma mudança de bloco mais adiante. Por isso, captar essas palavras de transição evita que você perca o ponto principal do item.
 
-| Função | Marcadores | Ação |
+| Função | Marcadores | Como agir |
 |---|---|---|
-| **Correção / mudança de posição** | *"Actually...", "Wait, I mean...", "On second thought...", "Come to think of it..."* | A resposta reflete a versão **corrigida**, não a inicial |
-| **Tom pragmático** | *"I guess...", "Sure, if you say so...", "Well, technically...", "I suppose so"* | Sinaliza relutância, ironia ou concordância parcial: não tome ao pé da letra |
-| **Instrução / ação requerida** | *"Please make sure to...", "Don't forget...", "You'll need to...", "Be sure to..."* | Fato de altíssima chance de ser testado: é o núcleo do anúncio |
-| **Ênfase** | *"The key thing is...", "What matters here is...", "This is important:"* | Marque mentalmente ou em 2–3 palavras |
-| **Contraste rápido** | *"but", "though", "except that", "having said that"* | Um único *"but"* pode inverter o item inteiro. Não relaxe perto do fim |
-| **Concessão + retorno à tese** | *"Sure, X, but the point is Y"* | A resposta é **Y**, não X |
-| **Exemplificação** | *"Take X, for instance", "Here's a case:", "Say you..."* | O que vem a seguir é exemplo de apoio, não ideia nova |
-| **Digressão e volta** | *"Anyway...", "Where was I?", "Getting back to..."* | O que veio no meio é secundário; a linha principal retoma aqui |
-| **Idiomatismo** | *"back to square one", "a long shot", "let's not get ahead of ourselves"* | Pare o piloto automático e traduza o sentido figurado |
+| **Correção ou mudança de posição** | *"[[Actually...::Na verdade...]]"*, *"[[Wait, I mean...::Espera, quero dizer...]]"*, *"[[On second thought...::Pensando bem...]]"*, *"[[Come to think of it...::Agora que penso nisso...]]"* | A resposta certa acompanha a versão **corrigida**, e não a primeira fala |
+| **Tom pragmático** | *"[[I guess...::Acho que...]]"*, *"[[Sure, if you say so...::Claro, se você está dizendo...]]"*, *"[[Well, technically...::Bem, tecnicamente...]]"*, *"[[I suppose so::Suponho que sim]]"* | Indica relutância, ironia ou concordância parcial, então não interprete ao pé da letra |
+| **Instrução ou ação necessária** | *"[[Please make sure to...::Por favor, certifique-se de...]]"*, *"[[Don't forget...::Não se esqueça de...]]"*, *"[[You'll need to...::Você vai precisar...]]"*, *"[[Be sure to...::Não deixe de...]]"* | Guarde esse dado com atenção, porque ele costuma ser o centro da pergunta no anúncio |
+| **Ênfase** | *"[[The key thing is...::O ponto principal é...]]"*, *"[[What matters here is...::O que importa aqui é...]]"*, *"[[This is important::Isto é importante]]"* | Destaque a ideia mentalmente ou anote de 2 a 3 palavras |
+| **Contraste rápido** | *"[[but::mas]]"*, *"[[though::embora, contudo]]"*, *"[[except that::exceto que, só que]]"*, *"[[having said that::dito isso]]"* | Um único *"but"* pode virar o sentido do áudio no final, então mantenha a escuta até a última palavra |
+| **Concessão e retorno à tese** | *"[[Sure, X, but the point is Y::Claro, X, mas o ponto principal é Y]]"* | A ideia central que a questão vai cobrar está em **Y**, e não em X |
+| **Exemplificação** | *"[[Take X, for instance::Tome X como exemplo]]"*, *"[[Here's a case::Aqui está um caso]]"*, *"[[Say you...::Digamos que você...]]"* | O que vem em seguida serve para ilustrar a tese anterior, e não para abrir outro tema |
+| **Digressão e volta** | *"[[Anyway...::Enfim...]]"*, *"[[Where was I?::Onde eu estava?]]"*, *"[[Getting back to...::Voltando a...]]"* | O comentário anterior era secundário, e o fio principal retoma a partir daqui |
+| **Expressão idiomática** | *"[[back to square one::de volta à estaca zero]]"*, *"[[a long shot::uma aposta com pouca chance]]"*, *"[[let's not get ahead of ourselves::não vamos nos precipitar]]"* | Saia do sentido literal na hora e observe o que a expressão quer dizer na situação |
 
-### 2.4 Estratégia por task type
+### 2.4 Estratégia por formato de tarefa
 
-**Choose a Response**: você testa **pragmática**, não conteúdo. A pergunta real: "o que uma pessoa fluente responderia aqui, naturalmente?"
-- Descarte respostas gramaticalmente corretas, mas **socialmente estranhas**.
-- Cheque o **registro** (gíria com um professor = descartável).
-- **Trap:** resposta que repete palavras do áudio mas não responde à intenção
-(a fala era um convite; a resposta trata como pergunta factual).
+Em **[[Listen and Choose a Response::Ouça e escolha uma resposta]]**, a questão avalia a sua percepção de pragmática, e não a retenção de fatos longos. Ao ouvir a frase, pergunte a si mesmo o que uma pessoa fluente responderia com naturalidade naquela situação:
 
-**Conversation**: identifique em 1–2 s: **quem fala com quem, sobre o quê, qual é o obstáculo/pedido**. A "virada" (resolução/decisão) costuma vir na segunda metade, então redobre a atenção ali. Escala 1 de anotação.
+- **Descarte respostas socialmente estranhas:** uma alternativa pode ter a gramática perfeita e ainda assim não encaixar na conversa.
+- **Observe o registro:** respostas com gírias ou tom casual demais para um professor já podem ser eliminadas.
+- **Armadilha comum:** desconfie da opção que repete palavras do áudio, mas ignora a intenção da fala, como tratar um convite educado como se fosse uma pergunta sobre horários.
 
-**Announcement**: trate como **checklist auditiva**: data · local · ação requerida · exceção/condição. Estrutura típica: contexto → informação principal → instrução prática → (às vezes) contato/prazo.
-- **Trap:** o anúncio menciona duas datas ou dois locais (o antigo e o novo); o
-distrator usa o **desatualizado**.
+Em **[[Listen to a Conversation::Ouça uma conversa]]**, identifique logo nos primeiros segundos quem está falando com quem, sobre qual assunto e qual é o pedido ou obstáculo. Como a decisão ou solução costuma aparecer na segunda metade do diálogo, redobre a atenção nesse trecho final e use a Escala 1 de anotação.
 
-**Academic Talk**: único task type em que a Escala 2 se justifica. Escute em 4 níveis, versão compacta:
+Em **[[Listen to an Announcement::Ouça um anúncio]]**, acompanhe o aviso buscando quatro dados principais, que são data, local, ação necessária e exceção ou condição. A ordem mais comum apresenta primeiro o contexto, depois a novidade principal, em seguida a instrução prática e, por fim, um contato ou prazo:
+
+- **Armadilha comum:** muitos anúncios citam dois horários ou dois locais (o antigo e o novo), e o distrator costuma trazer justamente o dado desatualizado.
+
+Em **[[Listen to an Academic Talk::Ouça uma aula ou palestra acadêmica]]**, vale usar a Escala 2 de anotação e acompanhar o áudio em quatro níveis:
 
 | Nível | O que escutar | Onde anotar |
 |---|---|---|
-| Superfície | fatos, definições | "Ponto 1 / Ponto 2" |
-| Propósito | por que o professor disse aquilo | marca mental `*` |
-| Atitude | tom sobre o tema | campo "Atitude" ( + / − / ? ) |
-| Estrutura | como as ideias se conectam | setas ( → / ≠ ) |
+| Superfície | fatos e definições principais | campos "Ponto 1" e "Ponto 2" |
+| Propósito | por que o professor citou aquele exemplo | marca mental ou asterisco `*` |
+| Atitude | tom do professor sobre o tema | campo "Atitude" ( +, − ou ? ) |
+| Estrutura | como as ideias se conectam | setas de relação ( → ou ≠ ) |
 
 ### 2.5 Fase router: os primeiros itens decidem tudo
 
-O router é a fase **mais longa e mais decisiva**: abre com uma sequência de itens curtos (Choose a Response) e depois traz conversas, um anúncio e uma fala acadêmica. O erro mais comum é subestimar os itens curtos do começo.
+O [[router::bloco inicial de nivelamento]] é a etapa **mais longa e decisiva** do Listening, pois começa com uma sequência de itens curtos (*Choose a Response*) e depois avança para conversas, anúncios e palestras acadêmicas. Como muita gente subestima as frases curtas da abertura, vale seguir quatro cuidados:
 
-1. **Trate cada item do router como se já valesse o módulo superior.**
-2. **Não acelere nos itens curtos.** Gaste 2–3 s a mais para confirmar a
-intenção pragmática antes de marcar.
-3. **Não entre em pânico** com um item difícil cedo: pode ser calibração.
-Mantenha o ritmo.
-4. **Consistência > heroísmo.** Um padrão estável de acertos nos itens curtos
-pesa mais que acertar um item difícil isolado e errar fáceis por pressa.
+1. **Valorize cada item desde o início:** trate as primeiras questões com o mesmo cuidado que você daria ao módulo superior, porque elas definem para qual caminho você vai.
+2. **Não apresse os itens curtos:** reserve 2 ou 3 segundos para confirmar a intenção da fala antes de confirmar a alternativa.
+3. **Mantenha a calma diante de um item difícil:** uma questão exigente logo no começo pode ser só calibração do sistema, então respire fundo e mantenha o seu ritmo.
+4. **Priorize a consistência:** manter uma sequência estável de acertos nos itens curtos pesa mais para a sua banda do que acertar uma questão difícil isolada e errar duas simples por pressa.
 
 ### 2.6 Os 7 padrões de distrator da ETS
 
-| # | Padrão | Como aparece |
+Conhecer o formato das **alternativas incorretas** ajuda você a eliminar opções com segurança mesmo quando ficar em dúvida entre duas letras.
+
+| # | Padrão | Como aparece na questão |
 |---|---|---|
-| **1** | **CORRECT WORDS, WRONG MEANING** | reutiliza uma palavra do áudio, mas com ação/sentido invertido |
-| **2** | **WRONG FOCUS / TOO SPECIFIC** | foca num detalhe secundário (nome de um prédio) em vez da instrução principal |
-| **3** | **TRUE BUT NOT SAID** | plausível no mundo real ("a biblioteca fecha às 22h"), mas não afirmado **neste** áudio |
-| **4** | **CONFUSED REASONING** | inverte quem pediu o quê a quem; troca causa por efeito |
-| **5** | **OPPOSITE** | diz o contrário do áudio (o distrator usa a palavra-chave certa com polaridade trocada) |
-| **6** | **EXTREME / WRONG REGISTER** | tecnicamente relacionado ao tópico, mas com *always/never/only* ou tom incompatível |
-| **7** | **OUT OF SCOPE** | fala de algo que o áudio nem aborda (outro assunto, outra pessoa, outro momento) |
+| **1** | **[[CORRECT WORDS, WRONG MEANING::Palavras certas, sentido errado]]** | Repete uma palavra que você ouviu no áudio, mas muda a ação ou o sentido da frase |
+| **2** | **[[WRONG FOCUS::Foco errado]]** ou **[[TOO SPECIFIC::Específico demais]]** | Prende-se a um detalhe lateral (como o nome de um prédio) em vez de responder sobre a instrução principal |
+| **3** | **[[TRUE BUT NOT SAID::Verdadeiro, mas não dito no áudio]]** | Traz algo plausível na vida real (como "a biblioteca fecha às 22h"), mas que não foi dito naquele áudio |
+| **4** | **[[CONFUSED REASONING::Raciocínio invertido]]** | Inverte quem pediu o quê a quem ou troca a causa pelo efeito |
+| **5** | **[[OPPOSITE::Sentido oposto]]** | Afirma o contrário do áudio, muitas vezes usando as palavras-chave certas com o sentido invertido |
+| **6** | **[[EXTREME::Extremo]]** ou **[[WRONG REGISTER::Registro inadequado]]** | Aborda o tema, mas exagera com *[[always::sempre]]*, *[[never::nunca]]* ou *[[only::apenas]]*, ou usa um tom incompatível |
+| **7** | **[[OUT OF SCOPE::Fora do escopo]]** | Menciona um assunto, pessoa ou situação que o áudio nem chegou a tocar |
 
-### 2.7 Regras de ouro do pacing
+### 2.7 Regras de ouro para o ritmo de prova
 
-1. **Nunca deixe item em branco.** Sem penalidade: chute > zero.
-2. **Sprint, não maratona.** A média é de 32 a 37 s por item, áudio incluído;
-confie no primeiro processamento correto.
-3. **Router = atenção máxima desde o item 1.**
-4. **Escale a anotação ao task type**, não anote por hábito.
-5. **Idiomatismo é alvo prioritário no Academic Talk.**
-6. **Não relaxe no fim do áudio**: a informação decisiva (um *but*, uma
-correção, uma instrução) costuma vir nas últimas palavras.
+1. **Responda sempre a todas as questões:** como não há desconto por erro, marcar uma opção é sempre melhor do que deixar em branco.
+2. **Confie na sua primeira leitura auditiva:** com média de 32 a 37 segundos por item (contando o áudio), vale decidir com firmeza sem ficar remoendo a questão anterior.
+3. **Entre atento já no item 1:** o router começa a calcular o seu nível desde a primeira resposta.
+4. **Ajuste a anotação ao formato da tarefa:** anote apenas quando o tamanho do áudio pedir, e não por hábito automático.
+5. **Fique atento às expressões idiomáticas na palestra:** elas são alvo frequente de pergunta no *Academic Talk*.
+6. **Mantenha a escuta ativa até a última palavra:** a informação que decide o item (um *but*, uma correção de rota ou um aviso final) costuma aparecer justamente no fechamento do áudio.
 
 ---
 
-## PARTE 3: LABORATÓRIO DE ESCUTA · O INGLÊS FALADO DE VERDADE
+## Parte 3: Laboratório de escuta e o inglês falado de verdade
 
-O maior obstáculo do brasileiro no Listening **não** é vocabulário. É que o inglês falado **não soa como o inglês escrito**: palavras se colam, sons somem, formas se reduzem. Esta parte treina o que você precisa **reconhecer de ouvido**. Leia em voz alta, exagerando as reduções, até elas soarem naturais pra você.
+É muito comum entender todas as palavras de uma transcrição escrita, mas sentir dificuldade quando o mesmo trecho toca no fone. Isso acontece porque o principal desafio de quem fala português no Listening não costuma ser falta de vocabulário, e sim o fato de que o **inglês falado** não soa palavra por palavra como no papel: os sons se emendam, sílabas perdem força e várias formas se reduzem. Esta parte foi pensada para acostumar o seu ouvido a esses padrões. Leia as tabelas em voz alta, imitando as reduções, até que elas fiquem naturais para você.
 
-### 3.1 Formas fracas e reduções: o que o áudio realmente "diz"
+### 3.1 Formas fracas e reduções: o que o áudio realmente diz
 
-Palavras de função (auxiliares, preposições, artigos, pronomes) são ditas **rápido, curto e sem tônica**. Se você espera ouvi-las "por extenso", você não as ouve e perde a estrutura da frase.
+Na fala natural, as chamadas **palavras de função** (verbos auxiliares, preposições, artigos e pronomes) saem rápidas, curtas e sem força na voz. Se você esperar ouvir cada uma delas pronunciada pausadamente como na leitura, a frase parece rápida demais; quando você conhece a forma reduzida, a estrutura fica clara na hora.
 
-| Escrito | Falado (o que você ouve) | Exemplo |
+| Forma escrita | Como soa no áudio | Exemplo |
 |---|---|---|
-| going to | **gonna** /ˈɡʌnə/ | *"I'm gonna check."* |
-| want to | **wanna** /ˈwɑnə/ | *"Do you wanna come?"* |
-| got to / have got to | **gotta** /ˈɡɑɾə/ | *"I gotta go."* |
-| have to / has to | **hafta / hasta** | *"She hasta leave early."* |
-| ought to | **oughta** | *"You oughta ask him."* |
-| could have / should have / would have | **coulda / shoulda / woulda** | *"I shoulda studied more."* |
-| let me | **lemme** | *"Lemme see."* |
-| give me | **gimme** | *"Gimme a minute."* |
-| kind of / sort of | **kinda / sorta** | *"It's kinda late."* |
-| a lot of | **a lotta** | *"There's a lotta reading."* |
-| don't know | **dunno** /dəˈnoʊ/ | *"I dunno."* |
-| what are you | **whatcha / whaddya** | *"Whaddya think?"* |
-| did you | **didja** | *"Didja finish it?"* |
-| would you / could you | **wouldja / couldja** | *"Couldja repeat that?"* |
-| you | **/jə/** (átono) | *"See ya later."* |
-| to | **/tə/** (átono) | *"I need to go"* → *"I need /tə/ go"* |
-| of | **/ə/** (átono) | *"a cup of coffee"* → *"a cup /ə/ coffee"* |
-| and | **/ən/** ou **/n/** | *"bread and butter"* → *"bread /n/ butter"* |
-| for | **/fər/** (átono) | *"This is for you."* |
-| him / her / them | **/əm/ /ər/ /əm/** (após consoante) | *"tell him"* → *"tell /əm/"*; *"ask her"* → *"ask /ər/"* |
-| can (afirmativo) | **/kən/** (átono, curto): vs. **can't** /kænt/ (tônico, longo) | *"I /kən/ do it"* vs. *"I **can't** do it"* |
+| going to | **gonna** /ˈɡʌnə/ | *"[[I'm gonna check.::Vou dar uma olhada.]]"* |
+| want to | **wanna** /ˈwɑnə/ | *"[[Do you wanna come?::Você quer vir?]]"* |
+| got to ou have got to | **gotta** /ˈɡɑɾə/ | *"[[I gotta go.::Eu preciso ir.]]"* |
+| have to ou has to | **hafta** ou **hasta** | *"[[She hasta leave early.::Ela tem que sair mais cedo.]]"* |
+| ought to | **oughta** | *"[[You oughta ask him.::Você deveria perguntar a ele.]]"* |
+| could have, should have ou would have | **coulda**, **shoulda** ou **woulda** | *"[[I shoulda studied more.::Eu deveria ter estudado mais.]]"* |
+| let me | **lemme** | *"[[Lemme see.::Deixe-me ver.]]"* |
+| give me | **gimme** | *"[[Gimme a minute.::Me dê um minuto.]]"* |
+| kind of ou sort of | **kinda** ou **sorta** | *"[[It's kinda late.::Já está meio tarde.]]"* |
+| a lot of | **a lotta** | *"[[There's a lotta reading.::Há muita leitura.]]"* |
+| don't know | **dunno** /dəˈnoʊ/ | *"[[I dunno.::Não sei.]]"* |
+| what are you | **whatcha** ou **whaddya** | *"[[Whaddya think?::O que você acha?]]"* |
+| did you | **didja** | *"[[Didja finish it?::Você terminou isso?]]"* |
+| would you ou could you | **wouldja** ou **couldja** | *"[[Couldja repeat that?::Você poderia repetir isso?]]"* |
+| you | **/jə/** (átono) | *"[[See ya later.::Até mais tarde.]]"* |
+| to | **/tə/** (átono) | *"[[I need to go::Eu preciso ir]]"* soa como *"I need /tə/ go"* |
+| of | **/ə/** (átono) | *"[[a cup of coffee::uma xícara de café]]"* soa como *"a cup /ə/ coffee"* |
+| and | **/ən/** ou **/n/** | *"[[bread and butter::pão com manteiga]]"* soa como *"bread /n/ butter"* |
+| for | **/fər/** (átono) | *"[[This is for you.::Isto é para você.]]"* |
+| him, her ou them | **/əm/**, **/ər/** e **/əm/** (após consoante) | *"[[tell him::diga a ele]]"* soa como *"tell /əm/"*; *"[[ask her::pergunte a ela]]"* soa como *"ask /ər/"* |
+| can (afirmativo) | **/kən/** (átono e curto) vs. **can't** /kænt/ (tônico e longo) | *"[[I /kən/ do it::Eu consigo fazer isso]]"* vs. *"I **can't** do it"* |
 
-> ⚠️ **A confusão can / can't:** no inglês americano, a diferença muitas vezes **não** é o /t/ (que quase some): é que *can't* é **tônico e a vogal é longa/clara** (/æ/), enquanto *can* afirmativo é **átono e reduzido** (/kən/). Se a vogal soou forte, provavelmente é *can't*.
+> **Atenção:** No inglês americano, a diferença entre *[[can::posso, pode]]* e *[[can't::não posso, não pode]]* quase nunca está no /t/ final, que costuma sumir na fala rápida. O que diferencia os dois é o ritmo, pois *can't* recebe força na frase e tem a vogal aberta e clara (/æ/), enquanto *can* afirmativo sai curto e reduzido (/kən/).
 
-### 3.2 Linking e sons que somem
+### 3.2 Ligação entre palavras e sons que somem
 
-| Fenômeno | O que acontece | Exemplo (soa como) |
+No inglês falado, as palavras não vêm separadas por pausas como no texto escrito. Esse fenômeno de **[[linking::ligação de sons entre palavras vizinhas]]** faz o final de uma palavra colar no começo da seguinte, mudando o jeito como o trecho chega ao seu ouvido.
+
+| Fenômeno | O que acontece | Exemplo (como soa) |
 |---|---|---|
-| **Consoante + vogal** | a consoante final se cola à vogal seguinte | *"an apple"* → *"a-napple"*; *"pick it up"* → *"pi-ki-tup"* |
-| **/t/ e /d/ entre vogais (flap)** | viram um /d/ leve | *"water"* → *"wader"*; *"better"* → *"bedder"*; *"a lot of"* → *"a lodda"* |
-| **/t/ e /d/ finais** | somem antes de consoante | *"next week"* → *"nex week"*; *"old man"* → *"ol man"*; *"just now"* → *"jus now"* |
-| **/h/ de pronome átono** | some | *"did he"* → *"didee"*; *"tell her"* → *"teller"*; *"ask him"* → *"askim"* |
-| **vogal + vogal** | ganha um /w/ ou /j/ de ligação | *"go on"* → *"gowon"*; *"I asked"* → *"I-yasked"* |
-| **"n't"** | quase some | *"I don't think so"* → *"I dun think so"*; *"couldn't"* → *"kudn"* |
+| **Consoante + vogal** | a consoante final se junta à vogal seguinte | *"[[an apple::uma maçã]]"* soa como *"a-napple"*; *"[[pick it up::pegue isso]]"* soa como *"pi-ki-tup"* |
+| **/t/ e /d/ entre vogais ([[flap::som rápido parecido com o 'r' fraco de 'caro']])** | soam como um /d/ bem leve e rápido | *"[[water::água]]"* soa como *"wader"*; *"[[better::melhor]]"* soa como *"bedder"*; *"[[a lot of::muito, muitos]]"* soa como *"a lodda"* |
+| **/t/ e /d/ finais** | somem antes de outra consoante | *"[[next week::semana que vem]]"* soa como *"nex week"*; *"[[old man::homem idoso]]"* soa como *"ol man"*; *"[[just now::agora mesmo]]"* soa como *"jus now"* |
+| **/h/ de pronome átono** | desaparece na emenda com o verbo | *"[[did he::ele fez]]"* soa como *"didee"*; *"[[tell her::diga a ela]]"* soa como *"teller"*; *"[[ask him::pergunte a ele]]"* soa como *"askim"* |
+| **Vogal + vogal** | ganha um som leve de /w/ ou /j/ na ligação | *"[[go on::continue]]"* soa como *"gowon"*; *"[[I asked::eu perguntei]]"* soa como *"I-yasked"* |
+| **Terminação "n't"** | o /t/ final quase some na fala corrida | *"[[I don't think so::acho que não]]"* soa como *"I dun think so"*; *"[[couldn't::não podia, não conseguiu]]"* soa como *"kudn"* |
 
-**Treino:** ouça um trecho de podcast 3×. Na 1ª, só sinta o ritmo. Na 2ª, marque onde as palavras se colam. Na 3ª, tente repetir colando igual.
+> **Dica:** Para destravar a percepção dessas emendas, escolha um trecho curto de áudio em inglês e ouça três vezes. Na primeira vez, acompanhe apenas o ritmo; na segunda, marque no texto onde as palavras se colam; na terceira, repita em voz alta imitando a mesma ligação.
 
-### 3.3 Contrações e homófonos traiçoeiros
+### 3.3 Contrações e homófonos que confundem
 
-| Ouviu | Pode ser | Como decidir |
+Algumas contrações têm exatamente o **mesmo som** na fala rápida, e o que mostra qual palavra está ali é a estrutura gramatical que vem logo depois.
+
+| O que você ouviu | O que pode ser | Como decidir pelo contexto |
 |---|---|---|
-| *"he'd"* | he **had** ou he **would** | pelo verbo seguinte: *"he'd **left**"* (had) vs. *"he'd **leave**"* (would) |
-| *"she's"* | she **is** ou she **has** | *"she's **tired**"* (is) vs. *"she's **gone**"* (has) |
-| *"there's"* | there **is** (e no inglês falado, informalmente, também com plural) | contexto |
-| *"that'll / it'll / this'll"* | that will / it will | quase inaudível: espere um verbo base depois |
-| *"who's"* vs. *"whose"* | who is/has vs. de quem | *"Who's coming?"* vs. *"Whose book is this?"* |
-| *"'til / till"* | until | *"Wait till Monday."* |
-| *"'cause"* | because | *"'Cause I was busy."* |
-| *"gotta"* | *have got to* (obrigação) **ou** *"got a"* (tenho um) | *"I gotta go"* (obrigação) vs. *"I gotta new phone"* (= got a) |
+| *"he'd"* | *he **had*** ou *he **would*** | Olhe o verbo seguinte: *"he'd **left**"* (particípio, logo *had*) vs. *"he'd **leave**"* (forma base, logo *would*) |
+| *"she's"* | *she **is*** ou *she **has*** | *"she's **tired**"* (*is*) vs. *"she's **gone**"* (particípio, logo *has*) |
+| *"there's"* | *there **is*** (e, na fala informal, às vezes antes de plural) | Pelo sentido geral da frase |
+| *"that'll"*, *"it'll"* ou *"this'll"* | *that will*, *it will* ou *this will* | O som de *'ll* é bem discreto, mas vem sempre seguido de um verbo na forma base |
+| *"who's"* vs. *"whose"* | *who is* ou *who has* vs. pronome possessivo ("de quem") | *"[[Who's coming?::Quem está vindo?]]"* vs. *"[[Whose book is this?::De quem é este livro?]]"* |
+| *"'til"* ou *"till"* | *until* | *"[[Wait till Monday.::Espere até segunda-feira.]]"* |
+| *"'cause"* | *because* | *"[['Cause I was busy.::Porque eu estava ocupado.]]"* |
+| *"gotta"* | *have got to* (obrigação) **ou** *"got a"* (tenho ou consegui um) | *"[[I gotta go::Eu tenho que ir]]"* (obrigação) vs. *"[[I gotta new phone::Eu consegui um celular novo]]"* (equivale a *got a*) |
 
 ### 3.4 Números, datas e horas ditos rápido
 
-| Confusão | Diferença | Dica |
+Em avisos e conversas no campus, horários e números costumam decidir a questão. Ficar atento à **sílaba tônica** evita confundir dezenas parecidas.
+
+| Par ou expressão | Como diferenciar | Exemplo prático |
 |---|---|---|
-| **thirteen** vs. **thirty** (e todos os -teen/-ty) | -**teen**: tônica na 2ª sílaba, /n/ claro no fim. -**ty**: tônica na 1ª, fim reduzido (flap) | *"thir-**TEEN**"* vs. *"**THIR**-dy"* |
-| **a couple** | 2 (às vezes "poucos") | |
-| **a dozen** | 12 | |
-| **a quarter past / to** | :15 / :45 | *"quarter to five"* = 4:45 |
-| **half past** | :30 | *"half past nine"* = 9:30 |
-| **half an hour** / **an hour and a half** | 30 min / 90 min | |
-| **the 13th** vs. **the 30th** | ordinais também sofrem -teen/-ty (*thirTEENTH* × *THIRtieth*) | contexto do calendário |
-| **oh** em números | zero | *"room two-oh-four"* = 204 |
-| **fortnight** (britânico) | duas semanas | |
-| datas | mês-dia (EUA) ou dia-mês (RU) | *"March fifth"* / *"the fifth of March"* |
+| **[[thirteen::treze]]** vs. **[[thirty::trinta]]** (e os demais pares com *-teen* e *-ty*) | Em *-teen*, a sílaba forte é a 2ª e o /n/ final soa claro; em *-ty*, a sílaba forte é a 1ª e o final sai reduzido | *"thir-**TEEN**"* vs. *"**THIR**-dy"* |
+| **[[a couple::um par, dois]]** | 2 (ou, em tom informal, "alguns poucos") | *"[[a couple of days::dois dias, ou alguns dias]]"* |
+| **[[a dozen::uma dúzia]]** | 12 | *"[[a dozen copies::doze cópias]]"* |
+| **[[a quarter past::quinze minutos após a hora]]** ou **[[a quarter to::quinze minutos para a hora]]** | 15 minutos depois da hora cheia ou 15 minutos antes da próxima | *"[[quarter to five::quinze para as cinco]]"* equivale a 4:45 |
+| **[[half past::meia hora passada]]** | 30 minutos depois da hora cheia | *"[[half past nine::nove e meia]]"* equivale a 9:30 |
+| **[[half an hour::meia hora]]** vs. **[[an hour and a half::uma hora e meia]]** | 30 minutos vs. 90 minutos | *"[[in half an hour::em meia hora]]"* |
+| **[[the 13th::dia treze, décimo terceiro]]** vs. **[[the 30th::dia trinta, trigésimo]]** | Os ordinais seguem a mesma diferença de tônica entre *-teenth* e *-tieth* (*thirTEENTH* vs. *THIRtieth*) | Observe também o contexto do calendário |
+| **oh** em números | equivale ao algarismo zero | *"[[room two-oh-four::sala duzentos e quatro]]"* equivale a 204 |
+| **[[fortnight::quinzena]]** (uso britânico) | duas semanas (14 dias) | *"[[in a fortnight::daqui a duas semanas]]"* |
+| Datas | mês e dia (nos EUA) ou dia e mês (no Reino Unido) | *"[[March fifth::cinco de março]]"* ou *"[[the fifth of March::cinco de março]]"* |
 
 ### 3.5 Vocabulário de campus (os 41 termos que o teste usa)
 
-Conversation e Announcement acontecem quase sempre num contexto universitário americano. Não saber esses termos = perder o item.
+As tarefas de *Conversation* e *Announcement* acontecem quase sempre na rotina de uma universidade. Dominar esse **vocabulário de campus** permite que você entenda o cenário nos primeiros segundos, sem travar em termos administrativos.
 
-| Termo | Significado |
+| Termo | Significado no contexto universitário |
 |---|---|
-| **registrar('s office)** | secretaria acadêmica (matrículas, históricos) |
-| **transcript** | histórico escolar |
-| **syllabus** | plano de ensino / ementa da disciplina |
-| **office hours** | horário de atendimento do professor |
-| **prerequisite / prereq** | pré-requisito |
-| **waiver** | dispensa (de um requisito) |
-| **elective** | disciplina optativa |
-| **credit(s) / credit hours** | créditos |
-| **major / minor** | curso principal / segunda ênfase |
-| **declare a major** | oficializar o curso escolhido |
-| **the dean** | diretor(a) de faculdade |
-| **faculty** | corpo docente (não "faculdade": isso é *college/school*) |
-| **(academic) advisor** | orientador acadêmico |
-| **TA (teaching assistant)** | monitor / assistente de ensino |
-| **orientation** | recepção de calouros |
-| **the add/drop period** | período de ajuste de matrícula |
-| **audit a course** | assistir sem receber nota |
-| **an incomplete** | nota "incompleto" (trabalho pendente) |
-| **withdraw / drop a class** | trancar/desistir de uma disciplina |
-| **pass/fail** | aprovado/reprovado (sem nota numérica) |
-| **the curve** | ajuste de notas pela distribuição da turma |
-| **a make-up (exam/class)** | prova/aula de reposição |
-| **extension** | prorrogação de prazo |
-| **plagiarism / academic integrity** | plágio / integridade acadêmica |
-| **lecture hall** | anfiteatro |
-| **seminar** | disciplina em formato de discussão, turma pequena |
-| **lab section** | turma prática (laboratório) |
-| **thesis / dissertation** | tese / dissertação |
-| **defense** | banca / defesa |
-| **stacks** (na biblioteca) | acervo (as estantes) |
-| **reserve (desk)** | acervo de reserva (material com empréstimo curto) |
-| **overdue** | em atraso (devolução) |
-| **financial aid** | auxílio financeiro / bolsa |
-| **work-study** | bolsa-trabalho |
-| **tuition** | mensalidade / anuidade |
-| **the bursar** | setor financeiro (pagamentos) |
-| **residence hall / dorm** | alojamento estudantil |
-| **RA (resident assistant)** | monitor de alojamento |
-| **meal plan** | plano de refeições |
-| **commencement** | formatura (cerimônia) |
-| **the quad** | pátio central do campus |
+| **[[registrar::secretaria acadêmica]]** ou **[[registrar's office::secretaria acadêmica]]** | secretaria acadêmica (cuidando de matrículas e históricos) |
+| **[[transcript::histórico escolar]]** | histórico escolar oficial |
+| **[[syllabus::ementa ou cronograma da disciplina]]** | plano de ensino e cronograma da disciplina |
+| **[[office hours::horário de atendimento do professor]]** | horário de atendimento do professor aos alunos |
+| **[[prerequisite::pré-requisito]]** ou **[[prereq::pré-requisito]]** | disciplina exigida como pré-requisito |
+| **[[waiver::dispensa oficial de exigência]]** | dispensa formal de um requisito |
+| **[[elective::disciplina optativa]]** | disciplina optativa |
+| **[[credits::créditos acadêmicos]]** ou **[[credit hours::horas de crédito]]** | créditos da disciplina |
+| **[[major::curso ou habilitação principal]]** e **[[minor::segunda área de concentração]]** | área principal de formação e segunda ênfase |
+| **[[declare a major::oficializar a escolha do curso principal]]** | oficializar a área principal escolhida |
+| **[[the dean::diretor ou reitor de faculdade]]** | diretor ou decano de uma faculdade |
+| **[[faculty::corpo docente, professores]]** | corpo docente (e não "faculdade", que em inglês é *[[college::faculdade]]* ou *[[school::escola ou faculdade]]*) |
+| **[[academic advisor::orientador acadêmico]]** | orientador acadêmico |
+| **[[TA::monitor, assistente de ensino]]** (*[[teaching assistant::assistente de ensino]]*) | monitor ou assistente de ensino |
+| **[[orientation::semana de recepção de calouros]]** | recepção e integração de calouros |
+| **[[the add/drop period::período de ajuste de matrículas]]** | período inicial para incluir ou cancelar disciplinas |
+| **[[audit a course::assistir a uma disciplina como ouvinte]]** | cursar como ouvinte, sem receber nota nem crédito |
+| **[[an incomplete::menção de disciplina incompleta]]** | registro temporário de pendência para entregar trabalho depois |
+| **[[withdraw::trancar uma disciplina]]** ou **[[drop a class::cancelar uma disciplina]]** | trancar ou desistir de uma matéria |
+| **[[pass/fail::sistema de aprovação sem nota numérica]]** | avaliação apenas como aprovado ou reprovado, sem nota numérica |
+| **[[the curve::ajuste estatístico de notas da turma]]** | ajuste das notas de acordo com o desempenho geral da turma |
+| **[[a make-up exam::prova substitutiva ou de reposição]]** | prova ou aula de reposição |
+| **[[extension::prorrogação de prazo]]** | prorrogação do prazo de entrega |
+| **[[plagiarism::plágio]]** e **[[academic integrity::integridade acadêmica]]** | plágio e normas de integridade acadêmica |
+| **[[lecture hall::auditório ou anfiteatro de aulas]]** | anfiteatro para aulas com turmas grandes |
+| **[[seminar::seminário, disciplina de discussão]]** | disciplina em formato de debate, com turma pequena |
+| **[[lab section::turma prática de laboratório]]** | aula prática de laboratório ligada à disciplina |
+| **[[thesis::tese ou monografia]]** ou **[[dissertation::tese de doutorado ou dissertação]]** | tese ou dissertação acadêmica |
+| **[[defense::defesa perante banca]]** | defesa do trabalho diante da banca |
+| **[[stacks::estantes do acervo geral da biblioteca]]** | estantes do acervo geral da biblioteca |
+| **[[reserve desk::balcão de obras de consulta controlada]]** | setor de reserva (livros com empréstimo curto, geralmente para uso no local) |
+| **[[overdue::em atraso]]** | com devolução ou entrega em atraso |
+| **[[financial aid::auxílio financeiro ou bolsa]]** | auxílio financeiro estudantil ou bolsa |
+| **[[work-study::programa de bolsa-trabalho no campus]]** | programa de bolsa-trabalho dentro da universidade |
+| **[[tuition::mensalidade ou anuidade escolar]]** | valor das mensalidades ou da anuidade do curso |
+| **[[the bursar::tesouraria ou setor financeiro da universidade]]** | setor financeiro responsável pelos pagamentos |
+| **[[residence hall::alojamento estudantil]]** ou **[[dorm::dormitório universitário]]** | alojamento estudantil no campus |
+| **[[RA::monitor de alojamento]]** (*[[resident assistant::assistente de residência estudantil]]*) | estudante monitor do alojamento |
+| **[[meal plan::plano de refeições do refeitório]]** | plano de refeições no campus |
+| **[[commencement::cerimônia de formatura]]** | cerimônia de colação de grau e formatura |
+| **[[the quad::pátio central do campus]]** | pátio aberto central entre os prédios do campus |
 
-### 3.6 Idioms e phrasal verbs que o teste adora (30)
+### 3.6 Expressões idiomáticas e phrasal verbs frequentes na prova (30)
 
-Alvo direto de questões de vocabulário/idiom in context no Academic Talk e, às vezes, na Conversation.
+As [[idioms::expressões idiomáticas]] e os [[phrasal verbs::verbos compostos por verbo e partícula]] abaixo aparecem com frequência como **alvo de questão** tanto nas palestras de *Academic Talk* quanto nos diálogos de *Conversation*.
 
-| Expressão | Sentido |
+| Expressão | Sentido natural |
 |---|---|
-| **back to square one** | de volta ao ponto de partida, sem progresso |
-| **the jury's still out (on X)** | ainda não há conclusão sobre X |
-| **a long shot** | tentativa com pouca chance de dar certo |
-| **get the ball rolling** | começar / dar o pontapé inicial |
-| **be on the same page** | estar de acordo / entender do mesmo jeito |
-| **cut corners** | economizar fazendo malfeito |
-| **bite the bullet** | encarar algo desagradável de uma vez |
-| **hit the books** | estudar firme |
-| **ace a test** / **bomb a test** | tirar nota alta / ir muito mal |
-| **pull an all-nighter** | virar a noite estudando |
-| **be swamped / snowed under** | estar atolado de trabalho |
-| **a piece of cake** | muito fácil |
-| **wrap (something) up** | finalizar |
-| **drop by / stop by** | dar uma passada (visita rápida) |
-| **put (something) off** | adiar |
-| **look into (something)** | investigar / verificar |
-| **run (something) by (someone)** | consultar alguém sobre algo |
-| **count on (someone)** | contar com alguém |
-| **get up to speed (on X)** | se atualizar sobre X |
-| **be up in the air** | ainda indefinido |
-| **iron out (the details)** | acertar os últimos detalhes |
-| **touch base (with someone)** | dar um retorno rápido / alinhar |
-| **on second thought** | pensando bem (mudando de ideia) |
-| **that's a stretch** | isso é forçar a barra / exagero |
-| **take (something) with a grain of salt** | não levar totalmente a sério |
-| **the bottom line** | o essencial / a conclusão prática |
-| **in a nutshell** | resumindo |
-| **not add up** | não fazer sentido |
-| **a mixed bag** | uma coisa com prós e contras |
-| **par for the course** | dentro do esperado (geralmente algo chato) |
+| **[[back to square one::de volta à estaca zero]]** | de volta ao ponto de partida, tendo de recomeçar |
+| **[[the jury's still out::ainda não há um veredito]]** | a questão ainda está em aberto, sem conclusão definitiva |
+| **[[a long shot::uma tentativa com pouca chance]]** | tentativa difícil, com baixa probabilidade de dar certo |
+| **[[get the ball rolling::dar o pontapé inicial]]** | começar uma atividade ou colocar um projeto em andamento |
+| **[[be on the same page::estar alinhado, ter o mesmo entendimento]]** | estar de acordo e entender a situação da mesma forma |
+| **[[cut corners::fazer de qualquer jeito para economizar]]** | economizar tempo ou dinheiro pulando etapas importantes |
+| **[[bite the bullet::encarar uma situação difícil de frente]]** | enfrentar de uma vez algo necessário, mas desagradável |
+| **[[hit the books::estudar com afinco]]** | mergulhar nos estudos com seriedade |
+| **[[ace a test::gabaritar ou ir muito bem na prova]]** vs. **[[bomb a test::ir muito mal na prova]]** | tirar uma nota excelente vs. ir muito mal numa avaliação |
+| **[[pull an all-nighter::virar a noite estudando]]** | passar a madrugada inteira acordado estudando ou trabalhando |
+| **[[be swamped::estar atolado de tarefas]]** ou **[[be snowed under::estar sobrecarregado de trabalho]]** | estar cheio de trabalho acumulado |
+| **[[a piece of cake::muito fácil, moleza]]** | algo muito simples de fazer |
+| **[[wrap something up::concluir, encerrar]]** | finalizar uma tarefa ou reunião |
+| **[[drop by::dar uma passada rápida]]** ou **[[stop by::passar rapidamente em algum lugar]]** | fazer uma visita rápida sem muita formalidade |
+| **[[put something off::adiar, deixar para depois]]** | adiar uma tarefa ou compromisso |
+| **[[look into something::investigar, averiguar]]** | verificar ou pesquisar mais a fundo um problema |
+| **[[run something by someone::mostrar uma ideia a alguém para ouvir opinião]]** | consultar alguém sobre um plano ou trabalho antes de decidir |
+| **[[count on someone::contar com alguém]]** | confiar no apoio de alguém |
+| **[[get up to speed::atualizar-se, pôr-se a par]]** | colocar-se em dia sobre um assunto ou projeto |
+| **[[be up in the air::estar indefinido, em aberto]]** | continuar sem definição até o momento |
+| **[[iron out the details::acertar os detalhes finais]]** | resolver os últimos ajustes de um plano |
+| **[[touch base with someone::fazer um contato rápido para alinhar]]** | conversar rapidamente com alguém para alinhar informações |
+| **[[on second thought::pensando melhor]]** | mudando de ideia depois de refletir melhor |
+| **[[that's a stretch::isso é forçar a barra, é um exagero]]** | isso é um exagero ou vai além do que as provas permitem dizer |
+| **[[take something with a grain of salt::receber uma informação com cautela]]** | ouvir uma afirmação com certa reserva, sem acreditar de imediato |
+| **[[the bottom line::o ponto essencial, o resumo prático]]** | o fator decisivo ou a conclusão prática |
+| **[[in a nutshell::em resumo, em poucas palavras]]** | de forma bem resumida |
+| **[[not add up::não fazer sentido, não fechar a conta]]** | parecer incoerente ou mal explicado |
+| **[[a mixed bag::um conjunto com pontos bons e ruins]]** | algo que mistura vantagens e desvantagens |
+| **[[par for the course::dentro do esperado para a situação]]** | exatamente o que já se esperava acontecer naquele contexto |
 
-### 3.7 Linguagem funcional: como o inglês concorda, discorda, hesita, se corrige
+### 3.7 Linguagem funcional: como o inglês concorda, discorda, hesita e se corrige
 
-Itens de *function* e *attitude* dependem de você reconhecer estas fórmulas.
+As questões sobre [[function::função comunicativa]] e [[attitude::atitude ou tom]] avaliam se você percebe a intenção real de quem fala. A tabela abaixo reúne as **expressões funcionais** mais usadas no exame para concordar, discordar com educação, hesitar ou mudar de rota.
 
-| Função | Fórmulas |
+| Função comunicativa | Expressões típicas |
 |---|---|
-| **Concordar enfaticamente** | *"Absolutely.", "Exactly.", "I couldn't agree more.", "Tell me about it.", "You can say that again.", "No doubt about it."* |
-| **Concordar com ressalva** | *"I see your point, but...", "True, though...", "Fair enough, still..."* |
-| **Discordar educadamente** | *"I'm not so sure.", "I see it a little differently.", "That's one way to look at it.", "I'd push back on that a bit."* |
-| **Hesitar / suavizar** | *"sort of", "kind of", "I guess", "more or less", "if that makes sense", "I mean..."* |
-| **Corrigir-se** | *"Actually, no: ", "Wait, I mean...", "Scratch that.", "Let me rephrase."* |
-| **Expressar relutância** | *"I suppose so.", "If you say so.", "I don't see why not.", "Well... okay."*: o tom carrega mais sentido que as palavras |
-| **Surpresa / interesse** | *"No way!", "Really?", "Huh: I hadn't thought of that.", "That's interesting."* |
-| **Duvidar / minimizar** | *"That's a stretch.", "I'll believe it when I see it.", "We'll see.", "Take it with a grain of salt."* |
-| **Introduzir uma sugestão** | *"Have you considered...?", "What if you...?", "You might want to...", "It couldn't hurt to..."* |
-| **Sinalizar que vai ao ponto** | *"The bottom line is...", "Long story short...", "In a nutshell..."* |
+| **Concordar com ênfase** | *"[[Absolutely.::Com certeza.]]"*, *"[[Exactly.::Exatamente.]]"*, *"[[I couldn't agree more.::Concordo plenamente.]]"*, *"[[Tell me about it.::Nem me fale, concordo totalmente.]]"*, *"[[You can say that again.::Pode crer, tem toda razão.]]"*, *"[[No doubt about it.::Sem dúvida nenhuma.]]"* |
+| **Concordar com ressalva** | *"[[I see your point, but...::Entendo o seu ponto, mas...]]"*, *"[[True, though...::É verdade, embora...]]"*, *"[[Fair enough, still...::Justo, mas ainda assim...]]"* |
+| **Discordar com educação** | *"[[I'm not so sure.::Não tenho tanta certeza.]]"*, *"[[I see it a little differently.::Eu vejo isso de um jeito um pouco diferente.]]"*, *"[[That's one way to look at it.::Essa é uma forma de ver a questão.]]"*, *"[[I'd push back on that a bit.::Eu discordaria um pouco desse ponto.]]"* |
+| **Hesitar ou suavizar** | *"[[sort of::meio que]]"*, *"[[kind of::um pouco, meio]]"*, *"[[I guess::acho que]]"*, *"[[more or less::mais ou menos]]"*, *"[[if that makes sense::se é que isso faz sentido]]"*, *"[[I mean...::quero dizer...]]"* |
+| **Corrigir a própria fala** | *"[[Actually, no::Na verdade, não]]"*, *"[[Wait, I mean...::Espera, quero dizer...]]"*, *"[[Scratch that.::Esqueça o que eu disse.]]"*, *"[[Let me rephrase.::Deixe-me dizer de outro jeito.]]"* |
+| **Demonstrar relutância** | *"[[I suppose so.::Suponho que sim.]]"*, *"[[If you say so.::Se você está dizendo.]]"*, *"[[I don't see why not.::Não vejo por que não.]]"*, *"[[Well... okay.::Bem... está bom.]]"* (aqui a entonação diz mais do que as palavras) |
+| **Mostrar surpresa ou interesse** | *"[[No way!::Não acredito!]]"*, *"[[Really?::Sério?]]"*, *"[[Huh, I hadn't thought of that.::Puxa, eu não tinha pensado nisso.]]"*, *"[[That's interesting.::Isso é interessante.]]"* |
+| **Duvidar ou minimizar** | *"[[That's a stretch.::Isso é um exagero.]]"*, *"[[I'll believe it when I see it.::Só acredito vendo.]]"*, *"[[We'll see.::Vamos ver.]]"*, *"[[Take it with a grain of salt.::Não leve tão ao pé da letra.]]"* |
+| **Fazer uma sugestão** | *"[[Have you considered...?::Você já pensou em...?]]"*, *"[[What if you...?::E se você...?]]"*, *"[[You might want to...::Talvez valha a pena você...]]"*, *"[[It couldn't hurt to...::Não custa nada...]]"* |
+| **Ir direto ao ponto** | *"[[The bottom line is...::O ponto essencial é...]]"*, *"[[Long story short...::Resumindo a história...]]"*, *"[[In a nutshell...::Em poucas palavras...]]"* |
 
 ### 3.8 Símbolos de anotação rápida
 
-Anotar palavra por palavra é lento demais. Use símbolos.
+Tentar anotar palavras inteiras enquanto o áudio corre tira a sua concentração do que vem a seguir. Usar **símbolos** curtos permite registrar a lógica da fala sem perder o fio da escuta.
 
 | Símbolo | Significado | | Símbolo | Significado |
 |---|---|---|---|---|
-| **→** | leva a / causa / então | | **↑ ↓** | aumenta / diminui |
-| **≠** | ao contrário / diferente de | | **∴** | portanto |
-| **=** | ou seja / significa | | **?** | não entendi / verificar |
-| **+ / −** | vantagem / desvantagem; atitude positiva/negativa | | **★ ou \*** | ponto enfatizado pelo professor |
-| **eg** | exemplo | | **cf** | comparar com |
-| **b/c** | porque | | **w/ w/o** | com / sem |
-| **1° 2° 3°** | primeiro, segundo... (numere os pontos) | | **~** | aproximadamente |
+| **→** | leva a, causa ou então | | **↑ ↓** | aumenta ou diminui |
+| **≠** | ao contrário ou diferente de | | **∴** | portanto |
+| **=** | ou seja, significa | | **?** | dúvida ou ponto a confirmar |
+| **+ e −** | vantagem ou desvantagem; atitude positiva ou negativa | | **★ ou \*** | ponto destacado pelo professor |
+| **eg** | por exemplo | | **cf** | comparar com |
+| **b/c** | porque (*[[because::porque]]*) | | **w/ e w/o** | com (*[[with::com]]*) e sem (*[[without::sem]]*) |
+| **1° 2° 3°** | primeiro, segundo e seguintes (para numerar pontos) | | **~** | aproximadamente |
 
 ---
 
-## PARTE 4: EXEMPLO RESOLVIDO
+## Parte 4: Exemplo resolvido
 
-### 4.1 Listen and Choose a Response: o raciocínio narrado
+### 4.1 Listen and Choose a Response: o raciocínio passo a passo
 
 **Fala:** *"You're not seriously thinking of driving downtown on game day, are you?"*
 
@@ -407,51 +403,43 @@ Anotar palavra por palavra é lento demais. Use símbolos.
 - (C) *"I drove downtown last weekend."*
 - (D) *"I don't really follow that team."*
 
-> **Passo 1: o que é isto?** Uma **pergunta retórica negativa** (*"You're not
-> ... are you?"*), que funciona como um **alerta educado**, não um pedido de
-> informação: "isso é má ideia por causa do trânsito no dia do jogo".
->
-> **Passo 2: qual seria a resposta natural?** Reconhecer o alerta e ajustar o
-> plano. É exatamente **(B)**: *"Good point · I'll take the train instead."*
->
-> **Passo 3 · por que as outras falham:**
->
-> - (A) responde a uma pergunta que **não foi feita** (o horário do jogo).
->   **WRONG FOCUS.**
-> - (C) usa as palavras *"drove downtown"* do original, mas não responde ao
->   alerta: reforça o comportamento problemático. **CORRECT WORDS, WRONG
->   MEANING.**
-> - (D) muda de assunto para a torcida pelo time. **OUT OF SCOPE.**
->
-> **Resposta: (B).** O erro típico do brasileiro aqui é ouvir *"driving
-> downtown"* e escolher (C) por reconhecimento de palavras, sem processar que a
-> frase era um **alerta**, não uma pergunta.
+No **Passo 1**, identifique o papel comunicativo da fala. Trata-se de uma pergunta retórica negativa (*"[[You're not seriously thinking of driving downtown on game day, are you?::Você não está pensando seriamente em ir de carro para o centro em dia de jogo, está?]]"*), que funciona como um alerta educado sobre o trânsito pesado do dia do jogo, e não como um pedido literal de informação.
 
-### 4.2 Academic Talk: 3 tipos de questão narrados
+No **Passo 2**, pense na reação mais natural a esse aviso. Quem recebe o alerta reconhece o problema e ajusta o plano, exatamente como faz a alternativa (B) ao responder *"[[Good point, I'll take the train instead.::Bem pensado, vou pegar o trem em vez disso.]]"*.
+
+No **Passo 3**, repare no motivo pelo qual as outras opções caem nos padrões clássicos de distrator:
+
+- **(A):** informa o horário do jogo, respondendo a uma pergunta que não foi feita ([[WRONG FOCUS::Foco errado]]).
+- **(C):** repete as palavras *"[[drove downtown::dirigiu até o centro]]"*, mas fala do fim de semana passado e não reage ao alerta ([[CORRECT WORDS, WRONG MEANING::Palavras certas, sentido errado]]).
+- **(D):** puxa o assunto para torcer ou não pelo time, saindo da situação proposta ([[OUT OF SCOPE::Fora do escopo]]).
+
+> **Erro comum:** A resposta certa é (B). Um deslize frequente é ouvir *"[[driving downtown::dirigir até o centro]]"* e marcar (C) pela repetição das palavras, sem reparar que a frase original era um aviso amigável para evitar o carro naquele dia.
+
+### 4.2 Academic Talk: 3 tipos de questão comentados
 
 **Trecho:** *"...and here's where it gets interesting. You'd expect the older, more established firms to adopt the new technology first — they have the money, after all. But study after study finds the opposite: it's the smaller, newer companies that move first, and the big firms follow only once the technology is proven. Why? Part of it is that a large firm has more to lose. Its existing operations already work; a failed experiment disrupts something profitable. A startup, by contrast, has little to disrupt."*
 
-**Pergunta A · Detail:** *"According to the professor, which firms typically adopt a new technology first?"* (A) Older, more established firms, because they have more money. (B) Smaller, newer firms. (C) Firms of all sizes at roughly the same time. (D) Only firms that have already failed once.
+**Pergunta A (Detail):** *"According to the professor, which firms typically adopt a new technology first?"* (A) Older, more established firms, because they have more money. (B) Smaller, newer firms. (C) Firms of all sizes at roughly the same time. (D) Only firms that have already failed once.
 
-> O professor diz explicitamente: *"it's the smaller, newer companies that move first."* → **(B)**. (A) é o que você *"esperaria"*, e o professor usa isso como contraste (*"You'd expect... But..."*). **OPPOSITE.** Cuidado com distratores que repetem a parte "esperada" da frase.
+> **Exemplo:** O professor afirma de forma explícita que *"[[it's the smaller, newer companies that move first::são as empresas menores e mais novas que se movem primeiro]]"*, confirmando a alternativa (B). A opção (A) repete o que o senso comum esperaria (*"[[You'd expect... But...::Você esperaria... Mas...]]"*), um caso típico de [[OPPOSITE::Sentido oposto]] feito para pegar quem perde o contraste do *but*.
 
-**Pergunta B · Organization:** *"Why does the professor say that a large firm 'has more to lose'?"* (A) To criticize large firms for being too cautious. (B) To explain why established firms adopt new technology later. (C) To introduce a new, unrelated topic about company finances. (D) To argue that startups always outperform large firms.
+**Pergunta B (Organization):** *"Why does the professor say that a large firm 'has more to lose'?"* (A) To criticize large firms for being too cautious. (B) To explain why established firms adopt new technology later. (C) To introduce a new, unrelated topic about company finances. (D) To argue that startups always outperform large firms.
 
-> A frase vem logo depois de *"Why?"*: é a **explicação** do padrão que ele acabou de descrever. Função estrutural = dar a causa. → **(B)**. (A) confunde explicar com criticar; (D) é **EXTREME** (*always*).
+> **Exemplo:** Essa frase vem imediatamente após a pergunta *"[[Why?::Por quê?]]"* e apresenta a causa do comportamento descrito antes, o que aponta para a alternativa (B). A opção (A) confunde uma explicação objetiva com uma crítica, e a (D) exagera com a palavra *[[always::sempre]]* ([[EXTREME::Extremo]]).
 
-**Pergunta C · Inference:** *"What can be inferred about a startup's decision to adopt an unproven technology?"* (A) It is guaranteed to succeed. (B) It carries less risk to existing operations than the same decision would for a large firm. (C) It is never influenced by cost. (D) Startups are legally required to innovate.
+**Pergunta C (Inference):** *"What can be inferred about a startup's decision to adopt an unproven technology?"* (A) It is guaranteed to succeed. (B) It carries less risk to existing operations than the same decision would for a large firm. (C) It is never influenced by cost. (D) Startups are legally required to innovate.
 
-> O professor diz que a startup *"has little to disrupt."* Um passo lógico: para a startup, o mesmo movimento arriscado **ameaça menos** o que já existe. → **(B)**. (A) e (C) são **EXTREME**; (D) é **OUT OF SCOPE**.
-
----
-
-## PARTE 5: ACTION DRILLS
-
-> Cronometre. Responda **antes** do gabarito (Parte 6). Para máximo efeito, peça a alguém para ler as transcrições em voz alta, ou use um leitor texto-para-fala: ouvir, não ler.
+> **Exemplo:** Como o professor diz que a *startup* *"[[has little to disrupt::tem pouco a desorganizar]]"*, concluímos com um único passo lógico que a mesma tentativa envolve menos risco para as operações existentes do que numa grande empresa, chegando à alternativa (B). As opções (A) e (C) são extremas (EXTREME), e a (D) foge do tema (OUT OF SCOPE).
 
 ---
 
-### GRUPO A: LISTEN AND CHOOSE A RESPONSE (12 itens · alvo: 12 s/item)
+## Parte 5: Exercícios
+
+> **Dica:** Faça os exercícios marcando o tempo e responda a todos antes de consultar o gabarito na Parte 6. Para treinar a escuta de verdade, peça a alguém para ler as transcrições em voz alta ou use um leitor de texto em voz alta, ouvindo sem acompanhar pelo texto.
+
+---
+
+### Grupo A: Listen and Choose a Response (12 itens, meta de 12 s por item)
 
 *Escolha a resposta mais natural e pragmaticamente adequada.*
 
@@ -481,11 +469,11 @@ Anotar palavra por palavra é lento demais. Use símbolos.
 
 ---
 
-### GRUPO B: LISTEN TO A CONVERSATION (3 diálogos · Escala 1)
+### Grupo B: Listen to a Conversation (3 diálogos, Escala 1)
 
 ---
 
-#### DRILL B1: Advising Office · alvo: 3 min
+#### Exercício B1: Advising Office (meta de 3 min)
 
 *Narrator: Listen to a conversation between a student and an academic advisor.*
 
@@ -511,7 +499,7 @@ Anotar palavra por palavra é lento demais. Use símbolos.
 
 ---
 
-#### DRILL B2: Library Reserve Desk · alvo: 3 min
+#### Exercício B2: Library Reserve Desk (meta de 3 min)
 
 *Narrator: Listen to a conversation between a student and a librarian.*
 
@@ -535,7 +523,7 @@ Anotar palavra por palavra é lento demais. Use símbolos.
 
 ---
 
-#### DRILL B3: After Class · alvo: 3 min
+#### Exercício B3: After Class (meta de 3 min)
 
 *Narrator: Listen to a conversation between a student and a professor.*
 
@@ -561,11 +549,11 @@ Anotar palavra por palavra é lento demais. Use símbolos.
 
 ---
 
-### GRUPO C: LISTEN TO AN ANNOUNCEMENT (3 anúncios · checklist auditiva)
+### Grupo C: Listen to an Announcement (3 anúncios, lista de checagem auditiva)
 
 ---
 
-#### DRILL C1: Library Services · alvo: 2 min
+#### Exercício C1: Library Services (meta de 2 min)
 
 *Narrator: Listen to an announcement about a change to library services.*
 
@@ -577,7 +565,7 @@ Anotar palavra por palavra é lento demais. Use símbolos.
 
 ---
 
-#### DRILL C2: Course Registration · alvo: 2 min
+#### Exercício C2: Course Registration (meta de 2 min)
 
 *Narrator: Listen to an announcement about course registration.*
 
@@ -589,7 +577,7 @@ Anotar palavra por palavra é lento demais. Use símbolos.
 
 ---
 
-#### DRILL C3: Campus Event · alvo: 2 min
+#### Exercício C3: Campus Event (meta de 2 min)
 
 *Narrator: Listen to an announcement about a career event.*
 
@@ -601,11 +589,11 @@ Anotar palavra por palavra é lento demais. Use símbolos.
 
 ---
 
-### GRUPO D: LISTEN TO AN ACADEMIC TALK (3 palestras · Escala 2)
+### Grupo D: Listen to an Academic Talk (3 palestras, Escala 2)
 
 ---
 
-#### DRILL D1: Psicologia · alvo: 4 min
+#### Exercício D1: Psicologia (meta de 4 min)
 
 *Narrator: Listen to part of a talk in a psychology class.*
 
@@ -627,7 +615,7 @@ Now, this doesn't mean choice is bad: a complete absence of options is its own p
 
 ---
 
-#### DRILL D2: Biologia · alvo: 4 min
+#### Exercício D2: Biologia (meta de 4 min)
 
 *Narrator: Listen to part of a talk in a biology class.*
 
@@ -649,7 +637,7 @@ Now, a word of caution. This work has captured the public imagination, and some 
 
 ---
 
-#### DRILL D3: História da tecnologia · alvo: 4 min
+#### Exercício D3: História da tecnologia (meta de 4 min)
 
 *Narrator: Listen to part of a talk in a history of technology class.*
 
@@ -671,92 +659,92 @@ This is a textbook case of what economists call **path dependence**, or sometime
 
 ---
 
-## PARTE 6: GABARITO COMENTADO
+## Parte 6: Gabarito comentado
 
-### GRUPO A: Listen and Choose a Response
+### Grupo A: Listen and Choose a Response
 
-| Item | Resp. | Por quê / padrão do distrator |
+| Item | Resp. | Por quê e padrão do distrator |
 |---|---|---|
-| A1 | **B** | O falante sinaliza falta de tempo; a resposta natural propõe a ação consequente. (A) reaproveita *lunch* sem reagir à falta de tempo: **CORRECT WORDS, WRONG MEANING**; (C)(D) ignoram a urgência: **WRONG FOCUS**. |
-| A2 | **A** | Pedido direto → resposta direta de concessão + plano. (B) é gentil mas não responde ao pedido; (C) reaproveita *borrow* e (D) reaproveita *Tuesday*: **CORRECT WORDS, WRONG MEANING**. |
-| A3 | **B** | Insegurança sobre o rascunho → resposta busca o problema específico. (A) reaproveita *ready* sem tratar da preocupação: **CORRECT WORDS, WRONG MEANING**; (C)(D) ignoram a preocupação. |
-| A4 | **A** | Pergunta retórica = alerta educado sobre ir a pé com esse tempo. A resposta natural revisa o plano. (B) reaproveita *weather*: **CORRECT WORDS, WRONG MEANING**; (C)(D) falam de outro momento e ignoram o alerta. |
-| A5 | **B** | Informação nova (mudança de horário) → interesse + pedido de detalhe. (A)(D) reaproveitam o som de *registrar* em *register* (matricular-se), mas não reagem à notícia: **CORRECT WORDS, WRONG MEANING**. (C) dá a localização do escritório, que ninguém perguntou: **WRONG FOCUS**. |
-| A6 | **B** | *"run X by me"* = me mostrar antes. Resposta natural marca um horário. (A) toma *"run"* ao pé da letra: **CORRECT WORDS, WRONG MEANING**. (C) muda o foco; (D) reaproveita *presentation* sem responder ao pedido. |
-| A7 | **A** | Divergência sobre a data → confirmar juntos, checar o syllabus. (B) muda o foco (localização); (C)(D) ignoram a divergência. |
-| A8 | **B** | Pergunta de preferência (primeiro ou último) → escolher e justificar. (A)(C)(D) não respondem à escolha oferecida. |
-| A9 | **B** | Reclamação sobre a demora → *"Tell me about it"* concorda enfaticamente + acrescenta. (A)(C)(D) reaproveitam *bus*/*left* sem reagir à reclamação. |
-| A10 | **B** | Notícia incerta (*"might cancel"*) → pedir esclarecimento sobre o motivo/certeza. (A)(C)(D) desviam. |
-| A11 | **B** | Pergunta sobre como foi a entrevista → dar o resultado + próximo passo. (A) responde sobre horário; (C)(D) generalizam/desviam. |
-| A12 | **B** | Dúvida + autodepreciação → encorajamento. (A)(C)(D) desviam para custo, experiência passada e calendário. |
+| A1 | **B** | Quem fala avisa que ficou sem tempo para almoçar antes do seminário, e a resposta natural propõe ir direto para lá. A opção (A) repete *[[lunch::almoço]]* sem reagir à falta de tempo ([[CORRECT WORDS, WRONG MEANING::Palavras certas, sentido errado]]), enquanto (C) e (D) ignoram a urgência do momento ([[WRONG FOCUS::Foco errado]]). |
+| A2 | **A** | Um pedido direto de notas de aula pede uma resposta direta aceitando e combinando o envio. A opção (B) é simpática, mas não responde ao pedido; já (C) repete *[[borrow::pegar emprestado]]* e (D) repete *[[Tuesday::terça-feira]]* fora de contexto (CORRECT WORDS, WRONG MEANING). |
+| A3 | **B** | Diante da insegurança sobre o rascunho (*[[draft::rascunho]]*), a reação natural é perguntar o que ainda falta ajustar. A opção (A) repete *[[ready::pronto]]* falando da impressora (CORRECT WORDS, WRONG MEANING), e as opções (C) e (D) não tratam da dúvida apresentada. |
+| A4 | **A** | A pergunta retórica funciona como um alerta educado sobre caminhar com aquele tempo ruim, e a resposta natural ajusta o plano para ir de ônibus. A opção (B) repete *[[weather::tempo, clima]]* (CORRECT WORDS, WRONG MEANING), enquanto (C) e (D) falam do passado e ignoram o aviso. |
+| A5 | **B** | Ao ouvir a novidade sobre a mudança de horário da secretaria, o interlocutor demonstra interesse e pergunta pelo novo expediente. As opções (A) e (D) aproveitam a semelhança sonora entre *[[registrar::secretaria acadêmica]]* e *[[register::matricular-se]]* (CORRECT WORDS, WRONG MEANING), e a (C) informa o andar sem ninguém ter perguntado (WRONG FOCUS). |
+| A6 | **B** | A expressão *"[[run your presentation by me::mostrar sua apresentação para mim antes]]"* pede para treinar ou revisar junto, então marcar um horário é a reação natural. A opção (A) interpreta *run* no sentido literal de correr (CORRECT WORDS, WRONG MEANING), a (C) muda o foco e a (D) repete *presentation* sem responder ao pedido. |
+| A7 | **A** | Diante da dúvida sobre a data de entrega do relatório, o colega concorda com a surpresa e propõe conferir o *[[syllabus::cronograma da disciplina]]*. A opção (B) fala da localização do laboratório, e as opções (C) e (D) não resolvem o desencontro sobre o prazo. |
+| A8 | **B** | A pergunta oferece uma escolha entre apresentar primeiro ou por último, e a resposta escolhe uma opção justificando o motivo. As alternativas (A), (C) e (D) repetem palavras da frase sem fazer a escolha pedida. |
+| A9 | **B** | Diante da reclamação sobre o atraso do ônibus, *"[[Tell me about it::Nem me fale, concordo totalmente]]"* concorda com ênfase e lamenta andar no limite do horário (*"[[cutting it this close::chegar tão em cima da hora]]"*). As opções (A), (C) e (D) repetem *bus* ou *left* sem reagir à reclamação. |
+| A10 | **B** | Como a notícia traz incerteza (*"[[might cancel::talvez cancele]]"*), a resposta natural busca saber o motivo ou confirmar se é apenas uma possibilidade. As alternativas (A), (C) e (D) desviam do ponto principal. |
+| A11 | **B** | A pergunta quer saber como foi a entrevista que já aconteceu, e a resposta conta o resultado e o próximo passo. A opção (A) trata a entrevista como futura, e as opções (C) e (D) desviam para comentários gerais. |
+| A12 | **B** | Quando alguém demonstra dúvida e insegurança sobre se inscrever, a resposta natural é dar incentivo (*"[[I'd go for it::Eu tentaria, iria em frente]]"*). As opções (A), (C) e (D) desviam para taxa, passado ou calendário. |
 
-### GRUPO B: Listen to a Conversation
+### Grupo B: Listen to a Conversation
 
-**B1.1: (B).** A estudante quer *"switch one of my electives"*. (A) sem conflito de horário; (C) já está matriculada; (D) **OUT OF SCOPE**.
-**B1.2: (C).** A pergunta avalia se a professora poderia dar um *waiver*. (A)(B)(D) sem base.
+**B1.1: (B).** A estudante diz logo na abertura que quer *"[[switching one of my electives::trocar uma das minhas disciplinas optativas]]"*. A opção (A) fala em conflito de horário que não existe, a (C) diz que é a primeira matrícula e a (D) foge do assunto ([[OUT OF SCOPE::Fora do escopo]]).
+**B1.2: (C).** O orientador faz essa pergunta para avaliar se a professora teria motivo concreto para conceder a dispensa do pré-requisito (*[[waiver::dispensa oficial de exigência]]*). As opções (A), (B) e (D) não têm apoio no diálogo.
 
-**B2.1: (B).** *"two-hour loans, in-library use only... can't take them out of the building."* (A) descreve o exemplar da circulação; (C)(D) não ditos.
-**B2.2: (B).** *"I'll check the stacks first."* Inferência direta. (A) só se não achar; (C)(D) contradizem a intenção declarada.
+**B2.1: (B).** A bibliotecária explica que os livros da reserva têm *"[[two-hour loans, in-library use only::empréstimos de duas horas, apenas para uso dentro da biblioteca]]"* e não podem sair do prédio. A opção (A) descreve a regra do exemplar do acervo geral, e as opções (C) e (D) não foram ditas.
+**B2.2: (B).** O estudante encerra dizendo *"[[I'll check the stacks first::Vou verificar as estantes do acervo primeiro]]"*, que ficam no quarto andar. A opção (A) seria apenas o plano alternativo caso o livro não esteja na estante, e as opções (C) e (D) contrariam a decisão dele.
 
-**B3.1: (C).** *"weigh the argument: where is it strong, where is it weak, and does the evidence actually support the conclusion?"* (A)(B) o professor diz que *"evaluate"* é **nenhum** dos dois; (D) não dito.
-**B3.2: (B).** *"Don't pad it"* = não encher linguiça para bater a contagem de palavras. (A) o oposto; (C)(D) **OUT OF SCOPE**.
+**B3.1: (C).** O professor define *[[evaluate::avaliar criticamente]]* como *"[[weigh the argument::pesar o argumento]]"*, observando pontos fortes, pontos fracos e se as evidências sustentam a conclusão. Ele deixa claro que a tarefa não se resume a (A) nem a (B), e a opção (D) não é mencionada.
+**B3.2: (B).** A expressão *"[[Don't pad it::Não encha linguiça, não infle o texto]]"* orienta o aluno a não acrescentar palavras vazias só para atingir o tamanho pedido. A opção (A) diz o oposto, e as opções (C) e (D) estão fora do escopo (OUT OF SCOPE).
 
-### GRUPO C: Listen to an Announcement
+### Grupo C: Listen to an Announcement
 
-**C1.1: (B).** *"transferred automatically to the East Wing — you don't need to rebook."* (A) o oposto; (D) adiciona condição não dita.
-**C1.2: (C).** Aviso prático de que *"not all East Wing rooms are equipped"*. (A)(D) **EXTREME**; (B) **OUT OF SCOPE**.
+**C1.1: (B).** O aviso informa que as salas já foram *"[[transferred automatically to the East Wing::transferidas automaticamente para a Ala Leste]]"* e que *"[[you don't need to rebook::você não precisa fazer nova reserva]]"*. A opção (A) diz o contrário, e a (D) inventa uma exigência de confirmação por e-mail.
+**C1.2: (C).** O objetivo é avisar que *"[[not all East Wing rooms are equipped::nem todas as salas da Ala Leste são equipadas]]"* com recursos audiovisuais, para que o aluno confira antes. As opções (A) e (D) são extremas ou inventadas ([[EXTREME::Extremo]]), e a (B) foge do tema (OUT OF SCOPE).
 
-**C2.1: (C).** *"add yourself to the waitlist rather than emailing the instructor."* (A) explicitamente desaconselhado.
-**C2.2: (B).** Add/drop mais curto → menos tempo para ajustar depois que as aulas começam. (A)(C)(D) não são ditos no anúncio.
+**C2.1: (C).** A instrução explícita é *"[[add yourself to the waitlist rather than emailing the instructor::inscreva-se na lista de espera em vez de mandar e-mail ao professor]]"*. Por isso, a opção (A) faz exatamente o que o aviso pede para evitar.
+**C2.2: (B).** Como o período de ajuste (*[[add/drop period::período de ajuste de matrículas]]*) diminuiu de duas semanas para uma, haverá menos tempo para trocar de turma depois que as aulas começarem. As opções (A), (C) e (D) não têm base no anúncio.
 
-**C3.1: (C).** *"from 10 to 4."* (A) é a abertura da estação de revisão de currículo; (B) é o workshop.
-**C3.2: (B).** A estação abre às 9, é *first-come, first-served* → chegar cedo. (A) o workshop é de habilidades de entrevista, não revisão de currículo; (C)(D) não sugeridos.
+**C3.1: (C).** A feira de carreiras acontece *"[[from 10 to 4::das 10h às 16h]]"*. O horário das 9h na (A) é a abertura do balcão de revisão de currículos, e o das 9h30 na (B) é o da oficina de entrevistas.
+**C3.2: (B).** Como o posto de revisão de currículos abre às 9h e funciona por ordem de chegada (*[[first-come, first-served::por ordem de chegada]]*), o estudante precisa chegar cedo. A oficina da (A) está lotada e trata de entrevistas, enquanto (C) e (D) não são recomendadas no aviso.
 
-### GRUPO D: Listen to an Academic Talk
+### Grupo D: Listen to an Academic Talk
 
-**D1.1: (B).** Tese anunciada no início e no fechamento. (A) **EXTREME**; (C) **EXTREME** (*always*) e generaliza um único estudo; (D) **OUT OF SCOPE**.
-**D1.2: (A).** *"attracted more browsers, but far fewer of them bought anything."* (B) o oposto: **OPPOSITE**.
-**D1.3: (B).** Exemplo empírico logo após o conceito abstrato. (A)(C)(D) sem base.
-**D1.4: (B).** *"stuck at square one"* = sem sair do ponto de partida. (A) o oposto; (C)(D) distorcem.
+**D1.1: (B).** Essa é a tese central apresentada na abertura e retomada na conclusão da palestra. A opção (A) distorce o ponto, a (C) usa *[[always::sempre]]* (EXTREME) e generaliza um único estudo, e a (D) restringe o efeito sem apoio no áudio (OUT OF SCOPE).
+**D1.2: (A).** O professor conta que a bancada com 24 geleias *"[[attracted more browsers, but far fewer of them bought anything::atraiu mais curiosos, mas bem menos pessoas compraram alguma coisa]]"*. A opção (B) inverte o resultado das vendas ([[OPPOSITE::Sentido oposto]]).
+**D1.3: (B).** O experimento do supermercado entra logo depois da definição teórica para dar um exemplo concreto do paradoxo da escolha. As opções (A), (C) e (D) não correspondem à função do trecho.
+**D1.4: (B).** A expressão *"[[stuck at square one::preso na estaca zero]]"* significa ficar travado no ponto de partida, sem conseguir avançar para uma decisão. A opção (A) diz o oposto, e as opções (C) e (D) distorcem a imagem da expressão.
 
-**D2.1: (B).** *"the trees are also connected, underground, through fungi... and things move along those links."* (A) o professor admite competição **mas** acrescenta a conexão; (C) o oposto (a relação é benéfica); (D) é exatamente o exagero que ele critica no fim.
-**D2.2: (C).** *"the tree gives the fungi sugars it makes through photosynthesis."* (A)(B) são o que os fungos fazem pela árvore; (D) o oposto.
-**D2.3: (B).** Ele separa o que a evidência sustenta firmemente do que relatos populares exageram (*"forests as single cooperative organisms"*). (A)(C) **EXTREME**; (D) **OUT OF SCOPE**.
-**D2.4: (B).** *"the jury's still out"* = ainda não há conclusão firme. (A) o oposto; (C) literal demais; (D) não dito.
+**D2.1: (B).** O ponto central da aula é que *"[[the trees are also connected, underground, through fungi::as árvores também estão conectadas no subsolo por meio de fungos]]"* e que recursos circulam por essa rede. A opção (A) ignora a conexão apresentada, a (C) inverte uma relação que é benéfica e a (D) repete justamente o exagero popular que o professor corrige no final.
+**D2.2: (C).** Na troca, *"[[the tree gives the fungi sugars it makes through photosynthesis::a árvore fornece aos fungos açúcares produzidos pela fotossíntese]]"*. Água e minerais nas opções (A) e (B) são o que os fungos entregam à árvore, e a (D) nega a troca.
+**D2.3: (B).** O professor faz essa ressalva para separar o que os experimentos comprovam das interpretações exageradas que tratam a floresta como um único organismo cooperativo. As opções (A) e (C) são extremas (EXTREME), e a (D) sai do assunto (OUT OF SCOPE).
+**D2.4: (B).** Dizer que *"[[the jury's still out::ainda não há um veredito]]"* significa que a ciência ainda não chegou a uma conclusão definitiva sobre a extensão desse compartilhamento. A opção (A) diz o oposto, a (C) toma a palavra *jury* ao pé da letra e a (D) não foi dita.
 
-**D3.1: (B).** A pergunta central é por que um layout ultrapassado sobreviveu, e a resposta é *path dependence*. (A)(D) **WRONG FOCUS / EXTREME**; (C) é contexto, não o tema.
-**D3.2: (B).** *"That's probably an oversimplification... but the layout was shaped by 1870s machinery."*
-**D3.3: (A).** O ciclo ilustra como o padrão se autorreforça (lock-in). (B)(C)(D) sem base.
-**D3.4: (B).** *"quietly"* sugere que as pessoas usam QWERTY sem perceber que é um design obsoleto. (A) não tem relação com a palavra; (C) lê *"quietly"* como segredo, ideia que a palestra não sustenta; (D) contradiz *"on every device you own"*: **OPPOSITE**.
+**D3.1: (B).** A palestra inteira responde por que um teclado desenhado no século XIX persiste até hoje, usando o caso para ilustrar o conceito de *[[path dependence::dependência da trajetória]]*. As opções (A) e (D) desviam o foco ou exageram (WRONG FOCUS e EXTREME), e a (C) é apenas o pano de fundo histórico.
+**D3.2: (B).** O professor comenta que essa história conhecida *"[[is probably an oversimplification::é provavelmente uma simplificação exagerada]]"*, embora o desenho realmente tenha nascido das limitações mecânicas da década de 1870.
+**D3.3: (A).** O ciclo entre digitadores e máquinas mostra na prática como o efeito de aprisionamento (*[[lock-in::aprisionamento tecnológico a um padrão]]*) faz um padrão se retroalimentar e tornar a mudança muito custosa. As opções (B), (C) e (D) não têm base na fala.
+**D3.4: (B).** Na frase *"[[still, quietly, on every device you own::ainda presente, de forma silenciosa, em cada aparelho que você tem]]"*, o advérbio *quietly* sugere que continuamos usando o padrão QWERTY no dia a dia sem nem reparar que ele veio de uma limitação antiga. A opção (A) não traduz a ideia da palavra, a (C) inventa um segredo dos fabricantes e a (D) contradiz o próprio trecho citado (OPPOSITE).
 
 ---
 
-### SCORE CONSOLIDADO
+### Pontuação consolidada dos exercícios
 
-Some: Grupo A (**12**), Grupo B (**6**), Grupo C (**6**), Grupo D (**12**). Total: **36 itens**.
+Mais do que uma nota isolada, o seu total de acertos funciona como um mapa para mostrar qual parte da escuta merece atenção agora. Some os seus pontos do Grupo A (12 itens), do Grupo B (6 itens), do Grupo C (6 itens) e do Grupo D (12 itens), que juntos perfazem **36 itens**.
 
-| % de acerto | Banda CEFR estimada (Listening) | Ação |
+| % de acerto | Banda CEFR estimada (Listening) | Próximo passo |
 |---|---|---|
-| 86–100% | 5,5–6 (C1–C2) | Vá para o Módulo 3. Refaça só os tipos com 1 erro. |
-| 71–85% | 4,5–5,5 (B2–C1) | Releia a Parte 3 nos pontos fracos (formas fracas 3.1, idioms 3.6). Refaça o Grupo D **de ouvido**. |
-| 56–70% | 4–4,5 (B2) | O reconhecimento de task/distrator entrou; o processamento auditivo não. Trabalhe a Parte 3 inteira e refaça A e D. |
-| 41–55% | 3–3,5 (B1) | Foque em 3.1 (reduções) e 3.2 (linking) por uma semana, 15 min/dia, ouvindo material real. Depois volte aos drills. |
-| ≤40% | ≤3 (A2–B1) | Sua base de escuta precede este módulo: 20 min/dia de shadowing (Módulo 3, Parte 5, bloco C) antes de retornar. |
+| 86–100% | 5,5–6 (C1–C2) | Excelente resultado. Você já pode seguir para o Módulo 3 e revisar apenas os tipos de questão em que teve algum deslize. |
+| 71–85% | 4,5–5,5 (B2–C1) | Você já tem uma ótima base. Releia a Parte 3 nos pontos que pesaram mais (como formas fracas em 3.1 e expressões em 3.6) e refaça o Grupo D de ouvido, sem ler a transcrição. |
+| 56–70% | 4–4,5 (B2) | Você já entendeu a lógica das tarefas e dos distratores, e agora o ganho vem de refinar o processamento do som. Trabalhe a Parte 3 com calma e refaça os Grupos A e D. |
+| 41–55% | 3–3,5 (B1) | Fique tranquilo, porque esse é o momento de acostumar o ouvido ao inglês conectado. Dedique uma semana às seções 3.1 (reduções) e 3.2 ([[linking::ligação de sons entre palavras]]), por 15 minutos ao dia ouvindo áudio real, e depois volte aos exercícios. |
+| ≤40% | ≤3 (A2–B1) | Construir a base de escuta vem antes da velocidade de prova. Pratique 20 minutos por dia de [[shadowing::técnica de repetir a fala em voz alta quase ao mesmo tempo que o áudio]] (Módulo 3, Parte 5, bloco C) antes de refazer este módulo. |
 
 ---
 
-## PARTE 7: PROTOCOLO DE ANÁLISE DE ERROS DE LISTENING
+## Parte 7: Passo a passo de análise de erros de Listening
 
-Classifique **todo** erro numa destas categorias antes de seguir.
+Agora vamos olhar com calma para o que você errou, porque é exatamente aqui que a sua escuta mais evolui. Sempre que errar uma questão em exercício, simulado ou teste prático, classifique o motivo na tabela abaixo **antes** de seguir para a próxima.
 
 | Código | Categoria | Sinal | O que fazer |
 |---|---|---|---|
-| **L1** | **Não decodifiquei o áudio** | "Não ouvi a palavra" / ouviu errado (*can* vs *can't*, *thirteen* vs *thirty*, um pronome que sumiu) | Parte 3.1–3.4. Faça shadowing do trecho 5×. É o erro que mais trava o brasileiro. |
-| **L2** | **Não entendi a pergunta** | Respondeu certo para outro tipo (deu gist quando pediram function) | Parte 1.4. Sublinhe a palavra-chave do enunciado antes das opções. |
-| **L3** | **Caí num distrator** | A opção reusava uma palavra do áudio / era verdadeira mas não dita / extrema | Parte 2.6. Anote qual dos 7 padrões te pegou. |
-| **L4** | **Anotação errada** | Anotou demais e perdeu o áudio, ou de menos e não lembrou o detalhe | Parte 2.2. Cheque se usou a escala certa para o task type. |
-| **L5** | **Vocabulário** | Não sabia um termo de campus ou um idiom | Parte 3.5 / 3.6. Anote o termo num caderno com o contexto. |
-| **L6** | **Atenção / fim do áudio** | Relaxou e perdeu um *but*, uma correção, uma instrução final | Regra 6 do pacing. Force atenção nas últimas 3 palavras de cada áudio. |
+| **L1** | **Não decodifiquei o áudio** | Você sentiu que não ouviu a palavra ou confundiu sons parecidos (*[[can::posso, pode]]* vs. *[[can't::não posso, não pode]]*, *[[thirteen::treze]]* vs. *[[thirty::trinta]]* ou um pronome reduzido) | Volte às seções 3.1 a 3.4 e faça [[shadowing::técnica de repetir a fala em voz alta quase ao mesmo tempo que o áudio]] do trecho 5 vezes. Esse é um ponto de atenção muito comum para quem fala português. |
+| **L2** | **Não entendi a pergunta** | A sua resposta fazia sentido para o áudio, mas respondia a outro tipo de questão (como marcar a ideia geral quando o item pedia a função da fala) | Revise a seção 1.4 e destaque a palavra-chave do enunciado antes de olhar as alternativas. |
+| **L3** | **Caí num distrator** | A opção escolhida repetia uma palavra isolada do áudio, trazia algo verdadeiro mas não dito, ou usava uma palavra extrema | Consulte a seção 2.6 e anote qual dos 7 padrões de distrator atraiu a sua atenção. |
+| **L4** | **Anotação errada** | Você anotou demais e perdeu o fio da fala, ou anotou de menos e esqueceu um detalhe importante | Volte à seção 2.2 e confira se você usou a escala certa de anotação para aquele formato de tarefa. |
+| **L5** | **Vocabulário** | Faltou conhecer um termo universitário ou uma expressão idiomática usada pelo falante | Consulte as seções 3.5 e 3.6 e anote a expressão num caderno junto com a frase em que ela apareceu. |
+| **L6** | **Atenção no fim do áudio** | Você relaxou nos segundos finais e deixou passar um *[[but::mas]]*, uma correção de ideia ou uma instrução prática | Aplique a regra 6 da seção 2.7 e mantenha o foco redobrado até as últimas palavras de cada faixa. |
 
 **Registro (após cada sessão):**
 
@@ -767,8 +755,8 @@ Padrão dominante desta semana: _______________________
 Ação para a próxima sessão: __________________________
 ```
 
-> **L1 é a prioridade nº 1 se aparecer 3+ vezes.** Nenhum aumento de volume de prática compensa não conseguir decodificar o inglês falado: é o Laboratório de Escuta (Parte 3) que resolve, ouvindo material real todo dia.
+> **Dica:** Se o código L1 aparecer 3 vezes ou mais na semana, trate esse ponto como a sua prioridade número 1. Fazer mais questões sem decodificar o inglês falado rende pouco, então volte ao Laboratório de Escuta (Parte 3) e ouça material real todos os dias.
 
 ---
 
-✅ Módulo 2 concluído: Listening no formato 2026 (Router + Choose a Response + Conversation + Announcement + Academic Talk), com Laboratório de Escuta, exemplo resolvido e protocolo de erros.
+✅ Módulo 2 concluído. Você já conhece o Listening no formato 2026 ([[router::bloco inicial de nivelamento]], [[Listen and Choose a Response::Ouça e escolha uma resposta]], [[Listen to a Conversation::Ouça uma conversa]], [[Listen to an Announcement::Ouça um anúncio]] e [[Listen to an Academic Talk::Ouça uma aula ou palestra acadêmica]]), com o Laboratório de Escuta, o exemplo resolvido e o passo a passo de análise de erros. Mais um passo dado, e ele conta muito.

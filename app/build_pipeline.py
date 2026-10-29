@@ -461,7 +461,7 @@ def build_mod2():
     before_g, rest = slice_lines(rest, "### GRUPO A: Listen and Choose a Response", "### GRUPO B: Listen to a Conversation")
     _, rest = slice_lines(rest, "### GRUPO B: Listen to a Conversation", "### GRUPO C: Listen to an Announcement")
     _, rest = slice_lines(rest, "### GRUPO C: Listen to an Announcement", "### GRUPO D: Listen to an Academic Talk")
-    _, rest = slice_lines(rest, "### GRUPO D: Listen to an Academic Talk", "### SCORE CONSOLIDADO")
+    _, rest = slice_lines(rest, "### GRUPO D: Listen to an Academic Talk", "### Pontuação consolidada")
 
     # PARTE 7: troca o template de "Registro" (preencher à mão) pelo
     # formulário que salva histórico
