@@ -423,7 +423,7 @@ def build_mod1():
     # aparece inline em cada widget acima); mantém o Score Consolidado
     before_g, rest = slice_lines(rest, "### GRUPO A: Complete the Words", "### GRUPO B: Read in Daily Life")
     _, rest = slice_lines(rest, "### GRUPO B: Read in Daily Life", "### GRUPO C: Read an Academic Passage")
-    _, rest = slice_lines(rest, "### GRUPO C: Read an Academic Passage", "### SCORE CONSOLIDADO DOS DRILLS")
+    _, rest = slice_lines(rest, "### GRUPO C: Read an Academic Passage", "### Pontuação consolidada")
 
     # PARTE 7: troca o template de "Registro" (preencher à mão) pelo
     # formulário que salva histórico
@@ -699,6 +699,10 @@ def add_translations(html_in):
         en, pt = m.group(1).strip(), re.sub(r"<[^>]+>", "", m.group(2)).strip()
         if not en or not pt:
             raise ValueError(f"tradução vazia em {m.group(0)!r}")
+        # negrito ou itálico dentro do balão cruza as tags do Markdown
+        # (<em><span>...</em>...</span>): a marcação fica de fora do [[ ]]
+        if "<" in en:
+            raise ValueError(f"tradução: sem negrito ou itálico dentro de {m.group(0)!r}")
         return f'<span class="tr" data-tr="{html_lib.escape(html_lib.unescape(pt), quote=True)}" lang="en">{en}</span>'
     out = TR_RE.sub(repl, html_in)
     if re.search(r"\[\[[^\]\n]*::", out):
