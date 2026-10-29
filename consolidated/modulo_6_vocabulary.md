@@ -1,565 +1,568 @@
-# MÓDULO 6: ENGENHARIA DE VOCABULÁRIO ACADÊMICO
+# Módulo 6: Vocabulário acadêmico
 
-> **iTOEFL | Formato TOEFL iBT vigente desde 21/jan/2026**
->
-> Módulo de referência permanente. Estude a estratégia da Parte 1 uma vez;
-> depois volte às tabelas como banco de consulta durante os drills de Reading,
-> Listening, Speaking e Writing.
+> **Resumo:** Este é o módulo de referência permanente de vocabulário do curso, alinhado ao formato do TOEFL iBT vigente desde 21 de janeiro de 2026. Ele reúne a estratégia de ativação lexical, os bancos de palavras de alta frequência e de alto impacto, as famílias de palavras, os pares de nuance e os exercícios práticos de fixação.
+
+Estude a estratégia da **Parte 1** uma vez com calma para entender como transformar leitura passiva em produção ativa. Depois, volte às tabelas como banco de consulta sempre que fizer os exercícios de Reading, Listening, Speaking e Writing.
 
 ---
 
-## PARTE 1: A ESTRATÉGIA · COMO ESTE MÓDULO FUNCIONA
+## Parte 1: A estratégia e como este módulo funciona
 
-### A distinção crítica: reconhecer vs. ativar
+### A distinção essencial: reconhecer ou ativar
 
-O maior erro de preparação de vocabulário é estudar palavras que você **reconhece** ao ler, mas não consegue **usar** ao falar ou escrever sob pressão. Este módulo trabalha as duas camadas, cada uma com seu objetivo próprio:
+Na preparação de vocabulário, uma armadilha muito comum é estudar longas listas de palavras que você até reconhece quando lê, mas não consegue usar com segurança quando precisa falar ou escrever sob pressão. Por isso, este módulo trabalha **duas camadas** complementares, cada uma com um objetivo próprio:
 
 | Categoria | Função no TOEFL 2026 | Habilidade-alvo | Onde pesa |
 |---|---|---|---|
-| **High-Frequency TOEFL Vocabulary** | Palavras que aparecem nos textos e áudios do exame | **Compreensão imediata**: entender na hora, sem hesitar | Reading (*Read an Academic Passage*, *Complete the Words*) + Listening (*Listen to an Academic Talk*) |
-| **Low-Frequency High-Impact Vocabulary** | Termos sofisticados que **você** insere para ativar os gatilhos de pontuação | **Produção ativa**: usar com precisão sob pressão | Speaking (*Take an Interview*: variedade lexical) + Writing (*Write for an Academic Discussion*: sofisticação lexical do e-rater) |
+| **[[High-Frequency TOEFL Vocabulary::Vocabulário de alta frequência do TOEFL]]** | Palavras que aparecem com frequência nos textos e áudios do exame | **Compreensão imediata**: entender na hora, sem hesitar | Reading (*[[Read an Academic Passage::Leia uma passagem acadêmica]]* e *[[Complete the Words::Complete as palavras]]*) e Listening (*[[Listen to an Academic Talk::Ouça uma palestra acadêmica]]*) |
+| **[[Low-Frequency High-Impact Vocabulary::Vocabulário de baixa frequência e alto impacto]]** | Termos sofisticados que você escolhe inserir para elevar a nota de vocabulário | **Produção ativa**: usar com precisão sob pressão | Speaking (variedade lexical em *[[Take an Interview::Faça uma entrevista]]*) e Writing (sofisticação lexical avaliada pelo [[e-rater::sistema de correção automática de escrita da ETS]] em *[[Write for an Academic Discussion::Escreva para uma discussão acadêmica]]*) |
 
-> ⚠️ **Regra de ativação:** uma palavra só deve ser usada em *Take an Interview* quando você consegue empregá-la em uma frase completa e correta em menos de 3 segundos. Se precisar pensar mais que isso, ela ainda é passiva: continue usando-a só no Writing até atingir automaticidade.
+> **Atenção:** Uma palavra só deve entrar na sua fala em *Take an Interview* quando você conseguir empregá-la em uma frase completa e correta em menos de 3 segundos. Se ainda precisar pensar mais do que isso, ela continua passiva, então mantenha o seu uso apenas no Writing até ganhar automaticidade.
 
-### O protocolo de 4 níveis de domínio
+### Os 4 níveis de domínio
+
+Aprender uma palavra nova acontece em etapas. Veja na tabela os **quatro níveis** pelos quais cada termo passa até ficar pronto para a fala sob pressão:
 
 | Nível | Habilidade | Teste | Onde serve |
 |---|---|---|---|
-| **1: Reconhecimento** | Entende quando vê/ouve | Escolhe a definição certa em múltipla escolha | Reading, Listening |
-| **2: Recall** | Lembra quando recebe o estímulo | Traduz/define quando solicitado | Preparação |
+| **1: Reconhecimento** | Entende quando vê ou ouve | Escolhe a definição certa em múltipla escolha | Reading, Listening |
+| **2: [[Recall::Recuperação ativa na memória]]** | Lembra quando recebe o estímulo | Traduz ou define quando solicitado | Preparação |
 | **3: Produção** | Usa corretamente em frase própria | Escreve uma frase original sem consultar | Writing |
 | **4: Automaticidade** | Usa sob pressão cronometrada | Usa em resposta de *Take an Interview* sem pausa | Speaking |
 
-**Protocolo de revisão espaçada (spaced repetition):**
-- **D1:** estude 10 palavras → leia cada exemplo em voz alta 3×
-- **D3:** relembre sem consultar → use cada palavra em uma frase própria
-- **D7:** use 3 palavras num mock de *Take an Interview*
-- **D14:** use 5 palavras num mock de *Write for an Academic Discussion*
-- **D30:** verificação de automaticidade · *Take an Interview* cronometrado
+Siga esta **rotina de revisão espaçada** (*[[spaced repetition::repetição espaçada]]*) para levar as palavras do reconhecimento até a automaticidade:
+
+- **D1:** estude 10 palavras e leia cada exemplo em voz alta 3 vezes.
+- **D3:** puxe as palavras pela memória, sem consultar, e use cada uma em uma frase própria.
+- **D7:** use 3 dessas palavras em um treino de *Take an Interview*.
+- **D14:** use 5 dessas palavras em um treino de *Write for an Academic Discussion*.
+- **D30:** faça a verificação de automaticidade em um *Take an Interview* cronometrado.
 
 ---
 
-## PARTE 2: HIGH-FREQUENCY TOEFL VOCABULARY
+## Parte 2: Vocabulário de alta frequência no exame
 
-> Estas são as palavras que o TOEFL **usa** nos textos e áudios. Dominar o reconhecimento elimina hesitações em Reading e Listening e garante que você entenda os estímulos.
+> **Resumo:** Estas são as palavras que o próprio TOEFL usa com frequência nos textos e áudios. Dominar o reconhecimento imediato elimina hesitações no Reading e no Listening e garante que você compreenda os enunciados e passagens com clareza.
 
-### ÁREA: EDUCATION
-
-| Palavra | Cat. | Significado (PT) | Sinônimo acadêmico | Exemplo: nível nota máxima |
-|---|---|---|---|---|
-| **curriculum** | n. | grade curricular; conjunto estruturado de conteúdos de um curso | syllabus; course of study | *"A well-designed curriculum not only sequences content logically but actively scaffolds the development of higher-order thinking skills."* |
-| **assessment** | n. | avaliação (de aprendizagem ou desempenho) | evaluation; appraisal | *"Formative assessment, when integrated continuously into instruction, provides educators with actionable data to adjust pedagogy in real time."* |
-| **pedagogy** | n. | metodologia e prática de ensino | teaching methodology; instructional approach | *"Progressive pedagogy emphasizes student agency and inquiry over passive reception of predetermined content."* |
-| **cognitive** | adj. | cognitivo; relativo a processos mentais | intellectual; mental | *"The cognitive demands of simultaneous note-taking and active listening are substantially greater in a second language than in one's native tongue."* |
-| **facilitate** | v. | facilitar; tornar possível ou mais fácil | to enable; to foster | *"Digital platforms facilitate collaborative learning across geographic boundaries, effectively democratizing access to high-quality instruction."* |
-| **retention** | n. | retenção; capacidade de lembrar informação aprendida | recall; consolidation | *"Spaced repetition is consistently shown to enhance long-term retention by leveraging the brain's natural memory consolidation processes."* |
-| **intervention** | n. | intervenção educacional; programa deliberado de melhoria | program; remediation | *"Early literacy interventions targeting children between the ages of three and five yield disproportionately large returns in academic achievement over the long term."* |
-| **inquiry-based** | adj. | baseado em investigação ativa pelo aluno | investigative; student-directed | *"Inquiry-based learning environments cultivate intellectual curiosity by positioning students as active generators of knowledge rather than passive recipients."* |
-| **collaboration** | n. | colaboração; trabalho conjunto entre indivíduos ou grupos | teamwork; joint effort | *"Structured collaboration among students not only deepens conceptual understanding but also develops the interpersonal competencies that professional contexts increasingly demand."* |
-| **standardized** | adj. | padronizado; desenvolvido para aplicação uniforme | uniform; regulated | *"Critics argue that standardized testing, by design, privileges test-taking proficiency over authentic academic competence."* |
-
-### ÁREA: BUSINESS & ECONOMICS
+### Área: Education
 
 | Palavra | Cat. | Significado (PT) | Sinônimo acadêmico | Exemplo: nível nota máxima |
 |---|---|---|---|---|
-| **productivity** | n. | produtividade; eficiência na geração de resultados | output efficiency | *"Remote work arrangements have, in many documented cases, increased individual productivity while simultaneously reducing organizational overhead costs."* |
-| **innovation** | n. | inovação; introdução de novos processos, produtos ou ideias | advancement; novelty | *"Sustained innovation in any sector requires not merely creative talent but institutional conditions that tolerate and even reward productive failure."* |
-| **stakeholder** | n. | parte interessada; quem é afetado ou tem interesse numa organização | interested party; constituent | *"Effective corporate governance requires systematically accounting for the interests of all stakeholders, not solely those of shareholders."* |
-| **viable** | adj. | viável; capaz de funcionar de forma sustentável | feasible; workable | *"For a renewable energy transition to be economically viable, the per-unit cost of clean energy must reach parity with (or fall below) that of fossil fuels."* |
-| **leverage** | v./n. | alavancar; usar estrategicamente para obter vantagem | to capitalize on; to utilize strategically | *"Established firms can leverage their brand recognition and distribution networks to defend market share against disruptive new entrants."* |
-| **revenue** | n. | receita; renda gerada por atividades empresariais | income; proceeds | *"The platform's capacity to generate advertising revenue depends critically on its ability to aggregate and retain a sufficiently large user base."* |
-| **sustainable** | adj. | sustentável; capaz de ser mantido sem comprometimento futuro | viable long-term; maintainable | *"A business model that externalizes environmental costs is, by any rigorous definition, not sustainable: it merely defers those costs to future generations."* |
-| **disruption** | n. | disrupção; mudança radical em um setor ou mercado | upheaval; paradigm shift | *"The disruption of the retail sector by e-commerce has forced traditional brick-and-mortar businesses to fundamentally reconceive their value proposition."* |
-| **transparency** | n. | transparência; abertura e prestação de contas em operações | openness; disclosure | *"Organizational transparency, both in decision-making processes and financial reporting, is increasingly treated as a prerequisite for institutional legitimacy."* |
-| **infrastructure** | n. | infraestrutura; sistemas físicos e organizacionais fundamentais | foundational systems; backbone | *"Inadequate digital infrastructure disproportionately disadvantages rural and lower-income communities in an economy that increasingly privileges connectivity."* |
+| **curriculum** | n. | grade curricular; conjunto estruturado de conteúdos de um curso | syllabus; course of study | *"[[A well-designed curriculum not only sequences content logically but actively scaffolds the development of higher-order thinking skills.::Um currículo bem elaborado não apenas organiza o conteúdo de forma lógica, mas também sustenta ativamente o desenvolvimento de habilidades de pensamento mais complexas.]]"* |
+| **assessment** | n. | avaliação (de aprendizagem ou desempenho) | evaluation; appraisal | *"[[Formative assessment, when integrated continuously into instruction, provides educators with actionable data to adjust pedagogy in real time.::A avaliação formativa, quando integrada continuamente ao ensino, oferece aos educadores dados práticos para ajustar a pedagogia em tempo real.]]"* |
+| **pedagogy** | n. | metodologia e prática de ensino | teaching methodology; instructional approach | *"[[Progressive pedagogy emphasizes student agency and inquiry over passive reception of predetermined content.::A pedagogia progressista valoriza a autonomia e a investigação do aluno em vez da recepção passiva de conteúdos predeterminados.]]"* |
+| **cognitive** | adj. | cognitivo; relativo a processos mentais | intellectual; mental | *"[[The cognitive demands of simultaneous note-taking and active listening are substantially greater in a second language than in one's native tongue.::As exigências cognitivas de anotar e ouvir ativamente ao mesmo tempo são substancialmente maiores em uma segunda língua do que na língua materna.]]"* |
+| **facilitate** | v. | facilitar; tornar possível ou mais fácil | to enable; to foster | *"[[Digital platforms facilitate collaborative learning across geographic boundaries, effectively democratizing access to high-quality instruction.::As plataformas digitais facilitam a aprendizagem colaborativa além das fronteiras geográficas, democratizando na prática o acesso a um ensino de alta qualidade.]]"* |
+| **retention** | n. | retenção; capacidade de lembrar informação aprendida | recall; consolidation | *"[[Spaced repetition is consistently shown to enhance long-term retention by leveraging the brain's natural memory consolidation processes.::A repetição espaçada mostra de forma consistente que melhora a retenção de longo prazo ao aproveitar os processos naturais de consolidação da memória no cérebro.]]"* |
+| **intervention** | n. | intervenção educacional; programa deliberado de melhoria | program; remediation | *"[[Early literacy interventions targeting children between the ages of three and five yield disproportionately large returns in academic achievement over the long term.::As intervenções de alfabetização precoce voltadas a crianças de três a cinco anos geram retornos proporcionalmente muito altos no desempenho acadêmico a longo prazo.]]"* |
+| **inquiry-based** | adj. | baseado em investigação ativa pelo aluno | investigative; student-directed | *"[[Inquiry-based learning environments cultivate intellectual curiosity by positioning students as active generators of knowledge rather than passive recipients.::Ambientes de aprendizagem baseados em investigação cultivam a curiosidade intelectual ao colocar os alunos como produtores ativos de conhecimento, e não como receptores passivos.]]"* |
+| **collaboration** | n. | colaboração; trabalho conjunto entre indivíduos ou grupos | teamwork; joint effort | *"[[Structured collaboration among students not only deepens conceptual understanding but also develops the interpersonal competencies that professional contexts increasingly demand.::A colaboração estruturada entre os estudantes não apenas aprofunda a compreensão conceitual, mas também desenvolve as competências interpessoais que os ambientes profissionais exigem cada vez mais.]]"* |
+| **standardized** | adj. | padronizado; desenvolvido para aplicação uniforme | uniform; regulated | *"[[Critics argue that standardized testing, by design, privileges test-taking proficiency over authentic academic competence.::Os críticos argumentam que os testes padronizados, por sua própria concepção, privilegiam a habilidade de fazer provas em vez da competência acadêmica autêntica.]]"* |
 
-### ÁREA: SCIENCE & RESEARCH
-
-| Palavra | Cat. | Significado (PT) | Sinônimo acadêmico | Exemplo: nível nota máxima |
-|---|---|---|---|---|
-| **hypothesis** | n. | hipótese; explicação proposta a ser testada | proposition; conjecture | *"A hypothesis, however elegantly formulated, holds no scientific standing until it has been subjected to rigorous empirical testing and potential falsification."* |
-| **empirical** | adj. | empírico; baseado em observação e evidência, não em teoria | evidence-based; data-driven | *"The distinction between empirical findings and theoretical claims is foundational to scientific reasoning and is routinely tested in TOEFL reading passages."* |
-| **correlation** | n. | correlação; relação estatística entre duas variáveis | association; covariation | *"Demonstrating a strong correlation between variables is a necessary but insufficient step toward establishing a causal relationship."* |
-| **causation** | n. | causalidade; relação direta entre causa e efeito | causal mechanism | *"The fundamental challenge in epidemiology is distinguishing genuine causation from spurious correlation in observational data."* |
-| **variable** | n. | variável; fator que pode mudar em um experimento | factor; parameter | *"Controlling for confounding variables is the central methodological challenge in any study that aims to establish causal rather than merely correlational claims."* |
-| **replicate** | v. | replicar; reproduzir resultados experimentais | to reproduce; to verify | *"The failure to replicate high-profile findings has prompted a broad reassessment of methodological standards across the social sciences."* |
-| **mechanism** | n. | mecanismo; processo subjacente pelo qual algo ocorre | pathway; underlying dynamic | *"Identifying the precise neurological mechanism by which stress impairs memory consolidation remains an active area of neuroscientific inquiry."* |
-| **longitudinal** | adj. | longitudinal; conduzido ao longo de um período estendido | long-term; multi-year | *"Longitudinal studies, by tracking the same cohort over years or decades, offer analytical advantages that cross-sectional designs fundamentally cannot replicate."* |
-| **phenomenon** | n. | fenômeno; fato ou evento observável | occurrence; manifestation | *"The urban heat island effect is a well-documented climatic phenomenon that has become increasingly consequential as global urbanization accelerates."* |
-| **paradigm** | n. | paradigma; estrutura de conceitos e práticas aceitos em uma área | framework; conceptual structure | *"A scientific paradigm not only provides researchers with the conceptual tools to formulate questions but also, critically, determines which questions are considered legitimate."* |
-
-### ÁREA: ENVIRONMENT
+### Área: Business and Economics
 
 | Palavra | Cat. | Significado (PT) | Sinônimo acadêmico | Exemplo: nível nota máxima |
 |---|---|---|---|---|
-| **ecosystem** | n. | ecossistema; comunidade biológica e seu ambiente físico | ecological system | *"The collapse of a single keystone species can destabilize an entire ecosystem, triggering cascading disruptions that extend far beyond the immediate habitat."* |
-| **biodiversity** | n. | biodiversidade; variedade de vida num ambiente | species richness | *"Biodiversity loss is increasingly recognized not merely as an environmental concern but as a direct threat to the ecosystem services upon which human economies depend."* |
-| **mitigation** | n. | mitigação; redução da gravidade ou impacto de algo prejudicial | reduction; amelioration | *"Climate mitigation strategies that prioritize rapid decarbonization of energy systems are projected to deliver substantially greater long-term returns than those focused solely on adaptation."* |
-| **conservation** | n. | conservação; proteção e gestão de recursos naturais | preservation; stewardship | *"Effective conservation policy increasingly recognizes that protecting biodiversity and supporting sustainable livelihoods for local communities are complementary rather than competing objectives."* |
-| **resilience** | n. | resiliência; capacidade de sistemas se recuperarem de perturbações | robustness; recovery capacity | *"Building ecological resilience requires preserving not only individual species but the complex networks of interaction that enable ecosystems to absorb and recover from disturbance."* |
-| **emissions** | n. | emissões; liberação de gases (especialmente CO₂) na atmosfera | discharge; release | *"Per-capita carbon emissions in densely urbanized environments are consistently lower than in sprawling suburban and rural areas, largely due to transit dependency."* |
-| **renewable** | adj. | renovável; naturalmente reposto dentro de uma escala humana de tempo | replenishable | *"The transition to renewable energy sources is increasingly driven not only by environmental imperatives but by the rapidly improving cost-competitiveness of solar and wind generation."* |
-| **habitat** | n. | habitat; ambiente natural de um organismo | natural environment; native surroundings | *"Habitat fragmentation (the division of continuous ecosystems into isolated patches) is among the most significant drivers of species decline globally."* |
-| **degradation** | n. | degradação; deterioração da qualidade ou função de um ambiente | deterioration; depletion | *"Soil degradation, driven primarily by intensive agricultural practices, threatens the productive capacity of approximately one-third of the Earth's arable land."* |
-| **carbon footprint** | n. | pegada de carbono; total de emissões de CO₂ geradas por atividade | emissions profile | *"The carbon footprint of a product encompasses not only its production phase but its entire lifecycle: from raw material extraction through disposal or recycling."* |
+| **productivity** | n. | produtividade; eficiência na geração de resultados | output efficiency | *"[[Remote work arrangements have, in many documented cases, increased individual productivity while simultaneously reducing organizational overhead costs.::Os regimes de trabalho remoto, em muitos casos documentados, aumentaram a produtividade individual ao mesmo tempo que reduziram os custos operacionais das organizações.]]"* |
+| **innovation** | n. | inovação; introdução de novos processos, produtos ou ideias | advancement; novelty | *"[[Sustained innovation in any sector requires not merely creative talent but institutional conditions that tolerate and even reward productive failure.::A inovação contínua em qualquer setor exige não apenas talento criativo, mas também condições institucionais que tolerem e até recompensem o erro produtivo.]]"* |
+| **stakeholder** | n. | parte interessada; quem é afetado ou tem interesse numa organização | interested party; constituent | *"[[Effective corporate governance requires systematically accounting for the interests of all stakeholders, not solely those of shareholders.::Uma governança corporativa eficaz exige levar em conta de forma sistemática os interesses de todas as partes envolvidas, e não apenas os dos acionistas.]]"* |
+| **viable** | adj. | viável; capaz de funcionar de forma sustentável | feasible; workable | *"[[For a renewable energy transition to be economically viable, the per-unit cost of clean energy must reach parity with (or fall below) that of fossil fuels.::Para que a transição para energias renováveis seja economicamente viável, o custo unitário da energia limpa precisa igualar (ou ficar abaixo de) o dos combustíveis fósseis.]]"* |
+| **leverage** | v. ou n. | alavancar; usar estrategicamente para obter vantagem | to capitalize on; to utilize strategically | *"[[Established firms can leverage their brand recognition and distribution networks to defend market share against disruptive new entrants.::Empresas já estabelecidas podem usar o reconhecimento da marca e as redes de distribuição a seu favor para defender sua fatia de mercado contra novos concorrentes disruptivos.]]"* |
+| **revenue** | n. | receita; renda gerada por atividades empresariais | income; proceeds | *"[[The platform's capacity to generate advertising revenue depends critically on its ability to aggregate and retain a sufficiently large user base.::A capacidade da plataforma de gerar receita publicitária depende de forma decisiva de conseguir reunir e manter uma base de usuários suficientemente ampla.]]"* |
+| **sustainable** | adj. | sustentável; capaz de ser mantido sem comprometimento futuro | viable long-term; maintainable | *"[[A business model that externalizes environmental costs is, by any rigorous definition, not sustainable: it merely defers those costs to future generations.::Um modelo de negócios que transfere os custos ambientais para terceiros, por qualquer definição rigorosa, não é sustentável, pois apenas adia esses custos para as próximas gerações.]]"* |
+| **disruption** | n. | disrupção; mudança radical em um setor ou mercado | upheaval; paradigm shift | *"[[The disruption of the retail sector by e-commerce has forced traditional brick-and-mortar businesses to fundamentally reconceive their value proposition.::A transformação radical do setor varejista pelo comércio eletrônico forçou as lojas físicas tradicionais a repensar pela raiz a sua proposta de valor.]]"* |
+| **transparency** | n. | transparência; abertura e prestação de contas em operações | openness; disclosure | *"[[Organizational transparency, both in decision-making processes and financial reporting, is increasingly treated as a prerequisite for institutional legitimacy.::A transparência organizacional, tanto nos processos de tomada de decisão quanto nos relatórios financeiros, é tratada cada vez mais como requisito básico para a legitimidade institucional.]]"* |
+| **infrastructure** | n. | infraestrutura; sistemas físicos e organizacionais fundamentais | foundational systems; backbone | *"[[Inadequate digital infrastructure disproportionately disadvantages rural and lower-income communities in an economy that increasingly privileges connectivity.::A infraestrutura digital precária prejudica de forma desproporcional as comunidades rurais e de baixa renda em uma economia que valoriza cada vez mais a conectividade.]]"* |
 
-### ÁREA: TECHNOLOGY
+### Área: Science and Research
 
 | Palavra | Cat. | Significado (PT) | Sinônimo acadêmico | Exemplo: nível nota máxima |
 |---|---|---|---|---|
-| **algorithm** | n. | algoritmo; conjunto de regras para resolver um problema | computational procedure | *"The algorithm that determines the content a user sees on social media platforms is, in effect, one of the most consequential editorial decisions made in the modern information environment."* |
-| **automation** | n. | automação; realização de tarefas por sistemas sem intervenção humana | mechanization | *"The automation of routine cognitive tasks does not necessarily reduce total employment; it typically shifts labor demand toward activities that require distinctly human judgment."* |
-| **scalable** | adj. | escalável; expansível sem perda proporcional de eficiência | expandable; flexible | *"A business model is only genuinely scalable if its marginal cost of serving an additional user approaches zero as the user base grows."* |
-| **platform** | n. | plataforma; sistema tecnológico que suporta produtos e interações | ecosystem; base technology | *"Platform businesses derive their competitive advantage not from proprietary technology alone but from the network effects generated by their user base."* |
-| **integration** | n. | integração; combinação de sistemas ou componentes em um todo coerente | consolidation; interconnection | *"The seamless integration of digital health records across healthcare providers remains one of the most significant unresolved challenges in medical technology."* |
-| **data-driven** | adj. | orientado por dados; baseado em análise em vez de intuição | analytics-informed | *"A data-driven approach to public health policy requires not only the collection of large-scale data but the analytical capacity to derive actionable insights from it."* |
-| **interface** | n. | interface; ponto de interação entre usuário e sistema | interaction layer | *"The quality of a digital product's interface increasingly determines adoption rates, as users demonstrate diminishing tolerance for cognitive friction in their technological interactions."* |
-| **obsolescence** | n. | obsolescência; processo de se tornar desatualizado ou inútil | deprecation | *"Planned obsolescence (the deliberate design of products with limited useful lifespans) generates both economic profits and disproportionate environmental costs."* |
-| **encryption** | n. | criptografia; codificação de dados para impedir acesso não autorizado | cryptographic security | *"End-to-end encryption ensures that digital communications remain private from all third parties, including the platform providers through which they are transmitted."* |
-| **bandwidth** | n. | largura de banda; capacidade de transmissão de dados em rede | transmission capacity | *"The digital divide is increasingly defined not merely by access to internet connectivity but by access to the bandwidth necessary to fully participate in an economy built on rich media and real-time interaction."* |
+| **hypothesis** | n. | hipótese; explicação proposta a ser testada | proposition; conjecture | *"[[A hypothesis, however elegantly formulated, holds no scientific standing until it has been subjected to rigorous empirical testing and potential falsification.::Uma hipótese, por mais elegante que seja a sua formulação, não tem validade científica até passar por testes empíricos rigorosos e pela possibilidade de refutação.]]"* |
+| **empirical** | adj. | empírico; baseado em observação e evidência, não em teoria | evidence-based; data-driven | *"[[The distinction between empirical findings and theoretical claims is foundational to scientific reasoning and is routinely tested in TOEFL reading passages.::A distinção entre achados empíricos e afirmações teóricas é fundamental para o raciocínio científico e aparece com frequência nas passagens de leitura do TOEFL.]]"* |
+| **correlation** | n. | correlação; relação estatística entre duas variáveis | association; covariation | *"[[Demonstrating a strong correlation between variables is a necessary but insufficient step toward establishing a causal relationship.::Demonstrar uma forte correlação entre variáveis é um passo necessário, porém insuficiente, para comprovar uma relação de causa e efeito.]]"* |
+| **causation** | n. | causalidade; relação direta entre causa e efeito | causal mechanism | *"[[The fundamental challenge in epidemiology is distinguishing genuine causation from spurious correlation in observational data.::O desafio central na epidemiologia é separar a causalidade real da correlação aparente nos dados observacionais.]]"* |
+| **variable** | n. | variável; fator que pode mudar em um experimento | factor; parameter | *"[[Controlling for confounding variables is the central methodological challenge in any study that aims to establish causal rather than merely correlational claims.::Controlar as variáveis de confundimento é o principal desafio metodológico em qualquer estudo que busque estabelecer relações causais, e não apenas correlacionais.]]"* |
+| **replicate** | v. | replicar; reproduzir resultados experimentais | to reproduce; to verify | *"[[The failure to replicate high-profile findings has prompted a broad reassessment of methodological standards across the social sciences.::A dificuldade de reproduzir resultados de grande visibilidade motivou uma ampla revisão dos padrões metodológicos nas ciências sociais.]]"* |
+| **mechanism** | n. | mecanismo; processo subjacente pelo qual algo ocorre | pathway; underlying dynamic | *"[[Identifying the precise neurological mechanism by which stress impairs memory consolidation remains an active area of neuroscientific inquiry.::Identificar o mecanismo neurológico exato pelo qual o estresse prejudica a consolidação da memória continua sendo uma área ativa de pesquisa na neurociência.]]"* |
+| **longitudinal** | adj. | longitudinal; conduzido ao longo de um período estendido | long-term; multi-year | *"[[Longitudinal studies, by tracking the same cohort over years or decades, offer analytical advantages that cross-sectional designs fundamentally cannot replicate.::Os estudos longitudinais, ao acompanharem o mesmo grupo ao longo de anos ou décadas, oferecem vantagens analíticas que os recortes pontuais não conseguem reproduzir.]]"* |
+| **phenomenon** | n. | fenômeno; fato ou evento observável | occurrence; manifestation | *"[[The urban heat island effect is a well-documented climatic phenomenon that has become increasingly consequential as global urbanization accelerates.::O efeito das ilhas de calor urbanas é um fenômeno climático bem documentado, cujas consequências se tornam cada vez maiores à medida que a urbanização global avança.]]"* |
+| **paradigm** | n. | paradigma; estrutura de conceitos e práticas aceitos em uma área | framework; conceptual structure | *"[[A scientific paradigm not only provides researchers with the conceptual tools to formulate questions but also, critically, determines which questions are considered legitimate.::Um paradigma científico não apenas oferece aos pesquisadores as ferramentas conceituais para formular perguntas, mas também define quais questões são consideradas legítimas.]]"* |
+
+### Área: Environment
+
+| Palavra | Cat. | Significado (PT) | Sinônimo acadêmico | Exemplo: nível nota máxima |
+|---|---|---|---|---|
+| **ecosystem** | n. | ecossistema; comunidade biológica e seu ambiente físico | ecological system | *"[[The collapse of a single keystone species can destabilize an entire ecosystem, triggering cascading disruptions that extend far beyond the immediate habitat.::O colapso de uma única espécie-chave pode desestabilizar um ecossistema inteiro, desencadeando desequilíbrios em cascata que vão muito além do habitat imediato.]]"* |
+| **biodiversity** | n. | biodiversidade; variedade de vida num ambiente | species richness | *"[[Biodiversity loss is increasingly recognized not merely as an environmental concern but as a direct threat to the ecosystem services upon which human economies depend.::A perda de biodiversidade é reconhecida cada vez mais não apenas como uma questão ambiental, mas como uma ameaça direta aos serviços ecossistêmicos dos quais as economias humanas dependem.]]"* |
+| **mitigation** | n. | mitigação; redução da gravidade ou impacto de algo prejudicial | reduction; amelioration | *"[[Climate mitigation strategies that prioritize rapid decarbonization of energy systems are projected to deliver substantially greater long-term returns than those focused solely on adaptation.::Estratégias de mitigação climática que priorizam a rápida descarbonização dos sistemas de energia devem gerar retornos muito maiores no longo prazo do que aquelas voltadas apenas à adaptação.]]"* |
+| **conservation** | n. | conservação; proteção e gestão de recursos naturais | preservation; stewardship | *"[[Effective conservation policy increasingly recognizes that protecting biodiversity and supporting sustainable livelihoods for local communities are complementary rather than competing objectives.::Políticas eficazes de conservação reconhecem cada vez mais que proteger a biodiversidade e apoiar meios de subsistência sustentáveis para as comunidades locais são objetivos complementares, e não opostos.]]"* |
+| **resilience** | n. | resiliência; capacidade de sistemas se recuperarem de perturbações | robustness; recovery capacity | *"[[Building ecological resilience requires preserving not only individual species but the complex networks of interaction that enable ecosystems to absorb and recover from disturbance.::Construir resiliência ecológica exige preservar não apenas espécies isoladas, mas também as redes complexas de interação que permitem aos ecossistemas absorver perturbações e se recuperar delas.]]"* |
+| **emissions** | n. | emissões; liberação de gases (especialmente CO₂) na atmosfera | discharge; release | *"[[Per-capita carbon emissions in densely urbanized environments are consistently lower than in sprawling suburban and rural areas, largely due to transit dependency.::As emissões de carbono per capita em ambientes densamente urbanizados são consistentemente menores do que em áreas suburbanas e rurais espalhadas, em grande parte pelo uso do transporte público.]]"* |
+| **renewable** | adj. | renovável; naturalmente reposto dentro de uma escala humana de tempo | replenishable | *"[[The transition to renewable energy sources is increasingly driven not only by environmental imperatives but by the rapidly improving cost-competitiveness of solar and wind generation.::A transição para fontes de energia renovável é impulsionada cada vez mais não apenas por exigências ambientais, mas também pela rápida queda nos custos da geração solar e eólica.]]"* |
+| **habitat** | n. | habitat; ambiente natural de um organismo | natural environment; native surroundings | *"[[Habitat fragmentation (the division of continuous ecosystems into isolated patches) is among the most significant drivers of species decline globally.::A fragmentação de habitat (a divisão de ecossistemas contínuos em áreas isoladas) está entre os fatores mais significativos para o declínio de espécies no mundo todo.]]"* |
+| **degradation** | n. | degradação; deterioração da qualidade ou função de um ambiente | deterioration; depletion | *"[[Soil degradation, driven primarily by intensive agricultural practices, threatens the productive capacity of approximately one-third of the Earth's arable land.::A degradação do solo, causada principalmente por práticas agrícolas intensivas, ameaça a capacidade produtiva de cerca de um terço das terras cultiváveis do planeta.]]"* |
+| **carbon footprint** | n. | pegada de carbono; total de emissões de CO₂ geradas por atividade | emissions profile | *"[[The carbon footprint of a product encompasses not only its production phase but its entire lifecycle: from raw material extraction through disposal or recycling.::A pegada de carbono de um produto abrange não apenas a fase de fabricação, mas todo o seu ciclo de vida, desde a extração da matéria-prima até o descarte ou a reciclagem.]]"* |
+
+### Área: Technology
+
+| Palavra | Cat. | Significado (PT) | Sinônimo acadêmico | Exemplo: nível nota máxima |
+|---|---|---|---|---|
+| **algorithm** | n. | algoritmo; conjunto de regras para resolver um problema | computational procedure | *"[[The algorithm that determines the content a user sees on social media platforms is, in effect, one of the most consequential editorial decisions made in the modern information environment.::O algoritmo que define qual conteúdo o usuário vê nas redes sociais funciona, na prática, como uma das decisões editoriais de maior impacto no ambiente de informação atual.]]"* |
+| **automation** | n. | automação; realização de tarefas por sistemas sem intervenção humana | mechanization | *"[[The automation of routine cognitive tasks does not necessarily reduce total employment; it typically shifts labor demand toward activities that require distinctly human judgment.::A automação de tarefas cognitivas rotineiras não reduz necessariamente o nível total de emprego; em geral, ela desloca a demanda de trabalho para atividades que exigem um julgamento claramente humano.]]"* |
+| **scalable** | adj. | escalável; expansível sem perda proporcional de eficiência | expandable; flexible | *"[[A business model is only genuinely scalable if its marginal cost of serving an additional user approaches zero as the user base grows.::Um modelo de negócios só é verdadeiramente escalável se o custo marginal de atender a um novo usuário se aproximar de zero à medida que a base de clientes cresce.]]"* |
+| **platform** | n. | plataforma; sistema tecnológico que suporta produtos e interações | ecosystem; base technology | *"[[Platform businesses derive their competitive advantage not from proprietary technology alone but from the network effects generated by their user base.::Empresas baseadas em plataforma tiram sua vantagem competitiva não apenas da tecnologia própria, mas dos efeitos de rede gerados pela sua base de usuários.]]"* |
+| **integration** | n. | integração; combinação de sistemas ou componentes em um todo coerente | consolidation; interconnection | *"[[The seamless integration of digital health records across healthcare providers remains one of the most significant unresolved challenges in medical technology.::A integração fluida dos prontuários digitais entre diferentes serviços de saúde continua sendo um dos maiores desafios ainda em aberto na tecnologia médica.]]"* |
+| **data-driven** | adj. | orientado por dados; baseado em análise em vez de intuição | analytics-informed | *"[[A data-driven approach to public health policy requires not only the collection of large-scale data but the analytical capacity to derive actionable insights from it.::Uma abordagem orientada por dados nas políticas de saúde pública exige não apenas a coleta de informações em larga escala, mas também a capacidade analítica de extrair conclusões práticas a partir delas.]]"* |
+| **interface** | n. | interface; ponto de interação entre usuário e sistema | interaction layer | *"[[The quality of a digital product's interface increasingly determines adoption rates, as users demonstrate diminishing tolerance for cognitive friction in their technological interactions.::A qualidade da interface de um produto digital define cada vez mais o seu ritmo de adoção, já que os usuários mostram cada vez menos tolerância a dificuldades de uso nas interações tecnológicas.]]"* |
+| **obsolescence** | n. | obsolescência; processo de se tornar desatualizado ou inútil | deprecation | *"[[Planned obsolescence (the deliberate design of products with limited useful lifespans) generates both economic profits and disproportionate environmental costs.::A obsolescência programada (o desenho intencional de produtos com vida útil limitada) gera tanto lucros econômicos quanto custos ambientais desproporcionais.]]"* |
+| **encryption** | n. | criptografia; codificação de dados para impedir acesso não autorizado | cryptographic security | *"[[End-to-end encryption ensures that digital communications remain private from all third parties, including the platform providers through which they are transmitted.::A criptografia de ponta a ponta garante que as comunicações digitais permaneçam privadas diante de quaisquer terceiros, inclusive das próprias plataformas pelas quais são transmitidas.]]"* |
+| **bandwidth** | n. | largura de banda; capacidade de transmissão de dados em rede | transmission capacity | *"[[The digital divide is increasingly defined not merely by access to internet connectivity but by access to the bandwidth necessary to fully participate in an economy built on rich media and real-time interaction.::A desigualdade digital é definida cada vez mais não apenas pelo acesso à internet, mas pela disponibilidade da largura de banda necessária para participar plenamente de uma economia baseada em mídia pesada e interação em tempo real.]]"* |
 
 ---
 
-## PARTE 3: LOW-FREQUENCY HIGH-IMPACT VOCABULARY
+## Parte 3: Vocabulário de alto impacto para produção
 
-> Estas são as palavras que **você** insere estrategicamente no Speaking e Writing para ativar os gatilhos de sofisticação lexical. Use-as apenas quando puder fazê-lo com precisão: uma palavra errada custa mais do que a palavra simples e correta.
+> **Dica:** Estas são as palavras que **você** escolhe inserir no Speaking e no Writing para elevar a nota de vocabulário. Use cada termo apenas quando tiver certeza do seu sentido exato, porque uma palavra simples e correta pontua mais do que um termo sofisticado fora de lugar.
 
-### EDUCATION: HIGH-IMPACT
-
-| Palavra | Cat. | Significado (PT) | Sinônimo (mais simples) | Exemplo: nível nota máxima |
-|---|---|---|---|---|
-| **metacognition** | n. | metacognição; consciência e controle dos próprios processos de pensamento | self-awareness of thinking | *"Students who develop metacognitive skills (the capacity to monitor and regulate their own learning processes) consistently outperform peers of comparable baseline ability."* |
-| **scaffolding** | n. | andaime pedagógico; suporte gradualmente removido conforme o aluno ganha autonomia | structured support | *"Effective instructional scaffolding demands that teachers accurately diagnose the learner's current capability and calibrate the degree of support accordingly."* |
-| **inculcate** | v. | inculcar; incutir crenças, valores ou hábitos por repetição | to instill; to teach firmly | *"The most enduring contribution of education may not be the transmission of specific knowledge but the inculcation of intellectual habits that outlast the content itself."* |
-| **epistemic** | adj. | epistêmico; relativo à natureza, validade e limites do conhecimento | knowledge-related | *"A curriculum that neglects epistemic humility (the acknowledgment that knowledge is provisional) risks producing graduates who mistake certainty for understanding."* |
-| **autodidactic** | adj. | autodidata; relativo a quem se instrui de forma independente | self-taught | *"The proliferation of high-quality open educational resources has created genuinely viable pathways for autodidactic learners to acquire skills previously accessible only through formal enrollment."* |
-| **heuristic** | n./adj. | heurística; abordagem prática de resolução de problemas sem garantia de solução ótima | rule of thumb | *"Expert practitioners rely less on exhaustive analysis and more on heuristics (refined through experience) that reliably identify productive approaches to familiar problems."* |
-| **cultivate** | v. | cultivar; desenvolver ou promover deliberadamente | to develop; to nurture | *"Universities that genuinely cultivate intellectual curiosity (rather than merely credentialing students) produce graduates who remain learners throughout their professional lives."* |
-| **disseminate** | v. | disseminar; difundir amplamente | to spread; to circulate | *"Open-access publishing models are transforming the speed at which peer-reviewed research is disseminated, compressing the gap between discovery and application."* |
-| **nuanced** | adj. | nuançado; que apresenta distinções sutis e complexidade | subtle; multifaceted | *"A nuanced understanding of learning differences requires moving beyond diagnostic labels toward a genuine appreciation of the specific cognitive profiles that shape each student's experience."* |
-| **transformative** | adj. | transformador; que produz mudança fundamental e duradoura | profound; foundational | *"The most transformative educational experiences are rarely those that transmit information efficiently; they are those that alter how the learner perceives the world itself."* |
-
-### BUSINESS & ECONOMICS: HIGH-IMPACT
+### Education: alto impacto
 
 | Palavra | Cat. | Significado (PT) | Sinônimo (mais simples) | Exemplo: nível nota máxima |
 |---|---|---|---|---|
-| **externality** | n. | externalidade; consequência de uma atividade que afeta terceiros não envolvidos na transação | spillover effect | *"Carbon emissions represent the paradigmatic example of a negative externality: the costs of environmental degradation are borne by society broadly, not by the entities generating the emissions."* |
-| **proliferation** | n. | proliferação; aumento ou expansão rápida em número ou escala | rapid spread; surge | *"The proliferation of subscription-based business models across sectors reflects a fundamental shift in how companies conceptualize the relationship between customer acquisition and lifetime value."* |
-| **incumbent** | n./adj. | incumbente; agente que já ocupa posição dominante no mercado | established player | *"Incumbent firms in regulated industries often leverage their regulatory relationships (rather than their technological advantages) to erect barriers against more efficient new entrants."* |
-| **arbitrage** | n. | arbitragem; exploração de diferenças de preço entre mercados distintos | price exploitation | *"Regulatory arbitrage (structuring operations to exploit gaps between different jurisdictions' legal frameworks) has become a significant strategic consideration for multinational corporations."* |
-| **commoditize** | v. | transformar em commodity; tornar padronizado e indistinguível competitivamente | to standardize; to genericize | *"As machine learning capabilities become commoditized, competitive advantage will increasingly derive not from the technology itself but from the proprietary data and domain expertise that inform its application."* |
-| **scalability** | n. | escalabilidade; capacidade de crescimento sem aumento proporcional de custos | growth potential | *"The fundamental advantage of software-based business models over physical ones lies in their scalability: the marginal cost of delivering the product to an additional customer approaches zero."* |
-| **paradigm shift** | n. | mudança de paradigma; transformação fundamental na forma como um campo opera | fundamental transformation | *"The shift from internal combustion to electric vehicles represents not merely a technological upgrade but a paradigm shift in the structure of the global automotive industry."* |
-| **synergy** | n. | sinergia; efeito combinado que supera a soma das partes | complementary effect | *"The anticipated synergies from a merger rarely materialize at the scale projected in acquisition models, largely because cultural integration costs are systematically underestimated."* |
-| **incremental** | adj. | incremental; que avança por pequenos acréscimos sucessivos | step-by-step; gradual | *"Incremental improvements to an established process often deliver more reliable returns than the pursuit of a single transformative breakthrough."* |
-| **benchmark** | v./n. | comparar com um padrão de referência; o próprio padrão | standard; reference point | *"Benchmarking organizational performance against industry peers provides a more meaningful signal of competitive positioning than absolute metrics considered in isolation."* |
+| **metacognition** | n. | metacognição; consciência e controle dos próprios processos de pensamento | self-awareness of thinking | *"[[Students who develop metacognitive skills (the capacity to monitor and regulate their own learning processes) consistently outperform peers of comparable baseline ability.::Os estudantes que desenvolvem habilidades metacognitivas (a capacidade de monitorar e regular o próprio processo de aprendizagem) superam de forma consistente os colegas com nível inicial semelhante.]]"* |
+| **scaffolding** | n. | andaime pedagógico; suporte gradualmente removido conforme o aluno ganha autonomia | structured support | *"[[Effective instructional scaffolding demands that teachers accurately diagnose the learner's current capability and calibrate the degree of support accordingly.::Um suporte pedagógico eficaz exige que os professores diagnostiquem com precisão a capacidade atual do aluno e ajustem o grau de apoio de acordo com essa necessidade.]]"* |
+| **inculcate** | v. | inculcar; incutir crenças, valores ou hábitos por repetição | to instill; to teach firmly | *"[[The most enduring contribution of education may not be the transmission of specific knowledge but the inculcation of intellectual habits that outlast the content itself.::A contribuição mais duradoura da educação talvez não seja a transmissão de conteúdos específicos, e sim a formação de hábitos intelectuais que permanecem muito depois do conteúdo em si.]]"* |
+| **epistemic** | adj. | epistêmico; relativo à natureza, validade e limites do conhecimento | knowledge-related | *"[[A curriculum that neglects epistemic humility (the acknowledgment that knowledge is provisional) risks producing graduates who mistake certainty for understanding.::Um currículo que deixa de lado a humildade epistêmica (o reconhecimento de que o conhecimento é provisório) corre o risco de formar alunos que confundem certeza com compreensão.]]"* |
+| **autodidactic** | adj. | autodidata; relativo a quem se instrui de forma independente | self-taught | *"[[The proliferation of high-quality open educational resources has created genuinely viable pathways for autodidactic learners to acquire skills previously accessible only through formal enrollment.::A expansão de recursos educacionais abertos de alta qualidade criou caminhos realmente viáveis para que aprendizes autodidatas desenvolvam habilidades antes restritas ao ensino formal.]]"* |
+| **heuristic** | n. ou adj. | heurística; abordagem prática de resolução de problemas sem garantia de solução ótima | rule of thumb | *"[[Expert practitioners rely less on exhaustive analysis and more on heuristics (refined through experience) that reliably identify productive approaches to familiar problems.::Profissionais experientes apoiam-se menos em análises exaustivas e mais em atalhos práticos (refinados pela experiência) que apontam com segurança caminhos produtivos para problemas conhecidos.]]"* |
+| **cultivate** | v. | cultivar; desenvolver ou promover deliberadamente | to develop; to nurture | *"[[Universities that genuinely cultivate intellectual curiosity (rather than merely credentialing students) produce graduates who remain learners throughout their professional lives.::As universidades que realmente cultivam a curiosidade intelectual (em vez de apenas emitir diplomas) formam profissionais que continuam aprendendo ao longo de toda a carreira.]]"* |
+| **disseminate** | v. | disseminar; difundir amplamente | to spread; to circulate | *"[[Open-access publishing models are transforming the speed at which peer-reviewed research is disseminated, compressing the gap between discovery and application.::Os modelos de publicação em acesso aberto estão transformando a velocidade com que pesquisas revisadas por pares são difundidas, encurtando a distância entre a descoberta e a aplicação prática.]]"* |
+| **nuanced** | adj. | nuançado; que apresenta distinções sutis e complexidade | subtle; multifaceted | *"[[A nuanced understanding of learning differences requires moving beyond diagnostic labels toward a genuine appreciation of the specific cognitive profiles that shape each student's experience.::Uma compreensão cuidadosa das diferenças de aprendizagem exige ir além de rótulos diagnósticos e valorizar os perfis cognitivos específicos que moldam a experiência de cada estudante.]]"* |
+| **transformative** | adj. | transformador; que produz mudança fundamental e duradoura | profound; foundational | *"[[The most transformative educational experiences are rarely those that transmit information efficiently; they are those that alter how the learner perceives the world itself.::As experiências educacionais mais transformadoras raramente são aquelas que apenas transmitem informação com eficiência, e sim as que mudam a forma como o aluno enxerga o próprio mundo.]]"* |
 
-### SCIENCE & RESEARCH: HIGH-IMPACT
-
-| Palavra | Cat. | Significado (PT) | Sinônimo (mais simples) | Exemplo: nível nota máxima |
-|---|---|---|---|---|
-| **confounding variable** | n. | variável de confundimento; fator que influencia tanto a variável independente quanto a dependente, distorcendo resultados | hidden factor | *"The persistent failure to control for socioeconomic status as a confounding variable has undermined the conclusions of a significant portion of educational psychology research."* |
-| **extrapolate** | v. | extrapolar; estender dados conhecidos para prever resultados desconhecidos | to project; to infer beyond | *"Caution is warranted when extrapolating findings from laboratory settings to real-world contexts, as ecological validity is rarely guaranteed."* |
-| **substantiate** | v. | fundamentar, comprovar; fornecer evidências concretas para apoiar uma afirmação | to support; to corroborate | *"Before a scientific claim can be incorporated into policy, it must be substantiated by multiple independent lines of evidence gathered under methodologically rigorous conditions."* |
-| **counterintuitive** | adj. | contraintuitivo; contrário ao esperado pelo senso comum | surprising; paradoxical | *"One of the most counterintuitive findings in behavioral economics is that providing individuals with more choices frequently reduces, rather than enhances, their overall satisfaction."* |
-| **robust** | adj. | robusto; forte, confiável e resistente a erros metodológicos | reliable; sound | *"The causal claim gains credibility when supported by robust findings across multiple independent studies employing distinct methodological approaches."* |
-| **elucidate** | v. | elucidar; tornar algo claro através de explicação cuidadosa | to clarify; to illuminate | *"The lecture's primary purpose is to elucidate the mechanism by which the phenomenon described in the reading passage actually operates at the molecular level."* |
-| **corollary** | n. | corolário; consequência direta e lógica de uma proposição anterior | logical result | *"A direct corollary of the findings on sleep deprivation is that educational institutions that begin classes at earlier hours are, by design, undermining the cognitive performance of the students they serve."* |
-| **posit** | v. | postular; propor ou assumir como verdadeiro para fins de argumento | to propose; to assert | *"The professor posits that the simultaneous emergence of agriculture across geographically distant regions reflects a universal threshold in human cognitive complexity rather than cultural diffusion."* |
-| **tenuous** | adj. | tênue; fraco, pouco convincente, facilmente contestável | weak; fragile | *"The connection between screen time and adverse mental health outcomes in adolescents remains statistically tenuous once pre-existing conditions are rigorously controlled for."* |
-| **corroborate** | v. | corroborar; confirmar uma afirmação através de evidência independente | to confirm; to verify | *"The lecture's experimental evidence directly corroborates the theoretical prediction made in the reading, providing the empirical grounding that the model alone could not supply."* |
-
-### ENVIRONMENT: HIGH-IMPACT
+### Business and Economics: alto impacto
 
 | Palavra | Cat. | Significado (PT) | Sinônimo (mais simples) | Exemplo: nível nota máxima |
 |---|---|---|---|---|
-| **anthropogenic** | adj. | antropogênico; causado ou originado por atividade humana | human-caused; man-made | *"The scientific consensus that current climate change is predominantly anthropogenic in origin is among the most thoroughly substantiated positions in the history of earth science."* |
-| **sequestration** | n. | sequestro (de carbono); captura e armazenamento de CO₂ da atmosfera | carbon capture | *"Natural carbon sequestration through the preservation of intact forests represents one of the most cost-effective climate mitigation strategies currently available."* |
-| **tipping point** | n. | ponto de inflexão; limiar após o qual mudanças graduais tornam-se irreversíveis | point of no return | *"Climate scientists warn that several planetary systems may be approaching tipping points beyond which self-reinforcing feedback loops will drive change independently of human emissions trajectories."* |
-| **endemic** | adj. | endêmico; nativo e restrito a uma área geográfica específica | native; regionally specific | *"Species that are endemic to island ecosystems are disproportionately vulnerable to extinction, as they have evolved in isolation without adaptations that confer resilience to novel threats."* |
-| **remediation** | n. | remediação; processo de reverter ou interromper dano ambiental | restoration; cleanup | *"Effective soil remediation following industrial contamination requires not merely the removal of pollutants but the active restoration of microbial communities that drive ecological recovery."* |
-| **cascading effect** | n. | efeito em cascata; um evento desencadeia outros em sequência | chain reaction; knock-on effect | *"The loss of a keystone predator can produce cascading effects that ultimately restructure the entire food web, often in ways that initial ecological models failed to anticipate."* |
-| **precautionary principle** | n. | princípio da precaução; agir preventivamente diante de incerteza científica | preventive approach | *"The precautionary principle holds that the burden of proof for demonstrating safety should fall on those introducing a potentially harmful intervention, not on those who may be harmed."* |
-| **irreversible** | adj. | irreversível; que não pode ser desfeito após ocorrer | permanent; irremediable | *"What distinguishes biodiversity loss from most other forms of environmental degradation is its fundamentally irreversible character: once a species becomes extinct, no technological intervention can restore it."* |
-| **symbiosis** | n. | simbiose; convivência estreita e duradoura entre organismos de espécies diferentes (pode ser benéfica para ambos, neutra para um ou parasitária) | close association; interdependence | *"The symbiosis between mycorrhizal fungi and plant root systems exemplifies how ecological relationships that appear parasitic at first glance can, upon closer analysis, prove mutualistic."* |
-| **acidification** | n. | acidificação; queda do pH (dos oceanos) por absorção de CO₂ | pH decline | *"Ocean acidification, driven by the absorption of atmospheric CO₂, impairs the ability of corals and shellfish to build the calcium carbonate structures on which entire marine food webs depend."* |
+| **externality** | n. | externalidade; consequência de uma atividade que afeta terceiros não envolvidos na transação | spillover effect | *"[[Carbon emissions represent the paradigmatic example of a negative externality: the costs of environmental degradation are borne by society broadly, not by the entities generating the emissions.::As emissões de carbono representam o exemplo clássico de uma externalidade negativa, pois os custos da degradação ambiental recaem sobre a sociedade como um todo, e não sobre os agentes que geram essas emissões.]]"* |
+| **proliferation** | n. | proliferação; aumento ou expansão rápida em número ou escala | rapid spread; surge | *"[[The proliferation of subscription-based business models across sectors reflects a fundamental shift in how companies conceptualize the relationship between customer acquisition and lifetime value.::A rápida expansão dos modelos de negócios por assinatura em vários setores reflete uma mudança profunda na forma como as empresas enxergam a relação entre conquistar clientes e gerar valor no longo prazo.]]"* |
+| **incumbent** | n. ou adj. | incumbente; agente que já ocupa posição dominante no mercado | established player | *"[[Incumbent firms in regulated industries often leverage their regulatory relationships (rather than their technological advantages) to erect barriers against more efficient new entrants.::As empresas já dominantes em setores regulados muitas vezes usam suas relações institucionais (e não suas vantagens tecnológicas) para erguer barreiras contra novos concorrentes mais eficientes.]]"* |
+| **arbitrage** | n. | arbitragem; exploração de diferenças de preço entre mercados distintos | price exploitation | *"[[Regulatory arbitrage (structuring operations to exploit gaps between different jurisdictions' legal frameworks) has become a significant strategic consideration for multinational corporations.::A arbitragem regulatória (estruturar operações para aproveitar brechas entre as leis de diferentes países) tornou-se um fator estratégico relevante para empresas multinacionais.]]"* |
+| **commoditize** | v. | transformar em commodity; tornar padronizado e indistinguível competitivamente | to standardize; to genericize | *"[[As machine learning capabilities become commoditized, competitive advantage will increasingly derive not from the technology itself but from the proprietary data and domain expertise that inform its application.::À medida que os recursos de aprendizado de máquina se tornam padronizados, a vantagem competitiva virá cada vez menos da tecnologia em si e mais dos dados próprios e do conhecimento especializado que orientam a sua aplicação.]]"* |
+| **scalability** | n. | escalabilidade; capacidade de crescimento sem aumento proporcional de custos | growth potential | *"[[The fundamental advantage of software-based business models over physical ones lies in their scalability: the marginal cost of delivering the product to an additional customer approaches zero.::A vantagem central dos modelos de negócios baseados em software sobre os físicos está na escalabilidade, já que o custo marginal de entregar o produto a mais um cliente se aproxima de zero.]]"* |
+| **paradigm shift** | n. | mudança de paradigma; transformação fundamental na forma como um campo opera | fundamental transformation | *"[[The shift from internal combustion to electric vehicles represents not merely a technological upgrade but a paradigm shift in the structure of the global automotive industry.::A passagem dos motores a combustão para os veículos elétricos representa não apenas uma atualização tecnológica, mas uma mudança de paradigma na estrutura da indústria automotiva mundial.]]"* |
+| **synergy** | n. | sinergia; efeito combinado que supera a soma das partes | complementary effect | *"[[The anticipated synergies from a merger rarely materialize at the scale projected in acquisition models, largely because cultural integration costs are systematically underestimated.::As sinergias esperadas em uma fusão raramente se concretizam na escala prevista pelos modelos de aquisição, em grande parte porque os custos de integração cultural são subestimados de forma sistemática.]]"* |
+| **incremental** | adj. | incremental; que avança por pequenos acréscimos sucessivos | step-by-step; gradual | *"[[Incremental improvements to an established process often deliver more reliable returns than the pursuit of a single transformative breakthrough.::Melhorias graduais em um processo já estabelecido costumam trazer retornos mais confiáveis do que a busca por uma única descoberta revolucionária.]]"* |
+| **benchmark** | v. ou n. | comparar com um padrão de referência; o próprio padrão | standard; reference point | *"[[Benchmarking organizational performance against industry peers provides a more meaningful signal of competitive positioning than absolute metrics considered in isolation.::Comparar o desempenho de uma organização com o de outras empresas do setor oferece um indicador muito mais claro de posição competitiva do que olhar números absolutos de forma isolada.]]"* |
 
-### TECHNOLOGY: HIGH-IMPACT
+### Science and Research: alto impacto
 
 | Palavra | Cat. | Significado (PT) | Sinônimo (mais simples) | Exemplo: nível nota máxima |
 |---|---|---|---|---|
-| **ubiquitous** | adj. | ubíquo; presente em todos os lugares ao mesmo tempo | everywhere; pervasive | *"The near-ubiquitous presence of smartphones in daily life has fundamentally altered not only how people communicate but how they perceive, navigate, and experience the physical world."* |
-| **disruptive** | adj. | disruptivo; que causa mudança radical e desestrutura modelos estabelecidos | revolutionary; destabilizing | *"Technologies that prove genuinely disruptive do not merely improve on existing products: they render the existing category of product obsolete by redefining what the market actually values."* |
-| **convergence** | n. | convergência; fusão de tecnologias ou setores distintos em uma nova entidade integrada | merging; fusion | *"The convergence of artificial intelligence, genomics, and materials science represents arguably the most consequential technological development of the twenty-first century."* |
-| **iterative** | adj. | iterativo; que repete um processo com refinamentos progressivos a cada ciclo | incremental; progressive | *"Software development methodologies that favor iterative deployment over comprehensive upfront planning consistently demonstrate superior adaptability to shifting user requirements."* |
-| **interoperability** | n. | interoperabilidade; capacidade de sistemas diferentes funcionarem em conjunto sem fricção | compatibility; connectivity | *"The absence of interoperability between electronic health record systems represents one of the most significant (and most avoidable) inefficiencies in contemporary healthcare delivery."* |
-| **augment** | v. | aumentar; melhorar ou complementar capacidades existentes | to enhance; to amplify | *"The most productive framing of artificial intelligence is not as a replacement for human judgment but as a tool that can augment human decision-making by processing information at scales beyond unaided cognitive capacity."* |
-| **exponential** | adj. | exponencial; que cresce sempre na mesma proporção do valor atual (por exemplo, dobrando a cada período) | rapid; compounding | *"The exponential growth in data generation has created both extraordinary analytical opportunities and unprecedented challenges for privacy, security, and regulatory governance."* |
-| **latency** | n. | latência; atraso entre a transmissão e a recepção de dados em uma rede | delay; lag | *"For applications requiring real-time responsiveness (autonomous vehicles, remote surgery), reducing network latency to a few milliseconds is not a performance optimization but a safety imperative."* |
-| **algorithmic bias** | n. | viés algorítmico; distorções sistemáticas em sistemas de IA que reproduzem preconceitos dos dados de treinamento | systematic AI discrimination | *"Algorithmic bias in hiring and credit-scoring systems poses a profound equity challenge: it can automate and scale discriminatory outcomes while simultaneously obscuring the human decisions that produced them."* |
-| **redundancy** | n. | redundância; duplicação deliberada de componentes para garantir confiabilidade | backup capacity; fail-safe | *"Well-engineered systems build in redundancy precisely because component failure is a statistical certainty over a long enough time horizon, not a remote possibility."* |
+| **confounding variable** | n. | variável de confundimento; fator que influencia tanto a variável independente quanto a dependente, distorcendo resultados | hidden factor | *"[[The persistent failure to control for socioeconomic status as a confounding variable has undermined the conclusions of a significant portion of educational psychology research.::A falha recorrente em controlar o nível socioeconômico como variável de confundimento enfraqueceu as conclusões de boa parte das pesquisas em psicologia educacional.]]"* |
+| **extrapolate** | v. | extrapolar; estender dados conhecidos para prever resultados desconhecidos | to project; to infer beyond | *"[[Caution is warranted when extrapolating findings from laboratory settings to real-world contexts, as ecological validity is rarely guaranteed.::É preciso ter cautela ao extrapolar resultados de laboratório para situações do mundo real, já que a validade fora do ambiente controlado raramente está garantida.]]"* |
+| **substantiate** | v. | fundamentar, comprovar; fornecer evidências concretas para apoiar uma afirmação | to support; to corroborate | *"[[Before a scientific claim can be incorporated into policy, it must be substantiated by multiple independent lines of evidence gathered under methodologically rigorous conditions.::Antes que uma afirmação científica possa orientar políticas públicas, ela precisa ser comprovada por várias linhas independentes de evidência, reunidas sob condições metodológicas rigorosas.]]"* |
+| **counterintuitive** | adj. | contraintuitivo; contrário ao esperado pelo senso comum | surprising; paradoxical | *"[[One of the most counterintuitive findings in behavioral economics is that providing individuals with more choices frequently reduces, rather than enhances, their overall satisfaction.::Um dos achados mais contraintuitivos da economia comportamental é que oferecer mais opções às pessoas frequentemente reduz, em vez de aumentar, a sua satisfação geral.]]"* |
+| **robust** | adj. | robusto; forte, confiável e resistente a erros metodológicos | reliable; sound | *"[[The causal claim gains credibility when supported by robust findings across multiple independent studies employing distinct methodological approaches.::A afirmação de causa e efeito ganha credibilidade quando é sustentada por resultados sólidos em vários estudos independentes que utilizam abordagens metodológicas distintas.]]"* |
+| **elucidate** | v. | elucidar; tornar algo claro através de explicação cuidadosa | to clarify; to illuminate | *"[[The lecture's primary purpose is to elucidate the mechanism by which the phenomenon described in the reading passage actually operates at the molecular level.::O objetivo principal da palestra é elucidar o mecanismo pelo qual o fenômeno descrito na passagem de leitura realmente funciona em nível molecular.]]"* |
+| **corollary** | n. | corolário; consequência direta e lógica de uma proposição anterior | logical result | *"[[A direct corollary of the findings on sleep deprivation is that educational institutions that begin classes at earlier hours are, by design, undermining the cognitive performance of the students they serve.::Uma consequência lógica direta das pesquisas sobre privação de sono é que as instituições de ensino que começam as aulas muito cedo acabam prejudicando, pela própria organização do horário, o desempenho cognitivo dos seus alunos.]]"* |
+| **posit** | v. | postular; propor ou assumir como verdadeiro para fins de argumento | to propose; to assert | *"[[The professor posits that the simultaneous emergence of agriculture across geographically distant regions reflects a universal threshold in human cognitive complexity rather than cultural diffusion.::O professor postula que o surgimento simultâneo da agricultura em regiões geograficamente distantes reflete um patamar universal de complexidade cognitiva humana, e não uma difusão cultural.]]"* |
+| **tenuous** | adj. | tênue; fraco, pouco convincente, facilmente contestável | weak; fragile | *"[[The connection between screen time and adverse mental health outcomes in adolescents remains statistically tenuous once pre-existing conditions are rigorously controlled for.::A relação entre o tempo de tela e os efeitos negativos na saúde mental de adolescentes mostra-se estatisticamente tênue quando as condições preexistentes são controladas com rigor.]]"* |
+| **corroborate** | v. | corroborar; confirmar uma afirmação através de evidência independente | to confirm; to verify | *"[[The lecture's experimental evidence directly corroborates the theoretical prediction made in the reading, providing the empirical grounding that the model alone could not supply.::As evidências experimentais da palestra corroboram diretamente a previsão teórica feita no texto, oferecendo a base empírica que o modelo sozinho não conseguia fornecer.]]"* |
+
+### Environment: alto impacto
+
+| Palavra | Cat. | Significado (PT) | Sinônimo (mais simples) | Exemplo: nível nota máxima |
+|---|---|---|---|---|
+| **anthropogenic** | adj. | antropogênico; causado ou originado por atividade humana | human-caused; man-made | *"[[The scientific consensus that current climate change is predominantly anthropogenic in origin is among the most thoroughly substantiated positions in the history of earth science.::O consenso científico de que a mudança climática atual tem origem predominantemente humana está entre as posições mais amplamente comprovadas na história das ciências da Terra.]]"* |
+| **sequestration** | n. | sequestro de carbono; captura e armazenamento de CO₂ da atmosfera | carbon capture | *"[[Natural carbon sequestration through the preservation of intact forests represents one of the most cost-effective climate mitigation strategies currently available.::O sequestro natural de carbono por meio da preservação de florestas intactas representa uma das estratégias de mitigação climática de melhor custo-benefício disponíveis hoje.]]"* |
+| **tipping point** | n. | ponto de inflexão; limiar após o qual mudanças graduais tornam-se irreversíveis | point of no return | *"[[Climate scientists warn that several planetary systems may be approaching tipping points beyond which self-reinforcing feedback loops will drive change independently of human emissions trajectories.::Cientistas do clima alertam que vários sistemas planetários podem estar se aproximando de pontos de inflexão, após os quais ciclos que se retroalimentam impulsionarão mudanças independentemente da trajetória das emissões humanas.]]"* |
+| **endemic** | adj. | endêmico; nativo e restrito a uma área geográfica específica | native; regionally specific | *"[[Species that are endemic to island ecosystems are disproportionately vulnerable to extinction, as they have evolved in isolation without adaptations that confer resilience to novel threats.::Espécies endêmicas de ecossistemas insulares são desproporcionalmente vulneráveis à extinção, pois evoluíram isoladas e sem adaptações que garantam resistência a novas ameaças.]]"* |
+| **remediation** | n. | remediação; processo de reverter ou interromper dano ambiental | restoration; cleanup | *"[[Effective soil remediation following industrial contamination requires not merely the removal of pollutants but the active restoration of microbial communities that drive ecological recovery.::A remediação eficaz do solo após a contaminação industrial exige não apenas a retirada dos poluentes, mas também a restauração ativa das comunidades microbianas que impulsionam a recuperação ecológica.]]"* |
+| **cascading effect** | n. | efeito em cascata; um evento desencadeia outros em sequência | chain reaction; knock-on effect | *"[[The loss of a keystone predator can produce cascading effects that ultimately restructure the entire food web, often in ways that initial ecological models failed to anticipate.::A perda de um predador-chave pode gerar efeitos em cascata que acabam reestruturando toda a cadeia alimentar, muitas vezes de formas que os modelos ecológicos iniciais não previram.]]"* |
+| **precautionary principle** | n. | princípio da precaução; agir preventivamente diante de incerteza científica | preventive approach | *"[[The precautionary principle holds that the burden of proof for demonstrating safety should fall on those introducing a potentially harmful intervention, not on those who may be harmed.::O princípio da precaução sustenta que o dever de comprovar a segurança cabe a quem introduz uma intervenção potencialmente danosa, e não a quem pode sofrer os danos.]]"* |
+| **irreversible** | adj. | irreversível; que não pode ser desfeito após ocorrer | permanent; irremediable | *"[[What distinguishes biodiversity loss from most other forms of environmental degradation is its fundamentally irreversible character: once a species becomes extinct, no technological intervention can restore it.::O que diferencia a perda de biodiversidade da maioria das outras formas de degradação ambiental é o seu caráter fundamentalmente irreversível, pois uma vez que uma espécie é extinta, nenhuma intervenção tecnológica consegue recuperá-la.]]"* |
+| **symbiosis** | n. | simbiose; convivência estreita e duradoura entre organismos de espécies diferentes, podendo ser benéfica para ambos, neutra para um ou parasitária | close association; interdependence | *"[[The symbiosis between mycorrhizal fungi and plant root systems exemplifies how ecological relationships that appear parasitic at first glance can, upon closer analysis, prove mutualistic.::A simbiose entre fungos micorrízicos e raízes de plantas exemplifica como relações ecológicas que parecem parasitárias à primeira vista podem, sob análise mais atenta, revelar-se benéficas para ambos os lados.]]"* |
+| **acidification** | n. | acidificação; queda do pH dos oceanos por absorção de CO₂ | pH decline | *"[[Ocean acidification, driven by the absorption of atmospheric CO₂, impairs the ability of corals and shellfish to build the calcium carbonate structures on which entire marine food webs depend.::A acidificação dos oceanos, provocada pela absorção de CO₂ da atmosfera, prejudica a capacidade de corais e moluscos de formar as estruturas de carbonato de cálcio das quais dependem cadeias alimentares marinhas inteiras.]]"* |
+
+### Technology: alto impacto
+
+| Palavra | Cat. | Significado (PT) | Sinônimo (mais simples) | Exemplo: nível nota máxima |
+|---|---|---|---|---|
+| **ubiquitous** | adj. | ubíquo; presente em todos os lugares ao mesmo tempo | everywhere; pervasive | *"[[The near-ubiquitous presence of smartphones in daily life has fundamentally altered not only how people communicate but how they perceive, navigate, and experience the physical world.::A presença quase onipresente dos smartphones no dia a dia alterou profundamente não apenas como as pessoas se comunicam, mas também como percebem, percorrem e vivenciam o mundo físico.]]"* |
+| **disruptive** | adj. | disruptivo; que causa mudança radical e desestrutura modelos estabelecidos | revolutionary; destabilizing | *"[[Technologies that prove genuinely disruptive do not merely improve on existing products: they render the existing category of product obsolete by redefining what the market actually values.::As tecnologias que se mostram genuinamente disruptivas não apenas melhoram produtos existentes, mas tornam obsoleta toda a categoria anterior ao redefinir o que o mercado realmente valoriza.]]"* |
+| **convergence** | n. | convergência; fusão de tecnologias ou setores distintos em uma nova entidade integrada | merging; fusion | *"[[The convergence of artificial intelligence, genomics, and materials science represents arguably the most consequential technological development of the twenty-first century.::A convergência entre inteligência artificial, genômica e ciência dos materiais representa possivelmente o avanço tecnológico de maior impacto do século XXI.]]"* |
+| **iterative** | adj. | iterativo; que repete um processo com refinamentos progressivos a cada ciclo | incremental; progressive | *"[[Software development methodologies that favor iterative deployment over comprehensive upfront planning consistently demonstrate superior adaptability to shifting user requirements.::As metodologias de desenvolvimento de software que priorizam entregas iterativas em vez de um planejamento inicial exaustivo demonstram de forma consistente maior capacidade de adaptação às mudanças nas necessidades dos usuários.]]"* |
+| **interoperability** | n. | interoperabilidade; capacidade de sistemas diferentes funcionarem em conjunto sem fricção | compatibility; connectivity | *"[[The absence of interoperability between electronic health record systems represents one of the most significant (and most avoidable) inefficiencies in contemporary healthcare delivery.::A falta de interoperabilidade entre sistemas de prontuário eletrônico representa uma das ineficiências mais graves (e mais evitáveis) no atendimento de saúde contemporâneo.]]"* |
+| **augment** | v. | aumentar; melhorar ou complementar capacidades existentes | to enhance; to amplify | *"[[The most productive framing of artificial intelligence is not as a replacement for human judgment but as a tool that can augment human decision-making by processing information at scales beyond unaided cognitive capacity.::A forma mais produtiva de encarar a inteligência artificial não é como substituta do julgamento humano, mas como uma ferramenta capaz de ampliar a nossa tomada de decisão ao processar informações em escalas que superam a capacidade cognitiva isolada.]]"* |
+| **exponential** | adj. | exponencial; que cresce sempre na mesma proporção do valor atual, como quando dobra a cada período | rapid; compounding | *"[[The exponential growth in data generation has created both extraordinary analytical opportunities and unprecedented challenges for privacy, security, and regulatory governance.::O crescimento exponencial na geração de dados criou tanto oportunidades analíticas extraordinárias quanto desafios sem precedentes para a privacidade, a segurança e a governança regulatória.]]"* |
+| **latency** | n. | latência; atraso entre a transmissão e a recepção de dados em uma rede | delay; lag | *"[[For applications requiring real-time responsiveness (autonomous vehicles, remote surgery), reducing network latency to a few milliseconds is not a performance optimization but a safety imperative.::Para aplicações que exigem resposta em tempo real (como veículos autônomos e cirurgias remotas), reduzir a latência da rede a poucos milissegundos não é apenas um ganho de desempenho, mas uma exigência de segurança.]]"* |
+| **algorithmic bias** | n. | viés algorítmico; distorções sistemáticas em sistemas de IA que reproduzem preconceitos dos dados de treinamento | systematic AI discrimination | *"[[Algorithmic bias in hiring and credit-scoring systems poses a profound equity challenge: it can automate and scale discriminatory outcomes while simultaneously obscuring the human decisions that produced them.::O viés algorítmico em sistemas de contratação e análise de crédito traz um sério desafio de justiça, pois pode automatizar e ampliar resultados discriminatórios enquanto esconde as decisões humanas que os geraram.]]"* |
+| **redundancy** | n. | redundância; duplicação deliberada de componentes para garantir confiabilidade | backup capacity; fail-safe | *"[[Well-engineered systems build in redundancy precisely because component failure is a statistical certainty over a long enough time horizon, not a remote possibility.::Sistemas bem projetados incluem redundância justamente porque a falha de algum componente é uma certeza estatística ao longo de um período suficientemente amplo, e não uma possibilidade remota.]]"* |
 
 ---
 
-## PARTE 4: ARSENAL CROSS-TEMÁTICO
+## Parte 4: Repertório transversal para qualquer tema
 
-### ⚡ Verbos acadêmicos de alto impacto (universais: qualquer tema)
+### Verbos acadêmicos de alto impacto para qualquer tema
 
-Funcionam em qualquer área e são os gatilhos mais fortes de variedade lexical no Speaking e Writing. Memorize-os como substitutos dos equivalentes simples.
+Estes verbos funcionam em qualquer área temática e são ótimos aliados para demonstrar **variedade lexical** no Speaking e no Writing. Vale memorizá-los como substitutos diretos de verbos comuns, porque assim você eleva o registro da frase com segurança.
 
 | Verbo de alto impacto | Substitui | Uso típico |
 |---|---|---|
-| **underscore** | emphasize / show | *"The data underscore the critical role of early intervention in determining long-term outcomes."* |
-| **posit** | suggest / propose | *"The professor posits that the phenomenon is driven primarily by economic, not cultural, factors."* |
-| **contend** | argue / say | *"Critics contend that the policy fails to account for regional disparities in implementation capacity."* |
-| **elucidate** | explain / clarify | *"The lecture elucidates the mechanism by which mycorrhizal networks distribute nutrients across forest systems."* |
-| **substantiate** | support / prove | *"Before a claim is incorporated into policy, it must be substantiated by replicable experimental evidence."* |
-| **corroborate** | confirm / support | *"The second study's findings corroborate the original hypothesis, lending it considerably greater credibility."* |
-| **mitigate** | reduce / lessen | *"Urban green spaces, while imperfect, can meaningfully mitigate the thermal stress associated with the heat island effect."* |
-| **perpetuate** | continue / maintain | *"Educational systems that treat intelligence as fixed rather than malleable inadvertently perpetuate the very inequalities they claim to address."* |
-| **exacerbate** | worsen / increase | *"Economic inequality exacerbates the mental health consequences of urban density by restricting low-income residents' access to restorative environments."* |
-| **preclude** | prevent / stop | *"A lack of interoperability between healthcare platforms does not merely inconvenience providers: it precludes the coordinated care that complex chronic conditions require."* |
-| **engender** | create / produce | *"Regulatory uncertainty engenders a risk premium that systematically reduces private investment in long-horizon infrastructure projects."* |
-| **circumvent** | avoid / bypass | *"Multinational corporations often circumvent domestic regulatory frameworks by relocating operations to jurisdictions with more permissive oversight."* |
-| **delineate** | outline / describe | *"The reading passage delineates three distinct theories of prehistoric human migration, each supported by a different strand of archaeological evidence."* |
-| **extrapolate** | extend / project | *"Extrapolating current trends without accounting for technological disruption routinely produces forecasts that prove dramatically inaccurate within a decade."* |
-| **precipitate** | cause suddenly / trigger | *"The currency devaluation precipitated a wave of corporate defaults that cascaded through the financial system far more rapidly than regulators had anticipated."* |
-| **undermine** | weaken / damage | *"Repeated failures to replicate the original result have steadily undermined confidence in the entire research program."* |
-| **underpin** | support / be the basis of | *"A shared set of methodological standards underpins the credibility of any empirical discipline."* |
-| **bolster** | strengthen / reinforce | *"The second experiment bolsters the reading's argument by supplying the causal evidence the first study lacked."* |
-| **warrant** | justify / call for | *"The magnitude of the projected losses warrants immediate policy intervention rather than continued observation."* |
-| **illuminate** | make clear / shed light on | *"The case study illuminates a dynamic that aggregate statistics had obscured for decades."* |
-| **reconcile** | make compatible / resolve a conflict between | *"The challenge is to reconcile the demand for rapid innovation with the need for rigorous safety testing."* |
-| **encompass** | include / cover | *"A comprehensive assessment of the policy must encompass its indirect effects on adjacent sectors, not only its stated targets."* |
-| **hinder** | slow down / obstruct | *"Fragmented data-sharing agreements continue to hinder coordinated responses to cross-border public health threats."* |
-| **attribute (to)** | credit / assign a cause to | *"The lecturer attributes the decline not to a single cause but to the convergence of several long-term trends."* |
-| **entail** | involve / require as a consequence | *"Any transition to renewable energy entails significant upfront investment in transmission infrastructure."* |
-| **hinge on** | depend critically on | *"Whether the model's predictions hold hinges on an assumption about consumer behavior that the data only weakly support."* |
+| **underscore** | [[emphasize / show::enfatizar ou mostrar]] | *"[[The data underscore the critical role of early intervention in determining long-term outcomes.::Os dados ressaltam o papel decisivo da intervenção precoce na definição dos resultados de longo prazo.]]"* |
+| **posit** | [[suggest / propose::sugerir ou propor]] | *"[[The professor posits that the phenomenon is driven primarily by economic, not cultural, factors.::O professor postula que o fenômeno é impulsionado principalmente por fatores econômicos, e não culturais.]]"* |
+| **contend** | [[argue / say::argumentar ou afirmar]] | *"[[Critics contend that the policy fails to account for regional disparities in implementation capacity.::Os críticos sustentam que a política deixa de levar em conta as desigualdades regionais na capacidade de implementação.]]"* |
+| **elucidate** | [[explain / clarify::explicar ou esclarecer]] | *"[[The lecture elucidates the mechanism by which mycorrhizal networks distribute nutrients across forest systems.::A palestra elucida o mecanismo pelo qual as redes micorrízicas distribuem nutrientes pelos sistemas florestais.]]"* |
+| **substantiate** | [[support / prove::sustentar ou comprovar]] | *"[[Before a claim is incorporated into policy, it must be substantiated by replicable experimental evidence.::Antes que uma afirmação seja incorporada às políticas públicas, ela precisa ser comprovada por evidências experimentais replicáveis.]]"* |
+| **corroborate** | [[confirm / support::confirmar ou apoiar]] | *"[[The second study's findings corroborate the original hypothesis, lending it considerably greater credibility.::Os achados do segundo estudo corroboram a hipótese original, conferindo a ela uma credibilidade muito maior.]]"* |
+| **mitigate** | [[reduce / lessen::reduzir ou atenuar]] | *"[[Urban green spaces, while imperfect, can meaningfully mitigate the thermal stress associated with the heat island effect.::As áreas verdes urbanas, embora não resolvam tudo, podem atenuar de forma significativa o estresse térmico associado ao efeito de ilha de calor.]]"* |
+| **perpetuate** | [[continue / maintain::manter ou perpetuar]] | *"[[Educational systems that treat intelligence as fixed rather than malleable inadvertently perpetuate the very inequalities they claim to address.::Sistemas educacionais que tratam a inteligência como algo fixo, e não maleável, acabam perpetuando sem perceber as próprias desigualdades que dizem combater.]]"* |
+| **exacerbate** | [[worsen / increase::agravar ou piorar]] | *"[[Economic inequality exacerbates the mental health consequences of urban density by restricting low-income residents' access to restorative environments.::A desigualdade econômica agrava os efeitos da densidade urbana sobre a saúde mental ao restringir o acesso de moradores de baixa renda a ambientes restauradores.]]"* |
+| **preclude** | [[prevent / stop::impedir ou inviabilizar]] | *"[[A lack of interoperability between healthcare platforms does not merely inconvenience providers: it precludes the coordinated care that complex chronic conditions require.::A falta de interoperabilidade entre plataformas de saúde não apenas atrapalha os profissionais, mas impede o atendimento coordenado que doenças crônicas complexas exigem.]]"* |
+| **engender** | [[create / produce::gerar ou produzir]] | *"[[Regulatory uncertainty engenders a risk premium that systematically reduces private investment in long-horizon infrastructure projects.::A incerteza regulatória gera um custo adicional de risco que reduz sistematicamente o investimento privado em projetos de infraestrutura de longo prazo.]]"* |
+| **circumvent** | [[avoid / bypass::contornar ou driblar]] | *"[[Multinational corporations often circumvent domestic regulatory frameworks by relocating operations to jurisdictions with more permissive oversight.::Empresas multinacionais muitas vezes contornam as regras nacionais ao transferir operações para países com fiscalização mais permissiva.]]"* |
+| **delineate** | [[outline / describe::delinear ou descrever com precisão]] | *"[[The reading passage delineates three distinct theories of prehistoric human migration, each supported by a different strand of archaeological evidence.::A passagem de leitura descreve três teorias distintas sobre a migração humana pré-histórica, cada uma apoiada em uma linha diferente de evidências arqueológicas.]]"* |
+| **extrapolate** | [[extend / project::estender ou projetar]] | *"[[Extrapolating current trends without accounting for technological disruption routinely produces forecasts that prove dramatically inaccurate within a decade.::Extrapolar tendências atuais sem levar em conta mudanças tecnológicas bruscas costuma gerar previsões que se mostram completamente equivocadas em menos de uma década.]]"* |
+| **precipitate** | [[cause suddenly / trigger::provocar subitamente ou desencadear]] | *"[[The currency devaluation precipitated a wave of corporate defaults that cascaded through the financial system far more rapidly than regulators had anticipated.::A desvalorização da moeda desencadeou uma onda de inadimplência corporativa que se espalhou pelo sistema financeiro muito mais rápido do que os reguladores haviam previsto.]]"* |
+| **undermine** | [[weaken / damage::enfraquecer ou minar]] | *"[[Repeated failures to replicate the original result have steadily undermined confidence in the entire research program.::As repetidas falhas em reproduzir o resultado original vêm minando de forma contínua a confiança em todo o programa de pesquisa.]]"* |
+| **underpin** | [[support / be the basis of::sustentar ou servir de base para]] | *"[[A shared set of methodological standards underpins the credibility of any empirical discipline.::Um conjunto compartilhado de padrões metodológicos sustenta a credibilidade de qualquer disciplina empírica.]]"* |
+| **bolster** | [[strengthen / reinforce::fortalecer ou reforçar]] | *"[[The second experiment bolsters the reading's argument by supplying the causal evidence the first study lacked.::O segundo experimento reforça o argumento do texto ao fornecer a evidência de causa e efeito que faltava ao primeiro estudo.]]"* |
+| **warrant** | [[justify / call for::justificar ou exigir]] | *"[[The magnitude of the projected losses warrants immediate policy intervention rather than continued observation.::A dimensão das perdas projetadas justifica uma intervenção imediata de políticas públicas, e não apenas a continuidade da observação.]]"* |
+| **illuminate** | [[make clear / shed light on::esclarecer ou lançar luz sobre]] | *"[[The case study illuminates a dynamic that aggregate statistics had obscured for decades.::O estudo de caso esclarece uma dinâmica que as estatísticas gerais vinham encobrindo há décadas.]]"* |
+| **reconcile** | [[make compatible / resolve a conflict between::conciliar ou compatibilizar]] | *"[[The challenge is to reconcile the demand for rapid innovation with the need for rigorous safety testing.::O desafio consiste em conciliar a demanda por inovação rápida com a necessidade de testes rigorosos de segurança.]]"* |
+| **encompass** | [[include / cover::abranger ou incluir]] | *"[[A comprehensive assessment of the policy must encompass its indirect effects on adjacent sectors, not only its stated targets.::Uma avaliação completa da política precisa abranger seus efeitos indiretos sobre setores vizinhos, e não apenas suas metas declaradas.]]"* |
+| **hinder** | [[slow down / obstruct::dificultar ou obstruir]] | *"[[Fragmented data-sharing agreements continue to hinder coordinated responses to cross-border public health threats.::Acordos fragmentados de compartilhamento de dados continuam dificultando respostas coordenadas a ameaças de saúde pública que cruzam fronteiras.]]"* |
+| **attribute (to)** | [[credit / assign a cause to::atribuir a causa a]] | *"[[The lecturer attributes the decline not to a single cause but to the convergence of several long-term trends.::O palestrante atribui a queda não a uma única causa, mas à convergência de várias tendências de longo prazo.]]"* |
+| **entail** | [[involve / require as a consequence::envolver ou implicar como consequência]] | *"[[Any transition to renewable energy entails significant upfront investment in transmission infrastructure.::Qualquer transição para energias renováveis envolve um investimento inicial expressivo em infraestrutura de transmissão.]]"* |
+| **hinge on** | [[depend critically on::depender de forma decisiva de]] | *"[[Whether the model's predictions hold hinges on an assumption about consumer behavior that the data only weakly support.::A validade das previsões do modelo depende de forma decisiva de uma premissa sobre o comportamento do consumidor que os dados sustentam apenas fracamente.]]"* |
 
-### ⚡ Adjetivos acadêmicos de alto registro (universais)
+### Adjetivos acadêmicos de alto registro
 
 | Adjetivo | Significado | Substitui | Exemplo |
 |---|---|---|---|
-| **pervasive** | amplamente difuso; presente em todo lugar | widespread / common | *"The pervasive influence of social media on political discourse has fundamentally altered the information environment in which democratic deliberation occurs."* |
-| **nuanced** | sutil, complexo, com distinções finas | complex / detailed | *"A nuanced reading of the data reveals a pattern that aggregate statistics systematically obscure."* |
-| **robust** | forte, confiável, resistente a erros | strong / reliable | *"The finding is particularly credible because it has proven robust across multiple independent studies using divergent methodological approaches."* |
-| **tenuous** | fraco, tênue, facilmente refutável | weak / thin | *"The causal connection the reading implies between X and Y is considerably more tenuous than its confident framing suggests."* |
-| **counterintuitive** | contrário ao esperado | surprising / unexpected | *"It is counterintuitive, but empirically well-supported, that increasing the number of available options frequently reduces rather than enhances consumer satisfaction."* |
-| **unprecedented** | sem precedente histórico | new / never before | *"The rate of species extinction currently underway is unprecedented in the post-dinosaur history of the planet."* |
-| **consequential** | que tem consequências significativas e duradouras | important / significant | *"The shift from coal to renewable energy is among the most consequential industrial transitions of the twenty-first century."* |
-| **inherent** | inerente; parte fundamental e inseparável de algo | built-in / fundamental | *"The inherent tension between innovation and stability is not a flaw to be resolved but a productive dynamic to be managed."* |
-| **systemic** | sistêmico; que afeta ou é causado pelo sistema como um todo | widespread / structural | *"Addressing poverty requires systemic reform rather than isolated interventions, because its drivers are embedded in institutional structures, not individual behaviors."* |
-| **ostensible** | aparente; que parece verdadeiro mas pode não ser | apparent / supposed | *"The ostensible simplicity of the professor's argument conceals a web of empirical assumptions that the reading passage explicitly challenges."* |
-| **salient** | mais notável, que se destaca | important / prominent | *"The most salient difference between the two accounts is not what they explain but what they choose to leave unexplained."* |
-| **negligible** | tão pequeno que não importa | insignificant / tiny | *"Once the confounding variable is controlled for, the effect the reading emphasizes becomes statistically negligible."* |
-| **compelling** | convincente, difícil de refutar | strong / persuasive | *"The lecture offers a more compelling account precisely because it identifies a mechanism, not merely a correlation."* |
-| **plausible** | que parece razoável e possível | believable / credible | *"The hypothesis is plausible, but plausibility is not evidence, and the passage never moves beyond it."* |
-| **arbitrary** | sem base ou critério claro | random / unprincipled | *"The threshold the policy sets is essentially arbitrary: nothing in the data marks that particular figure as meaningful."* |
-| **coherent** | logicamente consistente e bem articulado | consistent / unified | *"What the field lacks is not data but a coherent framework capable of integrating the findings it already has."* |
-| **tangible** | concreto, perceptível, mensurável | real / measurable | *"For the investment to be politically sustainable, communities need to see tangible benefits within a single electoral cycle."* |
-| **marginal** | pequeno, secundário, no limite | slight / peripheral | *"The upgrade delivers only a marginal improvement in efficiency at a substantial increase in cost."* |
+| **pervasive** | amplamente difuso; presente em todo lugar | [[widespread / common::difundido ou comum]] | *"[[The pervasive influence of social media on political discourse has fundamentally altered the information environment in which democratic deliberation occurs.::A influência generalizada das redes sociais sobre o debate político alterou profundamente o ambiente de informação em que ocorre a deliberação democrática.]]"* |
+| **nuanced** | sutil, complexo, com distinções finas | [[complex / detailed::complexo ou detalhado]] | *"[[A nuanced reading of the data reveals a pattern that aggregate statistics systematically obscure.::Uma leitura cuidadosa dos dados revela um padrão que as estatísticas gerais encobrem de forma sistemática.]]"* |
+| **robust** | forte, confiável, resistente a erros | [[strong / reliable::forte ou confiável]] | *"[[The finding is particularly credible because it has proven robust across multiple independent studies using divergent methodological approaches.::O achado é especialmente confiável porque se mostrou sólido em vários estudos independentes que usaram abordagens metodológicas distintas.]]"* |
+| **tenuous** | fraco, tênue, facilmente refutável | [[weak / thin::fraco ou frágil]] | *"[[The causal connection the reading implies between X and Y is considerably more tenuous than its confident framing suggests.::A relação de causa e efeito que o texto sugere entre X e Y é bem mais frágil do que a sua apresentação confiante dá a entender.]]"* |
+| **counterintuitive** | contrário ao esperado | [[surprising / unexpected::surpreendente ou inesperado]] | *"[[It is counterintuitive, but empirically well-supported, that increasing the number of available options frequently reduces rather than enhances consumer satisfaction.::Parece contraintuitivo, mas tem forte respaldo empírico, o fato de que aumentar o número de opções disponíveis frequentemente reduz, em vez de elevar, a satisfação do consumidor.]]"* |
+| **unprecedented** | sem precedente histórico | [[new / never before::novo ou inédito]] | *"[[The rate of species extinction currently underway is unprecedented in the post-dinosaur history of the planet.::O ritmo atual de extinção de espécies não tem precedentes na história do planeta desde o fim dos dinossauros.]]"* |
+| **consequential** | que tem consequências significativas e duradouras | [[important / significant::importante ou significativo]] | *"[[The shift from coal to renewable energy is among the most consequential industrial transitions of the twenty-first century.::A passagem do carvão para a energia renovável está entre as transições industriais de maior impacto do século XXI.]]"* |
+| **inherent** | inerente; parte fundamental e inseparável de algo | [[built-in / fundamental::intrínseco ou fundamental]] | *"[[The inherent tension between innovation and stability is not a flaw to be resolved but a productive dynamic to be managed.::A tensão inerente entre inovação e estabilidade não é um defeito a ser eliminado, mas uma dinâmica produtiva a ser administrada.]]"* |
+| **systemic** | sistêmico; que afeta ou é causado pelo sistema como um todo | [[widespread / structural::generalizado ou estrutural]] | *"[[Addressing poverty requires systemic reform rather than isolated interventions, because its drivers are embedded in institutional structures, not individual behaviors.::Enfrentar a pobreza exige reformas sistêmicas em vez de intervenções isoladas, porque suas causas estão enraizadas nas estruturas institucionais, e não apenas em comportamentos individuais.]]"* |
+| **ostensible** | aparente; que parece verdadeiro, mas pode não ser | [[apparent / supposed::aparente ou suposto]] | *"[[The ostensible simplicity of the professor's argument conceals a web of empirical assumptions that the reading passage explicitly challenges.::A simplicidade aparente do argumento do professor esconde uma rede de premissas empíricas que o texto de leitura contesta de forma explícita.]]"* |
+| **salient** | mais notável, que se destaca | [[important / prominent::importante ou proeminente]] | *"[[The most salient difference between the two accounts is not what they explain but what they choose to leave unexplained.::A diferença mais marcante entre os dois relatos não está no que eles explicam, mas no que escolhem deixar sem explicação.]]"* |
+| **negligible** | tão pequeno que não importa | [[insignificant / tiny::insignificante ou mínimo]] | *"[[Once the confounding variable is controlled for, the effect the reading emphasizes becomes statistically negligible.::Quando a variável de confundimento é controlada, o efeito destacado pelo texto torna-se estatisticamente irrelevante.]]"* |
+| **compelling** | convincente, difícil de refutar | [[strong / persuasive::forte ou persuasivo]] | *"[[The lecture offers a more compelling account precisely because it identifies a mechanism, not merely a correlation.::A palestra oferece uma explicação mais convincente justamente porque identifica um mecanismo, e não apenas uma correlação.]]"* |
+| **plausible** | que parece razoável e possível | [[believable / credible::plausível ou crível]] | *"[[The hypothesis is plausible, but plausibility is not evidence, and the passage never moves beyond it.::A hipótese é plausível, mas plausibilidade não é evidência, e a passagem nunca avança além desse ponto.]]"* |
+| **arbitrary** | sem base ou critério claro | [[random / unprincipled::aleatório ou sem critério]] | *"[[The threshold the policy sets is essentially arbitrary: nothing in the data marks that particular figure as meaningful.::O limite estabelecido pela política é essencialmente arbitrário, já que nada nos dados indica que esse número específico tenha um significado real.]]"* |
+| **coherent** | logicamente consistente e bem articulado | [[consistent / unified::consistente ou articulado]] | *"[[What the field lacks is not data but a coherent framework capable of integrating the findings it already has.::O que falta à área não são dados, e sim um modelo coerente capaz de integrar os resultados que já existem.]]"* |
+| **tangible** | concreto, perceptível, mensurável | [[real / measurable::real ou mensurável]] | *"[[For the investment to be politically sustainable, communities need to see tangible benefits within a single electoral cycle.::Para que o investimento se sustente politicamente, as comunidades precisam enxergar benefícios concretos dentro de um único ciclo eleitoral.]]"* |
+| **marginal** | pequeno, secundário, no limite | [[slight / peripheral::leve ou secundário]] | *"[[The upgrade delivers only a marginal improvement in efficiency at a substantial increase in cost.::A atualização traz apenas um ganho marginal de eficiência, acompanhado de um aumento substancial de custo.]]"* |
 
-### ⚡ Collocations estratégicas: combinações de alto impacto
+### Collocations estratégicas: combinações de alto impacto
 
-Collocations são pares de palavras que nativos usam naturalmente juntas. Usá-las corretamente é um forte sinal de proficiência para o e-rater.
+As **[[collocations::combinações naturais de palavras]]** são pares de termos que os falantes nativos usam juntos com naturalidade. Empregá-las com precisão é um forte sinal de domínio da língua para o [[e-rater::sistema de correção automática de escrita da ETS]], porque mostra controle de uso real em vez de tradução palavra por palavra.
 
 | Verbo âncora | Collocations mais avaliadas | Exemplo de uso |
 |---|---|---|
-| **conduct** | *conduct research / a study / an investigation / an experiment / a survey* | *"The researchers conducted a twenty-year longitudinal study tracking the same cohort..."* |
-| **draw** | *draw a conclusion / an inference / a distinction / a comparison / an analogy* | *"It would be premature to draw firm conclusions from a single study with this sample size."* |
-| **raise** | *raise a question / a concern / an issue / awareness / doubts / objections* | *"The professor raises a fundamental concern about the methodological validity of the reading's central claim."* |
-| **pose** | *pose a challenge / a threat / a risk / a question / a problem* | *"Algorithmic bias poses a direct challenge to the ideal of meritocratic selection in hiring."* |
-| **yield** | *yield results / evidence / insights / returns / data* | *"Early childhood education programs yield disproportionately large returns in cognitive development compared to equivalent investments at later stages."* |
-| **challenge** | *challenge a claim / an assumption / a notion / conventional wisdom / a paradigm* | *"The lecture directly challenges the assumption that urban green spaces produce unambiguous benefits for air quality."* |
-| **demonstrate** | *demonstrate effectiveness / a correlation / causation / a pattern / feasibility* | *"The second study demonstrates a causal (not merely correlational) relationship between X and Y."* |
-| **account for** | *account for a phenomenon / differences / variation / failures / omissions* | *"The reading's optimistic assessment fails to account for the significant implementation costs that similar programs have historically incurred."* |
-| **provide** | *provide evidence / insight / a basis / support / a framework / an account* | *"The lecture provides a basis for rejecting the reading's central assumption."* |
-| **address** | *address an issue / a concern / a problem / a question / a gap / a need* | *"The proposal addresses the symptom but leaves the underlying cause untouched."* |
-| **exert** | *exert influence / pressure / control / an effect / authority* | *"Peer groups exert a stronger influence on adolescent behavior than most parents assume."* |
-| **gain** | *gain insight / traction / acceptance / an advantage / prominence / momentum* | *"The theory gained acceptance only after a second, independent team reproduced the result."* |
-| **reach** | *reach a conclusion / a consensus / a threshold / an agreement / a verdict* | *"The committee reached no consensus, which itself signals how contested the evidence remains."* |
-| **meet** | *meet a need / a demand / a standard / a requirement / a target / a deadline* | *"Renewable capacity is not yet sufficient to meet peak demand without fossil backup."* |
-| **play** | *play a role / a part / a function* | *"Chance plays a larger role in the outcome than the confident narrative acknowledges."* |
-| **bear** | *bear the cost / responsibility / the burden / a resemblance / on a question* | *"Society bears the cost of the externality while the firm retains the profit."* |
-| **lend** | *lend support / credibility / weight / itself to* | *"The replication lends considerable weight to what had been a speculative claim."* |
-| **shed** | *shed light on* | *"The fossil record sheds light on a transition that living species can only hint at."* |
-| **impose** | *impose a limit / a cost / a constraint / a requirement / order* | *"The regulation imposes a compliance cost that falls disproportionately on small firms."* |
-| **undergo** | *undergo change / a transformation / a process / scrutiny / testing* | *"Any drug must undergo years of trials before it can be approved for general use."* |
+| **conduct** | *[[conduct research / a study / an investigation / an experiment / a survey::conduzir uma pesquisa, um estudo, uma investigação, um experimento ou um levantamento]]* | *"[[The researchers conducted a twenty-year longitudinal study tracking the same cohort...::Os pesquisadores conduziram um estudo longitudinal de vinte anos acompanhando o mesmo grupo...]]"* |
+| **draw** | *[[draw a conclusion / an inference / a distinction / a comparison / an analogy::tirar uma conclusão ou inferência, fazer uma distinção, comparação ou analogia]]* | *"[[It would be premature to draw firm conclusions from a single study with this sample size.::Seria prematuro tirar conclusões definitivas a partir de um único estudo com esse tamanho de amostra.]]"* |
+| **raise** | *[[raise a question / a concern / an issue / awareness / doubts / objections::levantar uma questão, preocupação, problema, dúvida ou objeção, ou ampliar a conscientização]]* | *"[[The professor raises a fundamental concern about the methodological validity of the reading's central claim.::O professor levanta uma preocupação fundamental sobre a validade metodológica da tese central do texto.]]"* |
+| **pose** | *[[pose a challenge / a threat / a risk / a question / a problem::representar um desafio, uma ameaça, um risco ou um problema, ou colocar uma questão]]* | *"[[Algorithmic bias poses a direct challenge to the ideal of meritocratic selection in hiring.::O viés algorítmico representa um desafio direto ao ideal de seleção meritocrática nas contratações.]]"* |
+| **yield** | *[[yield results / evidence / insights / returns / data::gerar resultados, evidências, percepções, retornos ou dados]]* | *"[[Early childhood education programs yield disproportionately large returns in cognitive development compared to equivalent investments at later stages.::Programas de educação na primeira infância geram retornos proporcionalmente muito altos no desenvolvimento cognitivo em comparação com investimentos equivalentes em fases posteriores.]]"* |
+| **challenge** | *[[challenge a claim / an assumption / a notion / conventional wisdom / a paradigm::contestar uma afirmação, uma premissa, uma noção, o senso comum ou um paradigma]]* | *"[[The lecture directly challenges the assumption that urban green spaces produce unambiguous benefits for air quality.::A palestra contesta diretamente a premissa de que áreas verdes urbanas trazem benefícios indiscutíveis para a qualidade do ar.]]"* |
+| **demonstrate** | *[[demonstrate effectiveness / a correlation / causation / a pattern / feasibility::demonstrar eficácia, correlação, causalidade, um padrão ou viabilidade]]* | *"[[The second study demonstrates a causal (not merely correlational) relationship between X and Y.::O segundo estudo demonstra uma relação de causa e efeito (e não apenas de correlação) entre X e Y.]]"* |
+| **account for** | *[[account for a phenomenon / differences / variation / failures / omissions::explicar um fenômeno, diferenças, variações, falhas ou omissões]]* | *"[[The reading's optimistic assessment fails to account for the significant implementation costs that similar programs have historically incurred.::A avaliação otimista do texto deixa de levar em conta os altos custos de implementação que programas semelhantes historicamente enfrentaram.]]"* |
+| **provide** | *[[provide evidence / insight / a basis / support / a framework / an account::fornecer evidências, compreensão, base, apoio, estrutura conceitual ou explicação]]* | *"[[The lecture provides a basis for rejecting the reading's central assumption.::A palestra oferece uma base sólida para rejeitar a premissa central do texto.]]"* |
+| **address** | *[[address an issue / a concern / a problem / a question / a gap / a need::abordar ou enfrentar uma questão, preocupação, problema, dúvida, lacuna ou necessidade]]* | *"[[The proposal addresses the symptom but leaves the underlying cause untouched.::A proposta lida com o sintoma, mas deixa a causa principal intocada.]]"* |
+| **exert** | *[[exert influence / pressure / control / an effect / authority::exercer influência, pressão, controle, efeito ou autoridade]]* | *"[[Peer groups exert a stronger influence on adolescent behavior than most parents assume.::Os grupos de colegas exercem uma influência mais forte sobre o comportamento dos adolescentes do que a maioria dos pais imagina.]]"* |
+| **gain** | *[[gain insight / traction / acceptance / an advantage / prominence / momentum::ganhar compreensão, força, aceitação, vantagem, destaque ou impulso]]* | *"[[The theory gained acceptance only after a second, independent team reproduced the result.::A teoria só ganhou aceitação depois que uma segunda equipe independente reproduziu o resultado.]]"* |
+| **reach** | *[[reach a conclusion / a consensus / a threshold / an agreement / a verdict::chegar a uma conclusão, a um consenso, a um patamar, a um acordo ou a um veredito]]* | *"[[The committee reached no consensus, which itself signals how contested the evidence remains.::O comitê não chegou a nenhum consenso, o que por si só mostra o quanto as evidências continuam disputadas.]]"* |
+| **meet** | *[[meet a need / a demand / a standard / a requirement / a target / a deadline::atender a uma necessidade, demanda, padrão, requisito ou meta, ou cumprir um prazo]]* | *"[[Renewable capacity is not yet sufficient to meet peak demand without fossil backup.::A capacidade renovável ainda não é suficiente para atender ao pico de demanda sem o apoio de combustíveis fósseis.]]"* |
+| **play** | *[[play a role / a part / a function::desempenhar um papel ou uma função]]* | *"[[Chance plays a larger role in the outcome than the confident narrative acknowledges.::O acaso desempenha um papel maior no resultado do que o relato confiante reconhece.]]"* |
+| **bear** | *[[bear the cost / responsibility / the burden / a resemblance / on a question::arcar com o custo, a responsabilidade ou o peso, ter semelhança ou ter relação com uma questão]]* | *"[[Society bears the cost of the externality while the firm retains the profit.::A sociedade arca com o custo da externalidade enquanto a empresa fica com o lucro.]]"* |
+| **lend** | *[[lend support / credibility / weight / itself to::dar apoio, credibilidade ou peso, ou prestar-se a algo]]* | *"[[The replication lends considerable weight to what had been a speculative claim.::A reprodução do estudo dá um peso considerável ao que antes era apenas uma hipótese especulativa.]]"* |
+| **shed** | *[[shed light on::lançar luz sobre, esclarecer]]* | *"[[The fossil record sheds light on a transition that living species can only hint at.::O registro fóssil esclarece uma transição que as espécies atuais conseguem apenas sugerir.]]"* |
+| **impose** | *[[impose a limit / a cost / a constraint / a requirement / order::impor um limite, um custo, uma restrição, uma exigência ou ordem]]* | *"[[The regulation imposes a compliance cost that falls disproportionately on small firms.::A regulamentação impõe um custo de adequação que recai de forma desproporcional sobre as pequenas empresas.]]"* |
+| **undergo** | *[[undergo change / a transformation / a process / scrutiny / testing::passar por uma mudança, transformação, processo, avaliação rigorosa ou teste]]* | *"[[Any drug must undergo years of trials before it can be approved for general use.::Qualquer medicamento precisa passar por anos de testes clínicos antes de ser aprovado para uso geral.]]"* |
 
 ---
 
-## PARTE 5: FAMÍLIAS DE PALAVRAS E MORFOLOGIA
+## Parte 5: Famílias de palavras e morfologia
 
-> Esta parte é o motor de duas coisas: acertar *Complete the Words* (que testa a forma exata) e adivinhar palavras desconhecidas em *Read an Academic Passage* pela estrutura. Aprender **uma família inteira** de cada vez rende mais do que aprender palavras soltas.
+> **Resumo:** Esta parte ajuda você tanto a acertar *[[Complete the Words::Complete as palavras]]* (que cobra a forma exata da palavra) quanto a deduzir o sentido de termos novos em *[[Read an Academic Passage::Leia uma passagem acadêmica]]* pela estrutura. Estudar uma família inteira de palavras rende muito mais do que decorar termos soltos.
 
 ### 5.1 Por que a família importa mais que a palavra
 
-O *Complete the Words* traz um parágrafo acadêmico curto (cerca de 70 palavras) em que 10 palavras aparecem só com o começo escrito; você digita as letras que faltam, e a lacuna cobra a **forma gramatical correta**. Saber *analyze* não basta: a lacuna pode pedir *analysis*, *analytical*, *analyst* ou *analytically*. A regra: identifique a **função sintática** da lacuna (sujeito? verbo? adjetivo antes de substantivo? advérbio?) e escolha a forma correspondente.
+O *Complete the Words* apresenta um parágrafo acadêmico curto, de cerca de 70 palavras, em que 10 termos aparecem apenas com o começo escrito. Como você precisa digitar as letras que faltam, a lacuna exige a **forma gramatical correta** para aquela posição.
 
-| Raiz (verbo) | Substantivo (coisa/processo) | Substantivo (pessoa) | Adjetivo | Advérbio |
+Por isso, conhecer apenas o verbo *[[analyze::analisar]]* não basta: o espaço pode pedir *[[analysis::análise]]*, *[[analytical::analítico]]*, *[[analyst::analista]]* ou *[[analytically::analiticamente]]*. Antes de completar a palavra, identifique a **função sintática** da lacuna (observando se ela pede sujeito, verbo, adjetivo antes de substantivo ou advérbio) e escolha a terminação correspondente.
+
+| Raiz (verbo) | Substantivo (coisa ou processo) | Substantivo (pessoa) | Adjetivo | Advérbio |
 |---|---|---|---|---|
 | analyze | analysis | analyst | analytical | analytically |
-| create | creation / creativity | creator | creative | creatively |
-| develop | development | developer | developmental | developmentally |
-| economize | economy / economics | economist | economic / economical | economically |
-| specify | specification | — | specific | specifically |
-| signify | significance | — | significant | significantly |
-| compete | competition | competitor | competitive | competitively |
-| respond | response | respondent | responsive | responsively |
-| persist | persistence | — | persistent | persistently |
-| prove | proof | — | provable / proven | provably |
-| conclude | conclusion | — | conclusive | conclusively |
-| assume | assumption | — | assumed | — |
-| presume | presumption | — | presumable | presumably |
-| sustain | sustainability | — | sustainable | sustainably |
-| vary | variation / variety / variable | — | various / variable | variously |
-| distinguish | distinction | — | distinct / distinctive | distinctly |
+| [[create::criar]] | creation / creativity | creator | creative | creatively |
+| [[develop::desenvolver]] | development | developer | developmental | developmentally |
+| [[economize::economizar]] | economy / economics | economist | economic / economical | economically |
+| [[specify::especificar]] | specification | - | specific | specifically |
+| [[signify::significar, indicar]] | significance | - | significant | significantly |
+| [[compete::competir]] | competition | competitor | competitive | competitively |
+| [[respond::responder]] | response | respondent | responsive | responsively |
+| [[persist::persistir]] | persistence | - | persistent | persistently |
+| [[prove::provar]] | proof | - | provable / proven | provably |
+| [[conclude::concluir]] | conclusion | - | conclusive | conclusively |
+| [[assume::assumir, supor]] | assumption | - | assumed | - |
+| [[presume::presumir]] | presumption | - | presumable | presumably |
+| [[sustain::sustentar]] | sustainability | - | sustainable | sustainably |
+| [[vary::variar]] | variation / variety / variable | - | various / variable | variously |
+| [[distinguish::distinguir]] | distinction | - | distinct / distinctive | distinctly |
 
 ### 5.2 Prefixos que mudam o sentido (para adivinhar em Reading)
 
 | Prefixo | Sentido | Exemplos |
 |---|---|---|
-| **un- / in- / im- / il- / ir-** | negação | *unfounded, inconclusive, implausible, illogical, irreversible* |
-| **mis-** | erro | *misinterpret, misconception, misallocate* |
-| **over- / under-** | excesso / falta | *overestimate, oversimplify, underreport, underdeveloped* |
-| **re-** | de novo / de volta | *reassess, reconfigure, replicate, reinstate* |
-| **dis-** | reverter / remover | *disprove, disregard, disaggregate, disincentive* |
-| **counter- / contra-** | contra | *counterargument, counterproductive, counterintuitive* |
-| **inter-** | entre | *interdependent, interdisciplinary, interoperability* |
-| **pre- / post-** | antes / depois | *predate, precondition, post-industrial, postpone* |
-| **sub-** | abaixo / parte de | *subset, subcategory, substandard, subsidiary* |
-| **co- / con-** | junto | *coexist, coherent, converge, collaborate* |
+| **un- / in- / im- / il- / ir-** | negação | *[[unfounded, inconclusive, implausible, illogical, irreversible::sem fundamento, inconclusivo, implausível, ilógico, irreversível]]* |
+| **mis-** | erro | *[[misinterpret, misconception, misallocate::interpretar mal, equívoco, alocar de forma inadequada]]* |
+| **over- / under-** | excesso ou falta | *[[overestimate, oversimplify, underreport, underdeveloped::superestimar, simplificar demais, subnotificar, subdesenvolvido]]* |
+| **re-** | de novo ou de volta | *[[reassess, reconfigure, replicate, reinstate::reavaliar, reconfigurar, replicar, restabelecer]]* |
+| **dis-** | reverter ou remover | *[[disprove, disregard, disaggregate, disincentive::refutar, desconsiderar, desagregar, desincentivo]]* |
+| **counter- / contra-** | contra | *[[counterargument, counterproductive, counterintuitive::contra-argumento, contraproducente, contraintuitivo]]* |
+| **inter-** | entre | *[[interdependent, interdisciplinary, interoperability::interdependente, interdisciplinar, interoperabilidade]]* |
+| **pre- / post-** | antes ou depois | *[[predate, precondition, post-industrial, postpone::anteceder, pré-condição, pós-industrial, adiar]]* |
+| **sub-** | abaixo ou parte de | *[[subset, subcategory, substandard, subsidiary::subconjunto, subcategoria, abaixo do padrão, subsidiário]]* |
+| **co- / con-** | junto | *[[coexist, coherent, converge, collaborate::coexistir, coerente, convergir, colaborar]]* |
 
-### 5.3 Sufixos que definem a classe da palavra (para *Complete the Words*)
+### 5.3 Sufixos que definem a classe da palavra (para Complete the Words)
 
 | Sufixo | Classe | Exemplos |
 |---|---|---|
-| **-tion / -sion / -ment / -ance / -ence / -ity / -ness** | substantivo | *evaluation, provision, assessment, reliance, coherence, complexity, robustness* |
-| **-er / -or / -ist / -ant / -ent** | pessoa/agente | *researcher, investigator, economist, participant, respondent* |
-| **-ize / -ify / -ate / -en** | verbo | *prioritize, clarify, differentiate, strengthen* |
-| **-ous / -ive / -al / -ic / -able / -ent** | adjetivo | *ambiguous, decisive, marginal, systemic, measurable, prevalent* |
-| **-ly** | advérbio | *substantially, markedly, arguably, consistently* |
-| **-ism** | doutrina/sistema | *empiricism, determinism, protectionism* |
+| **-tion / -sion / -ment / -ance / -ence / -ity / -ness** | substantivo | *[[evaluation, provision, assessment, reliance, coherence, complexity, robustness::avaliação, provisão, avaliação, dependência, coerência, complexidade, solidez]]* |
+| **-er / -or / -ist / -ant / -ent** | pessoa ou agente | *[[researcher, investigator, economist, participant, respondent::pesquisador, investigador, economista, participante, respondente]]* |
+| **-ize / -ify / -ate / -en** | verbo | *[[prioritize, clarify, differentiate, strengthen::priorizar, esclarecer, diferenciar, fortalecer]]* |
+| **-ous / -ive / -al / -ic / -able / -ent** | adjetivo | *[[ambiguous, decisive, marginal, systemic, measurable, prevalent::ambíguo, decisivo, marginal, sistêmico, mensurável, predominante]]* |
+| **-ly** | advérbio | *[[substantially, markedly, arguably, consistently::substancialmente, acentuadamente, possivelmente, de forma consistente]]* |
+| **-ism** | doutrina ou sistema | *[[empiricism, determinism, protectionism::empirismo, determinismo, protecionismo]]* |
 
-> ⚠️ Cuidado com pares onde o sufixo muda o sentido, não só a classe: *economic* (relativo à economia) ≠ *economical* (que gasta pouco); *historic* (importante na história) ≠ *historical* (relativo ao passado); *classic* (exemplar) ≠ *classical* (da antiguidade / da música erudita).
+> **Atenção:** Tenha cuidado com os pares em que o sufixo muda o próprio sentido da palavra, e não apenas a classe gramatical. Compare *[[economic::econômico, relativo à economia]]* (relativo à economia) com *[[economical::econômico, que gasta pouco]]* (que economiza recursos), *[[historic::histórico, marcante]]* (importante na história) com *[[historical::histórico, relativo ao passado]]* (relativo ao passado) e *[[classic::clássico, exemplar]]* (exemplar) com *[[classical::clássico, da antiguidade ou da música erudita]]* (da antiguidade ou da música erudita).
 
 ---
 
-## PARTE 6: NUANCE E PRECISÃO · PARES QUE O BRASILEIRO CONFUNDE
+## Parte 6: Nuance e precisão nos pares que confundem
 
-> Estes erros não são de vocabulário "difícil": são de precisão. Cada um custa ponto de *language use* no e-rater e no SpeechRater, porque sinaliza controle incompleto.
+> **Resumo:** Estes pontos de atenção não envolvem vocabulário raro, e sim exatidão de sentido. Ajustar cada par protege a sua nota de *[[language use::uso da língua]]* no [[e-rater::sistema de correção automática de escrita da ETS]] e no [[SpeechRater::sistema de avaliação automática de fala da ETS]], demonstrando controle seguro do idioma.
 
 ### 6.1 Pares de sentido próximo
 
 | Par | Diferença | Uso correto |
 |---|---|---|
-| **affect / effect** | *affect* = verbo (influenciar); *effect* = substantivo (resultado); *effect* como verbo = "causar/implementar", raro | *"The policy **affected** enrollment"; "the **effect** on enrollment was small"* |
-| **imply / infer** | quem fala **implies** (sugere); quem ouve **infers** (deduz) | *"The author implies X; from this the reader infers Y."* |
-| **comprise / compose / constitute** | o todo **comprises** as partes; as partes **compose/constitute** o todo | *"The report comprises four sections"; "four sections constitute the report"*: nunca *"is comprised of"* em registro alto |
-| **among / between** | *between* = 2 (ou relações par-a-par); *among* = grupo indistinto | *"a distinction between the two"; "common among students"* |
-| **fewer / less** | *fewer* = contável; *less* = incontável | *"fewer errors", "less variation"* |
-| **amount / number** | *amount* = incontável; *number* = contável | *"the amount of data", "the number of participants"* |
-| **affect / impact (v.)** | *impact* como verbo soa jornalístico; em registro alto prefira *affect* ou *have an impact on* | *"factors that affect outcomes"* / *"a measurable impact on outcomes"* |
-| **compare to / compare with** | *to* = mostrar semelhança; *with* = examinar semelhanças e diferenças | *"He compared the brain to a computer"; "compared with the control group"* |
-| **ensure / insure / assure** | *ensure* = garantir que; *insure* = fazer seguro; *assure* = tranquilizar alguém | *"steps to ensure accuracy"* |
-| **principal / principle** | *principal* = principal (adj.) ou diretor; *principle* = princípio | *"the principal cause"; "a founding principle"* |
-| **precede / proceed** | *precede* = vir antes; *proceed* = prosseguir | *"the events that preceded the crisis"; "the study then proceeds to..."* |
-| **elicit / illicit** | *elicit* = provocar (uma resposta); *illicit* = ilegal | *"designed to elicit an honest answer"* |
+| **affect / effect** | *[[affect::afetar, influenciar]]* é verbo (influenciar); *[[effect::efeito, resultado]]* é substantivo (resultado); *effect* como verbo significa "causar" ou "implementar" e é raro | *"The policy **affected** enrollment"*; *"the **effect** on enrollment was small"* |
+| **imply / infer** | quem fala **[[implies::sugere, dá a entender]]** (sugere); quem ouve **[[infers::deduz, conclui]]** (deduz) | *"[[The author implies X; from this the reader infers Y.::O autor sugere X; a partir disso, o leitor deduz Y.]]"* |
+| **comprise / compose / constitute** | o todo **[[comprises::compreende, abrange]]** as partes; as partes **[[compose::compõem]]** ou **[[constitute::constituem]]** o todo | *"[[The report comprises four sections::O relatório compreende quatro seções]]"*; *"[[four sections constitute the report::quatro seções constituem o relatório]]"* (evite *"is comprised of"* em registro formal) |
+| **among / between** | *[[between::entre dois elementos ou pares definidos]]* usa-se para 2 elementos (ou relações par a par); *[[among::entre vários elementos de um grupo]]* usa-se para um grupo indistinto | *"[[a distinction between the two::uma distinção entre os dois]]"*; *"[[common among students::comum entre os estudantes]]"* |
+| **fewer / less** | *[[fewer::menos, para contáveis]]* acompanha itens contáveis; *[[less::menos, para incontáveis]]* acompanha termos incontáveis | *"[[fewer errors::menos erros]]"*, *"[[less variation::menos variação]]"* |
+| **amount / number** | *[[amount::quantidade, para incontáveis]]* usa-se com incontáveis; *[[number::número, para contáveis]]* usa-se com contáveis | *"[[the amount of data::a quantidade de dados]]"*, *"[[the number of participants::o número de participantes]]"* |
+| **affect / impact (v.)** | *[[impact::impactar]]* como verbo soa jornalístico; em registro alto prefira *affect* ou *[[have an impact on::ter um impacto sobre]]* | *"[[factors that affect outcomes::fatores que afetam os resultados]]"* ou *"[[a measurable impact on outcomes::um impacto mensurável nos resultados]]"* |
+| **compare to / compare with** | *[[compare to::comparar a, apontando semelhança]]* mostra semelhança; *[[compare with::comparar com, analisando semelhanças e diferenças]]* examina semelhanças e diferenças | *"[[He compared the brain to a computer::Ele comparou o cérebro a um computador]]"*; *"[[compared with the control group::em comparação com o grupo de controle]]"* |
+| **ensure / insure / assure** | *[[ensure::garantir que algo aconteça]]* é garantir um fato; *[[insure::fazer seguro financeiro]]* é fazer seguro; *[[assure::tranquilizar alguém]]* é tranquilizar uma pessoa | *"[[steps to ensure accuracy::medidas para garantir a precisão]]"* |
+| **principal / principle** | *[[principal::principal ou diretor]]* é adjetivo (principal) ou diretor; *[[principle::princípio, regra fundamental]]* é substantivo (princípio) | *"[[the principal cause::a causa principal]]"*; *"[[a founding principle::um princípio fundador]]"* |
+| **precede / proceed** | *[[precede::preceder, vir antes]]* significa vir antes; *[[proceed::prosseguir, avançar]]* significa prosseguir | *"[[the events that preceded the crisis::os eventos que precederam a crise]]"*; *"[[the study then proceeds to...::o estudo então passa a...]]"* |
+| **elicit / illicit** | *[[elicit::obter, provocar uma resposta]]* é provocar uma resposta; *[[illicit::ilícito, ilegal]]* significa ilegal | *"[[designed to elicit an honest answer::planejado para obter uma resposta sincera]]"* |
 
 ### 6.2 Falsos cognatos de registro acadêmico
 
-O Módulo 9 cobre os falsos cognatos de fala cotidiana. Estes são os que mais aparecem em contexto acadêmico e que o brasileiro erra por semelhança com o português.
+O Módulo 9 aborda os falsos cognatos da fala cotidiana. Aqui estão os termos que mais aparecem em **contexto acadêmico** e que costumam confundir quem fala português pela semelhança na grafia.
 
-| Inglês | NÃO significa | Significa | Para dizer o sentido do português, use |
+| Inglês | Não significa | Significa | Para dizer o sentido do português, use |
 |---|---|---|---|
-| **eventually** | eventualmente (às vezes) | no fim, mais cedo ou mais tarde | *occasionally, possibly* |
-| **actually** | atualmente | na verdade, de fato | *currently, nowadays* |
-| **currently** | — | atualmente, no momento | (esta sim = "atualmente") |
-| **comprehensive** | compreensivo | abrangente, completo | *understanding* |
-| **sensible** | sensível | sensato, com bom senso | *sensitive* |
-| **pretend** | pretender | fingir | *intend to, plan to* |
-| **realize** | realizar (fazer) | perceber, dar-se conta | *carry out, accomplish* |
-| **eventual** | eventual (possível, ocasional) | final, resultante | *possible, occasional* |
-| **exit** | êxito | saída | *success* |
-| **notice** | notícia | aviso; perceber | *news* |
-| **support** | suportar (aguentar) | apoiar; sustentar uma tese | *stand, bear, put up with* |
-| **matriculate** | matricular-se (em qualquer curso) | ingressar formalmente numa universidade (raro, formal) | *enroll, register* |
-| **argument** | — | argumento; em conversa, também briga, bate-boca | (no Listening, *they had an argument* = eles brigaram) |
-| **evidence** | evidência no sentido de "coisa óbvia" | provas, indícios; incontável: nunca *an evidence* nem *evidences* | para "é evidente que", use *it is clear that* |
+| **eventually** | eventualmente (às vezes) | no fim, mais cedo ou mais tarde | *[[occasionally::ocasionalmente]], [[possibly::possivelmente]]* |
+| **actually** | atualmente | na verdade, de fato | *[[currently::atualmente]], [[nowadays::hoje em dia]]* |
+| **currently** | - | atualmente, no momento | (esta sim significa "atualmente") |
+| **comprehensive** | compreensivo | abrangente, completo | *[[understanding::compreensivo]]* |
+| **sensible** | sensível | sensato, com bom senso | *[[sensitive::sensível]]* |
+| **pretend** | pretender | fingir | *[[intend to::pretender]], [[plan to::planejar]]* |
+| **realize** | realizar (fazer) | perceber, dar-se conta | *[[carry out::realizar, executar]], [[accomplish::realizar, alcançar]]* |
+| **eventual** | eventual (possível, ocasional) | final, resultante | *[[possible::possível]], [[occasional::ocasional]]* |
+| **exit** | êxito | saída | *[[success::êxito, sucesso]]* |
+| **notice** | notícia | aviso; perceber | *[[news::notícia]]* |
+| **support** | suportar (aguentar) | apoiar; sustentar uma tese | *[[stand::aguentar]], [[bear::suportar]], [[put up with::tolerar]]* |
+| **matriculate** | matricular-se (em qualquer curso) | ingressar formalmente numa universidade (raro, formal) | *[[enroll::matricular-se, inscrever-se]], [[register::registrar-se, matricular-se]]* |
+| **argument** | - | argumento; em conversa, também briga, bate-boca | (no Listening, *[[they had an argument::eles tiveram uma discussão, brigaram]]* significa que eles brigaram) |
+| **evidence** | evidência no sentido de "coisa óbvia" | provas ou indícios (incontável, sem *an evidence* nem *evidences*) | para "é evidente que", use *[[it is clear that::está claro que, é evidente que]]* |
 
 ### 6.3 Verbos de reporte e a postura que carregam
 
-Ao relatar o que um autor, palestrante ou colega diz, o verbo escolhido revela **a sua leitura da postura dele**. Errar isso muda o sentido da sua resposta em Reading (perguntas de atitude do autor) e enfraquece a Academic Discussion.
+Quando você relata o que um autor, palestrante ou colega diz, o verbo escolhido revela a sua leitura da **postura** daquela pessoa. Confundir esse tom pode mudar o sentido da sua análise em Reading (nas questões de atitude do autor) e enfraquecer o seu parágrafo na *[[Write for an Academic Discussion::Escreva para uma discussão acadêmica]]*.
 
 | Verbo | Postura que sinaliza |
 |---|---|
-| **state / note / observe / report** | neutro: apenas registra o que foi dito |
-| **argue / contend / maintain / hold / assert** | defende uma posição, possivelmente contestável |
-| **claim / allege** | afirma sem prova suficiente (ceticismo implícito) |
-| **acknowledge / concede / admit** | reconhece um ponto contrário à própria posição |
-| **suggest / imply / hint** | não diz diretamente; deixa deduzir |
-| **demonstrate / show / establish** | prova com evidência (você endossa) |
-| **emphasize / stress / underscore** | dá peso especial a um ponto |
-| **dismiss / reject / refute** | descarta uma posição oposta |
-| **question / challenge / dispute** | põe em dúvida sem necessariamente refutar |
+| **[[state / note / observe / report::afirmar, notar, observar, relatar]]** | neutro: apenas registra o que foi dito |
+| **[[argue / contend / maintain / hold / assert::argumentar, sustentar, manter, defender, afirmar]]** | defende uma posição, possivelmente contestável |
+| **[[claim / allege::alegar, afirmar sem prova]]** | afirma sem prova suficiente (ceticismo implícito) |
+| **[[acknowledge / concede / admit::reconhecer, conceder, admitir]]** | reconhece um ponto contrário à própria posição |
+| **[[suggest / imply / hint::sugerir, dar a entender, insinuar]]** | não diz diretamente; deixa deduzir |
+| **[[demonstrate / show / establish::demonstrar, mostrar, estabelecer]]** | prova com evidência (você endossa) |
+| **[[emphasize / stress / underscore::enfatizar, frisar, ressaltar]]** | dá peso especial a um ponto |
+| **[[dismiss / reject / refute::descartar, rejeitar, refutar]]** | descarta uma posição oposta |
+| **[[question / challenge / dispute::questionar, desafiar, contestar]]** | põe em dúvida sem necessariamente refutar |
 
-> Exemplo do peso: *"The author **claims** that X"* (você duvida) vs. *"The author **demonstrates** that X"* (você aceita) vs. *"The author **argues** that X"* (neutro-analítico). Numa pergunta de atitude do autor em Reading, escolher o verbo errado na sua cabeça leva à alternativa errada.
+> **Exemplo:** Repare na diferença de peso entre *"The author **claims** that X"* (você demonstra dúvida), *"The author **demonstrates** that X"* (você aceita a prova) e *"The author **argues** that X"* (analítico e neutro). Em uma questão de atitude do autor no Reading, trocar esse verbo mentalmente pode levar você à alternativa errada.
 
 ---
 
-## PARTE 7: VOCABULÁRIO FUNCIONAL PARA LISTENING
+## Parte 7: Vocabulário funcional para o Listening
 
-> Em *Listen to an Academic Talk* e *Listen to a Conversation*, certas palavras não carregam o conteúdo: elas **sinalizam a estrutura**. Reconhecê-las na hora diz onde anotar e o que vai cair na pergunta.
+> **Resumo:** Em *[[Listen to an Academic Talk::Ouça uma palestra acadêmica]]* e *[[Listen to a Conversation::Ouça uma conversa]]*, certas expressões servem para sinalizar a estrutura da fala, mais do que o conteúdo em si. Reconhecê-las na hora mostra exatamente quando anotar e o que tem grande chance de cair nas perguntas.
 
 ### 7.1 Sinalizadores de estrutura em palestras
 
-| Função | O palestrante diz... | O que significa para a sua anotação |
+| Função | O que o palestrante diz | O que significa para a sua anotação |
 |---|---|---|
-| Anunciar o tema | *"Today I want to focus on... / Let's turn to..."* | título do bloco |
-| Listar | *"There are three main... / First... / Another..."* | numere: a pergunta vai cobrar "quantos / quais" |
-| Definir | *"By X, I mean... / X refers to... / X, that is,..."* | definição = provável pergunta de detalhe |
-| Exemplificar | *"For instance... / To illustrate... / Take the case of..."* | exemplo apoia o ponto anterior: ligue os dois |
-| Contrastar | *"However... / On the other hand... / Whereas... / Unlike..."* | ponto de virada: quase sempre cai na pergunta |
-| Causa/efeito | *"As a result... / This leads to... / Consequently... / because of this..."* | relação causal = pergunta de "por quê" |
-| Enfatizar | *"The key point is... / What matters here is... / I can't stress enough..."* | ideia principal: sublinhe |
-| Corrigir/reformular | *"Or rather... / Actually... / Let me put that differently..."* | a segunda versão é a que vale |
-| Digressão | *"By the way... / As an aside... / This is a bit of a tangent..."* | **não** vai cair, não gaste anotação |
-| Retomar | *"Getting back to... / As I was saying... / To return to the main point..."* | fim da digressão |
-| Concluir | *"So to sum up... / The upshot is... / In short..."* | resumo da ideia principal: pergunta de *gist* |
+| Anunciar o tema | *"[[Today I want to focus on...::Hoje quero focar em...]]"*, *"[[Let's turn to...::Vamos passar para...]]"* | título do bloco |
+| Listar | *"[[There are three main...::Há três principais...]]"*, *"[[First...::Primeiro...]]"*, *"[[Another...::Outro ponto...]]"* | numere: a pergunta vai cobrar "quantos" ou "quais" |
+| Definir | *"[[By X, I mean...::Por X, quero dizer...]]"*, *"[[X refers to...::X refere-se a...]]"*, *"[[X, that is,...::X, isto é,...]]"* | definição, que costuma virar pergunta de detalhe |
+| Exemplificar | *"[[For instance...::Por exemplo...]]"*, *"[[To illustrate...::Para ilustrar...]]"*, *"[[Take the case of...::Veja o caso de...]]"* | o exemplo apoia o ponto anterior: ligue os dois |
+| Contrastar | *"[[However...::No entanto...]]"*, *"[[On the other hand...::Por outro lado...]]"*, *"[[Whereas...::Ao passo que...]]"*, *"[[Unlike...::Diferentemente de...]]"* | ponto de virada: quase sempre cai na pergunta |
+| Causa e efeito | *"[[As a result...::Como resultado...]]"*, *"[[This leads to...::Isso leva a...]]"*, *"[[Consequently...::Consequentemente...]]"*, *"[[because of this...::por causa disso...]]"* | relação causal, que costuma virar pergunta de motivo |
+| Enfatizar | *"[[The key point is...::O ponto principal é...]]"*, *"[[What matters here is...::O que importa aqui é...]]"*, *"[[I can't stress enough...::Não posso enfatizar o bastante...]]"* | ideia principal: sublinhe |
+| Corrigir ou reformular | *"[[Or rather...::Ou melhor...]]"*, *"[[Actually...::Na verdade...]]"*, *"[[Let me put that differently...::Deixe-me colocar isso de outra forma...]]"* | a segunda versão é a que vale |
+| Digressão | *"[[By the way...::A propósito...]]"*, *"[[As an aside...::Abrindo um parêntese...]]"*, *"[[This is a bit of a tangent...::Isso foge um pouco do assunto...]]"* | **não** vai cair, então não gaste anotação |
+| Retomar | *"[[Getting back to...::Voltando a...]]"*, *"[[As I was saying...::Como eu estava dizendo...]]"*, *"[[To return to the main point...::Para voltar ao ponto principal...]]"* | fim da digressão |
+| Concluir | *"[[So to sum up...::Então, para resumir...]]"*, *"[[The upshot is...::O resultado final é...]]"*, *"[[In short...::Em suma...]]"* | resumo da ideia principal: pergunta de *[[gist::ideia principal]]* |
 
 ### 7.2 Phrasal verbs frequentes em conversas de campus
 
-O Listening usa muito phrasal verb onde o brasileiro espera o verbo latino. Reconhecimento imediato é obrigatório.
+Os diálogos do Listening usam muitos **[[phrasal verbs::verbos acompanhados de preposição ou advérbio que mudam de sentido]]** justamente onde quem fala português espera um verbo de origem latina. Reconhecê-los de imediato ajuda você a acompanhar as conversas sem perder detalhes importantes.
 
 | Phrasal | Sentido | Equivalente latino |
 |---|---|---|
-| *drop by / stop by* | passar rapidamente (num lugar) | visit briefly |
-| *sign up for* | inscrever-se em | enroll in / register for |
-| *drop / add a class* | trancar / incluir uma disciplina | withdraw from / enroll in |
-| *catch up on* | pôr em dia | review what was missed |
-| *put off* | adiar | postpone |
-| *turn in / hand in* | entregar (trabalho) | submit |
-| *look over / go over* | revisar | review, examine |
-| *figure out* | descobrir, entender | determine, work out |
-| *run into* | encontrar por acaso | encounter unexpectedly |
-| *fill out* | preencher (formulário) | complete |
-| *back up* | apoiar; fazer backup | support; save a copy |
-| *bring up* | mencionar | raise, mention |
-| *point out* | destacar | note, indicate |
-| *set up* | organizar, marcar | arrange, schedule |
-| *work on* | trabalhar em | develop, refine |
-| *come up with* | inventar, propor | devise, propose |
-| *cut back on* | reduzir | reduce, curtail |
-| *end up* | acabar (fazendo/sendo) | eventually be/do |
+| *drop by / stop by* | passar rapidamente (num lugar) | [[visit briefly::visitar brevemente]] |
+| *sign up for* | inscrever-se em | [[enroll in / register for::matricular-se ou inscrever-se em]] |
+| *drop / add a class* | trancar ou incluir uma disciplina | [[withdraw from / enroll in::retirar-se de ou matricular-se em]] |
+| *catch up on* | pôr em dia | [[review what was missed::revisar o que ficou atrasado]] |
+| *put off* | adiar | [[postpone::adiar, postergar]] |
+| *turn in / hand in* | entregar (trabalho) | [[submit::entregar, submeter]] |
+| *look over / go over* | revisar | [[review, examine::revisar, examinar]] |
+| *figure out* | descobrir, entender | [[determine, work out::determinar, resolver]] |
+| *run into* | encontrar por acaso | [[encounter unexpectedly::encontrar inesperadamente]] |
+| *fill out* | preencher (formulário) | [[complete::completar, preencher]] |
+| *back up* | apoiar; fazer cópia de segurança | [[support; save a copy::apoiar; salvar uma cópia]] |
+| *bring up* | mencionar | [[raise, mention::levantar um tema, mencionar]] |
+| *point out* | destacar | [[note, indicate::notar, apontar]] |
+| *set up* | organizar, marcar | [[arrange, schedule::organizar, agendar]] |
+| *work on* | trabalhar em | [[develop, refine::desenvolver, aprimorar]] |
+| *come up with* | inventar, propor | [[devise, propose::elaborar, propor]] |
+| *cut back on* | reduzir | [[reduce, curtail::reduzir, cortar]] |
+| *end up* | acabar (fazendo ou sendo) | [[eventually be/do::acabar sendo ou fazendo no fim]] |
 
-### 7.3 Linguagem de conversa transacional (student ↔ staff)
+### 7.3 Linguagem de conversa transacional entre aluno e equipe
 
-| O aluno quer... | Ouça por... |
+| O que o aluno quer | O que você vai ouvir |
 |---|---|
-| Marcar horário | *"Could I set up a time to...", "Are you available...", "office hours"* |
-| Pedir extensão | *"an extension", "push back the deadline", "a few more days"* |
-| Reclamar / relatar problema | *"I'm having trouble with...", "there seems to be an issue...", "it's not working"* |
-| Pedir esclarecimento | *"I'm a little confused about...", "could you clarify...", "what exactly..."* |
-| Aceitar / concordar | *"that works for me", "sounds good", "I'd appreciate that"* |
-| Recusar educadamente (staff) | *"I'm afraid that's not possible", "unfortunately", "the policy is..."* |
+| Marcar horário | *"[[Could I set up a time to...::Eu poderia agendar um horário para...]]"*, *"[[Are you available...::Você está disponível...]]"*, *"[[office hours::horário de atendimento do professor]]"* |
+| Pedir prorrogação | *"[[an extension::uma prorrogação de prazo]]"*, *"[[push back the deadline::adiar o prazo final]]"*, *"[[a few more days::mais alguns dias]]"* |
+| Reclamar ou relatar problema | *"[[I'm having trouble with...::Estou tendo dificuldade com...]]"*, *"[[there seems to be an issue...::parece haver um problema...]]"*, *"[[it's not working::não está funcionando]]"* |
+| Pedir esclarecimento | *"[[I'm a little confused about...::Estou um pouco confuso sobre...]]"*, *"[[could you clarify...::você poderia esclarecer...]]"*, *"[[what exactly...::o que exatamente...]]"* |
+| Aceitar ou concordar | *"[[that works for me::para mim funciona bem]]"*, *"[[sounds good::parece ótimo]]"*, *"[[I'd appreciate that::eu agradeceria muito]]"* |
+| Recusar educadamente (equipe) | *"[[I'm afraid that's not possible::Receio que isso não seja possível]]"*, *"[[unfortunately::infelizmente]]"*, *"[[the policy is...::a regra da instituição é...]]"* |
 
 ---
 
-## PARTE 8: O KIT DE EMERGÊNCIA · AS 50 PALAVRAS DE MAIOR ROI
+## Parte 8: O kit de emergência com as 50 palavras de maior ROI
 
-> Para quem tem pouco tempo: as 50 palavras com maior retorno por hora de estudo, combinando frequência no exame e impacto na pontuação quando usadas por você. Priorize-as acima de qualquer outra lista.
+> **Dica:** Para quem tem pouco tempo até a prova, estas 50 palavras oferecem o maior retorno por hora de estudo, pois combinam alta frequência no exame e forte impacto na pontuação quando você as utiliza. Priorize esta seleção acima de qualquer outra lista.
 
-| # | Palavra | Cat. | Use no Speaking quando... | Use no Writing quando... |
+| # | Palavra | Cat. | Quando usar no Speaking | Quando usar no Writing |
 |---|---|---|---|---|
-| 1 | **underscore** | v. | ...quiser enfatizar um ponto | ...introduzir sua conclusão ou evidência |
-| 2 | **posit** | v. | ...reportar a posição de alguém | ...apresentar uma hipótese ou afirmação |
-| 3 | **contend** | v. | ...reportar alguém que defende uma posição discutível | ...apresentar a tese de um dos lados do debate (não como sinônimo neutro de *say*) |
-| 4 | **proliferation** | n. | ...falar sobre crescimento rápido de qualquer coisa | ...descrever expansão de fenômenos |
-| 5 | **nuanced** | adj. | ...descrever uma situação complexa | ...qualificar um argumento simplista |
-| 6 | **exacerbate** | v. | ...algo piora um problema existente | ...mostrar relação de agravamento |
-| 7 | **mitigate** | v. | ...algo reduz um problema | ...ao discutir soluções ou políticas |
-| 8 | **substantiate** | v. | ...falar sobre evidências | ...ao conectar evidência a afirmação |
-| 9 | **pervasive** | adj. | ...descrever algo muito difundido | ...ao argumentar sobre escala de um fenômeno |
-| 10 | **counterintuitive** | adj. | ...introduzir um resultado surpreendente | ...ao apresentar um paradoxo ou contradição |
-| 11 | **empirical** | adj. | ...falar sobre pesquisa ou dados | ...ao distinguir evidência de teoria |
-| 12 | **robust** | adj. | ...descrever evidência forte | ...ao qualificar estudos ou argumentos |
-| 13 | **tenuous** | adj. | ...contestar um argumento fraco | ...ao desafiar uma afirmação da discussão |
-| 14 | **viable** | adj. | ...falar sobre soluções ou planos | ...ao avaliar estratégias ou políticas |
-| 15 | **anthropogenic** | adj. | ...falar sobre mudança climática | ...ao discutir causas ambientais |
-| 16 | **corroborate** | v. | ...a evidência confirma algo | ...ao ligar duas fontes de evidência |
-| 17 | **inherent** | adj. | ...descrever limitação fundamental | ...ao argumentar sobre trade-offs estruturais |
-| 18 | **perpetuate** | v. | ...falar sobre ciclos que se mantêm | ...ao analisar causas sistêmicas |
-| 19 | **systemic** | adj. | ...falar sobre problemas estruturais | ...ao propor reformas amplas |
-| 20 | **paradigm** | n. | ...falar sobre mudança fundamental de abordagem | ...ao introduzir uma transformação conceitual |
-| 21 | **elucidate** | v. | ...explicar algo | ...ao descrever o que a palestra/leitura faz |
-| 22 | **extrapolate** | v. | ...fazer projeções ou inferências | ...ao conectar dados a conclusões |
-| 23 | **confounding variable** | n. | ...contestar a validade de um estudo | ...ao criticar a metodologia de uma pesquisa citada |
-| 24 | **precipitate** | v. | ...descrever uma causa abrupta | ...ao narrar uma sequência de eventos |
-| 25 | **ubiquitous** | adj. | ...descrever algo onipresente (tecnologia) | ...ao argumentar sobre adoção em massa |
-| 26 | **cascade** / **cascading** | v./adj. | ...descrever efeitos em sequência | ...ao analisar consequências sistêmicas |
-| 27 | **engender** | v. | ...descrever o que algo cria/produz | ...ao argumentar sobre causas |
-| 28 | **unprecedented** | adj. | ...enfatizar a singularidade de algo | ...ao contextualizar um fenômeno histórico |
-| 29 | **tipping point** | n. | ...falar sobre limiares críticos | ...ao argumentar sobre urgência de intervenção |
-| 30 | **scalable** | adj. | ...falar sobre tecnologia ou negócios | ...ao avaliar viabilidade de soluções |
-| 31 | **leverage** | v. | ...descrever uso estratégico de vantagem | ...ao argumentar sobre estratégia competitiva |
-| 32 | **corollary** | n. | ...apresentar uma consequência lógica | ...ao encadear argumentos |
-| 33 | **disseminate** | v. | ...falar sobre difusão de informação | ...ao descrever impacto de tecnologia ou pesquisa |
-| 34 | **remediation** | n. | ...falar sobre correção de danos | ...ao discutir políticas ambientais |
-| 35 | **benchmark** | v./n. | ...falar sobre padrões de comparação | ...ao avaliar desempenho relativo |
-| 36 | **iterative** | adj. | ...descrever processos de melhoria contínua | ...ao avaliar abordagens de inovação |
-| 37 | **consequential** | adj. | ...enfatizar a importância de algo | ...ao introduzir um argumento de alto impacto |
-| 38 | **ostensible** | adj. | ...questionar a aparência de algo | ...ao complicar uma afirmação simples |
-| 39 | **augment** | v. | ...falar sobre IA como apoio humano | ...ao descrever complementação de capacidades |
-| 40 | **pedagogy** | n. | ...falar sobre educação | ...ao analisar abordagens de ensino |
-| 41 | **epistemic** | adj. | ...falar sobre natureza do conhecimento | ...ao argumentar sobre validade de afirmações |
-| 42 | **symbiosis** | n. | ...descrever relações estreitas de interdependência | ...ao analisar interações complexas |
-| 43 | **externality** | n. | ...falar sobre custos/benefícios não contabilizados | ...ao criticar análises econômicas parciais |
-| 44 | **convergence** | n. | ...falar sobre fusão de tecnologias | ...ao descrever tendências interligadas |
-| 45 | **delineate** | v. | ...descrever a estrutura de um argumento | ...ao introduzir pontos de forma organizada |
-| 46 | **preclude** | v. | ...argumentar que algo impede outra coisa | ...ao mostrar incompatibilidade lógica |
-| 47 | **incumbent** | n./adj. | ...falar sobre players estabelecidos em mercados | ...ao analisar dinâmicas competitivas |
-| 48 | **longitudinal** | adj. | ...descrever pesquisa de longo prazo | ...ao qualificar a solidez de um estudo |
-| 49 | **inculcate** | v. | ...falar sobre formação de valores ou hábitos | ...ao discutir o papel da educação |
-| 50 | **circumvent** | v. | ...descrever como algo evita uma regra | ...ao analisar comportamentos estratégicos |
+| 1 | **[[underscore::ressaltar, enfatizar]]** | v. | quiser enfatizar um ponto | introduzir sua conclusão ou evidência |
+| 2 | **[[posit::postular, propor]]** | v. | reportar a posição de alguém | apresentar uma hipótese ou afirmação |
+| 3 | **[[contend::sustentar, defender]]** | v. | reportar alguém que defende uma posição discutível | apresentar a tese de um dos lados do debate (não como sinônimo neutro de *[[say::dizer]]*) |
+| 4 | **[[proliferation::proliferação, rápida expansão]]** | n. | falar sobre crescimento rápido de qualquer coisa | descrever expansão de fenômenos |
+| 5 | **[[nuanced::nuançado, com distinções sutis]]** | adj. | descrever uma situação complexa | qualificar um argumento simplista |
+| 6 | **[[exacerbate::agravar, piorar]]** | v. | algo piora um problema existente | mostrar relação de agravamento |
+| 7 | **[[mitigate::mitigar, atenuar]]** | v. | algo reduz um problema | discutir soluções ou políticas |
+| 8 | **[[substantiate::fundamentar, comprovar com evidências]]** | v. | falar sobre evidências | conectar evidência a afirmação |
+| 9 | **[[pervasive::difundido por toda parte]]** | adj. | descrever algo muito difundido | argumentar sobre escala de um fenômeno |
+| 10 | **[[counterintuitive::contraintuitivo]]** | adj. | introduzir um resultado surpreendente | apresentar um paradoxo ou contradição |
+| 11 | **[[empirical::empírico, baseado em dados]]** | adj. | falar sobre pesquisa ou dados | distinguir evidência de teoria |
+| 12 | **[[robust::robusto, sólido]]** | adj. | descrever evidência forte | qualificar estudos ou argumentos |
+| 13 | **[[tenuous::tênue, frágil]]** | adj. | contestar um argumento fraco | desafiar uma afirmação da discussão |
+| 14 | **[[viable::viável]]** | adj. | falar sobre soluções ou planos | avaliar estratégias ou políticas |
+| 15 | **[[anthropogenic::antropogênico, causado por humanos]]** | adj. | falar sobre mudança climática | discutir causas ambientais |
+| 16 | **[[corroborate::corroborar, confirmar]]** | v. | a evidência confirma algo | ligar duas fontes de evidência |
+| 17 | **[[inherent::inerente, intrínseco]]** | adj. | descrever limitação fundamental | argumentar sobre [[trade-offs::compensações entre perdas e ganhos]] estruturais |
+| 18 | **[[perpetuate::perpetuar, manter ativo]]** | v. | falar sobre ciclos que se mantêm | analisar causas sistêmicas |
+| 19 | **[[systemic::sistêmico, estrutural]]** | adj. | falar sobre problemas estruturais | propor reformas amplas |
+| 20 | **[[paradigm::paradigma, modelo conceitual]]** | n. | falar sobre mudança fundamental de abordagem | introduzir uma transformação conceitual |
+| 21 | **[[elucidate::elucidar, esclarecer]]** | v. | explicar algo | descrever o que a palestra ou leitura faz |
+| 22 | **[[extrapolate::extrapolar, projetar além dos dados]]** | v. | fazer projeções ou inferências | conectar dados a conclusões |
+| 23 | **[[confounding variable::variável de confundimento]]** | n. | contestar a validade de um estudo | criticar a metodologia de uma pesquisa citada |
+| 24 | **[[precipitate::precipitar, desencadear subitamente]]** | v. | descrever uma causa abrupta | narrar uma sequência de eventos |
+| 25 | **[[ubiquitous::ubíquo, onipresente]]** | adj. | descrever algo onipresente (tecnologia) | argumentar sobre adoção em massa |
+| 26 | **[[cascade::espalhar-se em cascata]]** ou **[[cascading::em cascata]]** | v. ou adj. | descrever efeitos em sequência | analisar consequências sistêmicas |
+| 27 | **[[engender::gerar, dar origem a]]** | v. | descrever o que algo cria ou produz | argumentar sobre causas |
+| 28 | **[[unprecedented::sem precedentes, inédito]]** | adj. | enfatizar a singularidade de algo | contextualizar um fenômeno histórico |
+| 29 | **[[tipping point::ponto de inflexão]]** | n. | falar sobre limiares críticos | argumentar sobre urgência de intervenção |
+| 30 | **[[scalable::escalável]]** | adj. | falar sobre tecnologia ou negócios | avaliar viabilidade de soluções |
+| 31 | **[[leverage::alavancar, usar estrategicamente]]** | v. | descrever uso estratégico de vantagem | argumentar sobre estratégia competitiva |
+| 32 | **[[corollary::corolário, consequência lógica direta]]** | n. | apresentar uma consequência lógica | encadear argumentos |
+| 33 | **[[disseminate::disseminar, difundir]]** | v. | falar sobre difusão de informação | descrever impacto de tecnologia ou pesquisa |
+| 34 | **[[remediation::remediação, recuperação ambiental]]** | n. | falar sobre correção de danos | discutir políticas ambientais |
+| 35 | **[[benchmark::padrão de referência]]** | v. ou n. | falar sobre padrões de comparação | avaliar desempenho relativo |
+| 36 | **[[iterative::iterativo, feito em ciclos de melhoria]]** | adj. | descrever processos de melhoria contínua | avaliar abordagens de inovação |
+| 37 | **[[consequential::de grande impacto, importante]]** | adj. | enfatizar a importância de algo | introduzir um argumento de alto impacto |
+| 38 | **[[ostensible::aparente, suposto]]** | adj. | questionar a aparência de algo | complicar uma afirmação simples |
+| 39 | **[[augment::ampliar, complementar capacidades]]** | v. | falar sobre IA como apoio humano | descrever complementação de capacidades |
+| 40 | **[[pedagogy::pedagogia, prática de ensino]]** | n. | falar sobre educação | analisar abordagens de ensino |
+| 41 | **[[epistemic::epistêmico, relativo ao conhecimento]]** | adj. | falar sobre natureza do conhecimento | argumentar sobre validade de afirmações |
+| 42 | **[[symbiosis::simbiose, interdependência estreita]]** | n. | descrever relações estreitas de interdependência | analisar interações complexas |
+| 43 | **[[externality::externalidade, efeito sobre terceiros]]** | n. | falar sobre custos ou benefícios não contabilizados | criticar análises econômicas parciais |
+| 44 | **[[convergence::convergência, fusão]]** | n. | falar sobre fusão de tecnologias | descrever tendências interligadas |
+| 45 | **[[delineate::delinear, traçar com clareza]]** | v. | descrever a estrutura de um argumento | introduzir pontos de forma organizada |
+| 46 | **[[preclude::impedir, inviabilizar]]** | v. | argumentar que algo impede outra coisa | mostrar incompatibilidade lógica |
+| 47 | **[[incumbent::empresa já dominante no mercado]]** | n. ou adj. | falar sobre empresas estabelecidas em mercados | analisar dinâmicas competitivas |
+| 48 | **[[longitudinal::longitudinal, acompanhado por longo período]]** | adj. | descrever pesquisa de longo prazo | qualificar a solidez de um estudo |
+| 49 | **[[inculcate::inculcar, transmitir valores de forma duradoura]]** | v. | falar sobre formação de valores ou hábitos | discutir o papel da educação |
+| 50 | **[[circumvent::contornar, driblar uma regra]]** | v. | descrever como algo evita uma regra | analisar comportamentos estratégicos |
 
 ---
 
-## PARTE 9: DRILLS DE VOCABULÁRIO
+## Parte 9: Exercícios de vocabulário
 
-> As tabelas acima são reconhecimento. Estes drills forçam **produção**. Faça-os com papel e caneta, sem consultar, e só depois confira o gabarito.
+> **Dica:** As tabelas anteriores trabalham o reconhecimento, enquanto estes exercícios colocam a sua **produção** em prática. Resolva cada bloco com papel e caneta, sem consultar as listas, e só confira o gabarito depois de terminar.
 
-### DRILL 1: Complete the Words (forma exata)
+### Exercício 1: Complete the Words (forma exata)
 
-Complete a palavra. As primeiras letras são dadas; a frase determina a forma.
+Complete cada palavra com as letras que faltam. As primeiras letras já estão indicadas, e a estrutura da frase define a **forma gramatical** correta.
 
-1. "The committee will *ass___* the proposal before the vote." → *(verbo)*
-2. "A thorough *ass___* of the risks is still pending." → *(substantivo)*
-3. "The results were *stat___* significant." → *(advérbio)*
-4. "Researchers must control for every *conf___* variable." → *(adjetivo)*
-5. "The two theories offer *comp___* explanations of the same data." → *(adjetivo = 'concorrentes/rivais')*
-6. "Her argument rests on a questionable *assum___*." → *(substantivo)*
-7. "The city failed to *pri___* infrastructure spending." → *(verbo)*
-8. "The evidence is far from *concl___*." → *(adjetivo)*
-9. "The lecture *elab___* on a point the reading only mentions." → *(verbo, 3ª pessoa)*
-10. "Such policies tend to *perp___* existing inequalities." → *(verbo)*
-11. "The findings were later *corrob___* by an independent team." → *(verbo, particípio)*
-12. "There is considerable *variat___* between the regions." → *(substantivo)*
-13. "The professor's account is more *nu___* than the textbook's." → *(adjetivo)*
-14. "This raises an important *episte___* question about how we know what we claim to know." → *(adjetivo)*
-15. "The intervention produced only a *marg___* improvement." → *(adjetivo)*
+1. "The committee will *ass___* the proposal before the vote." *(verbo)*
+2. "A thorough *ass___* of the risks is still pending." *(substantivo)*
+3. "The results were *stat___* significant." *(advérbio)*
+4. "Researchers must control for every *conf___* variable." *(adjetivo)*
+5. "The two theories offer *comp___* explanations of the same data." *(adjetivo, no sentido de "concorrentes" ou "rivais")*
+6. "Her argument rests on a questionable *assum___*." *(substantivo)*
+7. "The city failed to *pri___* infrastructure spending." *(verbo)*
+8. "The evidence is far from *concl___*." *(adjetivo)*
+9. "The lecture *elab___* on a point the reading only mentions." *(verbo, 3ª pessoa)*
+10. "Such policies tend to *perp___* existing inequalities." *(verbo)*
+11. "The findings were later *corrob___* by an independent team." *(verbo, particípio)*
+12. "There is considerable *variat___* between the regions." *(substantivo)*
+13. "The professor's account is more *nu___* than the textbook's." *(adjetivo)*
+14. "This raises an important *episte___* question about how we know what we claim to know." *(adjetivo)*
+15. "The intervention produced only a *marg___* improvement." *(adjetivo)*
 
 **Gabarito:** 1 assess · 2 assessment · 3 statistically · 4 confounding · 5 competing · 6 assumption · 7 prioritize · 8 conclusive · 9 elaborates · 10 perpetuate · 11 corroborated · 12 variation · 13 nuanced · 14 epistemic · 15 marginal
 
-### DRILL 2: Forma da palavra (word form)
+### Exercício 2: Forma da palavra (word form)
 
-Coloque a forma correta da raiz entre parênteses.
+Coloque a **forma correta** da raiz indicada entre parênteses.
 
 1. "The study's methodological ___ (ROBUST) has been widely praised."
 2. "These findings ___ (SUBSTANTIAL) the earlier hypothesis."
 3. "The two accounts differ ___ (SIGNIFICANT) in their conclusions."
 4. "A ___ (PERSIST) gap remains between policy and practice."
 5. "The data must be interpreted with ___ (CAUTION)."
-6. "The model ___ (SIMPLE) a process that is in fact highly complex." *(over-...)*
+6. "The model ___ (SIMPLE) a process that is in fact highly complex." *(com o prefixo over-)*
 7. "Their ___ (RELY) on a single data source weakens the argument."
 8. "The phenomenon has been documented ___ (EXTENSIVE)."
 9. "The committee reached a ___ (CONCLUDE) after months of review."
@@ -569,9 +572,9 @@ Coloque a forma correta da raiz entre parênteses.
 
 **Gabarito:** 1 robustness · 2 substantiate · 3 significantly · 4 persistent · 5 caution · 6 oversimplifies · 7 reliance · 8 extensively · 9 conclusion · 10 transformative · 11 demonstrably · 12 variation (ou variability)
 
-### DRILL 3: Collocation (verbo âncora)
+### Exercício 3: Collocation (verbo âncora)
 
-Escolha o verbo que forma a collocation: *conduct · draw · raise · pose · yield · challenge · account for · reach*
+Escolha o verbo que forma a **[[collocation::combinação natural de palavras]]** adequada em cada frase: *conduct · draw · raise · pose · yield · challenge · account for · reach*
 
 1. "The researchers ___ a longitudinal study over fifteen years."
 2. "It is too early to ___ firm conclusions."
@@ -584,9 +587,9 @@ Escolha o verbo que forma a collocation: *conduct · draw · raise · pose · yi
 
 **Gabarito:** 1 conducted · 2 draw · 3 raises · 4 poses · 5 yield · 6 challenges · 7 account for · 8 reached
 
-### DRILL 4: Sinônimo preciso (registro acadêmico)
+### Exercício 4: Sinônimo preciso (registro acadêmico)
 
-Substitua a palavra simples pela acadêmica que melhor se encaixa. Mais de uma pode servir; escolha a mais precisa.
+Substitua a palavra simples em destaque pelo termo acadêmico mais **preciso** para o contexto. Mais de uma opção pode funcionar, então escolha a que melhor se encaixa na frase.
 
 1. "The policy made the problem **worse**." → ___
 2. "This shows the importance of early action." → ___
@@ -601,9 +604,9 @@ Substitua a palavra simples pela acadêmica que melhor se encaixa. Mais de uma p
 
 **Gabarito (uma opção):** 1 exacerbated · 2 underscores · 3 corroborate one another · 4 tenuous · 5 mitigate · 6 posits · 7 contend · 8 counterintuitive · 9 pervasive · 10 robust
 
-### DRILL 5: Pares de nuance
+### Exercício 5: Pares de nuance
 
-Escolha a palavra certa.
+Escolha a **palavra certa** entre as opções de cada item.
 
 1. "The new rule will (affect / effect) attendance."
 2. "The (affect / effect) on attendance was minimal."
@@ -620,17 +623,17 @@ Escolha a palavra certa.
 
 **Gabarito:** 1 affect · 2 effect · 3 implies · 4 infer · 5 comprises · 6 fewer · 7 number · 8 with *(é a forma recomendada pelos manuais de estilo para comparação de diferenças; "to" também é aceito no uso real)* · 9 principal · 10 sensible · 11 preceded · 12 elicit
 
-### DRILL 6: Gap-fill em contexto acadêmico
+### Exercício 6: Preenchimento de lacunas em contexto acadêmico
 
-Complete com: *empirical · mechanism · extrapolate · confounding · replicate · tenuous · systemic · mitigation · correlation · causation*
+Complete as lacunas do parágrafo usando os termos do **banco**: *empirical · mechanism · extrapolate · confounding · replicate · tenuous · systemic · mitigation · correlation · causation*
 
 > "The paper reports a strong ___(1) between screen time and poor sleep in teenagers. But correlation is not ___(2), and the study does not identify the ___(3) by which screens would disrupt sleep. A likely ___(4) variable is simply that anxious teenagers both sleep poorly and use phones more. Until an independent team can ___(5) the result under controlled conditions, the causal claim remains ___(6). The authors are right, however, that the broader trend is real and that its drivers are largely ___(7): a product of how devices and apps are designed. Any ___(8) strategy should therefore target design, not just individual willpower. The ___(9) evidence we do have supports modest limits; it does not support the alarmist framing that lets commentators ___(10) from a small effect to a generational crisis."
 
 **Gabarito:** 1 correlation · 2 causation · 3 mechanism · 4 confounding · 5 replicate · 6 tenuous · 7 systemic · 8 mitigation · 9 empirical · 10 extrapolate
 
-### DRILL 7: Verbo de reporte + postura
+### Exercício 7: Verbo de reporte e postura
 
-Para cada frase, escolha o verbo que combina com a postura indicada entre colchetes: *acknowledges · claims · demonstrates · disputes · notes · concedes*
+Para cada frase, escolha o **verbo de reporte** que combina com a postura indicada entre colchetes: *acknowledges · claims · demonstrates · disputes · notes · concedes*
 
 1. "The author ___ that the sample was small. [reconhece uma fraqueza própria]"
 2. "The lecturer ___, with new data, that the reading's model is wrong. [prova]"
@@ -639,19 +642,19 @@ Para cada frase, escolha o verbo que combina com a postura indicada entre colche
 5. "The passage ___ that enrollment rose in 2024. [registra um fato, neutro]"
 6. "While she ___ the cost is real, she argues the benefit is larger. [admite o contra]"
 
-**Gabarito:** 1 acknowledges · 2 demonstrates · 3 claims · 4 disputes · 5 notes · 6 concedes *(nos itens 1 e 6 as duas formas servem: acknowledge e concede estão na mesma linha da tabela 6.3)*
+**Gabarito:** 1 acknowledges · 2 demonstrates · 3 claims · 4 disputes · 5 notes · 6 concedes *(nos itens 1 e 6 as duas formas servem, pois acknowledge e concede estão na mesma linha da tabela 6.3)*
 
-### DRILL 8: Ativação (inserção no início da frase)
+### Exercício 8: Ativação (inserção no início da frase)
 
-Para cada palavra, escreva **uma** frase própria em que ela apareça **nas primeiras 4 palavras**. Cronometre: 15 segundos por frase. Se passar disso, a palavra ainda é passiva: mantenha-a só no Writing.
+Para cada palavra abaixo, escreva uma frase própria em que o termo apareça logo nas **primeiras 4 palavras**. Cronometre 15 segundos por frase; se passar desse tempo, sinal de que a palavra ainda é passiva e deve continuar apenas no Writing por enquanto.
 
 *proliferation · counterintuitive · exacerbate · pervasive · underscore · viable · systemic · inherent*
 
 **Modelo (proliferation):** *"The proliferation of streaming services has fragmented an audience that cable once held together."*
 
-### DRILL 9: Caça ao erro
+### Exercício 9: Caça ao erro
 
-Cada frase tem **um** erro de vocabulário (forma, colocação, falso cognato ou nuance). Encontre e corrija.
+Cada frase abaixo tem um deslize de **vocabulário** envolvendo forma da palavra, colocação, falso cognato ou nuance. Encontre o ponto de atenção e faça a correção.
 
 1. "Eventually, the study has three limitations that the authors admit."
 2. "The data are comprised of responses from 400 students."
@@ -664,91 +667,89 @@ Cada frase tem **um** erro de vocabulário (forma, colocação, falso cognato ou
 
 **Gabarito:**
 
-1. *Eventually* → **"The study has three limitations..."** (falso cognato: *eventually* = "no fim"; o aluno pensou em "eventualmente". Se a ideia era "possivelmente", use *possibly*; aqui o mais limpo é cortar)
-2. *are comprised of* → **"comprise"** ou **"are composed of"**
-3. *about if* → **"about whether"**
-4. *pretends* → **"claims"** ou **"argues"** (falso cognato: *pretend* = fingir)
-5. *corroborate to each other* → **"corroborate each other"** (sem preposição)
-6. *affect* → **"effect"** (aqui é substantivo)
-7. *robusts* → **"robust"** (adjetivo não flexiona)
-8. *makes an emphasis on* → **"emphasizes"** ou **"places emphasis on"**
+1. Troque *Eventually* por **"The study has three limitations..."** (falso cognato, pois *[[eventually::no fim, mais cedo ou mais tarde]]* significa "no fim", enquanto a intenção era dizer "eventualmente"; se a ideia era "possivelmente", use *[[possibly::possivelmente]]*, mas aqui o mais limpo é cortar).
+2. Troque *are comprised of* por **"comprise"** ou **"are composed of"**.
+3. Troque *about if* por **"about whether"**.
+4. Troque *pretends* por **"claims"** ou **"argues"** (falso cognato, pois *[[pretend::fingir]]* significa "fingir").
+5. Troque *corroborate to each other* por **"corroborate each other"** (sem preposição).
+6. Troque *affect* por **"effect"** (aqui é substantivo).
+7. Troque *robusts* por **"robust"** (adjetivo não flexiona).
+8. Troque *makes an emphasis on* por **"emphasizes"** ou **"places emphasis on"**.
 
 ---
 
-## PARTE 10: PROTOCOLO DE ATIVAÇÃO · DE RECONHECER A USAR
+## Parte 10: Passo a passo de ativação para passar de reconhecer a usar
 
 ### Plano de 30 dias para ativar as 50 palavras
 
+Transformar vocabulário passivo em produção fluente pede contato diário e progressivo. Siga este **plano de 30 dias** para ativar as 50 palavras do Kit de Emergência:
+
 | Fase | Dias | Atividade | Meta |
 |---|---|---|---|
-| **Aquisição** | D1–D5 | Estude 10 palavras/dia: leia definição + exemplo em voz alta 3× | Reconhecimento imediato |
-| **Recall** | D6–D10 | Flash cards: veja a palavra → diga definição + 1 frase própria sem consultar | Recall ativo em 3 segundos |
-| **Produção escrita** | D11–D20 | Use 5 palavras novas em cada *Write for an Academic Discussion* de prática | Produção correta no Writing |
-| **Produção oral** | D21–D28 | Use 2–3 palavras novas em cada *Take an Interview* gravado | Produção sob pressão de tempo |
-| **Automaticidade** | D29–D30 | Mock de *Take an Interview* completo: verifique se as palavras saem naturalmente | Zero hesitação = ativação completa |
+| **Aquisição** | D1–D5 | Estude 10 palavras por dia: leia a definição e o exemplo em voz alta 3 vezes | Reconhecimento imediato |
+| **[[Recall::Recuperação ativa na memória]]** | D6–D10 | Use os cartões de memória: veja a palavra e diga a definição e 1 frase própria sem consultar | Recall em 3 segundos |
+| **Produção escrita** | D11–D20 | Use 5 palavras novas em cada *[[Write for an Academic Discussion::Escreva para uma discussão acadêmica]]* de prática | Produção correta no Writing |
+| **Produção oral** | D21–D28 | Use de 2 a 3 palavras novas em cada *[[Take an Interview::Faça uma entrevista]]* gravado | Produção sob pressão de tempo |
+| **Automaticidade** | D29–D30 | Faça um treino completo de *Take an Interview* e verifique se as palavras saem naturalmente | Zero hesitação e ativação completa |
 
 ### Regra de inserção estratégica (Take an Interview)
 
-Nunca tente encaixar uma palavra de impacto no meio de uma frase que você já está construindo. Insira **no início da frase**, onde você ainda tem controle total:
+Evite tentar encaixar uma palavra difícil no meio de uma frase que você já está construindo, porque isso costuma travar o ritmo da fala. Insira o termo **no início da frase**, onde você ainda tem controle total da estrutura:
 
-- ❌ Fraco: *"Education is important and it... um... pervasive in... in society."*
-- ✅ Elite: *"The pervasive influence of [X] on [Y] makes this a particularly consequential choice."*
+- ❌ Hesitante: *"[[Education is important and it... um... pervasive in... in society.::A educação é importante e ela é... hã... difundida na... na sociedade.]]"*
+- ✅ Bem construído: *"[[The pervasive influence of::A influência ampla de]] [X] on [Y] [[makes this a particularly consequential choice.::torna esta uma escolha especialmente importante.]]"*
 
-A frase começa **com** a palavra de impacto, não termina nela.
+Quando a frase começa **com** a palavra de impacto, o restante do raciocínio flui sem tropeços.
 
 ### Como esta camada pontua em 2026
 
-- **Reading / Listening:** o vocabulário da Parte 2 aparece nos textos e áudios.
-Reconhecimento lento = pontos perdidos em *Read an Academic Passage* e *Listen to an Academic Talk*, além de dificuldade em *Complete the Words*.
-- **Take an Interview:** a rubrica premia **variedade lexical**: 2 a 3 palavras
-da Parte 3/8 por resposta, inseridas no começo da frase, elevam a banda sem custar fluência.
-- **Write an Email:** vocabulário navegacional preciso (*request an extension,
-clarify the requirements, reschedule*), não termos acadêmicos raros.
-- **Write for an Academic Discussion:** é onde a Parte 3 rende mais: há tempo
-para inserir 4 a 6 termos de impacto com precisão.
+- **Reading e Listening:** o vocabulário da Parte 2 aparece diretamente nos textos e áudios da prova. Reconhecê-lo na hora evita perder pontos em *[[Read an Academic Passage::Leia uma passagem acadêmica]]* e *[[Listen to an Academic Talk::Ouça uma palestra acadêmica]]*, além de facilitar a resolução de *[[Complete the Words::Complete as palavras]]*.
+- **Take an Interview:** a avaliação premia a variedade lexical. Incluir de 2 a 3 palavras das Partes 3 e 8 por resposta, sempre no começo da frase, eleva a sua banda sem custar fluência.
+- **[[Write an Email::Escreva um e-mail]]:** o foco está no vocabulário prático da rotina universitária (*[[request an extension::solicitar uma prorrogação de prazo]]*, *[[clarify the requirements::esclarecer os requisitos]]* e *[[reschedule::reagendar]]*), e não em termos acadêmicos raros.
+- **Write for an Academic Discussion:** é a tarefa em que a Parte 3 rende mais, pois há tempo para inserir de 4 a 6 termos de impacto com precisão.
 
 ---
 
-## PARTE 11: PROTOCOLO DE ANÁLISE DE ERROS DE VOCABULÁRIO
+## Parte 11: Passo a passo de análise de erros de vocabulário
 
-Depois de cada drill de produção (Speaking/Writing), classifique cada erro lexical numa das seis categorias. O padrão diz onde focar.
+Agora vamos olhar com calma para o que você trocou nos treinos, porque mapear esses padrões é o caminho mais rápido para evoluir. Depois de cada exercício de produção (no Speaking ou no Writing), classifique cada **deslize lexical** em uma das seis categorias abaixo para saber exatamente onde focar.
 
-| Código | Erro | Sinal | Correção | Onde revisar |
+| Código | Ponto de atenção | Sinal | Como corrigir | Onde revisar |
 |---|---|---|---|---|
-| **V1** | Forma errada da palavra | usou *analyze* onde a lacuna pedia *analysis*; *robusts* | identificar a função sintática antes de escolher a forma | Parte 5.1, Drills 1–2 |
-| **V2** | Colocação errada | *do a research*, *corroborate to*, *make an emphasis* | banco de collocations por verbo âncora | Parte 4, Drills 3, 9 |
-| **V3** | Falso cognato | *eventually* = "eventualmente"; *pretend* = "pretender"; *realize* = "realizar" | lista da Parte 6.2; ao ver um cognato "óbvio", desconfiar | Parte 6.2, Módulo 9 |
-| **V4** | Registro trocado | latinismo raro num e-mail; phrasal informal na Academic Discussion; palavra de impacto onde a simples bastava | escolher o registro da task antes de escrever | Parte 6, Módulo 5 |
-| **V5** | Overreach (usou palavra que não controla) | a palavra sofisticada está no lugar errado da frase, ou com sentido aproximado, ou trava a fala | rebaixar para a palavra simples e correta até a sofisticada passar no teste dos 3 segundos | Parte 1 (regra de ativação), Drill 8 |
-| **V6** | Sinônimo impreciso | *say* → *claim* quando o autor prova; *big* → *pervasive* quando era só *large* | escolher o sinônimo pela **nuance**, não pelo tamanho | Parte 6.3, Drill 4 |
+| **V1** | Forma errada da palavra | usou *[[analyze::analisar]]* onde a lacuna pedia *[[analysis::análise]]*; escreveu *robusts* | identificar a função sintática antes de escolher a forma | Parte 5.1, Exercícios 1–2 |
+| **V2** | Colocação errada | *do a research*, *corroborate to*, *make an emphasis* | consultar o banco de [[collocations::combinações naturais de palavras]] por verbo âncora | Parte 4, Exercícios 3 e 9 |
+| **V3** | Falso cognato | usou *[[eventually::no fim, mais cedo ou mais tarde]]* como "eventualmente", *[[pretend::fingir]]* como "pretender" ou *[[realize::perceber, dar-se conta]]* como "realizar" | revisar a lista da Parte 6.2 e desconfiar de cognatos que parecem óbvios | Parte 6.2, Módulo 9 |
+| **V4** | Registro trocado | usou latinismo raro num e-mail, [[phrasal verb::verbo com partícula de tom mais coloquial]] informal na *[[Write for an Academic Discussion::Escreva para uma discussão acadêmica]]* ou palavra difícil onde a simples bastava | definir o registro da tarefa antes de começar a escrever | Parte 6, Módulo 5 |
+| **V5** | [[Overreach::Tentativa de usar uma palavra além do domínio atual]] (usou palavra que ainda não controla) | a palavra sofisticada entrou no lugar errado da frase, ficou com sentido aproximado ou travou a fala | voltar para a palavra simples e correta até a mais sofisticada passar no teste dos 3 segundos | Parte 1 (regra de ativação), Exercício 8 |
+| **V6** | Sinônimo impreciso | trocou *[[say::dizer]]* por *[[claim::alegar sem prova]]* quando o autor comprova a ideia, ou *[[big::grande]]* por *[[pervasive::difundido por toda parte]]* quando queria dizer apenas *[[large::grande, amplo]]* | escolher o sinônimo pela **nuance** exata, e não pelo tamanho da palavra | Parte 6.3, Exercício 4 |
 
 ### Registro semanal
 
-| Semana | Drills feitos | V mais frequente | Palavras que "vazaram" para passivo de novo | Ação |
+| Semana | Exercícios feitos | V mais frequente | Palavras que voltaram para o passivo | Ação |
 |---|---|---|---|---|
 | | | | | |
 | | | | | |
 | | | | | |
 
-> Se **V5** domina, você está tentando ativar palavras cedo demais: recue para menos palavras, mais repetição. Se **V1/V2** dominam, o problema é forma e colocação, não repertório: concentre-se nas Partes 4 e 5, não em aprender palavras novas.
+> **Dica:** Se o código V5 aparecer com mais frequência, você está tentando ativar palavras novas cedo demais, então reduza a quantidade e aumente a repetição. Já se predominarem V1 e V2, a prioridade é revisar forma e colocação nas Partes 4 e 5, em vez de buscar palavras novas.
 
 ---
 
-## PARTE 12: CHECKLIST DE SAÍDA DO MÓDULO 6
+## Parte 12: Checklist de saída do Módulo 6
 
-- [ ] Entendi a diferença entre vocabulário de **reconhecimento** (Parte 2) e de **produção** (Parte 3)
-- [ ] Sei que uma palavra só entra no *Take an Interview* quando sai em menos de 3 segundos
-- [ ] Sei aprender por **família de palavras**, não por palavra solta, e identificar a forma pela função sintática
-- [ ] Conheço os prefixos/sufixos que me deixam adivinhar palavras novas em Reading
-- [ ] Não caio mais nos falsos cognatos acadêmicos (*eventually, actually, pretend, realize, comprehensive, sensible*)
-- [ ] Sei que o verbo de reporte (*claim / argue / demonstrate / concede*) carrega postura e escolho o certo
-- [ ] Reconheço os sinalizadores de estrutura em palestras e os phrasal verbs de conversas de campus
-- [ ] Escolhi as 50 palavras do Kit de Emergência como prioridade
-- [ ] Comecei o plano de 30 dias de ativação
-- [ ] Sei inserir a palavra de impacto **no início** da frase, não no fim
+- [ ] Entendi a diferença entre o vocabulário de **reconhecimento** (Parte 2) e o de produção (Parte 3)
+- [ ] Sei que uma palavra nova só entra no *[[Take an Interview::Faça uma entrevista]]* quando sai com segurança em menos de 3 segundos
+- [ ] Sei estudar por **família de palavras**, e não por palavra solta, identificando a forma certa pela função sintática
+- [ ] Conheço os prefixos e sufixos que ajudam a deduzir o sentido de palavras novas no Reading
+- [ ] Não caio mais nos falsos cognatos acadêmicos (*[[eventually::no fim, mais cedo ou mais tarde]]*, *[[actually::na verdade, de fato]]*, *[[pretend::fingir]]*, *[[realize::perceber, dar-se conta]]*, *[[comprehensive::abrangente, completo]]* e *[[sensible::sensato]]*)
+- [ ] Sei que o verbo de reporte (*[[claim::alegar sem prova]]*, *[[argue::argumentar]]*, *[[demonstrate::demonstrar com evidência]]* e *[[concede::admitir um ponto contrário]]*) carrega postura e escolho o adequado para cada contexto
+- [ ] Reconheço os sinalizadores de estrutura em palestras e os [[phrasal verbs::verbos acompanhados de preposição ou advérbio que mudam de sentido]] frequentes nas conversas de campus
+- [ ] Escolhi as 50 palavras do Kit de Emergência como minha prioridade de estudo
+- [ ] Comecei a colocar em prática o plano de 30 dias de ativação
+- [ ] Sei inserir a palavra de impacto **no início** da frase, e não no final
 - [ ] Memorizei os verbos e adjetivos universais da Parte 4 como substitutos diretos
-- [ ] Fiz os 9 drills da Parte 9 e tenho um registro de erros V1–V6 em andamento
+- [ ] Fiz os 9 exercícios da Parte 9 e mantenho o meu registro de erros de V1 a V6 em andamento
 
 ---
 
-✅ Módulo 6 concluído. As tabelas ficam como banco de consulta permanente durante todos os drills. Refaça os drills da Parte 9 depois de cada simulado do Módulo 7.
+✅ Módulo 6 concluído. As tabelas deste módulo continuam à sua disposição como banco de consulta durante todos os exercícios do curso, e vale refazer a prática da Parte 9 depois de cada simulado do Módulo 7. Mais um passo importante dado na sua preparação.
