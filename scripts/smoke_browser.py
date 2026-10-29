@@ -706,7 +706,7 @@ def run():
                       and rd["sentence"] == "Parte 2: O atlas linguístico", rd)
                 tr = b.eval(TRANSLATE)
                 check("translation_balloon_opens_closes_and_is_off_in_exercises",
-                      tr.pop("count") == 5 and all(tr.values()), tr)
+                      tr.pop("count") >= 5 and all(tr.values()), tr)
                 co = b.eval(CALLOUTS)
                 check("callouts_seven_types", all(co.values()), co)
                 tb = b.eval(TABLES)

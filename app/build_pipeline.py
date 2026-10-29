@@ -179,22 +179,43 @@ def fix_checklists(html):
 
 
 def strip_title_banner(text):
-    """Cut everything before the first '## PARTE 1' (or '## PARTE') heading."""
-    m = re.search(r"^## PARTE 1", text, flags=re.M)
+    """Cut everything before the first '## Parte 1' (or '## Parte') heading."""
+    m = re.search(r"^## PARTE 1\b", text, flags=re.M | re.I)
     if m:
         return text[m.start():]
-    m = re.search(r"^## PARTE", text, flags=re.M)
+    m = re.search(r"^## PARTE", text, flags=re.M | re.I)
     return text[m.start():] if m else text
 
 
 def slice_lines(text, start_marker, end_marker):
-    """Return (before, cut, after) split on line-start markers."""
+    """Return (before, after) split on line-start markers. A comparação não
+    liga para maiúsculas: desde a etapa 3 os títulos do .md estão em formato
+    de frase ("## Parte 6: Gabarito comentado")."""
     lines = text.split("\n")
-    start_idx = next(i for i, l in enumerate(lines) if l.startswith(start_marker))
-    end_idx = next(i for i, l in enumerate(lines) if l.startswith(end_marker))
+    start_idx = next(i for i, l in enumerate(lines) if l.casefold().startswith(start_marker.casefold()))
+    end_idx = next(i for i, l in enumerate(lines) if i > start_idx and l.casefold().startswith(end_marker.casefold()))
     before = "\n".join(lines[:start_idx])
     after = "\n".join(lines[end_idx:])
     return before, after
+
+
+def slice_table(text, header):
+    """Return (before, after) around the Markdown table that starts at the
+    line `header`; `after` begins at the first line after it that is not a
+    table row."""
+    lines = text.split("\n")
+    start_idx = next(i for i, l in enumerate(lines) if l.startswith(header))
+    end_idx = start_idx
+    while end_idx < len(lines) and lines[end_idx].startswith("|"):
+        end_idx += 1
+    return "\n".join(lines[:start_idx]), "\n".join(lines[end_idx:])
+
+
+def find_heading(html, tag, prefix):
+    """Posição do primeiro <tag> cujo texto começa com `prefix`, sem ligar
+    para maiúsculas (-1 se não houver)."""
+    m = re.search(rf"<{tag}>{re.escape(prefix)}", html, flags=re.I)
+    return m.start() if m else -1
 
 
 # ---------- Módulo 0: diagnostic quiz ----------
@@ -254,17 +275,13 @@ def build_mod0():
     raw = strip_title_banner(raw)
     # o diagnóstico é a Parte 1 (até 2026-10-25 era a 3): as questões e o
     # gabarito do .md (1.2 a 1.4) saem e o widget entra no lugar
-    before, after = slice_lines(raw, "### 1.2 As 10 Questões", "## PARTE 2")
+    before, after = slice_lines(raw, "### 1.2 ", "## PARTE 2")
 
     # Parte 5.1: troca a tabela estática de acompanhamento semanal (células
     # em branco pra preencher à mão -- não faz sentido numa página web sem
     # nenhum jeito de digitar nela) pela versão interativa: input por
     # semana/métrica, salvo sozinho em localStorage.
-    before_wd, after_wd = slice_lines(
-        after,
-        "| Métrica | Semana 1 | Semana 2 | Semana 3 | Semana 4 | Meta |",
-        "> ⚡ **Regra de ouro do dashboard:**",
-    )
+    before_wd, after_wd = slice_table(after, "| Métrica | Semana 1 | Semana 2 | Semana 3 | Semana 4 | Meta |")
     after = before_wd + "\n\n" + render_weekly_dashboard(WEEKLY_DASH_METRICS) + "\n\n" + after_wd
 
     html_before = to_html(before)
@@ -322,7 +339,7 @@ def build_mod0():
         '<button type="button" class="lvlp-shuffle" id="lvlpShuffle" hidden>Sortear outra sessão</button>'
         '</div>'
     )
-    idx = html_after.find("<h2>PARTE 5")
+    idx = find_heading(html_after, "h2", "PARTE 5")
     if idx != -1:
         html_after = html_after[:idx] + live_score + level_practice + html_after[idx:]
 
@@ -343,7 +360,7 @@ def build_mod0():
         'arredondada à meia banda mais próxima, como na prova. Não é nota oficial.</p>'
         '</div>'
     )
-    idx = html_after.find("<h3>4.3")
+    idx = find_heading(html_after, "h3", "4.3")
     if idx == -1:
         raise ValueError("M0: não achei a seção 4.3 para encaixar a calculadora")
     html_after = html_after[:idx] + score_calc + html_after[idx:]
@@ -650,7 +667,7 @@ def build_mod6():
     # "<h2>SEÇÃO 9" e ficou obsoleto (silenciosamente!) quando M6 trocou pra
     # "PARTE" nesta mesma sessão; sem o achado aqui, o widget cairia sempre
     # no fallback (fim do módulo) em vez do lugar certo.
-    idx = html_out.find("<h2>PARTE 9")
+    idx = find_heading(html_out, "h2", "PARTE 9")
     if idx == -1:
         return html_out + widget
     return html_out[:idx] + widget + "\n" + html_out[idx:]

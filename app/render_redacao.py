@@ -85,7 +85,7 @@ e = html.escape
 
 def module_parts(md_text):
     """Títulos das Partes de um módulo, na ordem ('## PARTE N: TÍTULO')."""
-    found = re.findall(r"^## PARTE (\d+)\s*[:·]\s*(.+?)\s*$", md_text, flags=re.M)
+    found = re.findall(r"^## PARTE (\d+)\s*[:·]\s*(.+?)\s*$", md_text, flags=re.M | re.I)
     nums = [int(n) for n, _ in found]
     if nums != list(range(1, len(nums) + 1)):
         raise ValueError(f"Partes fora de ordem: {nums}")

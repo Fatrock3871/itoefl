@@ -180,7 +180,7 @@ def inject(frag, videos):
             continue
         # o <h2> de cada Parte é montado pelo build_pipeline.py com o título
         # em <span class="htext">PARTE N: ...</span>
-        pat = re.compile(r'(<h2\b[^>]*>(?:(?!</h2>).)*<span class="htext">PARTE %d\b(?:(?!</h2>).)*</h2>)' % v["part"], re.S)
+        pat = re.compile(r'(<h2\b[^>]*>(?:(?!</h2>).)*<span class="htext">PARTE %d\b(?:(?!</h2>).)*</h2>)' % v["part"], re.S | re.I)
         new, n = pat.subn(lambda m: m.group(1) + block, out[mod], count=1)
         if n != 1:
             raise ValueError(f"videos.json, vídeo {v['id']}: não achei a PARTE {v['part']} em {mod}")

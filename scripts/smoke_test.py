@@ -524,7 +524,7 @@ check("content_points_to_ets_for_changing_numbers", function(){
 // Premium sao so os planos de preco (decisao de 2026-10-08)
 check("schedules_do_not_use_plan_names", function(){
   var m0 = document.getElementById("panel-mod0").textContent;
-  return ["6.1 Intensivo: 30 Dias", "6.2 Regular: 60 Dias", "6.3 Completo: 90 Dias"].every(function(s){ return m0.indexOf(s) !== -1; }) &&
+  return ["6.1 Intensivo: 30 dias", "6.2 Regular: 60 dias", "6.3 Completo: 90 dias"].every(function(s){ return m0.indexOf(s) !== -1; }) &&
     !/(Sprint|Standard|Premium)/.test(m0) &&
     !/Cronograma (Sprint|Standard|Premium)/.test(document.body.textContent);
 });

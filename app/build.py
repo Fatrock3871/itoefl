@@ -205,7 +205,11 @@ _KEEP_PHRASES = {"COMPLETE THE WORDS": "Complete the Words", "THE EXAM DAY": "Th
 
 
 def sentence_case(title):
-    if not _re_pt.search(r"[A-ZÁÉÍÓÚÂÊÔÃÕÇ]{3}", title) or title != title.upper() and "(" not in title:
+    # só mexe em título em caixa alta; o que está entre parênteses não conta
+    # ("PARTE 5: EXERCÍCIOS (Read in Daily Life)"). Os .md reescritos na
+    # etapa 3 já vêm em formato de frase e passam direto.
+    bare = _re_pt.sub(r"\([^)]*\)", "", title)
+    if not _re_pt.search(r"[A-ZÁÉÍÓÚÂÊÔÃÕÇ]{3}", bare) or bare != bare.upper():
         return title
     out, cap = [], True
     for tok in _re_pt.split(r"(\s+|[:·(])", title):
