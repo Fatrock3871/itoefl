@@ -1,83 +1,86 @@
-# MÓDULO 8: EXAM DAY PROTOCOL
+# Módulo 8: Passo a passo para o dia da prova
 
-> **iTOEFL | Formato TOEFL iBT vigente desde 21/jan/2026**
->
-> *"A prova não começa na hora marcada. Ela começa sete dias antes: no momento
-> em que você decide como vai chegar ao dia D."*
+Conteúdo do **iTOEFL** atualizado para o formato do TOEFL iBT vigente desde 21 de janeiro de 2026.
+
+> **Resumo:** a sua prova não começa na hora marcada. Ela começa sete dias antes, no momento em que você decide cuidar do seu descanso para chegar inteiro ao grande dia.
 
 ---
 
-## PARTE 1: OS 7 DIAS ANTES · PLANO DE AÇÃO MILIMÉTRICO
+## Parte 1: Sua última semana antes da prova
 
-> **Princípio:** nos 7 dias antes da prova, o objetivo é **consolidar o que você já sabe** e chegar ao dia D no pico físico e mental. Não é aprender conteúdo novo. Quem estuda exaustivamente na semana da prova chega cansado, ansioso, com estruturas comprometidas pela fadiga. Quem gerencia os 7 dias finais com estratégia chega afiado.
+É normal sentir vontade de revisar tudo na última semana, mas este é o momento de tirar o pé do acelerador. Quem estuda até a exaustão na véspera chega ao exame cansado e ansioso, com o raciocínio prejudicado pela **fadiga**. Quem organiza esses 7 dias finais com calma chega com a mente descansada e afiada.
+
+> **Dica:** nos 7 dias antes da prova, o seu objetivo é consolidar o que você já sabe e chegar ao dia do exame no seu melhor estado físico e mental, sem tentar aprender matéria nova.
 
 ### D-7: o último simulado
 
 | Período | Atividade | Duração | Objetivo |
 |---|---|---|---|
-| **Manhã** | Simulado 4 completo em condições reais (ou Simulado 3 se o 4 ainda não foi feito) | ~1h30 | Baseline final de banda real |
-| **Tarde** | Análise de erros completa com a Taxonomia do Módulo 7 | 45 min | Identificar as 3 prioridades de reparo |
-| **Noite** | Zero estudos após 21h | — | Início do protocolo de sono |
+| **Manhã** | Simulado 4 completo em condições reais (ou Simulado 3, se o 4 ainda não foi feito) | ~1h30 | Retrato final da sua banda real |
+| **Tarde** | Análise de erros completa com a tabela de triagem do Módulo 7 | 45 min | Identificar os 3 pontos principais de ajuste |
+| **Noite** | Descanso total dos estudos após as 21h | - | Começar a rotina de sono da semana |
 
-**Resultado de D-7:** você tem sua banda estimada final, sua lista de top 3 erros e sabe onde investir os próximos 6 dias.
+**Resultado de D-7:** você fecha o dia com a sua banda estimada final, a lista dos seus 3 erros mais frequentes e a clareza de onde focar nos próximos 6 dias.
 
-### D-6: reparo cirúrgico
+### D-6: ajuste fino nos pontos fracos
 
 | Período | Atividade | Duração |
 |---|---|---|
-| **Manhã** | Revise somente os 3 padrões de erro identificados no D-7: releia o hack específico de cada tipo | 45 min |
-| **Tarde** | Drilling da seção mais fraca: 1 passagem de Reading OU 1 set de Listening OU 2 itens de *Take an Interview* (não tudo) | 30 min |
-| **Noite** | *Take an Interview*: 2 respostas gravadas e ouvidas de volta. Identifique 1 ajuste | 20 min |
+| **Manhã** | Revise somente os 3 padrões de erro identificados no D-7 e releia a estratégia específica de cada tipo | 45 min |
+| **Tarde** | Prática da seção mais fraca: faça 1 passagem de Reading, ou 1 bloco de Listening, ou 2 itens de *[[Take an Interview::Faça uma entrevista]]* (escolha só um, não tudo) | 30 min |
+| **Noite** | *Take an Interview*: grave 2 respostas e ouça a gravação em seguida para identificar 1 ponto de melhoria | 20 min |
 
 ### D-5: vocabulário e leitura
 
 | Período | Atividade | Duração |
 |---|---|---|
-| **Manhã** | 1 passagem de Reading (Módulo 7 ou material ETS) com cronômetro: análise de erros imediata | 25 min |
-| **Tarde** | Revisão do Kit de Emergência: as 50 palavras do Módulo 6. Flash cards, sem consulta | 30 min |
-| **Noite** | 1 *Write for an Academic Discussion* cronometrado (10 min): a última prática intensiva de escrita | 15 min |
+| **Manhã** | 1 passagem de Reading (do Módulo 7 ou de material da ETS) com cronômetro e revisão imediata dos erros | 25 min |
+| **Tarde** | Revisão do Kit de Emergência com as 50 palavras do Módulo 6 nos cartões de memória, sem consultar a lista | 30 min |
+| **Noite** | 1 *[[Write for an Academic Discussion::Escreva para uma discussão acadêmica]]* cronometrado (10 min), como última prática completa de escrita | 15 min |
 
-### D-4: frameworks e logística
-
-| Período | Atividade | Duração |
-|---|---|---|
-| **Manhã** | Releia o Atlas Linguístico do Módulo 5 na sua banda-alvo + os frameworks de resposta do Módulo 3 (Speaking) e os templates do Módulo 4 (Writing). Leia em voz alta, não escreva | 30 min |
-| **Tarde** | *Listen and Repeat*: 2 ciclos de 7 frases gravados. Ouça e identifique 1 ajuste de ritmo/fidelidade | 25 min |
-| **Noite** | **LOGÍSTICA:** confirme endereço do centro, horário de chegada, rota e tempo de deslocamento. Separe o documento de identificação | 15 min |
-
-### D-3: traps e desaceleração
+### D-4: estruturas de resposta e logística
 
 | Período | Atividade | Duração |
 |---|---|---|
-| **Manhã** | Revise o Módulo 9 (Brazilian Trap Library): foque nos seus erros pessoais mais recorrentes | 30 min |
-| **Tarde** | Leitura leve em inglês: um artigo do The Atlantic, Scientific American ou BBC Future. Sem drilling | 20 min |
-| **Noite** | **Início sério do protocolo de sono.** Tela desligada 60 minutos antes de deitar. Durma no horário alvo. Nenhum conteúdo novo após o jantar | — |
+| **Manhã** | Releia o Atlas Linguístico do Módulo 5 na sua banda-alvo, as estruturas de resposta do Módulo 3 (Speaking) e os modelos do Módulo 4 (Writing). Leia em voz alta, sem escrever | 30 min |
+| **Tarde** | *[[Listen and Repeat::Ouça e repita]]*: grave 2 ciclos de 7 frases, ouça a gravação e escolha 1 detalhe de ritmo ou fidelidade para ajustar | 25 min |
+| **Noite** | Logística: confirme o endereço do centro, o horário de chegada, a rota e o tempo de trajeto. Já deixe separado o documento de identificação | 15 min |
 
-> ⚠️ **Por que D-3 é o sono mais importante:** a consolidação da memória de longo prazo ocorre principalmente durante o sono. O conteúdo praticado nos últimos dias é consolidado nas noites D-3 e D-2. Se você dormir bem nessas duas noites, uma noite mais curta em D-1 (comum por ansiedade) pesa bem menos do que você teme.
+### D-3: armadilhas comuns e desaceleração
+
+| Período | Atividade | Duração |
+|---|---|---|
+| **Manhã** | Revise o Módulo 9 (*[[Brazilian Trap Library::Biblioteca de armadilhas para brasileiros]]*) focando nos seus erros pessoais mais recorrentes | 30 min |
+| **Tarde** | Leitura leve em inglês: um artigo do The Atlantic, da Scientific American ou da BBC Future, só pelo hábito de ler e sem exercícios | 20 min |
+| **Noite** | Começo pra valer da rotina de sono: desligue as telas 60 minutos antes de deitar, durma no horário planejado e não veja nenhum conteúdo novo após o jantar | - |
+
+> **Dica:** a memória de longo prazo se fixa principalmente enquanto dormimos, e o que você praticou nos últimos dias se consolida nas noites de D-3 e D-2. Se você dormir bem nessas duas noites, dormir menos na véspera (D-1), o que é comum por causa da ansiedade, vai pesar bem menos do que você imagina.
 
 ### D-2: visualização e preparação mental
 
 | Período | Atividade | Duração |
 |---|---|---|
-| **Manhã** | Run-through mental (sem escrever): abertura de resposta de *Take an Interview* por função discursiva (Módulo 3) → esqueleto de *Write an Email* → estrutura de *Write for an Academic Discussion* (Módulo 4) | 20 min |
-| **Tarde** | 1 *Take an Interview* gravado (warm-up, sem pressão de nota). Ouça. Se soou bem, ótimo. Se não, faça mais 1. Pare em 2 | 10 min |
-| **Noite** | Prepare a mochila para amanhã. Jantar leve. **Durma cedo**: meta de 8 horas | — |
+| **Manhã** | Repasse de cabeça, sem escrever: as aberturas de *Take an Interview* por função do Módulo 3, depois o esqueleto de *[[Write an Email::Escreva um e-mail]]* e por fim a estrutura de *Write for an Academic Discussion* do Módulo 4 | 20 min |
+| **Tarde** | Grave 1 item de *Take an Interview* apenas como aquecimento, sem se cobrar nota. Ouça a gravação: se soou bem, ótimo; se não, grave só mais 1 e pare em 2 | 10 min |
+| **Noite** | Deixe a mochila pronta para o dia seguinte, faça um jantar leve e durma cedo, com meta de 8 horas de sono | - |
 
 ### D-1: dia de preservação
 
-> **Regra de ouro do D-1:** nenhum estudo novo. Nenhuma tentativa de revisar tudo. O que você não aprendeu não entra em 24 horas, mas o estresse de tentar compromete o que já está consolidado.
+> **Atenção:** na véspera (D-1), nada de matéria nova nem de tentar revisar tudo de uma vez. O que não foi aprendido até aqui não entra em 24 horas, e o estresse de tentar só atrapalha o que você já sabe.
 
 | Período | Atividade | Duração |
 |---|---|---|
-| **Manhã** | Atividade fisicamente agradável e não cognitiva: caminhada, música, culinária, série. Zero TOEFL | — |
-| **Tarde** | **Ensaio mental:** feche os olhos por 10 minutos e visualize a sequência do dia seguinte: chegada ao centro, entrada, fone de ouvido, primeiro item do router de Reading, e você executando tudo com calma | 10 min |
-| **Jantar** | Refeição consistente com o que você planeja comer amanhã de manhã. Nada pesado, nada experimental | — |
-| **21h** | Desconecte-se de telas. Prepare o material: documento de identidade, confirmação de inscrição, água para a manhã | — |
-| **Meta de sono** | Deitar no horário que você vem mantendo na semana. Acordar com folga: mínimo 90 minutos antes de sair | 7–9h |
+| **Manhã** | Faça uma atividade leve e prazerosa que descanse a cabeça, como caminhar, ouvir música, cozinhar ou ver um episódio de série. Nada de TOEFL | - |
+| **Tarde** | Ensaio mental: feche os olhos por 10 minutos e imagine passo a passo a manhã seguinte, desde a chegada ao local, a entrada e o ajuste do fone até a primeira questão do [[router::bloco inicial de nivelamento]] de Reading, vendo você fazer tudo com calma | 10 min |
+| **Jantar** | Faça uma refeição leve e parecida com o que você planeja comer na manhã seguinte. Evite pratos pesados ou novidades | - |
+| **21h** | Desligue as telas e deixe tudo separado: documento de identidade, confirmação da inscrição e uma garrafa de água para a manhã | - |
+| **Meta de sono** | Deite no mesmo horário que você manteve na semana e programe o despertador com folga, pelo menos 90 minutos antes de sair de casa | 7–9h |
 
 ---
 
-## PARTE 2: AS ÚLTIMAS 24 HORAS · PROTOCOLO HORA A HORA
+## Parte 2: As últimas 24 horas passo a passo
+
+Ter uma **rotina clara** na manhã do exame tira o peso de decidir o que fazer a cada minuto e poupa a sua cabeça para o que realmente importa.
 
 ### Na manhã do exame
 
@@ -117,103 +120,100 @@ ANTES DE CLICAR EM "INICIAR"
 
 ---
 
-## PARTE 3: BIOHACKING ACADÊMICO · NUTRIÇÃO E SONO PARA PICO COGNITIVO
+## Parte 3: Sono, comida e energia na semana da prova
 
-> ⚠️ **Disclaimer:** as recomendações abaixo são baseadas em evidências amplamente estabelecidas de ciência nutricional e do sono. Não substituem orientação médica individual.
+> **Atenção:** as orientações abaixo vêm de estudos bem estabelecidos sobre sono e alimentação, mas são gerais e não substituem a orientação individual de um médico ou nutricionista.
 
-### 🧠 Sono: o maior potenciador cognitivo disponível
+### 🧠 Sono: o seu maior aliado para o foco e a memória
 
-Nenhum suplemento, técnica de estudo ou estratégia de prova supera os efeitos da privação de sono.
+Nenhum suplemento, técnica de revisão de última hora ou dica de prova compensa os efeitos da **falta de sono**.
 
 | Impacto da privação de sono | O que acontece |
 |---|---|
-| **1–2 horas a menos que o ótimo** | Queda de 10–20% em velocidade de processamento e memória de trabalho |
-| **Privação moderada (5–6h/noite por vários dias)** | Déficits equivalentes a 24h sem dormir: sem percepção subjetiva do declínio |
-| **Sono adequado (7–9h)** | Consolidação de memória procedural, raciocínio verbal, velocidade de resposta |
+| **1–2 horas a menos que o ideal** | Queda de 10–20% na velocidade de processamento e na memória de trabalho |
+| **Privação moderada (5–6h por noite por vários dias)** | Perda de atenção equivalente a passar 24h acordado, mesmo quando você acha que está bem |
+| **Sono adequado (7–9h)** | Boa fixação do que você treinou, raciocínio verbal ágil e boa velocidade de resposta |
 
-**Protocolo de sono para os 7 dias:**
-- **D-7 a D-1:** durma e acorde em horários fixos, alinhados ao horário da prova; se ela for cedo, antecipe a hora de deitar aos poucos ao longo da semana.
-- **D-3 e D-2:** prioridade máxima: são as noites de consolidação.
-- **D-1:** é normal ter sono mais fragmentado por ansiedade. **Não entre em pânico.**
-- **Higiene de sono nos 3 dias finais:** telas desligadas 60 min antes de deitar;
-quarto fresco (18–20 °C); mesma hora de dormir e acordar.
+**Rotina de sono para os 7 dias finais:**
+- **D-7 a D-1:** durma e acorde em horários fixos, alinhados ao horário da prova; se o exame for cedo, antecipe a hora de deitar aos poucos ao longo da semana.
+- **D-3 e D-2:** dê prioridade máxima a essas duas noites, porque é nelas que o cérebro fixa o que você revisou.
+- **D-1:** é perfeitamente normal ter um sono mais leve por causa da ansiedade da véspera, então fique em paz se demorar um pouco mais a pegar no sono.
+- **Higiene do sono nos 3 dias finais:** desligue as telas 60 min antes de deitar, mantenha o quarto fresco (18–20 °C) e preserve o mesmo horário de dormir e acordar.
 
-### 🍳 Nutrição pré-exame: estabilidade glicêmica é tudo
+### 🍳 Alimentação antes da prova: como manter a energia estável
 
-O cérebro opera primariamente a partir de glicose. Alimentos de alto índice glicêmico causam um pico rápido de energia seguido de uma queda brusca (o "crash"), tipicamente 60–90 minutos após o consumo. Por isso o lanche de 30 a 45 minutos antes da prova pesa tanto: se for doce, a queda chega no meio do exame, perto do Writing.
+O seu cérebro usa glicose como combustível principal. Alimentos muito doces ou de absorção rápida dão um pico de energia seguido de uma queda brusca (o famoso *[[crash::queda brusca de energia]]*), geralmente de 60 a 90 minutos depois de comer. É por isso que o **lanche de 30 a 45 minutos** antes da prova faz tanta diferença: se ele for cheio de açúcar, o cansaço bate bem no meio do exame, perto do Writing.
 
 **Café da manhã ideal (90–120 min antes da prova):**
 
 | Componente | Exemplos | Por quê |
 |---|---|---|
-| **Carboidratos complexos** | Aveia, pão integral, batata-doce, banana | Liberação gradual de glicose: energia sustentada por 3–4h |
-| **Proteína moderada** | Ovos, iogurte grego, queijo | Retarda a absorção de carboidratos, mantém saciedade |
-| **Gordura saudável** | Nozes, amêndoas, azeite, abacate | Retarda a digestão e prolonga a saciedade |
-| **Hidratação** | Água (500ml ao acordar + 250ml no café) | Desidratação leve (1–2% do peso) reduz o desempenho cognitivo mensuravelmente |
+| **Carboidratos complexos** | Aveia, pão integral, batata-doce, banana | Liberam glicose aos poucos e sustentam a energia por 3–4h |
+| **Proteína moderada** | Ovos, iogurte grego, queijo | Desacelera a absorção dos carboidratos e prolonga a saciedade |
+| **Gordura saudável** | Nozes, amêndoas, azeite, abacate | Deixa a digestão mais gradual e mantém você satisfeito por mais tempo |
+| **Hidratação** | Água (500ml ao acordar + 250ml no café) | Mesmo uma desidratação leve (1–2% do peso) já reduz de forma mensurável o foco e o raciocínio |
 
-**Alimentos a evitar na manhã do exame:**
+**Alimentos para evitar na manhã do exame:**
 
 | Evite | Por quê |
 |---|---|
-| Pão branco, croissant, cereais açucarados | Pico glicêmico + crash durante o exame |
-| Refeição muito pesada (fritura, carne vermelha) | Sangue desviado para a digestão: sonolência |
-| Suco de fruta em excesso (mesmo natural) | Carga glicêmica alta sem fibra |
-| Cafeína em dose muito superior à habitual | Amplifica a ansiedade; possível tremor de mãos |
-| Álcool na véspera | Fragmenta o sono profundo, compromete a consolidação de memória |
+| **Pão branco, croissant, cereais açucarados** | Causam pico de açúcar no sangue seguido de queda de energia durante a prova |
+| **Refeição muito pesada (fritura, carne vermelha)** | Concentra o fluxo sanguíneo na digestão e dá sonolência |
+| **Suco de fruta em excesso (mesmo natural)** | Entrega uma carga alta de açúcar da fruta sem a fibra para desacelerar a absorção |
+| **Cafeína em dose muito acima da habitual** | Aumenta a ansiedade e pode causar tremor nas mãos |
+| **Álcool na véspera** | Fragmenta o sono profundo e atrapalha a fixação da memória |
 
-### ☕ Cafeína: estratégia de uso inteligente
+### ☕ Cafeína: como usar a seu favor
 
 | Situação | Recomendação |
 |---|---|
-| **Você bebe café regularmente** | Sua dose habitual, não mais. 45–60 min antes do início |
-| **Você não bebe café habitualmente** | **Não inicie no dia do exame.** O efeito não habitual amplifica a ansiedade e pode comprometer o Speaking |
-| **Você toma café e tem ansiedade alta** | Reduza a dose em 50% no dia do exame |
-| **Timing crítico** | 45–60 min antes de começar: a cafeína atinge o pico no sangue de 30 a 60 min após a ingestão, e o efeito dura a prova inteira |
+| **Você bebe café todos os dias** | Tome apenas a sua dose habitual, sem exagerar, de 45 a 60 min antes do início |
+| **Você não tem o hábito de tomar café** | Não comece no dia da prova, pois o efeito em quem não está acostumado aumenta a ansiedade e pode atrapalhar o Speaking |
+| **Você toma café, mas fica muito ansioso** | Reduza a sua dose habitual pela metade (50%) na manhã do exame |
+| **Horário ideal** | De 45 a 60 min antes de começar, porque a cafeína atinge o pico no sangue de 30 a 60 min após beber e mantém o efeito pela prova inteira |
 
-### 💧 Hidratação: a variável mais negligenciada
+### 💧 Hidratação: o cuidado simples que muita gente esquece
 
-- Desidratação de apenas **1% do peso corporal** (~700ml para 70kg) produz queda
-mensurável em atenção, velocidade de resposta e memória de trabalho.
-- **Protocolo:** 500ml ao acordar; 250ml com o café; 200–300ml no trajeto.
-**Pare com grandes volumes 30 min antes do exame** (para não precisar ir ao banheiro durante a prova).
-- **Durante a prova:** não há intervalo programado (ETS, *Information Bulletin 2026-2027*), e comida e bebida não entram na sala. A água fica para antes e depois.
+- Uma desidratação leve de apenas **1% do peso corporal** (cerca de 700ml para quem pesa 70kg) já diminui de forma perceptível a atenção, a velocidade de resposta e a memória de trabalho.
+- **Rotina de água:** beba 500ml ao acordar, 250ml no café da manhã e de 200 a 300ml no caminho. Pare de tomar grandes quantidades 30 min antes do exame para não precisar ir ao banheiro durante a prova.
+- **Durante a prova:** o exame não tem intervalo programado (*[[Information Bulletin 2026-2027::Boletim informativo 2026-2027]]*, da ETS), e comida e bebida não entram na sala. A água fica para antes de entrar e para depois de sair.
 
-### 🥜 Snack antes de entrar (a prova não tem pausa oficial)
+### 🥜 Lanche antes de entrar (a prova não tem pausa oficial)
 
-Coma 30 a 45 minutos antes de começar. A prova não tem intervalo programado e comida não entra na sala, então o último lanche é antes do check-in:
+Coma alguma coisa leve de **30 a 45 minutos** antes de começar. Como a prova não tem intervalo programado e comida não entra na sala, esse último lanche acontece antes do *[[check-in::credenciamento de entrada]]*:
 
-| Snack ideal | Por quê |
+| Lanche ideal | Por quê |
 |---|---|
-| Punhado de nozes ou amêndoas | Gordura + proteína sem pico glicêmico |
-| Banana pequena | Carboidrato de liberação moderada + magnésio |
-| Chocolate amargo (1–2 quadradinhos) | Estimulante leve + antioxidantes, sem o crash do chocolate ao leite |
-| Água | Hidratação antes de entrar (em goles, sem exagero) |
+| **Punhado de nozes ou amêndoas** | Combina gordura boa e proteína, sem causar pico de açúcar no sangue |
+| **Banana pequena** | Entrega carboidrato de liberação gradual e magnésio |
+| **Chocolate amargo (1–2 quadradinhos)** | Dá um estímulo leve e antioxidantes, sem a queda brusca do chocolate ao leite |
+| **Água** | Garante a hidratação final antes de entrar, em goles pequenos e sem exagero |
 
-**Evite no snack:** açúcar refinado (chocolate ao leite, biscoito doce, suco).
+**Evite nesse lanche:** doces de açúcar refinado (como chocolate ao leite, biscoito recheado ou suco), que dão sede e derrubam a sua energia no meio da prova.
 
 ---
 
-## PARTE 4: GESTÃO PSICOLÓGICA · O SISTEMA MENTAL DOS CAMPEÕES
+## Parte 4: Como manter a calma e o foco sob pressão
 
-### O modelo de performance sob pressão
+### O que acontece no corpo quando bate o nervosismo
 
-A ansiedade pré-prova é fisiológica. O sistema nervoso simpático é ativado por ameaças percebidas, e uma avaliação de alto impacto conta como ameaça. O problema real não é sentir ansiedade, é não ter protocolo pra redirecioná-la.
+Sentir frio na barriga antes da prova é uma reação natural do corpo. O nosso **sistema nervoso simpático** é ativado sempre que percebe algo importante em jogo, e um exame como o TOEFL entra nessa conta. O problema nunca é sentir ansiedade, e sim não ter um passo a passo simples para canalizar essa energia.
 
-Atletas de elite não tentam eliminar a ansiedade antes da competição. Eles a *interpretam como ativação*. A mesma resposta fisiológica (coração acelerado, atenção aguçada, adrenalina) pode ser lida como "estou com medo" ou como "estou pronto". O treinamento é a origem da confiança, e você treinou.
+Quem compete em alto nível não tenta zerar o nervosismo antes de começar, mas aprende a enxergar essa reação como **estado de prontidão**. Os mesmos sinais físicos (coração acelerado, atenção ligada e adrenalina) podem ser lidos pela sua mente como "estou com medo" ou como "meu corpo está pronto". A sua confiança vem do treino que você já fez até aqui.
 
-### 🔑 A Anchor Phrase: sua âncora de desempenho
+### 🔑 A sua frase-âncora: um lembrete curto para voltar ao eixo
 
-Antes do dia do exame, escolha **uma frase curta** que ancore seu estado de desempenho treinado. Repita-a silenciosamente no início de cada seção e nos momentos de tensão. Deve evocar o ato específico de aplicar o sistema, não motivação genérica.
+Antes do dia do exame, escolha **uma frase curta** (a sua *[[Anchor Phrase::frase-âncora]]*) que lembre você de aplicar o que treinou. Repita essa frase em silêncio no começo de cada seção e sempre que sentir a tensão subir. Ela funciona melhor quando aponta para uma ação concreta, em vez de ser apenas uma frase de motivação genérica.
 
 | Tipo | Exemplos |
 |---|---|
-| De execução | *"Stick to the plan."* / *"One item at a time."* |
-| De presença | *"Right here, right now."* / *"This item only."* |
-| De competência | *"I've done this before."* / *"I know how to do this."* |
+| **De execução** | *"[[Stick to the plan.::Siga o plano.]]"* ou *"[[One item at a time.::Uma questão de cada vez.]]"* |
+| **De presença** | *"[[Right here, right now.::Aqui e agora.]]"* ou *"[[This item only.::Só esta questão.]]"* |
+| **De competência** | *"[[I've done this before.::Eu já fiz isso antes.]]"* ou *"[[I know how to do this.::Eu sei como fazer isso.]]"* |
 
-### 🫁 Protocolo 1: o suspiro fisiológico (para ansiedade aguda)
+### 🫁 Passo a passo 1: o suspiro fisiológico (para quando o nervosismo aperta)
 
-Uma das técnicas mais rápidas para reduzir a ativação simpática. Leva menos de 10 segundos e é discreta o bastante para usar durante o exame.
+Essa é uma das formas mais rápidas de acalmar a **ativação do sistema nervoso**. Ela leva menos de 10 segundos e é discreta o bastante para você fazer sentado na sua estação durante o exame.
 
 ```
 PASSO 1: Inspire profundamente pelo nariz (encha os pulmões)
@@ -222,9 +222,9 @@ PASSO 3: Expire lentamente e completamente pela boca
 PASSO 4: Retorne ao exame
 ```
 
-**Use quando:** sentir o coração acelerar, a mente em branco, ou perceber que está relendo o mesmo item pela terceira vez.
+**Quando usar:** sempre que sentir o coração acelerar, a mente dar um branco ou perceber que está lendo o mesmo item pela terceira vez.
 
-### 🌬️ Protocolo 2: respiração em caixa (para resets entre seções)
+### 🌬️ Passo a passo 2: a respiração em caixa (para renovar o foco entre seções)
 
 ```
 INSPIRE pelo nariz por 4 segundos
@@ -234,11 +234,11 @@ SEGURE por 4 segundos
 [Repita 2–3 ciclos]
 ```
 
-**Use:** na transição entre seções e antes de clicar em "INICIAR" pela primeira vez.
+**Quando usar:** na transição entre as seções e nos minutos finais antes de clicar em "INICIAR" pela primeira vez.
 
-### 🚪 Protocolo 3: o selo de seção
+### 🚪 Passo a passo 3: o selo de seção
 
-A maior ameaça ao desempenho multi-seção é a contaminação emocional: uma seção que pareceu correr mal destrói a concentração nas seguintes.
+O maior perigo em uma prova com quatro etapas é a **contaminação emocional**: deixar que uma seção que pareceu difícil tire a sua concentração nas próximas.
 
 ```
 Quando uma seção terminar:
@@ -249,9 +249,9 @@ Quando uma seção terminar:
 5. Clique em "PRÓXIMO"
 ```
 
-> **Princípio:** sua banda de Speaking é **matematicamente independente** da sua banda de Listening. Um Listening que pareceu difícil não afeta sua nota de Speaking. Nunca. Deixe ir.
+> **Dica:** a sua banda de Speaking é matematicamente independente da sua banda de Listening. Um Listening que pareceu difícil não tira nenhum ponto do seu Speaking, então deixe a seção anterior ficar no passado.
 
-### 🎯 Protocolo 4: o reset de item (para erros percebidos no meio da seção)
+### 🎯 Passo a passo 4: o recomeço de questão (quando você trava no meio da seção)
 
 ```
 Quando perceber que errou um item ou ficou preso:
@@ -261,56 +261,56 @@ Quando perceber que errou um item ou ficou preso:
 4. Avance.
 ```
 
-> ⚠️ **Em Reading e Listening de 2026 (adaptativos):** normalmente não há como voltar a itens já respondidos dentro de um módulo. Isso torna o reset ainda mais essencial: ruminação sobre um item passado só prejudica os próximos, que você ainda pode acertar.
+> **Atenção:** no Reading e no Listening do formato 2026, que são adaptativos, normalmente não dá para voltar a questões já respondidas dentro de um módulo. Por isso virar a página é tão importante, já que pensar no item que passou só tira o foco dos próximos, que você ainda pode acertar.
 
-### ⚙️ Ensaie os protocolos ANTES, não estreie no dia D
+### ⚙️ Treine essas rotinas antes para não estrear no dia da prova
 
-Nenhum protocolo desta parte funciona se a primeira vez que você o usa é na prova real. Integre-os aos Simulados 3 e 4 (Módulo 7):
+Nenhuma dessas rotinas funciona direito se a primeira vez que você tenta usá-la é na prova real. Por isso, inclua cada uma delas já nos **Simulados 3 e 4** do Módulo 7:
 
-- **Suspiro fisiológico:** use uma vez ao trocar de seção em todo simulado, mesmo sem ansiedade. Vira automático.
-- **Selo de seção:** execute os 5 passos ao fim de cada seção do simulado. Cronometre: deve levar < 15 s.
-- **Anchor Phrase:** escolha-a **agora**, nesta semana, e repita-a no início de cada seção de cada simulado. Não invente uma frase nova no dia D.
-- **Reset de item:** toda vez que perceber que travou num item durante um drill cronometrado, diga "próximo item, página em branco" e avance. Treine a mão a clicar.
+- **Suspiro fisiológico:** faça uma vez ao trocar de seção em todo simulado, mesmo que você esteja calmo, para que o gesto fique automático.
+- **Selo de seção:** faça os 5 passos ao fim de cada seção do simulado e confira no relógio, pois tudo deve levar menos de 15 segundos.
+- **Frase-âncora:** escolha a sua *Anchor Phrase* já nesta semana e repita no início de cada seção dos simulados, sem deixar para inventar uma frase nova no dia da prova.
+- **Recomeço de questão:** toda vez que perceber que travou num item durante um exercício cronometrado, diga mentalmente "próximo item, página em branco" e avance, treinando a mão a clicar.
 
-> Se você chega ao dia D e os protocolos ainda parecem "técnicas que li uma vez", eles não vão te ajudar sob pressão. O objetivo é que estejam tão automáticos quanto respirar.
+> **Resumo:** se você deixar para testar essas rotinas só no dia da prova, elas vão parecer apenas técnicas que você leu uma vez e não vão ajudar sob pressão. O objetivo é praticar antes para que fiquem tão naturais quanto respirar.
 
-### Mapa de ansiedade: identifique seu padrão
+### Mapa da ansiedade: identifique o seu padrão
 
-| Padrão | Sintoma | Protocolo |
+| Padrão | Sintoma | O que fazer |
 |---|---|---|
-| **Antecipatória** | Noite anterior, não consegue dormir, pensamentos em loop | D-1: visualização + respiração em caixa antes de deitar. Aceite que o sono será leve; tudo bem |
-| **De ativação** | Coração dispara ao clicar em "Iniciar" no Reading | Antes de iniciar: 3 ciclos de box breathing + Anchor Phrase + "Eu treinei para o router" |
-| **De performance** | Fica preso em itens difíceis e entra em espiral | Protocolo de reset de item. Hard rule: máximo de ~45–60 segundos por item (a média do Reading é de cerca de 35 s por item) |
-| **De resultado** | Fica pensando na nota durante o exame | Âncora de presença: *"Right here, right now. This item only."* O resultado não existe durante a prova |
-| **De Speaking** | Voz treme, mente em branco no primeiro item de *Take an Interview* | Diga a primeira frase do framework imediatamente: sem esperar "estar pronto". As palavras seguem a abertura |
+| **Na véspera** | Na noite anterior (D-1), você demora a dormir e fica com pensamentos repetitivos | Faça a visualização e a respiração em caixa antes de deitar. Aceite em paz que o sono será mais leve; está tudo bem |
+| **Na largada** | O coração dispara ao clicar em "Iniciar" no Reading | Antes de começar, faça 3 ciclos de *[[box breathing::respiração em caixa]]*, repita a sua *Anchor Phrase* e lembre: "Eu treinei para o [[router::bloco inicial de nivelamento]]" |
+| **Durante a questão** | Você fica preso em itens difíceis e sente que está perdendo o controle | Use o recomeço de questão e respeite o teto de ~45–60 segundos por item (a média do Reading é de cerca de 35 s por item) |
+| **Foco na nota** | Você começa a pensar na nota final no meio do exame | Use a âncora de presença: *"[[Right here, right now. This item only.::Aqui e agora. Só esta questão.]]"* O resultado não existe durante a prova |
+| **Trava no Speaking** | A voz treme ou dá branco no primeiro item de *[[Take an Interview::Faça uma entrevista]]* | Fale a primeira frase da estrutura imediatamente, sem esperar se sentir pronto, porque as palavras vêm logo atrás da abertura |
 
 ---
 
-## PARTE 5: LOGÍSTICA OPERACIONAL · ZERO SURPRESAS
+## Parte 5: Logística e documentos sem imprevistos
 
-> Surpresas logísticas drenam energia cognitiva antes da primeira questão. Elimine-as com antecedência.
+> **Dica:** imprevistos no caminho ou na conferência de documentos gastam a sua energia mental antes mesmo da primeira questão. Deixe toda a parte prática resolvida com antecedência.
 
-### ✅ Checklist de véspera (complete em D-2, para ter um dia de folga)
+### ✅ Lista de conferência da véspera (complete em D-2 para ter um dia de folga)
 
 **Documentação:**
-- [ ] Documento de identidade aceito pela ETS para o seu país de prova e a sua nacionalidade: confira na página de documentos da ETS (ets.org/toefl, em *Register* → *ID requirements*), porque a regra muda de país para país. Em todos os casos o documento tem de ser **original e físico** (documento digital no celular não vale), **dentro da validade**, com **foto recente** e **assinatura**. Passaporte válido é a escolha mais segura
-- [ ] E-mail de confirmação de inscrição (impresso ou salvo offline no celular)
-- [ ] Nome e data de nascimento no documento **idênticos** aos da inscrição ETS: discrepâncias impedem o acesso, e a taxa não é devolvida
+- [ ] Documento de identidade aceito pela ETS para o seu país de prova e a sua nacionalidade: confira na página oficial da ETS (ets.org/toefl, entrando em *[[Register::Inscrição]]* e depois em *[[ID requirements::Requisitos de documento de identidade]]*), porque a regra muda de país para país. Em todos os casos o documento precisa ser **original e físico** (documento digital no celular não vale), estar dentro da validade e ter foto recente e assinatura. O passaporte válido é a escolha mais segura
+- [ ] E-mail de confirmação da inscrição (impresso ou salvo no celular para abrir mesmo sem internet)
+- [ ] Nome e data de nascimento no documento **idênticos** aos da inscrição na ETS, pois qualquer diferença impede a sua entrada e a taxa não é devolvida
 
 **Logística:**
-- [ ] Endereço exato do centro confirmado (não só a cidade)
-- [ ] Rota traçada com o tempo de deslocamento no horário de pico
-- [ ] Plano B de transporte
-- [ ] Horário de chegada: **pelo menos 30 minutos antes** do horário de início. Não é meta, é regra da ETS: quem chega depois do horário marcado não faz a prova e perde a taxa
-- [ ] Regras do seu centro sobre o que pode levar (água, lanches)
+- [ ] Endereço exato do centro confirmado (não apenas o bairro ou a cidade)
+- [ ] Rota traçada já considerando o tempo de deslocamento no horário de pico
+- [ ] Plano B de transporte definido
+- [ ] Horário de chegada: programe-se para estar lá **pelo menos 30 minutos antes** do horário de início. Essa não é só uma recomendação, é regra oficial da ETS, e quem chega depois do horário marcado não faz a prova e perde a taxa
+- [ ] Regras do seu centro conferidas sobre onde guardar água e lanches
 
-**O que NÃO levar para dentro da sala:**
-- [ ] Celular (fica no armário externo)
-- [ ] Smartwatch ou qualquer wearable
-- [ ] Anotações, fichas de vocabulário, qualquer material de estudo
-- [ ] Fone de ouvido pessoal (o centro fornece)
+**O que não pode entrar na sala de prova:**
+- [ ] Celular (ele fica guardado no armário externo)
+- [ ] *[[Smartwatch::relógio inteligente]]* ou qualquer acessório eletrônico vestível
+- [ ] Anotações, fichas de vocabulário ou qualquer material de estudo
+- [ ] Fone de ouvido pessoal (o centro fornece o equipamento oficial)
 
-**O que o centro fornece:** folhas de rascunho e lápis (você não pode levar o seu papel, e só recebe mais folhas devolvendo as usadas), fone de ouvido, armário para pertences.
+**O que o centro fornece:** folhas de rascunho e lápis (você não pode levar o seu próprio papel, e só recebe mais folhas devolvendo as usadas), fone de ouvido e armário para guardar os seus pertences.
 
 ### ⏱️ Linha do tempo do dia do exame (centro de testes)
 
@@ -323,52 +323,52 @@ T-05 min → 3 ciclos de box breathing + Anchor Phrase
 T-00 min → CLICAR EM INICIAR
 ```
 
-### 🏠 TOEFL iBT Home Edition: regras específicas
+### 🏠 TOEFL iBT Home Edition: regras específicas para fazer em casa
 
-Muitos candidatos brasileiros fazem a prova em casa. É o **mesmo teste e o mesmo score**, mas com um proctor humano remoto e regras de ambiente rígidas. Descumprir uma regra de ambiente pode **encerrar a sessão sem reembolso**; por isso, trate a preparação logística com o mesmo rigor do conteúdo.
+Muitos candidatos brasileiros fazem a prova em casa, na modalidade [[Home Edition::edição em casa]]. É exatamente o mesmo teste e a mesma pontuação do centro presencial, mas com um *[[proctor::fiscal de prova remoto]]* humano acompanhando tudo ao vivo e exigências rígidas para o ambiente. Como descumprir uma regra da sala pode **encerrar a sessão sem reembolso**, cuide dessa preparação prática com o mesmo carinho que você dedicou ao conteúdo.
 
-**Requisitos técnicos (teste com antecedência de 48h+):**
+**Requisitos técnicos (teste com pelo menos 48h de antecedência):**
 
 | Item | Exigência |
 |---|---|
-| Sistema | Desktop ou notebook (Windows ou macOS); tablet, celular e Chromebook **não** são permitidos. A versão mínima do sistema muda com o tempo: confira o requisito atual na [página de requisitos da Home Edition, no site da ETS](https://www.ets.org/toefl/test-takers/ibt/register/at-home-requirements.html) e rode a checagem de equipamento com antecedência |
-| Aplicativo | O **TOEFL Test App**, baixado antes pelo painel *My TOEFL Home*; é nele que roda a checagem de equipamento (*equipment check*) |
-| Câmera | Webcam funcional; você precisará **mostrar o ambiente e o seu documento** por ela |
-| Microfone | Externo ou embutido, desde que não seja o de um fone; testado na checagem de equipamento |
-| Internet | Conexão estável, de preferência cabeada; upload de vídeo contínuo durante toda a prova |
-| Alto-falante | **Fone de ouvido não é permitido** na Home Edition (o proctor precisa ouvir o áudio): use os alto-falantes do computador |
+| **Sistema** | Computador de mesa ou notebook com Windows ou macOS (tablets, celulares e Chromebooks não são permitidos). Como a versão mínima exigida muda com o tempo, confira o requisito atual na [página de requisitos da Home Edition, no site da ETS](https://www.ets.org/toefl/test-takers/ibt/register/at-home-requirements.html) e rode a checagem de equipamento com antecedência |
+| **Aplicativo** | O aplicativo oficial TOEFL Test App, baixado antes pelo painel *[[My TOEFL Home::Meu painel TOEFL]]*, onde você roda a checagem técnica (*[[equipment check::checagem de equipamento]]*) |
+| **Câmera** | Webcam funcionando bem, que possa ser movimentada para mostrar o ambiente todo e o seu documento para o fiscal |
+| **Microfone** | Externo ou embutido no computador, desde que não seja o de um fone de ouvido, testado na checagem de equipamento |
+| **Internet** | Conexão estável, de preferência por cabo de rede, pois há envio contínuo de vídeo durante toda a prova |
+| **Alto-falante** | Fone de ouvido não é permitido na Home Edition, porque o fiscal precisa ouvir o áudio do ambiente. Use somente os alto-falantes do computador |
 
-**Ambiente da sala (o proctor verifica por câmera antes de liberar):**
+**Ambiente da sala (o fiscal confere tudo pela câmera antes de liberar):**
 
-- Você sozinho na sala, porta fechada; ninguém pode entrar durante a prova
-- Mesa e paredes livres: sem papéis, pôsteres, quadros, post-its
-- Nada nos ouvidos, nada no colo, nada no bolso
-- **Anotações:** papel comum **não** é permitido na Home Edition. As duas opções aceitas pela ETS são: (a) um **quadro branco pequeno, de mesa**, com marcador apagável, ou (b) **uma folha em branco dentro de um plástico transparente**, com marcador apagável, e a folha não pode sair do plástico em nenhum momento. Conte com mostrar o material em branco para a câmera no início e apagar tudo diante dela no fim
-- O proctor pode pedir um *room scan* (girar a webcam/notebook 360°) a qualquer momento
+- Fique **sozinho na sala**, com a porta fechada, garantindo que ninguém entre no cômodo durante a prova
+- Deixe a **mesa e as paredes livres**, sem papéis soltos, pôsteres, quadros escritos ou bilhetes colados
+- Mantenha as orelhas descobertas, o colo livre e os **bolsos vazios**
+- **Anotações:** papel comum não é permitido na Home Edition. As duas únicas opções aceitas pela ETS são usar um quadro branco pequeno de mesa com marcador apagável, ou usar uma folha em branco dentro de um plástico protetor transparente com marcador apagável (sem tirar a folha do plástico em nenhum momento). Você precisará mostrar o material limpo para a câmera no início e apagar tudo diante dela no final
+- O fiscal pode pedir um *[[room scan::giro de 360° com a câmera pelo quarto]]* (girando a webcam ou o notebook ao redor da sala) a qualquer momento
 
 **Documento e identidade:**
 
-- Mesmo requisito do centro: documento oficial com foto, **nome idêntico** ao da inscrição
-- Você segura o documento próximo à câmera no check-in
-- A ETS pode pedir que você confirme a identidade por um aplicativo de celular antes da prova. Se for o seu caso, faça isso **pelo menos 48 horas antes**
-- Tenha à mão **um celular ou um espelho de mão**: o proctor usa um dos dois no check-in para ver a sua tela. Se a ETS exigir segunda câmera, é o celular que faz esse papel
+- Vale a mesma regra do centro presencial: documento oficial físico com foto e com o **nome idêntico** ao da inscrição
+- Você segura o **documento perto da câmera** durante o *[[check-in::credenciamento de entrada]]*
+- A ETS pode pedir que você confirme a identidade por um aplicativo de celular antes do dia da prova. Se isso aparecer para você, conclua essa etapa com **pelo menos 48 horas** de antecedência
+- Deixe por perto **um celular ou um espelho de mão**, porque o fiscal usa um dos dois no credenciamento para enxergar a sua tela. Se a ETS exigir uma segunda câmera, é o celular que cumpre esse papel
 
 **Durante a prova:**
 
-- **Sem pausa nenhuma:** a prova não tem intervalo programado e, na Home Edition, pausa não programada não é permitida (ETS, *Information Bulletin 2026-2027*). Vá ao banheiro antes do check-in
-- Não leia os enunciados em voz alta (fale só nas respostas do Speaking): o proctor pode interpretar como ajuda externa
-- Se a conexão cair: normalmente você reconecta e retoma; **não feche o aplicativo**; aguarde a instrução
+- **Sem pausa nenhuma:** a prova não tem intervalo programado e, na Home Edition, pausas não programadas também não são permitidas (*[[Information Bulletin 2026-2027::Boletim informativo 2026-2027]]*, da ETS). Vá ao banheiro antes de iniciar o credenciamento
+- Evite ler os enunciados em **voz alta** (fale apenas nas gravações do Speaking), porque o fiscal pode interpretar murmúrios como tentativa de comunicação com alguém
+- Se a conexão cair no meio do exame, mantenha a calma e **não feche o aplicativo**. Na maioria dos casos o sistema reconecta sozinho e retoma de onde parou; basta aguardar a orientação do fiscal
 
-**Checklist Home Edition (fazer em D-2):**
+**Lista de conferência da Home Edition (fazer em D-2):**
 
-- [ ] TOEFL Test App instalado
-- [ ] Checagem de equipamento rodada e aprovada no mesmo computador e sala da prova
-- [ ] Quadro branco apagável + marcador (ou alternativa permitida): testado
-- [ ] Sala reservada e todos em casa avisados para não interromper
-- [ ] Mesa e paredes limpas. O celular (ou um espelho de mão) fica com você **só para o check-in**; depois, longe do alcance e virado para baixo, como o proctor orientar
-- [ ] Plano para ruído (obra, cachorro, campainha): avise vizinhos/família
-- [ ] Documento com nome idêntico ao da inscrição, em mãos
-- [ ] Alto-falantes testados (fone não é permitido)
+- [ ] Aplicativo **TOEFL Test App** instalado
+- [ ] Checagem de equipamento rodada e aprovada no **mesmo computador e quarto** da prova
+- [ ] Quadro branco apagável com marcador (ou folha no plástico transparente) **testado com antecedência**
+- [ ] Sala reservada e **todas as pessoas da casa** avisadas para não interromper
+- [ ] Mesa e paredes limpas, deixando o celular (ou um espelho de mão) com você **só para o credenciamento** e depois longe do alcance e virado para baixo, conforme o fiscal orientar
+- [ ] Combinado para evitar barulhos (obras, cachorro ou campainha), avisando **vizinhos e familiares**
+- [ ] Documento original em mãos, com o **nome idêntico** ao da inscrição
+- [ ] Alto-falantes do computador testados (lembre-se de que **fone de ouvido não é permitido**)
 
 ### ⏱️ Linha do tempo do dia do exame (Home Edition)
 
@@ -384,60 +384,61 @@ T-00 min → INÍCIO
 
 ---
 
-## PARTE 6: DURANTE O EXAME · PROTOCOLO SEÇÃO A SEÇÃO (FORMATO 2026)
+## Parte 6: Durante o exame seção a seção (formato 2026)
 
-Sequência oficial: **Reading → Listening → Writing → Speaking**, sem intervalo programado. Duração total ~1h23–1h29.
+Sequência oficial: **Reading, Listening, Writing e Speaking**, sem intervalo programado. Duração total de ~1h23–1h29.
 
-> ⚠️ **O que é fixo:** a ordem das seções é sempre Reading, Listening, Writing e Speaking (ETS, *Updated TOEFL iBT Test Overview*), e não há intervalo programado (ETS, *Information Bulletin 2026-2027*). Entre uma seção e outra só existem as telas de instrução, que não contam no tempo das seções. O princípio do protocolo abaixo é selar a seção anterior e ativar o sistema da próxima nesses poucos segundos.
+> **Regra da ETS:** a ordem das seções é sempre Reading, Listening, Writing e Speaking (*[[Updated TOEFL iBT Test Overview::Visão geral atualizada do teste TOEFL iBT]]*, da ETS), sem intervalo programado (*[[Information Bulletin 2026-2027::Boletim informativo 2026-2027]]*, da ETS). Entre uma seção e outra aparecem apenas as telas de instrução, que não descontam do tempo das questões.
 
-### Micro-orçamento de tempo por seção (referência rápida)
+A ideia do **passo a passo** abaixo é aproveitar esses poucos segundos de transição para encerrar mentalmente a seção que acabou e sintonizar a sua cabeça na próxima.
+
+### Divisão rápida de tempo por seção
 
 | Seção | Tempo total | Divisão interna |
 |---|---|---|
-| Reading | ~27–30 min | router ~9 min + módulo ~18–21 min |
-| Listening | ~25–29 min | router ~18 min + módulo 7 ou 11 min |
-| Writing | ~23 min | Build a Sentence ~6 min · Email 7 min · Academic Discussion 10 min |
-| Speaking | ~8 min | Listen and Repeat (7 itens) + Take an Interview (4 itens), janelas fixas por item |
+| **Reading** | ~27–30 min | [[router::bloco inicial de nivelamento]] de ~9 min + módulo de ~18–21 min |
+| **Listening** | ~25–29 min | router de ~18 min + módulo de 7 ou 11 min |
+| **Writing** | ~23 min | *[[Build a Sentence::Monte uma frase]]* (~6 min), *[[Write an Email::Escreva um e-mail]]* (7 min) e *[[Write for an Academic Discussion::Escreva para uma discussão acadêmica]]* (10 min) |
+| **Speaking** | ~8 min | *[[Listen and Repeat::Ouça e repita]]* (7 itens) e *[[Take an Interview::Faça uma entrevista]]* (4 itens), com janelas fixas por item |
 
-### READING (~27–30 min: router + módulo adaptativo)
+### Reading (~27–30 min: bloco inicial e módulo adaptativo)
 
-**Estado mental:** você está no pico de energia cognitiva, e o **router** decide sua rota de dificuldade. Trate cada item do início da seção como se já valesse a nota, porque, indiretamente, vale.
+**Estado mental:** você começa a prova no pico da sua energia mental, e o router decide para qual módulo de dificuldade você vai. Trate cada questão desse começo com total atenção, porque ela influencia diretamente o teto da sua nota.
 
-**Protocolo de entrada:**
-- Leia o enunciado de cada task antes de começar
-- Nos itens de *Complete the Words*: aplique o método dos 3 filtros do Módulo 1 (gramática → léxico → sentido), não pule etapas
-- Nos itens de *Read an Academic Passage*: mapeie a função de cada parágrafo antes de responder
-
-**Durante:**
-- Ritmo alto e constante: o sistema controla o tempo; não sobra margem para reler tudo no fim
-- Não "aqueça devagar" nos primeiros itens achando que são triviais: eles definem sua rota (erro **SX** na análise pós-prova)
-- Não trave num único item difícil: elimine o que der e siga
-- Item negativo (*NOT/EXCEPT*): localize a palavra negativa antes de olhar as opções e repita-a mentalmente (evita o erro **SR-att**)
-
-**Ao terminar:** execute o selo de seção. Não fique remoendo.
-
-### LISTENING (~25–29 min: router + módulo adaptativo)
-
-**Estado mental:** modo de captura ativa, lápis na mão antes de o áudio começar. Cada áudio toca **uma única vez**.
-
-**Protocolo de entrada:**
-- Leia o contexto na tela antes de o áudio iniciar (tipo de task, nº de itens)
-- Sistema de anotação escalonado do Módulo 2 pronto
-- Fone ajustado, volume verificado
+**Rotina de entrada:**
+- Leia o enunciado de cada tarefa antes de começar para saber o que a questão pede
+- Nos itens de *[[Complete the Words::Complete as palavras]]*, aplique o método dos **3 filtros do Módulo 1** (gramática, vocabulário e sentido), sem pular etapas
+- Nos textos de *[[Read an Academic Passage::Leia uma passagem acadêmica]]*, identifique a **função de cada parágrafo** antes de responder às perguntas
 
 **Durante:**
-- Itens curtos e numerosos: velocidade de decisão item a item importa mais que memória de longo prazo
-- Em *Listen and Choose a Response*: foco em intenção, registro e tom da fala isolada
-- Em *Listen to an Academic Talk*: ideia central + inferência + vocabulário idiomático
-- Se perder um trecho: escreva "?" e siga, não tente recuperar o perdido
-- O gargalo mais comum do brasileiro aqui é **SL-dec** (não converter o som em palavras a tempo). Se isso acontecer em vários itens, é o foco nº 1 do reparo (M2 Parte 3)
+- Mantenha um **ritmo constante**, pois o relógio corre por bloco e não sobra folga para reler tudo no final
+- Não entre devagar nos primeiros itens achando que são simples demais, porque são eles que definem a sua rota na prova (erro **SX** na análise pós-prova)
+- Se uma questão parecer difícil demais, **elimine o que puder**, marque a melhor opção entre as restantes e siga em frente
+- Em questões negativas (*[[NOT::NÃO]]* ou *[[EXCEPT::EXCETO]]*), localize a palavra negativa no enunciado antes de olhar as alternativas e repita essa ideia na cabeça para evitar o erro de atenção **SR-att**
 
-**Ao terminar:** execute o selo de seção **imediatamente**. O Writing vem em seguida, sem intervalo.
+**Ao terminar:** faça o selo de seção e siga adiante, sem ficar revendo de cabeça o que já passou.
 
-### ⏸️ A transição sem intervalo: o reset de 30 segundos
+### Listening (~25–29 min: bloco inicial e módulo adaptativo)
 
-A prova não tem pausa programada (ETS, *Information Bulletin 2026-2027*). O
-reset acontece na tela de instruções entre uma seção e outra, sentado.
+**Estado mental:** entre em modo de escuta ativa, já com o lápis ou marcador na mão antes de o som começar. Cada áudio toca uma única vez.
+
+**Rotina de entrada:**
+- Olhe o contexto na tela antes de o áudio iniciar, conferindo o **tipo de tarefa** e o número de questões
+- Deixe o seu papel ou quadro pronto para a **anotação escalonada** do Módulo 2
+- Confira se o **fone está bem ajustado** (no centro de testes) e com o volume claro
+
+**Durante:**
+- Como são vários itens curtos, a sua **agilidade para decidir** questão a questão importa mais do que tentar guardar tudo na memória de longo prazo
+- Em *[[Listen and Choose a Response::Ouça e escolha uma resposta]]*, foque na **intenção**, no nível de formalidade e no tom da fala isolada
+- Em *[[Listen to an Academic Talk::Ouça uma palestra acadêmica]]*, acompanhe a **ideia central**, o que pode ser inferido e o vocabulário idiomático
+- Se você perder um trecho do áudio, anote apenas um **"?"** e continue prestando atenção no que vem a seguir, sem tentar recuperar o que passou
+- O ponto de atenção mais comum para quem fala português aqui é o código **SL-dec** (demorar para converter o som em palavras enquanto o áudio corre). Se isso acontecer em vários itens nos seus treinos, priorize a Parte 3 do Módulo 2
+
+**Ao terminar:** faça o selo de seção na mesma hora, porque o Writing começa logo em seguida, sem intervalo.
+
+### ⏸️ A transição sem intervalo: como renovar o fôlego em 30 segundos
+
+Como a prova não tem pausa programada (*Information Bulletin 2026-2027*, da ETS), esse **recomeço rápido de 30 segundos** acontece sentado na cadeira, enquanto a tela de instruções da próxima seção está aberta.
 
 ```
 1. Solte os ombros e as mãos (5 s)
@@ -449,164 +450,159 @@ reset acontece na tela de instruções entre uma seção e outra, sentado.
 4. Anchor Phrase. "[Próxima seção] mode: ON." (5 s)
 ```
 
-> ⚠️ **O erro mais comum na transição:** ficar remoendo o Listening enquanto
-> o Writing já começou. Selo de seção, reset e próxima.
->
-> 💡 **Antes do Speaking:** ele vem logo depois do Writing. No centro de
-> testes, fale 2 ou 3 frases baixinho na tela de instruções (qualquer coisa:
-> descreva o que vê). Na Home Edition, não fale fora dos itens de Speaking,
-> porque o proctor pode interpretar como ajuda externa: só articule as
-> palavras, sem som. Não estreie a voz no primeiro item.
+> **Erro comum:** continuar pensando nas questões do Listening enquanto o cronômetro do Writing já está rodando. Feche a seção anterior na mente, respire e foque na escrita.
 
-### ✍️ WRITING (~23 min: 12 itens, correção por IA)
+Como o Speaking vem logo depois do Writing, vale aquecer a voz antes do primeiro item. Se você estiver no **centro de testes**, fale 2 ou 3 frases bem baixinho na tela de instruções, descrevendo qualquer coisa que estiver vendo na sala. Já na [[Home Edition::edição em casa]], não fale fora dos itens de Speaking, porque o fiscal remoto pode interpretar como ajuda externa; nesse caso, apenas articule as palavras mexendo os lábios sem som, para não estrear a voz no primeiro item.
 
-**Estado mental:** a estrutura é sua âncora. Você já treinou cada task: execute o esqueleto, não improvise.
+### ✍️ Writing (~23 min: 12 itens, correção automática e por IA)
+
+**Estado mental:** a estrutura que você treinou é a sua âncora. Você já conhece o formato de cada tarefa, então siga o modelo passo a passo sem precisar improvisar.
 
 **Build a Sentence (10 itens, ~6 min):**
-- Corrigido por máquina, quase binário: a estrutura está certa ou não está
-- Monte o esqueleto SVO primeiro, depois encaixe os modificadores
-- Checagem rápida por item: verbo e tempo → sujeito → subordinação → ordem das palavras
-- Falha aqui → código **SW-synt/SW-verb** na análise (M7 Parte 6 → M4 W1/W2 + M9)
+- A correção é feita por máquina e não tem meio-termo, pois a **estrutura da frase** está certa ou não está
+- Monte primeiro o **núcleo com sujeito, verbo e objeto** (SVO) e só depois encaixe os modificadores
+- Confira rapidamente em cada item, nesta sequência: o **verbo e o tempo verbal**, o sujeito, a subordinação e a ordem das palavras
+- Tropeços aqui aparecem nos códigos **SW-synt ou SW-verb** na análise do Módulo 7 (Parte 6), que levam a W1 e W2 do Módulo 4 e ao Módulo 9
 
 **Write an Email (7 min):**
-- Abertura (saudação + quem você é) → propósito em 1 frase clara → os três pontos do enunciado (pedido educado com modal onde couber) → fechamento com agradecimento
-- Registro formal consistente, sem contrações. O enunciado lista **três pontos**: cubra os três, um por frase ou par de frases
-- Direto e educado: sem rodeios nem cerimônia (ver Módulo 9, Parte 5, e Módulo 5, Parte 5.2)
+- Siga a **sequência em quatro partes**: abertura (saudação e quem você é), propósito logo em 1 frase clara, desenvolvimento dos três pontos do enunciado (usando verbos modais para pedidos educados onde couber) e fechamento com agradecimento
+- Mantenha o registro formal do começo ao fim, sem contrações. Como o enunciado traz sempre **três pontos**, cubra todos os três usando uma frase ou um par de frases para cada um
+- Escreva de forma **direta e educada**, sem rodeios nem excesso de cerimônia (como vimos na Parte 5 do Módulo 9 e na Parte 5.2 do Módulo 5)
 
-**Write for an Academic Discussion (10 min, mínimo indicado de 100 palavras):**
-- 0–1:30: leitura do prompt (pergunta + colegas)
-- 1:30–2:30: planejamento (posição + razão central + como engajar um colega)
-- 2:30–9: escrita · posição inequívoca na 1ª frase, razão mecanística, exemplo concreto, engajamento explícito com um colega
-- 9–10: caça aos 5 erros do brasileiro (3ª pessoa -s, artigo indevido, tempo verbal, run-on, repetição lexical)
+**Write for an Academic Discussion (10 min, mínimo recomendado de 100 palavras):**
+- **De 0 a 1min30:** leia com calma o tema proposto (a pergunta do professor e as postagens dos colegas)
+- **De 1min30 a 2min30:** planeje a resposta definindo a sua posição, a razão central e como vai dialogar com um colega
+- **De 2min30 a 9min:** escreva o texto colocando a sua posição clara já na 1ª frase, desenvolva uma explicação lógica de causa e efeito, traga um exemplo concreto e mencione diretamente o argumento de um colega
+- **De 9 a 10min:** faça a caça aos 5 deslizes mais comuns de brasileiros (esquecer o *-s* de 3ª pessoa, usar artigo indevido, trocar o tempo verbal, emendar frases em *[[run-on::frases coladas sem conector ou pontuação adequada]]* e repetir a mesma palavra)
 
-> ⚠️ **Gestão de fadiga:** se sentir a mente pesar durante a *Academic Discussion*, faça o suspiro fisiológico discretamente e continue. Prefira fechar o parágrafo com posição + razão + fechamento a deixá-lo incompleto.
+> **Dica:** se você sentir a mente pesar durante a *Write for an Academic Discussion*, faça o suspiro fisiológico discretamente e continue. Vale mais fechar o parágrafo com posição, razão e conclusão curta do que deixá-lo pela metade.
 
-### 🎤 SPEAKING (~8 min: 11 itens, correção 100% IA)
+### 🎤 Speaking (~8 min: 11 itens, correção 100% por IA)
 
-**Estado mental:** modo de produção. O sistema motor de fala é diferente do de leitura: o Speaking vem logo após o Writing, sem pausa, e você entra "frio": articule 2–3 frases baixinho na tela de transição antes do primeiro item (na Home Edition, sem som).
+**Estado mental:** agora você entra em modo de fala ativa. Como falar usa uma coordenação motora diferente da leitura e o Speaking vem logo após o Writing sem pausa, cuide para não entrar "frio" e articule de 2 a 3 frases baixinho na tela de transição antes do primeiro item (na Home Edition, apenas mexa os lábios sem som).
 
 **Listen and Repeat (7 itens):**
-- Não parafraseie. Reproduza exatamente o que ouviu: inclusive artigos e preposições
-- Chunking sintático: retenha blocos (sujeito / sintagma verbal / oração), não palavras soltas
-- Ritmo stress-timed: comprima as palavras de função (a, to, of, have) a schwa
-- Se não pegou a frase inteira, diga o máximo que reteve com prosódia natural: silêncio total pontua pior
-- Falha aqui → código **SS-phon/SS-rhythm** (M7 Parte 6 → M3 S1/S3)
+- Não troque palavras por sinônimos e **reproduza exatamente** o que você ouviu, incluindo artigos e preposições
+- Use o *[[chunking::agrupamento sintático em blocos de sentido]]*, retendo blocos inteiros (sujeito, verbo com complemento e oração), em vez de palavras soltas
+- Mantenha o ritmo *[[stress-timed::marcado pelas sílabas tônicas]]* do inglês, reduzindo as palavras curtas de função (*a*, *to*, *of*, *have*) ao som neutro de *[[schwa::vogal curta e relaxada]]*
+- Se não conseguiu pegar a frase inteira, fale o máximo que reteve com **entonação natural**, porque o silêncio total pontua bem pior
+- Dificuldades aqui entram nos códigos **SS-phon ou SS-rhythm** na análise do Módulo 7 (Parte 6), que apontam para S1 e S3 do Módulo 3
 
 **Take an Interview (4 itens):**
-- Reconheça a função pedida (descrição / explicação / opinião / sugestão / previsão / narração) nos primeiros 2 segundos
-- Aplique o esqueleto correspondente do Módulo 3: posição/ideia na 1ª frase → razão específica → 1 exemplo ou contraponto curto
-- Sem preparação e sem segunda tentativa: comece a falar imediatamente
-- Resposta rasa → código **SS-struct** (M7 Parte 6 → M3 S6 + M5 RG6)
+- Identifique a **função pedida na pergunta** (descrição, explicação, opinião, sugestão, previsão ou narração) logo nos primeiros 2 segundos
+- Aplique o **modelo correspondente do Módulo 3**, colocando a sua posição ou ideia principal na 1ª frase, seguida de uma razão específica e de 1 exemplo ou contraponto curto
+- Como não há tempo de preparo nem segunda tentativa, **comece a falar imediatamente**
+- Uma resposta rasa ou sem desenvolvimento cai no código **SS-struct** da análise do Módulo 7 (Parte 6), que leva a S6 no Módulo 3 e a RG6 no Módulo 5
 
-**Entre os itens:** 1 respiração + Anchor Phrase. Não avalie o item anterior: está selado.
+**Entre os itens:** faça 1 respiração calma e repita a sua *[[Anchor Phrase::frase-âncora]]*, sem ficar julgando o item anterior, que já passou.
 
-**Ao terminar:** é a última seção. Mantenha o ritmo até o último item: muitos afrouxam nos dois últimos (10 e 11) e perdem banda no fim.
+**Ao terminar:** esta é a última seção da prova. Mantenha o ritmo firme até o último segundo, porque muita gente relaxa nos dois itens finais (10 e 11) e perde pontos preciosos no fim.
 
 ---
 
-## PARTE 7: O PLANO ANTI-COLAPSO · SE ALGO DER ERRADO
+## Parte 7: Se algo der errado no dia (e como seguir em frente)
 
-> A maioria dos erros de prova é resposta de pânico a situações inesperadas, não falha cognitiva de verdade. Protocolos pré-definidos transformam improviso em execução.
+> **Dica:** grande parte dos tropeços no dia da prova vem do susto diante de um imprevisto, e não de falta de inglês. Saber de antemão como agir em cada situação evita o improviso e devolve a sua calma na hora.
 
 | Cenário | O que fazer |
 |---|---|
-| **"Estou em branco no começo do Reading"** | Não se prenda ao primeiro item. Respire uma vez, leia o enunciado da task com calma e ataque o primeiro item de verdade: o contexto ativa a compreensão |
-| **"Vi 3 alternativas plausíveis no mesmo item"** | Volte ao texto: a resposta está lá. Se não achar, elimine a mais extrema e escolha entre as 2 restantes. Não gaste mais de 60 segundos |
-| **"Acho que fui mal no router do Reading/Listening"** | Selo de seção. Você não sabe para qual módulo foi roteado, e a percepção durante a prova é sistematicamente pessimista. Ataque a próxima seção como se nada tivesse acontecido |
-| **"Não peguei a frase inteira em Listen and Repeat"** | Diga o máximo que reteve, com ritmo e entonação naturais. Uma reprodução parcial com boa prosódia pontua; o silêncio, não |
-| **"Travei em Take an Interview: 5 segundos de silêncio"** | Diga a primeira frase do esqueleto da função: *"I think..."* / *"In my experience..."*. O sistema motor de fala inicia e o resto segue |
-| **"Estou sem tempo na Academic Discussion"** | Feche o parágrafo agora: 1 frase que retoma a posição + 1 razão. Um parágrafo curto e completo pontua melhor que um longo interrompido |
-| **"O computador travou / problema técnico"** | **Centro:** levante a mão imediatamente, não tente resolver. **Home Edition:** não feche o aplicativo; aguarde o proctor pelo chat. Incidentes técnicos têm protocolo: você não é penalizado por algo fora do seu controle |
-| **"Não consegui dormir na noite anterior"** | Lembre-se: você dormiu bem em D-3 e D-2. Uma noite leve depois de semanas de sono adequado não destrói a performance. O pânico sobre o sono é mais prejudicial que o sono ruim. Hidrate, coma bem, siga o plano |
-| **"Cheguei atrasado ao centro"** | A regra da ETS é dura: quem chega ou faz o check-in depois do horário marcado não faz a prova e não recebe a taxa de volta. Não conte com tolerância no centro (ela só existe na Home Edition, de 30 minutos). Por isso o plano B de transporte da Parte 5 não é opcional. Se acontecer, vá assim mesmo e fale com a recepção: é a única chance |
-| **"O nome no meu documento tem uma diferença pequena da inscrição"** | Isso barra o acesso, e a ETS não devolve a taxa de quem não apresenta o documento exigido. Resolva **antes** do dia: corrija o nome na sua conta ETS assim que perceber. Um segundo documento com foto e assinatura ajuda quando falta a assinatura no principal, mas não conserta nome diferente |
-| **"Barulho começou no meio da prova (Home Edition)"** | Continue: o áudio da prova está nos alto-falantes e o Listening não pausa. Se ficar impossível, use o chat do proctor para registrar; há protocolo para interrupção de ambiente |
-| **"Meu microfone falhou no Speaking"** | Levante a mão / chame o proctor imediatamente. Não continue falando para um microfone mudo. Relate a falha na hora: a ETS tem procedimento para problemas de equipamento, que pode incluir refazer a prova |
-| **"Fiquei preso num item do router e perdi tempo"** | Reset de item: escolha o mais plausível, "próximo item, página em branco". Anote mentalmente **SX** para a análise. Um item do router perdido pesa menos que 3 itens perdidos por atraso em cascata |
-| **"Terminei o Reading com a sensação de que fui rebaixado de módulo"** | A percepção durante a prova é sistematicamente pessimista, e você não tem como saber a rota. Selo de seção. A próxima seção é matematicamente independente |
+| **"Estou em branco no começo do Reading"** | Não se prenda à sensação inicial. Respire fundo uma vez, leia o enunciado da tarefa com calma e foque na primeira questão de verdade, porque o próprio contexto destrava a compreensão |
+| **"Vi 3 alternativas plausíveis no mesmo item"** | Volte ao texto, pois a resposta está lá. Se ainda restar dúvida, elimine a opção mais extrema e escolha entre as 2 que sobraram, sem gastar mais de 60 segundos |
+| **"Acho que fui mal no bloco inicial do Reading ou do Listening"** | Faça o selo de seção. Você não tem como saber para qual módulo foi enviado, e a nossa percepção durante a prova é quase sempre mais pessimista do que a realidade. Encare a próxima seção de cabeça limpa |
+| **"Não peguei a frase inteira em Listen and Repeat"** | Fale o máximo que você guardou, mantendo o ritmo e a entonação naturais. Uma repetição parcial com boa pronúncia pontua, enquanto o silêncio não soma nada |
+| **"Travei em Take an Interview: 5 segundos de silêncio"** | Diga imediatamente a primeira frase da estrutura daquela função, como *"[[I think...::Eu acho que...]]"* ou *"[[In my experience...::Na minha experiência...]]"*. Assim que você começa a falar, o resto da ideia acompanha |
+| **"Estou sem tempo na Academic Discussion"** | Feche o seu parágrafo agora mesmo com 1 frase que retoma a sua posição e 1 razão clara. Um parágrafo mais curto e completo pontua melhor do que um texto longo cortado no meio |
+| **"O computador travou ou deu problema técnico"** | No centro de testes, levante a mão na mesma hora e não tente resolver sozinho. Na [[Home Edition::edição em casa]], não feche o aplicativo e aguarde o fiscal pelo bate-papo. Problemas técnicos têm procedimento próprio e você não é penalizado por algo fora do seu controle |
+| **"Não consegui dormir na noite anterior"** | Fique em paz, porque você já dormiu bem em D-3 e D-2. Uma noite mais curta depois de uma boa semana não derruba o seu desempenho, e o susto com a insônia atrapalha mais do que o cansaço em si. Hidrate-se, coma bem e siga o plano |
+| **"Cheguei atrasado ao centro"** | A regra da ETS é rigorosa: quem chega ou faz o credenciamento depois do horário marcado não entra na prova e não recebe a taxa de volta. Não conte com tolerância no centro presencial (ela só existe na Home Edition, com margem de 30 minutos). É por isso que o plano B de transporte da Parte 5 é tão importante; se acontecer, vá até lá mesmo assim e fale com a recepção, pois é a sua única chance |
+| **"O nome no meu documento tem uma diferença pequena da inscrição"** | Isso impede a entrada, e a ETS não devolve a taxa de quem apresenta documento divergente do cadastro. Resolva antes do dia da prova, corrigindo o nome na sua conta da ETS assim que perceber. Um segundo documento com foto e assinatura ajuda quando falta assinatura no principal, mas não resolve nome diferente |
+| **"Barulho começou no meio da prova (Home Edition)"** | Continue focado na prova, pois o som sai nos alto-falantes e o Listening não tem pausa. Se o barulho ficar impossível, avise o fiscal pelo bate-papo para registrar a ocorrência na sessão |
+| **"Meu microfone falhou no Speaking"** | Avise na mesma hora, levantando a mão no centro ou chamando o fiscal na Home Edition. Não continue falando para um microfone sem captação. Quando você relata a falha na hora, a ETS abre o procedimento oficial para problemas de equipamento, que pode incluir remarcar a prova |
+| **"Fiquei preso num item do router e perdi tempo"** | Use o recomeço de questão: escolha a opção mais plausível, pense "próximo item, página em branco" e avance (anotando de cabeça o código SX para a análise). Errar 1 item isolado do [[router::bloco inicial de nivelamento]] pesa muito menos do que perder 3 questões por atraso em cascata |
+| **"Terminei o Reading com a sensação de que fui rebaixado de módulo"** | A nossa impressão durante a prova costuma ser pessimista, e você não tem como saber na hora qual rota o sistema escolheu. Faça o selo de seção e siga adiante, pois a próxima seção é matematicamente independente |
 
 ---
 
-## PARTE 8: O PROTOCOLO PÓS-EXAME
+## Parte 8: O que fazer depois que a prova termina
 
-### Imediatamente após o exame
+### Logo após o exame
 
-O TOEFL exibe um score estimado não oficial para **Reading e Listening** logo após o término. Speaking e Writing são processados depois (correção 100% por IA no formato 2026, com prazo de resultado mais curto que no formato antigo).
+O TOEFL mostra na tela uma pontuação estimada não oficial para **Reading e Listening** assim que você termina a prova. Já Speaking e Writing são processados depois (com correção 100% por IA no formato 2026, o que garante um prazo de entrega mais curto do que no formato antigo).
 
-| Ação | Timing | Por quê |
+| Ação | Quando fazer | Por quê |
 |---|---|---|
-| Veja o score estimado não oficial de R/L | Imediatamente | Calibração inicial |
-| **Não interprete o score emocionalmente** | Primeiras 24h | Percepção pós-exame é distorcida por fadiga; o resultado oficial pode diferir |
-| Registre o que lembrar sobre erros | Primeiras 2h | Alimenta a análise de erros e a decisão de reteste |
-| Aguarde o score oficial | Cerca de 3 dias depois da prova | Sai na sua conta ETS, com aviso por e-mail. Inclui Speaking e Writing e as bandas CEFR finais |
+| **Anote a pontuação estimada não oficial de Reading e Listening** | Imediatamente ao terminar | Dá uma primeira referência do seu resultado nessas duas seções |
+| **Não julgue o seu desempenho no calor do momento** | Primeiras 24h | O cansaço pós-prova distorce a nossa percepção, e o resultado oficial pode trazer boas surpresas |
+| **Registre o que você lembrar sobre dúvidas e dificuldades** | Primeiras 2h | Alimenta a sua análise de erros caso você precise planejar um novo exame |
+| **Aguarde o boletim oficial completo** | Cerca de 3 dias depois da prova | Sai na sua conta da ETS (com aviso por e-mail) e traz as notas de Speaking e Writing junto com as bandas finais do CEFR |
 
-### Cancelamento de score: quando considerar
+### Cancelamento da nota: quando considerar
 
-No fim da prova a tela pergunta se você quer **reportar** ou **cancelar** os scores. Cancelar não custa nada, vale para todas as seções de uma vez e não dá reembolso. Quem escolhe reportar não pode cancelar depois. Quem cancela e se arrepende pode pedir a reativação pela conta ETS em até 60 dias, pagando uma taxa. Considere cancelar **apenas** se:
-- Houve um problema técnico significativo durante o exame
-- Você estava genuinamente doente e o desempenho foi objetivamente comprometido
+No fim da prova, a tela pergunta se você quer **reportar ou cancelar** as suas notas. Cancelar não custa nada, vale para todas as seções de uma só vez e não gera reembolso da inscrição. Quem escolhe reportar não pode cancelar depois; já quem cancela e muda de ideia pode pedir a reativação pela conta da ETS em até 60 dias, pagando uma taxa. Só considere cancelar se acontecer uma destas situações:
+- Houve um **problema técnico grave** que prejudicou o andamento do exame
+- Você passou **muito mal fisicamente** durante a prova e o seu desempenho foi claramente comprometido
 
-**Não cancele** só por sensação de que correu mal: a percepção de performance durante a prova é sistematicamente pessimista.
+**Não cancele** apenas pela sensação de que foi mal, porque a nossa percepção de desempenho durante a prova é quase sempre mais pessimista do que a nota real.
 
-### Reteste: regras e estratégia
+### Nova tentativa: regras da ETS e estratégia
 
 | Ponto | Regra |
 |---|---|
-| **Intervalo mínimo entre testes** | Não dá para fazer a prova mais de uma vez num período de 3 dias, mesmo que você tenha cancelado o score da primeira |
-| **Envio para instituições** | A taxa da prova inclui até **4 envios**. Você escolhe ou troca os destinatários na conta ETS até as 22h (horário local do centro) da véspera. Depois disso, cada envio adicional é pago: confira o valor atual na [página de envio de notas da ETS](https://www.ets.org/toefl/test-takers/ibt/scores/send-scores.html) antes de pedir |
-| **Validade do score** | 2 anos a partir da data do teste |
-| **Quantas vezes** | Sem limite, respeitado o intervalo de 3 dias |
-| **MyBest Scores (superscore)** | A ETS reporta automaticamente, junto do score da data, a melhor banda de **cada seção** entre todos os seus testes dos últimos 2 anos. Verifique se a sua instituição aceita MyBest: muitas aceitam |
+| **Intervalo mínimo entre testes** | Não é permitido fazer a prova mais de uma vez num período de 3 dias, mesmo que você tenha cancelado a nota da primeira |
+| **Envio para instituições** | A taxa de inscrição já inclui até 4 envios gratuitos. Você pode escolher ou trocar as instituições destinatárias na sua conta da ETS até as 22h (horário local do centro) da véspera da prova. Depois desse prazo, cada envio extra é cobrado à parte; confira o valor atual na [página de envio de notas da ETS](https://www.ets.org/toefl/test-takers/ibt/scores/send-scores.html) antes de solicitar |
+| **Validade da nota** | 2 anos contados a partir da data do teste |
+| **Limite de tentativas** | Não há limite máximo de vezes, desde que você respeite o intervalo mínimo de 3 dias entre uma prova e outra |
+| **[[MyBest Scores::Melhores notas combinadas]] ([[superscore::combinação das maiores notas por seção]])** | Junto com a nota daquela data, a ETS reporta automaticamente a sua melhor banda de cada seção entre todos os exames válidos dos últimos 2 anos. Confira se a sua instituição aceita o MyBest, pois muitas universidades aceitam |
 
-**Quando remarcar rápido (dentro de 1–2 semanas):**
+**Quando remarcar logo (dentro de 1–2 semanas):**
 
-- O gap para a meta é pequeno (≤ meia banda numa ou duas seções) e concentrado num tipo de item identificável
-- Você sabe exatamente qual código de triagem (M7 Parte 6) dominou e tem uma semana para atacá-lo
-- Você fez o teste cansado ou doente e o problema foi de estado, não de preparação
+- A distância para a sua meta foi pequena (**até meia banda** em uma ou duas seções) e ficou concentrada num tipo de questão bem claro
+- Você sabe exatamente qual **código de triagem** (Parte 6 do Módulo 7) mais pesou e tem uma semana livre para praticar esse ponto
+- Você fez a prova **cansado ou indisposto**, ou seja, o tropeço veio do estado físico do dia e não da falta de preparo
 
-**Quando esperar mais (1 mês+):**
+**Quando dar mais tempo de estudo (1 mês ou mais):**
 
-- O gap é de mais de meia banda em duas ou mais seções
-- O erro dominante é estrutural (ex.: **SL-dec** sistemático, ou gramática sob pressão): isso não muda em uma semana
+- Faltou **mais de meia banda** em duas ou mais seções da prova
+- O ponto de atenção principal é de base (como o código **SL-dec** recorrente no Listening ou gramática sob pressão), porque esse ajuste pede algumas semanas de prática constante
 
-### 🏆 Os 7 comportamentos dos campeões: resumo final
+### 🏆 As 7 atitudes de quem faz uma boa prova: resumo final
 
-| # | Comportamento | Princípio |
+| # | Atitude | Por que funciona |
 |---|---|---|
-| **1** | Chegam ao dia D descansados, não exaustos | A semana final é de consolidação, não de acumulação |
-| **2** | Seguem o sistema sem improvisar | Estruturas internalizadas eliminam a necessidade de pensar sob pressão |
-| **3** | Selam cada seção e avançam | Performance multi-seção exige compartimentalização |
-| **4** | Usam as transições entre seções como reset | Recuperação ativa é tão importante quanto execução ativa |
-| **5** | Respondem todos os itens, sem exceção | Sem penalidade por erro: deixar em branco é a única garantia de zero |
-| **6** | Interpretam a ansiedade como ativação, não como ameaça | A resposta fisiológica é a mesma: o framing determina se ajuda ou atrapalha |
-| **7** | Confiam no treinamento quando a cognição falha | Quando a mente trava, o corpo executa o que foi repetido |
+| **1** | Chegam ao dia do exame descansados, e não exaustos | A semana final serve para consolidar o que você já sabe, não para acumular matéria nova |
+| **2** | Seguem o passo a passo treinado, sem improvisar | Ter as estruturas na ponta da língua poupa você de pensar em formato sob pressão |
+| **3** | Encerram cada seção na mente e avançam | Mandar bem nas quatro etapas exige separar uma seção da outra |
+| **4** | Usam as telas de transição para respirar e renovar o foco | Saber recuperar o fôlego entre as seções é tão importante quanto responder às questões |
+| **5** | Respondem a todos os itens, sem deixar nada em branco | Como não há desconto por erro, deixar em branco é a única garantia de nota zero no item |
+| **6** | Enxergam o frio na barriga como ativação, e não como ameaça | A reação física do corpo é a mesma, e o modo como você a interpreta faz essa energia ajudar |
+| **7** | Confiam no treinamento acumulado quando bate o cansaço | Quando a mente cansa, o hábito construído nos simulados mantém a sua execução firme |
 
 ---
 
-## PARTE 9: A COLA MENTAL · UMA PÁGINA PARA O T-5 MIN
+## Parte 9: Sua cola mental para os 5 minutos antes de começar
 
-Não é permitido levar material de consulta para a sala. Esta página é o que você deve **memorizar** e rodar mentalmente nos 5 minutos antes de clicar em INICIAR, e de novo em cada transição entre seções. Releia-a todo dia na semana final até saber de cor.
+Como não é permitido levar material de consulta para a sala, esta página reúne o que você deve **guardar na memória** e repassar de cabeça nos 5 minutos antes de clicar em "INICIAR" e em cada transição entre as seções. Releia este resumo todos os dias na última semana até saber de cor.
 
-**Antes de INICIAR (e entre seções):**
+**Antes de clicar em "INICIAR" (e entre as seções):**
 
-1. 3 ciclos de respiração em caixa (4-4-4-4)
-2. Anchor Phrase: _______________________ (a sua, escolhida nesta semana)
-3. "Um item de cada vez. Eu treinei para isto."
+1. Faça 3 ciclos de **respiração em caixa** (4-4-4-4)
+2. Repita a sua *[[Anchor Phrase::frase-âncora]]*: _______________________ (aquela que você escolheu nesta semana)
+3. Diga para si mesmo: **"Um item de cada vez. Eu treinei para isto."**
 
-**Reading (~27–30 min):** router = peso máximo, sem "aquecer devagar". 3 filtros no *Complete the Words* (gramática → léxico → sentido). Item negativo: localize o NOT antes das opções. Ritmo constante, sem reler tudo no fim. Selo ao terminar.
+**Reading (~27–30 min):** o [[router::bloco inicial de nivelamento]] tem peso decisivo, então não comece devagar. Aplique os 3 filtros em *[[Complete the Words::Complete as palavras]]* (gramática, vocabulário e sentido). Nas questões negativas, localize o *[[NOT::NÃO]]* antes de ler as opções. Mantenha o ritmo constante, sem contar com tempo para reler tudo no fim, e faça o selo de seção ao terminar.
 
-**Listening (~25–29 min):** lápis na mão antes do áudio. Toca uma vez só. Perdeu um trecho → "?" e segue. Foco: ideia central + o *but*/correção + a instrução final. Selo imediato → Writing em seguida.
+**Listening (~25–29 min):** fique com o lápis ou marcador na mão antes de o áudio começar, pois ele toca uma vez só. Se perder um trecho, anote um "?" e siga ouvindo. Foque na ideia central, no que vem depois de um *[[but::mas]]* ou correção e na instrução final. Ao acabar, faça o selo de seção imediatamente, pois o Writing vem logo em seguida.
 
-**Transição (sem intervalo):** ombros soltos, 1 suspiro fisiológico, revisão relâmpago da próxima seção. "Próxima seção: ON."
+**Transição (sem intervalo):** solte os ombros, faça 1 suspiro fisiológico, repasse de cabeça a estrutura da próxima seção e ative o foco para a etapa seguinte.
 
-**Writing (~23 min):** Build a Sentence = esqueleto SVO primeiro. Email = abertura, propósito, os 3 pontos do enunciado, fechamento; sem contração. Discussion = posição na 1ª frase → razão com mecanismo → exemplo concreto → engajar 1 colega → 60 s de caça aos 5 erros (–s, artigo, tempo, run-on, repetição).
+**Writing (~23 min):** em *[[Build a Sentence::Monte uma frase]]*, monte primeiro o esqueleto com sujeito, verbo e objeto (SVO). No *[[Write an Email::Escreva um e-mail]]*, siga abertura, propósito, os 3 pontos do enunciado e fechamento, sem usar contrações. Na *[[Write for an Academic Discussion::Escreva para uma discussão acadêmica]]*, coloque a sua posição logo na 1ª frase, explique a razão com clareza, traga um exemplo concreto, dialogue com 1 colega e reserve os 60 segundos finais para revisar os 5 deslizes mais comuns (o *-s* de 3ª pessoa, artigos, tempo verbal, frases emendadas em *[[run-on::frases coladas sem conector ou pontuação adequada]]* e repetição de palavras).
 
-**Speaking (~8 min):** vem logo depois do Writing, então acenda a voz com 2–3 frases baixinho (na Home Edition, só articule, sem som). *Listen and Repeat*: reproduza exato, ritmo comprimido, parcial > silêncio. *Take an Interview*: função nos 2 primeiros segundos → esqueleto do Módulo 3, comece a falar já. Ritmo firme até o item 11.
+**Speaking (~8 min):** como ele vem logo depois do Writing, aqueça a voz falando de 2 a 3 frases bem baixinho na transição (na [[Home Edition::edição em casa]], apenas articule os lábios sem emitir som). Em *[[Listen and Repeat::Ouça e repita]]*, reproduza exatamente o que ouviu com ritmo natural, lembrando que falar parte da frase pontua mais do que o silêncio. Em *[[Take an Interview::Faça uma entrevista]]*, identifique a função da pergunta nos 2 primeiros segundos, use a estrutura do Módulo 3 e comece a falar na hora, mantendo o ritmo firme até o item 11.
 
-**Se travar em qualquer ponto:** suspiro fisiológico (1 ciclo) → "próximo item, página em branco" → avança. Nunca releia o mesmo item 4 vezes.
+**Se travar em qualquer ponto:** faça 1 suspiro fisiológico, diga mentalmente "próximo item, página em branco" e avance na hora, sem reler o mesmo item pela quarta vez.
 
-**Regra final:** responda **todos** os itens. Não há penalidade por erro. Em branco = zero garantido.
+**Regra final:** responda a todos os itens da prova. Como não há desconto por resposta errada, deixar em branco é a única certeza de zerar a questão.
 
 ---
 
-✅ Módulo 8 concluído. O protocolo completo para o dia mais importante da preparação está definido. Rode a Parte 9 (cola mental) mentalmente nos Simulados 3 e 4 para que ela esteja automática no dia D.
+✅ **Módulo 8 concluído.** Mais um passo importante dado: agora você já tem toda a rotina para chegar tranquilo e confiante ao dia da prova. Pratique a cola mental da Parte 9 durante os Simulados 3 e 4 para que ela já esteja na ponta da língua no grande dia.
