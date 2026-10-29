@@ -710,7 +710,7 @@
     "source": {
       "kind": "migrado",
       "file": "consolidated/modulo_7_simulados.md",
-      "ref": "linha 281",
+      "ref": "linha 289",
       "live_on_site": true,
       "answer_letter": "origem",
       "build_map": {
@@ -757,7 +757,7 @@
     "source": {
       "kind": "migrado",
       "file": "consolidated/modulo_7_simulados.md",
-      "ref": "linha 287",
+      "ref": "linha 295",
       "live_on_site": true,
       "answer_letter": "origem",
       "build_map": {
@@ -804,7 +804,7 @@
     "source": {
       "kind": "migrado",
       "file": "consolidated/modulo_7_simulados.md",
-      "ref": "linha 290",
+      "ref": "linha 298",
       "live_on_site": true,
       "answer_letter": "origem",
       "build_map": {
@@ -851,7 +851,7 @@
     "source": {
       "kind": "migrado",
       "file": "consolidated/modulo_7_simulados.md",
-      "ref": "linha 306",
+      "ref": "linha 314",
       "live_on_site": true,
       "answer_letter": "origem",
       "build_map": {
@@ -898,7 +898,7 @@
     "source": {
       "kind": "migrado",
       "file": "consolidated/modulo_7_simulados.md",
-      "ref": "linha 312",
+      "ref": "linha 320",
       "live_on_site": true,
       "answer_letter": "origem",
       "build_map": {
@@ -945,7 +945,7 @@
     "source": {
       "kind": "migrado",
       "file": "consolidated/modulo_7_simulados.md",
-      "ref": "linha 318",
+      "ref": "linha 326",
       "live_on_site": true,
       "answer_letter": "origem",
       "build_map": {
@@ -992,7 +992,7 @@
     "source": {
       "kind": "migrado",
       "file": "consolidated/modulo_7_simulados.md",
-      "ref": "linha 321",
+      "ref": "linha 329",
       "live_on_site": true,
       "answer_letter": "origem",
       "build_map": {
@@ -1039,7 +1039,7 @@
     "source": {
       "kind": "migrado",
       "file": "consolidated/modulo_7_simulados.md",
-      "ref": "linha 327",
+      "ref": "linha 335",
       "live_on_site": true,
       "answer_letter": "origem",
       "build_map": {
@@ -1062,7 +1062,7 @@
     "stimulus": {
       "kind": "text",
       "format": "markdown",
-      "title": "Bloco C: Read an Academic Passage (alvo: 6 min)",
+      "title": "Bloco C: Read an Academic Passage (meta de 6 min)",
       "content": "**PASSAGE: The Economics of Network Effects**\n\nA network effect occurs when a product or service becomes more valuable as more people use it. The telephone is the textbook example: a single telephone is useless, but each new user adds value for everyone already connected. Such effects can be direct or indirect. Direct network effects arise among users of the *same* product: a messaging app is more useful as more of one's contacts join it. Indirect network effects arise between two distinct but interdependent groups: a ride-sharing platform becomes more attractive to riders as more drivers join, and more attractive to drivers as more riders join.\n\nBecause users generally prefer the platform with the largest existing network, early leaders in such markets tend to compound their advantage rapidly, often keeping dominant positions even when competitors offer superior technology. This \"winner-take-most\" dynamic has generated significant regulatory concern, particularly about whether dominant platforms use their market power in ways that stifle competition rather than simply reflecting superior efficiency.\n\nCritics of this narrative, however, caution against treating network effects as an insurmountable barrier to entry. Several dominant platforms have been displaced by newer entrants offering a sufficiently different experience. Low switching costs, multi-homing behavior (where users maintain accounts on multiple competing platforms at once), and shifts in user preference can erode even substantial network advantages over time.",
       "audio_ref": null
     },
@@ -1086,7 +1086,7 @@
     "source": {
       "kind": "migrado",
       "file": "consolidated/modulo_7_simulados.md",
-      "ref": "linha 662",
+      "ref": "linha 670",
       "live_on_site": true,
       "answer_letter": "origem",
       "build_map": {
@@ -1109,7 +1109,7 @@
     "stimulus": {
       "kind": "text",
       "format": "markdown",
-      "title": "Bloco C: Read an Academic Passage (alvo: 6 min)",
+      "title": "Bloco C: Read an Academic Passage (meta de 6 min)",
       "content": "**PASSAGE: The Economics of Network Effects**\n\nA network effect occurs when a product or service becomes more valuable as more people use it. The telephone is the textbook example: a single telephone is useless, but each new user adds value for everyone already connected. Such effects can be direct or indirect. Direct network effects arise among users of the *same* product: a messaging app is more useful as more of one's contacts join it. Indirect network effects arise between two distinct but interdependent groups: a ride-sharing platform becomes more attractive to riders as more drivers join, and more attractive to drivers as more riders join.\n\nBecause users generally prefer the platform with the largest existing network, early leaders in such markets tend to compound their advantage rapidly, often keeping dominant positions even when competitors offer superior technology. This \"winner-take-most\" dynamic has generated significant regulatory concern, particularly about whether dominant platforms use their market power in ways that stifle competition rather than simply reflecting superior efficiency.\n\nCritics of this narrative, however, caution against treating network effects as an insurmountable barrier to entry. Several dominant platforms have been displaced by newer entrants offering a sufficiently different experience. Low switching costs, multi-homing behavior (where users maintain accounts on multiple competing platforms at once), and shifts in user preference can erode even substantial network advantages over time.",
       "audio_ref": null
     },
@@ -1133,7 +1133,7 @@
     "source": {
       "kind": "migrado",
       "file": "consolidated/modulo_7_simulados.md",
-      "ref": "linha 668",
+      "ref": "linha 676",
       "live_on_site": true,
       "answer_letter": "origem",
       "build_map": {
@@ -1156,7 +1156,7 @@
     "stimulus": {
       "kind": "text",
       "format": "markdown",
-      "title": "Bloco C: Read an Academic Passage (alvo: 6 min)",
+      "title": "Bloco C: Read an Academic Passage (meta de 6 min)",
       "content": "**PASSAGE: The Economics of Network Effects**\n\nA network effect occurs when a product or service becomes more valuable as more people use it. The telephone is the textbook example: a single telephone is useless, but each new user adds value for everyone already connected. Such effects can be direct or indirect. Direct network effects arise among users of the *same* product: a messaging app is more useful as more of one's contacts join it. Indirect network effects arise between two distinct but interdependent groups: a ride-sharing platform becomes more attractive to riders as more drivers join, and more attractive to drivers as more riders join.\n\nBecause users generally prefer the platform with the largest existing network, early leaders in such markets tend to compound their advantage rapidly, often keeping dominant positions even when competitors offer superior technology. This \"winner-take-most\" dynamic has generated significant regulatory concern, particularly about whether dominant platforms use their market power in ways that stifle competition rather than simply reflecting superior efficiency.\n\nCritics of this narrative, however, caution against treating network effects as an insurmountable barrier to entry. Several dominant platforms have been displaced by newer entrants offering a sufficiently different experience. Low switching costs, multi-homing behavior (where users maintain accounts on multiple competing platforms at once), and shifts in user preference can erode even substantial network advantages over time.",
       "audio_ref": null
     },
@@ -1180,7 +1180,7 @@
     "source": {
       "kind": "migrado",
       "file": "consolidated/modulo_7_simulados.md",
-      "ref": "linha 674",
+      "ref": "linha 682",
       "live_on_site": true,
       "answer_letter": "origem",
       "build_map": {
@@ -1203,7 +1203,7 @@
     "stimulus": {
       "kind": "text",
       "format": "markdown",
-      "title": "Bloco C: Read an Academic Passage (alvo: 6 min)",
+      "title": "Bloco C: Read an Academic Passage (meta de 6 min)",
       "content": "**PASSAGE: The Economics of Network Effects**\n\nA network effect occurs when a product or service becomes more valuable as more people use it. The telephone is the textbook example: a single telephone is useless, but each new user adds value for everyone already connected. Such effects can be direct or indirect. Direct network effects arise among users of the *same* product: a messaging app is more useful as more of one's contacts join it. Indirect network effects arise between two distinct but interdependent groups: a ride-sharing platform becomes more attractive to riders as more drivers join, and more attractive to drivers as more riders join.\n\nBecause users generally prefer the platform with the largest existing network, early leaders in such markets tend to compound their advantage rapidly, often keeping dominant positions even when competitors offer superior technology. This \"winner-take-most\" dynamic has generated significant regulatory concern, particularly about whether dominant platforms use their market power in ways that stifle competition rather than simply reflecting superior efficiency.\n\nCritics of this narrative, however, caution against treating network effects as an insurmountable barrier to entry. Several dominant platforms have been displaced by newer entrants offering a sufficiently different experience. Low switching costs, multi-homing behavior (where users maintain accounts on multiple competing platforms at once), and shifts in user preference can erode even substantial network advantages over time.",
       "audio_ref": null
     },
@@ -1227,7 +1227,7 @@
     "source": {
       "kind": "migrado",
       "file": "consolidated/modulo_7_simulados.md",
-      "ref": "linha 677",
+      "ref": "linha 685",
       "live_on_site": true,
       "answer_letter": "origem",
       "build_map": {
@@ -1250,7 +1250,7 @@
     "stimulus": {
       "kind": "text",
       "format": "markdown",
-      "title": "Bloco C: Read an Academic Passage (alvo: 6 min)",
+      "title": "Bloco C: Read an Academic Passage (meta de 6 min)",
       "content": "**PASSAGE: The Economics of Network Effects**\n\nA network effect occurs when a product or service becomes more valuable as more people use it. The telephone is the textbook example: a single telephone is useless, but each new user adds value for everyone already connected. Such effects can be direct or indirect. Direct network effects arise among users of the *same* product: a messaging app is more useful as more of one's contacts join it. Indirect network effects arise between two distinct but interdependent groups: a ride-sharing platform becomes more attractive to riders as more drivers join, and more attractive to drivers as more riders join.\n\nBecause users generally prefer the platform with the largest existing network, early leaders in such markets tend to compound their advantage rapidly, often keeping dominant positions even when competitors offer superior technology. This \"winner-take-most\" dynamic has generated significant regulatory concern, particularly about whether dominant platforms use their market power in ways that stifle competition rather than simply reflecting superior efficiency.\n\nCritics of this narrative, however, caution against treating network effects as an insurmountable barrier to entry. Several dominant platforms have been displaced by newer entrants offering a sufficiently different experience. Low switching costs, multi-homing behavior (where users maintain accounts on multiple competing platforms at once), and shifts in user preference can erode even substantial network advantages over time.",
       "audio_ref": null
     },
@@ -1274,7 +1274,7 @@
     "source": {
       "kind": "migrado",
       "file": "consolidated/modulo_7_simulados.md",
-      "ref": "linha 683",
+      "ref": "linha 691",
       "live_on_site": true,
       "answer_letter": "origem",
       "build_map": {

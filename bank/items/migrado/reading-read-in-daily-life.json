@@ -620,7 +620,7 @@
     "source": {
       "kind": "migrado",
       "file": "consolidated/modulo_7_simulados.md",
-      "ref": "linha 231",
+      "ref": "linha 239",
       "live_on_site": true,
       "answer_letter": "origem",
       "build_map": {
@@ -667,7 +667,7 @@
     "source": {
       "kind": "migrado",
       "file": "consolidated/modulo_7_simulados.md",
-      "ref": "linha 237",
+      "ref": "linha 245",
       "live_on_site": true,
       "answer_letter": "origem",
       "build_map": {
@@ -714,7 +714,7 @@
     "source": {
       "kind": "migrado",
       "file": "consolidated/modulo_7_simulados.md",
-      "ref": "linha 255",
+      "ref": "linha 263",
       "live_on_site": true,
       "answer_letter": "origem",
       "build_map": {
@@ -761,7 +761,7 @@
     "source": {
       "kind": "migrado",
       "file": "consolidated/modulo_7_simulados.md",
-      "ref": "linha 261",
+      "ref": "linha 269",
       "live_on_site": true,
       "answer_letter": "origem",
       "build_map": {
@@ -808,7 +808,7 @@
     "source": {
       "kind": "migrado",
       "file": "consolidated/modulo_7_simulados.md",
-      "ref": "linha 267",
+      "ref": "linha 275",
       "live_on_site": true,
       "answer_letter": "origem",
       "build_map": {
@@ -831,7 +831,7 @@
     "stimulus": {
       "kind": "text",
       "format": "markdown",
-      "title": "Bloco B · Read in Daily Life (alvo: 2 min)",
+      "title": "Bloco B: Read in Daily Life (meta de 2 min)",
       "content": "> **Café Menu Insert:** Our oat milk is now available at no extra charge for all espresso drinks. Almond and soy milk remain available for a $0.75 upcharge. This change applies to in-store and mobile orders alike.",
       "audio_ref": null
     },
@@ -855,7 +855,7 @@
     "source": {
       "kind": "migrado",
       "file": "consolidated/modulo_7_simulados.md",
-      "ref": "linha 644",
+      "ref": "linha 652",
       "live_on_site": true,
       "answer_letter": "origem",
       "build_map": {

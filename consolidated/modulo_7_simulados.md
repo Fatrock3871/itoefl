@@ -1,54 +1,56 @@
-# ITOEFL
+# iTOEFL
 ---
 
-# MÓDULO 7
-## 🏁 JORNADA DE SIMULADOS PROGRESSIVOS (Formato 2026)
+# Módulo 7
+## Jornada de simulados progressivos (formato 2026)
 
 ---
 
-## PARTE 1: A LÓGICA DOS 4 SIMULADOS · VISÃO GERAL
+## Parte 1: A lógica dos 4 simulados e visão geral
 
-### Como o TOEFL iBT Está Estruturado
+### Como o TOEFL iBT está estruturado
 
-Este módulo é a sua sequência de prática completa pro TOEFL iBT atual, um teste de **1h23min a 1h29min**. Reading e Listening são **adaptativos em dois estágios**: um módulo "router" decide se você vai pra um módulo mais fácil ou mais difícil. Speaking e Writing são **lineares**, com itens curtos e objetivos.
+Chegar à fase dos simulados dá um frio na barriga, mas é aqui que tudo o que você estudou ganha forma de prova real. Este módulo reúne a sua sequência de prática para o TOEFL iBT atual, um exame de **1h23min a 1h29min** em que Reading e Listening são adaptativos em dois estágios (um módulo [[router::bloco inicial de nivelamento]] define se você segue para um módulo mais acessível ou mais avançado) e Speaking e Writing são lineares, com tarefas curtas e diretas.
 
-O formato é denso. Pouco tempo de sobra, pouca margem pra item de aquecimento. Cada resposta no início de Reading e Listening carrega peso real sobre o resto da seção.
+Como a prova tem pouco tempo de sobra, não existe margem para começar devagar como se estivesse apenas aquecendo. Cada resposta nos primeiros minutos de Reading e Listening tem **peso real** sobre o restante da seção, porque define o caminho que o sistema vai abrir para você.
 
-### Por Que 4 Simulados
+### Por que 4 simulados
 
-A lógica de progressão dos 4 simulados existe para treinar precisão desde o primeiro item, não apenas fôlego para o final da prova. Alguns fatores explicam por quê:
+A progressão dos 4 simulados foi desenhada para você treinar **precisão** desde a primeira questão, e não apenas resistência para chegar ao fim da prova. Veja por que esse treino gradual faz tanta diferença no formato de 2026:
 
-- **Reading e Listening são adaptativos em 2 estágios** (router → módulo inferior ou superior): seu desempenho nos primeiros itens determina o teto de dificuldade (e de score) do resto da seção.
-- **Os itens são curtos e numerosos** (50 em Reading, 47 em Listening): a velocidade de leitura e decisão item a item importa mais do que a resistência para uma passagem isolada e longa.
-- **Speaking tem 11 itens curtos** (repetição fiel e entrevista). O que conta é precisão e fidelidade imediatas, não "encher o tempo" com conteúdo.
-- **Writing inclui um componente 100% gramatical** (Build a Sentence), além de e-mail e discussão acadêmica: 12 itens ao todo.
+- **Reading e Listening são adaptativos em 2 estágios** (do router para o módulo inferior ou superior), então o seu desempenho nos primeiros itens define o teto de dificuldade e de nota do resto da seção.
+- **Os itens são curtos e numerosos** (50 em Reading e 47 em Listening), por isso a agilidade para ler e decidir questão por questão vale mais do que o fôlego para um único texto longo.
+- **Speaking tem 11 itens curtos** (repetição fiel e entrevista), nos quais o que pontua é a clareza imediata, e não tentar preencher o tempo falando sem parar.
+- **Writing inclui uma tarefa 100% gramatical** ([[Build a Sentence::Monte uma frase]]), além do e-mail e da discussão acadêmica, somando 12 itens ao todo.
 
-A conclusão estratégica é direta: **o TOEFL pune começos fracos com mais severidade e recompensa consistência item a item mais do que resistência de maratona.** A sequência de 4 simulados existe pra treinar exatamente isso.
+Em resumo, o exame exige atenção máxima logo na largada e premia a **regularidade** questão a questão muito mais do que a resistência de maratona. É exatamente esse ritmo que vamos construir juntos nos 4 simulados.
 
-### A Sequência em 4 Etapas
+### A sequência em 4 etapas
 
-| Simulado | Nome | Foco Principal | Condição de Tempo | Momento Ideal |
+| Simulado | Nome | Foco principal | Condição de tempo | Momento ideal |
 |---|---|---|---|---|
-| **1** | Diagnóstico | Estimar o nível de partida com 10 questões de base (gramática, vocabulário, conectivos, ordem das palavras, registro e compreensão), antes de qualquer preparação | Sem cronômetro | Semana 1 (Módulo 0, Parte 1: já realizado) |
+| **1** | Diagnóstico | Estimar o nível de partida com 10 questões de base (gramática, vocabulário, conectivos, ordem das palavras, registro e compreensão), antes de qualquer preparação | Sem cronômetro | Semana 1 (Módulo 0, Parte 1, já realizado) |
 | **2** | Intermediário | Fixar a estrutura e a mecânica de cada tipo de item novo, com liberdade de consulta | Sem cronômetro | Após Módulos 1–5 |
-| **3** | Avançado | Reproduzir a dinâmica real do exame adaptativo: tempo estrito, router ativo, pressão contínua | **Cronômetro obrigatório** | Após Módulo 6 |
-| **4** | Final (Exam Day) | Simulação idêntica ao teste real da ETS: as 4 seções na sequência oficial, zero consultas | **Cronômetro + condições reais** | 7–10 dias antes da prova |
+| **3** | Avançado | Reproduzir a dinâmica real do exame adaptativo, com tempo controlado, router ativo e ritmo contínuo | **Cronômetro ligado** | Após Módulo 6 |
+| **4** | Final ([[Exam Day::dia da prova]]) | Simulação idêntica ao teste real da ETS, com as 4 seções na sequência oficial e zero consultas | **Cronômetro e condições reais** | 7–10 dias antes da prova |
 
-> 📌 **Nota sobre o Simulado 1:** o Simulado 1 é o Teste de Nivelamento Express, a Parte 1 do Módulo 0. Ele não dá nota por seção. São 10 questões de base (gramática, vocabulário, conectivos, ordem das palavras, registro e compreensão) que estimam um nível geral de partida, em CEFR e em banda de 1 a 6, e indicam o cronograma. Antes do Simulado 2, retome as áreas em que você errou no diagnóstico: elas mostram onde vale repetir mais exercícios.
+> **Resumo:** O Simulado 1 é o Teste de Nivelamento Express (Parte 1 do Módulo 0). Ele não dá nota por seção. São 10 questões de base (gramática, vocabulário, conectivos, ordem das palavras, registro e compreensão) que estimam seu nível geral de partida, em [[CEFR::Quadro Europeu Comum de Referência]] e em banda de 1 a 6, e indicam o seu cronograma.
 
-### Pré-requisitos de Cada Simulado
+Antes de avançar para o **Simulado 2**, retome os pontos em que você teve mais dificuldade no diagnóstico. Eles mostram exatamente onde vale repetir mais exercícios para ganhar segurança.
 
-Não adianta rodar um simulado antes de ter estudado o que ele mede. A regra é esta:
+### Pré-requisitos de cada simulado
+
+Fazer um simulado antes de estudar o que ele cobra só gera frustração desnecessária. Por isso, siga esta **ordem de preparo** para que cada etapa cumpra o seu papel:
 
 | Simulado | Pré-requisito mínimo | Por quê |
 |---|---|---|
-| **2: Intermediário** | Módulos 1, 2, 3, 4 lidos + Módulo 5 lido uma vez | Você precisa conhecer a mecânica de cada tipo de item e ter os frameworks de Speaking/Writing em mãos para consultar |
-| **3: Avançado** | Módulo 6 estudado + **todos os drills dos Módulos 1–4 feitos ao menos uma vez** + Protocolo de Erros do Simulado 2 executado | O Simulado 3 é sem consulta; se os drills não foram feitos, o simulado vira diagnóstico, não treino de pressão |
-| **4: Final** | Simulado 3 analisado + 3 áreas de gap identificadas e revisadas + Módulo 8 lido | O Simulado 4 valida prontidão; só faz sentido depois que os gaps do S3 foram atacados |
+| **2: Intermediário** | Módulos 1, 2, 3 e 4 lidos + Módulo 5 lido uma vez | Você precisa conhecer a mecânica de cada tipo de item e ter as estruturas de Speaking e Writing em mãos para consultar |
+| **3: Avançado** | Módulo 6 estudado + todos os exercícios dos Módulos 1–4 feitos ao menos uma vez + Passo a passo de análise de erros do Simulado 2 concluído | O Simulado 3 é feito sem consulta; se os exercícios de base ainda não foram praticados, ele vira apenas diagnóstico em vez de treino de ritmo |
+| **4: Final** | Simulado 3 analisado + 3 áreas prioritárias identificadas e revisadas + Módulo 8 lido | O Simulado 4 confirma a sua prontidão para o dia da prova, e só rende de verdade depois que você ajustou as lacunas do Simulado 3 |
 
 ### Simulados oficiais gratuitos da ETS
 
-A ETS publica quatro testes práticos gratuitos em PDF, já no formato de 2026, com gabarito de Reading, Listening e Build a Sentence. São a amostra mais fiel que existe da prova e valem como simulados extras:
+A ETS publica quatro testes práticos gratuitos em PDF, já no formato de 2026, com gabarito de Reading, Listening e Build a Sentence. Eles são a **amostra mais fiel** que existe da prova e funcionam muito bem como simulados extras:
 
 | Teste | Onde baixar |
 |---|---|
@@ -57,19 +59,21 @@ A ETS publica quatro testes práticos gratuitos em PDF, já no formato de 2026, 
 | Teacher Resources, Practice Test 1 | [ets.org, Teacher Resources 1](https://www.ets.org/content/dam/ets-org/pdfs/toefl/toefl-ibt-teachers-resources-practice-test-1.pdf) |
 | Teacher Resources, Practice Test 2 | [ets.org, Teacher Resources 2](https://www.ets.org/content/dam/ets-org/pdfs/toefl/toefl-ibt-teachers-resources-practice-test-2.pdf) |
 
-**Como usar:**
+Veja como aproveitar melhor esses **testes oficiais**:
 
-- **Quando:** guarde-os para depois do Simulado 2. Um bom encaixe é um teste oficial antes do Simulado 3 e outro entre o 3 e o 4. Não gaste os quatro no começo.
-- **Listening e Speaking vêm transcritos, sem áudio.** Não leia as falas: peça para alguém ler em voz alta ou cole o trecho num leitor de voz (texto para fala), e só olhe as alternativas depois de ouvir.
-- **Não há rubrica nem resposta-modelo** para o e-mail, a discussão e a entrevista. Avalie-se com as rubricas da Parte 7 deste módulo.
-- **O teste em papel não é adaptativo.** Cada seção traz dois módulos fixos; na prova o segundo depende do seu desempenho no primeiro.
-- **Triagem:** passe os erros pelo protocolo da Parte 6, como em qualquer simulado.
+- **Quando:** guarde esses PDFs para depois do Simulado 2. Um ótimo encaixe é fazer um teste oficial antes do Simulado 3 e outro entre o 3 e o 4, evitando gastar os quatro logo no começo.
+- **Listening e Speaking vêm transcritos, sem áudio:** não leia as falas na folha. Peça para alguém ler em voz alta ou cole o trecho em um leitor de voz (texto para fala), e só olhe as alternativas depois de ouvir.
+- **Não há rubrica nem resposta-modelo** para o e-mail, a discussão e a entrevista. Você pode se avaliar usando os critérios da Parte 7 deste módulo.
+- **O teste em PDF não é adaptativo:** cada seção traz dois módulos fixos, enquanto na prova real o segundo módulo depende do seu desempenho no primeiro.
+- **Triagem:** passe os seus erros pelo passo a passo da Parte 6, exatamente como faria em qualquer simulado.
 
-O planejador de estudos de 8 semanas que a ETS também oferece de graça ainda descreve o formato antigo da prova. Não use.
+O **planejador de estudos** de 8 semanas que a ETS oferece gratuitamente ainda descreve o formato antigo da prova, por isso recomendamos deixá-lo de lado para não confundir a sua preparação.
 
-### Conversão Banda CEFR ↔ Score Legado 0–120
+### Conversão entre banda CEFR e score legado 0–120
 
-O formato 2026 reporta **bandas CEFR de 1 a 6** (com meios pontos). Durante o período de transição (até ~2028) a ETS também fornece um score comparável na escala antiga de 0–120. A tabela abaixo segue a **concordância publicada pela ETS** (a mesma do Módulo 0, Parte 2.3), agrupada por nível. Cada faixa junta a banda cheia e a meia banda seguinte: banda 4 e 4,5 são B2, por exemplo.
+O formato 2026 reporta **bandas CEFR de 1 a 6** (com meios pontos). Durante o período de transição (até cerca de 2028), a ETS também informa uma nota comparável na escala antiga de 0 a 120.
+
+A tabela abaixo segue a **concordância oficial** publicada pela ETS (a mesma do Módulo 0, Parte 2.3), agrupada por nível. Cada faixa reúne a banda cheia e a meia banda seguinte, então as bandas 4 e 4,5 correspondem ao nível B2, por exemplo.
 
 | Banda CEFR | Nível | Faixa 0–120 (total) | Leitura em uma frase |
 |---|---|---|---|
@@ -80,11 +84,11 @@ O formato 2026 reporta **bandas CEFR de 1 a 6** (com meios pontos). Durante o pe
 | **2 e 2,5** | A2 | 24–43 | Básico; frases curtas, apoio contextual necessário |
 | **1 e 1,5** | A1 | 0–23 | Iniciante; elementos isolados |
 
-> A maioria das universidades que pedem TOEFL mira algo entre 80 e 100 na escala antiga, o que hoje cai entre a **banda 4 e a banda 5**. Programas de pós competitivos costumam pedir 100 ou mais, que é **banda 5**. Confirme a exigência da sua instituição na escala que **ela** usa e defina sua meta de banda a partir disso.
+> **Dica:** A maioria das universidades que pedem o TOEFL mira entre 80 e 100 na escala antiga (hoje entre as bandas 4 e 5), enquanto programas de pós-graduação mais concorridos costumam pedir 100 ou mais (banda 5). Confirme a exigência da sua instituição na escala que ela adota e defina a sua meta de banda a partir disso.
 
-### Como Funciona a Arquitetura de Roteamento
+### Como funciona a arquitetura de roteamento
 
-Reading e Listening não seguem uma prova única e fixa: eles têm uma **arquitetura de roteamento**:
+Reading e Listening não seguem uma prova única e fixa, pois funcionam com uma **arquitetura de roteamento** em dois estágios:
 
 ```
 READING                                  LISTENING
@@ -105,81 +109,85 @@ READING                                  LISTENING
 └─────────────────┘      └──────────────┘ └──────────────────┘    └──────────────┘
 ```
 
-**Implicação prática e não negociável:** trate cada item do módulo router como se já valesse a nota final, porque, de forma indireta, ele vale. Um candidato que "aquece" nos primeiros itens do router e erra por desatenção pode ser roteado para o módulo inferior e perder acesso às bandas mais altas (5–6) mesmo tendo capacidade para elas. A Parte 2 formaliza essa regra no protocolo de execução.
+**O que isso muda na prática:** trate cada questão do módulo router como se já valesse a nota final, porque indiretamente ela vale. Se você começar os primeiros itens distraído, achando que são apenas um aquecimento, pode ser direcionado para o módulo inferior e ficar sem acesso às bandas mais altas (5–6), mesmo tendo capacidade para alcançá-las. A Parte 2 organiza o passo a passo para você entrar focado desde o início.
 
 ---
 
-## PARTE 2: PROTOCOLO UNIVERSAL DE EXECUÇÃO (Formato 2026)
+## Parte 2: Passo a passo universal de realização (formato 2026)
 
-### As 8 Regras que se Aplicam a Todos os Simulados
+### As 8 regras que valem para todos os simulados
 
 | # | Regra | Por que importa no formato 2026 |
 |---|---|---|
-| **1** | Realize cada simulado em sessão única e ininterrupta | O teste real dura ~1h23–1h29min sem nenhuma pausa programada entre as seções: fragmentar o treino elimina o efeito de foco sustentado que você está calibrando |
-| **2** | Trate cada item do **módulo router** (Reading e Listening) com o mesmo cuidado que um item de alto peso | O router decide sua rota de dificuldade: um erro por pressa no início pode rebaixar o teto de banda disponível no restante da seção |
-| **3** | Use papel para anotações de Listening e Speaking (não digite no computador) | Simula o material físico do centro de testes |
-| **4** | No Simulado 2: consulte os frameworks de Speaking (Módulo 3) e os templates de Writing (Módulo 4) abertamente | A fixação de estrutura é o objetivo: não há mérito em travar sem referência nesta fase |
-| **5** | No Simulado 3 e 4: nenhuma consulta a qualquer material | A pressão real (e o comportamento do router sob pressão) só aparece sem rede de segurança |
-| **6** | Grave TODAS as respostas de Speaking (app de gravação no celular) | Speaking agora é 100% corrigido por IA (SpeechRater) com foco em fidelidade e elaboração: sem gravação, sua autoavaliação é sistematicamente otimista |
-| **7** | Preencha o Protocolo de Análise de Erros (Parte 6) imediatamente após | Análise fria e imediata é mais precisa do que retrospectiva de dois dias depois |
-| **8** | Registre o score estimado (banda CEFR **e** score legado 0–120) no Dashboard (Parte 8) | A curva de evolução entre simulados é o dado mais importante do sistema, e as duas escalas contam histórias complementares até 2028 |
+| **1** | Realize cada simulado em sessão única e sem interrupções | O teste real dura de ~1h23 a 1h29min sem pausa programada entre as seções, então dividir o treino corta o exercício de foco contínuo que você está calibrando |
+| **2** | Trate cada item do módulo [[router::bloco inicial de nivelamento]] (Reading e Listening) com o mesmo cuidado de uma questão decisiva | O bloco inicial define a sua rota de dificuldade, e um erro por pressa na largada pode limitar o teto de banda disponível no restante da seção |
+| **3** | Use papel para as anotações de Listening e Speaking (não digite no computador) | Isso reproduz a experiência real de anotação manual do dia da prova |
+| **4** | No Simulado 2, consulte as estruturas de Speaking (Módulo 3) e os modelos de Writing (Módulo 4) abertamente | Como o objetivo desta etapa é fixar o formato das respostas, consultar o material ajuda a consolidar o modelo certo sem travar |
+| **5** | Nos Simulados 3 e 4, não consulte nenhum material de apoio | O treino de ritmo real e a tomada de decisão no router só funcionam quando você responde sem rede de segurança |
+| **6** | Grave todas as respostas de Speaking (no gravador da plataforma ou no celular) | O Speaking é 100% corrigido por IA ([[SpeechRater::sistema de avaliação automática de fala da ETS]]) com foco em fidelidade e clareza; sem ouvir a gravação, a autoavaliação costuma ficar otimista demais |
+| **7** | Preencha o Passo a passo de análise de erros (Parte 6) logo após terminar | Revisar enquanto o raciocínio ainda está fresco mostra a origem do deslize com muito mais precisão do que deixar para dois dias depois |
+| **8** | Registre a nota estimada (banda [[CEFR::Quadro Europeu Comum de Referência]] e score legado 0–120) no Painel de progresso (Parte 8) | A curva de evolução entre os simulados é o seu melhor termômetro, e acompanhar as duas escalas dá clareza total até 2028 |
 
-### Timing por Seção: Referência para os Simulados 3 e 4
+### Tempo por seção: referência para os Simulados 3 e 4
 
-| Seção | Duração alvo | Estrutura interna | O que cronometrar |
+| Seção | Duração-alvo | Estrutura interna | O que cronometrar |
 |---|---|---|---|
-| **Reading** | 27–30 min | ~9 min router + ~18–21 min módulo inferior/superior | Tempo total da seção: o sistema já controla o tempo por item |
-| **Listening** | ~25–29 min | ~18 min router + 7 min módulo inferior OU 11 min módulo superior | Tempo total; módulos de áudio não pausam |
-| **Writing** | ~23 min | 10 itens Build a Sentence + 1 Write an Email + 1 Write for an Academic Discussion | Tempo total da seção |
-| **Speaking** | ~8 min | 7 itens Listen and Repeat + 4 itens Take an Interview | Tempo de resposta por item: cada item tem janela fixa |
+| **Reading** | 27–30 min | ~9 min no router + ~18–21 min no módulo inferior ou superior | Tempo total da seção, pois o próprio sistema controla o relógio geral |
+| **Listening** | ~25–29 min | ~18 min no router + 7 min no módulo inferior ou 11 min no módulo superior | Tempo total, lembrando que os blocos de áudio não pausam |
+| **Writing** | ~23 min | 10 itens de [[Build a Sentence::Monte uma frase]] + 1 [[Write an Email::Escreva um e-mail]] + 1 [[Write for an Academic Discussion::Escreva para uma discussão acadêmica]] | Tempo total da seção |
+| **Speaking** | ~8 min | 7 itens de [[Listen and Repeat::Ouça e repita]] + 4 itens de [[Take an Interview::Faça uma entrevista]] | Tempo de resposta por item, já que cada questão tem janela fixa |
 
-**Regra de ouro:** os itens são curtos, numerosos e sequenciais, e não há tempo de sobra para revisar tudo no final. Treine para decidir rápido e seguir em frente. Revisão extensa de itens já respondidos não é o uso mais eficiente dos minutos que você tem.
+**Regra de ouro:** como os itens são curtos, numerosos e vêm em sequência rápida, não sobra tempo para revisar tudo no final. Treine para decidir com segurança e seguir em frente, porque voltar para rever várias questões já respondidas consome minutos importantes das próximas telas.
 
-### Como Tratar o Router na Prática (Reading e Listening)
+### Como lidar com o router na prática (Reading e Listening)
 
-1. **Não acelere demais nos primeiros itens** achando que "são de aquecimento": eles não são triviais, e definem sua rota.
-2. **Não trave em um único item difícil do router**: se não souber, aplique o processo de eliminação (Módulo 1/2) e siga. Um item perdido no router pesa menos do que vários itens perdidos por atraso em cascata.
-3. **Mantenha o mesmo padrão de atenção do início ao fim**: o router acontece logo no começo da seção, então não vale a pena reservar energia para o final.
+1. **Não acelere demais nos primeiros itens** achando que são apenas de aquecimento, porque eles já contam para definir a sua rota.
+2. **Não trave em uma única questão difícil do router:** se tiver dúvida, aplique o processo de eliminação (Módulos 1 e 2) e siga adiante, pois perder um item isolado pesa bem menos do que atrasar vários em sequência.
+3. **Mantenha o mesmo nível de atenção do início ao fim:** como o router vem logo na abertura da seção, você precisa entrar ligado desde a primeira tela, sem guardar energia para depois.
 
-### Ambiente de Simulado (Simulados 3 e 4: obrigatório)
+### Ambiente de prova para os Simulados 3 e 4
 
-- Local silencioso, sem interrupções
-- Timer visível (relógio ou cronômetro, não o celular)
-- Fones de ouvido para o áudio do Listening (se a sua prova for a Home Edition, treine com o alto-falante do computador: lá o fone é proibido)
-- Água disponível: nenhum outro alimento ou bebida
-- Folhas de papel em branco para anotações (folha separada por seção). Na Home Edition papel solto não entra: treine com quadro branco pequeno ou com uma folha dentro de um plástico transparente e marcador apagável
-- Nenhuma consulta a notas, módulos ou qualquer outro material
-- Sem pausa entre as seções: a prova oficial não tem intervalo programado
+Para que os Simulados 3 e 4 preparem você para a sensação real do exame, monte o seu **ambiente de treino** com estes cuidados:
 
-### A Semana Entre Simulados: Template de 5 Passos
+- Escolha um local silencioso e avise quem mora com você para evitar interrupções.
+- Deixe um cronômetro visível no computador ou em um relógio de mesa, mantendo o celular longe.
+- Use fones de ouvido no Listening; se a sua prova for a [[Home Edition::versão da prova feita em casa]], treine com o alto-falante do computador, porque lá o uso de fone é proibido.
+- Deixe apenas água por perto, sem outros alimentos ou bebidas na mesa.
+- Separe folhas de papel em branco para anotações (uma por seção). Se for fazer a Home Edition, papel solto não é permitido, então treine com um quadro branco pequeno ou uma folha dentro de plástico transparente com caneta apagável.
+- Guarde apostilas, cadernos e abas de consulta antes de dar a largada.
+- Faça as quatro seções em sequência direta, já que a prova oficial não tem intervalo programado.
 
-Um simulado só rende se a semana seguinte for de reparo direcionado. Não faça outro simulado até completar este ciclo.
+### A semana entre simulados: roteiro de 5 passos
 
-| Dia | Atividade | Saída concreta |
+Um simulado só traz evolução real quando a semana seguinte é dedicada a ajustar o que apareceu. Por isso, complete sempre este **ciclo de 5 passos** antes de partir para o próximo simulado:
+
+| Dia | Atividade | Resultado concreto |
 |---|---|---|
-| **D+1** | Análise a frio: preencha o Protocolo de Erros (Parte 6) inteiro. Ouça todas as gravações de Speaking. | Lista de códigos de erro com frequência |
-| **D+2** | Agrupe os erros por **módulo de reparo**. Identifique os 3 códigos mais frequentes. | 3 prioridades com módulo + parte/seção exatos |
-| **D+3 a D+5** | Reparo dirigido: refaça **só** os drills dos módulos ligados aos 3 códigos. Nada de conteúdo novo. | Drills refeitos, com a segunda taxa de acerto anotada |
-| **D+6** | Mini-simulado do tipo de item que mais falhou (2–3 blocos, cronometrado). | Confirmação de que o reparo pegou |
-| **D+7** | Descanso ou revisão leve (flashcards do M6, releitura do M5). | Mente fresca para o próximo simulado |
+| **D+1** | Análise com calma: preencha o Passo a passo de análise de erros (Parte 6) completo e ouça todas as gravações de Speaking. | Lista de códigos de erro com a frequência de cada um |
+| **D+2** | Agrupe os erros por módulo de revisão e identifique os 3 códigos mais frequentes. | 3 prioridades com módulo e parte exatos |
+| **D+3 a D+5** | Ajuste direcionado: refaça apenas os exercícios dos módulos ligados aos 3 códigos, sem abrir matéria nova. | Exercícios refeitos, com a nova taxa de acerto anotada |
+| **D+6** | Mini-simulado do formato de questão que mais oscilou (2–3 blocos, com cronômetro). | Confirmação de que o ajuste funcionou na prática |
+| **D+7** | Descanso ou revisão leve (cartões de vocabulário do M6 e releitura rápida do M5). | Mente descansada para o próximo passo |
 
-> ⚠️ Se o mesmo código de erro sobrevive a **dois** ciclos de reparo, o problema é uma lacuna estrutural, não falta de prática. Volte ao texto do módulo correspondente, não aos drills.
-
----
-
-## PARTE 3: SIMULADO 2 · INTERMEDIÁRIO (Sem Cronômetro, Fixação de Estrutura)
-
-> **Objetivo:** Fixar a mecânica de cada tipo de item novo do formato 2026 sem a pressão do cronômetro. Consulte os frameworks de Speaking (Módulo 3) e de Writing (Módulo 4) abertamente durante essas seções. Para Reading e Listening, não consulte materiais, mas releia o gabarito imediatamente após cada seção. Este é um conjunto **abreviado** (amostra representativa de cada tipo de item, não a seção completa).
+> **Atenção:** Se o mesmo código de erro continuar aparecendo depois de dois ciclos de revisão, isso indica uma lacuna na base teórica, e não falta de treino. Nesse caso, volte à explicação do módulo correspondente antes de refazer os exercícios.
 
 ---
 
-### READING: SIMULADO 2
+## Parte 3: Simulado 2, intermediário (sem cronômetro, fixação de estrutura)
+
+> **Resumo:** O objetivo deste simulado é fixar a mecânica de cada formato de questão de 2026 sem a pressão do relógio. Nas seções de Speaking e Writing, consulte à vontade as estruturas do Módulo 3 e do Módulo 4. No Reading e no Listening, não consulte nada, mas releia o gabarito logo depois de cada seção. Este é um conjunto abreviado, com uma amostra representativa de cada tarefa em vez da seção inteira.
+
+Durante as seções de Speaking e Writing, consulte à vontade as estruturas do **Módulo 3** e os modelos do Módulo 4. Já em Reading e Listening, responda sem consultar o material e confira o gabarito comentado logo após concluir cada seção para entender cada acerto ou deslize.
+
+---
+
+### Reading: Simulado 2
 
 #### Bloco A: Complete the Words
 
-**Instrução:** Cada frase abaixo contém palavras parcialmente apagadas. Use lógica gramatical, contexto semântico e conhecimento lexical para completar a palavra com a alternativa correta.
+**Instrução:** Cada frase abaixo contém palavras parcialmente apagadas. Use a estrutura gramatical, o sentido da frase e o seu vocabulário para completar a palavra com a alternativa correta.
 
-**Parte 1: múltipla escolha (reconhecimento de padrão):**
+**Parte 1, múltipla escolha (reconhecimento de padrão):**
 
 1. Despite the company's initial success, its market share began to **dec_____** steadily after the arrival of two aggressive competitors.
 (A) decorate  (B) decline  (C) declare  (D) deceive
@@ -211,7 +219,7 @@ Um simulado só rende se a semana seguinte for de reparo direcionado. Não faça
 10. The study's conclusions remain **ten_____**: the sample was small and has not yet been replicated.
 (A) tender  (B) tenant  (C) tentative  (D) tenacious
 
-**Parte 2: digitação livre (formato C-test real): complete apenas as letras que faltam.**
+**Parte 2, digitação livre (formato C-test real, completando apenas as letras que faltam):**
 
 11. The results were surprising, but they were later **conf\_\_\_\_\_** by two independent laboratories. → *(verbo no particípio)*
 12. A well-organized argument moves **log\_\_\_\_\_\_** from evidence to conclusion. → *(advérbio)*
@@ -220,7 +228,7 @@ Um simulado só rende se a semana seguinte for de reparo direcionado. Não faça
 
 **Gabarito:** 1-B ("market share" que cai depois de "initial success"; *decorate*, *declare* e *deceive* não cabem) · 2-B ("touch and manipulate" = interativo) · 3-B (descoberta inesperada) · 4-A (depois de "was" vem adjetivo: *unanimous*; "every member voted in favor") · 5-C ("interpreted differently" = ambíguo) · 6-B ("not to generalize... to the whole population") · 7-A (advérbio; "one department at a time") · 8-B (advérbio modificando "higher") · 9-A ("structurally unsafe") · 10-C ("small sample, not replicated" = provisório) · 11 **confirmed** · 12 **logically**
 
-> 💡 No teste real, **todos** os 30 itens de *Complete the Words* são digitação livre (formato C-test) dentro de um texto corrido: nunca múltipla escolha. As Partes 1 e 2 acima treinam as duas habilidades: reconhecer o padrão (MC) e produzir a forma exata (digitação). O drill completo de digitação está no Módulo 1 (Reading), Parte 5.
+> **Regra da ETS:** No exame oficial, todos os 30 itens de [[Complete the Words::Complete as palavras]] são de digitação livre (formato [[C-test::teste de completar letras faltantes]]) dentro de um parágrafo corrido, nunca de múltipla escolha. As duas partes acima separam o reconhecimento do padrão e a escrita exata da palavra, e você encontra o treino completo de digitação no Módulo 1 (Reading), Parte 5.
 
 #### Bloco B: Read in Daily Life
 
@@ -334,7 +342,7 @@ This standardizing effect was not entirely welcome. Writers who spoke regional v
 
 ---
 
-### LISTENING: SIMULADO 2 (com transcrições)
+### Listening: Simulado 2 (com transcrições)
 
 #### Listen and Choose a Response
 
@@ -362,7 +370,7 @@ This standardizing effect was not entirely welcome. Writers who spoke regional v
 - (C) "I think the email server was down on Monday, so try again."
 - (D) "You should present first."
 
-*(nota: (C) dá uma causa provável e uma ação. (A) e (B) reaproveitam o assunto "professor/e-mail" sem responder à queixa.)*
+*(nota: a opção (C) aponta uma causa provável e sugere uma ação prática, enquanto (A) e (B) apenas repetem o assunto de professor ou e-mail sem responder à queixa.)*
 
 **ÁUDIO 4:** **Woman:** "This reading is forty pages — there's no way I'll finish it before class."
 
@@ -406,7 +414,7 @@ This standardizing effect was not entirely welcome. Writers who spoke regional v
 
 #### Listen to an Academic Talk
 
-**TRANSCRIÇÃO (trecho de palestra · Introdução à Sociologia):** "Today we're discussing the concept of social capital — the networks of relationships and mutual trust that allow individuals and communities to function effectively. Unlike financial capital, social capital isn't stored in a bank account; it exists in the quality and density of a person's relationships. Researchers distinguish between two types: bonding social capital, which strengthens ties within a tightly knit group (like an extended family or a close circle of friends), and bridging social capital, which connects individuals across different groups, such as different professions or social classes. Communities strong in bonding capital but weak in bridging capital often show high internal solidarity but limited access to outside resources and opportunities."
+**TRANSCRIÇÃO (trecho de palestra, Introdução à Sociologia):** "Today we're discussing the concept of social capital — the networks of relationships and mutual trust that allow individuals and communities to function effectively. Unlike financial capital, social capital isn't stored in a bank account; it exists in the quality and density of a person's relationships. Researchers distinguish between two types: bonding social capital, which strengthens ties within a tightly knit group (like an extended family or a close circle of friends), and bridging social capital, which connects individuals across different groups, such as different professions or social classes. Communities strong in bonding capital but weak in bridging capital often show high internal solidarity but limited access to outside resources and opportunities."
 
 **QUESTÃO 1:** According to the talk, what distinguishes bridging social capital from bonding social capital?
 - (A) Bridging capital exists only in professional settings
@@ -460,7 +468,7 @@ This standardizing effect was not entirely welcome. Writers who spoke regional v
 
 #### Listen to an Academic Talk (2)
 
-**TRANSCRIÇÃO (trecho · Introdução à Biologia):** "So far we've treated the cell membrane as a simple barrier, but that picture is misleading. The membrane is better thought of as a busy checkpoint. It's selectively permeable — some molecules, like oxygen and carbon dioxide, pass through freely; others, like glucose or charged ions, can only cross with help, through specific protein channels or pumps. And here's the key point for today: some of those pumps run *against* the concentration gradient. They move a substance from where it's scarce to where it's already abundant, which costs energy. This is called active transport, and it's how a nerve cell, for example, maintains the sharp difference in ion concentration across its membrane that makes a nerve impulse possible."
+**TRANSCRIÇÃO (trecho de aula, Introdução à Biologia):** "So far we've treated the cell membrane as a simple barrier, but that picture is misleading. The membrane is better thought of as a busy checkpoint. It's selectively permeable — some molecules, like oxygen and carbon dioxide, pass through freely; others, like glucose or charged ions, can only cross with help, through specific protein channels or pumps. And here's the key point for today: some of those pumps run *against* the concentration gradient. They move a substance from where it's scarce to where it's already abundant, which costs energy. This is called active transport, and it's how a nerve cell, for example, maintains the sharp difference in ion concentration across its membrane that makes a nerve impulse possible."
 
 **QUESTÃO 1:** According to the professor, why is calling the membrane a "simple barrier" misleading?
 - (A) The membrane has no effect on what enters the cell
@@ -484,13 +492,13 @@ This standardizing effect was not entirely welcome. Writers who spoke regional v
 
 ---
 
-### ✍️ WRITING: SIMULADO 2
+### ✍️ Writing: Simulado 2
 
-**Condição:** Consulte os templates e frameworks do Módulo 4 (Writing) abertamente. Sem cronômetro nesta fase, mas anote o tempo gasto.
+**Condição:** Consulte os modelos e estruturas do Módulo 4 (Writing) sempre que precisar. Faça sem cronômetro nesta fase, mas anote o tempo gasto para ter uma referência.
 
 #### Build a Sentence (exemplos)
 
-Reordene os fragmentos para formar uma frase gramaticalmente correta e natural. Na prova, cada item é a resposta a uma fala: quando houver *Context*, monte a resposta a ele. Nos itens 3 e 4 sobra um bloco que não entra na frase, como às vezes acontece na prova.
+Reordene os fragmentos para formar uma **frase correta** e natural. Na prova, cada item funciona como resposta a uma fala inicial: quando houver *Context*, monte a frase que responde a ele. Nos itens 3 e 4 sobra um bloco que não entra na frase, como às vezes acontece no exame.
 
 1. `has become / over the past decade. / Renewable energy / significantly more affordable`
 **Resposta modelo:** *Renewable energy has become significantly more affordable over the past decade.*
@@ -521,7 +529,7 @@ Reordene os fragmentos para formar uma frase gramaticalmente correta e natural. 
 8. `Having read / the instructions / she / carefully, / began the experiment.`
 **Resposta modelo:** *Having read the instructions carefully, she began the experiment.*
 
-> **Como se autoavaliar:** compare cada frase com a modelo usando a rubrica de *Build a Sentence* da Parte 7. Erro de ordem, concordância, fragmento faltando ou bloco extra usado = item errado, mesmo que o sentido "dê para entender".
+> **Dica:** Para se autoavaliar, compare cada frase que você montou com a resposta-modelo usando os critérios de [[Build a Sentence::Monte uma frase]] da Parte 7. Qualquer deslize na ordem, na concordância, na falta de um trecho ou no uso de um bloco extra zera o item na prova, mesmo que o sentido geral pareça compreensível.
 
 #### Write an Email (situação prática da vida universitária)
 
@@ -532,7 +540,7 @@ Reordene os fragmentos para formar uma frase gramaticalmente correta e natural. 
 > - ask whether another session time is available
 > - ask whether the presentation materials can be shared
 
-**Resposta modelo (esqueleto orientador: desenvolva com o template do Módulo 4):**
+**Resposta modelo (esqueleto orientador para desenvolver com o modelo do Módulo 4):**
 > Subject: Scheduling Conflict with Study Abroad Info Session
 >
 > Dear Study Abroad Office,
@@ -549,29 +557,29 @@ Reordene os fragmentos para formar uma frase gramaticalmente correta e natural. 
 **PROFESSOR'S PROMPT:**
 > "This week we've discussed how organizations balance short-term efficiency with long-term innovation. In your view, should companies prioritize immediate productivity gains or long-term investment in innovation, even when it temporarily reduces efficiency? Explain your reasoning."
 
-**Classmate posts (para você responder/engajar):**
+**Classmate posts (para você responder e dialogar):**
 - **Jordan:** "I think efficiency should come first — a company that isn't profitable today won't survive long enough to innovate tomorrow."
 - **Priya:** "I'd disagree. Companies that only chase short-term efficiency often get disrupted by competitors willing to take innovation risks."
 
 **Resposta-modelo, banda 5 (C1):**
 > "Jordan's point about survival is fair, but I think it frames the choice too starkly. What makes long-term innovation worth protecting is that the cost of falling behind is rarely visible until it is too late to recover: by the time a disruptive competitor appears, the efficient-but-stagnant firm has no capacity left to respond. That said, Priya's position also needs a limit: innovation spending that ignores the balance sheet entirely is how promising companies run out of runway. The workable answer is a protected minimum — a fixed share of budget and attention reserved for longer-horizon work — while the rest of the organization optimizes for the present. That way efficiency funds the company today without being allowed to consume its future."
 
-**Resposta-modelo: banda 3 (B1), para comparação:**
+**Resposta-modelo, banda 3 (B1), para comparação:**
 > "I agree more with Priya. Companies need new ideas or other companies will pass them. Efficiency is good but it is not enough. For example, some big companies did not change and then they lost customers. So I think companies should invest in innovation even if it costs money now. But they should also not spend too much."
 
-*Diferença: a versão banda 5 abre com concessão, dá um mecanismo específico ("the cost of falling behind is rarely visible"), aponta o limite da posição de cada colega e propõe uma síntese. A versão B1 está correta e clara, mas cada frase carrega uma ideia só e o exemplo é genérico. Ver Módulo 5, Parte 6.*
+*Diferença entre as duas respostas: a versão de banda 5 abre com uma concessão, apresenta um mecanismo específico ("[[the cost of falling behind is rarely visible::o custo de ficar para trás raramente é visível]]"), aponta o limite do argumento de cada colega e propõe uma síntese. Já a versão B1 está correta e clara, mas cada frase carrega uma única ideia isolada e o exemplo é genérico. Veja o Módulo 5, Parte 6.*
 
 ---
 
-### 🎤 SPEAKING: SIMULADO 2
+### 🎤 Speaking: Simulado 2
 
-**Condição:** Grave todas as respostas. Consulte os frameworks do Módulo 3 (Speaking: esqueletos de resposta por função discursiva) antes de começar.
+**Condição:** Grave todas as respostas. Antes de começar, consulte as estruturas do Módulo 3 (Speaking), com os modelos de resposta por função discursiva.
 
 #### Listen and Repeat (progressão de complexidade)
 
-Repita cada frase com o máximo de fidelidade e naturalidade prosódica possível. Grave e avalie com a rubrica de fidelidade da Parte 7.
+Repita cada frase com a maior **fidelidade** e naturalidade de ritmo possíveis. Depois de gravar, avalie a sua fala com a tabela de critérios da Parte 7.
 
-Cenário: a visita guiada à biblioteca do campus. Como na prova, as frases são do mesmo cenário e crescem de tamanho (na prova são 7; aqui, 6).
+Cenário: uma visita guiada à **biblioteca** do campus. Assim como na prova, as frases pertencem ao mesmo contexto e crescem gradualmente de tamanho (no exame são 7; aqui treinamos com 6).
 
 1. *"Welcome to the main library."*
 2. *"Please keep your student ID with you."*
@@ -582,7 +590,7 @@ Cenário: a visita guiada à biblioteca do campus. Como na prova, as frases são
 
 #### Take an Interview (elicitação variada)
 
-Você tem 45 segundos para cada resposta, sem preparo, como na prova. Grave todas.
+Você tem **45 segundos** para cada resposta, sem tempo de preparação, exatamente como na prova. Grave todas as suas falas.
 
 1. **(Descrição)** "Describe a place in your city that you think visitors should see. What makes it special?"
 2. **(Opinião)** "Do you think it's better for students to study alone or in groups? Why?"
@@ -591,25 +599,25 @@ Você tem 45 segundos para cada resposta, sem preparo, como na prova. Grave toda
 5. **(Explicação)** "Why do you think some people find it hard to keep a regular study routine?"
 6. **(Narração)** "Tell me about a time you changed your mind about something important. What made you change it?"
 
-**Esqueleto de banda 4–5 (aplicável a qualquer função):** posição/resposta direta em 1 frase → razão específica (não genérica) → um exemplo ou detalhe concreto → fecho de uma linha. Ver Módulo 3, Parte 2.3, e Módulo 5, Parte 5.1.
+**Estrutura de banda 4–5 (aplicável a qualquer função):** comece com uma posição ou resposta direta em 1 frase, apresente uma razão específica (não genérica), traga um exemplo ou detalhe concreto e feche em uma linha. Veja o Módulo 3, Parte 2.3, e o Módulo 5, Parte 5.1.
 
 ---
 
-## PARTE 4: SIMULADO 3 · AVANÇADO (Timing Estrito, Formato Adaptativo Real)
+## Parte 4: Simulado 3, avançado (tempo controlado, formato adaptativo real)
 
-> **Objetivo:** Replicar a dinâmica adaptativa real do exame sob pressão de tempo genuína. Nenhuma consulta. Nenhuma pausa não oficial. O objetivo vai além de obter um bom score: é descobrir o que falha quando o router está ativo e o relógio corre de verdade.
+> **Resumo:** Neste simulado, vamos reproduzir a dinâmica adaptativa do exame com o relógio correndo, sem consulta e sem pausas extras. Mais do que buscar uma nota alta agora, o objetivo é descobrir quais pontos pedem ajuste quando o [[router::bloco inicial de nivelamento]] está valendo e o tempo aperta.
 
-**Condições obrigatórias:**
-- Timer visível para cada seção, seguindo os alvos da Parte 2
-- Speaking gravado sem pausas adicionais entre itens
-- Writing produzido em tempo cronometrado (~23 min total, sem extensão)
-- Nenhuma pausa entre as seções: a prova oficial não tem intervalo programado
+**Condições para este simulado:**
+- Cronômetro visível para cada seção, seguindo os tempos da Parte 2
+- Respostas de Speaking gravadas em sequência, sem pausas extras entre os itens
+- Textos de Writing produzidos dentro do tempo (~23 min no total, sem prorrogação)
+- Sessão contínua entre as seções, já que a prova oficial não tem intervalo programado
 
 ---
 
-### READING · SIMULADO 3 (Tempo máximo: 27 minutos)
+### Reading: Simulado 3 (tempo máximo de 27 minutos)
 
-#### Bloco A: Complete the Words (cronometrado, alvo: 3 min)
+#### Bloco A: Complete the Words (cronometrado, meta de 3 min)
 
 1. The negotiations reached a **dead_____** after both sides refused to modify their core demands.
 (A) deadline  (B) deadlock  (C) deadweight  (D) deadbeat
@@ -637,7 +645,7 @@ Você tem 45 segundos para cada resposta, sem preparo, como na prova. Grave toda
 
 **Gabarito:** 1-B · 2-C · 3-D ("no other company... had ever" = sem igual; nada no texto fala em risco, o que descarta *unsustainable*) · 4-B · 5-C ("not contradictory... different aspect" = complementares; cuidado: *complimentary* = elogioso/grátis) · 6-A (depois de "is" vem adjetivo; *skepticism* e *skeptic* são substantivos, *skeptically* é advérbio) · 7-B ("for three consecutive years" + tempo contínuo; *declared* e *declaring* não fazem sentido com "enrollment" como sujeito, e *declension* é substantivo) · 8-A (depois de "is" vem adjetivo; *mandate* é substantivo ou verbo, e *mandarin* não faz sentido)
 
-#### Bloco B · Read in Daily Life (alvo: 2 min)
+#### Bloco B: Read in Daily Life (meta de 2 min)
 
 > **Café Menu Insert:** Our oat milk is now available at no extra charge for all espresso drinks. Almond and soy milk remain available for a $0.75 upcharge. This change applies to in-store and mobile orders alike.
 
@@ -649,7 +657,7 @@ Você tem 45 segundos para cada resposta, sem preparo, como na prova. Grave toda
 
 **Gabarito:** B
 
-#### Bloco C: Read an Academic Passage (alvo: 6 min)
+#### Bloco C: Read an Academic Passage (meta de 6 min)
 
 **PASSAGE: The Economics of Network Effects**
 
@@ -690,9 +698,9 @@ Critics of this narrative, however, caution against treating network effects as 
 
 ---
 
-### LISTENING · SIMULADO 3 (Tempo total: ~25–29 min, com router)
+### Listening: Simulado 3 (tempo total de 25 a 29 min, com router)
 
-**Instrução:** Ouça (ou leia a transcrição uma única vez, sem pausar) e responda sem retroceder: o áudio real não permite replay.
+**Instrução:** Ouça o áudio (ou leia a transcrição uma única vez, sem pausar) e responda sem voltar atrás, porque no exame oficial a gravação toca apenas uma vez.
 
 #### Listen and Choose a Response
 
@@ -756,7 +764,7 @@ Critics of this narrative, however, caution against treating network effects as 
 
 ---
 
-### ✍️ WRITING · SIMULADO 3 (Tempo total: ~23 min, cronometrado)
+### ✍️ Writing: Simulado 3 (tempo total de 23 min, cronometrado)
 
 #### Build a Sentence
 
@@ -788,11 +796,11 @@ Critics of this narrative, however, caution against treating network effects as 
 
 ---
 
-### 🎤 SPEAKING · SIMULADO 3 (Tempo total: ~8 min, cronometrado, zero pausas extras)
+### 🎤 Speaking: Simulado 3 (tempo total de 8 min, cronometrado e sem pausas extras)
 
 #### Listen and Repeat
 
-Cenário: o primeiro dia de um novo assistente no laboratório de química. Conjunto abreviado (na prova são 7 frases), com o mesmo crescimento de tamanho.
+Cenário: o primeiro dia de um novo assistente no **laboratório de química**. Este é um conjunto abreviado (na prova são 7 frases), mantendo a mesma progressão gradual de tamanho.
 
 1. *"Welcome to the chemistry lab."*
 2. *"Safety goggles must be worn at all times."*
@@ -801,34 +809,34 @@ Cenário: o primeiro dia de um novo assistente no laboratório de química. Conj
 
 #### Take an Interview
 
-Cenário: uma pesquisa sobre transporte na sua cidade. As quatro perguntas sobem em escada, como na prova (Módulo 3, Parte 2.3).
+Cenário: uma pesquisa sobre **transporte** na sua cidade. As quatro perguntas aumentam gradualmente de complexidade, como acontece na prova (Módulo 3, Parte 2.3).
 
 1. **(Fato pessoal)** "How do you usually get around your city?"
 2. **(Reação)** "What do you like or dislike about getting around that way? Why?"
 3. **(Concordar ou discordar)** "Some people say cities should ban cars from downtown areas. Do you agree or disagree? Why?"
 4. **(Medida pública)** "Should the government make public transportation free for everyone? Why or why not?"
 
-> **Autoavaliação obrigatória (S3):** ao ouvir cada gravação, atribua um código de triagem (SS-phon / SS-stress / SS-rhythm / SS-flu / SS-gram / SS-struct) ao erro predominante e anote-o na planilha da Parte 6. Sob timing real, o erro que mais aparece raramente é o mesmo que aparecia sem cronômetro: normalmente **SS-flu** e **SS-gram** sobem.
+> **Dica:** Ao ouvir cada gravação do Simulado 3, escolha o código de triagem do deslize mais frequente (SS-phon, SS-stress, SS-rhythm, SS-flu, SS-gram ou SS-struct) e anote na planilha da Parte 6. Com o relógio correndo, o padrão costuma mudar em relação ao treino livre, e pontos de fluência (SS-flu) e gramática (SS-gram) aparecem mais.
 
 ---
 
-## PARTE 5: SIMULADO 4 · FINAL (THE EXAM DAY)
+## Parte 5: Simulado 4, final (dia da prova)
 
-> **Objetivo:** Simulação completa e idêntica ao exame real, na sequência oficial de 2026. Realizado 7–10 dias antes da prova, deve ser tratado com o mesmo rigor psicológico do exame real.
+> **Resumo:** Esta é a sua simulação completa e idêntica ao exame real, na sequência oficial de 2026. Faça este simulado de 7 a 10 dias antes da prova, tratando a sessão com o mesmo foco e cuidado que você terá no dia oficial.
 
-### Protocolo do Simulado 4
+### Passo a passo do Simulado 4
 
-**Para máxima validade diagnóstica, o Simulado 4 DEVE usar materiais oficiais sempre que possível:**
+Para que o resultado reflita com fidelidade o seu nível atual, procure usar **materiais oficiais** da ETS sempre que possível no Simulado 4:
 
 | Recurso | Acesso | O que usar |
 |---|---|---|
-| **Os 4 testes práticos gratuitos da ETS** | ets.org: gratuito, links na Parte 1 deste módulo | Prova completa no formato 2026, com gabarito |
-| **Simulados pagos da ETS** | ets.org/toefl, área de preparação: confira lá o nome e o preço atuais | O que a ETS estiver vendendo no formato 2026 na data da sua prova |
-| **Guias oficiais atualizados da ETS** | ETS | Priorize sempre o material mais recente publicado pela ETS |
+| **Os 4 testes práticos gratuitos da ETS** | Gratuito em ets.org, com links na Parte 1 deste módulo | Prova completa no formato 2026, com gabarito |
+| **Simulados pagos da ETS** | Área de preparação em ets.org/toefl (confira lá o nome e o preço atuais) | O material que a ETS estiver oferecendo no formato 2026 na época da sua prova |
+| **Guias oficiais atualizados da ETS** | Site da ETS | Priorize sempre o material mais recente publicado pela organizadora |
 
-**Se você já usou os quatro testes oficiais:** refaça o que você fez há mais tempo, com pelo menos três semanas de intervalo, em condições reais e na sequência oficial abaixo. Não use o Simulado 3 como Simulado 4: você já conhece as respostas.
+**Se você já usou os quatro testes oficiais:** refaça aquele que realizou há mais tempo, respeitando pelo menos três semanas de intervalo, em condições reais e na sequência oficial abaixo. Não repita o Simulado 3 como Simulado 4: você já conhece as respostas, e o resultado deixaria de mostrar seu nível real.
 
-### Sequência Oficial do Simulado 4 (2026)
+### Sequência oficial do Simulado 4 (2026)
 
 ```
 READING                  ~27–30 minutos  (router ~9min + módulo inferior/superior ~18–21min)
@@ -842,91 +850,91 @@ SPEAKING                  ~8 minutos     (7 Listen and Repeat + 4 Take an Interv
 DURAÇÃO TOTAL DA SESSÃO: ~1h23min a 1h29min
 ```
 
-A ordem é fixa: Reading, Listening, Writing e Speaking, nesta sequência (ETS, *Updated TOEFL iBT Test Overview*). E não há intervalo programado entre as seções (ETS, *TOEFL iBT Information Bulletin 2026-2027*).
+A **ordem** das seções é fixa: Reading, Listening, Writing e Speaking, sempre nesta sequência (ETS, *Updated TOEFL iBT Test Overview*). Além disso, não há intervalo programado entre as seções (ETS, *TOEFL iBT Information Bulletin 2026-2027*).
 
 ### Após o Simulado 4
 
-- Registre score (banda CEFR 1–6 e estimativa 0–120) no Dashboard (Parte 8)
-- Execute o Protocolo de Análise de Erros (Parte 6) completo
-- Identifique as 3 áreas de maior gap vs. sua meta de banda
-- Revise **apenas** essas 3 áreas nos dias finais, não tente revisar tudo
+- Registre a sua nota (banda [[CEFR::Quadro Europeu Comum de Referência]] de 1 a 6 e estimativa de 0 a 120) no Painel de progresso (Parte 8).
+- Faça o Passo a passo de análise de erros (Parte 6) completo para mapear onde houve deslize.
+- Identifique as 3 áreas com maior distância em relação à sua meta de banda.
+- Revise **apenas** essas 3 áreas nos dias finais, porque tentar rever tudo na véspera só gera cansaço desnecessário.
 
 ---
 
-## PARTE 6: O PROTOCOLO DE ANÁLISE DE ERROS PÓS-SIMULADO
+## Parte 6: Passo a passo de análise de erros pós-simulado
 
-> "Fazer um simulado sem analisá-lo é como treinar para uma prova adaptativa sem entender por que o sistema te rebaixou de módulo. O valor não está no exercício: está nos dados."
+> **Dica:** Fazer um simulado sem olhar para os erros depois é como treinar para uma prova adaptativa sem entender por que o sistema levou você para o módulo inferior. O maior ganho não está no exercício em si, mas no mapa que os seus dados entregam.
 
-### Como Este Protocolo se Conecta aos Outros Módulos
+### Como este passo a passo se conecta aos outros módulos
 
-Cada módulo de conteúdo tem seu **próprio** protocolo de erros com códigos próprios:
+Agora vamos olhar com calma para o que você errou, porque é aqui que você mais evolui. Cada módulo de conteúdo tem o seu **próprio** passo a passo de análise de erros com códigos específicos:
 
-| Módulo | Protocolo | Códigos |
+| Módulo | Passo a passo | Códigos |
 |---|---|---|
-| M1 Reading | Parte 7: Protocolo de Análise de Erros | **R1–R6** |
-| M2 Listening | Parte 7: Protocolo L1–L6 (L1 = "não decodifiquei o áudio" é prioridade) | **L1–L6** |
-| M3 Speaking | Parte 7: Protocolo S1–S6 (S1 fonema, S3 ritmo são prioridade) | **S1–S6** |
-| M4 Writing | Parte 7: Protocolo W1–W6 | **W1–W6** |
-| M5 Registro | Parte 9: Protocolo RG1–RG6 | **RG1–RG6** |
-| M6 Vocabulário | Parte 11: Protocolo V1–V6 | **V1–V6** |
+| M1 Reading | Parte 7, Passo a passo de análise de erros | **R1–R6** |
+| M2 Listening | Parte 7, Passo a passo L1–L6 (L1, "não decodifiquei o áudio", é a prioridade) | **L1–L6** |
+| M3 Speaking | Parte 7, Passo a passo S1–S6 (S1 de fonema e S3 de ritmo são a prioridade) | **S1–S6** |
+| M4 Writing | Parte 7, Passo a passo W1–W6 | **W1–W6** |
+| M5 Registro | Parte 9, Passo a passo RG1–RG6 | **RG1–RG6** |
+| M6 Vocabulário | Parte 11, Passo a passo V1–V6 | **V1–V6** |
 
-O papel do Simulado é **triagem**. Para cada questão errada, você primeiro classifica na tabela abaixo (código de simulado, prefixo `S`), e a última coluna te manda pro protocolo específico do módulo, onde o reparo acontece de verdade.
+O papel do simulado é fazer a **triagem**. Para cada questão errada, você primeiro classifica o deslize na tabela abaixo (código de simulado, com prefixo `S`), e a última coluna indica exatamente a parte do módulo em que o ajuste acontece na prática.
 
-### Taxonomia de Triagem do Simulado (Formato 2026)
+### Tabela de triagem do simulado (formato 2026)
 
-Os códigos abaixo espelham um a um os protocolos dos módulos. A última coluna é para onde você vai fazer o reparo.
+Os códigos abaixo espelham um a um os quadros de análise de cada módulo. A última coluna mostra para onde você vai fazer a **revisão**.
 
-**Reading** (espelha M1 R1–R6):
+**Reading** (espelha M1, R1–R6):
 
-| Código | Falha | → Reparo |
+| Código | O que aconteceu | Onde revisar |
 |---|---|---|
-| **SR-q** | Respondeu certo, mas para outra pergunta (deu gist quando pediram detalhe) | **M1 → R1** |
-| **SR-dist** | Caiu num distrator: opção verdadeira mas específica demais, extrema, ou fora do texto | **M1 → R2** |
-| **SR-ctw** | *Complete the Words*: forma verbal, concordância, ordem ou artigo errados | **M1 → R3** + **M6 → V1** (morfologia) |
-| **SR-lex** | Palavra desconhecida travou a compreensão, ou quebrou uma collocation | **M1 → R4** + **M6 → V2** |
-| **SR-time** | Sabia responder, mas chutou por falta de tempo | **M1 → R5** + pacing da Parte 2 |
-| **SR-att** | Errou o que sabia: ignorou um *not*, marcou o oposto, pulou uma linha | **M1 → R6** |
+| **SR-q** | Respondeu certo, mas para outra pergunta (deu a [[gist::ideia principal]] quando pediram um detalhe) | **M1, R1** |
+| **SR-dist** | Caiu num distrator, como uma opção verdadeira mas específica demais, extrema ou fora do texto | **M1, R2** |
+| **SR-ctw** | Em [[Complete the Words::Complete as palavras]], errou a forma verbal, a concordância, a ordem ou o artigo | **M1, R3** e **M6, V1** (morfologia) |
+| **SR-lex** | Uma palavra desconhecida travou a compreensão ou quebrou uma [[collocation::combinação natural de palavras]] | **M1, R4** e **M6, V2** |
+| **SR-time** | Sabia responder, mas precisou chutar por falta de tempo | **M1, R5** e controle de tempo da Parte 2 |
+| **SR-att** | Deslizou no que já sabia porque deixou passar um *[[not::não]]*, marcou o oposto ou pulou uma linha | **M1, R6** |
 
-**Listening** (espelha M2 L1–L6):
+**Listening** (espelha M2, L1–L6):
 
-| Código | Falha | → Reparo |
+| Código | O que aconteceu | Onde revisar |
 |---|---|---|
-| **SL-dec** | Não converteu o som em palavras a tempo (reduções, linking, velocidade, *can/can't*) | **M2 → L1**: prioridade absoluta |
-| **SL-q** | Respondeu certo para outro tipo de pergunta (gist × function) | **M2 → L2** |
-| **SL-dist** | Caiu num distrator (palavra reusada do áudio / verdadeira mas não dita / extrema) | **M2 → L3** |
-| **SL-note** | Anotou demais e perdeu o áudio, ou de menos e não lembrou o detalhe | **M2 → L4** |
-| **SL-vocab** | Não sabia um termo de campus ou um idiom | **M2 → L5** + **M6 → Parte 7** |
-| **SL-att** | Relaxou e perdeu um *but*, uma correção, uma instrução final | **M2 → L6** |
+| **SL-dec** | Não converteu o som em palavras a tempo por causa de reduções, [[linking::ligação entre sons de palavras vizinhas]], velocidade ou diferença entre *[[can::pode (afirmativo)]]* e *[[can't::não pode (negativo)]]* | **M2, L1** (prioridade máxima) |
+| **SL-q** | Respondeu certo, mas para outro tipo de pergunta (confundiu gist com [[function::função comunicativa da fala]]) | **M2, L2** |
+| **SL-dist** | Caiu num distrator (palavra repetida do áudio, ideia verdadeira mas não dita ou opção extrema) | **M2, L3** |
+| **SL-note** | Anotou demais e perdeu o fio do áudio, ou anotou de menos e esqueceu o detalhe | **M2, L4** |
+| **SL-vocab** | Não conhecia um termo da vida universitária ou um [[idiom::expressão idiomática]] | **M2, L5** e **M6, Parte 7** |
+| **SL-att** | Desconcentrou-se e perdeu um *[[but::mas]]*, uma correção de rota ou uma instrução final | **M2, L6** |
 
-**Speaking** (espelha M3 S1–S6):
+**Speaking** (espelha M3, S1–S6):
 
-| Código | Falha | → Reparo |
+| Código | O que aconteceu | Onde revisar |
 |---|---|---|
-| **SS-phon** | *Listen and Repeat*: fonema/segmento comprometendo inteligibilidade (*th*, *ship/sheep*, cluster quebrado) | **M3 → S1** |
-| **SS-stress** | Tônica errada em palavra (cognato: *DEvelop*, *comforTAble*) | **M3 → S2** |
-| **SS-rhythm** | Fala "silabada", átonas não comprimidas, prosódia robótica | **M3 → S3** |
-| **SS-flu** | Demorou >2s para começar, *"uh/um"* frequente, pausas no meio de sintagmas | **M3 → S4** |
-| **SS-gram** | 3ª pessoa -s some ao falar rápido, tempo verbal inconsistente na narração | **M3 → S5** + **M9** |
-| **SS-struct** | *Take an Interview*: sem posição na 1ª frase, sem exemplo concreto, resposta genérica, fim abrupto | **M3 → S6** + **M5 → RG6** (densidade) |
+| **SS-phon** | Em [[Listen and Repeat::Ouça e repita]], um fonema ou segmento prejudicou a clareza (*th*, diferença entre *[[ship::navio]]* e *[[sheep::ovelha]]* ou encontro consonantal quebrado) | **M3, S1** |
+| **SS-stress** | Sílaba tônica na posição errada, especialmente em cognatos (*DEvelop* ou *comforTAble*) | **M3, S2** |
+| **SS-rhythm** | Fala silabada, sílabas átonas não comprimidas e entonação artificial | **M3, S3** |
+| **SS-flu** | Demorou mais de 2s para começar, usou muitos *"uh"* ou *"um"* ou fez pausas no meio de expressões | **M3, S4** |
+| **SS-gram** | O *-s* de 3ª pessoa sumiu ao falar rápido ou o tempo verbal oscilou na narração | **M3, S5** e **M9** |
+| **SS-struct** | Em [[Take an Interview::Faça uma entrevista]], faltou posição direta na 1ª frase, exemplo concreto ou fechamento claro | **M3, S6** e **M5, RG6** (densidade) |
 
-**Writing** (espelha M4 W1–W6):
+**Writing** (espelha M4, W1–W6):
 
-| Código | Falha | → Reparo |
+| Código | O que aconteceu | Onde revisar |
 |---|---|---|
-| **SW-synt** | *Build a Sentence* ou frase da redação: run-on, comma splice, fragmento, ordem errada | **M4 → W1** + **M9** |
-| **SW-verb** | Tempo inconsistente, 3ª pessoa -s, forma verbal errada após modal/*to*/preposição | **M4 → W2** |
-| **SW-form** | Artigo indevido/faltando, *"depend of"*, *"the develop of"* | **M4 → W3** + **M9** |
-| **SW-reg** | Contração no e-mail, *get/stuff/really*, cerimônia excessiva, registro trocado | **M4 → W4** + **M5 → RG1/RG2** |
-| **SW-fit** | Não abordou um elemento do prompt; posição vaga; sem exemplo; sem engajamento com colega | **M4 → W5** |
-| **SW-lex** | Repetição da mesma palavra 3+ vezes; palavra imprecisa | **M4 → W6** + **M6 → V6** |
+| **SW-synt** | Em [[Build a Sentence::Monte uma frase]] ou nos textos, houve [[run-on::duas orações independentes juntas sem conectivo]], [[comma splice::duas orações independentes ligadas apenas por vírgula]], fragmento ou ordem errada | **M4, W1** e **M9** |
+| **SW-verb** | Tempo inconsistente, falta do *-s* de 3ª pessoa ou forma verbal errada após modal, *to* ou preposição | **M4, W2** |
+| **SW-form** | Artigo indevido ou ausente, ou construções como *"depend of"* e *"the develop of"* | **M4, W3** e **M9** |
+| **SW-reg** | Uso de contração no e-mail, palavras informais como *[[get::conseguir, pegar (informal)]]*, *[[stuff::coisas (informal)]]* ou *[[really::muito (informal)]]*, formalidade exagerada ou registro trocado | **M4, W4** e **M5, RG1 e RG2** |
+| **SW-fit** | Deixou de abordar um ponto do enunciado, manteve posição vaga, não deu exemplo ou não dialogou com os colegas | **M4, W5** |
+| **SW-lex** | Repetiu a mesma palavra 3 vezes ou mais, ou usou um termo impreciso | **M4, W6** e **M6, V6** |
 
 **Router** (transversal):
 
-| Código | Falha | → Reparo |
+| Código | O que aconteceu | Onde revisar |
 |---|---|---|
-| **SX** | Erro nos primeiros itens do módulo router (Reading/Listening) por pressa ou por tratá-los como "aquecimento" | Parte 2 deste módulo (protocolo do router) + o reparo do tipo de item errado acima |
+| **SX** | Erro nos primeiros itens do módulo [[router::bloco inicial de nivelamento]] (Reading e Listening) por pressa ou por tratá-los como aquecimento | Parte 2 deste módulo (cuidados com o router) e a revisão do tipo de item errado acima |
 
-### Planilha de Análise de Erros (Por Simulado)
+### Planilha de análise de erros por simulado
 
 ```
 SIMULADO Nº: ___ | DATA: ___________
@@ -961,101 +969,101 @@ Prioridade 2: Praticar __________________ (código ___ → Módulo ___, Parte __
 Prioridade 3: Drilling de ________________ (código ___ → Módulo ___, Seção ___)
 ```
 
-### Consolidação Entre Simulados
+### Consolidação entre simulados
 
-Depois de **dois** simulados analisados, some as frequências de cada código de triagem nos dois. O padrão diz onde está o gargalo real:
+Depois de analisar **dois** simulados, some a frequência de cada código de triagem nos dois. Esse padrão revela onde está o seu principal ponto de evolução:
 
-| O que você vê | Diagnóstico | Ação |
+| O que você vê | O que significa | O que fazer |
 |---|---|---|
-| Um código domina (≥40% dos erros de uma seção) | Lacuna estrutural, não de prática | Releia o texto do módulo-alvo inteiro, depois refaça os drills |
-| Erros espalhados por muitos códigos numa seção | Falta de volume de prática | Mais drills daquele módulo, sem pressa; a precisão vem antes da velocidade |
-| **SX** recorrente | Você perde acesso ao módulo superior por pressa no router | Treino de ritmo dos primeiros 5–7 itens (Parte 2): trate-os como itens de peso |
-| **SL-dec** recorrente | O gargalo é decodificação de áudio: o mais comum em brasileiros | M2 Parte 3 (Laboratório de Escuta) + shadowing diário 10 min antes de qualquer outro reparo |
-| Códigos de *language* (SS-gram, SW-verb, SW-form) recorrentes nas duas seções | Um erro gramatical sistemático está custando banda em Speaking **e** Writing | M9 (Brazilian Trap Library) vira o foco único da semana |
+| Um código domina (40% ou mais dos erros de uma seção) | Lacuna na base teórica, e não falta de prática | Releia a explicação do módulo-alvo por completo e só depois refaça os exercícios |
+| Erros espalhados por muitos códigos numa seção | Falta de volume de prática naquele formato | Faça mais exercícios daquele módulo sem pressa, pois a precisão vem antes da velocidade |
+| **SX** recorrente | Você está perdendo acesso ao módulo superior por pressa no router | Treine o ritmo dos primeiros 5–7 itens (Parte 2), tratando cada um como questão de peso |
+| **SL-dec** recorrente | O ponto de atenção é a decodificação do áudio, muito comum entre brasileiros | Faça o M2, Parte 3 (Laboratório de Escuta), e 10 minutos diários de [[shadowing::repetição simultânea em voz alta acompanhando o áudio]] antes de qualquer outro ajuste |
+| Códigos de língua (SS-gram, SW-verb, SW-form) recorrentes nas duas seções | Um mesmo hábito gramatical está custando nota tanto em Speaking quanto em Writing | Dedique a semana ao M9 ([[Brazilian Trap Library::Biblioteca de armadilhas para brasileiros]]) como foco principal |
 
 ---
 
-## PARTE 7: RUBRICA DE AUTOAVALIAÇÃO · SPEAKING E WRITING (Escala CEFR 1–6)
+## Parte 7: Rubrica de autoavaliação de Speaking e Writing (escala CEFR de 1 a 6)
 
-### 🎤 Speaking: Listen and Repeat (Checklist de Fidelidade)
+### 🎤 Speaking: Listen and Repeat (critérios de fidelidade)
 
-Ouça sua gravação item a item e marque:
+Ouça a sua gravação item por item e marque na **lista de critérios**:
 
-| Critério | ✅/❌ |
+| Critério | Cumprido |
 |---|---|
 | Todas as palavras da frase original foram reproduzidas (nenhuma omissão) | |
 | Nenhuma palavra foi substituída ou inventada | |
-| Ordem sintática preservada integralmente | |
-| Pronúncia inteligível mesmo nas partes mais longas/complexas da frase | |
-| Ritmo e entonação naturais (não robotizados, não excessivamente lentos) | |
-| Nenhuma pausa longa (>1,5s) no meio da frase | |
+| Ordem das palavras preservada integralmente | |
+| Pronúncia clara mesmo nas partes mais longas ou complexas da frase | |
+| Ritmo e entonação naturais (sem soar robótico nem excessivamente lento) | |
+| Nenhuma pausa longa (mais de 1,5s) no meio da frase | |
 
-**Conversão de checklist em banda estimada (1–6):**
-- 6/6 critérios ✅, incluindo frases longas com orações subordinadas → **Banda 5–6**
-- 4–5/6 ✅ → **Banda 3–4**
-- 2–3/6 ✅ → **Banda 2–3**
-- 0–1/6 ✅ → **Banda 1**
+**Conversão da lista em banda estimada (1–6):**
+- 6 de 6 critérios cumpridos, incluindo frases longas com orações subordinadas: **Banda 5–6**
+- 4 ou 5 de 6 critérios cumpridos: **Banda 3–4**
+- 2 ou 3 de 6 critérios cumpridos: **Banda 2–3**
+- 0 ou 1 de 6 critérios cumpridos: **Banda 1**
 
-### 🎤 Speaking: Take an Interview (Checklist de Elaboração)
+### 🎤 Speaking: Take an Interview (critérios de elaboração)
 
-| Critério | ✅/❌ |
+| Critério | Cumprido |
 |---|---|
-| Respondeu diretamente à pergunta feita (descrição/opinião/previsão/sugestão, conforme o caso) | |
+| Respondeu diretamente à pergunta feita (descrição, opinião, previsão, sugestão, explicação ou narração, conforme o caso) | |
 | Desenvolveu a resposta com pelo menos um exemplo ou justificativa concreta | |
 | Resposta coerente do início ao fim, sem contradição interna | |
 | Gramática precisa na maior parte da resposta | |
 | Vocabulário variado (evitou repetir a mesma palavra-chave) | |
-| Prosódia inteligível e fluência sem hesitação excessiva | |
+| Entonação clara e fluência sem hesitação excessiva | |
 
 **Conversão em banda estimada (1–6):**
-- 6/6 ✅ → **Banda 5–6**
-- 4–5/6 ✅ → **Banda 3–4**
-- 2–3/6 ✅ → **Banda 2–3**
-- 0–1/6 ✅ → **Banda 1**
+- 6 de 6 critérios cumpridos: **Banda 5–6**
+- 4 ou 5 de 6 critérios cumpridos: **Banda 3–4**
+- 2 ou 3 de 6 critérios cumpridos: **Banda 2–3**
+- 0 ou 1 de 6 critérios cumpridos: **Banda 1**
 
 ---
 
 ### ✍️ Writing: Build a Sentence
 
-| Critério | ✅/❌ |
+| Critério | Cumprido |
 |---|---|
-| Ordem sintática final é gramaticalmente correta | |
-| Concordância verbal e nominal preservada | |
-| Nenhum fragmento faltando, e o bloco extra (quando há) ficou de fora | |
-| Sentido lógico da frase original mantido | |
+| A ordem final das palavras está gramaticalmente correta | |
+| A concordância verbal e nominal foi preservada | |
+| Nenhum fragmento ficou faltando, e o bloco extra (quando há) ficou de fora | |
+| O sentido lógico da frase original foi mantido | |
 
-**Conversão:** ≥9/10 itens corretos → Banda 5–6 | 6–8/10 → Banda 3–4 | 3–5/10 → Banda 2–3 | ≤2/10 → Banda 1
+**Conversão:** 9 ou 10 itens corretos de 10 indicam **Banda 5–6**; de 6 a 8 de 10 indicam **Banda 3–4**; de 3 a 5 de 10 indicam **Banda 2–3**; até 2 de 10 indicam **Banda 1**.
 
 ### ✍️ Writing: Write an Email
 
-| Critério | ✅/❌ |
+| Critério | Cumprido |
 |---|---|
-| Registro apropriado à situação (nem informal demais, nem excessivamente formal) | |
-| Propósito do e-mail comunicado claramente na primeira ou segunda frase | |
-| Estrutura multi-frase coerente, com abertura e fechamento apropriados | |
-| Os três pontos do prompt cobertos, cada pedido claramente formulado | |
-| Erros gramaticais sistemáticos ausentes | |
+| Registro adequado à situação (nem informal demais, nem cerimonioso em excesso) | |
+| Objetivo do e-mail comunicado com clareza logo na primeira ou segunda frase | |
+| Estrutura de várias frases bem articulada, com abertura e fechamento adequados | |
+| Os três pontos do enunciado foram cobertos, com cada pedido formulado de forma clara | |
+| Ausência de erros gramaticais repetitivos | |
 
-**Conversão:** 5/5 ✅ → Banda 5–6 | 3–4/5 ✅ → Banda 3–4 | 1–2/5 ✅ → Banda 2–3 | 0/5 ✅ → Banda 1
+**Conversão:** 5 de 5 critérios cumpridos indicam **Banda 5–6**; 3 ou 4 de 5 indicam **Banda 3–4**; 1 ou 2 de 5 indicam **Banda 2–3**; 0 de 5 indica **Banda 1**.
 
 ### ✍️ Writing: Write for an Academic Discussion
 
-| Critério | ✅/❌ |
+| Critério | Cumprido |
 |---|---|
-| Posição clara estabelecida logo no início do parágrafo | |
+| Posição clara apresentada logo no início do parágrafo | |
 | Argumento sustentado com raciocínio específico (não genérico) | |
-| Engajamento substantivo com pelo menos um ponto dos colegas de turma | |
-| Vocabulário e estrutura de frase variados | |
-| Erros gramaticais sistemáticos ausentes | |
-| Parágrafo coeso, com conectores lógicos apropriados | |
+| Diálogo direto com pelo menos um argumento dos colegas de turma | |
+| Vocabulário e estruturas de frase variados | |
+| Ausência de erros gramaticais repetitivos | |
+| Parágrafo coeso, com conectivos lógicos adequados | |
 
-**Conversão:** 6/6 ✅ → Banda 5–6 | 4–5/6 ✅ → Banda 3–4 | 2–3/6 ✅ → Banda 2–3 | 0–1/6 ✅ → Banda 1
+**Conversão:** 6 de 6 critérios cumpridos indicam **Banda 5–6**; 4 ou 5 de 6 indicam **Banda 3–4**; 2 ou 3 de 6 indicam **Banda 2–3**; 0 ou 1 de 6 indica **Banda 1**.
 
 ---
 
-## PARTE 8: DASHBOARD DE PROGRESSO · OS 4 SIMULADOS (Bandas CEFR 1–6 + Score Legado 0–120)
+## Parte 8: Painel de progresso dos 4 simulados (bandas CEFR de 1 a 6 e score legado 0–120)
 
-> Preencha após cada simulado. Registre as **duas escalas**: a banda CEFR (1–6, com meios pontos) é a régua oficial do formato 2026; o score comparável 0–120 segue sendo reportado durante o período de transição (até ~2028) e é útil para comparação com metas de instituições que ainda pedem a escala antiga.
+> **Dica:** Preencha este painel após cada simulado registrando as duas escalas. A banda [[CEFR::Quadro Europeu Comum de Referência]] (de 1 a 6, com meios pontos) é a régua oficial de 2026, enquanto a pontuação comparável de 0 a 120 continua sendo informada durante a transição (até cerca de 2028) para instituições que ainda pedem a escala antiga.
 
 ```
 ╔═════════════════════════════════════════════════════════════════════════════╗
@@ -1079,36 +1087,38 @@ Ouça sua gravação item a item e marque:
 ╚══════════════════════╩═══════════╩═══════════╩═══════════╩══════════════════╝
 ```
 
-### Interpretação da Curva de Progresso
+### Interpretação da curva de progresso
 
-| Padrão de Evolução | Diagnóstico | Ação |
+Mais do que olhar para um resultado isolado, vale observar a **curva** que as suas notas desenham ao longo dos simulados. Se a pontuação oscilar quando o cronômetro entrar em cena, fique tranquilo, pois a tabela abaixo mostra o que cada movimento significa e como ajustar a rota:
+
+| Padrão de evolução | O que significa | Próximo passo |
 |---|---|---|
-| **S1→S2→S3 crescendo, S4 estável** | Progresso sólido e consolidado: pronto para o exame | Foco no Módulo 8 (Exam Day Protocol) |
-| **S2 alto, S3 cai** | Mecânica de item funciona sem pressão, mas desmorona sob timing real e router ativo | Drills cronometrados diários + revisão do protocolo do router (Parte 2) |
-| **Muitos erros classificados como SX (router)** | O candidato está perdendo acesso ao módulo superior por pressa nos primeiros itens | Treino específico de ritmo nos primeiros 5–7 itens de Reading/Listening |
-| **S1→S4 estagnado (sem crescimento de banda)** | O conteúdo estudado não está sendo ativado nos simulados | Revise os erros com a Taxonomia (Parte 6): pode estar estudando o que não está errando |
-| **Uma seção específica não sobe de banda** | Lacuna estrutural naquela seção | Retorne ao módulo da seção correspondente e refaça os drills daquele tipo de item |
-| **Banda geral consistentemente abaixo da meta** | Meta pode precisar de ajuste, ou o cronograma precisa ser estendido | Revise o Plano Catch-Up (Módulo 0) |
+| **Subida do S1 ao S3, com S4 estável** | Progresso consistente e consolidado, mostrando que você está pronto para a prova | Concentre-se no Módulo 8 ([[Exam Day Protocol::Passo a passo para o dia da prova]]) |
+| **S2 alto, mas S3 cai** | Você domina a mecânica das questões sem relógio, mas ainda sente o impacto do tempo real e do [[router::bloco inicial de nivelamento]] | Pratique exercícios cronometrados diariamente e revise os cuidados com o router na Parte 2 |
+| **Muitos erros classificados como SX (router)** | A pressa nos primeiros itens está impedindo você de chegar ao módulo superior | Treine um ritmo calmo e atento para os primeiros 5–7 itens de Reading e Listening |
+| **Estagnação do S1 ao S4 (sem subida de banda)** | O conteúdo estudado ainda não está passando para a prática na hora do simulado | Revise seus erros com a Tabela de triagem (Parte 6), pois você pode estar estudando temas que já domina em vez do que realmente erra |
+| **Uma seção específica não sobe de banda** | Há uma lacuna de base concentrada naquela habilidade | Volte ao módulo correspondente e refaça os exercícios daquele formato específico de questão |
+| **Banda geral ainda abaixo da meta** | A meta pode pedir mais algumas semanas de consolidação | Consulte o plano [[Catch-Up::plano de recuperação de ritmo]] no Módulo 0 para reorganizar o seu prazo |
 
 ---
 
-## PARTE 9: CALENDÁRIO DE REFERÊNCIA · 8 SEMANAS ATÉ A PROVA
+## Parte 9: Calendário de referência de 8 semanas até a prova
 
-Um cronograma-base assumindo que você já fez o Simulado 1 (Módulo 0) e tem ~8 semanas. Comprima ou estenda proporcionalmente. A regra fixa: **nunca dois simulados sem o ciclo de reparo de 5 passos (Parte 2) entre eles.**
+Este cronograma-base parte da ideia de que você já fez o Simulado 1 (Módulo 0) e tem cerca de 8 semanas até o exame. Você pode comprimir ou estender as semanas conforme o seu prazo, mantendo sempre uma **regra essencial**: nunca faça dois simulados seguidos sem completar o roteiro de revisão de 5 passos (Parte 2) entre eles.
 
-| Semana | Foco de conteúdo | Prática / drills | Marco |
+| Semana | Foco de conteúdo | Exercícios práticos | Marco |
 |---|---|---|---|
-| **1** | M1 Reading + M2 Listening (leitura + Parte 3 de cada) | Drills do M1 e M2, sem cronômetro | — |
-| **2** | M3 Speaking + M4 Writing (leitura + Laboratório) | Drills do M3 e M4; gravar tudo do Speaking | — |
-| **3** | M5 Registro (leitura completa) + começar M6 (Kit de 50) | Drills do M5; flashcards SRS do M6 diários | **Simulado 2** no fim da semana (com consulta) |
-| **4** | Reparo dos 3 códigos do Simulado 2 | Refazer só os drills ligados aos 3 códigos | Ciclo de reparo (D+1 a D+7) |
-| **5** | M6 completo (Partes 4–7) + M9 Brazilian Traps | Drills do M6 (Parte 9); drills do M9 | — |
-| **6** | Revisão dos tipos de item mais fracos (dados dos Simulados 1–2) | Drills cronometrados: teto de segundos por item | **Simulado 3** no fim da semana (timing estrito, sem consulta) |
-| **7** | Reparo dos 3 gaps do Simulado 3 + M8 Exam Day (leitura) | Mini-simulados cronometrados dos tipos que caíram | Ciclo de reparo |
-| **8** | Apenas os 3 maiores gaps. Nada novo. | Leve: flashcards, releitura do M5, 1 resposta de cada task por dia | **Simulado 4** 7–10 dias antes da prova; depois só M8 |
+| **1** | M1 Reading + M2 Listening (leitura + Parte 3 de cada um) | Exercícios do M1 e do M2, sem cronômetro | - |
+| **2** | M3 Speaking + M4 Writing (leitura + Laboratório) | Exercícios do M3 e do M4; gravar todas as respostas de Speaking | - |
+| **3** | M5 Registro (leitura completa) + início do M6 (Kit de 50 palavras) | Exercícios do M5; cartões [[SRS::repetição espaçada]] do M6 diariamente | **Simulado 2** no fim da semana (com consulta) |
+| **4** | Revisão dos 3 códigos mais frequentes do Simulado 2 | Refazer apenas os exercícios ligados aos 3 códigos | Ciclo de revisão (D+1 a D+7) |
+| **5** | M6 completo (Partes 4–7) + M9 ([[Brazilian Trap Library::Biblioteca de armadilhas para brasileiros]]) | Exercícios do M6 (Parte 9) e exercícios do M9 | - |
+| **6** | Revisão dos formatos de questão mais sensíveis (dados dos Simulados 1–2) | Exercícios cronometrados, respeitando o tempo-alvo por questão | **Simulado 3** no fim da semana (tempo controlado, sem consulta) |
+| **7** | Ajuste das 3 prioridades do Simulado 3 + leitura do M8 ([[Exam Day Protocol::Passo a passo para o dia da prova]]) | Mini-simulados cronometrados dos formatos que oscilaram | Ciclo de revisão |
+| **8** | Apenas as 3 maiores prioridades, sem matéria nova | Treino leve com cartões de vocabulário, releitura do M5 e 1 resposta de cada tarefa por dia | **Simulado 4** de 7 a 10 dias antes da prova; depois, foco no M8 |
 
-> Se você tem menos de 8 semanas: mantenha os 4 simulados e o ciclo de reparo, mas reduza o tempo de "foco de conteúdo": a análise pós-simulado tem prioridade sobre estudar módulo novo. Se tem menos de 4 semanas: faça o Simulado 2 e o Simulado 4, pule o 3, e concentre todo o reparo no código de triagem mais frequente.
+> **Dica:** Se você tiver menos de 8 semanas até a prova, mantenha os 4 simulados e a semana de revisão entre eles, reduzindo apenas o tempo de leitura de teoria nova. Se tiver menos de 4 semanas, faça os Simulados 2 e 4 (pulando o 3) e concentre os ajustes no código de erro mais frequente.
 
 ---
 
-*Módulo 7 concluído. Volte à Parte 6 (taxonomia de triagem) depois de cada simulado: é a peça que liga este módulo a todos os outros.*
+✅ Módulo 7 concluído. Volte à Parte 6 (tabela de triagem) sempre que terminar um simulado, porque é ela que conecta este módulo a todos os outros e transforma cada treino em evolução real. Mais um grande passo dado, e ele conta muito na sua jornada até a prova.

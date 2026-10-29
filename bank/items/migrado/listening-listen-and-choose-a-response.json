@@ -575,7 +575,7 @@
     "source": {
       "kind": "migrado",
       "file": "consolidated/modulo_7_simulados.md",
-      "ref": "linha 343",
+      "ref": "linha 351",
       "live_on_site": true,
       "answer_letter": "origem",
       "build_map": {
@@ -622,7 +622,7 @@
     "source": {
       "kind": "migrado",
       "file": "consolidated/modulo_7_simulados.md",
-      "ref": "linha 351",
+      "ref": "linha 359",
       "live_on_site": true,
       "answer_letter": "origem",
       "build_map": {
@@ -659,7 +659,7 @@
       "D": "\"You should present first.\""
     },
     "answer": "C",
-    "explanation": "(nota: (C) dá uma causa provável e uma ação. (A) e (B) reaproveitam o assunto \"professor/e-mail\" sem responder à queixa.)",
+    "explanation": "(nota: a opção (C) aponta uma causa provável e sugere uma ação prática, enquanto (A) e (B) apenas repetem o assunto de professor ou e-mail sem responder à queixa.)",
     "hint": null,
     "trap_codes": [],
     "tags": [
@@ -669,7 +669,7 @@
     "source": {
       "kind": "migrado",
       "file": "consolidated/modulo_7_simulados.md",
-      "ref": "linha 359",
+      "ref": "linha 367",
       "live_on_site": true,
       "answer_letter": "origem",
       "build_map": {
@@ -716,7 +716,7 @@
     "source": {
       "kind": "migrado",
       "file": "consolidated/modulo_7_simulados.md",
-      "ref": "linha 369",
+      "ref": "linha 377",
       "live_on_site": true,
       "answer_letter": "origem",
       "build_map": {
@@ -763,7 +763,7 @@
     "source": {
       "kind": "migrado",
       "file": "consolidated/modulo_7_simulados.md",
-      "ref": "linha 701",
+      "ref": "linha 709",
       "live_on_site": true,
       "answer_letter": "origem",
       "build_map": {

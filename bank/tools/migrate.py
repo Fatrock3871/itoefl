@@ -275,8 +275,8 @@ def from_m7():
         if task is None:
             raise ValueError(f"M7 linha {h + 1}: tipo de tarefa não reconhecido em {heading!r}")
         section = TASK_SECTION[task]
-        sim = last_before(first, lambda l: l.startswith("### ") and "SIMULADO" in l)
-        sim_n = re.search(r"SIMULADO (\d)", lines[sim]).group(1)
+        sim = last_before(first, lambda l: l.startswith("### ") and "SIMULADO" in l.upper())
+        sim_n = re.search(r"SIMULADO (\d)", lines[sim], flags=re.I).group(1)
         boundary = max(h, last_before(first, lambda l: l.startswith("**Gabarito:**")))
         preamble = "\n".join(lines[boundary + 1:first]).strip()
         own_pre = all(it.get("pre") for it in orig[1:]) and len(orig) > 1
