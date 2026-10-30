@@ -64,8 +64,30 @@ todas as vezes, mesmo que já tenha sido autorizado em outra ocasião:
 - Tornar o repositório público ou convidar colaboradores.
 - Qualquer coisa que gaste créditos de API de forma recorrente.
 
+## Trabalho em dupla
+
+O projeto tem duas pessoas: Pietro (conteúdo) e Gabriel (plataforma e pagamento).
+
+- **A main é protegida.** Nada vai direto para ela. Tudo entra por pull request,
+  revisado pela outra pessoa, com o teste automático
+  (`.github/workflows/teste.yml`) verde.
+- **Uma branch curta por tarefa,** com nome `nome/tarefa` (ex.: `gabriel/colaboracao`).
+  Comece sempre de `git checkout main` e `git pull`, e envie a branch em 1 ou 2
+  dias. Branch longa vira conflito.
+- **Divisão por área.** Pietro: `consolidated/*.md` e os arquivos de dados
+  (`app/*.json`, `app/*_data.py`, `bank/`). Gabriel: `app/app.js`, `supabase/` e
+  o que envolve login e pagamento. Mexer na área do outro é possível, mas avise antes.
+- **Antes de começar um item do `ROADMAP.md`,** escreva seu nome ao lado dele,
+  para a outra pessoa não pegar o mesmo.
+- **Arquivos que mais dão conflito:** `ROADMAP.md`, `CLAUDE.md` e `app/app.js`.
+  Mudanças pequenas e `git pull` antes de editar.
+- **Segredos só com o Pietro:** chaves do Stripe e chaves de servidor (Supabase
+  `service_role`, secrets das functions). Gabriel trabalha só com a chave
+  pública (ver `docs/publicar.md`). Nenhum segredo vai para o repositório.
+
 ## Quando dois agentes trabalham no mesmo repositório
 
 Antes de mexer em arquivo: `git pull` e `git status`. Se houver mudança que
 não é sua, não desfaça: avise o usuário. Ao terminar: build, smoke test,
-commit, push, e uma linha no `ROADMAP.md` dizendo o que foi feito.
+commit na sua branch, push da branch (nunca da main), pull request, e uma
+linha no `ROADMAP.md` dizendo o que foi feito.
