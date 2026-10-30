@@ -25,10 +25,10 @@ SRC = "../consolidated"
 
 # Item 10 da review de UX (2026-09-16): o "Registro" de cada Protocolo de
 # Análise de Erros (Parte 7 de M1-M4, Parte 9/Seção 11 de M5/M6) era um
-# template de texto pra preencher à mão em outro lugar. Vira um mini-
+# template de texto para preencher à mão em outro lugar. Vira um mini-
 # formulário (render_errorlog.render_error_log) com o histórico salvo no
 # navegador. Códigos abaixo = mesma tabela de cada módulo, só copiados pro
-# Python pra virar checkbox. M7 fica de fora (protocolo de triagem próprio,
+# Python para virar checkbox. M7 fica de fora (protocolo de triagem próprio,
 # mais elaborado — decisão de design à parte, junto com o resto do M7).
 ERRLOG_CODES = {
     "mod1": [
@@ -65,7 +65,7 @@ ERRLOG_CODES = {
 
 # Módulo 0, Parte 5.1: mesmas 10 linhas do template estático de
 # acompanhamento semanal, agora alimentando a tabela interativa
-# (render_weeklydash.py) em vez de células em branco pra preencher à mão.
+# (render_weeklydash.py) em vez de células em branco para preencher à mão.
 WEEKLY_DASH_METRICS = [
     ("complete_words", "% acerto: Complete the Words", "≥85%"),
     ("read_daily_academic", "% acerto: Read in Daily Life / Academic Passage", "≥80%"),
@@ -166,7 +166,7 @@ def to_html(text):
 # "[ ] item" vira texto literal dentro do <li>, colchetes e tudo. Os
 # checklists de saída de cada módulo usam exatamente essa sintaxe, então
 # toda `<li>[ ] texto</li>` saía quebrada. Em vez de adicionar uma
-# dependência nova só pra isso, um post-processo simples troca o `[ ]`/`[x]`
+# dependência nova só para isso, um post-processo simples troca o `[ ]`/`[x]`
 # literal por uma checkbox de verdade depois da conversão.
 CHECKLIST_RE = re.compile(r"<li>\[([ xX])\]\s*(.*?)</li>")
 
@@ -278,7 +278,7 @@ def build_mod0():
     before, after = slice_lines(raw, "### 1.2 ", "## PARTE 2")
 
     # Parte 5.1: troca a tabela estática de acompanhamento semanal (células
-    # em branco pra preencher à mão -- não faz sentido numa página web sem
+    # em branco para preencher à mão -- não faz sentido numa página web sem
     # nenhum jeito de digitar nela) pela versão interativa: input por
     # semana/métrica, salvo sozinho em localStorage.
     before_wd, after_wd = slice_table(after, "| Métrica | Semana 1 | Semana 2 | Semana 3 | Semana 4 | Meta |")
@@ -299,7 +299,7 @@ def build_mod0():
     items = rebalance_items(items, "mod0-diag")
     widget = render_quiz_drill(
         "mod0-diag", None,
-        "Teste de Nivelamento Express: 10 questões de gramática, vocabulário, conectivos, ordem das palavras, registro e "
+        "Teste de nivelamento: 10 questões de gramática, vocabulário, conectivos, ordem das palavras, registro e "
         "compreensão. Responda e confirme cada uma. O gabarito e as explicações aparecem juntos no fim, depois da décima.",
         None, items, reveal_at_end=True,
     ) + render_diag_result()
@@ -315,13 +315,13 @@ def build_mod0():
         '<div class="live-score-grid">'
         '<div class="live-score-item"><span class="live-score-label">Reading</span>'
         '<span class="live-score-pct" id="liveScoreReadingPct">—</span>'
-        '<span class="live-score-band" id="liveScoreReadingBand">Responda aos Action Drills do Módulo 1 para calcular</span></div>'
+        '<span class="live-score-band" id="liveScoreReadingBand">Responda aos exercícios do Módulo 1 para calcular</span></div>'
         '<div class="live-score-item"><span class="live-score-label">Listening</span>'
         '<span class="live-score-pct" id="liveScoreListeningPct">—</span>'
-        '<span class="live-score-band" id="liveScoreListeningBand">Responda aos Action Drills do Módulo 2 para calcular</span></div>'
+        '<span class="live-score-band" id="liveScoreListeningBand">Responda aos exercícios do Módulo 2 para calcular</span></div>'
         '<div class="live-score-item"><span class="live-score-label">Writing · Build a Sentence</span>'
         '<span class="live-score-pct" id="liveScoreWritingPct">—</span>'
-        '<span class="live-score-band" id="liveScoreWritingBand">Faça o drill interativo do Módulo 4 para calcular</span></div>'
+        '<span class="live-score-band" id="liveScoreWritingBand">Faça o exercício interativo do Módulo 4 para calcular</span></div>'
         '<div class="live-score-item"><span class="live-score-label">Simulados</span>'
         '<span class="live-score-pct" id="liveScoreExamPct">—</span>'
         '<span class="live-score-band" id="liveScoreExamBand">Entregue um bloco de simulado do Módulo 7 para calcular</span></div>'
@@ -369,7 +369,7 @@ def build_mod0():
 
 
 # ---------- Módulo 1: Reading drills ----------
-# NOTA (2026-09-16): build_mod1() foi reescrita pra estrutura atual do módulo
+# NOTA (2026-09-16): build_mod1() foi reescrita para estrutura atual do módulo
 # (7 partes, "PARTE 5: ACTION DRILLS"). A versão anterior fatiava em
 # "PARTE 3: ACTION DRILLS", um marcador que não existe mais desde que o
 # módulo foi renumerado/expandido — main() usava build_plain() nesse meio
@@ -396,7 +396,7 @@ def build_mod1():
           'palavra está impresso e você digita o final. O campo aceita exatamente o número de letras que falta. '
           'Alvo: 3 minutos por texto.</p>'
         + render_ctw_group(CTW_SETS)
-        + "<h3>Grupo A2: gramática e collocation em contexto (treino de base)</h3>"
+        + "<h3>Grupo A2: gramática e combinações de palavras em contexto (treino de base)</h3>"
         + '<p class="ctw-group-intro">Estes cinco textos <strong>não</strong> estão no formato da prova: aqui a lacuna '
           'é uma palavra inteira e há alternativas. Servem para treinar a decisão gramatical e de collocation que '
           'está por trás de cada lacuna do Grupo A.</p>'
@@ -664,7 +664,7 @@ def build_mod6():
     widget = render_srs("kit50", cards)
     # injeta o widget de flashcards logo após o Kit de 50 palavras (Parte 8),
     # antes dos drills de vocabulário (Parte 9) -- NOTA: esse marcador era
-    # "<h2>SEÇÃO 9" e ficou obsoleto (silenciosamente!) quando M6 trocou pra
+    # "<h2>SEÇÃO 9" e ficou obsoleto (silenciosamente!) quando M6 trocou para
     # "PARTE" nesta mesma sessão; sem o achado aqui, o widget cairia sempre
     # no fallback (fim do módulo) em vez do lugar certo.
     idx = find_heading(html_out, "h2", "PARTE 9")

@@ -69,7 +69,7 @@ AUTH_BG_DECOR = '<div class="auth-gate-bg" aria-hidden="true">' + "".join(
 ) + '</div>'
 
 # links para as duas páginas legais (geradas no fim deste arquivo a partir de
-# legal/*.md). Abrem em aba nova pra não tirar o aluno do meio do login/compra.
+# legal/*.md). Abrem em aba nova para não tirar o aluno do meio do login/compra.
 LEGAL_LINKS = (
     '<a href="termos.html" target="_blank" rel="noopener">Termos de Uso</a>'
     '<span aria-hidden="true"> · </span>'
@@ -106,7 +106,7 @@ MODS = [
     ("mod7","07","Simulados","modulo_7_simulados.md",
      "Quatro simulados progressivos e a análise de erros que liga tudo."),
     ("mod8","08","Exam Day","modulo_8_examday.md",
-     "As 24 horas antes e o protocolo seção a seção no dia da prova."),
+     "As 24 horas antes e o passo a passo de cada seção no dia da prova."),
     ("mod9","09","Brazilian Traps","modulo_9_braziliantraps.md",
      "O padrão de erro do brasileiro, mapeado e eliminado."),
 ]
@@ -585,7 +585,7 @@ pay_gate = (
     '</div>'
 )
 
-# certificado de conclusão: nada oficial, só uma tela pra comemorar que
+# certificado de conclusão: nada oficial, só uma tela para comemorar que
 # terminou os 10 módulos — aparece a partir daí (ver app.js/updateBadges)
 cert_modal = (
     '<div class="cert-modal" id="certModal" role="dialog" aria-modal="true" aria-label="Certificado de conclusão" hidden>'
@@ -614,7 +614,7 @@ cert_modal = (
     '<h2 class="cert-name" id="certName">Aluno(a) iTOEFL</h2>'
     '<p class="cert-body">concluiu com êxito a preparação completa para o <strong>TOEFL iBT</strong> '
     '(formato 2026) pela plataforma iTOEFL, percorrendo os 10 módulos: do diagnóstico de nivelamento '
-    'ao protocolo do dia da prova.</p>'
+    'ao passo a passo do dia da prova.</p>'
     '<div class="cert-stats">'
     '<div class="cert-stat"><span class="cert-stat-label">Módulos concluídos</span><span class="cert-stat-value">10 de 10</span></div>'
     '<div class="cert-stat"><span class="cert-stat-label">Nível estimado</span><span class="cert-stat-value" id="certBand">—</span></div>'
@@ -688,7 +688,7 @@ account_modal = (
     '<form class="auth-form" id="accountEmailForm">'
     '<span class="auth-field">'
     '<input type="email" id="accountEmail" class="auth-input" required>'
-    '<span class="auth-hint">Trocar o e-mail exige confirmar o link enviado pro endereço novo.</span>'
+    '<span class="auth-hint">Trocar o e-mail exige confirmar o link enviado para o endereço novo.</span>'
     '</span>'
     '<button type="submit" class="auth-gate-submit">Salvar e-mail</button>'
     '</form>'
@@ -712,7 +712,7 @@ account_modal = (
     '<div class="account-section account-danger">'
     f'<span class="account-section-label">{icon("trash", "ico account-section-icon")}Excluir conta</span>'
     '<p class="account-danger-text">Apaga de vez sua conta, seu progresso, suas redações e o registro do seu pagamento. '
-    'O acesso comprado é perdido e não dá pra desfazer.</p>'
+    'O acesso comprado é perdido e não dá para desfazer.</p>'
     '<button type="button" class="account-danger-open" id="accountDeleteOpen">Quero excluir minha conta</button>'
     '<form class="auth-form" id="accountDeleteForm" hidden>'
     '<label class="auth-field"><span class="auth-label">Digite EXCLUIR para confirmar</span>'
@@ -732,7 +732,7 @@ account_modal = (
 
 # painel: sequência de dias, banda estimada, progresso geral e pontos fracos
 # -- tudo calculado em cima de dados que já existem em outros widgets (ver
-# app.js, bloco "Painel (dashboard)"), sem nenhum conteúdo novo pra manter.
+# app.js, bloco "Painel (dashboard)"), sem nenhum conteúdo novo para manter.
 dashboard_modal = (
     '<div class="dash-modal" id="dashboardModal" role="dialog" aria-modal="true" aria-label="Painel de progresso" hidden>'
     '<div class="dash-modal-backdrop" id="dashboardModalBackdrop"></div>'

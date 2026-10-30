@@ -25,7 +25,7 @@
     "verbo âncora", "palavras de alto risco", "termo", "expressão"
     // "verbo" sozinho de propósito NÃO entra aqui: o mesmo cabeçalho aparece
     // em tabelas de concordância (M1/M4, "Sujeito | Verbo | Exemplo") cujas
-    // células dizem coisa tipo "verbo + -s", não uma palavra pra pronunciar
+    // células dizem coisa tipo "verbo + -s", não uma palavra para pronunciar
   ];
   // escolhe a melhor voz em inglês disponível no navegador: as vozes "remotas"
   // (Google/Microsoft Online/Natural) soam bem menos robóticas que a voz local
@@ -70,7 +70,7 @@
     Array.prototype.slice.call(document.querySelectorAll(".panel table")).forEach(function(table){
       var headCells = Array.prototype.slice.call(table.querySelectorAll("thead th"));
       // colIndexes (plural): algumas tabelas repetem o cabeçalho duas vezes
-      // na mesma linha pra economizar espaço (ex.: "Verbo | Collocations |
+      // na mesma linha para economizar espaço (ex.: "Verbo | Collocations |
       // Verbo | Collocations", duas colunas lado a lado) -- pegar só a
       // primeira ocorrência deixava a segunda coluna sem botão.
       var colIndexes = [];
@@ -96,7 +96,7 @@
       });
     });
     // avisa, uma vez no topo de cada módulo que usa o recurso, o que o
-    // ícone significa -- sem isso o símbolo sozinho não é óbvio pra quem
+    // ícone significa -- sem isso o símbolo sozinho não é óbvio para quem
     // nunca viu (M6 ganha o aviso mesmo sem tabela batendo o cabeçalho,
     // por causa do kit de flashcards SRS, que também tem o botão)
     speakPanelsHit["panel-mod6"] = true;
@@ -110,7 +110,7 @@
       head.parentNode.insertBefore(hint, head.nextSibling);
     });
 
-    // Listening (M2): os drills viravam texto pra ler em silêncio -- esses
+    // Listening (M2): os drills viravam texto para ler em silêncio -- esses
     // dois botões tocam o item/a passagem em voz alta (Web Speech API),
     // virando prática de ouvir de verdade em vez de leitura de transcrição.
     Array.prototype.slice.call(document.querySelectorAll(".quiz-item-speak")).forEach(function(btn){
@@ -369,7 +369,7 @@
     });
   });
 
-  // espelha o client do Supabase e o uid logado pra fora do bloco de auth
+  // espelha o client do Supabase e o uid logado para fora do bloco de auth
   // (que é seu próprio IIFE) -- o certificado precisa ler/gravar
   // profiles.display_name e não tinha como chegar em `client`/`uid` de lá
   var supaClient = null, supaUid = null;
@@ -531,7 +531,7 @@
       var s = computeStreak();
       streakEl.innerHTML = "";
       if(s.count === 0){
-        streakEl.textContent = "Estude hoje para começar uma sequência.";
+        streakEl.textContent = "Que tal 20 minutos hoje? Um pouco por dia rende mais do que muito de vez em quando.";
       } else {
         var b = document.createElement("b");
         b.textContent = s.count + (s.count === 1 ? " dia" : " dias");
@@ -743,7 +743,7 @@
     setSidebarOpen(false); // navegar fecha a gaveta, que não deve ocupar espaço
     populateRailToc(key);
     // abre a primeira subseção (h3) do módulo que acabou de aparecer -- sem
-    // isso a tela troca pra um módulo novo e mostra tudo fechado até o
+    // isso a tela troca para um módulo novo e mostra tudo fechado até o
     // aluno clicar ou rolar (o observer de scroll só cobre rolagem, não
     // troca de aba). No load inicial, antes do accordion existir (roda
     // numa IIFE mais abaixo), isso não acha nada e não faz nada -- tudo bem,
@@ -824,8 +824,8 @@
     // reflete no estado visual da sidebar: concluído (✓), atual, ou bloqueado (🔒).
     // o número do módulo fica sempre visível (mesmo bloqueado — o texto dos
     // módulos referencia "Módulo N" e precisa bater com o que aparece aqui);
-    // só o "%" de progresso é escondido quando bloqueado, pra não parecer que
-    // dá pra entrar só porque já tem progresso ali.
+    // só o "%" de progresso é escondido quando bloqueado, para não parecer que
+    // dá para entrar só porque já tem progresso ali.
     tabBtns.forEach(function(b){
       var key = b.dataset.tab;
       var badgeEl = b.querySelector(".num-badge");
@@ -875,7 +875,7 @@
       if(card){
         card.classList.toggle("done", c.checked);
         // marcar a Parte como concluída fecha as subseções dela de volta
-        // (economiza espaço na tela) -- ainda dá pra reabrir clicando
+        // (economiza espaço na tela) -- ainda dá para reabrir clicando
         if(c.checked){
           Array.prototype.slice.call(card.querySelectorAll(".h3-toggle")).forEach(function(h3){
             h3.classList.add("collapsed");
@@ -1031,9 +1031,9 @@
       : "Banda " + band.code + " (" + band.label + ")") + " · " + tail;
   }
   function updateLiveScorePanel(){
-    renderLiveScoreSection("mod1-", "liveScoreReadingPct", "liveScoreReadingBand", "Responda aos Action Drills do Módulo 1 para calcular");
-    renderLiveScoreSection("mod2-", "liveScoreListeningPct", "liveScoreListeningBand", "Responda aos Action Drills do Módulo 2 para calcular");
-    renderLiveScoreSection("extra:bsq", "liveScoreWritingPct", "liveScoreWritingBand", "Faça o drill interativo do Módulo 4 para calcular");
+    renderLiveScoreSection("mod1-", "liveScoreReadingPct", "liveScoreReadingBand", "Responda aos exercícios do Módulo 1 para calcular");
+    renderLiveScoreSection("mod2-", "liveScoreListeningPct", "liveScoreListeningBand", "Responda aos exercícios do Módulo 2 para calcular");
+    renderLiveScoreSection("extra:bsq", "liveScoreWritingPct", "liveScoreWritingBand", "Faça o exercício interativo do Módulo 4 para calcular");
     renderLiveScoreSection("extra:exam", "liveScoreExamPct", "liveScoreExamBand",
       accessFree ? FREE_REASON.exam : "Entregue um bloco de simulado do Módulo 7 para calcular");
   }
@@ -1063,8 +1063,8 @@
 
   // melhor estimativa disponível da banda CEFR atual do aluno: prioriza o
   // diagnóstico do Módulo 0 (se completo), senão usa o agregado dos Action
-  // Drills de Reading/Listening já respondidos. Movida pro escopo
-  // compartilhado (era local do modal do painel) pra também alimentar a
+  // Drills de Reading/Listening já respondidos. Movida para o escopo
+  // compartilhado (era local do modal do painel) para também alimentar a
   // recomendação de nível nos Action Drills (ver IIFE "Nível recomendado").
   function computeBandEstimate(){
     var diag = computeQuizAccuracy("mod0-diag");
@@ -1075,19 +1075,19 @@
     var reading = computeQuizAccuracy("mod1-"), listening = computeQuizAccuracy("mod2-");
     var confirmed = reading.confirmed + listening.confirmed, correct = reading.correct + listening.correct;
     if(confirmed > 0){
-      return { pct: Math.round(100 * correct / confirmed), source: "Action Drills de Reading/Listening" };
+      return { pct: Math.round(100 * correct / confirmed), source: "exercícios de Reading e Listening" };
     }
     return null;
   }
 
-  // Action Drills de nível diferente pra cada aluno: cada drill de M1/M2 tem
+  // Action Drills de nível diferente para cada aluno: cada drill de M1/M2 tem
   // um nível CEFR (ver "level" em drills_data.py, ex. "B2–C1"). Marca como
-  // "recomendado pra você" os que incluem a banda estimada atual do aluno,
+  // "recomendado para você" os que incluem a banda estimada atual do aluno,
   // sem esconder os outros -- navegação livre continua valendo (ver decisão
   // em CLAUDE.md), isso só destaca por onde começar.
   function updateLevelRecommendations(){
     var est = computeBandEstimate();
-    if(!est) return; // sem diagnóstico/drills respondidos ainda, não dá pra recomendar nada
+    if(!est) return; // sem diagnóstico/drills respondidos ainda, não dá para recomendar nada
     var myLevel = cefrBandFromPct(est.pct).label; // ex. "B1"
     Array.prototype.slice.call(document.querySelectorAll(".quiz-drill[data-level]")).forEach(function(drillEl){
       var levels = drillEl.dataset.level.split(/[–-]/).map(function(s){ return s.trim(); });
@@ -1152,7 +1152,7 @@
       return L.length > 1 ? L.slice(0, -1).join(", ") + " e " + L[L.length - 1] : (L[0] || "");
     }
     if(ok) return "Você acertou.";
-    return "Você marcou " + list(pickedOpts) + ". " + (keyOpts.length > 1 ? "As corretas são " : "A correta é ") + list(keyOpts) + ".";
+    return "Quase. Você marcou " + list(pickedOpts) + ", mas " + (keyOpts.length > 1 ? "as respostas são " : "a resposta é ") + list(keyOpts) + ".";
   }
   // marca as alternativas de uma questão corrigida e devolve a frase
   function tagOptions(opts, pickedLetters, keyLetters){
@@ -1380,7 +1380,7 @@
   });
 
   // ---------- Cronômetro de seção ----------
-  // setDrillTimerMinutes fica exposta fora da IIFE pro botão "iniciar
+  // setDrillTimerMinutes fica exposta fora da IIFE para o botão "iniciar
   // cronômetro" de cada Action Drill (mais abaixo) poder carregar o alvo
   // específico daquele drill, sem duplicar a lógica do widget.
   var setDrillTimerMinutes = null;
@@ -1523,7 +1523,7 @@
     // transcrição ao vivo (autoavaliação de Speaking): não substitui gravar o
     // áudio, roda em paralelo via SpeechRecognition -- a "irmã" da API de voz
     // já usada pros botões de pronúncia, só que no sentido contrário (fala ->
-    // texto). Não pontua nada, só mostra o que o app "ouviu" pra comparar com
+    // texto). Não pontua nada, só mostra o que o app "ouviu" para comparar com
     // o que o aluno pretendia dizer. Sem suporte no navegador (ex.: Firefox),
     // o gravador de áudio continua funcionando normal, só sem essa parte.
     var SpeechRec = window.SpeechRecognition || window.webkitSpeechRecognition;
@@ -2462,7 +2462,7 @@
     var fCat = frontEl.querySelector(".srs-cat");
     var bWord = backEl.querySelector(".srs-word");
     // texto e botão de pronúncia vivem em nós separados dentro de .srs-word
-    // pra poder trocar só o texto a cada carta (textContent apagaria o botão junto)
+    // para poder trocar só o texto a cada carta (textContent apagaria o botão junto)
     var fWordText = document.createTextNode("");
     var bWordText = document.createTextNode("");
     fWord.appendChild(fWordText);
@@ -2834,7 +2834,7 @@
       var url = meta.avatar_url || meta.picture || null;
       if(!url) return null;
       // o Google costuma devolver uma miniatura pequena (ex.: "=s96-c" no
-      // fim da URL) — pede uma versão maior pra não borrar/encolher dentro
+      // fim da URL) — pede uma versão maior para não borrar/encolher dentro
       // do avatar do site, que é bem maior que 96px
       if(/googleusercontent\.com/.test(url)){
         url = /=s\d+-c$/.test(url) ? url.replace(/=s\d+-c$/, "=s256-c") : url + "=s256-c";
@@ -2967,12 +2967,12 @@
         .then(function(res){
           if(res.error){
             // erro de rede/consulta: mantém a tela de pagamento visível (o
-            // padrão seguro pra receita continua sendo travar por padrão),
+            // padrão seguro para receita continua sendo travar por padrão),
             // mas avisa que foi uma falha de conexão, não que o aluno não
             // pagou -- sem isso, quem já pagou via um erro transitório
             // lia "sem acesso" sem saber que é só tentar de novo.
             payGateEl.hidden = false;
-            payGateMsg("Não deu pra confirmar seu acesso agora (erro de conexão). Atualize a página pra tentar de novo.", "err");
+            payGateMsg("Não consegui confirmar seu acesso agora, parece ser a conexão. Atualize a página que eu tento de novo.", "err");
             console.error("Falha ao verificar pagamento:", res.error.message);
             return;
           }
@@ -3012,7 +3012,7 @@
         // (dependendo da versão da lib carregada pelo CDN) -- a edge
         // function então recebe a chamada sem Authorization e responde
         // "Não autenticado." mesmo com o aluno logado. Busca a sessão
-        // atual e manda o token explicitamente pra não depender disso.
+        // atual e manda o token explicitamente para não depender disso.
         client.auth.getSession().then(function(sessionRes){
           var token = sessionRes && sessionRes.data && sessionRes.data.session && sessionRes.data.session.access_token;
           var coupon = couponInput ? couponInput.value.trim() : "";
@@ -3042,7 +3042,7 @@
           .catch(function(){
             // rejeição de verdade (ex.: sem internet, DNS falhou antes de
             // chegar no Supabase) -- sem isso o botão ficava travado em
-            // "Abrindo a página de pagamento…" pra sempre, sem erro e sem como tentar de novo
+            // "Abrindo a página de pagamento…" para sempre, sem erro e sem como tentar de novo
             payBtn.disabled = false;
             payGateMsg("Erro de conexão ao abrir a página de pagamento. Tente de novo.", "err");
           });
@@ -3089,7 +3089,7 @@
         .upsert({ user_id: uid, state: bundle, updated_at: stamp }, { onConflict: "user_id" })
         .select("updated_at").single()
         .then(function(res){
-          if(res.error){ msg("Falha ao salvar na nuvem.", "err"); return; }
+          if(res.error){ msg("Não consegui salvar na nuvem agora. Seu progresso continua guardado neste aparelho.", "err"); return; }
           try {
             localStorage.setItem("toefl_sync_at", res.data.updated_at);
             localStorage.removeItem("toefl_dirty");
@@ -3241,9 +3241,9 @@
           return;
         }
         // e-mail já cadastrado e confirmado: o Supabase responde como se tivesse
-        // dado certo (pra não revelar quais e-mails já existem) mas não manda
+        // dado certo (para não revelar quais e-mails já existem) mas não manda
         // nada e não cria identidade nova -- sem checar isso, o aviso de
-        // "confira seu e-mail" mente pra quem já tem conta.
+        // "confira seu e-mail" mente para quem já tem conta.
         var identities = res.data && res.data.user && res.data.user.identities;
         if(identities && identities.length === 0){
           gateMsg("Esse e-mail já tem conta. Use a aba Entrar ou, se não lembrar a senha, clique em \"Esqueci minha senha\".", "err");
@@ -3306,7 +3306,7 @@
     });
 
     document.getElementById("forgotPasswordLink").addEventListener("click", function(){
-      var email = window.prompt("Seu e-mail. Enviaremos um link pra você escolher uma nova senha:");
+      var email = window.prompt("Seu e-mail. Enviaremos um link para você escolher uma nova senha:");
       if(!email) return;
       var redirect = location.href.split("#")[0].split("?")[0];
       client.auth.resetPasswordForEmail(email.trim(), { redirectTo: redirect }).then(function(res){
@@ -3324,8 +3324,8 @@
         var redirect = location.href.split("#")[0].split("?")[0];
         client.auth.signInWithOAuth({ provider: "google", options: { redirectTo: redirect } })
           .then(function(res){
-            // sucesso: o navegador é redirecionado pro Google, não sobra nada pra fazer aqui
-            if(res.error) gateMsg("Erro: " + res.error.message, "err");
+            // sucesso: o navegador é redirecionado para o Google, não sobra nada para fazer aqui
+            if(res.error) gateMsg("Algo deu errado: " + res.error.message, "err");
           });
       });
     }
@@ -3404,12 +3404,12 @@
       function loadAccess(user){
         if(!accessEl) return;
         if(renewBtn) renewBtn.hidden = true;
-        if(!user){ setAccess("Não deu pra verificar agora.", ""); return; }
+        if(!user){ setAccess("Não consegui verificar agora.", ""); return; }
         if(isAdmin({ user: user })){ setAccess("Conta de administrador: acesso liberado, sem cobrança.", "is-paid"); return; }
         setAccess("Verificando…", "");
         fetchEntitlement(user.id)
           .then(function(res){
-            if(res.error){ setAccess("Não deu pra verificar agora. Feche e abra esta tela pra tentar de novo.", ""); return; }
+            if(res.error){ setAccess("Não consegui verificar agora. Feche e abra esta tela que eu tento de novo.", ""); return; }
             var st = accessState(res.data, Date.now());
             var line = accessText(st, res.data && res.data.paid_at);
             setAccess(line.text, line.cls);
@@ -3429,7 +3429,7 @@
               };
             }
           })
-          .catch(function(){ setAccess("Não deu pra verificar agora (erro de conexão).", ""); });
+          .catch(function(){ setAccess("Não consegui verificar agora, parece ser a conexão.", ""); });
       }
 
       function accountMsg(text, kind){
@@ -3481,8 +3481,8 @@
           accountMsg("Salvando…", "ok");
           client.auth.updateUser({ email: email }).then(function(res){
             if(res.error){ accountMsg(friendlyError(res.error.message), "err"); return; }
-            // o Supabase manda link de confirmação pro endereço NOVO (e, se
-            // "secure email change" estiver ligado, também pro antigo) --
+            // o Supabase manda link de confirmação para o endereço NOVO (e, se
+            // "secure email change" estiver ligado, também para o antigo) --
             // o e-mail só troca de verdade depois de clicar nesse link
             accountMsg("Confira o e-mail enviado para " + email + " e confirme a troca por lá.", "ok");
           }).catch(function(){ accountMsg("Erro de conexão. Tente de novo.", "err"); });
@@ -3503,7 +3503,7 @@
 
       // ---- excluir conta ----
       // quem apaga de verdade é a edge function delete-account (precisa da
-      // service_role, que não pode vir pro navegador). Aqui é só a
+      // service_role, que não pode vir para o navegador). Aqui é só a
       // confirmação e a limpeza do que ficou neste aparelho.
       var deleteOpenBtn = document.getElementById("accountDeleteOpen");
       var deleteForm = document.getElementById("accountDeleteForm");
@@ -3718,7 +3718,7 @@
     var planTextEl = document.getElementById("dashPlanText");
     var planBtnEl = document.getElementById("dashPlanBtn");
 
-    // pra onde mandar o aluno a partir do código de erro mais frequente --
+    // para onde mandar o aluno a partir do código de erro mais frequente --
     // mesmo agrupamento do mapa reverso do Módulo 9, Parte 8 (RG antes de R,
     // senão "RG1" bateria como se fosse Reading por causa do prefixo "R")
     var ERROR_MODULE_MAP = [
@@ -3738,7 +3738,7 @@
 
     // mesmos rótulos de app/build_pipeline.py (ERRLOG_CODES) -- duplicado
     // aqui de propósito: são só 36 pares fixos, não vale a pena gerar isso
-    // no build só pra não repetir uma lista curta.
+    // no build só para não repetir uma lista curta.
     var ERRLOG_LABELS = {
       R1:"Não entendi a pergunta", R2:"Caí num distrator", R3:"Lacuna de gramática (CTW)",
       R4:"Lacuna de vocabulário / collocation", R5:"Tempo", R6:"Desatenção / releitura",
@@ -3778,9 +3778,9 @@
     function render(){
       var streak = computeStreak();
       streakEl.textContent = streak.count === 0
-        ? "Estude hoje para começar uma sequência."
+        ? "Que tal 20 minutos hoje? Um pouco por dia rende mais do que muito de vez em quando."
         : streak.count + (streak.count === 1 ? " dia seguido estudando" : " dias seguidos estudando") +
-          (streak.today ? "" : " (continue hoje pra manter)");
+          (streak.today ? "" : " (continue hoje para manter)");
 
       // a mesma meta de hoje da gaveta e da faixa do topo (plano de estudo)
       var today = window.__toeflToday ? window.__toeflToday() : null;
@@ -3792,7 +3792,7 @@
       var band = computeBandEstimate();
       bandEl.textContent = band
         ? "Banda " + cefrBandFromPct(band.pct).code + " (" + cefrBandFromPct(band.pct).label + ") · fonte: " + band.source
-        : "Complete o diagnóstico do Módulo 0 pra ver sua estimativa.";
+        : "Complete o diagnóstico do Módulo 0 para ver sua estimativa.";
 
       var prog = computeOverallProgress();
       progressFillEl.style.width = prog.pct + "%";
@@ -3821,11 +3821,11 @@
             navTo(target.mod);
           };
         } else {
-          planTextEl.textContent = "Continue registrando sessões pra receber uma sugestão personalizada.";
+          planTextEl.textContent = "Continue registrando sessões para receber uma sugestão personalizada.";
           planBtnEl.hidden = true;
         }
       } else {
-        planTextEl.textContent = "Continue estudando e registrando sessões (M1–M6) pra receber uma sugestão personalizada aqui.";
+        planTextEl.textContent = "Continue estudando e registrando sessões (M1–M6) para receber uma sugestão personalizada aqui.";
         planBtnEl.hidden = true;
       }
     }
@@ -3846,7 +3846,7 @@
 
   // ---------- Weekly Performance Dashboard (M0, Parte 5.1) ----------
   // toefl_weeklydash_v1 guarda { <metrica>: { w1..w4: "valor digitado" } },
-  // salvo a cada tecla (o safeSet já cuida do dirty flag/push debounced pra
+  // salvo a cada tecla (o safeSet já cuida do dirty flag/push debounced para
   // quem está logado, igual ao resto do progresso).
   (function(){
     var root = document.getElementById("weeklyDash");
@@ -3957,7 +3957,7 @@
   // drills/widgets interativos, que ficam sempre visíveis) começa FECHADA,
   // e abre sozinha quando o aluno rola até ela (IntersectionObserver) --
   // "anda" pelo módulo abrindo uma subseção de cada vez, em vez de mostrar
-  // tudo de uma vez. Continua dando pra abrir/fechar clicando no título a
+  // tudo de uma vez. Continua dando para abrir/fechar clicando no título a
   // qualquer momento. Marcar a Parte (h2) inteira como concluída fecha as
   // subseções dela de volta (ver o listener de .pchk mais acima) -- depois
   // disso elas não reabrem sozinhas de novo, só se o aluno clicar. Roda por
@@ -3965,7 +3965,7 @@
   // índice "Nesta parte") contam com a posição original dos elementos em
   // relação aos h3/h2.
   // marcação de concluído por subseção (h3), separada da marcação por Parte
-  // (h2) que já existia -- pedido do usuário: só dava pra marcar a Parte
+  // (h2) que já existia -- pedido do usuário: só dava para marcar a Parte
   // inteira de uma vez, sem visão de quais subseções específicas já tinham
   // sido lidas.
   function readH3Progress(){
@@ -3991,7 +3991,7 @@
     var cards = Array.prototype.slice.call(document.querySelectorAll(".section-card"));
     var allH3 = [];
     var h3Ends = []; // o fim de cada subseção: chegar nele marca como lida
-    var h3Seq = {}; // contador por módulo, pra dar um id estável a cada h3
+    var h3Seq = {}; // contador por módulo, para dar um id estável a cada h3
     var h3Done = readH3Progress();
     cards.forEach(function(card){
       var panelEl = card.closest(".panel");
@@ -4097,10 +4097,10 @@
     }
 
     // "continuar de onde parei": guarda a última subseção que o aluno leu
-    // (a que entrou na faixa de leitura no meio da tela), pra sidebar
-    // oferecer um atalho direto pra lá na próxima visita -- ver resumeBtn
+    // (a que entrou na faixa de leitura no meio da tela), para sidebar
+    // oferecer um atalho direto para lá na próxima visita -- ver resumeBtn
     // mais abaixo. Separado do observer de auto-abrir porque precisa
-    // disparar mesmo pra seções que já estavam abertas.
+    // disparar mesmo para seções que já estavam abertas.
     // o IntersectionObserver dispara um callback inicial assim que começa a
     // observar, refletindo o que já está na tela nesse instante (a seção
     // 1.1 do módulo que acabou de carregar) -- isso não é "o aluno rolou até
@@ -4140,7 +4140,7 @@
     // abre direto a primeira subseção do painel ativo no momento em que essa
     // IIFE roda (o painel que o showTab() inicial já deixou visível) -- não
     // depende do primeiro callback do IntersectionObserver, que na prática
-    // nem sempre dispara a tempo pra quem já está com a seção na tela sem
+    // nem sempre dispara a tempo para quem já está com a seção na tela sem
     // ter rolado nada ainda.
     var firstActiveH3 = document.querySelector(".panel:not([hidden]) .h3-toggle");
     if(firstActiveH3 && firstActiveH3.classList.contains("collapsed")){
@@ -4190,7 +4190,7 @@
           var target = document.getElementById(pos.id);
           if(!target) return;
           // se o módulo estiver paginado por parte (ver IIFE de paginação
-          // logo abaixo), pula primeiro pra parte que contém essa subseção,
+          // logo abaixo), pula primeiro para parte que contém essa subseção,
           // senão ela fica escondida e o scroll não acha nada
           var showPart = window.__toeflShowPart && window.__toeflShowPart[pos.mod];
           var card = target.closest(".section-card");
@@ -4335,8 +4335,8 @@
 
   // ---------- Paginação por Parte, tipo flashcard ----------
   // Pedido do usuário: em vez de rolar por todas as Partes de um módulo de
-  // uma vez, mostrar uma Parte inteira por vez com um botão pra passar pra
-  // próxima (e voltar pra anterior). Roda depois do accordion de h3 (que já
+  // uma vez, mostrar uma Parte inteira por vez com um botão para passar para
+  // próxima (e voltar para anterior). Roda depois do accordion de h3 (que já
   // preparou os data-mod/ids); só mexe em visibilidade (hidden), não na
   // ordem/estrutura dos elementos, então o resto do app (observer de scroll,
   // "continuar de onde parei" etc.) continua funcionando normalmente dentro
@@ -4375,8 +4375,8 @@
       else if(inner){ inner.insertBefore(pager, inner.firstChild); }
 
       // no fim da última Parte, em vez de só esconder o botão, oferece a
-      // transição pro próximo módulo -- pedido do usuário: terminar um
-      // módulo não tinha nenhum convite claro pra seguir pro seguinte.
+      // transição para o próximo módulo -- pedido do usuário: terminar um
+      // módulo não tinha nenhum convite claro para seguir para o seguinte.
       var modIdx = modOrder.indexOf(modKey);
       var nextModKey = modIdx >= 0 ? modOrder[modIdx + 1] : null;
       var nextModBtn = nextModKey ? tabBtns[modOrder.indexOf(nextModKey)] : null;

@@ -95,7 +95,7 @@
       fb.hidden = !done;
       if(done){
         var ok = s.picked === key;
-        setVerdict(fb, ok ? "Você acertou." : "Você marcou (" + s.picked + "). A correta é (" + key + ").", ok);
+        setVerdict(fb, ok ? "Você acertou." : "Quase. Você marcou (" + s.picked + "), mas a resposta é (" + key + ").", ok);
       } else {
         setVerdict(fb, null);
       }

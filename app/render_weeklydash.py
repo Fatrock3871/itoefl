@@ -1,6 +1,6 @@
 """Renderiza o "Weekly Performance Dashboard" do Módulo 0, Parte 5.1 como
 tabela interativa (input por semana/métrica, salvo em localStorage) em vez
-do antigo template de texto com células vazias pra preencher à mão -- numa
+do antigo template de texto com células vazias para preencher à mão -- numa
 página web, uma tabela sem nenhum jeito de digitar nela não faz sentido."""
 
 

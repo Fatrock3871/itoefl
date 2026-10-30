@@ -393,7 +393,7 @@ MOD2_ACTION_DRILLS_B = [
         "id": "mod2-b1",
         "title": "Exercício B1: Advising Office (meta de 3 min)",
         "level": "B1–B2",
-        "objective": "Leia o diálogo (ou peça pra alguém ler em voz alta) e responda às 2 questões. Tempo-alvo: 3 minutos.",
+        "objective": "Leia o diálogo (ou peça para alguém ler em voz alta) e responda às 2 questões. Tempo-alvo: 3 minutos.",
         "passage_html": """<p><em>Narrator: Listen to a conversation between a student and an academic advisor.</em></p>
 <p><strong>Student:</strong> Hi, I wanted to ask about switching one of my electives. I'm in Intro to Statistics, but I'd rather take Data Visualization this term.</p>
 <p><strong>Advisor:</strong> Let me check... okay, Data Visualization has space. But it has Statistics as a prerequisite — have you completed that?</p>
@@ -416,7 +416,7 @@ MOD2_ACTION_DRILLS_B = [
         "id": "mod2-b2",
         "title": "Exercício B2: Library Reserve Desk (meta de 3 min)",
         "level": "B1–B2",
-        "objective": "Leia o diálogo (ou peça pra alguém ler em voz alta) e responda às 2 questões. Tempo-alvo: 3 minutos.",
+        "objective": "Leia o diálogo (ou peça para alguém ler em voz alta) e responda às 2 questões. Tempo-alvo: 3 minutos.",
         "passage_html": """<p><em>Narrator: Listen to a conversation between a student and a librarian.</em></p>
 <p><strong>Student:</strong> Hi — I'm looking for a book my professor put on reserve for the history seminar. It's <em>The Making of the Atlantic World</em>.</p>
 <p><strong>Librarian:</strong> Let me look... yes, we have two copies on reserve. Reserve items are two-hour loans, in-library use only. You can't take them out of the building.</p>
@@ -438,7 +438,7 @@ MOD2_ACTION_DRILLS_B = [
         "id": "mod2-b3",
         "title": "Exercício B3: After Class (meta de 3 min)",
         "level": "B1–B2",
-        "objective": "Leia o diálogo (ou peça pra alguém ler em voz alta) e responda às 2 questões. Tempo-alvo: 3 minutos.",
+        "objective": "Leia o diálogo (ou peça para alguém ler em voz alta) e responda às 2 questões. Tempo-alvo: 3 minutos.",
         "passage_html": """<p><em>Narrator: Listen to a conversation between a student and a professor.</em></p>
 <p><strong>Student:</strong> Professor, do you have a minute? I'm a bit lost on the second essay prompt.</p>
 <p><strong>Professor:</strong> Of course. Which part?</p>
@@ -466,7 +466,7 @@ MOD2_ACTION_DRILLS_C = [
         "id": "mod2-c1",
         "title": "Exercício C1: Library Services (meta de 2 min)",
         "level": "B1",
-        "objective": "Leia o anúncio (ou peça pra alguém ler em voz alta) e responda às 2 questões. Tempo-alvo: 2 minutos.",
+        "objective": "Leia o anúncio (ou peça para alguém ler em voz alta) e responda às 2 questões. Tempo-alvo: 2 minutos.",
         "passage_html": """<p><em>Narrator: Listen to an announcement about a change to library services.</em></p>
 <p><strong>Speaker:</strong> Attention, students. Starting next Monday, the Main Library's third-floor reading room will be closed for renovation through the end of the month. During this period you can use the East Wing reading room instead, which keeps its regular hours. Reserved study rooms originally booked for the third floor have already been transferred automatically to the East Wing — you don't need to rebook. However, if your reservation was for a room with audiovisual equipment, please double-check availability, since not all East Wing rooms are equipped. Questions go to the circulation desk.</p>""",
         "items": [
@@ -482,7 +482,7 @@ MOD2_ACTION_DRILLS_C = [
         "id": "mod2-c2",
         "title": "Exercício C2: Course Registration (meta de 2 min)",
         "level": "B1",
-        "objective": "Leia o anúncio (ou peça pra alguém ler em voz alta) e responda às 2 questões. Tempo-alvo: 2 minutos.",
+        "objective": "Leia o anúncio (ou peça para alguém ler em voz alta) e responda às 2 questões. Tempo-alvo: 2 minutos.",
         "passage_html": """<p><em>Narrator: Listen to an announcement about course registration.</em></p>
 <p><strong>Speaker:</strong> A reminder to all second-year students: registration for spring courses opens this Thursday at 8 a.m. and closes the following Wednesday at midnight. Register early — popular courses fill within hours. If a course you need is full, add yourself to the waitlist rather than emailing the instructor; the system releases spots automatically as students drop, and it works strictly in waitlist order. One change this year: the add/drop period after classes begin has been shortened from two weeks to one, so finalize your schedule before the term starts, not after.</p>""",
         "items": [
@@ -498,7 +498,7 @@ MOD2_ACTION_DRILLS_C = [
         "id": "mod2-c3",
         "title": "Exercício C3: Campus Event (meta de 2 min)",
         "level": "B1",
-        "objective": "Leia o anúncio (ou peça pra alguém ler em voz alta) e responda às 2 questões. Tempo-alvo: 2 minutos.",
+        "objective": "Leia o anúncio (ou peça para alguém ler em voz alta) e responda às 2 questões. Tempo-alvo: 2 minutos.",
         "passage_html": """<p><em>Narrator: Listen to an announcement about a career event.</em></p>
 <p><strong>Speaker:</strong> The annual Career Fair takes place next Wednesday from 10 to 4 in the main gymnasium. Over eighty employers will attend, mostly in engineering, healthcare, and education. A few reminders. Bring several printed copies of your résumé — most recruiters still expect a paper copy. Business-casual dress is recommended, not required. The résumé-review station near the entrance will be open from 9, an hour before the fair, and it operates first-come, first-served, so arrive early if you want feedback before talking to employers. Finally, the 9:30 workshop on interview skills is now full; a recording will be posted next week for those who missed it.</p>""",
         "items": [
@@ -519,7 +519,7 @@ MOD2_ACTION_DRILLS_D = [
         "id": "mod2-d1",
         "title": "Exercício D1: psicologia (meta de 4 min)",
         "level": "B2–C1",
-        "objective": "Leia a palestra (ou peça pra alguém ler em voz alta) e responda às 4 questões. Tempo-alvo: 4 minutos.",
+        "objective": "Leia a palestra (ou peça para alguém ler em voz alta) e responda às 4 questões. Tempo-alvo: 4 minutos.",
         "passage_html": """<p><em>Narrator: Listen to part of a talk in a psychology class.</em></p>
 <p><strong>Professor:</strong> We've been discussing decision-making, and today I want to bring up something researchers call the paradox of choice. The idea is counterintuitive: you'd think more options would always make us happier, but past a certain point it does the opposite.</p>
 <p>A classic example. In one well-known study, researchers set up a tasting table in a grocery store: first with six varieties of jam, then with twenty-four. You'd expect the bigger display to sell more. Actually, the smaller display generated significantly more purchases. The larger one attracted more browsers, but far fewer of them bought anything.</p>
@@ -544,7 +544,7 @@ MOD2_ACTION_DRILLS_D = [
         "id": "mod2-d2",
         "title": "Exercício D2: biologia (meta de 4 min)",
         "level": "B2–C1",
-        "objective": "Leia a palestra (ou peça pra alguém ler em voz alta) e responda às 4 questões. Tempo-alvo: 4 minutos.",
+        "objective": "Leia a palestra (ou peça para alguém ler em voz alta) e responda às 4 questões. Tempo-alvo: 4 minutos.",
         "passage_html": """<p><em>Narrator: Listen to part of a talk in a biology class.</em></p>
 <p><strong>Professor:</strong> When we picture a forest, we tend to see individual trees competing — for light, for water, for space. And that's real. But over the last thirty years, research has revealed something the old picture missed: the trees are also <strong>connected</strong>, underground, through fungi.</p>
 <p>Here's how. The roots of most trees are wrapped in a network of fungal threads; this partnership between root and fungus is called a mycorrhiza. The fungi pull in water and minerals the tree's roots can't reach efficiently, and hand them to the tree. In return, the tree gives the fungi sugars it makes through photosynthesis. So far, a simple trade.</p>
@@ -569,7 +569,7 @@ MOD2_ACTION_DRILLS_D = [
         "id": "mod2-d3",
         "title": "Exercício D3: história da tecnologia (meta de 4 min)",
         "level": "B2–C1",
-        "objective": "Leia a palestra (ou peça pra alguém ler em voz alta) e responda às 4 questões. Tempo-alvo: 4 minutos.",
+        "objective": "Leia a palestra (ou peça para alguém ler em voz alta) e responda às 4 questões. Tempo-alvo: 4 minutos.",
         "passage_html": """<p><em>Narrator: Listen to part of a talk in a history of technology class.</em></p>
 <p><strong>Professor:</strong> Look at your keyboard. The top row of letters spells Q-W-E-R-T-Y. It's an odd arrangement — the most common letters aren't under your strongest fingers. So why has it survived, essentially unchanged, for a hundred and fifty years?</p>
 <p>The layout dates from the 1870s, from early mechanical typewriters. The common story is that QWERTY was designed to <em>slow typists down</em> so the metal type-bars wouldn't jam. That's probably an oversimplification (the real design pressures were more mixed), but the key point is that the layout was shaped by the constraints of 1870s <strong>machinery</strong>, constraints that vanished decades ago.</p>

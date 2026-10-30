@@ -849,7 +849,7 @@ def run():
                     pressed: ex[1].querySelectorAll('.exam-opt[aria-pressed="true"]').length };
                 })()""")
                 check("real_feedback_says_right_or_wrong_in_words",
-                      fb["wrongTags"] == "correta|sua resposta" and fb["wrongVerdict"].startswith("✗ Você marcou") and fb["lettersMatch"]
+                      fb["wrongTags"] == "correta|sua resposta" and fb["wrongVerdict"].startswith("✗ Quase. Você marcou") and fb["lettersMatch"]
                       and fb["role"] == "status" and fb["rightTags"] == "sua resposta, correta" and fb["rightVerdict"] == "✓ Você acertou."
                       and fb["examVerdicts"] and fb["examTags"], fb)
                 check("real_exam_shows_how_many_left", fb["openTags"] == 0 and fb["left"].startswith("Falta") and fb["pressed"] == 1, fb)

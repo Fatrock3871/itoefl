@@ -51,7 +51,7 @@ def render_quiz_drill(drill_id, title, objective, passage_html, items, listen=Fa
         if passage_html else ""
     )
     # nível CEFR do drill (ver "level" em drills_data.py): badge visível +
-    # data-level no widget, pra JS marcar "recomendado pro seu nível" com
+    # data-level no widget, para JS marcar "recomendado para o seu nível" com
     # base na banda estimada do aluno (diagnóstico do M0 ou Action Drills
     # já respondidos) sem esconder nenhum drill dos outros níveis.
     level_badge = f'<span class="drill-level" data-level-badge-for="{drill_id}">Nível {level}</span>' if level else ""
