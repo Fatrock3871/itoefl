@@ -90,7 +90,7 @@ scripts/prepublish_check.py  Reprova a publicação ([PREENCHER], SITE_URL local
 app/site.json             SITE_URL: o endereço público, num lugar só (a variável de ambiente vence). Lido por app/site_config.py
 artifact/_headers, robots.txt, sitemap.xml   Hospedagem (Cloudflare Pages), gerados pelo build.py; não editar
 docs/publicar.md          Passo a passo do dono para publicar (Cloudflare Pages, domínio, Supabase, Google, Stripe, Pix, SMTP)
-app/site.json             Também BETA (faixa "Versão de teste") e FEEDBACK_EMAIL (link "Enviar sugestão")
+app/site.json             Também BETA (faixa "Versão de teste"), FEEDBACK_EMAIL (link "Enviar sugestão") e BRAND_NAME (nome do curso: o build troca "iTOEFL" por ele em todas as páginas e no manifesto)
 docs/                     Análises e notas de decisão
 _archive/                 Versão pré-2026: index.html monolítico + os 10 .md antigos
 _snapshots/               Cópias com timestamp antes de mudanças estruturais
@@ -164,7 +164,7 @@ teclado (Esc fecha). Dentro de exercício, diagnóstico e simulado o balão
 fica desligado até o aluno responder aquele item. O interruptor
 "Traduções" (Configurações, no menu) vale para o site todo e fica no
 aparelho (`toefl_tr_v1`). Marcação aberta e não fechada derruba o build.
-Hoje há 5 exemplos, na tabela da Parte 3.3 do M0; o resto é a etapa 3.
+Desde a etapa 3 (2026-10-29) são cerca de 2.500 marcações nos 10 módulos. Negrito ou itálico dentro do `[[ ]]` derruba o build, e o smoke test reprova balão em alternativa, fala de transcrição, bloco de simulado ou widget de exercício.
 
 **Caixas explicativas:** os blocos de citação (`>`) viram um de 7 tipos no
 `app.js` (dica, atenção, exemplo, erro comum, resumo, regra da ETS,
@@ -340,7 +340,7 @@ concluída" (o `.mark-done` do fim da Parte some ali); abaixo de 1100 px a
 coluna vira uma barra fina no topo que abre o sumário. Subseção conta como
 lida quando o aluno rola até o fim dela aberta (`toefl_h3progress_v1`); não
 há caixa por subseção. Títulos de Parte aparecem em formato de frase
-(`sentence_case` em `build.py`; o `.md` segue em caixa alta até a etapa 3).
+(desde a etapa 3 o próprio `.md` está assim; o pipeline acha os títulos sem ligar para maiúsculas).
 
 ## Estado e progresso do usuário (runtime)
 

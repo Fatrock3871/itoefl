@@ -403,10 +403,23 @@ abaixo são os itens dela). Relato item a item em
       `itoefl-gerencia/revisao/APLICADO-etapa2.md`. Topo, botões e ícones
       (62fee15); menu e Configurações (e0f7f8c); leitura e coluna "Nesta
       Parte" (cbdb622); caixas e tabelas (8b8fc23); balão de tradução (60d3780).
-- [ ] (C) Etapa 3, texto: tom, pontuação, traduções em todo o conteúdo,
-      marca TOEFL® e nome num lugar só, decimais (itens 6, 9, 16, 17, 18).
-      Inclui os títulos das Partes nos `.md` em formato de frase (hoje só a
-      tela converte) e rótulos para as caixas que ficaram neutras.
+- [x] (C) Etapa 3, texto (2026-10-29): tom, pontuação, traduções em todo
+      o conteúdo, marca TOEFL® e nome num lugar só, decimais (itens 6, 9,
+      16, 17, 18). Rascunho do Gemini revisado módulo a módulo (o M9 foi
+      reescrito à mão: a cota do Gemini acabou antes). Títulos dos `.md` em
+      formato de frase e rótulos nas caixas. 2.557 marcações de tradução,
+      nenhuma em material que o aluno responde. Commits: M0 489ae3a, M1
+      8a44f69, M2 8614ed9, M3 11ed2c8, M4 1006299, M5 16f19c4, M6 9db82ca,
+      M7 ea31338, M8 7c116cd, M9 a2ef52a; dados 614c629; interface 9d073be;
+      marca eb107d1; banda com vírgula d76d131; smoke 2e17974 (344
+      checagens). Relato em `itoefl-gerencia/revisao/APLICADO-etapa3.md`.
+- [ ] (U) Para trocar o nome do curso: mudar `BRAND_NAME` em
+      `app/site.json` e rodar as builds. As edge functions `review-essay`
+      (e-mail da correção) e `create-checkout` (nome do produto) ainda têm
+      "iTOEFL" no código e só mudam com deploy, que fica com o dono.
+- [ ] (U) Conferir no M9, Parte 4.2, a linha "Pergunta direta: Where is the
+      library? ↗ ascendente (correto)": o M3 ensina que pergunta com *wh-*
+      desce. Fato anterior à etapa 3, não mexi.
 - [ ] (U) Olhar a regra das caixas (`calloutType` em `app/app.js`): 79 das
       182 caixas ficam neutras por não ter marcador no texto.
 
