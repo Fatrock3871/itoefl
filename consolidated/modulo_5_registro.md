@@ -67,7 +67,7 @@ Ter bom **controle de registro** significa escolher a voz certa para cada situa�
 
 A tabela abaixo funciona como a sua **referência principal** ao longo do estudo. Antes de começar qualquer exercício, veja em qual coluna você já atua com segurança hoje e quais marcadores ajudam a consolidar a sua banda ou subir um degrau.
 
-| Elemento linguístico | B1 (banda 3–3.5) | B2 (banda 4–4.5) | C1–C2 (banda 5–6) |
+| Elemento linguístico | B1 (banda 3–3,5) | B2 (banda 4–4,5) | C1–C2 (banda 5–6) |
 |---|---|---|---|
 | **Abertura de resposta oral ([[Take an Interview::Faça uma entrevista]])** | *"[[I think X because...::Eu acho X porque...]]"* | *"[[In my experience, X: mainly because...::Na minha experiência, X, principalmente porque...]]"* | *"[[What stands out for me about X is...::O que mais me chama a atenção em X é...]]"* ou *"[[My view on X comes down to...::A minha visão sobre X se resume a...]]"* |
 | **Abertura de parágrafo ([[Write for an Academic Discussion::Escreva para uma discussão acadêmica]])** | *"[[I agree with X.::Eu concordo com X.]]"* | *"[[I agree with X, primarily because...::Eu concordo com X, principalmente porque...]]"* | *"[[While both points have merit, the stronger case is that...::Embora os dois pontos tenham mérito, o argumento mais forte é que...]]"* |
@@ -848,9 +848,9 @@ Escolher o degrau certo para o seu momento atual evita frustração e acelera a 
 
 | Banda estimada agora (Speaking e Writing) | Banda-alvo do treino | Condição para subir |
 |---|---|---|
-| 3–3.5 (B1) | **B2**: consolidar a estrutura antes do vocabulário | A estrutura básica (posição, razão e exemplo) precisa sair de forma automática, sem esforço para lembrar o roteiro, por 5 sessões seguidas |
-| 4–4.5 (B2) | **B2 consolidado com marcadores C1 seletivos** | Inclua um marcador da Parte 3 por semana e só avance para o próximo quando o anterior já sair sem esforço |
-| 5–5.5 (C1) | **C1 completo com ajuste fino de precisão** | Foque no Módulo 9 ([[Brazilian Traps::Armadilhas comuns para brasileiros]]) para ajustar artigos, concordância, ritmo silábico e excesso de cerimônia no e-mail |
+| 3–3,5 (B1) | **B2**: consolidar a estrutura antes do vocabulário | A estrutura básica (posição, razão e exemplo) precisa sair de forma automática, sem esforço para lembrar o roteiro, por 5 sessões seguidas |
+| 4–4,5 (B2) | **B2 consolidado com marcadores C1 seletivos** | Inclua um marcador da Parte 3 por semana e só avance para o próximo quando o anterior já sair sem esforço |
+| 5–5,5 (C1) | **C1 completo com ajuste fino de precisão** | Foque no Módulo 9 ([[Brazilian Traps::Armadilhas comuns para brasileiros]]) para ajustar artigos, concordância, ritmo silábico e excesso de cerimônia no e-mail |
 | 6 (C2) | **C2: refinamento sob pressão de tempo** | Treine com simulados cronometrados, pois aqui o ganho vem da consistência, e não de adicionar estruturas novas |
 
 > **Erro comum:** Evite pular direto do nível B1 para tentar produzir estruturas de nível C1. O passo que mais faz a nota subir é firmar a transição de B1 para B2 (com boa estrutura e conectivos intermediários), pois o nível C1 só compensa depois que o B2 já está automático.

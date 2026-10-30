@@ -7,12 +7,12 @@
 var ToeflLevel = {
   band: function(pct){
     // meia banda com vírgula, como na calculadora e no texto do módulo
-    if(pct <= 20) return {code:"1–1,5", label:"A1", low:1, desc:"fundamentos ausentes"};
+    if(pct <= 20) return {code:"1–1,5", label:"A1", low:1, desc:"base inicial em construção"};
     if(pct <= 40) return {code:"2–2,5", label:"A2", low:2, desc:"fundamentos parciais"};
-    if(pct <= 55) return {code:"3–3,5", label:"B1", low:3, desc:"base funcional, muitos gaps de precisão"};
+    if(pct <= 55) return {code:"3–3,5", label:"B1", low:3, desc:"base funcional, ainda com oscilações de precisão"};
     if(pct <= 70) return {code:"4–4,5", label:"B2", low:4, desc:"consistência intermediária-avançada"};
-    if(pct <= 85) return {code:"5–5,5", label:"C1", low:5, desc:"alta consistência, poucos erros sistemáticos"};
-    return {code:"6", label:"C2", low:6, desc:"domínio quase completo"};
+    if(pct <= 85) return {code:"5–5,5", label:"C1", low:5, desc:"alta consistência, poucos erros recorrentes"};
+    return {code:"6", label:"C2", low:6, desc:"domínio amplo e seguro"};
   },
   schedule: function(pct){
     if(pct <= 55) return "Cronograma Completo (90 dias) · Módulo 0, Parte 6.3";

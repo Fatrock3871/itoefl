@@ -95,11 +95,11 @@ Mais do que uma nota, o seu número de acertos funciona como um **mapa** para mo
 
 | Acertos (de 10) | Banda CEFR estimada | Faixa 0–120 comparável | Leitura do resultado |
 |---|---|---|---|
-| 0–2 | A1 (1–1.5) | 0–23 | Base em construção: comece por gramática essencial e vocabulário de alta frequência antes de entrar nos módulos de tarefa |
-| 3–4 | A2 (2–2.5) | 24–43 | Base com lacunas importantes: priorize gramática essencial e vocabulário de alta frequência antes de avançar nos módulos de tarefa |
-| 5 | B1 (3–3.5) | 44–71 | Base intermediária: você já pode seguir os módulos do curso, com atenção redobrada aos Módulos 1 a 4 |
-| 6–7 | B2 (4–4.5) | 72–94 | Intermediário-avançado: seu foco agora é refinar a precisão e as nuances, mais do que revisar a base |
-| 8 | C1 (5–5.5) | 95–113 | Avançado: concentre-se em estratégia de prova, controle de tempo e ajuste fino de registro |
+| 0–2 | A1 (1–1,5) | 0–23 | Base em construção: comece por gramática essencial e vocabulário de alta frequência antes de entrar nos módulos de tarefa |
+| 3–4 | A2 (2–2,5) | 24–43 | Base com lacunas importantes: priorize gramática essencial e vocabulário de alta frequência antes de avançar nos módulos de tarefa |
+| 5 | B1 (3–3,5) | 44–71 | Base intermediária: você já pode seguir os módulos do curso, com atenção redobrada aos Módulos 1 a 4 |
+| 6–7 | B2 (4–4,5) | 72–94 | Intermediário-avançado: seu foco agora é refinar a precisão e as nuances, mais do que revisar a base |
+| 8 | C1 (5–5,5) | 95–113 | Avançado: concentre-se em estratégia de prova, controle de tempo e ajuste fino de registro |
 | 9–10 | C2 (6) | 114–120 | Teto de proficiência: foque em manter o desempenho sob pressão e treinar com simulados cronometrados |
 
 > **Resumo:** Esta régua segue a mesma proporção da tabela da Parte 4.2, em que cada acerto equivale a 10%, e é a referência que o site usa para calcular a sua banda ao final do diagnóstico.
@@ -128,24 +128,24 @@ A partir de 2026, o seu boletim traz o resultado em **duas escalas** ao mesmo te
 
 | Escala | O que é | Status |
 |---|---|---|
-| **[[CEFR Bands::bandas do CEFR, o Quadro Europeu Comum de Referência]] 1–6** (de meio em meio ponto, de 1 e 1.5 até 6) | Nova régua oficial principal, com uma banda por seção (Reading, Listening, Writing e Speaking) e uma banda geral, que é a média das 4 | **Escala primária a partir de 2026** |
+| **[[CEFR Bands::bandas do CEFR, o Quadro Europeu Comum de Referência]] 1–6** (de meio em meio ponto, de 1 e 1,5 até 6) | Nova régua oficial principal, com uma banda por seção (Reading, Listening, Writing e Speaking) e uma banda geral, que é a média das 4 | **Escala primária a partir de 2026** |
 | **0–120 (legada)** | Pontuação comparável, calculada estatisticamente a partir do seu desempenho na nova prova | Informada em paralelo no boletim até cerca de 2028 e depois descontinuada |
 
 > **Atenção:** Muitas universidades e programas de bolsa ainda estão atualizando suas notas de corte. Nos próximos 1 a 2 anos, várias instituições vão aceitar as duas escalas, então vale conhecer ambas para preencher seus formulários de candidatura com segurança.
 
 ### 2.3 Tabela CEFR × 0–120 (concordância oficial da ETS)
 
-> **Regra da ETS:** A tabela oficial de concordância (publicada em *TOEFL Score Scale Update* e na Tabela 3 do *Updated TOEFL iBT Test Overview*) relaciona cada banda de 1 a 6 a uma faixa da escala 0–120. No boletim, a sua banda aparece acompanhada do ponto médio dessa faixa: uma banda 4.5, por exemplo, vem com a nota 90.
+> **Regra da ETS:** A tabela oficial de concordância (publicada em *TOEFL Score Scale Update* e na Tabela 3 do *Updated TOEFL iBT Test Overview*) relaciona cada banda de 1 a 6 a uma faixa da escala 0–120. No boletim, a sua banda aparece acompanhada do ponto médio dessa faixa: uma banda 4,5, por exemplo, vem com a nota 90.
 
 Na tabela abaixo, reunimos as duas **meias bandas** de cada nível CEFR em uma única linha. A coluna com o perfil de candidato é uma leitura pedagógica nossa para orientar o seu estudo.
 
 | Banda CEFR | Nível | Faixa comparável 0–120 (ETS) | Perfil de candidato |
 |---|---|---|---|
-| 1 – 1.5 | A1 | 0–23 | Iniciante: momento de construir a base do idioma antes de fazer a prova |
-| 2 – 2.5 | A2 | 24–43 | Básico: fundamentos ainda em formação |
-| 3 – 3.5 | B1 | 44–71 | Intermediário: boa base para iniciar uma preparação focada |
-| 4 – 4.5 | B2 | 72–94 | Intermediário-avançado: faixa exigida pela maioria dos programas de graduação |
-| 5 – 5.5 | C1 | 95–113 | Avançado: faixa buscada por bolsas competitivas e pós-graduação nas principais universidades |
+| 1 – 1,5 | A1 | 0–23 | Iniciante: momento de construir a base do idioma antes de fazer a prova |
+| 2 – 2,5 | A2 | 24–43 | Básico: fundamentos ainda em formação |
+| 3 – 3,5 | B1 | 44–71 | Intermediário: boa base para iniciar uma preparação focada |
+| 4 – 4,5 | B2 | 72–94 | Intermediário-avançado: faixa exigida pela maioria dos programas de graduação |
+| 5 – 5,5 | C1 | 95–113 | Avançado: faixa buscada por bolsas competitivas e pós-graduação nas principais universidades |
 | 6 | C2 | 114–120 | Proficiência plena: teto da prova |
 
 > **Dica:** O objetivo deste curso é preparar você para chegar às bandas 5 a 6 (C1 a C2), a faixa alta que historicamente pedem as universidades da [[Ivy League::grupo de oito universidades tradicionais do nordeste dos EUA]], as do [[G5::as cinco universidades de pesquisa mais prestigiadas do Reino Unido]] britânico e os programas mais disputados de mestrado ou doutorado.
@@ -249,11 +249,11 @@ Por esse motivo, a calculadora desta seção funciona como uma **estimativa peda
 
 | % de acerto na seção (em simulados) | Banda CEFR estimada | Interpretação |
 |---|---|---|
-| 0–20% | 1 – 1.5 (A1) | Base inicial em construção |
-| 21–40% | 2 – 2.5 (A2) | Fundamentos parciais |
-| 41–55% | 3 – 3.5 (B1) | Base funcional, ainda com oscilações de precisão |
-| 56–70% | 4 – 4.5 (B2) | Consistência intermediária-avançada |
-| 71–85% | 5 – 5.5 (C1) | Alta consistência, poucos erros recorrentes |
+| 0–20% | 1 – 1,5 (A1) | Base inicial em construção |
+| 21–40% | 2 – 2,5 (A2) | Fundamentos parciais |
+| 41–55% | 3 – 3,5 (B1) | Base funcional, ainda com oscilações de precisão |
+| 56–70% | 4 – 4,5 (B2) | Consistência intermediária-avançada |
+| 71–85% | 5 – 5,5 (C1) | Alta consistência, poucos erros recorrentes |
 | 86–100% | 6 (C2) | Domínio amplo e seguro |
 
 Como o Reading e o Listening são adaptativos, procure calcular o seu **percentual de acerto** separadamente no módulo inferior e no superior sempre que souber em qual deles você caiu. Um bom sinal de progresso é que chegar ao módulo superior já indica um desempenho acima da faixa B1 ou B2 no [[router::bloco inicial de nivelamento]].
@@ -267,7 +267,7 @@ Score Geral (CEFR) = (Reading + Listening + Writing + Speaking) ÷ 4, arredondad
 Score Comparável 0–120 = faixa da banda geral na concordância oficial da ETS (tabela 2.3)
 ```
 
-**Exemplo de cálculo:** se você tirar Reading 4.5, Listening 4.0, Writing 4.0 e Speaking 3.5, a soma dá 16 e a divisão por 4 resulta na banda geral 4.0 (B2). Pela concordância oficial da ETS, esse resultado equivale à faixa de 72 a 85 na escala 0–120, já que 86 corresponde à banda 4.5.
+**Exemplo de cálculo:** se você tirar Reading 4,5, Listening 4,0, Writing 4,0 e Speaking 3,5, a soma dá 16 e a divisão por 4 resulta na banda geral 4,0 (B2). Pela concordância oficial da ETS, esse resultado equivale à faixa de 72 a 85 na escala 0–120, já que 86 corresponde à banda 4,5.
 
 ---
 
@@ -284,11 +284,11 @@ Preencha este quadro uma vez por semana, de preferência sempre no mesmo dia, po
 | **% acerto: Listen and Choose a Response** | | | | | ≥85% |
 | **% acerto: Listen to Conversation, Announcement e Academic Talk** | | | | | ≥80% |
 | **% acerto: Build a Sentence** | | | | | ≥90% |
-| **Nota qualitativa: Write an Email (1–5)** | | | | | ≥4.5 |
-| **Nota qualitativa: Write for an Academic Discussion (1–5)** | | | | | ≥4.5 |
+| **Nota qualitativa: Write an Email (1–5)** | | | | | ≥4,5 |
+| **Nota qualitativa: Write for an Academic Discussion (1–5)** | | | | | ≥4,5 |
 | **% fidelidade: Listen and Repeat** | | | | | ≥90% |
-| **Nota qualitativa: Take an Interview (1–5)** | | | | | ≥4.5 |
-| **Banda CEFR geral estimada** | | | | | 5.0–6.0 |
+| **Nota qualitativa: Take an Interview (1–5)** | | | | | ≥4,5 |
+| **Banda CEFR geral estimada** | | | | | 5,0–6,0 |
 | **Horas de estudo deliberado na semana** | | | | | conforme cronograma |
 
 > **Atenção:** Se um indicador ficar estagnado por 2 semanas seguidas, não espere até a semana 4 para ajustar a rota. Volte ao módulo correspondente para revisar a base daquela tarefa antes de seguir em frente.
@@ -339,10 +339,10 @@ Se você parte da faixa **B1** ou de um nível anterior, este plano constrói a 
 
 | Semanas | Foco principal | Módulos | Marco |
 |---|---|---|---|
-| 1–3 | Reforço da base: gramática, vocabulário acadêmico e conectivos | Módulo 0 | Bloco de simulado do Módulo 7 ou teste prático oficial da ETS, buscando subir 0.5 banda |
-| 4–6 | Reading completo e ampliação do vocabulário de alta frequência | Módulo 1 | Banda 4.0 ou mais nos simulados de Reading |
-| 7–9 | Listening completo e prática de fala conectada e expressões idiomáticas | Módulo 2 | Banda 4.0 ou mais nos simulados de Listening |
-| 10–11 | Writing completo com ciclos de revisão e reescrita | Módulo 4 | Nota qualitativa de 4.5 ou mais com regularidade |
+| 1–3 | Reforço da base: gramática, vocabulário acadêmico e conectivos | Módulo 0 | Bloco de simulado do Módulo 7 ou teste prático oficial da ETS, buscando subir 0,5 banda |
+| 4–6 | Reading completo e ampliação do vocabulário de alta frequência | Módulo 1 | Banda 4,0 ou mais nos simulados de Reading |
+| 7–9 | Listening completo e prática de fala conectada e expressões idiomáticas | Módulo 2 | Banda 4,0 ou mais nos simulados de Listening |
+| 10–11 | Writing completo com ciclos de revisão e reescrita | Módulo 4 | Nota qualitativa de 4,5 ou mais com regularidade |
 | 12 | Speaking completo com foco em ritmo, entonação e fidelidade | Módulo 3 | Fidelidade de 85% ou mais em Listen and Repeat |
 | 13 | Simulados completos, ajustes finais e controle do nervosismo | Módulo 7 | 3 simulados completos com a banda geral estável na meta |
 

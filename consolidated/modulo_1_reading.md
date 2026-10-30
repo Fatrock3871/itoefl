@@ -845,10 +845,10 @@ Mais do que uma nota, o seu número de acertos funciona como um termômetro para
 | % de acerto | Banda CEFR estimada (Reading) | Próximo passo |
 |---|---|---|
 | 86–100% | 6 (C2) | Ótimo resultado. Você já pode avançar para o Módulo 2 e revisar apenas os formatos em que teve algum deslize. |
-| 71–85% | 5–5.5 (C1) | Você está bem perto do topo. Releia a Parte 3 nos pontos que errou e refaça o Grupo C para consolidar. |
-| 56–70% | 4–4.5 (B2) | Você já pegou o jeito da estratégia, e agora vale reforçar a base da língua. Revise a Parte 3 com calma e refaça os Grupos A e C. |
-| 41–55% | 3–3.5 (B1) | Antes de fazer novas questões, volte às Partes 2 e 3 com atenção especial às formas verbais (3.1) e às [[collocations::combinações naturais de palavras]] (3.5). |
-| ≤40% | 1–2.5 (A1–A2) | Fique tranquilo, porque construir a base vem primeiro. Dedique uma semana à Parte 3 (10 a 15 minutos por dia) antes de refazer os exercícios. |
+| 71–85% | 5–5,5 (C1) | Você está bem perto do topo. Releia a Parte 3 nos pontos que errou e refaça o Grupo C para consolidar. |
+| 56–70% | 4–4,5 (B2) | Você já pegou o jeito da estratégia, e agora vale reforçar a base da língua. Revise a Parte 3 com calma e refaça os Grupos A e C. |
+| 41–55% | 3–3,5 (B1) | Antes de fazer novas questões, volte às Partes 2 e 3 com atenção especial às formas verbais (3.1) e às [[collocations::combinações naturais de palavras]] (3.5). |
+| ≤40% | 1–2,5 (A1–A2) | Fique tranquilo, porque construir a base vem primeiro. Dedique uma semana à Parte 3 (10 a 15 minutos por dia) antes de refazer os exercícios. |
 
 ---
 

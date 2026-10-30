@@ -690,10 +690,10 @@ Mais do que uma nota isolada, o seu resultado em **[[Build a Sentence::Monte uma
 
 | % de acerto | Banda estimada | Próximo passo |
 |---|---|---|
-| 90–100% | 5.5–6 | Excelente resultado. Você já pode avançar e refazer apenas as estruturas de nível C1 em que teve algum deslize (seção 3.9, blocos I a K). |
-| 75–89% | 4.5–5.5 | Você já tem uma ótima base. Releia a Parte 3 nos pontos que pesaram mais e refaça o Exercício A3 para consolidar. |
-| 60–74% | 4–4.5 | As estruturas de nível B2 ainda pedem mais treino para ficarem automáticas. Revise as seções 3.4, 3.5 e 3.9 (blocos A a H) e depois refaça os Exercícios A2 e A3. |
-| <60% | ≤3.5 | Fique tranquilo, porque o momento é de firmar a base da frase. Comece pelas seções 3.1 a 3.3 (tipos de frase, [[run-on::orações coladas sem pontuação]] e paralelismo) e pelos blocos A a D da seção 3.9. |
+| 90–100% | 5,5–6 | Excelente resultado. Você já pode avançar e refazer apenas as estruturas de nível C1 em que teve algum deslize (seção 3.9, blocos I a K). |
+| 75–89% | 4,5–5,5 | Você já tem uma ótima base. Releia a Parte 3 nos pontos que pesaram mais e refaça o Exercício A3 para consolidar. |
+| 60–74% | 4–4,5 | As estruturas de nível B2 ainda pedem mais treino para ficarem automáticas. Revise as seções 3.4, 3.5 e 3.9 (blocos A a H) e depois refaça os Exercícios A2 e A3. |
+| <60% | ≤3,5 | Fique tranquilo, porque o momento é de firmar a base da frase. Comece pelas seções 3.1 a 3.3 (tipos de frase, [[run-on::orações coladas sem pontuação]] e paralelismo) e pelos blocos A a D da seção 3.9. |
 
 Para **[[Write an Email::Escreva um e-mail]] e [[Write for an Academic Discussion::Escreva para uma discussão acadêmica]]**, compare cada texto seu com o modelo de banda 5 fazendo quatro perguntas: (a) cobri todos os elementos do enunciado? (b) deixei minha posição ou objetivo claros logo na 1ª frase? (c) quantos deslizes gramaticais apareceram por 100 palavras? (d) repeti as mesmas palavras-chave? Se houver mais de 3 erros por 100 palavras ou muita repetição de vocabulário, vale reforçar o laboratório da Parte 3 antes de se preocupar com novos modelos.
 
