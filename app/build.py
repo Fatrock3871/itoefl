@@ -1,6 +1,6 @@
 import json
 from urllib.parse import quote as _quote
-from site_config import load_beta, load_site_url
+from site_config import load_beta, load_brand, load_site_url
 from icons import icon, sprite as icon_sprite
 
 SITE_URL = load_site_url()
@@ -10,6 +10,18 @@ print("SITE_URL:", SITE_URL)
 # chave BETA de app/site.json. O link "Enviar sugestão" abre o e-mail do
 # aluno com o assunto pronto; não há formulário nem dado guardado aqui.
 BETA, FEEDBACK_EMAIL = load_beta()
+# nome do curso num lugar só (BRAND_NAME no app/site.json): o texto da fonte
+# usa "iTOEFL" e cada arquivo gerado passa por _brand() antes de ser gravado
+BRAND = load_brand()
+
+
+def _brand(text):
+    return text.replace("iTOEFL", BRAND)
+
+
+# aviso de marca da ETS, no rodapé de todas as páginas (item 6 de 2026-10-25)
+ETS_NOTICE = ("TOEFL® e TOEFL iBT® são marcas registradas da ETS (Educational Testing Service). "
+              "Este produto não é endossado nem aprovado pela ETS.")
 BETA_BAR = ""
 if BETA:
     _fb = (f' <a href="mailto:{FEEDBACK_EMAIL}?subject={_quote("Sugestão para o iTOEFL (versão de teste)")}">'
@@ -612,7 +624,7 @@ cert_modal = (
     f'<div class="cert-ornament">{icon("cap")}</div>'
     '<p class="cert-kicker">Certificado de Conclusão</p>'
     '<h2 class="cert-name" id="certName">Aluno(a) iTOEFL</h2>'
-    '<p class="cert-body">concluiu com êxito a preparação completa para o <strong>TOEFL iBT</strong> '
+    '<p class="cert-body">concluiu com êxito a preparação completa para o exame <strong>TOEFL iBT®</strong> '
     '(formato 2026) pela plataforma iTOEFL, percorrendo os 10 módulos: do diagnóstico de nivelamento '
     'ao passo a passo do dia da prova.</p>'
     '<div class="cert-stats">'
@@ -888,7 +900,7 @@ html = f'''<!DOCTYPE html>
         </div>
       </div>
     </details>
-    <div class="foot-note">Preparação independente baseada nas especificações da ETS vigentes desde 21/jan/2026. Não afiliada à ETS. <span id="syncNote">Seu progresso é salvo neste navegador.</span>
+    <div class="foot-note">Preparação independente, baseada nas especificações da ETS vigentes desde 21 de janeiro de 2026. <span class="ets-notice">{ETS_NOTICE}</span> <span id="syncNote">Seu progresso é salvo neste navegador.</span>
       <span class="legal-links">{LEGAL_LINKS}</span></div>
   </aside>
 
@@ -995,7 +1007,7 @@ html = f'''<!DOCTYPE html>
 
 import os as _os
 _os.makedirs("../artifact", exist_ok=True)  # num clone novo a pasta nao existe (artifact/ e gerado e fica fora do Git)
-open("../artifact/index.html", "w", encoding="utf-8").write(html)
+open("../artifact/index.html", "w", encoding="utf-8").write(_brand(html))
 print("written", len(html))
 
 # ---- páginas legais: legal/*.md -> artifact/<nome>.html ----
@@ -1049,11 +1061,11 @@ for _slug, _title in LEGAL_PAGES:
 <main class="legal-doc">
 {_body}
 </main>
-<footer class="legal-foot">{LEGAL_LINKS}</footer>
+<footer class="legal-foot">{LEGAL_LINKS}<p class="ets-notice">{ETS_NOTICE}</p></footer>
 </body>
 </html>
 '''
-    open(f"../artifact/{_slug}.html", "w", encoding="utf-8").write(_page)
+    open(f"../artifact/{_slug}.html", "w", encoding="utf-8").write(_brand(_page))
     print(f"written {_slug}.html", len(_page))
 
 # ---- tela de apresentação: artifact/apresentacao.html ----
@@ -1120,7 +1132,7 @@ _one_time_names = ", ".join(p["name"] for p in _one_time[:-1]) + " e " + _one_ti
 
 LP_FAQ = [
     ("O iTOEFL é oficial da ETS?",
-     "Não. É uma preparação independente, sem vínculo com a ETS. TOEFL e TOEFL iBT são marcas registradas da ETS. "
+     "Não. É uma preparação independente, sem vínculo com a ETS. TOEFL® e TOEFL iBT® são marcas registradas da ETS. "
      "O material é original e segue o formato público da prova; não reproduz questões oficiais."),
     ("Existe garantia de nota?",
      "Não. Nenhum curso pode garantir. O resultado depende do seu estudo. O diagnóstico e as bandas mostradas na "
@@ -1154,16 +1166,16 @@ LANDING_JS = LEVEL_JS + "\n" + open("landing.js", encoding="utf-8").read()
 # vídeo explicativo do topo (chave "apresentacao" de app/videos.json); sem
 # vídeo cadastrado, nada entra na página
 LANDING_VIDEO = render_video.render_landing_video(render_video.load_landing_video())
-_lp_desc = ("Preparação em português para o TOEFL iBT no formato 2026: 10 módulos, exercícios no molde da prova e simulados. "
+_lp_desc = ("Preparação em português para o exame TOEFL iBT® no formato 2026: 10 módulos, exercícios no molde da prova e simulados. "
             "Faça o diagnóstico grátis, sem criar conta.")
 _landing = f'''<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>iTOEFL: preparação para o TOEFL iBT no formato 2026</title>
+<title>iTOEFL: preparação para o exame TOEFL iBT® no formato 2026</title>
 <meta name="description" content="{_lp_desc}">
-<meta property="og:title" content="iTOEFL: preparação para o TOEFL iBT no formato 2026">
+<meta property="og:title" content="iTOEFL: preparação para o exame TOEFL iBT® no formato 2026">
 <meta property="og:description" content="{_lp_desc}">
 <meta property="og:type" content="website">
 <meta property="og:url" content="{SITE_URL}/apresentacao">
@@ -1198,7 +1210,7 @@ _landing = f'''<!DOCTYPE html>
 <main id="lpMain" tabindex="-1">
 <section class="lp-hero">
   <p class="lp-kicker">Formato vigente desde 21 de janeiro de 2026</p>
-  <h1>TOEFL iBT no formato 2026, em português.</h1>
+  <h1>Exame TOEFL iBT® no formato 2026, em português.</h1>
   <p class="lp-sub">A prova mudou em janeiro de 2026: menos de 1h30, Reading e Listening adaptativos, nota de 1 a 6.
   Este curso foi escrito para ela.</p>
   <div class="lp-cta">
@@ -1274,8 +1286,8 @@ _landing = f'''<!DOCTYPE html>
 </main>
 
 <footer class="lp-foot">
-  <p>Preparação independente, baseada nas especificações públicas da prova. Não afiliada à ETS.
-  TOEFL e TOEFL iBT são marcas registradas da ETS.</p>
+  <p>Preparação independente, baseada nas especificações públicas da prova.</p>
+  <p class="ets-notice">{ETS_NOTICE}</p>
   <p><a href="termos.html">Termos de Uso</a><span aria-hidden="true"> · </span><a href="privacidade.html">Política de Privacidade</a><span aria-hidden="true"> · </span><a href="termos.html">Contato (nos Termos de Uso)</a><span aria-hidden="true"> · </span><a href="index.html#entrar">Entrar</a></p>
 </footer>
 <script>
@@ -1284,7 +1296,7 @@ _landing = f'''<!DOCTYPE html>
 </body>
 </html>
 '''
-open("../artifact/apresentacao.html", "w", encoding="utf-8").write(_landing)
+open("../artifact/apresentacao.html", "w", encoding="utf-8").write(_brand(_landing))
 print("written apresentacao.html", len(_landing))
 
 # ---- PWA: manifesto, ícones e service worker com versão carimbada ----
@@ -1296,7 +1308,8 @@ import hashlib as _hashlib
 import shutil as _shutil
 
 _os.makedirs("../artifact/icons", exist_ok=True)
-_shutil.copyfile("manifest.json", "../artifact/manifest.json")
+with open("manifest.json", encoding="utf-8") as _mf:
+    open("../artifact/manifest.json", "w", encoding="utf-8", newline="\n").write(_brand(_mf.read()))
 for _icon in sorted(_os.listdir("icons")):
     if _icon.endswith(".png"):
         _shutil.copyfile(f"icons/{_icon}", f"../artifact/icons/{_icon}")

@@ -1,6 +1,7 @@
 {
-  "_comment": "Endereco publico do site, em um unico lugar. O build le SITE_URL daqui (a variavel de ambiente SITE_URL, se existir, vence). Sem barra no fim e sem caminho. Para publicar, troque pelo endereco final (ex.: https://itoefl.com.br). Em desenvolvimento fica localhost; scripts/prepublish_check.py reprova a publicacao enquanto for localhost. Nas edge functions do Supabase o mesmo valor vai em `supabase secrets set SITE_URL=...`. BETA true mostra a faixa 'Versao de teste' no app e na apresentacao; FEEDBACK_EMAIL e o e-mail do link 'Enviar sugestao' (vazio: a faixa aparece sem o link). As variaveis de ambiente BETA (1 ou 0) e FEEDBACK_EMAIL, se existirem, vencem o arquivo.",
+  "_comment": "Endereco publico do site, em um unico lugar. O build le SITE_URL daqui (a variavel de ambiente SITE_URL, se existir, vence). Sem barra no fim e sem caminho. Para publicar, troque pelo endereco final (ex.: https://itoefl.com.br). Em desenvolvimento fica localhost; scripts/prepublish_check.py reprova a publicacao enquanto for localhost. Nas edge functions do Supabase o mesmo valor vai em `supabase secrets set SITE_URL=...`. BETA true mostra a faixa 'Versao de teste' no app e na apresentacao; FEEDBACK_EMAIL e o e-mail do link 'Enviar sugestao' (vazio: a faixa aparece sem o link). BRAND_NAME e o nome do curso: o build troca toda ocorrencia de iTOEFL por ele no app, na apresentacao, nos termos, na privacidade e no manifesto; para trocar a marca, mude so esta linha (as edge functions do Supabase ainda tem o nome escrito no codigo e precisam de deploy). As variaveis de ambiente BETA (1 ou 0) e FEEDBACK_EMAIL, se existirem, vencem o arquivo.",
   "SITE_URL": "http://localhost:8000",
   "BETA": true,
-  "FEEDBACK_EMAIL": ""
+  "FEEDBACK_EMAIL": "",
+  "BRAND_NAME": "iTOEFL"
 }

@@ -242,7 +242,7 @@ Quando você coloca elementos em uma lista ou os conecta com *and*, *or* e *but*
 
 Escolha um **tempo verbal dominante** para o seu parágrafo e mantenha essa base do começo ao fim, mudando apenas quando houver um motivo claro, como contar um exemplo do passado ou projetar uma consequência no futuro.
 
-| Tempo | Uso no Writing do TOEFL | Exemplo |
+| Tempo | Uso no Writing do exame TOEFL® | Exemplo |
 |---|---|---|
 | **Presente simples** | opiniões, fatos gerais e verdades permanentes | *"[[Technology shapes how students learn.::A tecnologia molda como os estudantes aprendem.]]"* |
 | **Presente perfeito** | experiências acumuladas até agora ou efeito presente de algo que começou no passado | *"[[Online tools have made collaboration easier.::As ferramentas on-line tornaram a colaboração mais fácil.]]"* |

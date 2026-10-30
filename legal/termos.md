@@ -8,7 +8,7 @@ iTOEFL. Ao criar a conta, você declara que os leu e que concorda com eles e com
 
 ## 1. Quem somos
 
-O iTOEFL é uma plataforma de estudo para o TOEFL iBT, mantida por
+O iTOEFL é uma plataforma de estudo para o exame TOEFL iBT®, mantida por
 [PREENCHER: nome completo ou razão social do responsável], inscrito no
 [PREENCHER: CPF ou CNPJ] sob o nº [PREENCHER: número], com contato pelo e-mail
 [PREENCHER: e-mail de contato].

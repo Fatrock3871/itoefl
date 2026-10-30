@@ -39,7 +39,7 @@ Veja como funciona a **progressão de dificuldade** oficial da seção:
 
 **Apoio ao candidato (oficial):** cada tarefa começa com uma introdução de cenário dita em áudio e impressa na tela, acompanhada de elementos visuais como imagens, mapas, formulários e fotos dos falantes.
 
-**Tempo de resposta (oficial):** em Take an Interview você tem 45 segundos por pergunta, e em Listen and Repeat tem de 8 a 12 segundos para gravar cada frase (segundo o documento *[[Updated TOEFL iBT Test Overview::Visão geral atualizada do teste TOEFL iBT]]*, da ETS). Como não há tempo de preparação nos testes práticos oficiais, o objetivo é responder rápido e com clareza desde o primeiro segundo.
+**Tempo de resposta (oficial):** em Take an Interview você tem 45 segundos por pergunta, e em Listen and Repeat tem de 8 a 12 segundos para gravar cada frase (segundo o documento *[[Updated TOEFL iBT® Test Overview::Visão geral atualizada do teste TOEFL iBT]]*, da ETS). Como não há tempo de preparação nos testes práticos oficiais, o objetivo é responder rápido e com clareza desde o primeiro segundo.
 
 ### 1.3 O que a arquitetura revela
 

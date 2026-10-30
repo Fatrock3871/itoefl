@@ -8,9 +8,9 @@
 
 ## Parte 1: A lógica dos 4 simulados e visão geral
 
-### Como o TOEFL iBT está estruturado
+### Como o exame TOEFL iBT® está estruturado
 
-Chegar à fase dos simulados dá um frio na barriga, mas é aqui que tudo o que você estudou ganha forma de prova real. Este módulo reúne a sua sequência de prática para o TOEFL iBT atual, um exame de **1h23min a 1h29min** em que Reading e Listening são adaptativos em dois estágios (um módulo [[router::bloco inicial de nivelamento]] define se você segue para um módulo mais acessível ou mais avançado) e Speaking e Writing são lineares, com tarefas curtas e diretas.
+Chegar à fase dos simulados dá um frio na barriga, mas é aqui que tudo o que você estudou ganha forma de prova real. Este módulo reúne a sua sequência de prática para o exame TOEFL iBT atual, um exame de **1h23min a 1h29min** em que Reading e Listening são adaptativos em dois estágios (um módulo [[router::bloco inicial de nivelamento]] define se você segue para um módulo mais acessível ou mais avançado) e Speaking e Writing são lineares, com tarefas curtas e diretas.
 
 Como a prova tem pouco tempo de sobra, não existe margem para começar devagar como se estivesse apenas aquecendo. Cada resposta nos primeiros minutos de Reading e Listening tem **peso real** sobre o restante da seção, porque define o caminho que o sistema vai abrir para você.
 
@@ -84,7 +84,7 @@ A tabela abaixo segue a **concordância oficial** publicada pela ETS (a mesma do
 | **2 e 2,5** | A2 | 24–43 | Básico; frases curtas, apoio contextual necessário |
 | **1 e 1,5** | A1 | 0–23 | Iniciante; elementos isolados |
 
-> **Dica:** A maioria das universidades que pedem o TOEFL mira entre 80 e 100 na escala antiga (hoje entre as bandas 4 e 5), enquanto programas de pós-graduação mais concorridos costumam pedir 100 ou mais (banda 5). Confirme a exigência da sua instituição na escala que ela adota e defina a sua meta de banda a partir disso.
+> **Dica:** A maioria das universidades que pedem o exame TOEFL mira entre 80 e 100 na escala antiga (hoje entre as bandas 4 e 5), enquanto programas de pós-graduação mais concorridos costumam pedir 100 ou mais (banda 5). Confirme a exigência da sua instituição na escala que ela adota e defina a sua meta de banda a partir disso.
 
 ### Como funciona a arquitetura de roteamento
 

@@ -1,6 +1,6 @@
 # Módulo 9: Armadilhas de quem fala português (Brazilian Trap Library)
 
-> **Resumo:** Todo candidato erra em inglês, e quem fala português erra seguindo um padrão. Conhecer esse padrão é um dos passos que mais rendem perto da prova, porque cada armadilha mapeada vira um erro a menos. Conteúdo alinhado ao formato do TOEFL iBT vigente desde 21 de janeiro de 2026.
+> **Resumo:** Todo candidato erra em inglês, e quem fala português erra seguindo um padrão. Conhecer esse padrão é um dos passos que mais rendem perto da prova, porque cada armadilha mapeada vira um erro a menos. Conteúdo alinhado ao formato do exame TOEFL iBT® vigente desde 21 de janeiro de 2026.
 
 ---
 

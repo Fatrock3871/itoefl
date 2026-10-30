@@ -6,7 +6,7 @@
 
 ---
 
-Começar a preparação para o TOEFL dá um frio na barriga, ainda mais com o exame de cara nova. Todo o **iTOEFL** foi construído em torno das especificações oficiais da ETS vigentes desde janeiro de 2026, que são as únicas que você vai encontrar no dia da prova. Entender como essa versão funciona evita que você perca tempo treinando para um formato que já ficou para trás.
+Começar a preparação para o exame TOEFL® dá um frio na barriga, ainda mais com o exame de cara nova. Todo o **iTOEFL** foi construído em torno das especificações oficiais da ETS vigentes desde janeiro de 2026, que são as únicas que você vai encontrar no dia da prova. Entender como essa versão funciona evita que você perca tempo treinando para um formato que já ficou para trás.
 
 ---
 
@@ -114,13 +114,13 @@ Mais do que uma nota, o seu número de acertos funciona como um **mapa** para mo
 
 Mais do que estudar inglês, você está conquistando a **nota** que abre a porta que você quer: a universidade, a bolsa, o visto ou o processo seletivo. Vamos construir esse resultado juntos.
 
-O TOEFL iBT 2026 é uma prova curta e **adaptativa**: no Reading e no Listening, o seu desempenho no primeiro bloco define se o segundo bloco será mais acessível ou mais exigente. Por isso, cada questão conta desde o começo.
+O exame TOEFL iBT 2026 é uma prova curta e **adaptativa**: no Reading e no Listening, o seu desempenho no primeiro bloco define se o segundo bloco será mais acessível ou mais exigente. Por isso, cada questão conta desde o começo.
 
 O tempo para falar e escrever também diminuiu bastante. Não sobra espaço para improvisar uma resposta longa sem direção: você precisa ir direto ao ponto com **clareza** já na primeira tentativa.
 
 Pense com sinceridade por um instante: se a prova fosse amanhã, você saberia como responder com segurança logo no primeiro item de cada seção? Se a resposta ainda for não, fique tranquilo, porque é exatamente esse **caminho** que os próximos módulos vão mostrar passo a passo.
 
-> **Resumo:** O TOEFL 2026 valoriza a precisão imediata mais do que a quantidade de palavras. Quando você entende a estrutura da prova e treina especificamente para cada formato, avança muito mais rápido do que estudando inglês sem direção.
+> **Resumo:** O exame TOEFL 2026 valoriza a precisão imediata mais do que a quantidade de palavras. Quando você entende a estrutura da prova e treina especificamente para cada formato, avança muito mais rápido do que estudando inglês sem direção.
 
 ### 2.2 A nova régua: duas escalas, um só objetivo
 
@@ -356,7 +356,7 @@ Se você parte da faixa **B1** ou de um nível anterior, este plano constrói a 
 
 Se a rotina apertou e você atrasou o estudo, respire fundo: ainda dá para organizar a reta final com inteligência. Siga este **passo a passo** de recuperação rápida ([[catch-up::recuperação de atraso]]) em dois casos: quando faltarem cerca de 7 dias para a prova e o cronograma estiver atrasado, ou quando o seu painel mostrar duas semanas de estagnação perto da data do exame.
 
-### 7.2 O princípio de Pareto aplicado ao TOEFL 2026
+### 7.2 O princípio de Pareto aplicado ao exame TOEFL 2026
 
 > **Resumo:** Grande parte da sua evolução de banda vem de poucos ajustes certeiros. Como a prova dura de 1h23min a 1h29min, concentre sua energia nas 5 frentes abaixo, que reúnem a maior fatia dos pontos brutos do exame.
 

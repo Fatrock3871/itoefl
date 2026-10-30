@@ -35,5 +35,15 @@ def load_beta():
     return beta, email if _EMAIL_RE.fullmatch(email) else ""
 
 
+def load_brand():
+    """Nome do curso (BRAND_NAME no app/site.json; a variavel de ambiente
+    BRAND_NAME, se existir, vence). Trocar a marca = trocar este valor."""
+    cfg = json.loads(_FILE.read_text(encoding="utf-8-sig"))
+    brand = os.environ.get("BRAND_NAME", "").strip() or (cfg.get("BRAND_NAME") or "").strip()
+    if not brand or "<" in brand or '"' in brand:
+        raise SystemExit(f"BRAND_NAME invalido em app/site.json: {brand!r}")
+    return brand
+
+
 def is_local(url):
     return bool(re.match(r"https?://(localhost|127\.0\.0\.1|0\.0\.0\.0|\[::1\])(:|$)", url))

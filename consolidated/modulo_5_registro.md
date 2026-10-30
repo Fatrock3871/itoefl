@@ -1,6 +1,6 @@
 # Módulo 5: Registro e sofisticação retórica
 
-> **Resumo:** Este é o módulo de referência transversal do curso, alinhado ao formato do TOEFL iBT vigente desde 21 de janeiro de 2026. Enquanto os Módulos 3 e 4 mostram a mecânica de cada tarefa produtiva, aqui você aprende o controle de registro e a densidade retórica que separam uma resposta apenas correta de uma resposta de banda alta.
+> **Resumo:** Este é o módulo de referência transversal do curso, alinhado ao formato do exame TOEFL iBT® vigente desde 21 de janeiro de 2026. Enquanto os Módulos 3 e 4 mostram a mecânica de cada tarefa produtiva, aqui você aprende o controle de registro e a densidade retórica que separam uma resposta apenas correta de uma resposta de banda alta.
 
 Estude este material uma primeira vez com calma para entender a lógica das **bandas** e perceber o que faz a nota subir. Depois, volte a estas páginas como lista de consulta sempre que fizer os exercícios de Speaking e Writing.
 
@@ -10,7 +10,7 @@ Estude este material uma primeira vez com calma para entender a lógica das **ba
 
 ### 1.1 O que a correção por IA realmente mede na produção
 
-Na hora de falar ou escrever sob pressão, é normal achar que basta responder ao tema sem errar gramática. Mas as três tarefas produtivas do TOEFL 2026 corrigidas por IA ([[Take an Interview::Faça uma entrevista]], [[Write an Email::Escreva um e-mail]] e [[Write for an Academic Discussion::Escreva para uma discussão acadêmica]]) não avaliam apenas se você acertou o assunto.
+Na hora de falar ou escrever sob pressão, é normal achar que basta responder ao tema sem errar gramática. Mas as três tarefas produtivas do exame TOEFL 2026 corrigidas por IA ([[Take an Interview::Faça uma entrevista]], [[Write an Email::Escreva um e-mail]] e [[Write for an Academic Discussion::Escreva para uma discussão acadêmica]]) não avaliam apenas se você acertou o assunto.
 
 Elas são pontuadas com base em critérios alinhados ao [[CEFR::Quadro Europeu Comum de Referência]], e o que faz a sua nota avançar de uma **banda** para outra pode ser medido com clareza. Veja na tabela o que entra nessa conta:
 
@@ -51,9 +51,9 @@ A IA não lê intenções subjetivas. Ela identifica **sinais mensuráveis** no 
 
 > **Dica:** Estes alvos são estimativas didáticas do iTOEFL, e não números oficiais publicados pela ETS. Você não precisa calcular nada disso na prova, pois o treino nos exercícios da Parte 7 faz esse padrão sair de forma natural.
 
-### 1.5 A escala de formalidade: as três vozes do TOEFL 2026
+### 1.5 A escala de formalidade: as três vozes do exame TOEFL 2026
 
-Ter bom **controle de registro** significa escolher a voz certa para cada situação, e não aplicar uma régua fixa de formal contra informal. O TOEFL 2026 avalia três vozes distintas nas tarefas produtivas:
+Ter bom **controle de registro** significa escolher a voz certa para cada situação, e não aplicar uma régua fixa de formal contra informal. O exame TOEFL 2026 avalia três vozes distintas nas tarefas produtivas:
 
 | Voz | Onde aparece | Marca registrada | Ponto de atenção comum |
 |---|---|---|---|

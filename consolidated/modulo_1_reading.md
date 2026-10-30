@@ -87,7 +87,7 @@ Cada passagem acadêmica traz uma combinação dos tipos de pergunta abaixo. Rec
 | **Vocabulário em contexto** | *"[[The word X is closest in meaning to...::A palavra X tem sentido mais próximo de...]]"* | Indica o sinônimo que funciona naquele contexto específico, e não apenas o significado mais comum da palavra |
 | **Propósito retórico** | *"[[Why does the author mention X?::Por que o autor menciona X?]]"* ou *"[[The author discusses Y in order to...::O autor discute Y com o objetivo de...]]"* | Descreve a função do trecho, como exemplificar, contrastar, refutar ou embasar uma ideia |
 
-> **Regra da ETS:** Perguntas de simplificar frase, encaixar uma frase nova no texto e montar um resumo marcando 3 de 6 opções eram do TOEFL antigo, com passagens de 700 palavras. Elas não aparecem na prova de 2026, em que cada passagem tem cerca de 200 palavras e 5 perguntas.
+> **Regra da ETS:** Perguntas de simplificar frase, encaixar uma frase nova no texto e montar um resumo marcando 3 de 6 opções eram do exame TOEFL® antigo, com passagens de 700 palavras. Elas não aparecem na prova de 2026, em que cada passagem tem cerca de 200 palavras e 5 perguntas.
 
 ---
 

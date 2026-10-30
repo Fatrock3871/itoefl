@@ -4,7 +4,7 @@
 
 Se você quiser rever os números gerais da prova antes de começar, eles estão no **Módulo 0**, Parte 3. Aqui vamos olhar de perto para o funcionamento do Listening e treinar cada formato de questão passo a passo.
 
-> **Atenção:** Os exercícios deste módulo usam transcrições para você treinar o reconhecimento de cada tarefa, a triagem de anotações e os padrões de distrator. Como no exame o áudio é falado, com entonação, hesitação e ritmo reais, complemente o treino ouvindo o *TOEFL iBT Free Practice Test* da ETS e praticando a Parte 3 em voz alta.
+> **Atenção:** Os exercícios deste módulo usam transcrições para você treinar o reconhecimento de cada tarefa, a triagem de anotações e os padrões de distrator. Como no exame o áudio é falado, com entonação, hesitação e ritmo reais, complemente o treino ouvindo o *TOEFL iBT® Free Practice Test* da ETS e praticando a Parte 3 em voz alta.
 
 ---
 

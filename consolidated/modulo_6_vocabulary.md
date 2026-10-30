@@ -1,6 +1,6 @@
 # Módulo 6: Vocabulário acadêmico
 
-> **Resumo:** Este é o módulo de referência permanente de vocabulário do curso, alinhado ao formato do TOEFL iBT vigente desde 21 de janeiro de 2026. Ele reúne a estratégia de ativação lexical, os bancos de palavras de alta frequência e de alto impacto, as famílias de palavras, os pares de nuance e os exercícios práticos de fixação.
+> **Resumo:** Este é o módulo de referência permanente de vocabulário do curso, alinhado ao formato do exame TOEFL iBT® vigente desde 21 de janeiro de 2026. Ele reúne a estratégia de ativação lexical, os bancos de palavras de alta frequência e de alto impacto, as famílias de palavras, os pares de nuance e os exercícios práticos de fixação.
 
 Estude a estratégia da **Parte 1** uma vez com calma para entender como transformar leitura passiva em produção ativa. Depois, volte às tabelas como banco de consulta sempre que fizer os exercícios de Reading, Listening, Speaking e Writing.
 
@@ -12,9 +12,9 @@ Estude a estratégia da **Parte 1** uma vez com calma para entender como transfo
 
 Na preparação de vocabulário, uma armadilha muito comum é estudar longas listas de palavras que você até reconhece quando lê, mas não consegue usar com segurança quando precisa falar ou escrever sob pressão. Por isso, este módulo trabalha **duas camadas** complementares, cada uma com um objetivo próprio:
 
-| Categoria | Função no TOEFL 2026 | Habilidade-alvo | Onde pesa |
+| Categoria | Função no exame TOEFL 2026 | Habilidade-alvo | Onde pesa |
 |---|---|---|---|
-| **[[High-Frequency TOEFL Vocabulary::Vocabulário de alta frequência do TOEFL]]** | Palavras que aparecem com frequência nos textos e áudios do exame | **Compreensão imediata**: entender na hora, sem hesitar | Reading (*[[Read an Academic Passage::Leia uma passagem acadêmica]]* e *[[Complete the Words::Complete as palavras]]*) e Listening (*[[Listen to an Academic Talk::Ouça uma palestra acadêmica]]*) |
+| **[[High-Frequency TOEFL Vocabulary::Vocabulário de alta frequência do exame TOEFL]]** | Palavras que aparecem com frequência nos textos e áudios do exame | **Compreensão imediata**: entender na hora, sem hesitar | Reading (*[[Read an Academic Passage::Leia uma passagem acadêmica]]* e *[[Complete the Words::Complete as palavras]]*) e Listening (*[[Listen to an Academic Talk::Ouça uma palestra acadêmica]]*) |
 | **[[Low-Frequency High-Impact Vocabulary::Vocabulário de baixa frequência e alto impacto]]** | Termos sofisticados que você escolhe inserir para elevar a nota de vocabulário | **Produção ativa**: usar com precisão sob pressão | Speaking (variedade lexical em *[[Take an Interview::Faça uma entrevista]]*) e Writing (sofisticação lexical avaliada pelo [[e-rater::sistema de correção automática de escrita da ETS]] em *[[Write for an Academic Discussion::Escreva para uma discussão acadêmica]]*) |
 
 > **Atenção:** Uma palavra só deve entrar na sua fala em *Take an Interview* quando você conseguir empregá-la em uma frase completa e correta em menos de 3 segundos. Se ainda precisar pensar mais do que isso, ela continua passiva, então mantenha o seu uso apenas no Writing até ganhar automaticidade.
@@ -42,7 +42,7 @@ Siga esta **rotina de revisão espaçada** (*[[spaced repetition::repetição es
 
 ## Parte 2: Vocabulário de alta frequência no exame
 
-> **Resumo:** Estas são as palavras que o próprio TOEFL usa com frequência nos textos e áudios. Dominar o reconhecimento imediato elimina hesitações no Reading e no Listening e garante que você compreenda os enunciados e passagens com clareza.
+> **Resumo:** Estas são as palavras que o próprio exame TOEFL usa com frequência nos textos e áudios. Dominar o reconhecimento imediato elimina hesitações no Reading e no Listening e garante que você compreenda os enunciados e passagens com clareza.
 
 ### Área: Education
 
@@ -79,7 +79,7 @@ Siga esta **rotina de revisão espaçada** (*[[spaced repetition::repetição es
 | Palavra | Cat. | Significado (PT) | Sinônimo acadêmico | Exemplo: nível nota máxima |
 |---|---|---|---|---|
 | **hypothesis** | n. | hipótese; explicação proposta a ser testada | proposition; conjecture | *"[[A hypothesis, however elegantly formulated, holds no scientific standing until it has been subjected to rigorous empirical testing and potential falsification.::Uma hipótese, por mais elegante que seja a sua formulação, não tem validade científica até passar por testes empíricos rigorosos e pela possibilidade de refutação.]]"* |
-| **empirical** | adj. | empírico; baseado em observação e evidência, não em teoria | evidence-based; data-driven | *"[[The distinction between empirical findings and theoretical claims is foundational to scientific reasoning and is routinely tested in TOEFL reading passages.::A distinção entre achados empíricos e afirmações teóricas é fundamental para o raciocínio científico e aparece com frequência nas passagens de leitura do TOEFL.]]"* |
+| **empirical** | adj. | empírico; baseado em observação e evidência, não em teoria | evidence-based; data-driven | *"[[The distinction between empirical findings and theoretical claims is foundational to scientific reasoning and is routinely tested in TOEFL reading passages.::A distinção entre achados empíricos e afirmações teóricas é fundamental para o raciocínio científico e aparece com frequência nas passagens de leitura do exame TOEFL.]]"* |
 | **correlation** | n. | correlação; relação estatística entre duas variáveis | association; covariation | *"[[Demonstrating a strong correlation between variables is a necessary but insufficient step toward establishing a causal relationship.::Demonstrar uma forte correlação entre variáveis é um passo necessário, porém insuficiente, para comprovar uma relação de causa e efeito.]]"* |
 | **causation** | n. | causalidade; relação direta entre causa e efeito | causal mechanism | *"[[The fundamental challenge in epidemiology is distinguishing genuine causation from spurious correlation in observational data.::O desafio central na epidemiologia é separar a causalidade real da correlação aparente nos dados observacionais.]]"* |
 | **variable** | n. | variável; fator que pode mudar em um experimento | factor; parameter | *"[[Controlling for confounding variables is the central methodological challenge in any study that aims to establish causal rather than merely correlational claims.::Controlar as variáveis de confundimento é o principal desafio metodológico em qualquer estudo que busque estabelecer relações causais, e não apenas correlacionais.]]"* |

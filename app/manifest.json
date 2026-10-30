@@ -1,7 +1,7 @@
 {
-  "name": "iTOEFL: preparação para o TOEFL iBT",
+  "name": "iTOEFL: preparação para o exame TOEFL iBT®",
   "short_name": "iTOEFL",
-  "description": "Plataforma de estudo para o TOEFL iBT no formato 2026, em português.",
+  "description": "Plataforma de estudo para o exame TOEFL iBT® no formato 2026, em português.",
   "lang": "pt-BR",
   "start_url": "./index.html",
   "scope": "./",

@@ -1,6 +1,6 @@
 # Módulo 8: Passo a passo para o dia da prova
 
-Conteúdo do **iTOEFL** atualizado para o formato do TOEFL iBT vigente desde 21 de janeiro de 2026.
+Conteúdo do **iTOEFL** atualizado para o formato do exame TOEFL iBT® vigente desde 21 de janeiro de 2026.
 
 > **Resumo:** a sua prova não começa na hora marcada. Ela começa sete dias antes, no momento em que você decide cuidar do seu descanso para chegar inteiro ao grande dia.
 
@@ -70,7 +70,7 @@ Conteúdo do **iTOEFL** atualizado para o formato do TOEFL iBT vigente desde 21 
 
 | Período | Atividade | Duração |
 |---|---|---|
-| **Manhã** | Faça uma atividade leve e prazerosa que descanse a cabeça, como caminhar, ouvir música, cozinhar ou ver um episódio de série. Nada de TOEFL | - |
+| **Manhã** | Faça uma atividade leve e prazerosa que descanse a cabeça, como caminhar, ouvir música, cozinhar ou ver um episódio de série. Nada de estudar para a prova | - |
 | **Tarde** | Ensaio mental: feche os olhos por 10 minutos e imagine passo a passo a manhã seguinte, desde a chegada ao local, a entrada e o ajuste do fone até a primeira questão do [[router::bloco inicial de nivelamento]] de Reading, vendo você fazer tudo com calma | 10 min |
 | **Jantar** | Faça uma refeição leve e parecida com o que você planeja comer na manhã seguinte. Evite pratos pesados ou novidades | - |
 | **21h** | Desligue as telas e deixe tudo separado: documento de identidade, confirmação da inscrição e uma garrafa de água para a manhã | - |
@@ -197,7 +197,7 @@ Coma alguma coisa leve de **30 a 45 minutos** antes de começar. Como a prova n�
 
 ### O que acontece no corpo quando bate o nervosismo
 
-Sentir frio na barriga antes da prova é uma reação natural do corpo. O nosso **sistema nervoso simpático** é ativado sempre que percebe algo importante em jogo, e um exame como o TOEFL entra nessa conta. O problema nunca é sentir ansiedade, e sim não ter um passo a passo simples para canalizar essa energia.
+Sentir frio na barriga antes da prova é uma reação natural do corpo. O nosso **sistema nervoso simpático** é ativado sempre que percebe algo importante em jogo, e uma prova como o exame TOEFL entra nessa conta. O problema nunca é sentir ansiedade, e sim não ter um passo a passo simples para canalizar essa energia.
 
 Quem compete em alto nível não tenta zerar o nervosismo antes de começar, mas aprende a enxergar essa reação como **estado de prontidão**. Os mesmos sinais físicos (coração acelerado, atenção ligada e adrenalina) podem ser lidos pela sua mente como "estou com medo" ou como "meu corpo está pronto". A sua confiança vem do treino que você já fez até aqui.
 
@@ -527,7 +527,7 @@ Como o Speaking vem logo depois do Writing, vale aquecer a voz antes do primeiro
 
 ### Logo após o exame
 
-O TOEFL mostra na tela uma pontuação estimada não oficial para **Reading e Listening** assim que você termina a prova. Já Speaking e Writing são processados depois (com correção 100% por IA no formato 2026, o que garante um prazo de entrega mais curto do que no formato antigo).
+O exame TOEFL mostra na tela uma pontuação estimada não oficial para **Reading e Listening** assim que você termina a prova. Já Speaking e Writing são processados depois (com correção 100% por IA no formato 2026, o que garante um prazo de entrega mais curto do que no formato antigo).
 
 | Ação | Quando fazer | Por quê |
 |---|---|---|
