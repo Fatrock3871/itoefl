@@ -11,7 +11,7 @@
     "stimulus": {
       "kind": "text",
       "format": "html",
-      "title": "Drill A1 · alvo: 4 min",
+      "title": "Exercício A1 (meta de 4 min)",
       "content": "<p><strong>TEXT: A message to a friend</strong></p>\n<p>Hi Marco,</p>\n<p>I'm really sorry, but I have to (1)_____ our plans for Saturday. My sister (2)_____ from Recife that morning and I have to pick her up at the airport. I know we (3)_____ this dinner for weeks, and I feel terrible about it.</p>\n<p>Would Sunday afternoon (4)_____ instead? There's a new place near the park that everyone (5)_____ about. If Sunday doesn't work for you, just let me (6)_____ and we'll find another day.</p>\n<p>Again, I'm sorry for the short notice.</p>\n<p>Talk soon, Lia</p>",
       "audio_ref": null
     },
@@ -56,7 +56,7 @@
     "stimulus": {
       "kind": "text",
       "format": "html",
-      "title": "Drill A1 · alvo: 4 min",
+      "title": "Exercício A1 (meta de 4 min)",
       "content": "<p><strong>TEXT: A message to a friend</strong></p>\n<p>Hi Marco,</p>\n<p>I'm really sorry, but I have to (1)_____ our plans for Saturday. My sister (2)_____ from Recife that morning and I have to pick her up at the airport. I know we (3)_____ this dinner for weeks, and I feel terrible about it.</p>\n<p>Would Sunday afternoon (4)_____ instead? There's a new place near the park that everyone (5)_____ about. If Sunday doesn't work for you, just let me (6)_____ and we'll find another day.</p>\n<p>Again, I'm sorry for the short notice.</p>\n<p>Talk soon, Lia</p>",
       "audio_ref": null
     },
@@ -70,7 +70,7 @@
       "D": "is arriving"
     },
     "answer": "D",
-    "explanation": "Compromisso futuro já combinado (\"that morning\") → <strong>presente contínuo com valor de futuro</strong>. (A) quebra a concordância com <em>my sister</em>; (B) <em>will</em> + <em>-ing</em> sem <em>be</em> é agramatical; (C) <em>arriving</em> sozinho não tem auxiliar. Obs.: <em>arrives</em> também estaria certo aqui (horário de voo), por isso não está entre as opções.",
+    "explanation": "Um compromisso futuro já combinado (\"that morning\") pede o <strong>presente contínuo com valor de futuro</strong>. (A) quebra a concordância com <em>my sister</em>; (B) junta <em>will</em> e <em>-ing</em> sem <em>be</em>, o que não existe; (C) <em>arriving</em> sozinho não tem auxiliar. Repare que <em>arrives</em> também estaria certo aqui (horário de voo), e por isso não está entre as opções.",
     "hint": null,
     "trap_codes": [],
     "tags": [],
@@ -101,7 +101,7 @@
     "stimulus": {
       "kind": "text",
       "format": "html",
-      "title": "Drill A1 · alvo: 4 min",
+      "title": "Exercício A1 (meta de 4 min)",
       "content": "<p><strong>TEXT: A message to a friend</strong></p>\n<p>Hi Marco,</p>\n<p>I'm really sorry, but I have to (1)_____ our plans for Saturday. My sister (2)_____ from Recife that morning and I have to pick her up at the airport. I know we (3)_____ this dinner for weeks, and I feel terrible about it.</p>\n<p>Would Sunday afternoon (4)_____ instead? There's a new place near the park that everyone (5)_____ about. If Sunday doesn't work for you, just let me (6)_____ and we'll find another day.</p>\n<p>Again, I'm sorry for the short notice.</p>\n<p>Talk soon, Lia</p>",
       "audio_ref": null
     },
@@ -115,7 +115,7 @@
       "D": "are planning"
     },
     "answer": "C",
-    "explanation": "\"For weeks\" + ação iniciada no passado e ainda em curso → <strong>presente perfeito contínuo</strong>. (D) <em>are planning</em> ignora o \"for weeks\"; (A) não conecta passado e presente; (B) <em>planning</em> sozinho não tem auxiliar.",
+    "explanation": "\"For weeks\" com uma ação que começou no passado e continua pede o <strong>presente perfeito contínuo</strong>. (D) <em>are planning</em> ignora o \"for weeks\"; (A) não liga passado e presente; (B) <em>planning</em> sozinho não tem auxiliar.",
     "hint": null,
     "trap_codes": [],
     "tags": [],
@@ -146,7 +146,7 @@
     "stimulus": {
       "kind": "text",
       "format": "html",
-      "title": "Drill A1 · alvo: 4 min",
+      "title": "Exercício A1 (meta de 4 min)",
       "content": "<p><strong>TEXT: A message to a friend</strong></p>\n<p>Hi Marco,</p>\n<p>I'm really sorry, but I have to (1)_____ our plans for Saturday. My sister (2)_____ from Recife that morning and I have to pick her up at the airport. I know we (3)_____ this dinner for weeks, and I feel terrible about it.</p>\n<p>Would Sunday afternoon (4)_____ instead? There's a new place near the park that everyone (5)_____ about. If Sunday doesn't work for you, just let me (6)_____ and we'll find another day.</p>\n<p>Again, I'm sorry for the short notice.</p>\n<p>Talk soon, Lia</p>",
       "audio_ref": null
     },
@@ -160,7 +160,7 @@
       "D": "worked"
     },
     "answer": "A",
-    "explanation": "Depois do modal <em>would</em> → <strong>base</strong>. \"Would Sunday afternoon work?\"",
+    "explanation": "Depois do modal <em>would</em> vem o verbo na <strong>forma base</strong>, como em \"Would Sunday afternoon work?\"",
     "hint": null,
     "trap_codes": [],
     "tags": [],
@@ -191,7 +191,7 @@
     "stimulus": {
       "kind": "text",
       "format": "html",
-      "title": "Drill A1 · alvo: 4 min",
+      "title": "Exercício A1 (meta de 4 min)",
       "content": "<p><strong>TEXT: A message to a friend</strong></p>\n<p>Hi Marco,</p>\n<p>I'm really sorry, but I have to (1)_____ our plans for Saturday. My sister (2)_____ from Recife that morning and I have to pick her up at the airport. I know we (3)_____ this dinner for weeks, and I feel terrible about it.</p>\n<p>Would Sunday afternoon (4)_____ instead? There's a new place near the park that everyone (5)_____ about. If Sunday doesn't work for you, just let me (6)_____ and we'll find another day.</p>\n<p>Again, I'm sorry for the short notice.</p>\n<p>Talk soon, Lia</p>",
       "audio_ref": null
     },
@@ -205,7 +205,7 @@
       "D": "be talking"
     },
     "answer": "B",
-    "explanation": "<em>Everyone</em> = <strong>singular</strong> → <em>is talking</em> (o contínuo é o natural para o que está na moda agora). (A) quebra a concordância; (C) e (D) não têm auxiliar conjugado.",
+    "explanation": "<em>Everyone</em> é <strong>singular</strong> e pede <em>is talking</em> (o contínuo é o natural para o que está na moda agora). (A) quebra a concordância; (C) e (D) não têm auxiliar conjugado.",
     "hint": null,
     "trap_codes": [],
     "tags": [],
@@ -236,7 +236,7 @@
     "stimulus": {
       "kind": "text",
       "format": "html",
-      "title": "Drill A1 · alvo: 4 min",
+      "title": "Exercício A1 (meta de 4 min)",
       "content": "<p><strong>TEXT: A message to a friend</strong></p>\n<p>Hi Marco,</p>\n<p>I'm really sorry, but I have to (1)_____ our plans for Saturday. My sister (2)_____ from Recife that morning and I have to pick her up at the airport. I know we (3)_____ this dinner for weeks, and I feel terrible about it.</p>\n<p>Would Sunday afternoon (4)_____ instead? There's a new place near the park that everyone (5)_____ about. If Sunday doesn't work for you, just let me (6)_____ and we'll find another day.</p>\n<p>Again, I'm sorry for the short notice.</p>\n<p>Talk soon, Lia</p>",
       "audio_ref": null
     },
@@ -281,7 +281,7 @@
     "stimulus": {
       "kind": "text",
       "format": "html",
-      "title": "Drill A2 · alvo: 4 min",
+      "title": "Exercício A2 (meta de 4 min)",
       "content": "<p><strong>TEXT: Notice at a community pool</strong></p>\n<p>Starting Monday, the main pool (1)_____ closed for its annual maintenance. We expect the work (2)_____ completed by Friday afternoon. During this period, members (3)_____ still use the smaller training pool, which (4)_____ open at its usual hours.</p>\n<p>We apologize for any (5)_____ this may cause. If you have questions about your membership or class schedule, please (6)_____ to speak with the front desk staff, who will be happy to help.</p>",
       "audio_ref": null
     },
@@ -295,7 +295,7 @@
       "D": "been"
     },
     "answer": "A",
-    "explanation": "\"The main pool ___ closed\": voz passiva no presente: <strong>is</strong> + particípio (<em>closed</em>).",
+    "explanation": "Em \"The main pool ___ closed\" temos a voz passiva no presente, formada por <strong>is</strong> e particípio (<em>closed</em>).",
     "hint": null,
     "trap_codes": [],
     "tags": [],
@@ -326,7 +326,7 @@
     "stimulus": {
       "kind": "text",
       "format": "html",
-      "title": "Drill A2 · alvo: 4 min",
+      "title": "Exercício A2 (meta de 4 min)",
       "content": "<p><strong>TEXT: Notice at a community pool</strong></p>\n<p>Starting Monday, the main pool (1)_____ closed for its annual maintenance. We expect the work (2)_____ completed by Friday afternoon. During this period, members (3)_____ still use the smaller training pool, which (4)_____ open at its usual hours.</p>\n<p>We apologize for any (5)_____ this may cause. If you have questions about your membership or class schedule, please (6)_____ to speak with the front desk staff, who will be happy to help.</p>",
       "audio_ref": null
     },
@@ -371,7 +371,7 @@
     "stimulus": {
       "kind": "text",
       "format": "html",
-      "title": "Drill A2 · alvo: 4 min",
+      "title": "Exercício A2 (meta de 4 min)",
       "content": "<p><strong>TEXT: Notice at a community pool</strong></p>\n<p>Starting Monday, the main pool (1)_____ closed for its annual maintenance. We expect the work (2)_____ completed by Friday afternoon. During this period, members (3)_____ still use the smaller training pool, which (4)_____ open at its usual hours.</p>\n<p>We apologize for any (5)_____ this may cause. If you have questions about your membership or class schedule, please (6)_____ to speak with the front desk staff, who will be happy to help.</p>",
       "audio_ref": null
     },
@@ -416,7 +416,7 @@
     "stimulus": {
       "kind": "text",
       "format": "html",
-      "title": "Drill A2 · alvo: 4 min",
+      "title": "Exercício A2 (meta de 4 min)",
       "content": "<p><strong>TEXT: Notice at a community pool</strong></p>\n<p>Starting Monday, the main pool (1)_____ closed for its annual maintenance. We expect the work (2)_____ completed by Friday afternoon. During this period, members (3)_____ still use the smaller training pool, which (4)_____ open at its usual hours.</p>\n<p>We apologize for any (5)_____ this may cause. If you have questions about your membership or class schedule, please (6)_____ to speak with the front desk staff, who will be happy to help.</p>",
       "audio_ref": null
     },
@@ -430,7 +430,7 @@
       "D": "to remain"
     },
     "answer": "B",
-    "explanation": "Sujeito <em>which</em> retoma <em>the smaller training pool</em> (singular) → <strong>+ -s</strong>.",
+    "explanation": "O pronome <em>which</em> retoma <em>the smaller training pool</em>, que é singular, por isso o verbo leva <strong>-s</strong>.",
     "hint": null,
     "trap_codes": [],
     "tags": [],
@@ -461,7 +461,7 @@
     "stimulus": {
       "kind": "text",
       "format": "html",
-      "title": "Drill A2 · alvo: 4 min",
+      "title": "Exercício A2 (meta de 4 min)",
       "content": "<p><strong>TEXT: Notice at a community pool</strong></p>\n<p>Starting Monday, the main pool (1)_____ closed for its annual maintenance. We expect the work (2)_____ completed by Friday afternoon. During this period, members (3)_____ still use the smaller training pool, which (4)_____ open at its usual hours.</p>\n<p>We apologize for any (5)_____ this may cause. If you have questions about your membership or class schedule, please (6)_____ to speak with the front desk staff, who will be happy to help.</p>",
       "audio_ref": null
     },
@@ -506,7 +506,7 @@
     "stimulus": {
       "kind": "text",
       "format": "html",
-      "title": "Drill A2 · alvo: 4 min",
+      "title": "Exercício A2 (meta de 4 min)",
       "content": "<p><strong>TEXT: Notice at a community pool</strong></p>\n<p>Starting Monday, the main pool (1)_____ closed for its annual maintenance. We expect the work (2)_____ completed by Friday afternoon. During this period, members (3)_____ still use the smaller training pool, which (4)_____ open at its usual hours.</p>\n<p>We apologize for any (5)_____ this may cause. If you have questions about your membership or class schedule, please (6)_____ to speak with the front desk staff, who will be happy to help.</p>",
       "audio_ref": null
     },
@@ -551,7 +551,7 @@
     "stimulus": {
       "kind": "text",
       "format": "html",
-      "title": "Drill A3 · alvo: 5 min",
+      "title": "Exercício A3 (meta de 5 min)",
       "content": "<p><strong>TEXT: A message from the office manager</strong></p>\n<p>Hi team,</p>\n<p>I wanted to send a quick note before the long weekend. As most of you already (1)_____, the building's heating system will be shut down for scheduled maintenance from Friday evening through Monday morning. Please make sure you (2)_____ any equipment that shouldn't be left running unattended, and take home anything that might be sensitive to temperature changes over the weekend.</p>\n<p>The maintenance crew has assured us that the work will be (3)_____ before Monday, so there shouldn't be any disruption when everyone (4)_____ back to the office. However, if the weather turns unexpectedly cold, the building may take a little longer than usual to (5)_____ up again — so please dress in layers just in case.</p>\n<p>If you have any questions or concerns, don't (6)_____ to reach out to facilities directly. We'd rather you ask a question that turns out to be unnecessary than (7)_____ a real problem over the weekend.</p>\n<p>Thanks for your patience, and enjoy the (8)_____ time off!</p>",
       "audio_ref": null
     },
@@ -596,7 +596,7 @@
     "stimulus": {
       "kind": "text",
       "format": "html",
-      "title": "Drill A3 · alvo: 5 min",
+      "title": "Exercício A3 (meta de 5 min)",
       "content": "<p><strong>TEXT: A message from the office manager</strong></p>\n<p>Hi team,</p>\n<p>I wanted to send a quick note before the long weekend. As most of you already (1)_____, the building's heating system will be shut down for scheduled maintenance from Friday evening through Monday morning. Please make sure you (2)_____ any equipment that shouldn't be left running unattended, and take home anything that might be sensitive to temperature changes over the weekend.</p>\n<p>The maintenance crew has assured us that the work will be (3)_____ before Monday, so there shouldn't be any disruption when everyone (4)_____ back to the office. However, if the weather turns unexpectedly cold, the building may take a little longer than usual to (5)_____ up again — so please dress in layers just in case.</p>\n<p>If you have any questions or concerns, don't (6)_____ to reach out to facilities directly. We'd rather you ask a question that turns out to be unnecessary than (7)_____ a real problem over the weekend.</p>\n<p>Thanks for your patience, and enjoy the (8)_____ time off!</p>",
       "audio_ref": null
     },
@@ -610,7 +610,7 @@
       "D": "turn over"
     },
     "answer": "A",
-    "explanation": "\"Turn off equipment\" = desligar equipamento. (B) = diminuir intensidade; (C) = revelar-se/comparecer; (D) = virar/entregar.",
+    "explanation": "\"Turn off equipment\" é desligar o equipamento. (B) significa diminuir a intensidade; (C), revelar-se ou comparecer; (D), virar ou entregar.",
     "hint": null,
     "trap_codes": [],
     "tags": [],
@@ -641,7 +641,7 @@
     "stimulus": {
       "kind": "text",
       "format": "html",
-      "title": "Drill A3 · alvo: 5 min",
+      "title": "Exercício A3 (meta de 5 min)",
       "content": "<p><strong>TEXT: A message from the office manager</strong></p>\n<p>Hi team,</p>\n<p>I wanted to send a quick note before the long weekend. As most of you already (1)_____, the building's heating system will be shut down for scheduled maintenance from Friday evening through Monday morning. Please make sure you (2)_____ any equipment that shouldn't be left running unattended, and take home anything that might be sensitive to temperature changes over the weekend.</p>\n<p>The maintenance crew has assured us that the work will be (3)_____ before Monday, so there shouldn't be any disruption when everyone (4)_____ back to the office. However, if the weather turns unexpectedly cold, the building may take a little longer than usual to (5)_____ up again — so please dress in layers just in case.</p>\n<p>If you have any questions or concerns, don't (6)_____ to reach out to facilities directly. We'd rather you ask a question that turns out to be unnecessary than (7)_____ a real problem over the weekend.</p>\n<p>Thanks for your patience, and enjoy the (8)_____ time off!</p>",
       "audio_ref": null
     },
@@ -686,7 +686,7 @@
     "stimulus": {
       "kind": "text",
       "format": "html",
-      "title": "Drill A3 · alvo: 5 min",
+      "title": "Exercício A3 (meta de 5 min)",
       "content": "<p><strong>TEXT: A message from the office manager</strong></p>\n<p>Hi team,</p>\n<p>I wanted to send a quick note before the long weekend. As most of you already (1)_____, the building's heating system will be shut down for scheduled maintenance from Friday evening through Monday morning. Please make sure you (2)_____ any equipment that shouldn't be left running unattended, and take home anything that might be sensitive to temperature changes over the weekend.</p>\n<p>The maintenance crew has assured us that the work will be (3)_____ before Monday, so there shouldn't be any disruption when everyone (4)_____ back to the office. However, if the weather turns unexpectedly cold, the building may take a little longer than usual to (5)_____ up again — so please dress in layers just in case.</p>\n<p>If you have any questions or concerns, don't (6)_____ to reach out to facilities directly. We'd rather you ask a question that turns out to be unnecessary than (7)_____ a real problem over the weekend.</p>\n<p>Thanks for your patience, and enjoy the (8)_____ time off!</p>",
       "audio_ref": null
     },
@@ -700,7 +700,7 @@
       "D": "will comes"
     },
     "answer": "B",
-    "explanation": "\"Everyone\" é gramaticalmente singular → 3ª pessoa do singular: \"comes back\". (D) é agramatical (\"will\" nunca é seguido de verbo com -s).",
+    "explanation": "\"Everyone\" é singular na gramática e pede a 3ª pessoa do singular: \"comes back\". (D) não existe, porque \"will\" nunca vem seguido de verbo com -s.",
     "hint": null,
     "trap_codes": [],
     "tags": [],
@@ -731,7 +731,7 @@
     "stimulus": {
       "kind": "text",
       "format": "html",
-      "title": "Drill A3 · alvo: 5 min",
+      "title": "Exercício A3 (meta de 5 min)",
       "content": "<p><strong>TEXT: A message from the office manager</strong></p>\n<p>Hi team,</p>\n<p>I wanted to send a quick note before the long weekend. As most of you already (1)_____, the building's heating system will be shut down for scheduled maintenance from Friday evening through Monday morning. Please make sure you (2)_____ any equipment that shouldn't be left running unattended, and take home anything that might be sensitive to temperature changes over the weekend.</p>\n<p>The maintenance crew has assured us that the work will be (3)_____ before Monday, so there shouldn't be any disruption when everyone (4)_____ back to the office. However, if the weather turns unexpectedly cold, the building may take a little longer than usual to (5)_____ up again — so please dress in layers just in case.</p>\n<p>If you have any questions or concerns, don't (6)_____ to reach out to facilities directly. We'd rather you ask a question that turns out to be unnecessary than (7)_____ a real problem over the weekend.</p>\n<p>Thanks for your patience, and enjoy the (8)_____ time off!</p>",
       "audio_ref": null
     },
@@ -776,7 +776,7 @@
     "stimulus": {
       "kind": "text",
       "format": "html",
-      "title": "Drill A3 · alvo: 5 min",
+      "title": "Exercício A3 (meta de 5 min)",
       "content": "<p><strong>TEXT: A message from the office manager</strong></p>\n<p>Hi team,</p>\n<p>I wanted to send a quick note before the long weekend. As most of you already (1)_____, the building's heating system will be shut down for scheduled maintenance from Friday evening through Monday morning. Please make sure you (2)_____ any equipment that shouldn't be left running unattended, and take home anything that might be sensitive to temperature changes over the weekend.</p>\n<p>The maintenance crew has assured us that the work will be (3)_____ before Monday, so there shouldn't be any disruption when everyone (4)_____ back to the office. However, if the weather turns unexpectedly cold, the building may take a little longer than usual to (5)_____ up again — so please dress in layers just in case.</p>\n<p>If you have any questions or concerns, don't (6)_____ to reach out to facilities directly. We'd rather you ask a question that turns out to be unnecessary than (7)_____ a real problem over the weekend.</p>\n<p>Thanks for your patience, and enjoy the (8)_____ time off!</p>",
       "audio_ref": null
     },
@@ -821,7 +821,7 @@
     "stimulus": {
       "kind": "text",
       "format": "html",
-      "title": "Drill A3 · alvo: 5 min",
+      "title": "Exercício A3 (meta de 5 min)",
       "content": "<p><strong>TEXT: A message from the office manager</strong></p>\n<p>Hi team,</p>\n<p>I wanted to send a quick note before the long weekend. As most of you already (1)_____, the building's heating system will be shut down for scheduled maintenance from Friday evening through Monday morning. Please make sure you (2)_____ any equipment that shouldn't be left running unattended, and take home anything that might be sensitive to temperature changes over the weekend.</p>\n<p>The maintenance crew has assured us that the work will be (3)_____ before Monday, so there shouldn't be any disruption when everyone (4)_____ back to the office. However, if the weather turns unexpectedly cold, the building may take a little longer than usual to (5)_____ up again — so please dress in layers just in case.</p>\n<p>If you have any questions or concerns, don't (6)_____ to reach out to facilities directly. We'd rather you ask a question that turns out to be unnecessary than (7)_____ a real problem over the weekend.</p>\n<p>Thanks for your patience, and enjoy the (8)_____ time off!</p>",
       "audio_ref": null
     },
@@ -866,7 +866,7 @@
     "stimulus": {
       "kind": "text",
       "format": "html",
-      "title": "Drill A3 · alvo: 5 min",
+      "title": "Exercício A3 (meta de 5 min)",
       "content": "<p><strong>TEXT: A message from the office manager</strong></p>\n<p>Hi team,</p>\n<p>I wanted to send a quick note before the long weekend. As most of you already (1)_____, the building's heating system will be shut down for scheduled maintenance from Friday evening through Monday morning. Please make sure you (2)_____ any equipment that shouldn't be left running unattended, and take home anything that might be sensitive to temperature changes over the weekend.</p>\n<p>The maintenance crew has assured us that the work will be (3)_____ before Monday, so there shouldn't be any disruption when everyone (4)_____ back to the office. However, if the weather turns unexpectedly cold, the building may take a little longer than usual to (5)_____ up again — so please dress in layers just in case.</p>\n<p>If you have any questions or concerns, don't (6)_____ to reach out to facilities directly. We'd rather you ask a question that turns out to be unnecessary than (7)_____ a real problem over the weekend.</p>\n<p>Thanks for your patience, and enjoy the (8)_____ time off!</p>",
       "audio_ref": null
     },
@@ -880,7 +880,7 @@
       "D": "extension"
     },
     "answer": "C",
-    "explanation": "\"The _____ time off\" pede um particípio-adjetivo antes do substantivo. \"Extended time off\" = folga prolongada.",
+    "explanation": "\"The _____ time off\" pede um particípio com função de adjetivo antes do substantivo. \"Extended time off\" é uma folga prolongada.",
     "hint": null,
     "trap_codes": [],
     "tags": [],
@@ -911,7 +911,7 @@
     "stimulus": {
       "kind": "text",
       "format": "html",
-      "title": "Drill A4 · alvo: 5 min",
+      "title": "Exercício A4 (meta de 5 min)",
       "content": "<p><strong>TEXT: Museum exhibit information card</strong></p>\n<p>This exhibit brings together more than two hundred objects (1)_____ over four decades of fieldwork in the region. Many of them (2)_____ never been displayed publicly before. Together, they offer a rare (3)_____ into daily life in a community that written records largely overlooked.</p>\n<p>Visitors are (4)_____ to move through the rooms in order, since the layout follows a rough chronology. Labels have been kept deliberately brief; those who wish to (5)_____ deeper into any single object will find extended notes on the tablets provided at the entrance. Photography without flash (6)_____ permitted throughout, except in the final room, where the light-sensitive textiles require complete darkness.</p>",
       "audio_ref": null
     },
@@ -956,7 +956,7 @@
     "stimulus": {
       "kind": "text",
       "format": "html",
-      "title": "Drill A4 · alvo: 5 min",
+      "title": "Exercício A4 (meta de 5 min)",
       "content": "<p><strong>TEXT: Museum exhibit information card</strong></p>\n<p>This exhibit brings together more than two hundred objects (1)_____ over four decades of fieldwork in the region. Many of them (2)_____ never been displayed publicly before. Together, they offer a rare (3)_____ into daily life in a community that written records largely overlooked.</p>\n<p>Visitors are (4)_____ to move through the rooms in order, since the layout follows a rough chronology. Labels have been kept deliberately brief; those who wish to (5)_____ deeper into any single object will find extended notes on the tablets provided at the entrance. Photography without flash (6)_____ permitted throughout, except in the final room, where the light-sensitive textiles require complete darkness.</p>",
       "audio_ref": null
     },
@@ -970,7 +970,7 @@
       "D": "having"
     },
     "answer": "B",
-    "explanation": "Sujeito <em>Many of them</em> (plural) + presente perfeito → \"have never been displayed\". (A) quebra a concordância; (C) mudaria para passado perfeito sem marco; (D) não fecha o tempo.",
+    "explanation": "O sujeito <em>Many of them</em> é plural e, com o presente perfeito, forma \"have never been displayed\". (A) quebra a concordância; (C) mudaria para o passado perfeito sem um marco no passado; (D) não fecha o tempo verbal.",
     "hint": null,
     "trap_codes": [],
     "tags": [],
@@ -1001,7 +1001,7 @@
     "stimulus": {
       "kind": "text",
       "format": "html",
-      "title": "Drill A4 · alvo: 5 min",
+      "title": "Exercício A4 (meta de 5 min)",
       "content": "<p><strong>TEXT: Museum exhibit information card</strong></p>\n<p>This exhibit brings together more than two hundred objects (1)_____ over four decades of fieldwork in the region. Many of them (2)_____ never been displayed publicly before. Together, they offer a rare (3)_____ into daily life in a community that written records largely overlooked.</p>\n<p>Visitors are (4)_____ to move through the rooms in order, since the layout follows a rough chronology. Labels have been kept deliberately brief; those who wish to (5)_____ deeper into any single object will find extended notes on the tablets provided at the entrance. Photography without flash (6)_____ permitted throughout, except in the final room, where the light-sensitive textiles require complete darkness.</p>",
       "audio_ref": null
     },
@@ -1015,7 +1015,7 @@
       "D": "bridge"
     },
     "answer": "A",
-    "explanation": "\"A rare ___ into daily life\": collocation fixa: <em>a window into/onto</em> = uma janela para (uma visão de). As outras opções não formam collocation com \"into daily life\" nesse sentido.",
+    "explanation": "Em \"A rare ___ into daily life\" está a combinação fixa <em>a window into</em> (ou <em>onto</em>), \"uma janela para\", no sentido de uma visão de algo. As outras opções não combinam com \"into daily life\" nesse sentido.",
     "hint": null,
     "trap_codes": [],
     "tags": [],
@@ -1046,7 +1046,7 @@
     "stimulus": {
       "kind": "text",
       "format": "html",
-      "title": "Drill A4 · alvo: 5 min",
+      "title": "Exercício A4 (meta de 5 min)",
       "content": "<p><strong>TEXT: Museum exhibit information card</strong></p>\n<p>This exhibit brings together more than two hundred objects (1)_____ over four decades of fieldwork in the region. Many of them (2)_____ never been displayed publicly before. Together, they offer a rare (3)_____ into daily life in a community that written records largely overlooked.</p>\n<p>Visitors are (4)_____ to move through the rooms in order, since the layout follows a rough chronology. Labels have been kept deliberately brief; those who wish to (5)_____ deeper into any single object will find extended notes on the tablets provided at the entrance. Photography without flash (6)_____ permitted throughout, except in the final room, where the light-sensitive textiles require complete darkness.</p>",
       "audio_ref": null
     },
@@ -1060,7 +1060,7 @@
       "D": "encouragement"
     },
     "answer": "B",
-    "explanation": "\"Visitors are ___ to move\": voz passiva: <em>are encouraged to</em>. (C) mudaria o sujeito; (A)/(D) não formam o passivo.",
+    "explanation": "Em \"Visitors are ___ to move\" temos a voz passiva <em>are encouraged to</em>. (C) mudaria o sujeito; (A) e (D) não formam a passiva.",
     "hint": null,
     "trap_codes": [],
     "tags": [],
@@ -1091,7 +1091,7 @@
     "stimulus": {
       "kind": "text",
       "format": "html",
-      "title": "Drill A4 · alvo: 5 min",
+      "title": "Exercício A4 (meta de 5 min)",
       "content": "<p><strong>TEXT: Museum exhibit information card</strong></p>\n<p>This exhibit brings together more than two hundred objects (1)_____ over four decades of fieldwork in the region. Many of them (2)_____ never been displayed publicly before. Together, they offer a rare (3)_____ into daily life in a community that written records largely overlooked.</p>\n<p>Visitors are (4)_____ to move through the rooms in order, since the layout follows a rough chronology. Labels have been kept deliberately brief; those who wish to (5)_____ deeper into any single object will find extended notes on the tablets provided at the entrance. Photography without flash (6)_____ permitted throughout, except in the final room, where the light-sensitive textiles require complete darkness.</p>",
       "audio_ref": null
     },
@@ -1105,7 +1105,7 @@
       "D": "sink"
     },
     "answer": "A",
-    "explanation": "\"Wish to ___ deeper into any single object\": <em>delve into</em> = aprofundar-se em. As outras opções não formam collocation com \"deeper into [um tema]\" no sentido de investigar.",
+    "explanation": "Em \"Wish to ___ deeper into any single object\", <em>delve into</em> quer dizer aprofundar-se em. As outras opções não combinam com \"deeper into [um tema]\" no sentido de investigar.",
     "hint": null,
     "trap_codes": [],
     "tags": [],
@@ -1136,7 +1136,7 @@
     "stimulus": {
       "kind": "text",
       "format": "html",
-      "title": "Drill A4 · alvo: 5 min",
+      "title": "Exercício A4 (meta de 5 min)",
       "content": "<p><strong>TEXT: Museum exhibit information card</strong></p>\n<p>This exhibit brings together more than two hundred objects (1)_____ over four decades of fieldwork in the region. Many of them (2)_____ never been displayed publicly before. Together, they offer a rare (3)_____ into daily life in a community that written records largely overlooked.</p>\n<p>Visitors are (4)_____ to move through the rooms in order, since the layout follows a rough chronology. Labels have been kept deliberately brief; those who wish to (5)_____ deeper into any single object will find extended notes on the tablets provided at the entrance. Photography without flash (6)_____ permitted throughout, except in the final room, where the light-sensitive textiles require complete darkness.</p>",
       "audio_ref": null
     },
@@ -1150,7 +1150,7 @@
       "D": "be"
     },
     "answer": "A",
-    "explanation": "\"Photography without flash ___ permitted\": sujeito <em>Photography</em> (incontável, singular) → <strong>is</strong>.",
+    "explanation": "Em \"Photography without flash ___ permitted\", o sujeito <em>Photography</em> é incontável e singular, por isso pede <strong>is</strong>.",
     "hint": null,
     "trap_codes": [],
     "tags": [],
@@ -1181,7 +1181,7 @@
     "stimulus": {
       "kind": "text",
       "format": "html",
-      "title": "Drill A5 · alvo: 5 min",
+      "title": "Exercício A5 (meta de 5 min)",
       "content": "<p><strong>TEXT: Excerpt from an editorial</strong></p>\n<p>For decades, the standard response to traffic congestion (1)_____ been to add lanes. The logic seems sound. Yet a growing body of research points to the opposite (2)_____: added lanes tend to attract additional drivers until, within a few years, traffic returns to its former level — a phenomenon known as induced demand. Rarely (3)_____ a policy so intuitive prove so consistently ineffective.</p>\n<p>This does not mean nothing (4)_____ be done. It means the solution lies elsewhere: in reliable public transit, in pricing that reflects the true cost of road use, and in land-use decisions that reduce the (5)_____ to drive in the first place. None of these is as politically straightforward as pouring concrete, which is (6)_____ they are so often postponed.</p>",
       "audio_ref": null
     },
@@ -1195,7 +1195,7 @@
       "D": "having"
     },
     "answer": "A",
-    "explanation": "Sujeito \"the standard response\" = <strong>singular</strong> → \"has been\" (presente perfeito: \"For decades... has been\"). (B) quebra a concordância; (C) pediria um marco no passado; (D) não fecha o tempo.",
+    "explanation": "O sujeito \"the standard response\" é <strong>singular</strong> e pede \"has been\" (presente perfeito, com \"For decades... has been\"). (B) quebra a concordância; (C) pediria um marco no passado; (D) não fecha o tempo verbal.",
     "hint": null,
     "trap_codes": [],
     "tags": [],
@@ -1226,7 +1226,7 @@
     "stimulus": {
       "kind": "text",
       "format": "html",
-      "title": "Drill A5 · alvo: 5 min",
+      "title": "Exercício A5 (meta de 5 min)",
       "content": "<p><strong>TEXT: Excerpt from an editorial</strong></p>\n<p>For decades, the standard response to traffic congestion (1)_____ been to add lanes. The logic seems sound. Yet a growing body of research points to the opposite (2)_____: added lanes tend to attract additional drivers until, within a few years, traffic returns to its former level — a phenomenon known as induced demand. Rarely (3)_____ a policy so intuitive prove so consistently ineffective.</p>\n<p>This does not mean nothing (4)_____ be done. It means the solution lies elsewhere: in reliable public transit, in pricing that reflects the true cost of road use, and in land-use decisions that reduce the (5)_____ to drive in the first place. None of these is as politically straightforward as pouring concrete, which is (6)_____ they are so often postponed.</p>",
       "audio_ref": null
     },
@@ -1271,7 +1271,7 @@
     "stimulus": {
       "kind": "text",
       "format": "html",
-      "title": "Drill A5 · alvo: 5 min",
+      "title": "Exercício A5 (meta de 5 min)",
       "content": "<p><strong>TEXT: Excerpt from an editorial</strong></p>\n<p>For decades, the standard response to traffic congestion (1)_____ been to add lanes. The logic seems sound. Yet a growing body of research points to the opposite (2)_____: added lanes tend to attract additional drivers until, within a few years, traffic returns to its former level — a phenomenon known as induced demand. Rarely (3)_____ a policy so intuitive prove so consistently ineffective.</p>\n<p>This does not mean nothing (4)_____ be done. It means the solution lies elsewhere: in reliable public transit, in pricing that reflects the true cost of road use, and in land-use decisions that reduce the (5)_____ to drive in the first place. None of these is as politically straightforward as pouring concrete, which is (6)_____ they are so often postponed.</p>",
       "audio_ref": null
     },
@@ -1285,7 +1285,7 @@
       "D": "has"
     },
     "answer": "A",
-    "explanation": "Inversão após <em>Rarely</em> no início da frase → auxiliar <strong>does</strong> + sujeito + base (<em>prove</em>). \"Rarely does a policy... prove...\"",
+    "explanation": "Com <em>Rarely</em> no início da frase há inversão: o auxiliar <strong>does</strong> vem antes do sujeito, e o verbo fica na forma base (<em>prove</em>), como em \"Rarely does a policy... prove...\"",
     "hint": null,
     "trap_codes": [],
     "tags": [],
@@ -1316,7 +1316,7 @@
     "stimulus": {
       "kind": "text",
       "format": "html",
-      "title": "Drill A5 · alvo: 5 min",
+      "title": "Exercício A5 (meta de 5 min)",
       "content": "<p><strong>TEXT: Excerpt from an editorial</strong></p>\n<p>For decades, the standard response to traffic congestion (1)_____ been to add lanes. The logic seems sound. Yet a growing body of research points to the opposite (2)_____: added lanes tend to attract additional drivers until, within a few years, traffic returns to its former level — a phenomenon known as induced demand. Rarely (3)_____ a policy so intuitive prove so consistently ineffective.</p>\n<p>This does not mean nothing (4)_____ be done. It means the solution lies elsewhere: in reliable public transit, in pricing that reflects the true cost of road use, and in land-use decisions that reduce the (5)_____ to drive in the first place. None of these is as politically straightforward as pouring concrete, which is (6)_____ they are so often postponed.</p>",
       "audio_ref": null
     },
@@ -1330,7 +1330,7 @@
       "D": "has"
     },
     "answer": "A",
-    "explanation": "\"This does not mean nothing ___ be done\": modal + <em>be done</em> (passiva): \"não significa que nada pode ser feito\". (B) inverteria o sentido; (C) e (D) não podem vir antes de \"be\" (\"is be\" e \"has be\" são agramaticais).",
+    "explanation": "Em \"This does not mean nothing ___ be done\" entra um modal antes de <em>be done</em> (passiva), com o sentido de \"não significa que nada pode ser feito\". (B) inverteria o sentido; (C) e (D) não podem vir antes de \"be\" (\"is be\" e \"has be\" não existem).",
     "hint": null,
     "trap_codes": [],
     "tags": [],
@@ -1361,7 +1361,7 @@
     "stimulus": {
       "kind": "text",
       "format": "html",
-      "title": "Drill A5 · alvo: 5 min",
+      "title": "Exercício A5 (meta de 5 min)",
       "content": "<p><strong>TEXT: Excerpt from an editorial</strong></p>\n<p>For decades, the standard response to traffic congestion (1)_____ been to add lanes. The logic seems sound. Yet a growing body of research points to the opposite (2)_____: added lanes tend to attract additional drivers until, within a few years, traffic returns to its former level — a phenomenon known as induced demand. Rarely (3)_____ a policy so intuitive prove so consistently ineffective.</p>\n<p>This does not mean nothing (4)_____ be done. It means the solution lies elsewhere: in reliable public transit, in pricing that reflects the true cost of road use, and in land-use decisions that reduce the (5)_____ to drive in the first place. None of these is as politically straightforward as pouring concrete, which is (6)_____ they are so often postponed.</p>",
       "audio_ref": null
     },
@@ -1375,7 +1375,7 @@
       "D": "hope"
     },
     "answer": "A",
-    "explanation": "\"Reduce the ___ to drive\": <em>the need to (do something)</em> = a necessidade de. As outras opções não formam collocation com essa estrutura.",
+    "explanation": "Em \"Reduce the ___ to drive\", <em>the need to (do something)</em> é \"a necessidade de\". As outras opções não combinam com essa estrutura.",
     "hint": null,
     "trap_codes": [],
     "tags": [],
@@ -1406,7 +1406,7 @@
     "stimulus": {
       "kind": "text",
       "format": "html",
-      "title": "Drill A5 · alvo: 5 min",
+      "title": "Exercício A5 (meta de 5 min)",
       "content": "<p><strong>TEXT: Excerpt from an editorial</strong></p>\n<p>For decades, the standard response to traffic congestion (1)_____ been to add lanes. The logic seems sound. Yet a growing body of research points to the opposite (2)_____: added lanes tend to attract additional drivers until, within a few years, traffic returns to its former level — a phenomenon known as induced demand. Rarely (3)_____ a policy so intuitive prove so consistently ineffective.</p>\n<p>This does not mean nothing (4)_____ be done. It means the solution lies elsewhere: in reliable public transit, in pricing that reflects the true cost of road use, and in land-use decisions that reduce the (5)_____ to drive in the first place. None of these is as politically straightforward as pouring concrete, which is (6)_____ they are so often postponed.</p>",
       "audio_ref": null
     },
@@ -1420,7 +1420,7 @@
       "D": "what"
     },
     "answer": "A",
-    "explanation": "\"Which is ___ they are so often postponed\": \"which is why...\" = \"razão pela qual\". (B) precisaria de outra estrutura; (C)/(D) não fecham a relativa.",
+    "explanation": "Em \"Which is ___ they are so often postponed\", \"which is why...\" quer dizer \"razão pela qual\". (B) precisaria de outra estrutura; (C) e (D) não fecham a oração relativa.",
     "hint": null,
     "trap_codes": [],
     "tags": [],

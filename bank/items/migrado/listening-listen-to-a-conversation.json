@@ -11,7 +11,7 @@
     "stimulus": {
       "kind": "audio",
       "format": "html",
-      "title": "Drill B1 · Advising Office · alvo: 3 min",
+      "title": "Exercício B1: Advising Office (meta de 3 min)",
       "content": "<p><em>Narrator: Listen to a conversation between a student and an academic advisor.</em></p>\n<p><strong>Student:</strong> Hi, I wanted to ask about switching one of my electives. I'm in Intro to Statistics, but I'd rather take Data Visualization this term.</p>\n<p><strong>Advisor:</strong> Let me check... okay, Data Visualization has space. But it has Statistics as a prerequisite — have you completed that?</p>\n<p><strong>Student:</strong> No, I'm taking it right now. I was hoping to take Data Visualization first and Statistics later.</p>\n<p><strong>Advisor:</strong> Ah. Unfortunately that's not possible; the prerequisite is enforced by the system. You'd need to finish Statistics first, or get a written waiver from the Data Visualization instructor.</p>\n<p><strong>Student:</strong> Is it worth asking the instructor directly, or is that rarely approved?</p>\n<p><strong>Advisor:</strong> It's approved sometimes, especially if you have relevant experience — a coding background, say. Do you have any?</p>\n<p><strong>Student:</strong> I do, actually — I took two programming courses last year.</p>\n<p><strong>Advisor:</strong> Then it's worth emailing her. I'll send you her contact information now.</p>",
       "audio_ref": null
     },
@@ -56,7 +56,7 @@
     "stimulus": {
       "kind": "audio",
       "format": "html",
-      "title": "Drill B1 · Advising Office · alvo: 3 min",
+      "title": "Exercício B1: Advising Office (meta de 3 min)",
       "content": "<p><em>Narrator: Listen to a conversation between a student and an academic advisor.</em></p>\n<p><strong>Student:</strong> Hi, I wanted to ask about switching one of my electives. I'm in Intro to Statistics, but I'd rather take Data Visualization this term.</p>\n<p><strong>Advisor:</strong> Let me check... okay, Data Visualization has space. But it has Statistics as a prerequisite — have you completed that?</p>\n<p><strong>Student:</strong> No, I'm taking it right now. I was hoping to take Data Visualization first and Statistics later.</p>\n<p><strong>Advisor:</strong> Ah. Unfortunately that's not possible; the prerequisite is enforced by the system. You'd need to finish Statistics first, or get a written waiver from the Data Visualization instructor.</p>\n<p><strong>Student:</strong> Is it worth asking the instructor directly, or is that rarely approved?</p>\n<p><strong>Advisor:</strong> It's approved sometimes, especially if you have relevant experience — a coding background, say. Do you have any?</p>\n<p><strong>Student:</strong> I do, actually — I took two programming courses last year.</p>\n<p><strong>Advisor:</strong> Then it's worth emailing her. I'll send you her contact information now.</p>",
       "audio_ref": null
     },
@@ -101,7 +101,7 @@
     "stimulus": {
       "kind": "audio",
       "format": "html",
-      "title": "Drill B2 · Library Reserve Desk · alvo: 3 min",
+      "title": "Exercício B2: Library Reserve Desk (meta de 3 min)",
       "content": "<p><em>Narrator: Listen to a conversation between a student and a librarian.</em></p>\n<p><strong>Student:</strong> Hi — I'm looking for a book my professor put on reserve for the history seminar. It's <em>The Making of the Atlantic World</em>.</p>\n<p><strong>Librarian:</strong> Let me look... yes, we have two copies on reserve. Reserve items are two-hour loans, in-library use only. You can't take them out of the building.</p>\n<p><strong>Student:</strong> Oh. I was hoping to take it home for the weekend — the essay's due Monday.</p>\n<p><strong>Librarian:</strong> For reserve items, no, sorry. But here's an option: there's a circulating copy in the stacks, on the fourth floor. That one you <em>can</em> take out, for three weeks.</p>\n<p><strong>Student:</strong> Great, I'll grab that instead. Is it available right now?</p>\n<p><strong>Librarian:</strong> The catalog says one copy is in. If it's not on the shelf, come back and I'll place a hold on the reserve copy for you to use here.</p>\n<p><strong>Student:</strong> Thanks — I'll check the stacks first.</p>",
       "audio_ref": null
     },
@@ -146,7 +146,7 @@
     "stimulus": {
       "kind": "audio",
       "format": "html",
-      "title": "Drill B2 · Library Reserve Desk · alvo: 3 min",
+      "title": "Exercício B2: Library Reserve Desk (meta de 3 min)",
       "content": "<p><em>Narrator: Listen to a conversation between a student and a librarian.</em></p>\n<p><strong>Student:</strong> Hi — I'm looking for a book my professor put on reserve for the history seminar. It's <em>The Making of the Atlantic World</em>.</p>\n<p><strong>Librarian:</strong> Let me look... yes, we have two copies on reserve. Reserve items are two-hour loans, in-library use only. You can't take them out of the building.</p>\n<p><strong>Student:</strong> Oh. I was hoping to take it home for the weekend — the essay's due Monday.</p>\n<p><strong>Librarian:</strong> For reserve items, no, sorry. But here's an option: there's a circulating copy in the stacks, on the fourth floor. That one you <em>can</em> take out, for three weeks.</p>\n<p><strong>Student:</strong> Great, I'll grab that instead. Is it available right now?</p>\n<p><strong>Librarian:</strong> The catalog says one copy is in. If it's not on the shelf, come back and I'll place a hold on the reserve copy for you to use here.</p>\n<p><strong>Student:</strong> Thanks — I'll check the stacks first.</p>",
       "audio_ref": null
     },
@@ -191,7 +191,7 @@
     "stimulus": {
       "kind": "audio",
       "format": "html",
-      "title": "Drill B3 · After Class · alvo: 3 min",
+      "title": "Exercício B3: After Class (meta de 3 min)",
       "content": "<p><em>Narrator: Listen to a conversation between a student and a professor.</em></p>\n<p><strong>Student:</strong> Professor, do you have a minute? I'm a bit lost on the second essay prompt.</p>\n<p><strong>Professor:</strong> Of course. Which part?</p>\n<p><strong>Student:</strong> It asks us to \"evaluate\" the argument, and I'm not sure if that means summarize it or agree or disagree with it.</p>\n<p><strong>Professor:</strong> Good question — \"evaluate\" means neither, exactly. It means weigh the argument: where is it strong, where is it weak, and does the evidence actually support the conclusion? You can end up agreeing or disagreeing, but the point is the <em>weighing</em>, not the verdict.</p>\n<p><strong>Student:</strong> Okay, that helps. So a summary alone wouldn't be enough.</p>\n<p><strong>Professor:</strong> Right. A summary shows you understood it. Evaluation shows you can think about it. Aim for maybe a third summary, two-thirds evaluation.</p>\n<p><strong>Student:</strong> Got it. And length — still fifteen hundred words?</p>\n<p><strong>Professor:</strong> Fifteen hundred, give or take a hundred. Don't pad it.</p>",
       "audio_ref": null
     },
@@ -236,7 +236,7 @@
     "stimulus": {
       "kind": "audio",
       "format": "html",
-      "title": "Drill B3 · After Class · alvo: 3 min",
+      "title": "Exercício B3: After Class (meta de 3 min)",
       "content": "<p><em>Narrator: Listen to a conversation between a student and a professor.</em></p>\n<p><strong>Student:</strong> Professor, do you have a minute? I'm a bit lost on the second essay prompt.</p>\n<p><strong>Professor:</strong> Of course. Which part?</p>\n<p><strong>Student:</strong> It asks us to \"evaluate\" the argument, and I'm not sure if that means summarize it or agree or disagree with it.</p>\n<p><strong>Professor:</strong> Good question — \"evaluate\" means neither, exactly. It means weigh the argument: where is it strong, where is it weak, and does the evidence actually support the conclusion? You can end up agreeing or disagreeing, but the point is the <em>weighing</em>, not the verdict.</p>\n<p><strong>Student:</strong> Okay, that helps. So a summary alone wouldn't be enough.</p>\n<p><strong>Professor:</strong> Right. A summary shows you understood it. Evaluation shows you can think about it. Aim for maybe a third summary, two-thirds evaluation.</p>\n<p><strong>Student:</strong> Got it. And length — still fifteen hundred words?</p>\n<p><strong>Professor:</strong> Fifteen hundred, give or take a hundred. Don't pad it.</p>",
       "audio_ref": null
     },
@@ -250,7 +250,7 @@
       "D": "Include as many quotations as possible"
     },
     "answer": "B",
-    "explanation": "\"Don't pad it\" = não encher linguiça para bater a contagem de palavras. (A) é o oposto; (C)/(D) estão fora do que foi dito.",
+    "explanation": "\"Don't pad it\" é \"não encha linguiça\" só para chegar ao número de palavras. (A) diz o oposto; (C) e (D) estão fora do que foi dito.",
     "hint": null,
     "trap_codes": [],
     "tags": [],

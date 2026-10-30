@@ -11,7 +11,7 @@
     "stimulus": {
       "kind": "audio",
       "format": "html",
-      "title": "Drill C1 · Library Services · alvo: 2 min",
+      "title": "Exercício C1: Library Services (meta de 2 min)",
       "content": "<p><em>Narrator: Listen to an announcement about a change to library services.</em></p>\n<p><strong>Speaker:</strong> Attention, students. Starting next Monday, the Main Library's third-floor reading room will be closed for renovation through the end of the month. During this period you can use the East Wing reading room instead, which keeps its regular hours. Reserved study rooms originally booked for the third floor have already been transferred automatically to the East Wing — you don't need to rebook. However, if your reservation was for a room with audiovisual equipment, please double-check availability, since not all East Wing rooms are equipped. Questions go to the circulation desk.</p>",
       "audio_ref": null
     },
@@ -56,7 +56,7 @@
     "stimulus": {
       "kind": "audio",
       "format": "html",
-      "title": "Drill C1 · Library Services · alvo: 2 min",
+      "title": "Exercício C1: Library Services (meta de 2 min)",
       "content": "<p><em>Narrator: Listen to an announcement about a change to library services.</em></p>\n<p><strong>Speaker:</strong> Attention, students. Starting next Monday, the Main Library's third-floor reading room will be closed for renovation through the end of the month. During this period you can use the East Wing reading room instead, which keeps its regular hours. Reserved study rooms originally booked for the third floor have already been transferred automatically to the East Wing — you don't need to rebook. However, if your reservation was for a room with audiovisual equipment, please double-check availability, since not all East Wing rooms are equipped. Questions go to the circulation desk.</p>",
       "audio_ref": null
     },
@@ -101,7 +101,7 @@
     "stimulus": {
       "kind": "audio",
       "format": "html",
-      "title": "Drill C2 · Course Registration · alvo: 2 min",
+      "title": "Exercício C2: Course Registration (meta de 2 min)",
       "content": "<p><em>Narrator: Listen to an announcement about course registration.</em></p>\n<p><strong>Speaker:</strong> A reminder to all second-year students: registration for spring courses opens this Thursday at 8 a.m. and closes the following Wednesday at midnight. Register early — popular courses fill within hours. If a course you need is full, add yourself to the waitlist rather than emailing the instructor; the system releases spots automatically as students drop, and it works strictly in waitlist order. One change this year: the add/drop period after classes begin has been shortened from two weeks to one, so finalize your schedule before the term starts, not after.</p>",
       "audio_ref": null
     },
@@ -146,7 +146,7 @@
     "stimulus": {
       "kind": "audio",
       "format": "html",
-      "title": "Drill C2 · Course Registration · alvo: 2 min",
+      "title": "Exercício C2: Course Registration (meta de 2 min)",
       "content": "<p><em>Narrator: Listen to an announcement about course registration.</em></p>\n<p><strong>Speaker:</strong> A reminder to all second-year students: registration for spring courses opens this Thursday at 8 a.m. and closes the following Wednesday at midnight. Register early — popular courses fill within hours. If a course you need is full, add yourself to the waitlist rather than emailing the instructor; the system releases spots automatically as students drop, and it works strictly in waitlist order. One change this year: the add/drop period after classes begin has been shortened from two weeks to one, so finalize your schedule before the term starts, not after.</p>",
       "audio_ref": null
     },
@@ -160,7 +160,7 @@
       "D": "Because registration reopens midway through the term"
     },
     "answer": "B",
-    "explanation": "Add/drop mais curto → menos tempo para ajustar depois que as aulas começam. (A), (C) e (D) não são ditos no anúncio.",
+    "explanation": "Com o período de add/drop mais curto, sobra menos tempo para ajustar a matrícula depois que as aulas começam. (A), (C) e (D) não são ditos no anúncio.",
     "hint": null,
     "trap_codes": [],
     "tags": [],
@@ -191,7 +191,7 @@
     "stimulus": {
       "kind": "audio",
       "format": "html",
-      "title": "Drill C3 · Campus Event · alvo: 2 min",
+      "title": "Exercício C3: Campus Event (meta de 2 min)",
       "content": "<p><em>Narrator: Listen to an announcement about a career event.</em></p>\n<p><strong>Speaker:</strong> The annual Career Fair takes place next Wednesday from 10 to 4 in the main gymnasium. Over eighty employers will attend, mostly in engineering, healthcare, and education. A few reminders. Bring several printed copies of your résumé — most recruiters still expect a paper copy. Business-casual dress is recommended, not required. The résumé-review station near the entrance will be open from 9, an hour before the fair, and it operates first-come, first-served, so arrive early if you want feedback before talking to employers. Finally, the 9:30 workshop on interview skills is now full; a recording will be posted next week for those who missed it.</p>",
       "audio_ref": null
     },
@@ -236,7 +236,7 @@
     "stimulus": {
       "kind": "audio",
       "format": "html",
-      "title": "Drill C3 · Campus Event · alvo: 2 min",
+      "title": "Exercício C3: Campus Event (meta de 2 min)",
       "content": "<p><em>Narrator: Listen to an announcement about a career event.</em></p>\n<p><strong>Speaker:</strong> The annual Career Fair takes place next Wednesday from 10 to 4 in the main gymnasium. Over eighty employers will attend, mostly in engineering, healthcare, and education. A few reminders. Bring several printed copies of your résumé — most recruiters still expect a paper copy. Business-casual dress is recommended, not required. The résumé-review station near the entrance will be open from 9, an hour before the fair, and it operates first-come, first-served, so arrive early if you want feedback before talking to employers. Finally, the 9:30 workshop on interview skills is now full; a recording will be posted next week for those who missed it.</p>",
       "audio_ref": null
     },
@@ -250,7 +250,7 @@
       "D": "Wait until after 4 p.m."
     },
     "answer": "B",
-    "explanation": "A estação abre às 9, é <em>first-come, first-served</em> → chegar cedo. (A) o workshop é de habilidades de entrevista, não revisão de currículo; (C)/(D) não sugeridos.",
+    "explanation": "A estação abre às 9 e funciona por ordem de chegada (<em>first-come, first-served</em>), por isso vale chegar cedo. (A) erra porque o workshop é de entrevista, não de revisão de currículo; (C) e (D) não são sugeridos.",
     "hint": null,
     "trap_codes": [],
     "tags": [],

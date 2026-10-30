@@ -1,7 +1,7 @@
 [
   {
     "num": 1,
-    "topic": "Gramática (verb tense/aspect)",
+    "topic": "Gramática (tempo e aspecto verbal)",
     "area": "gramatica",
     "prompt": "By the time the seminar starts next Monday, Dr. Alvarez ______ her final report for over three weeks.",
     "options": {
@@ -11,8 +11,8 @@
       "D": "was writing"
     },
     "correct": "C",
-    "why_right": "Futuro perfeito contínuo: ação iniciada no passado, contínua até um ponto futuro específico (\"by the time... next Monday\"), com ênfase na duração (\"for over three weeks\").",
-    "why_wrong": "(A) presente simples ignora a duração; (B) presente perfeito contínuo não projeta para o futuro; (D) passado contínuo não conecta com o marco temporal futuro."
+    "why_right": "É o futuro perfeito contínuo: uma ação que começou antes e continua até um ponto específico no futuro (\"by the time... next Monday\"), com ênfase na duração (\"for over three weeks\").",
+    "why_wrong": "(A) usa o presente simples e ignora a duração; (B) usa o presente perfeito contínuo, que não projeta a ação para o futuro; (D) usa o passado contínuo, que não se liga ao marco no futuro."
   },
   {
     "num": 2,
@@ -26,8 +26,8 @@
       "D": "similarly"
     },
     "correct": "C",
-    "why_right": "O conector precisa sinalizar contraste + ironia entre a intenção da política (reduzir custos) e o resultado real (aumentou custos): \"paradoxically\" captura essa contradição inesperada.",
-    "why_wrong": "(A) e (B) são de continuidade/consequência lógica, incompatíveis com contraste; (D) sinaliza semelhança, o oposto do que a frase exige."
+    "why_right": "O conectivo precisa mostrar o contraste irônico entre a intenção da política (reduzir custos) e o resultado real (os custos aumentaram). \"Paradoxically\" capta essa contradição inesperada.",
+    "why_wrong": "(A) e (B) indicam continuidade ou consequência, o que não cabe num contraste; (D) indica semelhança, o oposto do que a frase pede."
   },
   {
     "num": 3,
@@ -41,12 +41,12 @@
       "D": "endorse"
     },
     "correct": "C",
-    "why_right": "\"Deflect criticism\" = desviar a crítica de si, a collocation natural: adiar a votação foi um jeito de tirar o foco da crítica.",
-    "why_wrong": "(A) \"defer\" atrai por lembrar \"adiar a votação\", mas \"defer criticism\" não se usa; (B) \"exacerbate\" = agravar, o contrário da intenção; (D) \"endorse\" = apoiar, não faz sentido com \"criticism\"."
+    "why_right": "\"Deflect criticism\" é desviar a crítica de si, a combinação natural em inglês. Adiar a votação foi um jeito de tirar o foco da crítica.",
+    "why_wrong": "(A) \"defer\" atrai por lembrar \"adiar a votação\", mas não se diz \"defer criticism\"; (B) \"exacerbate\" é agravar, o contrário da intenção; (D) \"endorse\" é apoiar e não faz sentido com \"criticism\"."
   },
   {
     "num": 4,
-    "topic": "Gramática (subjunctive/conditional)",
+    "topic": "Gramática (condicional)",
     "area": "gramatica",
     "prompt": "If the funding request ______ approved last quarter, the lab would already have hired two new researchers.",
     "options": {
@@ -56,8 +56,8 @@
       "D": "has been"
     },
     "correct": "C",
-    "why_right": "Condicional tipo 3 (hipótese sobre o passado): a oração principal tem \"would already have hired\", o que exige past perfect na oração com \"if\": \"had been approved\". \"Last quarter\" confirma o passado.",
-    "why_wrong": "(A) e (B) são formas de passado simples/subjuntivo incompatíveis com a estrutura de tipo 3; (D) é present perfect, tempo errado para hipótese no passado."
+    "why_right": "É a condicional do tipo 3, uma hipótese sobre o passado. Como a oração principal tem \"would already have hired\", a oração com \"if\" pede o past perfect, \"had been approved\". \"Last quarter\" confirma o passado.",
+    "why_wrong": "(A) e (B) são formas de passado simples ou de subjuntivo que não combinam com a estrutura do tipo 3; (D) é present perfect, o tempo errado para uma hipótese sobre o passado."
   },
   {
     "num": 5,
@@ -71,12 +71,12 @@
       "D": "numerous facing setbacks"
     },
     "correct": "B",
-    "why_right": "Ordem correta: verbo no gerúndio + objeto (\"facing numerous setbacks\") após \"despite\", seguindo a estrutura padrão preposição + gerúndio + complemento.",
+    "why_right": "Depois de \"despite\" vem o verbo no gerúndio seguido do objeto (\"facing numerous setbacks\"), na estrutura padrão de preposição, gerúndio e complemento.",
     "why_wrong": "(A) inverte adjetivo e verbo de forma não natural; (C) e (D) quebram a ordem sintática do inglês (adjetivo deve preceder o substantivo, verbo deve preceder o objeto)."
   },
   {
     "num": 6,
-    "topic": "Conectivos (causa/consequência lógica)",
+    "topic": "Conectivos (causa e consequência)",
     "area": "conectivos",
     "prompt": "Coral reefs are highly sensitive to temperature change; ______, rising ocean temperatures have already caused mass bleaching in many regions.",
     "options": {
@@ -101,12 +101,12 @@
       "D": "diminish"
     },
     "correct": "A",
-    "why_right": "\"Substantiate an argument\" é a collocation acadêmica padrão para \"sustentar/comprovar um argumento com evidências\".",
-    "why_wrong": "(B) significa fabricar/inventar, sentido oposto ao contexto acadêmico legítimo; (C) significa aliviar, sem relação; (D) significa diminuir, sentido oposto."
+    "why_right": "\"Substantiate an argument\" é a combinação acadêmica padrão para \"sustentar ou comprovar um argumento com evidências\".",
+    "why_wrong": "(B) significa fabricar ou inventar, o oposto de uma pesquisa séria; (C) significa aliviar e não tem relação com a frase; (D) significa diminuir, o sentido oposto."
   },
   {
     "num": 8,
-    "topic": "Gramática (relative clauses / estrutura complexa, relevante para Listen and Repeat)",
+    "topic": "Gramática (orações relativas, relevante para Listen and Repeat)",
     "area": "gramatica",
     "prompt": "The proposal, ______ implications had not been fully considered, was rejected by the board.",
     "options": {
@@ -131,12 +131,12 @@
       "D": "So I was thinking maybe you guys could push the date back for me?"
     },
     "correct": "B",
-    "why_right": "Fórmula de abertura formal (\"I am writing to...\"), advérbio de cortesia (\"respectfully\") e justificativa objetiva: adequado para comunicação institucional, exatamente o padrão exigido em Write an Email.",
-    "why_wrong": "(A), (C) e (D) usam registro coloquial (\"Hey\", \"just wondering\", \"stuff\", \"you guys\") e tom de cobrança (\"it's urgent\"): inadequados para um e-mail formal a uma instituição."
+    "why_right": "Tem abertura formal (\"I am writing to...\"), advérbio de cortesia (\"respectfully\") e justificativa objetiva. É o tom certo para falar com uma instituição, o mesmo padrão de Write an Email.",
+    "why_wrong": "(A), (C) e (D) usam registro coloquial (\"Hey\", \"just wondering\", \"stuff\", \"you guys\") e tom de cobrança (\"it's urgent\"), o que não cabe num e-mail formal a uma instituição."
   },
   {
     "num": 10,
-    "topic": "Compreensão inferencial (relevante para Read an Academic Passage / Listen to an Academic Talk)",
+    "topic": "Compreensão inferencial (relevante para Read an Academic Passage e Listen to an Academic Talk)",
     "area": "compreensao",
     "prompt": "\"Although the pilot program showed promising results in urban districts, researchers cautioned against broad conclusions, noting that participation rates in rural areas remained too low for the results to be generalized.\"\n\nWhat can be inferred from this statement?",
     "options": {
@@ -147,6 +147,6 @@
     },
     "correct": "C",
     "why_right": "O texto diz que a participação rural foi baixa demais para generalizar; logo, os resultados podem não representar a população como um todo.",
-    "why_wrong": "(A) contradiz o texto (resultados foram \"promissores\", não um fracasso); (B) exagera: \"baixa participação\" não é \"exclusão total\"; (D) é uma conclusão não sustentada pelo texto, que apenas pede cautela, não cancelamento."
+    "why_wrong": "(A) contradiz o texto, porque os resultados foram \"promissores\", e não um fracasso; (B) exagera, já que \"baixa participação\" não é \"exclusão total\"; (D) vai além do texto, que só pede cautela, e não o cancelamento."
   }
 ]

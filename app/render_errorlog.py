@@ -18,7 +18,7 @@ def render_error_log(mod_key, codes):
   <form class="errlog-form">
     <div class="errlog-row">
       <label class="errlog-field">Data<input type="date" class="errlog-date"></label>
-      <label class="errlog-field">Drill / Simulado<input type="text" class="errlog-drill" placeholder="ex.: Drill A3"></label>
+      <label class="errlog-field">Exercício ou simulado<input type="text" class="errlog-drill" placeholder="ex.: Exercício A3"></label>
       <label class="errlog-field">Resultado<input type="text" class="errlog-result" placeholder="ex.: 5/8 acertos"></label>
     </div>
     <div class="errlog-codes">{checkboxes}</div>

@@ -7,7 +7,7 @@
 MOD1_ACTION_DRILLS_A = [
     {
         "id": "mod1-a1",
-        "title": "Drill A1 · alvo: 4 min",
+        "title": "Exercício A1 (meta de 4 min)",
         "level": "A2–B1",
         "objective": "Leia o texto e escolha a opção que completa cada lacuna corretamente. Tempo-alvo: 4 minutos.",
         "passage_html": """<p><strong>TEXT: A message to a friend</strong></p>
@@ -20,20 +20,20 @@ MOD1_ACTION_DRILLS_A = [
             {"num": "1", "prompt": "Lacuna (1)", "options": {"A": "cancel", "B": "canceling", "C": "to cancel", "D": "cancelled"},
              "correct": "A", "explanation": "\"Have to\" + <strong>verbo base</strong>. As opções (B) <em>canceling</em>, (C) <em>to cancel</em> e (D) <em>cancelled</em> quebram a estrutura \"have to + base\"."},
             {"num": "2", "prompt": "Lacuna (2)", "options": {"A": "arrive", "B": "will arriving", "C": "arriving", "D": "is arriving"},
-             "correct": "D", "explanation": "Compromisso futuro já combinado (\"that morning\") → <strong>presente contínuo com valor de futuro</strong>. (A) quebra a concordância com <em>my sister</em>; (B) <em>will</em> + <em>-ing</em> sem <em>be</em> é agramatical; (C) <em>arriving</em> sozinho não tem auxiliar. Obs.: <em>arrives</em> também estaria certo aqui (horário de voo), por isso não está entre as opções."},
+             "correct": "D", "explanation": "Um compromisso futuro já combinado (\"that morning\") pede o <strong>presente contínuo com valor de futuro</strong>. (A) quebra a concordância com <em>my sister</em>; (B) junta <em>will</em> e <em>-ing</em> sem <em>be</em>, o que não existe; (C) <em>arriving</em> sozinho não tem auxiliar. Repare que <em>arrives</em> também estaria certo aqui (horário de voo), e por isso não está entre as opções."},
             {"num": "3", "prompt": "Lacuna (3)", "options": {"A": "plan", "B": "planning", "C": "have been planning", "D": "are planning"},
-             "correct": "C", "explanation": "\"For weeks\" + ação iniciada no passado e ainda em curso → <strong>presente perfeito contínuo</strong>. (D) <em>are planning</em> ignora o \"for weeks\"; (A) não conecta passado e presente; (B) <em>planning</em> sozinho não tem auxiliar."},
+             "correct": "C", "explanation": "\"For weeks\" com uma ação que começou no passado e continua pede o <strong>presente perfeito contínuo</strong>. (D) <em>are planning</em> ignora o \"for weeks\"; (A) não liga passado e presente; (B) <em>planning</em> sozinho não tem auxiliar."},
             {"num": "4", "prompt": "Lacuna (4)", "options": {"A": "work", "B": "works", "C": "working", "D": "worked"},
-             "correct": "A", "explanation": "Depois do modal <em>would</em> → <strong>base</strong>. \"Would Sunday afternoon work?\""},
+             "correct": "A", "explanation": "Depois do modal <em>would</em> vem o verbo na <strong>forma base</strong>, como em \"Would Sunday afternoon work?\""},
             {"num": "5", "prompt": "Lacuna (5)", "options": {"A": "are talking", "B": "is talking", "C": "talking", "D": "be talking"},
-             "correct": "B", "explanation": "<em>Everyone</em> = <strong>singular</strong> → <em>is talking</em> (o contínuo é o natural para o que está na moda agora). (A) quebra a concordância; (C) e (D) não têm auxiliar conjugado."},
+             "correct": "B", "explanation": "<em>Everyone</em> é <strong>singular</strong> e pede <em>is talking</em> (o contínuo é o natural para o que está na moda agora). (A) quebra a concordância; (C) e (D) não têm auxiliar conjugado."},
             {"num": "6", "prompt": "Lacuna (6)", "options": {"A": "know", "B": "known", "C": "knowing", "D": "to know"},
              "correct": "A", "explanation": "<em>Let</em> + objeto + <strong>base</strong> (\"let me know\": fórmula fixa). (D) \"let me to know\" é agramatical."},
         ],
     },
     {
         "id": "mod1-a2",
-        "title": "Drill A2 · alvo: 4 min",
+        "title": "Exercício A2 (meta de 4 min)",
         "level": "B1",
         "objective": "Leia o texto e escolha a opção que completa cada lacuna corretamente. Tempo-alvo: 4 minutos.",
         "passage_html": """<p><strong>TEXT: Notice at a community pool</strong></p>
@@ -41,13 +41,13 @@ MOD1_ACTION_DRILLS_A = [
 <p>We apologize for any (5)_____ this may cause. If you have questions about your membership or class schedule, please (6)_____ to speak with the front desk staff, who will be happy to help.</p>""",
         "items": [
             {"num": "1", "prompt": "Lacuna (1)", "options": {"A": "is", "B": "be", "C": "being", "D": "been"},
-             "correct": "A", "explanation": "\"The main pool ___ closed\": voz passiva no presente: <strong>is</strong> + particípio (<em>closed</em>)."},
+             "correct": "A", "explanation": "Em \"The main pool ___ closed\" temos a voz passiva no presente, formada por <strong>is</strong> e particípio (<em>closed</em>)."},
             {"num": "2", "prompt": "Lacuna (2)", "options": {"A": "is", "B": "to be", "C": "being", "D": "be"},
              "correct": "B", "explanation": "\"We expect the work ___ completed\": <em>expect</em> + objeto + <strong>to + infinitivo</strong> (aqui infinitivo passivo <em>to be completed</em>)."},
             {"num": "3", "prompt": "Lacuna (3)", "options": {"A": "may", "B": "may to", "C": "maying", "D": "mays"},
              "correct": "A", "explanation": "Modal simples; \"members may still use\". (B) \"may to\" é agramatical: modal nunca leva <em>to</em>."},
             {"num": "4", "prompt": "Lacuna (4)", "options": {"A": "remain", "B": "remains", "C": "remaining", "D": "to remain"},
-             "correct": "B", "explanation": "Sujeito <em>which</em> retoma <em>the smaller training pool</em> (singular) → <strong>+ -s</strong>."},
+             "correct": "B", "explanation": "O pronome <em>which</em> retoma <em>the smaller training pool</em>, que é singular, por isso o verbo leva <strong>-s</strong>."},
             {"num": "5", "prompt": "Lacuna (5)", "options": {"A": "inconvenient", "B": "inconveniently", "C": "inconvenience", "D": "inconvenienced"},
              "correct": "C", "explanation": "Depois de <em>any</em>, a lacuna é <strong>substantivo</strong>: \"any inconvenience this may cause\"."},
             {"num": "6", "prompt": "Lacuna (6)", "options": {"A": "hesitate", "B": "not hesitate", "C": "don't hesitate", "D": "hesitating"},
@@ -56,7 +56,7 @@ MOD1_ACTION_DRILLS_A = [
     },
     {
         "id": "mod1-a3",
-        "title": "Drill A3 · alvo: 5 min",
+        "title": "Exercício A3 (meta de 5 min)",
         "level": "B2",
         "objective": "Leia o texto e escolha a opção que completa cada lacuna corretamente. Tempo-alvo: 5 minutos.",
         "passage_html": """<p><strong>TEXT: A message from the office manager</strong></p>
@@ -69,11 +69,11 @@ MOD1_ACTION_DRILLS_A = [
             {"num": "1", "prompt": "Lacuna (1)", "options": {"A": "know", "B": "knows", "C": "known", "D": "knowing"},
              "correct": "A", "explanation": "\"As most of you already know\" pede presente simples na 3ª pessoa do plural (forma base, sem -s). (B) quebra a concordância; (C) exigiria auxiliar (\"have known\"); (D) não completa o tempo verbal."},
             {"num": "2", "prompt": "Lacuna (2)", "options": {"A": "turn off", "B": "turn down", "C": "turn out", "D": "turn over"},
-             "correct": "A", "explanation": "\"Turn off equipment\" = desligar equipamento. (B) = diminuir intensidade; (C) = revelar-se/comparecer; (D) = virar/entregar."},
+             "correct": "A", "explanation": "\"Turn off equipment\" é desligar o equipamento. (B) significa diminuir a intensidade; (C), revelar-se ou comparecer; (D), virar ou entregar."},
             {"num": "3", "prompt": "Lacuna (3)", "options": {"A": "completion", "B": "completing", "C": "completed", "D": "completes"},
              "correct": "C", "explanation": "\"Will be _____\" pede particípio passado (voz passiva): \"will be completed\". (A) é substantivo; (B) daria voz ativa sem objeto; (D) é verbo conjugado, impossível depois de \"be\"."},
             {"num": "4", "prompt": "Lacuna (4)", "options": {"A": "come", "B": "comes", "C": "coming", "D": "will comes"},
-             "correct": "B", "explanation": "\"Everyone\" é gramaticalmente singular → 3ª pessoa do singular: \"comes back\". (D) é agramatical (\"will\" nunca é seguido de verbo com -s)."},
+             "correct": "B", "explanation": "\"Everyone\" é singular na gramática e pede a 3ª pessoa do singular: \"comes back\". (D) não existe, porque \"will\" nunca vem seguido de verbo com -s."},
             {"num": "5", "prompt": "Lacuna (5)", "options": {"A": "warm", "B": "warms", "C": "warmly", "D": "warmth"},
              "correct": "A", "explanation": "\"To _____ up again\" pede o infinitivo (verbo base) após \"to\". \"Warm up\" é o phrasal verb certo para um ambiente recuperando temperatura."},
             {"num": "6", "prompt": "Lacuna (6)", "options": {"A": "hesitate", "B": "hesitating", "C": "hesitation", "D": "hesitated"},
@@ -81,12 +81,12 @@ MOD1_ACTION_DRILLS_A = [
             {"num": "7", "prompt": "Lacuna (7)", "options": {"A": "miss", "B": "lose", "C": "waste", "D": "fail"},
              "correct": "A", "explanation": "Estrutura paralela \"ask a question... than _____ a real problem\" pede verbo base após \"than\". <em>Miss a problem</em> = não perceber, deixar passar um problema: melhor uma pergunta à toa do que um problema real que ninguém notou. (B) <em>lose a problem</em> não existe; (C) <em>waste</em> pede <em>time/money</em>; (D) <em>fail</em> pede <em>to</em> (\"fail to notice\")."},
             {"num": "8", "prompt": "Lacuna (8)", "options": {"A": "extend", "B": "extending", "C": "extended", "D": "extension"},
-             "correct": "C", "explanation": "\"The _____ time off\" pede um particípio-adjetivo antes do substantivo. \"Extended time off\" = folga prolongada."},
+             "correct": "C", "explanation": "\"The _____ time off\" pede um particípio com função de adjetivo antes do substantivo. \"Extended time off\" é uma folga prolongada."},
         ],
     },
     {
         "id": "mod1-a4",
-        "title": "Drill A4 · alvo: 5 min",
+        "title": "Exercício A4 (meta de 5 min)",
         "level": "B2–C1",
         "objective": "Leia o texto e escolha a opção que completa cada lacuna corretamente. Tempo-alvo: 5 minutos.",
         "passage_html": """<p><strong>TEXT: Museum exhibit information card</strong></p>
@@ -96,20 +96,20 @@ MOD1_ACTION_DRILLS_A = [
             {"num": "1", "prompt": "Lacuna (1)", "options": {"A": "collect", "B": "collected", "C": "collecting", "D": "collection"},
              "correct": "B", "explanation": "\"Objects ___ over four decades\": particípio reduzido de \"objects <strong>that were collected</strong>\"."},
             {"num": "2", "prompt": "Lacuna (2)", "options": {"A": "has", "B": "have", "C": "had", "D": "having"},
-             "correct": "B", "explanation": "Sujeito <em>Many of them</em> (plural) + presente perfeito → \"have never been displayed\". (A) quebra a concordância; (C) mudaria para passado perfeito sem marco; (D) não fecha o tempo."},
+             "correct": "B", "explanation": "O sujeito <em>Many of them</em> é plural e, com o presente perfeito, forma \"have never been displayed\". (A) quebra a concordância; (C) mudaria para o passado perfeito sem um marco no passado; (D) não fecha o tempo verbal."},
             {"num": "3", "prompt": "Lacuna (3)", "options": {"A": "window", "B": "door", "C": "mirror", "D": "bridge"},
-             "correct": "A", "explanation": "\"A rare ___ into daily life\": collocation fixa: <em>a window into/onto</em> = uma janela para (uma visão de). As outras opções não formam collocation com \"into daily life\" nesse sentido."},
+             "correct": "A", "explanation": "Em \"A rare ___ into daily life\" está a combinação fixa <em>a window into</em> (ou <em>onto</em>), \"uma janela para\", no sentido de uma visão de algo. As outras opções não combinam com \"into daily life\" nesse sentido."},
             {"num": "4", "prompt": "Lacuna (4)", "options": {"A": "encourage", "B": "encouraged", "C": "encouraging", "D": "encouragement"},
-             "correct": "B", "explanation": "\"Visitors are ___ to move\": voz passiva: <em>are encouraged to</em>. (C) mudaria o sujeito; (A)/(D) não formam o passivo."},
+             "correct": "B", "explanation": "Em \"Visitors are ___ to move\" temos a voz passiva <em>are encouraged to</em>. (C) mudaria o sujeito; (A) e (D) não formam a passiva."},
             {"num": "5", "prompt": "Lacuna (5)", "options": {"A": "delve", "B": "fall", "C": "drop", "D": "sink"},
-             "correct": "A", "explanation": "\"Wish to ___ deeper into any single object\": <em>delve into</em> = aprofundar-se em. As outras opções não formam collocation com \"deeper into [um tema]\" no sentido de investigar."},
+             "correct": "A", "explanation": "Em \"Wish to ___ deeper into any single object\", <em>delve into</em> quer dizer aprofundar-se em. As outras opções não combinam com \"deeper into [um tema]\" no sentido de investigar."},
             {"num": "6", "prompt": "Lacuna (6)", "options": {"A": "is", "B": "are", "C": "being", "D": "be"},
-             "correct": "A", "explanation": "\"Photography without flash ___ permitted\": sujeito <em>Photography</em> (incontável, singular) → <strong>is</strong>."},
+             "correct": "A", "explanation": "Em \"Photography without flash ___ permitted\", o sujeito <em>Photography</em> é incontável e singular, por isso pede <strong>is</strong>."},
         ],
     },
     {
         "id": "mod1-a5",
-        "title": "Drill A5 · alvo: 5 min",
+        "title": "Exercício A5 (meta de 5 min)",
         "level": "C1",
         "objective": "Leia o texto e escolha a opção que completa cada lacuna corretamente. Tempo-alvo: 5 minutos.",
         "passage_html": """<p><strong>TEXT: Excerpt from an editorial</strong></p>
@@ -117,17 +117,17 @@ MOD1_ACTION_DRILLS_A = [
 <p>This does not mean nothing (4)_____ be done. It means the solution lies elsewhere: in reliable public transit, in pricing that reflects the true cost of road use, and in land-use decisions that reduce the (5)_____ to drive in the first place. None of these is as politically straightforward as pouring concrete, which is (6)_____ they are so often postponed.</p>""",
         "items": [
             {"num": "1", "prompt": "Lacuna (1)", "options": {"A": "has", "B": "have", "C": "had", "D": "having"},
-             "correct": "A", "explanation": "Sujeito \"the standard response\" = <strong>singular</strong> → \"has been\" (presente perfeito: \"For decades... has been\"). (B) quebra a concordância; (C) pediria um marco no passado; (D) não fecha o tempo."},
+             "correct": "A", "explanation": "O sujeito \"the standard response\" é <strong>singular</strong> e pede \"has been\" (presente perfeito, com \"For decades... has been\"). (B) quebra a concordância; (C) pediria um marco no passado; (D) não fecha o tempo verbal."},
             {"num": "2", "prompt": "Lacuna (2)", "options": {"A": "conclusion", "B": "decision", "C": "opinion", "D": "suggestion"},
              "correct": "A", "explanation": "\"Points to the opposite ___\": <em>point to a conclusion</em> é a collocation. As outras opções não formam collocation com \"research points to the opposite ___\"."},
             {"num": "3", "prompt": "Lacuna (3)", "options": {"A": "does", "B": "do", "C": "is", "D": "has"},
-             "correct": "A", "explanation": "Inversão após <em>Rarely</em> no início da frase → auxiliar <strong>does</strong> + sujeito + base (<em>prove</em>). \"Rarely does a policy... prove...\""},
+             "correct": "A", "explanation": "Com <em>Rarely</em> no início da frase há inversão: o auxiliar <strong>does</strong> vem antes do sujeito, e o verbo fica na forma base (<em>prove</em>), como em \"Rarely does a policy... prove...\""},
             {"num": "4", "prompt": "Lacuna (4)", "options": {"A": "can", "B": "can't", "C": "is", "D": "has"},
-             "correct": "A", "explanation": "\"This does not mean nothing ___ be done\": modal + <em>be done</em> (passiva): \"não significa que nada pode ser feito\". (B) inverteria o sentido; (C) e (D) não podem vir antes de \"be\" (\"is be\" e \"has be\" são agramaticais)."},
+             "correct": "A", "explanation": "Em \"This does not mean nothing ___ be done\" entra um modal antes de <em>be done</em> (passiva), com o sentido de \"não significa que nada pode ser feito\". (B) inverteria o sentido; (C) e (D) não podem vir antes de \"be\" (\"is be\" e \"has be\" não existem)."},
             {"num": "5", "prompt": "Lacuna (5)", "options": {"A": "need", "B": "want", "C": "wish", "D": "hope"},
-             "correct": "A", "explanation": "\"Reduce the ___ to drive\": <em>the need to (do something)</em> = a necessidade de. As outras opções não formam collocation com essa estrutura."},
+             "correct": "A", "explanation": "Em \"Reduce the ___ to drive\", <em>the need to (do something)</em> é \"a necessidade de\". As outras opções não combinam com essa estrutura."},
             {"num": "6", "prompt": "Lacuna (6)", "options": {"A": "why", "B": "because", "C": "how", "D": "what"},
-             "correct": "A", "explanation": "\"Which is ___ they are so often postponed\": \"which is why...\" = \"razão pela qual\". (B) precisaria de outra estrutura; (C)/(D) não fecham a relativa."},
+             "correct": "A", "explanation": "Em \"Which is ___ they are so often postponed\", \"which is why...\" quer dizer \"razão pela qual\". (B) precisaria de outra estrutura; (C) e (D) não fecham a oração relativa."},
         ],
     },
 ]
@@ -137,7 +137,7 @@ MOD1_ACTION_DRILLS_A = [
 MOD1_ACTION_DRILLS_B = [
     {
         "id": "mod1-b1",
-        "title": "Drill B1 · Placa / aviso · alvo: 2 min",
+        "title": "Exercício B1: placa ou aviso (meta de 2 min)",
         "level": "A2–B1",
         "objective": "Leia o texto e responda às questões de compreensão. Tempo-alvo: 2 minutos.",
         "passage_html": """<p><strong>TEXT: Sign at a nature reserve trailhead</strong></p>
@@ -149,7 +149,7 @@ MOD1_ACTION_DRILLS_B = [
         "items": [
             {"num": "B1.1", "prompt": "A visitor with a dog on May 20 may walk:",
              "options": {"A": "anywhere on the reserve", "B": "on all trails except the upper loop", "C": "only on the upper loop", "D": "nowhere, because dogs are banned in summer"},
-             "correct": "B", "explanation": "Cães de coleira são permitidos; o <em>upper loop</em> é fechado a cães de 1/abr a 15/jul, e 20 de maio cai nesse período → todas as trilhas <strong>exceto</strong> o upper loop. (A) ignora a restrição; (C) inverte; (D) exagera: cães não são banidos, só do upper loop."},
+             "correct": "B", "explanation": "Cães na coleira são permitidos, mas o <em>upper loop</em> fica fechado para cães de 1º de abril a 15 de julho, e 20 de maio cai nesse período. Por isso, o visitante pode usar todas as trilhas <strong>exceto</strong> o upper loop. (A) ignora a restrição; (C) inverte a regra; (D) exagera, porque os cães não são proibidos em toda parte, só no upper loop."},
             {"num": "B1.2", "prompt": "Which of the following is allowed on the trail?",
              "options": {"A": "A regular bicycle", "B": "An overnight tent", "C": "A mobility scooter", "D": "Leaving food scraps in a trash can"},
              "correct": "C", "explanation": "\"E-bikes and mobility scooters are exempt\" da proibição de bicicletas. (A) bicicleta comum é proibida; (B) camping é proibido; (D) não há lixeiras além daquele ponto."},
@@ -157,7 +157,7 @@ MOD1_ACTION_DRILLS_B = [
     },
     {
         "id": "mod1-b2",
-        "title": "Drill B2 · Cardápio · alvo: 3 min",
+        "title": "Exercício B2: cardápio (meta de 3 min)",
         "level": "A2–B1",
         "objective": "Leia o texto e responda às questões de compreensão. Tempo-alvo: 3 minutos.",
         "passage_html": """<p><strong>TEXT: Café lunch menu (extract)</strong></p>
@@ -173,7 +173,7 @@ MOD1_ACTION_DRILLS_B = [
              "correct": "B", "explanation": "<em>Garden</em> é vegan e não tem aviso de nozes. (A) Halloumi Stack tem queijo (não vegan) e <em>contains nuts</em>; (C) a sopa é sempre vegetariana mas <strong>pode não ser vegana</strong>: o texto manda perguntar; (D) Classic Club tem frango e ovo."},
             {"num": "B2.2", "prompt": "A customer orders a Classic Club with fries at 11:45 a.m. Before any discount, the price is:",
              "options": {"A": "$12", "B": "$14", "C": "$12.60", "D": "$16"},
-             "correct": "B", "explanation": "$12 do sanduíche + $2 pela troca por fries = $14. O desconto de 10% (pedido antes do meio-dia) se aplica <strong>depois</strong>, mas a pergunta é o preço <strong>antes</strong> do desconto. (C) $12.60 é o valor <strong>com</strong> o desconto, que a pergunta exclui; (A) esquece a troca por fries."},
+             "correct": "B", "explanation": "São $12 do sanduíche mais $2 pela troca por fries, o que dá $14. O desconto de 10% (pedido antes do meio-dia) entra <strong>depois</strong>, mas a pergunta é o preço <strong>antes</strong> do desconto. (C) $12.60 é o valor <strong>com</strong> o desconto, que a pergunta exclui; (A) esquece a troca por fries."},
             {"num": "B2.3", "prompt": "According to the menu, the soup of the day:",
              "options": {"A": "is always vegan", "B": "is always vegetarian, and may or may not be vegan", "C": "never contains bread", "D": "costs more than any sandwich"},
              "correct": "B", "explanation": "\"Soup of the day is always vegetarian; ask staff whether today's is vegan\": sempre vegetariana, veganidade varia."},
@@ -181,7 +181,7 @@ MOD1_ACTION_DRILLS_B = [
     },
     {
         "id": "mod1-b3",
-        "title": "Drill B3 · E-mail formal · alvo: 3 min",
+        "title": "Exercício B3: e-mail formal (meta de 3 min)",
         "level": "B1–B2",
         "objective": "Leia o texto e responda às questões de compreensão. Tempo-alvo: 3 minutos.",
         "passage_html": """<p><strong>TEXT: Email from a course coordinator</strong></p>
@@ -207,7 +207,7 @@ MOD1_ACTION_DRILLS_B = [
     },
     {
         "id": "mod1-b4",
-        "title": "Drill B4 · Horário / tabela · alvo: 2 min",
+        "title": "Exercício B4: horário ou tabela (meta de 2 min)",
         "level": "B1–B2",
         "objective": "Leia o texto e responda às questões de compreensão. Tempo-alvo: 2 minutos.",
         "passage_html": """<p><strong>TEXT: Shuttle timetable notice</strong></p>
@@ -217,7 +217,7 @@ MOD1_ACTION_DRILLS_B = [
         "items": [
             {"num": "B4.1", "prompt": "A student wants to leave Campus Gate on a Tuesday at 17:30. On that day there is:",
              "options": {"A": "no 17:30 service — after 17:00 the shuttle leaves on the hour only", "B": "a 17:30 service that arrives at the station around 17:50", "C": "a shuttle only if it is a holiday", "D": "a 17:30 service that takes about 45 minutes"},
-             "correct": "A", "explanation": "A nota de rodapé é explícita: \"the last half-past departure from Campus Gate is at 16:30\" e, depois das 17:00, o serviço é \"on the hour only\". Logo, não existe 17:30 na terça-feira. Este item treina a leitura da <strong>nota de rodapé</strong>: quem responde (B) leu só a linha principal e ignorou a exceção."},
+             "correct": "A", "explanation": "A nota de rodapé é clara: \"the last half-past departure from Campus Gate is at 16:30\", e depois das 17:00 o serviço é \"on the hour only\". Logo, não existe saída às 17:30 na terça-feira. Este item treina a leitura da <strong>nota de rodapé</strong>, e quem marca (B) leu só a linha principal e deixou passar a exceção."},
             {"num": "B4.2", "prompt": "On a Sunday, a shuttle leaves the Station at:",
              "options": {"A": "quarter past and quarter to every hour", "B": "on the hour only", "C": "half past every hour", "D": "the timetable does not say"},
              "correct": "B", "explanation": "Fim de semana: \"On weekends and holidays, shuttles leave both stops on the hour only\". A tabela <em>quarter past / quarter to</em> da estação vale só de segunda a sexta."},
@@ -225,7 +225,7 @@ MOD1_ACTION_DRILLS_B = [
     },
     {
         "id": "mod1-b5",
-        "title": "Drill B5 · Post de rede social · alvo: 3 min",
+        "title": "Exercício B5: post de rede social (meta de 3 min)",
         "level": "A2–B1",
         "objective": "Leia o texto e responda às questões de compreensão. Tempo-alvo: 3 minutos.",
         "passage_html": """<p><strong>TEXT: A social media post from a local bakery</strong></p>
@@ -254,7 +254,7 @@ MOD1_ACTION_DRILLS_B = [
 MOD1_ACTION_DRILLS_C = [
     {
         "id": "mod1-c1",
-        "title": "Drill C1 · Ciências naturais · alvo: 6 min",
+        "title": "Exercício C1: ciências naturais (meta de 6 min)",
         "level": "B2–C1",
         "objective": "Leia a passagem completa uma vez. Responda às 5 questões. Tempo-alvo: 6 minutos.",
         "passage_html": """<p><strong>PASSAGE: Bioluminescence in Marine Organisms</strong></p>
@@ -270,18 +270,18 @@ MOD1_ACTION_DRILLS_C = [
              "correct": "D", "explanation": "O parágrafo 2 lista defesa, caça e comunicação/atração de parceiros. Regulação de temperatura nunca aparece."},
             {"num": "C1.3", "prompt": "Inferência. It can be inferred from paragraph 2 that in deep-sea environments:",
              "options": {"A": "visual communication is impossible for any species", "B": "organisms rely on producing their own light because there is little to no ambient light", "C": "most species have lost their sense of sight entirely", "D": "bioluminescence is used only for hunting"},
-             "correct": "B", "explanation": "\"In the deep sea, darkness is nearly absolute, so visual signals cannot rely on ambient light at all\" → produzir a própria luz supre a ausência de luz ambiente. (A) é extremo; (C)/(D) sem base."},
+             "correct": "B", "explanation": "O texto diz que \"In the deep sea, darkness is nearly absolute, so visual signals cannot rely on ambient light at all\". Produzir a própria luz resolve a falta de luz ambiente. (A) é extrema; (C) e (D) não têm base no texto."},
             {"num": "C1.4", "prompt": "Propósito retórico. Why does the author state that bioluminescence \"did not evolve just once\"?",
              "options": {"A": "To argue that bioluminescence is less significant than previously thought", "B": "To introduce and support the claim that it is a notable example of convergent evolution", "C": "To explain why some marine species have gone extinct", "D": "To compare bioluminescence with the evolution of eyesight in mammals"},
              "correct": "B", "explanation": "A frase abre o parágrafo e prepara a definição de evolução convergente, que vem duas frases depois: serve para apresentar e embasar a tese de que a bioluminescência é um exemplo notável desse padrão. (A), (C) e (D) não têm base no texto."},
             {"num": "C1.5", "prompt": "Vocabulário em contexto. The word \"striking\" in paragraph 3 is closest in meaning to:",
              "options": {"A": "violent", "B": "notable", "C": "accidental", "D": "doubtful"},
-             "correct": "B", "explanation": "\"One of its most striking examples\" = exemplo notável. (A)/(C)/(D) pertencem a outros campos ou invertem o tom."},
+             "correct": "B", "explanation": "\"One of its most striking examples\" é um exemplo notável. (A), (C) e (D) vêm de outros campos de sentido ou invertem o tom."},
         ],
     },
     {
         "id": "mod1-c2",
-        "title": "Drill C2 · História · alvo: 6 min",
+        "title": "Exercício C2: história (meta de 6 min)",
         "level": "B2–C1",
         "objective": "Leia a passagem completa uma vez. Responda às 5 questões. Tempo-alvo: 6 minutos.",
         "passage_html": """<p><strong>PASSAGE: Coffee Houses in Seventeenth-Century England</strong></p>
@@ -294,7 +294,7 @@ MOD1_ACTION_DRILLS_C = [
              "correct": "B", "explanation": "O texto traça como as coffee houses viraram centros de informação e discussão pública. (A)/(C)/(D) são detalhes ou não constam."},
             {"num": "C2.2", "prompt": "Inferência. It can be inferred that before coffee houses existed, information among these groups:",
              "options": {"A": "did not exist at all", "B": "traveled more slowly and less widely", "C": "was controlled entirely by merchants", "D": "was freely available to everyone"},
-             "correct": "B", "explanation": "\"Information that had once circulated slowly, by letter or rumor, now moved quickly\" → antes, mais devagar e menos amplamente. (A) exagera; (C)/(D) sem base."},
+             "correct": "B", "explanation": "O texto diz que \"Information that had once circulated slowly, by letter or rumor, now moved quickly\", ou seja, antes a informação corria mais devagar e chegava a menos gente. (A) exagera; (C) e (D) não têm base no texto."},
             {"num": "C2.3", "prompt": "Propósito retórico. Why does the author mention Lloyd's and the houses near the Royal Society?",
              "options": {"A": "To show that different coffee houses specialized in different topics", "B": "To argue that Lloyd's was the most important coffee house", "C": "To explain how coffee houses were decorated", "D": "To prove that scientists disliked merchants"},
              "correct": "A", "explanation": "\"Particular houses became known for particular subjects\": Lloyd's e as casas perto da Royal Society ilustram a especialização por tema."},
@@ -303,12 +303,12 @@ MOD1_ACTION_DRILLS_C = [
              "correct": "B", "explanation": "\"The order provoked such immediate opposition that it was withdrawn within days\". (A) troca a ordem pelas casas, que continuaram funcionando por mais um século; (C) não tem base, e (D) contradiz \"the king issued a proclamation\"."},
             {"num": "C2.5", "prompt": "Vocabulário em contexto. The word \"provoked\" in paragraph 3 is closest in meaning to:",
              "options": {"A": "prevented", "B": "caused", "C": "delayed", "D": "forgave"},
-             "correct": "B", "explanation": "\"Provoked such... opposition\" = causou/gerou oposição."},
+             "correct": "B", "explanation": "\"Provoked such... opposition\" quer dizer que a ordem causou, gerou oposição."},
         ],
     },
     {
         "id": "mod1-c3",
-        "title": "Drill C3 · Ciências sociais · alvo: 6 min",
+        "title": "Exercício C3: ciências sociais (meta de 6 min)",
         "level": "C1",
         "objective": "Leia a passagem completa uma vez. Responda às 5 questões. Tempo-alvo: 6 minutos.",
         "passage_html": """<p><strong>PASSAGE: The Strength of Weak Ties</strong></p>
@@ -324,13 +324,13 @@ MOD1_ACTION_DRILLS_C = [
              "correct": "C", "explanation": "\"Most had heard about it not from a close friend but from an acquaintance.\""},
             {"num": "C3.3", "prompt": "Inferência. It can be inferred that a person whose contacts are ALL close friends would:",
              "options": {"A": "have access to a wider range of information than average", "B": "tend to hear the same information over and over", "C": "never be able to find a job", "D": "be more innovative at work, since close-knit teams produce more original work"},
-             "correct": "B", "explanation": "Se todos os contatos são amigos próximos, que circulam nos mesmos círculos → informação repetida, pouca novidade de partes distantes. (A) inverte; (C) exagera; (D) contradiz o parágrafo 3, que liga a inovação a equipes conectadas a muitos grupos de fora."},
+             "correct": "B", "explanation": "Se todos os contatos são amigos próximos, que andam nos mesmos círculos, a informação se repete e pouca novidade chega de partes distantes da rede. (A) inverte; (C) exagera; (D) contradiz o parágrafo 3, que liga a inovação a equipes conectadas a muitos grupos de fora."},
             {"num": "C3.4", "prompt": "Propósito retórico. Why does the author mention innovation within companies in paragraph 3?",
              "options": {"A": "To give an example of how the weak-ties finding applies beyond job-hunting", "B": "To argue that companies should fire employees with weak ties", "C": "To contradict Granovetter's original study", "D": "To explain how companies are structured"},
              "correct": "A", "explanation": "O parágrafo 3 lista extensões do achado além da busca de emprego; a inovação nas empresas é um desses exemplos."},
             {"num": "C3.5", "prompt": "Vocabulário em contexto. The word \"bridge\" in paragraph 2 is closest in meaning to:",
              "options": {"A": "obstacle", "B": "connection", "C": "copy", "D": "competitor"},
-             "correct": "B", "explanation": "\"A bridge to parts of the network you could not otherwise reach\" = uma ponte/conexão."},
+             "correct": "B", "explanation": "\"A bridge to parts of the network you could not otherwise reach\" é uma ponte, uma conexão."},
         ],
     },
 ]
@@ -351,37 +351,37 @@ MOD2_ACTION_DRILLS_A = [
              "correct": "B", "explanation": "O falante sinaliza falta de tempo; a resposta natural propõe a ação consequente. (A) reaproveita <em>lunch</em> sem reagir à falta de tempo; (C)/(D) ignoram a urgência."},
             {"num": "A2", "prompt": "\"Do you mind if I borrow your notes from Tuesday? I was out sick.\"",
              "options": {"A": "Sure — I'll send them over tonight.", "B": "I hope you feel better soon.", "C": "I borrowed a book from the library on Tuesday.", "D": "Tuesday's class starts at nine."},
-             "correct": "A", "explanation": "Pedido direto → resposta direta de concessão + plano. (B) é gentil mas não responde ao pedido; (C) e (D) só reaproveitam palavras da fala (<em>borrow</em>, <em>Tuesday</em>)."},
+             "correct": "A", "explanation": "A um pedido direto, a resposta natural é aceitar e combinar um plano. (B) é gentil, mas não responde ao pedido; (C) e (D) só repetem palavras da fala (<em>borrow</em>, <em>Tuesday</em>)."},
             {"num": "A3", "prompt": "\"Honestly, I'm not sure this draft is ready to submit.\"",
              "options": {"A": "I'm sure the printer is ready.", "B": "What do you think it still needs?", "C": "I submitted mine yesterday.", "D": "That's a great title."},
-             "correct": "B", "explanation": "Insegurança sobre o rascunho → a resposta busca o problema específico. (A) reaproveita <em>ready</em> sem tratar da preocupação; (C)/(D) ignoram a preocupação."},
+             "correct": "B", "explanation": "Diante da insegurança sobre o rascunho, a resposta natural procura o problema específico. (A) repete <em>ready</em> sem tratar da preocupação; (C) e (D) ignoram a preocupação."},
             {"num": "A4", "prompt": "\"You're not still planning to walk in this weather, are you?\"",
              "options": {"A": "No, I'll catch the bus instead.", "B": "The weather report comes on at six.", "C": "I walked there yesterday.", "D": "It rained a lot last semester too."},
-             "correct": "A", "explanation": "Pergunta retórica = alerta educado sobre ir a pé com esse tempo. A resposta natural revisa o plano. (B) só reaproveita <em>weather</em>; (C)/(D) falam de outro momento e ignoram o alerta."},
+             "correct": "A", "explanation": "A pergunta retórica é um alerta educado sobre ir a pé com esse tempo, e a resposta natural muda o plano. (B) só repete <em>weather</em>; (C) e (D) falam de outro momento e ignoram o alerta."},
             {"num": "A5", "prompt": "\"I heard the registrar's office changed their hours.\"",
              "options": {"A": "I registered for four classes this term.", "B": "Really? Do you know the new schedule?", "C": "The office is on the second floor.", "D": "I haven't registered for anything yet."},
-             "correct": "B", "explanation": "Informação nova (mudança de horário) → interesse + pedido de detalhe. (A) e (D) reaproveitam o som de <em>registrar</em> em <em>register</em> (matricular-se), mas não reagem à notícia; (C) dá a localização do escritório, que ninguém perguntou."},
+             "correct": "B", "explanation": "Diante de uma informação nova (a mudança de horário), a resposta natural mostra interesse e pede um detalhe. (A) e (D) aproveitam o som de <em>registrar</em> em <em>register</em> (matricular-se), mas não reagem à notícia; (C) dá a localização do escritório, que ninguém perguntou."},
             {"num": "A6", "prompt": "\"Could you run your presentation by me before the meeting?\"",
              "options": {"A": "I ran three miles this morning.", "B": "Sure — are you free around four?", "C": "The meeting's been moved to Thursday.", "D": "I gave my first presentation in high school."},
-             "correct": "B", "explanation": "\"Run X by me\" = me mostrar antes. Resposta natural marca um horário. (A) toma \"run\" ao pé da letra; (C) muda o foco; (D) reaproveita <em>presentation</em> sem responder ao pedido."},
+             "correct": "B", "explanation": "\"Run X by me\" é \"me mostrar antes\", e a resposta natural marca um horário. (A) toma \"run\" ao pé da letra; (C) muda o foco; (D) repete <em>presentation</em> sem responder ao pedido."},
             {"num": "A7", "prompt": "\"I thought the lab report was due next week, not tomorrow.\"",
              "options": {"A": "So did I — let me double-check the syllabus.", "B": "The lab is on the ground floor.", "C": "I finished my report last month.", "D": "Next week works better for me too."},
-             "correct": "A", "explanation": "Divergência sobre a data → confirmar juntos, checar o syllabus. (B)/(C)/(D) ignoram a divergência."},
+             "correct": "A", "explanation": "Diante da dúvida sobre a data, a resposta natural é conferir junto no syllabus. (B), (C) e (D) ignoram a dúvida."},
             {"num": "A8", "prompt": "\"Would you rather present first or last?\"",
              "options": {"A": "The last presentation ran over time.", "B": "Last, if that's an option — I need time to prepare.", "C": "The presentation is worth 20% of the grade.", "D": "First place goes to the best presentation."},
-             "correct": "B", "explanation": "Pergunta de preferência (primeiro ou último) → escolher e justificar. (A)/(C)/(D) não respondem à escolha oferecida."},
+             "correct": "B", "explanation": "Numa pergunta de preferência (primeiro ou último), a resposta natural escolhe e justifica. (A), (C) e (D) não respondem à escolha oferecida."},
             {"num": "A9", "prompt": "\"This bus is taking forever. We should've left earlier.\"",
              "options": {"A": "The bus stop is right over there.", "B": "Tell me about it — I hate cutting it this close.", "C": "I take this bus every day.", "D": "I left my umbrella on the bus once."},
-             "correct": "B", "explanation": "Reclamação sobre a demora → \"Tell me about it\" concorda enfaticamente + acrescenta. (A), (C) e (D) reaproveitam <em>bus</em>/<em>left</em> sem reagir à reclamação."},
+             "correct": "B", "explanation": "Diante da reclamação sobre a demora, \"Tell me about it\" concorda com ênfase e acrescenta algo. (A), (C) e (D) repetem <em>bus</em> ou <em>left</em> sem reagir à reclamação."},
             {"num": "A10", "prompt": "\"Professor Lin said she might cancel Friday's class.\"",
              "options": {"A": "She's a great lecturer, isn't she?", "B": "Did she say why, or was it just a maybe?", "C": "Friday's class is in the east building.", "D": "I've never had a class canceled before."},
-             "correct": "B", "explanation": "Notícia incerta (\"might cancel\") → pedir esclarecimento sobre o motivo/certeza. (A)/(C)/(D) desviam."},
+             "correct": "B", "explanation": "Diante de uma notícia incerta (\"might cancel\"), a resposta natural pede esclarecimento sobre o motivo ou a certeza. (A), (C) e (D) desviam do assunto."},
             {"num": "A11", "prompt": "\"I've been meaning to ask: how did the interview go?\"",
              "options": {"A": "It's at two o'clock on Thursday.", "B": "Better than I expected, actually. They said they'd call by Friday.", "C": "I've had a lot of interviews lately.", "D": "The company is downtown, near the station."},
-             "correct": "B", "explanation": "Pergunta sobre como foi a entrevista → dar o resultado + próximo passo. (A) responde sobre horário; (C)/(D) generalizam/desviam."},
+             "correct": "B", "explanation": "A pergunta é sobre como foi a entrevista, e a resposta natural conta o resultado e o próximo passo. (A) responde sobre horário; (C) e (D) generalizam ou desviam."},
             {"num": "A12", "prompt": "\"Do you think it's worth applying? I doubt I'd get in.\"",
              "options": {"A": "The application fee is fifty dollars.", "B": "You never know unless you try — I'd go for it.", "C": "I applied there two years ago.", "D": "The program starts in September."},
-             "correct": "B", "explanation": "Dúvida + autodepreciação → encorajamento. (A), (C) e (D) desviam para custo, experiência passada e calendário."},
+             "correct": "B", "explanation": "Diante de dúvida e autocrítica, a resposta natural é encorajar. (A), (C) e (D) desviam para custo, experiência passada e calendário."},
         ],
     },
 ]
@@ -391,7 +391,7 @@ MOD2_ACTION_DRILLS_A = [
 MOD2_ACTION_DRILLS_B = [
     {
         "id": "mod2-b1",
-        "title": "Drill B1 · Advising Office · alvo: 3 min",
+        "title": "Exercício B1: Advising Office (meta de 3 min)",
         "level": "B1–B2",
         "objective": "Leia o diálogo (ou peça pra alguém ler em voz alta) e responda às 2 questões. Tempo-alvo: 3 minutos.",
         "passage_html": """<p><em>Narrator: Listen to a conversation between a student and an academic advisor.</em></p>
@@ -414,7 +414,7 @@ MOD2_ACTION_DRILLS_B = [
     },
     {
         "id": "mod2-b2",
-        "title": "Drill B2 · Library Reserve Desk · alvo: 3 min",
+        "title": "Exercício B2: Library Reserve Desk (meta de 3 min)",
         "level": "B1–B2",
         "objective": "Leia o diálogo (ou peça pra alguém ler em voz alta) e responda às 2 questões. Tempo-alvo: 3 minutos.",
         "passage_html": """<p><em>Narrator: Listen to a conversation between a student and a librarian.</em></p>
@@ -436,7 +436,7 @@ MOD2_ACTION_DRILLS_B = [
     },
     {
         "id": "mod2-b3",
-        "title": "Drill B3 · After Class · alvo: 3 min",
+        "title": "Exercício B3: After Class (meta de 3 min)",
         "level": "B1–B2",
         "objective": "Leia o diálogo (ou peça pra alguém ler em voz alta) e responda às 2 questões. Tempo-alvo: 3 minutos.",
         "passage_html": """<p><em>Narrator: Listen to a conversation between a student and a professor.</em></p>
@@ -454,7 +454,7 @@ MOD2_ACTION_DRILLS_B = [
              "correct": "C", "explanation": "\"Weigh the argument: where is it strong, where is it weak, and does the evidence actually support the conclusion?\" (A)/(B) o professor diz que \"evaluate\" é <strong>nenhum</strong> dos dois; (D) não dito."},
             {"num": "B3.2", "prompt": "Meaning of an expression. What does the professor mean by \"Don't pad it\"?",
              "options": {"A": "Write more than 1,500 words to be safe", "B": "Don't add filler just to reach the word count", "C": "Use larger margins and spacing", "D": "Include as many quotations as possible"},
-             "correct": "B", "explanation": "\"Don't pad it\" = não encher linguiça para bater a contagem de palavras. (A) é o oposto; (C)/(D) estão fora do que foi dito."},
+             "correct": "B", "explanation": "\"Don't pad it\" é \"não encha linguiça\" só para chegar ao número de palavras. (A) diz o oposto; (C) e (D) estão fora do que foi dito."},
         ],
     },
 ]
@@ -464,7 +464,7 @@ MOD2_ACTION_DRILLS_B = [
 MOD2_ACTION_DRILLS_C = [
     {
         "id": "mod2-c1",
-        "title": "Drill C1 · Library Services · alvo: 2 min",
+        "title": "Exercício C1: Library Services (meta de 2 min)",
         "level": "B1",
         "objective": "Leia o anúncio (ou peça pra alguém ler em voz alta) e responda às 2 questões. Tempo-alvo: 2 minutos.",
         "passage_html": """<p><em>Narrator: Listen to an announcement about a change to library services.</em></p>
@@ -480,7 +480,7 @@ MOD2_ACTION_DRILLS_C = [
     },
     {
         "id": "mod2-c2",
-        "title": "Drill C2 · Course Registration · alvo: 2 min",
+        "title": "Exercício C2: Course Registration (meta de 2 min)",
         "level": "B1",
         "objective": "Leia o anúncio (ou peça pra alguém ler em voz alta) e responda às 2 questões. Tempo-alvo: 2 minutos.",
         "passage_html": """<p><em>Narrator: Listen to an announcement about course registration.</em></p>
@@ -491,12 +491,12 @@ MOD2_ACTION_DRILLS_C = [
              "correct": "C", "explanation": "\"Add yourself to the waitlist rather than emailing the instructor.\" (A) é explicitamente desaconselhado."},
             {"num": "C2.2", "prompt": "Inference. Why does the speaker emphasize finalizing the schedule before the term?",
              "options": {"A": "Because instructors will not answer email during the term", "B": "Because there will be less time to change courses once classes start", "C": "Because spring courses are harder than fall courses", "D": "Because registration reopens midway through the term"},
-             "correct": "B", "explanation": "Add/drop mais curto → menos tempo para ajustar depois que as aulas começam. (A), (C) e (D) não são ditos no anúncio."},
+             "correct": "B", "explanation": "Com o período de add/drop mais curto, sobra menos tempo para ajustar a matrícula depois que as aulas começam. (A), (C) e (D) não são ditos no anúncio."},
         ],
     },
     {
         "id": "mod2-c3",
-        "title": "Drill C3 · Campus Event · alvo: 2 min",
+        "title": "Exercício C3: Campus Event (meta de 2 min)",
         "level": "B1",
         "objective": "Leia o anúncio (ou peça pra alguém ler em voz alta) e responda às 2 questões. Tempo-alvo: 2 minutos.",
         "passage_html": """<p><em>Narrator: Listen to an announcement about a career event.</em></p>
@@ -507,7 +507,7 @@ MOD2_ACTION_DRILLS_C = [
              "correct": "C", "explanation": "\"From 10 to 4.\" (A) é a abertura da estação de revisão de currículo; (B) é o workshop."},
             {"num": "C3.2", "prompt": "Connecting content. A student wants résumé feedback before speaking to employers. What should they do?",
              "options": {"A": "Attend the 9:30 workshop", "B": "Arrive at the résumé-review station around 9, since it is first-come, first-served", "C": "Email their résumé to a recruiter in advance", "D": "Wait until after 4 p.m."},
-             "correct": "B", "explanation": "A estação abre às 9, é <em>first-come, first-served</em> → chegar cedo. (A) o workshop é de habilidades de entrevista, não revisão de currículo; (C)/(D) não sugeridos."},
+             "correct": "B", "explanation": "A estação abre às 9 e funciona por ordem de chegada (<em>first-come, first-served</em>), por isso vale chegar cedo. (A) erra porque o workshop é de entrevista, não de revisão de currículo; (C) e (D) não são sugeridos."},
         ],
     },
 ]
@@ -517,7 +517,7 @@ MOD2_ACTION_DRILLS_C = [
 MOD2_ACTION_DRILLS_D = [
     {
         "id": "mod2-d1",
-        "title": "Drill D1 · Psicologia · alvo: 4 min",
+        "title": "Exercício D1: psicologia (meta de 4 min)",
         "level": "B2–C1",
         "objective": "Leia a palestra (ou peça pra alguém ler em voz alta) e responda às 4 questões. Tempo-alvo: 4 minutos.",
         "passage_html": """<p><em>Narrator: Listen to part of a talk in a psychology class.</em></p>
@@ -537,12 +537,12 @@ MOD2_ACTION_DRILLS_D = [
              "correct": "B", "explanation": "Exemplo empírico logo após o conceito abstrato. (A)/(C)/(D) sem base."},
             {"num": "D1.4", "prompt": "Idiom in context. What does \"stuck at square one\" mean here?",
              "options": {"A": "Making a confident final decision", "B": "Unable to make any progress toward a decision", "C": "Choosing the first option presented", "D": "Comparing two options systematically"},
-             "correct": "B", "explanation": "\"Stuck at square one\" = sem sair do ponto de partida. (A) é o oposto; (C)/(D) distorcem."},
+             "correct": "B", "explanation": "\"Stuck at square one\" é ficar sem sair do ponto de partida. (A) diz o oposto; (C) e (D) distorcem o sentido."},
         ],
     },
     {
         "id": "mod2-d2",
-        "title": "Drill D2 · Biologia · alvo: 4 min",
+        "title": "Exercício D2: biologia (meta de 4 min)",
         "level": "B2–C1",
         "objective": "Leia a palestra (ou peça pra alguém ler em voz alta) e responda às 4 questões. Tempo-alvo: 4 minutos.",
         "passage_html": """<p><em>Narrator: Listen to part of a talk in a biology class.</em></p>
@@ -562,12 +562,12 @@ MOD2_ACTION_DRILLS_D = [
              "correct": "B", "explanation": "Ele separa o que a evidência sustenta firmemente do que relatos populares exageram (\"forests as single cooperative organisms\"). (A)/(C) exageram; (D) está fora do que foi dito."},
             {"num": "D2.4", "prompt": "Idiom in context. What does the professor mean by \"the jury's still out\"?",
              "options": {"A": "The question has been definitively settled", "B": "There is not yet a firm conclusion on the matter", "C": "A court case is involved in the research", "D": "The researchers have stopped studying it"},
-             "correct": "B", "explanation": "\"The jury's still out\" = ainda não há conclusão firme. (A) é o oposto; (C) é literal demais; (D) não é dito."},
+             "correct": "B", "explanation": "\"The jury's still out\" quer dizer que ainda não há conclusão firme. (A) diz o oposto; (C) é literal demais; (D) não é dito."},
         ],
     },
     {
         "id": "mod2-d3",
-        "title": "Drill D3 · História da tecnologia · alvo: 4 min",
+        "title": "Exercício D3: história da tecnologia (meta de 4 min)",
         "level": "B2–C1",
         "objective": "Leia a palestra (ou peça pra alguém ler em voz alta) e responda às 4 questões. Tempo-alvo: 4 minutos.",
         "passage_html": """<p><em>Narrator: Listen to part of a talk in a history of technology class.</em></p>

@@ -11,7 +11,7 @@
     "stimulus": {
       "kind": "text",
       "format": "html",
-      "title": "Drill B1 · Placa / aviso · alvo: 2 min",
+      "title": "Exercício B1: placa ou aviso (meta de 2 min)",
       "content": "<p><strong>TEXT: Sign at a nature reserve trailhead</strong></p>\n<blockquote><p><strong>RIDGELINE TRAIL: PLEASE READ BEFORE ENTERING</strong></p>\n<p>• Trail open sunrise to sunset. Overnight camping is not permitted anywhere on the reserve.<br>\n• Dogs welcome on a leash no longer than 6 feet. The upper loop (marked in red) is closed to dogs from April 1 to July 15 to protect ground-nesting birds.<br>\n• No bicycles. E-bikes and mobility scooters are exempt from this rule.<br>\n• Pack out all trash. There are no trash cans beyond this point.</p></blockquote>",
       "audio_ref": null
     },
@@ -25,7 +25,7 @@
       "D": "nowhere, because dogs are banned in summer"
     },
     "answer": "B",
-    "explanation": "Cães de coleira são permitidos; o <em>upper loop</em> é fechado a cães de 1/abr a 15/jul, e 20 de maio cai nesse período → todas as trilhas <strong>exceto</strong> o upper loop. (A) ignora a restrição; (C) inverte; (D) exagera: cães não são banidos, só do upper loop.",
+    "explanation": "Cães na coleira são permitidos, mas o <em>upper loop</em> fica fechado para cães de 1º de abril a 15 de julho, e 20 de maio cai nesse período. Por isso, o visitante pode usar todas as trilhas <strong>exceto</strong> o upper loop. (A) ignora a restrição; (C) inverte a regra; (D) exagera, porque os cães não são proibidos em toda parte, só no upper loop.",
     "hint": null,
     "trap_codes": [],
     "tags": [],
@@ -56,7 +56,7 @@
     "stimulus": {
       "kind": "text",
       "format": "html",
-      "title": "Drill B1 · Placa / aviso · alvo: 2 min",
+      "title": "Exercício B1: placa ou aviso (meta de 2 min)",
       "content": "<p><strong>TEXT: Sign at a nature reserve trailhead</strong></p>\n<blockquote><p><strong>RIDGELINE TRAIL: PLEASE READ BEFORE ENTERING</strong></p>\n<p>• Trail open sunrise to sunset. Overnight camping is not permitted anywhere on the reserve.<br>\n• Dogs welcome on a leash no longer than 6 feet. The upper loop (marked in red) is closed to dogs from April 1 to July 15 to protect ground-nesting birds.<br>\n• No bicycles. E-bikes and mobility scooters are exempt from this rule.<br>\n• Pack out all trash. There are no trash cans beyond this point.</p></blockquote>",
       "audio_ref": null
     },
@@ -101,7 +101,7 @@
     "stimulus": {
       "kind": "text",
       "format": "html",
-      "title": "Drill B2 · Cardápio · alvo: 3 min",
+      "title": "Exercício B2: cardápio (meta de 3 min)",
       "content": "<p><strong>TEXT: Café lunch menu (extract)</strong></p>\n<blockquote><p><strong>SANDWICHES</strong>: all served on sourdough with a side salad (swap for fries +$2)</p>\n<p>• <strong>Garden</strong> — roasted vegetables, hummus, arugula · $9 · <em>vegan</em><br>\n• <strong>Classic Club</strong> (chicken, bacon, egg, lettuce) · $12<br>\n• <strong>Halloumi Stack</strong> — grilled halloumi, tomato, pesto · $11 · <em>vegetarian (contains nuts)</em></p>\n<p><strong>SOUPS</strong> · served with bread · $7 · soup of the day is always vegetarian; ask staff whether today's is vegan.</p>\n<p><em>A 10% discount applies to all lunch orders placed before noon.</em></p></blockquote>",
       "audio_ref": null
     },
@@ -146,7 +146,7 @@
     "stimulus": {
       "kind": "text",
       "format": "html",
-      "title": "Drill B2 · Cardápio · alvo: 3 min",
+      "title": "Exercício B2: cardápio (meta de 3 min)",
       "content": "<p><strong>TEXT: Café lunch menu (extract)</strong></p>\n<blockquote><p><strong>SANDWICHES</strong>: all served on sourdough with a side salad (swap for fries +$2)</p>\n<p>• <strong>Garden</strong> — roasted vegetables, hummus, arugula · $9 · <em>vegan</em><br>\n• <strong>Classic Club</strong> (chicken, bacon, egg, lettuce) · $12<br>\n• <strong>Halloumi Stack</strong> — grilled halloumi, tomato, pesto · $11 · <em>vegetarian (contains nuts)</em></p>\n<p><strong>SOUPS</strong> · served with bread · $7 · soup of the day is always vegetarian; ask staff whether today's is vegan.</p>\n<p><em>A 10% discount applies to all lunch orders placed before noon.</em></p></blockquote>",
       "audio_ref": null
     },
@@ -160,7 +160,7 @@
       "D": "$16"
     },
     "answer": "B",
-    "explanation": "$12 do sanduíche + $2 pela troca por fries = $14. O desconto de 10% (pedido antes do meio-dia) se aplica <strong>depois</strong>, mas a pergunta é o preço <strong>antes</strong> do desconto. (C) $12.60 é o valor <strong>com</strong> o desconto, que a pergunta exclui; (A) esquece a troca por fries.",
+    "explanation": "São $12 do sanduíche mais $2 pela troca por fries, o que dá $14. O desconto de 10% (pedido antes do meio-dia) entra <strong>depois</strong>, mas a pergunta é o preço <strong>antes</strong> do desconto. (C) $12.60 é o valor <strong>com</strong> o desconto, que a pergunta exclui; (A) esquece a troca por fries.",
     "hint": null,
     "trap_codes": [],
     "tags": [],
@@ -191,7 +191,7 @@
     "stimulus": {
       "kind": "text",
       "format": "html",
-      "title": "Drill B2 · Cardápio · alvo: 3 min",
+      "title": "Exercício B2: cardápio (meta de 3 min)",
       "content": "<p><strong>TEXT: Café lunch menu (extract)</strong></p>\n<blockquote><p><strong>SANDWICHES</strong>: all served on sourdough with a side salad (swap for fries +$2)</p>\n<p>• <strong>Garden</strong> — roasted vegetables, hummus, arugula · $9 · <em>vegan</em><br>\n• <strong>Classic Club</strong> (chicken, bacon, egg, lettuce) · $12<br>\n• <strong>Halloumi Stack</strong> — grilled halloumi, tomato, pesto · $11 · <em>vegetarian (contains nuts)</em></p>\n<p><strong>SOUPS</strong> · served with bread · $7 · soup of the day is always vegetarian; ask staff whether today's is vegan.</p>\n<p><em>A 10% discount applies to all lunch orders placed before noon.</em></p></blockquote>",
       "audio_ref": null
     },
@@ -236,7 +236,7 @@
     "stimulus": {
       "kind": "text",
       "format": "html",
-      "title": "Drill B3 · E-mail formal · alvo: 3 min",
+      "title": "Exercício B3: e-mail formal (meta de 3 min)",
       "content": "<p><strong>TEXT: Email from a course coordinator</strong></p>\n<blockquote>\n<p><strong>Subject: Re: Request to submit Assignment 2 late</strong></p>\n<p>Dear Bruna,</p>\n<p>Thank you for letting me know about your situation in advance rather than after the deadline. I'm sorry to hear you've been unwell.</p>\n<p>Our department policy does not allow me to grant an extension without a doctor's note. If you're able to provide one, I can extend your deadline to next Monday. If not, I can still accept the assignment up to 48 hours late, though the standard 10% late penalty would apply in that case.</p>\n<p>Please let me know which option you'd prefer by Thursday so I can update the system.</p>\n<p>Best regards,<br>Dr. Okafor</p>\n</blockquote>",
       "audio_ref": null
     },
@@ -281,7 +281,7 @@
     "stimulus": {
       "kind": "text",
       "format": "html",
-      "title": "Drill B3 · E-mail formal · alvo: 3 min",
+      "title": "Exercício B3: e-mail formal (meta de 3 min)",
       "content": "<p><strong>TEXT: Email from a course coordinator</strong></p>\n<blockquote>\n<p><strong>Subject: Re: Request to submit Assignment 2 late</strong></p>\n<p>Dear Bruna,</p>\n<p>Thank you for letting me know about your situation in advance rather than after the deadline. I'm sorry to hear you've been unwell.</p>\n<p>Our department policy does not allow me to grant an extension without a doctor's note. If you're able to provide one, I can extend your deadline to next Monday. If not, I can still accept the assignment up to 48 hours late, though the standard 10% late penalty would apply in that case.</p>\n<p>Please let me know which option you'd prefer by Thursday so I can update the system.</p>\n<p>Best regards,<br>Dr. Okafor</p>\n</blockquote>",
       "audio_ref": null
     },
@@ -326,7 +326,7 @@
     "stimulus": {
       "kind": "text",
       "format": "html",
-      "title": "Drill B3 · E-mail formal · alvo: 3 min",
+      "title": "Exercício B3: e-mail formal (meta de 3 min)",
       "content": "<p><strong>TEXT: Email from a course coordinator</strong></p>\n<blockquote>\n<p><strong>Subject: Re: Request to submit Assignment 2 late</strong></p>\n<p>Dear Bruna,</p>\n<p>Thank you for letting me know about your situation in advance rather than after the deadline. I'm sorry to hear you've been unwell.</p>\n<p>Our department policy does not allow me to grant an extension without a doctor's note. If you're able to provide one, I can extend your deadline to next Monday. If not, I can still accept the assignment up to 48 hours late, though the standard 10% late penalty would apply in that case.</p>\n<p>Please let me know which option you'd prefer by Thursday so I can update the system.</p>\n<p>Best regards,<br>Dr. Okafor</p>\n</blockquote>",
       "audio_ref": null
     },
@@ -371,7 +371,7 @@
     "stimulus": {
       "kind": "text",
       "format": "html",
-      "title": "Drill B4 · Horário / tabela · alvo: 2 min",
+      "title": "Exercício B4: horário ou tabela (meta de 2 min)",
       "content": "<p><strong>TEXT: Shuttle timetable notice</strong></p>\n<blockquote><p><strong>CAMPUS ↔ STATION SHUTTLE</strong></p>\n<p>Departs Campus Gate: on the hour and at half past, 7:00–19:00, Mon–Fri. Departs Station: at quarter past and quarter to, same times. Journey time: approximately 20 minutes.</p>\n<p><em>The half-past and quarter-to services do not run after 17:00: the last half-past departure from Campus Gate is at 16:30. On weekends and holidays, shuttles leave both stops on the hour only.</em></p></blockquote>",
       "audio_ref": null
     },
@@ -385,7 +385,7 @@
       "D": "a 17:30 service that takes about 45 minutes"
     },
     "answer": "A",
-    "explanation": "A nota de rodapé é explícita: \"the last half-past departure from Campus Gate is at 16:30\" e, depois das 17:00, o serviço é \"on the hour only\". Logo, não existe 17:30 na terça-feira. Este item treina a leitura da <strong>nota de rodapé</strong>: quem responde (B) leu só a linha principal e ignorou a exceção.",
+    "explanation": "A nota de rodapé é clara: \"the last half-past departure from Campus Gate is at 16:30\", e depois das 17:00 o serviço é \"on the hour only\". Logo, não existe saída às 17:30 na terça-feira. Este item treina a leitura da <strong>nota de rodapé</strong>, e quem marca (B) leu só a linha principal e deixou passar a exceção.",
     "hint": null,
     "trap_codes": [],
     "tags": [],
@@ -416,7 +416,7 @@
     "stimulus": {
       "kind": "text",
       "format": "html",
-      "title": "Drill B4 · Horário / tabela · alvo: 2 min",
+      "title": "Exercício B4: horário ou tabela (meta de 2 min)",
       "content": "<p><strong>TEXT: Shuttle timetable notice</strong></p>\n<blockquote><p><strong>CAMPUS ↔ STATION SHUTTLE</strong></p>\n<p>Departs Campus Gate: on the hour and at half past, 7:00–19:00, Mon–Fri. Departs Station: at quarter past and quarter to, same times. Journey time: approximately 20 minutes.</p>\n<p><em>The half-past and quarter-to services do not run after 17:00: the last half-past departure from Campus Gate is at 16:30. On weekends and holidays, shuttles leave both stops on the hour only.</em></p></blockquote>",
       "audio_ref": null
     },
@@ -461,7 +461,7 @@
     "stimulus": {
       "kind": "text",
       "format": "html",
-      "title": "Drill B5 · Post de rede social · alvo: 3 min",
+      "title": "Exercício B5: post de rede social (meta de 3 min)",
       "content": "<p><strong>TEXT: A social media post from a local bakery</strong></p>\n<blockquote><p>🥐 <strong>Riverside Bakery</strong> · Posted 2 hours ago</p>\n<p>Big news, everyone! Starting next Tuesday, we're extending our weekday hours — open at 6:30 AM instead of 7:00 AM, so early risers can grab their coffee and croissants before work. 🌅</p>\n<p>Quick heads-up though: because of the earlier opening, our weekday sourdough batch will now go into the oven the night before instead of first thing in the morning. It'll still be baked fresh daily, just on a slightly different schedule — so if you're used to grabbing a loaf warm out of the oven at 8 AM, you'll now find it ready on the shelf as soon as we open. Come say hi and let us know what you think of the new hours!</p>\n<p>Weekend hours are unchanged (8 AM–3 PM, same as always).</p></blockquote>",
       "audio_ref": null
     },
@@ -506,7 +506,7 @@
     "stimulus": {
       "kind": "text",
       "format": "html",
-      "title": "Drill B5 · Post de rede social · alvo: 3 min",
+      "title": "Exercício B5: post de rede social (meta de 3 min)",
       "content": "<p><strong>TEXT: A social media post from a local bakery</strong></p>\n<blockquote><p>🥐 <strong>Riverside Bakery</strong> · Posted 2 hours ago</p>\n<p>Big news, everyone! Starting next Tuesday, we're extending our weekday hours — open at 6:30 AM instead of 7:00 AM, so early risers can grab their coffee and croissants before work. 🌅</p>\n<p>Quick heads-up though: because of the earlier opening, our weekday sourdough batch will now go into the oven the night before instead of first thing in the morning. It'll still be baked fresh daily, just on a slightly different schedule — so if you're used to grabbing a loaf warm out of the oven at 8 AM, you'll now find it ready on the shelf as soon as we open. Come say hi and let us know what you think of the new hours!</p>\n<p>Weekend hours are unchanged (8 AM–3 PM, same as always).</p></blockquote>",
       "audio_ref": null
     },
@@ -551,7 +551,7 @@
     "stimulus": {
       "kind": "text",
       "format": "html",
-      "title": "Drill B5 · Post de rede social · alvo: 3 min",
+      "title": "Exercício B5: post de rede social (meta de 3 min)",
       "content": "<p><strong>TEXT: A social media post from a local bakery</strong></p>\n<blockquote><p>🥐 <strong>Riverside Bakery</strong> · Posted 2 hours ago</p>\n<p>Big news, everyone! Starting next Tuesday, we're extending our weekday hours — open at 6:30 AM instead of 7:00 AM, so early risers can grab their coffee and croissants before work. 🌅</p>\n<p>Quick heads-up though: because of the earlier opening, our weekday sourdough batch will now go into the oven the night before instead of first thing in the morning. It'll still be baked fresh daily, just on a slightly different schedule — so if you're used to grabbing a loaf warm out of the oven at 8 AM, you'll now find it ready on the shelf as soon as we open. Come say hi and let us know what you think of the new hours!</p>\n<p>Weekend hours are unchanged (8 AM–3 PM, same as always).</p></blockquote>",
       "audio_ref": null
     },

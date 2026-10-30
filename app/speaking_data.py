@@ -17,7 +17,7 @@ LISTEN_REPEAT_SETS = [
     {
         "id": "mod3-lr1",
         "level": "A2–B2",
-        "title": "Cenário 1 · Campus library",
+        "title": "Cenário 1: Campus library",
         "scenario": "You are learning to help at a campus library. Listen to the librarian and repeat what she says. Repeat only once.",
         "items": [
             "The library opens at eight.",
@@ -32,7 +32,7 @@ LISTEN_REPEAT_SETS = [
     {
         "id": "mod3-lr2",
         "level": "A2–B2",
-        "title": "Cenário 2 · Coffee shop",
+        "title": "Cenário 2: Coffee shop",
         "scenario": "You are starting a job at a coffee shop. Listen to your manager and repeat what he says. Repeat only once.",
         "items": [
             "Welcome to the coffee shop.",
@@ -47,7 +47,7 @@ LISTEN_REPEAT_SETS = [
     {
         "id": "mod3-lr3",
         "level": "B1–C1",
-        "title": "Cenário 3 · Bike-share program",
+        "title": "Cenário 3: Bike-share program",
         "scenario": "You are learning to work for a city bike-share program. Listen to your trainer and repeat what he says. Repeat only once.",
         "items": [
             "Riders unlock bikes with the app.",
@@ -62,7 +62,7 @@ LISTEN_REPEAT_SETS = [
     {
         "id": "mod3-lr4",
         "level": "B1–C1",
-        "title": "Cenário 4 · Chemistry lab",
+        "title": "Cenário 4: Chemistry lab",
         "scenario": "You are attending a safety briefing in a chemistry lab. Listen to the instructor and repeat what he says. Repeat only once.",
         "items": [
             "Safety comes first in the lab.",
@@ -77,7 +77,7 @@ LISTEN_REPEAT_SETS = [
     {
         "id": "mod3-lr5",
         "level": "B1–C1",
-        "title": "Cenário 5 · Hotel front desk",
+        "title": "Cenário 5: Hotel front desk",
         "scenario": "You are learning to work at a hotel front desk. Listen to your supervisor and repeat what she says. Repeat only once.",
         "items": [
             "Check-in begins at three o'clock.",
@@ -95,7 +95,7 @@ INTERVIEW_SETS = [
     {
         "id": "mod3-int1",
         "level": "B1–C1",
-        "title": "Entrevista 1 · Study habits",
+        "title": "Entrevista 1: Study habits",
         "scenario": "You have agreed to take part in a research study about how students prepare for exams. You will have a short online interview with a researcher.",
         "items": [
             "Thank you for joining me today. I'm studying how students prepare for exams. To begin, where do you usually study: at home, in a library, or somewhere else?",
@@ -107,7 +107,7 @@ INTERVIEW_SETS = [
     {
         "id": "mod3-int2",
         "level": "B1–C1",
-        "title": "Entrevista 2 · Getting around",
+        "title": "Entrevista 2: Getting around",
         "scenario": "You have agreed to take part in a survey about transportation in your area. You will have a short online interview with a researcher.",
         "items": [
             "Thanks for your time. I'm collecting opinions about transportation. First, how do you usually get around: by car, by public transportation, or on foot?",
@@ -119,7 +119,7 @@ INTERVIEW_SETS = [
     {
         "id": "mod3-int3",
         "level": "B1–C2",
-        "title": "Entrevista 3 · Phones and free time",
+        "title": "Entrevista 3: Phones and free time",
         "scenario": "You have agreed to take part in a research study about technology and daily life. You will have a short online interview with a researcher.",
         "items": [
             "Thank you for speaking with me. My research is about technology in daily life. To start, about how many hours a day do you spend on your phone?",
@@ -131,7 +131,7 @@ INTERVIEW_SETS = [
     {
         "id": "mod3-int4",
         "level": "B1–C2",
-        "title": "Entrevista 4 · Food and cooking",
+        "title": "Entrevista 4: Food and cooking",
         "scenario": "You have agreed to take part in a research study about eating habits. You will have a short online interview with a researcher.",
         "items": [
             "Thank you for being here. I'm studying people's eating habits. First of all, do you usually cook your own meals, or do you eat out?",

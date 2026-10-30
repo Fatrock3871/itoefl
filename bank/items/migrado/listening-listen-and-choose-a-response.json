@@ -70,7 +70,7 @@
       "D": "Tuesday's class starts at nine."
     },
     "answer": "A",
-    "explanation": "Pedido direto → resposta direta de concessão + plano. (B) é gentil mas não responde ao pedido; (C) e (D) só reaproveitam palavras da fala (<em>borrow</em>, <em>Tuesday</em>).",
+    "explanation": "A um pedido direto, a resposta natural é aceitar e combinar um plano. (B) é gentil, mas não responde ao pedido; (C) e (D) só repetem palavras da fala (<em>borrow</em>, <em>Tuesday</em>).",
     "hint": null,
     "trap_codes": [],
     "tags": [],
@@ -115,7 +115,7 @@
       "D": "That's a great title."
     },
     "answer": "B",
-    "explanation": "Insegurança sobre o rascunho → a resposta busca o problema específico. (A) reaproveita <em>ready</em> sem tratar da preocupação; (C)/(D) ignoram a preocupação.",
+    "explanation": "Diante da insegurança sobre o rascunho, a resposta natural procura o problema específico. (A) repete <em>ready</em> sem tratar da preocupação; (C) e (D) ignoram a preocupação.",
     "hint": null,
     "trap_codes": [],
     "tags": [],
@@ -160,7 +160,7 @@
       "D": "It rained a lot last semester too."
     },
     "answer": "A",
-    "explanation": "Pergunta retórica = alerta educado sobre ir a pé com esse tempo. A resposta natural revisa o plano. (B) só reaproveita <em>weather</em>; (C)/(D) falam de outro momento e ignoram o alerta.",
+    "explanation": "A pergunta retórica é um alerta educado sobre ir a pé com esse tempo, e a resposta natural muda o plano. (B) só repete <em>weather</em>; (C) e (D) falam de outro momento e ignoram o alerta.",
     "hint": null,
     "trap_codes": [],
     "tags": [],
@@ -205,7 +205,7 @@
       "D": "I haven't registered for anything yet."
     },
     "answer": "B",
-    "explanation": "Informação nova (mudança de horário) → interesse + pedido de detalhe. (A) e (D) reaproveitam o som de <em>registrar</em> em <em>register</em> (matricular-se), mas não reagem à notícia; (C) dá a localização do escritório, que ninguém perguntou.",
+    "explanation": "Diante de uma informação nova (a mudança de horário), a resposta natural mostra interesse e pede um detalhe. (A) e (D) aproveitam o som de <em>registrar</em> em <em>register</em> (matricular-se), mas não reagem à notícia; (C) dá a localização do escritório, que ninguém perguntou.",
     "hint": null,
     "trap_codes": [],
     "tags": [],
@@ -250,7 +250,7 @@
       "D": "I gave my first presentation in high school."
     },
     "answer": "B",
-    "explanation": "\"Run X by me\" = me mostrar antes. Resposta natural marca um horário. (A) toma \"run\" ao pé da letra; (C) muda o foco; (D) reaproveita <em>presentation</em> sem responder ao pedido.",
+    "explanation": "\"Run X by me\" é \"me mostrar antes\", e a resposta natural marca um horário. (A) toma \"run\" ao pé da letra; (C) muda o foco; (D) repete <em>presentation</em> sem responder ao pedido.",
     "hint": null,
     "trap_codes": [],
     "tags": [],
@@ -295,7 +295,7 @@
       "D": "Next week works better for me too."
     },
     "answer": "A",
-    "explanation": "Divergência sobre a data → confirmar juntos, checar o syllabus. (B)/(C)/(D) ignoram a divergência.",
+    "explanation": "Diante da dúvida sobre a data, a resposta natural é conferir junto no syllabus. (B), (C) e (D) ignoram a dúvida.",
     "hint": null,
     "trap_codes": [],
     "tags": [],
@@ -340,7 +340,7 @@
       "D": "First place goes to the best presentation."
     },
     "answer": "B",
-    "explanation": "Pergunta de preferência (primeiro ou último) → escolher e justificar. (A)/(C)/(D) não respondem à escolha oferecida.",
+    "explanation": "Numa pergunta de preferência (primeiro ou último), a resposta natural escolhe e justifica. (A), (C) e (D) não respondem à escolha oferecida.",
     "hint": null,
     "trap_codes": [],
     "tags": [],
@@ -385,7 +385,7 @@
       "D": "I left my umbrella on the bus once."
     },
     "answer": "B",
-    "explanation": "Reclamação sobre a demora → \"Tell me about it\" concorda enfaticamente + acrescenta. (A), (C) e (D) reaproveitam <em>bus</em>/<em>left</em> sem reagir à reclamação.",
+    "explanation": "Diante da reclamação sobre a demora, \"Tell me about it\" concorda com ênfase e acrescenta algo. (A), (C) e (D) repetem <em>bus</em> ou <em>left</em> sem reagir à reclamação.",
     "hint": null,
     "trap_codes": [],
     "tags": [],
@@ -430,7 +430,7 @@
       "D": "I've never had a class canceled before."
     },
     "answer": "B",
-    "explanation": "Notícia incerta (\"might cancel\") → pedir esclarecimento sobre o motivo/certeza. (A)/(C)/(D) desviam.",
+    "explanation": "Diante de uma notícia incerta (\"might cancel\"), a resposta natural pede esclarecimento sobre o motivo ou a certeza. (A), (C) e (D) desviam do assunto.",
     "hint": null,
     "trap_codes": [],
     "tags": [],
@@ -475,7 +475,7 @@
       "D": "The company is downtown, near the station."
     },
     "answer": "B",
-    "explanation": "Pergunta sobre como foi a entrevista → dar o resultado + próximo passo. (A) responde sobre horário; (C)/(D) generalizam/desviam.",
+    "explanation": "A pergunta é sobre como foi a entrevista, e a resposta natural conta o resultado e o próximo passo. (A) responde sobre horário; (C) e (D) generalizam ou desviam.",
     "hint": null,
     "trap_codes": [],
     "tags": [],
@@ -520,7 +520,7 @@
       "D": "The program starts in September."
     },
     "answer": "B",
-    "explanation": "Dúvida + autodepreciação → encorajamento. (A), (C) e (D) desviam para custo, experiência passada e calendário.",
+    "explanation": "Diante de dúvida e autocrítica, a resposta natural é encorajar. (A), (C) e (D) desviam para custo, experiência passada e calendário.",
     "hint": null,
     "trap_codes": [],
     "tags": [],

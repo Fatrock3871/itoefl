@@ -11,7 +11,7 @@
     "stimulus": {
       "kind": "audio",
       "format": "html",
-      "title": "Drill D1 · Psicologia · alvo: 4 min",
+      "title": "Exercício D1: psicologia (meta de 4 min)",
       "content": "<p><em>Narrator: Listen to part of a talk in a psychology class.</em></p>\n<p><strong>Professor:</strong> We've been discussing decision-making, and today I want to bring up something researchers call the paradox of choice. The idea is counterintuitive: you'd think more options would always make us happier, but past a certain point it does the opposite.</p>\n<p>A classic example. In one well-known study, researchers set up a tasting table in a grocery store: first with six varieties of jam, then with twenty-four. You'd expect the bigger display to sell more. Actually, the smaller display generated significantly more purchases. The larger one attracted more browsers, but far fewer of them bought anything.</p>\n<p>Why? Two things: decision fatigue and anticipated regret. With more options, comparing them mentally becomes exhausting — that's the fatigue. And even before you pick, you start worrying that one of the other twenty-three might be better and that you'll regret your choice — that's the regret. Ironically, more choices can leave people stuck at square one, unable to commit at all.</p>\n<p>Now, this doesn't mean choice is bad: a complete absence of options is its own problem. The point is there's a sweet spot, and past it, additional options stop helping and start working against us. To be fair, later studies haven't always replicated the jam result, so the size of the effect is still debated.</p>",
       "audio_ref": null
     },
@@ -56,7 +56,7 @@
     "stimulus": {
       "kind": "audio",
       "format": "html",
-      "title": "Drill D1 · Psicologia · alvo: 4 min",
+      "title": "Exercício D1: psicologia (meta de 4 min)",
       "content": "<p><em>Narrator: Listen to part of a talk in a psychology class.</em></p>\n<p><strong>Professor:</strong> We've been discussing decision-making, and today I want to bring up something researchers call the paradox of choice. The idea is counterintuitive: you'd think more options would always make us happier, but past a certain point it does the opposite.</p>\n<p>A classic example. In one well-known study, researchers set up a tasting table in a grocery store: first with six varieties of jam, then with twenty-four. You'd expect the bigger display to sell more. Actually, the smaller display generated significantly more purchases. The larger one attracted more browsers, but far fewer of them bought anything.</p>\n<p>Why? Two things: decision fatigue and anticipated regret. With more options, comparing them mentally becomes exhausting — that's the fatigue. And even before you pick, you start worrying that one of the other twenty-three might be better and that you'll regret your choice — that's the regret. Ironically, more choices can leave people stuck at square one, unable to commit at all.</p>\n<p>Now, this doesn't mean choice is bad: a complete absence of options is its own problem. The point is there's a sweet spot, and past it, additional options stop helping and start working against us. To be fair, later studies haven't always replicated the jam result, so the size of the effect is still debated.</p>",
       "audio_ref": null
     },
@@ -101,7 +101,7 @@
     "stimulus": {
       "kind": "audio",
       "format": "html",
-      "title": "Drill D1 · Psicologia · alvo: 4 min",
+      "title": "Exercício D1: psicologia (meta de 4 min)",
       "content": "<p><em>Narrator: Listen to part of a talk in a psychology class.</em></p>\n<p><strong>Professor:</strong> We've been discussing decision-making, and today I want to bring up something researchers call the paradox of choice. The idea is counterintuitive: you'd think more options would always make us happier, but past a certain point it does the opposite.</p>\n<p>A classic example. In one well-known study, researchers set up a tasting table in a grocery store: first with six varieties of jam, then with twenty-four. You'd expect the bigger display to sell more. Actually, the smaller display generated significantly more purchases. The larger one attracted more browsers, but far fewer of them bought anything.</p>\n<p>Why? Two things: decision fatigue and anticipated regret. With more options, comparing them mentally becomes exhausting — that's the fatigue. And even before you pick, you start worrying that one of the other twenty-three might be better and that you'll regret your choice — that's the regret. Ironically, more choices can leave people stuck at square one, unable to commit at all.</p>\n<p>Now, this doesn't mean choice is bad: a complete absence of options is its own problem. The point is there's a sweet spot, and past it, additional options stop helping and start working against us. To be fair, later studies haven't always replicated the jam result, so the size of the effect is still debated.</p>",
       "audio_ref": null
     },
@@ -146,7 +146,7 @@
     "stimulus": {
       "kind": "audio",
       "format": "html",
-      "title": "Drill D1 · Psicologia · alvo: 4 min",
+      "title": "Exercício D1: psicologia (meta de 4 min)",
       "content": "<p><em>Narrator: Listen to part of a talk in a psychology class.</em></p>\n<p><strong>Professor:</strong> We've been discussing decision-making, and today I want to bring up something researchers call the paradox of choice. The idea is counterintuitive: you'd think more options would always make us happier, but past a certain point it does the opposite.</p>\n<p>A classic example. In one well-known study, researchers set up a tasting table in a grocery store: first with six varieties of jam, then with twenty-four. You'd expect the bigger display to sell more. Actually, the smaller display generated significantly more purchases. The larger one attracted more browsers, but far fewer of them bought anything.</p>\n<p>Why? Two things: decision fatigue and anticipated regret. With more options, comparing them mentally becomes exhausting — that's the fatigue. And even before you pick, you start worrying that one of the other twenty-three might be better and that you'll regret your choice — that's the regret. Ironically, more choices can leave people stuck at square one, unable to commit at all.</p>\n<p>Now, this doesn't mean choice is bad: a complete absence of options is its own problem. The point is there's a sweet spot, and past it, additional options stop helping and start working against us. To be fair, later studies haven't always replicated the jam result, so the size of the effect is still debated.</p>",
       "audio_ref": null
     },
@@ -160,7 +160,7 @@
       "D": "Comparing two options systematically"
     },
     "answer": "B",
-    "explanation": "\"Stuck at square one\" = sem sair do ponto de partida. (A) é o oposto; (C)/(D) distorcem.",
+    "explanation": "\"Stuck at square one\" é ficar sem sair do ponto de partida. (A) diz o oposto; (C) e (D) distorcem o sentido.",
     "hint": null,
     "trap_codes": [],
     "tags": [],
@@ -191,7 +191,7 @@
     "stimulus": {
       "kind": "audio",
       "format": "html",
-      "title": "Drill D2 · Biologia · alvo: 4 min",
+      "title": "Exercício D2: biologia (meta de 4 min)",
       "content": "<p><em>Narrator: Listen to part of a talk in a biology class.</em></p>\n<p><strong>Professor:</strong> When we picture a forest, we tend to see individual trees competing — for light, for water, for space. And that's real. But over the last thirty years, research has revealed something the old picture missed: the trees are also <strong>connected</strong>, underground, through fungi.</p>\n<p>Here's how. The roots of most trees are wrapped in a network of fungal threads; this partnership between root and fungus is called a mycorrhiza. The fungi pull in water and minerals the tree's roots can't reach efficiently, and hand them to the tree. In return, the tree gives the fungi sugars it makes through photosynthesis. So far, a simple trade.</p>\n<p>The surprising part is that a single fungal network can link <strong>many</strong> trees at once — even trees of different species. And things move along those links. Experiments using radioactive tracers have shown carbon flowing from a tree standing in full sun to a shaded seedling of another species nearby. Some researchers describe old, well-connected trees as \"hub trees\" that support younger ones around them.</p>\n<p>Now, a word of caution. This work has captured the public imagination, and some popular accounts overstate it: talking about forests as single cooperative organisms. The jury's still out on how deliberate or widespread the sharing really is. What's solid is that the connections exist and that resources can move through them. How much that reshapes our model of the forest is still being worked out.</p>",
       "audio_ref": null
     },
@@ -236,7 +236,7 @@
     "stimulus": {
       "kind": "audio",
       "format": "html",
-      "title": "Drill D2 · Biologia · alvo: 4 min",
+      "title": "Exercício D2: biologia (meta de 4 min)",
       "content": "<p><em>Narrator: Listen to part of a talk in a biology class.</em></p>\n<p><strong>Professor:</strong> When we picture a forest, we tend to see individual trees competing — for light, for water, for space. And that's real. But over the last thirty years, research has revealed something the old picture missed: the trees are also <strong>connected</strong>, underground, through fungi.</p>\n<p>Here's how. The roots of most trees are wrapped in a network of fungal threads; this partnership between root and fungus is called a mycorrhiza. The fungi pull in water and minerals the tree's roots can't reach efficiently, and hand them to the tree. In return, the tree gives the fungi sugars it makes through photosynthesis. So far, a simple trade.</p>\n<p>The surprising part is that a single fungal network can link <strong>many</strong> trees at once — even trees of different species. And things move along those links. Experiments using radioactive tracers have shown carbon flowing from a tree standing in full sun to a shaded seedling of another species nearby. Some researchers describe old, well-connected trees as \"hub trees\" that support younger ones around them.</p>\n<p>Now, a word of caution. This work has captured the public imagination, and some popular accounts overstate it: talking about forests as single cooperative organisms. The jury's still out on how deliberate or widespread the sharing really is. What's solid is that the connections exist and that resources can move through them. How much that reshapes our model of the forest is still being worked out.</p>",
       "audio_ref": null
     },
@@ -281,7 +281,7 @@
     "stimulus": {
       "kind": "audio",
       "format": "html",
-      "title": "Drill D2 · Biologia · alvo: 4 min",
+      "title": "Exercício D2: biologia (meta de 4 min)",
       "content": "<p><em>Narrator: Listen to part of a talk in a biology class.</em></p>\n<p><strong>Professor:</strong> When we picture a forest, we tend to see individual trees competing — for light, for water, for space. And that's real. But over the last thirty years, research has revealed something the old picture missed: the trees are also <strong>connected</strong>, underground, through fungi.</p>\n<p>Here's how. The roots of most trees are wrapped in a network of fungal threads; this partnership between root and fungus is called a mycorrhiza. The fungi pull in water and minerals the tree's roots can't reach efficiently, and hand them to the tree. In return, the tree gives the fungi sugars it makes through photosynthesis. So far, a simple trade.</p>\n<p>The surprising part is that a single fungal network can link <strong>many</strong> trees at once — even trees of different species. And things move along those links. Experiments using radioactive tracers have shown carbon flowing from a tree standing in full sun to a shaded seedling of another species nearby. Some researchers describe old, well-connected trees as \"hub trees\" that support younger ones around them.</p>\n<p>Now, a word of caution. This work has captured the public imagination, and some popular accounts overstate it: talking about forests as single cooperative organisms. The jury's still out on how deliberate or widespread the sharing really is. What's solid is that the connections exist and that resources can move through them. How much that reshapes our model of the forest is still being worked out.</p>",
       "audio_ref": null
     },
@@ -326,7 +326,7 @@
     "stimulus": {
       "kind": "audio",
       "format": "html",
-      "title": "Drill D2 · Biologia · alvo: 4 min",
+      "title": "Exercício D2: biologia (meta de 4 min)",
       "content": "<p><em>Narrator: Listen to part of a talk in a biology class.</em></p>\n<p><strong>Professor:</strong> When we picture a forest, we tend to see individual trees competing — for light, for water, for space. And that's real. But over the last thirty years, research has revealed something the old picture missed: the trees are also <strong>connected</strong>, underground, through fungi.</p>\n<p>Here's how. The roots of most trees are wrapped in a network of fungal threads; this partnership between root and fungus is called a mycorrhiza. The fungi pull in water and minerals the tree's roots can't reach efficiently, and hand them to the tree. In return, the tree gives the fungi sugars it makes through photosynthesis. So far, a simple trade.</p>\n<p>The surprising part is that a single fungal network can link <strong>many</strong> trees at once — even trees of different species. And things move along those links. Experiments using radioactive tracers have shown carbon flowing from a tree standing in full sun to a shaded seedling of another species nearby. Some researchers describe old, well-connected trees as \"hub trees\" that support younger ones around them.</p>\n<p>Now, a word of caution. This work has captured the public imagination, and some popular accounts overstate it: talking about forests as single cooperative organisms. The jury's still out on how deliberate or widespread the sharing really is. What's solid is that the connections exist and that resources can move through them. How much that reshapes our model of the forest is still being worked out.</p>",
       "audio_ref": null
     },
@@ -340,7 +340,7 @@
       "D": "The researchers have stopped studying it"
     },
     "answer": "B",
-    "explanation": "\"The jury's still out\" = ainda não há conclusão firme. (A) é o oposto; (C) é literal demais; (D) não é dito.",
+    "explanation": "\"The jury's still out\" quer dizer que ainda não há conclusão firme. (A) diz o oposto; (C) é literal demais; (D) não é dito.",
     "hint": null,
     "trap_codes": [],
     "tags": [],
@@ -371,7 +371,7 @@
     "stimulus": {
       "kind": "audio",
       "format": "html",
-      "title": "Drill D3 · História da tecnologia · alvo: 4 min",
+      "title": "Exercício D3: história da tecnologia (meta de 4 min)",
       "content": "<p><em>Narrator: Listen to part of a talk in a history of technology class.</em></p>\n<p><strong>Professor:</strong> Look at your keyboard. The top row of letters spells Q-W-E-R-T-Y. It's an odd arrangement — the most common letters aren't under your strongest fingers. So why has it survived, essentially unchanged, for a hundred and fifty years?</p>\n<p>The layout dates from the 1870s, from early mechanical typewriters. The common story is that QWERTY was designed to <em>slow typists down</em> so the metal type-bars wouldn't jam. That's probably an oversimplification (the real design pressures were more mixed), but the key point is that the layout was shaped by the constraints of 1870s <strong>machinery</strong>, constraints that vanished decades ago.</p>\n<p>Better layouts have been proposed. The best known, Dvorak, was patented in 1936 and, in some studies, allows modestly faster and more comfortable typing. Yet it never caught on. Why not?</p>\n<p>This is a textbook case of what economists call <strong>path dependence</strong>, or sometimes \"lock-in.\" Once QWERTY became the standard, everything organized itself around that standard: typewriters were built for it, typing was taught on it, and every new typist learned it because that's what the machines used — and machines used it because that's what typists knew. To switch, a single person gains little unless nearly everyone switches at once. The cost of coordinating that switch is enormous, and no one bears it. So an arrangement that made sense only for 1870s hardware is still, quietly, on every device you own.</p>",
       "audio_ref": null
     },
@@ -416,7 +416,7 @@
     "stimulus": {
       "kind": "audio",
       "format": "html",
-      "title": "Drill D3 · História da tecnologia · alvo: 4 min",
+      "title": "Exercício D3: história da tecnologia (meta de 4 min)",
       "content": "<p><em>Narrator: Listen to part of a talk in a history of technology class.</em></p>\n<p><strong>Professor:</strong> Look at your keyboard. The top row of letters spells Q-W-E-R-T-Y. It's an odd arrangement — the most common letters aren't under your strongest fingers. So why has it survived, essentially unchanged, for a hundred and fifty years?</p>\n<p>The layout dates from the 1870s, from early mechanical typewriters. The common story is that QWERTY was designed to <em>slow typists down</em> so the metal type-bars wouldn't jam. That's probably an oversimplification (the real design pressures were more mixed), but the key point is that the layout was shaped by the constraints of 1870s <strong>machinery</strong>, constraints that vanished decades ago.</p>\n<p>Better layouts have been proposed. The best known, Dvorak, was patented in 1936 and, in some studies, allows modestly faster and more comfortable typing. Yet it never caught on. Why not?</p>\n<p>This is a textbook case of what economists call <strong>path dependence</strong>, or sometimes \"lock-in.\" Once QWERTY became the standard, everything organized itself around that standard: typewriters were built for it, typing was taught on it, and every new typist learned it because that's what the machines used — and machines used it because that's what typists knew. To switch, a single person gains little unless nearly everyone switches at once. The cost of coordinating that switch is enormous, and no one bears it. So an arrangement that made sense only for 1870s hardware is still, quietly, on every device you own.</p>",
       "audio_ref": null
     },
@@ -461,7 +461,7 @@
     "stimulus": {
       "kind": "audio",
       "format": "html",
-      "title": "Drill D3 · História da tecnologia · alvo: 4 min",
+      "title": "Exercício D3: história da tecnologia (meta de 4 min)",
       "content": "<p><em>Narrator: Listen to part of a talk in a history of technology class.</em></p>\n<p><strong>Professor:</strong> Look at your keyboard. The top row of letters spells Q-W-E-R-T-Y. It's an odd arrangement — the most common letters aren't under your strongest fingers. So why has it survived, essentially unchanged, for a hundred and fifty years?</p>\n<p>The layout dates from the 1870s, from early mechanical typewriters. The common story is that QWERTY was designed to <em>slow typists down</em> so the metal type-bars wouldn't jam. That's probably an oversimplification (the real design pressures were more mixed), but the key point is that the layout was shaped by the constraints of 1870s <strong>machinery</strong>, constraints that vanished decades ago.</p>\n<p>Better layouts have been proposed. The best known, Dvorak, was patented in 1936 and, in some studies, allows modestly faster and more comfortable typing. Yet it never caught on. Why not?</p>\n<p>This is a textbook case of what economists call <strong>path dependence</strong>, or sometimes \"lock-in.\" Once QWERTY became the standard, everything organized itself around that standard: typewriters were built for it, typing was taught on it, and every new typist learned it because that's what the machines used — and machines used it because that's what typists knew. To switch, a single person gains little unless nearly everyone switches at once. The cost of coordinating that switch is enormous, and no one bears it. So an arrangement that made sense only for 1870s hardware is still, quietly, on every device you own.</p>",
       "audio_ref": null
     },
@@ -506,7 +506,7 @@
     "stimulus": {
       "kind": "audio",
       "format": "html",
-      "title": "Drill D3 · História da tecnologia · alvo: 4 min",
+      "title": "Exercício D3: história da tecnologia (meta de 4 min)",
       "content": "<p><em>Narrator: Listen to part of a talk in a history of technology class.</em></p>\n<p><strong>Professor:</strong> Look at your keyboard. The top row of letters spells Q-W-E-R-T-Y. It's an odd arrangement — the most common letters aren't under your strongest fingers. So why has it survived, essentially unchanged, for a hundred and fifty years?</p>\n<p>The layout dates from the 1870s, from early mechanical typewriters. The common story is that QWERTY was designed to <em>slow typists down</em> so the metal type-bars wouldn't jam. That's probably an oversimplification (the real design pressures were more mixed), but the key point is that the layout was shaped by the constraints of 1870s <strong>machinery</strong>, constraints that vanished decades ago.</p>\n<p>Better layouts have been proposed. The best known, Dvorak, was patented in 1936 and, in some studies, allows modestly faster and more comfortable typing. Yet it never caught on. Why not?</p>\n<p>This is a textbook case of what economists call <strong>path dependence</strong>, or sometimes \"lock-in.\" Once QWERTY became the standard, everything organized itself around that standard: typewriters were built for it, typing was taught on it, and every new typist learned it because that's what the machines used — and machines used it because that's what typists knew. To switch, a single person gains little unless nearly everyone switches at once. The cost of coordinating that switch is enormous, and no one bears it. So an arrangement that made sense only for 1870s hardware is still, quietly, on every device you own.</p>",
       "audio_ref": null
     },

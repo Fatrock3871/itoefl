@@ -11,7 +11,7 @@
     "stimulus": {
       "kind": "text",
       "format": "html",
-      "title": "Drill C1 · Ciências naturais · alvo: 6 min",
+      "title": "Exercício C1: ciências naturais (meta de 6 min)",
       "content": "<p><strong>PASSAGE: Bioluminescence in Marine Organisms</strong></p>\n<p>Bioluminescence, the production of light by a living organism, is remarkably common in the ocean, appearing in bacteria, jellyfish, fish, and even some sharks. Unlike an incandescent bulb, which wastes most of its energy as heat, bioluminescent light comes from a highly efficient chemical reaction between a molecule called luciferin and an enzyme called luciferase. Because so little energy is lost as heat, biologists sometimes call it \"cold light.\"</p>\n<p>Organisms use this light in several ways. Some use it defensively: certain squid release a glowing cloud instead of ink, startling predators long enough to escape. Others use it to hunt. The anglerfish, perhaps the most famous example, dangles a glowing lure above its mouth to attract prey close enough to seize. Still others use light to communicate. In the deep sea, darkness is nearly absolute, so visual signals cannot rely on ambient light at all, and even in shallow water at night, tiny crustaceans called ostracods produce synchronized displays to attract mates.</p>\n<p>What especially interests evolutionary biologists is that bioluminescence did not evolve just once. Genetic and biochemical evidence shows that it has arisen independently dozens of times in unrelated lineages, often through different chemical pathways. This pattern, in which unrelated organisms evolve similar traits independently, is known as convergent evolution, and bioluminescence is one of its most striking examples.</p>",
       "audio_ref": null
     },
@@ -56,7 +56,7 @@
     "stimulus": {
       "kind": "text",
       "format": "html",
-      "title": "Drill C1 · Ciências naturais · alvo: 6 min",
+      "title": "Exercício C1: ciências naturais (meta de 6 min)",
       "content": "<p><strong>PASSAGE: Bioluminescence in Marine Organisms</strong></p>\n<p>Bioluminescence, the production of light by a living organism, is remarkably common in the ocean, appearing in bacteria, jellyfish, fish, and even some sharks. Unlike an incandescent bulb, which wastes most of its energy as heat, bioluminescent light comes from a highly efficient chemical reaction between a molecule called luciferin and an enzyme called luciferase. Because so little energy is lost as heat, biologists sometimes call it \"cold light.\"</p>\n<p>Organisms use this light in several ways. Some use it defensively: certain squid release a glowing cloud instead of ink, startling predators long enough to escape. Others use it to hunt. The anglerfish, perhaps the most famous example, dangles a glowing lure above its mouth to attract prey close enough to seize. Still others use light to communicate. In the deep sea, darkness is nearly absolute, so visual signals cannot rely on ambient light at all, and even in shallow water at night, tiny crustaceans called ostracods produce synchronized displays to attract mates.</p>\n<p>What especially interests evolutionary biologists is that bioluminescence did not evolve just once. Genetic and biochemical evidence shows that it has arisen independently dozens of times in unrelated lineages, often through different chemical pathways. This pattern, in which unrelated organisms evolve similar traits independently, is known as convergent evolution, and bioluminescence is one of its most striking examples.</p>",
       "audio_ref": null
     },
@@ -101,7 +101,7 @@
     "stimulus": {
       "kind": "text",
       "format": "html",
-      "title": "Drill C1 · Ciências naturais · alvo: 6 min",
+      "title": "Exercício C1: ciências naturais (meta de 6 min)",
       "content": "<p><strong>PASSAGE: Bioluminescence in Marine Organisms</strong></p>\n<p>Bioluminescence, the production of light by a living organism, is remarkably common in the ocean, appearing in bacteria, jellyfish, fish, and even some sharks. Unlike an incandescent bulb, which wastes most of its energy as heat, bioluminescent light comes from a highly efficient chemical reaction between a molecule called luciferin and an enzyme called luciferase. Because so little energy is lost as heat, biologists sometimes call it \"cold light.\"</p>\n<p>Organisms use this light in several ways. Some use it defensively: certain squid release a glowing cloud instead of ink, startling predators long enough to escape. Others use it to hunt. The anglerfish, perhaps the most famous example, dangles a glowing lure above its mouth to attract prey close enough to seize. Still others use light to communicate. In the deep sea, darkness is nearly absolute, so visual signals cannot rely on ambient light at all, and even in shallow water at night, tiny crustaceans called ostracods produce synchronized displays to attract mates.</p>\n<p>What especially interests evolutionary biologists is that bioluminescence did not evolve just once. Genetic and biochemical evidence shows that it has arisen independently dozens of times in unrelated lineages, often through different chemical pathways. This pattern, in which unrelated organisms evolve similar traits independently, is known as convergent evolution, and bioluminescence is one of its most striking examples.</p>",
       "audio_ref": null
     },
@@ -115,7 +115,7 @@
       "D": "bioluminescence is used only for hunting"
     },
     "answer": "B",
-    "explanation": "\"In the deep sea, darkness is nearly absolute, so visual signals cannot rely on ambient light at all\" → produzir a própria luz supre a ausência de luz ambiente. (A) é extremo; (C)/(D) sem base.",
+    "explanation": "O texto diz que \"In the deep sea, darkness is nearly absolute, so visual signals cannot rely on ambient light at all\". Produzir a própria luz resolve a falta de luz ambiente. (A) é extrema; (C) e (D) não têm base no texto.",
     "hint": null,
     "trap_codes": [],
     "tags": [],
@@ -146,7 +146,7 @@
     "stimulus": {
       "kind": "text",
       "format": "html",
-      "title": "Drill C1 · Ciências naturais · alvo: 6 min",
+      "title": "Exercício C1: ciências naturais (meta de 6 min)",
       "content": "<p><strong>PASSAGE: Bioluminescence in Marine Organisms</strong></p>\n<p>Bioluminescence, the production of light by a living organism, is remarkably common in the ocean, appearing in bacteria, jellyfish, fish, and even some sharks. Unlike an incandescent bulb, which wastes most of its energy as heat, bioluminescent light comes from a highly efficient chemical reaction between a molecule called luciferin and an enzyme called luciferase. Because so little energy is lost as heat, biologists sometimes call it \"cold light.\"</p>\n<p>Organisms use this light in several ways. Some use it defensively: certain squid release a glowing cloud instead of ink, startling predators long enough to escape. Others use it to hunt. The anglerfish, perhaps the most famous example, dangles a glowing lure above its mouth to attract prey close enough to seize. Still others use light to communicate. In the deep sea, darkness is nearly absolute, so visual signals cannot rely on ambient light at all, and even in shallow water at night, tiny crustaceans called ostracods produce synchronized displays to attract mates.</p>\n<p>What especially interests evolutionary biologists is that bioluminescence did not evolve just once. Genetic and biochemical evidence shows that it has arisen independently dozens of times in unrelated lineages, often through different chemical pathways. This pattern, in which unrelated organisms evolve similar traits independently, is known as convergent evolution, and bioluminescence is one of its most striking examples.</p>",
       "audio_ref": null
     },
@@ -191,7 +191,7 @@
     "stimulus": {
       "kind": "text",
       "format": "html",
-      "title": "Drill C1 · Ciências naturais · alvo: 6 min",
+      "title": "Exercício C1: ciências naturais (meta de 6 min)",
       "content": "<p><strong>PASSAGE: Bioluminescence in Marine Organisms</strong></p>\n<p>Bioluminescence, the production of light by a living organism, is remarkably common in the ocean, appearing in bacteria, jellyfish, fish, and even some sharks. Unlike an incandescent bulb, which wastes most of its energy as heat, bioluminescent light comes from a highly efficient chemical reaction between a molecule called luciferin and an enzyme called luciferase. Because so little energy is lost as heat, biologists sometimes call it \"cold light.\"</p>\n<p>Organisms use this light in several ways. Some use it defensively: certain squid release a glowing cloud instead of ink, startling predators long enough to escape. Others use it to hunt. The anglerfish, perhaps the most famous example, dangles a glowing lure above its mouth to attract prey close enough to seize. Still others use light to communicate. In the deep sea, darkness is nearly absolute, so visual signals cannot rely on ambient light at all, and even in shallow water at night, tiny crustaceans called ostracods produce synchronized displays to attract mates.</p>\n<p>What especially interests evolutionary biologists is that bioluminescence did not evolve just once. Genetic and biochemical evidence shows that it has arisen independently dozens of times in unrelated lineages, often through different chemical pathways. This pattern, in which unrelated organisms evolve similar traits independently, is known as convergent evolution, and bioluminescence is one of its most striking examples.</p>",
       "audio_ref": null
     },
@@ -205,7 +205,7 @@
       "D": "doubtful"
     },
     "answer": "B",
-    "explanation": "\"One of its most striking examples\" = exemplo notável. (A)/(C)/(D) pertencem a outros campos ou invertem o tom.",
+    "explanation": "\"One of its most striking examples\" é um exemplo notável. (A), (C) e (D) vêm de outros campos de sentido ou invertem o tom.",
     "hint": null,
     "trap_codes": [],
     "tags": [],
@@ -236,7 +236,7 @@
     "stimulus": {
       "kind": "text",
       "format": "html",
-      "title": "Drill C2 · História · alvo: 6 min",
+      "title": "Exercício C2: história (meta de 6 min)",
       "content": "<p><strong>PASSAGE: Coffee Houses in Seventeenth-Century England</strong></p>\n<p>The first English coffee house opened in Oxford in 1650; within two decades, London alone had hundreds. For the price of a single cup, a customer could sit for hours, read the newspapers provided by the house, and join whatever conversation was underway. Because admission was cheap and open to any man who could pay, merchants, scholars, clergymen, and minor gentry sat at the same long tables.</p>\n<p>This mixing had consequences well beyond casual talk. Particular houses became known for particular subjects: men interested in maritime insurance gathered at Lloyd's, while those following scientific debates went to the houses near the Royal Society. Information that had once circulated slowly, by letter or rumor, now moved quickly through these rooms. Some historians argue that the coffee house functioned as an early public sphere: a space where opinion could form through discussion rather than being handed down by church or crown.</p>\n<p>The authorities were uneasy. In 1675, the king issued a proclamation ordering the coffee houses closed, on the grounds that they spread \"false, malicious and scandalous reports.\" The order provoked such immediate opposition that it was withdrawn within days, and the houses continued to operate for another century.</p>",
       "audio_ref": null
     },
@@ -281,7 +281,7 @@
     "stimulus": {
       "kind": "text",
       "format": "html",
-      "title": "Drill C2 · História · alvo: 6 min",
+      "title": "Exercício C2: história (meta de 6 min)",
       "content": "<p><strong>PASSAGE: Coffee Houses in Seventeenth-Century England</strong></p>\n<p>The first English coffee house opened in Oxford in 1650; within two decades, London alone had hundreds. For the price of a single cup, a customer could sit for hours, read the newspapers provided by the house, and join whatever conversation was underway. Because admission was cheap and open to any man who could pay, merchants, scholars, clergymen, and minor gentry sat at the same long tables.</p>\n<p>This mixing had consequences well beyond casual talk. Particular houses became known for particular subjects: men interested in maritime insurance gathered at Lloyd's, while those following scientific debates went to the houses near the Royal Society. Information that had once circulated slowly, by letter or rumor, now moved quickly through these rooms. Some historians argue that the coffee house functioned as an early public sphere: a space where opinion could form through discussion rather than being handed down by church or crown.</p>\n<p>The authorities were uneasy. In 1675, the king issued a proclamation ordering the coffee houses closed, on the grounds that they spread \"false, malicious and scandalous reports.\" The order provoked such immediate opposition that it was withdrawn within days, and the houses continued to operate for another century.</p>",
       "audio_ref": null
     },
@@ -295,7 +295,7 @@
       "D": "was freely available to everyone"
     },
     "answer": "B",
-    "explanation": "\"Information that had once circulated slowly, by letter or rumor, now moved quickly\" → antes, mais devagar e menos amplamente. (A) exagera; (C)/(D) sem base.",
+    "explanation": "O texto diz que \"Information that had once circulated slowly, by letter or rumor, now moved quickly\", ou seja, antes a informação corria mais devagar e chegava a menos gente. (A) exagera; (C) e (D) não têm base no texto.",
     "hint": null,
     "trap_codes": [],
     "tags": [],
@@ -326,7 +326,7 @@
     "stimulus": {
       "kind": "text",
       "format": "html",
-      "title": "Drill C2 · História · alvo: 6 min",
+      "title": "Exercício C2: história (meta de 6 min)",
       "content": "<p><strong>PASSAGE: Coffee Houses in Seventeenth-Century England</strong></p>\n<p>The first English coffee house opened in Oxford in 1650; within two decades, London alone had hundreds. For the price of a single cup, a customer could sit for hours, read the newspapers provided by the house, and join whatever conversation was underway. Because admission was cheap and open to any man who could pay, merchants, scholars, clergymen, and minor gentry sat at the same long tables.</p>\n<p>This mixing had consequences well beyond casual talk. Particular houses became known for particular subjects: men interested in maritime insurance gathered at Lloyd's, while those following scientific debates went to the houses near the Royal Society. Information that had once circulated slowly, by letter or rumor, now moved quickly through these rooms. Some historians argue that the coffee house functioned as an early public sphere: a space where opinion could form through discussion rather than being handed down by church or crown.</p>\n<p>The authorities were uneasy. In 1675, the king issued a proclamation ordering the coffee houses closed, on the grounds that they spread \"false, malicious and scandalous reports.\" The order provoked such immediate opposition that it was withdrawn within days, and the houses continued to operate for another century.</p>",
       "audio_ref": null
     },
@@ -371,7 +371,7 @@
     "stimulus": {
       "kind": "text",
       "format": "html",
-      "title": "Drill C2 · História · alvo: 6 min",
+      "title": "Exercício C2: história (meta de 6 min)",
       "content": "<p><strong>PASSAGE: Coffee Houses in Seventeenth-Century England</strong></p>\n<p>The first English coffee house opened in Oxford in 1650; within two decades, London alone had hundreds. For the price of a single cup, a customer could sit for hours, read the newspapers provided by the house, and join whatever conversation was underway. Because admission was cheap and open to any man who could pay, merchants, scholars, clergymen, and minor gentry sat at the same long tables.</p>\n<p>This mixing had consequences well beyond casual talk. Particular houses became known for particular subjects: men interested in maritime insurance gathered at Lloyd's, while those following scientific debates went to the houses near the Royal Society. Information that had once circulated slowly, by letter or rumor, now moved quickly through these rooms. Some historians argue that the coffee house functioned as an early public sphere: a space where opinion could form through discussion rather than being handed down by church or crown.</p>\n<p>The authorities were uneasy. In 1675, the king issued a proclamation ordering the coffee houses closed, on the grounds that they spread \"false, malicious and scandalous reports.\" The order provoked such immediate opposition that it was withdrawn within days, and the houses continued to operate for another century.</p>",
       "audio_ref": null
     },
@@ -416,7 +416,7 @@
     "stimulus": {
       "kind": "text",
       "format": "html",
-      "title": "Drill C2 · História · alvo: 6 min",
+      "title": "Exercício C2: história (meta de 6 min)",
       "content": "<p><strong>PASSAGE: Coffee Houses in Seventeenth-Century England</strong></p>\n<p>The first English coffee house opened in Oxford in 1650; within two decades, London alone had hundreds. For the price of a single cup, a customer could sit for hours, read the newspapers provided by the house, and join whatever conversation was underway. Because admission was cheap and open to any man who could pay, merchants, scholars, clergymen, and minor gentry sat at the same long tables.</p>\n<p>This mixing had consequences well beyond casual talk. Particular houses became known for particular subjects: men interested in maritime insurance gathered at Lloyd's, while those following scientific debates went to the houses near the Royal Society. Information that had once circulated slowly, by letter or rumor, now moved quickly through these rooms. Some historians argue that the coffee house functioned as an early public sphere: a space where opinion could form through discussion rather than being handed down by church or crown.</p>\n<p>The authorities were uneasy. In 1675, the king issued a proclamation ordering the coffee houses closed, on the grounds that they spread \"false, malicious and scandalous reports.\" The order provoked such immediate opposition that it was withdrawn within days, and the houses continued to operate for another century.</p>",
       "audio_ref": null
     },
@@ -430,7 +430,7 @@
       "D": "forgave"
     },
     "answer": "B",
-    "explanation": "\"Provoked such... opposition\" = causou/gerou oposição.",
+    "explanation": "\"Provoked such... opposition\" quer dizer que a ordem causou, gerou oposição.",
     "hint": null,
     "trap_codes": [],
     "tags": [],
@@ -461,7 +461,7 @@
     "stimulus": {
       "kind": "text",
       "format": "html",
-      "title": "Drill C3 · Ciências sociais · alvo: 6 min",
+      "title": "Exercício C3: ciências sociais (meta de 6 min)",
       "content": "<p><strong>PASSAGE: The Strength of Weak Ties</strong></p>\n<p>When people look for a new job, common sense suggests they should turn to their closest contacts: family and good friends who know them well and want to help. Yet when the sociologist Mark Granovetter studied professionals who had recently changed jobs, he found the opposite. Of those who had found their position through a personal contact, most had heard about it not from a close friend but from an acquaintance — someone they saw only occasionally.</p>\n<p>Granovetter's explanation rests on how information moves through social networks. Your close friends tend to know one another and move in the same circles you do, so they mostly hear the same news you already have. An acquaintance, by contrast, moves in a different circle and hears different news. A weak tie is therefore a bridge to parts of the network you could not otherwise reach.</p>\n<p>The finding has been extended beyond job-hunting: weak ties have been linked to the spread of new ideas between organizations and to innovation within companies, where teams connected to many outside groups tend to produce more original work. Critics note that weak ties carry less trust, so acting on their information involves more risk. But the core insight has held up: the contacts most likely to tell you something new are often the ones you know least well.</p>",
       "audio_ref": null
     },
@@ -506,7 +506,7 @@
     "stimulus": {
       "kind": "text",
       "format": "html",
-      "title": "Drill C3 · Ciências sociais · alvo: 6 min",
+      "title": "Exercício C3: ciências sociais (meta de 6 min)",
       "content": "<p><strong>PASSAGE: The Strength of Weak Ties</strong></p>\n<p>When people look for a new job, common sense suggests they should turn to their closest contacts: family and good friends who know them well and want to help. Yet when the sociologist Mark Granovetter studied professionals who had recently changed jobs, he found the opposite. Of those who had found their position through a personal contact, most had heard about it not from a close friend but from an acquaintance — someone they saw only occasionally.</p>\n<p>Granovetter's explanation rests on how information moves through social networks. Your close friends tend to know one another and move in the same circles you do, so they mostly hear the same news you already have. An acquaintance, by contrast, moves in a different circle and hears different news. A weak tie is therefore a bridge to parts of the network you could not otherwise reach.</p>\n<p>The finding has been extended beyond job-hunting: weak ties have been linked to the spread of new ideas between organizations and to innovation within companies, where teams connected to many outside groups tend to produce more original work. Critics note that weak ties carry less trust, so acting on their information involves more risk. But the core insight has held up: the contacts most likely to tell you something new are often the ones you know least well.</p>",
       "audio_ref": null
     },
@@ -551,7 +551,7 @@
     "stimulus": {
       "kind": "text",
       "format": "html",
-      "title": "Drill C3 · Ciências sociais · alvo: 6 min",
+      "title": "Exercício C3: ciências sociais (meta de 6 min)",
       "content": "<p><strong>PASSAGE: The Strength of Weak Ties</strong></p>\n<p>When people look for a new job, common sense suggests they should turn to their closest contacts: family and good friends who know them well and want to help. Yet when the sociologist Mark Granovetter studied professionals who had recently changed jobs, he found the opposite. Of those who had found their position through a personal contact, most had heard about it not from a close friend but from an acquaintance — someone they saw only occasionally.</p>\n<p>Granovetter's explanation rests on how information moves through social networks. Your close friends tend to know one another and move in the same circles you do, so they mostly hear the same news you already have. An acquaintance, by contrast, moves in a different circle and hears different news. A weak tie is therefore a bridge to parts of the network you could not otherwise reach.</p>\n<p>The finding has been extended beyond job-hunting: weak ties have been linked to the spread of new ideas between organizations and to innovation within companies, where teams connected to many outside groups tend to produce more original work. Critics note that weak ties carry less trust, so acting on their information involves more risk. But the core insight has held up: the contacts most likely to tell you something new are often the ones you know least well.</p>",
       "audio_ref": null
     },
@@ -565,7 +565,7 @@
       "D": "be more innovative at work, since close-knit teams produce more original work"
     },
     "answer": "B",
-    "explanation": "Se todos os contatos são amigos próximos, que circulam nos mesmos círculos → informação repetida, pouca novidade de partes distantes. (A) inverte; (C) exagera; (D) contradiz o parágrafo 3, que liga a inovação a equipes conectadas a muitos grupos de fora.",
+    "explanation": "Se todos os contatos são amigos próximos, que andam nos mesmos círculos, a informação se repete e pouca novidade chega de partes distantes da rede. (A) inverte; (C) exagera; (D) contradiz o parágrafo 3, que liga a inovação a equipes conectadas a muitos grupos de fora.",
     "hint": null,
     "trap_codes": [],
     "tags": [],
@@ -596,7 +596,7 @@
     "stimulus": {
       "kind": "text",
       "format": "html",
-      "title": "Drill C3 · Ciências sociais · alvo: 6 min",
+      "title": "Exercício C3: ciências sociais (meta de 6 min)",
       "content": "<p><strong>PASSAGE: The Strength of Weak Ties</strong></p>\n<p>When people look for a new job, common sense suggests they should turn to their closest contacts: family and good friends who know them well and want to help. Yet when the sociologist Mark Granovetter studied professionals who had recently changed jobs, he found the opposite. Of those who had found their position through a personal contact, most had heard about it not from a close friend but from an acquaintance — someone they saw only occasionally.</p>\n<p>Granovetter's explanation rests on how information moves through social networks. Your close friends tend to know one another and move in the same circles you do, so they mostly hear the same news you already have. An acquaintance, by contrast, moves in a different circle and hears different news. A weak tie is therefore a bridge to parts of the network you could not otherwise reach.</p>\n<p>The finding has been extended beyond job-hunting: weak ties have been linked to the spread of new ideas between organizations and to innovation within companies, where teams connected to many outside groups tend to produce more original work. Critics note that weak ties carry less trust, so acting on their information involves more risk. But the core insight has held up: the contacts most likely to tell you something new are often the ones you know least well.</p>",
       "audio_ref": null
     },
@@ -641,7 +641,7 @@
     "stimulus": {
       "kind": "text",
       "format": "html",
-      "title": "Drill C3 · Ciências sociais · alvo: 6 min",
+      "title": "Exercício C3: ciências sociais (meta de 6 min)",
       "content": "<p><strong>PASSAGE: The Strength of Weak Ties</strong></p>\n<p>When people look for a new job, common sense suggests they should turn to their closest contacts: family and good friends who know them well and want to help. Yet when the sociologist Mark Granovetter studied professionals who had recently changed jobs, he found the opposite. Of those who had found their position through a personal contact, most had heard about it not from a close friend but from an acquaintance — someone they saw only occasionally.</p>\n<p>Granovetter's explanation rests on how information moves through social networks. Your close friends tend to know one another and move in the same circles you do, so they mostly hear the same news you already have. An acquaintance, by contrast, moves in a different circle and hears different news. A weak tie is therefore a bridge to parts of the network you could not otherwise reach.</p>\n<p>The finding has been extended beyond job-hunting: weak ties have been linked to the spread of new ideas between organizations and to innovation within companies, where teams connected to many outside groups tend to produce more original work. Critics note that weak ties carry less trust, so acting on their information involves more risk. But the core insight has held up: the contacts most likely to tell you something new are often the ones you know least well.</p>",
       "audio_ref": null
     },
@@ -655,7 +655,7 @@
       "D": "competitor"
     },
     "answer": "B",
-    "explanation": "\"A bridge to parts of the network you could not otherwise reach\" = uma ponte/conexão.",
+    "explanation": "\"A bridge to parts of the network you could not otherwise reach\" é uma ponte, uma conexão.",
     "hint": null,
     "trap_codes": [],
     "tags": [],

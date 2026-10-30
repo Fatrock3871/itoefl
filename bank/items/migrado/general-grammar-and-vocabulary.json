@@ -5,7 +5,7 @@
     "task_type": "Grammar and Vocabulary",
     "exam_format": false,
     "format": "mcq",
-    "skill": "Gramática (verb tense/aspect)",
+    "skill": "Gramática (tempo e aspecto verbal)",
     "cefr_min": null,
     "cefr_max": null,
     "stimulus": null,
@@ -19,7 +19,7 @@
       "D": "was writing"
     },
     "answer": "C",
-    "explanation": "<strong>Por que certa:</strong> Futuro perfeito contínuo: ação iniciada no passado, contínua até um ponto futuro específico (\"by the time... next Monday\"), com ênfase na duração (\"for over three weeks\").<br><strong>Por que as outras erram:</strong> (A) presente simples ignora a duração; (B) presente perfeito contínuo não projeta para o futuro; (D) passado contínuo não conecta com o marco temporal futuro.",
+    "explanation": "<strong>Por que certa:</strong> É o futuro perfeito contínuo: uma ação que começou antes e continua até um ponto específico no futuro (\"by the time... next Monday\"), com ênfase na duração (\"for over three weeks\").<br><strong>Por que as outras erram:</strong> (A) usa o presente simples e ignora a duração; (B) usa o presente perfeito contínuo, que não projeta a ação para o futuro; (D) usa o passado contínuo, que não se liga ao marco no futuro.",
     "hint": null,
     "trap_codes": [],
     "tags": [
@@ -60,7 +60,7 @@
       "D": "similarly"
     },
     "answer": "C",
-    "explanation": "<strong>Por que certa:</strong> O conector precisa sinalizar contraste + ironia entre a intenção da política (reduzir custos) e o resultado real (aumentou custos): \"paradoxically\" captura essa contradição inesperada.<br><strong>Por que as outras erram:</strong> (A) e (B) são de continuidade/consequência lógica, incompatíveis com contraste; (D) sinaliza semelhança, o oposto do que a frase exige.",
+    "explanation": "<strong>Por que certa:</strong> O conectivo precisa mostrar o contraste irônico entre a intenção da política (reduzir custos) e o resultado real (os custos aumentaram). \"Paradoxically\" capta essa contradição inesperada.<br><strong>Por que as outras erram:</strong> (A) e (B) indicam continuidade ou consequência, o que não cabe num contraste; (D) indica semelhança, o oposto do que a frase pede.",
     "hint": null,
     "trap_codes": [],
     "tags": [
@@ -101,7 +101,7 @@
       "D": "endorse"
     },
     "answer": "C",
-    "explanation": "<strong>Por que certa:</strong> \"Deflect criticism\" = desviar a crítica de si, a collocation natural: adiar a votação foi um jeito de tirar o foco da crítica.<br><strong>Por que as outras erram:</strong> (A) \"defer\" atrai por lembrar \"adiar a votação\", mas \"defer criticism\" não se usa; (B) \"exacerbate\" = agravar, o contrário da intenção; (D) \"endorse\" = apoiar, não faz sentido com \"criticism\".",
+    "explanation": "<strong>Por que certa:</strong> \"Deflect criticism\" é desviar a crítica de si, a combinação natural em inglês. Adiar a votação foi um jeito de tirar o foco da crítica.<br><strong>Por que as outras erram:</strong> (A) \"defer\" atrai por lembrar \"adiar a votação\", mas não se diz \"defer criticism\"; (B) \"exacerbate\" é agravar, o contrário da intenção; (D) \"endorse\" é apoiar e não faz sentido com \"criticism\".",
     "hint": null,
     "trap_codes": [],
     "tags": [
@@ -128,7 +128,7 @@
     "task_type": "Grammar and Vocabulary",
     "exam_format": false,
     "format": "mcq",
-    "skill": "Gramática (subjunctive/conditional)",
+    "skill": "Gramática (condicional)",
     "cefr_min": null,
     "cefr_max": null,
     "stimulus": null,
@@ -142,7 +142,7 @@
       "D": "has been"
     },
     "answer": "C",
-    "explanation": "<strong>Por que certa:</strong> Condicional tipo 3 (hipótese sobre o passado): a oração principal tem \"would already have hired\", o que exige past perfect na oração com \"if\": \"had been approved\". \"Last quarter\" confirma o passado.<br><strong>Por que as outras erram:</strong> (A) e (B) são formas de passado simples/subjuntivo incompatíveis com a estrutura de tipo 3; (D) é present perfect, tempo errado para hipótese no passado.",
+    "explanation": "<strong>Por que certa:</strong> É a condicional do tipo 3, uma hipótese sobre o passado. Como a oração principal tem \"would already have hired\", a oração com \"if\" pede o past perfect, \"had been approved\". \"Last quarter\" confirma o passado.<br><strong>Por que as outras erram:</strong> (A) e (B) são formas de passado simples ou de subjuntivo que não combinam com a estrutura do tipo 3; (D) é present perfect, o tempo errado para uma hipótese sobre o passado.",
     "hint": null,
     "trap_codes": [],
     "tags": [
@@ -183,7 +183,7 @@
       "D": "numerous facing setbacks"
     },
     "answer": "B",
-    "explanation": "<strong>Por que certa:</strong> Ordem correta: verbo no gerúndio + objeto (\"facing numerous setbacks\") após \"despite\", seguindo a estrutura padrão preposição + gerúndio + complemento.<br><strong>Por que as outras erram:</strong> (A) inverte adjetivo e verbo de forma não natural; (C) e (D) quebram a ordem sintática do inglês (adjetivo deve preceder o substantivo, verbo deve preceder o objeto).",
+    "explanation": "<strong>Por que certa:</strong> Depois de \"despite\" vem o verbo no gerúndio seguido do objeto (\"facing numerous setbacks\"), na estrutura padrão de preposição, gerúndio e complemento.<br><strong>Por que as outras erram:</strong> (A) inverte adjetivo e verbo de forma não natural; (C) e (D) quebram a ordem sintática do inglês (adjetivo deve preceder o substantivo, verbo deve preceder o objeto).",
     "hint": null,
     "trap_codes": [],
     "tags": [
@@ -210,7 +210,7 @@
     "task_type": "Grammar and Vocabulary",
     "exam_format": false,
     "format": "mcq",
-    "skill": "Conectivos (causa/consequência lógica)",
+    "skill": "Conectivos (causa e consequência)",
     "cefr_min": null,
     "cefr_max": null,
     "stimulus": null,
@@ -265,7 +265,7 @@
       "D": "diminish"
     },
     "answer": "A",
-    "explanation": "<strong>Por que certa:</strong> \"Substantiate an argument\" é a collocation acadêmica padrão para \"sustentar/comprovar um argumento com evidências\".<br><strong>Por que as outras erram:</strong> (B) significa fabricar/inventar, sentido oposto ao contexto acadêmico legítimo; (C) significa aliviar, sem relação; (D) significa diminuir, sentido oposto.",
+    "explanation": "<strong>Por que certa:</strong> \"Substantiate an argument\" é a combinação acadêmica padrão para \"sustentar ou comprovar um argumento com evidências\".<br><strong>Por que as outras erram:</strong> (B) significa fabricar ou inventar, o oposto de uma pesquisa séria; (C) significa aliviar e não tem relação com a frase; (D) significa diminuir, o sentido oposto.",
     "hint": null,
     "trap_codes": [],
     "tags": [
@@ -292,7 +292,7 @@
     "task_type": "Grammar and Vocabulary",
     "exam_format": false,
     "format": "mcq",
-    "skill": "Gramática (relative clauses / estrutura complexa, relevante para Listen and Repeat)",
+    "skill": "Gramática (orações relativas, relevante para Listen and Repeat)",
     "cefr_min": null,
     "cefr_max": null,
     "stimulus": null,
@@ -347,7 +347,7 @@
       "D": "So I was thinking maybe you guys could push the date back for me?"
     },
     "answer": "B",
-    "explanation": "<strong>Por que certa:</strong> Fórmula de abertura formal (\"I am writing to...\"), advérbio de cortesia (\"respectfully\") e justificativa objetiva: adequado para comunicação institucional, exatamente o padrão exigido em Write an Email.<br><strong>Por que as outras erram:</strong> (A), (C) e (D) usam registro coloquial (\"Hey\", \"just wondering\", \"stuff\", \"you guys\") e tom de cobrança (\"it's urgent\"): inadequados para um e-mail formal a uma instituição.",
+    "explanation": "<strong>Por que certa:</strong> Tem abertura formal (\"I am writing to...\"), advérbio de cortesia (\"respectfully\") e justificativa objetiva. É o tom certo para falar com uma instituição, o mesmo padrão de Write an Email.<br><strong>Por que as outras erram:</strong> (A), (C) e (D) usam registro coloquial (\"Hey\", \"just wondering\", \"stuff\", \"you guys\") e tom de cobrança (\"it's urgent\"), o que não cabe num e-mail formal a uma instituição.",
     "hint": null,
     "trap_codes": [],
     "tags": [
@@ -374,7 +374,7 @@
     "task_type": "Grammar and Vocabulary",
     "exam_format": false,
     "format": "mcq",
-    "skill": "Compreensão inferencial (relevante para Read an Academic Passage / Listen to an Academic Talk)",
+    "skill": "Compreensão inferencial (relevante para Read an Academic Passage e Listen to an Academic Talk)",
     "cefr_min": null,
     "cefr_max": null,
     "stimulus": null,
@@ -388,7 +388,7 @@
       "D": "Researchers recommend canceling the program."
     },
     "answer": "C",
-    "explanation": "<strong>Por que certa:</strong> O texto diz que a participação rural foi baixa demais para generalizar; logo, os resultados podem não representar a população como um todo.<br><strong>Por que as outras erram:</strong> (A) contradiz o texto (resultados foram \"promissores\", não um fracasso); (B) exagera: \"baixa participação\" não é \"exclusão total\"; (D) é uma conclusão não sustentada pelo texto, que apenas pede cautela, não cancelamento.",
+    "explanation": "<strong>Por que certa:</strong> O texto diz que a participação rural foi baixa demais para generalizar; logo, os resultados podem não representar a população como um todo.<br><strong>Por que as outras erram:</strong> (A) contradiz o texto, porque os resultados foram \"promissores\", e não um fracasso; (B) exagera, já que \"baixa participação\" não é \"exclusão total\"; (D) vai além do texto, que só pede cautela, e não o cancelamento.",
     "hint": null,
     "trap_codes": [],
     "tags": [
