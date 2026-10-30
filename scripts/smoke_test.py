@@ -1569,6 +1569,123 @@ def portuguese_dash_checks():
     return {"html_portuguese_has_no_dash": not bad, "html_portuguese_has_no_dash__error": " | ".join(bad[:6])}
 
 
+PT_WORD = re.compile(r"[ãõçáéíóúâêôà]|\b(?:não|você|que|para|com|uma|dos|das|pelo|pela|são|os|em|de|da|do)\b", re.I)
+TR_MARK = re.compile(r"\[\[([^\]]*?)::[^\]]*\]\]")
+ETS_NOTICE = ("TOEFL® e TOEFL iBT® são marcas registradas da ETS (Educational Testing Service). "
+              "Este produto não é endossado nem aprovado pela ETS.")
+# widgets em que o aluno responde: passagem, transcrição, enunciado e alternativas
+EXERCISE_CLASSES = {"quiz-drill", "exam", "ctw", "bsq", "spk", "wbox"}
+
+
+class _TrInExercise(html.parser.HTMLParser):
+    """Conta balões de tradução (class="tr") dentro de um widget de exercício."""
+    VOID = _BlockText.VOID
+
+    def __init__(self):
+        super().__init__(convert_charrefs=True)
+        self.stack, self.found = [], []
+
+    def handle_starttag(self, tag, attrs):
+        if tag in self.VOID:
+            return
+        cls = set((dict(attrs).get("class") or "").split())
+        if "tr" in cls and any(self.stack):
+            self.found.append(dict(attrs).get("data-tr", ""))
+        self.stack.append(bool(cls & EXERCISE_CLASSES))
+
+    def handle_endtag(self, tag):
+        if tag not in self.VOID and self.stack:
+            self.stack.pop()
+
+
+def etapa3_text_checks():
+    """Etapa 3 (textos, 2026-10-29), itens 6, 9 e 17 da lista de correções:
+    no máximo um dois-pontos por frase em português e nenhum "·" em título dos
+    .md; nenhuma marcação [[ ]] em material que o aluno responde (alternativas,
+    falas de transcrição, blocos de simulado do M7 e qualquer widget de
+    exercício no HTML); o aviso de marca da ETS em todas as páginas; e o nome
+    do curso vindo de BRAND_NAME no app/site.json."""
+    colon, dot_title, tr_md = [], [], []
+    speaker = re.compile(r"^\s*>?\s*\*\*(?:Woman|Man|Student|Professor|Speaker|Advisor|Librarian|Narrator|Interviewer|TRANSCRIÇÃO)[^*]*\*\*")
+    for md in sorted((APP_DIR.parent / "consolidated").glob("modulo_*.md")):
+        lines = md.read_text(encoding="utf-8").split("\n")
+        code = in_block = False
+        for n, line in enumerate(lines, 1):
+            if line.startswith("```"):
+                code = not code
+                continue
+            if code:
+                continue
+            if line.startswith("#") and "·" in line:
+                dot_title.append(f"{md.name}:{n}")
+            # bloco de simulado do M7: do título "####" até o primeiro gabarito
+            if md.name.startswith("modulo_7"):
+                if line.startswith("#### "):
+                    in_block = True
+                elif line.startswith("**Gabarito:**"):
+                    in_block = False
+            # lista de alternativas: dois ou mais "(A) texto" sem português (a
+            # explicação do gabarito cita "(A)" no meio de frase em português)
+            bare = re.sub(r"^\s*>?\s*\*\*[^*]+\*\*", "", TR_MARK.sub(r"\1", line))  # sem rótulo nem balão
+            opts = [s for s in re.findall(r"\([A-D]\)\s+([^()]{2,140}?)(?=\s*\([A-D]\)|$)", bare) if not PT_WORD.search(s)]
+            pt_outside = PT_WORD.search(re.sub(r"\([A-D]\)\s+[^()]*", " ", bare))
+            # no bloco do simulado, linha só em inglês é passagem, enunciado ou fala
+            if "[[" in line and (speaker.search(line) or (in_block and not PT_WORD.search(bare))
+                                 or (len(opts) >= 2 and not pt_outside)):
+                tr_md.append(f"{md.name}:{n}")
+            t = TR_MARK.sub(r"\1", line)
+            t = re.sub(r"^\s*>?\s*(?:\d+\.\s+)?(?:- )?(?:\[ \] )?\*\*[^*]{1,60}:\*\*", "", t)  # rótulo da caixa
+            t = re.sub(r"\*\"[^\"]*\"\*|\"[^\"]*\"|“[^”]*”|\*[^*]+\*|`[^`]*`", " ", t)  # citação e inglês
+            t = re.sub(r"\d{1,2}:\d{2}|https?://\S+|\b[A-ZÁÉÍÓÚ][\wáéíóúãõç]*:(?=\s*$|\s{2})", " ", t)
+            if not PT_WORD.search(t):
+                continue
+            for cell in t.split("|"):
+                if any(s.count(":") >= 2 for s in re.split(r"(?<=[.!?;])\s", cell)):
+                    colon.append(f"{md.name}:{n}")
+                    break
+    tr_html, ets_missing, brand_missing = [], [], []
+    brand = json.loads((APP_DIR / "site.json").read_text(encoding="utf-8-sig")).get("BRAND_NAME", "")
+    for name in ("index.html", "apresentacao.html", "termos.html", "privacidade.html"):
+        page = (ARTIFACT.parent / name).read_text(encoding="utf-8")
+        if ETS_NOTICE not in page:
+            ets_missing.append(name)
+        if not brand or brand not in page:
+            brand_missing.append(name)
+        if name == "index.html":
+            p = _TrInExercise()
+            p.feed(page)
+            tr_html = p.found
+    # o nome sai de BRAND_NAME: site_config o lê (o ambiente vence) e o build
+    # passa cada página e o manifesto por _brand() antes de gravar
+    sys.path.insert(0, str(APP_DIR))
+    import site_config
+    saved = os.environ.get("BRAND_NAME")
+    os.environ["BRAND_NAME"] = "MarcaDeTeste"
+    try:
+        env_ok = site_config.load_brand() == "MarcaDeTeste"
+    finally:
+        if saved is None:
+            os.environ.pop("BRAND_NAME")
+        else:
+            os.environ["BRAND_NAME"] = saved
+    build_src = (APP_DIR / "build.py").read_text(encoding="utf-8")
+    writes = re.findall(r'open\(f?"\.\./artifact/(?:index|\{_slug\}|apresentacao|manifest)\.(?:html|json)"[^\n]*\.write\(([^\n]*)\)', build_src)
+    brand_ok = (bool(brand) and env_ok and len(writes) == 4 and all(w.startswith("_brand(") for w in writes)
+                and brand in (ARTIFACT.parent / "manifest.json").read_text(encoding="utf-8") and not brand_missing)
+    return {
+        "pt_sentence_has_at_most_one_colon": not colon,
+        "pt_sentence_has_at_most_one_colon__error": ", ".join(colon[:10]),
+        "titles_have_no_middle_dot": not dot_title,
+        "titles_have_no_middle_dot__error": ", ".join(dot_title[:10]),
+        "translations_not_in_exercise_material": not tr_md and not tr_html,
+        "translations_not_in_exercise_material__error": ", ".join(tr_md[:8] + tr_html[:4]),
+        "ets_trademark_notice_on_every_page": not ets_missing,
+        "ets_trademark_notice_on_every_page__error": ", ".join(ets_missing),
+        "brand_name_comes_from_site_json": brand_ok,
+        "brand_name_comes_from_site_json__error": f"BRAND_NAME={brand!r} env={env_ok} gravações={writes} sem marca={brand_missing}",
+    }
+
+
 def passage_checks():
     """Decisão B da revisão (2026-10-18): passagem de Read an Academic Passage
     com até 230 palavras e 5 perguntas, e Listening com as perguntas por áudio
@@ -1962,6 +2079,7 @@ def main():
     results.update(content_review_checks())
     results.update(english_dot_checks())
     results.update(portuguese_dash_checks())
+    results.update(etapa3_text_checks())
     results.update(passage_checks())
 
     # quarta passada: Chrome de verdade por http://127.0.0.1 (recarregar,
