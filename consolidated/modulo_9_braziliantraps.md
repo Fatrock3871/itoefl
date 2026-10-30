@@ -1,67 +1,64 @@
-# MÓDULO 9: THE BRAZILIAN TRAP LIBRARY
+# Módulo 9: Armadilhas de quem fala português (Brazilian Trap Library)
 
-> **iTOEFL | Formato TOEFL iBT vigente desde 21/jan/2026**
->
-> *"Todo candidato tem erros de inglês. O candidato brasileiro tem erros de
-> inglês com um padrão. Mapeá-los é o último passo antes da banda de elite."*
+> **Resumo:** Todo candidato erra em inglês, e quem fala português erra seguindo um padrão. Conhecer esse padrão é um dos passos que mais rendem perto da prova, porque cada armadilha mapeada vira um erro a menos. Conteúdo alinhado ao formato do TOEFL iBT vigente desde 21 de janeiro de 2026.
 
 ---
 
-## PARTE 1: A MENTALIDADE CERTA · POR QUE ESTE MÓDULO EXISTE
+## Parte 1: Por que este módulo existe
 
-Todo cérebro aprende uma língua nova apoiado na estrutura da língua que já domina. Para quem fala português, o inglês que você produz naturalmente carrega a impressão digital do português. Isso acontece principalmente sob pressão de tempo, em *Take an Interview* e nas tarefas de Writing. Não é fraqueza, é neurologia. O problema real é quando essa impressão digital persiste sem que você a reconheça.
+Todo cérebro aprende uma língua nova apoiado na língua que já domina. Por isso, o inglês de quem fala português carrega marcas do português, principalmente sob pressão de tempo, em *Take an Interview* e nas tarefas de Writing. Isso não é fraqueza, é o jeito como a gente aprende. O problema só aparece quando essas marcas continuam sem que você as perceba.
 
-Este módulo não ensina gramática básica. Ele mapeia os **erros sistemáticos**: aqueles que aparecem repetidamente nos mesmos contextos, mesmo em candidatos de nível avançado, e entrega a correção cirúrgica para cada um.
+Este módulo não ensina gramática básica. Ele mapeia os **erros recorrentes**, aqueles que voltam nos mesmos contextos até em candidatos de nível avançado, e mostra a correção exata de cada um.
 
 **Como usar este módulo:**
-1. Leia cada seção e identifique os erros que você já cometeu ou reconhece como risco
-2. Marque esses itens como **seu perfil pessoal de traps** (Parte 6)
-3. Erros de Speaking: drill em voz alta imediatamente após identificar
-4. Erros de Writing: adicione à sua lista de revisão antes de cada simulado
+1. Leia cada seção e identifique os erros que você já cometeu ou que reconhece como risco.
+2. Marque esses itens no seu **perfil pessoal de armadilhas** (Parte 6).
+3. Nos erros de Speaking, treine a forma certa em voz alta logo depois de identificar o erro.
+4. Nos erros de Writing, acrescente o item à sua lista de revisão antes de cada simulado.
 
-**Classificação de impacto por seção:**
+**Em que seção cada armadilha pesa mais:**
 
 | Símbolo | Significado |
 |---|---|
-| 🎤 | Risco primário no Speaking (SpeechRater: correção 100% IA) |
-| ✍️ | Risco primário no Writing (e-rater: *Write an Email* e *Write for an Academic Discussion*) |
-| 🎤✍️ | Risco nas duas seções |
+| 🎤 | Pesa mais no Speaking (SpeechRater, correção 100% por IA) |
+| ✍️ | Pesa mais no Writing (e-rater, em *Write an Email* e *Write for an Academic Discussion*) |
+| 🎤✍️ | Pesa nas duas seções |
 
-**Onde cada trap "cai" nos protocolos de erro:** cada armadilha deste módulo corresponde a um código de erro dos outros módulos. A **Parte 8** traz o mapa completo. Resumo:
+**Onde cada armadilha aparece na análise de erros:** cada uma corresponde a um código de erro dos outros módulos. O mapa completo está na **Parte 8**, e o resumo vem abaixo.
 
-| Tipo de trap | Código de reparo | Onde na análise pós-simulado (M7) |
+| Tipo de armadilha | Onde revisar | Código na análise pós-simulado (M7) |
 |---|---|---|
-| Preposição / artigo / word form | **M4 → W3**, **M1 → R4** | `SW-form`, `SR-lex` |
-| 3ª pessoa -s, tempo verbal, incontáveis | **M4 → W2**, **M3 → S5** | `SW-verb`, `SS-gram` |
-| Estrutura de frase (word order, run-on) | **M4 → W1** | `SW-synt` |
-| Falso cognato (sentido trocado) | **M6 → V3** | `SR-lex`, `SW-lex` |
-| Fonema / ritmo / -ED | **M3 → S1 / S2 / S3** | `SS-phon`, `SS-rhythm` |
-| Over-formality / registro no e-mail | **M4 → W4**, **M5 → RG1 / RG2** | `SW-reg` |
+| Preposição, artigo ou classe de palavra (*word form*) | **M4, W3** e **M1, R4** | `SW-form`, `SR-lex` |
+| *-s* da 3ª pessoa, tempo verbal, incontáveis | **M4, W2** e **M3, S5** | `SW-verb`, `SS-gram` |
+| Estrutura de frase (ordem das palavras, *run-on*) | **M4, W1** | `SW-synt` |
+| Falso cognato (sentido trocado) | **M6, V3** | `SR-lex`, `SW-lex` |
+| Fonema, ritmo ou *-ED* | **M3, S1, S2 e S3** | `SS-phon`, `SS-rhythm` |
+| Excesso de formalidade ou registro errado no e-mail | **M4, W4** e **M5, RG1 e RG2** | `SW-reg` |
 
 ---
 
-## PARTE 2: TRANSFERÊNCIA LINGUÍSTICA FATAL
+## Parte 2: Armadilhas de quem fala português
 
-> Transferência linguística é aplicar, sem perceber, as regras da língua materna à língua-alvo. As que seguem são as mais frequentes e as mais custosas para candidatos brasileiros.
+> **Resumo:** Transferência linguística é aplicar ao inglês, sem perceber, as regras do português. As armadilhas abaixo são as mais frequentes e as que mais custam pontos a candidatos brasileiros.
 
-### 2.1 Preposições assassinas
+### 2.1 Preposições que enganam
 
-Inglês e português raramente concordam em qual preposição usar com o mesmo verbo.
+Inglês e português raramente usam a mesma preposição com o mesmo verbo, por isso vale decorar a combinação inteira.
 
-| Errado (PT→EN) | Origem portuguesa | Forma correta | Seção |
+| Erro comum | De onde vem | Forma correta | Seção |
 |---|---|---|---|
 | *"depend **of** the situation"* | depender **de** | **depend on** the situation | 🎤✍️ |
 | *"consist **in** three parts"* | consistir **em** | **consist of** three parts | ✍️ |
 | *"insist **in** doing"* | insistir **em** | **insist on** doing | 🎤✍️ |
 | *"arrive **to** the conclusion"* | chegar **à** conclusão | **arrive at** the conclusion | ✍️ |
-| *"arrive **to** New York"* | chegar **a** Nova York | **arrive in** New York (cidades) / **arrive at** (local específico) | 🎤✍️ |
-| *"dream **with** success"* | sonhar **com** | **dream of/about** success | 🎤✍️ |
+| *"arrive **to** New York"* | chegar **a** Nova York | **arrive in** New York (cidades) ou **arrive at** (local específico) | 🎤✍️ |
+| *"dream **with** success"* | sonhar **com** | **dream of** ou **dream about** success | 🎤✍️ |
 | *"think **in** the future"* | pensar **no** futuro | **think about** the future | 🎤✍️ |
 | *"research **about** the topic"* | pesquisar **sobre** | **research** the topic (sem preposição); *search **for** information* está certo | ✍️ |
 | *"enter **in** the room"* | entrar **na** sala | **enter** the room (sem preposição) | ✍️ |
 | *"the reason **of** my choice"* | a razão **da** minha escolha | **the reason for** my choice | 🎤✍️ |
-| *"married **with** her"* | casou **com** ela | **married her** / **got married to her** | ✍️ |
-| *"agree **with** a proposal"* (querendo dizer "aceitar") | concordar **com** | **agree to** a proposal (aceitar); *agree with* = ter a mesma opinião | ✍️ |
+| *"married **with** her"* | casou **com** ela | **married her** ou **got married to her** | ✍️ |
+| *"agree **with** a proposal"* (querendo dizer "aceitar") | concordar **com** | **agree to** a proposal (aceitar); *agree with* é ter a mesma opinião | ✍️ |
 | *"responsible **of**"* | responsável **por** | **responsible for** | 🎤✍️ |
 | *"interested **on** the topic"* | interessado **em** | **interested in** | 🎤✍️ |
 | *"good **in** math"* | bom **em** | **good at** math | 🎤 |
@@ -72,45 +69,45 @@ Inglês e português raramente concordam em qual preposição usar com o mesmo v
 | *"based **in** the data"* | baseado **em** | **based on** the data | ✍️ |
 | *"benefit **of** the program"* (querendo "beneficiar-se") | beneficiar-se **de** | **benefit from** the program | ✍️ |
 | *"prevent someone **of**"* | impedir alguém **de** | **prevent someone from** | ✍️ |
-| *"succeed **to** do"* | conseguir fazer | **succeed in** doing / **manage to** do | ✍️ |
+| *"succeed **to** do"* | conseguir fazer | **succeed in** doing ou **manage to** do | ✍️ |
 | *"contribute **for**"* | contribuir **para** | **contribute to** | ✍️ |
-| *"to access **to** the site"* | acessar **o** site / ter acesso **ao** site | **access** the site (verbo, sem preposição); o substantivo leva *to*: *access to the internet* | ✍️ |
+| *"to access **to** the site"* | acessar **o** site ou ter acesso **ao** site | **access** the site (verbo, sem preposição); o substantivo leva *to*: *access to the internet* | ✍️ |
 
-> **Drill de fixação:** escreva 6 frases, uma com cada expressão: "depend on", "consist of", "arrive at/in", "insist on", "responsible for" e "based on" sobre tópicos do TOEFL (educação, tecnologia, meio ambiente). Releia em voz alta. Repita até saírem automaticamente. Erro aqui = código **SW-form** → **M4 W3**.
+> **Dica:** Escreva 6 frases sobre temas comuns da prova (educação, tecnologia, meio ambiente), uma com cada expressão: *depend on*, *consist of*, *arrive at* ou *arrive in*, *insist on*, *responsible for* e *based on*. Leia em voz alta e repita até saírem sem esforço. Erro aqui é o código **SW-form**, que você revisa no **M4, W3**.
 
-### 2.2 Expressões idiomáticas de risco fatal
+### 2.2 Expressões que não se traduzem ao pé da letra
 
-Aqui a tradução direta do português produz inglês gramaticalmente errado ou pragmaticamente incompreensível.
+Aqui a tradução direta do português gera um inglês errado na gramática ou que ninguém entende do jeito que você quis dizer.
 
-| Errado | Tradução literal | Forma correta | Contexto TOEFL |
+| Erro comum | Tradução literal | Forma correta | Onde aparece na prova |
 |---|---|---|---|
-| *"make a party"* | fazer uma festa | **throw/have a party** | *Take an Interview* (exemplos pessoais) |
+| *"make a party"* | fazer uma festa | **throw a party** ou **have a party** | *Take an Interview* (exemplos pessoais) |
 | *"do a question"* | fazer uma pergunta | **ask a question** | Speaking e Writing |
-| *"make a research"* | fazer uma pesquisa | **conduct/do research** (incontável: sem artigo) | *Write for an Academic Discussion* |
-| *"give a class"* | dar uma aula | **teach a class / give a lecture** | qualquer seção sobre educação |
-| *"assist the class"* | assistir à aula | **attend class** | Speaking/Writing sobre educação |
-| *"connect/disconnect the TV"* | ligar/desligar a TV | **turn on / turn off the TV** | *Take an Interview* (cotidiano) |
-| *"in my opinion, I think that"* | na minha opinião, acho que | use apenas **um**: "In my opinion" OU "I think/believe" | 🎤✍️ |
+| *"make a research"* | fazer uma pesquisa | **conduct research** ou **do research** (incontável, sem artigo) | *Write for an Academic Discussion* |
+| *"give a class"* | dar uma aula | **teach a class** ou **give a lecture** | qualquer seção sobre educação |
+| *"assist the class"* | assistir à aula | **attend class** | Speaking e Writing sobre educação |
+| *"connect the TV"*, *"disconnect the TV"* | ligar ou desligar a TV | **turn on** ou **turn off the TV** | *Take an Interview* (cotidiano) |
+| *"in my opinion, I think that"* | na minha opinião, acho que | use só **um**: *In my opinion* ou *I think* (ou *I believe*) | 🎤✍️ |
 | *"do an effort"* | fazer um esforço | **make an effort** (*make efforts to* também está certo) | *Write for an Academic Discussion* |
-| *"have success"* | ter sucesso | **be successful / succeed / achieve success** | 🎤✍️ |
+| *"have success"* | ter sucesso | **be successful**, **succeed** ou **achieve success** | 🎤✍️ |
 | *"pass by a difficult situation"* | passar por uma situação difícil | **go through a difficult situation** | *Take an Interview* (narração) |
 | *"I am with X years"* | estou com X anos | **I am X years old** | *Take an Interview* |
-| *"take a decision"* | tomar uma decisão | **make a decision** (padrão americano; *take a decision* é britânico e destoa no TOEFL) | 🎤✍️ |
-| *"win money / win a good salary"* | ganhar dinheiro | **earn money / make money** (*win* só em competição/sorte) | 🎤 |
-| *"lose the bus / lose the class"* | perder o ônibus/aula | **miss the bus / miss class** | 🎤 |
-| *"know a place"* (visitar) | conhecer um lugar | **visit / go to / see** a place | *Take an Interview* (narração) |
+| *"take a decision"* | tomar uma decisão | **make a decision** (padrão americano; *take a decision* é britânico e destoa na prova) | 🎤✍️ |
+| *"win money"*, *"win a good salary"* | ganhar dinheiro | **earn money** ou **make money** (*win* só em competição ou sorte) | 🎤 |
+| *"lose the bus"*, *"lose the class"* | perder o ônibus ou a aula | **miss the bus** ou **miss class** | 🎤 |
+| *"know a place"* (visitar) | conhecer um lugar | **visit**, **go to** ou **see** a place | *Take an Interview* (narração) |
 | *"since a long time"* | há muito tempo | **for a long time** | 🎤✍️ |
-| *"nowadays" no início repetido* | hoje em dia | ok uma vez; variar com *"today", "at present", "increasingly"* | ✍️ |
-| *"I don't know how **does it work**"* | não sei como funciona | *"I don't know **how it works**"* (pergunta indireta = ordem afirmativa) | 🎤✍️ |
-| *"each time more people"* | cada vez mais pessoas | **more and more people / an increasing number of people** | 🎤✍️ |
+| *"nowadays"* repetido no começo das frases | hoje em dia | uma vez está bem; depois varie com *today*, *at present* ou *increasingly* | ✍️ |
+| *"I don't know how **does it work**"* | não sei como funciona | *"I don't know **how it works**"* (pergunta indireta segue a ordem da afirmação) | 🎤✍️ |
+| *"each time more people"* | cada vez mais pessoas | **more and more people** ou **an increasing number of people** | 🎤✍️ |
 
-### 2.3 Estruturas gramaticais de transferência
+### 2.3 Estruturas que o português empurra para o erro
 
-**A. Artigo definido com substantivos abstratos e genéricos:**
+**A. Artigo definido com substantivos abstratos e genéricos**
 
-O português usa artigo definido (o/a) com abstratos: "A vida é bela." Em inglês, abstratos e genéricos tipicamente **não** levam artigo.
+O português usa artigo definido com ideias abstratas, como em "A vida é bela". Em inglês, substantivos abstratos e genéricos em geral **não** levam artigo.
 
-| Errado (transferência PT) | Correto (EN) |
+| Erro comum | Forma correta |
 |---|---|
 | *"**The** education is important"* | *"**Education** is important"* |
 | *"**The** technology has changed our lives"* | *"**Technology** has changed our lives"* |
@@ -118,122 +115,122 @@ O português usa artigo definido (o/a) com abstratos: "A vida é bela." Em ingl�
 | *"**The** research shows that..."* | *"**Research** shows that..."* (quando genérico) |
 | *"**The** nature should be protected"* | *"**Nature** should be protected"* |
 
-> ⚠️ **Exceção:** quando o substantivo é específico/definido, o artigo é obrigatório: *"The research conducted by Smith (2020) shows..."*.
+> **Atenção:** Quando o substantivo é específico, o artigo volta a ser necessário, como em *"[[The research conducted by Smith (2020) shows...::A pesquisa feita por Smith (2020) mostra...]]"*.
 
-**B. Gerúndio vs. infinitivo:**
+**B. Gerúndio ou infinitivo**
 
-O português usa infinitivo após a maioria dos verbos; o inglês tem regras específicas.
+O português usa o infinitivo depois da maioria dos verbos. O inglês tem verbos que pedem o gerúndio (*-ing*), e estes cinco aparecem muito na prova.
 
-| Verbo | Exige gerúndio | Exemplo correto |
+| Verbo | Pede gerúndio | Exemplo correto |
 |---|---|---|
-| **enjoy** | *"I enjoy **reading**"* (❌ "enjoy to read") | *"I enjoy analyzing complex data sets."* |
+| **enjoy** | *"I enjoy **reading**"* (❌ "enjoy to read") | *"[[I enjoy analyzing complex data sets.::Gosto de analisar conjuntos de dados complexos.]]"* |
 | **avoid** | *"avoid **making** errors"* (❌ "avoid to make") | *"Researchers avoid **overgeneralizing** from limited samples."* |
 | **finish** | *"finish **writing**"* (❌ "finish to write") | *"The team **finished collecting** data in May."* |
 | **consider** | *"consider **implementing**"* (❌ "consider to implement") | *"Policymakers should consider **expanding** access to..."* |
 | **suggest** | *"suggest **increasing**"* (❌ "suggest to increase") | *"The lecture suggests **revising** the methodology."* |
 
-**C. Terceira pessoa do singular (a concordância invisível):**
+**C. Terceira pessoa do singular, a concordância que some**
 
-O marcador -s da 3ª pessoa do singular desaparece sob pressão porque é a única marca de pessoa no presente do inglês: uma consoante isolada, átona, fácil de engolir na fala rápida.
+O *-s* da 3ª pessoa do singular some sob pressão porque é a única marca de pessoa no presente do inglês. É uma consoante solta e átona, fácil de engolir na fala rápida.
 
-| Errado | Correto | Contexto TOEFL |
+| Erro comum | Forma correta | Onde aparece na prova |
 |---|---|---|
-| *"The author **argue** that..."* | *"The author **argues** that..."* | *Write for an Academic Discussion* (referir uma fonte) |
+| *"The author **argue** that..."* | *"The author **argues** that..."* | *Write for an Academic Discussion* (ao citar uma fonte) |
 | *"The evidence **suggest**..."* | *"The evidence **suggests**..."* | Writing |
 | *"The study **challenge** this claim..."* | *"The study **challenges** this claim..."* | Writing |
 | *"Each student **have** different needs"* | *"Each student **has** different needs"* | *Write for an Academic Discussion* |
 | *"The policy **affect** low-income families"* | *"The policy **affects** low-income families"* | *Write for an Academic Discussion* |
 
-> **Este erro é detectado automaticamente pelo e-rater.** Cada ocorrência penaliza o critério de gramática. Como você usa esses verbos constantemente ("the author argues / the evidence suggests / the study challenges"), um padrão sistemático deste erro pode custar meia banda na seção.
+> **Atenção:** O e-rater detecta este erro automaticamente, e cada ocorrência pesa no critério de gramática. Como você usa esses verbos o tempo todo (*the author argues*, *the evidence suggests*, *the study challenges*), errar sempre do mesmo jeito pode custar meia banda na seção.
 
-**D. Reflexivos desnecessários:**
+**D. Reflexivos desnecessários**
 
-O português usa reflexivos em contextos onde o inglês não usa.
+O português usa pronome reflexivo em situações em que o inglês não usa.
 
-| Errado | Correto |
+| Erro comum | Forma correta |
 |---|---|
 | *"I feel **myself** tired"* | *"I feel tired"* |
 | *"She hurt **herself**"* | ✅ correto (ação reflexiva genuína) |
-| *"I remember **myself** of"* | *"I remember"* (sem reflexivo + preposição) |
-| *"The situation **revealed itself** complex"* | *"The situation **proved** complex"* / *"was complex"* |
+| *"I remember **myself** of"* | *"I remember"* (sem reflexivo e sem preposição) |
+| *"The situation **revealed itself** complex"* | *"The situation **proved** complex"* ou *"was complex"* |
 
-**E. Substantivos incontáveis (o erro que o e-rater sempre pega):**
+**E. Substantivos incontáveis, o erro que o e-rater sempre pega**
 
-O português pluraliza livremente; muitos desses substantivos são **incontáveis** em inglês: sem `-s`, sem `a/an`, com verbo no singular.
+O português põe essas palavras no plural sem problema, mas em inglês elas são **incontáveis**: não levam *-s* nem *a* ou *an*, e o verbo fica no singular.
 
-| Errado | Correto |
+| Erro comum | Forma correta |
 |---|---|
-| *"informations", "an information"* | *"information"* / *"a piece of information"* |
-| *"advices", "an advice"* | *"advice"* / *"a piece of advice"* |
-| *"researches", "a research"* | *"research"* / *"a study"* |
+| *"informations"*, *"an information"* | *"information"* ou *"a piece of information"* |
+| *"advices"*, *"an advice"* | *"advice"* ou *"a piece of advice"* |
+| *"researches"*, *"a research"* | *"research"* ou *"a study"* |
 | *"feedbacks"* | *"feedback"* |
-| *"knowledges", "a knowledge"* | *"knowledge"* |
-| *"an equipment", "equipments"* | *"equipment"* / *"a piece of equipment"* |
+| *"knowledges"*, *"a knowledge"* | *"knowledge"* |
+| *"an equipment"*, *"equipments"* | *"equipment"* ou *"a piece of equipment"* |
 | *"furnitures"* | *"furniture"* |
-| *"a progress", "progresses"* | *"progress"* |
-| *"homeworks"* | *"homework"* / *"an assignment"* |
+| *"a progress"*, *"progresses"* | *"progress"* |
+| *"homeworks"* | *"homework"* ou *"an assignment"* |
 | *"vocabularies"* | *"vocabulary"* |
 | *"evidences"* | *"evidence"* (incontável no sentido de "provas") |
 
-> *"These informations are..."* dispara **dois** erros de gramática no e-rater (plural indevido + concordância). Código **SW-verb** → **M4 W2**.
+> **Erro comum:** *"These informations are..."* conta como **dois** erros de gramática no e-rater, o plural indevido e a concordância. É o código **SW-verb**, que você revisa no **M4, W2**.
 
-**F. Artigo indefinido omitido + `a` vs `an` + instituições:**
+**F. Artigo indefinido esquecido, *a* ou *an* e instituições**
 
-O português dispensa o artigo indefinido onde o inglês o exige.
+O português dispensa o artigo indefinido em lugares onde o inglês exige.
 
-| Errado | Correto |
+| Erro comum | Forma correta |
 |---|---|
 | *"He is engineer"* | *"He is **an** engineer"* |
 | *"as student, I..."* | *"**as a** student, I..."* |
 | *"It is **an** useful tool"* | *"It is **a** useful tool"* (som /j/, não vogal) |
 | *"in **a** hour"* | *"in **an** hour"* (h mudo) |
 | *"such **a** important issue"* | *"such **an** important issue"* |
-| *"go to **the** school"* (como aluno) | *"go to school"*; para ensino superior, no inglês americano: *"go to college"* |
-| *"go to **the** bed", "go to **the** work"* | *"go to bed", "go to work"* |
+| *"go to **the** school"* (como aluno) | *"go to school"*; para o ensino superior, no inglês americano, *"go to college"* |
+| *"go to **the** bed"*, *"go to **the** work"* | *"go to bed"*, *"go to work"* |
 
-**G. Ordem das palavras:**
+**G. Ordem das palavras**
 
-| Errado | Correto | Regra |
+| Erro comum | Forma correta | Regra |
 |---|---|---|
-| *"Explain me the rule"* | *"Explain the rule **to me**"* | *explain / describe / suggest / say* não levam objeto indireto sem *to* |
+| *"Explain me the rule"* | *"Explain the rule **to me**"* | *explain*, *describe*, *suggest* e *say* não levam objeto indireto sem *to* |
 | *"I like very much this book"* | *"I like this book **very much**"* | advérbio de intensidade não separa verbo e objeto |
-| *"I always am late"* / *"I am late always"* | *"I **am always** late"* / *"I **always** arrive late"* | advérbio de frequência: depois de *to be*, antes dos outros verbos |
-| *"differents ideas"*, *"importants points"* | *"**different** ideas"*, *"**important** points"* | adjetivo **não** concorda em número |
+| *"I always am late"*, *"I am late always"* | *"I **am always** late"* ou *"I **always** arrive late"* | o advérbio de frequência vem depois de *to be* e antes dos outros verbos |
+| *"differents ideas"*, *"importants points"* | *"**different** ideas"*, *"**important** points"* | o adjetivo **não** vai para o plural |
 | *"a car red"*, *"the house big"* | *"a **red** car"*, *"the **big** house"* | adjetivo antes do substantivo |
-| *"My father, he works a lot"* | *"My father works a lot"* | sem sujeito duplo (pronome retomando o sujeito) |
-| *"I don't know what **is** the answer"* | *"I don't know what **the answer is**"* | pergunta indireta = ordem afirmativa |
+| *"My father, he works a lot"* | *"My father works a lot"* | sem sujeito duplo (um pronome repetindo o sujeito) |
+| *"I don't know what **is** the answer"* | *"I don't know what **the answer is**"* | pergunta indireta segue a ordem da afirmação |
 
-**H. Present perfect vs. passado simples (+ `since` / `for`):**
+**H. Present perfect ou passado simples (com *since* e *for*)**
 
-O português usa o presente para situações que começaram no passado e continuam ("Moro aqui **desde** 2020" / "**há** cinco anos").
+O português usa o presente para situações que começaram no passado e continuam ("Moro aqui **desde** 2020", "**há** cinco anos"). O inglês pede o *present perfect*.
 
-| Errado | Correto |
+| Erro comum | Forma correta |
 |---|---|
 | *"I **live** here since 2020"* | *"I **have lived** here since 2020"* |
 | *"She **works** there for five years"* | *"She **has worked** there for five years"* |
-| *"since five years"* | *"**for** five years"* (*since* + ponto no tempo; *for* + duração) |
+| *"since five years"* | *"**for** five years"* (*since* com um ponto no tempo; *for* com uma duração) |
 | *"I **am knowing** him for a long time"* | *"I **have known** him for a long time"* (*know* é estativo, não vai no contínuo) |
-| *"I **have gone** to Rio last year"* | *"I **went** to Rio last year"* (tempo definido no passado = passado simples) |
+| *"I **have gone** to Rio last year"* | *"I **went** to Rio last year"* (tempo definido no passado pede o passado simples) |
 
-**I. Plural e concordância de número:**
+**I. Plural e concordância de número**
 
-| Errado | Correto |
+| Erro comum | Forma correta |
 |---|---|
-| *"one of the **reason**"* | *"one of the **reasons**"* (*one of the* + plural) |
-| *"20 **years old** man"* | *"a 20-**year**-old man"* (adjetivo composto: com hífens e sem plural) |
-| *"**peoples**"* (querendo "pessoas") | *"people"* (já é plural; *peoples* = povos) |
+| *"one of the **reason**"* | *"one of the **reasons**"* (*one of the* pede plural) |
+| *"20 **years old** man"* | *"a 20-**year**-old man"* (adjetivo composto, com hífens e sem plural) |
+| *"**peoples**"* (querendo "pessoas") | *"people"* (já é plural; *peoples* quer dizer "povos") |
 | *"The **majority of students** **is**..."* | *"The majority of students **are**..."* |
 | *"**a** two-hour**s** exam"* | *"a two-**hour** exam"* |
 
 ---
 
-## PARTE 3: FALSOS COGNATOS EM CONTEXTO ACADÊMICO · OS MAIS PERIGOSOS
+## Parte 3: Falsos cognatos em contexto acadêmico
 
-> Falsos cognatos clássicos ("exquisite/esquisito", "cigar/cigarro") raramente aparecem no TOEFL. Os que seguem são diferentes: aparecem em textos acadêmicos e em situações reais de Speaking e Writing, e causam confusão de sentido justamente em contexto de alto risco.
+> **Resumo:** Os falsos cognatos clássicos (*exquisite* e "esquisito", *cigar* e "cigarro") quase não aparecem na prova. Os desta Parte são outros: aparecem em textos acadêmicos e em situações reais de Speaking e Writing, e trocam o sentido da frase justamente onde ele mais importa.
 
-### Tabela mestra de falsos cognatos acadêmicos
+### Tabela principal de falsos cognatos acadêmicos
 
-| Palavra inglesa | O brasileiro pensa que significa | O que realmente significa | Palavra correta para o sentido PT |
+| Palavra em inglês | O que parece significar | O que significa de verdade | Palavra certa para o sentido do português |
 |---|---|---|---|
 | **actually** | atualmente | na verdade / de fato | currently / nowadays / at present |
 | **eventually** | eventualmente (às vezes) | no final / com o tempo | occasionally / sometimes / at times |
@@ -260,7 +257,7 @@ O português usa o presente para situações que começaram no passado e continu
 | **economic** | econômico (barato) | relativo à economia | economical / cheap / affordable |
 | **notice** | notícia | aviso; reparar/perceber | news / a news story |
 | **support** | suportar (tolerar) | apoiar / sustentar (uma tese) | tolerate / put up with / stand |
-| **push / pull** | puxar / empurrar (invertidos!) | *push* = empurrar; *pull* = puxar | — |
+| **push** e **pull** | puxar e empurrar (trocados) | *push* é empurrar; *pull* é puxar | - |
 | **parents** | parentes | pais (mãe e pai) | relatives |
 | **lecture** | leitura | palestra / aula expositiva | reading |
 | **propaganda** | propaganda (comercial) | propaganda (política, pejorativo) | advertising / an ad / a commercial |
@@ -269,146 +266,146 @@ O português usa o presente para situações que começaram no passado e continu
 | **journal** | jornal | revista científica / diário | newspaper |
 | **costume** | costume (hábito) | fantasia / traje | custom / habit |
 
-### Os 5 falsos cognatos mais custosos (com exemplos em contexto)
+### Os 5 falsos cognatos que mais custam pontos (com exemplos)
 
-**🚨 TRAP 1: ACTUALLY vs. ATUALMENTE**
+**Armadilha 1: *actually* não é "atualmente"**
 
-| | Errado | Correto |
+| | Erro comum | Forma correta |
 |---|---|---|
-| **Contexto TOEFL** | *"Actually, technology plays a major role in education"* (querendo dizer: atualmente) | *"**Currently/At present/Nowadays**, technology plays a major role in education"* |
-| **"Actually" correto** | *"The results **actually** support the opposite conclusion"* (= na verdade, surpreendentemente) | — |
+| **Na prova** | *"Actually, technology plays a major role in education"* (querendo dizer: atualmente) | *"**Currently/At present/Nowadays**, technology plays a major role in education"* |
+| **"Actually" correto** | *"The results **actually** support the opposite conclusion"* (= na verdade, surpreendentemente) | - |
 
-> **Regra:** "Actually" = "na verdade / de fato" (contraste ou correção). "Currently / At present" = "atualmente". Numa resposta de *Take an Interview* sobre o mundo atual, nunca use "actually" para significar "nowadays".
+> **Resumo:** *Actually* quer dizer "na verdade" ou "de fato" (contraste ou correção). Para "atualmente", use *currently* ou *at present*. Numa resposta de *Take an Interview* sobre o mundo de hoje, não use *actually* no lugar de *nowadays*.
 
-**🚨 TRAP 2: PRETEND vs. PRETENDER**
+**Armadilha 2: *pretend* não é "pretender"**
 
-| | Errado | Correto |
+| | Erro comum | Forma correta |
 |---|---|---|
-| **Contexto TOEFL** | *"The study **pretends** to demonstrate a causal relationship"* | *"The study **intends to demonstrate** / **aims to demonstrate**"* |
-| **"Pretend" correto** | *"The character **pretends** to be ill to avoid the exam"* | — |
+| **Na prova** | *"The study **pretends** to demonstrate a causal relationship"* | *"The study **intends to demonstrate** / **aims to demonstrate**"* |
+| **"Pretend" correto** | *"The character **pretends** to be ill to avoid the exam"* | - |
 
-> **Regra:** "Pretend" = fingir/simular. "Intend / aim to / plan to" = pretender.
+> **Resumo:** *Pretend* é fingir. Para "pretender", use *intend*, *aim to* ou *plan to*.
 
-**🚨 TRAP 3: REALIZE vs. REALIZAR**
+**Armadilha 3: *realize* não é "realizar"**
 
-| | Errado | Correto |
+| | Erro comum | Forma correta |
 |---|---|---|
-| **Contexto TOEFL** | *"The researchers **realized** a comprehensive study over ten years"* | *"The researchers **conducted/carried out** a comprehensive study over ten years"* |
-| **"Realize" correto** | *"As the experiment progressed, they **realized** that the hypothesis was flawed"* (= perceberam) | — |
+| **Na prova** | *"The researchers **realized** a comprehensive study over ten years"* | *"The researchers **conducted/carried out** a comprehensive study over ten years"* |
+| **"Realize" correto** | *"As the experiment progressed, they **realized** that the hypothesis was flawed"* (= perceberam) | - |
 
-> **Regra:** "Realize" = perceber / dar-se conta. "Conduct / carry out / accomplish" = realizar (executar/completar).
+> **Resumo:** *Realize* é perceber ou dar-se conta. Para "realizar" no sentido de executar, use *conduct*, *carry out* ou *accomplish*.
 
-**🚨 TRAP 4: SENSIBLE / COMPREHENSIVE / SYMPATHETIC**
+**Armadilha 4: *sensible*, *comprehensive* e *sympathetic***
 
-Uma família de erros de sentido que aparece especialmente em *Write for an Academic Discussion*, ao descrever características humanas.
+É uma família de erros de sentido que aparece muito em *Write for an Academic Discussion*, quando você descreve pessoas.
 
-| Quero dizer | NÃO use | USE |
+| Quero dizer | Não use | Use |
 |---|---|---|
 | "uma pessoa sensível" (emotiva) | sensible | **sensitive** |
 | "uma pessoa sensata" (razoável) | sensitive | **sensible / reasonable** |
 | "uma pessoa compreensiva" (tolerante) | comprehensive | **understanding / tolerant** |
-| "um relatório abrangente" | comprehensive (correto ✅) | — |
+| "um relatório abrangente" | *comprehensive* (aqui está certo ✅) | - |
 | "uma pessoa simpática" (agradável) | sympathetic | **pleasant / friendly / likable** |
 | "uma pessoa solidária" (compassiva) | pleasant | **sympathetic / compassionate** |
 
-**🚨 TRAP 5: EVENTUALLY vs. EVENTUALMENTE**
+**Armadilha 5: *eventually* não é "eventualmente"**
 
-| | Errado | Correto |
+| | Erro comum | Forma correta |
 |---|---|---|
-| **Contexto TOEFL** | *"**Eventually**, the policy may benefit some students"* (querendo dizer: possivelmente) | *"**Possibly/Potentially/In some cases**, the policy may benefit some students"* |
-| **"Eventually" correto** | *"The empire **eventually** collapsed due to internal political instability"* (= no final, com o tempo) | — |
+| **Na prova** | *"**Eventually**, the policy may benefit some students"* (querendo dizer: possivelmente) | *"**Possibly/Potentially/In some cases**, the policy may benefit some students"* |
+| **"Eventually" correto** | *"The empire **eventually** collapsed due to internal political instability"* (= no final, com o tempo) | - |
 
-> **Regra:** "Eventually" = "no final das contas / depois de um tempo" (temporal). Nunca significa "possivelmente" ou "às vezes".
+> **Resumo:** *Eventually* é "no fim das contas" ou "depois de um tempo", sempre com sentido de tempo. Não significa "possivelmente" nem "às vezes".
 
 ---
 
-## PARTE 4: VÍCIOS DE PRONÚNCIA E ENTONAÇÃO · O QUE O SPEECHRATER PENALIZA
+## Parte 4: Pronúncia e entonação que o SpeechRater penaliza
 
-> O SpeechRater da ETS (correção 100% IA no Speaking de 2026) processa padrões acústicos mensuráveis. Os erros abaixo são os mais frequentes em falantes de português. São também os que mais impactam a nota de **inteligibilidade e prosódia**, exatamente os critérios de *Listen and Repeat* e *Take an Interview*.
+> **Resumo:** O SpeechRater da ETS (correção 100% por IA no Speaking de 2026) analisa padrões de som mensuráveis. Os erros abaixo são os mais frequentes entre falantes de português e os que mais pesam na nota de **inteligibilidade e prosódia**, justamente os critérios de *Listen and Repeat* e *Take an Interview*.
 
-### 4.1 Os 9 pontos críticos de pronúncia
+### 4.1 Os 9 pontos de pronúncia que mais pedem atenção
 
-**FONEMA 1 · /θ/ (TH surdo): o mais famoso**
+**Fonema 1: /θ/ (*th* surdo), o mais famoso**
 
-| O que é | Como brasileiros produzem | Palavras de alto risco |
+| O que é | Como costuma sair | Palavras de atenção |
 |---|---|---|
-| "th" em "think": língua entre os dentes, ar sem vibração | /t/ ("tink"), /f/ ("fink"), /s/ ("sink") | **think, through, thank, theory, hypothesis, throughout, method, both, health, growth, worth** |
+| o *th* de *think*, com a língua entre os dentes e o ar passando sem vibração | /t/ ("tink"), /f/ ("fink"), /s/ ("sink") | **think, through, thank, theory, hypothesis, throughout, method, both, health, growth, worth** |
 
-**Como praticar:** ponta da língua levemente entre os dentes; sopre ar sem fechar; toque leve, sem pressão. Pratique *"think through both methods"*: todas com /θ/.
+**Como praticar:** apoie a ponta da língua de leve entre os dentes e sopre o ar sem fechar a boca, com toque leve e sem pressão. Treine *"think through both methods"*, em que todas as palavras têm /θ/.
 
-**Em *Listen and Repeat*:** frases com "the", "this", "think" e "although" são comuns em qualquer cenário. Reproduzir o /θ/ e o /ð/ com precisão é diretamente pontuado como inteligibilidade.
+**Em *Listen and Repeat*:** frases com *the*, *this*, *think* e *although* aparecem em qualquer cenário, e reproduzir o /θ/ e o /ð/ com precisão conta direto como inteligibilidade.
 
-**FONEMA 2 · /ð/ (TH sonoro): o irmão invisível**
+**Fonema 2: /ð/ (*th* sonoro), o par do /θ/**
 
-| O que é | Diferença do /θ/ | Palavras de alto risco |
+| O que é | Diferença para o /θ/ | Palavras de atenção |
 |---|---|---|
-| Mesmo posicionamento do /θ/, com vibração das cordas vocais | /θ/ = silencioso (think); /ð/ = sonoro (this, that, the, there) | **the, this, that, those, they, their, there, rather, further, other, another, whether** |
+| Mesma posição do /θ/, com vibração das cordas vocais | /θ/ é surdo (*think*); /ð/ é sonoro (*this*, *that*, *the*, *there*) | **the, this, that, those, they, their, there, rather, further, other, another, whether** |
 
-> **Regra prática:** artigos, pronomes e conjunções gramaticais geralmente usam /ð/. "think / through / hypothesis" usam /θ/.
+> **Dica:** Artigos, pronomes e conjunções em geral usam /ð/. Já *think*, *through* e *hypothesis* usam /θ/.
 
-**FONEMA 3 · a vogal /æ/ (short A): o som que o português não tem**
+**Fonema 3: a vogal /æ/ (*short a*), o som que o português não tem**
 
-| O que é | Como brasileiros produzem | Palavras de alto risco |
+| O que é | Como costuma sair | Palavras de atenção |
 |---|---|---|
-| Vogal em "cat, bad, man, can, that": mais aberta que /e/, mais fechada que /a/ | /ɛ/ ("fez") ou /a/ ("faz") | **can, that, have, actually, bad, plan, language, academic, grammar, natural, analysis** |
+| Vogal de *cat*, *bad*, *man*, *can* e *that*, mais aberta que /e/ e mais fechada que /a/ | /ɛ/ ("fez") ou /a/ ("faz") | **can, that, have, actually, bad, plan, language, academic, grammar, natural, analysis** |
 
-**Como praticar:** diga "fez" e abra mais a boca, empurrando a língua para baixo e para frente. Minimal pair: "bed" (/ɛ/) vs. "bad" (/æ/).
+**Como praticar:** diga "fez" e abra mais a boca, levando a língua para baixo e para a frente. Compare o par *bed* (/ɛ/) e *bad* (/æ/).
 
-**FONEMA 4: vogais epentéticas (as vogais extras)**
+**Fonema 4: vogais epentéticas (as vogais extras)**
 
 | O que é | Como ocorre | Exemplos |
 |---|---|---|
-| Vogal extra ao final de palavras ou entre consoantes finais | O português raramente termina em grupos de consoantes: o cérebro insere uma vogal | **speak → speak-i, last → last-i, think → think-i, work → work-i, test → test-i** |
+| Vogal extra ao final de palavras ou entre consoantes finais | O português quase nunca termina palavra em grupo de consoantes, e o cérebro acrescenta uma vogal | **speak vira speak-i, last vira last-i, think vira think-i, work vira work-i, test vira test-i** |
 
-**Por que penaliza:** o SpeechRater detecta sílabas extras onde não deveria haver nenhuma. "Work" tem 1 sílaba · "work-i" tem 2. Pare a palavra na consoante final, sem "abrir" a boca depois.
+**Por que tira pontos:** o SpeechRater detecta sílabas a mais. *Work* tem 1 sílaba; *work-i* tem 2. Pare a palavra na consoante final, sem abrir a boca depois.
 
-**FONEMA 5: o L final vocalizado**
+**Fonema 5: o L final que vira "u"**
 
-| O que é | Como brasileiros produzem | Palavras de alto risco |
+| O que é | Como costuma sair | Palavras de atenção |
 |---|---|---|
-| Em inglês americano, o L final é "dark L": a ponta da língua encosta na gengiva logo atrás dos dentes de cima e o fundo da língua sobe, dando um som "escuro" | Em PT-BR, L final = /w/ (vocalizado) | **all, feel, school, full, special, social, political, technological, critical, central** |
+| No inglês americano, o L final é o *dark L*: a ponta da língua encosta na gengiva logo atrás dos dentes de cima e o fundo da língua sobe, o que dá um som mais "escuro" | No português do Brasil, o L final vira /w/ | **all, feel, school, full, special, social, political, technological, critical, central** |
 
-**Impacto:** "social" dito como "sossiáu" soa muito diferente de /ˈsoʊʃəl/, e o SpeechRater pode não reconhecer a palavra. A ponta da língua deve **tentar** tocar a gengiva atrás dos dentes de cima, mesmo sem chegar completamente.
+**Por que importa:** *social* dito como "sossiáu" soa muito diferente de /ˈsoʊʃəl/, e o SpeechRater pode não reconhecer a palavra. Leve a ponta da língua em direção à gengiva atrás dos dentes de cima, mesmo que não chegue a tocar.
 
-**FONEMA 6: terminações -ED (a regra das 3 pronúncias)**
+**Fonema 6: terminações -ED (a regra das 3 pronúncias)**
 
-| Após... | Pronúncia do -ED | Exemplos TOEFL |
+| Depois de | Pronúncia do -ED | Exemplos |
 |---|---|---|
 | Sons surdos (p, k, f, s, sh, ch) | /t/ (sem vogal extra) | *looked* /lʊkt/, *discussed* /dɪsˈkʌst/, *researched* /rɪˈsɜːrtʃt/ |
-| Sons sonoros + vogais | /d/ (sem vogal extra) | *argued* /ˈɑːrɡjuːd/, *challenged* /ˈtʃælɪndʒd/, *showed* /ʃoʊd/ |
+| Sons sonoros e vogais | /d/ (sem vogal extra) | *argued* /ˈɑːrɡjuːd/, *challenged* /ˈtʃælɪndʒd/, *showed* /ʃoʊd/ |
 | Sons /t/ e /d/ | /ɪd/ (1 sílaba extra) | *suggested* /səˈdʒɛstɪd/, *conducted* /kənˈdʌktɪd/, *indicated* /ˈɪndɪkeɪtɪd/ |
 
-> **Erro mais comum:** produzir /ɪd/ para todos os verbos no passado ("looked-id, discussed-id"), o que é detectado como erro fonológico sistemático.
+> **Erro comum:** Pôr /ɪd/ em todos os verbos no passado (*looked-id*, *discussed-id*). O SpeechRater registra isso como erro de pronúncia recorrente.
 
-**Drill:** *"The author **argued** that the researchers **conducted** a study and **indicated** that the results **showed** a pattern."* · *conducted* e *indicated* ganham /ɪd/ (sílaba extra); *argued* e *showed* terminam em /d/, sem vogal extra.
+**Exercício:** *"The author **argued** that the researchers **conducted** a study and **indicated** that the results **showed** a pattern."* Aqui *conducted* e *indicated* ganham /ɪd/ (sílaba extra), e *argued* e *showed* terminam em /d/, sem vogal extra.
 
-**FONEMA 7: /ɪ/ vs. /iː/ (o par que muda a palavra)**
+**Fonema 7: /ɪ/ e /iː/, o par que muda a palavra**
 
-| O que é | Como brasileiros produzem | Pares mínimos de alto risco |
+| O que é | Como costuma sair | Pares de atenção |
 |---|---|---|
-| /ɪ/ = curto e relaxado (*bit*); /iː/ = longo e tenso (*beat*) | tudo vira /i/ do português (só o longo) | **live**/leave · **it**/eat · **sit**/seat · **bit**/beat · **fill**/feel · **hill**/heal · **rich**/reach · **ship**/sheep |
+| /ɪ/ é curto e relaxado (*bit*); /iː/ é longo e tenso (*beat*) | tudo vira o /i/ do português (só o longo) | **live** e leave, **it** e eat, **sit** e seat, **bit** e beat, **fill** e feel, **hill** e heal, **rich** e reach, **ship** e sheep |
 
-**Por que penaliza:** *"I want to live"* vs. *"I want to leave"*: sentidos opostos. Em *Listen and Repeat*, o SpeechRater compara com o alvo; trocar /ɪ/ por /iː/ conta como palavra errada.
+**Por que tira pontos:** *"I want to live"* e *"I want to leave"* têm sentidos opostos. Em *Listen and Repeat*, o SpeechRater compara a sua fala com o original, e trocar /ɪ/ por /iː/ conta como palavra errada.
 
-**FONEMA 8: /ʌ/ (o "u" de *but*)**
+**Fonema 8: /ʌ/ (o "u" de *but*)**
 
-| O que é | Como brasileiros produzem | Palavras de alto risco |
+| O que é | Como costuma sair | Palavras de atenção |
 |---|---|---|
-| Vogal central e curta em *but, cut, much, must, understand, result, study, discussion, culture, function* | /a/ (de "pá") ou /u/ (de "tu") | **but, much, result, study, discussion, function, culture, understand, subject, structure, public** |
+| Vogal central e curta de *but*, *cut*, *much*, *must*, *understand*, *result*, *study*, *discussion*, *culture* e *function* | /a/ (de "pá") ou /u/ (de "tu") | **but, much, result, study, discussion, function, culture, understand, subject, structure, public** |
 
-**FONEMA 9: clusters iniciais com S (a vogal epentética no começo)**
+**Fonema 9: grupos de consoantes com S no começo (a vogal extra no início)**
 
 | O que é | Como ocorre | Exemplos |
 |---|---|---|
-| O português não começa palavra com s+consoante: o cérebro adiciona um "e" antes | *student → "estudent"*, *speak → "espeak"* | **student, speak, study, Spanish, special, state, structure, strategy, specific, school** |
+| O português não começa palavra com S seguido de consoante, e o cérebro acrescenta um "e" antes | *student* vira "estudent", *speak* vira "espeak" | **student, speak, study, Spanish, special, state, structure, strategy, specific, school** |
 
-**Como praticar:** comece a palavra **direto no /s/**, prolongando-o: "ssspeak", "ssstudent". Nunca "eh-speak".
+**Como praticar:** comece a palavra **direto no /s/**, esticando o som: "ssspeak", "ssstudent". Nada de "eh-speak".
 
-### 4.1b Acento de palavra em cognatos: a tônica que migra
+### 4.1b Acento de palavra em cognatos: a sílaba tônica que muda de lugar
 
-Muitos cognatos português↔inglês têm a **sílaba tônica em posição diferente**. Errar a tônica de uma palavra que o avaliador espera ouvir (código **SS-phon** → M3 S2) é um dos sinais mais fortes de sotaque.
+Muitas palavras parecidas em português e em inglês têm a **sílaba tônica em outro lugar**. Errar a tônica de uma palavra que o avaliador espera ouvir (código **SS-phon**, revisado no **M3, S2**) é um dos sinais mais fortes de sotaque.
 
-| Palavra | ❌ tônica PT | ✅ tônica EN |
+| Palavra | ❌ tônica do português | ✅ tônica do inglês |
 |---|---|---|
 | **develop / development** | de-ve-LO-pe | de-**VE**-lop |
 | **comfortable** | con-for-TÁ-vel | **COMF**-ter-ble (3 síl.) |
@@ -427,124 +424,124 @@ Muitos cognatos português↔inglês têm a **sílaba tônica em posição difer
 
 ### 4.2 Os 3 padrões de ritmo e entonação
 
-**PADRÃO 1: ritmo silábico vs. stress-timed (o problema raiz)**
+**Padrão 1: ritmo silábico e ritmo acentual (a origem do problema)**
 
-Já apresentado no Módulo 3 (Speaking), revisitado aqui com foco na correção.
+Você já viu este ponto no Módulo 3 (Speaking). Aqui ele volta com foco na correção.
 
 | Português brasileiro | Inglês americano |
 |---|---|
-| Ritmo silábico: cada sílaba ocupa aproximadamente o mesmo tempo | Stress-timed: tônicas mais longas e fortes; átonas comprimidas/reduzidas |
-| *"edu-ca-ção"*: 4 sílabas com peso similar | *"edu**CA**tion"*: CA é longa, as demais comprimidas |
+| Ritmo silábico: cada sílaba ocupa mais ou menos o mesmo tempo | Ritmo acentual (*stress-timed*): tônicas mais longas e fortes; átonas comprimidas e reduzidas |
+| *"edu-ca-ção"*: 4 sílabas com peso parecido | *"edu**CA**tion"*: CA é longa e as outras ficam comprimidas |
 
-**Como corrigir:** identifique a sílaba tônica; exagere o comprimento dela no início do treino; comprima as átonas; use shadowing com falantes nativos.
+**Como corrigir:** identifique a sílaba tônica, exagere a duração dela no começo do treino, comprima as átonas e faça *shadowing* com falantes nativos.
 
-**PADRÃO 2: entonação de perguntas indiretas**
+**Padrão 2: entonação de perguntas indiretas**
 
-| Tipo | Entonação correta | Erro brasileiro |
+| Tipo | Entonação correta | Erro comum |
 |---|---|---|
 | Pergunta direta: *"Where is the library?"* | ↗️ ascendente | ↗️ ascendente (correto) |
-| Pergunta indireta dentro de afirmação: *"I'm not sure where the library **is**."* | ↘️ descendente | ↗️ ascendente (transferência PT) |
+| Pergunta indireta dentro de afirmação: *"I'm not sure where the library **is**."* | ↘️ descendente | ↗️ ascendente (influência do português) |
 
-**Por que importa:** em *Take an Interview*, candidatos frequentemente incorporam perguntas indiretas nas respostas. Entonação ascendente nelas soa como incerteza, e o SpeechRater pode classificá-la como incorreta.
+**Por que importa:** em *Take an Interview*, é comum usar perguntas indiretas dentro da resposta. Subir a voz no fim delas soa como insegurança, e o SpeechRater pode tratar a entonação como errada.
 
-**Drill** (entonação descendente na última palavra):
+**Exercício** (desça a voz na última palavra):
 - *"The lecture explains **why** students need feedback↘"*
 - *"It is unclear **whether** the policy will benefit all students↘"*
 
-**PADRÃO 3: frases declarativas com entonação ascendente**
+**Padrão 3: afirmações com a voz subindo no fim**
 
-| | Errado | Correto |
+| | Erro comum | Forma correta |
 |---|---|---|
 | **Efeito** | Declarações soam como perguntas ou insegurança | Declarações soam como afirmações confiantes |
 | **Exemplo** | *"The evidence suggests↗ that bilingualism↗ has cognitive benefits↗"* | *"The evidence suggests that bilingualism has cognitive benefits↘"* |
 
-> **Impacto:** entonação ascendente sistemática em declarações é detectada como marcador de não-natividade e penaliza a nota de prosódia.
+> **Atenção:** Subir a voz no fim de todas as afirmações é lido como sinal de fala não nativa e tira pontos de prosódia.
 
-### 4.3 Palavras de alto risco no Speaking
+### 4.3 Palavras que mais pedem atenção no Speaking
 
 | Palavra | Erro comum | Pronúncia alvo | Dica |
 |---|---|---|---|
-| **although** | /alˈdo/ (d no lugar de ð) | /ɔːlˈðoʊ/ | "though" rima com "go", mas começa com /ð/ (língua entre os dentes, com voz), nunca com /d/ |
-| **whether** | /ˈwɛtɛr/ (t no lugar de ð) | /ˈwɛðər/ | "weh-THer": ð sonoro + schwa |
-| **rather** | /ˈrɑðɛr/ | /ˈræðər/ | æ (short a) + ð + schwa |
-| **throughout** | /θruˈaʊt/ | /θruːˈaʊt/ | θ + "roo" + "owt" |
+| **although** | /alˈdo/ (d no lugar de ð) | /ɔːlˈðoʊ/ | *though* rima com *go*, mas começa com /ð/ (língua entre os dentes, com voz), e não com /d/ |
+| **whether** | /ˈwɛtɛr/ (t no lugar de ð) | /ˈwɛðər/ | "weh-THer": ð sonoro e schwa |
+| **rather** | /ˈrɑðɛr/ | /ˈræðər/ | æ (*short a*), ð e schwa |
+| **throughout** | /θruˈaʊt/ | /θruːˈaʊt/ | θ, "roo" e "owt" |
 | **environment** | /ɛnˌvaɪronˈmɛnti/ (5 sílabas) | /ɪnˈvaɪrənmənt/ (4 sílabas) | en-**VY**-ron-ment |
-| **particularly** | /pɑrˌtɪkjuˈlɑrɪlɪ/ | /pərˈtɪkjələrli/ | "tik" tônico; "cu-lar-ly" comprimidos |
-| **technology** | /tɛkˈnɔloʒɪ/ | /tɛkˈnɑːlədʒi/ | "nol" tônico; final /dʒi/ não /ʒɪ/ |
-| **hypothesis** | /ˌɪpɔˈtɛsɪs/ (sem h) | /haɪˈpɑːθəsɪs/ | H aspirado + "pot" tônico + θ |
+| **particularly** | /pɑrˌtɪkjuˈlɑrɪlɪ/ | /pərˈtɪkjələrli/ | "tik" tônico; "cu-lar-ly" comprimido |
+| **technology** | /tɛkˈnɔloʒɪ/ | /tɛkˈnɑːlədʒi/ | "nol" tônico; final /dʒi/, e não /ʒɪ/ |
+| **hypothesis** | /ˌɪpɔˈtɛsɪs/ (sem h) | /haɪˈpɑːθəsɪs/ | H aspirado, "pot" tônico e θ |
 | **comfortable** | /ˌkɔmˈfɔrtˌɑblɪ/ | /ˈkʌmftəbəl/ (3 sílabas) | "CUMF-tuh-bul" |
-| **focus** | /ˈfɔkʊs/ | /ˈfoʊkəs/ | Ditongo /oʊ/ + schwa final |
+| **focus** | /ˈfɔkʊs/ | /ˈfoʊkəs/ | Ditongo /oʊ/ e schwa no final |
 | **specifically** | /ˌspɛsɪˈfɪkɑlɪ/ | /spɪˈsɪfɪkli/ | "SIF" tônico; sem vogal extra |
-| **processes** | /ˈprɔsɛsɪs/ | /ˈprɑːsɛsɪz/ | Final /ɪz/ não /ɪs/ |
+| **processes** | /ˈprɔsɛsɪs/ | /ˈprɑːsɛsɪz/ | Final /ɪz/, e não /ɪs/ |
 | **suggest** | /suˈdʒɛst/ | /səˈdʒɛst/ | Schwa na 1ª sílaba |
-| **challenge** | /ˈtʃɑlɛndʒɪ/ (sílaba extra) | /ˈtʃælɪndʒ/ | æ + sem vogal final |
+| **challenge** | /ˈtʃɑlɛndʒɪ/ (sílaba extra) | /ˈtʃælɪndʒ/ | æ, sem vogal no final |
 | **evidence** | /ˈɛvɪdɛnsɪ/ (sílaba extra) | /ˈɛvɪdəns/ | Schwa no meio, sem vogal extra |
 
-### 4.4 Drill de pronúncia: frases de alto risco
+### 4.4 Exercício de pronúncia: frases que juntam vários riscos
 
-Pratique em voz alta, gravando e ouvindo de volta.
+Pratique em voz alta, grave e ouça de volta.
 
-**Drill 1 · /θ/ e /ð/:** *"Although the reading suggests that the hypothesis is theoretically sound, the professor challenges this throughout the lecture."*
-> Risco: **Although** (/ð/), **the** (/ð/ × 4), **that** (/ð/), **hypothesis** (/θ/), **theoretically** (/θ/), **this** (/ð/), **throughout** (/θ/)
+**Frase 1, /θ/ e /ð/:** *"Although the reading suggests that the hypothesis is theoretically sound, the professor challenges this throughout the lecture."*
+> **Dica:** Cuide de **Although** (/ð/), **the** (/ð/ × 4), **that** (/ð/), **hypothesis** (/θ/), **theoretically** (/θ/), **this** (/ð/), **throughout** (/θ/)
 
-**Drill 2 · stress-timing e vogais:** *"Evidence from longitudinal studies specifically indicates that academic performance depends on environmental factors."*
-> Risco: **Evidence** (schwa), **longitudinal** (stress em "TU"), **specifically** (stress em "SIF"), **academic** (stress em "DEM"), **environmental** (tônica em "MEN": en-vi-ron-**MEN**-tal; em *environment* ela fica em "VI")
+**Frase 2, ritmo acentual e vogais:** *"Evidence from longitudinal studies specifically indicates that academic performance depends on environmental factors."*
+> **Dica:** Cuide de **Evidence** (schwa), **longitudinal** (stress em "TU"), **specifically** (stress em "SIF"), **academic** (stress em "DEM"), **environmental** (tônica em "MEN": en-vi-ron-**MEN**-tal; em *environment* ela fica em "VI")
 
-**Drill 3 · terminações -ED:** *"The researchers argued that the proposed policy had generated unintended consequences and suggested that further studies be conducted."*
-> Risco: **argued** (/d/), **proposed** (/d/), **generated** (/ɪd/), **suggested** (/ɪd/), **conducted** (/ɪd/)
+**Frase 3, terminações -ED:** *"The researchers argued that the proposed policy had generated unintended consequences and suggested that further studies be conducted."*
+> **Dica:** Cuide de **argued** (/d/), **proposed** (/d/), **generated** (/ɪd/), **suggested** (/ɪd/), **conducted** (/ɪd/)
 
-**Drill 4: entonação declarativa descendente:** *"The evidence suggests that bilingualism has measurable cognitive benefits.↘"* *"The most effective approach to urban housing is a combination of policy interventions.↘"*
+**Frase 4, entonação descendente nas afirmações:** *"The evidence suggests that bilingualism has measurable cognitive benefits.↘"* *"The most effective approach to urban housing is a combination of policy interventions.↘"*
 
 ---
 
-## PARTE 5: ERROS ESPECÍFICOS NO WRITING ACADÊMICO
+## Parte 5: Armadilhas do Writing acadêmico
 
-Além da transferência oral, o Writing tem os próprios padrões de interferência. Eles aparecem principalmente em *Write for an Academic Discussion*, e alguns também em *Write an Email*.
+Além das armadilhas da fala, o Writing tem as suas próprias. Elas aparecem principalmente em *Write for an Academic Discussion*, e algumas também em *Write an Email*.
 
-| Erro de Writing | Origem | Forma correta |
+| Erro comum | De onde vem | Forma correta |
 |---|---|---|
-| *"In my point of view"* | no meu ponto de vista | **From my perspective / In my view** |
+| *"In my point of view"* | no meu ponto de vista | **[[From my perspective::Do meu ponto de vista]]** ou **[[In my view::Na minha visão]]** |
 | *"According to my opinion"* | de acordo com minha opinião | **In my opinion** (sem "according to") |
-| *"The text makes a critique of"* | o texto faz uma crítica de | **The text critiques / criticizes** |
-| *"As we can see"* | como podemos ver | evite: coloquial demais. Use: **As demonstrated / As the evidence shows** |
-| *"Concluding"* (para concluir) | concluindo | **In conclusion / To conclude / Ultimately** |
-| *"I will talk about"* | vou falar sobre | **This response will address / I will discuss** |
-| *"Let clear that"* / *"leave clear that"* | deixar claro que | **make it clear that / clarify** |
-| *"Put in practice"* | colocar em prática | **Implement / Apply / Put into practice** |
-| *"In function of"* | em função de | **Due to / As a result of / In terms of** |
+| *"The text makes a critique of"* | o texto faz uma crítica de | **The text critiques** ou **criticizes** |
+| *"As we can see"* | como podemos ver | evite, porque soa coloquial; use **[[As demonstrated::Como foi demonstrado]]** ou **[[As the evidence shows::Como mostram as evidências]]** |
+| *"Concluding"* (para concluir) | concluindo | **In conclusion**, **To conclude** ou **[[Ultimately::Em última análise]]** |
+| *"I will talk about"* | vou falar sobre | **[[This response will address::Esta resposta vai tratar de]]** ou **I will discuss** |
+| *"Let clear that"*, *"leave clear that"* | deixar claro que | **make it clear that** ou **clarify** |
+| *"Put in practice"* | colocar em prática | **Implement**, **Apply** ou **Put into practice** |
+| *"In function of"* | em função de | **Due to**, **As a result of** ou **In terms of** |
 | *"Problematic"* (como substantivo) | problemática | "Problematic" em inglês é adjetivo ("problematic situation"), não substantivo |
-| *"Diverse"* (= vários) | diverso | **Various / Several / Multiple**: "diverse" = culturalmente variado |
-| *"Nowadays society"* (advérbio usado como adjetivo) | hoje a sociedade | **Today's society / Society today** |
-| *"Since the text says X, so Y"* | já que... então | use **um**: "Since X, Y" OU "X; therefore, Y" |
-| *"I totally agree"* / *"I completely disagree"* | concordo totalmente | prefira **"I largely agree" / "I am not persuaded"**: hedging soa mais maduro |
+| *"Diverse"* (= vários) | diverso | **Various**, **Several** ou **Multiple**; *diverse* quer dizer "variado, diverso" (pessoas, culturas) |
+| *"Nowadays society"* (advérbio usado como adjetivo) | hoje a sociedade | **[[Today's society::A sociedade de hoje]]** ou **Society today** |
+| *"Since the text says X, so Y"* | já que... então | use só **um**: *Since X, Y* ou *X; therefore, Y* |
+| *"I totally agree"*, *"I completely disagree"* | concordo totalmente | prefira **"[[I largely agree::Concordo em grande parte]]"** ou **"[[I am not persuaded::Não estou convencido]]"**, porque a cautela soa mais madura |
 | *"more and more important"* repetido | cada vez mais | varie: **"increasingly important", "of growing importance"** |
-| *"a big problem", "a lot of people"* | um grande problema | **"a significant problem", "many people / a substantial number"** |
-| *"etc." / "and so on"* numa lista | etc. | feche a lista ou use **"among others"** |
-| *"In the actual context"* | no contexto atual | **"In the current context" / "Today"** |
+| *"a big problem"*, *"a lot of people"* | um grande problema | **"a significant problem"**, **"many people"** ou **"a substantial number"** |
+| *"etc."* ou *"and so on"* numa lista | etc. | feche a lista ou use **"[[among others::entre outros]]"** |
+| *"In the actual context"* | no contexto atual | **"[[In the current context::No contexto atual]]"** ou **"Today"** |
 
-> **No *Write an Email*:** a armadilha inversa também vale: excesso de formalidade e rodeios ("I would like to take this opportunity to humbly request if it would perhaps be possible...") soam como ruído, não registro alto. C1 no e-mail é **direto e educado**. Ver Módulo 5, Parte 5.2 (código **SW-reg**).
+> **Erro comum:** No *Write an Email* vale a armadilha inversa. Excesso de formalidade e rodeios (*"I would like to take this opportunity to humbly request if it would perhaps be possible..."*) soam como ruído, e não como registro alto. Um e-mail de nível C1 é **direto e educado**. Veja o Módulo 5, Parte 5.2 (código **SW-reg**).
 
 ### 5.1 Mini-banco de frases seguras para o e-mail
 
-Frases prontas, de registro certo, para cada movimento do *Write an Email*: evitam tanto a tradução literal quanto a cerimônia excessiva.
+Estas frases têm o registro certo para cada etapa do *Write an Email* e evitam tanto a tradução literal quanto a cerimônia demais.
 
 | Movimento | Frase segura |
 |---|---|
-| Contexto | *"I am a student in your [course] class."* / *"I am writing regarding [topic]."* |
-| Propósito | *"I am writing to ask whether..."* / *"I would like to request..."* / *"Could you let me know..."* |
-| Justificativa | *"I was unwell last week."* / *"I have a scheduling conflict with..."* |
-| Pedido | *"Would it be possible to...?"* / *"Could I...?"* / *"I would appreciate it if you could..."* |
-| Fechamento | *"Thank you for your time."* / *"I look forward to your reply."* / *"Best regards, [Name]"* |
+| Contexto | *"I am a student in your [course] class."* ou *"I am writing regarding [topic]."* |
+| Objetivo | *"[[I am writing to ask whether...::Escrevo para perguntar se...]]"*, *"[[I would like to request...::Gostaria de solicitar...]]"* ou *"[[Could you let me know...::Poderia me informar...]]"* |
+| Justificativa | *"[[I was unwell last week.::Estive doente na semana passada.]]"* ou *"[[I have a scheduling conflict with...::Tenho um conflito de horário com...]]"* |
+| Pedido | *"[[Would it be possible to...?::Seria possível...?]]"*, *"[[Could I...?::Eu poderia...?]]"* ou *"[[I would appreciate it if you could...::Eu agradeceria se o senhor pudesse...]]"* |
+| Fechamento | *"[[Thank you for your time.::Obrigado pelo seu tempo.]]"*, *"[[I look forward to your reply.::Aguardo o seu retorno.]]"* ou *"[[Best regards,::Atenciosamente,]] [Name]"* |
 
-> **Nunca** no e-mail: *"Dear Sir or Madam"* quando você sabe o nome · *"I hope this email finds you well"* (clichê) · contrações (*I'm, don't*) · *"ASAP"* · vários pedidos empilhados na mesma frase (um pedido por frase, cobrindo cada ponto obrigatório).
+> **Atenção:** No e-mail, evite *"Dear Sir or Madam"* quando você sabe o nome da pessoa, o clichê *"I hope this email finds you well"*, contrações (*I'm*, *don't*), *"ASAP"* e vários pedidos na mesma frase. Faça um pedido por frase e cubra cada ponto obrigatório.
 
 ---
 
-## PARTE 6: SEU PERFIL PESSOAL DE TRAPS
+## Parte 6: Seu perfil pessoal de armadilhas
 
-> Lista de verificação personalizada. Após revisar as partes acima, marque os erros que você já cometeu ou reconhece como recorrentes. São os que você deve priorizar antes do Simulado 4 e nos dias finais antes da prova.
+> **Dica:** Depois de revisar as Partes acima, marque os erros que você já cometeu ou que reconhece como recorrentes. São eles que você prioriza antes do Simulado 4 e nos últimos dias antes da prova.
 
-**Transferência linguística · meus erros recorrentes:**
+**Armadilhas do português que ainda me pegam:**
 ```
 ☐ Preposições (especifique quais): _______________________      → W3 / SW-form
 ☐ Gerúndio vs. infinitivo (verbos): _______________________     → W2 / SW-verb
@@ -560,7 +557,7 @@ Frases prontas, de registro certo, para cada movimento do *Write an Email*: evit
 ☐ Expressões idiomáticas (especifique): _______________________
 ```
 
-**Falsos cognatos: os que ainda me confundem:**
+**Falsos cognatos que ainda me confundem:**
 ```
 ☐ Actually / Atualmente        ☐ Eventually / Eventualmente
 ☐ Pretend / Pretender          ☐ Realize / Realizar
@@ -568,11 +565,11 @@ Frases prontas, de registro certo, para cada movimento do *Write an Email*: evit
 ☐ Sympathetic / Simpático      ☐ Outros: _______________________
 ```
 
-**Pronúncia · meus pontos críticos:**
+**Pontos de pronúncia que ainda pedem atenção:**
 ```
 ☐ /θ/ (th surdo: think, hypothesis, throughout)
 ☐ /ð/ (th sonoro: the, this, that, although)
-☐ /æ/ (short a — can, that, academic, challenge)
+☐ /æ/ (short a: can, that, academic, challenge)
 ☐ /ɪ/ vs /iː/ (live/leave, it/eat, ship/sheep)
 ☐ /ʌ/ (but, much, result, study, discussion)
 ☐ Vogais epentéticas no fim (speak-i, last-i, work-i)
@@ -585,7 +582,7 @@ Frases prontas, de registro certo, para cada movimento do *Write an Email*: evit
 ☐ Ritmo stress-timed (sílabas tônicas mais longas)
 ```
 
-**Palavras de alto risco · as que ainda erro:**
+**Palavras que ainda erro:**
 ```
 ☐ although        ☐ whether        ☐ rather
 ☐ throughout      ☐ environment    ☐ particularly
@@ -594,23 +591,23 @@ Frases prontas, de registro certo, para cada movimento do *Write an Email*: evit
 ☐ suggest         ☐ challenge      ☐ processes
 ```
 
-### Protocolo de eliminação personalizada
+### Passo a passo para eliminar as suas armadilhas
 
 | Fase | Ação | Frequência |
 |---|---|---|
-| **Reconhecimento** | Releia a entrada do trap neste módulo | Uma vez ao identificar |
-| **Drilling oral** (pronúncia e transferência) | Grave uma frase usando a forma correta | 3× ao dia por 3 dias |
-| **Drilling escrito** (falsos cognatos e gramática) | Escreva 2 frases originais usando a forma correta | 1× ao dia por 3 dias |
-| **Verificação** | Nos próximos simulados, monitore especificamente este erro | Cada simulado |
-| **Automação** | O erro deixou de aparecer nos simulados | Risco eliminado |
+| **Reconhecimento** | Releia a armadilha neste módulo | Uma vez, ao identificar |
+| **Treino oral** (pronúncia e armadilhas do português) | Grave uma frase usando a forma correta | 3 vezes ao dia por 3 dias |
+| **Treino escrito** (falsos cognatos e gramática) | Escreva 2 frases suas usando a forma correta | 1 vez ao dia por 3 dias |
+| **Verificação** | Nos próximos simulados, observe especificamente este erro | A cada simulado |
+| **Automatização** | O erro deixou de aparecer nos simulados | Armadilha superada |
 
 ---
 
-## PARTE 7: GLOSSÁRIO DE SOBREVIVÊNCIA · AS SUBSTITUIÇÕES MAIS URGENTES
+## Parte 7: Glossário de bolso com as trocas mais urgentes
 
-Para uso imediato, antes de qualquer outro estudo deste módulo.
+Se o tempo está curto, comece por aqui, antes de qualquer outra Parte deste módulo.
 
-| Em vez de... | Use... | Impacto |
+| Em vez de | Use | Seção |
 |---|---|---|
 | actually (= atualmente) | **currently / nowadays** | 🎤✍️ |
 | eventually (= às vezes) | **occasionally / sometimes** | 🎤✍️ |
@@ -630,7 +627,7 @@ Para uso imediato, antes de qualquer outro estudo deste módulo.
 | arrive to | **arrive at / arrive in** | 🎤✍️ |
 | I enjoy to | **I enjoy [gerúndio]** | 🎤✍️ |
 | avoid to | **avoid [gerúndio]** | ✍️ |
-| in my opinion, I think | **In my opinion** OU **I think** (não ambos) | 🎤✍️ |
+| in my opinion, I think | **In my opinion** ou **I think** (não os dois) | 🎤✍️ |
 | have success | **be successful / succeed** | 🎤✍️ |
 | do an effort | **make an effort** | ✍️ |
 | pass by (= passar por) | **go through** | 🎤 |
@@ -662,42 +659,42 @@ Para uso imediato, antes de qualquer outro estudo deste módulo.
 
 ---
 
-## PARTE 8: MAPA · ONDE CADA TRAP TE PEGA NOS PROTOCOLOS DE ERRO
+## Parte 8: Mapa de onde cada armadilha aparece na análise de erros
 
-Depois de um simulado, quando você classificar um erro com um código de triagem do Módulo 7, use este mapa reverso. Ele te leva direto ao trecho deste módulo que corrige aquele padrão.
+Depois de um simulado, quando você classificar um erro com um código de triagem do Módulo 7, use este mapa no sentido inverso. Ele leva você direto ao trecho deste módulo que corrige aquele padrão.
 
-| Código (M7) | Protocolo do módulo | Traps deste módulo | Onde reparar aqui |
+| Código (M7) | Onde revisar no curso | Armadilhas deste módulo | Onde revisar aqui |
 |---|---|---|---|
-| **SW-form** | M4 → W3 | preposições assassinas; artigo com abstratos; `a`/`an`; artigo com instituições; word form | Parte 2.1, Parte 2.3-A, Parte 2.3-F |
-| **SW-verb** | M4 → W2 | 3ª pessoa -s; incontáveis; present perfect × passado; gerúndio × infinitivo | Parte 2.3-B, C, E, H |
-| **SW-synt** | M4 → W1 | ordem das palavras; sujeito duplo; adjetivo no plural; *since... so* | Parte 2.3-G, I; Parte 5 |
-| **SW-reg** | M4 → W4 + M5 → RG1/RG2 | over-formality no e-mail; *"in my opinion, I think"*; *"as we can see"* | Parte 5, Parte 5.1 |
-| **SW-lex** / **SR-lex** | M6 → V3/V6 | falsos cognatos (sentido trocado); *diverse* = vários; *consistent* = substancial | Parte 3; Parte 5 (*diverse*) |
-| **SS-phon** | M3 → S1 / S2 | /θ/, /ð/, /æ/, /ɪ/–/iː/, /ʌ/, L final, epêntese, -ED; acento de palavra em cognatos | Parte 4.1, 4.1b |
-| **SS-rhythm** | M3 → S3 | ritmo silábico; entonação ascendente em declarações | Parte 4.2 |
-| **SS-gram** | M3 → S5 | 3ª pessoa -s sob pressão | Parte 2.3-C |
-| **SL-vocab** | M2 → L5 | falsos cognatos ouvidos ao contrário (*actually*, *eventually*, *library*) | Parte 3 |
+| **SW-form** | M4, W3 | preposições que enganam; artigo com abstratos; `a`/`an`; artigo com instituições; word form | Parte 2.1, Parte 2.3-A, Parte 2.3-F |
+| **SW-verb** | M4, W2 | *-s* da 3ª pessoa; incontáveis; present perfect ou passado; gerúndio ou infinitivo | Parte 2.3-B, C, E, H |
+| **SW-synt** | M4, W1 | ordem das palavras; sujeito duplo; adjetivo no plural; *since... so* | Parte 2.3-G, I; Parte 5 |
+| **SW-reg** | M4, W4 e M5, RG1 e RG2 | excesso de formalidade no e-mail; *"in my opinion, I think"*; *"as we can see"* | Parte 5, Parte 5.1 |
+| **SW-lex** e **SR-lex** | M6, V3 e V6 | falsos cognatos (sentido trocado); *diverse* no sentido de "vários"; *consistent* no sentido de "substancial" | Parte 3; Parte 5 (*diverse*) |
+| **SS-phon** | M3, S1 e S2 | /θ/, /ð/, /æ/, /ɪ/–/iː/, /ʌ/, L final, epêntese, -ED; acento de palavra em cognatos | Parte 4.1, 4.1b |
+| **SS-rhythm** | M3, S3 | ritmo silábico; entonação ascendente em declarações | Parte 4.2 |
+| **SS-gram** | M3, S5 | *-s* da 3ª pessoa sob pressão | Parte 2.3-C |
+| **SL-vocab** | M2, L5 | falsos cognatos ouvidos ao contrário (*actually*, *eventually*, *library*) | Parte 3 |
 
 ---
 
-## PARTE 9: SPRINT DE ELIMINAÇÃO · 2 SEMANAS
+## Parte 9: Plano de 2 semanas para eliminar as armadilhas
 
-Este módulo tem material demais para "estudar de uma vez". O que funciona de verdade é um sprint focado nos **seus** traps (Parte 6): você roda uma vez e depois só monitora nos simulados.
+Este módulo tem material demais para estudar de uma vez só. O que funciona é um plano curto focado nas **suas** armadilhas (Parte 6): você faz uma vez e depois só acompanha nos simulados.
 
 | Dia | Foco | Ação concreta |
 |---|---|---|
 | **1** | Diagnóstico | Preencha a Parte 6 inteira. Conte quantos itens marcou por categoria. |
-| **2–3** | Preposições + artigos (se marcados) | 10 frases próprias por dia com as formas certas; leia em voz alta |
-| **4–5** | 3ª pessoa -s + incontáveis + tempos verbais | Reescreva um parágrafo antigo seu caçando só esses 3 erros |
-| **6–7** | Falsos cognatos (seus 5 piores) | Flashcard: PT → forma errada tentadora → forma certa. 3 frases com a certa. |
-| **8–9** | Fonemas (seus 3 piores) | 20 repetições isoladas → em palavras → nas frases-drill da Parte 4.4. Grave e compare. |
-| **10** | Ritmo + entonação | Shadowing de 1 áudio (M2), focando tônicas longas e queda final |
-| **11** | E-mail | Escreva 2 e-mails usando só o banco da Parte 5.1; cace cerimônia e contração |
-| **12–13** | Simulado parcial | Speaking + Writing de um simulado do M7; classifique cada erro com código |
-| **14** | Revisão | Os traps que ainda apareceram nos dias 12 e 13 → lista curta para os dias finais |
+| **2–3** | Preposições e artigos (se marcados) | 10 frases próprias por dia com as formas certas; leia em voz alta |
+| **4–5** | *-s* da 3ª pessoa, incontáveis e tempos verbais | Reescreva um parágrafo antigo seu procurando só esses 3 erros |
+| **6–7** | Falsos cognatos (os seus 5 mais difíceis) | Cartão de memória com o sentido em português, a forma errada que tenta e a forma certa; depois, 3 frases com a forma certa |
+| **8–9** | Fonemas (os seus 3 mais difíceis) | 20 repetições do som sozinho, depois em palavras e por fim nas frases da Parte 4.4; grave e compare |
+| **10** | Ritmo e entonação | *Shadowing* de 1 áudio (M2), com foco nas tônicas longas e na queda final |
+| **11** | E-mail | Escreva 2 e-mails usando só as frases da Parte 5.1 e procure cerimônia e contrações |
+| **12–13** | Simulado parcial | Speaking e Writing de um simulado do M7; classifique cada erro com o código |
+| **14** | Revisão | As armadilhas que ainda apareceram nos dias 12 e 13 viram a sua lista curta para os últimos dias |
 
-> Depois do sprint, você **não** relê este módulo inteiro de novo. Você monitora a sua lista curta em cada simulado e, no dia D, roda só a Parte 6 marcada.
+> **Dica:** Depois desse plano, não precisa reler o módulo inteiro. Acompanhe a sua lista curta em cada simulado e, no dia da prova, revise só a Parte 6 que você marcou.
 
 ---
 
-✅ Módulo 9 concluído. A Brazilian Trap Library está mapeada e pronta para eliminação: rode o sprint da Parte 9 uma vez e priorize a sua Parte 6 marcada nos dias finais antes da prova.
+✅ Módulo 9 concluído. Agora as suas armadilhas estão mapeadas: faça o plano da Parte 9 uma vez e, nos últimos dias antes da prova, priorize a Parte 6 que você marcou. Mais um passo dado, e ele conta.
