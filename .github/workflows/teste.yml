@@ -1,7 +1,10 @@
 name: Teste
 
 # Roda o build e o smoke test em todo pull request para a main e em todo push na main.
-# Sem segredos: o app roda em modo offline (sem app/supabase_config.json).
+# Sem segredos: só a URL e a chave PÚBLICA (publishable) do Supabase, em variáveis do
+# repositório (Settings > Secrets and variables > Actions > Variables). O build.py lê as
+# duas do ambiente quando não há app/supabase_config.json. Sem elas o site builda offline,
+# sem login nem conta, e as checagens dessas telas reprovam.
 
 on:
   pull_request:
@@ -27,6 +30,9 @@ jobs:
         run: python -m pip install markdown
 
       - name: Build do pipeline e do site
+        env:
+          SUPABASE_URL: ${{ vars.SUPABASE_URL }}
+          SUPABASE_PUBLISHABLE_KEY: ${{ vars.SUPABASE_PUBLISHABLE_KEY }}
         run: |
           cd app
           python build_pipeline.py
