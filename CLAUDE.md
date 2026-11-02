@@ -398,6 +398,24 @@ foi publicado:** `docs/publicar.md` é o passo a passo do dono.
 Os botões Exportar/Importar na sidebar empacotam todas as chaves `toefl_*` em
 JSON. Ao mudar o formato do estado, escrever migração — não descartar progresso.
 
+## Trabalho em dupla
+
+Duas pessoas: Pietro (conteúdo: `consolidated/*.md` e arquivos de dados) e
+Gabriel (plataforma e pagamento: `app/app.js`, `supabase/`).
+
+- A **main é protegida**: só entra mudança por pull request, revisado pelo outro
+  e com o teste automático (`.github/workflows/teste.yml`) verde. Nunca enviar
+  para a main.
+- Toda tarefa numa **branch curta** (`nome/tarefa`), criada depois de `git pull`
+  na main e enviada em 1 ou 2 dias.
+- Antes de começar um item do `ROADMAP.md`, colocar o nome ao lado dele.
+- Os arquivos que mais dão conflito são `ROADMAP.md`, `CLAUDE.md` e
+  `app/app.js`: mudanças pequenas e `git pull` antes de editar.
+- **Segredos só com o Pietro** (Stripe, chaves de servidor). Gabriel usa só a
+  chave pública (ver `docs/publicar.md`).
+- O smoke test aceita a variável de ambiente `CHROME_PATH` para achar o Chrome
+  (o teste automático usa isso no Linux).
+
 ## Onde estamos
 
 Consultar `ROADMAP.md` antes de qualquer tarefa. É a memória entre sessões:

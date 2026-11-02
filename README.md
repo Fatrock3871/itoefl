@@ -66,7 +66,14 @@ commitado.
 
 ## Como contribuir
 
-1. Crie uma branch a partir da principal.
+A `main` é protegida: nada vai direto para ela.
+
+1. `git checkout main`, `git pull` e crie uma branch curta (`nome/tarefa`).
 2. Faça a mudança na fonte, rode as builds e o smoke test.
-3. Abra um pull request descrevendo o que mudou e como foi verificado.
-4. Ao concluir um item, marque-o no `ROADMAP.md`.
+3. Envie a branch em 1 ou 2 dias e abra um pull request descrevendo o que mudou
+   e como foi verificado. A outra pessoa revisa e o teste automático precisa passar.
+4. Ao concluir um item, marque-o no `ROADMAP.md` (e escreva seu nome ao lado de
+   um item antes de começá-lo).
+
+Divisão: Pietro cuida do conteúdo, Gabriel da plataforma e do pagamento. Detalhes
+em "Trabalho em dupla" no `AGENTS.md`.

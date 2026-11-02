@@ -1065,6 +1065,9 @@ document.title = JSON.stringify(results);
 
 
 def find_chrome():
+    # CHROME_PATH (variável de ambiente) vale antes dos caminhos do Windows; o CI usa
+    if os.environ.get("CHROME_PATH"):
+        return os.environ["CHROME_PATH"]
     for path in CHROME_CANDIDATES:
         if path.exists():
             return str(path)

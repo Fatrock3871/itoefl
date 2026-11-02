@@ -435,11 +435,14 @@ Você já viu este ponto no Módulo 3 (Speaking). Aqui ele volta com foco na cor
 
 **Como corrigir:** identifique a sílaba tônica, exagere a duração dela no começo do treino, comprima as átonas e faça *shadowing* com falantes nativos.
 
-**Padrão 2: entonação de perguntas indiretas**
+**Padrão 2: entonação de perguntas**
+
+Só a pergunta de sim ou não termina com a voz subindo. A pergunta com *wh-* e a pergunta indireta terminam com a voz descendo, como você viu no Módulo 3.
 
 | Tipo | Entonação correta | Erro comum |
 |---|---|---|
-| Pergunta direta: *"Where is the library?"* | ↗️ ascendente | ↗️ ascendente (correto) |
+| Pergunta com *wh-* (what, where, why...): *"Where is the library?"* | ↘️ descendente | ↗️ ascendente (influência do português) |
+| Pergunta de sim ou não: *"Is the library open?"* | ↗️ ascendente | ↗️ ascendente (correto) |
 | Pergunta indireta dentro de afirmação: *"I'm not sure where the library **is**."* | ↘️ descendente | ↗️ ascendente (influência do português) |
 
 **Por que importa:** em *Take an Interview*, é comum usar perguntas indiretas dentro da resposta. Subir a voz no fim delas soa como insegurança, e o SpeechRater pode tratar a entonação como errada.
