@@ -16,6 +16,7 @@ ATENCAO: quem tiver o link le o curso inteiro de graca. Nao deixe no ar depois
 do teste.
 """
 
+import os
 import shutil
 import subprocess
 import sys
@@ -40,8 +41,11 @@ def build(out=OUT):
 
         # sys.executable, e nao "python": o do PATH pode ser outro
         # interpretador, sem o pacote markdown
+        # o build.py também lê SUPABASE_URL e SUPABASE_PUBLISHABLE_KEY do
+        # ambiente (CI): sem tirá-las, esta cópia sairia com login
+        env = {k: v for k, v in os.environ.items() if k not in ("SUPABASE_URL", "SUPABASE_PUBLISHABLE_KEY")}
         for script in ("build_pipeline.py", "build.py"):
-            subprocess.run([sys.executable, script], cwd=work / "app", check=True, capture_output=True)
+            subprocess.run([sys.executable, script], cwd=work / "app", check=True, capture_output=True, env=env)
 
         html = (work / "artifact" / "index.html").read_text(encoding="utf-8")
         # o build.py só escreve esta atribuição quando há Supabase configurado
