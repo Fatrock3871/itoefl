@@ -1144,6 +1144,18 @@ def run():
                       lp["start"] == "index.html#criar-conta" and lp["heroMain"] == "index.html#criar-conta"
                       and lp["logo"] >= 40 and lp["navFont"] >= 15 and lp["kicker"]["size"] >= 14 and lp["kicker"]["straight"]
                       and not lp["video"], lp)
+                # sem grandes vazios (1280 px): cartão de etapa com no máximo 30%
+                # de altura vazia abaixo do último módulo; menos de 120 px entre
+                # o fim do topo e o título "Por que este curso existe"
+                gaps = b.eval(r"""(function(){
+                  var st = Array.prototype.map.call(document.querySelectorAll(".lp-stage"), function(a){
+                    var li = a.querySelectorAll(".lp-mods li"), ab = a.getBoundingClientRect();
+                    return Math.round((ab.bottom - li[li.length - 1].getBoundingClientRect().bottom) / ab.height * 100); });
+                  var h = document.querySelector("#por-que-existe h2"), hero = document.querySelector(".lp-hero");
+                  return { stages: st, gap: Math.round(h.getBoundingClientRect().top - hero.getBoundingClientRect().bottom) };
+                })()""")
+                check("landing_no_big_empty_spaces",
+                      len(gaps["stages"]) == 4 and max(gaps["stages"]) <= 30 and 0 <= gaps["gap"] < 120, gaps)
                 check("landing_four_plans_side_by_side_90_highlighted",
                       [p["id"] for p in lp["plans"]] == ["mensal", "60dias", "90dias", "anual"]
                       and [p["price"] for p in lp["plans"]] == ["R$ 29,90", "R$ 49,90", "R$ 59,90", "R$ 129,90"]
