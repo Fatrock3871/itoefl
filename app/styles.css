@@ -1767,7 +1767,7 @@ li > .reveal{margin:6px 0 4px;}
 }
 .lp-btn-big{min-height:54px; padding:13px 30px; font-size:17px;}
 .lp-video{max-width:720px; margin:30px auto 0; text-align:left;}
-.lp-hero h1{font-size:clamp(34px, 6.2vw, 60px); margin:0 0 18px; font-style:italic; text-transform:uppercase;}
+.lp-hero h1{font-size:clamp(34px, 6.2vw, 60px); margin:0 0 18px; font-style:italic;}
 .lp-sub{font-size:19px; line-height:1.55; color:var(--ink-2); max-width:640px; margin:0 auto 28px;}
 .lp-cta{display:flex; gap:14px; justify-content:center; flex-wrap:wrap;}
 .lp-note{margin:18px 0 0; font-size:14px; color:var(--ink-2);}
