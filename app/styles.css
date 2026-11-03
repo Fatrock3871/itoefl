@@ -1780,6 +1780,26 @@ li > .reveal{margin:6px 0 4px;}
 .lp-feat h3{font-size:18px; margin:0 0 8px;}
 .lp-feat p{margin:0; font-size:15px; line-height:1.55; color:var(--ink);}
 #diagnostico .quiz-drill{max-width:760px; margin:0 0 20px;}
+/* diagnóstico recolhido, uma questão por vez, gabarito recolhido (item 38) */
+.lp-diag{max-width:760px; background:var(--paper); border:2px solid var(--edge); border-radius:var(--radius); box-shadow:var(--shadow-hard);}
+.lp-diag > summary{
+  display:flex; flex-wrap:wrap; align-items:baseline; gap:4px 14px; padding:16px 20px; cursor:pointer; list-style:none; min-height:44px;
+}
+.lp-diag > summary::-webkit-details-marker{display:none;}
+.lp-diag > summary::after{content:"+"; margin-left:auto; font-size:24px; font-weight:800; line-height:1; color:var(--accent-strong);}
+.lp-diag[open] > summary::after{content:"\2212";}
+.lp-diag > summary:hover{background:var(--accent-wash);}
+.lp-diag-t{font-family:'Bricolage Grotesque',sans-serif; font-weight:800; font-size:20px;}
+.lp-diag-meta{font-size:14.5px; color:var(--ink-2);}
+.lp-diag-body{padding:4px 20px 20px;}
+.lp-diag-body .quiz-drill{margin-bottom:0;}
+.lp-step{margin:6px 0 12px; font-weight:800; font-size:15px; color:var(--accent-strong); outline:none;}
+.lp-key{margin:4px 0 16px; border:2px solid var(--edge); border-radius:var(--radius); background:var(--paper);}
+.lp-key > summary{padding:12px 16px; cursor:pointer; font-weight:700; min-height:44px; display:flex; align-items:center;}
+.lp-key > summary:hover{background:var(--accent-wash);}
+.lp-key-list{padding:4px 16px 16px;}
+.lp-key-list .qcard{margin-top:14px;}
+.lp-result-plan, .lp-result-save{font-size:15px; line-height:1.55;}
 .lp-result{
   max-width:760px; padding:24px; background:var(--accent-wash); border:2px solid var(--edge);
   border-radius:var(--radius); box-shadow:var(--shadow-hard); outline:none;
@@ -1796,6 +1816,13 @@ li > .reveal{margin:6px 0 4px;}
   border:2px solid var(--edge); border-radius:var(--radius);
 }
 .lp-plan.is-highlight{box-shadow:6px 6px 0 var(--accent); background:var(--accent-wash);}
+/* perfil do plano e destaque do que combina com a banda (item 39) */
+.lp-plan-profile{font-size:14px; font-weight:800; letter-spacing:0.04em; text-transform:uppercase; color:var(--accent-strong); margin-bottom:8px !important;}
+.lp-plan.is-match{outline:4px solid var(--accent-strong); outline-offset:3px;}
+.lp-plan .lp-plan-match{
+  align-self:flex-start; margin:0 0 10px; font-size:12px; font-weight:800; padding:3px 10px; border-radius:99px;
+  background:var(--ink); color:var(--bg);
+}
 .lp-plan-note{font-size:14px; font-weight:600; color:var(--ink-2); margin-bottom:10px !important;}
 .lp-plan .plan-badge{position:absolute; top:-12px; left:20px; font-size:11px; padding:3px 9px; box-shadow:2px 2px 0 var(--edge);}
 .lp-plan h3{font-size:24px; margin:0 0 6px;}
@@ -1831,6 +1858,7 @@ li > .reveal{margin:6px 0 4px;}
   /* no celular os planos viram cartões empilhados, o destacado primeiro */
   .lp-plans{grid-template-columns:1fr; gap:22px;}
   .lp-plan.is-highlight{order:-1;}
+  .lp-plan.is-match{order:-2;}
 }
 @media(min-width:861px) and (max-width:1100px){
   .lp-plans{grid-template-columns:repeat(2, minmax(0, 1fr)); gap:22px 16px;}

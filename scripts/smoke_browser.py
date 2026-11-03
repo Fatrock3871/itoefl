@@ -1086,6 +1086,23 @@ def run():
                       and [p["badge"] for p in lp["plans"]] == ["", "", "Melhor custo-benefício", ""]
                       and len({p["top"] for p in lp["plans"]}) == 1 and lp["refund"], lp)
                 check("landing_makes_no_unprovable_claims", not lp["claims"], lp["claims"])
+                # diagnóstico recolhido ("cerca de 12 min, grátis, sem cadastro"),
+                # abre com uma questão por vez e avança ao confirmar (item 38)
+                one = b.eval(r"""(function(){
+                  var d = document.getElementById("lpDiag"), out = { wasOpen: d.open,
+                    meta: d.querySelector(".lp-diag-meta").textContent };
+                  d.open = true;
+                  function shown(){ return Array.prototype.filter.call(document.querySelectorAll("#diagnostico .qcard"),
+                    function(c){ return c.getBoundingClientRect().height > 0; }).map(function(c){ return c.dataset.num; }); }
+                  out.first = shown(); out.step1 = document.getElementById("lpStep").textContent;
+                  var c = document.querySelector("#diagnostico .qcard");
+                  c.querySelector('.opt[data-letter="' + c.dataset.correct + '"]').click(); c.querySelector(".qconfirm").click();
+                  out.second = shown(); out.step2 = document.getElementById("lpStep").textContent;
+                  return out;
+                })()""")
+                check("landing_diagnostic_collapsed_one_question_at_a_time",
+                      one == {"wasOpen": False, "meta": "Cerca de 12 min, grátis, sem cadastro", "first": ["1"],
+                              "step1": "Questão 1 de 10", "second": ["2"], "step2": "Questão 2 de 10"}, one)
                 # 7 certas de 10: B2, cronograma Regular, e o estado fica na
                 # mesma chave que o app le
                 early = b.eval(r"""(function(){
@@ -1101,6 +1118,22 @@ def run():
                       "Você acertou 7 de 10." in res["text"] and "Nível estimado: banda 4–4,5 (B2)" in res["text"]
                       and "Cronograma Regular (60 dias)" in res["text"] and res["saved"] == 10 and res["verdicts"] == 10
                       and not res["hidden"], res)
+                # no fim: a banda e o cronograma à vista, o gabarito completo
+                # recolhido e o convite para salvar o resultado; o plano que
+                # combina com a banda 4–4,5 (60 dias) fica destacado (itens 38 e 39)
+                fin = b.eval(r"""(function(){
+                  var key = document.getElementById("lpKey"), r = document.getElementById("lpResult");
+                  return { keyShown: !key.hidden, keyOpen: key.open, keyCards: key.querySelectorAll(".qcard").length,
+                    listCards: document.querySelectorAll("#lpQList .qcard").length,
+                    invite: /Criar conta e salvar o resultado/.test(r.textContent) && /Quer guardar este resultado/.test(r.textContent),
+                    match: Array.prototype.filter.call(document.querySelectorAll(".lp-plan.is-match"), function(p){
+                      return !p.querySelector(".lp-plan-match").hidden; }).map(function(p){ return p.dataset.plan; }),
+                    line: document.getElementById("lpResultPlan").textContent };
+                })()""")
+                check("landing_result_key_collapsed_with_invite",
+                      fin["keyShown"] and not fin["keyOpen"] and fin["keyCards"] == 10 and fin["listCards"] == 0 and fin["invite"], fin)
+                check("landing_plan_highlight_follows_band",
+                      fin["match"] == ["60dias"] and fin["line"] == "60 dias, Revisão intensiva", fin)
                 b.reload(settle=1)
                 again = b.eval('(function(){ var r = document.getElementById("lpResult"); return { hidden: r.hidden, text: r.textContent }; })()')
                 check("landing_diagnostic_survives_reload", not again["hidden"] and "B2" in again["text"], again)
@@ -1124,7 +1157,7 @@ def run():
                 tops = {p["id"]: p["top"] for p in lp["plans"]}
                 check("landing_mobile_375_fits_and_stacks_highlight_first",
                       lp["docW"] <= 375 and not lp["over"] and len(tops) == 4
-                      and tops["90dias"] < tops["mensal"] < tops["60dias"] < tops["anual"] and lp["smallTargets"] == [], lp)
+                      and tops["60dias"] < tops["90dias"] < tops["mensal"] < tops["anual"] and lp["smallTargets"] == [], lp)
                 check("landing_no_js_errors", not b.errors, b.errors)
                 # o plano clicado la (60 dias) chega marcado na tela de compra do app
                 b.goto(page, settle=1)

@@ -1428,6 +1428,22 @@ def landing_checks():
         and page.index('id="por-que-existe"') < page.index('id="como-funciona"')
         and why.count('class="lp-pillar"') == 3
     )
+    # planos com perfil e faixa de banda (item 39): Mensal "Reta final", 60 dias
+    # "Revisão intensiva", 90 dias "Trilha completa", Anual "Ciclo de editais";
+    # só o 90 dias leva o selo, e só os três primeiros têm faixa de banda
+    plans = re.findall(r'<article class="lp-plan[^"]*" data-plan="(\w+)"([^>]*)>(.*?)</article>', page, re.S)
+    out["landing_plans_have_profiles_and_band_ranges"] = (
+        [(pid, re.search(r'lp-plan-profile">(.*?)<', body).group(1), re.search(r'data-fits="(\d-\d)"', attrs).group(1) if "data-fits" in attrs else "")
+         for pid, attrs, body in plans]
+        == [("mensal", "Reta final", "5-6"), ("60dias", "Revisão intensiva", "4-4"),
+            ("90dias", "Trilha completa", "1-3"), ("anual", "Ciclo de editais", "")]
+        and page.count('class="plan-badge">Melhor custo-benefício</span>') == 1 and "Mais escolhido" not in page
+    )
+    # diagnóstico recolhido na página, com o resultado e o gabarito fora das questões
+    out["landing_diagnostic_starts_collapsed"] = (
+        re.search(r'<details class="lp-diag" id="lpDiag">\s*<summary>', page) is not None
+        and "Cerca de 12 min, grátis, sem cadastro" in page and 'id="lpKey" hidden' in page
+    )
     # tema próprio e fixo creme (item 35): raiz travada em claro e nenhum
     # script que leia a escolha de tema do app
     out["landing_theme_fixed_cream"] = (
@@ -1440,7 +1456,8 @@ def landing_checks():
     summary = json.loads(re.search(r'<script type="application/json" id="freeSample">(.*?)</script>', index, re.S).group(1))["resumo"]
     out["landing_says_what_free_account_includes"] = (
         'id="gratis"' in page and f"A conta grátis abre {summary}." in page
-        and page.count('href="index.html#criar-conta">Criar conta grátis</a>') == 2
+        and page.count('href="index.html#criar-conta">Criar conta grátis</a>') == 1
+        and page.count('href="index.html#criar-conta">Criar conta e salvar o resultado</a>') == 1
         and "<summary>O que a conta grátis inclui?</summary>" in page and "pode mudar" in page
     )
     return out

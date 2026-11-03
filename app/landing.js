@@ -17,6 +17,20 @@
     try { state = JSON.parse(safeGet(LS_KEY) || "{}") || {}; } catch(e){ state = {}; }
     var cards = Array.prototype.slice.call(drill.querySelectorAll(".qcard"));
     var resultEl = document.getElementById("lpResult");
+    var diagBox = document.getElementById("lpDiag");
+    var qlist = document.getElementById("lpQList");
+    var stepEl = document.getElementById("lpStep");
+    var keyBox = document.getElementById("lpKey");
+    var keyList = document.getElementById("lpKeyList");
+
+    // O diagnóstico começa recolhido. Abre sozinho para quem já respondeu
+    // alguma questão (volta na página) e quando um link leva até ele.
+    function openDiag(){ if(diagBox) diagBox.open = true; }
+    if(Object.keys(state).length) openDiag();
+    Array.prototype.forEach.call(document.querySelectorAll('a[href="#diagnostico"]'), function(a){
+      a.addEventListener("click", openDiag);
+    });
+    if(location.hash === "#diagnostico") openDiag();
 
     // o texto das alternativas e a frase de cada questão são inglês
     cards.forEach(function(card){
@@ -111,13 +125,56 @@
       drill.querySelector(".quiz-score").textContent = confirmed + " de " + total + " respondidas";
       var finished = confirmed === total && total > 0;
       resultEl.hidden = !finished;
-      if(!finished) return;
+      showStep(finished);
+      if(!finished){ markPlan(null); return; }
       var pct = Math.round(100 * correct / total);
       var band = ToeflLevel.band(pct);
       document.getElementById("lpResultScore").textContent = "Você acertou " + correct + " de " + total + ".";
       document.getElementById("lpResultBand").textContent = "Nível estimado: banda " + band.code + " (" + band.label + ")";
       document.getElementById("lpResultDesc").textContent = band.desc.charAt(0).toUpperCase() + band.desc.slice(1) + ".";
       document.getElementById("lpResultSched").textContent = ToeflLevel.schedule(pct).split(" · ")[0];
+      markPlan(band.low);
+    }
+
+    // Uma questão por vez (item 38). Enquanto há questão por responder, só a
+    // primeira não confirmada aparece. No fim, as cartas vão para o gabarito
+    // recolhido dentro do resultado, e voltam para a lista ao refazer.
+    function showStep(finished){
+      var idx = -1;
+      cards.forEach(function(c, i){
+        var s = state[c.dataset.num];
+        if(idx < 0 && !(s && s.confirmed)) idx = i;
+      });
+      cards.forEach(function(c, i){
+        c.hidden = !finished && i !== idx;
+        var home = finished ? keyList : qlist;
+        if(c.parentNode !== home) home.appendChild(c);
+      });
+      keyBox.hidden = !finished;
+      if(!finished) keyBox.open = false;
+      drill.hidden = finished;
+      stepEl.hidden = finished;
+      if(!finished && idx >= 0) stepEl.textContent = "Questão " + (idx + 1) + " de " + cards.length;
+    }
+
+    // Destaca, na tabela de planos, o que combina com a banda de partida
+    // (data-fits no HTML: faixa de banda inicial, de 1 a 6). Sem resultado,
+    // nada fica destacado. O Anual não tem faixa: depende do objetivo.
+    function markPlan(low){
+      var hit = null;
+      Array.prototype.forEach.call(document.querySelectorAll(".lp-plan"), function(p){
+        var fits = (p.getAttribute("data-fits") || "").split("-");
+        var on = low !== null && fits.length === 2 && low >= +fits[0] && low <= +fits[1];
+        p.classList.toggle("is-match", on);
+        p.querySelector(".lp-plan-match").hidden = !on;
+        if(on) hit = p;
+      });
+      var line = document.getElementById("lpResultPlanLine");
+      line.hidden = !hit;
+      if(hit){
+        document.getElementById("lpResultPlan").textContent =
+          hit.querySelector("h3").textContent + ", " + hit.querySelector(".lp-plan-profile").textContent;
+      }
     }
 
     cards.forEach(function(card){
@@ -137,7 +194,7 @@
         save();
         if(allDone()) cards.forEach(applyCard); else applyCard(card);
         renderResult();
-        if(!resultEl.hidden) resultEl.focus();
+        if(!resultEl.hidden) resultEl.focus(); else stepEl.focus();
       });
       applyCard(card);
     });

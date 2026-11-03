@@ -1085,7 +1085,15 @@ for _slug, _title in LEGAL_PAGES:
 _diag = _re.search(r'<div class="quiz-drill" data-drill="mod0-diag"[^>]*>.*?(?=<div class="quiz-summary")', frag["mod0"], flags=_re.S)
 if not _diag or _diag.group(0).count('class="qcard"') != 10:
     raise SystemExit("apresentacao: nao achei as 10 questoes do diagnostico no fragmento do M0")
-DIAG_HTML = _diag.group(0) + "</div>"
+# uma questão por vez (item 38): o rótulo "Questão N de 10" e a lista das
+# cartas num bloco só, que o landing.js mostra uma a uma e, no fim, move para
+# o gabarito recolhido
+_diag_cut = _diag.group(0).index('<div class="qcard"')
+DIAG_HTML = (
+    _diag.group(0)[:_diag_cut]
+    + '<p class="lp-step" id="lpStep" tabindex="-1" aria-live="polite"></p>'
+    + '<div class="lp-qlist" id="lpQList">' + _diag.group(0)[_diag_cut:] + "</div></div>"
+)
 
 
 # Os 10 módulos em 4 etapas (item 37 de 2026-10-26). Sem métricas soltas ao
@@ -1129,18 +1137,37 @@ def _lp_stage(n, st):
 
 lp_stages = "".join(_lp_stage(n, st) for n, st in enumerate(LP_STAGES, 1))
 
+# Perfil de cada plano e a faixa de banda que combina com ele (item 39). A
+# faixa é da banda de partida do diagnóstico (ToeflLevel.band().low: 1 a 6) e
+# segue o cronograma que o próprio resultado indica: até 3–3,5 é o Completo
+# (90 dias), 4–4,5 o Regular (60 dias), 5 ou mais já está perto da meta. O
+# Anual não tem faixa: depende do objetivo, não da banda.
+LP_PROFILES = {
+    "mensal": ("Reta final", "Prova marcada para as próximas semanas, ou banda já alta.", (5, 6)),
+    "60dias": ("Revisão intensiva", "Banda 3,5 a 4: revisar o que mais pesa e rodar os simulados.", (4, 4)),
+    "90dias": ("Trilha completa", "Banda 2 a 3: construir a base e depois treinar as quatro seções.", (1, 3)),
+    "anual": ("Ciclo de editais", "Pós-graduação, bolsas e planejamento longo, com tempo para repetir a prova.", None),
+}
+if set(LP_PROFILES) != {p["id"] for p in PLANS}:
+    raise SystemExit("apresentacao: LP_PROFILES precisa ter um perfil para cada plano de plans.json")
+
+
 def _lp_plan(p):
     hl = p.get("highlight")
     note = "por mês, renovação automática" if p["interval"] == "month" else plan_month_note(p)
     action = f'Assinar o {p["name"]}' if p["interval"] == "month" else f'Escolher o plano {p["name"]}'
+    profile, profile_for, fits = LP_PROFILES[p["id"]]
+    fits_attr = f' data-fits="{fits[0]}-{fits[1]}"' if fits else ""
     return (
-        f'<article class="lp-plan{" is-highlight" if hl else ""}" data-plan="{p["id"]}">'
+        f'<article class="lp-plan{" is-highlight" if hl else ""}" data-plan="{p["id"]}"{fits_attr}>'
         f'{PLAN_BADGE if hl else ""}'
+        f'<span class="lp-plan-match" hidden>Combina com a sua banda</span>'
         f'<h3>{p["name"]}</h3>'
+        f'<p class="lp-plan-profile">{profile}</p>'
         f'<p class="lp-plan-price">{brl(p["price_cents"])}</p>'
         f'<p class="lp-plan-note">{note}</p>'
         f'<p class="lp-plan-access">{p["access"]}</p>'
-        f'<p class="lp-plan-for">{p["audience"]}</p>'
+        f'<p class="lp-plan-for">{profile_for}</p>'
         f'<p class="lp-plan-detail">{p["detail"]}</p>'
         f'<a class="lp-btn{" lp-btn-main" if hl else ""}" href="index.html#criar-conta" '
         f'data-plan-pick="{p["id"]}">{action}</a>'
@@ -1286,8 +1313,11 @@ _landing = f'''<!DOCTYPE html>
 <section class="lp-section" id="diagnostico" aria-labelledby="lpDiagTitle">
   <h2 id="lpDiagTitle">Diagnóstico grátis, sem conta</h2>
   <p class="lp-lead">São as 10 questões do Teste de Nivelamento do Módulo 0: gramática, vocabulário e conectivos
-  acadêmicos. Responda sem consulta, confirme cada resposta e veja no fim o seu nível estimado. É uma estimativa de
-  treino, não uma nota oficial.</p>
+  acadêmicos. Você responde uma por vez, sem consulta. No fim, mostro o seu nível estimado e o cronograma indicado.
+  É uma estimativa de treino, não uma nota oficial.</p>
+  <details class="lp-diag" id="lpDiag">
+    <summary><span class="lp-diag-t">Fazer o diagnóstico</span><span class="lp-diag-meta">Cerca de 12 min, grátis, sem cadastro</span></summary>
+    <div class="lp-diag-body">
   {DIAG_HTML}
   <div class="lp-result" id="lpResult" tabindex="-1" role="status" hidden>
     <p class="lp-result-score" id="lpResultScore"></p>
@@ -1295,12 +1325,22 @@ _landing = f'''<!DOCTYPE html>
     <p class="lp-result-desc" id="lpResultDesc"></p>
     <p class="lp-result-next">No curso, o caminho indicado para esse nível é o <strong id="lpResultSched"></strong>.
     A estimativa vem de 10 questões de gramática e vocabulário: serve para escolher por onde começar, não para prever a nota da prova.</p>
+    <p class="lp-result-plan" id="lpResultPlanLine" hidden>O plano que combina com essa banda é o <strong id="lpResultPlan"></strong>.
+    Ele está destacado <a href="#planos">na tabela de planos</a>.</p>
+    <details class="lp-key" id="lpKey" hidden>
+      <summary>Ver o gabarito completo</summary>
+      <div class="lp-key-list" id="lpKeyList"></div>
+    </details>
+    <p class="lp-result-save"><strong>Quer guardar este resultado?</strong> Crie uma conta grátis neste mesmo navegador
+    e o Módulo 0 já abre com o diagnóstico respondido.</p>
     <div class="lp-cta">
-      <a class="lp-btn lp-btn-main" href="#planos">Ver os planos</a>
-      <a class="lp-btn" href="index.html#criar-conta">Criar conta grátis</a>
+      <a class="lp-btn lp-btn-main" href="index.html#criar-conta">Criar conta e salvar o resultado</a>
+      <a class="lp-btn" href="#planos">Ver os planos</a>
       <button type="button" class="lp-btn" id="lpRetry">Refazer o diagnóstico</button>
     </div>
   </div>
+    </div>
+  </details>
 </section>
 
 <section class="lp-section" id="gratis" aria-labelledby="lpFreeTitle">
