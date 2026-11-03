@@ -63,7 +63,7 @@ var authIn = document.getElementById("authIn"); if(authIn) authIn.hidden = false
 check("checkbox_exists", function(){ return !!document.querySelector(".pchk"); });
 // meta de hoje sem diagnóstico feito: fazer o diagnóstico (item 5 de 2026-10-25)
 check("today_goal_without_diagnostic_is_the_diagnostic", function(){
-  return !document.getElementById("todayBar").hidden && document.getElementById("todayText").textContent.indexOf("Hoje: fazer o diagnóstico") === 0 &&
+  return !document.getElementById("todayBar").hidden && document.getElementById("todayText").textContent.indexOf("Sua prioridade hoje: Módulo 0, Parte 1: Teste de nivelamento") === 0 &&
     document.getElementById("dgText").textContent.indexOf("Hoje: fazer o diagnóstico") === 0 && document.getElementById("dgCount").textContent === "0/1";
 });
 var chk = document.querySelector(".pchk");
@@ -118,7 +118,7 @@ check("plans_four_options_90_default", function(){
 });
 check("plans_highlight_badge_only_on_90", function(){
   var badges = document.querySelectorAll("#planPick .plan-badge");
-  return badges.length === 1 && badges[0].textContent === "Mais escolhido" &&
+  return badges.length === 1 && badges[0].textContent === "Melhor custo-benefício" &&
     badges[0].closest(".plan-opt").querySelector("input").value === "90dias";
 });
 // equivalente por mês calculado no build a partir do preço (2026-10-18)
@@ -471,6 +471,22 @@ check("pwa_manifest_linked", function(){ return !!document.querySelector('link[r
 check("pwa_hidden_by_default", function(){
   return document.getElementById("pwaTools").hidden && document.getElementById("pwaInstall").hidden &&
          document.getElementById("pwaIosHint").hidden && document.getElementById("pwaUpdate").hidden;
+});
+// item 41: Exportar e Importar progresso só dentro de Configurações (fechada
+// por padrão), como backup avançado; "Instalar app" vem antes da lista de módulos
+check("backup_export_import_inside_settings", function(){
+  var s = document.getElementById("sideSettings"), ex = document.getElementById("dataExport"), im = document.getElementById("dataImport");
+  return !!s && !s.open && s.contains(ex) && s.contains(im) && s.contains(document.getElementById("dataFile")) &&
+    document.querySelectorAll("#dataExport, #dataImport").length === 2 &&
+    /Exportar progresso/.test(ex.textContent) && /Importar progresso/.test(im.textContent) &&
+    /Backup avançado/.test(s.querySelector(".data-backup-title").textContent) &&
+    Array.prototype.every.call(document.querySelectorAll("#sideRail button"), function(b){
+      return s.contains(b) || !/Exportar|Importar/.test(b.textContent); });
+});
+check("install_app_highlighted_before_modules", function(){
+  var tools = document.getElementById("pwaTools"), nav = document.getElementById("modnav");
+  return !!(tools.compareDocumentPosition(nav) & Node.DOCUMENT_POSITION_FOLLOWING) &&
+    !!tools.querySelector(".pwa-tools-title") && !!document.querySelector("#pwaInstall svg");
 });
 check("pwa_no_sw_on_file", function(){ return window.__toeflPwa && window.__toeflPwa.canRegister === false; });
 var bip = new Event("beforeinstallprompt", { cancelable: true });
@@ -992,6 +1008,86 @@ try { (function(){
   });
   window.__toeflShowPart.mod1(m1[0]);
 })(); } catch(ex){ check("part_kind_checks_ran", function(){ throw ex; }); }
+// pontos fracos automáticos e "Sua prioridade hoje" (itens 42 e 43), com
+// dados simulados; o estado de antes volta no fim
+try { (function(){
+  var keep = {};
+  for(var i = 0; i < localStorage.length; i++){ var k = localStorage.key(i); if(/^toefl_(quiz_|exam_|spk_|bsq_|ctw_|goal)/.test(k)) keep[k] = localStorage.getItem(k); }
+  function clear(){ Object.keys(keep).forEach(function(k){ localStorage.removeItem(k); }); }
+  function day(n){ var d = new Date(); d.setDate(d.getDate() + n); var p = function(x){ return (x < 10 ? "0" : "") + x; };
+    return d.getFullYear() + "-" + p(d.getMonth() + 1) + "-" + p(d.getDate()); }
+  function wrong(c){ return Array.prototype.filter.call(c.querySelectorAll(".opt"), function(o){ return o.dataset.letter !== c.dataset.correct; })[0].dataset.letter; }
+  function dash(){
+    document.getElementById("dashboardBtn").click();
+    var o = { text: document.getElementById("dashWeakSpots").textContent, rows: Array.prototype.map.call(document.querySelectorAll("#dashWeakSpots .dash-weak-row"), function(r){ return r.dataset.area; }),
+      plan: document.getElementById("dashPlanText").textContent, why: document.getElementById("dashPlanWhy").textContent };
+    document.getElementById("dashboardClose").click();
+    return o;
+  }
+  clear();
+  window.__toeflRefreshPlan();
+  var empty = dash();
+  check("weak_spots_without_data_says_so", function(){
+    return window.__toeflWeak().every(function(a){ return !a.enough && a.pct === null; }) && empty.rows.length === 0 &&
+      empty.text.indexOf("Ainda não há respostas suficientes") === 0;
+  });
+  check("priority_without_diagnostic_is_the_diagnostic", function(){
+    var p = window.__toeflPriority();
+    return p.kind === "diag" && p.mod === "mod0" && p.n === 1 && empty.plan.indexOf("Módulo 0, Parte 1: Teste de nivelamento") === 0;
+  });
+  // diagnóstico: gramática e ordem das palavras erradas (4 questões), o resto certo;
+  // Listening: 1 de 5 no primeiro exercício do M2; Reading: 4 de 4 no primeiro do M1
+  var dst = {};
+  Array.prototype.forEach.call(document.querySelectorAll('[data-drill="mod0-diag"] .qcard'), function(c){
+    var bad = c.dataset.area === "gramatica" || c.dataset.area === "ordem";
+    dst[c.dataset.num] = { picked: bad ? wrong(c) : c.dataset.correct, confirmed: true };
+  });
+  localStorage.setItem("toefl_quiz_mod0-diag_v1", JSON.stringify(dst));
+  function drill(id, n, nOk){
+    var st = {};
+    Array.prototype.slice.call(document.querySelectorAll('[data-drill="' + id + '"] .qcard'), 0, n).forEach(function(c, i){
+      st[c.dataset.num] = { picked: i < nOk ? c.dataset.correct : wrong(c), confirmed: true };
+    });
+    localStorage.setItem("toefl_quiz_" + id + "_v1", JSON.stringify(st));
+  }
+  drill("mod2-a", 5, 1);
+  drill("mod1-a1", 4, 4);
+  localStorage.setItem("toefl_goal_v1", JSON.stringify({ target: 5, exam: day(60), sched: 60, start: day(0) }));
+  window.__toeflRefreshPlan();
+  var areas = {};
+  window.__toeflWeak().forEach(function(a){ areas[a.key] = a; });
+  var full = dash();
+  check("weak_spots_join_diagnostic_and_exercises", function(){
+    return areas.gramatica.n === 4 && areas.gramatica.pct === 0 && areas.listening.ok === 1 && areas.listening.n === 5 &&
+      areas.reading.ok === 5 && areas.reading.n === 5 && !areas.vocabulario.enough && areas.vocabulario.n === 2 &&
+      full.rows.join() === "gramatica,listening" && full.text.indexOf("0%") !== -1 && full.text.indexOf("(1 de 5)") !== -1 &&
+      full.text.indexOf("Ainda com poucos dados:") !== -1 && full.text.indexOf("Vocabulário") !== -1;
+  });
+  document.getElementById("dashboardBtn").click();
+  document.querySelector('#dashWeakSpots .dash-weak-row[data-area="listening"] .dash-weak-go').click();
+  check("weak_spot_shortcut_opens_the_part", function(){
+    var cards = document.querySelectorAll("#panel-mod2 .section-card");
+    return document.getElementById("dashboardModal").hidden && document.querySelector(".tabbtn.active").dataset.tab === "mod2" &&
+      !cards[2].hidden && /^Parte 3: Laborat/.test(cards[2].querySelector("h2 .htext").textContent);
+  });
+  var weakP = window.__toeflPriority();
+  check("priority_goes_to_the_weak_spot", function(){
+    return weakP.kind === "weak" && weakP.mod === "mod4" && weakP.n === 3 && weakP.text.indexOf("Módulo 4, Parte 3: Laboratório") === 0 &&
+      weakP.why.indexOf("Gramática e ordem das palavras, com 0% de acerto (0 de 4)") !== -1 &&
+      document.getElementById("todayText").textContent === "Sua prioridade hoje: " + weakP.text;
+  });
+  localStorage.setItem("toefl_goal_v1", JSON.stringify({ target: 5, exam: day(10), sched: 30, start: day(-20) }));
+  var near = window.__toeflPriority();
+  localStorage.setItem("toefl_goal_v1", JSON.stringify({ target: 5, exam: day(1), sched: 30, start: day(-29) }));
+  var eve = window.__toeflPriority();
+  check("priority_with_exam_near_is_the_final_stretch", function(){
+    return near.kind === "exam" && near.mod === "mod7" && near.n === 3 && near.why.indexOf("Faltam 10 dias") === 0 &&
+      eve.kind === "exam" && eve.mod === "mod8" && eve.n === 2 && eve.why.indexOf("A prova é amanhã") === 0;
+  });
+  clear();
+  Object.keys(keep).forEach(function(k){ localStorage.setItem(k, keep[k]); });
+  window.__toeflRefreshPlan();
+})(); } catch(ex){ check("weak_and_priority_checks_ran", function(){ throw ex; }); }
 check("m7_says_what_the_diagnostic_measures", function(){
   var t = document.getElementById("panel-mod7").textContent;
   return t.indexOf("Ele não dá nota por seção.") !== -1 && t.indexOf("banda CEFR (1–6) por seção") === -1;
@@ -1415,25 +1511,49 @@ def landing_checks():
         '<meta name="description"' in page and "@import" not in page and 'rel="icon"' in page
         and "panel-mod1" not in page and "ITOEFL_SUPABASE" not in page and len(page) < len(index) / 4
     )
-    announced = [int(n) for n in re.findall(r'<span class="lp-stat-n">(\d+)</span>', page)]
-    real = [
-        len(re.findall(r'<section class="panel', index)),
-        len(re.findall(r'class="ctw-in"', index)),
-        len(re.findall(r'class="qcard"', index.split('id="panel-mod1"')[1].split('id="panel-mod2"')[0])),
-        len(re.findall(r'class="qcard"', index.split('id="panel-mod2"')[1].split('id="panel-mod3"')[0])),
-        len(re.findall(r'class="bsq-card', index.split('id="panel-mod4"')[1].split('id="panel-mod5"')[0])),
-        len(re.findall(r'class="spk"', index.split('id="panel-mod3"')[1].split('id="panel-mod4"')[0])),
-        len(re.findall(r'class="exam-item', index)),
-        len(json.loads((APP_DIR / "vocab_kit.json").read_text(encoding="utf-8"))),
-    ]
-    out["landing_numbers_match_the_site"] = announced == real and all(n > 0 for n in real)
+    # os 10 módulos em 4 etapas (M0 / M1 a M6 / M7 e M9 / M8), sem métricas
+    # soltas; "Por que existe" com 3 pilares antes da vitrine (itens 36 e 37)
+    stages = re.findall(r'<article class="lp-stage">(.*?)</article>', page, re.S)
+    stage_mods = [re.findall(r'<span class="lp-mod-n">(\d\d)</span>', st) for st in stages]
+    why = page.split('id="por-que-existe"')[1].split("</section>")[0] if 'id="por-que-existe"' in page else ""
+    out["landing_modules_in_four_stages"] = (
+        stage_mods == [["00"], ["01", "02", "03", "04", "05", "06"], ["07", "09"], ["08"]]
+        and "lp-stat-n" not in page
+        and [re.search(r"<h3>(.*?)(?: <span|</h3>)", st).group(1) for st in stages]
+        == ["Fundamentos", "Habilidades centrais", "Especificidade para brasileiros", "Reta final"]
+        and page.index('id="por-que-existe"') < page.index('id="como-funciona"')
+        and why.count('class="lp-pillar"') == 3
+    )
+    # planos com perfil e faixa de banda (item 39): Mensal "Reta final", 60 dias
+    # "Revisão intensiva", 90 dias "Trilha completa", Anual "Ciclo de editais";
+    # só o 90 dias leva o selo, e só os três primeiros têm faixa de banda
+    plans = re.findall(r'<article class="lp-plan[^"]*" data-plan="(\w+)"([^>]*)>(.*?)</article>', page, re.S)
+    out["landing_plans_have_profiles_and_band_ranges"] = (
+        [(pid, re.search(r'lp-plan-profile">(.*?)<', body).group(1), re.search(r'data-fits="(\d-\d)"', attrs).group(1) if "data-fits" in attrs else "")
+         for pid, attrs, body in plans]
+        == [("mensal", "Reta final", "5-6"), ("60dias", "Revisão intensiva", "4-4"),
+            ("90dias", "Trilha completa", "1-3"), ("anual", "Ciclo de editais", "")]
+        and page.count('class="plan-badge">Melhor custo-benefício</span>') == 1 and "Mais escolhido" not in page
+    )
+    # diagnóstico recolhido na página, com o resultado e o gabarito fora das questões
+    out["landing_diagnostic_starts_collapsed"] = (
+        re.search(r'<details class="lp-diag" id="lpDiag">\s*<summary>', page) is not None
+        and "Cerca de 12 min, grátis, sem cadastro" in page and 'id="lpKey" hidden' in page
+    )
+    # tema próprio e fixo creme (item 35): raiz travada em claro e nenhum
+    # script que leia a escolha de tema do app
+    out["landing_theme_fixed_cream"] = (
+        '<html lang="pt-BR" data-theme="light">' in page and "toefl_theme_v1" not in page
+        and '<meta name="color-scheme" content="light">' in page
+    )
     out["landing_linked_from_login"] = 'href="apresentacao.html"' in index or "ITOEFL_SUPABASE" not in index
     # conta grátis: a seção, o botão no resultado do diagnóstico e a pergunta
     # frequente dizem o mesmo resumo que o app mostra
     summary = json.loads(re.search(r'<script type="application/json" id="freeSample">(.*?)</script>', index, re.S).group(1))["resumo"]
     out["landing_says_what_free_account_includes"] = (
         'id="gratis"' in page and f"A conta grátis abre {summary}." in page
-        and page.count('href="index.html#criar-conta">Criar conta grátis</a>') == 2
+        and page.count('href="index.html#criar-conta">Criar conta grátis</a>') == 1
+        and page.count('href="index.html#criar-conta">Criar conta e salvar o resultado</a>') == 1
         and "<summary>O que a conta grátis inclui?</summary>" in page and "pode mudar" in page
     )
     return out

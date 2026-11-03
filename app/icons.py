@@ -45,6 +45,7 @@ PATHS = {
     "quote": '<path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2Z"/><path d="M8 9h8M8 13h5"/>',
     "translate": '<path d="M4 5h8M8 3v2M10 5c0 4-3 7-6 8M6 9c1 2 3 3.5 5 4"/><path d="m13 21 4-9 4 9M14.5 18h5"/>',
     "settings": '<path d="M4 21v-7M4 10V3M12 21v-9M12 8V3M20 21v-5M20 12V3M1 14h6M9 8h6M17 16h6"/>',
+    "download": '<path d="M12 3v12M7 10l5 5 5-5M4 21h16"/>',
 }
 
 

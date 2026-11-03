@@ -3700,8 +3700,9 @@
 
   // ---------- Painel (dashboard): sequência, banda estimada, progresso, pontos fracos ----------
   // Tudo aqui só lê dados que já existem em outros widgets (progresso,
-  // diagnóstico do M0, live score de Reading/Listening, registro de erros)
-  // -- nenhum estado novo além do streak em si.
+  // diagnóstico do M0, exercícios, meta) -- nenhum estado novo além do
+  // streak em si. Pontos fracos e prioridade: weakAreas() e computePriority(),
+  // no bloco "Pontos fracos e Sua prioridade hoje".
   (function(){
     var btn = document.getElementById("dashboardBtn");
     var modal = document.getElementById("dashboardModal");
@@ -3716,56 +3717,9 @@
     var progressTextEl = document.getElementById("dashProgressText");
     var weakListEl = document.getElementById("dashWeakSpots");
     var planTextEl = document.getElementById("dashPlanText");
+    var planWhyEl = document.getElementById("dashPlanWhy");
     var planBtnEl = document.getElementById("dashPlanBtn");
 
-    // para onde mandar o aluno a partir do código de erro mais frequente --
-    // mesmo agrupamento do mapa reverso do Módulo 9, Parte 8 (RG antes de R,
-    // senão "RG1" bateria como se fosse Reading por causa do prefixo "R")
-    var ERROR_MODULE_MAP = [
-      { re: /^RG/, mod: "mod5", title: "Registro & Retórica" },
-      { re: /^R/, mod: "mod1", title: "Reading" },
-      { re: /^L/, mod: "mod2", title: "Listening" },
-      { re: /^S/, mod: "mod3", title: "Speaking" },
-      { re: /^W/, mod: "mod4", title: "Writing" },
-      { re: /^V/, mod: "mod6", title: "Vocabulário" }
-    ];
-    function moduleForErrorCode(code){
-      for(var i = 0; i < ERROR_MODULE_MAP.length; i++){
-        if(ERROR_MODULE_MAP[i].re.test(code)) return ERROR_MODULE_MAP[i];
-      }
-      return null;
-    }
-
-    // mesmos rótulos de app/build_pipeline.py (ERRLOG_CODES) -- duplicado
-    // aqui de propósito: são só 36 pares fixos, não vale a pena gerar isso
-    // no build só para não repetir uma lista curta.
-    var ERRLOG_LABELS = {
-      R1:"Não entendi a pergunta", R2:"Caí num distrator", R3:"Lacuna de gramática (CTW)",
-      R4:"Lacuna de vocabulário / collocation", R5:"Tempo", R6:"Desatenção / releitura",
-      L1:"Não decodifiquei o áudio", L2:"Não entendi a pergunta", L3:"Caí num distrator",
-      L4:"Anotação errada", L5:"Vocabulário", L6:"Atenção / fim do áudio",
-      S1:"Fonema / segmento", S2:"Acento de palavra", S3:"Ritmo / acento de frase",
-      S4:"Fluência", S5:"Gramática sob pressão", S6:"Estrutura da resposta",
-      W1:"Estrutura de frase", W2:"Gramática de verbo", W3:"Artigo / preposição / word form",
-      W4:"Registro", W5:"Conteúdo / prompt", W6:"Léxico",
-      RG1:"Over-formality / cerimônia", RG2:"Register clash", RG3:"Sofisticação sem controle",
-      RG4:"Repetição lexical", RG5:"Conector impreciso ou ausente", RG6:"Densidade plana",
-      V1:"Forma errada da palavra", V2:"Colocação errada", V3:"Falso cognato",
-      V4:"Registro trocado", V5:"Overreach (usou palavra que não controla)", V6:"Sinônimo impreciso"
-    };
-    function computeWeakSpots(){
-      var freq = {};
-      ["mod1","mod2","mod3","mod4","mod5","mod6"].forEach(function(mod){
-        var entries = []; try { entries = JSON.parse(safeGet("toefl_errlog_" + mod + "_v1") || "[]"); } catch(e){}
-        entries.forEach(function(entry){
-          (entry.codes || []).forEach(function(c){ freq[c] = (freq[c] || 0) + 1; });
-        });
-      });
-      return Object.keys(freq)
-        .map(function(c){ return { code: c, label: ERRLOG_LABELS[c] || c, count: freq[c] }; })
-        .sort(function(a, b){ return b.count - a.count; })
-        .slice(0, 3);
-    }
     function computeOverallProgress(){
       var totalAll = 0, doneAll = 0, modsDone = 0;
       allChecks.forEach(function(c){
@@ -3798,36 +3752,44 @@
       progressFillEl.style.width = prog.pct + "%";
       progressTextEl.textContent = prog.pct + "% · " + prog.modsDone + " de " + prog.totalMods + " módulos concluídos";
 
-      var weak = computeWeakSpots();
-      weakListEl.innerHTML = weak.length ? "" : '<p class="dash-empty">Nenhum erro registrado ainda. Use o quadro "Registre esta sessão", no fim dos módulos M1 a M6.</p>';
-      weak.forEach(function(w){
+      renderWeak();
+      var pr = window.__toeflPriority ? window.__toeflPriority() : null;
+      planTextEl.textContent = pr ? pr.text : "";
+      planWhyEl.textContent = pr ? pr.why : "";
+      planBtnEl.hidden = !pr;
+      planBtnEl.textContent = pr && pr.kind === "diag" ? "Começar" : pr && pr.kind === "goal" ? "Montar meu plano" : "Continuar";
+      planBtnEl.onclick = function(){ close(); if(pr) pr.go(); };
+    }
+    // as áreas com dado suficiente e abaixo de 70%, da mais fraca para a
+    // menos fraca (no máximo 3), cada uma com o atalho para a Parte que ensina
+    function renderWeak(){
+      var all = window.__toeflWeak ? window.__toeflWeak() : [];
+      var enough = all.filter(function(a){ return a.enough; });
+      var weak = enough.filter(function(a){ return a.pct < WEAK_SHOW; }).slice(0, 3);
+      var few = all.filter(function(a){ return !a.enough; }).map(function(a){ return a.nome; });
+      weakListEl.innerHTML = "";
+      function note(text){
+        var p = document.createElement("p"); p.className = "dash-empty"; p.textContent = text;
+        weakListEl.appendChild(p);
+      }
+      if(!enough.length) note("Ainda não há respostas suficientes para apontar pontos fracos com honestidade. " +
+        "Faça o diagnóstico e alguns exercícios: a partir de " + WEAK_MIN + " respostas numa área, ela aparece aqui com a taxa de acerto.");
+      else if(!weak.length) note("Nenhuma área abaixo de " + WEAK_SHOW + "% de acerto até agora. Bom sinal: siga o cronograma.");
+      weak.forEach(function(a){
         var row = document.createElement("div");
         row.className = "dash-weak-row";
-        row.innerHTML = '<span class="dash-weak-code">' + w.code + '</span>' +
-          '<span class="dash-weak-label">' + w.label + '</span>' +
-          '<span class="dash-weak-count">' + w.count + 'x</span>';
+        row.dataset.area = a.key;
+        var pct = document.createElement("span"); pct.className = "dash-weak-code"; pct.textContent = a.pct + "%";
+        var label = document.createElement("span"); label.className = "dash-weak-label";
+        label.textContent = a.nome + " (" + a.ok + " de " + a.n + ")";
+        var go = document.createElement("button"); go.type = "button"; go.className = "diag-link dash-weak-go";
+        go.textContent = "Abrir M" + a.mod.slice(3) + ", Parte " + a.parte;
+        go.setAttribute("aria-label", "Abrir " + partTitle(a.mod, a.parte));
+        go.addEventListener("click", function(){ close(); openPart(a.mod, a.parte); });
+        row.appendChild(pct); row.appendChild(label); row.appendChild(go);
         weakListEl.appendChild(row);
       });
-
-      if(weak.length){
-        var top = weak[0];
-        var target = moduleForErrorCode(top.code);
-        if(target){
-          planTextEl.textContent = "Seu erro mais frequente é \"" + top.label + "\" (" + top.code + ", " + top.count +
-            "×). Revise o módulo de " + target.title + ".";
-          planBtnEl.hidden = false;
-          planBtnEl.onclick = function(){
-            close();
-            navTo(target.mod);
-          };
-        } else {
-          planTextEl.textContent = "Continue registrando sessões para receber uma sugestão personalizada.";
-          planBtnEl.hidden = true;
-        }
-      } else {
-        planTextEl.textContent = "Continue estudando e registrando sessões (M1–M6) para receber uma sugestão personalizada aqui.";
-        planBtnEl.hidden = true;
-      }
+      if(enough.length && few.length) note("Ainda com poucos dados: " + joinPt(few) + ".");
     }
     function open(){
       render();
@@ -4876,6 +4838,20 @@
     setTimeout(function(){ target.scrollIntoView({ behavior: "smooth", block: "start" }); }, 60);
   }
 
+  // áreas dos pontos fracos (itens 42 e 43): nome, módulo e Parte do atalho.
+  // Ficam aqui em cima porque o resultado do diagnóstico, logo abaixo, usa o
+  // mesmo atalho. O cálculo está no bloco "Pontos fracos e Sua prioridade hoje".
+  var WEAK_AREAS = {
+    reading: { nome: "Reading", mod: "mod1", parte: 2 },
+    listening: { nome: "Listening", mod: "mod2", parte: 3 },
+    speaking: { nome: "Speaking", mod: "mod3", parte: 3 },
+    writing: { nome: "Writing (Build a Sentence)", mod: "mod4", parte: 3 },
+    gramatica: { nome: "Gramática e ordem das palavras", mod: "mod4", parte: 3 },
+    vocabulario: { nome: "Vocabulário", mod: "mod6", parte: 2 },
+    registro: { nome: "Registro e conectivos", mod: "mod5", parte: 3 }
+  };
+  var WEAK_MIN = 4, WEAK_SHOW = 70, WEAK_STRONG = 50, EXAM_NEAR = 14;
+
   // ---------- Resultado do diagnóstico e a meta (M0, Parte 1) ----------
   // Aparece logo abaixo da décima questão quando ela é confirmada: nível
   // estimado, acertos por área, pontos fortes e a melhorar, e o formulário da
@@ -4901,13 +4877,15 @@
 
     function bandText(b){ return "banda " + b.code.replace("–", " a "); }
     function say(text, err){ msg.textContent = text; msg.classList.toggle("is-err", !!err); msg.hidden = !text; }
-    function item(list, text, mod){
+    // o atalho abre a Parte que ensina a área: a mesma dos pontos fracos do Painel
+    function item(list, text, painel){
       var li = document.createElement("li");
       li.appendChild(document.createTextNode(text));
-      if(mod){
+      var w = painel && WEAK_AREAS[painel];
+      if(w){
         var b = document.createElement("button");
-        b.type = "button"; b.className = "diag-link"; b.textContent = "Abrir o módulo";
-        b.addEventListener("click", function(){ navTo(mod); });
+        b.type = "button"; b.className = "diag-link"; b.textContent = "Abrir a Parte " + w.parte + " do Módulo " + w.mod.slice(3);
+        b.addEventListener("click", function(){ openPart(w.mod, w.parte); });
         li.appendChild(document.createTextNode(" "));
         li.appendChild(b);
       }
@@ -4962,7 +4940,7 @@
         li.appendChild(name); li.appendChild(n); li.appendChild(bar);
         list.appendChild(li);
         if(a.ok === a.n) item(strong, AREAS[k].nome + ": " + a.ok + " de " + a.n + ".");
-        else item(weak, AREAS[k].nome + ": " + a.ok + " de " + a.n + ". Onde treinar: " + AREAS[k].onde + ".", AREAS[k].mod);
+        else item(weak, AREAS[k].nome + ": " + a.ok + " de " + a.n + ". Onde treinar: " + AREAS[k].onde + ".", AREAS[k].painel);
       });
       if(!strong.children.length) item(strong, "Ainda nenhuma área completa. Tudo bem: é exatamente isso que o curso vai construir.");
       if(!weak.children.length) item(weak, "Você acertou todas as áreas. O foco agora é estratégia e tempo de prova.");
@@ -5121,6 +5099,138 @@
     };
   }
 
+  // ---------- Pontos fracos e "Sua prioridade hoje" (itens 42 e 43) ----------
+  // Pontos fracos: os acertos de tudo que já guarda certo e errado no
+  // progresso, somados por área. Diagnóstico (cada questão pela área dela,
+  // campo "painel" de DIAG_AREAS no build_pipeline.py), exercícios de Reading
+  // e Complete the Words, Listening, Build a Sentence, os blocos do simulado
+  // pela seção, e o Listen and Repeat (o aluno marca se repetiu sem erro).
+  // Área com menos de WEAK_MIN respostas não ganha taxa: aparece como "poucos
+  // dados". Não há estado novo: tudo sai de chaves que já sincronizam.
+  function weakAreas(){
+    var acc = {};
+    Object.keys(WEAK_AREAS).forEach(function(k){ acc[k] = { ok: 0, n: 0 }; });
+    function add(k, ok, n){ acc[k].ok += ok; acc[k].n += n; }
+    function read(key){ try { return JSON.parse(safeGet(key) || "{}") || {}; } catch(e){ return {}; } }
+    var diagMap = {};
+    try { diagMap = JSON.parse(document.getElementById("diagAreas").textContent); } catch(e){}
+    var diag = document.querySelector('.quiz-drill[data-drill="mod0-diag"]');
+    if(diag){
+      var st = read("toefl_quiz_mod0-diag_v1");
+      Array.prototype.forEach.call(diag.querySelectorAll(".qcard"), function(c){
+        var s = st[c.dataset.num], a = diagMap[c.dataset.area];
+        if(s && s.confirmed && a && acc[a.painel]) add(a.painel, isCardCorrect(c, s.picked) ? 1 : 0, 1);
+      });
+    }
+    var r = computeQuizAccuracy("mod1-"), l = computeQuizAccuracy("mod2-"), b = extraAccuracy("bsq");
+    add("reading", r.correct, r.confirmed);
+    add("listening", l.correct, l.confirmed);
+    add("writing", b.correct, b.confirmed);
+    // simulado: cada bloco conta na seção do título de cima ("Listen to..." é Listening)
+    var section = "reading";
+    Array.prototype.forEach.call(document.querySelectorAll("#panel-mod7 h3, #panel-mod7 h4, #panel-mod7 .exam"), function(el){
+      if(!el.classList.contains("exam")){
+        if(/\bListen/i.test(el.textContent)) section = "listening";
+        else if(/\bRead|Complete the Words/i.test(el.textContent)) section = "reading";
+        return;
+      }
+      if(isLockedNow(el)) return;
+      var es = read("toefl_exam_" + el.dataset.exam + "_v1");
+      if(!es.done || !es.answers) return;
+      Array.prototype.forEach.call(el.querySelectorAll(".exam-item"), function(it){
+        add(section, es.answers[it.dataset.num] === it.dataset.correct ? 1 : 0, 1);
+      });
+    });
+    Array.prototype.forEach.call(document.querySelectorAll('.spk[data-mode="repeat"]'), function(root){
+      if(isLockedNow(root)) return;
+      var ss = read("toefl_spk_" + root.dataset.spk + "_v1");
+      Object.keys(ss).forEach(function(num){
+        if(ss[num] === "ok") add("speaking", 1, 1);
+        else if(ss[num] === "miss") add("speaking", 0, 1);
+      });
+    });
+    return Object.keys(WEAK_AREAS).map(function(k){
+      var a = acc[k], w = WEAK_AREAS[k];
+      return { key: k, nome: w.nome, mod: w.mod, parte: w.parte, ok: a.ok, n: a.n,
+        pct: a.n ? Math.round(100 * a.ok / a.n) : null, enough: a.n >= WEAK_MIN };
+    }).sort(function(x, y){
+      if(x.enough !== y.enough) return x.enough ? -1 : 1;
+      return x.enough ? x.pct - y.pct : y.n - x.n;
+    });
+  }
+
+  function partOpenable(mod, n){
+    var card = partCards(mod)[n - 1];
+    return !!card && !(accessFree && card.classList.contains("fs-part-locked"));
+  }
+  function partIsDone(mod, n){
+    var card = partCards(mod)[n - 1], chk = card && partDoneBox(card);
+    return !!chk && !!progressState[chk.dataset.pid];
+  }
+  function partTitle(mod, n){
+    var t = partShortTitle(partCards(mod)[n - 1]);
+    return "Módulo " + mod.slice(3) + ", Parte " + n + (t ? ": " + t : "");
+  }
+  // primeira Parte do módulo, de um tipo, aberta e ainda não concluída
+  function firstPending(mod, tipo){
+    var cards = partCards(mod);
+    for(var i = 0; i < cards.length; i++){
+      var p = partInfo(mod, i + 1);
+      if(p && p.tipo === tipo && partOpenable(mod, i + 1) && !partIsDone(mod, i + 1)) return i + 1;
+    }
+    return 0;
+  }
+
+  // "Sua prioridade hoje": UMA Parte, pela primeira regra que vale, nesta
+  // ordem (a mesma regra está no CLAUDE.md).
+  // 1. Sem o diagnóstico completo: o diagnóstico (M0, Parte 1).
+  // 2. Prova em até 14 dias: reta final. No dia, M8 Parte 9; na véspera, M8
+  //    Parte 2; até 7 dias, M8 Parte 1 (se não feita); senão o próximo
+  //    simulado do M7 em aberto; com todos feitos, M8 Parte 1.
+  // 3. Ponto fraco forte (WEAK_MIN respostas ou mais e menos de 50% de
+  //    acerto): a Parte que ensina a área e, se já foi feita, a de prática.
+  // 4. Sem meta (nota e data da prova): montar o plano.
+  // 5. Senão, a meta de hoje do cronograma: a primeira Parte dela em aberto.
+  //    Cronograma cumprido: um bloco de simulado (M7, Parte 3).
+  // { kind: "diag" | "exam" | "weak" | "goal" | "plan" | "done", mod, n, text, why, go }
+  function computePriority(){
+    var d = diagStats();
+    if(!d) return null;
+    function pick(kind, mod, n, why){
+      return { kind: kind, mod: mod, n: n, text: partTitle(mod, n), why: why, go: function(){ openPart(mod, n); } };
+    }
+    if(!d.done) return pick("diag", "mod0", 1, "Sem ele eu não sei por onde você deve começar. São cerca de 15 minutos.");
+    var g = readGoal(), left = g ? daysUntil(g.exam) : null;
+    if(left !== null && left >= 0 && left <= EXAM_NEAR){
+      var when = left === 0 ? "A prova é hoje" : left === 1 ? "A prova é amanhã" : "Faltam " + left + " dias para a prova";
+      if(left === 0 && partOpenable("mod8", 9)) return pick("exam", "mod8", 9, when + ". Revise a sua cola mental e confie no que você treinou.");
+      if(left === 1 && partOpenable("mod8", 2)) return pick("exam", "mod8", 2, when + ". Hoje o foco é chegar descansado, com tudo pronto.");
+      if(left <= 7 && !partIsDone("mod8", 1) && partOpenable("mod8", 1)) return pick("exam", "mod8", 1, when + ". Na última semana, o que mais rende é ajustar a rotina de prova.");
+      var sim = firstPending("mod7", "simulado");
+      if(sim) return pick("exam", "mod7", sim, when + ". Agora o treino que mais rende é a prova inteira, no tempo dela.");
+      if(!partIsDone("mod8", 1) && partOpenable("mod8", 1)) return pick("exam", "mod8", 1, when + ". Os simulados estão feitos, então é hora de preparar a semana da prova.");
+    }
+    var weak = weakAreas().filter(function(a){ return a.enough && a.pct < WEAK_STRONG; })[0];
+    if(weak){
+      var why = "Seu ponto mais fraco agora é " + weak.nome + ", com " + weak.pct + "% de acerto (" + weak.ok + " de " + weak.n + "). ";
+      if(partOpenable(weak.mod, weak.parte) && !partIsDone(weak.mod, weak.parte)) return pick("weak", weak.mod, weak.parte, why + "Esta Parte ensina exatamente isso.");
+      var pr = firstPending(weak.mod, "pratica");
+      if(pr) return pick("weak", weak.mod, pr, why + "Você já leu a teoria. Agora é praticar.");
+    }
+    var td = computeToday();
+    if(!g) return { kind: "goal", mod: "mod0", n: 1, text: "Montar o seu plano (Módulo 0, Parte 1)",
+      why: "Com a nota que você precisa e a data da prova, eu monto o cronograma e passo a indicar a Parte de cada dia.", go: td.go };
+    if(td.kind === "plan"){
+      var first = td.items.filter(function(x){ return !progressState[x.pid]; })[0];
+      if(first) return pick("plan", first.mod, first.n, "É a próxima Parte do seu cronograma.");
+      var ahead = planParts(g).parts.filter(function(x){ return !progressState[x.pid]; })[0];
+      if(ahead) return pick("plan", ahead.mod, ahead.n, "A meta de hoje está cumprida. Se quiser adiantar, esta é a próxima do cronograma.");
+    }
+    return pick("done", "mod7", 3, "O cronograma está cumprido. Um bloco de simulado mantém o ritmo até a prova.");
+  }
+  window.__toeflWeak = weakAreas; // ganchos do smoke test e do Painel
+  window.__toeflPriority = computePriority;
+
   (function(){
     var $ = function(id){ return document.getElementById(id); };
     var current = null;
@@ -5145,17 +5255,23 @@
       }
       $("dgFill").style.width = Math.round(100 * Math.min(td.doneCount, td.total) / td.total) + "%";
       $("dgGo").textContent = td.done ? "Continuar estudando" : td.kind === "goal" ? "Montar meu plano" : "Começar";
-      if(bar){
+      // a faixa do topo mostra "Sua prioridade hoje" (item 43); a meta do
+      // cronograma continua na gaveta e aqui, na linha de baixo, com a conta
+      var pr = computePriority();
+      priority = pr;
+      if(bar && pr){
         bar.hidden = false;
         bar.classList.toggle("is-done", !!td.done);
-        setText("todayText", td.done ? doneText : td.text);
-        setText("todayMeta", td.meta ? td.meta + (td.done ? "" : " " + td.doneCount + " de " + td.total + " feitos.") : "");
-        $("todayGo").textContent = $("dgGo").textContent;
+        setText("todayText", "Sua prioridade hoje: " + pr.text);
+        setText("todayMeta", (td.done ? doneText + " " : "") + pr.why + (td.meta ? " " + td.meta : "") +
+          (td.kind === "plan" && !td.done ? " Meta do cronograma: " + td.text.replace(/^Hoje: /, "") + ", " + td.doneCount + " de " + td.total + " feitos." : ""));
+        $("todayGo").textContent = pr.kind === "diag" ? "Começar" : pr.kind === "goal" ? "Montar meu plano" : "Continuar";
       }
     }
+    var priority = null;
     function go(){ if(current && current.go){ setSidebarOpen(false); current.go(); } }
     $("dgGo").addEventListener("click", go);
-    $("todayGo").addEventListener("click", go);
+    $("todayGo").addEventListener("click", function(){ if(priority && priority.go) priority.go(); });
     window.__toeflRefreshPlan = render;
     window.__toeflToday = computeToday; // gancho do smoke test e do Painel
     document.addEventListener("toefl-access", render);

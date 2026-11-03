@@ -70,12 +70,21 @@ _BG_ICON_SVGS = {
     "headset": '<path d="M4 14v-2a8 8 0 0 1 16 0v2"/><rect x="2" y="14" width="5" height="7" rx="2"/><rect x="17" y="14" width="5" height="7" rx="2"/>',
     "passport": '<rect x="5" y="2" width="14" height="20" rx="2"/><circle cx="12" cy="10" r="3.5"/><path d="M9 18h6"/>',
 }
+# Fundo mais institucional (item 40 de 2026-10-26): régua de bandas e edital
+# no lugar do avião e do balão, mais uma textura suave de papel quadriculado
+# no CSS (.auth-gate-bg). Tudo em traço fino, sem competir com o cartão.
+_BG_ICON_SVGS["ruler"] = (
+    '<rect x="1" y="7" width="46" height="10" rx="1.5"/>'
+    '<path d="M8 7v4M15 7v6M22 7v4M29 7v6M36 7v4M43 7v6"/>')
+_BG_ICON_SVGS["edital"] = (
+    '<path d="M6 2h9l5 5v15H6Z"/><path d="M15 2v5h5M9 12h8M9 15.5h8M9 19h5"/>')
+_BG_ICON_VIEWBOX = {"ruler": "0 0 48 24"}
 _BG_ICON_LAYOUT = [
-    ("globe", "bgicon-1"), ("plane", "bgicon-2"), ("chat", "bgicon-3"),
+    ("globe", "bgicon-1"), ("edital", "bgicon-2"), ("ruler", "bgicon-3"),
     ("book", "bgicon-4"), ("headset", "bgicon-5"), ("passport", "bgicon-6"),
 ]
 AUTH_BG_DECOR = '<div class="auth-gate-bg" aria-hidden="true">' + "".join(
-    f'<svg class="bgicon {cls}" viewBox="0 0 24 24" fill="none" stroke="currentColor" '
+    f'<svg class="bgicon {cls}" viewBox="{_BG_ICON_VIEWBOX.get(name, "0 0 24 24")}" fill="none" stroke="currentColor" '
     f'stroke-width="1.15" stroke-linecap="round" stroke-linejoin="round">{_BG_ICON_SVGS[name]}</svg>'
     for name, cls in _BG_ICON_LAYOUT
 ) + '</div>'
@@ -776,15 +785,18 @@ dashboard_modal = (
     '</div>'
     '</div>'
 
-    '<div class="dash-callout dash-callout-warn">'
-    f'<span class="dash-section-label">{icon("alert", "ico dash-section-icon")}Pontos fracos</span>'
-    '<div id="dashWeakSpots" class="dash-weak-list"></div>'
+    # prioridade primeiro: é a única coisa a fazer agora (itens 42 e 43)
+    '<div class="dash-callout dash-callout-accent">'
+    f'<span class="dash-section-label">{icon("compass", "ico dash-section-icon")}Sua prioridade hoje</span>'
+    '<p class="dash-value" id="dashPlanText"></p>'
+    '<p class="dash-value dash-value-sm" id="dashPlanWhy"></p>'
+    '<button type="button" class="dash-plan-btn" id="dashPlanBtn" hidden>Continuar</button>'
     '</div>'
 
-    '<div class="dash-callout dash-callout-accent">'
-    f'<span class="dash-section-label">{icon("compass", "ico dash-section-icon")}Plano sugerido</span>'
-    '<p class="dash-value" id="dashPlanText"></p>'
-    '<button type="button" class="dash-plan-btn" id="dashPlanBtn" hidden>Ir para o módulo</button>'
+    '<div class="dash-callout dash-callout-warn">'
+    f'<span class="dash-section-label">{icon("alert", "ico dash-section-icon")}Pontos fracos</span>'
+    '<p class="dash-empty dash-weak-intro">Somados do diagnóstico e dos exercícios que você já fez.</p>'
+    '<div id="dashWeakSpots" class="dash-weak-list"></div>'
     '</div>'
     '</div>'
     '</div>'
@@ -858,6 +870,14 @@ html = f'''<!DOCTYPE html>
       <span class="level-badge-sched" id="levelBadgeSched"></span>
     </div>
     <button type="button" class="cert-btn" id="certBtn" hidden>Ver certificado de conclusão</button>
+    <!-- Instalar app em destaque (item 41): fica logo abaixo da meta de hoje, e não
+         perdido no fim do menu; só aparece quando o navegador permite instalar -->
+    <div class="pwa-tools" id="pwaTools" hidden>
+      <p class="pwa-tools-title">Leve o curso no seu aparelho</p>
+      <p class="pwa-tools-text">Abre em tela cheia, direto do ícone, sem digitar o endereço.</p>
+      <button type="button" class="pwa-install-btn" id="pwaInstall" hidden>{icon("download")} Instalar app</button>
+      <p class="pwa-ios-hint" id="pwaIosHint" hidden>No iPhone ou iPad: toque em <b>Compartilhar</b> e depois em <b>Adicionar à Tela de Início</b>.</p>
+    </div>
     <p class="side-section-label">Módulos</p>
     <nav class="modnav" id="modnav" aria-label="Módulos">
       {nav_items}
@@ -870,10 +890,6 @@ html = f'''<!DOCTYPE html>
       </div>
       <p class="trail-hint" id="trailHint"></p>
     </div>
-    <div class="pwa-tools" id="pwaTools" hidden>
-      <button type="button" class="pwa-install-btn" id="pwaInstall" hidden>⤓ Instalar app</button>
-      <p class="pwa-ios-hint" id="pwaIosHint" hidden>No iPhone ou iPad: toque em <b>Compartilhar</b> e depois em <b>Adicionar à Tela de Início</b>.</p>
-    </div>
     <!-- Configurações (item 28): o que mexe nos dados fica aqui, fechado, e
          reiniciar o progresso pede duas confirmações -->
     <details class="side-settings" id="sideSettings">
@@ -884,11 +900,15 @@ html = f'''<!DOCTYPE html>
           <span class="side-switch-track" aria-hidden="true"></span>
           <span class="side-switch-text"><b>Traduções</b> Palavras e frases em inglês com sublinhado pontilhado mostram a tradução ao passar o mouse ou tocar.</span>
         </label>
-        <div class="data-tools">
-          <button type="button" id="dataExport">↓ Exportar progresso</button>
-          <button type="button" id="dataImport">↑ Importar</button>
-          <input type="file" id="dataFile" accept="application/json,.json" hidden>
-          <span id="dataMsg" class="data-msg" hidden></span>
+        <div class="data-backup">
+          <p class="data-backup-title">Backup avançado</p>
+          <p class="data-backup-hint">Quem tem conta já tem o progresso salvo sozinho. Sem conta, ele fica só neste navegador, e a cópia em arquivo serve de segurança.</p>
+          <div class="data-tools">
+            <button type="button" id="dataExport">↓ Exportar progresso</button>
+            <button type="button" id="dataImport">↑ Importar progresso</button>
+            <input type="file" id="dataFile" accept="application/json,.json" hidden>
+            <span id="dataMsg" class="data-msg" hidden></span>
+          </div>
         </div>
         <button type="button" class="reset-btn" id="resetBtn">↺ Reiniciar todo o progresso</button>
         <div class="reset-confirm" id="resetConfirm" role="alertdialog" aria-labelledby="resetConfirmText" hidden>
@@ -930,7 +950,7 @@ html = f'''<!DOCTYPE html>
           <p id="reviewerBarText"></p>
           <button type="button" class="reviewer-go" id="reviewerBarGo">Abrir o Painel do corretor</button>
         </div>
-        <section class="today-bar" id="todayBar" aria-label="Meta de hoje" hidden>
+        <section class="today-bar" id="todayBar" aria-label="Sua prioridade hoje" hidden>
           <div class="today-main">
             <p class="today-text" id="todayText"></p>
             <p class="today-meta" id="todayMeta" hidden></p>
@@ -1076,7 +1096,7 @@ for _slug, _title in LEGAL_PAGES:
 # inteiro. "Entrar" e "Criar conta" levam ao index.html.
 #
 # Regra de texto desta página: só entra o que dá para provar. Os números
-# saem do próprio build, o selo é "Recomendado" (nunca "mais escolhido"), e
+# saem do próprio build, o selo é "Melhor custo-benefício" (nunca "mais escolhido"), e
 # não há promessa de nota nem contagem de alunos.
 
 # as 10 questões do diagnóstico, já com as letras redistribuídas pelo
@@ -1085,39 +1105,89 @@ for _slug, _title in LEGAL_PAGES:
 _diag = _re.search(r'<div class="quiz-drill" data-drill="mod0-diag"[^>]*>.*?(?=<div class="quiz-summary")', frag["mod0"], flags=_re.S)
 if not _diag or _diag.group(0).count('class="qcard"') != 10:
     raise SystemExit("apresentacao: nao achei as 10 questoes do diagnostico no fragmento do M0")
-DIAG_HTML = _diag.group(0) + "</div>"
+# uma questão por vez (item 38): o rótulo "Questão N de 10" e a lista das
+# cartas num bloco só, que o landing.js mostra uma a uma e, no fim, move para
+# o gabarito recolhido
+_diag_cut = _diag.group(0).index('<div class="qcard"')
+DIAG_HTML = (
+    _diag.group(0)[:_diag_cut]
+    + '<p class="lp-step" id="lpStep" tabindex="-1" aria-live="polite"></p>'
+    + '<div class="lp-qlist" id="lpQList">' + _diag.group(0)[_diag_cut:] + "</div></div>"
+)
 
 
-def _count(mod, pattern):
-    return len(_re.findall(pattern, frag[mod]))
-
-
-LP_STATS = [
-    (len(MODS), "módulos, do diagnóstico ao dia da prova"),
-    (_count("mod1", r'class="ctw-in"'), "lacunas de Complete the Words para digitar"),
-    (_count("mod1", r'class="qcard"'), "questões de Reading"),
-    (_count("mod2", r'class="qcard"'), "questões de Listening"),
-    (_count("mod4", r'class="bsq-card'), "itens de Build a Sentence"),
-    (_count("mod3", r'class="spk"'), "conjuntos de Speaking para ouvir e responder"),
-    (_count("mod7", r'class="exam-item'), "questões de simulado"),
-    (len(json.load(open("vocab_kit.json", encoding="utf-8"))), "flashcards de vocabulário"),
+# Os 10 módulos em 4 etapas (item 37 de 2026-10-26). Sem métricas soltas ao
+# lado: o número de questões não ajuda quem ainda não sabe por onde começar.
+LP_STAGES = [
+    ("Fundamentos", "Grátis", "Saiba onde você está e monte o seu caminho.", ["mod0"]),
+    ("Habilidades centrais", "", "As quatro seções da prova, mais o registro e o vocabulário que sustentam a nota.",
+     ["mod1", "mod2", "mod3", "mod4", "mod5", "mod6"]),
+    ("Especificidade para brasileiros", "", "Treino de prova completa e os erros típicos de quem fala português.", ["mod7", "mod9"]),
+    ("Reta final", "", "A véspera e o dia da prova, sem improviso.", ["mod8"]),
 ]
-if any(n <= 0 for n, _ in LP_STATS):
-    raise SystemExit(f"apresentacao: contagem zerada em LP_STATS: {LP_STATS}")
-lp_stats = "".join(f'<li><span class="lp-stat-n">{n}</span><span class="lp-stat-t">{t}</span></li>' for n, t in LP_STATS)
+LP_MOD_LINE = {
+    "mod0": "O diagnóstico, o seu nível estimado e o cronograma indicado.",
+    "mod1": "Complete the Words, textos do dia a dia e passagens acadêmicas.",
+    "mod2": "Respostas, conversas, avisos e palestras, com escuta ativa.",
+    "mod3": "Listen and Repeat e Take an Interview, com áudio e gravador.",
+    "mod4": "Build a Sentence, e-mail e discussão acadêmica.",
+    "mod5": "O tom certo e a variedade de estruturas que sobem a sua banda.",
+    "mod6": "Léxico acadêmico e flashcards de revisão espaçada.",
+    "mod7": "Simulados progressivos, com correção só na entrega.",
+    "mod8": "O passo a passo de cada seção e as últimas 24 horas.",
+    "mod9": "Os erros mais comuns do brasileiro, mapeados e corrigidos.",
+}
+_mod_by_id = {m[0]: m for m in MODS}
+if sorted(i for st in LP_STAGES for i in st[3]) != sorted(_mod_by_id) or set(LP_MOD_LINE) != set(_mod_by_id):
+    raise SystemExit("apresentacao: LP_STAGES e LP_MOD_LINE precisam cobrir os 10 módulos, cada um uma vez")
+
+
+def _lp_stage(n, st):
+    title, tag, lead, ids = st
+    items = "".join(
+        f'<li><span class="lp-mod-n">{_mod_by_id[i][1]}</span><span class="lp-mod-t"><strong>{_mod_by_id[i][2]}</strong>'
+        f'<span>{LP_MOD_LINE[i]}</span></span></li>' for i in ids)
+    tag_html = f' <span class="lp-stage-tag">{tag}</span>' if tag else ""
+    return (
+        f'<article class="lp-stage"><p class="lp-stage-n">Etapa {n}</p>'
+        f'<h3>{title}{tag_html}</h3>'
+        f'<p class="lp-stage-lead">{lead}</p><ol class="lp-mods">{items}</ol></article>'
+    )
+
+
+lp_stages = "".join(_lp_stage(n, st) for n, st in enumerate(LP_STAGES, 1))
+
+# Perfil de cada plano e a faixa de banda que combina com ele (item 39). A
+# faixa é da banda de partida do diagnóstico (ToeflLevel.band().low: 1 a 6) e
+# segue o cronograma que o próprio resultado indica: até 3–3,5 é o Completo
+# (90 dias), 4–4,5 o Regular (60 dias), 5 ou mais já está perto da meta. O
+# Anual não tem faixa: depende do objetivo, não da banda.
+LP_PROFILES = {
+    "mensal": ("Reta final", "Prova marcada para as próximas semanas, ou banda já alta.", (5, 6)),
+    "60dias": ("Revisão intensiva", "Banda 3,5 a 4: revisar o que mais pesa e rodar os simulados.", (4, 4)),
+    "90dias": ("Trilha completa", "Banda 2 a 3: construir a base e depois treinar as quatro seções.", (1, 3)),
+    "anual": ("Ciclo de editais", "Pós-graduação, bolsas e planejamento longo, com tempo para repetir a prova.", None),
+}
+if set(LP_PROFILES) != {p["id"] for p in PLANS}:
+    raise SystemExit("apresentacao: LP_PROFILES precisa ter um perfil para cada plano de plans.json")
+
 
 def _lp_plan(p):
     hl = p.get("highlight")
     note = "por mês, renovação automática" if p["interval"] == "month" else plan_month_note(p)
     action = f'Assinar o {p["name"]}' if p["interval"] == "month" else f'Escolher o plano {p["name"]}'
+    profile, profile_for, fits = LP_PROFILES[p["id"]]
+    fits_attr = f' data-fits="{fits[0]}-{fits[1]}"' if fits else ""
     return (
-        f'<article class="lp-plan{" is-highlight" if hl else ""}" data-plan="{p["id"]}">'
+        f'<article class="lp-plan{" is-highlight" if hl else ""}" data-plan="{p["id"]}"{fits_attr}>'
         f'{PLAN_BADGE if hl else ""}'
+        f'<span class="lp-plan-match" hidden>Combina com a sua banda</span>'
         f'<h3>{p["name"]}</h3>'
+        f'<p class="lp-plan-profile">{profile}</p>'
         f'<p class="lp-plan-price">{brl(p["price_cents"])}</p>'
         f'<p class="lp-plan-note">{note}</p>'
         f'<p class="lp-plan-access">{p["access"]}</p>'
-        f'<p class="lp-plan-for">{p["audience"]}</p>'
+        f'<p class="lp-plan-for">{profile_for}</p>'
         f'<p class="lp-plan-detail">{p["detail"]}</p>'
         f'<a class="lp-btn{" lp-btn-main" if hl else ""}" href="index.html#criar-conta" '
         f'data-plan-pick="{p["id"]}">{action}</a>'
@@ -1168,8 +1238,11 @@ LANDING_JS = LEVEL_JS + "\n" + open("landing.js", encoding="utf-8").read()
 LANDING_VIDEO = render_video.render_landing_video(render_video.load_landing_video())
 _lp_desc = ("Preparação em português para o exame TOEFL iBT® no formato 2026: 10 módulos, exercícios no molde da prova e simulados. "
             "Faça o diagnóstico grátis, sem criar conta.")
+# tema fixo creme (item 35, decisão do dono em 2026-10-26): data-theme="light"
+# na raiz e nenhum script de tema, então a escolha claro/escuro feita dentro
+# do app (toefl_theme_v1) e o modo escuro do sistema não chegam aqui
 _landing = f'''<!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-BR" data-theme="light">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -1183,7 +1256,7 @@ _landing = f'''<!DOCTYPE html>
 <link rel="icon" type="image/png" sizes="192x192" href="icons/icon-192.png">
 <meta name="theme-color" content="#ef5a1f">
 {FONT_LINKS}
-<script>{_LEGAL_THEME_JS}</script>
+<meta name="color-scheme" content="light">
 <style>
 {CSS}
 </style>
@@ -1195,7 +1268,8 @@ _landing = f'''<!DOCTYPE html>
   <div class="lp-top-in">
     <a class="legal-brand lp-brand" href="apresentacao.html" aria-label="iTOEFL, início"><span class="logo">{LOGO_SVG}</span><span class="name">iTOEFL</span></a>
     <nav class="lp-nav" aria-label="Seções da página">
-      <a href="#como-funciona">Como funciona</a>
+      <a href="#por-que-existe">Por que existe</a>
+      <a href="#como-funciona">Módulos</a>
       <a href="#diagnostico">Diagnóstico grátis</a>
       <a href="#planos">Planos</a>
       <a href="#duvidas">Dúvidas</a>
@@ -1222,9 +1296,27 @@ _landing = f'''<!DOCTYPE html>
   {LANDING_VIDEO}
 </section>
 
+<section class="lp-section" id="por-que-existe" aria-labelledby="lpWhyTitle">
+  <h2 id="lpWhyTitle">Por que este curso existe</h2>
+  <p class="lp-lead">Eu montei o iTOEFL por três motivos. Cada um nasceu de uma dificuldade real de quem estuda sozinho para esta prova.</p>
+  <div class="lp-why">
+    <div class="lp-pillar"><span class="lp-pillar-n" aria-hidden="true">1</span><h3>Feito para a prova de 2026</h3>
+      <p>A prova mudou em janeiro de 2026, e boa parte do material publicado até 2025 ficou desatualizada.
+      Este curso nasceu para as tarefas novas, então você treina o que vai encontrar de verdade.</p></div>
+    <div class="lp-pillar"><span class="lp-pillar-n" aria-hidden="true">2</span><h3>Explicação em português, prática em inglês</h3>
+      <p>Você entende cada regra na sua língua e treina com inglês autêntico, no molde da prova.
+      Assim a dúvida não trava o estudo e o treino não vira tradução.</p></div>
+    <div class="lp-pillar"><span class="lp-pillar-n" aria-hidden="true">3</span><h3>Custo acessível</h3>
+      <p>A taxa da prova já é cobrada em dólar. Por isso o preparo precisa custar pouco,
+      para sobrar orçamento para a inscrição.</p></div>
+  </div>
+</section>
+
 <section class="lp-section" id="como-funciona" aria-labelledby="lpInsideTitle">
-  <h2 id="lpInsideTitle">O que tem dentro</h2>
-  <ul class="lp-stats">{lp_stats}</ul>
+  <h2 id="lpInsideTitle">Os 10 módulos, em 4 etapas</h2>
+  <p class="lp-lead">Você pode abrir qualquer módulo a qualquer momento. As etapas mostram a ordem que eu recomendo.</p>
+  <div class="lp-stages">{lp_stages}</div>
+  <h3 class="lp-sub-h">O que tem dentro</h3>
   <div class="lp-feats">
     <div class="lp-feat"><h3>As quatro seções, no molde da prova</h3>
       <p>Reading, Listening, Writing e Speaking, com os tipos de tarefa de 2026: Complete the Words com digitação,
@@ -1241,8 +1333,11 @@ _landing = f'''<!DOCTYPE html>
 <section class="lp-section" id="diagnostico" aria-labelledby="lpDiagTitle">
   <h2 id="lpDiagTitle">Diagnóstico grátis, sem conta</h2>
   <p class="lp-lead">São as 10 questões do Teste de Nivelamento do Módulo 0: gramática, vocabulário e conectivos
-  acadêmicos. Responda sem consulta, confirme cada resposta e veja no fim o seu nível estimado. É uma estimativa de
-  treino, não uma nota oficial.</p>
+  acadêmicos. Você responde uma por vez, sem consulta. No fim, mostro o seu nível estimado e o cronograma indicado.
+  É uma estimativa de treino, não uma nota oficial.</p>
+  <details class="lp-diag" id="lpDiag">
+    <summary><span class="lp-diag-t">Fazer o diagnóstico</span><span class="lp-diag-meta">Cerca de 12 min, grátis, sem cadastro</span></summary>
+    <div class="lp-diag-body">
   {DIAG_HTML}
   <div class="lp-result" id="lpResult" tabindex="-1" role="status" hidden>
     <p class="lp-result-score" id="lpResultScore"></p>
@@ -1250,12 +1345,22 @@ _landing = f'''<!DOCTYPE html>
     <p class="lp-result-desc" id="lpResultDesc"></p>
     <p class="lp-result-next">No curso, o caminho indicado para esse nível é o <strong id="lpResultSched"></strong>.
     A estimativa vem de 10 questões de gramática e vocabulário: serve para escolher por onde começar, não para prever a nota da prova.</p>
+    <p class="lp-result-plan" id="lpResultPlanLine" hidden>O plano que combina com essa banda é o <strong id="lpResultPlan"></strong>.
+    Ele está destacado <a href="#planos">na tabela de planos</a>.</p>
+    <details class="lp-key" id="lpKey" hidden>
+      <summary>Ver o gabarito completo</summary>
+      <div class="lp-key-list" id="lpKeyList"></div>
+    </details>
+    <p class="lp-result-save"><strong>Quer guardar este resultado?</strong> Crie uma conta grátis neste mesmo navegador
+    e o Módulo 0 já abre com o diagnóstico respondido.</p>
     <div class="lp-cta">
-      <a class="lp-btn lp-btn-main" href="#planos">Ver os planos</a>
-      <a class="lp-btn" href="index.html#criar-conta">Criar conta grátis</a>
+      <a class="lp-btn lp-btn-main" href="index.html#criar-conta">Criar conta e salvar o resultado</a>
+      <a class="lp-btn" href="#planos">Ver os planos</a>
       <button type="button" class="lp-btn" id="lpRetry">Refazer o diagnóstico</button>
     </div>
   </div>
+    </div>
+  </details>
 </section>
 
 <section class="lp-section" id="gratis" aria-labelledby="lpFreeTitle">

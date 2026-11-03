@@ -219,15 +219,17 @@ def find_heading(html, tag, prefix):
 
 
 # ---------- Módulo 0: diagnostic quiz ----------
-# Áreas do diagnóstico (campo "area" de quiz_mod0.json): nome na tela e onde
-# treinar cada uma. O app.js lê o JSON embutido na tela de resultado.
+# Áreas do diagnóstico (campo "area" de quiz_mod0.json): nome na tela, onde
+# treinar cada uma e em que área dos pontos fracos do Painel ela conta
+# ("painel", uma chave de WEAK_AREAS no app.js, que tem o módulo e a Parte do
+# atalho). O app.js lê o JSON embutido na tela de resultado.
 DIAG_AREAS = {
-    "gramatica": {"nome": "Gramática", "mod": "mod4", "onde": "Módulo 4, Writing (Build a Sentence)"},
-    "conectivos": {"nome": "Conectivos", "mod": "mod5", "onde": "Módulo 5, Registro e Retórica"},
-    "vocabulario": {"nome": "Vocabulário", "mod": "mod6", "onde": "Módulo 6, Vocabulário"},
-    "ordem": {"nome": "Ordem das palavras", "mod": "mod4", "onde": "Módulo 4, Writing (Build a Sentence)"},
-    "registro": {"nome": "Registro", "mod": "mod5", "onde": "Módulo 5, Registro e Retórica"},
-    "compreensao": {"nome": "Compreensão", "mod": "mod1", "onde": "Módulo 1, Reading"},
+    "gramatica": {"nome": "Gramática", "mod": "mod4", "onde": "Módulo 4, Writing (Build a Sentence)", "painel": "gramatica"},
+    "conectivos": {"nome": "Conectivos", "mod": "mod5", "onde": "Módulo 5, Registro e Retórica", "painel": "registro"},
+    "vocabulario": {"nome": "Vocabulário", "mod": "mod6", "onde": "Módulo 6, Vocabulário", "painel": "vocabulario"},
+    "ordem": {"nome": "Ordem das palavras", "mod": "mod4", "onde": "Módulo 4, Writing (Build a Sentence)", "painel": "gramatica"},
+    "registro": {"nome": "Registro", "mod": "mod5", "onde": "Módulo 5, Registro e Retórica", "painel": "registro"},
+    "compreensao": {"nome": "Compreensão", "mod": "mod1", "onde": "Módulo 1, Reading", "painel": "reading"},
 }
 
 

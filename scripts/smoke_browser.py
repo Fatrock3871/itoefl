@@ -406,7 +406,7 @@ LANDING_STATE = r"""
     if(r.height && r.height < 44) small.push(e.textContent.trim().slice(0, 30) + ":" + Math.round(r.height));
   });
   var text = document.body.textContent;
-  // "Mais escolhido" (selo do plano de 90 dias) foi decisão do dono em 2026-10-18
+  // "Melhor custo-benefício" (selo do plano de 90 dias): decisão do dono em 2026-10-26, no lugar de "Mais escolhido"
   var banned = [/mais (vendido|popular)/i, /milhares|centenas de alunos|\d+ alunos/i, /aprova[çc][ãa]o garantida/i,
                 /garant(imos|e) (a |sua |uma )?(nota|aprova)/i, /nota garantida/i, /melhor curso/i, /n[úu]mero 1|#1/i, /oficial da ETS\./i];
   return {
@@ -803,16 +803,21 @@ def run():
                   g.start = %s;
                   localStorage.setItem("toefl_goal_v1", JSON.stringify(g));
                   window.__toeflRefreshPlan();
+                  o.priority = window.__toeflPriority().mod;
                   document.getElementById("todayGo").click();
                   o.went = document.querySelector(".tabbtn.active").dataset.tab;
                   return o;
                 })()""" % json.dumps(goal["today"]))
+                # a faixa do topo mostra a prioridade (item 43); a meta do
+                # cronograma fica na gaveta e na linha de baixo da faixa
                 check("real_today_goal_follows_schedule",
-                      re.match(r"^Hoje: M[01] Parte \d", today["text"]) and re.search(r"\(\d+ min\)$", today["text"])
-                      and not re.search(r"M0 Parte 1\b", today["text"])
-                      and today["side"] == today["text"] and "Prova em 45 dias. Você: B2. Meta: C1 (banda 5)." in today["meta"]
+                      re.match(r"^Hoje: M[01] Parte \d", today["side"]) and re.search(r"\(\d+ min\)$", today["side"])
+                      and not re.search(r"M0 Parte 1\b", today["side"])
+                      and today["text"].startswith("Sua prioridade hoje: Módulo ")
+                      and "Prova em 45 dias. Você: B2. Meta: C1 (banda 5)." in today["meta"]
+                      and "Meta do cronograma: " + today["side"][len("Hoje: "):] in today["meta"]
                       and today["next"].startswith("Depois: ") and today["lateItems"] > 1 and "atrás do cronograma" in today["lateNext"]
-                      and today["went"] in ("mod0", "mod1"), today)
+                      and today["went"] == today["priority"], today)
                 b.pump(1.2)  # a caixa de escrita salva com atraso
                 start2 = b.eval('({ title: document.querySelector("#startCard .start-title").textContent,'
                                 ' go: document.querySelector("#startCard .start-go").textContent })')
@@ -876,11 +881,15 @@ def run():
                     '(function(){ document.getElementById("authBox").hidden = false; document.getElementById("authIn").hidden = false;'
                     ' document.getElementById("dashboardBtn").click();'
                     ' var o = { goal: document.getElementById("dashGoalText").textContent, weak: document.getElementById("dashWeakSpots").textContent,'
-                    '           band: document.getElementById("dashBand").textContent };'
+                    '           band: document.getElementById("dashBand").textContent,'
+                    '           plan: document.getElementById("dashPlanText").textContent,'
+                    '           rows: document.querySelectorAll("#dashWeakSpots .dash-weak-row").length };'
                     ' document.getElementById("dashboardClose").click(); return o; })()')
+                # pontos fracos saem dos exercícios respondidos acima, não do registro de erros
                 check("real_dashboard_reads_progress",
                       (dash["goal"].startswith("Hoje: ") or "Meta batida" in dash["goal"]) and "/1" not in dash["goal"]
-                      and "R1" in dash["weak"] and "B2" in dash["band"], dash)
+                      and (dash["rows"] > 0 and "%" in dash["weak"] or "Nenhuma área abaixo" in dash["weak"])
+                      and "R1" not in dash["weak"] and dash["plan"].startswith("Módulo ") and "B2" in dash["band"], dash)
 
                 # teclado: Enter no titulo de uma subsecao abre e fecha; a
                 # janela do painel recebe o foco, fecha com Esc e devolve o foco
@@ -1068,7 +1077,7 @@ def run():
                 b.reload(settle=1.2)
                 lp = b.eval(LANDING_STATE)
                 check("landing_desktop_has_all_sections",
-                      lp["h1"] == 1 and lp["sections"] == ["como-funciona", "diagnostico", "gratis", "planos", "duvidas"]
+                      lp["h1"] == 1 and lp["sections"] == ["por-que-existe", "como-funciona", "diagnostico", "gratis", "planos", "duvidas"]
                       and lp["qcards"] == 10 and lp["enter"] == "index.html#entrar" and lp["legal"] and lp["faq"] >= 6
                       and lp["resultHidden"] and lp["docW"] <= lp["vw"] and not lp["over"], lp)
                 # topo com presença: logo e menu maiores, "Começar grátis" como
@@ -1083,9 +1092,26 @@ def run():
                       and [p["price"] for p in lp["plans"]] == ["R$ 29,90", "R$ 49,90", "R$ 59,90", "R$ 129,90"]
                       and [p["note"] for p in lp["plans"]] == ["por mês, renovação automática", "equivale a R$ 24,95/mês",
                                                                "equivale a R$ 19,97/mês", "equivale a R$ 10,83/mês"]
-                      and [p["badge"] for p in lp["plans"]] == ["", "", "Mais escolhido", ""]
+                      and [p["badge"] for p in lp["plans"]] == ["", "", "Melhor custo-benefício", ""]
                       and len({p["top"] for p in lp["plans"]}) == 1 and lp["refund"], lp)
                 check("landing_makes_no_unprovable_claims", not lp["claims"], lp["claims"])
+                # diagnóstico recolhido ("cerca de 12 min, grátis, sem cadastro"),
+                # abre com uma questão por vez e avança ao confirmar (item 38)
+                one = b.eval(r"""(function(){
+                  var d = document.getElementById("lpDiag"), out = { wasOpen: d.open,
+                    meta: d.querySelector(".lp-diag-meta").textContent };
+                  d.open = true;
+                  function shown(){ return Array.prototype.filter.call(document.querySelectorAll("#diagnostico .qcard"),
+                    function(c){ return c.getBoundingClientRect().height > 0; }).map(function(c){ return c.dataset.num; }); }
+                  out.first = shown(); out.step1 = document.getElementById("lpStep").textContent;
+                  var c = document.querySelector("#diagnostico .qcard");
+                  c.querySelector('.opt[data-letter="' + c.dataset.correct + '"]').click(); c.querySelector(".qconfirm").click();
+                  out.second = shown(); out.step2 = document.getElementById("lpStep").textContent;
+                  return out;
+                })()""")
+                check("landing_diagnostic_collapsed_one_question_at_a_time",
+                      one == {"wasOpen": False, "meta": "Cerca de 12 min, grátis, sem cadastro", "first": ["1"],
+                              "step1": "Questão 1 de 10", "second": ["2"], "step2": "Questão 2 de 10"}, one)
                 # 7 certas de 10: B2, cronograma Regular, e o estado fica na
                 # mesma chave que o app le
                 early = b.eval(r"""(function(){
@@ -1101,17 +1127,38 @@ def run():
                       "Você acertou 7 de 10." in res["text"] and "Nível estimado: banda 4–4,5 (B2)" in res["text"]
                       and "Cronograma Regular (60 dias)" in res["text"] and res["saved"] == 10 and res["verdicts"] == 10
                       and not res["hidden"], res)
+                # no fim: a banda e o cronograma à vista, o gabarito completo
+                # recolhido e o convite para salvar o resultado; o plano que
+                # combina com a banda 4–4,5 (60 dias) fica destacado (itens 38 e 39)
+                fin = b.eval(r"""(function(){
+                  var key = document.getElementById("lpKey"), r = document.getElementById("lpResult");
+                  return { keyShown: !key.hidden, keyOpen: key.open, keyCards: key.querySelectorAll(".qcard").length,
+                    listCards: document.querySelectorAll("#lpQList .qcard").length,
+                    invite: /Criar conta e salvar o resultado/.test(r.textContent) && /Quer guardar este resultado/.test(r.textContent),
+                    match: Array.prototype.filter.call(document.querySelectorAll(".lp-plan.is-match"), function(p){
+                      return !p.querySelector(".lp-plan-match").hidden; }).map(function(p){ return p.dataset.plan; }),
+                    line: document.getElementById("lpResultPlan").textContent };
+                })()""")
+                check("landing_result_key_collapsed_with_invite",
+                      fin["keyShown"] and not fin["keyOpen"] and fin["keyCards"] == 10 and fin["listCards"] == 0 and fin["invite"], fin)
+                check("landing_plan_highlight_follows_band",
+                      fin["match"] == ["60dias"] and fin["line"] == "60 dias, Revisão intensiva", fin)
                 b.reload(settle=1)
                 again = b.eval('(function(){ var r = document.getElementById("lpResult"); return { hidden: r.hidden, text: r.textContent }; })()')
                 check("landing_diagnostic_survives_reload", not again["hidden"] and "B2" in again["text"], again)
                 pick = b.eval('(function(){ var a = document.querySelector(\'.lp-plan[data-plan="60dias"] a\'); a.addEventListener("click", function(e){ e.preventDefault(); });'
                               ' a.click(); return { href: a.getAttribute("href"), saved: localStorage.getItem("toefl_plan_pick_v1") }; })()')
                 check("landing_plan_click_carries_choice", pick == {"href": "index.html#criar-conta", "saved": "60dias"}, pick)
-                for theme in ("light", "dark"):
-                    b.eval('document.documentElement.setAttribute("data-theme", %s)' % json.dumps(theme))
-                    b.pump(0.3)
-                    low = b.eval(CONTRAST)
-                    check("landing_contrast_aa_" + theme, not low, low)
+                # tema fixo creme (item 35): quem escolheu o escuro dentro do app
+                # continua vendo a apresentação creme
+                b.eval('localStorage.setItem("toefl_theme_v1", "dark")')
+                b.reload(settle=1)
+                theme = b.eval('({ attr: document.documentElement.getAttribute("data-theme"),'
+                               ' bg: getComputedStyle(document.body).backgroundColor })')
+                check("landing_theme_ignores_app_dark_choice", theme == {"attr": "light", "bg": "rgb(251, 244, 234)"}, theme)
+                b.eval('localStorage.setItem("toefl_theme_v1", "light")')
+                low = b.eval(CONTRAST)
+                check("landing_contrast_aa_light", not low, low)
 
                 b.viewport(375, 812, mobile=True)
                 b.reload(settle=1)
@@ -1119,7 +1166,7 @@ def run():
                 tops = {p["id"]: p["top"] for p in lp["plans"]}
                 check("landing_mobile_375_fits_and_stacks_highlight_first",
                       lp["docW"] <= 375 and not lp["over"] and len(tops) == 4
-                      and tops["90dias"] < tops["mensal"] < tops["60dias"] < tops["anual"] and lp["smallTargets"] == [], lp)
+                      and tops["60dias"] < tops["90dias"] < tops["mensal"] < tops["anual"] and lp["smallTargets"] == [], lp)
                 check("landing_no_js_errors", not b.errors, b.errors)
                 # o plano clicado la (60 dias) chega marcado na tela de compra do app
                 b.goto(page, settle=1)
