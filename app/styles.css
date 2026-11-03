@@ -1750,13 +1750,31 @@ li > .reveal{margin:6px 0 4px;}
 .lp-section{max-width:1080px; margin:0 auto; padding:46px 20px 0; scroll-margin-top:90px;}
 .lp-section > h2{font-size:clamp(26px, 4vw, 36px); margin:0 0 12px;}
 .lp-lead{font-size:17px; line-height:1.6; color:var(--ink-2); max-width:70ch; margin:0 0 24px;}
-.lp-stats{list-style:none; margin:0 0 26px; padding:0; display:grid; grid-template-columns:repeat(4, 1fr); gap:12px;}
-.lp-stats li{
-  display:flex; flex-direction:column; gap:4px; padding:16px 16px 14px; background:var(--paper);
-  border:2px solid var(--edge); border-radius:var(--radius); box-shadow:var(--shadow-hard);
+/* "Por que existe": três pilares (item 36) */
+.lp-why{display:grid; grid-template-columns:repeat(3, 1fr); gap:14px;}
+.lp-pillar{padding:22px 20px; background:var(--paper); border:2px solid var(--edge); border-radius:var(--radius); box-shadow:var(--shadow-hard);}
+.lp-pillar-n{
+  display:inline-flex; align-items:center; justify-content:center; width:34px; height:34px; border-radius:99px;
+  background:var(--accent-fill); color:#fff; font-family:'Bricolage Grotesque',sans-serif; font-weight:800; font-size:17px; margin-bottom:10px;
 }
-.lp-stat-n{font-family:'Bricolage Grotesque',sans-serif; font-size:34px; font-weight:800; line-height:1; color:var(--accent-strong);}
-.lp-stat-t{font-size:14px; line-height:1.4; color:var(--ink);}
+.lp-pillar h3{font-size:19px; margin:0 0 8px;}
+.lp-pillar p{margin:0; font-size:15.5px; line-height:1.6;}
+/* os 10 módulos em 4 etapas (item 37) */
+.lp-stages{display:grid; grid-template-columns:repeat(2, minmax(0, 1fr)); gap:16px; margin:0 0 30px;}
+.lp-stage{padding:20px; background:var(--paper); border:2px solid var(--edge); border-radius:var(--radius);}
+.lp-stage-n{margin:0 0 4px; font-size:12.5px; font-weight:800; letter-spacing:0.08em; text-transform:uppercase; color:var(--accent-strong);}
+.lp-stage h3{font-size:22px; margin:0 0 6px;}
+.lp-stage-tag{
+  display:inline-block; vertical-align:middle; margin-left:6px; padding:2px 9px; border-radius:99px; background:var(--accent-fill);
+  color:#fff; font-family:'Plus Jakarta Sans',sans-serif; font-size:12px; font-weight:800; letter-spacing:0;
+}
+.lp-stage-lead{margin:0 0 12px; font-size:15px; line-height:1.5; color:var(--ink-2);}
+.lp-mods{list-style:none; margin:0; padding:0; display:flex; flex-direction:column;}
+.lp-mods li{display:flex; gap:12px; align-items:baseline; padding:9px 0; border-top:1px solid var(--hair);}
+.lp-mod-n{flex:none; min-width:26px; font-family:'Bricolage Grotesque',sans-serif; font-weight:800; font-size:18px; color:var(--accent-strong);}
+.lp-mod-t{display:flex; flex-direction:column; gap:1px; font-size:14.5px; line-height:1.45;}
+.lp-mod-t strong{font-size:15.5px;}
+.lp-sub-h{font-size:20px; margin:0 0 12px;}
 .lp-feats{display:grid; grid-template-columns:repeat(3, 1fr); gap:14px;}
 .lp-feat{padding:20px; background:var(--sand); border:2px solid var(--edge); border-radius:var(--radius);}
 .lp-feat h3{font-size:18px; margin:0 0 8px;}
@@ -1808,7 +1826,7 @@ li > .reveal{margin:6px 0 4px;}
 .lp-foot a{color:inherit;}
 .lp-foot a:hover{color:var(--accent-strong);}
 @media(max-width:860px){
-  .lp-stats{grid-template-columns:repeat(2, 1fr);}
+  .lp-why, .lp-stages{grid-template-columns:1fr;}
   .lp-feats{grid-template-columns:1fr;}
   /* no celular os planos viram cartões empilhados, o destacado primeiro */
   .lp-plans{grid-template-columns:1fr; gap:22px;}
@@ -1831,7 +1849,6 @@ li > .reveal{margin:6px 0 4px;}
   .lp-top-actions .lp-btn{padding:8px 12px; font-size:14px;}
   .lp-cta .lp-btn{width:100%;}
   .lp-result{padding:20px 16px;}
-  .lp-stat-n{font-size:28px;}
 }
 @media print{ .lp-top .lp-nav, .lp-cta, body.lp-page::after{display:none !important;} }
 

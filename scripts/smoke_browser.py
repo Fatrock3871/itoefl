@@ -406,7 +406,7 @@ LANDING_STATE = r"""
     if(r.height && r.height < 44) small.push(e.textContent.trim().slice(0, 30) + ":" + Math.round(r.height));
   });
   var text = document.body.textContent;
-  // "Mais escolhido" (selo do plano de 90 dias) foi decisão do dono em 2026-10-18
+  // "Melhor custo-benefício" (selo do plano de 90 dias): decisão do dono em 2026-10-26, no lugar de "Mais escolhido"
   var banned = [/mais (vendido|popular)/i, /milhares|centenas de alunos|\d+ alunos/i, /aprova[çc][ãa]o garantida/i,
                 /garant(imos|e) (a |sua |uma )?(nota|aprova)/i, /nota garantida/i, /melhor curso/i, /n[úu]mero 1|#1/i, /oficial da ETS\./i];
   return {
@@ -1068,7 +1068,7 @@ def run():
                 b.reload(settle=1.2)
                 lp = b.eval(LANDING_STATE)
                 check("landing_desktop_has_all_sections",
-                      lp["h1"] == 1 and lp["sections"] == ["como-funciona", "diagnostico", "gratis", "planos", "duvidas"]
+                      lp["h1"] == 1 and lp["sections"] == ["por-que-existe", "como-funciona", "diagnostico", "gratis", "planos", "duvidas"]
                       and lp["qcards"] == 10 and lp["enter"] == "index.html#entrar" and lp["legal"] and lp["faq"] >= 6
                       and lp["resultHidden"] and lp["docW"] <= lp["vw"] and not lp["over"], lp)
                 # topo com presença: logo e menu maiores, "Começar grátis" como
@@ -1083,7 +1083,7 @@ def run():
                       and [p["price"] for p in lp["plans"]] == ["R$ 29,90", "R$ 49,90", "R$ 59,90", "R$ 129,90"]
                       and [p["note"] for p in lp["plans"]] == ["por mês, renovação automática", "equivale a R$ 24,95/mês",
                                                                "equivale a R$ 19,97/mês", "equivale a R$ 10,83/mês"]
-                      and [p["badge"] for p in lp["plans"]] == ["", "", "Mais escolhido", ""]
+                      and [p["badge"] for p in lp["plans"]] == ["", "", "Melhor custo-benefício", ""]
                       and len({p["top"] for p in lp["plans"]}) == 1 and lp["refund"], lp)
                 check("landing_makes_no_unprovable_claims", not lp["claims"], lp["claims"])
                 # 7 certas de 10: B2, cronograma Regular, e o estado fica na
@@ -1107,11 +1107,16 @@ def run():
                 pick = b.eval('(function(){ var a = document.querySelector(\'.lp-plan[data-plan="60dias"] a\'); a.addEventListener("click", function(e){ e.preventDefault(); });'
                               ' a.click(); return { href: a.getAttribute("href"), saved: localStorage.getItem("toefl_plan_pick_v1") }; })()')
                 check("landing_plan_click_carries_choice", pick == {"href": "index.html#criar-conta", "saved": "60dias"}, pick)
-                for theme in ("light", "dark"):
-                    b.eval('document.documentElement.setAttribute("data-theme", %s)' % json.dumps(theme))
-                    b.pump(0.3)
-                    low = b.eval(CONTRAST)
-                    check("landing_contrast_aa_" + theme, not low, low)
+                # tema fixo creme (item 35): quem escolheu o escuro dentro do app
+                # continua vendo a apresentação creme
+                b.eval('localStorage.setItem("toefl_theme_v1", "dark")')
+                b.reload(settle=1)
+                theme = b.eval('({ attr: document.documentElement.getAttribute("data-theme"),'
+                               ' bg: getComputedStyle(document.body).backgroundColor })')
+                check("landing_theme_ignores_app_dark_choice", theme == {"attr": "light", "bg": "rgb(251, 244, 234)"}, theme)
+                b.eval('localStorage.setItem("toefl_theme_v1", "light")')
+                low = b.eval(CONTRAST)
+                check("landing_contrast_aa_light", not low, low)
 
                 b.viewport(375, 812, mobile=True)
                 b.reload(settle=1)

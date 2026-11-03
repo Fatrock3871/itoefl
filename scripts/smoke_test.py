@@ -118,7 +118,7 @@ check("plans_four_options_90_default", function(){
 });
 check("plans_highlight_badge_only_on_90", function(){
   var badges = document.querySelectorAll("#planPick .plan-badge");
-  return badges.length === 1 && badges[0].textContent === "Mais escolhido" &&
+  return badges.length === 1 && badges[0].textContent === "Melhor custo-benefício" &&
     badges[0].closest(".plan-opt").querySelector("input").value === "90dias";
 });
 // equivalente por mês calculado no build a partir do preço (2026-10-18)
@@ -1415,18 +1415,25 @@ def landing_checks():
         '<meta name="description"' in page and "@import" not in page and 'rel="icon"' in page
         and "panel-mod1" not in page and "ITOEFL_SUPABASE" not in page and len(page) < len(index) / 4
     )
-    announced = [int(n) for n in re.findall(r'<span class="lp-stat-n">(\d+)</span>', page)]
-    real = [
-        len(re.findall(r'<section class="panel', index)),
-        len(re.findall(r'class="ctw-in"', index)),
-        len(re.findall(r'class="qcard"', index.split('id="panel-mod1"')[1].split('id="panel-mod2"')[0])),
-        len(re.findall(r'class="qcard"', index.split('id="panel-mod2"')[1].split('id="panel-mod3"')[0])),
-        len(re.findall(r'class="bsq-card', index.split('id="panel-mod4"')[1].split('id="panel-mod5"')[0])),
-        len(re.findall(r'class="spk"', index.split('id="panel-mod3"')[1].split('id="panel-mod4"')[0])),
-        len(re.findall(r'class="exam-item', index)),
-        len(json.loads((APP_DIR / "vocab_kit.json").read_text(encoding="utf-8"))),
-    ]
-    out["landing_numbers_match_the_site"] = announced == real and all(n > 0 for n in real)
+    # os 10 módulos em 4 etapas (M0 / M1 a M6 / M7 e M9 / M8), sem métricas
+    # soltas; "Por que existe" com 3 pilares antes da vitrine (itens 36 e 37)
+    stages = re.findall(r'<article class="lp-stage">(.*?)</article>', page, re.S)
+    stage_mods = [re.findall(r'<span class="lp-mod-n">(\d\d)</span>', st) for st in stages]
+    why = page.split('id="por-que-existe"')[1].split("</section>")[0] if 'id="por-que-existe"' in page else ""
+    out["landing_modules_in_four_stages"] = (
+        stage_mods == [["00"], ["01", "02", "03", "04", "05", "06"], ["07", "09"], ["08"]]
+        and "lp-stat-n" not in page
+        and [re.search(r"<h3>(.*?)(?: <span|</h3>)", st).group(1) for st in stages]
+        == ["Fundamentos", "Habilidades centrais", "Especificidade para brasileiros", "Reta final"]
+        and page.index('id="por-que-existe"') < page.index('id="como-funciona"')
+        and why.count('class="lp-pillar"') == 3
+    )
+    # tema próprio e fixo creme (item 35): raiz travada em claro e nenhum
+    # script que leia a escolha de tema do app
+    out["landing_theme_fixed_cream"] = (
+        '<html lang="pt-BR" data-theme="light">' in page and "toefl_theme_v1" not in page
+        and '<meta name="color-scheme" content="light">' in page
+    )
     out["landing_linked_from_login"] = 'href="apresentacao.html"' in index or "ITOEFL_SUPABASE" not in index
     # conta grátis: a seção, o botão no resultado do diagnóstico e a pergunta
     # frequente dizem o mesmo resumo que o app mostra

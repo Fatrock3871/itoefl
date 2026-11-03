@@ -1076,7 +1076,7 @@ for _slug, _title in LEGAL_PAGES:
 # inteiro. "Entrar" e "Criar conta" levam ao index.html.
 #
 # Regra de texto desta página: só entra o que dá para provar. Os números
-# saem do próprio build, o selo é "Recomendado" (nunca "mais escolhido"), e
+# saem do próprio build, o selo é "Melhor custo-benefício" (nunca "mais escolhido"), e
 # não há promessa de nota nem contagem de alunos.
 
 # as 10 questões do diagnóstico, já com as letras redistribuídas pelo
@@ -1088,23 +1088,46 @@ if not _diag or _diag.group(0).count('class="qcard"') != 10:
 DIAG_HTML = _diag.group(0) + "</div>"
 
 
-def _count(mod, pattern):
-    return len(_re.findall(pattern, frag[mod]))
-
-
-LP_STATS = [
-    (len(MODS), "módulos, do diagnóstico ao dia da prova"),
-    (_count("mod1", r'class="ctw-in"'), "lacunas de Complete the Words para digitar"),
-    (_count("mod1", r'class="qcard"'), "questões de Reading"),
-    (_count("mod2", r'class="qcard"'), "questões de Listening"),
-    (_count("mod4", r'class="bsq-card'), "itens de Build a Sentence"),
-    (_count("mod3", r'class="spk"'), "conjuntos de Speaking para ouvir e responder"),
-    (_count("mod7", r'class="exam-item'), "questões de simulado"),
-    (len(json.load(open("vocab_kit.json", encoding="utf-8"))), "flashcards de vocabulário"),
+# Os 10 módulos em 4 etapas (item 37 de 2026-10-26). Sem métricas soltas ao
+# lado: o número de questões não ajuda quem ainda não sabe por onde começar.
+LP_STAGES = [
+    ("Fundamentos", "Grátis", "Saiba onde você está e monte o seu caminho.", ["mod0"]),
+    ("Habilidades centrais", "", "As quatro seções da prova, mais o registro e o vocabulário que sustentam a nota.",
+     ["mod1", "mod2", "mod3", "mod4", "mod5", "mod6"]),
+    ("Especificidade para brasileiros", "", "Treino de prova completa e os erros típicos de quem fala português.", ["mod7", "mod9"]),
+    ("Reta final", "", "A véspera e o dia da prova, sem improviso.", ["mod8"]),
 ]
-if any(n <= 0 for n, _ in LP_STATS):
-    raise SystemExit(f"apresentacao: contagem zerada em LP_STATS: {LP_STATS}")
-lp_stats = "".join(f'<li><span class="lp-stat-n">{n}</span><span class="lp-stat-t">{t}</span></li>' for n, t in LP_STATS)
+LP_MOD_LINE = {
+    "mod0": "O diagnóstico, o seu nível estimado e o cronograma indicado.",
+    "mod1": "Complete the Words, textos do dia a dia e passagens acadêmicas.",
+    "mod2": "Respostas, conversas, avisos e palestras, com escuta ativa.",
+    "mod3": "Listen and Repeat e Take an Interview, com áudio e gravador.",
+    "mod4": "Build a Sentence, e-mail e discussão acadêmica.",
+    "mod5": "O tom certo e a variedade de estruturas que sobem a sua banda.",
+    "mod6": "Léxico acadêmico e flashcards de revisão espaçada.",
+    "mod7": "Simulados progressivos, com correção só na entrega.",
+    "mod8": "O passo a passo de cada seção e as últimas 24 horas.",
+    "mod9": "Os erros mais comuns do brasileiro, mapeados e corrigidos.",
+}
+_mod_by_id = {m[0]: m for m in MODS}
+if sorted(i for st in LP_STAGES for i in st[3]) != sorted(_mod_by_id) or set(LP_MOD_LINE) != set(_mod_by_id):
+    raise SystemExit("apresentacao: LP_STAGES e LP_MOD_LINE precisam cobrir os 10 módulos, cada um uma vez")
+
+
+def _lp_stage(n, st):
+    title, tag, lead, ids = st
+    items = "".join(
+        f'<li><span class="lp-mod-n">{_mod_by_id[i][1]}</span><span class="lp-mod-t"><strong>{_mod_by_id[i][2]}</strong>'
+        f'<span>{LP_MOD_LINE[i]}</span></span></li>' for i in ids)
+    tag_html = f' <span class="lp-stage-tag">{tag}</span>' if tag else ""
+    return (
+        f'<article class="lp-stage"><p class="lp-stage-n">Etapa {n}</p>'
+        f'<h3>{title}{tag_html}</h3>'
+        f'<p class="lp-stage-lead">{lead}</p><ol class="lp-mods">{items}</ol></article>'
+    )
+
+
+lp_stages = "".join(_lp_stage(n, st) for n, st in enumerate(LP_STAGES, 1))
 
 def _lp_plan(p):
     hl = p.get("highlight")
@@ -1168,8 +1191,11 @@ LANDING_JS = LEVEL_JS + "\n" + open("landing.js", encoding="utf-8").read()
 LANDING_VIDEO = render_video.render_landing_video(render_video.load_landing_video())
 _lp_desc = ("Preparação em português para o exame TOEFL iBT® no formato 2026: 10 módulos, exercícios no molde da prova e simulados. "
             "Faça o diagnóstico grátis, sem criar conta.")
+# tema fixo creme (item 35, decisão do dono em 2026-10-26): data-theme="light"
+# na raiz e nenhum script de tema, então a escolha claro/escuro feita dentro
+# do app (toefl_theme_v1) e o modo escuro do sistema não chegam aqui
 _landing = f'''<!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-BR" data-theme="light">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -1183,7 +1209,7 @@ _landing = f'''<!DOCTYPE html>
 <link rel="icon" type="image/png" sizes="192x192" href="icons/icon-192.png">
 <meta name="theme-color" content="#ef5a1f">
 {FONT_LINKS}
-<script>{_LEGAL_THEME_JS}</script>
+<meta name="color-scheme" content="light">
 <style>
 {CSS}
 </style>
@@ -1195,7 +1221,8 @@ _landing = f'''<!DOCTYPE html>
   <div class="lp-top-in">
     <a class="legal-brand lp-brand" href="apresentacao.html" aria-label="iTOEFL, início"><span class="logo">{LOGO_SVG}</span><span class="name">iTOEFL</span></a>
     <nav class="lp-nav" aria-label="Seções da página">
-      <a href="#como-funciona">Como funciona</a>
+      <a href="#por-que-existe">Por que existe</a>
+      <a href="#como-funciona">Módulos</a>
       <a href="#diagnostico">Diagnóstico grátis</a>
       <a href="#planos">Planos</a>
       <a href="#duvidas">Dúvidas</a>
@@ -1222,9 +1249,27 @@ _landing = f'''<!DOCTYPE html>
   {LANDING_VIDEO}
 </section>
 
+<section class="lp-section" id="por-que-existe" aria-labelledby="lpWhyTitle">
+  <h2 id="lpWhyTitle">Por que este curso existe</h2>
+  <p class="lp-lead">Eu montei o iTOEFL por três motivos. Cada um nasceu de uma dificuldade real de quem estuda sozinho para esta prova.</p>
+  <div class="lp-why">
+    <div class="lp-pillar"><span class="lp-pillar-n" aria-hidden="true">1</span><h3>Feito para a prova de 2026</h3>
+      <p>A prova mudou em janeiro de 2026, e boa parte do material publicado até 2025 ficou desatualizada.
+      Este curso nasceu para as tarefas novas, então você treina o que vai encontrar de verdade.</p></div>
+    <div class="lp-pillar"><span class="lp-pillar-n" aria-hidden="true">2</span><h3>Explicação em português, prática em inglês</h3>
+      <p>Você entende cada regra na sua língua e treina com inglês autêntico, no molde da prova.
+      Assim a dúvida não trava o estudo e o treino não vira tradução.</p></div>
+    <div class="lp-pillar"><span class="lp-pillar-n" aria-hidden="true">3</span><h3>Custo acessível</h3>
+      <p>A taxa da prova já é cobrada em dólar. Por isso o preparo precisa custar pouco,
+      para sobrar orçamento para a inscrição.</p></div>
+  </div>
+</section>
+
 <section class="lp-section" id="como-funciona" aria-labelledby="lpInsideTitle">
-  <h2 id="lpInsideTitle">O que tem dentro</h2>
-  <ul class="lp-stats">{lp_stats}</ul>
+  <h2 id="lpInsideTitle">Os 10 módulos, em 4 etapas</h2>
+  <p class="lp-lead">Você pode abrir qualquer módulo a qualquer momento. As etapas mostram a ordem que eu recomendo.</p>
+  <div class="lp-stages">{lp_stages}</div>
+  <h3 class="lp-sub-h">O que tem dentro</h3>
   <div class="lp-feats">
     <div class="lp-feat"><h3>As quatro seções, no molde da prova</h3>
       <p>Reading, Listening, Writing e Speaking, com os tipos de tarefa de 2026: Complete the Words com digitação,
