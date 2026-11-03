@@ -803,16 +803,21 @@ def run():
                   g.start = %s;
                   localStorage.setItem("toefl_goal_v1", JSON.stringify(g));
                   window.__toeflRefreshPlan();
+                  o.priority = window.__toeflPriority().mod;
                   document.getElementById("todayGo").click();
                   o.went = document.querySelector(".tabbtn.active").dataset.tab;
                   return o;
                 })()""" % json.dumps(goal["today"]))
+                # a faixa do topo mostra a prioridade (item 43); a meta do
+                # cronograma fica na gaveta e na linha de baixo da faixa
                 check("real_today_goal_follows_schedule",
-                      re.match(r"^Hoje: M[01] Parte \d", today["text"]) and re.search(r"\(\d+ min\)$", today["text"])
-                      and not re.search(r"M0 Parte 1\b", today["text"])
-                      and today["side"] == today["text"] and "Prova em 45 dias. Você: B2. Meta: C1 (banda 5)." in today["meta"]
+                      re.match(r"^Hoje: M[01] Parte \d", today["side"]) and re.search(r"\(\d+ min\)$", today["side"])
+                      and not re.search(r"M0 Parte 1\b", today["side"])
+                      and today["text"].startswith("Sua prioridade hoje: Módulo ")
+                      and "Prova em 45 dias. Você: B2. Meta: C1 (banda 5)." in today["meta"]
+                      and "Meta do cronograma: " + today["side"][len("Hoje: "):] in today["meta"]
                       and today["next"].startswith("Depois: ") and today["lateItems"] > 1 and "atrás do cronograma" in today["lateNext"]
-                      and today["went"] in ("mod0", "mod1"), today)
+                      and today["went"] == today["priority"], today)
                 b.pump(1.2)  # a caixa de escrita salva com atraso
                 start2 = b.eval('({ title: document.querySelector("#startCard .start-title").textContent,'
                                 ' go: document.querySelector("#startCard .start-go").textContent })')
@@ -876,11 +881,15 @@ def run():
                     '(function(){ document.getElementById("authBox").hidden = false; document.getElementById("authIn").hidden = false;'
                     ' document.getElementById("dashboardBtn").click();'
                     ' var o = { goal: document.getElementById("dashGoalText").textContent, weak: document.getElementById("dashWeakSpots").textContent,'
-                    '           band: document.getElementById("dashBand").textContent };'
+                    '           band: document.getElementById("dashBand").textContent,'
+                    '           plan: document.getElementById("dashPlanText").textContent,'
+                    '           rows: document.querySelectorAll("#dashWeakSpots .dash-weak-row").length };'
                     ' document.getElementById("dashboardClose").click(); return o; })()')
+                # pontos fracos saem dos exercícios respondidos acima, não do registro de erros
                 check("real_dashboard_reads_progress",
                       (dash["goal"].startswith("Hoje: ") or "Meta batida" in dash["goal"]) and "/1" not in dash["goal"]
-                      and "R1" in dash["weak"] and "B2" in dash["band"], dash)
+                      and (dash["rows"] > 0 and "%" in dash["weak"] or "Nenhuma área abaixo" in dash["weak"])
+                      and "R1" not in dash["weak"] and dash["plan"].startswith("Módulo ") and "B2" in dash["band"], dash)
 
                 # teclado: Enter no titulo de uma subsecao abre e fecha; a
                 # janela do painel recebe o foco, fecha com Esc e devolve o foco

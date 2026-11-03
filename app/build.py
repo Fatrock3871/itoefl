@@ -785,15 +785,18 @@ dashboard_modal = (
     '</div>'
     '</div>'
 
-    '<div class="dash-callout dash-callout-warn">'
-    f'<span class="dash-section-label">{icon("alert", "ico dash-section-icon")}Pontos fracos</span>'
-    '<div id="dashWeakSpots" class="dash-weak-list"></div>'
+    # prioridade primeiro: é a única coisa a fazer agora (itens 42 e 43)
+    '<div class="dash-callout dash-callout-accent">'
+    f'<span class="dash-section-label">{icon("compass", "ico dash-section-icon")}Sua prioridade hoje</span>'
+    '<p class="dash-value" id="dashPlanText"></p>'
+    '<p class="dash-value dash-value-sm" id="dashPlanWhy"></p>'
+    '<button type="button" class="dash-plan-btn" id="dashPlanBtn" hidden>Continuar</button>'
     '</div>'
 
-    '<div class="dash-callout dash-callout-accent">'
-    f'<span class="dash-section-label">{icon("compass", "ico dash-section-icon")}Plano sugerido</span>'
-    '<p class="dash-value" id="dashPlanText"></p>'
-    '<button type="button" class="dash-plan-btn" id="dashPlanBtn" hidden>Ir para o módulo</button>'
+    '<div class="dash-callout dash-callout-warn">'
+    f'<span class="dash-section-label">{icon("alert", "ico dash-section-icon")}Pontos fracos</span>'
+    '<p class="dash-empty dash-weak-intro">Somados do diagnóstico e dos exercícios que você já fez.</p>'
+    '<div id="dashWeakSpots" class="dash-weak-list"></div>'
     '</div>'
     '</div>'
     '</div>'
@@ -947,7 +950,7 @@ html = f'''<!DOCTYPE html>
           <p id="reviewerBarText"></p>
           <button type="button" class="reviewer-go" id="reviewerBarGo">Abrir o Painel do corretor</button>
         </div>
-        <section class="today-bar" id="todayBar" aria-label="Meta de hoje" hidden>
+        <section class="today-bar" id="todayBar" aria-label="Sua prioridade hoje" hidden>
           <div class="today-main">
             <p class="today-text" id="todayText"></p>
             <p class="today-meta" id="todayMeta" hidden></p>

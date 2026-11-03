@@ -375,6 +375,34 @@ chaves sincronizadas são empacotadas num blob e salvas em `user_state.state`.
 `safeSet` marca `toefl_dirty` e agenda um push debounced. Setup:
 `docs/supabase-setup.md`.
 
+**Pontos fracos e "Sua prioridade hoje" (itens 42 e 43, 2026-11-02):** não
+têm chave própria nem SQL. Saem, a cada cálculo, das chaves que já
+sincronizam (`toefl_quiz_`, `toefl_ctw_`, `toefl_bsq_`, `toefl_exam_`,
+`toefl_spk_`, `toefl_goal_v1`, `toefl_progress_v1`). `weakAreas()` no
+`app.js` soma os acertos por área: Reading (M1, Complete the Words, blocos
+de Reading do M7, questão de compreensão do diagnóstico), Listening (M2 e
+blocos "Listen..." do M7), Speaking (Listen and Repeat marcado "ok" ou
+"miss"), Writing (Build a Sentence) e, só pelo diagnóstico, gramática,
+vocabulário e registro (campo `painel` de `DIAG_AREAS` no
+`build_pipeline.py`). Cada área tem um atalho para uma Parte em
+`WEAK_AREAS`; o resultado do diagnóstico usa o mesmo atalho. Com menos de 4
+respostas a área aparece como "poucos dados", sem taxa. O Painel lista até 3
+áreas abaixo de 70%. A prioridade (`computePriority()`) é UMA Parte, pela
+primeira regra que vale:
+
+1. Diagnóstico incompleto: M0, Parte 1.
+2. Prova em até 14 dias: no dia, M8 Parte 9; na véspera, M8 Parte 2; até 7
+   dias, M8 Parte 1 se não feita; senão o próximo simulado do M7 em aberto;
+   com todos feitos, M8 Parte 1.
+3. Ponto fraco forte (4 respostas ou mais e menos de 50%): a Parte da área
+   e, se já concluída, a primeira de prática daquele módulo.
+4. Sem meta (nota e data): montar o plano no M0, Parte 1.
+5. Senão, a primeira Parte em aberto da meta de hoje do cronograma; meta
+   cumprida, a próxima do cronograma; tudo cumprido, M7 Parte 3.
+
+A faixa do topo mostra a prioridade e, na linha de baixo, o porquê e a meta
+do cronograma com a conta; a gaveta continua com a meta de hoje.
+
 **Conta e acesso pago (2026-10-18):** quatro planos. Mensal (assinatura no
 cartão, Stripe `mode=subscription`, cancelamento pelo Customer Portal) e 60
 dias, 90 dias e Anual (pagamento único, Stripe `mode=payment`, ou Pix pelo

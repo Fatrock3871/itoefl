@@ -63,7 +63,7 @@ var authIn = document.getElementById("authIn"); if(authIn) authIn.hidden = false
 check("checkbox_exists", function(){ return !!document.querySelector(".pchk"); });
 // meta de hoje sem diagnóstico feito: fazer o diagnóstico (item 5 de 2026-10-25)
 check("today_goal_without_diagnostic_is_the_diagnostic", function(){
-  return !document.getElementById("todayBar").hidden && document.getElementById("todayText").textContent.indexOf("Hoje: fazer o diagnóstico") === 0 &&
+  return !document.getElementById("todayBar").hidden && document.getElementById("todayText").textContent.indexOf("Sua prioridade hoje: Módulo 0, Parte 1: Teste de nivelamento") === 0 &&
     document.getElementById("dgText").textContent.indexOf("Hoje: fazer o diagnóstico") === 0 && document.getElementById("dgCount").textContent === "0/1";
 });
 var chk = document.querySelector(".pchk");
@@ -1008,6 +1008,86 @@ try { (function(){
   });
   window.__toeflShowPart.mod1(m1[0]);
 })(); } catch(ex){ check("part_kind_checks_ran", function(){ throw ex; }); }
+// pontos fracos automáticos e "Sua prioridade hoje" (itens 42 e 43), com
+// dados simulados; o estado de antes volta no fim
+try { (function(){
+  var keep = {};
+  for(var i = 0; i < localStorage.length; i++){ var k = localStorage.key(i); if(/^toefl_(quiz_|exam_|spk_|bsq_|ctw_|goal)/.test(k)) keep[k] = localStorage.getItem(k); }
+  function clear(){ Object.keys(keep).forEach(function(k){ localStorage.removeItem(k); }); }
+  function day(n){ var d = new Date(); d.setDate(d.getDate() + n); var p = function(x){ return (x < 10 ? "0" : "") + x; };
+    return d.getFullYear() + "-" + p(d.getMonth() + 1) + "-" + p(d.getDate()); }
+  function wrong(c){ return Array.prototype.filter.call(c.querySelectorAll(".opt"), function(o){ return o.dataset.letter !== c.dataset.correct; })[0].dataset.letter; }
+  function dash(){
+    document.getElementById("dashboardBtn").click();
+    var o = { text: document.getElementById("dashWeakSpots").textContent, rows: Array.prototype.map.call(document.querySelectorAll("#dashWeakSpots .dash-weak-row"), function(r){ return r.dataset.area; }),
+      plan: document.getElementById("dashPlanText").textContent, why: document.getElementById("dashPlanWhy").textContent };
+    document.getElementById("dashboardClose").click();
+    return o;
+  }
+  clear();
+  window.__toeflRefreshPlan();
+  var empty = dash();
+  check("weak_spots_without_data_says_so", function(){
+    return window.__toeflWeak().every(function(a){ return !a.enough && a.pct === null; }) && empty.rows.length === 0 &&
+      empty.text.indexOf("Ainda não há respostas suficientes") === 0;
+  });
+  check("priority_without_diagnostic_is_the_diagnostic", function(){
+    var p = window.__toeflPriority();
+    return p.kind === "diag" && p.mod === "mod0" && p.n === 1 && empty.plan.indexOf("Módulo 0, Parte 1: Teste de nivelamento") === 0;
+  });
+  // diagnóstico: gramática e ordem das palavras erradas (4 questões), o resto certo;
+  // Listening: 1 de 5 no primeiro exercício do M2; Reading: 4 de 4 no primeiro do M1
+  var dst = {};
+  Array.prototype.forEach.call(document.querySelectorAll('[data-drill="mod0-diag"] .qcard'), function(c){
+    var bad = c.dataset.area === "gramatica" || c.dataset.area === "ordem";
+    dst[c.dataset.num] = { picked: bad ? wrong(c) : c.dataset.correct, confirmed: true };
+  });
+  localStorage.setItem("toefl_quiz_mod0-diag_v1", JSON.stringify(dst));
+  function drill(id, n, nOk){
+    var st = {};
+    Array.prototype.slice.call(document.querySelectorAll('[data-drill="' + id + '"] .qcard'), 0, n).forEach(function(c, i){
+      st[c.dataset.num] = { picked: i < nOk ? c.dataset.correct : wrong(c), confirmed: true };
+    });
+    localStorage.setItem("toefl_quiz_" + id + "_v1", JSON.stringify(st));
+  }
+  drill("mod2-a", 5, 1);
+  drill("mod1-a1", 4, 4);
+  localStorage.setItem("toefl_goal_v1", JSON.stringify({ target: 5, exam: day(60), sched: 60, start: day(0) }));
+  window.__toeflRefreshPlan();
+  var areas = {};
+  window.__toeflWeak().forEach(function(a){ areas[a.key] = a; });
+  var full = dash();
+  check("weak_spots_join_diagnostic_and_exercises", function(){
+    return areas.gramatica.n === 4 && areas.gramatica.pct === 0 && areas.listening.ok === 1 && areas.listening.n === 5 &&
+      areas.reading.ok === 5 && areas.reading.n === 5 && !areas.vocabulario.enough && areas.vocabulario.n === 2 &&
+      full.rows.join() === "gramatica,listening" && full.text.indexOf("0%") !== -1 && full.text.indexOf("(1 de 5)") !== -1 &&
+      full.text.indexOf("Ainda com poucos dados:") !== -1 && full.text.indexOf("Vocabulário") !== -1;
+  });
+  document.getElementById("dashboardBtn").click();
+  document.querySelector('#dashWeakSpots .dash-weak-row[data-area="listening"] .dash-weak-go').click();
+  check("weak_spot_shortcut_opens_the_part", function(){
+    var cards = document.querySelectorAll("#panel-mod2 .section-card");
+    return document.getElementById("dashboardModal").hidden && document.querySelector(".tabbtn.active").dataset.tab === "mod2" &&
+      !cards[2].hidden && /^Parte 3: Laborat/.test(cards[2].querySelector("h2 .htext").textContent);
+  });
+  var weakP = window.__toeflPriority();
+  check("priority_goes_to_the_weak_spot", function(){
+    return weakP.kind === "weak" && weakP.mod === "mod4" && weakP.n === 3 && weakP.text.indexOf("Módulo 4, Parte 3: Laboratório") === 0 &&
+      weakP.why.indexOf("Gramática e ordem das palavras, com 0% de acerto (0 de 4)") !== -1 &&
+      document.getElementById("todayText").textContent === "Sua prioridade hoje: " + weakP.text;
+  });
+  localStorage.setItem("toefl_goal_v1", JSON.stringify({ target: 5, exam: day(10), sched: 30, start: day(-20) }));
+  var near = window.__toeflPriority();
+  localStorage.setItem("toefl_goal_v1", JSON.stringify({ target: 5, exam: day(1), sched: 30, start: day(-29) }));
+  var eve = window.__toeflPriority();
+  check("priority_with_exam_near_is_the_final_stretch", function(){
+    return near.kind === "exam" && near.mod === "mod7" && near.n === 3 && near.why.indexOf("Faltam 10 dias") === 0 &&
+      eve.kind === "exam" && eve.mod === "mod8" && eve.n === 2 && eve.why.indexOf("A prova é amanhã") === 0;
+  });
+  clear();
+  Object.keys(keep).forEach(function(k){ localStorage.setItem(k, keep[k]); });
+  window.__toeflRefreshPlan();
+})(); } catch(ex){ check("weak_and_priority_checks_ran", function(){ throw ex; }); }
 check("m7_says_what_the_diagnostic_measures", function(){
   var t = document.getElementById("panel-mod7").textContent;
   return t.indexOf("Ele não dá nota por seção.") !== -1 && t.indexOf("banda CEFR (1–6) por seção") === -1;
