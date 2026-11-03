@@ -31,6 +31,9 @@ ARTIFACT = ROOT / "artifact" / "index.html"
 CHROME_CANDIDATES = [
     Path(r"C:\Program Files\Google\Chrome\Application\chrome.exe"),
     Path(r"C:\Program Files (x86)\Google\Chrome\Application\chrome.exe"),
+    Path("/Applications/Google Chrome.app/Contents/MacOS/Google Chrome"),
+    Path("/usr/bin/google-chrome"),
+    Path("/usr/bin/chromium"),
 ]
 
 # script injetado antes de </body> do artifact -- roda inteiramente no
