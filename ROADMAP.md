@@ -413,11 +413,13 @@ abaixo são os itens dela). Relato item a item em
       M7 ea31338, M8 7c116cd, M9 a2ef52a; dados 614c629; interface 9d073be;
       marca eb107d1; banda com vírgula d76d131; smoke 2e17974 (344
       checagens). Relato em `itoefl-gerencia/revisao/APLICADO-etapa3.md`.
-- [ ] (C) Etapa 2b, parte A (itens 35 a 41 de `itoefl-gerencia/pendencias-correcao.md`,
-      seção D7): tema fixo da apresentação, "Por que existe", módulos em 4
-      etapas, diagnóstico recolhido e uma questão por vez, planos com perfil,
-      selo "Melhor custo-benefício", fundo do login, Exportar/Importar em
-      Configurações (Claude, em andamento).
+- [x] (C) Etapa 2b, parte A (itens 35 a 41 de `itoefl-gerencia/pendencias-correcao.md`,
+      seção D7), branch `claude/etapa-2b`: tema fixo da apresentação, "Por
+      que existe", módulos em 4 etapas (86133bf); diagnóstico recolhido e uma
+      questão por vez, planos com perfil e destaque pela banda (2d80699);
+      selo "Melhor custo-benefício" (e52eba3); fundo do login, Instalar app
+      em destaque e Exportar/Importar em Configurações (857ca93). Faltam os
+      itens 42 e 43 (parte B) e o pull request.
 - [ ] (U) Para trocar o nome do curso: mudar `BRAND_NAME` em
       `app/site.json` e rodar as builds. As edge functions `review-essay`
       (e-mail da correção) e `create-checkout` (nome do produto) ainda têm
