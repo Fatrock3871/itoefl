@@ -70,12 +70,21 @@ _BG_ICON_SVGS = {
     "headset": '<path d="M4 14v-2a8 8 0 0 1 16 0v2"/><rect x="2" y="14" width="5" height="7" rx="2"/><rect x="17" y="14" width="5" height="7" rx="2"/>',
     "passport": '<rect x="5" y="2" width="14" height="20" rx="2"/><circle cx="12" cy="10" r="3.5"/><path d="M9 18h6"/>',
 }
+# Fundo mais institucional (item 40 de 2026-10-26): régua de bandas e edital
+# no lugar do avião e do balão, mais uma textura suave de papel quadriculado
+# no CSS (.auth-gate-bg). Tudo em traço fino, sem competir com o cartão.
+_BG_ICON_SVGS["ruler"] = (
+    '<rect x="1" y="7" width="46" height="10" rx="1.5"/>'
+    '<path d="M8 7v4M15 7v6M22 7v4M29 7v6M36 7v4M43 7v6"/>')
+_BG_ICON_SVGS["edital"] = (
+    '<path d="M6 2h9l5 5v15H6Z"/><path d="M15 2v5h5M9 12h8M9 15.5h8M9 19h5"/>')
+_BG_ICON_VIEWBOX = {"ruler": "0 0 48 24"}
 _BG_ICON_LAYOUT = [
-    ("globe", "bgicon-1"), ("plane", "bgicon-2"), ("chat", "bgicon-3"),
+    ("globe", "bgicon-1"), ("edital", "bgicon-2"), ("ruler", "bgicon-3"),
     ("book", "bgicon-4"), ("headset", "bgicon-5"), ("passport", "bgicon-6"),
 ]
 AUTH_BG_DECOR = '<div class="auth-gate-bg" aria-hidden="true">' + "".join(
-    f'<svg class="bgicon {cls}" viewBox="0 0 24 24" fill="none" stroke="currentColor" '
+    f'<svg class="bgicon {cls}" viewBox="{_BG_ICON_VIEWBOX.get(name, "0 0 24 24")}" fill="none" stroke="currentColor" '
     f'stroke-width="1.15" stroke-linecap="round" stroke-linejoin="round">{_BG_ICON_SVGS[name]}</svg>'
     for name, cls in _BG_ICON_LAYOUT
 ) + '</div>'
@@ -858,6 +867,14 @@ html = f'''<!DOCTYPE html>
       <span class="level-badge-sched" id="levelBadgeSched"></span>
     </div>
     <button type="button" class="cert-btn" id="certBtn" hidden>Ver certificado de conclusão</button>
+    <!-- Instalar app em destaque (item 41): fica logo abaixo da meta de hoje, e não
+         perdido no fim do menu; só aparece quando o navegador permite instalar -->
+    <div class="pwa-tools" id="pwaTools" hidden>
+      <p class="pwa-tools-title">Leve o curso no seu aparelho</p>
+      <p class="pwa-tools-text">Abre em tela cheia, direto do ícone, sem digitar o endereço.</p>
+      <button type="button" class="pwa-install-btn" id="pwaInstall" hidden>{icon("download")} Instalar app</button>
+      <p class="pwa-ios-hint" id="pwaIosHint" hidden>No iPhone ou iPad: toque em <b>Compartilhar</b> e depois em <b>Adicionar à Tela de Início</b>.</p>
+    </div>
     <p class="side-section-label">Módulos</p>
     <nav class="modnav" id="modnav" aria-label="Módulos">
       {nav_items}
@@ -870,10 +887,6 @@ html = f'''<!DOCTYPE html>
       </div>
       <p class="trail-hint" id="trailHint"></p>
     </div>
-    <div class="pwa-tools" id="pwaTools" hidden>
-      <button type="button" class="pwa-install-btn" id="pwaInstall" hidden>⤓ Instalar app</button>
-      <p class="pwa-ios-hint" id="pwaIosHint" hidden>No iPhone ou iPad: toque em <b>Compartilhar</b> e depois em <b>Adicionar à Tela de Início</b>.</p>
-    </div>
     <!-- Configurações (item 28): o que mexe nos dados fica aqui, fechado, e
          reiniciar o progresso pede duas confirmações -->
     <details class="side-settings" id="sideSettings">
@@ -884,11 +897,15 @@ html = f'''<!DOCTYPE html>
           <span class="side-switch-track" aria-hidden="true"></span>
           <span class="side-switch-text"><b>Traduções</b> Palavras e frases em inglês com sublinhado pontilhado mostram a tradução ao passar o mouse ou tocar.</span>
         </label>
-        <div class="data-tools">
-          <button type="button" id="dataExport">↓ Exportar progresso</button>
-          <button type="button" id="dataImport">↑ Importar</button>
-          <input type="file" id="dataFile" accept="application/json,.json" hidden>
-          <span id="dataMsg" class="data-msg" hidden></span>
+        <div class="data-backup">
+          <p class="data-backup-title">Backup avançado</p>
+          <p class="data-backup-hint">Quem tem conta já tem o progresso salvo sozinho. Sem conta, ele fica só neste navegador, e a cópia em arquivo serve de segurança.</p>
+          <div class="data-tools">
+            <button type="button" id="dataExport">↓ Exportar progresso</button>
+            <button type="button" id="dataImport">↑ Importar progresso</button>
+            <input type="file" id="dataFile" accept="application/json,.json" hidden>
+            <span id="dataMsg" class="data-msg" hidden></span>
+          </div>
         </div>
         <button type="button" class="reset-btn" id="resetBtn">↺ Reiniciar todo o progresso</button>
         <div class="reset-confirm" id="resetConfirm" role="alertdialog" aria-labelledby="resetConfirmText" hidden>

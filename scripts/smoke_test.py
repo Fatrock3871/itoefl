@@ -472,6 +472,22 @@ check("pwa_hidden_by_default", function(){
   return document.getElementById("pwaTools").hidden && document.getElementById("pwaInstall").hidden &&
          document.getElementById("pwaIosHint").hidden && document.getElementById("pwaUpdate").hidden;
 });
+// item 41: Exportar e Importar progresso só dentro de Configurações (fechada
+// por padrão), como backup avançado; "Instalar app" vem antes da lista de módulos
+check("backup_export_import_inside_settings", function(){
+  var s = document.getElementById("sideSettings"), ex = document.getElementById("dataExport"), im = document.getElementById("dataImport");
+  return !!s && !s.open && s.contains(ex) && s.contains(im) && s.contains(document.getElementById("dataFile")) &&
+    document.querySelectorAll("#dataExport, #dataImport").length === 2 &&
+    /Exportar progresso/.test(ex.textContent) && /Importar progresso/.test(im.textContent) &&
+    /Backup avançado/.test(s.querySelector(".data-backup-title").textContent) &&
+    Array.prototype.every.call(document.querySelectorAll("#sideRail button"), function(b){
+      return s.contains(b) || !/Exportar|Importar/.test(b.textContent); });
+});
+check("install_app_highlighted_before_modules", function(){
+  var tools = document.getElementById("pwaTools"), nav = document.getElementById("modnav");
+  return !!(tools.compareDocumentPosition(nav) & Node.DOCUMENT_POSITION_FOLLOWING) &&
+    !!tools.querySelector(".pwa-tools-title") && !!document.querySelector("#pwaInstall svg");
+});
 check("pwa_no_sw_on_file", function(){ return window.__toeflPwa && window.__toeflPwa.canRegister === false; });
 var bip = new Event("beforeinstallprompt", { cancelable: true });
 var bipPrompted = false; bip.prompt = function(){ bipPrompted = true; };

@@ -288,11 +288,21 @@ nav.modnav{display:flex; flex-direction:column; gap:1px;}
   overflow-x:hidden; overflow-y:auto; -webkit-overflow-scrolling:touch; overscroll-behavior:contain;
 }
 .auth-gate > .auth-gate-card{margin:auto;}
-.auth-gate-bg{position:fixed; inset:0; z-index:0; pointer-events:none; overflow:hidden;}
+/* fundo institucional (item 40): papel quadriculado suave, um clarão quente
+   atrás do cartão e as figuras em traço fino. Só as cores do tema, sem
+   imagem de fora. */
+.auth-gate-bg{
+  position:fixed; inset:0; z-index:0; pointer-events:none; overflow:hidden;
+  background-image:
+    radial-gradient(ellipse 70% 55% at 50% 38%, var(--accent-wash) 0%, transparent 70%),
+    linear-gradient(color-mix(in srgb, var(--hair) 50%, transparent) 1px, transparent 1px),
+    linear-gradient(90deg, color-mix(in srgb, var(--hair) 50%, transparent) 1px, transparent 1px);
+  background-size:auto, 44px 44px, 44px 44px;
+}
 .bgicon{position:absolute; color:var(--hair); opacity:0.85;}
 .bgicon.bgicon-1{width:120px; height:120px; top:8%; left:6%; transform:rotate(-8deg);}
-.bgicon.bgicon-2{width:150px; height:150px; top:12%; right:-3%; transform:rotate(18deg);}
-.bgicon.bgicon-3{width:95px; height:95px; bottom:16%; left:3%; transform:rotate(-6deg);}
+.bgicon.bgicon-2{width:130px; height:130px; top:12%; right:3%; transform:rotate(8deg);}
+.bgicon.bgicon-3{width:220px; height:110px; bottom:14%; left:3%; transform:rotate(-4deg);}
 .bgicon.bgicon-4{width:110px; height:110px; bottom:6%; right:8%; transform:rotate(10deg);}
 .bgicon.bgicon-5{width:80px; height:80px; top:42%; left:-4%; transform:rotate(-14deg);}
 .bgicon.bgicon-6{width:100px; height:100px; top:58%; right:4%; transform:rotate(9deg);}
@@ -754,7 +764,18 @@ nav.modnav{display:flex; flex-direction:column; gap:1px;}
   font-family:inherit; font-size:10.5px; font-weight:600; color:rgba(224,125,103,0.85); cursor:pointer; text-align:center;
 }
 .reset-btn:hover{background:rgba(224,125,103,0.12); border-style:solid; border-color:rgba(224,125,103,0.85); color:#e07d67;}
-.pwa-tools{margin-top:8px; display:flex; flex-direction:column; gap:6px;}
+/* Instalar app em destaque (item 41): cartão logo abaixo da meta de hoje */
+.pwa-tools{
+  margin:10px 0; padding:12px; display:flex; flex-direction:column; gap:6px; border-radius:10px;
+  border:1.5px dashed var(--accent); background:rgba(249,122,61,0.10);
+}
+.pwa-tools-title{margin:0; font-family:'Bricolage Grotesque',sans-serif; font-size:13.5px; font-weight:800; color:var(--rail-ink);}
+.pwa-tools-text{margin:0; font-size:11.5px; line-height:1.5; color:var(--rail-dim);}
+.pwa-install-btn svg{width:15px; height:15px; vertical-align:-3px; margin-right:4px;}
+/* backup avançado dentro de Configurações (item 41) */
+.data-backup{display:flex; flex-direction:column; gap:6px;}
+.data-backup-title{margin:0; font-size:12px; font-weight:800; color:var(--rail-ink);}
+.data-backup-hint{margin:0; font-size:10.5px; line-height:1.5; color:var(--rail-dim);}
 .pwa-install-btn{
   width:100%; padding:8px 10px; border-radius:7px; border:1px solid var(--accent-fill); background:var(--accent-fill);
   font-family:inherit; font-size:11.5px; font-weight:700; color:#fff; cursor:pointer; text-align:center;
