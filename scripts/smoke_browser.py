@@ -459,6 +459,30 @@ GATE_SCROLL = r"""
 })()
 """
 
+# Geometria da tela de login dividida: onde ficam o cartão do login e o painel
+# do curso, quantos planos com preço e se a tela rola.
+GATE_LAYOUT = r"""
+(function(){
+  var g = document.getElementById("authGate");
+  g.hidden = false;
+  g.scrollTop = 0;
+  var card = g.querySelector(".auth-gate-card").getBoundingClientRect();
+  var aside = g.querySelector(".auth-aside").getBoundingClientRect();
+  var split = g.querySelector(".auth-split").getBoundingClientRect();
+  var plans = g.querySelectorAll(".auth-plan");
+  var o = {
+    cardRight: card.right, cardBottom: card.bottom, asideLeft: aside.left, asideTop: aside.top, splitTop: split.top,
+    plans: plans.length,
+    prices: Array.prototype.filter.call(plans, function(p){ return /R\$\s*\d/.test(p.querySelector(".auth-plan-price").textContent); }).length,
+    badge: g.querySelectorAll(".auth-plan .plan-badge").length,
+    more: !!g.querySelector('.auth-aside-more a[href="apresentacao.html"]'),
+    scrollable: g.scrollHeight > g.clientHeight, docW: document.documentElement.scrollWidth, vw: innerWidth
+  };
+  g.hidden = true;
+  return o;
+})()
+"""
+
 LANDING_ANSWER = r"""
 (function(){
   Array.prototype.forEach.call(document.querySelectorAll("#diagnostico .qcard"), function(c, k){
@@ -1064,6 +1088,19 @@ def run():
                     gate = b.eval(GATE_SCROLL)
                     check(f"login_gate_scrolls_{w}x{h}",
                           gate["tall"] and gate["scrolled"] and gate["googleIn"] and gate["termsIn"] and gate["topIn"], gate)
+
+                # duas colunas no computador (login à esquerda, planos à direita,
+                # com os 4 preços) e uma coluna no celular (login primeiro,
+                # planos embaixo, a tela rola)
+                for w, h, mobile, cols in ((1280, 800, False, 2), (390, 800, True, 1)):
+                    b.viewport(w, h, mobile=mobile)
+                    b.goto(page, settle=0.8)
+                    lay = b.eval(GATE_LAYOUT)
+                    side = lay["asideLeft"] >= lay["cardRight"] - 1 and abs(lay["asideTop"] - lay["splitTop"]) < 4
+                    stacked = lay["asideTop"] >= lay["cardBottom"] - 1 and lay["scrollable"] and lay["docW"] <= lay["vw"]
+                    check(f"login_gate_{cols}_columns_{w}",
+                          lay["plans"] == 4 and lay["prices"] == 4 and lay["badge"] == 1 and lay["more"]
+                          and (side if cols == 2 else stacked), lay)
 
             # apresentacao antes do login: o script do <head> do app (com
             # Supabase configurado) manda quem nao tem sessao para a

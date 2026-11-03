@@ -458,6 +458,45 @@ nav.modnav{display:flex; flex-direction:column; gap:1px;}
 .auth-gate-card > p.pay-terms{margin:12px 0 0; font-size:12px; line-height:1.5; color:var(--ink-2);}
 .pay-signout + .pay-signout{margin-top:10px;}
 @media(max-width:480px){ .auth-gate-card{padding:30px 24px 26px;} .auth-gate-ghost{display:none;} }
+/* tela de login em duas colunas (a partir de 960 px): login à esquerda, curso e
+   planos à direita. Abaixo disso é uma coluna só, login primeiro e planos
+   embaixo; o #authGate continua sendo o que rola. */
+#authGate{display:block; padding:0;}
+.auth-split{display:grid; grid-template-columns:minmax(0,1fr); min-height:100%;}
+.auth-split > .auth-gate-card{margin:20px auto; padding-block:38px 32px; width:calc(100% - 40px);}
+#authGate .auth-gate-card h2{font-size:26px; font-style:normal; text-transform:none; letter-spacing:-0.01em;}
+#authGate .auth-free-note{margin:0 0 18px;}
+#authGate .auth-free-note p{margin:0 0 6px;}
+#authGate .auth-free-note summary{cursor:pointer; font-weight:700; color:var(--accent-strong); font-size:13px;}
+#authGate .auth-free-note details p{margin:8px 0 0; text-align:left;}
+.auth-aside{
+  background:var(--accent-wash); border-top:2px solid var(--edge); padding:34px 20px 40px;
+  display:flex; align-items:center; justify-content:center;
+}
+.auth-aside-in{width:100%; max-width:560px;}
+.auth-aside h2{font-family:'Bricolage Grotesque',sans-serif; font-size:26px; font-weight:800; line-height:1.15; margin:0 0 8px;}
+.auth-aside-lead{margin:0 0 14px; font-size:15px; line-height:1.55; color:var(--ink);}
+.auth-aside-points{margin:0 0 22px; padding:0; list-style:none; display:grid; gap:6px;}
+.auth-aside-points li{position:relative; padding-left:22px; font-size:14.5px; line-height:1.45; color:var(--ink);}
+.auth-aside-points li::before{content:"✓"; position:absolute; left:0; font-weight:800; color:var(--accent-strong);}
+.auth-plans{margin:0 0 18px; padding:14px 0 0; list-style:none; display:grid; grid-template-columns:repeat(2, minmax(0,1fr)); gap:14px 12px;}
+.auth-plan{
+  position:relative; display:flex; flex-direction:column; gap:2px; padding:16px 14px 12px; background:var(--paper);
+  border:2px solid var(--edge); border-radius:var(--radius);
+}
+.auth-plan.is-highlight{box-shadow:4px 4px 0 var(--accent);}
+.auth-plan .plan-badge{position:absolute; top:-11px; left:12px; font-size:10.5px; padding:2px 8px; box-shadow:2px 2px 0 var(--edge);}
+.auth-plan-name{font-family:'Bricolage Grotesque',sans-serif; font-size:17px; font-weight:800;}
+.auth-plan-profile{font-size:12px; font-weight:800; letter-spacing:0.04em; text-transform:uppercase; color:var(--accent-strong);}
+.auth-plan-price{font-family:'Bricolage Grotesque',sans-serif; font-size:24px; font-weight:800; line-height:1.2; margin-top:4px;}
+.auth-plan-note{font-size:12.5px; line-height:1.4; color:var(--ink-2);}
+.auth-aside-more{margin:0; font-size:14.5px; font-weight:700;}
+.auth-aside-more a{color:var(--accent-strong);}
+@media(max-width:380px){ .auth-plans{grid-template-columns:minmax(0,1fr);} }
+@media(min-width:960px){
+  .auth-split{grid-template-columns:minmax(0,1fr) minmax(0,1.1fr);}
+  .auth-aside{border-top:0; border-left:2px solid var(--edge); padding:40px 40px 48px;}
+}
 
 /* botão de certificado na sidebar (some até concluir os 10 módulos) */
 .cert-btn{

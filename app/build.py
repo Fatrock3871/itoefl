@@ -405,7 +405,7 @@ else:
 gate_hidden = "" if (supa_url and supa_key) else "hidden"
 gate = (
     f'<div class="auth-gate" id="authGate" {gate_hidden}>'
-    f'{AUTH_BG_DECOR}'
+    '<div class="auth-split">'
     '<div class="auth-gate-card">'
     '<div class="auth-gate-brand">'
     f'<span class="logo">{LOGO_SVG}</span>'
@@ -413,8 +413,11 @@ gate = (
     '</div>'
     '<h2 id="authGateTitle">Entre para continuar</h2>'
     '<p id="authGateSubtitle"></p>'
-    f'<p class="auth-free-note" id="authFreeNote">Ainda não tem conta? A conta grátis abre {FREE_SUMMARY}, '
-    'sem prazo e sem cartão. <button type="button" class="auth-link" id="authFreeSignup">Criar conta grátis</button></p>'
+    '<div class="auth-free-note" id="authFreeNote">'
+    '<p>A conta grátis não pede cartão e abre o Módulo 0 inteiro. '
+    '<button type="button" class="auth-link" id="authFreeSignup">Criar conta grátis</button></p>'
+    f'<details><summary>O que vem na conta grátis</summary><p>A conta grátis abre {FREE_SUMMARY}, sem prazo.</p></details>'
+    '</div>'
 
     '<div class="auth-tabs" id="authTabs">'
     '<span class="auth-tab-indicator" id="authTabIndicator"></span>'
@@ -472,8 +475,9 @@ gate = (
     '</div>'
 
     '<span id="authGateMsg" class="auth-gate-msg" hidden></span>'
-    '<p class="legal-links"><a href="apresentacao.html">Voltar para a apresentação: o curso e os planos</a></p>'
     f'<p class="legal-links">{LEGAL_LINKS}</p>'
+    '</div>'
+    '%%AUTH_ASIDE%%'
     '</div>'
     '</div>'
 )
@@ -553,6 +557,57 @@ def _plan_option(p):
 
 
 plan_options = "".join(_plan_option(p) for p in PLANS)
+
+# Perfil de cada plano e a faixa de banda que combina com ele (item 39). A
+# faixa é da banda de partida do diagnóstico (ToeflLevel.band().low: 1 a 6) e
+# segue o cronograma que o próprio resultado indica: até 3–3,5 é o Completo
+# (90 dias), 4–4,5 o Regular (60 dias), 5 ou mais já está perto da meta. O
+# Anual não tem faixa: depende do objetivo, não da banda.
+LP_PROFILES = {
+    "mensal": ("Reta final", "Prova marcada para as próximas semanas, ou banda já alta.", (5, 6)),
+    "60dias": ("Revisão intensiva", "Banda 3,5 a 4: revisar o que mais pesa e rodar os simulados.", (4, 4)),
+    "90dias": ("Trilha completa", "Banda 2 a 3: construir a base e depois treinar as quatro seções.", (1, 3)),
+    "anual": ("Ciclo de editais", "Pós-graduação, bolsas e planejamento longo, com tempo para repetir a prova.", None),
+}
+if set(LP_PROFILES) != {p["id"] for p in PLANS}:
+    raise SystemExit("apresentacao: LP_PROFILES precisa ter um perfil para cada plano de plans.json")
+
+
+
+# Painel da direita da tela de login: o que é o curso e os planos em cartões
+# compactos. Preço, perfil e selo vêm das mesmas fontes da apresentação
+# (plans.json e LP_PROFILES); nada é digitado duas vezes.
+def _auth_plan(p):
+    profile = LP_PROFILES[p["id"]][0]
+    note = "por mês, renovação automática" if p["interval"] == "month" else plan_month_note(p)
+    hl = p.get("highlight")
+    return (
+        f'<li class="auth-plan{" is-highlight" if hl else ""}" data-plan="{p["id"]}">'
+        f'{PLAN_BADGE if hl else ""}'
+        f'<span class="auth-plan-name">{p["name"]}</span>'
+        f'<span class="auth-plan-profile">{profile}</span>'
+        f'<span class="auth-plan-price">{brl(p["price_cents"])}</span>'
+        f'<span class="auth-plan-note">{note}</span>'
+        '</li>'
+    )
+
+
+AUTH_ASIDE = (
+    '<aside class="auth-aside" aria-label="Sobre o curso e os planos">'
+    '<div class="auth-aside-in">'
+    '<h2>Prepare o TOEFL iBT® formato 2026</h2>'
+    '<p class="auth-aside-lead">Explicação em português e prática em inglês, do diagnóstico ao dia da prova.</p>'
+    '<ul class="auth-aside-points">'
+    '<li>Diagnóstico e cronograma pensados para a sua meta</li>'
+    '<li>Os 10 módulos, de Reading a Exam Day</li>'
+    '<li>Simulados com correção só na entrega</li>'
+    '<li>Correção de redação</li>'
+    '</ul>'
+    '<ul class="auth-plans">' + "".join(_auth_plan(p) for p in PLANS) + '</ul>'
+    '<p class="auth-aside-more"><a href="apresentacao.html">Ver tudo sobre o curso</a></p>'
+    '</div></aside>'
+)
+gate = gate.replace("%%AUTH_ASIDE%%", AUTH_ASIDE)
 _plan_default = next(p for p in PLANS if p.get("highlight"))
 # meio de pagamento: aparece só com um plano sem renovação marcado, enquanto o
 # Pix vier pelo Mercado Pago (o Stripe no Brasil só dá Pix por convite)
@@ -1156,21 +1211,6 @@ def _lp_stage(n, st):
 
 
 lp_stages = "".join(_lp_stage(n, st) for n, st in enumerate(LP_STAGES, 1))
-
-# Perfil de cada plano e a faixa de banda que combina com ele (item 39). A
-# faixa é da banda de partida do diagnóstico (ToeflLevel.band().low: 1 a 6) e
-# segue o cronograma que o próprio resultado indica: até 3–3,5 é o Completo
-# (90 dias), 4–4,5 o Regular (60 dias), 5 ou mais já está perto da meta. O
-# Anual não tem faixa: depende do objetivo, não da banda.
-LP_PROFILES = {
-    "mensal": ("Reta final", "Prova marcada para as próximas semanas, ou banda já alta.", (5, 6)),
-    "60dias": ("Revisão intensiva", "Banda 3,5 a 4: revisar o que mais pesa e rodar os simulados.", (4, 4)),
-    "90dias": ("Trilha completa", "Banda 2 a 3: construir a base e depois treinar as quatro seções.", (1, 3)),
-    "anual": ("Ciclo de editais", "Pós-graduação, bolsas e planejamento longo, com tempo para repetir a prova.", None),
-}
-if set(LP_PROFILES) != {p["id"] for p in PLANS}:
-    raise SystemExit("apresentacao: LP_PROFILES precisa ter um perfil para cada plano de plans.json")
-
 
 def _lp_plan(p):
     hl = p.get("highlight")

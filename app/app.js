@@ -3203,7 +3203,7 @@
       document.getElementById("authGateDivider").hidden = false;
       document.getElementById("authGateGoogleWrap").hidden = false;
       authGateTitle.textContent = "Criar conta grátis";
-      authGateSubtitle.textContent = FREE ? "A conta grátis abre " + FREE.resumo + ", sem prazo e sem cartão." : "";
+      authGateSubtitle.textContent = "A conta grátis não pede cartão e abre o Módulo 0 inteiro.";
       setFreeNote(false);
     }
     function showResetPasswordView(){
