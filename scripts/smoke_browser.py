@@ -637,6 +637,24 @@ def _write_stripe_page(site):
                                            encoding="utf-8")
 
 
+# "TOEFL iBT" tem i minusculo. Percorre todo texto da pagina (inclusive
+# painel fechado), aplica o text-transform do elemento (o mesmo que o
+# innerText aplica) e devolve o que ficaria com "IBT" em maiuscula.
+IBT_CASE = r"""(function(){
+  var bad = [], w = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT);
+  while (w.nextNode()) {
+    var n = w.currentNode, t = n.nodeValue;
+    if (!/ibt/i.test(t) || !n.parentElement || /^(SCRIPT|STYLE)$/.test(n.parentElement.tagName)) continue;
+    var tt = getComputedStyle(n.parentElement).textTransform;
+    if (tt === "uppercase") t = t.toUpperCase();
+    else if (tt === "capitalize") t = t.replace(/\b\w/g, function(c){ return c.toUpperCase(); });
+    var m = t.match(/.{0,25}\bIBT\b.{0,25}/);
+    if (m) bad.push(m[0]);
+  }
+  return bad.slice(0, 5);
+})()"""
+
+
 def run():
     """Devolve (resultados, detalhes): nome -> bool, e nome -> texto do que falhou."""
     out, why = {}, {}
@@ -688,6 +706,8 @@ def run():
                 b.eval('localStorage.setItem("toefl_theme_v1", "light")')
                 b.reload(settle=1.2)
                 check("real_no_js_errors_on_load", not b.errors, b.errors)
+                bad = b.eval(IBT_CASE)
+                check("app_toefl_ibt_keeps_lowercase_i", not bad, bad)
                 # abrir o site nao e estudar: nada de sequencia, meta ou
                 # alteracao pendente de sincronizacao so pela carga da pagina
                 idle = b.eval('Object.keys(localStorage).filter(function(k){ return /^toefl_(streak|dailygoal|dirty|scorecalc)/.test(k); })')
@@ -1159,6 +1179,8 @@ def run():
                 b.eval('localStorage.setItem("toefl_theme_v1", "light")')
                 low = b.eval(CONTRAST)
                 check("landing_contrast_aa_light", not low, low)
+                bad = b.eval(IBT_CASE)
+                check("landing_toefl_ibt_keeps_lowercase_i", not bad, bad)
 
                 b.viewport(375, 812, mobile=True)
                 b.reload(settle=1)
