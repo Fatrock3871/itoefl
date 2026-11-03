@@ -12,7 +12,7 @@ Decisões de 2026-10-18 (detalhes em "Decisões travadas" do `ROADMAP.md`):
 - Pagamento: **Stripe** no cartão, em todos os planos. **Pix pelo Mercado
   Pago** só nos planos de pagamento único, até o Stripe liberar o Pix.
 - Planos: Mensal R$ 29,90 (assinatura), 60 dias R$ 49,90, 90 dias R$ 59,90 e
-  Anual R$ 129,90 (pagamento único). Preço, dias e o selo "Mais escolhido"
+  Anual R$ 129,90 (pagamento único). Preço, dias e o selo "Melhor custo-benefício"
   ficam num arquivo só: `supabase/functions/_shared/plans.json`.
 
 Regra de ouro: **primeiro tudo em modo de TESTE do Stripe**. As chaves reais

@@ -289,7 +289,7 @@ volta do login e do pagamento (`?pay=`, `?mp=`), sem internet e `file://`.
 - **Só entra o que dá para provar.** Os números saem do próprio build
   (`LP_STATS`) e não há promessa de nota nem contagem de alunos. O smoke
   test tem uma lista de frases proibidas (`landing_makes_no_unprovable_claims`).
-  Exceção decidida pelo dono em 2026-10-18: o selo "Mais escolhido" no plano
+  Exceção decidida pelo dono em 2026-10-18: o selo "Melhor custo-benefício" (era "Mais escolhido" até 2026-10-26) no plano
   de 90 dias (vem de `highlight_label` no `plans.json`).
 - **Diagnóstico:** é o mesmo HTML das 10 questões do M0, tirado do fragmento
   do pipeline, e grava na mesma chave do app (`toefl_quiz_mod0-diag_v1`).
