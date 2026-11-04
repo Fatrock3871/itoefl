@@ -4879,6 +4879,8 @@
     registro: { nome: "Registro e conectivos", mod: "mod5", parte: 3 }
   };
   var WEAK_MIN = 4, WEAK_SHOW = 70, WEAK_STRONG = 50, EXAM_NEAR = 14;
+  // o registro de erros de cada módulo entra na área dele
+  var ERRLOG_AREA = { mod1: "reading", mod2: "listening", mod3: "speaking", mod4: "writing", mod5: "registro", mod6: "vocabulario" };
 
   // ---------- Resultado do diagnóstico e a meta (M0, Parte 1) ----------
   // Aparece logo abaixo da décima questão quando ela é confirmada: nível
@@ -5175,6 +5177,18 @@
       Object.keys(ss).forEach(function(num){
         if(ss[num] === "ok") add("speaking", 1, 1);
         else if(ss[num] === "miss") add("speaking", 0, 1);
+      });
+    });
+    // registro de erros (quadro "Registre esta sessão", M1 a M6): cada código
+    // marcado conta como 1 erro na área do módulo. Sessão sem código não conta
+    // acerto, porque o aluno não disse quantas acertou.
+    Object.keys(ERRLOG_AREA).forEach(function(mod){
+      var entries;
+      try { entries = JSON.parse(safeGet("toefl_errlog_" + mod + "_v1") || "[]"); } catch(e){ entries = []; }
+      if(!Array.isArray(entries)) return;
+      entries.forEach(function(en){
+        var n = en && Array.isArray(en.codes) ? en.codes.length : 0;
+        if(n) add(ERRLOG_AREA[mod], 0, n);
       });
     });
     return Object.keys(WEAK_AREAS).map(function(k){
