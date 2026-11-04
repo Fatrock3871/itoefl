@@ -405,13 +405,28 @@ chaves sincronizadas são empacotadas num blob e salvas em `user_state.state`.
 **Pontos fracos e "Sua prioridade hoje" (itens 42 e 43, 2026-11-02):** não
 têm chave própria nem SQL. Saem, a cada cálculo, das chaves que já
 sincronizam (`toefl_quiz_`, `toefl_ctw_`, `toefl_bsq_`, `toefl_exam_`,
-`toefl_spk_`, `toefl_goal_v1`, `toefl_progress_v1`). `weakAreas()` no
-`app.js` soma os acertos por área: Reading (M1, Complete the Words, blocos
-de Reading do M7, questão de compreensão do diagnóstico), Listening (M2 e
-blocos "Listen..." do M7), Speaking (Listen and Repeat marcado "ok" ou
-"miss"), Writing (Build a Sentence) e, só pelo diagnóstico, gramática,
-vocabulário e registro (campo `painel` de `DIAG_AREAS` no
-`build_pipeline.py`). Cada área tem um atalho para uma Parte em
+`toefl_spk_`, `toefl_srs_`, `toefl_errlog_`, `toefl_goal_v1`,
+`toefl_progress_v1`). `weakAreas()` no `app.js` soma os acertos por área:
+
+- **Diagnóstico:** cada questão na área dela (campo `painel` de
+  `DIAG_AREAS` no `build_pipeline.py`).
+- **Reading:** exercícios do M1, Complete the Words e blocos de Reading do M7.
+- **Listening:** exercícios do M2 e blocos "Listen..." do M7.
+- **Speaking:** Listen and Repeat marcado "ok" ou "miss".
+- **Writing e gramática:** Build a Sentence conta nas duas.
+- **Vocabulário:** a questão de vocabulário em contexto ("closest in
+  meaning"), marcada no build com `data-weak="vocabulario"` (`weak_area()` em
+  `render_quiz.py`, usada também no `render_exam.py`), sai de Reading e conta
+  aqui. Os flashcards do M6 contam uma vez por palavra revisada, pela última
+  nota: caixa 0 é "Errei", acima de 0 é acerto.
+- **Registro de erros** (quadro "Registre esta sessão", M1 a M6,
+  `ERRLOG_AREA`): cada código marcado é 1 erro na área do módulo (M1 Reading,
+  M2 Listening, M3 Speaking, M4 Writing, M5 registro, M6 vocabulário). Sessão
+  sem código não conta acerto.
+- **Registro:** só o diagnóstico e o registro de erros do M5, porque o M5
+  não tem exercício que guarde certo e errado.
+
+Cada área tem um atalho para uma Parte em
 `WEAK_AREAS`; o resultado do diagnóstico usa o mesmo atalho. Com menos de 4
 respostas a área aparece como "poucos dados", sem taxa. O Painel lista até 3
 áreas abaixo de 70%. A prioridade (`computePriority()`) é UMA Parte, pela
