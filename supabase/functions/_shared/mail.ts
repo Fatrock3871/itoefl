@@ -8,7 +8,7 @@
 //   SMTP_PORT   465 (TLS direto) ou 587 (STARTTLS). Padrão: 465
 //   SMTP_USER   usuário da conta de envio
 //   SMTP_PASS   senha ou chave de app
-//   SMTP_FROM   remetente, ex.: "iTOEFL <nao-responda@seudominio.com>"
+//   SMTP_FROM   remetente, ex.: "PolyPoint <nao-responda@seudominio.com>"
 //   SITE_URL    endereço público do site, para o link do e-mail (opcional)
 // Passo a passo em docs/deploy-redacao.md.
 

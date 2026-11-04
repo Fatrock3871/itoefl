@@ -471,11 +471,16 @@ GATE_LAYOUT = r"""
   var split = g.querySelector(".auth-split").getBoundingClientRect();
   var plans = g.querySelectorAll(".auth-plan");
   var o = {
-    cardRight: card.right, cardBottom: card.bottom, asideLeft: aside.left, asideTop: aside.top, splitTop: split.top,
+    cardRight: card.right, cardBottom: card.bottom, cardTop: card.top, cardW: card.width, asideLeft: aside.left, asideTop: aside.top,
+    asideW: aside.width, splitTop: split.top, splitW: split.width,
+    googleBottom: g.querySelector("#authSignInGoogle").getBoundingClientRect().bottom,
     plans: plans.length,
     prices: Array.prototype.filter.call(plans, function(p){ return /R\$\s*\d/.test(p.querySelector(".auth-plan-price").textContent); }).length,
+    pricesOnScreen: Array.prototype.filter.call(plans, function(p){
+      var r = p.querySelector(".auth-plan-price").getBoundingClientRect(); return r.width > 0 && r.left >= 0 && r.right <= innerWidth; }).length,
+    linked: Array.prototype.filter.call(plans, function(p){ return p.querySelector('a[href="#criar-conta"][data-plan-pick]'); }).length,
     badge: g.querySelectorAll(".auth-plan .plan-badge").length,
-    more: !!g.querySelector('.auth-aside-more a[href="apresentacao.html"]'),
+    more: !!g.querySelector('.auth-aside-more[href="apresentacao.html"]'),
     scrollable: g.scrollHeight > g.clientHeight, docW: document.documentElement.scrollWidth, vw: innerWidth
   };
   g.hidden = true;
@@ -1082,7 +1087,7 @@ def run():
             # o link dos Termos ficam alcançáveis (item 20 de 2026-10-25: o
             # cartão era centralizado com overflow:hidden e o fim sumia)
             with Browser() as b:
-                for w, h, mobile in ((390, 600, True), (1280, 500, False)):
+                for w, h, mobile in ((390, 480, True), (1280, 500, False)):
                     b.viewport(w, h, mobile=mobile)
                     b.goto(page, settle=0.8)
                     gate = b.eval(GATE_SCROLL)
@@ -1092,15 +1097,22 @@ def run():
                 # duas colunas no computador (login à esquerda, planos à direita,
                 # com os 4 preços) e uma coluna no celular (login primeiro,
                 # planos embaixo, a tela rola)
-                for w, h, mobile, cols in ((1280, 800, False, 2), (390, 800, True, 1)):
+                # (1280x720 e 1366x768: o login cabe sem rolar, com o botão do
+                # Google à vista; 770 px: empilhado, sem coluna vazia, com os
+                # 4 preços na página; 390 px: uma coluna e rola)
+                for w, h, mobile, cols in ((1280, 800, False, 2), (1280, 720, False, 2), (1366, 768, False, 2),
+                                           (770, 800, False, 1), (390, 800, True, 1)):
                     b.viewport(w, h, mobile=mobile)
                     b.goto(page, settle=0.8)
                     lay = b.eval(GATE_LAYOUT)
-                    side = lay["asideLeft"] >= lay["cardRight"] - 1 and abs(lay["asideTop"] - lay["splitTop"]) < 4
-                    stacked = lay["asideTop"] >= lay["cardBottom"] - 1 and lay["scrollable"] and lay["docW"] <= lay["vw"]
-                    check(f"login_gate_{cols}_columns_{w}",
-                          lay["plans"] == 4 and lay["prices"] == 4 and lay["badge"] == 1 and lay["more"]
-                          and (side if cols == 2 else stacked), lay)
+                    side = (lay["asideLeft"] >= lay["cardRight"] - 1 and lay["asideTop"] <= lay["cardTop"] + 4
+                            and lay["splitW"] <= 1100 and not lay["scrollable"] and lay["googleBottom"] <= h
+                            and 0.3 < lay["cardW"] / (lay["cardW"] + lay["asideW"]) < 0.5)
+                    stacked = (lay["asideTop"] >= lay["cardBottom"] - 1 and lay["scrollable"] and lay["docW"] <= lay["vw"]
+                               and lay["asideW"] >= lay["vw"] * 0.8 and lay["cardW"] >= lay["vw"] * 0.8)
+                    check(f"login_gate_{cols}_columns_{w}x{h}",
+                          lay["plans"] == 4 and lay["prices"] == 4 and lay["pricesOnScreen"] == 4 and lay["linked"] == 4
+                          and lay["badge"] == 1 and lay["more"] and (side if cols == 2 else stacked), lay)
 
             # apresentacao antes do login: o script do <head> do app (com
             # Supabase configurado) manda quem nao tem sessao para a
@@ -1156,6 +1168,16 @@ def run():
                 })()""")
                 check("landing_no_big_empty_spaces",
                       len(gaps["stages"]) == 4 and max(gaps["stages"]) <= 30 and 0 <= gaps["gap"] < 120, gaps)
+                # topo centralizado (1280 px): selo, título, apoio, botões e linha da
+                # conta grátis com o centro no centro da página
+                cen = b.eval(r"""(function(){
+                  var mid = document.documentElement.clientWidth / 2;
+                  var els = [".lp-kicker", ".lp-hero h1", ".lp-sub", ".lp-cta", ".lp-note"];
+                  return { align: getComputedStyle(document.querySelector(".lp-hero")).textAlign,
+                    off: els.map(function(q){ var r = document.querySelector(q).getBoundingClientRect();
+                      return Math.round(Math.abs((r.left + r.right) / 2 - mid)); }) };
+                })()""")
+                check("landing_hero_centered", cen["align"] == "center" and max(cen["off"]) <= 8, cen)
                 check("landing_four_plans_side_by_side_90_highlighted",
                       [p["id"] for p in lp["plans"]] == ["mensal", "60dias", "90dias", "anual"]
                       and [p["price"] for p in lp["plans"]] == ["R$ 29,90", "R$ 49,90", "R$ 59,90", "R$ 129,90"]
