@@ -1156,6 +1156,16 @@ def run():
                 })()""")
                 check("landing_no_big_empty_spaces",
                       len(gaps["stages"]) == 4 and max(gaps["stages"]) <= 30 and 0 <= gaps["gap"] < 120, gaps)
+                # topo centralizado (1280 px): selo, título, apoio, botões e linha da
+                # conta grátis com o centro no centro da página
+                cen = b.eval(r"""(function(){
+                  var mid = document.documentElement.clientWidth / 2;
+                  var els = [".lp-kicker", ".lp-hero h1", ".lp-sub", ".lp-cta", ".lp-note"];
+                  return { align: getComputedStyle(document.querySelector(".lp-hero")).textAlign,
+                    off: els.map(function(q){ var r = document.querySelector(q).getBoundingClientRect();
+                      return Math.round(Math.abs((r.left + r.right) / 2 - mid)); }) };
+                })()""")
+                check("landing_hero_centered", cen["align"] == "center" and max(cen["off"]) <= 8, cen)
                 check("landing_four_plans_side_by_side_90_highlighted",
                       [p["id"] for p in lp["plans"]] == ["mensal", "60dias", "90dias", "anual"]
                       and [p["price"] for p in lp["plans"]] == ["R$ 29,90", "R$ 49,90", "R$ 59,90", "R$ 129,90"]
