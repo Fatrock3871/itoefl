@@ -53,6 +53,15 @@ function check(name, fn){
 check("gate_visible_by_default", function(){
   return document.getElementById("authGate").hidden === false;
 });
+// a tela de entrar abre sem aviso: o de confirmar o e-mail só vem da resposta
+// do servidor ou logo depois de criar a conta
+check("gate_opens_without_confirm_email_notice", function(){
+  var g = document.getElementById("authGate"), m = document.getElementById("authGateMsg");
+  var shown = Array.prototype.filter.call(g.querySelectorAll("*"), function(el){
+    return el.children.length === 0 && el.getClientRects().length && /Confirme o seu e-mail|confirmar antes de entrar/.test(el.textContent);
+  });
+  return !!m && (m.hidden || m.textContent === "") && shown.length === 0;
+});
 
 // simula estado logado (sem sessao real do Supabase)
 document.getElementById("authGate").hidden = true;

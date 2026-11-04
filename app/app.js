@@ -2794,6 +2794,7 @@
     function gateMsg(text, kind){
       if(!gateMsgEl) return;
       gateMsgEl.textContent = text;
+      gateMsgEl.dataset.kind = kind || "";
       if(kind === "err"){
         gateMsgEl.style.color = "var(--danger)";
         gateMsgEl.style.background = "var(--danger-wash)";
@@ -2805,6 +2806,21 @@
       }
       gateMsgEl.hidden = false;
     }
+    // a caixa só mostra a resposta da última ação. Ela começa vazia, esvazia
+    // ao trocar de aba, ao digitar de novo e quando o navegador devolve a
+    // página da memória (botão Voltar), para um aviso antigo, como o de
+    // confirmar o e-mail, não ficar na tela sem o aluno ter feito nada.
+    function gateMsgClear(){
+      if(!gateMsgEl) return;
+      gateMsgEl.textContent = "";
+      gateMsgEl.hidden = true;
+    }
+    gateMsgClear();
+    window.addEventListener("pageshow", function(e){ if(e.persisted) gateMsgClear(); });
+    ["loginEmail", "loginPassword", "signupEmail", "signupPassword"].forEach(function(id){
+      var el = document.getElementById(id);
+      if(el) el.addEventListener("input", function(){ if(gateMsgEl && gateMsgEl.dataset.kind === "err") gateMsgClear(); });
+    });
 
     var googleBtn = document.getElementById("authSignInGoogle");
     var signedIn = document.getElementById("authIn");
@@ -3314,8 +3330,8 @@
           res.error ? "err" : "ok");
       });
     });
-    authTabLogin.addEventListener("click", showLoginView);
-    authTabSignup.addEventListener("click", showSignupView);
+    authTabLogin.addEventListener("click", function(){ gateMsgClear(); showLoginView(); });
+    authTabSignup.addEventListener("click", function(){ gateMsgClear(); showSignupView(); });
     // "Criar conta" da tela de apresentação chega com #criar-conta
     if(location.hash === "#criar-conta") showSignupView();
     // cartões de plano do painel da direita: mesmo destino dos botões da
