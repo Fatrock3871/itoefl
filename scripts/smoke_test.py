@@ -1798,7 +1798,20 @@ def etapa3_text_checks():
     writes = re.findall(r'open\(f?"\.\./artifact/(?:index|\{_slug\}|apresentacao|manifest)\.(?:html|json)"[^\n]*\.write\(([^\n]*)\)', build_src)
     brand_ok = (bool(brand) and env_ok and len(writes) == 4 and all(w.startswith("_brand(") for w in writes)
                 and brand in (ARTIFACT.parent / "manifest.json").read_text(encoding="utf-8") and not brand_missing)
+    # marca antiga: nenhum "iTOEFL" escrito à mão nas páginas, e o nome novo
+    # no título e no manifesto (a menos que a marca configurada seja ela mesma)
+    old_name = "iTOEFL"
+    leftover = [n for n in ("index.html", "apresentacao.html", "termos.html", "privacidade.html")
+                if brand != old_name and old_name in (ARTIFACT.parent / n).read_text(encoding="utf-8")]
+    mf = json.loads((ARTIFACT.parent / "manifest.json").read_text(encoding="utf-8"))
+    titles = [re.search(r"<title>(.*?)</title>", (ARTIFACT.parent / n).read_text(encoding="utf-8"), re.S)
+              for n in ("index.html", "apresentacao.html")]
+    brand_title_ok = (all(t and brand in t.group(1) for t in titles)
+                      and brand in mf.get("name", "") and mf.get("short_name") == brand)
     return {
+        "no_old_brand_in_pages": not leftover,
+        "no_old_brand_in_pages__error": ", ".join(leftover),
+        "brand_in_titles_and_manifest": brand_title_ok,
         "pt_sentence_has_at_most_one_colon": not colon,
         "pt_sentence_has_at_most_one_colon__error": ", ".join(colon[:10]),
         "titles_have_no_middle_dot": not dot_title,

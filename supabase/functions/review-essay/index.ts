@@ -18,6 +18,7 @@ import { createClient } from "https://esm.sh/@supabase/supabase-js@2";
 import { redacaoNivel, redacaoNotaFinal, redacaoValidaDevolutiva } from "../_shared/redacao.js";
 import { sendMail } from "../_shared/mail.ts";
 import { PUBLISHABLE_KEY, SECRET_KEY } from "../_shared/keys.ts";
+import { BRAND } from "../_shared/brand.ts";
 
 const SUPABASE_URL = Deno.env.get("SUPABASE_URL")!;
 const SITE_URL = Deno.env.get("SITE_URL") || "";
@@ -137,10 +138,10 @@ Deno.serve(async (req) => {
       const link = SITE_URL ? `\n\nPara ver, entre na plataforma: ${SITE_URL}\n(Minha conta > Redações)` : "\n\nPara ver, entre na plataforma e abra Minha conta > Redações.";
       emailed = await sendMail(
         to,
-        "Sua redação do iTOEFL foi corrigida",
+        `Sua redação do ${BRAND} foi corrigida`,
         `Olá!\n\nA devolutiva da sua redação está pronta: nota ${String(final).replace(".", ",")} de 5, nível estimado ${level}.` +
           link +
-          "\n\nA nota é uma estimativa de treino, não a nota oficial da ETS.\n\nEquipe iTOEFL",
+          `\n\nA nota é uma estimativa de treino, não a nota oficial da ETS.\n\nEquipe ${BRAND}`,
       );
     }
 

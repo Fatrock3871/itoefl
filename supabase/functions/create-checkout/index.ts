@@ -23,6 +23,7 @@
 import { createClient } from "https://esm.sh/@supabase/supabase-js@2";
 import { buildReference, findPlan, PIX_VIA_MERCADO_PAGO, type Plan } from "../_shared/plans.ts";
 import { PUBLISHABLE_KEY } from "../_shared/keys.ts";
+import { BRAND } from "../_shared/brand.ts";
 import { STRIPE_LIVE_STATUSES } from "../_shared/stripe.js";
 import { StripeError, stripeConfigured, stripeRequest } from "../_shared/stripe_api.ts";
 
@@ -42,7 +43,7 @@ function json(body: unknown, status = 200) {
 }
 
 function productName(plan: Plan) {
-  return plan.interval ? `iTOEFL: plano ${plan.name} (assinatura mensal)` : `iTOEFL: plano ${plan.name} (${plan.days} dias de acesso)`;
+  return plan.interval ? `${BRAND}: plano ${plan.name} (assinatura mensal)` : `${BRAND}: plano ${plan.name} (${plan.days} dias de acesso)`;
 }
 
 // Cupom do site (tabela coupons, um percentual) como cupom do Stripe de uso
@@ -201,7 +202,7 @@ async function mercadoPagoPix(user: { id: string; email?: string }, plan: Plan, 
     return json({ error: "O Pix ainda não está disponível. Use o cartão ou tente mais tarde." }, 503);
   }
   const priceCents = Math.round(plan.priceCents * (100 - percent) / 100);
-  const title = `iTOEFL: plano ${plan.name} (${plan.days} dias de acesso)` + (percent ? `, cupom de ${percent}%` : "");
+  const title = `${BRAND}: plano ${plan.name} (${plan.days} dias de acesso)` + (percent ? `, cupom de ${percent}%` : "");
   const preferenceBody: Record<string, unknown> = {
     items: [{ id: plan.id, title, quantity: 1, unit_price: priceCents / 100, currency_id: "BRL" }],
     // o mp-webhook lê isto de volta para saber de quem é o pagamento

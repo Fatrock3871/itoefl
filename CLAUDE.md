@@ -315,6 +315,26 @@ foi deixada no código (sempre retorna `true` agora) só por compatibilidade com
 sem pedido explícito do usuário. `showLockMessage()` e `.lock-msg`, que eram
 código morto, foram removidos em 2026-10-06.
 
+## Marca, logo e cor principal (PolyPoint desde 2026-11-03)
+
+O nome do curso é **PolyPoint**. Fica em `BRAND_NAME` no `app/site.json`: o
+build troca todo "iTOEFL" da fonte por ele (`_brand()`) no app, na
+apresentação, nos termos, na privacidade e no manifesto, e o smoke test reprova
+"iTOEFL" que sobrar nas páginas. Nas edge functions o nome é a constante
+`BRAND` de `supabase/functions/_shared/brand.ts` (precisa de deploy).
+Domínio previsto: polypointprep.com (ainda não comprado; `SITE_URL` não mudou).
+Ficaram com "itoefl" de propósito: o repositório, a pasta, `window.ITOEFL_SUPABASE`
+e as chaves `toefl_*`, para ninguém perder progresso.
+
+Onde trocar o visual da marca:
+
+- **Cor principal:** só as variáveis no topo de `app/styles.css` (`--accent`,
+  `--accent-2`, `--accent-strong`, `--accent-fill`, `--logo-deep`, nos temas
+  claro e escuro). Depois conferir o contraste (o smoke test mede).
+- **Logo (ícone):** `LOGO_SVG` em `app/build.py`, a flor de 6 pétalas, que usa
+  as variáveis de cor acima. Os ícones da PWA saem de `scripts/make_icons.py`.
+- **Texto do logotipo:** vem de `BRAND_NAME`; não há nome escrito dentro do SVG.
+
 ## Cor e contraste
 
 Texto branco nunca vai sobre `--accent` puro (dá 3,4:1). Fundo de botão,
