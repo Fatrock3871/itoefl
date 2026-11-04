@@ -1844,7 +1844,7 @@ li > .reveal{margin:6px 0 4px;}
    Página pública antes do login, montada no fim de app/build.py. Usa as
    mesmas cores e fontes do app. Texto branco só sobre --accent-fill; texto
    laranja em --accent-strong (ver "Cor e contraste" no CLAUDE.md). */
-.lp-page main{display:block; outline:none;}
+.lp-page main{display:block; outline:none; padding-bottom:0;}
 /* topo com presença (item 22 de 2026-10-25): faixa inteira, fixa no alto,
    logo e menu maiores, "Entrar" e "Começar grátis" sempre à vista */
 .lp-top{
@@ -1988,7 +1988,7 @@ li > .reveal{margin:6px 0 4px;}
 }
 .lp-faq-item summary:hover{background:var(--accent-wash);}
 .lp-faq-item p{margin:0; padding:0 18px 16px; font-size:15.5px; line-height:1.6; color:var(--ink);}
-.lp-foot{max-width:1080px; margin:var(--sp-7) auto var(--sp-6); padding:22px 20px 0; border-top:2px solid var(--hair); font-size:13px; line-height:1.6; color:var(--ink-2);}
+.lp-foot{max-width:1080px; margin:var(--sp-5) auto var(--sp-6); padding:var(--sp-5) 20px 0; border-top:2px solid var(--hair); font-size:13px; line-height:1.6; color:var(--ink-2); text-align:center;}
 .lp-foot p{margin:0 0 8px;}
 .lp-foot a{color:inherit;}
 .lp-foot a:hover{color:var(--accent-strong);}
