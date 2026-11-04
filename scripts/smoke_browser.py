@@ -1200,6 +1200,24 @@ def run():
                       return Math.round(Math.abs((r.left + r.right) / 2 - mid)); }) };
                 })()""")
                 check("landing_hero_centered", cen["align"] == "center" and max(cen["off"]) <= 8, cen)
+                # rodapé: logo e linhas de texto no mesmo eixo (centro da página) e
+                # menos de 120 px entre a última pergunta frequente e o rodapé
+                foot = b.eval(r"""(function(){
+                  var f = document.querySelector(".lp-foot"), fr = f.getBoundingClientRect(), mid = (fr.left + fr.right) / 2;
+                  function ctr(el){ var rg = document.createRange(); rg.selectNodeContents(el); var r = rg.getBoundingClientRect();
+                    return Math.round(Math.abs((r.left + r.right) / 2 - mid)); }
+                  var items = f.querySelectorAll(".foot-brand, p");
+                  var faq = document.querySelectorAll(".lp-faq-item"), last = faq[faq.length - 1];
+                  return { align: getComputedStyle(f).textAlign, off: Array.prototype.map.call(items, ctr),
+                           n: items.length, gap: Math.round(fr.top - last.getBoundingClientRect().bottom) };
+                })()""")
+                check("landing_footer_centered_and_close_to_faq",
+                      foot["align"] == "center" and foot["n"] == 4 and max(foot["off"]) <= 8 and 0 <= foot["gap"] < 120, foot)
+                b.eval("document.querySelector('.lp-foot').scrollIntoView({block:'end'})")
+                time.sleep(0.4)
+                shot = Path("C:/Users/pietr/itoefl-gerencia/qa/rodape-alinhado.png")
+                shot.parent.mkdir(parents=True, exist_ok=True)
+                b.screenshot(str(shot))
                 check("landing_four_plans_side_by_side_90_highlighted",
                       [p["id"] for p in lp["plans"]] == ["mensal", "60dias", "90dias", "anual"]
                       and [p["price"] for p in lp["plans"]] == ["R$ 29,90", "R$ 49,90", "R$ 59,90", "R$ 129,90"]
