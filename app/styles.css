@@ -2363,3 +2363,8 @@ body.acc-free .part-pager.is-locked .part-pager-title::before{content:"🔒 ";}
   color:var(--brand-rail-from);
   background-image:linear-gradient(90deg,var(--brand-rail-from),var(--brand-rail-to));
 }
+
+/* logotipo no rodapé (apresentação e páginas legais): mesmo componente .legal-brand, menor */
+.foot-brand{justify-content:center; margin:0 auto 12px; width:max-content; max-width:100%;}
+.foot-brand .logo{width:26px; height:26px;}
+.foot-brand .name{font-size:20px;}
