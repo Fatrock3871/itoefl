@@ -1024,7 +1024,8 @@ try { (function(){
 // dados simulados; o estado de antes volta no fim
 try { (function(){
   var keep = {};
-  for(var i = 0; i < localStorage.length; i++){ var k = localStorage.key(i); if(/^toefl_(quiz_|exam_|spk_|bsq_|ctw_|goal)/.test(k)) keep[k] = localStorage.getItem(k); }
+  for(var i = 0; i < localStorage.length; i++){ var k = localStorage.key(i); if(/^toefl_(quiz_|exam_|spk_|bsq_|ctw_|goal|errlog_|srs_)/.test(k)) keep[k] = localStorage.getItem(k); }
+  ["toefl_errlog_mod2_v1", "toefl_srs_kit50_v1"].forEach(function(k){ if(!(k in keep)) keep[k] = null; });
   function clear(){ Object.keys(keep).forEach(function(k){ localStorage.removeItem(k); }); }
   function day(n){ var d = new Date(); d.setDate(d.getDate() + n); var p = function(x){ return (x < 10 ? "0" : "") + x; };
     return d.getFullYear() + "-" + p(d.getMonth() + 1) + "-" + p(d.getDate()); }
@@ -1096,8 +1097,32 @@ try { (function(){
     return near.kind === "exam" && near.mod === "mod7" && near.n === 3 && near.why.indexOf("Faltam 10 dias") === 0 &&
       eve.kind === "exam" && eve.mod === "mod8" && eve.n === 2 && eve.why.indexOf("A prova é amanhã") === 0;
   });
+  // registro de erros do M2: cada código marcado é 1 erro em Listening; a
+  // sessão sem código não conta nada
+  localStorage.setItem("toefl_errlog_mod2_v1", JSON.stringify([
+    { date: day(0), drill: "Exercício A", result: "1/5", codes: ["L1", "L3"] },
+    { date: day(-1), drill: "Exercício B1", result: "5/5", codes: [] }]));
+  var withLog = {};
+  window.__toeflWeak().forEach(function(a){ withLog[a.key] = a; });
+  check("errlog_feeds_weak_spots_of_its_module", function(){
+    var note = document.querySelector('#panel-mod2 .errlog .errlog-note');
+    return withLog.listening.ok === 1 && withLog.listening.n === 7 && withLog.reading.n === areas.reading.n &&
+      !!note && note.textContent.indexOf("Painel") !== -1;
+  });
+  // vocabulário: flashcards do M6 (pela última nota de cada palavra) e a
+  // questão de vocabulário em contexto do M1 contam em Vocabulário, não em Reading
+  localStorage.setItem("toefl_srs_kit50_v1", JSON.stringify({ a: { box: 0, due: 0 }, b: { box: 2, due: 0 }, c: { box: 1, due: 0 } }));
+  drill("mod1-c1", 5, 5);
+  var withVocab = {};
+  window.__toeflWeak().forEach(function(a){ withVocab[a.key] = a; });
+  check("flashcards_and_vocab_items_feed_vocabulary", function(){
+    return document.querySelectorAll('.quiz-drill .qcard[data-weak="vocabulario"]').length === 3 &&
+      document.querySelectorAll('.exam .exam-item[data-weak="vocabulario"]').length === 3 &&
+      withVocab.vocabulario.n === areas.vocabulario.n + 4 && withVocab.vocabulario.ok === areas.vocabulario.ok + 3 &&
+      withVocab.vocabulario.enough && withVocab.reading.n === areas.reading.n + 4;
+  });
   clear();
-  Object.keys(keep).forEach(function(k){ localStorage.setItem(k, keep[k]); });
+  Object.keys(keep).forEach(function(k){ if(keep[k] !== null) localStorage.setItem(k, keep[k]); });
   window.__toeflRefreshPlan();
 })(); } catch(ex){ check("weak_and_priority_checks_ran", function(){ throw ex; }); }
 check("m7_says_what_the_diagnostic_measures", function(){

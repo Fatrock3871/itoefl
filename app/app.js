@@ -5135,7 +5135,9 @@
   // campo "painel" de DIAG_AREAS no build_pipeline.py), exercícios de Reading
   // e Complete the Words, Listening, Build a Sentence, os blocos do simulado
   // pela seção, e o Listen and Repeat (o aluno marca se repetiu sem erro).
-  // Área com menos de WEAK_MIN respostas não ganha taxa: aparece como "poucos
+  // Também: questão de vocabulário em contexto (data-weak) em Vocabulário,
+  // Build a Sentence em gramática, flashcards do M6 em Vocabulário e o
+  // registro de erros de cada módulo (só erros). Área com menos de WEAK_MIN respostas não ganha taxa: aparece como "poucos
   // dados". Não há estado novo: tudo sai de chaves que já sincronizam.
   function weakAreas(){
     var acc = {};
@@ -5152,10 +5154,33 @@
         if(s && s.confirmed && a && acc[a.painel]) add(a.painel, isCardCorrect(c, s.picked) ? 1 : 0, 1);
       });
     }
-    var r = computeQuizAccuracy("mod1-"), l = computeQuizAccuracy("mod2-"), b = extraAccuracy("bsq");
-    add("reading", r.correct, r.confirmed);
-    add("listening", l.correct, l.confirmed);
+    // exercícios do M1 e do M2: cada questão conta na seção do módulo, menos a
+    // de tipo com área própria (data-weak no build, hoje o vocabulário em
+    // contexto), que conta nessa área
+    [["mod1-", "reading"], ["mod2-", "listening"]].forEach(function(pa){
+      Array.prototype.forEach.call(document.querySelectorAll('.quiz-drill[data-drill^="' + pa[0] + '"]'), function(drillEl){
+        if(isLockedNow(drillEl)) return;
+        var st = read("toefl_quiz_" + drillEl.dataset.drill + "_v1");
+        Array.prototype.forEach.call(drillEl.querySelectorAll(".qcard"), function(c){
+          var s = st[c.dataset.num];
+          if(s && s.confirmed) add(acc[c.dataset.weak] ? c.dataset.weak : pa[1], isCardCorrect(c, s.picked) ? 1 : 0, 1);
+        });
+      });
+    });
+    var ctw = extraAccuracy("ctw"), b = extraAccuracy("bsq");
+    add("reading", ctw.correct, ctw.confirmed);
+    // Build a Sentence é Writing e também gramática e ordem das palavras
     add("writing", b.correct, b.confirmed);
+    add("gramatica", b.correct, b.confirmed);
+    // flashcards do M6: cada palavra já revisada conta 1 vez, pela última nota.
+    // "Errei" deixa a caixa em 0; "Difícil" e "Fácil" passam da caixa 0.
+    Array.prototype.forEach.call(document.querySelectorAll(".srs"), function(root){
+      if(isLockedNow(root)) return;
+      var sr = read("toefl_srs_" + root.dataset.srs + "_v1");
+      Object.keys(sr).forEach(function(w){
+        if(sr[w] && typeof sr[w].box === "number") add("vocabulario", sr[w].box > 0 ? 1 : 0, 1);
+      });
+    });
     // simulado: cada bloco conta na seção do título de cima ("Listen to..." é Listening)
     var section = "reading";
     Array.prototype.forEach.call(document.querySelectorAll("#panel-mod7 h3, #panel-mod7 h4, #panel-mod7 .exam"), function(el){
@@ -5168,7 +5193,7 @@
       var es = read("toefl_exam_" + el.dataset.exam + "_v1");
       if(!es.done || !es.answers) return;
       Array.prototype.forEach.call(el.querySelectorAll(".exam-item"), function(it){
-        add(section, es.answers[it.dataset.num] === it.dataset.correct ? 1 : 0, 1);
+        add(acc[it.dataset.weak] ? it.dataset.weak : section, es.answers[it.dataset.num] === it.dataset.correct ? 1 : 0, 1);
       });
     });
     Array.prototype.forEach.call(document.querySelectorAll('.spk[data-mode="repeat"]'), function(root){
