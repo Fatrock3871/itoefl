@@ -1152,7 +1152,7 @@ for _slug, _title in LEGAL_PAGES:
 <main class="legal-doc">
 {_body}
 </main>
-<footer class="legal-foot">{LEGAL_LINKS}<p class="ets-notice">{ETS_NOTICE}</p></footer>
+<footer class="legal-foot"><a class="legal-brand foot-brand" href="index.html" aria-label="iTOEFL, início"><span class="logo">{LOGO_SVG}</span><span class="name">iTOEFL</span></a>{LEGAL_LINKS}<p class="ets-notice">{ETS_NOTICE}</p></footer>
 </body>
 </html>
 '''
@@ -1447,6 +1447,7 @@ _landing = f'''<!DOCTYPE html>
 </main>
 
 <footer class="lp-foot">
+  <a class="legal-brand foot-brand" href="apresentacao.html" aria-label="iTOEFL, início"><span class="logo">{LOGO_SVG}</span><span class="name">iTOEFL</span></a>
   <p>Preparação independente, baseada nas especificações públicas da prova.</p>
   <p class="ets-notice">{ETS_NOTICE}</p>
   <p><a href="termos.html">Termos de Uso</a><span aria-hidden="true"> · </span><a href="privacidade.html">Política de Privacidade</a><span aria-hidden="true"> · </span><a href="termos.html">Contato (nos Termos de Uso)</a><span aria-hidden="true"> · </span><a href="index.html#entrar">Entrar</a></p>

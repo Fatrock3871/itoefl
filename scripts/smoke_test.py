@@ -1808,7 +1808,25 @@ def etapa3_text_checks():
               for n in ("index.html", "apresentacao.html")]
     brand_title_ok = (all(t and brand in t.group(1) for t in titles)
                       and brand in mf.get("name", "") and mf.get("short_name") == brand)
+    # logotipo em todo lugar: todo <span class="name"> fica dentro de um
+    # container de logo (mesma regra de degradê no CSS), os rodapés da
+    # apresentação e das páginas legais têm o logo, e a regra cobre os três
+    css = (APP_DIR / "styles.css").read_text(encoding="utf-8")
+    grad = re.search(r"\.brand \.name,\s*\.auth-gate-brand \.name,\s*\.legal-brand \.name\s*\{[^}]*linear-gradient", css)
+    logo_bad = []
+    for n in ("index.html", "apresentacao.html", "termos.html", "privacidade.html"):
+        pg = (ARTIFACT.parent / n).read_text(encoding="utf-8")
+        for m in re.finditer(r'<span class="name">', pg):
+            # container de logo mais próximo antes do span, sem fechar o <a>/<div> dele no meio
+            before = pg[:m.start()]
+            k = max((mm.end() for mm in re.finditer(r'class="(?:brand|auth-gate-brand|legal-brand)[ "]', before)), default=-1)
+            if k < 0 or re.search(r"</a>|</div>", before[k:]):
+                logo_bad.append(n)
+        if n != "index.html" and 'class="legal-brand foot-brand"' not in pg.split("<footer", 1)[-1]:
+            logo_bad.append(n + ":rodape")
     return {
+        "logo_name_always_inside_logo_container_with_gradient": bool(grad) and not logo_bad,
+        "logo_name_always_inside_logo_container_with_gradient__error": f"gradiente={bool(grad)} fora={logo_bad}",
         "no_old_brand_in_pages": not leftover,
         "no_old_brand_in_pages__error": ", ".join(leftover),
         "brand_in_titles_and_manifest": brand_title_ok,

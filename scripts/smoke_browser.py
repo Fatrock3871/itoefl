@@ -34,6 +34,20 @@ import build_teste  # noqa: E402
 from cdp import Browser  # noqa: E402
 
 
+LOGO_GRADIENT_JS = r"""(function(){
+  var sel = ".brand .name, .auth-gate-brand .name, .legal-brand .name";
+  var logos = Array.prototype.slice.call(document.querySelectorAll(sel));
+  var bad = logos.filter(function(e){ var c = getComputedStyle(e);
+    return !(c.backgroundClip === "text" || c.webkitBackgroundClip === "text") || c.backgroundImage.indexOf("linear-gradient") < 0
+      || !e.textContent.trim(); }).map(function(e){ return e.className + ":" + e.textContent; });
+  var stray = Array.prototype.filter.call(document.body.querySelectorAll("*"), function(e){
+    if (e.matches(sel)) return false;
+    var c = getComputedStyle(e);
+    return (c.backgroundClip === "text" || c.webkitBackgroundClip === "text") && c.backgroundImage.indexOf("gradient") >= 0
+      && !e.closest(".lp-hero h1, h1, h2, h3, .lp-plan-price, .ring-wrap"); }).map(function(e){ return e.tagName + "." + e.className; });
+  return { n: logos.length, bad: bad, stray: stray };
+})()"""
+
 class _Quiet(http.server.SimpleHTTPRequestHandler):
     def log_message(self, *args):
         pass
@@ -1122,6 +1136,14 @@ def run():
             redir = re.search(r'<script id="landingRedirect">.*?</script>', real_index, re.S)
             check("landing_redirect_in_real_build", redir or "ITOEFL_SUPABASE" not in real_index,
                   "artifact/index.html tem Supabase e não tem o script landingRedirect")
+            # logotipo: degradê em todo texto de logo das páginas legais e do app
+            # (a apresentação é checada na passada dela, mais abaixo)
+            for lg_page, want in (("termos.html", 2), ("privacidade.html", 2), ("index.html", 1)):
+                with Browser() as b:
+                    b.goto(base + "/" + lg_page, settle=0.8)
+                    lg2 = b.eval(LOGO_GRADIENT_JS)
+                    check("logos_gradient_" + lg_page.split(".")[0],
+                          lg2["n"] >= want and not lg2["bad"] and not lg2["stray"], lg2)
             if redir:
                 (site / "redirect_test.html").write_text(
                     '<!DOCTYPE html><html><head><link rel="icon" href="data:,">' + redir.group(0) + '</head><body>app</body></html>',
@@ -1186,6 +1208,9 @@ def run():
                       and [p["badge"] for p in lp["plans"]] == ["", "", "Melhor custo-benefício", ""]
                       and len({p["top"] for p in lp["plans"]}) == 1 and lp["refund"], lp)
                 check("landing_makes_no_unprovable_claims", not lp["claims"], lp["claims"])
+                lg = b.eval(LOGO_GRADIENT_JS)
+                check("landing_logos_have_gradient_and_no_stray_gradient",
+                      lg["n"] == 2 and not lg["bad"] and not lg["stray"], lg)
                 # diagnóstico recolhido ("cerca de 12 min, grátis, sem cadastro"),
                 # abre com uma questão por vez e avança ao confirmar (item 38)
                 one = b.eval(r"""(function(){
