@@ -334,6 +334,13 @@ Onde trocar o visual da marca:
 - **Logo (ícone):** `LOGO_SVG` em `app/build.py`, a flor de 6 pétalas, que usa
   as variáveis de cor acima. Os ícones da PWA saem de `scripts/make_icons.py`.
 - **Texto do logotipo:** vem de `BRAND_NAME`; não há nome escrito dentro do SVG.
+- **Degradê do texto do logotipo:** horizontal, do laranja forte ao laranja
+  claro da flor, com `background-clip:text` e cor sólida de reserva. As cores
+  ficam em variáveis no topo de `app/styles.css`: `--brand-from` e `--brand-to`
+  (sobre papel; no tema escuro viram tons mais claros) e `--brand-rail-from` e
+  `--brand-rail-to` (sidebar, sempre escura). Vale para `.brand .name`,
+  `.auth-gate-brand .name` e `.legal-brand .name` (apresentação, termos e
+  privacidade). Texto grande em negrito pede 3:1 de contraste.
 
 ## Cor e contraste
 
