@@ -3318,6 +3318,18 @@
     authTabSignup.addEventListener("click", showSignupView);
     // "Criar conta" da tela de apresentação chega com #criar-conta
     if(location.hash === "#criar-conta") showSignupView();
+    // cartões de plano do painel da direita: mesmo destino dos botões da
+    // apresentação. Guarda o plano (a tela de compra abre com ele marcado) e
+    // abre "Criar conta", sem recarregar a página.
+    Array.prototype.forEach.call(document.querySelectorAll("#authGate [data-plan-pick]"), function(a){
+      a.addEventListener("click", function(e){
+        e.preventDefault();
+        safeSet("toefl_plan_pick_v1", a.getAttribute("data-plan-pick"));
+        showSignupView();
+        var email = document.getElementById("signupEmail");
+        if(email){ email.scrollIntoView({ block: "center", behavior: "smooth" }); email.focus({ preventScroll: true }); }
+      });
+    });
 
     if(googleBtn){
       googleBtn.addEventListener("click", function(){

@@ -465,40 +465,108 @@ nav.modnav{display:flex; flex-direction:column; gap:1px;}
    planos à direita. Abaixo disso é uma coluna só, login primeiro e planos
    embaixo; o #authGate continua sendo o que rola. */
 #authGate{display:block; padding:0;}
-.auth-split{display:grid; grid-template-columns:minmax(0,1fr); min-height:100%;}
-.auth-split > .auth-gate-card{margin:20px auto; padding-block:38px 32px; width:calc(100% - 40px);}
-#authGate .auth-gate-card h2{font-size:26px; font-style:normal; text-transform:none; letter-spacing:-0.01em;}
-#authGate .auth-free-note{margin:0 0 18px;}
-#authGate .auth-free-note p{margin:0 0 6px;}
-#authGate .auth-free-note summary{cursor:pointer; font-weight:700; color:var(--accent-strong); font-size:13px;}
-#authGate .auth-free-note details p{margin:8px 0 0; text-align:left;}
+/* uma coluna (celular e janelas até 899 px): login em cima, planos embaixo,
+   os dois na largura da tela (máx. 720 px, centralizados). Nunca sobra uma
+   coluna vazia: abaixo de 900 px a grade nem existe. */
+.auth-split{
+  display:grid; grid-template-columns:minmax(0,1fr); gap:var(--sp-4);
+  width:100%; max-width:720px; margin:0 auto; padding:var(--sp-4); min-height:100%; align-content:start;
+}
+.auth-split > .auth-gate-card{margin:0; max-width:none; width:100%; padding:var(--sp-5) var(--sp-5) var(--sp-4);}
+/* login compacto: logo de 44 px ao lado do nome, campos e botões de 42 px,
+   rótulos em caixa normal, espaçamento só pela escala --sp-* */
+#authGate .auth-gate-brand{flex-direction:row; justify-content:center; gap:var(--sp-3); margin-bottom:var(--sp-3);}
+#authGate .auth-gate-brand .logo{width:44px; height:44px;}
+#authGate .auth-gate-brand .logo svg{width:100%; height:100%;}
+#authGate .auth-gate-brand .name{font-size:26px;}
+#authGate .auth-gate-card h2{font-size:20px; font-style:normal; text-transform:none; letter-spacing:-0.01em; margin:0 0 var(--sp-2);}
+#authGate .auth-gate-card > p{font-size:13px; line-height:1.45; margin:0 0 var(--sp-3);}
+#authGate .auth-free-note{margin:0 0 var(--sp-3);}
+#authGate .auth-free-note p{margin:0 0 var(--sp-1); font-size:13px; line-height:1.4;}
+#authGate .auth-free-note summary{cursor:pointer; font-weight:700; color:var(--accent-strong); font-size:12.5px;}
+#authGate .auth-free-note details p{margin:var(--sp-2) 0 0; text-align:left;}
+#authGate .auth-tabs{margin-bottom:var(--sp-3);}
+#authGate .auth-tab{padding:var(--sp-2) var(--sp-3);}
+#authGate .auth-form{gap:var(--sp-3); margin-bottom:var(--sp-3);}
+#authGate .auth-field{gap:var(--sp-1);}
+#authGate .auth-label{font-size:12.5px; font-weight:700; text-transform:none; letter-spacing:0; font-family:inherit;}
+#authGate .auth-input{min-height:42px; padding:var(--sp-2) var(--sp-3); font-size:14px;}
+#authGate .auth-input-wrap .auth-input{padding-right:42px;}
+#authGate .auth-input-wrap.has-icon .auth-input{padding-right:var(--sp-3); padding-left:40px;}
+#authGate .auth-gate-submit{min-height:42px; padding:var(--sp-2) var(--sp-4); margin-top:0;}
+#authGate .auth-links{margin-bottom:var(--sp-3); gap:var(--sp-4);}
+#authGate .auth-gate-divider{margin:var(--sp-3) 0;}
+#authGate .auth-gate-actions{margin-bottom:0;}
+#authGate .auth-gate-actions button{min-height:42px; padding:var(--sp-2) var(--sp-4);}
+#authGate .auth-gate-msg{margin-top:var(--sp-3);}
+#authGate .legal-links{margin:var(--sp-3) 0 0;}
+/* painel da direita */
 .auth-aside{
-  background:var(--accent-wash); border-top:2px solid var(--edge); padding:34px 20px 40px;
-  display:flex; align-items:center; justify-content:center;
+  background:var(--accent-wash); border:2px solid var(--edge); border-radius:var(--radius);
+  padding:var(--sp-5) var(--sp-4); min-width:0;
 }
-.auth-aside-in{width:100%; max-width:560px;}
-.auth-aside h2{font-family:'Bricolage Grotesque',sans-serif; font-size:26px; font-weight:800; line-height:1.15; margin:0 0 8px;}
-.auth-aside-lead{margin:0 0 14px; font-size:15px; line-height:1.55; color:var(--ink);}
-.auth-aside-points{margin:0 0 22px; padding:0; list-style:none; display:grid; gap:6px;}
-.auth-aside-points li{position:relative; padding-left:22px; font-size:14.5px; line-height:1.45; color:var(--ink);}
-.auth-aside-points li::before{content:"✓"; position:absolute; left:0; font-weight:800; color:var(--accent-strong);}
-.auth-plans{margin:0 0 18px; padding:14px 0 0; list-style:none; display:grid; grid-template-columns:repeat(2, minmax(0,1fr)); gap:14px 12px;}
-.auth-plan{
-  position:relative; display:flex; flex-direction:column; gap:2px; padding:16px 14px 12px; background:var(--paper);
-  border:2px solid var(--edge); border-radius:var(--radius);
+.auth-aside-in{width:100%; height:100%; display:flex; flex-direction:column; gap:var(--sp-4);}
+.auth-aside h2{font-family:'Bricolage Grotesque',sans-serif; font-size:24px; font-weight:800; line-height:1.15; margin:0 0 var(--sp-1);}
+.auth-aside-lead{margin:0 0 var(--sp-3); font-size:14px; line-height:1.45; color:var(--ink);}
+.auth-aside-points{margin:0; padding:0; list-style:none; display:flex; flex-wrap:wrap; gap:var(--sp-1) var(--sp-4);}
+.auth-aside-points li{display:inline-flex; align-items:center; gap:6px; font-size:13px; font-weight:700; color:var(--ink);}
+.auth-aside-points .ico{width:16px; height:16px; flex:none; color:var(--accent-strong);}
+/* planos: cartões largos, um embaixo do outro; o espaço que sobra na altura é
+   dividido entre eles, então o painel fica preenchido sem vazio */
+.auth-plans{margin:0; padding:0; list-style:none; display:flex; flex-direction:column; gap:var(--sp-3); flex:1;}
+.auth-plan{position:relative; display:flex; flex:1 1 auto;}
+.auth-plan-link{
+  position:relative; display:flex; align-items:center; justify-content:space-between; gap:var(--sp-4); width:100%;
+  padding:var(--sp-3) var(--sp-4); background:var(--paper); color:var(--ink); text-decoration:none;
+  border:2px solid var(--edge); border-radius:var(--radius); box-shadow:2px 2px 0 var(--edge);
+  transition:transform .1s ease, box-shadow .1s ease;
 }
-.auth-plan.is-highlight{box-shadow:4px 4px 0 var(--accent);}
-.auth-plan .plan-badge{position:absolute; top:-11px; left:12px; font-size:10.5px; padding:2px 8px; box-shadow:2px 2px 0 var(--edge);}
-.auth-plan-name{font-family:'Bricolage Grotesque',sans-serif; font-size:17px; font-weight:800;}
-.auth-plan-profile{font-size:12px; font-weight:800; letter-spacing:0.04em; text-transform:uppercase; color:var(--accent-strong);}
-.auth-plan-price{font-family:'Bricolage Grotesque',sans-serif; font-size:24px; font-weight:800; line-height:1.2; margin-top:4px;}
-.auth-plan-note{font-size:12.5px; line-height:1.4; color:var(--ink-2);}
-.auth-aside-more{margin:0; font-size:14.5px; font-weight:700;}
-.auth-aside-more a{color:var(--accent-strong);}
-@media(max-width:380px){ .auth-plans{grid-template-columns:minmax(0,1fr);} }
-@media(min-width:960px){
-  .auth-split{grid-template-columns:minmax(0,1fr) minmax(0,1.1fr);}
-  .auth-aside{border-top:0; border-left:2px solid var(--edge); padding:40px 40px 48px;}
+.auth-plan-link:hover{transform:translateY(-1px); box-shadow:3px 3px 0 var(--edge);}
+.auth-plan-link:focus-visible{outline:3px solid var(--accent); outline-offset:2px;}
+.auth-plan-main{display:flex; flex-direction:column; gap:2px; min-width:0;}
+.auth-plan-name{font-family:'Bricolage Grotesque',sans-serif; font-size:17px; font-weight:800; line-height:1.2;}
+.auth-plan-profile{font-weight:700; color:var(--accent-strong);}
+.auth-plan-for{font-size:12.5px; line-height:1.4; color:var(--ink-2);}
+.auth-plan-side{display:flex; flex-direction:column; align-items:flex-end; text-align:right; flex:none;}
+.auth-plan-price{font-family:'Bricolage Grotesque',sans-serif; font-size:26px; font-weight:800; line-height:1.1; white-space:nowrap;}
+.auth-plan-note{font-size:12px; line-height:1.3; color:var(--ink-2);}
+/* destaque: borda e fundo na cor principal, selo à mostra, um pouco maior */
+.auth-plan.is-highlight{margin-block:var(--sp-1);}
+.auth-plan.is-highlight .auth-plan-link{
+  background:var(--accent-fill); border-color:var(--edge); color:#fff; padding-block:var(--sp-4);
+  box-shadow:4px 4px 0 var(--edge);
+}
+.auth-plan.is-highlight .auth-plan-link:hover{background:var(--accent-fill-hover); box-shadow:5px 5px 0 var(--edge);}
+.auth-plan.is-highlight .auth-plan-name{font-size:19px;}
+.auth-plan.is-highlight .auth-plan-profile, .auth-plan.is-highlight .auth-plan-for, .auth-plan.is-highlight .auth-plan-note{color:#fff;}
+.auth-plan.is-highlight .auth-plan-price{font-size:30px;}
+.auth-plan-link .plan-badge{
+  position:absolute; top:-12px; left:var(--sp-4); font-size:11px; padding:2px 9px; box-shadow:2px 2px 0 var(--edge);
+  background:var(--paper); color:var(--ink);
+}
+.auth-aside-foot{display:flex; align-items:center; justify-content:space-between; gap:var(--sp-3); flex-wrap:wrap;}
+.auth-aside-foot p{margin:0; font-size:13px; font-weight:700; color:var(--ink);}
+.auth-aside-more{
+  display:inline-flex; align-items:center; min-height:40px; padding:0 var(--sp-4); background:var(--paper); color:var(--ink);
+  border:2px solid var(--edge); border-radius:8px; font-size:13.5px; font-weight:800; text-decoration:none;
+  font-family:'Bricolage Grotesque',sans-serif; box-shadow:2px 2px 0 var(--edge);
+}
+.auth-aside-more:hover{background:var(--accent-wash);}
+@media(max-width:480px){
+  .auth-split{padding:var(--sp-3);}
+  .auth-plan-link{padding:var(--sp-3);}
+  .auth-plan-price{font-size:22px;} .auth-plan.is-highlight .auth-plan-price{font-size:24px;}
+}
+@media(max-width:360px){ .auth-plan-link{flex-direction:column; align-items:flex-start;} .auth-plan-side{align-items:flex-start; text-align:left;} }
+/* duas colunas (900 px ou mais): login ~40%, painel ~60%, centralizadas e com
+   largura total máxima de 1100 px, para não esticar em tela larga */
+@media(min-width:900px){
+  .auth-split{
+    max-width:1100px; grid-template-columns:minmax(0,2fr) minmax(0,3fr); gap:var(--sp-5);
+    align-items:stretch; align-content:center; padding:var(--sp-5);
+  }
+  .auth-split > .auth-gate-card{align-self:center; padding:var(--sp-5);}
+  .auth-aside{padding:var(--sp-5);}
 }
 
 /* botão de certificado na sidebar (some até concluir os 10 módulos) */

@@ -578,33 +578,49 @@ if set(LP_PROFILES) != {p["id"] for p in PLANS}:
 # compactos. Preço, perfil e selo vêm das mesmas fontes da apresentação
 # (plans.json e LP_PROFILES); nada é digitado duas vezes.
 def _auth_plan(p):
-    profile = LP_PROFILES[p["id"]][0]
+    profile, profile_for, _fits = LP_PROFILES[p["id"]]
     note = "por mês, renovação automática" if p["interval"] == "month" else plan_month_note(p)
     hl = p.get("highlight")
+    # o cartão inteiro é um link para #criar-conta com data-plan-pick, como os
+    # botões da apresentação: o app.js grava o plano em toefl_plan_pick_v1
     return (
         f'<li class="auth-plan{" is-highlight" if hl else ""}" data-plan="{p["id"]}">'
+        f'<a class="auth-plan-link" href="#criar-conta" data-plan-pick="{p["id"]}">'
         f'{PLAN_BADGE if hl else ""}'
-        f'<span class="auth-plan-name">{p["name"]}</span>'
-        f'<span class="auth-plan-profile">{profile}</span>'
+        '<span class="auth-plan-main">'
+        f'<span class="auth-plan-name">{p["name"]}<span class="auth-plan-profile"> · {profile}</span></span>'
+        f'<span class="auth-plan-for">{profile_for}</span>'
+        '</span>'
+        '<span class="auth-plan-side">'
         f'<span class="auth-plan-price">{brl(p["price_cents"])}</span>'
         f'<span class="auth-plan-note">{note}</span>'
-        '</li>'
+        '</span>'
+        '</a></li>'
     )
 
+
+AUTH_POINTS = (
+    ("compass", "Diagnóstico"),
+    ("book", "10 módulos"),
+    ("timer", "Simulados"),
+    ("pen", "Correção de redação"),
+)
 
 AUTH_ASIDE = (
     '<aside class="auth-aside" aria-label="Sobre o curso e os planos">'
     '<div class="auth-aside-in">'
+    '<div class="auth-aside-head">'
     '<h2>Prepare o TOEFL iBT® formato 2026</h2>'
     '<p class="auth-aside-lead">Explicação em português e prática em inglês, do diagnóstico ao dia da prova.</p>'
     '<ul class="auth-aside-points">'
-    '<li>Diagnóstico e cronograma pensados para a sua meta</li>'
-    '<li>Os 10 módulos, de Reading a Exam Day</li>'
-    '<li>Simulados com correção só na entrega</li>'
-    '<li>Correção de redação</li>'
+    + "".join(f'<li>{icon(n)}<span>{t}</span></li>' for n, t in AUTH_POINTS) +
     '</ul>'
+    '</div>'
     '<ul class="auth-plans">' + "".join(_auth_plan(p) for p in PLANS) + '</ul>'
-    '<p class="auth-aside-more"><a href="apresentacao.html">Ver tudo sobre o curso</a></p>'
+    '<div class="auth-aside-foot">'
+    '<p>A conta grátis não pede cartão.</p>'
+    '<a class="auth-aside-more" href="apresentacao.html">Ver tudo sobre o curso</a>'
+    '</div>'
     '</div></aside>'
 )
 gate = gate.replace("%%AUTH_ASIDE%%", AUTH_ASIDE)
