@@ -2794,6 +2794,7 @@
     function gateMsg(text, kind){
       if(!gateMsgEl) return;
       gateMsgEl.textContent = text;
+      gateMsgEl.dataset.kind = kind || "";
       if(kind === "err"){
         gateMsgEl.style.color = "var(--danger)";
         gateMsgEl.style.background = "var(--danger-wash)";
@@ -2805,6 +2806,21 @@
       }
       gateMsgEl.hidden = false;
     }
+    // a caixa só mostra a resposta da última ação. Ela começa vazia, esvazia
+    // ao trocar de aba, ao digitar de novo e quando o navegador devolve a
+    // página da memória (botão Voltar), para um aviso antigo, como o de
+    // confirmar o e-mail, não ficar na tela sem o aluno ter feito nada.
+    function gateMsgClear(){
+      if(!gateMsgEl) return;
+      gateMsgEl.textContent = "";
+      gateMsgEl.hidden = true;
+    }
+    gateMsgClear();
+    window.addEventListener("pageshow", function(e){ if(e.persisted) gateMsgClear(); });
+    ["loginEmail", "loginPassword", "signupEmail", "signupPassword"].forEach(function(id){
+      var el = document.getElementById(id);
+      if(el) el.addEventListener("input", function(){ if(gateMsgEl && gateMsgEl.dataset.kind === "err") gateMsgClear(); });
+    });
 
     var googleBtn = document.getElementById("authSignInGoogle");
     var signedIn = document.getElementById("authIn");
@@ -3314,8 +3330,8 @@
           res.error ? "err" : "ok");
       });
     });
-    authTabLogin.addEventListener("click", showLoginView);
-    authTabSignup.addEventListener("click", showSignupView);
+    authTabLogin.addEventListener("click", function(){ gateMsgClear(); showLoginView(); });
+    authTabSignup.addEventListener("click", function(){ gateMsgClear(); showSignupView(); });
     // "Criar conta" da tela de apresentação chega com #criar-conta
     if(location.hash === "#criar-conta") showSignupView();
     // cartões de plano do painel da direita: mesmo destino dos botões da
@@ -4863,6 +4879,8 @@
     registro: { nome: "Registro e conectivos", mod: "mod5", parte: 3 }
   };
   var WEAK_MIN = 4, WEAK_SHOW = 70, WEAK_STRONG = 50, EXAM_NEAR = 14;
+  // o registro de erros de cada módulo entra na área dele
+  var ERRLOG_AREA = { mod1: "reading", mod2: "listening", mod3: "speaking", mod4: "writing", mod5: "registro", mod6: "vocabulario" };
 
   // ---------- Resultado do diagnóstico e a meta (M0, Parte 1) ----------
   // Aparece logo abaixo da décima questão quando ela é confirmada: nível
@@ -5117,7 +5135,9 @@
   // campo "painel" de DIAG_AREAS no build_pipeline.py), exercícios de Reading
   // e Complete the Words, Listening, Build a Sentence, os blocos do simulado
   // pela seção, e o Listen and Repeat (o aluno marca se repetiu sem erro).
-  // Área com menos de WEAK_MIN respostas não ganha taxa: aparece como "poucos
+  // Também: questão de vocabulário em contexto (data-weak) em Vocabulário,
+  // Build a Sentence em gramática, flashcards do M6 em Vocabulário e o
+  // registro de erros de cada módulo (só erros). Área com menos de WEAK_MIN respostas não ganha taxa: aparece como "poucos
   // dados". Não há estado novo: tudo sai de chaves que já sincronizam.
   function weakAreas(){
     var acc = {};
@@ -5134,10 +5154,33 @@
         if(s && s.confirmed && a && acc[a.painel]) add(a.painel, isCardCorrect(c, s.picked) ? 1 : 0, 1);
       });
     }
-    var r = computeQuizAccuracy("mod1-"), l = computeQuizAccuracy("mod2-"), b = extraAccuracy("bsq");
-    add("reading", r.correct, r.confirmed);
-    add("listening", l.correct, l.confirmed);
+    // exercícios do M1 e do M2: cada questão conta na seção do módulo, menos a
+    // de tipo com área própria (data-weak no build, hoje o vocabulário em
+    // contexto), que conta nessa área
+    [["mod1-", "reading"], ["mod2-", "listening"]].forEach(function(pa){
+      Array.prototype.forEach.call(document.querySelectorAll('.quiz-drill[data-drill^="' + pa[0] + '"]'), function(drillEl){
+        if(isLockedNow(drillEl)) return;
+        var st = read("toefl_quiz_" + drillEl.dataset.drill + "_v1");
+        Array.prototype.forEach.call(drillEl.querySelectorAll(".qcard"), function(c){
+          var s = st[c.dataset.num];
+          if(s && s.confirmed) add(acc[c.dataset.weak] ? c.dataset.weak : pa[1], isCardCorrect(c, s.picked) ? 1 : 0, 1);
+        });
+      });
+    });
+    var ctw = extraAccuracy("ctw"), b = extraAccuracy("bsq");
+    add("reading", ctw.correct, ctw.confirmed);
+    // Build a Sentence é Writing e também gramática e ordem das palavras
     add("writing", b.correct, b.confirmed);
+    add("gramatica", b.correct, b.confirmed);
+    // flashcards do M6: cada palavra já revisada conta 1 vez, pela última nota.
+    // "Errei" deixa a caixa em 0; "Difícil" e "Fácil" passam da caixa 0.
+    Array.prototype.forEach.call(document.querySelectorAll(".srs"), function(root){
+      if(isLockedNow(root)) return;
+      var sr = read("toefl_srs_" + root.dataset.srs + "_v1");
+      Object.keys(sr).forEach(function(w){
+        if(sr[w] && typeof sr[w].box === "number") add("vocabulario", sr[w].box > 0 ? 1 : 0, 1);
+      });
+    });
     // simulado: cada bloco conta na seção do título de cima ("Listen to..." é Listening)
     var section = "reading";
     Array.prototype.forEach.call(document.querySelectorAll("#panel-mod7 h3, #panel-mod7 h4, #panel-mod7 .exam"), function(el){
@@ -5150,7 +5193,7 @@
       var es = read("toefl_exam_" + el.dataset.exam + "_v1");
       if(!es.done || !es.answers) return;
       Array.prototype.forEach.call(el.querySelectorAll(".exam-item"), function(it){
-        add(section, es.answers[it.dataset.num] === it.dataset.correct ? 1 : 0, 1);
+        add(acc[it.dataset.weak] ? it.dataset.weak : section, es.answers[it.dataset.num] === it.dataset.correct ? 1 : 0, 1);
       });
     });
     Array.prototype.forEach.call(document.querySelectorAll('.spk[data-mode="repeat"]'), function(root){
@@ -5159,6 +5202,18 @@
       Object.keys(ss).forEach(function(num){
         if(ss[num] === "ok") add("speaking", 1, 1);
         else if(ss[num] === "miss") add("speaking", 0, 1);
+      });
+    });
+    // registro de erros (quadro "Registre esta sessão", M1 a M6): cada código
+    // marcado conta como 1 erro na área do módulo. Sessão sem código não conta
+    // acerto, porque o aluno não disse quantas acertou.
+    Object.keys(ERRLOG_AREA).forEach(function(mod){
+      var entries;
+      try { entries = JSON.parse(safeGet("toefl_errlog_" + mod + "_v1") || "[]"); } catch(e){ entries = []; }
+      if(!Array.isArray(entries)) return;
+      entries.forEach(function(en){
+        var n = en && Array.isArray(en.codes) ? en.codes.length : 0;
+        if(n) add(ERRLOG_AREA[mod], 0, n);
       });
     });
     return Object.keys(WEAK_AREAS).map(function(k){

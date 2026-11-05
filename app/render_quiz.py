@@ -5,6 +5,14 @@ from rebalance import tag_refs, fixed_order
 from icons import icon
 
 
+def weak_area(prompt):
+    """Área dos pontos fracos pelo tipo da questão, quando o tipo é claro.
+    Hoje só o vocabulário em contexto ("closest in meaning"), que conta em
+    Vocabulário e não na seção. Sem tipo claro devolve None e a questão conta
+    na área do módulo (o app.js decide)."""
+    return "vocabulario" if "closest in meaning" in prompt else None
+
+
 def render_quiz_drill(drill_id, title, objective, passage_html, items, listen=False, level=None, reveal_at_end=False):
     # reveal_at_end=True (diagnóstico do M0): cada resposta confirmada fica
     # guardada sem correção; o gabarito e as explicações aparecem juntos
@@ -28,6 +36,8 @@ def render_quiz_drill(drill_id, title, objective, passage_html, items, listen=Fa
         multi_attr = f' data-multi="{it["multi"]}"' if it.get("multi") else ""
         if it.get("area"):
             multi_attr += f' data-area="{it["area"]}"'
+        if weak_area(it["prompt"]):
+            multi_attr += f' data-weak="{weak_area(it["prompt"])}"'
         # o app.js embaralha a ordem das alternativas a cada sessão; itens
         # cuja letra tem significado próprio ficam na ordem original
         if fixed_order(it["prompt"], it["explanation"], *it["options"].values()):

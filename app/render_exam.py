@@ -17,6 +17,7 @@ import re
 import markdown as md
 
 from rebalance import rebalance_items, tag_refs
+from render_quiz import weak_area
 
 ITEM_NUM_RE = re.compile(r"^(\d+)\. (.+)$")
 ITEM_Q_RE = re.compile(r"^\*\*QUESTÃO(?: (\d+))?(?: · [^:*]+)?:\*\* ?(.*)$")
@@ -67,8 +68,9 @@ def render_exam(exam_id, items):
         note = f'<span class="exam-hint">{tag_refs(inline(it["note"]))}</span>' if it.get("note") else ""
         expl = f'<p class="exam-expl" hidden>{tag_refs(inline(it["explanation"]))}</p>' if it.get("explanation") else ""
         pre = f'<div class="exam-pre">{md.markdown(chr(10).join(it["pre"]))}</div>' if it.get("pre") else ""
+        weak = f' data-weak="{weak_area(it["prompt"])}"' if weak_area(it["prompt"]) else ""
         cards.append(f'''
-  <div class="exam-item" data-num="{it["num"]}" data-correct="{it["correct"]}">
+  <div class="exam-item" data-num="{it["num"]}" data-correct="{it["correct"]}"{weak}>
     {pre}
     <p class="exam-prompt"><span class="exam-n">{it["num"]}</span><span class="exam-q">{inline(it["prompt"])}{note}</span></p>
     <div class="exam-opts">{opts}</div>

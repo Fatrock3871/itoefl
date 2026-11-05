@@ -15,6 +15,7 @@ def render_error_log(mod_key, codes):
     return f'''
 <div class="errlog" data-errlog="{mod_key}">
   <p class="errlog-title">Registre esta sessão</p>
+  <p class="errlog-note">Cada erro que você marca aqui ajuda o Painel a mostrar onde vale a pena treinar.</p>
   <form class="errlog-form">
     <div class="errlog-row">
       <label class="errlog-field">Data<input type="date" class="errlog-date"></label>

@@ -425,6 +425,17 @@ abaixo são os itens dela). Relato item a item em
       "Sua prioridade hoje" na faixa do topo e no Painel, com a regra no
       CLAUDE.md (4a3b2e6). Sem SQL. Smoke: 358 checagens. Itens 35 a 43
       feitos; falta só revisar e aceitar o pull request (U).
+- [x] (C) Pontos fracos com mais dados (Claude, branch
+      `claude/pontos-fracos-dados`, 2026-11-04): o registro de erros do M1 ao
+      M6 entra na área do módulo (cada código marcado é 1 erro), o vocabulário
+      em contexto e os flashcards do M6 contam em Vocabulário, e Build a
+      Sentence conta também em gramática. Tela de entrar: a caixa de aviso
+      começa vazia e esvazia ao trocar de aba, ao digitar e ao voltar pelo
+      histórico. Não reproduzi o aviso de confirmar o e-mail aparecendo
+      sozinho; o smoke test agora reprova se ele aparecer ao abrir a tela.
+- [ ] (U) Testar com o Supabase de verdade: abrir a tela de entrar, errar a
+      senha (deve dizer "E-mail ou senha incorretos.") e entrar com conta sem
+      e-mail confirmado (deve pedir a confirmação).
 - [ ] (U) Para trocar o nome do curso: mudar `BRAND_NAME` em
       `app/site.json` e rodar as builds. As edge functions `review-essay`
       (e-mail da correção) e `create-checkout` (nome do produto) ainda têm
