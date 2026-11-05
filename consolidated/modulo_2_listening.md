@@ -445,7 +445,7 @@ No **Passo 3**, repare no motivo pelo qual as outras opções caem nos padrões 
 
 **A1.** *"I was going to grab lunch before the seminar, but there's no time now."* (A) "I usually have lunch at the café downstairs." (B) "Yeah, let's just head straight there." (C) "The seminar was really interesting." (D) "I ate there last week too."
 
-**A2.** *"Do you mind if I borrow your notes from Tuesday? I was out sick."* (A) "Sure: I'll send them over tonight." (B) "I hope you feel better soon." (C) "I borrowed a book from the library on Tuesday." (D) "Tuesday's class starts at nine."
+**A2.** *"Do you mind if I borrow your notes from Tuesday? I was out sick."* (A) "Sure, I'll send them over tonight." (B) "I hope you feel better soon." (C) "I borrowed a book from the library on Tuesday." (D) "Tuesday's class starts at nine."
 
 **A3.** *"Honestly, I'm not sure this draft is ready to submit."* (A) "I'm sure the printer is ready." (B) "What do you think it still needs?" (C) "I submitted mine yesterday." (D) "That's a great title."
 
@@ -453,19 +453,19 @@ No **Passo 3**, repare no motivo pelo qual as outras opções caem nos padrões 
 
 **A5.** *"I heard the registrar's office changed their hours."* (A) "I registered for four classes this term." (B) "Really? Do you know the new schedule?" (C) "The office is on the second floor." (D) "I haven't registered for anything yet."
 
-**A6.** *"Could you run your presentation by me before the meeting?"* (A) "I ran three miles this morning." (B) "Sure: are you free around four?" (C) "The meeting's been moved to Thursday." (D) "I gave my first presentation in high school."
+**A6.** *"Could you run your presentation by me before the meeting?"* (A) "I ran three miles this morning." (B) "Sure, are you free around four?" (C) "The meeting's been moved to Thursday." (D) "I gave my first presentation in high school."
 
-**A7.** *"I thought the lab report was due next week, not tomorrow."* (A) "So did I: let me double-check the syllabus." (B) "The lab is on the ground floor." (C) "I finished my report last month." (D) "Next week works better for me too."
+**A7.** *"I thought the lab report was due next week, not tomorrow."* (A) "So did I. Let me double-check the syllabus." (B) "The lab is on the ground floor." (C) "I finished my report last month." (D) "Next week works better for me too."
 
-**A8.** *"Would you rather present first or last?"* (A) "The last presentation ran over time." (B) "Last, if that's an option: I need time to prepare." (C) "The presentation is worth 20% of the grade." (D) "First place goes to the best presentation."
+**A8.** *"Would you rather present first or last?"* (A) "The last presentation ran over time." (B) "Last, if that's an option. I need time to prepare." (C) "The presentation is worth 20% of the grade." (D) "First place goes to the best presentation."
 
-**A9.** *"This bus is taking forever. We should've left earlier."* (A) "The bus stop is right over there." (B) "Tell me about it: I hate cutting it this close." (C) "I take this bus every day." (D) "I left my umbrella on the bus once."
+**A9.** *"This bus is taking forever. We should've left earlier."* (A) "The bus stop is right over there." (B) "Tell me about it. I hate cutting it this close." (C) "I take this bus every day." (D) "I left my umbrella on the bus once."
 
 **A10.** *"Professor Lin said she might cancel Friday's class."* (A) "She's a great lecturer, isn't she?" (B) "Did she say why, or was it just a maybe?" (C) "Friday's class is in the east building." (D) "I've never had a class canceled before."
 
 **A11.** *"I've been meaning to ask: how did the interview go?"* (A) "It's at two o'clock on Thursday." (B) "Better than I expected, actually. They said they'd call by Friday." (C) "I've had a lot of interviews lately." (D) "The company is downtown, near the station."
 
-**A12.** *"Do you think it's worth applying? I doubt I'd get in."* (A) "The application fee is fifty dollars." (B) "You never know unless you try: I'd go for it." (C) "I applied there two years ago." (D) "The program starts in September."
+**A12.** *"Do you think it's worth applying? I doubt I'd get in."* (A) "The application fee is fifty dollars." (B) "You never know unless you try. I'd go for it." (C) "I applied there two years ago." (D) "The program starts in September."
 
 ---
 

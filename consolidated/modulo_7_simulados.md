@@ -376,7 +376,7 @@ This standardizing effect was not entirely welcome. Writers who spoke regional v
 
 **QUESTÃO:** Best response:
 - (A) "The class is at ten."
-- (B) "Focus on the intro and the conclusion: that's usually enough to follow the discussion."
+- (B) "Focus on the intro and the conclusion. That's usually enough to follow the discussion."
 - (C) "I bought the book last semester."
 - (D) "There are forty students in that class."
 

@@ -2119,6 +2119,61 @@ document.title = JSON.stringify(results);
 """
 
 
+# revisão de 2026-11-04: começo curto de fala ("Sure", "So did I", "Tell me
+# about it") seguido de ": " é a regra do dois-pontos do português aplicada ao
+# inglês por engano, e só a alternativa certa tinha, o que entregava o gabarito
+OPTION_LEADING_COLON = re.compile(r"^\W*[A-Z][\w']*(?:,? [\w']+){0,6}: \S")
+MD_OPTION = re.compile(r"\(([A-D])\) \"([^\"]+)\"")
+CITED_DISTRACTOR = re.compile(r"\(([A-D])\) \"(?:\[\[)?([^\":\]]+)")
+
+
+def answer_option_checks():
+    """Alternativa em inglês não pode ter ": " depois de um começo curto de
+    fala, nos drills, no diagnóstico e nos .md. E o gabarito do diagnóstico do
+    M0 (quiz_mod0.json e a tabela 1.3 do .md) não pode citar como distrator
+    "(D) "palavra"" uma palavra que não é a alternativa (D) da questão."""
+    sys.path.insert(0, str(APP_DIR))
+    import drills_data
+    bad_colon, bad_cited, compared = [], [], 0
+
+    options = []  # (onde, texto)
+    for name in dir(drills_data):
+        if name.startswith("MOD"):
+            for d in getattr(drills_data, name):
+                for it in d["items"]:
+                    options += [(f"{d['id']}/{it['num']}", t) for t in it["options"].values()]
+    quiz = json.loads((APP_DIR / "quiz_mod0.json").read_text(encoding="utf-8"))
+    options += [(f"quiz_mod0/{q['num']}", t) for q in quiz for t in q["options"].values()]
+    for md in sorted((APP_DIR.parent / "consolidated").glob("modulo_*.md")):
+        for n, line in enumerate(md.read_text(encoding="utf-8").split("\n"), 1):
+            if not line.startswith(("|", ">")):  # tabela de gabarito e caixa de explicação citam, não oferecem
+                options += [(f"{md.name}:{n}", m.group(2)) for m in MD_OPTION.finditer(line)]
+    bad_colon = [where for where, text in options if OPTION_LEADING_COLON.search(text)]
+
+    def cited(explanation, opts, where):
+        nonlocal compared
+        for letter, word in CITED_DISTRACTOR.findall(explanation):
+            compared += 1
+            if word.strip().lower() != opts.get(letter, "").strip().lower():
+                bad_cited.append(f"{where} ({letter}) {word}")
+
+    for q in quiz:
+        cited(q["why_wrong"], q["options"], f"quiz_mod0/{q['num']}")
+    md0 = (APP_DIR.parent / "consolidated" / "modulo_0_embarque.md").read_text(encoding="utf-8")
+    md0 = md0[md0.find("### 1.2 "):md0.find("### 1.4 ")]  # questões e gabarito comentado
+    md_opts = {}
+    for num, line in re.findall(r"\*\*Questão (\d+):[^\n]*\n(?:[^\n]*\n){0,4}?(\(A\) [^\n]*)", md0):
+        md_opts[num] = {l: t.strip() for l, t in re.findall(r"\(([A-D])\) (.*?)(?= \([A-D]\) |$)", line)}
+    for num, last in re.findall(r"^\| \*\*(\d+)\*\* \|.*\|([^|]*)\|\s*$", md0, re.M):
+        cited(last, md_opts.get(num, {}), f"modulo_0_embarque.md Q{num}")
+    return {
+        "options_no_colon_after_short_reply": not bad_colon and len(options) > 400,
+        "options_no_colon_after_short_reply__error": ", ".join(bad_colon[:10]) or f"{len(options)} alternativas lidas",
+        "diag_cited_distractor_is_an_option": not bad_cited and compared >= 10 and len(md_opts) == 10,
+        "diag_cited_distractor_is_an_option__error": ", ".join(bad_cited[:10]) or f"{compared} citações, {len(md_opts)} questões no .md",
+    }
+
+
 def build_fixture(work):
     """Builda o site de exemplo em `work` e devolve o index.html gerado."""
     # supabase/functions/_shared: o build cola as regras de redação de lá
@@ -2234,6 +2289,7 @@ def main():
     results.update(deep_markup_checks())
     results.update(bank_checks())
     results.update(content_review_checks())
+    results.update(answer_option_checks())
     results.update(english_dot_checks())
     results.update(portuguese_dash_checks())
     results.update(etapa3_text_checks())

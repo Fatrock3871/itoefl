@@ -82,8 +82,8 @@ What can be inferred from this statement?
 | **2** | **(C)** paradoxically | O conector precisa mostrar o contraste e a ironia entre a intenção da política, que era reduzir custos, e o resultado real, que foi aumentá-los. A palavra "[[paradoxically::paradoxalmente]]" captura bem essa contradição inesperada. | (A) "[[furthermore::além disso]]" e (B) "[[as a result::como resultado]]" indicam continuidade ou consequência lógica, o que não cabe num contraste; (D) "[[similarly::da mesma forma]]" indica semelhança, o oposto do que a frase pede. |
 | **3** | **(C)** deflect | A combinação natural em inglês é "[[deflect criticism::desviar críticas]]": adiar a votação foi uma tentativa de tirar o foco das críticas públicas. | (A) "[[defer::adiar]]" confunde por lembrar o adiamento da votação, mas não se diz "defer criticism"; (B) "[[exacerbate::agravar]]" tem o sentido contrário ao da frase; (D) "[[endorse::endossar, apoiar]]" não faz sentido com "criticism". |
 | **4** | **(C)** had been | Trata-se da condicional de tipo 3, usada para hipóteses no passado. Como a oração principal traz "[[would already have hired::já teria contratado]]", a oração com "if" pede o [[past perfect::passado perfeito]] em "[[had been approved::tivesse sido aprovado]]", e "[[last quarter::no último trimestre]]" confirma que o fato já passou. | (A) e (B) são formas de passado simples ou subjuntivo que não combinam com a condicional de tipo 3; (D) está no [[present perfect::presente perfeito]], tempo inadequado para uma hipótese sobre o passado. |
-| **5** | **(B)** facing numerous setbacks | A ordem correta pede verbo no gerúndio seguido de objeto ("[[facing numerous setbacks::enfrentar inúmeros contratempos]]") logo após a preposição "[[despite::apesar de]]", formando preposição, gerúndio e complemento. | (A) inverte o adjetivo e o verbo de um jeito pouco natural; (C) e (D) quebram a ordem das palavras em inglês, já que o adjetivo vem antes do substantivo e o verbo vem antes do objeto. |
-| **6** | **(C)** consequently | A segunda oração é consequência direta da primeira: como os recifes são sensíveis, o aquecimento já causou branqueamento. "[[Consequently::consequentemente, por isso]]" marca essa relação de causa e efeito. | (A) "[[nevertheless::ainda assim]]" e (B) "[[in contrast::em contraste]]" indicam oposição e não cabem numa relação de causa e efeito; (D) "[[similarly::da mesma forma]]" indica semelhança, mas a segunda oração não compara nada. |
+| **5** | **(B)** facing numerous setbacks | A ordem correta pede verbo no gerúndio seguido de objeto ("[[facing numerous setbacks::enfrentar inúmeros contratempos]]") logo após a preposição "[[despite::apesar de]]", formando preposição, gerúndio e complemento. | (A) põe o objeto ("[[numerous setbacks::inúmeros contratempos]]") antes do gerúndio, ordem que o inglês não aceita; (C) e (D) quebram a ordem das palavras em inglês, já que o adjetivo vem antes do substantivo e o verbo vem antes do objeto. |
+| **6** | **(C)** consequently | A segunda oração é consequência direta da primeira: como os recifes são sensíveis, até um aumento de um grau pode causar branqueamento em massa. "[[Consequently::consequentemente, por isso]]" marca essa relação de causa e efeito. | (A) "[[nevertheless::ainda assim]]" e (B) "[[in contrast::em contraste]]" indicam oposição e não cabem numa relação de causa e efeito; (D) "[[meanwhile::enquanto isso]]" indica simultaneidade no tempo, não causa e efeito. |
 | **7** | **(A)** substantiate | A expressão "[[substantiate an argument::sustentar ou comprovar um argumento com evidências]]" é a combinação acadêmica natural para esse contexto. | (B) "[[fabricate::fabricar, inventar]]" tem sentido oposto ao de uma pesquisa séria; (C) "[[alleviate::aliviar]]" não combina com argumentos; (D) "[[diminish::diminuir]]" enfraquece a ideia em vez de sustentá-la. |
 | **8** | **(C)** whose | "[[Whose::cujo, cuja]]" é o pronome relativo possessivo e vale também para coisas, não só para pessoas: "whose implications" equivale a "its implications", sem repetir "its". | (A) "that its" é incorreto na gramática do inglês porque "that" não se combina com possessivo assim; (B) "which its" repete a ideia de posse de forma redundante e incorreta; (D) "who's" é a contração de "who is", não um possessivo. |
 | **9** | **(B)** | A frase traz abertura formal ("[[I am writing to respectfully request::escrevo para solicitar respeitosamente]]") e justificativa objetiva: é o tom adequado para uma instituição e segue o padrão de [[Write an Email::Escreva um e-mail]]. | (A), (C) e (D) usam expressões informais como "[[Hey::Oi]]", "[[just wondering::só queria saber]]", "[[stuff::coisas]]" e "[[you guys::vocês]]", ou um tom de cobrança direta em "[[it's urgent::é urgente]]", inadequados para um e-mail formal. |
@@ -193,14 +193,14 @@ Repare também no **Speaking**: são apenas 8 minutos, mas eles somam 55 pontos 
 ### 3.3 Os tipos de item: mapa completo
 
 #### Reading
-| Task | Itens | O que testa | CEFR |
+| Tarefa | Itens | O que testa | CEFR |
 |---|---|---|---|
 | **[[Complete the Words::Complete as palavras]]** | 30 (1pt cada) | Completar o final de palavras cortadas em parágrafos curtos (10 por parágrafo): gramática, forma e ortografia da palavra, compreensão | B1–C1+ |
 | **[[Read in Daily Life::Leia textos do dia a dia]]** | 5–15 (1pt cada) | Textos curtos não acadêmicos (placa, cardápio, e-mail, post) | A1–C1 |
 | **[[Read an Academic Passage::Leia uma passagem acadêmica]]** | 5–15 (1pt cada) | Ideia principal, detalhes, inferência, estrutura retórica | B1–C2 |
 
 #### Listening
-| Task | Itens | O que testa | CEFR |
+| Tarefa | Itens | O que testa | CEFR |
 |---|---|---|---|
 | **[[Listen and Choose a Response::Ouça e escolha uma resposta]]** | 15–19 (1pt cada) | Diálogo de troca única entre duas pessoas | A1–B2 |
 | **[[Listen to a Conversation::Ouça uma conversa]]** | 10 (1pt cada) | Conversas curtas entre duas pessoas | A2–C1 |
@@ -208,17 +208,17 @@ Repare também no **Speaking**: são apenas 8 minutos, mas eles somam 55 pontos 
 | **[[Listen to an Academic Talk::Ouça uma aula ou palestra acadêmica]]** | 8–16 (1pt cada) | Palestra acadêmica: ideia central, inferência, vocabulário idiomático | A2–C2 |
 
 #### Writing
-| Task | Itens | O que testa | CEFR | Corretor |
+| Tarefa | Itens | O que testa | CEFR | Corretor |
 |---|---|---|---|---|
 | **[[Build a Sentence::Monte uma frase]]** | 10 (1pt cada) | Reconstruir estruturas de frase em contexto social ou interpessoal | A1–C2 | Máquina |
 | **[[Write an Email::Escreva um e-mail]]** | 1 (5pts) | E-mail curto em resposta a uma situação do dia a dia ou da vida universitária, cobrindo 3 pontos pedidos | B1–C2 | IA |
 | **[[Write for an Academic Discussion::Escreva para um debate acadêmico]]** | 1 (5pts) | Parágrafo acadêmico com argumento sustentado, gramática e vocabulário variados | B1–C2 | IA |
 
 #### Speaking
-| Task | Itens | O que testa | CEFR | Corretor |
+| Tarefa | Itens | O que testa | CEFR | Corretor |
 |---|---|---|---|---|
 | **[[Listen and Repeat::Ouça e repita]]** | 7 (5pts cada) | Repetir frases com precisão e inteligibilidade: progride de orações simples a estruturas complexas | A1–C2 | IA (SpeechRater) |
-| **[[Take an Interview::Faça uma entrevista]]** | 4 (5pts cada) | Responder perguntas com elaboração clara, gramática precisa, prosódia inteligível: descrições, opiniões, previsões, narrações | A1–C2 | IA (SpeechRater) |
+| **[[Take an Interview::Faça uma entrevista]]** | 4 (5pts cada) | Responder perguntas com elaboração clara, gramática precisa e prosódia inteligível, cobrindo descrições, explicações, opiniões, sugestões, previsões e narrações | A1–C2 | IA (SpeechRater) |
 
 O **Speaking** concentra tudo em apenas 2 formatos: Listen and Repeat e Take an Interview. Você não precisa mais decorar aqueles discursos longos do formato antigo.
 
