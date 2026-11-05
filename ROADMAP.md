@@ -373,7 +373,19 @@ do banco de questões, porque define o formato de dois tipos de item.
       escrita no e-mail e na discussão, e as 13 respostas-modelo fechadas até
       o aluno pedir (antes ficavam à vista, embaixo do enunciado). O Build a
       Sentence do M7 continua no molde antigo, de reordenar e escrever.
-- [ ] (C) Geração de questões por nível: depende do banco (Etapa 2).
+- [x] (C) Questões por nível (Claude, 2026-11-05, branch `claude/banco-niveis`):
+      banco de 180 questões, 30 por nível CEFR (`app/banco_niveis.json`,
+      escritas pelo Gemini e revisadas pelo Claude: 14 alteradas, relatório em
+      `itoefl-gerencia/banco-niveis/REVISAO-claude.md`). Diagnóstico
+      adaptativo opcional no M0 e na apresentação, "Questões para o seu nível"
+      no Painel (70% do nível e 30% do de cima, sobe com 80% e desce abaixo de
+      40% em 15 seguidas), 5 questões na conta grátis, respostas nos pontos
+      fracos pela habilidade. Sincroniza em `toefl_banco_v1` e
+      `toefl_diagad_v1`, sem SQL. Regras no `CLAUDE.md` e no `app/banco.js`.
+- [ ] (U) Passar as 180 questões do banco por nível por um professor e testar
+      o adaptativo num celular. Só foram testados em Chrome.
+- [ ] (D) O texto dos Termos (`legal/termos.md`, conta grátis) não cita as
+      5 questões do banco. Atualizar quando o advogado revisar.
 
 ### Correção de 2026-10-25, Etapa 1: estrutura e fluxo
 
@@ -625,6 +637,7 @@ Não foram pedidos, apareceram ao consolidar a lista.
 | Tipos de pergunta extintos | **Remover** Sentence Simplification, Insert a Sentence, Prose Summary e arrastar para a tabela, e **encurtar as passagens** para o padrão da prova de 2026. Entra na rodada 2 da revisão de conteúdo | 2026-10-13 |
 | Drills legados | **Apagar** `MOD1_DRILLS` e `MOD2_DRILLS` de `app/drills_data.py`: não apareciam no site | 2026-10-13 |
 | Diagnóstico e metas | Diagnóstico é a **Parte 1 do M0**, com gabarito só no fim e tela de resultado (nível, áreas, fortes e a melhorar). O aluno informa a banda que precisa e a data da prova; o site indica 30, 60 ou 90 dias pelas regras da Parte 6 e a **meta de hoje sai desse cronograma**, ajustando se o aluno atrasar | 2026-10-25 |
+| Banco por nível | 180 questões marcadas por nível e habilidade. Diagnóstico **rápido (10 fixas)** ou **adaptativo** (começa no B1, sobe ao acertar e desce ao errar, 12 a 15 questões), os dois com o mesmo plano e a mesma banda. No Painel, rodadas com ~70% do nível e ~30% do de cima; 80% ou mais em 15 seguidas do nível sobe, abaixo de 40% desce. Conta grátis: os dois diagnósticos e 5 questões do banco | 2026-11-05 |
 | Teoria x prática | Cada Parte tem selo **Teoria, Prática, Simulado ou Referência** e tempo estimado (`app/partes.json`), no topo, na paginação e no mapa do módulo, com "Agora pratique" e "Rever a teoria" | 2026-10-25 |
 | Apresentação antes do login | Quem abre o site ou o app sem sessão vê primeiro a apresentação; "Entrar" no topo e "Começar grátis" como ação principal; quem está logado vai direto ao curso. Espaço para vídeo no topo (`videos.json`, chave `apresentacao`) | 2026-10-25 |
 | Redação | Conta corretora vê "Redações na fila: N (X vencem hoje)" no topo e no menu, com atalho ao Painel do corretor; o aluno recebe a data até a qual a redação será corrigida | 2026-10-25 |
