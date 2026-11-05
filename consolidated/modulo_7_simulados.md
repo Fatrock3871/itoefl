@@ -91,22 +91,37 @@ A tabela abaixo segue a **concordância oficial** publicada pela ETS (a mesma do
 Reading e Listening não seguem uma prova única e fixa, pois funcionam com uma **arquitetura de roteamento** em dois estágios:
 
 ```
-READING                                  LISTENING
-┌─────────────────┐                     ┌──────────────────┐
-│  MÓDULO ROUTER   │  ~9 min             │   MÓDULO ROUTER   │  ~18 min
-│  (dificuldade    │                     │   (dificuldade    │
-│   mista)         │                     │    mista)         │
-└────────┬─────────┘                     └─────────┬─────────┘
-         │ desempenho define rota                  │ desempenho define rota
-         ▼                                          ▼
-┌─────────────────┐                     ┌──────────────────┐
-│ MÓDULO INFERIOR  │  ou  │ MÓDULO       │ MÓDULO INFERIOR   │ ou │ MÓDULO
-│ (mais fácil,     │      │ SUPERIOR     │ (mais fácil,      │    │ SUPERIOR
-│  teto de banda   │      │ (mais difícil,│  teto de banda    │    │ (mais difícil,
-│  mais baixo)     │      │  acesso a     │  mais baixo)      │    │  acesso a
-│  ~18–21 min      │      │  bandas altas)│  7 min            │    │  bandas altas)
-│                  │      │               │                   │    │  11 min
-└─────────────────┘      └──────────────┘ └──────────────────┘    └──────────────┘
+READING
+┌──────────────────┐
+│ MÓDULO ROUTER    │  ~9 min
+│ (dificuldade     │
+│  mista)          │
+└────────┬─────────┘
+         │ desempenho define rota
+         ▼
+┌──────────────────┐      ┌──────────────────┐
+│ MÓDULO INFERIOR  │      │ MÓDULO SUPERIOR  │
+│ (mais fácil,     │  ou  │ (mais difícil,   │
+│  teto de banda   │      │  acesso a        │
+│  mais baixo)     │      │  bandas altas)   │
+│  ~18–21 min      │      │  ~18–21 min      │
+└──────────────────┘      └──────────────────┘
+
+LISTENING
+┌──────────────────┐
+│ MÓDULO ROUTER    │  ~18 min
+│ (dificuldade     │
+│  mista)          │
+└────────┬─────────┘
+         │ desempenho define rota
+         ▼
+┌──────────────────┐      ┌──────────────────┐
+│ MÓDULO INFERIOR  │      │ MÓDULO SUPERIOR  │
+│ (mais fácil,     │  ou  │ (mais difícil,   │
+│  teto de banda   │      │  acesso a        │
+│  mais baixo)     │      │  bandas altas)   │
+│  7 min           │      │  11 min          │
+└──────────────────┘      └──────────────────┘
 ```
 
 **O que isso muda na prática:** trate cada questão do módulo router como se já valesse a nota final, porque indiretamente ela vale. Se você começar os primeiros itens distraído, achando que são apenas um aquecimento, pode ser direcionado para o módulo inferior e ficar sem acesso às bandas mais altas (5–6), mesmo tendo capacidade para alcançá-las. A Parte 2 organiza o passo a passo para você entrar focado desde o início.
@@ -119,7 +134,7 @@ READING                                  LISTENING
 
 | # | Regra | Por que importa no formato 2026 |
 |---|---|---|
-| **1** | Realize cada simulado em sessão única e sem interrupções | O teste real dura de ~1h23 a 1h29min sem pausa programada entre as seções, então dividir o treino corta o exercício de foco contínuo que você está calibrando |
+| **1** | Realize cada simulado em sessão única e sem interrupções | O teste real dura de ~1h23min a 1h29min sem pausa programada entre as seções, então dividir o treino corta o exercício de foco contínuo que você está calibrando |
 | **2** | Trate cada item do módulo [[router::bloco inicial de nivelamento]] (Reading e Listening) com o mesmo cuidado de uma questão decisiva | O bloco inicial define a sua rota de dificuldade, e um erro por pressa na largada pode limitar o teto de banda disponível no restante da seção |
 | **3** | Use papel para as anotações de Listening e Speaking (não digite no computador) | Isso reproduz a experiência real de anotação manual do dia da prova |
 | **4** | No Simulado 2, consulte as estruturas de Speaking (Módulo 3) e os modelos de Writing (Módulo 4) abertamente | Como o objetivo desta etapa é fixar o formato das respostas, consultar o material ajuda a consolidar o modelo certo sem travar |
@@ -588,9 +603,9 @@ Cenário: uma visita guiada à **biblioteca** do campus. Assim como na prova, as
 5. *"Laptops and phone chargers can be checked out at the front desk."*
 6. *"Group study rooms on the third floor can be reserved online up to a week in advance."*
 
-#### Take an Interview (elicitação variada)
+#### Take an Interview (uma pergunta por função)
 
-Você tem **45 segundos** para cada resposta, sem tempo de preparação, exatamente como na prova. Grave todas as suas falas.
+Você tem **45 segundos** para cada resposta, sem tempo de preparação, exatamente como na prova. Na prova são 4 perguntas sobre um mesmo tema; aqui são 6, uma por função comunicativa, para você treinar todas. Grave todas as suas falas.
 
 1. **(Descrição)** "Describe a place in your city that you think visitors should see. What makes it special?"
 2. **(Opinião)** "Do you think it's better for students to study alone or in groups? Why?"

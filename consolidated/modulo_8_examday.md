@@ -2,7 +2,7 @@
 
 Conteúdo do **iTOEFL** atualizado para o formato do exame TOEFL iBT® vigente desde 21 de janeiro de 2026.
 
-> **Resumo:** a sua prova não começa na hora marcada. Ela começa sete dias antes, no momento em que você decide cuidar do seu descanso para chegar inteiro ao grande dia.
+> **Resumo:** A sua prova não começa na hora marcada. Ela começa sete dias antes, no momento em que você decide cuidar do seu descanso para chegar inteiro ao grande dia.
 
 ---
 
@@ -10,7 +10,7 @@ Conteúdo do **iTOEFL** atualizado para o formato do exame TOEFL iBT® vigente d
 
 É normal sentir vontade de revisar tudo na última semana, mas este é o momento de tirar o pé do acelerador. Quem estuda até a exaustão na véspera chega ao exame cansado e ansioso, com o raciocínio prejudicado pela **fadiga**. Quem organiza esses 7 dias finais com calma chega com a mente descansada e afiada.
 
-> **Dica:** nos 7 dias antes da prova, o seu objetivo é consolidar o que você já sabe e chegar ao dia do exame no seu melhor estado físico e mental, sem tentar aprender matéria nova.
+> **Dica:** Nos 7 dias antes da prova, o seu objetivo é consolidar o que você já sabe e chegar ao dia do exame no seu melhor estado físico e mental, sem tentar aprender matéria nova.
 
 ### D-7: o último simulado
 
@@ -54,7 +54,7 @@ Conteúdo do **iTOEFL** atualizado para o formato do exame TOEFL iBT® vigente d
 | **Tarde** | Leitura leve em inglês: um artigo do The Atlantic, da Scientific American ou da BBC Future, só pelo hábito de ler e sem exercícios | 20 min |
 | **Noite** | Começo pra valer da rotina de sono: desligue as telas 60 minutos antes de deitar, durma no horário planejado e não veja nenhum conteúdo novo após o jantar | - |
 
-> **Dica:** a memória de longo prazo se fixa principalmente enquanto dormimos, e o que você praticou nos últimos dias se consolida nas noites de D-3 e D-2. Se você dormir bem nessas duas noites, dormir menos na véspera (D-1), o que é comum por causa da ansiedade, vai pesar bem menos do que você imagina.
+> **Dica:** A memória de longo prazo se fixa principalmente enquanto dormimos, e o que você praticou nos últimos dias se consolida nas noites de D-3 e D-2. Se você dormir bem nessas duas noites, dormir menos na véspera (D-1), o que é comum por causa da ansiedade, vai pesar bem menos do que você imagina.
 
 ### D-2: visualização e preparação mental
 
@@ -66,7 +66,7 @@ Conteúdo do **iTOEFL** atualizado para o formato do exame TOEFL iBT® vigente d
 
 ### D-1: dia de preservação
 
-> **Atenção:** na véspera (D-1), nada de matéria nova nem de tentar revisar tudo de uma vez. O que não foi aprendido até aqui não entra em 24 horas, e o estresse de tentar só atrapalha o que você já sabe.
+> **Atenção:** Na véspera (D-1), nada de matéria nova nem de tentar revisar tudo de uma vez. O que não foi aprendido até aqui não entra em 24 horas, e o estresse de tentar só atrapalha o que você já sabe.
 
 | Período | Atividade | Duração |
 |---|---|---|
@@ -94,8 +94,8 @@ CAFÉ DA MANHÃ (detalhes na Parte 3): 90–120 minutos antes do início da prov
 CAFEÍNA (se for sua prática habitual): 45–60 minutos antes do início
   ↓
 REVISÃO MENTAL FINAL (10 minutos, máximo)
-  Releia apenas os frameworks de abertura do Módulo 3 e os 10 marcadores do Módulo 5
-  Repita sua Anchor Phrase pessoal (veja Parte 4)
+  Releia apenas as estruturas de abertura do Módulo 3 e os 10 marcadores do Módulo 5
+  Repita a sua frase-âncora pessoal (veja a Parte 4)
   ↓
 SAÍDA COM ANTECEDÊNCIA: chegada ao centro 30 minutos antes do horário marcado
 ```
@@ -107,14 +107,14 @@ CHEGADA (30 min antes)
   Documento de identidade + confirmação de inscrição
   Guarde pertences no armário designado
   ↓
-CHECK-IN E SETUP (~15–20 min antes)
-  Biometria (foto/digital)
+CHECK-IN E PREPARAÇÃO (~15–20 min antes)
+  Biometria (foto e digital)
   Receba folhas de rascunho + lápis
   Ajuste o fone de ouvido e teste o volume antes de começar
   ↓
 ANTES DE CLICAR EM "INICIAR"
   3 respirações profundas
-  Anchor Phrase silenciosa
+  Frase-âncora silenciosa
   "Siga o plano."
 ```
 
@@ -122,7 +122,7 @@ ANTES DE CLICAR EM "INICIAR"
 
 ## Parte 3: Sono, comida e energia na semana da prova
 
-> **Atenção:** as orientações abaixo vêm de estudos bem estabelecidos sobre sono e alimentação, mas são gerais e não substituem a orientação individual de um médico ou nutricionista.
+> **Atenção:** As orientações abaixo vêm de estudos bem estabelecidos sobre sono e alimentação, mas são gerais e não substituem a orientação individual de um médico ou nutricionista.
 
 ### 🧠 Sono: o seu maior aliado para o foco e a memória
 
@@ -249,19 +249,19 @@ Quando uma seção terminar:
 5. Clique em "PRÓXIMO"
 ```
 
-> **Dica:** a sua banda de Speaking é matematicamente independente da sua banda de Listening. Um Listening que pareceu difícil não tira nenhum ponto do seu Speaking, então deixe a seção anterior ficar no passado.
+> **Dica:** A sua banda de Speaking é matematicamente independente da sua banda de Listening. Um Listening que pareceu difícil não tira nenhum ponto do seu Speaking, então deixe a seção anterior ficar no passado.
 
 ### 🎯 Passo a passo 4: o recomeço de questão (quando você trava no meio da seção)
 
 ```
 Quando perceber que errou um item ou ficou preso:
-1. NÃO releia o mesmo item pela quarta vez.
+1. Não releia o mesmo item pela quarta vez.
 2. Faça a escolha mais plausível.
 3. Diga mentalmente: "Próximo item. Página em branco."
 4. Avance.
 ```
 
-> **Atenção:** no Reading e no Listening do formato 2026, que são adaptativos, normalmente não dá para voltar a questões já respondidas dentro de um módulo. Por isso virar a página é tão importante, já que pensar no item que passou só tira o foco dos próximos, que você ainda pode acertar.
+> **Atenção:** No Reading e no Listening do formato 2026, que são adaptativos, normalmente não dá para voltar a questões já respondidas dentro de um módulo. Por isso virar a página é tão importante, já que pensar no item que passou só tira o foco dos próximos, que você ainda pode acertar.
 
 ### ⚙️ Treine essas rotinas antes para não estrear no dia da prova
 
@@ -272,7 +272,7 @@ Nenhuma dessas rotinas funciona direito se a primeira vez que você tenta usá-l
 - **Frase-âncora:** escolha a sua *Anchor Phrase* já nesta semana e repita no início de cada seção dos simulados, sem deixar para inventar uma frase nova no dia da prova.
 - **Recomeço de questão:** toda vez que perceber que travou num item durante um exercício cronometrado, diga mentalmente "próximo item, página em branco" e avance, treinando a mão a clicar.
 
-> **Resumo:** se você deixar para testar essas rotinas só no dia da prova, elas vão parecer apenas técnicas que você leu uma vez e não vão ajudar sob pressão. O objetivo é praticar antes para que fiquem tão naturais quanto respirar.
+> **Resumo:** Se você deixar para testar essas rotinas só no dia da prova, elas vão parecer apenas técnicas que você leu uma vez e não vão ajudar sob pressão. O objetivo é praticar antes para que fiquem tão naturais quanto respirar.
 
 ### Mapa da ansiedade: identifique o seu padrão
 
@@ -288,7 +288,7 @@ Nenhuma dessas rotinas funciona direito se a primeira vez que você tenta usá-l
 
 ## Parte 5: Logística e documentos sem imprevistos
 
-> **Dica:** imprevistos no caminho ou na conferência de documentos gastam a sua energia mental antes mesmo da primeira questão. Deixe toda a parte prática resolvida com antecedência.
+> **Dica:** Imprevistos no caminho ou na conferência de documentos gastam a sua energia mental antes mesmo da primeira questão. Deixe toda a parte prática resolvida com antecedência.
 
 ### ✅ Lista de conferência da véspera (complete em D-2 para ter um dia de folga)
 
@@ -388,7 +388,7 @@ T-00 min → INÍCIO
 
 Sequência oficial: **Reading, Listening, Writing e Speaking**, sem intervalo programado. Duração total de ~1h23–1h29.
 
-> **Regra da ETS:** a ordem das seções é sempre Reading, Listening, Writing e Speaking (*[[Updated TOEFL iBT Test Overview::Visão geral atualizada do teste TOEFL iBT]]*, da ETS), sem intervalo programado (*[[Information Bulletin 2026-2027::Boletim informativo 2026-2027]]*, da ETS). Entre uma seção e outra aparecem apenas as telas de instrução, que não descontam do tempo das questões.
+> **Regra da ETS:** A ordem das seções é sempre Reading, Listening, Writing e Speaking (*[[Updated TOEFL iBT Test Overview::Visão geral atualizada do teste TOEFL iBT]]*, da ETS), sem intervalo programado (*[[Information Bulletin 2026-2027::Boletim informativo 2026-2027]]*, da ETS). Entre uma seção e outra aparecem apenas as telas de instrução, que não descontam do tempo das questões.
 
 A ideia do **passo a passo** abaixo é aproveitar esses poucos segundos de transição para encerrar mentalmente a seção que acabou e sintonizar a sua cabeça na próxima.
 
@@ -450,7 +450,7 @@ Como a prova não tem pausa programada (*Information Bulletin 2026-2027*, da ETS
 4. Anchor Phrase. "[Próxima seção] mode: ON." (5 s)
 ```
 
-> **Erro comum:** continuar pensando nas questões do Listening enquanto o cronômetro do Writing já está rodando. Feche a seção anterior na mente, respire e foque na escrita.
+> **Erro comum:** Continuar pensando nas questões do Listening enquanto o cronômetro do Writing já está rodando. Feche a seção anterior na mente, respire e foque na escrita.
 
 Como o Speaking vem logo depois do Writing, vale aquecer a voz antes do primeiro item. Se você estiver no **centro de testes**, fale 2 ou 3 frases bem baixinho na tela de instruções, descrevendo qualquer coisa que estiver vendo na sala. Já na [[Home Edition::edição em casa]], não fale fora dos itens de Speaking, porque o fiscal remoto pode interpretar como ajuda externa; nesse caso, apenas articule as palavras mexendo os lábios sem som, para não estrear a voz no primeiro item.
 
@@ -475,7 +475,7 @@ Como o Speaking vem logo depois do Writing, vale aquecer a voz antes do primeiro
 - **De 2min30 a 9min:** escreva o texto colocando a sua posição clara já na 1ª frase, desenvolva uma explicação lógica de causa e efeito, traga um exemplo concreto e mencione diretamente o argumento de um colega
 - **De 9 a 10min:** faça a caça aos 5 deslizes mais comuns de brasileiros (esquecer o *-s* de 3ª pessoa, usar artigo indevido, trocar o tempo verbal, emendar frases em *[[run-on::frases coladas sem conector ou pontuação adequada]]* e repetir a mesma palavra)
 
-> **Dica:** se você sentir a mente pesar durante a *Write for an Academic Discussion*, faça o suspiro fisiológico discretamente e continue. Vale mais fechar o parágrafo com posição, razão e conclusão curta do que deixá-lo pela metade.
+> **Dica:** Se você sentir a mente pesar durante a *Write for an Academic Discussion*, faça o suspiro fisiológico discretamente e continue. Vale mais fechar o parágrafo com posição, razão e conclusão curta do que deixá-lo pela metade.
 
 ### 🎤 Speaking (~8 min: 11 itens, correção 100% por IA)
 
@@ -502,7 +502,7 @@ Como o Speaking vem logo depois do Writing, vale aquecer a voz antes do primeiro
 
 ## Parte 7: Se algo der errado no dia (e como seguir em frente)
 
-> **Dica:** grande parte dos tropeços no dia da prova vem do susto diante de um imprevisto, e não de falta de inglês. Saber de antemão como agir em cada situação evita o improviso e devolve a sua calma na hora.
+> **Dica:** Grande parte dos tropeços no dia da prova vem do susto diante de um imprevisto, e não de falta de inglês. Saber de antemão como agir em cada situação evita o improviso e devolve a sua calma na hora.
 
 | Cenário | O que fazer |
 |---|---|

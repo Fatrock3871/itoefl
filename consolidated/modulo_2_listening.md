@@ -53,7 +53,7 @@ Errar várias questões logo nos primeiros itens, mesmo nas falas curtas e apare
 |---|---|---|---|---|---|
 | 1 | **[[Listen and Choose a Response::Ouça e escolha uma resposta]]** | Escolher a resposta natural a uma fala isolada, observando intenção, tom e registro | **15–19** | A1–B2 | 1 fala isolada, muito curta |
 | 2 | **[[Listen to a Conversation::Ouça uma conversa]]** | Propósito, detalhe e relação entre os falantes numa conversa curta | 10 | A2–C1 | 4–9 falas curtas, no cotidiano ou no campus |
-| 3 | **[[Listen to an Announcement::Ouça um anúncio]]** | Detalhe factual (data, local, ação ou exceção) num aviso falado | 6–10 | A2–C1 | monólogo informativo curto |
+| 3 | **[[Listen to an Announcement::Ouça um comunicado]]** | Detalhe factual (data, local, ação ou exceção) num aviso falado | 6–10 | A2–C1 | monólogo informativo curto |
 | 4 | **[[Listen to an Academic Talk::Ouça uma aula ou palestra acadêmica]]** | Ideia principal, detalhe de apoio, inferência, organização e **vocabulário idiomático** | 8–16 | A2–C2 | monólogo acadêmico, até 250 palavras |
 
 Você pode enxergar esses formatos como uma **escada de complexidade**, que vai da resposta a uma única frase (*Choose a Response*) até o monólogo universitário (*Academic Talk*). O router mistura os quatro tipos, e o módulo seguinte distribui o volume de questões na proporção mostrada na tabela.
@@ -69,12 +69,12 @@ Cada questão avalia uma habilidade específica. Quando você reconhece o tipo d
 | **[[Gist-content::Ideia principal do conteúdo]]** | *"[[What is the talk mainly about?::Sobre o que é a palestra principalmente?]]"* | Sintetiza o áudio inteiro, sem se prender a um detalhe isolado |
 | **[[Gist-purpose::Objetivo principal]]** | *"[[Why does the student go to see the advisor?::Por que o estudante vai falar com o orientador?]]"* | Indica o **objetivo** da conversa, e não apenas o assunto de fundo |
 | **[[Detail::Detalhe factual]]** | *"[[According to the speaker, when...?::De acordo com quem fala, quando...?]]"* | Traz uma informação **explícita** do áudio, quase sempre dita com outras palavras |
-| **[[Function::Função comunicativa]]** | *"Why does the woman say: [replay]?"* | Descreve a **intenção** por trás da fala (concordar, discordar, ironizar, corrigir ou exemplificar), fugindo do sentido literal |
+| **[[Function::Função comunicativa]]** | *"[[Why does the woman say::Por que a mulher diz]]: [replay]?"* | Descreve a **intenção** por trás da fala (concordar, discordar, ironizar, corrigir ou exemplificar), fugindo do sentido literal |
 | **[[Attitude::Atitude ou tom]]** | *"[[What is the professor's opinion of...?::Qual é a opinião do professor sobre...?]]"* ou *"[[How does the man feel about...?::Como o homem se sente em relação a...?]]"* | Capta o **tom** (aprova, duvida, surpreende-se ou minimiza) pela escolha de palavras e pela entonação |
 | **[[Organization::Organização estrutural]]** | *"[[Why does the professor mention X?::Por que o professor menciona X?]]"* ou *"[[How does the professor introduce the topic?::Como o professor apresenta o tema?]]"* | Aponta a **função estrutural** do trecho (exemplo de apoio, contraste, digressão ou transição) |
 | **[[Inference::Inferência]]** | *"[[What can be inferred about...?::O que pode ser inferido sobre...?]]"* ou *"[[What does the professor imply?::O que o professor sugere?]]"* | Dá um único passo lógico além do que foi dito, nunca dois; desconfie de opções com *[[always::sempre]]*, *[[never::nunca]]*, *[[only::apenas]]* ou *[[impossible::impossível]]* |
 | **[[Connecting content::Conexão de informações]]** | *"[[What is the likely outcome of...?::Qual é o resultado provável de...?]]"* | Junta duas informações ditas em momentos diferentes do áudio |
-| **[[Prediction::Previsão do próximo tópico]]** | *"[[What will the professor probably discuss next?::O que o professor provavelmente vai discutir a seguir?]]"* | Segue a pista deixada no fim do áudio, como *"[[Next time, we'll look at...::Na próxima vez, vamos olhar para...]]"* ou *"[[Let's turn to...::Vamos passar para...]]"* |
+| **[[Prediction::Previsão do próximo tópico]]** | *"[[What will the professor probably discuss next?::O que o professor provavelmente vai discutir a seguir?]]"* | Segue a pista deixada no fim do áudio, como *"[[Next time, we'll look at...::Na próxima aula, vamos ver...]]"* ou *"[[Let's turn to...::Vamos passar para...]]"* |
 | **[[Vocabulary or idiom in context::Vocabulário ou expressão idiomática em contexto]]** | *"[[What does the speaker mean by 'X'?::O que quem fala quer dizer com 'X'?]]"* | Mostra o sentido **daquela expressão naquele contexto**, enquanto o sentido ao pé da letra funciona como distrator |
 
 ---
@@ -144,7 +144,7 @@ Em **[[Listen and Choose a Response::Ouça e escolha uma resposta]]**, a questã
 
 Em **[[Listen to a Conversation::Ouça uma conversa]]**, identifique logo nos primeiros segundos quem está falando com quem, sobre qual assunto e qual é o pedido ou obstáculo. Como a decisão ou solução costuma aparecer na segunda metade do diálogo, redobre a atenção nesse trecho final e use a Escala 1 de anotação.
 
-Em **[[Listen to an Announcement::Ouça um anúncio]]**, acompanhe o aviso buscando quatro dados principais, que são data, local, ação necessária e exceção ou condição. A ordem mais comum apresenta primeiro o contexto, depois a novidade principal, em seguida a instrução prática e, por fim, um contato ou prazo:
+Em **[[Listen to an Announcement::Ouça um comunicado]]**, acompanhe o aviso buscando quatro dados principais, que são data, local, ação necessária e exceção ou condição. A ordem mais comum apresenta primeiro o contexto, depois a novidade principal, em seguida a instrução prática e, por fim, um contato ou prazo:
 
 - **Armadilha comum:** muitos anúncios citam dois horários ou dois locais (o antigo e o novo), e o distrator costuma trazer justamente o dado desatualizado.
 
@@ -759,4 +759,4 @@ Ação para a próxima sessão: __________________________
 
 ---
 
-✅ Módulo 2 concluído. Você já conhece o Listening no formato 2026 ([[router::bloco inicial de nivelamento]], [[Listen and Choose a Response::Ouça e escolha uma resposta]], [[Listen to a Conversation::Ouça uma conversa]], [[Listen to an Announcement::Ouça um anúncio]] e [[Listen to an Academic Talk::Ouça uma aula ou palestra acadêmica]]), com o Laboratório de Escuta, o exemplo resolvido e o passo a passo de análise de erros. Mais um passo dado, e ele conta muito.
+✅ Módulo 2 concluído. Você já conhece o Listening no formato 2026 ([[router::bloco inicial de nivelamento]], [[Listen and Choose a Response::Ouça e escolha uma resposta]], [[Listen to a Conversation::Ouça uma conversa]], [[Listen to an Announcement::Ouça um comunicado]] e [[Listen to an Academic Talk::Ouça uma aula ou palestra acadêmica]]), com o Laboratório de Escuta, o exemplo resolvido e o passo a passo de análise de erros. Mais um passo dado, e ele conta muito.

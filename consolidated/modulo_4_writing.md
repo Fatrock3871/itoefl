@@ -93,7 +93,7 @@ Para não hesitar na hora de montar os blocos, vale deixar estas **regras de ord
 
 | Estrutura | Ordem padrão | Ponto de atenção para quem fala português |
 |---|---|---|
-| Declarativa simples | Sujeito + Verbo + Objeto (SVO) | Omitir o sujeito em *"Is important to study"*, quando o certo é *"[[It is important to study::É importante estudar]]"* (com **It**) |
+| Declarativa simples | Sujeito obrigatório + Verbo + Complemento | Omitir o sujeito em *"Is important to study"*, quando o certo é *"[[It is important to study::É importante estudar]]"* (com **It**) |
 | Advérbio de frequência | Sujeito + advérbio + verbo principal | Colocar o advérbio depois do verbo em *"She goes always"*, em vez de *"[[She always goes::Ela sempre vai]]"* |
 | Pergunta com auxiliar | Auxiliar + Sujeito + Verbo | Esquecer o auxiliar em *"What you want?"*, quando o certo é *"[[What do you want?::O que você quer?]]"* |
 | Oração subordinada primeiro | Conjunção + subordinada **,** oração principal | Esquecer a vírgula quando a oração subordinada abre a frase |
@@ -333,7 +333,7 @@ Ordene os blocos abaixo para montar cada frase e confira as respostas na **Parte
 > L7. `the report / by / Friday / be / will / submitted` L8. `the results / have / not / yet / announced / been`
 
 **E. Orações relativas**
-> L9. `the professor / recommended / The book / that / very helpful. / was` L10. `the students / studied / who / hardest / passed / the exam`
+> L9. `the professor / recommended / the book / that / very helpful / was` L10. `the students / studied / who / hardest / passed / the exam`
 
 **F. Discurso indireto**
 > L11. `she / said / (that) / the meeting / postponed / had been` L12. `he / asked / whether / I / finished / had / the assignment`
@@ -348,7 +348,7 @@ Ordene os blocos abaixo para montar cada frase e confira as respostas na **Parte
 > L17. `rarely / such / does / one / dedication / see` L18. `not only / did / the team / its targets, / exceed / but / it / also / costs / reduced`
 
 **J. Estruturas de foco com [[cleft sentences::frases clivadas, usadas para destacar um termo]] (C1–C2)**
-> L19. `it / was / the cost / that / the decision / determined` L20. `what / students / most / need / is / feedback / detailed`
+> L19. `it / was / the cost / that / the decision / determined` L20. `what / students / most need / is / feedback / detailed`
 
 **K. Orações reduzidas de particípio (C1–C2)**
 > L21. `finished / having / the analysis, / they / their findings / published` L22. `the report, / just before / submitted / the deadline, / several errors / contained`

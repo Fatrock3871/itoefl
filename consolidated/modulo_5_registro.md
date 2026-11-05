@@ -69,7 +69,7 @@ A tabela abaixo funciona como a sua **referência principal** ao longo do estudo
 
 | Elemento linguístico | B1 (banda 3–3,5) | B2 (banda 4–4,5) | C1–C2 (banda 5–6) |
 |---|---|---|---|
-| **Abertura de resposta oral ([[Take an Interview::Faça uma entrevista]])** | *"[[I think X because...::Eu acho X porque...]]"* | *"[[In my experience, X: mainly because...::Na minha experiência, X, principalmente porque...]]"* | *"[[What stands out for me about X is...::O que mais me chama a atenção em X é...]]"* ou *"[[My view on X comes down to...::A minha visão sobre X se resume a...]]"* |
+| **Abertura de resposta oral ([[Take an Interview::Faça uma entrevista]])** | *"[[I think X because...::Eu acho X porque...]]"* | *"[[In my experience, X, mainly because...::Na minha experiência, X, principalmente porque...]]"* | *"[[What stands out for me about X is...::O que mais me chama a atenção em X é...]]"* ou *"[[My view on X comes down to...::A minha visão sobre X se resume a...]]"* |
 | **Abertura de parágrafo ([[Write for an Academic Discussion::Escreva para uma discussão acadêmica]])** | *"[[I agree with X.::Eu concordo com X.]]"* | *"[[I agree with X, primarily because...::Eu concordo com X, principalmente porque...]]"* | *"[[While both points have merit, the stronger case is that...::Embora os dois pontos tenham mérito, o argumento mais forte é que...]]"* |
 | **Abertura de e-mail ([[Write an Email::Escreva um e-mail]])** | *"[[I am writing because...::Estou escrevendo porque...]]"* | *"[[I am writing to request...::Escrevo para solicitar...]]"* ou *"[[to ask about...::para perguntar sobre...]]"* | *"[[I am writing to request... and to clarify...::Escrevo para solicitar... e para esclarecer...]]"* (objetivo duplo e controlado) |
 | **Conectivos de adição** | *First... Second... [[Also::Além disso]]...* | *[[Furthermore::Além disso]]... [[Additionally::Adicionalmente]]... [[Moreover::Além do mais]]...* | *[[Beyond this::Para além disso]]... [[What is more::Mais ainda]]... [[Compounding this problem::Agravando esse problema]]...* (só para somar um problema a outro) |
@@ -110,7 +110,7 @@ O atlas acima mostra apenas um exemplo para cada elemento. Nas tabelas a seguir 
 | B1 | B2 | C1–C2 |
 |---|---|---|
 | But... ou [[However...::No entanto...]] | [[That said...::Dito isso...]] ou [[In contrast...::Em contraste...]] | [[Notwithstanding this...::Apesar disso...]] |
-| [[On the other hand...::Por outro lado...]] | [[Then again...::Por outro lado, pensando bem...]] | This is not to say that... |
+| [[On the other hand...::Por outro lado...]] | [[Then again...::Por outro lado, pensando bem...]] | [[This is not to say that...::Isso não quer dizer que...]] |
 | [[Still...::Ainda assim...]] | [[Even so...::Mesmo assim...]] | [[The picture is more complicated::O cenário é mais complexo]]: ... |
 
 **Fazer concessão (admitir o outro lado antes de responder):**
@@ -505,7 +505,7 @@ Em [[Take an Interview::Faça uma entrevista]], você tem **45 segundos** para r
 > "I think a part-time job is generally positive, mainly because it teaches time management. When students have to balance work and classes, they learn to prioritize, and that skill carries over into their studies. It can be a problem if the job takes too many hours, but a few hours a week is usually manageable."
 
 **C1–C2:**
-> "On balance I think a part-time job benefits students, and what makes it valuable is less the money than the discipline it forces. Having to juggle shifts and deadlines builds a kind of time management that no class teaches directly. The risk, of course, is a job that creeps past fifteen or twenty hours and starts eating into study time: but within reasonable limits, the trade-off clearly favors working."
+> "On balance I think a part-time job benefits students, and what makes it valuable is less the money than the discipline it forces. Having to juggle shifts and deadlines builds a kind of time management that no class teaches directly. The risk, of course, is a job that creeps past fifteen or twenty hours and starts eating into study time — but within reasonable limits, the trade-off clearly favors working."
 
 *Repare no que muda entre o nível B2 e o C1: a justificativa ganha foco ("[[less the money than the discipline::menos pelo dinheiro do que pela disciplina]]"), a concessão entra integrada na estrutura e surge um detalhe concreto ("[[fifteen or twenty hours::quinze ou vinte horas]]"), sem precisar de nenhuma palavra rara.*
 

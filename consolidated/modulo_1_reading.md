@@ -108,7 +108,7 @@ Glaciers are large masses of ice that move slowly over land.
 They fo_ _ when sn_ _ builds up ov_ _ many years.
 ```
 
-Nesse exemplo, as respostas são *[[form::formam]]*, *[[snow::neve]]* e *[[over::ao longo de]]*, e cada traço representa uma letra. A regra do corte é sempre a mesma: fica visível mais ou menos a **primeira metade** da palavra. Em palavras de duas letras, como *is* ou *of*, aparece apenas a primeira.
+Nesse exemplo, as respostas são *[[form::se formam]]*, *[[snow::neve]]* e *[[over::ao longo de]]*, e cada traço representa uma letra. A regra do corte é sempre a mesma: fica visível mais ou menos a **primeira metade** da palavra. Em palavras de duas letras, como *is* ou *of*, aparece apenas a primeira.
 
 Essa tarefa avalia três **camadas** ao mesmo tempo:
 
@@ -132,7 +132,7 @@ Nenhuma dessas camadas resolve o item sozinha. Uma lacuna como *th_ _* pode ser 
 - **Palavra curta de função:** lacunas como *a_ _*, *th_ _*, *i_* e *o_* parecem fáceis, mas derrubam quem presta atenção só nas palavras longas e deixa passar a preposição ou o conector que a frase pede.
 - **Terminação incompleta:** digitar *[[eruption::erupção]]* onde a frase pede o plural *[[eruptions::erupções]]*, ou *[[call::chamar]]* onde o certo é *[[called::chamado]]*. Conte sempre o número de traços, porque ele avisa quando falta uma terminação.
 - **Ortografia:** como o computador corrige letra por letra, uma troca como *recieve* (em vez de *[[receive::receber]]*) não ganha ponto parcial.
-- **Palavra que cabe nos traços, mas não no sentido:** a lacuna *fo_ _* aceita *form*, *[[fold::dobrar]]*, *[[fork::garfo ou bifurcar]]* e *[[foam::espuma]]*, mas só a primeira faz sentido em *[[They form when snow builds up::Elas se formam quando a neve se acumula]]*.
+- **Palavra que cabe nos traços, mas não no sentido:** a lacuna *fo_ _* aceita *form*, *[[fold::dobrar]]*, *[[fork::bifurcar]]* e *[[foam::espumar]]*, mas só a primeira faz sentido em *[[They form when snow builds up::Elas se formam quando a neve se acumula]]*.
 - **Travar em uma lacuna difícil:** são 30 lacunas na seção inteira. Se uma palavra não vier na hora, siga em frente, porque muitas vezes ela reaparece escrita por inteiro em outra linha ou a lacuna seguinte ajuda você a lembrar.
 
 > **Dica:** Os textos do Grupo A, na Parte 5, reproduzem exatamente esse modelo da prova. Já o Grupo A2 usa lacunas de palavra inteira com alternativas para você treinar com calma a decisão de gramática e [[collocation::combinação natural de palavras]] do Passo 2.
@@ -411,7 +411,7 @@ Hi team,
 
 I wanted to send a quick note before the long weekend. As most of you already (1)_____, the building's heating system will be shut down for scheduled maintenance from Friday evening through Monday morning. Please make sure you (2)_____ any equipment that shouldn't be left running unattended, and take home anything that might be sensitive to temperature changes over the weekend.
 
-The maintenance crew has assured us that the work will be (3)_____ before Monday, so there shouldn't be any disruption when everyone (4)_____ back to the office. However, if the weather turns unexpectedly cold, the building may take a little longer than usual to (5)_____ up again: so please dress in layers just in case.
+The maintenance crew has assured us that the work will be (3)_____ before Monday, so there shouldn't be any disruption when everyone (4)_____ back to the office. However, if the weather turns unexpectedly cold, the building may take a little longer than usual to (5)_____ up again — so please dress in layers just in case.
 
 If you have any questions or concerns, don't (6)_____ to reach out to facilities directly. We'd rather you ask a question that turns out to be unnecessary than (7)_____ a real problem over the weekend.
 

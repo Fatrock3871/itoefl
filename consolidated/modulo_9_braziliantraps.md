@@ -57,7 +57,7 @@ Inglês e português raramente usam a mesma preposição com o mesmo verbo, por 
 | *"research **about** the topic"* | pesquisar **sobre** | **research** the topic (sem preposição); *search **for** information* está certo | ✍️ |
 | *"enter **in** the room"* | entrar **na** sala | **enter** the room (sem preposição) | ✍️ |
 | *"the reason **of** my choice"* | a razão **da** minha escolha | **the reason for** my choice | 🎤✍️ |
-| *"married **with** her"* | casou **com** ela | **married her** ou **got married to her** | ✍️ |
+| *"married **with** her"* | casou ou é casado **com** ela | **married her**, **got married to her** ou **is married to her** | ✍️ |
 | *"agree **with** a proposal"* (querendo dizer "aceitar") | concordar **com** | **agree to** a proposal (aceitar); *agree with* é ter a mesma opinião | ✍️ |
 | *"responsible **of**"* | responsável **por** | **responsible for** | 🎤✍️ |
 | *"interested **on** the topic"* | interessado **em** | **interested in** | 🎤✍️ |
@@ -409,7 +409,7 @@ Muitas palavras parecidas em português e em inglês têm a **sílaba tônica em
 |---|---|---|
 | **develop / development** | de-ve-LO-pe | de-**VE**-lop |
 | **comfortable** | con-for-TÁ-vel | **COMF**-ter-ble (3 síl.) |
-| **economy / economic** | e-co-no-MI-a | e-**CO**-no-my / e-co-**NO**-mic |
+| **economy** | e-co-no-MI-a | e-**CO**-no-my (em *e-co-**NO**-mic* a tônica fica onde está em *e-co-NÔ-mi-co*) |
 | **technology** | tec-no-lo-GI-a | tech-**NO**-lo-gy |
 | **hierarchy** | hi-e-rar-QUI-a | **HI**-e-rar-chy |
 | **democracy** | de-mo-cra-CI-a | de-**MO**-cra-cy |
@@ -420,7 +420,6 @@ Muitas palavras parecidas em português e em inglês têm a **sílaba tônica em
 | **admirable** | ad-mi-RÁ-vel | **AD**-mi-ra-ble |
 | **colleague** | co-LE-ga | **COL**-league |
 | **percent** | PER-cent | per-**CENT** |
-| **hotel / event** | (varia) | ho-**TEL** / e-**VENT** (tônica final) |
 
 ### 4.2 Os 3 padrões de ritmo e entonação
 
