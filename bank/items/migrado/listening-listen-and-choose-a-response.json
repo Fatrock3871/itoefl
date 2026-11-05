@@ -64,7 +64,7 @@
     "prompt": "Choose the best response.",
     "text_format": "html",
     "options": {
-      "A": "Sure — I'll send them over tonight.",
+      "A": "Sure, I'll send them over tonight.",
       "B": "I hope you feel better soon.",
       "C": "I borrowed a book from the library on Tuesday.",
       "D": "Tuesday's class starts at nine."
@@ -245,7 +245,7 @@
     "text_format": "html",
     "options": {
       "A": "I ran three miles this morning.",
-      "B": "Sure — are you free around four?",
+      "B": "Sure, are you free around four?",
       "C": "The meeting's been moved to Thursday.",
       "D": "I gave my first presentation in high school."
     },
@@ -289,7 +289,7 @@
     "prompt": "Choose the best response.",
     "text_format": "html",
     "options": {
-      "A": "So did I — let me double-check the syllabus.",
+      "A": "So did I. Let me double-check the syllabus.",
       "B": "The lab is on the ground floor.",
       "C": "I finished my report last month.",
       "D": "Next week works better for me too."
@@ -335,7 +335,7 @@
     "text_format": "html",
     "options": {
       "A": "The last presentation ran over time.",
-      "B": "Last, if that's an option — I need time to prepare.",
+      "B": "Last, if that's an option. I need time to prepare.",
       "C": "The presentation is worth 20% of the grade.",
       "D": "First place goes to the best presentation."
     },
@@ -380,7 +380,7 @@
     "text_format": "html",
     "options": {
       "A": "The bus stop is right over there.",
-      "B": "Tell me about it — I hate cutting it this close.",
+      "B": "Tell me about it. I hate cutting it this close.",
       "C": "I take this bus every day.",
       "D": "I left my umbrella on the bus once."
     },
@@ -515,7 +515,7 @@
     "text_format": "html",
     "options": {
       "A": "The application fee is fifty dollars.",
-      "B": "You never know unless you try — I'd go for it.",
+      "B": "You never know unless you try. I'd go for it.",
       "C": "I applied there two years ago.",
       "D": "The program starts in September."
     },
@@ -575,7 +575,7 @@
     "source": {
       "kind": "migrado",
       "file": "consolidated/modulo_7_simulados.md",
-      "ref": "linha 351",
+      "ref": "linha 366",
       "live_on_site": true,
       "answer_letter": "origem",
       "build_map": {
@@ -622,7 +622,7 @@
     "source": {
       "kind": "migrado",
       "file": "consolidated/modulo_7_simulados.md",
-      "ref": "linha 359",
+      "ref": "linha 374",
       "live_on_site": true,
       "answer_letter": "origem",
       "build_map": {
@@ -669,7 +669,7 @@
     "source": {
       "kind": "migrado",
       "file": "consolidated/modulo_7_simulados.md",
-      "ref": "linha 367",
+      "ref": "linha 382",
       "live_on_site": true,
       "answer_letter": "origem",
       "build_map": {
@@ -701,7 +701,7 @@
     "text_format": "markdown",
     "options": {
       "A": "\"The class is at ten.\"",
-      "B": "\"Focus on the intro and the conclusion: that's usually enough to follow the discussion.\"",
+      "B": "\"Focus on the intro and the conclusion. That's usually enough to follow the discussion.\"",
       "C": "\"I bought the book last semester.\"",
       "D": "\"There are forty students in that class.\""
     },
@@ -716,7 +716,7 @@
     "source": {
       "kind": "migrado",
       "file": "consolidated/modulo_7_simulados.md",
-      "ref": "linha 377",
+      "ref": "linha 392",
       "live_on_site": true,
       "answer_letter": "origem",
       "build_map": {
@@ -763,7 +763,7 @@
     "source": {
       "kind": "migrado",
       "file": "consolidated/modulo_7_simulados.md",
-      "ref": "linha 709",
+      "ref": "linha 724",
       "live_on_site": true,
       "answer_letter": "origem",
       "build_map": {

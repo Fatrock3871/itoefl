@@ -53,7 +53,7 @@ Errar várias questões logo nos primeiros itens, mesmo nas falas curtas e apare
 |---|---|---|---|---|---|
 | 1 | **[[Listen and Choose a Response::Ouça e escolha uma resposta]]** | Escolher a resposta natural a uma fala isolada, observando intenção, tom e registro | **15–19** | A1–B2 | 1 fala isolada, muito curta |
 | 2 | **[[Listen to a Conversation::Ouça uma conversa]]** | Propósito, detalhe e relação entre os falantes numa conversa curta | 10 | A2–C1 | 4–9 falas curtas, no cotidiano ou no campus |
-| 3 | **[[Listen to an Announcement::Ouça um anúncio]]** | Detalhe factual (data, local, ação ou exceção) num aviso falado | 6–10 | A2–C1 | monólogo informativo curto |
+| 3 | **[[Listen to an Announcement::Ouça um comunicado]]** | Detalhe factual (data, local, ação ou exceção) num aviso falado | 6–10 | A2–C1 | monólogo informativo curto |
 | 4 | **[[Listen to an Academic Talk::Ouça uma aula ou palestra acadêmica]]** | Ideia principal, detalhe de apoio, inferência, organização e **vocabulário idiomático** | 8–16 | A2–C2 | monólogo acadêmico, até 250 palavras |
 
 Você pode enxergar esses formatos como uma **escada de complexidade**, que vai da resposta a uma única frase (*Choose a Response*) até o monólogo universitário (*Academic Talk*). O router mistura os quatro tipos, e o módulo seguinte distribui o volume de questões na proporção mostrada na tabela.
@@ -69,12 +69,12 @@ Cada questão avalia uma habilidade específica. Quando você reconhece o tipo d
 | **[[Gist-content::Ideia principal do conteúdo]]** | *"[[What is the talk mainly about?::Sobre o que é a palestra principalmente?]]"* | Sintetiza o áudio inteiro, sem se prender a um detalhe isolado |
 | **[[Gist-purpose::Objetivo principal]]** | *"[[Why does the student go to see the advisor?::Por que o estudante vai falar com o orientador?]]"* | Indica o **objetivo** da conversa, e não apenas o assunto de fundo |
 | **[[Detail::Detalhe factual]]** | *"[[According to the speaker, when...?::De acordo com quem fala, quando...?]]"* | Traz uma informação **explícita** do áudio, quase sempre dita com outras palavras |
-| **[[Function::Função comunicativa]]** | *"Why does the woman say: [replay]?"* | Descreve a **intenção** por trás da fala (concordar, discordar, ironizar, corrigir ou exemplificar), fugindo do sentido literal |
+| **[[Function::Função comunicativa]]** | *"[[Why does the woman say::Por que a mulher diz]]: [replay]?"* | Descreve a **intenção** por trás da fala (concordar, discordar, ironizar, corrigir ou exemplificar), fugindo do sentido literal |
 | **[[Attitude::Atitude ou tom]]** | *"[[What is the professor's opinion of...?::Qual é a opinião do professor sobre...?]]"* ou *"[[How does the man feel about...?::Como o homem se sente em relação a...?]]"* | Capta o **tom** (aprova, duvida, surpreende-se ou minimiza) pela escolha de palavras e pela entonação |
 | **[[Organization::Organização estrutural]]** | *"[[Why does the professor mention X?::Por que o professor menciona X?]]"* ou *"[[How does the professor introduce the topic?::Como o professor apresenta o tema?]]"* | Aponta a **função estrutural** do trecho (exemplo de apoio, contraste, digressão ou transição) |
 | **[[Inference::Inferência]]** | *"[[What can be inferred about...?::O que pode ser inferido sobre...?]]"* ou *"[[What does the professor imply?::O que o professor sugere?]]"* | Dá um único passo lógico além do que foi dito, nunca dois; desconfie de opções com *[[always::sempre]]*, *[[never::nunca]]*, *[[only::apenas]]* ou *[[impossible::impossível]]* |
 | **[[Connecting content::Conexão de informações]]** | *"[[What is the likely outcome of...?::Qual é o resultado provável de...?]]"* | Junta duas informações ditas em momentos diferentes do áudio |
-| **[[Prediction::Previsão do próximo tópico]]** | *"[[What will the professor probably discuss next?::O que o professor provavelmente vai discutir a seguir?]]"* | Segue a pista deixada no fim do áudio, como *"[[Next time, we'll look at...::Na próxima vez, vamos olhar para...]]"* ou *"[[Let's turn to...::Vamos passar para...]]"* |
+| **[[Prediction::Previsão do próximo tópico]]** | *"[[What will the professor probably discuss next?::O que o professor provavelmente vai discutir a seguir?]]"* | Segue a pista deixada no fim do áudio, como *"[[Next time, we'll look at...::Na próxima aula, vamos ver...]]"* ou *"[[Let's turn to...::Vamos passar para...]]"* |
 | **[[Vocabulary or idiom in context::Vocabulário ou expressão idiomática em contexto]]** | *"[[What does the speaker mean by 'X'?::O que quem fala quer dizer com 'X'?]]"* | Mostra o sentido **daquela expressão naquele contexto**, enquanto o sentido ao pé da letra funciona como distrator |
 
 ---
@@ -144,7 +144,7 @@ Em **[[Listen and Choose a Response::Ouça e escolha uma resposta]]**, a questã
 
 Em **[[Listen to a Conversation::Ouça uma conversa]]**, identifique logo nos primeiros segundos quem está falando com quem, sobre qual assunto e qual é o pedido ou obstáculo. Como a decisão ou solução costuma aparecer na segunda metade do diálogo, redobre a atenção nesse trecho final e use a Escala 1 de anotação.
 
-Em **[[Listen to an Announcement::Ouça um anúncio]]**, acompanhe o aviso buscando quatro dados principais, que são data, local, ação necessária e exceção ou condição. A ordem mais comum apresenta primeiro o contexto, depois a novidade principal, em seguida a instrução prática e, por fim, um contato ou prazo:
+Em **[[Listen to an Announcement::Ouça um comunicado]]**, acompanhe o aviso buscando quatro dados principais, que são data, local, ação necessária e exceção ou condição. A ordem mais comum apresenta primeiro o contexto, depois a novidade principal, em seguida a instrução prática e, por fim, um contato ou prazo:
 
 - **Armadilha comum:** muitos anúncios citam dois horários ou dois locais (o antigo e o novo), e o distrator costuma trazer justamente o dado desatualizado.
 
@@ -445,7 +445,7 @@ No **Passo 3**, repare no motivo pelo qual as outras opções caem nos padrões 
 
 **A1.** *"I was going to grab lunch before the seminar, but there's no time now."* (A) "I usually have lunch at the café downstairs." (B) "Yeah, let's just head straight there." (C) "The seminar was really interesting." (D) "I ate there last week too."
 
-**A2.** *"Do you mind if I borrow your notes from Tuesday? I was out sick."* (A) "Sure: I'll send them over tonight." (B) "I hope you feel better soon." (C) "I borrowed a book from the library on Tuesday." (D) "Tuesday's class starts at nine."
+**A2.** *"Do you mind if I borrow your notes from Tuesday? I was out sick."* (A) "Sure, I'll send them over tonight." (B) "I hope you feel better soon." (C) "I borrowed a book from the library on Tuesday." (D) "Tuesday's class starts at nine."
 
 **A3.** *"Honestly, I'm not sure this draft is ready to submit."* (A) "I'm sure the printer is ready." (B) "What do you think it still needs?" (C) "I submitted mine yesterday." (D) "That's a great title."
 
@@ -453,19 +453,19 @@ No **Passo 3**, repare no motivo pelo qual as outras opções caem nos padrões 
 
 **A5.** *"I heard the registrar's office changed their hours."* (A) "I registered for four classes this term." (B) "Really? Do you know the new schedule?" (C) "The office is on the second floor." (D) "I haven't registered for anything yet."
 
-**A6.** *"Could you run your presentation by me before the meeting?"* (A) "I ran three miles this morning." (B) "Sure: are you free around four?" (C) "The meeting's been moved to Thursday." (D) "I gave my first presentation in high school."
+**A6.** *"Could you run your presentation by me before the meeting?"* (A) "I ran three miles this morning." (B) "Sure, are you free around four?" (C) "The meeting's been moved to Thursday." (D) "I gave my first presentation in high school."
 
-**A7.** *"I thought the lab report was due next week, not tomorrow."* (A) "So did I: let me double-check the syllabus." (B) "The lab is on the ground floor." (C) "I finished my report last month." (D) "Next week works better for me too."
+**A7.** *"I thought the lab report was due next week, not tomorrow."* (A) "So did I. Let me double-check the syllabus." (B) "The lab is on the ground floor." (C) "I finished my report last month." (D) "Next week works better for me too."
 
-**A8.** *"Would you rather present first or last?"* (A) "The last presentation ran over time." (B) "Last, if that's an option: I need time to prepare." (C) "The presentation is worth 20% of the grade." (D) "First place goes to the best presentation."
+**A8.** *"Would you rather present first or last?"* (A) "The last presentation ran over time." (B) "Last, if that's an option. I need time to prepare." (C) "The presentation is worth 20% of the grade." (D) "First place goes to the best presentation."
 
-**A9.** *"This bus is taking forever. We should've left earlier."* (A) "The bus stop is right over there." (B) "Tell me about it: I hate cutting it this close." (C) "I take this bus every day." (D) "I left my umbrella on the bus once."
+**A9.** *"This bus is taking forever. We should've left earlier."* (A) "The bus stop is right over there." (B) "Tell me about it. I hate cutting it this close." (C) "I take this bus every day." (D) "I left my umbrella on the bus once."
 
 **A10.** *"Professor Lin said she might cancel Friday's class."* (A) "She's a great lecturer, isn't she?" (B) "Did she say why, or was it just a maybe?" (C) "Friday's class is in the east building." (D) "I've never had a class canceled before."
 
 **A11.** *"I've been meaning to ask: how did the interview go?"* (A) "It's at two o'clock on Thursday." (B) "Better than I expected, actually. They said they'd call by Friday." (C) "I've had a lot of interviews lately." (D) "The company is downtown, near the station."
 
-**A12.** *"Do you think it's worth applying? I doubt I'd get in."* (A) "The application fee is fifty dollars." (B) "You never know unless you try: I'd go for it." (C) "I applied there two years ago." (D) "The program starts in September."
+**A12.** *"Do you think it's worth applying? I doubt I'd get in."* (A) "The application fee is fifty dollars." (B) "You never know unless you try. I'd go for it." (C) "I applied there two years ago." (D) "The program starts in September."
 
 ---
 
@@ -759,4 +759,4 @@ Ação para a próxima sessão: __________________________
 
 ---
 
-✅ Módulo 2 concluído. Você já conhece o Listening no formato 2026 ([[router::bloco inicial de nivelamento]], [[Listen and Choose a Response::Ouça e escolha uma resposta]], [[Listen to a Conversation::Ouça uma conversa]], [[Listen to an Announcement::Ouça um anúncio]] e [[Listen to an Academic Talk::Ouça uma aula ou palestra acadêmica]]), com o Laboratório de Escuta, o exemplo resolvido e o passo a passo de análise de erros. Mais um passo dado, e ele conta muito.
+✅ Módulo 2 concluído. Você já conhece o Listening no formato 2026 ([[router::bloco inicial de nivelamento]], [[Listen and Choose a Response::Ouça e escolha uma resposta]], [[Listen to a Conversation::Ouça uma conversa]], [[Listen to an Announcement::Ouça um comunicado]] e [[Listen to an Academic Talk::Ouça uma aula ou palestra acadêmica]]), com o Laboratório de Escuta, o exemplo resolvido e o passo a passo de análise de erros. Mais um passo dado, e ele conta muito.

@@ -239,7 +239,7 @@ O avaliador automático penaliza *"uh"*, *"um"*, repetições e falsos começos,
 Quatro **cuidados de fluência** ajudam você a manter a fala estável:
 
 1. **Comece a falar em até 2 segundos:** a primeira frase já pode entregar a sua posição ou abrir com uma frase-ponte curta, como *"[[That's an interesting one.::Essa é uma questão interessante.]]"*
-2. **Fale em blocos e pause apenas nas fronteiras sintáticas:** nunca quebre um grupo de palavras no meio. Faça a micro-pausa antes de *"[[because::porque]]"*, e não depois, dizendo *"[[I prefer mornings::Eu prefiro as manhãs]]"* (pausa leve) *"[[because I focus better::porque me concentro melhor]]"*.
+2. **Fale em blocos e pause apenas nas fronteiras sintáticas:** nunca quebre um grupo de palavras no meio. Faça a micropausa antes de *"[[because::porque]]"*, e não depois, dizendo *"[[I prefer mornings::Eu prefiro as manhãs]]"* (pausa leve) *"[[because I focus better::porque me concentro melhor]]"*.
 3. **Mantenha um ritmo médio e constante:** falar rápido demais prejudica a clareza dos sons, enquanto falar devagar demais derruba os indicadores de fluência.
 4. **Se travar no meio, siga em frente sem recomeçar do zero:** retome o raciocínio a partir do último bloco completo dizendo *"...[[so, as I was saying, the main point is...::então, como eu estava dizendo, o ponto principal é...]]"*
 
@@ -288,7 +288,7 @@ Depois de gravar cada resposta, ouça o seu áudio com calma e dê uma **nota de
 **Repetição forte (C1–C2):** reprodução exata, palavra por palavra.
 - **Acento tônico no lugar certo:** *com-MIT-tee*, *de-CI-ded*, *post-PONE*, *VOTE*, *in-for-MA-tion* e *a-VAIL-a-ble*.
 - Redução natural de *"to"* para /tə/ e de *"until"* como palavra átona.
-- Nenhuma pausa quebrando os blocos de sentido, com apenas uma micro-pausa possível depois de *"[[vote::votação, voto]]"*.
+- Nenhuma pausa quebrando os blocos de sentido, com apenas uma micropausa possível depois de *"[[vote::votação, voto]]"*.
 - Entonação descendente ao encerrar a frase (*[[available::disponível]]↘*).
 - Não há nada a "melhorar" no vocabulário, porque a tarefa avalia **fidelidade ao áudio**, e não criatividade de estilo.
 
