@@ -380,7 +380,7 @@
 
   // chaves que sincronizam com o Supabase (progresso real do aluno).
   // ficam de fora: toefl_theme_v1, toefl_active_tab, toefl_timer_preset, toefl_sync_*
-  var SYNC_PREFIXES = ["toefl_progress", "toefl_srs_", "toefl_bsq_", "toefl_quiz_", "toefl_avatar", "toefl_errlog_", "toefl_cert_", "toefl_streak", "toefl_dailygoal", "toefl_weeklydash", "toefl_h3progress", "toefl_ctw_", "toefl_spk_", "toefl_write_", "toefl_exam_", "toefl_scorecalc", "toefl_essay_seen", "toefl_goal"];
+  var SYNC_PREFIXES = ["toefl_progress", "toefl_srs_", "toefl_bsq_", "toefl_quiz_", "toefl_avatar", "toefl_errlog_", "toefl_cert_", "toefl_streak", "toefl_dailygoal", "toefl_weeklydash", "toefl_h3progress", "toefl_ctw_", "toefl_spk_", "toefl_write_", "toefl_exam_", "toefl_scorecalc", "toefl_essay_seen", "toefl_goal", "toefl_banco", "toefl_diagad"];
   function isSyncedKey(key){
     if(!key || key.indexOf("toefl_") !== 0) return false;
     for(var i = 0; i < SYNC_PREFIXES.length; i++){
@@ -911,12 +911,13 @@
     var g = readGoal(), p = g && ToeflLevel.PLANS[g.sched];
     return p ? "Cronograma " + p.name + " (" + p.days + " dias) · Módulo 0, Parte " + p.part : ToeflLevel.schedule(pct);
   }
-  function updateLevelBadge(correct, total){
+  // pct: o do diagnóstico adaptativo, que não sai de acertos sobre o total
+  function updateLevelBadge(correct, total, pct){
     var badge = document.getElementById("levelBadge");
     var bandEl = document.getElementById("levelBadgeBand");
     var schedEl = document.getElementById("levelBadgeSched");
     if(!badge || !total) return;
-    var pct = Math.round(100 * correct / total);
+    if(typeof pct !== "number") pct = Math.round(100 * correct / total);
     var band = cefrBandFromPct(pct);
     if(bandEl) bandEl.textContent = "Banda " + band.code + " (" + band.label + ") · " + correct + "/" + total + " acertos";
     if(schedEl) schedEl.textContent = scheduleFromPct(pct);
@@ -1058,7 +1059,33 @@
     });
     out.done = out.total > 0 && out.confirmed === out.total;
     out.pct = out.total ? Math.round(100 * out.correct / out.total) : 0;
+    out.mode = "rapido";
+    // diagnóstico adaptativo (banco.js): escolhido e terminado, ele vale. O
+    // nível vira o % equivalente da régua do level.js, então a banda, o
+    // cronograma e a meta saem da mesma conta do rápido.
+    var ad = readDiagAd();
+    if(ad.mode === "adapt" && ad.done && ad.ans.length && BANK.length){
+      var r = ToeflBanco.adaptResult(BANK, ad.ans);
+      return { mode: "adapt", level: r.level, total: r.total, confirmed: r.total, correct: r.correct,
+        areas: r.areas, done: true, pct: r.pct };
+    }
+    if(out.done) out.level = cefrBandFromPct(out.pct).label;
     return out;
+  }
+  // ---------- Banco por nível (app/banco_niveis.json, regras no banco.js) ----------
+  var BANK = ToeflBanco.load(), BANK_BY_ID = ToeflBanco.byId(BANK);
+  var LS_DIAGAD = "toefl_diagad_v1", LS_BANK = "toefl_banco_v1";
+  function readDiagAd(){
+    var s = {};
+    try { s = JSON.parse(safeGet(LS_DIAGAD) || "{}") || {}; } catch(e){ s = {}; }
+    if(!Array.isArray(s.ans)) s.ans = [];
+    return s;
+  }
+  function diagMode(){
+    var s = readDiagAd();
+    if(s.mode) return s.mode;
+    try { if(Object.keys(JSON.parse(safeGet("toefl_quiz_mod0-diag_v1") || "{}") || {}).length) return "rapido"; } catch(e){}
+    return "";
   }
 
   // melhor estimativa disponível da banda CEFR atual do aluno: prioriza o
@@ -1067,10 +1094,9 @@
   // compartilhado (era local do modal do painel) para também alimentar a
   // recomendação de nível nos Action Drills (ver IIFE "Nível recomendado").
   function computeBandEstimate(){
-    var diag = computeQuizAccuracy("mod0-diag");
-    if(diag.confirmed > 0 && diag.confirmed === diag.total){
-      var pct = Math.round(100 * diag.correct / diag.confirmed);
-      return { pct: pct, source: "diagnóstico do Módulo 0" };
+    var diag = diagStats();
+    if(diag && diag.done){
+      return { pct: diag.pct, source: diag.mode === "adapt" ? "diagnóstico adaptativo do Módulo 0" : "diagnóstico do Módulo 0" };
     }
     var reading = computeQuizAccuracy("mod1-"), listening = computeQuizAccuracy("mod2-");
     var confirmed = reading.confirmed + listening.confirmed, correct = reading.correct + listening.correct;
@@ -1235,7 +1261,7 @@
           summary.hidden = true;
         }
       }
-      if(drillId === "mod0-diag" && confirmed === total && total > 0){
+      if(drillId === "mod0-diag" && confirmed === total && total > 0 && diagStats().mode !== "adapt"){
         updateLevelBadge(correct, total);
       }
       if(drillId === "mod0-diag" && typeof window.__toeflRefreshStart === "function") window.__toeflRefreshStart();
@@ -3671,9 +3697,9 @@
       nameEl.textContent = name;
       var iso = safeGet("toefl_cert_date_v1");
       dateEl.textContent = iso ? fmtDate(iso) : "—";
-      var diag = computeQuizAccuracy("mod0-diag");
-      if(diag.confirmed > 0 && diag.confirmed === diag.total){
-        var band = cefrBandFromPct(Math.round(100 * diag.correct / diag.confirmed));
+      var diag = diagStats();
+      if(diag && diag.done){
+        var band = cefrBandFromPct(diag.pct);
         bandEl.textContent = "Banda " + band.code + " (" + band.label + ")";
       } else {
         bandEl.textContent = "—";
@@ -4818,17 +4844,17 @@
     var diagCard = diag.closest(".section-card");
     function render(){
       card.hidden = safeGet(LS_WELCOME) === "1" || (!!diagCard && !diagCard.hidden);
-      var a = computeQuizAccuracy("mod0-diag");
-      if(a.confirmed < a.total){
+      var a = diagStats();
+      if(!a.done){
         titleEl.textContent = "Faça o diagnóstico antes de ler qualquer coisa";
-        textEl.textContent = "São 10 questões, cerca de 12 minutos. O resultado mostra o seu nível de partida e o cronograma que mais combina com você.";
+        textEl.textContent = "O rápido tem 10 questões, cerca de 12 minutos; o adaptativo tem de 12 a 15. O resultado mostra o seu nível de partida e o cronograma que mais combina com você.";
         goBtn.textContent = a.confirmed ? "Continuar o diagnóstico (" + a.confirmed + " de " + a.total + ")" : "Fazer o diagnóstico agora";
-        goBtn.onclick = function(){ goToPart(1, diag); };
+        goBtn.onclick = function(){ goToPart(1, document.getElementById("diagMode") || diag); };
       } else {
-        var band = cefrBandFromPct(Math.round(100 * a.correct / a.total));
+        var band = cefrBandFromPct(a.pct);
         titleEl.textContent = "Diagnóstico feito: nível estimado " + band.label;
         textEl.textContent = "Você acertou " + a.correct + " de " + a.total + ". " +
-          scheduleFromPct(Math.round(100 * a.correct / a.total)).split(" · ")[0] + ". O próximo passo é abrir esse cronograma.";
+          scheduleFromPct(a.pct).split(" · ")[0] + ". O próximo passo é abrir esse cronograma.";
         goBtn.textContent = "Ver o meu cronograma";
         goBtn.onclick = function(){ goToPart(6); };
       }
@@ -4988,7 +5014,7 @@
         start: old && old.sched === rec.days && old.start ? old.start : todayStr() }));
       say("Plano salvo. A meta de hoje já segue este cronograma.");
       renderPlan(d);
-      updateLevelBadge(d.correct, d.total); // o selo da gaveta passa a citar o cronograma da meta
+      updateLevelBadge(d.correct, d.total, d.pct); // o selo da gaveta passa a citar o cronograma da meta
       if(typeof window.__toeflRefreshStart === "function") window.__toeflRefreshStart();
       if(typeof window.__toeflRefreshPlan === "function") window.__toeflRefreshPlan();
     });
@@ -5002,6 +5028,153 @@
       }
     });
     window.__toeflRefreshDiag = render;
+    render();
+  })();
+
+  // ---------- Diagnóstico rápido ou adaptativo (M0, Parte 1) ----------
+  // Sem escolha, o rápido (as 10 questões de sempre) já aparece: o adaptativo
+  // é opcional. A escolha e as respostas do adaptativo ficam em
+  // toefl_diagad_v1 (sincroniza), a mesma chave da tela de apresentação. O
+  // resultado de qualquer dos dois vai para diagStats() e dali para a banda,
+  // o plano, a meta de hoje, a prioridade e o banco por nível.
+  (function(){
+    var chooser = document.getElementById("diagMode"), box = document.getElementById("diagAdapt");
+    var quick = document.querySelector('.quiz-drill[data-drill="mod0-diag"]');
+    if(!chooser || !box || !quick || !BANK.length) return;
+    var adaptive = null;
+    function refreshAll(){
+      var d = diagStats();
+      if(d && d.done) updateLevelBadge(d.correct, d.total, d.pct);
+      ["__toeflRefreshStart", "__toeflRefreshDiag", "__toeflRefreshPlan", "__toeflRefreshBank"].forEach(function(f){
+        if(typeof window[f] === "function") window[f]();
+      });
+      updateLevelRecommendations();
+    }
+    function show(){
+      var m = diagMode();
+      quick.hidden = m === "adapt";
+      box.hidden = m !== "adapt";
+      if(m === "adapt" && !adaptive){
+        adaptive = ToeflBanco.mountAdaptive({ root: box, items: BANK, get: readDiagAd,
+          set: function(s){ safeSet(LS_DIAGAD, JSON.stringify(s)); },
+          onDone: function(){
+            refreshAll();
+            var r = document.getElementById("diagResult");
+            if(r && !r.hidden){ r.focus({ preventScroll: true }); r.scrollIntoView({ behavior: "smooth", block: "start" }); }
+          },
+          onReset: refreshAll });
+      }
+    }
+    var ch = ToeflBanco.mountChooser({ root: chooser, current: diagMode, choose: function(m){
+      var s = readDiagAd();
+      s.mode = m;
+      safeSet(LS_DIAGAD, JSON.stringify(s));
+      show();
+      refreshAll();
+    } });
+    // gancho do smoke test e da volta do sync
+    window.__toeflDiagModes = { refresh: function(){ ch.paint(); show(); if(adaptive) adaptive.render(); refreshAll(); } };
+    show();
+    var d0 = diagStats();
+    if(d0 && d0.done && d0.mode === "adapt") updateLevelBadge(d0.correct, d0.total, d0.pct);
+  })();
+
+  // ---------- Questões para o seu nível (Painel) ----------
+  // Rodadas de 10 questões do banco por nível: 7 do nível do aluno e 3 do de
+  // cima. O nível começa no do diagnóstico e muda com 15 respostas seguidas do
+  // nível: 80% ou mais sobe, menos de 40% desce (regras no banco.js). Tudo
+  // fica em toefl_banco_v1, que sincroniza. Na conta grátis: as 5 primeiras
+  // questões do nível do aluno e, depois delas, o cartão do curso completo.
+  (function(){
+    var root = document.getElementById("dashBank");
+    if(!root || !BANK.length) return;
+    var $ = function(id){ return document.getElementById(id); };
+    function readBank(){ try { return JSON.parse(safeGet(LS_BANK) || "{}") || {}; } catch(e){ return {}; } }
+    function saveBank(st){ safeSet(LS_BANK, JSON.stringify(st)); }
+    function current(){
+      var d = diagStats();
+      if(!d || !d.done) return null;
+      var before = safeGet(LS_BANK), st = ToeflBanco.practiceInit(readBank(), d.level);
+      if(JSON.stringify(st) !== before) try { localStorage.setItem(LS_BANK, JSON.stringify(st)); } catch(e){} // sem safeSet: calcular não é estudar
+      return st;
+    }
+    var FREE_N = (FREE && FREE.banco && FREE.banco.itens) || ToeflBanco.FREE_ITEMS;
+    function closeDash(){ var c = $("dashboardClose"); if(c) c.click(); }
+    function render(note){
+      var st = current(), q = $("dashBankQ"), bar = $("dashBankBarWrap");
+      q.innerHTML = "";
+      if(!st){
+        $("dashBankLevel").textContent = "Faça o diagnóstico do Módulo 0, rápido ou adaptativo. Com ele eu sei o seu nível e separo as questões certas para você.";
+        $("dashBankProgress").textContent = "";
+        bar.hidden = true;
+        var b = document.createElement("button");
+        b.type = "button"; b.className = "dash-plan-btn"; b.textContent = "Fazer o diagnóstico";
+        b.addEventListener("click", function(){ closeDash(); openPart("mod0", 1); });
+        q.appendChild(b);
+        return;
+      }
+      bar.hidden = false;
+      var pr = ToeflBanco.practiceProgress(st), it, head;
+      if(accessFree){
+        var ids = ToeflBanco.practiceSet(BANK, st, true), done = ids.filter(function(id){ return st.ans[id]; }).length;
+        $("dashBankLevel").textContent = "Seu nível: " + st.level + ". Na conta grátis, você faz " + FREE_N + " questões do seu nível.";
+        $("dashBankProgress").textContent = done + " de " + ids.length + " feitas.";
+        $("dashBankFill").style.width = Math.round(100 * done / ids.length) + "%";
+        if(note) q.appendChild(note);
+        var nextId = ids.filter(function(id){ return !st.ans[id]; })[0];
+        if(!nextId){
+          q.appendChild(lockCard("O banco completo, com as 180 questões e a subida de nível, é do curso completo."));
+          return;
+        }
+        it = BANK_BY_ID[nextId];
+        head = "Questão " + (done + 1) + " de " + ids.length + ", nível " + it.nivel;
+      } else {
+        $("dashBankLevel").textContent = "Seu nível no banco: " + st.level + ". Cada rodada tem " + ToeflBanco.SESSION + " questões: " +
+          (pr.next ? (ToeflBanco.SESSION - ToeflBanco.SESSION_UP) + " do " + st.level + " e " + ToeflBanco.SESSION_UP + " do " + pr.next + ", para você ir se acostumando com o próximo." : "todas do " + st.level + ", o nível mais alto.");
+        $("dashBankProgress").textContent = (pr.next
+          ? "Para subir para o " + pr.next + ": " + pr.need + " acertos nas últimas " + pr.window + " do " + st.level + ". "
+          : "Você está no nível mais alto. ") +
+          "Agora: " + pr.ok + " de " + pr.n + " respondidas do " + st.level + (pr.n < pr.window ? (pr.window - pr.n === 1 ? ", falta 1" : ", faltam " + (pr.window - pr.n)) + " para fechar a conta." : ".");
+        $("dashBankFill").style.width = Math.round(100 * pr.n / pr.window) + "%";
+        if(note) q.appendChild(note);
+        if(!st.set || !st.set.length || (st.pos || 0) >= st.set.length){
+          st.set = ToeflBanco.practiceSet(BANK, st, false);
+          st.pos = 0;
+          try { localStorage.setItem(LS_BANK, JSON.stringify(st)); } catch(e){}
+        }
+        it = BANK_BY_ID[st.set[st.pos]];
+        head = "Questão " + (st.pos + 1) + " de " + st.set.length + " desta rodada, nível " + it.nivel;
+      }
+      var slot = document.createElement("div");
+      q.appendChild(slot);
+      ToeflBanco.renderItem(slot, it, head, function(p){
+        var cur = current();
+        var r = ToeflBanco.practiceRecord(cur, it, p);
+        if(!accessFree && cur.set) cur.pos = (cur.pos || 0) + 1;
+        saveBank(cur);
+        ToeflBanco.renderFeedback(slot.querySelector(".bk-card"), it, p);
+        var msg = null;
+        if(r.changed){
+          msg = document.createElement("p");
+          msg.className = "dash-bank-change";
+          msg.setAttribute("role", "status");
+          msg.textContent = ToeflBanco.LEVELS.indexOf(r.changed.to) > ToeflBanco.LEVELS.indexOf(r.changed.from)
+            ? "Muito bem: 80% ou mais nas últimas 15 do " + r.changed.from + ". Seu nível no banco subiu para " + r.changed.to + "."
+            : "Nas últimas 15 do " + r.changed.from + ", o acerto ficou abaixo de 40%. Vamos firmar a base: seu nível no banco agora é " + r.changed.to + ".";
+          slot.appendChild(msg);
+        }
+        var next = document.createElement("button");
+        next.type = "button"; next.className = "dash-plan-btn bk-next"; next.textContent = "Próxima questão";
+        next.addEventListener("click", function(){ render(msg); });
+        slot.appendChild(next);
+        if(typeof window.__toeflRefreshPlan === "function") window.__toeflRefreshPlan();
+      });
+    }
+    window.__toeflRefreshBank = function(){ render(); };
+    window.__toeflBank = { render: render, state: current }; // gancho do smoke test
+    var btn = $("dashboardBtn");
+    if(btn) btn.addEventListener("click", function(){ render(); });
+    document.addEventListener("toefl-access", function(){ render(); });
     render();
   })();
 
@@ -5154,6 +5327,16 @@
         if(s && s.confirmed && a && acc[a.painel]) add(a.painel, isCardCorrect(c, s.picked) ? 1 : 0, 1);
       });
     }
+    // banco por nível: o diagnóstico adaptativo e "Questões para o seu nível"
+    // contam pela habilidade da questão, na mesma área do diagnóstico rápido
+    // (leitura em Reading, conectivos e registro em Registro)
+    function addBank(id, ok){
+      var it = BANK_BY_ID[id], a = it && diagMap[ToeflBanco.HAB_DIAG[it.habilidade]];
+      if(a && acc[a.painel]) add(a.painel, ok ? 1 : 0, 1);
+    }
+    readDiagAd().ans.forEach(function(x){ addBank(x.id, x.ok); });
+    var bk = read(LS_BANK);
+    Object.keys(bk.ans || {}).forEach(function(id){ addBank(id, bk.ans[id] && bk.ans[id].ok); });
     // exercícios do M1 e do M2: cada questão conta na seção do módulo, menos a
     // de tipo com área própria (data-weak no build, hoje o vocabulário em
     // contexto), que conta nessa área

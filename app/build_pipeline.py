@@ -299,7 +299,11 @@ def build_mod0():
     } for q in quiz_json]
     # 7 das 10 respostas do diagnóstico eram "C" na origem (ver rebalance.py)
     items = rebalance_items(items, "mod0-diag")
-    widget = render_quiz_drill(
+    # escolha do modo (rápido, as 10 de sempre, ou adaptativo, pelo banco por
+    # nível) e a caixa do adaptativo: o app.js preenche (ToeflBanco, banco.js)
+    modes = ('<div class="dm-choose" id="diagMode"></div>'
+             '<div class="bk-adapt" id="diagAdapt" hidden></div>')
+    widget = modes + render_quiz_drill(
         "mod0-diag", None,
         "Teste de nivelamento: 10 questões de gramática, vocabulário, conectivos, ordem das palavras, registro e "
         "compreensão. Responda e confirme cada uma. O gabarito e as explicações aparecem juntos no fim, depois da décima.",

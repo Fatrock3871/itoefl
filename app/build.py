@@ -304,10 +304,42 @@ for _ex in FREE_SAMPLE["exercicios"]:
 if FREE_SAMPLE["partes"] != {"mod0": "todas", **{k: [1] for k, *_ in MODS if k != "mod0"}}:
     raise SystemExit("free_sample.json: a amostra de Partes mudou. Reescreva FREE_SUMMARY em app/build.py")
 _rot = [e["rotulo"] for e in FREE_SAMPLE["exercicios"]]
-FREE_SUMMARY = ("o Módulo 0 inteiro, a Parte 1 de cada um dos outros nove módulos e um exercício de cada tipo ("
-                + ", ".join(_rot[:-1]) + " e " + _rot[-1] + ")")
+FREE_SUMMARY = ("o Módulo 0 inteiro, a Parte 1 de cada um dos outros nove módulos, um exercício de cada tipo ("
+                + ", ".join(_rot[:-1]) + " e " + _rot[-1] + ") e " + FREE_SAMPLE["banco"]["rotulo"])
 FREE_JSON = json.dumps({"partes": FREE_SAMPLE["partes"], "exercicios": FREE_SAMPLE["exercicios"],
-                        "resumo": FREE_SUMMARY}, ensure_ascii=False).replace("</", "<\\/")
+                        "banco": FREE_SAMPLE["banco"], "resumo": FREE_SUMMARY}, ensure_ascii=False).replace("</", "<\\/")
+
+# ---- banco por nível (app/banco_niveis.json): 30 questões por nível CEFR ----
+# O banco.js usa no diagnóstico adaptativo e em "Questões para o seu nível".
+# O build para se o banco sair do formato: 180 itens, 30 por nível, uma só
+# alternativa certa, e "correta" na posição dela nos distratores.
+with open("banco_niveis.json", encoding="utf-8") as _f:
+    BANCO = json.load(_f)
+_BANCO_HAB = {"gramatica", "vocabulario", "conectivos", "leitura", "registro"}
+_banco_ids = set()
+for _it in BANCO:
+    _id = _it.get("id", "?")
+    if set(_it) != {"id", "nivel", "habilidade", "enunciado", "alternativas", "correta", "explicacao", "distratores"}:
+        raise SystemExit(f"banco_niveis.json: {_id} tem campos fora do formato")
+    if _id in _banco_ids:
+        raise SystemExit(f"banco_niveis.json: id repetido {_id}")
+    _banco_ids.add(_id)
+    if _it["nivel"] not in ("A1", "A2", "B1", "B2", "C1", "C2") or _it["habilidade"] not in _BANCO_HAB:
+        raise SystemExit(f"banco_niveis.json: {_id} com nível ou habilidade desconhecidos")
+    _alts = _it["alternativas"]
+    if len(_alts) != 4 or len(set(_alts)) != 4 or not all(a.strip() for a in _alts):
+        raise SystemExit(f"banco_niveis.json: {_id} precisa de 4 alternativas diferentes")
+    if _it["correta"] not in (0, 1, 2, 3) or len(_it["distratores"]) != 4 \
+            or [i for i, d in enumerate(_it["distratores"]) if d == "correta"] != [_it["correta"]]:
+        raise SystemExit(f"banco_niveis.json: {_id} precisa de uma só correta, marcada nos distratores")
+    if "—" in _it["explicacao"] or any("—" in d for d in _it["distratores"]):
+        raise SystemExit(f"banco_niveis.json: {_id} tem travessão na explicação")
+for _lv in ("A1", "A2", "B1", "B2", "C1", "C2"):
+    if sum(1 for _it in BANCO if _it["nivel"] == _lv) != 30:
+        raise SystemExit(f"banco_niveis.json: o nível {_lv} tem de ter 30 questões")
+if FREE_SAMPLE["banco"].get("itens") != 5 or not FREE_SAMPLE["banco"]["rotulo"].startswith("5 "):
+    raise SystemExit("free_sample.json: o banco abre 5 questões, e o rótulo tem de dizer isso")
+BANCO_JSON = json.dumps(BANCO, ensure_ascii=False, separators=(",", ":")).replace("</", "<\\/")
 
 panels = "\n".join(
     f'<section class="panel" data-panel="{k}" id="panel-{k}" {"hidden" if k != "mod0" else ""}>'
@@ -327,6 +359,9 @@ CSS = open("styles.css", encoding="utf-8").read()
 # level.js (resultado do diagnóstico -> banda e cronograma) vai na frente do
 # app.js e do landing.js: as duas páginas fazem a mesma conta
 LEVEL_JS = open("level.js", encoding="utf-8").read()
+# banco.js (banco por nível: diagnóstico adaptativo e recomendação) vem logo
+# depois, também nas duas páginas
+LEVEL_JS += "\n" + open("banco.js", encoding="utf-8").read()
 # regras do envio de redação: o mesmo arquivo que as edge functions importam.
 # No site ele entra sem a palavra "export" (os nomes começam todos com
 # "redacao" e viram globais).
@@ -869,6 +904,16 @@ dashboard_modal = (
     '<p class="dash-empty dash-weak-intro">Somados do diagnóstico e dos exercícios que você já fez.</p>'
     '<div id="dashWeakSpots" class="dash-weak-list"></div>'
     '</div>'
+
+    # banco por nível: 70% do nível do aluno e 30% do de cima (app.js, bloco
+    # "Questões para o seu nível"; regras no banco.js)
+    '<div class="dash-callout dash-bank" id="dashBank">'
+    f'<span class="dash-section-label">{icon("target", "ico dash-section-icon")}Questões para o seu nível</span>'
+    '<p class="dash-value dash-value-sm" id="dashBankLevel"></p>'
+    '<div class="op-bar dash-bar" id="dashBankBarWrap"><div class="op-fill" id="dashBankFill"></div></div>'
+    '<p class="dash-value dash-value-sm" id="dashBankProgress"></p>'
+    '<div class="dash-bank-q" id="dashBankQ"></div>'
+    '</div>'
     '</div>'
     '</div>'
 )
@@ -1089,6 +1134,7 @@ html = f'''<!DOCTYPE html>
 </div>
 <script type="application/json" id="freeSample">{FREE_JSON}</script>
 <script type="application/json" id="partKinds">{PARTES_JSON}</script>
+<script type="application/json" id="bancoNiveis">{BANCO_JSON}</script>
 <script>
 {JS}
 </script>
@@ -1388,19 +1434,25 @@ _landing = f'''<!DOCTYPE html>
 
 <section class="lp-section" id="diagnostico" aria-labelledby="lpDiagTitle">
   <h2 id="lpDiagTitle">Diagnóstico grátis, sem conta</h2>
-  <p class="lp-lead">São as 10 questões do Teste de Nivelamento do Módulo 0: gramática, vocabulário e conectivos
-  acadêmicos. Você responde uma por vez, sem consulta. No fim, mostro o seu nível estimado e o cronograma indicado.
+  <p class="lp-lead">Você escolhe o modo. O rápido são as 10 questões do Teste de Nivelamento do Módulo 0: gramática,
+  vocabulário e conectivos acadêmicos. O adaptativo tem de 12 a 15 questões e se ajusta ao que você acerta. Você responde
+  uma por vez, sem consulta. No fim, mostro o seu nível estimado e o cronograma indicado.
   É uma estimativa de treino, não uma nota oficial.</p>
   <details class="lp-diag" id="lpDiag">
     <summary><span class="lp-diag-t">Fazer o diagnóstico</span><span class="lp-diag-meta">Cerca de 12 min, grátis, sem cadastro</span></summary>
     <div class="lp-diag-body">
+  <script type="application/json" id="bancoNiveis">{BANCO_JSON}</script>
+  <div class="dm-choose" id="lpDiagMode"></div>
+  <div class="bk-adapt" id="lpAdapt" hidden></div>
+  <div class="lp-quick" id="lpQuick">
   {DIAG_HTML}
+  </div>
   <div class="lp-result" id="lpResult" tabindex="-1" role="status" hidden>
     <p class="lp-result-score" id="lpResultScore"></p>
     <p class="lp-result-band" id="lpResultBand"></p>
     <p class="lp-result-desc" id="lpResultDesc"></p>
     <p class="lp-result-next">No curso, o caminho indicado para esse nível é o <strong id="lpResultSched"></strong>.
-    A estimativa vem de 10 questões de gramática e vocabulário: serve para escolher por onde começar, não para prever a nota da prova.</p>
+    <span id="lpResultBasis">A estimativa vem de 10 questões de gramática e vocabulário</span>: serve para escolher por onde começar, não para prever a nota da prova.</p>
     <p class="lp-result-plan" id="lpResultPlanLine" hidden>O plano que combina com essa banda é o <strong id="lpResultPlan"></strong>.
     Ele está destacado <a href="#planos">na tabela de planos</a>.</p>
     <details class="lp-key" id="lpKey" hidden>
