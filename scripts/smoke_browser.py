@@ -1295,6 +1295,36 @@ def run():
                 check("landing_contrast_aa_light", not low, low)
                 bad = b.eval(IBT_CASE)
                 check("landing_toefl_ibt_keeps_lowercase_i", not bad, bad)
+                # diagnóstico adaptativo sem conta: escolher o modo, acertar todas,
+                # terminar com 12 questões no C2 (banda 6, plano Mensal destacado)
+                # e gravar na chave que o app lê; contraste AA com a questão na tela
+                adapt = b.eval(r"""(function(){
+                  var bank = {}; JSON.parse(document.getElementById("bancoNiveis").textContent).forEach(function(it){ bank[it.id] = it; });
+                  document.getElementById("lpDiag").open = true;
+                  document.querySelector('#lpDiagMode .dm-opt[data-mode="adapt"]').click();
+                  var box = document.getElementById("lpAdapt"), out = { quickHidden: document.getElementById("lpQuick").hidden,
+                    first: (box.querySelector(".bk-card") || {dataset: {}}).dataset.id || "" };
+                  for(var n = 0; n < 20 && !box.querySelector(".bk-done"); n++){
+                    var c = box.querySelector(".bk-card"), it = bank[c.dataset.id];
+                    c.querySelector('.bk-opt[data-i="' + it.correta + '"]').click(); c.querySelector(".bk-confirm").click();
+                  }
+                  var s = JSON.parse(localStorage.getItem("toefl_diagad_v1") || "{}");
+                  out.n = (s.ans || []).length; out.done = !!s.done; out.mode = s.mode;
+                  out.band = document.getElementById("lpResultBand").textContent;
+                  out.shown = !document.getElementById("lpResult").hidden;
+                  out.match = Array.prototype.filter.call(document.querySelectorAll(".lp-plan.is-match"), function(p){ return !p.querySelector(".lp-plan-match").hidden; }).map(function(p){ return p.dataset.plan; });
+                  return out;
+                })()""")
+                check("landing_adaptive_diagnostic_ends_with_level",
+                      adapt["quickHidden"] and adapt["first"].startswith("b1-") and adapt["n"] == 12 and adapt["done"]
+                      and adapt["mode"] == "adapt" and adapt["band"] == "Nível estimado: banda 6 (C2)" and adapt["shown"]
+                      and adapt["match"] == ["mensal"], adapt)
+                b.eval('document.querySelector("#lpAdapt .bk-key").open = true')
+                low = b.eval(CONTRAST)
+                check("landing_adaptive_contrast_aa", not low, low)
+                # o resto do teste segue com o diagnóstico rápido feito acima
+                b.eval('localStorage.removeItem("toefl_diagad_v1")')
+                b.reload(settle=1)
 
                 b.viewport(375, 812, mobile=True)
                 b.reload(settle=1)

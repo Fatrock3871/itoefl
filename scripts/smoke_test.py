@@ -1130,6 +1130,150 @@ check("m7_says_what_the_diagnostic_measures", function(){
   return t.indexOf("Ele não dá nota por seção.") !== -1 && t.indexOf("banda CEFR (1–6) por seção") === -1;
 });
 
+// banco por nível (app/banco_niveis.json, banco.js): escolha do modo do
+// diagnóstico, adaptativo, recomendação 70/30, subida e descida de nível,
+// limite da conta grátis e pontos fracos. O estado de antes volta no fim.
+try { (function(){
+  var KEYS = ["toefl_diagad_v1", "toefl_banco_v1", "toefl_quiz_mod0-diag_v1", "toefl_goal_v1", "toefl_srs_kit50_v1", "toefl_errlog_mod2_v1"], keep = {};
+  KEYS.forEach(function(k){ keep[k] = localStorage.getItem(k); localStorage.removeItem(k); });
+  var B = ToeflBanco, items = B.load(), $ = function(id){ return document.getElementById(id); };
+  function count(list, lv){ return list.filter(function(x){ return x === lv; }).length; }
+  check("bank_levels_180_items_one_correct", function(){
+    return items.length === 180 && B.LEVELS.every(function(l){ return items.filter(function(it){ return it.nivel === l; }).length === 30; }) &&
+      items.every(function(it){
+        return it.alternativas.length === 4 && it.correta >= 0 && it.correta <= 3 &&
+          it.distratores.filter(function(d){ return d === "correta"; }).length === 1 && it.distratores[it.correta] === "correta";
+      });
+  });
+  // escolha do modo: sem escolha, o rápido aparece; o adaptativo troca a tela
+  var quick = document.querySelector('.quiz-drill[data-drill="mod0-diag"]'), box = $("diagAdapt");
+  window.__toeflDiagModes.refresh();
+  var opts = document.querySelectorAll("#diagMode .dm-opt");
+  check("diag_mode_choice_offers_quick_and_adaptive", function(){
+    return opts.length === 2 && opts[0].textContent.indexOf("Diagnóstico rápido (10 questões fixas)") === 0 &&
+      opts[1].textContent.indexOf("Diagnóstico adaptativo") === 0 && !quick.hidden && box.hidden &&
+      !!quick.closest(".section-card").querySelector("#diagMode");
+  });
+  opts[1].click();
+  check("diag_mode_adaptive_replaces_quick", function(){
+    return quick.hidden && !box.hidden && !!box.querySelector(".bk-card") && JSON.parse(localStorage.getItem("toefl_diagad_v1")).mode === "adapt" &&
+      opts[1].getAttribute("aria-pressed") === "true" && box.querySelector(".bk-card").dataset.id.indexOf("b1-") === 0;
+  });
+  // o motor: sobe quando acerta, desce quando erra, termina entre 12 e 15 com nível
+  function run(answer){
+    var ans = [], lv = [], it;
+    while((it = B.adaptNext(items, ans, function(){ return 0; }))){
+      var ok = answer(it);
+      lv.push(it.nivel);
+      ans.push({ id: it.id, lvl: it.nivel, p: ok ? it.correta : (it.correta + 1) % 4, ok: ok });
+    }
+    return { ans: ans, lv: lv, r: B.adaptResult(items, ans) };
+  }
+  var allOk = run(function(){ return true; }), allBad = run(function(){ return false; });
+  var mid = run(function(it){ return B.LEVELS.indexOf(it.nivel) <= 3; }); // acerta até o B2, erra do C1 para cima
+  var zig = run(function(it){ return it.nivel === "B1" || it.nivel === "A2"; }); // oscila entre B1 e B2
+  check("adaptive_goes_up_and_down_and_ends_with_level", function(){
+    return allOk.lv.slice(0, 4).join() === "B1,B2,C1,C2" && allOk.ans.length === 12 && allOk.r.level === "C2" &&
+      allBad.lv.slice(0, 3).join() === "B1,A2,A1" && allBad.ans.length === 12 && allBad.r.level === "A1" &&
+      mid.lv.slice(0, 4).join() === "B1,B2,C1,B2" && mid.ans.length >= 12 && mid.ans.length <= 15 && mid.r.level === "B2" &&
+      zig.ans.length >= 12 && zig.ans.length <= 15 && zig.r.level === "B1" &&
+      allOk.ans.every(function(a, i, arr){ return arr.map(function(x){ return x.id; }).indexOf(a.id) === i; });
+  });
+  // pela tela: acertando todas, o adaptativo termina e o resultado alimenta a banda, o plano e a prioridade
+  var guard = 0;
+  while(box.querySelector(".bk-card .bk-confirm:not([hidden])") && !box.querySelector(".bk-done") && guard++ < 20){
+    var card = box.querySelector(".bk-card"), it = B.byId(items)[card.dataset.id];
+    card.querySelector('.bk-opt[data-i="' + it.correta + '"]').click();
+    card.querySelector(".bk-confirm").click();
+  }
+  var ad = JSON.parse(localStorage.getItem("toefl_diagad_v1"));
+  document.getElementById("dashboardBtn").click();
+  var dashBand = $("dashBand").textContent, bankLevel = $("dashBankLevel").textContent;
+  document.getElementById("dashboardClose").click();
+  check("adaptive_result_feeds_band_plan_and_priority", function(){
+    return !!box.querySelector(".bk-done") && ad.done && ad.ans.length === 12 &&
+      box.querySelector(".bk-done-title").textContent.indexOf("nível estimado C2") !== -1 &&
+      !$("diagResult").hidden && $("diagResultTitle").textContent.indexOf("Nível estimado: C2") === 0 &&
+      dashBand.indexOf("(C2)") !== -1 && dashBand.indexOf("adaptativo") !== -1 &&
+      window.__toeflPriority().kind !== "diag" && bankLevel.indexOf("Seu nível no banco: C2") === 0;
+  });
+  // recomendação: 7 do nível e 3 do de cima, sem repetir; no C2, as 10 do C2
+  var b1set = B.practiceSet(items, B.practiceInit({}, "B1"), false), byId = B.byId(items);
+  var lv1 = b1set.map(function(id){ return byId[id].nivel; });
+  var c2set = B.practiceSet(items, B.practiceInit({}, "C2"), false).map(function(id){ return byId[id].nivel; });
+  check("bank_recommendation_70_30", function(){
+    return b1set.length === 10 && count(lv1, "B1") === 7 && count(lv1, "B2") === 3 &&
+      b1set.filter(function(id, i){ return b1set.indexOf(id) === i; }).length === 10 &&
+      c2set.length === 10 && count(c2set, "C2") === 10;
+  });
+  // subida e descida: 15 seguidas do nível; 12 acertos sobe, 5 desce, 7 fica
+  function feed(st, n, nOk){
+    var pool = items.filter(function(it){ return it.nivel === st.level; }), out = null;
+    for(var i = 0; i < n; i++){ var it = pool[i % pool.length]; var r = B.practiceRecord(st, it, i < nOk ? it.correta : (it.correta + 1) % 4); if(r.changed) out = r.changed; }
+    return out;
+  }
+  var s = B.practiceInit({}, "B1");
+  var c1 = feed(s, 14, 14), atFourteen = s.level, c2 = feed(s, 1, 1), afterUp = s.level;
+  var c3 = feed(s, 15, 5), afterDown = s.level, c4 = feed(s, 15, 7), stay = s.level;
+  var upper = B.practiceInit({}, "B1");
+  B.practiceRecord(upper, items.filter(function(it){ return it.nivel === "B2"; })[0], 0);
+  check("bank_level_goes_up_and_down", function(){
+    return c1 === null && atFourteen === "B1" && c2 && c2.to === "B2" && afterUp === "B2" &&
+      c3 && c3.from === "B2" && c3.to === "B1" && afterDown === "B1" && c4 === null && stay === "B1" &&
+      s.hist.length === 2 && upper.win.length === 0;
+  });
+  // pela tela do Painel: nível B1 com 14 acertos seguidos; mais um acerto do B1 sobe para B2
+  var mid2 = run(function(it){ return B.LEVELS.indexOf(it.nivel) <= 2; });
+  localStorage.setItem("toefl_diagad_v1", JSON.stringify({ mode: "adapt", ans: mid2.ans, done: true }));
+  localStorage.setItem("toefl_banco_v1", JSON.stringify({ level: "B1", base: mid2.r.level, win: [1,1,1,1,1,1,1,1,1,1,1,1,1,1], ans: {}, hist: [] }));
+  window.__toeflBank.render();
+  var progTxt = $("dashBankProgress").textContent, lvlTxt = $("dashBankLevel").textContent;
+  var qc = $("dashBankQ").querySelector(".bk-card"), qi = byId[qc.dataset.id];
+  qc.querySelector('.bk-opt[data-i="' + qi.correta + '"]').click(); qc.querySelector(".bk-confirm").click();
+  var after = JSON.parse(localStorage.getItem("toefl_banco_v1"));
+  check("bank_panel_shows_level_progress_and_levels_up", function(){
+    return mid2.r.level === "B1" && lvlTxt.indexOf("Seu nível no banco: B1. Cada rodada tem 10 questões: 7 do B1 e 3 do B2") === 0 &&
+      progTxt.indexOf("Para subir para o B2: 12 acertos nas últimas 15 do B1. Agora: 14 de 14 respondidas do B1, falta 1") === 0 &&
+      qi.nivel === "B1" && after.level === "B2" && after.ans[qi.id].ok &&
+      $("dashBankQ").textContent.indexOf("Seu nível no banco subiu para B2") !== -1 && !!$("dashBankQ").querySelector(".bk-fb");
+  });
+  // pontos fracos: a resposta do banco conta pela habilidade da questão
+  localStorage.removeItem("toefl_diagad_v1");
+  localStorage.setItem("toefl_banco_v1", JSON.stringify({}));
+  var w0 = {}; window.__toeflWeak().forEach(function(a){ w0[a.key] = a; });
+  localStorage.setItem("toefl_banco_v1", JSON.stringify({ ans: { "a1-01": { p: 0, ok: false }, "a1-22": { p: 1, ok: true }, "a1-17": { p: 0, ok: true } } }));
+  var w1 = {}; window.__toeflWeak().forEach(function(a){ w1[a.key] = a; });
+  check("bank_feeds_weak_areas_by_skill", function(){
+    return w1.gramatica.n === w0.gramatica.n + 1 && w1.gramatica.ok === w0.gramatica.ok &&
+      w1.reading.n === w0.reading.n + 1 && w1.reading.ok === w0.reading.ok + 1 && w1.registro.n === w0.registro.n + 1;
+  });
+  // conta grátis: os dois modos do diagnóstico abertos e só 5 questões do banco, no nível do aluno
+  localStorage.setItem("toefl_diagad_v1", JSON.stringify({ mode: "adapt", ans: mid2.ans, done: true }));
+  localStorage.setItem("toefl_banco_v1", JSON.stringify({}));
+  window.__toeflAccess.setLevel("free");
+  window.__toeflDiagModes.refresh();
+  var freeIntro = $("dashBankLevel").textContent, seen = [];
+  for(var n = 0; n < 6; n++){
+    var fc = $("dashBankQ").querySelector(".bk-card");
+    if(!fc) break;
+    seen.push(fc.dataset.id);
+    var fi = byId[fc.dataset.id];
+    fc.querySelector('.bk-opt[data-i="' + fi.correta + '"]').click(); fc.querySelector(".bk-confirm").click();
+    $("dashBankQ").querySelector(".bk-next").click();
+  }
+  var modesOpen = document.querySelectorAll("#diagMode .dm-opt").length === 2 && !$("diagAdapt").closest("[data-locked]") &&
+    !quick.closest("[data-locked]");
+  check("bank_free_account_limit_5", function(){
+    return freeIntro.indexOf("Na conta grátis, você faz 5 questões do seu nível.") !== -1 && seen.length === 5 &&
+      seen.every(function(id){ return byId[id].nivel === "B1"; }) && !!$("dashBankQ").querySelector(".fs-lock") &&
+      $("dashBankProgress").textContent === "5 de 5 feitas." && modesOpen &&
+      JSON.parse($("freeSample").textContent).resumo.indexOf("5 questões do banco no seu nível") !== -1;
+  });
+  window.__toeflAccess.setLevel("full");
+  KEYS.forEach(function(k){ if(keep[k] === null) localStorage.removeItem(k); else localStorage.setItem(k, keep[k]); });
+  window.__toeflDiagModes.refresh();
+})(); } catch(ex){ check("bank_level_checks_ran", function(){ throw ex; }); }
+
 check("no_js_errors", function(){ return window.__errors.length === 0; });
 results.__jsErrors = window.__errors;
 
@@ -1592,6 +1736,21 @@ def landing_checks():
         and page.count('href="index.html#criar-conta">Criar conta grátis</a>') == 1
         and page.count('href="index.html#criar-conta">Criar conta e salvar o resultado</a>') == 1
         and "<summary>O que a conta grátis inclui?</summary>" in page and "pode mudar" in page
+    )
+    # banco por nível: a apresentação traz a escolha do modo, a caixa do
+    # adaptativo e o mesmo banco do app (180 questões, 30 por nível, uma correta)
+    bank_src = json.loads((APP_DIR / "banco_niveis.json").read_text(encoding="utf-8"))
+    m = re.search(r'<script type="application/json" id="bancoNiveis">(.*?)</script>', page, re.S)
+    bank_page = json.loads(m.group(1)) if m else []
+    out["bank_file_180_valid_one_correct"] = (
+        len(bank_src) == 180 and len({it["id"] for it in bank_src}) == 180
+        and all(sum(1 for it in bank_src if it["nivel"] == lv) == 30 for lv in ("A1", "A2", "B1", "B2", "C1", "C2"))
+        and all(len(it["alternativas"]) == 4 and len(set(it["alternativas"])) == 4 and it["correta"] in (0, 1, 2, 3)
+                and [i for i, d in enumerate(it["distratores"]) if d == "correta"] == [it["correta"]] for it in bank_src)
+    )
+    out["landing_diagnostic_offers_both_modes"] = (
+        'id="lpDiagMode"' in page and 'id="lpAdapt" hidden' in page and 'id="lpQuick"' in page
+        and bank_page == bank_src and "Diagnóstico rápido (10 questões fixas)" in page and "ToeflBanco" in page
     )
     return out
 

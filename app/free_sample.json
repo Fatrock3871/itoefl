@@ -17,5 +17,6 @@
     {"id": "mod2-a", "rotulo": "1 drill de Listening"},
     {"id": "mod3-lr1", "rotulo": "1 conjunto de Listen and Repeat"},
     {"id": "m4build2", "rotulo": "3 itens de Build a Sentence", "itens": 3}
-  ]
+  ],
+  "banco": {"itens": 5, "rotulo": "5 questões do banco no seu nível", "_leia": "Banco por nível (app/banco_niveis.json): na conta grátis abrem as 5 primeiras questões do nível do aluno. Os dois modos do diagnóstico são sempre abertos."}
 }

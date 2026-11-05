@@ -115,7 +115,50 @@
       }
     }
 
+    // ---------- os dois modos: rápido (as 10 fixas) e adaptativo (banco por nível) ----------
+    // Mesma chave do app (toefl_diagad_v1): quem faz o adaptativo aqui e cria
+    // a conta neste navegador encontra o resultado no Módulo 0.
+    var AD_KEY = "toefl_diagad_v1";
+    var BANK = ToeflBanco.load();
+    var basisEl = document.getElementById("lpResultBasis");
+    var basisQuick = basisEl ? basisEl.textContent : "";
+    function adState(){ try { return JSON.parse(safeGet(AD_KEY) || "{}") || {}; } catch(e){ return {}; } }
+    function setAd(s){ safeSet(AD_KEY, JSON.stringify(s)); }
+    function mode(){ var s = adState(); return s.mode || (Object.keys(state).length ? "rapido" : ""); }
+    var quickBox = document.getElementById("lpQuick"), adaptBox = document.getElementById("lpAdapt");
+    var adaptive = null;
+    function showMode(){
+      var m = mode();
+      quickBox.hidden = m === "adapt"; // sem escolha, o rápido já aparece: o adaptativo é opcional
+      adaptBox.hidden = m !== "adapt";
+      if(m === "adapt" && !adaptive){
+        adaptive = ToeflBanco.mountAdaptive({ root: adaptBox, items: BANK, get: adState, set: setAd,
+          onDone: function(){ renderResult(); resultEl.focus(); }, onReset: function(){ renderResult(); } });
+      }
+      renderResult();
+    }
+    ToeflBanco.mountChooser({ root: document.getElementById("lpDiagMode"), current: mode, choose: function(m){
+      var s = adState(); s.mode = m; if(!Array.isArray(s.ans)) s.ans = [];
+      setAd(s); openDiag(); showMode();
+    } });
+    if(adState().mode) openDiag();
+    function renderAdapt(){
+      var s = adState();
+      if(!s.done || !Array.isArray(s.ans) || !s.ans.length){ resultEl.hidden = true; markPlan(null); return; }
+      var r = ToeflBanco.adaptResult(BANK, s.ans), band = ToeflLevel.band(r.pct);
+      document.getElementById("lpResultScore").textContent = "Você acertou " + r.correct + " de " + r.total + " no diagnóstico adaptativo.";
+      document.getElementById("lpResultBand").textContent = "Nível estimado: banda " + band.code + " (" + band.label + ")";
+      document.getElementById("lpResultDesc").textContent = band.desc.charAt(0).toUpperCase() + band.desc.slice(1) + ".";
+      document.getElementById("lpResultSched").textContent = ToeflLevel.schedule(r.pct).split(" · ")[0];
+      if(basisEl) basisEl.textContent = "A estimativa vem de " + r.total + " questões que se ajustaram às suas respostas";
+      keyBox.hidden = true;
+      resultEl.hidden = false;
+      markPlan(band.low);
+    }
+
     function renderResult(){
+      if(mode() === "adapt"){ renderAdapt(); return; }
+      if(basisEl) basisEl.textContent = basisQuick;
       var total = cards.length, confirmed = 0, correct = 0;
       cards.forEach(function(card){
         var s = state[card.dataset.num];
@@ -200,6 +243,13 @@
     });
 
     document.getElementById("lpRetry").addEventListener("click", function(){
+      if(mode() === "adapt"){
+        setAd({ mode: "adapt", ans: [], done: false });
+        if(adaptive) adaptive.render();
+        renderResult();
+        adaptBox.scrollIntoView({ block: "start" });
+        return;
+      }
       state = {};
       save();
       cards.forEach(applyCard);
@@ -207,7 +257,7 @@
       drill.scrollIntoView({ block: "start" });
     });
 
-    renderResult();
+    showMode();
   }
 
   // ---------- plano escolhido na tabela ----------

@@ -56,6 +56,8 @@ app/app.js                Runtime: tema, abas, progresso (checkboxes + badges), 
 app/level.js              Resultado do diagnóstico -> banda CEFR, régua 0 a 120 da ETS e cronograma indicado (ToeflLevel.recommend). O build cola antes do app.js e do landing.js
 app/partes.json           Tipo (teoria, prática, simulado, referência) e minutos de cada uma das 86 Partes: selo, mapa do módulo, "Agora pratique" e meta de hoje. O build falha se não bater com as Partes
 app/landing.js            Runtime da tela de apresentação: diagnóstico sem conta e plano clicado
+app/banco_niveis.json     Banco por nível: 180 questões (30 por nível CEFR), com nível e habilidade. O build valida e embute como #bancoNiveis
+app/banco.js              ToeflBanco: diagnóstico adaptativo, recomendação 70/30 e subida de nível. O build cola depois do level.js, nas duas páginas
 app/styles.css            Estilo (tema claro/escuro/sistema)
 app/icons.py              Ícones de interface (SVG de traço): o build põe o sprite no <body>; o app.js usa toeflIcon(nome)
 app/manifest.json         Manifesto da PWA (o build copia para artifact/)
@@ -102,6 +104,10 @@ _snapshots/               Cópias com timestamp antes de mudanças estruturais
 - **Questões do diagnóstico** → `app/quiz_mod0.json` (cada uma com `area`,
   usada nos acertos por área). O diagnóstico é a **Parte 1 do M0** desde
   2026-10-25 e só mostra o gabarito depois da décima resposta.
+- **Banco por nível** → `app/banco_niveis.json` (lista única: id, nivel,
+  habilidade, enunciado, alternativas[4], correta 0 a 3, explicacao,
+  distratores[4] com "correta" na posição da certa). O build para se sair de
+  180 itens, 30 por nível, ou se tiver mais de uma correta.
 - **Tipo e tempo de cada Parte** → `app/partes.json`.
 - **Drills de Reading/Listening** → `app/drills_data.py`.
 - **Itens de Build a Sentence (M4)** → `app/build_sentence_data.py`.
@@ -382,7 +388,36 @@ das subseções), `toefl_quiz_<drillId>_v1`, `toefl_srs_kit50_v1`,
 de erros),
 `toefl_cert_date_v1`, `toefl_streak_v1`, `toefl_dailygoal_v1`,
 `toefl_weeklydash_v1`, `toefl_avatar_v1`, `toefl_goal_v1` (meta do aluno:
-banda, data da prova, cronograma e início; dela sai a meta de hoje).
+banda, data da prova, cronograma e início; dela sai a meta de hoje),
+`toefl_diagad_v1` (modo do diagnóstico e respostas do adaptativo; a
+apresentação grava na mesma chave) e `toefl_banco_v1` (nível no banco,
+últimas respostas do nível, respostas e rodada atual).
+
+**Banco por nível e diagnóstico adaptativo (2026-11-05):** regras em
+`app/banco.js`, que o app e a apresentação usam iguais.
+
+- **Diagnóstico:** no começo da Parte 1 do M0 (e na apresentação) o aluno
+  escolhe "Diagnóstico rápido (10 questões fixas)", o de sempre, ou
+  "Diagnóstico adaptativo". Sem escolha, o rápido aparece. O adaptativo
+  começa no B1; acertou, a próxima é do nível de cima, errou, do de baixo.
+  Termina com 12 questões se as 4 últimas ficaram em dois níveis vizinhos,
+  senão com 15. O nível final é a média arredondada do nível demonstrado
+  nas 6 últimas (o da questão se acertou, um abaixo se errou). O nível vira
+  um % equivalente (`ToeflBanco.PCT`) e entra no `diagStats()`, então a
+  banda, o cronograma, a meta, a prioridade e o certificado saem da mesma
+  conta do rápido. Vale o modo escolhido por último que estiver completo.
+- **Recomendação:** o Painel mostra "Questões para o seu nível". Rodadas de
+  10: 7 do nível do aluno e 3 do de cima (no C2, as 10 do C2), primeiro as
+  menos respondidas. O nível começa no do diagnóstico (diagnóstico novo com
+  outro nível recomeça a conta). Só as questões do nível contam: com 15
+  respostas seguidas, 80% ou mais sobe um nível e menos de 40% desce um. O
+  Painel mostra o nível e quanto falta.
+- **Pontos fracos:** cada resposta do adaptativo e do banco conta pela
+  habilidade da questão: gramática em Gramática, vocabulário em Vocabulário,
+  leitura em Reading, conectivos e registro em Registro.
+- **Conta grátis:** os dois modos do diagnóstico e as 5 primeiras questões do
+  nível do aluno (`banco` em `app/free_sample.json`); depois, o cartão do
+  curso completo.
 
 `toefl_progress_v1` e `toefl_partpos_v1` levam a marca `_ordem_m0`: objeto
 sem ela é da ordem antiga do M0 (diagnóstico na Parte 3) e o `app.js` o
@@ -409,7 +444,8 @@ sincronizam (`toefl_quiz_`, `toefl_ctw_`, `toefl_bsq_`, `toefl_exam_`,
 `toefl_progress_v1`). `weakAreas()` no `app.js` soma os acertos por área:
 
 - **Diagnóstico:** cada questão na área dela (campo `painel` de
-  `DIAG_AREAS` no `build_pipeline.py`).
+  `DIAG_AREAS` no `build_pipeline.py`). O adaptativo e o banco por nível
+  entram pela habilidade da questão, na mesma tabela.
 - **Reading:** exercícios do M1, Complete the Words e blocos de Reading do M7.
 - **Listening:** exercícios do M2 e blocos "Listen..." do M7.
 - **Speaking:** Listen and Repeat marcado "ok" ou "miss".
