@@ -10,6 +10,7 @@ from render_weeklydash import render_weekly_dashboard
 from drills_data import (
     MOD1_ACTION_DRILLS_A, MOD1_ACTION_DRILLS_B, MOD1_ACTION_DRILLS_C,
     MOD2_ACTION_DRILLS_A, MOD2_ACTION_DRILLS_B, MOD2_ACTION_DRILLS_C, MOD2_ACTION_DRILLS_D,
+    MOD5_DRILLS, MOD6_DRILLS,
 )
 from build_sentence_data import BUILD_SENTENCE_ITEMS
 from ctw_data import CTW_SETS
@@ -653,9 +654,42 @@ def build_mod7():
     return html_out
 
 
-# ---------- Módulo 5: markdown + formulário de registro de erros ----------
+# ---------- Rodada sorteada de exercícios (M5 e M6) ----------
+# Um grupo com mais exercícios do que uma rodada: todos vão no HTML (o
+# progresso e os pontos fracos leem o que já foi respondido em qualquer um),
+# mas o app.js só mostra ROUND_SIZE por vez, sorteados entre os que o aluno
+# ainda não fez nesta volta (toefl_sorteio_v1). Nenhum se repete antes de o
+# grupo inteiro ter sido feito.
+ROUND_SIZE = 4
+M5_EXPECTED = (14, 73)  # exercícios, questões
+M6_EXPECTED = (12, 81)
+
+
+def render_drill_round(group_id, drills, expected):
+    got = (len(drills), sum(len(d["items"]) for d in drills))
+    if got != expected:
+        raise ValueError(f"{group_id}: esperava {expected[0]} exercícios e {expected[1]} questões, achei {got}")
+    for d in drills:
+        if not d["id"].startswith(group_id.split("-")[0] + "-"):
+            raise ValueError(f"{group_id}: id {d['id']} fora do prefixo do módulo (os pontos fracos dependem dele)")
+    picks = "".join(
+        f'<div class="drill-pick" data-pick="{d["id"]}">'
+        + render_quiz_drill(d["id"], d["title"], d["objective"], d.get("passage_html"),
+                            rebalance_items(d["items"], d["id"]), level=d.get("level"))
+        + "</div>"
+        for d in drills
+    )
+    return (f'<div class="drill-round" data-round-group="{group_id}" data-round="{ROUND_SIZE}">'
+            f'<div class="drill-round-bar"><p class="drill-round-status" role="status">'
+            f'{len(drills)} exercícios, {ROUND_SIZE} por rodada.</p>'
+            f'<button type="button" class="drill-round-next">Sortear outra rodada</button></div>'
+            f'{picks}</div>')
+
+
+# ---------- Módulo 5: markdown + exercícios + registro de erros ----------
 def build_mod5():
-    return build_with_errlog(f"{SRC}/modulo_5_registro.md", "mod5")
+    html_out = build_with_errlog(f"{SRC}/modulo_5_registro.md", "mod5")
+    return swap_placeholder(html_out, "M5_DRILLS", render_drill_round("mod5-registro", MOD5_DRILLS, M5_EXPECTED))
 
 
 # ---------- Módulo 6: markdown + SRS + registro de erros ----------
@@ -665,6 +699,7 @@ def build_mod6():
     before, after = split_registro_block(raw)
     errlog = render_error_log("mod6", ERRLOG_CODES["mod6"])
     html_out = to_html(before) + errlog + to_html(after)
+    html_out = swap_placeholder(html_out, "M6_DRILLS", render_drill_round("mod6-vocabulario", MOD6_DRILLS, M6_EXPECTED))
 
     cards = json.load(open("vocab_kit.json", encoding="utf-8"))
     widget = render_srs("kit50", cards)
@@ -723,8 +758,8 @@ def main():
         "mod2": build_mod2(),  # Grupos A/B/C/D (Action Drills) interativos, 36 itens
         "mod3": build_mod3(),  # formulário de registro de erros (Parte 7)
         "mod4": build_mod4(),  # Build a Sentence + registro de erros
-        "mod5": build_mod5(),  # formulário de registro de erros (Parte 9)
-        "mod6": build_mod6(),  # SRS + registro de erros (Parte 11)
+        "mod5": build_mod5(),  # 14 exercícios interativos (Parte 7) + registro de erros
+        "mod6": build_mod6(),  # 12 exercícios interativos (Parte 9) + SRS + registro de erros
         "mod7": build_mod7(),  # blocos de simulado interativos, 59 itens
         "mod8": build_plain(f"{SRC}/modulo_8_examday.md"),
         "mod9": build_plain(f"{SRC}/modulo_9_braziliantraps.md"),

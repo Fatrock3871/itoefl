@@ -529,152 +529,17 @@ Os diálogos do Listening usam muitos **[[phrasal verbs::verbos acompanhados de 
 
 ## Parte 9: Exercícios de vocabulário
 
-> **Dica:** As tabelas anteriores trabalham o reconhecimento, enquanto estes exercícios colocam a sua **produção** em prática. Resolva cada bloco com papel e caneta, sem consultar as listas, e só confira o gabarito depois de terminar.
+> **Dica:** As tabelas anteriores trabalham o reconhecimento, e os exercícios de 1 a 12 testam se você escolhe a forma e o sentido certos sem consultar as listas. A correção aparece na hora, com o porquê. Depois, o Exercício 13 coloca a sua **produção** em prática.
 
-### Exercício 1: Complete the Words (forma exata)
+%%%M6_DRILLS%%%
 
-Complete cada palavra com as letras que faltam. As primeiras letras já estão indicadas, e a estrutura da frase define a **forma gramatical** correta.
-
-1. "The committee will *ass___* the proposal before the vote." *(verbo)*
-2. "A thorough *ass___* of the risks is still pending." *(substantivo)*
-3. "The results were *stat___* significant." *(advérbio)*
-4. "Researchers must control for every *conf___* variable." *(adjetivo)*
-5. "The two theories offer *comp___* explanations of the same data." *(adjetivo, no sentido de "concorrentes" ou "rivais")*
-6. "Her argument rests on a questionable *assum___*." *(substantivo)*
-7. "The city failed to *pri___* infrastructure spending." *(verbo)*
-8. "The evidence is far from *concl___*." *(adjetivo)*
-9. "The lecture *elab___* on a point the reading only mentions." *(verbo, 3ª pessoa)*
-10. "Such policies tend to *perp___* existing inequalities." *(verbo)*
-11. "The findings were later *corrob___* by an independent team." *(verbo, particípio)*
-12. "There is considerable *variat___* between the regions." *(substantivo)*
-13. "The professor's account is more *nu___* than the textbook's." *(adjetivo)*
-14. "This raises an important *episte___* question about how we know what we claim to know." *(adjetivo)*
-15. "The intervention produced only a *marg___* improvement." *(adjetivo)*
-
-**Gabarito:** 1 assess · 2 assessment · 3 statistically · 4 confounding · 5 competing · 6 assumption · 7 prioritize · 8 conclusive · 9 elaborates · 10 perpetuate · 11 corroborated · 12 variation · 13 nuanced · 14 epistemic · 15 marginal
-
-### Exercício 2: Forma da palavra (word form)
-
-Coloque a **forma correta** da raiz indicada entre parênteses.
-
-1. "The study's methodological ___ (ROBUST) has been widely praised."
-2. "These findings ___ (SUBSTANTIAL) the earlier hypothesis."
-3. "The two accounts differ ___ (SIGNIFICANT) in their conclusions."
-4. "A ___ (PERSIST) gap remains between policy and practice."
-5. "The data must be interpreted with ___ (CAUTION)."
-6. "The model ___ (SIMPLE) a process that is in fact highly complex." *(com o prefixo over-)*
-7. "Their ___ (RELY) on a single data source weakens the argument."
-8. "The phenomenon has been documented ___ (EXTENSIVE)."
-9. "The committee reached a ___ (CONCLUDE) after months of review."
-10. "The reform was ___ (TRANSFORM) rather than incremental."
-11. "The claim is ___ (DEMONSTRATE) false." *(advérbio)*
-12. "Such ___ (VARY) is expected in samples of this size."
-
-**Gabarito:** 1 robustness · 2 substantiate · 3 significantly · 4 persistent · 5 caution · 6 oversimplifies · 7 reliance · 8 extensively · 9 conclusion · 10 transformative · 11 demonstrably · 12 variation (ou variability)
-
-### Exercício 3: Collocation (verbo âncora)
-
-Escolha o verbo que forma a **[[collocation::combinação natural de palavras]]** adequada em cada frase: *conduct · draw · raise · pose · yield · challenge · account for · reach*
-
-1. "The researchers ___ a longitudinal study over fifteen years."
-2. "It is too early to ___ firm conclusions."
-3. "The lecture ___ a serious objection to the reading's assumption."
-4. "Algorithmic bias ___ a direct threat to fair hiring."
-5. "Early education programs ___ large long-term returns."
-6. "The new evidence ___ the conventional explanation."
-7. "The reading fails to ___ the implementation costs."
-8. "After long debate, the panel ___ a consensus."
-
-**Gabarito:** 1 conducted · 2 draw · 3 raises · 4 poses · 5 yield · 6 challenges · 7 account for · 8 reached
-
-### Exercício 4: Sinônimo preciso (registro acadêmico)
-
-Substitua a palavra simples em destaque pelo termo acadêmico mais **preciso** para o contexto. Mais de uma opção pode funcionar, então escolha a que melhor se encaixa na frase.
-
-1. "The policy made the problem **worse**." → ___
-2. "This shows the importance of early action." → ___
-3. "The two studies **agree with** each other." → ___
-4. "The theory is **weak** and easily challenged." → ___
-5. "Green spaces can **reduce** urban heat." → ___
-6. "The professor **says** the cause is economic." → ___ *(propõe como hipótese)*
-7. "Critics **say** the model ignores regional gaps." → ___ *(defendem uma posição)*
-8. "The result was **surprising** given common sense." → ___
-9. "The influence of social media is **everywhere**." → ___
-10. "The finding held up across many **strong** studies." → ___
-
-**Gabarito (uma opção):** 1 exacerbated · 2 underscores · 3 corroborate one another · 4 tenuous · 5 mitigate · 6 posits · 7 contend · 8 counterintuitive · 9 pervasive · 10 robust
-
-### Exercício 5: Pares de nuance
-
-Escolha a **palavra certa** entre as opções de cada item.
-
-1. "The new rule will (affect / effect) attendance."
-2. "The (affect / effect) on attendance was minimal."
-3. "The author (implies / infers) that the data are unreliable."
-4. "From the tone, we (imply / infer) skepticism."
-5. "The report (comprises / is comprised of) five chapters."
-6. "There were (fewer / less) objections than expected."
-7. "The (amount / number) of participants was small."
-8. "Compared (to / with) the control group, the treatment group improved."
-9. "The (principal / principle) reason is cost."
-10. "The measures are (sensible / sensitive) given the uncertainty."
-11. "The scandal (preceded / proceeded) the resignation."
-12. "The survey was designed to (elicit / illicit) candid responses."
-
-**Gabarito:** 1 affect · 2 effect · 3 implies · 4 infer · 5 comprises · 6 fewer · 7 number · 8 with *(é a forma recomendada pelos manuais de estilo para comparação de diferenças; "to" também é aceito no uso real)* · 9 principal · 10 sensible · 11 preceded · 12 elicit
-
-### Exercício 6: Preenchimento de lacunas em contexto acadêmico
-
-Complete as lacunas do parágrafo usando os termos do **banco**: *empirical · mechanism · extrapolate · confounding · replicate · tenuous · systemic · mitigation · correlation · causation*
-
-> "The paper reports a strong ___(1) between screen time and poor sleep in teenagers. But correlation is not ___(2), and the study does not identify the ___(3) by which screens would disrupt sleep. A likely ___(4) variable is simply that anxious teenagers both sleep poorly and use phones more. Until an independent team can ___(5) the result under controlled conditions, the causal claim remains ___(6). The authors are right, however, that the broader trend is real and that its drivers are largely ___(7): a product of how devices and apps are designed. Any ___(8) strategy should therefore target design, not just individual willpower. The ___(9) evidence we do have supports modest limits; it does not support the alarmist framing that lets commentators ___(10) from a small effect to a generational crisis."
-
-**Gabarito:** 1 correlation · 2 causation · 3 mechanism · 4 confounding · 5 replicate · 6 tenuous · 7 systemic · 8 mitigation · 9 empirical · 10 extrapolate
-
-### Exercício 7: Verbo de reporte e postura
-
-Para cada frase, escolha o **verbo de reporte** que combina com a postura indicada entre colchetes: *acknowledges · claims · demonstrates · disputes · notes · concedes*
-
-1. "The author ___ that the sample was small. [reconhece uma fraqueza própria]"
-2. "The lecturer ___, with new data, that the reading's model is wrong. [prova]"
-3. "The reading ___ that the method is flawless, but offers no support. [afirma sem prova]"
-4. "The professor ___ the reading's central assumption. [contesta]"
-5. "The passage ___ that enrollment rose in 2024. [registra um fato, neutro]"
-6. "While she ___ the cost is real, she argues the benefit is larger. [admite o contra]"
-
-**Gabarito:** 1 acknowledges · 2 demonstrates · 3 claims · 4 disputes · 5 notes · 6 concedes *(nos itens 1 e 6 as duas formas servem, pois acknowledge e concede estão na mesma linha da tabela 6.3)*
-
-### Exercício 8: Ativação (inserção no início da frase)
+### Exercício 13: Ativação (inserção no início da frase)
 
 Para cada palavra abaixo, escreva uma frase própria em que o termo apareça logo nas **primeiras 4 palavras**. Cronometre 15 segundos por frase; se passar desse tempo, sinal de que a palavra ainda é passiva e deve continuar apenas no Writing por enquanto.
 
 *proliferation · counterintuitive · exacerbate · pervasive · underscore · viable · systemic · inherent*
 
 **Modelo (proliferation):** *"The proliferation of streaming services has fragmented an audience that cable once held together."*
-
-### Exercício 9: Caça ao erro
-
-Cada frase abaixo tem um deslize de **vocabulário** envolvendo forma da palavra, colocação, falso cognato ou nuance. Encontre o ponto de atenção e faça a correção.
-
-1. "Eventually, the study has three limitations that the authors admit."
-2. "The data are comprised of responses from 400 students."
-3. "This raises a concern about if the method is valid."
-4. "The professor pretends that the effect is purely cultural."
-5. "The two results corroborate to each other."
-6. "The policy had a big affect on rural clinics."
-7. "The evidence for this connection is very strong and robusts."
-8. "The lecture makes an emphasis on the second mechanism."
-
-**Gabarito:**
-
-1. Troque *Eventually* por **"The study has three limitations..."** (falso cognato, pois *[[eventually::no fim, mais cedo ou mais tarde]]* significa "no fim", enquanto a intenção era dizer "eventualmente"; se a ideia era "possivelmente", use *[[possibly::possivelmente]]*, mas aqui o mais limpo é cortar).
-2. Troque *are comprised of* por **"comprise"** ou **"are composed of"**.
-3. Troque *about if* por **"about whether"**.
-4. Troque *pretends* por **"claims"** ou **"argues"** (falso cognato, pois *[[pretend::fingir]]* significa "fingir").
-5. Troque *corroborate to each other* por **"corroborate each other"** (sem preposição).
-6. Troque *affect* por **"effect"** (aqui é substantivo).
-7. Troque *robusts* por **"robust"** (adjetivo não flexiona).
-8. Troque *makes an emphasis on* por **"emphasizes"** ou **"places emphasis on"**.
 
 ---
 

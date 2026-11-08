@@ -131,6 +131,17 @@ def convert_exam_blocks(raw, id_prefix):
                         nxt[0].setdefault("pre", []).append(lines[k])
                     else:
                         stray.append(k)
+                # as outras questões trazem a fala própria e a primeira não: a
+                # fala dela é a linha logo acima do bloco ("**ÁUDIO 1:** ...").
+                # Ela entra na questão, para a fala acompanhar a questão quando
+                # o app.js sortear a ordem
+                if not pending[0].get("pre") and any(it.get("pre") for it in pending[1:]):
+                    k = first - 1
+                    while k >= 0 and not lines[k].strip():
+                        k -= 1
+                    if k >= 0 and not lines[k].lstrip().startswith("#"):
+                        pending[0]["pre"] = [lines[k]]
+                        first = k
                 if len(set(nums)) == len(nums) and set(nums) == set(answers) and not stray:
                     for it in pending:
                         it["correct"], it["explanation"] = answers[it["num"]]

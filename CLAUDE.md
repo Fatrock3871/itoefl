@@ -35,7 +35,7 @@ consolidated/*.md         Texto dos 10 módulos (M0–M9) — fonte da verdade d
 app/build_pipeline.py     Monta os fragmentos HTML por módulo; injeta os widgets
 app/build.py              Monta artifact/index.html (nav + painéis + CSS + JS)
 app/quiz_mod0.json        As 10 questões do diagnóstico (M0)
-app/drills_data.py        Drills interativos de Reading (M1) e Listening (M2)
+app/drills_data.py        Drills interativos de Reading (M1), Listening (M2), Registro (M5, MOD5_DRILLS) e Vocabulário (M6, MOD6_DRILLS)
 app/vocab_kit.json        As 50 palavras do Kit de Emergência (flashcards SRS do M6)
 app/build_sentence_data.py  30 itens de Build a Sentence no molde da prova (M4)
 app/ctw_data.py           8 parágrafos de Complete the Words no molde da prova (M1)
@@ -110,6 +110,12 @@ _snapshots/               Cópias com timestamp antes de mudanças estruturais
   180 itens, 30 por nível, ou se tiver mais de uma correta.
 - **Tipo e tempo de cada Parte** → `app/partes.json`.
 - **Drills de Reading/Listening** → `app/drills_data.py`.
+- **Exercícios do M5 (Registro) e do M6 (Vocabulário)** → `MOD5_DRILLS` e
+  `MOD6_DRILLS` em `app/drills_data.py` (2026-11-07). No `.md` o lugar é o
+  parágrafo `%%%M5_DRILLS%%%` ou `%%%M6_DRILLS%%%`. O build falha se a
+  contagem mudar sem atualizar `M5_EXPECTED` e `M6_EXPECTED` em
+  `build_pipeline.py` (hoje 14 e 73, 12 e 81). O id precisa começar com
+  `mod5-` ou `mod6-`, que é como os pontos fracos sabem a área.
 - **Itens de Build a Sentence (M4)** → `app/build_sentence_data.py`.
 - **Parágrafos de Complete the Words (M1)** → `app/ctw_data.py`.
 - **Cenários de Speaking (M3)** → `app/speaking_data.py`.
@@ -190,7 +196,20 @@ sempre "B". `rebalance.py` redistribui no build, e o `app.js` ainda embaralha
 a ordem na tela a cada sessão (`shuffleChoices`). Por isso: citar alternativa
 em explicação sempre como `(B)`, entre parênteses, que é o que as duas etapas
 sabem remapear. A correção e o progresso salvo usam `data-letter`, a letra
-depois do rebalanceamento do build, nunca a posição na tela. Cronômetro, gravador e
+depois do rebalanceamento do build, nunca a posição na tela.
+
+**Ordem das questões e rodada sorteada (2026-11-07):** nos exercícios do M1,
+M2, M5 e M6 e nos blocos do M7 a ordem das questões também é sorteada
+(`orderQuestions` no `app.js`): nova a cada abertura de exercício ainda não
+começado e a cada "Refazer", sempre diferente da última; começado ou
+entregue, fica a guardada. O número na tela segue a posição; a correção usa
+`data-num`. O diagnóstico do M0 fica fixo. No M7, a fala de uma questão de
+Listen and Choose a Response vai dentro dela (`.exam-pre`, `render_exam.py`)
+para acompanhar a questão. M5 e M6 mostram 4 exercícios por rodada
+(`render_drill_round`, `ToeflSorteio.pickRound`): primeiro os que o aluno
+ainda não fez nesta volta e, entre eles, os menos feitos; nenhum volta antes
+de o grupo inteiro ter sido feito. "Sortear outra rodada" troca os 4.
+Cronômetro, gravador e
 export/import ficam no shell (`build.py`) e valem para todas as abas.
 - Depois de qualquer edição de fonte, rodar as duas builds e conferir
   `artifact/index.html` no navegador.
@@ -270,8 +289,8 @@ Implicações que o conteúdo deve respeitar:
 | M2 | Listening | ✅ formato 2026, 4 drills |
 | M3 | Speaking | ✅ formato 2026: 5 cenários de Listen and Repeat e 4 entrevistas, com áudio |
 | M4 | Writing | ✅ formato 2026: 30 itens de Build a Sentence no molde da prova + 12 caixas de escrita |
-| M5 | Registro & Sofisticação Retórica | ✅ reescrito para 2026 — camada transversal de elevação de banda (Atlas Linguístico em bandas CEFR + 10 marcadores + aplicação por task) |
-| M6 | Vocabulário acadêmico | ✅ portado para 2026 — 100 entradas de léxico + arsenal cross-temático + kit de 50 palavras |
+| M5 | Registro & Sofisticação Retórica | ✅ reescrito para 2026 — camada transversal de elevação de banda (Atlas Linguístico em bandas CEFR + 10 marcadores + aplicação por task); 14 exercícios interativos (73 questões), 4 por rodada |
+| M6 | Vocabulário acadêmico | ✅ portado para 2026 — 100 entradas de léxico + arsenal cross-temático + kit de 50 palavras; 12 exercícios interativos (81 questões), 4 por rodada |
 | M7 | Simulados progressivos | ✅ formato 2026: 19 blocos interativos (59 questões), correção só na entrega |
 | M8 | Exam Day Protocol | ✅ portado — Parte 6 (seção a seção) reescrita para as 4 seções de 2026 |
 | M9 | Brazilian Trap Library | ✅ portado — referências a tasks extintas atualizadas |
@@ -390,8 +409,10 @@ de erros),
 `toefl_weeklydash_v1`, `toefl_avatar_v1`, `toefl_goal_v1` (meta do aluno:
 banda, data da prova, cronograma e início; dela sai a meta de hoje),
 `toefl_diagad_v1` (modo do diagnóstico e respostas do adaptativo; a
-apresentação grava na mesma chave) e `toefl_banco_v1` (nível no banco,
-últimas respostas do nível, respostas e rodada atual).
+apresentação grava na mesma chave), `toefl_banco_v1` (nível no banco,
+últimas respostas do nível, respostas e rodada atual) e `toefl_sorteio_v1`
+(por grupo do M5 e do M6: exercícios feitos nesta volta e quantas vezes cada
+um foi feito).
 
 **Banco por nível e diagnóstico adaptativo (2026-11-05):** regras em
 `app/banco.js`, que o app e a apresentação usam iguais.
@@ -429,7 +450,9 @@ Sempre locais, por aparelho: `toefl_theme_v1`, `toefl_active_tab`,
 (trilha rápida ou completa: preferência de leitura, não progresso),
 `toefl_welcome_v1` (cartão "Comece aqui" do M0 dispensado),
 `toefl_tr_v1` (interruptor "Traduções": `off` desliga o balão),
-`toefl_plan_pick_v1` (plano clicado na tela de apresentação). `toefl_sync_at` e
+`toefl_plan_pick_v1` (plano clicado na tela de apresentação),
+`toefl_qorder_v1` (ordem das questões de cada exercício e a rodada à mostra
+no M5 e no M6: abrir a página não marca nada para sincronizar). `toefl_sync_at` e
 `toefl_dirty` são internos do sync.
 
 **Sincronização:** quando o Supabase está configurado e o aluno logado, as
@@ -454,13 +477,14 @@ sincronizam (`toefl_quiz_`, `toefl_ctw_`, `toefl_bsq_`, `toefl_exam_`,
   meaning"), marcada no build com `data-weak="vocabulario"` (`weak_area()` em
   `render_quiz.py`, usada também no `render_exam.py`), sai de Reading e conta
   aqui. Os flashcards do M6 contam uma vez por palavra revisada, pela última
-  nota: caixa 0 é "Errei", acima de 0 é acerto.
+  nota: caixa 0 é "Errei", acima de 0 é acerto. Os exercícios do M6
+  (`mod6-`) contam aqui, cada questão.
 - **Registro de erros** (quadro "Registre esta sessão", M1 a M6,
   `ERRLOG_AREA`): cada código marcado é 1 erro na área do módulo (M1 Reading,
   M2 Listening, M3 Speaking, M4 Writing, M5 registro, M6 vocabulário). Sessão
   sem código não conta acerto.
-- **Registro:** só o diagnóstico e o registro de erros do M5, porque o M5
-  não tem exercício que guarde certo e errado.
+- **Registro:** o diagnóstico, os exercícios do M5 (`mod5-`, cada questão)
+  e o registro de erros do M5.
 
 Cada área tem um atalho para uma Parte em
 `WEAK_AREAS`; o resultado do diagnóstico usa o mesmo atalho. Com menos de 4
