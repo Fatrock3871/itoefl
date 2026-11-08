@@ -591,3 +591,1861 @@ MOD2_ACTION_DRILLS_D = [
         ],
     },
 ]
+
+
+# PARTE 7 do M5 (Registro): os exercícios de elevação, antes só texto, em
+# múltipla escolha. Rascunho do Gemini revisado pelo Claude em 2026-11-07
+# (itoefl-gerencia/m5m6/REVISAO-claude.md). "fonte" = linha do .md original.
+# Contam nos pontos fracos em Registro.
+MOD5_DRILLS = [{'id': 'mod5-x-1',
+  'title': 'Exercício 1: Elevação de frases para B2 (meta de 4 min)',
+  'level': 'B1–B2',
+  'objective': 'Escolha a opção que eleva cada frase de nível B1 para o nível B2 com precisão vocabular e controle '
+               'gramatical, mantendo o sentido original. Tempo-alvo: 4 minutos.',
+  'passage_html': None,
+  'items': [{'num': '1.1',
+             'prompt': 'Frase original (B1): "Technology is important because it helps people work faster."',
+             'options': {'A': 'Technology matters because it lets people work far more efficiently than before.',
+                         'B': 'Technology is crucial because it makes people to work much faster than before.',
+                         'C': 'Technology matters although it lets people work far more efficiently than before.',
+                         'D': 'Technology is important so that it helps people working much faster every day.'},
+             'correct': 'A',
+             'explanation': 'Você ganha precisão em B2 ao trocar <em>is important</em> por <strong>matters</strong> e '
+                            '<em>work faster</em> por <em>work far more efficiently</em>. A melhor armadilha é a (C), '
+                            'que usa o mesmo vocabulário, mas troca <em>because</em> por <em>although</em> e quebra a '
+                            'relação de causa; já a (B) erra a regência em <em>makes people to work</em>.',
+             'fonte': 'Parte 7, Exercício 1, item 1 (linhas 639 e 652)'},
+            {'num': '1.2',
+             'prompt': 'Frase original (B1): "Many students feel stressed during exams. This is a problem."',
+             'options': {'A': 'Exam-related stress are widespread and affects student performance.',
+                         'B': 'Exam-related stress is widespread and affects performance.',
+                         'C': 'Many students feel stressed in exams, which it is a big problem.',
+                         'D': 'Because exam-related stress is widespread, it benefits performance.'},
+             'correct': 'B',
+             'explanation': 'A opção (B) comprime as duas frases soltas em uma única oração densa usando o grupo '
+                            'nominal <strong>exam-related stress</strong>. A alternativa (A) chega perto, mas desliza '
+                            'na concordância com <em>stress are</em>; a (C) repete o pronome em <em>which it is</em> e '
+                            'mantém o nível B1.',
+             'fonte': 'Parte 7, Exercício 1, item 2 (linhas 640 e 653)'},
+            {'num': '1.3',
+             'prompt': 'Frase original (B1): "Remote work is good but it can make people feel alone."',
+             'options': {'A': 'Remote work has clear benefits, therefore isolation is a real cost.',
+                         'B': 'Remote work is very good, despite isolation is a real cost.',
+                         'C': 'Remote work has clear benefits, though isolation is a real cost.',
+                         'D': 'Remote work has clear benefits, because isolation is a real cost.'},
+             'correct': 'C',
+             'explanation': 'Em (C), você substitui o adjetivo genérico <em>good</em> por <strong>clear '
+                            'benefits</strong> e marca a concessão com <em>though</em>. A opção (B) é um ponto de '
+                            'atenção clássico: <em>despite</em> pede um grupo nominal, e não uma oração completa como '
+                            '<em>isolation is a real cost</em>. Já (A) e (D) trocam o contraste por conclusão ou '
+                            'causa.',
+             'fonte': 'Parte 7, Exercício 1, item 3 (linhas 641 e 654)'},
+            {'num': '1.4',
+             'prompt': 'Frase original (B1): "The city built a new park. Now more people exercise outside."',
+             'options': {'A': 'Before the city opened a new park, outdoor exercise rose noticeably.',
+                         'B': 'After the city opened a new park, outdoor exercise fell noticeably.',
+                         'C': 'Although the city opened a new park, outdoor exercise rose noticeably.',
+                         'D': 'After the city opened a new park, outdoor exercise rose noticeably.'},
+             'correct': 'D',
+             'explanation': 'A alternativa (D) integra a sequência temporal com <em>After</em> e eleva o vocabulário '
+                            'em <strong>outdoor exercise rose noticeably</strong>. A opção (C) é a armadilha mais '
+                            'próxima, mas usa <em>Although</em> onde não há oposição entre abrir o parque e o aumento '
+                            'de exercício.',
+             'fonte': 'Parte 7, Exercício 1, item 4 (linhas 642 e 655)'},
+            {'num': '1.5',
+             'prompt': 'Frase original (B1): "Learning a second language is useful for getting a job."',
+             'options': {'A': 'A second language is a substantial advantage at the job market.',
+                         'B': 'A second language is a substantial advantage in the job market.',
+                         'C': 'A second language is a small advantage in the job market today.',
+                         'D': 'Learning a second language is useful for get a good job today.'},
+             'correct': 'B',
+             'explanation': 'A opção (B) troca <em>useful for getting a job</em> pela colocação natural '
+                            '<strong>substantial advantage in the job market</strong>. A alternativa (A) parece '
+                            'idêntica, mas tropeça na preposição ao usar <em>at the job market</em> em vez de '
+                            '<em>in</em>.',
+             'fonte': 'Parte 7, Exercício 1, item 5 (linhas 643 e 656)'}]},
+ {'id': 'mod5-x-2',
+  'title': 'Exercício 2: Elevação de frases para C1 (meta de 5 min)',
+  'level': 'C1–C2',
+  'objective': 'Escolha a opção que transforma cada frase de nível B1 em uma construção de nível C1 com foco analítico '
+               'e densidade sintática. Tempo-alvo: 5 minutos.',
+  'passage_html': None,
+  'items': [{'num': '2.1',
+             'prompt': 'Frase original (B1): "Social media connects people but it also spreads false information."',
+             'options': {'A': 'The same architecture that lets social media connect people at scale is what lets '
+                              'falsehoods travel at that scale.',
+                         'B': 'The same architecture that lets social media to connect people at scale is what lets '
+                              'falsehoods travel at scale.',
+                         'C': 'What makes social media important is that it connects many people and also spreads '
+                              'false information very fast.',
+                         'D': 'Notwithstanding that social media connects people at scale, the architecture prevents '
+                              'falsehoods from traveling far.'},
+             'correct': 'A',
+             'explanation': 'A opção (A) atinge o nível C1 ao explicar o <strong>mecanismo</strong> comum aos dois '
+                            'efeitos com paralelismo e frase clivada. A alternativa (B) é quase igual, mas erra a '
+                            'gramática ao incluir <em>to</em> após o verbo <em>let</em> (<em>lets social media to '
+                            'connect</em>).',
+             'fonte': 'Parte 7, Exercício 1, item 6 (linhas 644 e 657)'},
+            {'num': '2.2',
+             'prompt': 'Frase original (B1): "The company hired more staff. The waiting time went down."',
+             'options': {'A': 'It was the staffing increase, not the new software, what brought waiting times down.',
+                         'B': 'What brought waiting times down was that the staffing increase hired more staff.',
+                         'C': 'It was the staffing increase, not the new software, that brought waiting times down.',
+                         'D': 'Not only the staffing increase brought waiting times down, but it also helped staff.'},
+             'correct': 'C',
+             'explanation': 'A alternativa (C) aplica com perfeição a estrutura <strong>it-cleft</strong> (<em>It was '
+                            'X, not Y, that...</em>) combinada à nominalização <em>staffing increase</em>. A opção (A) '
+                            'traz um deslize muito frequente: usar <em>what</em> no lugar de <em>that</em> para fechar '
+                            'uma frase clivada com <em>It was</em>.',
+             'fonte': 'Parte 7, Exercício 1, item 7 (linhas 645 e 658)'},
+            {'num': '2.3',
+             'prompt': 'Frase original (B1): "Reading books is better than watching videos for learning."',
+             'options': {'A': 'Reading moves at a pace the video sets; the reader sets its own, and comprehension '
+                              'quietly rises to match.',
+                         'B': 'Reading moves at a pace the reader sets; video sets its own, and comprehension quietly '
+                              'drops to match.',
+                         'C': 'Reading books is better than videos; because the reader sets the pace, and learning is '
+                              'much more good.',
+                         'D': 'Reading moves at a pace the reader sets; video sets its own, so comprehension quickly '
+                              'rises to match it.'},
+             'correct': 'B',
+             'explanation': 'Em (B), você substitui o adjetivo vago <em>better</em> pelo mecanismo real de controle de '
+                            'ritmo, criando <strong>densidade analítica</strong>. A opção (D) mantém a estrutura, mas '
+                            'inverte o sentido final ao dizer que a compreensão sobe com o ritmo imposto pelo vídeo.',
+             'fonte': 'Parte 7, Exercício 1, item 8 (linhas 646 e 659)'},
+            {'num': '2.4',
+             'prompt': 'Frase original (B1): "Public transport is cheaper than driving. It is also better for the '
+                       'air."',
+             'options': {'A': 'Public transport is the rare option that is more expensive for the individual and '
+                              'cleaner for everyone else at the same time.',
+                         'B': 'Public transport is the rare option that is cheaper for the individual nor cleaner for '
+                              'everyone else at the same time.',
+                         'C': 'Public transport is the rare option who is cheaper for the individual and cleaner for '
+                              'everyone else at the same time.',
+                         'D': 'Public transport is the rare option that is cheaper for the individual and cleaner for '
+                              'everyone else at the same time.'},
+             'correct': 'D',
+             'explanation': 'A resposta (D) integra os dois benefícios em uma única frase com '
+                            '<strong>paralelismo</strong> (<em>cheaper for the individual and cleaner for everyone '
+                            'else</em>). A opção (C) erra o pronome relativo ao usar <em>who</em> para '
+                            '<em>option</em>, e a (A) inverte o sentido de <em>cheaper</em>.',
+             'fonte': 'Parte 7, Exercício 1, item 9 (linhas 647 e 660)'},
+            {'num': '2.5',
+             'prompt': 'Frase original (B1): "Some students cheat on tests. Schools should stop this."',
+             'options': {'A': 'Cheating is more a discipline problem than a design one: it thrives whenever the stakes '
+                              'are low and the format is hard to game.',
+                         'B': 'Cheating is less a design problem than a discipline one: it disappears wherever the '
+                              'stakes are high and the format is easy to game.',
+                         'C': 'Cheating is less a discipline problem than a design one: it thrives wherever the stakes '
+                              'are high and the format is easy to game.',
+                         'D': 'Cheating is less a discipline problem than a design one: it thrives wherever the stakes '
+                              'are high or the format are easy to game.'},
+             'correct': 'C',
+             'explanation': 'A alternativa (C) faz um <strong>reenquadramento</strong> de nível C1 ao deslocar o foco '
+                            'da disciplina para o desenho da avaliação. A opção (D) é quase idêntica, mas quebra a '
+                            'concordância verbal no final com <em>the format are</em>.',
+             'fonte': 'Parte 7, Exercício 1, item 10 (linhas 648 e 661)'}]},
+ {'id': 'mod5-x-3',
+  'title': 'Exercício 3: Nominalização de processos (meta de 4 min)',
+  'level': 'C1–C2',
+  'objective': 'Escolha o grupo nominal que transforma corretamente o verbo em destaque em uma nominalização de nível '
+               'C1 (Marcador 6). Tempo-alvo: 4 minutos.',
+  'passage_html': None,
+  'items': [{'num': '3.1',
+             'prompt': 'Frase-base: "Fewer people are reading newspapers."',
+             'options': {'A': 'the growth in newspaper readership',
+                         'B': 'the decline of reading newspapers people',
+                         'C': 'the decline in newspaper readership',
+                         'D': 'the decreasing on newspaper readers'},
+             'correct': 'C',
+             'explanation': 'O grupo nominal <strong>the decline in newspaper readership</strong> comprime a oração '
+                            'inteira com a preposição correta (<em>decline in</em>). A opção (D) usa <em>decreasing '
+                            'on</em>, que falha na colocação de preposição, enquanto (A) inverte o sentido de '
+                            '<em>fewer</em>.',
+             'fonte': 'Parte 7, Exercício 2, item 1 (linhas 667 e 680)'},
+            {'num': '3.2',
+             'prompt': 'Frase-base: "The climate is changing quickly."',
+             'options': {'A': 'the pace of climate change',
+                         'B': 'the quickness in climate changing',
+                         'C': 'the fastly changing of climate',
+                         'D': 'the pace on climatic changes'},
+             'correct': 'A',
+             'explanation': 'Em (A), o advérbio <em>quickly</em> vira o substantivo de medida em <strong>the pace of '
+                            'climate change</strong>. A opção (B) soa artificial com <em>quickness in climate '
+                            'changing</em>, e (C) inventa a forma <em>fastly</em>.',
+             'fonte': 'Parte 7, Exercício 2, item 2 (linhas 668 e 681)'},
+            {'num': '3.3',
+             'prompt': 'Frase-base: "Cities are growing faster than infrastructure can keep up."',
+             'options': {'A': 'the equality between urban growth and infrastructure',
+                         'B': 'the mismatch between urban growth and infrastructure',
+                         'C': 'the mismatch among cities growing and infrastructure',
+                         'D': 'the fastness of urban growth over the infrastructure'},
+             'correct': 'B',
+             'explanation': 'A opção (B) sintetiza a diferença de ritmo no substantivo <strong>mismatch</strong> '
+                            'seguido de <em>between X and Y</em>. A alternativa (C) usa <em>among</em> para apenas '
+                            'dois termos e mantém o verbo <em>cities growing</em> sem nominalizar de forma limpa.',
+             'fonte': 'Parte 7, Exercício 2, item 3 (linhas 669 e 682)'},
+            {'num': '3.4',
+             'prompt': 'Frase-base: "People trust institutions less than they used to."',
+             'options': {'A': 'the surge of trust in institutions',
+                         'B': 'the erosion on institutional trusting',
+                         'C': 'the trusting less of institutions now',
+                         'D': 'the erosion of trust in institutions'},
+             'correct': 'D',
+             'explanation': 'A expressão <strong>the erosion of trust in institutions</strong> é uma das '
+                            'nominalizações mais valorizadas no Writing acadêmico. A opção (B) erra a regência com '
+                            '<em>erosion on</em> e <em>trusting</em>, e (A) troca a queda por aumento '
+                            '(<em>surge</em>).',
+             'fonte': 'Parte 7, Exercício 2, item 4 (linhas 670 e 683)'},
+            {'num': '3.5',
+             'prompt': 'Frase-base: "Companies depend more on remote teams now."',
+             'options': {'A': "companies' growing reliance in remote teams",
+                         'B': "companies' growing reliance on remote teams",
+                         'C': "companies' declining reliance on remote teams",
+                         'D': 'the growing dependance of companies to teams'},
+             'correct': 'B',
+             'explanation': 'O verbo <em>depend on</em> vira o substantivo <strong>reliance on</strong>, mantendo a '
+                            'mesma preposição exigida pelo verbo. A opção (A) é uma armadilha clássica de preposição '
+                            '(<em>reliance in</em>), e (D) erra tanto a grafia (<em>dependance</em>) quanto a '
+                            'preposição (<em>to</em>).',
+             'fonte': 'Parte 7, Exercício 2, item 5 (linhas 671 e 684)'}]},
+ {'id': 'mod5-x-4',
+  'title': 'Exercício 4: Nominalização de estados e eventos (meta de 4 min)',
+  'level': 'C1–C2',
+  'objective': 'Escolha a nominalização que substitui a estrutura verbal ou adjetiva mantendo a precisão e as '
+               'colocações naturais do inglês acadêmico. Tempo-alvo: 4 minutos.',
+  'passage_html': None,
+  'items': [{'num': '4.1',
+             'prompt': 'Frase-base: "The population is aging across most of Europe."',
+             'options': {'A': 'the aging of the population across much of Europe',
+                         'B': 'the youth of the population across much of Europe',
+                         'C': 'the aging in the population between most of Europe',
+                         'D': 'the oldness of population across most in Europe'},
+             'correct': 'A',
+             'explanation': 'A construção <strong>the aging of the population</strong> empacota o processo contínuo em '
+                            'um sujeito abstrato pronto para abrir a frase. A opção (C) usa <em>between</em> com um '
+                            'único termo coletivo (<em>Europe</em>), o que não funciona.',
+             'fonte': 'Parte 7, Exercício 2, item 6 (linhas 672 e 685)'},
+            {'num': '4.2',
+             'prompt': 'Frase-base: "The two departments failed to communicate."',
+             'options': {'A': 'the communication success between the two departments',
+                         'B': 'the communication failure among the two departments',
+                         'C': 'the communication failure between the two departments',
+                         'D': 'the failing for communicate of the two departments'},
+             'correct': 'C',
+             'explanation': 'O verbo <em>failed</em> se transforma no substantivo <strong>communication failure '
+                            'between</strong> os dois setores. Repare que a opção (B) troca <em>between</em> por '
+                            '<em>among</em> mesmo falando de exatamente dois departamentos.',
+             'fonte': 'Parte 7, Exercício 2, item 7 (linhas 673 e 686)'},
+            {'num': '4.3',
+             'prompt': 'Frase-base: "Students are aware of the risks now more than before."',
+             'options': {'A': 'a marked decline in student awareness of the risks',
+                         'B': 'a marked increase of student aware about the risks',
+                         'C': 'a marked increase on students awareness to the risks',
+                         'D': 'a marked increase in student awareness of the risks'},
+             'correct': 'D',
+             'explanation': 'O adjetivo <em>aware</em> recebe o sufixo <em>-ness</em> e entra na colocação '
+                            '<strong>increase in student awareness of</strong>. A alternativa (B) deixa o adjetivo '
+                            '<em>aware</em> sem transformar em substantivo, e (C) erra as preposições (<em>on</em> e '
+                            '<em>to</em>).',
+             'fonte': 'Parte 7, Exercício 2, item 8 (linhas 674 e 687)'},
+            {'num': '4.4',
+             'prompt': 'Frase-base: "The market collapsed in a matter of weeks."',
+             'options': {'A': 'the collapse of the market within weeks',
+                         'B': 'the recovery of the market within weeks',
+                         'C': 'the collapsing on the market during weeks',
+                         'D': 'the collapse in the market since weeks'},
+             'correct': 'A',
+             'explanation': 'Em (A), você comprime a frase em <strong>the collapse of the market within '
+                            'weeks</strong>, ótimo para funcionar como sujeito ou objeto. A opção (C) erra a '
+                            'preposição com <em>on the market</em> e usa <em>during weeks</em> em vez de <em>within '
+                            'weeks</em>.',
+             'fonte': 'Parte 7, Exercício 2, item 9 (linhas 675 e 688)'},
+            {'num': '4.5',
+             'prompt': 'Frase-base: "The rules were applied inconsistently."',
+             'options': {'A': 'the consistent application of the rules',
+                         'B': 'the inconsistent appliance of the rules',
+                         'C': 'the inconsistently applying on the rules',
+                         'D': 'the inconsistent application of the rules'},
+             'correct': 'D',
+             'explanation': 'Na nominalização, o verbo <em>applied</em> vira <em>application</em> e o advérbio '
+                            '<em>inconsistently</em> vira o adjetivo em <strong>the inconsistent application of the '
+                            'rules</strong>. A opção (B) é um ponto de atenção lexical porque <em>appliance</em> '
+                            'significa aparelho doméstico, e não aplicação de uma regra.',
+             'fonte': 'Parte 7, Exercício 2, item 10 (linhas 676 e 689)'}]},
+ {'id': 'mod5-x-5',
+  'title': 'Exercício 5: Conectivos de nível C1 (meta de 4 min)',
+  'level': 'C1–C2',
+  'objective': 'Leia o parágrafo de base e escolha a opção que substitui cada conectivo simples por um marcador de '
+               'nível C1 da Parte 2, mantendo o sentido original. Tempo-alvo: 4 minutos.',
+  'passage_html': '<p><strong>PARÁGRAFO ORIGINAL (B1–B2):</strong></p><blockquote><p>Online courses are cheaper than '
+                  'traditional ones. <strong>(1) Also</strong>, they are more flexible. <strong>(2) However</strong>, '
+                  'they have higher dropout rates. <strong>(3) So</strong>, universities should not rely on them '
+                  'completely. <strong>(4) Because of this</strong>, a mixed model works better.</p></blockquote>',
+  'items': [{'num': '5.1',
+             'prompt': 'Trecho (1): Como substituir "Also, they are more flexible." em nível C1?',
+             'options': {'A': 'Notwithstanding this, they are more flexible.',
+                         'B': 'Compounding this problem, they are more flexible.',
+                         'C': 'Consequently, they are much more flexible.',
+                         'D': 'Beyond this, they are more flexible.'},
+             'correct': 'D',
+             'explanation': 'O marcador <strong>Beyond this</strong> adiciona uma nova vantagem em registro C1. A '
+                            'melhor armadilha é a (B): como vimos no Atlas Linguístico, <em>Compounding this '
+                            'problem</em> só pode ser usado para somar um problema a outro, e não uma qualidade '
+                            'positiva como flexibilidade.',
+             'fonte': 'Parte 7, Exercício 3 (linhas 695 e 698)'},
+            {'num': '5.2',
+             'prompt': 'Trecho (2): Como substituir "However, they have higher dropout rates." em nível C1?',
+             'options': {'A': 'This is not to say that they are flawless: they have higher dropout rates.',
+                         'B': 'What is more, they are flawless, since they have higher dropout rates.',
+                         'C': 'This gives rise to the fact that they are flawless: dropout rates are low.',
+                         'D': 'Notwithstanding that they have higher dropout rates, they are flawless.'},
+             'correct': 'A',
+             'explanation': 'A estrutura <strong>This is not to say that</strong> introduz a ressalva com sofisticação '
+                            'antes de apontar a taxa de evasão. A opção (B) usa <em>What is more</em>, que é conectivo '
+                            'de adição, onde o parágrafo pede contraste.',
+             'fonte': 'Parte 7, Exercício 3 (linhas 695 e 698)'},
+            {'num': '5.3',
+             'prompt': 'Trecho (3): Como substituir "So, universities should not rely on them completely." em nível '
+                       'C1?',
+             'options': {'A': 'In contrast, universities should not rely on them completely.',
+                         'B': 'What this implies is that universities should not rely on them completely.',
+                         'C': 'What this implies is universities should rely on them completely.',
+                         'D': 'Whereas this implies that universities should not rely on them completely.'},
+             'correct': 'B',
+             'explanation': 'O molde <strong>What this implies is that</strong> substitui o <em>So</em> básico e '
+                            'explicita o elo lógico entre a evasão e a recomendação. A opção (D) cria uma frase '
+                            'incompleta com <em>Whereas</em>, e a (C) inverte a conclusão ao tirar o <em>not</em>.',
+             'fonte': 'Parte 7, Exercício 3 (linhas 695 e 698)'},
+            {'num': '5.4',
+             'prompt': 'Trecho (4): Como substituir "Because of this, a mixed model works better." em nível C1?',
+             'options': {'A': 'The consequence of this is that a mixed model works worse.',
+                         'B': 'The consequence in this is what a mixed model works better.',
+                         'C': 'The consequence of this is that a mixed model works better.',
+                         'D': 'Admittedly, the consequence is that a mixed model works better.'},
+             'correct': 'C',
+             'explanation': 'A expressão <strong>The consequence of this is that</strong> fecha a cadeia de causa e '
+                            'efeito sem repetir o marcador anterior. A alternativa (B) erra a preposição (<em>in</em> '
+                            'em vez de <em>of</em>) e troca a conjunção integrante <em>that</em> por <em>what</em>.',
+             'fonte': 'Parte 7, Exercício 3 (linhas 695 e 698)'}]},
+ {'id': 'mod5-x-6',
+  'title': 'Exercício 6: Precisão e cortesia no Write an Email (meta de 4 min)',
+  'level': 'B1–B2',
+  'objective': 'Leia o e-mail com excesso de cerimônia (código RG1) e escolha a melhor reescrita para cada parte da '
+               'mensagem em registro formal, direto e educado. Tempo-alvo: 4 minutos.',
+  'passage_html': '<p><strong>RASCUNHO COM EXCESSO DE CERIMÔNIA:</strong></p><blockquote><p>Dear Professor, I would '
+                  'like to take this opportunity to very humbly and respectfully reach out to you in order to kindly '
+                  'inquire whether it might perhaps somehow be possible, if it is not too much of an inconvenience for '
+                  'you, to consider the possibility of granting me a small extension on the assignment, as I have '
+                  'unfortunately been feeling somewhat unwell. Thank you so very much in advance for your kind '
+                  'consideration. Most respectfully yours.</p></blockquote>',
+  'items': [{'num': '6.1',
+             'prompt': 'Parte 1 (Saudação e propósito): Qual abertura substitui o rodeio inicial com o registro ideal '
+                       'para o Write an Email?',
+             'options': {'A': "Hey Professor Lima, I'm writing because I really need more time on Friday's essay.",
+                         'B': 'Dear Professor Lima, I am writing to ask whether I could have a short extension on the '
+                              'essay due Friday.',
+                         'C': 'Dear Professor Lima, I humbly beg your permission to postpone the essay due Friday.',
+                         'D': 'Dear Professor Lima, I am writing to demand a short extension on the essay due Friday.'},
+             'correct': 'B',
+             'explanation': 'Em (B), você apresenta o objetivo logo na primeira frase usando <strong>I am writing to '
+                            'ask whether I could</strong>, sem contrações e sem rodeios. A opção (A) cai no registro '
+                            "informal com <em>Hey</em> e <em>I'm</em>, enquanto a (C) mantém a cerimônia exagerada com "
+                            '<em>humbly beg</em>.',
+             'fonte': 'Parte 7, Exercício 4 (linhas 704 e 707)'},
+            {'num': '6.2',
+             'prompt': 'Parte 2 (Justificativa): Como explicar o motivo do pedido de forma profissional e objetiva?',
+             'options': {'A': "I was unwell for much of this week and can provide a doctor's note if needed.",
+                         'B': "I've been feeling super sick all week and it's not fair to grade me right now.",
+                         'C': 'I was unfortunately afflicted by a malady and might perhaps bring a medical paper.',
+                         'D': "I was unwell for much of this week, so you must accept my doctor's note now."},
+             'correct': 'A',
+             'explanation': 'A frase (A) informa o problema com sobriedade (<em>unwell</em>) e já oferece a '
+                            "comprovação concreta em <strong>can provide a doctor's note if needed</strong>. A opção "
+                            '(C) exagera no floreio com <em>afflicted by a malady</em>, e a (B) usa gíria e desabafo '
+                            'emocional.',
+             'fonte': 'Parte 7, Exercício 4 (linhas 704 e 707)'},
+            {'num': '6.3',
+             'prompt': 'Parte 3 (Pedido específico): Como propor a nova data de entrega em uma frase curta e cortês?',
+             'options': {'A': 'Can it maybe be on Monday?',
+                         'B': 'Will you give me Monday?',
+                         'C': 'Must I hand it in Monday?',
+                         'D': 'Would Monday be acceptable?'},
+             'correct': 'D',
+             'explanation': 'A pergunta <strong>Would Monday be acceptable?</strong> usa um único modal de cortesia em '
+                            'uma frase limpa e fácil de localizar. A alternativa (A) mistura modal informal com '
+                            'hesitação (<em>Can it maybe</em>), e a (B) soa direta demais para um pedido acadêmico.',
+             'fonte': 'Parte 7, Exercício 4 (linhas 704 e 707)'},
+            {'num': '6.4',
+             'prompt': 'Parte 4 (Fechamento): Qual encerramento substitui "Thank you so very much in advance... Most '
+                       'respectfully yours" na medida certa?',
+             'options': {'A': 'Thanks a lot for everything. See you soon, [Name]',
+                         'B': 'I remain forever grateful to your esteemed person. Yours, [Name]',
+                         'C': 'Thank you for considering it. Best regards, [Name]',
+                         'D': 'Thank you for granting my extension right now. Sincerely, [Name]'},
+             'correct': 'C',
+             'explanation': 'O fechamento <strong>Thank you for considering it. Best regards</strong> agradece sem '
+                            'exagero e respeita a decisão do professor. A opção (D) dá o pedido como já aprovado antes '
+                            'da resposta, o que soa impositivo.',
+             'fonte': 'Parte 7, Exercício 4 (linhas 704 e 707)'}]},
+ {'id': 'mod5-x-7',
+  'title': 'Exercício 7: Combinação de orações e densidade (meta de 6 min)',
+  'level': 'B1–B2',
+  'objective': 'Escolha a opção que reúne cada grupo de frases curtas em uma única frase densa e fluida, usando '
+               'subordinação, particípio ou aposto (seção 4.3). Tempo-alvo: 6 minutos.',
+  'passage_html': None,
+  'items': [{'num': '7.1',
+             'prompt': 'Frases originais: "The library extended its hours. Students asked for this. It happened last '
+                       'semester."',
+             'options': {'A': 'Last semester, in response to student requests, the library extended its hours.',
+                         'B': 'Asking for this last semester, the library extended its hours for the students.',
+                         'C': 'Last semester, despite student requests, the library extended its hours.',
+                         'D': 'The library extended its hours last semester, because it asked for the students.'},
+             'correct': 'A',
+             'explanation': 'Em (A), você comprime a segunda frase na locução prepositiva <strong>in response to '
+                            'student requests</strong> e abre com o marco temporal. A opção (B) cai na armadilha do '
+                            'particípio solto (<em>dangling participle</em>), fazendo parecer que a própria biblioteca '
+                            'pediu a mudança.',
+             'fonte': 'Parte 7, Exercício 5, item 1 (linhas 713 e 724)'},
+            {'num': '7.2',
+             'prompt': 'Frases originais: "Granovetter published a paper in 1973. It was about weak ties. It became '
+                       'very influential."',
+             'options': {'A': 'Granovetter, who was a 1973 paper on weak ties, proved highly influential.',
+                         'B': "Granovetter's 1973 paper on weak ties proved highly influential.",
+                         'C': "Publishing in 1973, weak ties made Granovetter's paper highly influential.",
+                         'D': "Granovetter's 1973 paper on weak ties, which it proved highly influential."},
+             'correct': 'B',
+             'explanation': 'A opção (B) reúne três frases em apenas nove palavras usando o grupo nominal compacto '
+                            "<strong>Granovetter's 1973 paper on weak ties</strong> como sujeito. A alternativa (C) "
+                            'cria um particípio solto (como se <em>weak ties</em> tivesse publicado o artigo), e a (D) '
+                            'fica sem verbo principal.',
+             'fonte': 'Parte 7, Exercício 5, item 2 (linhas 714 e 725)'},
+            {'num': '7.3',
+             'prompt': 'Frases originais: "The plan lowered costs. Because of this, it gained support. The support '
+                       'came from the finance team."',
+             'options': {'A': 'By lowering costs, the finance team was lowered by the support of the plan.',
+                         'B': 'Despite lowering costs, the plan won the support of the finance team.',
+                         'C': 'By lowering costs, the plan lost the support of the finance team.',
+                         'D': 'By lowering costs, the plan won the support of the finance team.'},
+             'correct': 'D',
+             'explanation': 'A estrutura <strong>By lowering costs</strong> usa preposição e gerúndio para expressar o '
+                            'meio pelo qual o plano conquistou o apoio, mantendo o mesmo sujeito (<em>the plan</em>) '
+                            'nas duas partes. A opção (B) troca a relação de causa por concessão ao usar '
+                            '<em>Despite</em>.',
+             'fonte': 'Parte 7, Exercício 5, item 3 (linhas 715 e 726)'},
+            {'num': '7.4',
+             'prompt': 'Frases originais: "The city invested in bike lanes. Cycling doubled. Car traffic fell '
+                       'slightly."',
+             'options': {'A': 'Before the city invested in bike lanes, cycling doubled while car traffic fell '
+                              'slightly.',
+                         'B': 'After the city invested in bike lanes, cycling doubled because car traffic rose '
+                              'slightly.',
+                         'C': 'After the city invested in bike lanes, cycling doubled while car traffic fell slightly.',
+                         'D': 'Investing in bike lanes, cycling doubled while car traffic fell slightly in the city.'},
+             'correct': 'C',
+             'explanation': 'Em (C), você articula três eventos com duas conjunções precisas: <em>After</em> para a '
+                            'causa temporal e <strong>while</strong> para contrastar os dois resultados simultâneos. A '
+                            'alternativa (D) deixa o particípio <em>Investing</em> solto, pois o sujeito seguinte é '
+                            '<em>cycling</em> e não <em>the city</em>.',
+             'fonte': 'Parte 7, Exercício 5, item 4 (linhas 716 e 727)'},
+            {'num': '7.5',
+             'prompt': 'Frases originais: "The study had a small sample. The results were still striking. They matched '
+                       'earlier work."',
+             'options': {'A': 'Despite a small sample, the study produced striking results that matched earlier work.',
+                         'B': 'Because of a small sample, the study produced striking results that matched earlier '
+                              'work.',
+                         'C': 'Despite that the sample was small, the study produced striking results matching earlier '
+                              'work.',
+                         'D': 'Despite a small sample, the study produced striking results that contradicted earlier '
+                              'work.'},
+             'correct': 'A',
+             'explanation': 'A opção (A) comprime a concessão em <strong>Despite a small sample</strong> e encaixa a '
+                            'terceira frase em uma oração relativa (<em>that matched earlier work</em>). A alternativa '
+                            '(C) comete o deslize de usar <em>Despite that</em> seguido de oração, em vez de grupo '
+                            'nominal.',
+             'fonte': 'Parte 7, Exercício 5, item 5 (linhas 717 e 728)'},
+            {'num': '7.6',
+             'prompt': 'Frases originais: "The app was free. It had ads. Many users left because of the ads."',
+             'options': {'A': 'The app was free and ad-supported, so the ads kept many users staying.',
+                         'B': 'The app was free but ad-supported, and the ads drove many users away.',
+                         'C': 'Being ad-supported and free, many users were driven away by the app.',
+                         'D': 'The app was free because ad-supported, though the ads drove users away.'},
+             'correct': 'B',
+             'explanation': 'Em (B), a segunda frase vira o adjetivo composto <strong>ad-supported</strong> e a '
+                            'terceira usa o verbo expressivo <em>drove many users away</em>. A opção (C) cria um '
+                            'particípio solto ao ligar <em>Being ad-supported and free</em> ao sujeito <em>many '
+                            'users</em>.',
+             'fonte': 'Parte 7, Exercício 5, item 6 (linhas 718 e 729)'},
+            {'num': '7.7',
+             'prompt': 'Frases originais: "The professor posts recordings. Students who miss class can catch up. '
+                       'Attendance has not dropped."',
+             'options': {'A': 'Because the professor posts recordings so that students who miss class can catch up, '
+                              'attendance has dropped.',
+                         'B': 'Although the professor posts recordings unless students who miss class can catch up, '
+                              'attendance has not dropped.',
+                         'C': 'Although the professor posts recordings so that students who miss class can catch up, '
+                              'attendance has not dropped.',
+                         'D': 'Posting recordings so that students who miss class can catch up, attendance has not '
+                              'dropped in the course.'},
+             'correct': 'C',
+             'explanation': 'A alternativa (C) combina concessão (<strong>Although</strong>) e finalidade (<em>so '
+                            'that</em>) na mesma frase, mantendo a leitura clara. A opção (D) cai novamente na '
+                            'armadilha do particípio solto, já que <em>attendance</em> não é quem publica as '
+                            'gravações.',
+             'fonte': 'Parte 7, Exercício 5, item 7 (linhas 719 e 730)'},
+            {'num': '7.8',
+             'prompt': 'Frases originais: "The report was written by an external panel. It criticized the process. '
+                       'Management accepted most of it."',
+             'options': {'A': "The external panel's report, supportive of the process, was largely rejected by "
+                              'management.',
+                         'B': "Written by management, the external panel's report was critical of the process and "
+                              'accepted.',
+                         'C': "The external panel's report, critical of the process, was largely rejected by "
+                              'management.',
+                         'D': "The external panel's report, critical of the process, was largely accepted by "
+                              'management.'},
+             'correct': 'D',
+             'explanation': "A opção (D) transforma a primeira frase em posse (<em>The external panel's report</em>) e "
+                            'reduz a segunda ao aposto adjetivo <strong>critical of the process</strong>. As '
+                            'alternativas (A), (B) e (C) alteram quem escreveu o relatório ou invertem a aceitação '
+                            'pela chefia.',
+             'fonte': 'Parte 7, Exercício 5, item 8 (linhas 720 e 731)'}]},
+ {'id': 'mod5-x-8',
+  'title': 'Exercício 8: Frases clivadas para dar foco (meta de 5 min)',
+  'level': 'C1–C2',
+  'objective': 'Escolha a frase clivada (it-cleft ou wh-cleft, seção 4.4) que destaca corretamente o elemento indicado '
+               'no enunciado. Tempo-alvo: 5 minutos.',
+  'passage_html': None,
+  'items': [{'num': '8.1',
+             'prompt': 'Destaque "Feedback" na frase: "Feedback, not testing, drives improvement."',
+             'options': {'A': 'It is feedback, not testing, that drives improvement.',
+                         'B': 'It is feedback, not testing, what drives improvement.',
+                         'C': 'What drives improvement is testing, not feedback at all.',
+                         'D': 'It is feedback, not testing, that drive improvement now.'},
+             'correct': 'A',
+             'explanation': 'O molde <strong>It is X, not Y, that</strong> coloca a causa sob o holofote logo na '
+                            'abertura. A opção (B) troca <em>that</em> por <em>what</em> em uma <em>it-cleft</em>, e a '
+                            '(D) erra a concordância com o singular <em>feedback</em> ao usar <em>drive</em>.',
+             'fonte': 'Parte 7, Exercício 6, item 1 (linhas 737 e 746)'},
+            {'num': '8.2',
+             'prompt': 'Destaque "the cost of maintenance" na frase: "The policy ignores the cost of maintenance."',
+             'options': {'A': 'What the policy ignores are the cost of maintenance.',
+                         'B': 'What the policy ignores is the cost of maintenance.',
+                         'C': 'It is the policy that ignores the cost of maintenance.',
+                         'D': 'What ignores the cost of maintenance is the policy.'},
+             'correct': 'B',
+             'explanation': 'A estrutura <strong>What the policy ignores is</strong> (<em>wh-cleft</em>) cria '
+                            'expectativa na primeira metade e entrega o foco no final. As opções (C) e (D) destacam '
+                            '<em>the policy</em> em vez de <em>the cost of maintenance</em>, e a (A) erra a '
+                            'concordância com <em>are</em>.',
+             'fonte': 'Parte 7, Exercício 6, item 2 (linhas 738 e 747)'},
+            {'num': '8.3',
+             'prompt': 'Destaque "The follow-up call" na frase: "The follow-up call closes most sales."',
+             'options': {'A': 'It is most sales that the follow-up call closes.',
+                         'B': 'It is the follow-up call who closes most sales.',
+                         'C': 'It is the follow-up call that closes most sales.',
+                         'D': 'What the follow-up call closes is that most sales.'},
+             'correct': 'C',
+             'explanation': 'Em (C), a <strong>it-cleft</strong> destaca o sujeito <em>the follow-up call</em> usando '
+                            'o conector <em>that</em>. A alternativa (B) usa <em>who</em> para uma coisa inanimada '
+                            '(<em>call</em>), e a (A) desloca o foco para <em>most sales</em>.',
+             'fonte': 'Parte 7, Exercício 6, item 3 (linhas 739 e 748)'},
+            {'num': '8.4',
+             'prompt': 'Destaque "the long-term effect" na frase: "This argument misses the long-term effect."',
+             'options': {'A': 'It is this argument that misses the long-term effect.',
+                         'B': 'What this argument misses that is the long-term effect.',
+                         'C': 'What misses the long-term effect is this argument here.',
+                         'D': 'What this argument misses is the long-term effect.'},
+             'correct': 'D',
+             'explanation': 'A <em>wh-cleft</em> em <strong>What this argument misses is</strong> direciona a atenção '
+                            'exatamente para o objeto que faltou no argumento. A opção (A) destaca <em>this '
+                            'argument</em> em vez do efeito de longo prazo, e a (B) sobra um <em>that</em> antes de '
+                            '<em>is</em>.',
+             'fonte': 'Parte 7, Exercício 6, item 4 (linhas 740 e 749)'},
+            {'num': '8.5',
+             'prompt': 'Destaque "The sustained investment" na frase: "The sustained investment turned the '
+                       'neighborhood around."',
+             'options': {'A': 'It was the sustained investment that turned the neighborhood around.',
+                         'B': 'It is the sustained investment what turned the neighborhood around.',
+                         'C': 'It was the neighborhood that the sustained investment turned around.',
+                         'D': 'What the sustained investment turned around was the neighborhood.'},
+             'correct': 'A',
+             'explanation': 'Como o verbo original (<em>turned</em>) está no passado, a clivada mantém o tempo verbal '
+                            'em <strong>It was the sustained investment that</strong>. As opções (C) e (D) colocam o '
+                            'foco no bairro (<em>the neighborhood</em>), e não no investimento.',
+             'fonte': 'Parte 7, Exercício 6, item 5 (linhas 741 e 750)'},
+            {'num': '8.6',
+             'prompt': 'Destaque "when the funding was cut" usando uma frase clivada em: "We only saw the problem when '
+                       'the funding was cut."',
+             'options': {'A': 'It was only when the funding was cut what we saw the problem.',
+                         'B': 'It was only when the funding was cut that we saw the problem.',
+                         'C': 'It was the problem that we only saw when the funding was cut.',
+                         'D': 'Only when the funding was cut we saw the problem clearly.'},
+             'correct': 'B',
+             'explanation': 'A estrutura <strong>It was only when... that</strong> destaca o marco temporal com uma '
+                            'clivada completa. Vale notar que a inversão <em>Only when the funding was cut did we see '
+                            'the problem</em> também seria boa gramática (embora não seja clivada), mas a (D) esquece '
+                            'de inverter o auxiliar <em>did</em>.',
+             'fonte': 'Parte 7, Exercício 6, item 6 (linhas 742 e 751)'}]},
+ {'id': 'mod5-x-9',
+  'title': 'Exercício 9: Escala de formalidade no Writing acadêmico (meta de 4 min)',
+  'level': 'B1–B2',
+  'objective': 'Leia o parágrafo informal e escolha a opção que eleva cada trecho para o registro acadêmico (seção '
+               '4.6), incluindo 1 ou 2 verbos mais formais por frase sem exagerar. Tempo-alvo: 4 minutos.',
+  'passage_html': '<p><strong>PARÁGRAFO INFORMAL:</strong></p><blockquote><p><strong>(1)</strong> The new rule made '
+                  'things a lot worse for small shops. <strong>(2)</strong> It put off a lot of customers because '
+                  "prices went up. <strong>(3)</strong> The city didn't look at the data before it brought in the "
+                  'change, <strong>(4)</strong> and now it has to deal with the fallout.</p></blockquote>',
+  'items': [{'num': '9.1',
+             'prompt': 'Trecho (1): Como elevar "The new rule made things a lot worse for small shops" com '
+                       'naturalidade?',
+             'options': {'A': 'The new regulation markedly improved conditions for small shops.',
+                         'B': 'The novel statutory mandate catastrophically deteriorated retail establishments.',
+                         'C': 'The new rule made things a bit worse for small shops.',
+                         'D': 'The new regulation markedly worsened conditions for small shops.'},
+             'correct': 'D',
+             'explanation': 'Em (D), você troca <em>rule</em> por <em>regulation</em>, <em>a lot</em> por '
+                            '<em>markedly</em> e <em>made things worse</em> por <strong>worsened conditions</strong>. '
+                            'A opção (B) cai na armadilha de trocar todas as palavras simples por termos pomposos, o '
+                            'que deixa o texto artificial.',
+             'fonte': 'Parte 7, Exercício 7 (linhas 757 e 760)'},
+            {'num': '9.2',
+             'prompt': 'Trecho (2): Como elevar "It put off a lot of customers because prices went up"?',
+             'options': {'A': 'It postponed many customers as prices declined,',
+                         'B': 'It deterred many customers as prices rose,',
+                         'C': 'It put off plenty of buyers since prices went up,',
+                         'D': 'It deterred many customers although prices fell,'},
+             'correct': 'B',
+             'explanation': 'No contexto de afastar clientes, <em>put off</em> equivale a <strong>deterred</strong>, e '
+                            '<em>went up</em> vira <em>rose</em>. A alternativa (A) é uma ótima armadilha: '
+                            '<em>postpone</em> traduz <em>put off</em> apenas no sentido de adiar uma reunião, e não '
+                            'de desencorajar pessoas.',
+             'fonte': 'Parte 7, Exercício 7 (linhas 757 e 760)'},
+            {'num': '9.3',
+             'prompt': 'Trecho (3): Como elevar "The city didn\'t look at the data before it brought in the change"?',
+             'options': {'A': 'and because the city did not watch the data before bringing the change,',
+                         'B': 'and although the city examined the data before introducing the change,',
+                         'C': 'and because the city did not examine the data before introducing the change,',
+                         'D': "and because the city didn't look into the data after introducing the change,"},
+             'correct': 'C',
+             'explanation': "A opção (C) desfaz a contração <em>didn't</em> e substitui os verbos frasais por "
+                            '<strong>examine</strong> e <em>introducing</em>. A alternativa (A) usa <em>watch the '
+                            'data</em>, que não forma colocação em inglês.',
+             'fonte': 'Parte 7, Exercício 7 (linhas 757 e 760)'},
+            {'num': '9.4',
+             'prompt': 'Trecho (4): Como elevar "and now it has to deal with the fallout"?',
+             'options': {'A': 'it must now ignore the consequences.',
+                         'B': 'it can now deal with the big fallout.',
+                         'C': 'it might perhaps tackle the things.',
+                         'D': 'it must now address the consequences.'},
+             'correct': 'D',
+             'explanation': 'Na tabela da seção 4.6, <em>deal with</em> passa a <strong>address</strong> e '
+                            '<em>fallout</em> ganha precisão com <em>the consequences</em>. A opção (C) mistura '
+                            'hesitação excessiva (<em>might perhaps</em>) com o substantivo vago <em>things</em>.',
+             'fonte': 'Parte 7, Exercício 7 (linhas 757 e 760)'}]},
+ {'id': 'mod5-x-10',
+  'title': 'Exercício 10: Calibragem de hedging (meta de 4 min)',
+  'level': 'C1–C2',
+  'objective': 'Suavize afirmações absolutas demais (Parte A) e dê firmeza ao que está evasivo demais (Parte B), '
+               'aplicando o hedging calibrado da seção 4.2. Tempo-alvo: 4 minutos.',
+  'passage_html': '<p><strong>PARTE A (absoluto demais):</strong> "Video games cause violence. Every child who plays '
+                  'them becomes aggressive. Technology destroys family communication completely."</p><p><strong>PARTE '
+                  'B (evasivo demais):</strong> "Maybe reading could possibly perhaps sometimes in some cases help a '
+                  'little bit with vocabulary, but I\'m not really sure and it might not be true for everyone."</p>',
+  'items': [{'num': '10.1',
+             'prompt': 'Parte A (1): Como reescrever "Video games cause violence. Every child who plays them becomes '
+                       'aggressive" com hedging de nível C1?',
+             'options': {'A': 'Video games definitely cause violence in most children, and players always become '
+                              'aggressive in the short term.',
+                         'B': 'Maybe video games might possibly perhaps cause a bit of violence in some children who '
+                              'play them sometimes.',
+                         'C': 'Some research suggests a link between heavy gaming and short-term aggression, though '
+                              'the effect appears small and does not hold for all players.',
+                         'D': 'Research proves that heavy gaming never causes any aggression, so the effect does not '
+                              'hold for any players at all.'},
+             'correct': 'C',
+             'explanation': 'Em (C), você substitui a afirmação absoluta por cautela calibrada com <strong>suggests a '
+                            'link</strong>, <em>appears small</em> e delimitação de escopo (<em>heavy gaming</em>, '
+                            '<em>not for all players</em>). A opção (B) sai do extremo absoluto direto para o extremo '
+                            'inseguro, empilhando quatro marcadores de dúvida seguidos.',
+             'fonte': 'Parte 7, Exercício 8, Parte A (linhas 765 e 772)'},
+            {'num': '10.2',
+             'prompt': 'Parte A (2): Como suavizar "Technology destroys family communication completely" mantendo um '
+                       'argumento forte e defensável?',
+             'options': {'A': 'Heavy device use may also weaken face-to-face communication within families, at least '
+                              'for some age groups.',
+                         'B': 'Heavy device use will undoubtedly destroy all face-to-face communication within '
+                              'families of every age group.',
+                         'C': 'Perhaps technology could maybe possibly affect family communication a little bit in '
+                              'some situations.',
+                         'D': 'Heavy device use always strengthens face-to-face communication within families across '
+                              'all age groups.'},
+             'correct': 'A',
+             'explanation': 'A opção (A) especifica o sujeito (<em>Heavy device use</em>), usa o modal <strong>may '
+                            'also weaken</strong> no lugar de <em>destroys</em> e limita o alcance com <em>at least '
+                            'for some age groups</em>. A alternativa (B) mantém o tom 100% absoluto com '
+                            '<em>undoubtedly destroy all</em>.',
+             'fonte': 'Parte 7, Exercício 8, Parte A (linhas 765 e 772)'},
+            {'num': '10.3',
+             'prompt': 'Parte B (1): Como dar firmeza à primeira metade de "Maybe reading could possibly perhaps '
+                       'sometimes in some cases help a little bit with vocabulary..."?',
+             'options': {'A': 'Reading is the only way that ever builds vocabulary for every person,',
+                         'B': 'Regular reading is one of the most reliable ways to build vocabulary,',
+                         'C': 'Maybe regular reading might perhaps help a bit with vocabulary,',
+                         'D': 'Regular reading rarely helps anyone build vocabulary in practice,'},
+             'correct': 'B',
+             'explanation': 'A construção <strong>one of the most reliable ways</strong> transmite segurança acadêmica '
+                            'sem cair no exagero absoluto de dizer <em>the only way</em> como na opção (A). Já a (C) '
+                            'mantém o excesso de hesitação do rascunho original.',
+             'fonte': 'Parte 7, Exercício 8, Parte B (linhas 768 e 773)'},
+            {'num': '10.4',
+             'prompt': 'Parte B (2): Como substituir "...but I\'m not really sure and it might not be true for '
+                       'everyone" por uma condição específica de nível C1?',
+             'options': {'A': 'and I am completely sure that this works the exact same way for every single reader who '
+                              'tries it.',
+                         'B': 'but I really do not know if this is true for all students who study new words at home '
+                              'or not.',
+                         'C': 'because readers who memorize isolated lists without any context always learn much more '
+                              'quickly.',
+                         'D': 'though the gain is larger for readers who encounter unfamiliar words in context rather '
+                              'than in lists.'},
+             'correct': 'D',
+             'explanation': "Em vez de confessar insegurança pessoal (<em>I'm not really sure</em>), a opção (D) "
+                            'explica em qual condição o efeito varia usando <strong>though the gain is larger '
+                            'for</strong>. A alternativa (B) apenas repete a dúvida subjetiva sem acrescentar critério '
+                            'analítico.',
+             'fonte': 'Parte 7, Exercício 8, Parte B (linhas 768 e 773)'}]},
+ {'id': 'mod5-x-11',
+  'title': 'Exercício 11: Substituição de vocabulário repetido (meta de 5 min)',
+  'level': 'B1–B2',
+  'objective': 'Para cada palavra repetida com frequência nos treinos de Writing, escolha a alternativa que traz '
+               'apenas substitutos de registro acadêmico adequados ao contexto. Tempo-alvo: 5 minutos.',
+  'passage_html': None,
+  'items': [{'num': '11.1',
+             'prompt': 'Para evitar repetir o adjetivo "important" ao longo do parágrafo, qual grupo reúne os '
+                       'substitutos acadêmicos recomendados?',
+             'options': {'A': 'crucial, central, decisive, key, significant',
+                         'B': 'huge, nice, cool, minor, optional',
+                         'C': 'crucial, trivial, negligible, slight, faint',
+                         'D': 'big, funny, casual, secondary, marginal'},
+             'correct': 'A',
+             'explanation': 'O grupo <strong>crucial, central, decisive, key, significant</strong> permite variar a '
+                            'palavra-chave mantendo a precisão do registro acadêmico. A opção (C) mistura '
+                            '<em>crucial</em> com antônimos que significam irrelevante (<em>trivial, negligible</em>).',
+             'fonte': 'Parte 7, Exercício 9 (linha 779)'},
+            {'num': '11.2',
+             'prompt': 'Em vez de repetir o adjetivo genérico "good", qual conjunto oferece boas opções de '
+                       'substituição para o Writing?',
+             'options': {'A': 'awesome, great, lovely, pleasant',
+                         'B': 'beneficial, sound, effective, valuable',
+                         'C': 'beneficial, harmful, flawed, doubtful',
+                         'D': 'enjoyable, funny, casual, friendly'},
+             'correct': 'B',
+             'explanation': 'As palavras <strong>beneficial, sound, effective, valuable</strong> especificam por que '
+                            'algo é positivo (traz benefício, é sólido, funciona ou tem valor). As opções (A) e (D) '
+                            'trazem adjetivos coloquiais ou emocionais, e a (C) inclui termos negativos.',
+             'fonte': 'Parte 7, Exercício 9 (linha 780)'},
+            {'num': '11.3',
+             'prompt': 'Para substituir "bad" com precisão analítica em um texto argumentativo, qual grupo você deve '
+                       'escolher?',
+             'options': {'A': 'unpleasant, terrible, horrible, disappointing',
+                         'B': 'harmful, beneficial, constructive, favorable',
+                         'C': 'harmful, damaging, counterproductive, detrimental',
+                         'D': 'unfair, frustrating, annoying, inconvenient'},
+             'correct': 'C',
+             'explanation': 'Os adjetivos <strong>harmful, damaging, counterproductive, detrimental</strong> apontam o '
+                            'prejuízo ou efeito contrário de uma medida em tom analítico. A alternativa (A) usa '
+                            'palavras de reação emocional, e a (B) mistura adjetivos positivos.',
+             'fonte': 'Parte 7, Exercício 9 (linha 781)'},
+            {'num': '11.4',
+             'prompt': 'Quando a palavra "problem" já apareceu no parágrafo, qual lista traz equivalentes adequados '
+                       'para retomar a ideia sem repetição?',
+             'options': {'A': 'benefit, advantage, asset, gain, strength',
+                         'B': 'mess, trouble, headache, pain, drama',
+                         'C': 'issue, solution, remedy, answer, fix',
+                         'D': 'issue, challenge, drawback, obstacle, shortcoming'},
+             'correct': 'D',
+             'explanation': 'O repertório <strong>issue, challenge, drawback, obstacle, shortcoming</strong> permite '
+                            'variar entre questão geral, desafio, desvantagem, obstáculo e limitação. A opção (B) é '
+                            'informal demais, e a (C) mistura problema com solução.',
+             'fonte': 'Parte 7, Exercício 9 (linha 782)'},
+            {'num': '11.5',
+             'prompt': 'Em vez de repetir o verbo "help" várias vezes, quais verbos de registro B2 e C1 cumprem essa '
+                       'função com naturalidade?',
+             'options': {'A': 'support, aid, facilitate, contribute to',
+                         'B': 'hinder, block, prevent, undermine',
+                         'C': 'help out, give a hand, fix up, back up',
+                         'D': 'support, prevent, worsen, obstruct'},
+             'correct': 'A',
+             'explanation': 'Os verbos <strong>support, aid, facilitate, contribute to</strong> elevam o registro '
+                            'lexical no Writing sem perder a clareza. A opção (C) usa apenas verbos frasais informais, '
+                            'e a (B) traz verbos com o sentido oposto (atrapalhar ou impedir).',
+             'fonte': 'Parte 7, Exercício 9 (linha 783)'},
+            {'num': '11.6',
+             'prompt': 'Para variar o verbo de opinião "think" ao apresentar posições no Writing acadêmico, qual '
+                       'conjunto é o mais adequado?',
+             'options': {'A': 'guess, wonder, hope, wish, feel like',
+                         'B': 'believe, hold, contend, maintain, argue',
+                         'C': 'believe, deny, refute, reject, dismiss',
+                         'D': 'reckon, figure, bet, suppose, dream'},
+             'correct': 'B',
+             'explanation': 'Com <strong>believe, hold, contend, maintain, argue</strong>, você introduz teses '
+                            'próprias ou de colegas com vocabulário acadêmico preciso. A alternativa (C) mistura '
+                            'verbos de defender uma ideia com verbos de rejeitá-la (<em>deny, refute</em>), e (D) traz '
+                            'termos coloquiais.',
+             'fonte': 'Parte 7, Exercício 9 (linha 784)'},
+            {'num': '11.7',
+             'prompt': 'Como substituir a palavra genérica "people" nomeando grupos mais específicos ou formais na '
+                       'resposta?',
+             'options': {'A': 'guys, folks, kids, everybody',
+                         'B': 'things, cases, factors, elements',
+                         'C': 'individuals, students, users, the public',
+                         'D': 'somebody, anybody, nobody, everyone'},
+             'correct': 'C',
+             'explanation': 'Nomear o grupo exato com <strong>individuals, students, users, the public</strong> '
+                            'aumenta tanto a variedade lexical quanto a concretude do argumento. A opção (A) é '
+                            'coloquial, e a (D) troca um termo genérico por pronomes indefinidos ainda mais vagos.',
+             'fonte': 'Parte 7, Exercício 9 (linha 785)'}]},
+ {'id': 'mod5-x-12',
+  'title': 'Exercício 12: Elevação na Academic Discussion (meta de 5 min)',
+  'level': 'C1–C2',
+  'objective': 'Acompanhe a construção de um parágrafo C1 para o Prompt A e escolha a frase que executa cada um dos 4 '
+               'movimentos retóricos pedidos. Tempo-alvo: 5 minutos.',
+  'passage_html': '<p><strong>PROMPT A:</strong> <em>"Is it better for a company to promote from within or to hire '
+                  'experienced people from outside?"</em></p><p><strong>Daniel:</strong> "Promoting from within keeps '
+                  'morale high and preserves company knowledge."<br><strong>Mei:</strong> "Outside hires bring fresh '
+                  'ideas and challenge groupthink."</p>',
+  'items': [{'num': '12.1',
+             'prompt': 'Movimento 1 (Abertura com concessão integrada, Marcador 5): Qual frase abre o parágrafo '
+                       'reconhecendo o ponto de Daniel antes de apresentar a tese?',
+             'options': {'A': 'I agree with Mei because outside hires are always much better than promoting people '
+                              'from within.',
+                         'B': 'Notwithstanding that Daniel is right about morale, promoting from within is completely '
+                              'wrong for any company today.',
+                         'C': 'Daniel says that promoting from within keeps morale high, and Mei says outside hires '
+                              'bring ideas.',
+                         'D': 'While Daniel is right that internal promotion protects institutional memory, the '
+                              'stronger position is a deliberate mix.'},
+             'correct': 'D',
+             'explanation': 'Em (D), você abre com a concessão <strong>While Daniel is right that</strong>, substitui '
+                            '<em>company knowledge</em> pela colocação C1 <em>institutional memory</em> e já firma uma '
+                            'tese equilibrada. A opção (C) apenas resume os colegas sem assumir posição, e a (B) '
+                            'reconhece Daniel, mas fecha num absoluto (<em>completely wrong</em>) que desfaz a '
+                            'concessão.',
+             'fonte': 'Parte 7, Exercício 11, Prompt A (linhas 795, 797 e 802)'},
+            {'num': '12.2',
+             'prompt': 'Movimento 2 (Razão com mecanismo, Marcador 1): Qual frase explica por que contratar de fora '
+                       'funciona, indo além do clichê "fresh ideas"?',
+             'options': {'A': "What makes an outside hire valuable is not the 'fresh ideas' in the abstract but the "
+                              'fact that they have not yet learned which questions the organization has stopped '
+                              'asking.',
+                         'B': 'What makes an outside hire valuable is that they are very valuable to the team and '
+                              'bring a lot of fresh ideas that everyone in the organization already knows how to ask.',
+                         'C': 'Outside hires are always good for a big company because they have many fresh ideas in '
+                              'the abstract and they also come from other organizations that work in the same market.',
+                         'D': "What makes an outside hire valuable is not the 'fresh ideas' in the abstract, because "
+                              'they have already learned all the old questions that the organization keeps asking.'},
+             'correct': 'A',
+             'explanation': 'A opção (A) usa a <em>wh-cleft</em> <strong>What makes an outside hire valuable is not X '
+                            'but Y</strong> para mostrar o mecanismo exato por trás das ideias novas. A alternativa '
+                            '(B) cai no erro circular apontado na Parte 3 (<em>what makes X valuable is that they are '
+                            'valuable</em>).',
+             'fonte': 'Parte 7, Exercício 11, Prompt A (linhas 795 e 802)'},
+            {'num': '12.3',
+             'prompt': 'Movimento 3 (Contraste concreto): Qual frase desenvolve o mecanismo comparando o comportamento '
+                       'da equipe interna com o de quem vem de fora?',
+             'options': {'A': 'A team that promotes from within never works well on any daily process; someone who '
+                              'comes from outside always fixes every single problem in the company right away.',
+                         'B': 'A team that has only ever promoted from within tends to optimize the process it already '
+                              'has; someone from outside is the one who asks why that process exists at all.',
+                         'C': 'For example, my uncle worked at a large traditional company for ten years; he liked his '
+                              'coworkers a lot, and they always used the same computer system every day.',
+                         'D': 'A team that has only ever promoted from within asks why the process exists at all; '
+                              'someone hired from outside just tries to optimize the routine it already has.'},
+             'correct': 'B',
+             'explanation': 'A frase (B) usa <em>hedging</em> calibrado (<strong>tends to optimize</strong>) e '
+                            'paralelismo com ponto e vírgula para ilustrar a diferença prática entre otimizar uma '
+                            'rotina e questionar sua existência. A opção (D) inverte os papéis, e a (C) traz um '
+                            'exemplo vago que não prova a tese.',
+             'fonte': 'Parte 7, Exercício 11, Prompt A (linhas 795 e 802)'},
+            {'num': '12.4',
+             'prompt': 'Movimento 4 (Diálogo final e condição): Qual fechamento responde à preocupação de Daniel sobre '
+                       'moral da equipe e amarra a síntese?',
+             'options': {'A': 'So I think both Daniel and Mei make very good points about the company, and managers '
+                              'should just do whatever they want when they need to hire or promote people.',
+                         'B': 'The morale cost is completely imaginary, so internal candidates should never be given a '
+                              'path to promotion even when the current thinking in the team is working well.',
+                         'C': 'The morale cost is real, but it is manageable if internal candidates are given a '
+                              'genuine path and outside hires are reserved for roles where the current thinking has '
+                              'visibly stalled.',
+                         'D': 'Were the morale cost real for the company, internal candidates will be given a genuine '
+                              'path and outside hires will be reserved for roles where the current thinking has '
+                              'stalled.'},
+             'correct': 'C',
+             'explanation': 'O fechamento (C) reconhece o custo apontado por Daniel (<strong>The morale cost is real, '
+                            'but it is manageable if</strong>) e estabelece a condição clara em que o modelo misto '
+                            'funciona. A opção (D) mistura os tempos da condicional invertida ao usar <em>will</em> '
+                            'depois de <em>Were</em>.',
+             'fonte': 'Parte 7, Exercício 11, Prompt A (linhas 795 e 802)'}]},
+ {'id': 'mod5-x-13',
+  'title': 'Exercício 13: Coesão com substantivo sumarizador (meta de 4 min)',
+  'level': 'C1–C2',
+  'objective': 'Substitua cada "this" ou "it" solto do parágrafo original por um substantivo sumarizador que retome a '
+               'ideia anterior com precisão (seção 4.5). Tempo-alvo: 4 minutos.',
+  'passage_html': '<p><strong>PARÁGRAFO COM PRONOMES SOLTOS:</strong></p><blockquote><p><strong>(1)</strong> '
+                  'Enrollment fell for three years. This forced the budget cuts. <strong>(2)</strong> It also meant '
+                  'two programs closed. <strong>(3)</strong> This was hard for the students in them. '
+                  '<strong>(4)</strong> It shows the college needs a new plan.</p></blockquote>',
+  'items': [{'num': '13.1',
+             'prompt': 'Trecho (1): Como reescrever "Enrollment fell for three years. This forced the budget cuts" com '
+                       'substantivo sumarizador?',
+             'options': {'A': 'Enrollment fell for three years running. This sustained decline forced the budget cuts',
+                         'B': 'Enrollment fell for three years running. This sustained growth forced the budget cuts',
+                         'C': 'Enrollment fell for three years running. This thing forced the budget cuts',
+                         'D': 'Enrollment fell for three years running. These constraints forced the enrollment'},
+             'correct': 'A',
+             'explanation': 'Em vez de deixar o pronome <em>This</em> sozinho no início da frase, a opção (A) retoma a '
+                            'queda nas matrículas com <strong>This sustained decline</strong>. A alternativa (B) usa '
+                            '<em>growth</em> (crescimento), contradizendo <em>fell</em>, e a (C) usa a palavra vaga '
+                            '<em>thing</em>.',
+             'fonte': 'Parte 7, Exercício 12 (linhas 808 e 811)'},
+            {'num': '13.2',
+             'prompt': 'Trecho (2): Como integrar "It also meant two programs closed" à frase dos cortes '
+                       'orçamentários, eliminando o "It" solto?',
+             'options': {'A': 'and, with it, two programs also opened.',
+                         'B': 'and, with them, the closure of two programs.',
+                         'C': 'and this also meant that it closed two.',
+                         'D': 'and, despite them, the opening of programs.'},
+             'correct': 'B',
+             'explanation': 'A continuação <strong>and, with them, the closure of two programs</strong> retoma '
+                            '<em>budget cuts</em> no plural (<em>them</em>) e transforma <em>two programs closed</em> '
+                            'na nominalização <em>the closure of two programs</em>. A opção (C) mantém os pronomes '
+                            'vagos <em>this</em> e <em>it</em>.',
+             'fonte': 'Parte 7, Exercício 12 (linhas 808 e 811)'},
+            {'num': '13.3',
+             'prompt': 'Trecho (3): Como reescrever "This was hard for the students in them" nomeando o impacto do '
+                       'fechamento dos cursos?',
+             'options': {'A': 'That benefit fell hardest on the students already enrolled in those programs.',
+                         'B': 'This was very hard for the students who were inside of them.',
+                         'C': 'That disruption fell hardest on the students already enrolled in those programs.',
+                         'D': 'Those improvements were hard for the students enrolled in that.'},
+             'correct': 'C',
+             'explanation': 'O grupo nominal <strong>That disruption</strong> resume o fechamento dos cursos com '
+                            'exatidão, e <em>in those programs</em> substitui o pronome solto <em>them</em>. As opções '
+                            '(A) e (D) trocam o problema por palavras positivas (<em>benefit, improvements</em>).',
+             'fonte': 'Parte 7, Exercício 12 (linhas 808 e 811)'},
+            {'num': '13.4',
+             'prompt': 'Trecho (4): Como fechar o parágrafo substituindo "It shows the college needs a new plan"?',
+             'options': {'A': 'It shows that the college is in need of a same old strategy.',
+                         'B': 'This thing points to a college that does not need any strategy.',
+                         'C': 'The whole episode hides that the college needs a new plan.',
+                         'D': 'The whole episode points to a college in need of a new strategy.'},
+             'correct': 'D',
+             'explanation': 'A expressão <strong>The whole episode</strong> amarra toda a sequência de eventos narrada '
+                            'no parágrafo e eleva <em>shows... needs a new plan</em> para <em>points to a college in '
+                            'need of a new strategy</em>. A opção (A) mantém o <em>It</em> solto na abertura.',
+             'fonte': 'Parte 7, Exercício 12 (linhas 808 e 811)'}]},
+ {'id': 'mod5-x-14',
+  'title': 'Exercício 14: Colocações acadêmicas (meta de 5 min)',
+  'level': 'B1–B2',
+  'objective': 'Complete cada frase com o verbo ou a preposição que forma a colocação acadêmica natural em inglês '
+               '(seção 4.7). Tempo-alvo: 5 minutos.',
+  'passage_html': None,
+  'items': [{'num': '14.1',
+             'prompt': '"Access to clean water ___ a central role in public health."',
+             'options': {'A': 'plays', 'B': 'makes', 'C': 'does', 'D': 'puts'},
+             'correct': 'A',
+             'explanation': 'Em inglês, a combinação natural para desempenhar um papel é <strong>play a role</strong>, '
+                            'conjugada no singular (<em>plays</em>) para concordar com o sujeito <em>Access</em>. A '
+                            'opção (B) <em>makes</em> é uma interferência comum do português ("faz um papel").',
+             'fonte': 'Parte 7, Exercício 13, item 1 (linhas 819 e 828)'},
+            {'num': '14.2',
+             'prompt': '"The study ___ compelling evidence that the effect is real."',
+             'options': {'A': 'poses', 'B': 'provides', 'C': 'reaches', 'D': 'undergoes'},
+             'correct': 'B',
+             'explanation': 'Com <em>compelling evidence</em>, o verbo que forma colocação acadêmica é '
+                            '<strong>provides</strong> (fornece evidências convincentes). A opção (A) <em>poses</em> '
+                            'combina com <em>a challenge</em> ou <em>a threat</em>, e não com <em>evidence</em>.',
+             'fonte': 'Parte 7, Exercício 13, item 2 (linhas 820 e 828)'},
+            {'num': '14.3',
+             'prompt': '"There has been a sharp increase ___ applications this year."',
+             'options': {'A': 'on', 'B': 'to', 'C': 'in', 'D': 'at'},
+             'correct': 'C',
+             'explanation': 'Antes daquilo que aumentou (<em>applications</em>), usamos <strong>increase in</strong>. '
+                            'Lembre-se da distinção da seção 4.7: <em>an increase in applications</em> (o que subiu), '
+                            'mas <em>an increase of 10%</em> (a quantidade que subiu). A opção (A) <em>on</em> é uma '
+                            'armadilha frequente.',
+             'fonte': 'Parte 7, Exercício 13, item 3 (linhas 821 e 828)'},
+            {'num': '14.4',
+             'prompt': '"The report ___ concerns about the timeline."',
+             'options': {'A': 'gains', 'B': 'plays', 'C': 'meets', 'D': 'raises'},
+             'correct': 'D',
+             'explanation': 'Para levantar preocupações ou dúvidas, a colocação fixa é <strong>raises '
+                            'concerns</strong>. A alternativa (C) <em>meets</em> combina com <em>a need</em> ou <em>a '
+                            'deadline</em>, mas não com <em>concerns</em>.',
+             'fonte': 'Parte 7, Exercício 13, item 4 (linhas 822 e 828)'},
+            {'num': '14.5',
+             'prompt': '"Researchers are trying to ___ insight ___ how the disease spreads."',
+             'options': {'A': 'gain ... into', 'B': 'make ... about', 'C': 'take ... over', 'D': 'do ... onto'},
+             'correct': 'A',
+             'explanation': 'O substantivo <em>insight</em> pede o verbo <em>gain</em> antes dele e a preposição '
+                            '<em>into</em> depois, formando <strong>gain insight into</strong>. A opção (B) traduz '
+                            'literalmente "sobre" por <em>about</em>, mas <em>insight</em> exige <em>into</em>.',
+             'fonte': 'Parte 7, Exercício 13, item 5 (linhas 823 e 828)'},
+            {'num': '14.6',
+             'prompt': '"The two approaches differ ___ one fundamental respect."',
+             'options': {'A': 'on', 'B': 'in', 'C': 'to', 'D': 'at'},
+             'correct': 'B',
+             'explanation': 'Com a palavra <em>respect</em> no sentido de aspecto ou ponto ("em um aspecto '
+                            'fundamental"), a preposição correta é <strong>in</strong> (<em>in one fundamental '
+                            'respect</em>). A opção (A) <em>on</em> não forma colocação com <em>respect</em>.',
+             'fonte': 'Parte 7, Exercício 13, item 6 (linhas 824 e 828)'},
+            {'num': '14.7',
+             'prompt': '"The policy had a significant impact ___ rural clinics."',
+             'options': {'A': 'in', 'B': 'to', 'C': 'on', 'D': 'of'},
+             'correct': 'C',
+             'explanation': 'Tanto <em>impact</em> quanto <em>effect</em> pedem a preposição <strong>on</strong> para '
+                            'indicar quem recebe o impacto (<em>a significant impact on rural clinics</em>). A '
+                            'alternativa (A) <em>in</em> é uma transferência comum de "impacto em".',
+             'fonte': 'Parte 7, Exercício 13, item 7 (linhas 825 e 828)'},
+            {'num': '14.8',
+             'prompt': '"This ___ a serious challenge to the standard model."',
+             'options': {'A': 'gains', 'B': 'plays', 'C': 'reaches', 'D': 'poses'},
+             'correct': 'D',
+             'explanation': 'Para dizer que algo representa um desafio, usamos a colocação <strong>poses a serious '
+                            'challenge to</strong>. As opções (A), (B) e (C) formam par com outros substantivos da '
+                            'seção 4.7 (<em>gain insight</em>, <em>play a role</em>, <em>reach a conclusion</em>).',
+             'fonte': 'Parte 7, Exercício 13, item 8 (linhas 826 e 828)'}]}]
+
+
+# PARTE 9 do M6 (Vocabulário): os exercícios de vocabulário, antes só texto,
+# em múltipla escolha. Mesma revisão. Contam nos pontos fracos em Vocabulário.
+MOD6_DRILLS = [{'id': 'mod6-x-1',
+  'title': 'Exercício 1: Forma exata da palavra (meta de 4 min)',
+  'level': 'B1–B2',
+  'objective': 'Identifique a função sintática da lacuna e escolha a palavra completa que preenche cada frase com a '
+               'forma gramatical exata. Tempo-alvo: 4 minutos.',
+  'passage_html': None,
+  'items': [{'num': '1.1',
+             'prompt': '"The committee will ass___ the proposal before the vote."',
+             'options': {'A': 'assessment', 'B': 'assess', 'C': 'assessing', 'D': 'assessed'},
+             'correct': 'B',
+             'explanation': 'Depois do modal <em>will</em>, a frase pede o verbo na forma base: '
+                            '<strong>assess</strong>. A opção (A) <em>assessment</em> é um substantivo, enquanto (C) e '
+                            '(D) trazem formas verbais que não entram diretamente após <em>will</em> na voz ativa.',
+             'fonte': 'Parte 9, Exercício 1, item 1 (linhas 538 e 554)'},
+            {'num': '1.2',
+             'prompt': '"A thorough ass___ of the risks is still pending."',
+             'options': {'A': 'assess', 'B': 'assessing', 'C': 'assessed', 'D': 'assessment'},
+             'correct': 'D',
+             'explanation': 'Entre o adjetivo <em>thorough</em> e a preposição <em>of</em>, você precisa de um '
+                            'substantivo contável no singular: <strong>assessment</strong>. A alternativa (A) '
+                            '<em>assess</em> é verbo, e (B) <em>assessing</em> não funciona como núcleo nominal depois '
+                            'de artigo indefinido e adjetivo nessa estrutura.',
+             'fonte': 'Parte 9, Exercício 1, item 2 (linhas 539 e 554)'},
+            {'num': '1.3',
+             'prompt': '"The results were stat___ significant."',
+             'options': {'A': 'statistically', 'B': 'statistical', 'C': 'statistics', 'D': 'statistician'},
+             'correct': 'A',
+             'explanation': 'Para modificar o adjetivo <em>significant</em>, a posição exige um advérbio terminado em '
+                            '<em>-ly</em>: <strong>statistically</strong>. A opção (B) <em>statistical</em> é adjetivo '
+                            'e só caberia antes de um substantivo, como em <em>statistical significance</em>.',
+             'fonte': 'Parte 9, Exercício 1, item 3 (linhas 540 e 554)'},
+            {'num': '1.4',
+             'prompt': '"Researchers must control for every conf___ variable."',
+             'options': {'A': 'confound', 'B': 'confoundedly', 'C': 'confounding', 'D': 'confounder'},
+             'correct': 'C',
+             'explanation': 'Antes do substantivo <em>variable</em>, usamos o adjetivo que forma o termo técnico de '
+                            'pesquisa <strong>confounding</strong> (<em>confounding variable</em>, ou variável de '
+                            'confundimento). A opção (A) <em>confound</em> está na forma verbal base, e (B) é um '
+                            'advérbio.',
+             'fonte': 'Parte 9, Exercício 1, item 4 (linhas 541 e 554)'},
+            {'num': '1.5',
+             'prompt': '"The two theories offer comp___ explanations of the same data." (no sentido de concorrentes ou '
+                       'rivais)',
+             'options': {'A': 'competition', 'B': 'competitively', 'C': 'competitor', 'D': 'competing'},
+             'correct': 'D',
+             'explanation': 'Para qualificar <em>explanations</em> no sentido de teorias rivais que disputam a '
+                            'explicação dos mesmos dados, a colocação acadêmica exata é <strong>competing</strong>. A '
+                            'opção (A) <em>competition</em> é substantivo abstrato, e (B) é advérbio.',
+             'fonte': 'Parte 9, Exercício 1, item 5 (linhas 542 e 554)'},
+            {'num': '1.6',
+             'prompt': '"Her argument rests on a questionable assum___."',
+             'options': {'A': 'assumption', 'B': 'assuming', 'C': 'assumed', 'D': 'assumes'},
+             'correct': 'A',
+             'explanation': 'O artigo <em>a</em> e o adjetivo <em>questionable</em> anunciam um substantivo contável '
+                            'no singular: <strong>assumption</strong> (premissa ou suposição). A opção (C) '
+                            '<em>assumed</em> é adjetivo ou particípio e deixaria a frase sem um substantivo no final.',
+             'fonte': 'Parte 9, Exercício 1, item 6 (linhas 543 e 554)'},
+            {'num': '1.7',
+             'prompt': '"The city failed to pri___ infrastructure spending."',
+             'options': {'A': 'priority', 'B': 'prioritizing', 'C': 'prioritize', 'D': 'priorities'},
+             'correct': 'C',
+             'explanation': 'A estrutura <em>failed to</em> pede um verbo no infinitivo, formado aqui pelo sufixo '
+                            'verbal <em>-ize</em>: <strong>prioritize</strong>. A opção (A) <em>priority</em> é '
+                            'substantivo, e (B) <em>prioritizing</em> usa gerúndio onde o <em>to</em> funciona como '
+                            'marca de infinitivo.',
+             'fonte': 'Parte 9, Exercício 1, item 7 (linhas 544 e 554)'},
+            {'num': '1.8',
+             'prompt': '"The evidence is far from concl___."',
+             'options': {'A': 'conclusion', 'B': 'conclusive', 'C': 'conclusively', 'D': 'conclude'},
+             'correct': 'B',
+             'explanation': 'Na expressão predicativa <em>is far from...</em>, a lacuna descreve o sujeito <em>the '
+                            'evidence</em> e pede o adjetivo <strong>conclusive</strong> (conclusiva). A alternativa '
+                            '(A) <em>conclusion</em> é substantivo, e (C) <em>conclusively</em> é advérbio.',
+             'fonte': 'Parte 9, Exercício 1, item 8 (linhas 545 e 554)'}]},
+ {'id': 'mod6-x-2',
+  'title': 'Exercício 2: Forma exata da palavra, nível avançado (meta de 4 min)',
+  'level': 'C1–C2',
+  'objective': 'Complete cada frase escolhendo a palavra acadêmica que começa com as letras indicadas e atende à '
+               'função gramatical da lacuna. Tempo-alvo: 4 minutos.',
+  'passage_html': None,
+  'items': [{'num': '2.1',
+             'prompt': '"The lecture elab___ on a point the reading only mentions."',
+             'options': {'A': 'elaborate', 'B': 'elaboration', 'C': 'elaborates', 'D': 'elaborately'},
+             'correct': 'C',
+             'explanation': 'O sujeito singular <em>The lecture</em> pede o verbo conjugado na terceira pessoa do '
+                            'singular do presente simples: <strong>elaborates</strong>. A opção (A) <em>elaborate</em> '
+                            'não flexiona o verbo para concordar com <em>lecture</em>, e (B) é um substantivo.',
+             'fonte': 'Parte 9, Exercício 1, item 9 (linhas 546 e 554)'},
+            {'num': '2.2',
+             'prompt': '"Such policies tend to perp___ existing inequalities."',
+             'options': {'A': 'perpetual', 'B': 'perpetuate', 'C': 'perpetually', 'D': 'perpetuation'},
+             'correct': 'B',
+             'explanation': 'Após <em>tend to</em>, precisamos do verbo na forma base: <strong>perpetuate</strong> '
+                            '(perpetuar ou manter ativo). A opção (A) <em>perpetual</em> é adjetivo, e (D) '
+                            '<em>perpetuation</em> é substantivo.',
+             'fonte': 'Parte 9, Exercício 1, item 10 (linhas 547 e 554)'},
+            {'num': '2.3',
+             'prompt': '"The findings were later corrob___ by an independent team."',
+             'options': {'A': 'corroborate', 'B': 'corroboration', 'C': 'corroborating', 'D': 'corroborated'},
+             'correct': 'D',
+             'explanation': 'A estrutura <em>were later ... by</em> está na voz passiva e exige o particípio passado '
+                            '<strong>corroborated</strong> (confirmados). A alternativa (A) deixa o verbo sem a '
+                            'terminação <em>-ed</em>, e (C) formaria a voz ativa contínua, incompatível com o agente '
+                            'introduzido por <em>by</em>.',
+             'fonte': 'Parte 9, Exercício 1, item 11 (linhas 548 e 554)'},
+            {'num': '2.4',
+             'prompt': '"There is considerable variat___ between the regions."',
+             'options': {'A': 'variation', 'B': 'variations', 'C': 'variational', 'D': 'variatively'},
+             'correct': 'A',
+             'explanation': 'Com o verbo no singular (<em>There is</em>) e o adjetivo <em>considerable</em>, a lacuna '
+                            'pede o substantivo incontável no singular: <strong>variation</strong>. A opção (B) '
+                            '<em>variations</em> está no plural e entraria em conflito com <em>There is</em>, enquanto '
+                            '(C) é adjetivo.',
+             'fonte': 'Parte 9, Exercício 1, item 12 (linhas 549 e 554)'},
+            {'num': '2.5',
+             'prompt': '"The professor\'s account is more nu___ than the textbook\'s."',
+             'options': {'A': 'nuance', 'B': 'nuances', 'C': 'nuanced', 'D': 'nuancing'},
+             'correct': 'C',
+             'explanation': 'A estrutura comparativa <em>is more ... than</em> descreve o substantivo <em>account</em> '
+                            'e pede o adjetivo <strong>nuanced</strong> (nuançado, com distinções sutis). A opção (A) '
+                            '<em>nuance</em> é substantivo e não funciona diretamente como predicativo depois de '
+                            '<em>is more</em>.',
+             'fonte': 'Parte 9, Exercício 1, item 13 (linhas 550 e 554)'},
+            {'num': '2.6',
+             'prompt': '"This raises an important episte___ question about how we know what we claim to know."',
+             'options': {'A': 'epistemology', 'B': 'epistemically', 'C': 'epistemologies', 'D': 'epistemic'},
+             'correct': 'D',
+             'explanation': 'Antes do substantivo <em>question</em>, você precisa do adjetivo '
+                            '<strong>epistemic</strong> (relativo à natureza e à validade do conhecimento). A '
+                            'alternativa (A) <em>epistemology</em> é o substantivo que nomeia a área da filosofia, e '
+                            '(B) é advérbio.',
+             'fonte': 'Parte 9, Exercício 1, item 14 (linhas 551 e 554)'},
+            {'num': '2.7',
+             'prompt': '"The intervention produced only a marg___ improvement."',
+             'options': {'A': 'margin', 'B': 'marginal', 'C': 'marginally', 'D': 'marginalize'},
+             'correct': 'B',
+             'explanation': 'Entre o artigo <em>a</em> e o substantivo <em>improvement</em>, a frase pede o adjetivo '
+                            '<strong>marginal</strong> (pequeno, mínimo). A opção (C) <em>marginally</em> é advérbio, '
+                            'e (A) <em>margin</em> é substantivo.',
+             'fonte': 'Parte 9, Exercício 1, item 15 (linhas 552 e 554)'}]},
+ {'id': 'mod6-x-3',
+  'title': 'Exercício 3: Família e forma da palavra (meta de 4 min)',
+  'level': 'B1–B2',
+  'objective': 'Escolha a forma correta da palavra derivada da raiz entre parênteses para preencher cada lacuna com '
+               'precisão gramatical. Tempo-alvo: 4 minutos.',
+  'passage_html': None,
+  'items': [{'num': '3.1',
+             'prompt': '"The study\'s methodological ___ (ROBUST) has been widely praised."',
+             'options': {'A': 'robustly', 'B': 'robustness', 'C': 'robust', 'D': 'robusts'},
+             'correct': 'B',
+             'explanation': "Depois do possessivo <em>The study's</em> e do adjetivo <em>methodological</em>, o núcleo "
+                            'do sujeito precisa ser um substantivo abstrato: <strong>robustness</strong> (solidez). A '
+                            'opção (C) <em>robust</em> é adjetivo, e (D) <em>robusts</em> não existe porque adjetivos '
+                            'em inglês não levam plural.',
+             'fonte': 'Parte 9, Exercício 2, item 1 (linhas 560 e 573)'},
+            {'num': '3.2',
+             'prompt': '"These findings ___ (SUBSTANTIAL) the earlier hypothesis."',
+             'options': {'A': 'substantiate', 'B': 'substantially', 'C': 'substantiation', 'D': 'substantiates'},
+             'correct': 'A',
+             'explanation': 'A oração precisa de um verbo principal que concorde com o sujeito plural <em>These '
+                            'findings</em>: <strong>substantiate</strong> (comprovam ou fundamentam). A alternativa '
+                            '(D) <em>substantiates</em> está no singular, e (B) <em>substantially</em> é advérbio.',
+             'fonte': 'Parte 9, Exercício 2, item 2 (linhas 561 e 573)'},
+            {'num': '3.3',
+             'prompt': '"The two accounts differ ___ (SIGNIFICANT) in their conclusions."',
+             'options': {'A': 'significance', 'B': 'significant', 'C': 'signify', 'D': 'significantly'},
+             'correct': 'D',
+             'explanation': 'Para qualificar o verbo de ação <em>differ</em>, você deve usar o advérbio '
+                            '<strong>significantly</strong>. A opção (B) <em>significant</em> é adjetivo e só '
+                            'modificaria um substantivo, enquanto (A) <em>significance</em> é substantivo.',
+             'fonte': 'Parte 9, Exercício 2, item 3 (linhas 562 e 573)'},
+            {'num': '3.4',
+             'prompt': '"A ___ (PERSIST) gap remains between policy and practice."',
+             'options': {'A': 'persistence', 'B': 'persistently', 'C': 'persistent', 'D': 'persists'},
+             'correct': 'C',
+             'explanation': 'Entre o artigo <em>A</em> e o substantivo <em>gap</em>, a colocação consagrada pede o '
+                            'adjetivo <strong>persistent</strong> (<em>a persistent gap</em>, uma lacuna persistente). '
+                            'A opção (A) <em>persistence</em> é substantivo, e (B) <em>persistently</em> é advérbio.',
+             'fonte': 'Parte 9, Exercício 2, item 4 (linhas 563 e 573)'},
+            {'num': '3.5',
+             'prompt': '"The data must be interpreted with ___ (CAUTION)."',
+             'options': {'A': 'caution', 'B': 'cautious', 'C': 'cautiously', 'D': 'cautionary'},
+             'correct': 'A',
+             'explanation': 'A preposição <em>with</em> exige um substantivo como complemento, formando a expressão '
+                            '<strong>with caution</strong> (com cautela). Se não houvesse a preposição <em>with</em>, '
+                            'você usaria o advérbio <em>cautiously</em> da opção (C); já (B) <em>cautious</em> é '
+                            'adjetivo.',
+             'fonte': 'Parte 9, Exercício 2, item 5 (linhas 564 e 573)'},
+            {'num': '3.6',
+             'prompt': '"The model ___ (SIMPLE) a process that is in fact highly complex." (use o prefixo over-)',
+             'options': {'A': 'oversimplify', 'B': 'oversimplifies', 'C': 'oversimplifying', 'D': 'oversimplification'},
+             'correct': 'B',
+             'explanation': 'O sujeito singular <em>The model</em> e o tempo presente da segunda oração (<em>is in '
+                            'fact</em>) pedem o verbo na terceira pessoa do singular: <strong>oversimplifies</strong> '
+                            '(simplifica em excesso). A opção (A) <em>oversimplify</em> não faz a concordância com '
+                            '<em>The model</em>, e (D) é substantivo.',
+             'fonte': 'Parte 9, Exercício 2, item 6 (linhas 565 e 573)'}]},
+ {'id': 'mod6-x-4',
+  'title': 'Exercício 4: Sufixos e derivação lexical (meta de 4 min)',
+  'level': 'B1–B2',
+  'objective': 'Identifique a classe gramatical exigida pela estrutura da frase e escolha a derivação correta da '
+               'palavra entre parênteses. Tempo-alvo: 4 minutos.',
+  'passage_html': None,
+  'items': [{'num': '4.1',
+             'prompt': '"Their ___ (RELY) on a single data source weakens the argument."',
+             'options': {'A': 'reliable', 'B': 'reliably', 'C': 'reliance', 'D': 'reliant'},
+             'correct': 'C',
+             'explanation': 'Depois do pronome possessivo <em>Their</em> e antes da preposição <em>on</em>, a posição '
+                            'pede o substantivo <strong>reliance</strong> (dependência). A alternativa (D) '
+                            '<em>reliant</em> e a (A) <em>reliable</em> são adjetivos e não podem ocupar o núcleo do '
+                            'sujeito.',
+             'fonte': 'Parte 9, Exercício 2, item 7 (linhas 566 e 573)'},
+            {'num': '4.2',
+             'prompt': '"The phenomenon has been documented ___ (EXTENSIVE)."',
+             'options': {'A': 'extensive', 'B': 'extension', 'C': 'extend', 'D': 'extensively'},
+             'correct': 'D',
+             'explanation': 'Para modificar o verbo na voz passiva <em>has been documented</em>, precisamos do '
+                            'advérbio <strong>extensively</strong> (amplamente). A opção (A) <em>extensive</em> é '
+                            'adjetivo e só funcionaria antes de um substantivo, como em <em>extensive '
+                            'documentation</em>.',
+             'fonte': 'Parte 9, Exercício 2, item 8 (linhas 567 e 573)'},
+            {'num': '4.3',
+             'prompt': '"The committee reached a ___ (CONCLUDE) after months of review."',
+             'options': {'A': 'conclusive', 'B': 'conclusion', 'C': 'conclusively', 'D': 'concluding'},
+             'correct': 'B',
+             'explanation': 'O artigo indefinido <em>a</em> e o verbo <em>reached</em> formam a colocação clássica '
+                            '<em>reach a conclusion</em>, exigindo o substantivo <strong>conclusion</strong>. As '
+                            'opções (A) <em>conclusive</em> e (D) <em>concluding</em> são formas adjetivas que '
+                            'deixariam o artigo sem substantivo.',
+             'fonte': 'Parte 9, Exercício 2, item 9 (linhas 568 e 573)'},
+            {'num': '4.4',
+             'prompt': '"The reform was ___ (TRANSFORM) rather than incremental."',
+             'options': {'A': 'transformative', 'B': 'transformation', 'C': 'transform', 'D': 'transformatively'},
+             'correct': 'A',
+             'explanation': 'A estrutura paralela <em>was ... rather than incremental</em> compara dois adjetivos '
+                            'predicativos, pedindo <strong>transformative</strong> (transformadora). A alternativa (B) '
+                            '<em>transformation</em> é substantivo e quebraria o paralelismo com o adjetivo '
+                            '<em>incremental</em>.',
+             'fonte': 'Parte 9, Exercício 2, item 10 (linhas 569 e 573)'},
+            {'num': '4.5',
+             'prompt': '"The claim is ___ (DEMONSTRATE) false."',
+             'options': {'A': 'demonstrable', 'B': 'demonstration', 'C': 'demonstrative', 'D': 'demonstrably'},
+             'correct': 'D',
+             'explanation': 'Antes do adjetivo <em>false</em>, a função sintática é de advérbio modificador: '
+                            '<strong>demonstrably</strong> (comprovadamente falso). A opção (A) <em>demonstrable</em> '
+                            'é adjetivo e não pode modificar outro adjetivo.',
+             'fonte': 'Parte 9, Exercício 2, item 11 (linhas 570 e 573)'},
+            {'num': '4.6',
+             'prompt': '"Such ___ (VARY) is expected in samples of this size."',
+             'options': {'A': 'various', 'B': 'variously', 'C': 'variation', 'D': 'variables'},
+             'correct': 'C',
+             'explanation': 'O determinante <em>Such</em> seguido do verbo singular <em>is expected</em> pede um '
+                            'substantivo no singular como núcleo do sujeito: <strong>variation</strong> (note que '
+                            '<em>variability</em> também caberia nesse contexto, por isso não está entre as '
+                            'alternativas). A opção (A) <em>various</em> é adjetivo, e (D) <em>variables</em> está no '
+                            'plural.',
+             'fonte': 'Parte 9, Exercício 2, item 12 (linhas 571 e 573)'}]},
+ {'id': 'mod6-x-5',
+  'title': 'Exercício 5: Collocations com verbo âncora (meta de 4 min)',
+  'level': 'B1–B2',
+  'objective': 'Escolha o verbo âncora que forma a colocação acadêmica natural em cada frase, conforme a tabela da '
+               'Parte 4. Tempo-alvo: 4 minutos.',
+  'passage_html': None,
+  'items': [{'num': '5.1',
+             'prompt': '"The researchers ___ a longitudinal study over fifteen years."',
+             'options': {'A': 'posed', 'B': 'yielded', 'C': 'conducted', 'D': 'reached'},
+             'correct': 'C',
+             'explanation': 'Com substantivos como <em>study</em>, <em>research</em> ou <em>experiment</em>, a '
+                            'colocação acadêmica padrão é <strong>conducted</strong> (conduziram). A opção (B) '
+                            '<em>yielded</em> combina com os resultados gerados pelo estudo (<em>yield results</em>), '
+                            'e não com o estudo em si.',
+             'fonte': 'Parte 9, Exercício 3, item 1 (linhas 579 e 588)'},
+            {'num': '5.2',
+             'prompt': '"It is too early to ___ firm conclusions."',
+             'options': {'A': 'draw', 'B': 'pose', 'C': 'conduct', 'D': 'exert'},
+             'correct': 'A',
+             'explanation': 'Para expressar a ideia de tirar conclusões a partir de dados, o inglês acadêmico usa a '
+                            'combinação <strong>draw</strong> (<em>draw firm conclusions</em>). A opção (B) '
+                            '<em>pose</em> forma par com <em>a threat</em> ou <em>a question</em>, mas não com '
+                            '<em>conclusions</em>.',
+             'fonte': 'Parte 9, Exercício 3, item 2 (linhas 580 e 588)'},
+            {'num': '5.3',
+             'prompt': '"The lecture ___ a serious objection to the reading\'s assumption."',
+             'options': {'A': 'conducts', 'B': 'reaches', 'C': 'meets', 'D': 'raises'},
+             'correct': 'D',
+             'explanation': 'Para levantar uma objeção, dúvida ou preocupação, o verbo âncora correto é '
+                            '<strong>raises</strong> (<em>raises a serious objection</em>). A alternativa (B) '
+                            '<em>reaches</em> combina com <em>a consensus</em> ou <em>a conclusion</em>, e não com '
+                            '<em>objection</em>.',
+             'fonte': 'Parte 9, Exercício 3, item 3 (linhas 581 e 588)'},
+            {'num': '5.4',
+             'prompt': '"Algorithmic bias ___ a direct threat to fair hiring."',
+             'options': {'A': 'draws', 'B': 'poses', 'C': 'conducts', 'D': 'reaches'},
+             'correct': 'B',
+             'explanation': 'Com <em>a threat</em>, <em>a risk</em> ou <em>a challenge</em>, o verbo que forma '
+                            'colocação natural é <strong>poses</strong> (representa uma ameaça direta). As opções (A) '
+                            '<em>draws</em> e (D) <em>reaches</em> pertencem a outros grupos de colocação.',
+             'fonte': 'Parte 9, Exercício 3, item 4 (linhas 582 e 588)'},
+            {'num': '5.5',
+             'prompt': '"Early education programs ___ large long-term returns."',
+             'options': {'A': 'yield', 'B': 'pose', 'C': 'draw', 'D': 'reach'},
+             'correct': 'A',
+             'explanation': 'No sentido de gerar resultados, dados ou retornos sobre um investimento, a escolha '
+                            'precisa é <strong>yield</strong> (<em>yield large long-term returns</em>). A opção (B) '
+                            '<em>pose</em> é usada para problemas ou ameaças, e não para retornos positivos.',
+             'fonte': 'Parte 9, Exercício 3, item 5 (linhas 583 e 588)'},
+            {'num': '5.6',
+             'prompt': '"The new evidence ___ the conventional explanation."',
+             'options': {'A': 'conducts', 'B': 'yields', 'C': 'reaches', 'D': 'challenges'},
+             'correct': 'D',
+             'explanation': 'Quando novos dados colocam em xeque uma teoria ou o senso comum, usamos '
+                            '<strong>challenges</strong> (<em>challenges the conventional explanation</em>). A opção '
+                            '(B) <em>yields</em> significaria que a evidência gerou a explicação tradicional, o oposto '
+                            'do contexto.',
+             'fonte': 'Parte 9, Exercício 3, item 6 (linhas 584 e 588)'},
+            {'num': '5.7',
+             'prompt': '"The reading fails to ___ the implementation costs."',
+             'options': {'A': 'draw on', 'B': 'account for', 'C': 'reach for', 'D': 'pose as'},
+             'correct': 'B',
+             'explanation': 'A expressão <strong>account for</strong> significa levar em conta ou explicar um fator '
+                            'importante na análise (<em>fails to account for the implementation costs</em>). A opção '
+                            '(A) <em>draw on</em> significa recorrer a uma fonte, o que mudaria o sentido da crítica.',
+             'fonte': 'Parte 9, Exercício 3, item 7 (linhas 585 e 588)'},
+            {'num': '5.8',
+             'prompt': '"After long debate, the panel ___ a consensus."',
+             'options': {'A': 'posed', 'B': 'yielded', 'C': 'reached', 'D': 'conducted'},
+             'correct': 'C',
+             'explanation': 'Em inglês, você chega a um consenso, acordo ou conclusão usando o verbo '
+                            '<strong>reached</strong> (<em>reached a consensus</em>). A alternativa (D) '
+                            '<em>conducted</em> combina com <em>a study</em> ou <em>a debate</em>, mas não com '
+                            '<em>consensus</em>.',
+             'fonte': 'Parte 9, Exercício 3, item 8 (linhas 586 e 588)'}]},
+ {'id': 'mod6-x-6',
+  'title': 'Exercício 6: Substituição por sinônimo acadêmico (meta de 3 min)',
+  'level': 'C1–C2',
+  'objective': 'Escolha o termo acadêmico de alto impacto que substitui com exatidão a expressão em destaque, mantendo '
+               'o sentido da frase original. Tempo-alvo: 3 minutos.',
+  'passage_html': None,
+  'items': [{'num': '6.1',
+             'prompt': 'Substitua o trecho em destaque por um único verbo acadêmico em: "The policy '
+                       '<strong>made</strong> the problem <strong>worse</strong>."',
+             'options': {'A': 'exacerbated', 'B': 'mitigated', 'C': 'corroborated', 'D': 'elucidated'},
+             'correct': 'A',
+             'explanation': 'Para dizer que uma medida agravou ou piorou um problema já existente, o verbo de alto '
+                            'impacto exato é <strong>exacerbated</strong> (<em>The policy exacerbated the '
+                            'problem</em>). A opção (B) <em>mitigated</em> tem o sentido oposto: atenuar ou reduzir o '
+                            'problema.',
+             'fonte': 'Parte 9, Exercício 4, item 1 (linhas 594 e 605)'},
+            {'num': '6.2',
+             'prompt': 'Substitua o verbo simples por um equivalente acadêmico que enfatize a relevância do ponto em: '
+                       '"This <strong>shows</strong> the importance of early action."',
+             'options': {'A': 'precludes', 'B': 'circumvents', 'C': 'underscores', 'D': 'undermines'},
+             'correct': 'C',
+             'explanation': 'O verbo <strong>underscores</strong> substitui <em>shows</em> ou <em>emphasizes</em> com '
+                            'força analítica, ressaltando a importância da ação precoce. A alternativa (D) '
+                            '<em>undermines</em> significa enfraquecer ou minar, invertendo o argumento.',
+             'fonte': 'Parte 9, Exercício 4, item 2 (linhas 595 e 605)'},
+            {'num': '6.3',
+             'prompt': 'Substitua o trecho em destaque pela expressão acadêmica correspondente em: "The two studies '
+                       '<strong>agree with each other</strong>."',
+             'options': {'A': 'contradict one another',
+                         'B': 'preclude one another',
+                         'C': 'exacerbate one another',
+                         'D': 'corroborate one another'},
+             'correct': 'D',
+             'explanation': 'Quando dois estudos independentes confirmam os mesmos resultados, dizemos que eles '
+                            '<strong>corroborate one another</strong> (corroboram um ao outro). A opção (A) '
+                            '<em>contradict one another</em> indica o oposto (contradição), e (B) indica que um impede '
+                            'o outro.',
+             'fonte': 'Parte 9, Exercício 4, item 3 (linhas 596 e 605)'},
+            {'num': '6.4',
+             'prompt': 'Substitua a palavra em destaque pelo adjetivo acadêmico mais preciso em: "The theory is '
+                       '<strong>weak</strong> and easily challenged."',
+             'options': {'A': 'robust', 'B': 'tenuous', 'C': 'compelling', 'D': 'pervasive'},
+             'correct': 'B',
+             'explanation': 'Para qualificar uma teoria, conexão ou argumento como frágil e pouco convincente, o '
+                            'adjetivo de nível C1 é <strong>tenuous</strong> (tênue). As opções (A) <em>robust</em> e '
+                            '(C) <em>compelling</em> descrevem justamente o contrário: evidências sólidas e '
+                            'convincentes.',
+             'fonte': 'Parte 9, Exercício 4, item 4 (linhas 597 e 605)'},
+            {'num': '6.5',
+             'prompt': 'Substitua o verbo em destaque pelo termo técnico adequado em: "Green spaces can '
+                       '<strong>reduce</strong> urban heat."',
+             'options': {'A': 'mitigate', 'B': 'exacerbate', 'C': 'perpetuate', 'D': 'precipitate'},
+             'correct': 'A',
+             'explanation': 'No contexto de reduzir a gravidade ou o impacto de um problema ambiental, o verbo preciso '
+                            'é <strong>mitigate</strong> (mitigar ou atenuar). A alternativa (B) <em>exacerbate</em> '
+                            'significa agravar, e (C) <em>perpetuate</em> significa manter o problema ativo.',
+             'fonte': 'Parte 9, Exercício 4, item 5 (linhas 598 e 605)'}]},
+ {'id': 'mod6-x-7',
+  'title': 'Exercício 7: Verbos e adjetivos de alto registro (meta de 3 min)',
+  'level': 'C1–C2',
+  'objective': 'Substitua a palavra simples em destaque pelo verbo ou adjetivo acadêmico que expressa a nuance exata '
+               'pedida no contexto. Tempo-alvo: 3 minutos.',
+  'passage_html': None,
+  'items': [{'num': '7.1',
+             'prompt': 'Substitua o verbo em destaque indicando que o professor propõe a ideia como hipótese ou '
+                       'premissa teórica: "The professor <strong>says</strong> the cause is economic."',
+             'options': {'A': 'concedes', 'B': 'posits', 'C': 'refutes', 'D': 'ignores'},
+             'correct': 'B',
+             'explanation': 'Quando um pesquisador ou professor postula uma hipótese como ponto de partida de um '
+                            'argumento, o verbo ideal é <strong>posits</strong>. A opção (A) <em>concedes</em> seria '
+                            'usada apenas se ele estivesse admitindo um ponto contrário à própria tese.',
+             'fonte': 'Parte 9, Exercício 4, item 6 (linhas 599 e 605)'},
+            {'num': '7.2',
+             'prompt': 'Substitua o verbo em destaque indicando que os críticos defendem uma tese firme em um debate: '
+                       '"Critics <strong>say</strong> the model ignores regional gaps."',
+             'options': {'A': 'concede', 'B': 'recall', 'C': 'hinder', 'D': 'contend'},
+             'correct': 'D',
+             'explanation': 'Para relatar que um grupo sustenta ou defende uma posição argumentativa forte, usamos '
+                            '<strong>contend</strong>. A alternativa (A) <em>concede</em> indicaria recuo ou admissão '
+                            'de falha, e não um argumento de ataque dos críticos.',
+             'fonte': 'Parte 9, Exercício 4, item 7 (linhas 600 e 605)'},
+            {'num': '7.3',
+             'prompt': 'Substitua o trecho de sentido simples pelo adjetivo acadêmico equivalente em: "The result was '
+                       '<strong>surprising given common sense</strong>."',
+             'options': {'A': 'counterintuitive', 'B': 'arbitrary', 'C': 'ostensible', 'D': 'negligible'},
+             'correct': 'A',
+             'explanation': 'Aquilo que contraria o que a intuição ou o senso comum esperaria é definido pelo adjetivo '
+                            '<strong>counterintuitive</strong> (contraintuitivo). A opção (B) <em>arbitrary</em> '
+                            'significa aleatório ou sem critério, e (D) <em>negligible</em> significa insignificante.',
+             'fonte': 'Parte 9, Exercício 4, item 8 (linhas 601 e 605)'},
+            {'num': '7.4',
+             'prompt': 'Substitua a palavra em destaque por um adjetivo de registro acadêmico em: "The influence of '
+                       'social media is <strong>everywhere</strong>."',
+             'options': {'A': 'marginal', 'B': 'tenuous', 'C': 'pervasive', 'D': 'negligible'},
+             'correct': 'C',
+             'explanation': 'Para descrever uma influência ou tendência que se espalhou por toda parte na sociedade, o '
+                            'adjetivo preciso é <strong>pervasive</strong> (difuso ou generalizado). As opções (A) '
+                            '<em>marginal</em> e (D) <em>negligible</em> dizem o contrário: uma influência pequena.',
+             'fonte': 'Parte 9, Exercício 4, item 9 (linhas 602 e 605)'},
+            {'num': '7.5',
+             'prompt': 'Substitua a palavra em destaque pelo adjetivo metodológico adequado em: "The finding held up '
+                       'across many <strong>strong</strong> studies."',
+             'options': {'A': 'ostensible', 'B': 'robust', 'C': 'plausible', 'D': 'salient'},
+             'correct': 'B',
+             'explanation': 'Em ciência e pesquisa, estudos ou resultados metodologicamente fortes e resistentes a '
+                            'falhas são chamados de <strong>robust</strong> (sólidos ou robustos). A alternativa (C) '
+                            '<em>plausible</em> diz apenas que algo parece possível na teoria, sem confirmar solidez '
+                            'empírica.',
+             'fonte': 'Parte 9, Exercício 4, item 10 (linhas 603 e 605)'}]},
+ {'id': 'mod6-x-8',
+  'title': 'Exercício 8: Pares de nuance e regência (meta de 4 min)',
+  'level': 'B1–B2',
+  'objective': 'Escolha a alternativa que preenche cada frase com precisão lexical e gramatical no registro acadêmico '
+               'formal (Parte 6.1). Tempo-alvo: 4 minutos.',
+  'passage_html': None,
+  'items': [{'num': '8.1',
+             'prompt': '"The new rule will ___ attendance."',
+             'options': {'A': 'effect', 'B': 'effects', 'C': 'affect', 'D': 'affective'},
+             'correct': 'C',
+             'explanation': 'Após o auxiliar <em>will</em>, a frase pede um verbo no sentido de influenciar: '
+                            '<strong>affect</strong>. Lembre-se de que <em>effect</em> na opção (A) é quase sempre '
+                            'substantivo (o resultado), enquanto <em>affect</em> é o verbo de ação.',
+             'fonte': 'Parte 9, Exercício 5, item 1 (linhas 611 e 624)'},
+            {'num': '8.2',
+             'prompt': '"The ___ on attendance was minimal."',
+             'options': {'A': 'effect', 'B': 'affect', 'C': 'affecting', 'D': 'effective'},
+             'correct': 'A',
+             'explanation': 'Entre o artigo <em>The</em> e a preposição <em>on</em>, o núcleo do sujeito exige o '
+                            'substantivo <strong>effect</strong> (o efeito ou resultado sobre a presença). A opção (B) '
+                            '<em>affect</em> é verbo no uso geral, e (D) <em>effective</em> é adjetivo.',
+             'fonte': 'Parte 9, Exercício 5, item 2 (linhas 612 e 624)'},
+            {'num': '8.3',
+             'prompt': '"The author ___ that the data are unreliable." (o autor dá a entender isso, sem dizer '
+                       'diretamente)',
+             'options': {'A': 'infers', 'B': 'inferring', 'C': 'imply', 'D': 'implies'},
+             'correct': 'D',
+             'explanation': 'Quem escreve ou fala dá a entender algo, por isso o sujeito <em>The author</em> pede '
+                            '<strong>implies</strong> (sugere indiretamente). A opção (A) <em>infers</em> cabe a quem '
+                            'lê ou ouve e tira uma dedução a partir do texto.',
+             'fonte': 'Parte 9, Exercício 5, item 3 (linhas 613 e 624)'},
+            {'num': '8.4',
+             'prompt': '"From the tone, we ___ skepticism."',
+             'options': {'A': 'implies', 'B': 'infer', 'C': 'imply', 'D': 'infers'},
+             'correct': 'B',
+             'explanation': 'Como somos nós (os leitores ou ouvintes) que deduzimos o ceticismo a partir do tom, o '
+                            'verbo exato é <strong>infer</strong>. A alternativa (C) <em>imply</em> descreveria a ação '
+                            'do autor ao emitir a pista, e não a nossa conclusão ao interpretá-la.',
+             'fonte': 'Parte 9, Exercício 5, item 4 (linhas 614 e 624)'},
+            {'num': '8.5',
+             'prompt': '"The report ___ five chapters." (escolha a forma recomendada no registro acadêmico formal)',
+             'options': {'A': 'is comprised of', 'B': 'comprise of', 'C': 'comprises', 'D': 'constitutes of'},
+             'correct': 'C',
+             'explanation': 'No registro acadêmico formal, o todo abrange as partes diretamente na voz ativa: '
+                            '<strong>comprises</strong> (sem preposição). Evite a construção passiva <em>is comprised '
+                            'of</em> da opção (A), que é rejeitada por manuais de estilo formais; caso queira a '
+                            'passiva, use <em>is composed of</em>.',
+             'fonte': 'Parte 9, Exercício 5, item 5 (linhas 615 e 624)'},
+            {'num': '8.6',
+             'prompt': '"There were ___ objections than expected."',
+             'options': {'A': 'less', 'B': 'lesser', 'C': 'amount of', 'D': 'fewer'},
+             'correct': 'D',
+             'explanation': 'Como <em>objections</em> é um substantivo contável no plural, o comparativo de '
+                            'inferioridade correto é <strong>fewer</strong>. A opção (A) <em>less</em> acompanha '
+                            'apenas termos incontáveis no singular, como <em>less resistance</em> ou <em>less '
+                            'variation</em>.',
+             'fonte': 'Parte 9, Exercício 5, item 6 (linhas 616 e 624)'}]},
+ {'id': 'mod6-x-9',
+  'title': 'Exercício 9: Precisão lexical e falsos amigos (meta de 4 min)',
+  'level': 'B1–B2',
+  'objective': 'Escolha a palavra que completa cada frase com o sentido exato exigido pelo contexto acadêmico (Partes '
+               '6.1 e 6.2). Tempo-alvo: 4 minutos.',
+  'passage_html': None,
+  'items': [{'num': '9.1',
+             'prompt': '"The ___ of participants was small."',
+             'options': {'A': 'amount', 'B': 'number', 'C': 'quantity', 'D': 'volume'},
+             'correct': 'B',
+             'explanation': 'Para seres e itens contáveis no plural como <em>participants</em>, usamos sempre '
+                            '<strong>number</strong> (<em>the number of participants</em>). A opção (A) '
+                            '<em>amount</em> é reservada para substantivos incontáveis, como em <em>the amount of '
+                            'data</em>.',
+             'fonte': 'Parte 9, Exercício 5, item 7 (linhas 617 e 624)'},
+            {'num': '9.2',
+             'prompt': '"Compared ___ the control group, the treatment group improved."',
+             'options': {'A': 'by', 'B': 'at', 'C': 'from', 'D': 'with'},
+             'correct': 'D',
+             'explanation': 'Para comparar dois grupos da mesma categoria, como tratamento e controle, os manuais de '
+                            'estilo recomendam <strong>with</strong> (<em>compared with</em>). As opções <em>by</em>, '
+                            '<em>at</em> e <em>from</em> não formam regência com <em>compared</em>. O <em>to</em> '
+                            'também é aceito no uso geral, e por isso ficou de fora.',
+             'fonte': 'Parte 9, Exercício 5, item 8 (linhas 618 e 624)'},
+            {'num': '9.3',
+             'prompt': '"The ___ reason is cost."',
+             'options': {'A': 'principal', 'B': 'principle', 'C': 'principally', 'D': 'principles'},
+             'correct': 'A',
+             'explanation': 'Antes do substantivo <em>reason</em>, precisamos do adjetivo que significa principal ou '
+                            'mais importante: <strong>principal</strong>. A alternativa (B) <em>principle</em> tem '
+                            'pronúncia parecida, mas é sempre um substantivo que significa princípio ou regra '
+                            'fundamental.',
+             'fonte': 'Parte 9, Exercício 5, item 9 (linhas 619 e 624)'},
+            {'num': '9.4',
+             'prompt': '"The measures are ___ given the uncertainty."',
+             'options': {'A': 'sensitive', 'B': 'sensitively', 'C': 'sensible', 'D': 'sensibility'},
+             'correct': 'C',
+             'explanation': 'Diante de um cenário de incerteza, medidas equilibradas e de bom senso são descritas pelo '
+                            'adjetivo <strong>sensible</strong> (sensatas). A opção (A) <em>sensitive</em> é um falso '
+                            'cognato clássico e significa sensível ou delicado, não sensato.',
+             'fonte': 'Parte 9, Exercício 5, item 10 (linhas 620 e 624)'},
+            {'num': '9.5',
+             'prompt': '"The scandal ___ the resignation."',
+             'options': {'A': 'proceeded', 'B': 'preceded', 'C': 'proceeds', 'D': 'preceding'},
+             'correct': 'B',
+             'explanation': 'Para dizer que o escândalo veio antes da renúncia, o verbo transitivo correto é '
+                            '<strong>preceded</strong> (precedeu, com o prefixo <em>pre-</em> de anterioridade). A '
+                            'opção (A) <em>proceeded</em> significa prosseguir ou avançar.',
+             'fonte': 'Parte 9, Exercício 5, item 11 (linhas 621 e 624)'},
+            {'num': '9.6',
+             'prompt': '"The survey was designed to ___ candid responses."',
+             'options': {'A': 'elicit', 'B': 'illicit', 'C': 'illicitly', 'D': 'elicited'},
+             'correct': 'A',
+             'explanation': 'Depois de <em>designed to</em>, precisamos de um verbo no infinitivo que signifique obter '
+                            'ou extrair respostas: <strong>elicit</strong>. A opção (B) <em>illicit</em> tem som '
+                            'parecido, mas é um adjetivo que significa ilícito ou ilegal.',
+             'fonte': 'Parte 9, Exercício 5, item 12 (linhas 622 e 624)'}]},
+ {'id': 'mod6-x-10',
+  'title': 'Exercício 10: Vocabulário em passagem científica (meta de 6 min)',
+  'level': 'C1–C2',
+  'objective': 'Leia o parágrafo acadêmico e escolha o termo que preenche cada lacuna, de (1) a (10), com precisão '
+               'conceitual. Tempo-alvo: 6 minutos.',
+  'passage_html': '<p><strong>PASSAGE: Screen Time and Adolescent Sleep</strong></p><blockquote><p>"The paper reports '
+                  'a strong (1)_____ between screen time and poor sleep in teenagers. But correlation is not (2)_____, '
+                  'and the study does not identify the (3)_____ by which screens would disrupt sleep. A likely '
+                  '(4)_____ variable is simply that anxious teenagers both sleep poorly and use phones more. Until an '
+                  'independent team can (5)_____ the result under controlled conditions, the causal claim remains '
+                  '(6)_____. The authors are right, however, that the broader trend is real and that its drivers are '
+                  'largely (7)_____: a product of how devices and apps are designed. Any (8)_____ strategy should '
+                  'therefore target design, not just individual willpower. The (9)_____ evidence we do have supports '
+                  'modest limits; it does not support the alarmist framing that lets commentators (10)_____ from a '
+                  'small effect to a generational crisis."</p></blockquote>',
+  'items': [{'num': '10.1',
+             'prompt': 'Lacuna (1): "The paper reports a strong ___(1) between screen time and poor sleep in '
+                       'teenagers."',
+             'options': {'A': 'mitigation', 'B': 'mechanism', 'C': 'correlation', 'D': 'replication'},
+             'correct': 'C',
+             'explanation': 'Quando um estudo observa que duas variáveis se movem juntas (tempo de tela e sono ruim) '
+                            'sem ainda provar causa direta, ele relata uma <strong>correlation</strong> (correlação '
+                            'estatística). A frase seguinte inclusive retoma esse termo para contrastá-lo com '
+                            'causalidade.',
+             'fonte': 'Parte 9, Exercício 6, item 1 (linhas 630 e 632)'},
+            {'num': '10.2',
+             'prompt': 'Lacuna (2): "But correlation is not ___(2), and the study does not identify..."',
+             'options': {'A': 'causation', 'B': 'mitigation', 'C': 'symmetry', 'D': 'paradigm'},
+             'correct': 'A',
+             'explanation': 'O princípio metodológico clássico da ciência afirma que correlação não equivale a '
+                            '<strong>causation</strong> (relação direta de causa e efeito). As opções (B), (C) e (D) '
+                            'não estabelecem a oposição conceitual com <em>correlation</em>.',
+             'fonte': 'Parte 9, Exercício 6, item 2 (linhas 630 e 632)'},
+            {'num': '10.3',
+             'prompt': 'Lacuna (3): "...and the study does not identify the ___(3) by which screens would disrupt '
+                       'sleep."',
+             'options': {'A': 'correlation', 'B': 'mitigation', 'C': 'hypothesis', 'D': 'mechanism'},
+             'correct': 'D',
+             'explanation': 'A estrutura <em>the ... by which screens would disrupt sleep</em> refere-se ao processo '
+                            'subjacente que explica como um fator produz o outro: o <strong>mechanism</strong>. A '
+                            'opção (C) <em>hypothesis</em> é uma suposição a ser testada, e não o processo físico ou '
+                            'biológico em si.',
+             'fonte': 'Parte 9, Exercício 6, item 3 (linhas 630 e 632)'},
+            {'num': '10.4',
+             'prompt': 'Lacuna (4): "A likely ___(4) variable is simply that anxious teenagers both sleep poorly and '
+                       'use phones more."',
+             'options': {'A': 'empirical', 'B': 'confounding', 'C': 'systemic', 'D': 'tenuous'},
+             'correct': 'B',
+             'explanation': 'Um fator oculto (como a ansiedade) que afeta ao mesmo tempo as duas variáveis estudadas e '
+                            'cria uma falsa aparência de causa é chamado de <strong>confounding</strong> '
+                            '(<em>confounding variable</em>). A opção (A) <em>empirical</em> significa baseado em '
+                            'dados, o que não define esse tipo de viés.',
+             'fonte': 'Parte 9, Exercício 6, item 4 (linhas 630 e 632)'},
+            {'num': '10.5',
+             'prompt': 'Lacuna (5): "Until an independent team can ___(5) the result under controlled conditions..."',
+             'options': {'A': 'extrapolate', 'B': 'exacerbate', 'C': 'replicate', 'D': 'circumvent'},
+             'correct': 'C',
+             'explanation': 'Para validar uma descoberta, uma equipe independente precisa reproduzir o experimento e '
+                            'chegar ao mesmo achado, ou seja, <strong>replicate</strong> (replicar o resultado). A '
+                            'opção (A) <em>extrapolate</em> significa projetar dados além do que foi testado.',
+             'fonte': 'Parte 9, Exercício 6, item 5 (linhas 630 e 632)'},
+            {'num': '10.6',
+             'prompt': 'Lacuna (6): "Until an independent team can replicate the result under controlled conditions, '
+                       'the causal claim remains ___(6)."',
+             'options': {'A': 'robust', 'B': 'empirical', 'C': 'systemic', 'D': 'tenuous'},
+             'correct': 'D',
+             'explanation': 'Enquanto o estudo não for replicado com controle de variáveis, a afirmação de causa e '
+                            'efeito continua frágil e pouco convincente: <strong>tenuous</strong>. A alternativa (A) '
+                            '<em>robust</em> diria que a afirmação já é sólida, contradizendo a ressalva anterior.',
+             'fonte': 'Parte 9, Exercício 6, item 6 (linhas 630 e 632)'},
+            {'num': '10.7',
+             'prompt': 'Lacuna (7): "...the broader trend is real and that its drivers are largely ___(7): a product '
+                       'of how devices and apps are designed."',
+             'options': {'A': 'tenuous', 'B': 'systemic', 'C': 'empirical', 'D': 'marginal'},
+             'correct': 'B',
+             'explanation': 'Como a explicação após os dois-pontos atribui o problema à arquitetura dos aparelhos e '
+                            'aplicativos (e não apenas a escolhas individuais), as causas são estruturais: '
+                            '<strong>systemic</strong>. A opção (D) <em>marginal</em> diminuiria a importância dos '
+                            'fatores citados.',
+             'fonte': 'Parte 9, Exercício 6, item 7 (linhas 630 e 632)'},
+            {'num': '10.8',
+             'prompt': 'Lacuna (8): "Any ___(8) strategy should therefore target design, not just individual '
+                       'willpower."',
+             'options': {'A': 'mitigation', 'B': 'causation', 'C': 'correlation', 'D': 'proliferation'},
+             'correct': 'A',
+             'explanation': 'Uma estratégia voltada a reduzir os danos de um problema é uma estratégia de '
+                            '<strong>mitigation</strong> (<em>mitigation strategy</em>). A opção (D) '
+                            '<em>proliferation</em> significa expansão rápida, o oposto de conter o problema.',
+             'fonte': 'Parte 9, Exercício 6, item 8 (linhas 630 e 632)'},
+            {'num': '10.9',
+             'prompt': 'Lacuna (9): "The ___(9) evidence we do have supports modest limits..."',
+             'options': {'A': 'systemic', 'B': 'confounding', 'C': 'ostensible', 'D': 'empirical'},
+             'correct': 'D',
+             'explanation': 'Para se referir às evidências concretas obtidas por observação e dados (em contraste com '
+                            'o alarmismo especulativo), usamos o adjetivo <strong>empirical</strong> (<em>empirical '
+                            'evidence</em>). A opção (C) <em>ostensible</em> significaria evidência apenas aparente ou '
+                            'suposta.',
+             'fonte': 'Parte 9, Exercício 6, item 9 (linhas 630 e 632)'},
+            {'num': '10.10',
+             'prompt': 'Lacuna (10): "...it does not support the alarmist framing that lets commentators ___(10) from '
+                       'a small effect to a generational crisis."',
+             'options': {'A': 'replicate', 'B': 'corroborate', 'C': 'extrapolate', 'D': 'substantiate'},
+             'correct': 'C',
+             'explanation': 'A estrutura <em>from [um efeito pequeno] to [uma crise geracional]</em> descreve o salto '
+                            'de projetar conclusões exageradas além do alcance real dos dados: '
+                            '<strong>extrapolate</strong>. As opções (B) e (D) significam confirmar ou comprovar com '
+                            'base sólida.',
+             'fonte': 'Parte 9, Exercício 6, item 10 (linhas 630 e 632)'}]},
+ {'id': 'mod6-x-11',
+  'title': 'Exercício 11: Verbos de reporte e postura (meta de 4 min)',
+  'level': 'C1–C2',
+  'objective': 'Escolha o verbo de reporte que expressa com exatidão a postura indicada entre colchetes, conforme a '
+               'tabela da Parte 6.3. Tempo-alvo: 4 minutos.',
+  'passage_html': None,
+  'items': [{'num': '11.1',
+             'prompt': '"The author ___ that the sample was small." [postura: reconhece uma limitação do próprio '
+                       'estudo]',
+             'options': {'A': 'acknowledges', 'B': 'demonstrates', 'C': 'disputes', 'D': 'refutes'},
+             'correct': 'A',
+             'explanation': 'Quando o autor admite uma limitação ou ponto sensível do próprio trabalho, o verbo '
+                            'adequado é <strong>acknowledges</strong> (reconhece). A opção (C) <em>disputes</em> '
+                            'indicaria que ele está contestando o fato de a amostra ser pequena, e não admitindo.',
+             'fonte': 'Parte 9, Exercício 7, item 1 (linhas 638 e 645)'},
+            {'num': '11.2',
+             'prompt': '"The lecturer ___, with new data, that the reading\'s model is wrong." [postura: prova com '
+                       'evidências]',
+             'options': {'A': 'claims', 'B': 'concedes', 'C': 'demonstrates', 'D': 'implies'},
+             'correct': 'C',
+             'explanation': 'Quando você endossa que o palestrante comprovou seu ponto com dados sólidos (<em>with new '
+                            'data</em>), o verbo exato é <strong>demonstrates</strong>. A alternativa (A) '
+                            '<em>claims</em> carregaria um tom de ceticismo, como se ele afirmasse sem provas.',
+             'fonte': 'Parte 9, Exercício 7, item 2 (linhas 639 e 645)'},
+            {'num': '11.3',
+             'prompt': '"The reading ___ that the method is flawless, but offers no support." [postura: afirma sem '
+                       'comprovação]',
+             'options': {'A': 'demonstrates', 'B': 'claims', 'C': 'establishes', 'D': 'concedes'},
+             'correct': 'B',
+             'explanation': 'Para sinalizar que o texto faz uma alegação sem apresentar evidências suficientes '
+                            '(<em>offers no support</em>), usamos <strong>claims</strong>. As opções (A) '
+                            '<em>demonstrates</em> e (C) <em>establishes</em> indicariam que o texto provou a '
+                            'afirmação.',
+             'fonte': 'Parte 9, Exercício 7, item 3 (linhas 640 e 645)'},
+            {'num': '11.4',
+             'prompt': '"The professor ___ the reading\'s central assumption." [postura: contesta diretamente]',
+             'options': {'A': 'notes', 'B': 'concedes', 'C': 'corroborates', 'D': 'disputes'},
+             'correct': 'D',
+             'explanation': 'Para mostrar que o professor questiona ou contesta a premissa central do texto, o verbo '
+                            'transitivo adequado é <strong>disputes</strong>. A opção (C) <em>corroborates</em> tem o '
+                            'sentido oposto (confirmar a premissa), e (A) <em>notes</em> é apenas neutro.',
+             'fonte': 'Parte 9, Exercício 7, item 4 (linhas 641 e 645)'},
+            {'num': '11.5',
+             'prompt': '"The passage ___ that enrollment rose in 2024." [postura: registra um fato de forma neutra]',
+             'options': {'A': 'notes', 'B': 'alleges', 'C': 'disputes', 'D': 'concedes'},
+             'correct': 'A',
+             'explanation': 'Ao relatar um dado objetivo (o aumento de matrículas em 2024) sem tom de dúvida ou '
+                            'debate, a escolha neutra é <strong>notes</strong>. A opção (B) <em>alleges</em> sugeriria '
+                            'uma acusação sem provas, inadequada para um registro factual simples.',
+             'fonte': 'Parte 9, Exercício 7, item 5 (linhas 642 e 645)'},
+            {'num': '11.6',
+             'prompt': '"While she ___ the cost is real, she argues the benefit is larger." [postura: admite um ponto '
+                       'contrário antes de rebater]',
+             'options': {'A': 'refutes', 'B': 'concedes', 'C': 'disputes', 'D': 'claims'},
+             'correct': 'B',
+             'explanation': 'Na oração concessiva introduzida por <em>While</em>, a autora reconhece um argumento do '
+                            'lado oposto antes de defender sua tese principal, o que pede <strong>concedes</strong> '
+                            '(admite ou concede). As opções (A) <em>refutes</em> e (C) <em>disputes</em> negariam que '
+                            'o custo é real.',
+             'fonte': 'Parte 9, Exercício 7, item 6 (linhas 643 e 645)'}]},
+ {'id': 'mod6-x-12',
+  'title': 'Exercício 12: Caça ao erro de vocabulário (meta de 5 min)',
+  'level': 'C1–C2',
+  'objective': 'Cada frase original contém um deslize de vocabulário (falso cognato, colocação, forma da palavra ou '
+               'nuance). Escolha a opção que corrige a frase mantendo o sentido pretendido. Tempo-alvo: 5 minutos.',
+  'passage_html': None,
+  'items': [{'num': '12.1',
+             'prompt': 'Corrija o falso cognato na frase: "Eventually, the study has three limitations that the '
+                       'authors admit."',
+             'options': {'A': 'Actually, the study pretends three limitations that the authors admit.',
+                         'B': 'Eventual, the study has three limitations that the authors admit.',
+                         'C': 'The study has three limitations that the authors admit.',
+                         'D': 'Eventually, the study has three limitations that the authors pretend.'},
+             'correct': 'C',
+             'explanation': 'Em inglês, <em>eventually</em> significa no fim ou depois de muito tempo, e não '
+                            'eventualmente. Como a frase apenas apresenta um fato sobre o estudo, a correção mais '
+                            'limpa é cortar o falso cognato e escrever <strong>The study has three limitations that '
+                            'the authors admit</strong>. As opções (A) e (D) introduzem o falso cognato '
+                            '<em>pretend</em> (fingir).',
+             'fonte': 'Parte 9, Exercício 9, item 1 (linhas 659 e 670)'},
+            {'num': '12.2',
+             'prompt': 'Corrija o deslize de uso formal na frase: "The data are comprised of responses from 400 '
+                       'students."',
+             'options': {'A': 'The data comprise responses from 400 students.',
+                         'B': 'The data comprise of responses from 400 students.',
+                         'C': 'The data constitutes of responses from 400 students.',
+                         'D': 'The data are composed by responses from 400 students.'},
+             'correct': 'A',
+             'explanation': 'No registro formal, evitamos <em>are comprised of</em> e usamos o verbo ativo sem '
+                            'preposição em <strong>The data comprise responses</strong> (ou a passiva <em>are composed '
+                            'of</em>). A opção (B) mantém a preposição indevida <em>of</em> após <em>comprise</em>, e '
+                            '(D) usa <em>by</em> em vez de <em>of</em> com <em>composed</em>.',
+             'fonte': 'Parte 9, Exercício 9, item 2 (linhas 660 e 671)'},
+            {'num': '12.3',
+             'prompt': 'Corrija a estrutura após a preposição na frase: "This raises a concern about if the method is '
+                       'valid."',
+             'options': {'A': 'This poses a concern about if the method is valid.',
+                         'B': 'This raises a concern about that the method is valid.',
+                         'C': 'This conducts a concern about whether the method is valid.',
+                         'D': 'This raises a concern about whether the method is valid.'},
+             'correct': 'D',
+             'explanation': 'Logo após uma preposição (como <em>about</em>), o inglês formal exige <strong>about '
+                            'whether</strong> para introduzir uma dúvida indireta, e nunca <em>about if</em>. A '
+                            'alternativa (C) acerta o <em>whether</em>, mas quebra a colocação ao trocar <em>raises a '
+                            'concern</em> por <em>conducts a concern</em>.',
+             'fonte': 'Parte 9, Exercício 9, item 3 (linhas 661 e 672)'},
+            {'num': '12.4',
+             'prompt': 'Corrija o falso cognato no verbo de reporte em: "The professor pretends that the effect is '
+                       'purely cultural."',
+             'options': {'A': 'The professor realizes that the effect is purely cultural.',
+                         'B': 'The professor argues that the effect is purely cultural.',
+                         'C': 'The professor intends that the effect is purely cultural.',
+                         'D': 'The professor sensitizes that the effect is purely cultural.'},
+             'correct': 'B',
+             'explanation': 'O verbo <em>pretend</em> é um falso amigo que significa fingir. Para relatar a tese '
+                            'defendida pelo professor em aula, trocamos por <strong>argues</strong> (ou '
+                            '<em>claims</em>). A opção (C) <em>intends</em> significa ter a intenção de fazer algo e '
+                            'não introduz uma tese teórica dessa forma.',
+             'fonte': 'Parte 9, Exercício 9, item 4 (linhas 662 e 673)'},
+            {'num': '12.5',
+             'prompt': 'Corrija a regência verbal na frase: "The two results corroborate to each other."',
+             'options': {'A': 'The two results corroborate with each other.',
+                         'B': 'The two results corroborate on each other.',
+                         'C': 'The two results corroborate each other.',
+                         'D': 'The two results corroborate for each other.'},
+             'correct': 'C',
+             'explanation': 'O verbo <em>corroborate</em> é transitivo direto e não aceita preposição antes do objeto, '
+                            'por isso a forma correta é <strong>corroborate each other</strong>. As alternativas (A), '
+                            '(B) e (D) mantêm preposições indevidas (<em>with</em>, <em>on</em>, <em>for</em>).',
+             'fonte': 'Parte 9, Exercício 9, item 5 (linhas 663 e 674)'},
+            {'num': '12.6',
+             'prompt': 'Corrija a escolha da palavra na frase: "The policy had a big affect on rural clinics."',
+             'options': {'A': 'The policy had a big effect on rural clinics.',
+                         'B': 'The policy had a big affecting on rural clinics.',
+                         'C': 'The policy made a big affect on rural clinics.',
+                         'D': 'The policy had a big effective on rural clinics.'},
+             'correct': 'A',
+             'explanation': 'Depois de <em>had a big...</em>, a função sintática é de substantivo, exigindo '
+                            '<strong>effect</strong> (<em>had a big effect on</em>). Na frase original, '
+                            '<em>affect</em> foi usado por engano no lugar do substantivo.',
+             'fonte': 'Parte 9, Exercício 9, item 6 (linhas 664 e 675)'},
+            {'num': '12.7',
+             'prompt': 'Corrija a forma da palavra no final da frase: "The evidence for this connection is very strong '
+                       'and robusts."',
+             'options': {'A': 'The evidence for this connection is very strong and robustness.',
+                         'B': 'The evidence for this connection is very strong and robustly.',
+                         'C': 'The evidence for this connection are very strong and robust.',
+                         'D': 'The evidence for this connection is very strong and robust.'},
+             'correct': 'D',
+             'explanation': 'Em inglês, adjetivos nunca recebem <em>-s</em> de plural ou de terceira pessoa, mantendo '
+                            'a forma invariável <strong>robust</strong> ao lado de <em>strong</em>. A opção (C) '
+                            'corrige <em>robust</em>, mas erra ao usar o verbo plural <em>are</em> com o substantivo '
+                            'incontável <em>evidence</em>.',
+             'fonte': 'Parte 9, Exercício 9, item 7 (linhas 665 e 676)'},
+            {'num': '12.8',
+             'prompt': 'Corrija a colocação na frase: "The lecture makes an emphasis on the second mechanism."',
+             'options': {'A': 'The lecture does an emphasis on the second mechanism.',
+                         'B': 'The lecture emphasizes on the second mechanism.',
+                         'C': 'The lecture places emphasis on the second mechanism.',
+                         'D': 'The lecture conducts emphasis on the second mechanism.'},
+             'correct': 'C',
+             'explanation': 'O substantivo <em>emphasis</em> não forma colocação com o verbo <em>make</em>; o natural '
+                            'é usar <strong>places emphasis on</strong> (ou diretamente o verbo transitivo '
+                            '<em>emphasizes the second mechanism</em>, sem preposição). Repare que a opção (B) erra ao '
+                            'colocar <em>on</em> depois do verbo <em>emphasizes</em>.',
+             'fonte': 'Parte 9, Exercício 9, item 8 (linhas 666 e 677)'}]}]

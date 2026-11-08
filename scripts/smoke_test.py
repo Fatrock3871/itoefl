@@ -959,7 +959,8 @@ check("paid_sees_everything", function(){
       // subseção recolhida pelo acordeão some por outro motivo, que não é o cadeado
       return el.hidden || el.classList.contains("h3-collapsed") || getComputedStyle(el).display !== "none";
     }) &&
-    Array.prototype.every.call(document.querySelectorAll(FS_WIDGETS), fsShown) &&
+    // fora da rodada sorteada (M5 e M6) o exercício some por outro motivo
+    Array.prototype.every.call(document.querySelectorAll(FS_WIDGETS), function(w){ return w.closest(".drill-pick[hidden]") || fsShown(w); }) &&
     / de 30 verificadas$/.test(document.querySelector('[data-bsq="m4build2"] .quiz-score').textContent) &&
     document.querySelector('#panel-mod1 .ph-progress-label span').textContent === "Seu progresso neste módulo";
 });
@@ -1125,6 +1126,84 @@ try { (function(){
   Object.keys(keep).forEach(function(k){ if(keep[k] !== null) localStorage.setItem(k, keep[k]); });
   window.__toeflRefreshPlan();
 })(); } catch(ex){ check("weak_and_priority_checks_ran", function(){ throw ex; }); }
+
+// M5 e M6 (2026-11-07): os exercícios que eram só texto viraram interativos,
+// contam em Registro e em Vocabulário, e aparecem em rodadas sorteadas. A
+// ordem das questões é sorteada, diferente da última, e nenhum exercício do
+// grupo volta antes de todos terem sido feitos. O estado de antes volta no fim.
+try { (function(){
+  var KEYS = ["toefl_quiz_mod5-x-1_v1", "toefl_quiz_mod6-x-1_v1"], keep = {};
+  KEYS.forEach(function(k){ keep[k] = localStorage.getItem(k); localStorage.removeItem(k); });
+  function weakMap(){ var m = {}; window.__toeflWeak().forEach(function(a){ m[a.key] = a; }); return m; }
+  function answer(id, nOk){
+    var st = {};
+    Array.prototype.forEach.call(document.querySelectorAll('[data-drill="' + id + '"] .qcard'), function(c, i){
+      var bad = Array.prototype.filter.call(c.querySelectorAll(".opt"), function(o){ return o.dataset.letter !== c.dataset.correct; })[0];
+      st[c.dataset.num] = { picked: i < nOk ? c.dataset.correct : bad.dataset.letter, confirmed: true };
+    });
+    localStorage.setItem("toefl_quiz_" + id + "_v1", JSON.stringify(st));
+  }
+  var w0 = weakMap();
+  answer("mod5-x-1", 5);
+  answer("mod6-x-1", 2);
+  var w1 = weakMap();
+  check("m5_m6_have_interactive_exercises", function(){
+    var n = function(sel){ return document.querySelectorAll(sel).length; };
+    var t5 = document.getElementById("panel-mod5").textContent, t6 = document.getElementById("panel-mod6").textContent;
+    return n('#panel-mod5 .drill-round .quiz-drill[data-drill^="mod5-"]') === 14 && n('#panel-mod5 .quiz-drill[data-drill^="mod5-"] .qcard') === 73 &&
+      n('#panel-mod6 .drill-round .quiz-drill[data-drill^="mod6-"]') === 12 && n('#panel-mod6 .quiz-drill[data-drill^="mod6-"] .qcard') === 81 &&
+      // o texto estático com gabarito saiu; a teoria e os exercícios de produção ficaram
+      t5.indexOf("Gabarito (versões de referência)") === -1 && t5.indexOf("Resposta em 3 bandas no Take an Interview") !== -1 &&
+      t5.indexOf("Nominalização: comprimir um processo num nome") !== -1 &&
+      t6.indexOf("1 assess · 2 assessment") === -1 && t6.indexOf("Ativação (inserção no início da frase)") !== -1;
+  });
+  check("m5_m6_feed_weak_spots", function(){
+    return w1.registro.n === w0.registro.n + 5 && w1.registro.ok === w0.registro.ok + 5 &&
+      w1.vocabulario.n === w0.vocabulario.n + 8 && w1.vocabulario.ok === w0.vocabulario.ok + 2;
+  });
+  check("drill_round_shows_four_at_a_time", function(){
+    return Array.prototype.every.call(document.querySelectorAll(".drill-round"), function(r){
+      return r.querySelectorAll(".drill-pick:not([hidden])").length === 4 && /^Nesta rodada: 4 de 1[24] exercícios\./.test(r.querySelector(".drill-round-status").textContent);
+    });
+  });
+  check("question_order_changes_between_openings", function(){
+    var S = window.ToeflSorteio, list = ["1", "2", "3", "4", "5"], last = list, ok = true;
+    for(var i = 0; i < 200; i++){
+      var p = S.permute(list, last);
+      if(p.join() === last.join() || p.slice().sort().join() !== list.join()) ok = false;
+      last = p;
+    }
+    var two = S.permute(["a", "b"], ["a", "b"]).join();
+    // na tela: o número mostrado segue a posição, e a ordem vem da guardada
+    var drill = document.querySelector('[data-drill="mod1-c1"]'), cards = drill.querySelectorAll(".qcard");
+    var saved = JSON.parse(localStorage.getItem("toefl_qorder_v1") || "{}")["quiz:mod1-c1"] || [];
+    var shown = Array.prototype.map.call(cards, function(c){ return c.dataset.num; });
+    var numbered = Array.prototype.every.call(cards, function(c, i){ return c.querySelector(".qnum").textContent === String(i + 1); });
+    var exam = document.querySelector('[data-exam="mod7-b6"]'), items = exam.querySelectorAll(".exam-item");
+    var audioWithItem = Array.prototype.every.call(items, function(it){ return !!it.querySelector(".exam-pre"); });
+    return ok && two === "b,a" && saved.join() === shown.join() && numbered && audioWithItem &&
+      exam.lastElementChild.classList.contains("exam-actions");
+  });
+  check("no_exercise_repeats_before_group_is_done", function(){
+    var S = window.ToeflSorteio, ids = [], g = {}, seen = [], prev = null, dup = false;
+    for(var i = 1; i <= 14; i++) ids.push("x" + i);
+    // 4 rodadas feitas inteiras (4 + 4 + 4 + 2): cada exercício uma vez só
+    for(var r = 0; r < 4; r++){
+      var round = S.pickRound(ids, g, 4, prev);
+      round.forEach(function(id){ if(seen.indexOf(id) !== -1) dup = true; seen.push(id); S.markDone(g, id, ids); });
+      prev = round;
+    }
+    var allOnce = !dup && seen.length === 14 && seen.slice().sort().join() === ids.slice().sort().join();
+    // volta completa: a próxima rodada recomeça e traz 4 de novo
+    var next = S.pickRound(ids, g, 4, prev);
+    S.markDone(g, next[0], ids);
+    // "Sortear outra rodada" sem fazer nada não repete a rodada enquanto houver outros
+    var h = {}, a = S.pickRound(ids, h, 4, null), b = S.pickRound(ids, h, 4, a);
+    var noOverlap = a.every(function(id){ return b.indexOf(id) === -1; });
+    return allOnce && next.length === 4 && g.cycle.length === 1 && g.n[next[0]] === 2 && noOverlap;
+  });
+  KEYS.forEach(function(k){ if(keep[k] !== null) localStorage.setItem(k, keep[k]); else localStorage.removeItem(k); });
+})(); } catch(ex){ check("m5_m6_and_order_checks_ran", function(){ throw ex; }); }
 check("m7_says_what_the_diagnostic_measures", function(){
   var t = document.getElementById("panel-mod7").textContent;
   return t.indexOf("Ele não dá nota por seção.") !== -1 && t.indexOf("banda CEFR (1–6) por seção") === -1;

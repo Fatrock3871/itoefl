@@ -1438,6 +1438,19 @@ main{max-width:1320px; margin:0 auto; padding:0 30px 120px; min-width:0;}
 .qconfirm:not(:disabled):hover{transform:translate(-2px,-2px); box-shadow:6px 6px 0 var(--edge);}
 
 .quiz-drill{margin:20px 0 34px;}
+/* rodada sorteada (M5 e M6): só os exercícios da rodada aparecem */
+.drill-pick[hidden]{display:none !important;}
+.drill-round-bar{
+  display:flex; flex-wrap:wrap; align-items:center; gap:10px 16px; margin:8px 0 18px;
+  padding:12px 16px; border:2px solid var(--edge); border-radius:var(--radius); background:var(--sand);
+}
+.drill-round-status{margin:0 !important; flex:1 1 260px; font-size:14px; color:var(--ink);}
+.drill-round-next{
+  padding:9px 15px; border-radius:8px; border:2px solid var(--edge); background:var(--accent-fill); color:#fff;
+  font-family:'Bricolage Grotesque',sans-serif; font-size:13px; font-weight:800; cursor:pointer;
+  box-shadow:2px 2px 0 var(--edge);
+}
+.drill-round-next:hover{background:var(--accent-fill-hover);}
 .quiz-passage{background:var(--sand); border:2px solid var(--edge); border-radius:var(--radius); padding:18px 20px; margin-bottom:16px;}
 .quiz-passage p{font-size:14.5px !important; margin:0 0 10px !important;}
 .quiz-passage p:last-child{margin-bottom:0 !important;}

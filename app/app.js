@@ -380,7 +380,7 @@
 
   // chaves que sincronizam com o Supabase (progresso real do aluno).
   // ficam de fora: toefl_theme_v1, toefl_active_tab, toefl_timer_preset, toefl_sync_*
-  var SYNC_PREFIXES = ["toefl_progress", "toefl_srs_", "toefl_bsq_", "toefl_quiz_", "toefl_avatar", "toefl_errlog_", "toefl_cert_", "toefl_streak", "toefl_dailygoal", "toefl_weeklydash", "toefl_h3progress", "toefl_ctw_", "toefl_spk_", "toefl_write_", "toefl_exam_", "toefl_scorecalc", "toefl_essay_seen", "toefl_goal", "toefl_banco", "toefl_diagad"];
+  var SYNC_PREFIXES = ["toefl_progress", "toefl_srs_", "toefl_bsq_", "toefl_quiz_", "toefl_avatar", "toefl_errlog_", "toefl_cert_", "toefl_streak", "toefl_dailygoal", "toefl_weeklydash", "toefl_h3progress", "toefl_ctw_", "toefl_spk_", "toefl_write_", "toefl_exam_", "toefl_scorecalc", "toefl_essay_seen", "toefl_goal", "toefl_banco", "toefl_diagad", "toefl_sorteio"];
   function isSyncedKey(key){
     if(!key || key.indexOf("toefl_") !== 0) return false;
     for(var i = 0; i < SYNC_PREFIXES.length; i++){
@@ -1207,6 +1207,69 @@
     v.textContent = (result.ok ? "✓ " : "✗ ") + result.text;
   }
 
+  // ---------- Sorteio: ordem das questões e rodada de exercícios ----------
+  // Ordem das questões (exercícios do M1, M2, M5 e M6 e blocos do M7): nova a
+  // cada abertura de um exercício ainda não começado e a cada "Refazer",
+  // sempre diferente da última vista. Começado ou entregue, fica a ordem
+  // guardada. A ordem é do aparelho (toefl_qorder_v1, não sincroniza).
+  // Rodada (grupos com mais exercícios do que uma rodada, hoje M5 e M6): o
+  // que já foi feito vai em toefl_sorteio_v1, que sincroniza com a conta.
+  var LS_QORDER = "toefl_qorder_v1", LS_SORTEIO = "toefl_sorteio_v1";
+  function readObj(key){ try { var o = JSON.parse(safeGet(key) || "{}"); return (o && typeof o === "object") ? o : {}; } catch(e){ return {}; } }
+  var ToeflSorteio = {
+    // permutação aleatória, diferente de "last" (mesma lista) quando der
+    permute: function(list, last){
+      var a = list.slice(), same = function(){ return !!last && last.length === a.length && last.join("|") === a.join("|"); };
+      for(var t = 0; t < 20; t++){
+        for(var i = a.length - 1; i > 0; i--){ var j = Math.floor(Math.random() * (i + 1)); var x = a[i]; a[i] = a[j]; a[j] = x; }
+        if(a.length < 2 || !same()) return a;
+      }
+      a.push(a.shift());
+      return a;
+    },
+    // k exercícios entre os que ainda não foram feitos nesta volta (cycle),
+    // os menos feitos primeiro; "avoid" (a rodada atual) só entra se faltar.
+    // Volta completa (todos feitos): cycle zera e começa outra.
+    pickRound: function(ids, g, k, avoid){
+      g.cycle = (g.cycle || []).filter(function(id){ return ids.indexOf(id) !== -1; });
+      g.n = g.n || {};
+      var pool = ids.filter(function(id){ return g.cycle.indexOf(id) === -1; });
+      if(!pool.length){ g.cycle = []; pool = ids.slice(); }
+      var rank = function(list){
+        return ToeflSorteio.permute(list).sort(function(x, y){ return (g.n[x] || 0) - (g.n[y] || 0); });
+      };
+      avoid = avoid || [];
+      var fresh = rank(pool.filter(function(id){ return avoid.indexOf(id) === -1; }));
+      var again = rank(pool.filter(function(id){ return avoid.indexOf(id) !== -1; }));
+      return fresh.concat(again).slice(0, k);
+    },
+    // exercício terminado: conta na volta e no total. Volta já completa
+    // (todos feitos) começa outra com este
+    markDone: function(g, id, ids){
+      g.cycle = g.cycle || []; g.n = g.n || {};
+      if(ids && ids.every(function(x){ return g.cycle.indexOf(x) !== -1; })) g.cycle = [];
+      if(g.cycle.indexOf(id) === -1) g.cycle.push(id);
+      g.n[id] = (g.n[id] || 0) + 1;
+    }
+  };
+  window.ToeflSorteio = ToeflSorteio;
+
+  // aplica a ordem das questões de um exercício; fresh = sortear de novo
+  function orderQuestions(key, items, anchor, numSel, fresh){
+    if(items.length < 2) return;
+    var byNum = {}, nums = items.map(function(el){ byNum[el.dataset.num] = el; return el.dataset.num; });
+    var all = readObj(LS_QORDER), saved = all[key];
+    var valid = Array.isArray(saved) && saved.length === nums.length && saved.every(function(n){ return byNum[n]; });
+    var order = (!fresh && valid) ? saved : ToeflSorteio.permute(nums, valid ? saved : null);
+    if(order !== saved){ all[key] = order; safeSet(LS_QORDER, JSON.stringify(all)); }
+    order.forEach(function(n, i){
+      var el = byNum[n];
+      anchor.parentNode.insertBefore(el, anchor);
+      var label = el.querySelector(numSel);
+      if(label) label.textContent = String(i + 1);
+    });
+  }
+
   var quizDrills = Array.prototype.slice.call(document.querySelectorAll(".quiz-drill"));
 
   quizDrills.forEach(function(drillEl){
@@ -1220,6 +1283,13 @@
     // guardada sem correção, e o gabarito com as explicações aparece em todas
     // as questões de uma vez, depois da última (item 2 de 2026-10-25)
     var revealAtEnd = drillEl.dataset.reveal === "end";
+    // ordem das questões sorteada (o diagnóstico fica fixo): nova se o
+    // exercício ainda não foi começado
+    var shuffleOrder = !revealAtEnd && drillId !== "mod0-diag";
+    function placeQuestions(fresh){
+      if(shuffleOrder) orderQuestions("quiz:" + drillId, qcards, drillEl.querySelector(".quiz-summary"), ".qnum", fresh);
+    }
+    placeQuestions(!Object.keys(state).some(function(n){ return state[n] && state[n].picked; }));
     function allConfirmed(){
       return qcards.every(function(c){ return state[c.dataset.num] && state[c.dataset.num].confirmed; });
     }
@@ -1372,7 +1442,10 @@
           s.confirmed = true;
           saveState();
           // exercício inteiro respondido conta na meta de hoje
-          if(!wasDone && allConfirmed()) markDailyGoalProgress(true);
+          if(!wasDone && allConfirmed()){
+            markDailyGoalProgress(true);
+            drillEl.dispatchEvent(new CustomEvent("toefl-drill-done", { bubbles: true, detail: { id: drillId } }));
+          }
           if(revealAtEnd && !wasDone && allConfirmed()){
             // a última: corrige todas de uma vez e mostra o resultado
             qcards.forEach(applyCardState);
@@ -1396,6 +1469,7 @@
       retryBtn.addEventListener("click", function(){
         state = {};
         saveState();
+        placeQuestions(true);
         qcards.forEach(function(card){ shuffleChoices(card, ".opt"); });
         qcards.forEach(applyCardState);
         renderSummary();
@@ -1403,6 +1477,65 @@
     }
 
     renderSummary();
+  });
+
+  // ---------- Rodada sorteada de exercícios (M5 e M6) ----------
+  // Todos os exercícios do grupo estão na página; só os da rodada aparecem.
+  // A rodada fica guardada até ser toda feita (aí a próxima abertura traz
+  // outra) ou até o aluno pedir outra. Nenhum exercício volta antes de o
+  // grupo inteiro ter sido feito (ToeflSorteio.pickRound).
+  Array.prototype.forEach.call(document.querySelectorAll(".drill-round"), function(root){
+    var gid = root.dataset.roundGroup, k = parseInt(root.dataset.round, 10) || 4;
+    var picks = Array.prototype.slice.call(root.querySelectorAll(".drill-pick"));
+    var ids = picks.map(function(p){ return p.dataset.pick; });
+    var statusEl = root.querySelector(".drill-round-status"), nextBtn = root.querySelector(".drill-round-next");
+    // o feito (cycle, n) sincroniza; a rodada à mostra é do aparelho, junto
+    // da ordem das questões: abrir a página não pode marcar nada para enviar
+    function load(){
+      var all = readObj(LS_SORTEIO), g = all[gid];
+      g = (g && typeof g === "object") ? g : {};
+      var r = readObj(LS_QORDER)["round:" + gid];
+      g.round = Array.isArray(r) ? r : null;
+      return { all: all, g: g };
+    }
+    function saveRound(s){
+      var o = readObj(LS_QORDER);
+      o["round:" + gid] = s.g.round;
+      safeSet(LS_QORDER, JSON.stringify(o));
+    }
+    function saveDone(s){
+      s.all[gid] = { cycle: s.g.cycle || [], n: s.g.n || {} };
+      safeSet(LS_SORTEIO, JSON.stringify(s.all));
+    }
+    function show(s){
+      var round = s.g.round || [];
+      picks.forEach(function(p){ p.hidden = round.indexOf(p.dataset.pick) === -1; });
+      round.forEach(function(id){
+        var p = picks[ids.indexOf(id)];
+        if(p) root.appendChild(p);
+      });
+      var done = (s.g.cycle || []).length;
+      statusEl.textContent = "Nesta rodada: " + round.length + " de " + ids.length + " exercícios. Você já fez " + done +
+        " de " + ids.length + " nesta volta, e os que faltam vêm primeiro.";
+    }
+    function newRound(s, avoid){ s.g.round = ToeflSorteio.pickRound(ids, s.g, k, avoid); saveRound(s); }
+    var s = load();
+    var valid = Array.isArray(s.g.round) && s.g.round.length > 0 && s.g.round.every(function(id){ return ids.indexOf(id) !== -1; });
+    if(!valid || s.g.round.every(function(id){ return (s.g.cycle || []).indexOf(id) !== -1; })) newRound(s, valid ? s.g.round : null);
+    show(s);
+    nextBtn.addEventListener("click", function(){
+      var s2 = load();
+      newRound(s2, s2.g.round);
+      show(s2);
+      var first = root.querySelector(".drill-pick:not([hidden])");
+      if(first) first.scrollIntoView({ behavior: "smooth", block: "start" });
+    });
+    root.addEventListener("toefl-drill-done", function(e){
+      var s2 = load();
+      ToeflSorteio.markDone(s2.g, e.detail.id, ids);
+      saveDone(s2);
+      show(s2);
+    });
   });
 
   // ---------- Cronômetro de seção ----------
@@ -1811,7 +1944,7 @@
       // tudo que é progresso de estudo. Ficam de fora, de propósito: a
       // sequência de dias e a meta de hoje (histórico de constância), a foto
       // e as preferências do aparelho (tema, cronômetro, trilha).
-      var RESET_PREFIXES = ["toefl_progress", "toefl_h3progress", "toefl_srs_", "toefl_bsq_", "toefl_quiz_", "toefl_errlog_", "toefl_cert_", "toefl_ctw_", "toefl_spk_", "toefl_write_", "toefl_exam_", "toefl_scorecalc", "toefl_weeklydash", "toefl_partpos", "toefl_lastpos", "toefl_goal"];
+      var RESET_PREFIXES = ["toefl_progress", "toefl_h3progress", "toefl_srs_", "toefl_bsq_", "toefl_quiz_", "toefl_errlog_", "toefl_cert_", "toefl_ctw_", "toefl_spk_", "toefl_write_", "toefl_exam_", "toefl_scorecalc", "toefl_weeklydash", "toefl_partpos", "toefl_lastpos", "toefl_goal", "toefl_sorteio", "toefl_qorder"];
       // confirmação dupla (item 28 de 2026-10-25): o botão abre um aviso, o
       // aviso pede uma segunda confirmação, e só ela apaga
       var confirmBox = document.getElementById("resetConfirm");
@@ -2292,6 +2425,9 @@
     var state = {};
     try { state = JSON.parse(safeGet(lsKey) || "{}"); } catch(e){ state = {}; }
     if(!state || typeof state !== "object" || !state.answers) state = { answers: {}, done: false };
+    // ordem das questões do bloco: sorteada enquanto o bloco não foi começado
+    var actionsEl = root.querySelector(".exam-actions");
+    orderQuestions("exam:" + root.dataset.exam, items, actionsEl, ".exam-n", !state.done && !Object.keys(state.answers).length);
 
     function persist(){ safeSet(lsKey, JSON.stringify(state)); }
     function paintSelection(){
@@ -2362,6 +2498,7 @@
       });
       root.classList.remove("is-done");
       resultEl.hidden = true; retryBtn.hidden = true; submitBtn.hidden = false;
+      orderQuestions("exam:" + root.dataset.exam, items, actionsEl, ".exam-n", true);
       items.forEach(function(it){ shuffleChoices(it, ".exam-opt"); });
       paintSelection();
       updateLiveScorePanel();
@@ -5340,7 +5477,8 @@
     // exercícios do M1 e do M2: cada questão conta na seção do módulo, menos a
     // de tipo com área própria (data-weak no build, hoje o vocabulário em
     // contexto), que conta nessa área
-    [["mod1-", "reading"], ["mod2-", "listening"]].forEach(function(pa){
+    // M5 conta em Registro e M6 em Vocabulário
+    [["mod1-", "reading"], ["mod2-", "listening"], ["mod5-", "registro"], ["mod6-", "vocabulario"]].forEach(function(pa){
       Array.prototype.forEach.call(document.querySelectorAll('.quiz-drill[data-drill^="' + pa[0] + '"]'), function(drillEl){
         if(isLockedNow(drillEl)) return;
         var st = read("toefl_quiz_" + drillEl.dataset.drill + "_v1");

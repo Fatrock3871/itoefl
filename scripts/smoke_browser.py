@@ -990,6 +990,26 @@ def run():
                 check("real_resume_label_has_no_checkmark", bool(label) and "✓" not in label, label)
                 check("real_start_card_stays_dismissed", b.eval('document.getElementById("startCard").hidden'))
 
+                # ordem das questoes (2026-11-07): exercicio e bloco de simulado
+                # ainda nao comecados mudam de ordem a cada abertura; o comecado
+                # fica como estava
+                order_js = ('(function(){ var q = function(s){ return Array.prototype.map.call(document.querySelectorAll(s),'
+                            ' function(c){ return c.dataset.num; }).join(); };'
+                            ' return { m5: q(\'[data-drill="mod5-x-7"] .qcard\'), m1: q(\'[data-drill="mod1-a3"] .qcard\'),'
+                            ' m7: q(\'[data-exam="mod7-b1"] .exam-item\'), started: q(\'[data-drill="mod1-b3"] .qcard\') }; })()')
+                b.eval('["toefl_quiz_mod5-x-7_v1", "toefl_quiz_mod1-a3_v1", "toefl_exam_mod7-b1_v1"].forEach(function(k){ localStorage.removeItem(k); });'
+                       ' var c = document.querySelector(\'[data-drill="mod1-b3"] .qcard\'); var st = {};'
+                       ' st[c.dataset.num] = { picked: "A", confirmed: false };'
+                       ' localStorage.setItem("toefl_quiz_mod1-b3_v1", JSON.stringify(st));')
+                b.reload(settle=1.2)
+                first = b.eval(order_js)
+                b.reload(settle=1.2)
+                second = b.eval(order_js)
+                check("real_question_order_changes_between_openings",
+                      all(first[k] and first[k] != second[k] for k in ("m5", "m1", "m7")) and first["started"] == second["started"],
+                      {"primeira": first, "segunda": second})
+                b.eval('localStorage.removeItem("toefl_quiz_mod1-b3_v1")')
+
                 # gaveta: uma lista só dos 10 módulos, cada um com o progresso
                 # (item 27; o "mapa do curso" repetia a lista)
                 b.eval('document.getElementById("sideToggle").click()')

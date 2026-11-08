@@ -630,204 +630,27 @@ Aqui vamos acompanhar a construção de uma resposta de banda alta **decisão po
 
 ## Parte 7: Exercícios de elevação
 
-> **Dica:** Todos os exercícios desta parte são de reescrita, porque o objetivo é pegar uma ideia já pronta e elevar a banda com segurança, sem precisar criar argumentos do zero. Inclua apenas um marcador novo da Parte 3 por semana nos seus treinos.
+> **Dica:** Os exercícios de 1 a 14 partem de uma ideia já pronta e pedem que você escolha a versão que eleva a banda com segurança, sem precisar criar argumentos do zero. A correção aparece na hora, com o porquê. Inclua apenas um marcador novo da Parte 3 por semana nos seus treinos.
 
-### Exercício 1: Elevação de frase de B1 para B2 e C1
+%%%M5_DRILLS%%%
 
-Para cada frase de nível B1 abaixo, escreva uma versão em nível B2 e outra em nível C1.
+### Para produzir: fala e escrita
 
-1. "Technology is important because it helps people work faster."
-2. "Many students feel stressed during exams. This is a problem."
-3. "Remote work is good but it can make people feel alone."
-4. "The city built a new park. Now more people exercise outside."
-5. "Learning a second language is useful for getting a job."
-6. "Social media connects people but it also spreads false information."
-7. "The company hired more staff. The waiting time went down."
-8. "Reading books is better than watching videos for learning."
-9. "Public transport is cheaper than driving. It is also better for the air."
-10. "Some students cheat on tests. Schools should stop this."
+Os três exercícios abaixo não têm alternativas, porque pedem a sua própria resposta. Faça depois de uma rodada acima, para usar na hora o que acabou de treinar.
 
-**Gabarito (versões de referência):**
-
-1. B2: *"Technology matters because it lets people work far more efficiently than before."* · C1: *"What makes technology decisive is less speed than scale: it lets a small team do work that once needed a department."*
-2. B2: *"Exam-related stress is widespread and affects performance."* · C1: *"The prevalence of exam stress is itself a signal that the assessment design, not the students, may be the problem."*
-3. B2: *"Remote work has clear benefits, though isolation is a real cost."* · C1: *"Remote work trades the friction of the commute for a subtler cost — the erosion of the informal contact that keeps teams cohesive."*
-4. B2: *"After the city opened a new park, outdoor exercise rose noticeably."* · C1: *"The new park did more than add green space; it made exercise the default for a neighborhood that had none within walking distance."*
-5. B2: *"A second language is a substantial advantage in the job market."* · C1: *"What a second language signals to an employer is less the language itself than the capacity to see a problem from another frame."*
-6. B2: *"Social media strengthens connection but also accelerates the spread of misinformation."* · C1: *"The same architecture that lets social media connect people at scale is what lets falsehoods travel at that scale."*
-7. B2: *"After the company added staff, waiting times fell significantly."* · C1: *"It was the staffing increase, not the new software, that brought waiting times down."*
-8. B2: *"For retention, active reading tends to outperform passive video."* · C1: *"Reading moves at a pace the reader sets; video sets its own, and comprehension quietly drops to match."*
-9. B2: *"Public transport is both cheaper than driving and less polluting."* · C1: *"Public transport is the rare option that is cheaper for the individual and cleaner for everyone else at the same time."*
-10. B2: *"Cheating undermines assessment, and schools should address it directly."* · C1: *"Cheating is less a discipline problem than a design one: it thrives wherever the stakes are high and the format is easy to game."*
-
-### Exercício 2: Banco de nominalizações
-
-Reescreva cada frase substituindo o verbo ou adjetivo em destaque por uma **nominalização** (Marcador 6) e usando essa nova estrutura como sujeito ou objeto.
-
-1. "Fewer people **are reading** newspapers."
-2. "The climate **is changing** quickly."
-3. "Cities **are growing** faster than infrastructure can keep up."
-4. "People **trust** institutions less than they used to."
-5. "Companies **depend** more on remote teams now."
-6. "The population **is aging** across most of Europe."
-7. "The two departments **failed to communicate**."
-8. "Students **are aware** of the risks now more than before."
-9. "The market **collapsed** in a matter of weeks."
-10. "The rules **were applied** inconsistently."
-
-**Gabarito:**
-
-1. *the decline in newspaper readership*
-2. *the pace of climate change*
-3. *the mismatch between urban growth and infrastructure*
-4. *the erosion of trust in institutions*
-5. *companies' growing reliance on remote teams*
-6. *the aging of the population across much of Europe*
-7. *the communication failure between the two departments* (ou *the breakdown in communication*)
-8. *a marked increase in student awareness of the risks*
-9. *the collapse of the market within weeks*
-10. *the inconsistent application of the rules*
-
-### Exercício 3: Substituição de conectivos de B2 para C1
-
-Reescreva o parágrafo abaixo trocando cada **conectivo** por um equivalente de nível C1 da Parte 2, mantendo o sentido original e sem repetir nenhum.
-
-> "Online courses are cheaper than traditional ones. Also, they are more flexible. However, they have higher dropout rates. So, universities should not rely on them completely. Because of this, a mixed model works better."
-
-**Gabarito (uma solução possível):**
-> "Online courses are cheaper than traditional ones. **Beyond this**, they are more flexible. **This is not to say that** they are flawless: they have higher dropout rates. **What this implies is that** universities should not rely on them completely. **The consequence of this is that** a mixed model works better."
-
-### Exercício 4: Enxugar o e-mail e cortar a cerimônia
-
-O e-mail abaixo exagera na cerimônia, uma armadilha comum para quem fala português. Reescreva a mensagem em cerca de 5 frases, mantendo um **registro C1** direto e educado.
-
-> "Dear Professor, I would like to take this opportunity to very humbly and respectfully reach out to you in order to kindly inquire whether it might perhaps somehow be possible, if it is not too much of an inconvenience for you, to consider the possibility of granting me a small extension on the assignment, as I have unfortunately been feeling somewhat unwell. Thank you so very much in advance for your kind consideration. Most respectfully yours."
-
-**Gabarito (uma solução possível):**
-> "Dear Professor Lima, I am writing to ask whether I could have a short extension on the essay due Friday. I was unwell for much of this week and can provide a doctor's note if needed. Would Monday be acceptable? Thank you for considering it. Best regards, [Name]"
-
-### Exercício 5: Combinação de orações para ganhar densidade
-
-Reúna cada grupo de frases curtas em uma única frase de nível B2 ou C1, usando **subordinação**, particípio ou aposto (seção 4.3).
-
-1. "The library extended its hours. Students asked for this. It happened last semester."
-2. "Granovetter published a paper in 1973. It was about weak ties. It became very influential."
-3. "The plan lowered costs. Because of this, it gained support. The support came from the finance team."
-4. "The city invested in bike lanes. Cycling doubled. Car traffic fell slightly."
-5. "The study had a small sample. The results were still striking. They matched earlier work."
-6. "The app was free. It had ads. Many users left because of the ads."
-7. "The professor posts recordings. Students who miss class can catch up. Attendance has not dropped."
-8. "The report was written by an external panel. It criticized the process. Management accepted most of it."
-
-**Gabarito:**
-
-1. *"Last semester, in response to student requests, the library extended its hours."*
-2. *"Granovetter's 1973 paper on weak ties proved highly influential."*
-3. *"By lowering costs, the plan won the support of the finance team."*
-4. *"After the city invested in bike lanes, cycling doubled while car traffic fell slightly."*
-5. *"Despite a small sample, the study produced striking results that matched earlier work."*
-6. *"The app was free but ad-supported, and the ads drove many users away."*
-7. *"Although the professor posts recordings so that students who miss class can catch up, attendance has not dropped."*
-8. *"The external panel's report, critical of the process, was largely accepted by management."*
-
-### Exercício 6: Frases clivadas para dar foco
-
-Reescreva cada frase usando uma estrutura **clivada** (*it-cleft* ou *wh-cleft*) para destacar o elemento sublinhado.
-
-1. "__Feedback__, not testing, drives improvement."
-2. "The policy ignores __the cost of maintenance__."
-3. "__The follow-up call__ closes most sales."
-4. "This argument misses __the long-term effect__."
-5. "__The sustained investment__ turned the neighborhood around."
-6. "We only saw the problem __when the funding was cut__."
-
-**Gabarito:**
-
-1. *"It is feedback, not testing, that drives improvement."*
-2. *"What the policy ignores is the cost of maintenance."*
-3. *"It is the follow-up call that closes most sales."*
-4. *"What this argument misses is the long-term effect."*
-5. *"It was the sustained investment that turned the neighborhood around."*
-6. *"It was only when the funding was cut that we saw the problem."* (A inversão *Only when the funding was cut did we see the problem.* também é válida, mas não é uma frase clivada.)
-
-### Exercício 7: Escala de formalidade no Writing acadêmico
-
-Reescreva o parágrafo abaixo elevando o **registro lexical** (seção 4.6), com a meta de incluir apenas 1 ou 2 verbos de origem latina por frase, sem exagerar.
-
-> "The new rule made things a lot worse for small shops. It put off a lot of customers because prices went up. The city didn't look at the data before it brought in the change, and now it has to deal with the fallout."
-
-**Gabarito (uma solução possível):**
-> "The new regulation markedly worsened conditions for small shops. It deterred many customers as prices rose, and because the city did not examine the data before introducing the change, it must now address the consequences."
-
-### Exercício 8: Calibrar o hedging
-
-**Parte A (suavize o que está afirmado de forma absoluta demais):**
-> "Video games cause violence. Every child who plays them becomes aggressive. Technology destroys family communication completely."
-
-**Parte B (dê firmeza ao que está evasivo demais):**
-> "Maybe reading could possibly perhaps sometimes in some cases help a little bit with vocabulary, but I'm not really sure and it might not be true for everyone."
-
-**Gabarito:**
-
-- A: *"Some research suggests a link between heavy gaming and short-term aggression, though the effect appears small and does not hold for all players. Heavy device use may also weaken face-to-face communication within families, at least for some age groups."*
-- B: *"Regular reading is one of the most reliable ways to build vocabulary, though the gain is larger for readers who encounter unfamiliar words in context rather than in lists."*
-
-### Exercício 9: Caça à repetição de vocabulário
-
-Pegue qualquer resposta de Writing que você já tenha escrito e sublinhe cada palavra de conteúdo que aparece 2 vezes ou mais. Para cada palavra marcada, anote 3 **sinônimos** do mesmo registro e reescreva o texto mantendo a meta de não repetir nenhuma palavra de conteúdo mais de uma vez em 150 palavras. Veja as palavras mais repetidas nos treinos e boas opções de substituição:
-
-- Em vez de repetir *important*: use *[[crucial::crucial]], [[central::central]], [[decisive::decisivo]], [[key::essencial]], [[significant::significativo]]*.
-- Em vez de repetir *good*: use *[[beneficial::benéfico]], [[sound::sólido, sensato]], [[effective::eficaz]], [[valuable::valioso]]*.
-- Em vez de repetir *bad*: use *[[harmful::prejudicial]], [[damaging::danoso]], [[counterproductive::contraproducente]], [[detrimental::prejudicial]]*.
-- Em vez de repetir *problem*: use *[[issue::questão, problema]], [[challenge::desafio]], [[drawback::desvantagem]], [[obstacle::obstáculo]], [[shortcoming::limitação, falha]]*.
-- Em vez de repetir *help*: use *[[support::apoiar]], [[aid::auxiliar]], [[facilitate::facilitar]], [[contribute to::contribuir para]]*.
-- Em vez de repetir *think*: use *[[believe::acreditar]], [[hold::sustentar]], [[contend::defender, argumentar]], [[maintain::afirmar, sustentar]], [[argue::argumentar]]*.
-- Em vez de repetir *people*: nomeie o grupo específico com *[[individuals::indivíduos]], [[students::estudantes]], [[users::usuários]], [[the public::o público]]*.
-
-### Exercício 10: Resposta em 3 bandas no Take an Interview (cronometrado)
+### Exercício 15: Resposta em 3 bandas no Take an Interview (cronometrado)
 
 Grave a sua voz respondendo à pergunta abaixo três vezes seguidas: a primeira mirando na banda B1, a segunda na B2 e a terceira na C1, sempre em até 45 segundos e sem tempo de preparo. Depois, ouça as gravações e confira se a versão C1 saiu com a mesma **fluidez** da versão B2; se houver mais hesitações, vale consolidar o nível B2 primeiro antes de subir um degrau, repetindo depois o treino com uma pergunta de sugestão e outra de previsão.
 
 *"Tell me about a place you like to spend time in. Why do you enjoy it?"*
 
-### Exercício 11: Elevação de parágrafo inteiro na Academic Discussion
+### Exercício 16: Elevação de parágrafo inteiro na Academic Discussion
 
-Escreva primeiro uma resposta curta e simples de nível B1 para cada tema abaixo. Em seguida, reescreva o seu parágrafo em nível **C1** aplicando quatro elementos: uma concessão na abertura (Marcador 5), uma razão com mecanismo (*"[[what makes X valuable is...::o que torna X valioso é...]]"*), um exemplo concreto bem desenvolvido e um diálogo direto com a fala de um colega.
-
-**Prompt A:** *"Is it better for a company to promote from within or to hire experienced people from outside?"* O colega Daniel diz: "Promoting from within keeps morale high and preserves company knowledge." A colega Mei responde: "Outside hires bring fresh ideas and challenge groupthink."
+No Exercício 12 você escolheu, movimento a movimento, a versão C1 de um parágrafo. Agora é a sua vez de escrever. Faça primeiro uma resposta curta e simples de nível B1 para o tema abaixo. Em seguida, reescreva o seu parágrafo em nível **C1** aplicando quatro elementos: uma concessão na abertura (Marcador 5), uma razão com mecanismo (*"[[what makes X valuable is...::o que torna X valioso é...]]"*), um exemplo concreto bem desenvolvido e um diálogo direto com a fala de um colega.
 
 **Prompt B:** *"Should high schools require every student to learn a musical instrument?"* O colega Lucas diz: "Yes — it builds discipline and teaches a skill that lasts." A colega Aisha responde: "No — not every student is interested, and the time is better spent elsewhere."
 
-**Modelo C1 (Prompt A):**
-> "While Daniel is right that internal promotion protects institutional memory, the stronger position is a deliberate mix. What makes an outside hire valuable is not the 'fresh ideas' in the abstract but the fact that they have not yet learned which questions the organization has stopped asking. A team that has only ever promoted from within tends to optimize the process it already has; someone from outside is the one who asks why that process exists at all. The morale cost is real, but it is manageable if internal candidates are given a genuine path and outside hires are reserved for roles where the current thinking has visibly stalled."
-
-### Exercício 12: Coesão com substantivo sumarizador
-
-Reescreva o parágrafo abaixo trocando cada *"this"* ou *"it"* solto por *this* acompanhado de um **substantivo sumarizador** (seção 4.5).
-
-> "Enrollment fell for three years. This forced the budget cuts. It also meant two programs closed. This was hard for the students in them. It shows the college needs a new plan."
-
-**Gabarito (uma solução possível):**
-> "Enrollment fell for three years running. This sustained decline forced the budget cuts and, with them, the closure of two programs. That disruption fell hardest on the students already enrolled in those programs. The whole episode points to a college in need of a new strategy."
-
-### Exercício 13: Colocações acadêmicas
-
-Complete cada frase com o verbo ou a preposição que forma a **colocação natural** em inglês (seção 4.7), conjugando o verbo quando necessário e lembrando que uma mesma preposição pode servir em mais de um item.
-
-**Banco:** play · provide · raise · gain · pose · in · into · on
-
-1. "Access to clean water ___ a central role in public health."
-2. "The study ___ compelling evidence that the effect is real."
-3. "There has been a sharp increase ___ applications this year."
-4. "The report ___ concerns about the timeline."
-5. "Researchers are trying to ___ insight ___ how the disease spreads."
-6. "The two approaches differ ___ one fundamental respect."
-7. "The policy had a significant impact ___ rural clinics."
-8. "This ___ a serious challenge to the standard model."
-
-**Gabarito:** 1 plays · 2 provides · 3 in · 4 raises · 5 gain / into · 6 in · 7 on · 8 poses
-
-### Exercício 14: Simulação integrada
+### Exercício 17: Simulação integrada
 
 Pegue uma resposta que você já produziu em um exercício do Módulo 3 (Speaking) ou do Módulo 4 (Writing) e passe pelo **checklist de elevação** completo abaixo:
 
