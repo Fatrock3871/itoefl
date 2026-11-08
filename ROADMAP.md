@@ -2,7 +2,7 @@
 
 Memória entre sessões. Atualizar ao concluir cada etapa.
 
-**Última atualização:** 2026-10-25
+**Última atualização:** 2026-11-07
 **O que tem neste arquivo:** a lista única de pendências ("Tudo que falta") e
 as decisões travadas. Nada mais.
 **Histórico:** o que cada sessão fez, as fases antigas e o mapa de pendências
@@ -386,6 +386,26 @@ do banco de questões, porque define o formato de dois tipos de item.
       o adaptativo num celular. Só foram testados em Chrome.
 - [ ] (D) O texto dos Termos (`legal/termos.md`, conta grátis) não cita as
       5 questões do banco. Atualizar quando o advogado revisar.
+- [x] (C) M5 e M6 interativos e sorteio sem repetir (Claude, 2026-11-07,
+      branch `claude/m5m6-interativo`). Os exercícios que eram só texto viraram
+      múltipla escolha corrigida na hora: 14 no M5 (73 questões, contam em
+      Registro) e 12 no M6 (81 questões, contam em Vocabulário), em
+      `MOD5_DRILLS` e `MOD6_DRILLS` do `app/drills_data.py`. Rascunho do
+      Gemini revisado item a item contra o `.md` (154 itens: 130 aceitos, 24
+      corrigidos, 0 descartados; relatório em
+      `itoefl-gerencia/m5m6/REVISAO-claude.md`). Ficaram como texto só os de
+      produção (M5 Exercícios 15 a 17, M6 Exercício 13). M5 e M6 mostram 4
+      exercícios por rodada, sorteados entre os que o aluno ainda não fez
+      (`toefl_sorteio_v1`, sincroniza). A ordem das questões dos exercícios do
+      M1, M2, M5 e M6 e dos blocos do M7 é sorteada a cada abertura, diferente
+      da última (`toefl_qorder_v1`, do aparelho). Sem SQL.
+- [ ] (U) Passar as 154 questões do M5 e do M6 por um professor.
+- [ ] (D) M1 e M2 mostram todos os exercícios de cada grupo, sem rodada,
+      porque cada grupo tem no máximo 5 textos. Se quiser rodada também ali
+      (ex.: 2 textos de Read in Daily Life por vez, como na prova), é só
+      envolver o grupo em `render_drill_round` no `build_pipeline.py`.
+- [ ] (C) `bank/tools/migrate.py` ainda não leva os exercícios do M5 e do M6
+      para `bank/items/migrado/`.
 
 ### Correção de 2026-10-25, Etapa 1: estrutura e fluxo
 

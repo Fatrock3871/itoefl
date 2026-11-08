@@ -7,6 +7,19 @@ falta" do `ROADMAP.md`. Sessão nova entra no topo.
 
 ---
 
+## Sessão 2026-11-07: M5 e M6 interativos, sorteio sem repetir
+
+Branch `claude/m5m6-interativo`. Exercícios do M5 e do M6 convertidos pelo
+Gemini em múltipla escolha e revisados pelo Claude item a item contra o
+`.md` (154 itens: 130 aceitos, 24 corrigidos, 0 descartados; relatório em
+`itoefl-gerencia/m5m6/REVISAO-claude.md`, com a conferência por amostragem
+de `revisao/contagem-questoes.md`). No site: 14 exercícios no M5 e 12 no M6,
+corrigidos na hora, 4 por rodada sorteada entre os não feitos, nos pontos
+fracos em Registro e Vocabulário. Ordem das questões sorteada no M1, M2, M5,
+M6 e M7. Smoke: 400 checagens. Nenhuma mudança de banco.
+
+---
+
 ## Sessão 2026-10-25/26: correção, Etapa 2 (visual e navegação)
 
 Itens 7, 14, 15, 18 (componente) e 24 a 34 de
