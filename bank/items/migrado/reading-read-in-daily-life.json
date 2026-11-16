@@ -585,6 +585,1221 @@
     }
   },
   {
+    "id": "mod1-bn1.b6.1",
+    "section": "reading",
+    "task_type": "Read in Daily Life",
+    "exam_format": true,
+    "format": "mcq",
+    "skill": null,
+    "cefr_min": "A2",
+    "cefr_max": "B1",
+    "stimulus": {
+      "kind": "text",
+      "format": "html",
+      "title": "Exercício B6: placa ou aviso (meta de 2 min)",
+      "content": "<p><strong>TEXT: Sign in a dormitory laundry room</strong></p>\n<blockquote><p><strong>NORTH HALL LAUNDRY ROOM: RULES FOR RESIDENTS</strong></p>\n<p>• Open daily from 6:00 a.m. to 11:00 p.m. The door locks automatically at 11:00 p.m.<br>\n• All machines use your student ID card. Cash and coins are not accepted.<br>\n• Please remove your clothes within 30 minutes after your cycle ends so others can use the machines.<br>\n• Forgotten items are placed in the blue basket by the door and donated every Friday afternoon.</p></blockquote>",
+      "audio_ref": null
+    },
+    "group": "mod1-bn1",
+    "prompt": "How do students pay to use the washing machines?",
+    "text_format": "html",
+    "options": {
+      "A": "With coins at the machine",
+      "B": "With cash at the front desk",
+      "C": "With their student ID card",
+      "D": "With a mobile banking app"
+    },
+    "answer": "C",
+    "explanation": "O aviso informa diretamente que <em>All machines use your student ID card</em>, confirmando a opção (C) como <strong>pagamento pelo cartão de estudante</strong>. A alternativa (A) é uma armadilha comum porque lavanderias costumam aceitar moedas, mas o texto avisa que <em>Cash and coins are not accepted</em>.",
+    "hint": null,
+    "trap_codes": [],
+    "tags": [],
+    "status": "rascunho",
+    "source": {
+      "kind": "migrado",
+      "file": "app/drills_data.py",
+      "ref": "MOD1_ACTION_DRILLS_B:mod1-bn1#B6.1",
+      "live_on_site": true,
+      "answer_letter": "origem",
+      "build_map": {
+        "A": "D",
+        "B": "A",
+        "C": "B",
+        "D": "C"
+      }
+    }
+  },
+  {
+    "id": "mod1-bn1.b6.2",
+    "section": "reading",
+    "task_type": "Read in Daily Life",
+    "exam_format": true,
+    "format": "mcq",
+    "skill": null,
+    "cefr_min": "A2",
+    "cefr_max": "B1",
+    "stimulus": {
+      "kind": "text",
+      "format": "html",
+      "title": "Exercício B6: placa ou aviso (meta de 2 min)",
+      "content": "<p><strong>TEXT: Sign in a dormitory laundry room</strong></p>\n<blockquote><p><strong>NORTH HALL LAUNDRY ROOM: RULES FOR RESIDENTS</strong></p>\n<p>• Open daily from 6:00 a.m. to 11:00 p.m. The door locks automatically at 11:00 p.m.<br>\n• All machines use your student ID card. Cash and coins are not accepted.<br>\n• Please remove your clothes within 30 minutes after your cycle ends so others can use the machines.<br>\n• Forgotten items are placed in the blue basket by the door and donated every Friday afternoon.</p></blockquote>",
+      "audio_ref": null
+    },
+    "group": "mod1-bn1",
+    "prompt": "On Friday afternoon, what happens to forgotten items in the blue basket?",
+    "text_format": "html",
+    "options": {
+      "A": "They are given away as donations",
+      "B": "They are washed again by the staff",
+      "C": "They are locked inside the machines",
+      "D": "They are sent to the resident's room"
+    },
+    "answer": "A",
+    "explanation": "A última linha explica que os itens esquecidos vão para o cesto azul e são <strong>doados na sexta-feira à tarde</strong> (<em>donated every Friday afternoon</em>), o que corresponde a <em>given away as donations</em> em (A). A opção (C) confunde o trancamento automático da porta às 23h com o destino das roupas.",
+    "hint": null,
+    "trap_codes": [],
+    "tags": [],
+    "status": "rascunho",
+    "source": {
+      "kind": "migrado",
+      "file": "app/drills_data.py",
+      "ref": "MOD1_ACTION_DRILLS_B:mod1-bn1#B6.2",
+      "live_on_site": true,
+      "answer_letter": "origem",
+      "build_map": {
+        "A": "A",
+        "B": "C",
+        "C": "B",
+        "D": "D"
+      }
+    }
+  },
+  {
+    "id": "mod1-bn2.b7.1",
+    "section": "reading",
+    "task_type": "Read in Daily Life",
+    "exam_format": true,
+    "format": "mcq",
+    "skill": null,
+    "cefr_min": "A2",
+    "cefr_max": "B1",
+    "stimulus": {
+      "kind": "text",
+      "format": "html",
+      "title": "Exercício B7: cardápio (meta de 2 min)",
+      "content": "<p><strong>TEXT: Student Union Coffee Cart menu</strong></p>\n<blockquote><p><strong>HOT AND ICED DRINKS</strong> (oat or almond milk +$0.50; bring your own mug for $0.50 off)</p>\n<p>• <strong>House Coffee</strong> — medium roast, hot or iced — $3.00<br>\n• <strong>Café Latte</strong> — espresso with steamed milk — $4.50<br>\n• <strong>Matcha Green Tea</strong> — sweetened or unsweetened — $4.00</p>\n<p><strong>MORNING PASTRIES</strong> — $3.50 each, or $2.00 when ordered with any drink before 10:00 a.m.<br>\n• <strong>Blueberry Muffin</strong> (vegetarian) • <strong>Banana Bread</strong> (contains walnuts) • <strong>Cinnamon Roll</strong> (vegan)</p></blockquote>",
+      "audio_ref": null
+    },
+    "group": "mod1-bn2",
+    "prompt": "A student orders a House Coffee and a Cinnamon Roll at 9:15 a.m. without bringing a mug. What is the total price?",
+    "text_format": "html",
+    "options": {
+      "A": "$3.50",
+      "B": "$4.50",
+      "C": "$6.50",
+      "D": "$5.00"
+    },
+    "answer": "D",
+    "explanation": "O café custa $3.00 e, como o pedido é feito antes das 10h junto com uma bebida, o doce sai pelo <strong>preço promocional de $2.00</strong>, somando $5.00 na opção (D). A alternativa (C) é a armadilha mais próxima porque soma o valor cheio do doce ($3.50) e esquece o desconto da manhã.",
+    "hint": null,
+    "trap_codes": [],
+    "tags": [],
+    "status": "rascunho",
+    "source": {
+      "kind": "migrado",
+      "file": "app/drills_data.py",
+      "ref": "MOD1_ACTION_DRILLS_B:mod1-bn2#B7.1",
+      "live_on_site": true,
+      "answer_letter": "origem",
+      "build_map": {
+        "A": "B",
+        "B": "D",
+        "C": "C",
+        "D": "A"
+      }
+    }
+  },
+  {
+    "id": "mod1-bn2.b7.2",
+    "section": "reading",
+    "task_type": "Read in Daily Life",
+    "exam_format": true,
+    "format": "mcq",
+    "skill": null,
+    "cefr_min": "A2",
+    "cefr_max": "B1",
+    "stimulus": {
+      "kind": "text",
+      "format": "html",
+      "title": "Exercício B7: cardápio (meta de 2 min)",
+      "content": "<p><strong>TEXT: Student Union Coffee Cart menu</strong></p>\n<blockquote><p><strong>HOT AND ICED DRINKS</strong> (oat or almond milk +$0.50; bring your own mug for $0.50 off)</p>\n<p>• <strong>House Coffee</strong> — medium roast, hot or iced — $3.00<br>\n• <strong>Café Latte</strong> — espresso with steamed milk — $4.50<br>\n• <strong>Matcha Green Tea</strong> — sweetened or unsweetened — $4.00</p>\n<p><strong>MORNING PASTRIES</strong> — $3.50 each, or $2.00 when ordered with any drink before 10:00 a.m.<br>\n• <strong>Blueberry Muffin</strong> (vegetarian) • <strong>Banana Bread</strong> (contains walnuts) • <strong>Cinnamon Roll</strong> (vegan)</p></blockquote>",
+      "audio_ref": null
+    },
+    "group": "mod1-bn2",
+    "prompt": "Which item should a customer with a nut allergy avoid?",
+    "text_format": "html",
+    "options": {
+      "A": "The Blueberry Muffin",
+      "B": "The Banana Bread",
+      "C": "The Cinnamon Roll",
+      "D": "The Matcha Green Tea"
+    },
+    "answer": "B",
+    "explanation": "No fim do cardápio, o aviso ao lado de <em>Banana Bread</em> indica <em>contains walnuts</em> (nozes), apontando a opção (B) como <strong>item com oleaginosas</strong>. A alternativa (C) traz apenas a marcação <em>vegan</em>, sem menção a nozes ou castanhas.",
+    "hint": null,
+    "trap_codes": [],
+    "tags": [],
+    "status": "rascunho",
+    "source": {
+      "kind": "migrado",
+      "file": "app/drills_data.py",
+      "ref": "MOD1_ACTION_DRILLS_B:mod1-bn2#B7.2",
+      "live_on_site": true,
+      "answer_letter": "origem",
+      "build_map": {
+        "A": "A",
+        "B": "B",
+        "C": "C",
+        "D": "D"
+      }
+    }
+  },
+  {
+    "id": "mod1-bn3.b8.1",
+    "section": "reading",
+    "task_type": "Read in Daily Life",
+    "exam_format": true,
+    "format": "mcq",
+    "skill": null,
+    "cefr_min": "A2",
+    "cefr_max": "B1",
+    "stimulus": {
+      "kind": "text",
+      "format": "html",
+      "title": "Exercício B8: anúncio de campus (meta de 2 min)",
+      "content": "<p><strong>TEXT: Notice on a residence hall bulletin board</strong></p>\n<blockquote><p><strong>BASEMENT BIKE ROOM CLEANUP — NOVEMBER 18</strong></p>\n<p>Next Monday, Campus Security will clear old bicycles from the basement storage room. If you keep a bike downstairs, please pick up a free yellow tag at the front desk and attach it to your handlebars by Sunday at 8:00 p.m.</p>\n<p>Any bike without a yellow tag on Monday morning will be moved to the main storage shed behind the gym. You can still claim it there during office hours by showing your student ID.</p></blockquote>",
+      "audio_ref": null
+    },
+    "group": "mod1-bn3",
+    "prompt": "What is the main purpose of the notice?",
+    "text_format": "html",
+    "options": {
+      "A": "To tell residents how to keep their bikes from being moved",
+      "B": "To announce that the basement bike room is closing forever",
+      "C": "To sell old bicycles to students at a low price",
+      "D": "To ask students to park their bikes behind the gym"
+    },
+    "answer": "A",
+    "explanation": "O objetivo do aviso é orientar os moradores a colocarem a etiqueta amarela para <strong>manter a bicicleta no subsolo</strong>, como resume a opção (A). A alternativa (B) exagera ao dizer que a sala fechará para sempre, quando haverá apenas uma limpeza (<em>cleanup</em>).",
+    "hint": null,
+    "trap_codes": [],
+    "tags": [],
+    "status": "rascunho",
+    "source": {
+      "kind": "migrado",
+      "file": "app/drills_data.py",
+      "ref": "MOD1_ACTION_DRILLS_B:mod1-bn3#B8.1",
+      "live_on_site": true,
+      "answer_letter": "origem",
+      "build_map": {
+        "A": "C",
+        "B": "D",
+        "C": "B",
+        "D": "A"
+      }
+    }
+  },
+  {
+    "id": "mod1-bn3.b8.2",
+    "section": "reading",
+    "task_type": "Read in Daily Life",
+    "exam_format": true,
+    "format": "mcq",
+    "skill": null,
+    "cefr_min": "A2",
+    "cefr_max": "B1",
+    "stimulus": {
+      "kind": "text",
+      "format": "html",
+      "title": "Exercício B8: anúncio de campus (meta de 2 min)",
+      "content": "<p><strong>TEXT: Notice on a residence hall bulletin board</strong></p>\n<blockquote><p><strong>BASEMENT BIKE ROOM CLEANUP — NOVEMBER 18</strong></p>\n<p>Next Monday, Campus Security will clear old bicycles from the basement storage room. If you keep a bike downstairs, please pick up a free yellow tag at the front desk and attach it to your handlebars by Sunday at 8:00 p.m.</p>\n<p>Any bike without a yellow tag on Monday morning will be moved to the main storage shed behind the gym. You can still claim it there during office hours by showing your student ID.</p></blockquote>",
+      "audio_ref": null
+    },
+    "group": "mod1-bn3",
+    "prompt": "What must a resident do by Sunday at 8:00 p.m.?",
+    "text_format": "html",
+    "options": {
+      "A": "Pay a storage fee at the front desk",
+      "B": "Move their bicycle to the main gym",
+      "C": "Put a yellow tag on their bicycle",
+      "D": "Show their student ID to security"
+    },
+    "answer": "C",
+    "explanation": "O primeiro parágrafo pede que o morador pegue a etiqueta gratuita na recepção e faça a <strong>identificação no guidão até domingo às 20h</strong> (<em>attach it to your handlebars by Sunday at 8:00 p.m.</em>), confirmando (C). A opção (A) inventa uma taxa, mas o texto diz <em>free yellow tag</em>.",
+    "hint": null,
+    "trap_codes": [],
+    "tags": [],
+    "status": "rascunho",
+    "source": {
+      "kind": "migrado",
+      "file": "app/drills_data.py",
+      "ref": "MOD1_ACTION_DRILLS_B:mod1-bn3#B8.2",
+      "live_on_site": true,
+      "answer_letter": "origem",
+      "build_map": {
+        "A": "A",
+        "B": "C",
+        "C": "B",
+        "D": "D"
+      }
+    }
+  },
+  {
+    "id": "mod1-bn3.b8.3",
+    "section": "reading",
+    "task_type": "Read in Daily Life",
+    "exam_format": true,
+    "format": "mcq",
+    "skill": null,
+    "cefr_min": "A2",
+    "cefr_max": "B1",
+    "stimulus": {
+      "kind": "text",
+      "format": "html",
+      "title": "Exercício B8: anúncio de campus (meta de 2 min)",
+      "content": "<p><strong>TEXT: Notice on a residence hall bulletin board</strong></p>\n<blockquote><p><strong>BASEMENT BIKE ROOM CLEANUP — NOVEMBER 18</strong></p>\n<p>Next Monday, Campus Security will clear old bicycles from the basement storage room. If you keep a bike downstairs, please pick up a free yellow tag at the front desk and attach it to your handlebars by Sunday at 8:00 p.m.</p>\n<p>Any bike without a yellow tag on Monday morning will be moved to the main storage shed behind the gym. You can still claim it there during office hours by showing your student ID.</p></blockquote>",
+      "audio_ref": null
+    },
+    "group": "mod1-bn3",
+    "prompt": "What will happen to a bicycle that has no tag on Monday morning?",
+    "text_format": "html",
+    "options": {
+      "A": "It will be thrown away immediately",
+      "B": "It will be locked in the front office",
+      "C": "It will be given to another student",
+      "D": "It will be taken to a shed behind the gym"
+    },
+    "answer": "D",
+    "explanation": "O segundo parágrafo explica que a bicicleta sem etiqueta será <strong>levada ao galpão atrás do ginásio</strong> (<em>moved to the main storage shed behind the gym</em>), onde o dono ainda pode recuperá-la, validando (D). A opção (A) erra porque nenhuma bicicleta é jogada fora na segunda-feira.",
+    "hint": null,
+    "trap_codes": [],
+    "tags": [],
+    "status": "rascunho",
+    "source": {
+      "kind": "migrado",
+      "file": "app/drills_data.py",
+      "ref": "MOD1_ACTION_DRILLS_B:mod1-bn3#B8.3",
+      "live_on_site": true,
+      "answer_letter": "origem",
+      "build_map": {
+        "A": "C",
+        "B": "B",
+        "C": "D",
+        "D": "A"
+      }
+    }
+  },
+  {
+    "id": "mod1-bn4.b9.1",
+    "section": "reading",
+    "task_type": "Read in Daily Life",
+    "exam_format": true,
+    "format": "mcq",
+    "skill": null,
+    "cefr_min": "B1",
+    "cefr_max": "B2",
+    "stimulus": {
+      "kind": "text",
+      "format": "html",
+      "title": "Exercício B9: horário ou tabela (meta de 2 min)",
+      "content": "<p><strong>TEXT: Campus Writing Center schedule</strong></p>\n<blockquote><p><strong>WRITING CENTER HOURS (FALL SEMESTER)</strong></p>\n<p>• <strong>Monday–Thursday, 9:00 a.m.–1:00 p.m.:</strong> 45-minute appointments only (book online).<br>\n• <strong>Monday–Thursday, 1:00 p.m.–5:00 p.m.:</strong> 20-minute drop-in sessions (no booking needed).<br>\n• <strong>Friday, 10:00 a.m.–2:00 p.m.:</strong> Online consultations only.</p>\n<p><em>Note: During final exam week, drop-in hours are suspended. All in-person and online sessions require an appointment booked at least 24 hours in advance, with a limit of one session per student.</em></p></blockquote>",
+      "audio_ref": null
+    },
+    "group": "mod1-bn4",
+    "prompt": "During a regular week, a student who wants help in person without an appointment should visit on:",
+    "text_format": "html",
+    "options": {
+      "A": "Tuesday at 10:30 a.m.",
+      "B": "Wednesday at 2:30 p.m.",
+      "C": "Friday at 11:00 a.m.",
+      "D": "Thursday at 9:30 a.m."
+    },
+    "answer": "B",
+    "explanation": "O atendimento presencial sem hora marcada (<em>drop-in sessions</em>) funciona de segunda a quinta, das 13h às 17h, faixa em que se encaixa a <strong>quarta-feira às 14h30</strong> na opção (B). As alternativas (A) e (D) caem no turno da manhã, que exige agendamento, e a (C) é na sexta, quando o atendimento é só on-line.",
+    "hint": null,
+    "trap_codes": [],
+    "tags": [],
+    "status": "rascunho",
+    "source": {
+      "kind": "migrado",
+      "file": "app/drills_data.py",
+      "ref": "MOD1_ACTION_DRILLS_B:mod1-bn4#B9.1",
+      "live_on_site": true,
+      "answer_letter": "origem",
+      "build_map": {
+        "A": "C",
+        "B": "A",
+        "C": "B",
+        "D": "D"
+      }
+    }
+  },
+  {
+    "id": "mod1-bn4.b9.2",
+    "section": "reading",
+    "task_type": "Read in Daily Life",
+    "exam_format": true,
+    "format": "mcq",
+    "skill": null,
+    "cefr_min": "B1",
+    "cefr_max": "B2",
+    "stimulus": {
+      "kind": "text",
+      "format": "html",
+      "title": "Exercício B9: horário ou tabela (meta de 2 min)",
+      "content": "<p><strong>TEXT: Campus Writing Center schedule</strong></p>\n<blockquote><p><strong>WRITING CENTER HOURS (FALL SEMESTER)</strong></p>\n<p>• <strong>Monday–Thursday, 9:00 a.m.–1:00 p.m.:</strong> 45-minute appointments only (book online).<br>\n• <strong>Monday–Thursday, 1:00 p.m.–5:00 p.m.:</strong> 20-minute drop-in sessions (no booking needed).<br>\n• <strong>Friday, 10:00 a.m.–2:00 p.m.:</strong> Online consultations only.</p>\n<p><em>Note: During final exam week, drop-in hours are suspended. All in-person and online sessions require an appointment booked at least 24 hours in advance, with a limit of one session per student.</em></p></blockquote>",
+      "audio_ref": null
+    },
+    "group": "mod1-bn4",
+    "prompt": "How does the schedule change during final exam week?",
+    "text_format": "html",
+    "options": {
+      "A": "Every session must be reserved a day ahead",
+      "B": "Students may attend up to two drop-in sessions",
+      "C": "The center closes completely on Fridays",
+      "D": "Appointments are offered only in the morning"
+    },
+    "answer": "A",
+    "explanation": "A nota de rodapé avisa que, na semana de provas finais, o atendimento sem hora marcada é suspenso e todas as sessões exigem <strong>reserva com 24 horas de antecedência</strong> (<em>booked at least 24 hours in advance</em>), como diz (A). Quem marca (B) deixou passar que os horários de <em>drop-in</em> ficam suspensos nessa semana.",
+    "hint": null,
+    "trap_codes": [],
+    "tags": [],
+    "status": "rascunho",
+    "source": {
+      "kind": "migrado",
+      "file": "app/drills_data.py",
+      "ref": "MOD1_ACTION_DRILLS_B:mod1-bn4#B9.2",
+      "live_on_site": true,
+      "answer_letter": "origem",
+      "build_map": {
+        "A": "B",
+        "B": "C",
+        "C": "A",
+        "D": "D"
+      }
+    }
+  },
+  {
+    "id": "mod1-bn5.b10.1",
+    "section": "reading",
+    "task_type": "Read in Daily Life",
+    "exam_format": true,
+    "format": "mcq",
+    "skill": null,
+    "cefr_min": "B1",
+    "cefr_max": "B2",
+    "stimulus": {
+      "kind": "text",
+      "format": "html",
+      "title": "Exercício B10: e-mail formal (meta de 3 min)",
+      "content": "<p><strong>TEXT: Email from the University Housing Office</strong></p>\n<blockquote><p><strong>Subject: Winter Break Residence Hall Closing</strong></p>\n<p>Dear Residents,</p>\n<p>All campus residence halls will close for winter break on Friday, December 20, at 6:00 p.m. and reopen on Saturday, January 11, at 9:00 a.m.</p>\n<p>International students and varsity athletes who need to remain on campus during the break may apply for temporary housing in Maple Court. This accommodation is free of charge if you submit the online form by December 6. Applications received after December 6 will still be accepted until December 13, but a $35 late processing fee will apply.</p>\n<p>Before leaving on December 20, all residents — including those moving temporarily to Maple Court — must unplug mini-fridges and lamps in their regular rooms.</p>\n<p>Sincerely,<br>Office of Residential Life</p></blockquote>",
+      "audio_ref": null
+    },
+    "group": "mod1-bn5",
+    "prompt": "What is required of an international student who applies for winter break housing on December 9?",
+    "text_format": "html",
+    "options": {
+      "A": "Finding housing off campus for the whole break",
+      "B": "Moving into Maple Court before December 13",
+      "C": "Paying a $35 fee for applying after December 6",
+      "D": "Getting a signature from a varsity sports coach"
+    },
+    "answer": "C",
+    "explanation": "A inscrição até 6 de dezembro é gratuita, mas pedidos enviados entre 6 e 13 de dezembro pagam <strong>taxa de processamento de $35</strong> (<em>a $35 late processing fee will apply</em>), o que torna (C) correta. A opção (A) ignora que o formulário ainda é aceito até o dia 13.",
+    "hint": null,
+    "trap_codes": [],
+    "tags": [],
+    "status": "rascunho",
+    "source": {
+      "kind": "migrado",
+      "file": "app/drills_data.py",
+      "ref": "MOD1_ACTION_DRILLS_B:mod1-bn5#B10.1",
+      "live_on_site": true,
+      "answer_letter": "origem",
+      "build_map": {
+        "A": "D",
+        "B": "B",
+        "C": "C",
+        "D": "A"
+      }
+    }
+  },
+  {
+    "id": "mod1-bn5.b10.2",
+    "section": "reading",
+    "task_type": "Read in Daily Life",
+    "exam_format": true,
+    "format": "mcq",
+    "skill": null,
+    "cefr_min": "B1",
+    "cefr_max": "B2",
+    "stimulus": {
+      "kind": "text",
+      "format": "html",
+      "title": "Exercício B10: e-mail formal (meta de 3 min)",
+      "content": "<p><strong>TEXT: Email from the University Housing Office</strong></p>\n<blockquote><p><strong>Subject: Winter Break Residence Hall Closing</strong></p>\n<p>Dear Residents,</p>\n<p>All campus residence halls will close for winter break on Friday, December 20, at 6:00 p.m. and reopen on Saturday, January 11, at 9:00 a.m.</p>\n<p>International students and varsity athletes who need to remain on campus during the break may apply for temporary housing in Maple Court. This accommodation is free of charge if you submit the online form by December 6. Applications received after December 6 will still be accepted until December 13, but a $35 late processing fee will apply.</p>\n<p>Before leaving on December 20, all residents — including those moving temporarily to Maple Court — must unplug mini-fridges and lamps in their regular rooms.</p>\n<p>Sincerely,<br>Office of Residential Life</p></blockquote>",
+      "audio_ref": null
+    },
+    "group": "mod1-bn5",
+    "prompt": "According to the email, who must unplug appliances in their regular rooms before December 20?",
+    "text_format": "html",
+    "options": {
+      "A": "Students who are leaving campus for the break",
+      "B": "Students who are moving to Maple Court",
+      "C": "Students who missed the December 6 deadline",
+      "D": "All residents, whether or not they stay on campus"
+    },
+    "answer": "D",
+    "explanation": "O último parágrafo destaca que \"all residents — including those moving temporarily to Maple Court — must unplug mini-fridges and lamps\", ou seja, <strong>todos os moradores sem exceção</strong>, confirmando (D). A alternativa (A) é a armadilha clássica de quem acha que a regra só vale para quem viaja.",
+    "hint": null,
+    "trap_codes": [],
+    "tags": [],
+    "status": "rascunho",
+    "source": {
+      "kind": "migrado",
+      "file": "app/drills_data.py",
+      "ref": "MOD1_ACTION_DRILLS_B:mod1-bn5#B10.2",
+      "live_on_site": true,
+      "answer_letter": "origem",
+      "build_map": {
+        "A": "D",
+        "B": "C",
+        "C": "B",
+        "D": "A"
+      }
+    }
+  },
+  {
+    "id": "mod1-bn5.b10.3",
+    "section": "reading",
+    "task_type": "Read in Daily Life",
+    "exam_format": true,
+    "format": "mcq",
+    "skill": null,
+    "cefr_min": "B1",
+    "cefr_max": "B2",
+    "stimulus": {
+      "kind": "text",
+      "format": "html",
+      "title": "Exercício B10: e-mail formal (meta de 3 min)",
+      "content": "<p><strong>TEXT: Email from the University Housing Office</strong></p>\n<blockquote><p><strong>Subject: Winter Break Residence Hall Closing</strong></p>\n<p>Dear Residents,</p>\n<p>All campus residence halls will close for winter break on Friday, December 20, at 6:00 p.m. and reopen on Saturday, January 11, at 9:00 a.m.</p>\n<p>International students and varsity athletes who need to remain on campus during the break may apply for temporary housing in Maple Court. This accommodation is free of charge if you submit the online form by December 6. Applications received after December 6 will still be accepted until December 13, but a $35 late processing fee will apply.</p>\n<p>Before leaving on December 20, all residents — including those moving temporarily to Maple Court — must unplug mini-fridges and lamps in their regular rooms.</p>\n<p>Sincerely,<br>Office of Residential Life</p></blockquote>",
+      "audio_ref": null
+    },
+    "group": "mod1-bn5",
+    "prompt": "When can students return to their regular residence hall rooms?",
+    "text_format": "html",
+    "options": {
+      "A": "On December 13 at 6:00 p.m.",
+      "B": "On January 11 at 9:00 a.m.",
+      "C": "On December 20 at 6:00 p.m.",
+      "D": "On January 6 at 9:00 a.m."
+    },
+    "answer": "B",
+    "explanation": "O primeiro parágrafo informa que os prédios reabrem no <strong>sábado, 11 de janeiro, às 9h</strong> (<em>reopen on Saturday, January 11, at 9:00 a.m.</em>), exatamente como em (B). A opção (C) traz a data em que os alojamentos fecham, e não a de reabertura.",
+    "hint": null,
+    "trap_codes": [],
+    "tags": [],
+    "status": "rascunho",
+    "source": {
+      "kind": "migrado",
+      "file": "app/drills_data.py",
+      "ref": "MOD1_ACTION_DRILLS_B:mod1-bn5#B10.3",
+      "live_on_site": true,
+      "answer_letter": "origem",
+      "build_map": {
+        "A": "D",
+        "B": "B",
+        "C": "A",
+        "D": "C"
+      }
+    }
+  },
+  {
+    "id": "mod1-bn6.b11.1",
+    "section": "reading",
+    "task_type": "Read in Daily Life",
+    "exam_format": true,
+    "format": "mcq",
+    "skill": null,
+    "cefr_min": "B1",
+    "cefr_max": "B2",
+    "stimulus": {
+      "kind": "text",
+      "format": "html",
+      "title": "Exercício B11: post de rede social (meta de 3 min)",
+      "content": "<p><strong>TEXT: A social media post from a campus club</strong></p>\n<blockquote><p>🥾 <strong>Pinecrest Outdoor Club</strong> · Posted 4 hours ago</p>\n<p>Quick update about tomorrow's Saturday hike! With heavy rain in the forecast for tonight, the river crossing on the Lower Canyon Trail will almost certainly be flooded. Instead of canceling the trip, we're switching to the East Crest Trail, which stays on higher ground and gives us great views of the valley.</p>\n<p>Our departure time from the Student Union parking lot is still 7:30 a.m. sharp, but because the East Crest route is about two miles shorter, we'll be back on campus around 2:00 p.m. instead of 4:00 p.m. Waterproof hiking boots are required for the muddy sections — if you don't own a pair, stop by the club gear shed before 5:00 p.m. today to borrow a pair for free!</p></blockquote>",
+      "audio_ref": null
+    },
+    "group": "mod1-bn6",
+    "prompt": "What is the main purpose of this social media post?",
+    "text_format": "html",
+    "options": {
+      "A": "To inform club members about a change of trail and return time",
+      "B": "To cancel a weekend hiking trip because of dangerous weather",
+      "C": "To advertise a sale on waterproof boots at the club gear shed",
+      "D": "To ask students to vote on two possible routes for Saturday"
+    },
+    "answer": "A",
+    "explanation": "A publicação avisa que o passeio foi mantido, mas com <strong>mudança de trilha e de horário de volta</strong> por causa da chuva, como resume (A). A opção (B) cai na armadilha da palavra <em>canceling</em>, embora o texto diga explicitamente <em>Instead of canceling the trip</em>.",
+    "hint": null,
+    "trap_codes": [],
+    "tags": [],
+    "status": "rascunho",
+    "source": {
+      "kind": "migrado",
+      "file": "app/drills_data.py",
+      "ref": "MOD1_ACTION_DRILLS_B:mod1-bn6#B11.1",
+      "live_on_site": true,
+      "answer_letter": "origem",
+      "build_map": {
+        "A": "B",
+        "B": "A",
+        "C": "C",
+        "D": "D"
+      }
+    }
+  },
+  {
+    "id": "mod1-bn6.b11.2",
+    "section": "reading",
+    "task_type": "Read in Daily Life",
+    "exam_format": true,
+    "format": "mcq",
+    "skill": null,
+    "cefr_min": "B1",
+    "cefr_max": "B2",
+    "stimulus": {
+      "kind": "text",
+      "format": "html",
+      "title": "Exercício B11: post de rede social (meta de 3 min)",
+      "content": "<p><strong>TEXT: A social media post from a campus club</strong></p>\n<blockquote><p>🥾 <strong>Pinecrest Outdoor Club</strong> · Posted 4 hours ago</p>\n<p>Quick update about tomorrow's Saturday hike! With heavy rain in the forecast for tonight, the river crossing on the Lower Canyon Trail will almost certainly be flooded. Instead of canceling the trip, we're switching to the East Crest Trail, which stays on higher ground and gives us great views of the valley.</p>\n<p>Our departure time from the Student Union parking lot is still 7:30 a.m. sharp, but because the East Crest route is about two miles shorter, we'll be back on campus around 2:00 p.m. instead of 4:00 p.m. Waterproof hiking boots are required for the muddy sections — if you don't own a pair, stop by the club gear shed before 5:00 p.m. today to borrow a pair for free!</p></blockquote>",
+      "audio_ref": null
+    },
+    "group": "mod1-bn6",
+    "prompt": "Why will the group return to campus earlier than originally planned?",
+    "text_format": "html",
+    "options": {
+      "A": "They are leaving the parking lot two hours earlier",
+      "B": "The replacement trail is shorter than the original one",
+      "C": "Another storm is expected at 2:00 p.m. on Saturday",
+      "D": "The club van has to be returned by mid-afternoon"
+    },
+    "answer": "B",
+    "explanation": "O segundo parágrafo explica a volta mais cedo ao dizer que <em>because the East Crest route is about two miles shorter, we'll be back on campus around 2:00 p.m.</em>, ou seja, <strong>o novo percurso é mais curto</strong>, confirmando (B). A opção (A) contradiz o trecho que mantém a saída às 7h30.",
+    "hint": null,
+    "trap_codes": [],
+    "tags": [],
+    "status": "rascunho",
+    "source": {
+      "kind": "migrado",
+      "file": "app/drills_data.py",
+      "ref": "MOD1_ACTION_DRILLS_B:mod1-bn6#B11.2",
+      "live_on_site": true,
+      "answer_letter": "origem",
+      "build_map": {
+        "A": "C",
+        "B": "A",
+        "C": "B",
+        "D": "D"
+      }
+    }
+  },
+  {
+    "id": "mod1-bn6.b11.3",
+    "section": "reading",
+    "task_type": "Read in Daily Life",
+    "exam_format": true,
+    "format": "mcq",
+    "skill": null,
+    "cefr_min": "B1",
+    "cefr_max": "B2",
+    "stimulus": {
+      "kind": "text",
+      "format": "html",
+      "title": "Exercício B11: post de rede social (meta de 3 min)",
+      "content": "<p><strong>TEXT: A social media post from a campus club</strong></p>\n<blockquote><p>🥾 <strong>Pinecrest Outdoor Club</strong> · Posted 4 hours ago</p>\n<p>Quick update about tomorrow's Saturday hike! With heavy rain in the forecast for tonight, the river crossing on the Lower Canyon Trail will almost certainly be flooded. Instead of canceling the trip, we're switching to the East Crest Trail, which stays on higher ground and gives us great views of the valley.</p>\n<p>Our departure time from the Student Union parking lot is still 7:30 a.m. sharp, but because the East Crest route is about two miles shorter, we'll be back on campus around 2:00 p.m. instead of 4:00 p.m. Waterproof hiking boots are required for the muddy sections — if you don't own a pair, stop by the club gear shed before 5:00 p.m. today to borrow a pair for free!</p></blockquote>",
+      "audio_ref": null
+    },
+    "group": "mod1-bn6",
+    "prompt": "What should a participant without waterproof boots do?",
+    "text_format": "html",
+    "options": {
+      "A": "Rent a pair at the trailhead on Saturday morning",
+      "B": "Wear regular running shoes and stay on higher ground",
+      "C": "Borrow a pair from the club shed by 5:00 p.m. today",
+      "D": "Wait until the next hike on the Lower Canyon Trail"
+    },
+    "answer": "C",
+    "explanation": "A frase final orienta quem não tem botas impermeáveis a <strong>pegar um par emprestado gratuitamente no galpão do clube</strong> até as 17h de hoje (<em>stop by the club gear shed before 5:00 p.m. today to borrow a pair for free</em>), como está em (C). A alternativa (A) inventa um aluguel no início da trilha.",
+    "hint": null,
+    "trap_codes": [],
+    "tags": [],
+    "status": "rascunho",
+    "source": {
+      "kind": "migrado",
+      "file": "app/drills_data.py",
+      "ref": "MOD1_ACTION_DRILLS_B:mod1-bn6#B11.3",
+      "live_on_site": true,
+      "answer_letter": "origem",
+      "build_map": {
+        "A": "B",
+        "B": "D",
+        "C": "C",
+        "D": "A"
+      }
+    }
+  },
+  {
+    "id": "mod1-bn7.b12.1",
+    "section": "reading",
+    "task_type": "Read in Daily Life",
+    "exam_format": true,
+    "format": "mcq",
+    "skill": null,
+    "cefr_min": "B1",
+    "cefr_max": "B2",
+    "stimulus": {
+      "kind": "text",
+      "format": "html",
+      "title": "Exercício B12: instruções de laboratório (meta de 3 min)",
+      "content": "<p><strong>TEXT: Guidelines at the Engineering Makerspace</strong></p>\n<blockquote><p><strong>3D PRINTING QUEUE — UNDERGRADUATE GUIDELINES</strong></p>\n<p>1. <strong>Safety Orientation:</strong> Before submitting your first print job, you must pass the 20-minute online safety quiz on the student portal with a score of 100%.</p>\n<p>2. <strong>Scheduling:</strong> Upload your file to the lab queue. Print jobs estimated at under 3 hours run during daytime hours (9:00 a.m.–6:00 p.m.). Any job requiring 3 hours or more is automatically scheduled for the overnight batch and will be ready the next morning.</p>\n<p>3. <strong>Cost and Pickup:</strong> Filament is billed at $0.08 per gram. Each student receives a $10.00 credit per semester for required coursework; personal projects do not qualify for this credit. Completed prints not picked up within 5 business days are recycled.</p></blockquote>",
+      "audio_ref": null
+    },
+    "group": "mod1-bn7",
+    "prompt": "A student uploads a print job at 11:00 a.m. that the system estimates will take 4 hours. When will it be printed?",
+    "text_format": "html",
+    "options": {
+      "A": "Immediately, finishing around 3:00 p.m. that afternoon",
+      "B": "Only after the student retakes the online safety quiz",
+      "C": "After 5 business days, once shorter jobs are finished",
+      "D": "Overnight, becoming available the following morning"
+    },
+    "answer": "D",
+    "explanation": "A regra 2 estabelece que qualquer impressão de 3 horas ou mais entra no <strong>lote noturno para entrega na manhã seguinte</strong> (<em>automatically scheduled for the overnight batch and will be ready the next morning</em>), validando (D). A opção (A) aplica a regra de projetos com menos de 3 horas.",
+    "hint": null,
+    "trap_codes": [],
+    "tags": [],
+    "status": "rascunho",
+    "source": {
+      "kind": "migrado",
+      "file": "app/drills_data.py",
+      "ref": "MOD1_ACTION_DRILLS_B:mod1-bn7#B12.1",
+      "live_on_site": true,
+      "answer_letter": "origem",
+      "build_map": {
+        "A": "D",
+        "B": "A",
+        "C": "B",
+        "D": "C"
+      }
+    }
+  },
+  {
+    "id": "mod1-bn7.b12.2",
+    "section": "reading",
+    "task_type": "Read in Daily Life",
+    "exam_format": true,
+    "format": "mcq",
+    "skill": null,
+    "cefr_min": "B1",
+    "cefr_max": "B2",
+    "stimulus": {
+      "kind": "text",
+      "format": "html",
+      "title": "Exercício B12: instruções de laboratório (meta de 3 min)",
+      "content": "<p><strong>TEXT: Guidelines at the Engineering Makerspace</strong></p>\n<blockquote><p><strong>3D PRINTING QUEUE — UNDERGRADUATE GUIDELINES</strong></p>\n<p>1. <strong>Safety Orientation:</strong> Before submitting your first print job, you must pass the 20-minute online safety quiz on the student portal with a score of 100%.</p>\n<p>2. <strong>Scheduling:</strong> Upload your file to the lab queue. Print jobs estimated at under 3 hours run during daytime hours (9:00 a.m.–6:00 p.m.). Any job requiring 3 hours or more is automatically scheduled for the overnight batch and will be ready the next morning.</p>\n<p>3. <strong>Cost and Pickup:</strong> Filament is billed at $0.08 per gram. Each student receives a $10.00 credit per semester for required coursework; personal projects do not qualify for this credit. Completed prints not picked up within 5 business days are recycled.</p></blockquote>",
+      "audio_ref": null
+    },
+    "group": "mod1-bn7",
+    "prompt": "When can a student use the $10.00 semester credit?",
+    "text_format": "html",
+    "options": {
+      "A": "When printing an item for an assigned university course",
+      "B": "When printing a personal gift that weighs under 100 grams",
+      "C": "When picking up a completed print within 24 hours",
+      "D": "When volunteering to recycle unclaimed prints in the lab"
+    },
+    "answer": "A",
+    "explanation": "O item 3 especifica que o crédito de $10.00 por semestre vale para <strong>trabalhos exigidos em disciplinas</strong> (<em>for required coursework</em>) e exclui projetos pessoais, confirmando (A). A alternativa (B) é uma armadilha direta porque o texto diz <em>personal projects do not qualify</em>.",
+    "hint": null,
+    "trap_codes": [],
+    "tags": [],
+    "status": "rascunho",
+    "source": {
+      "kind": "migrado",
+      "file": "app/drills_data.py",
+      "ref": "MOD1_ACTION_DRILLS_B:mod1-bn7#B12.2",
+      "live_on_site": true,
+      "answer_letter": "origem",
+      "build_map": {
+        "A": "B",
+        "B": "C",
+        "C": "A",
+        "D": "D"
+      }
+    }
+  },
+  {
+    "id": "mod1-bn7.b12.3",
+    "section": "reading",
+    "task_type": "Read in Daily Life",
+    "exam_format": true,
+    "format": "mcq",
+    "skill": null,
+    "cefr_min": "B1",
+    "cefr_max": "B2",
+    "stimulus": {
+      "kind": "text",
+      "format": "html",
+      "title": "Exercício B12: instruções de laboratório (meta de 3 min)",
+      "content": "<p><strong>TEXT: Guidelines at the Engineering Makerspace</strong></p>\n<blockquote><p><strong>3D PRINTING QUEUE — UNDERGRADUATE GUIDELINES</strong></p>\n<p>1. <strong>Safety Orientation:</strong> Before submitting your first print job, you must pass the 20-minute online safety quiz on the student portal with a score of 100%.</p>\n<p>2. <strong>Scheduling:</strong> Upload your file to the lab queue. Print jobs estimated at under 3 hours run during daytime hours (9:00 a.m.–6:00 p.m.). Any job requiring 3 hours or more is automatically scheduled for the overnight batch and will be ready the next morning.</p>\n<p>3. <strong>Cost and Pickup:</strong> Filament is billed at $0.08 per gram. Each student receives a $10.00 credit per semester for required coursework; personal projects do not qualify for this credit. Completed prints not picked up within 5 business days are recycled.</p></blockquote>",
+      "audio_ref": null
+    },
+    "group": "mod1-bn7",
+    "prompt": "What happens to a finished print that is left in the Makerspace for two weeks?",
+    "text_format": "html",
+    "options": {
+      "A": "It is mailed to the student's campus address",
+      "B": "It is kept at the desk for a storage fee",
+      "C": "It is sent to be recycled by the lab",
+      "D": "It is displayed in the engineering showcase"
+    },
+    "answer": "C",
+    "explanation": "A última frase informa que peças prontas não retiradas em até 5 dias úteis são <strong>enviadas para reciclagem</strong> (<em>Completed prints not picked up within 5 business days are recycled</em>), o que leva à opção (C). As demais alternativas trazem procedimentos que não existem no aviso.",
+    "hint": null,
+    "trap_codes": [],
+    "tags": [],
+    "status": "rascunho",
+    "source": {
+      "kind": "migrado",
+      "file": "app/drills_data.py",
+      "ref": "MOD1_ACTION_DRILLS_B:mod1-bn7#B12.3",
+      "live_on_site": true,
+      "answer_letter": "origem",
+      "build_map": {
+        "A": "D",
+        "B": "B",
+        "C": "A",
+        "D": "C"
+      }
+    }
+  },
+  {
+    "id": "mod1-bn8.b13.1",
+    "section": "reading",
+    "task_type": "Read in Daily Life",
+    "exam_format": true,
+    "format": "mcq",
+    "skill": null,
+    "cefr_min": "B2",
+    "cefr_max": "C1",
+    "stimulus": {
+      "kind": "text",
+      "format": "html",
+      "title": "Exercício B13: e-mail formal (meta de 3 min)",
+      "content": "<p><strong>TEXT: Email from the Undergraduate Research Grant Committee</strong></p>\n<blockquote><p><strong>Subject: Conditional Approval — Summer Fieldwork Grant (#UG-409)</strong></p>\n<p>Dear Lucas,</p>\n<p>The committee was impressed by your proposal to survey native pollinators in urban community gardens and is pleased to offer conditional funding of $2,400. Before the funds can be disbursed, however, two revisions are required.</p>\n<p>First, because three of your proposed study sites lie on municipal park land, you must attach either a city research permit or a signed note from your faculty advisor confirming that the biology department's blanket permit covers your fieldwork. Second, your budget allocates $600 for a digital camera; under university policy, grant funds may purchase equipment only if it remains departmental property after the project concludes.</p>\n<p>Please upload your revised packet by April 14 so we can release the award.</p>\n<p>Sincerely,<br>Prof. Elena Vance, Committee Chair</p></blockquote>",
+      "audio_ref": null
+    },
+    "group": "mod1-bn8",
+    "prompt": "Why is the committee withholding the $2,400 grant for now?",
+    "text_format": "html",
+    "options": {
+      "A": "Lucas submitted his initial research proposal after the deadline",
+      "B": "Two permit and budget issues must be resolved before payment",
+      "C": "The biology department has run out of funding for summer fieldwork",
+      "D": "The committee wants Lucas to choose sites outside the city"
+    },
+    "answer": "B",
+    "explanation": "A aprovação é condicional (<em>conditional funding</em>) e o pagamento depende de <strong>duas revisões de licença e orçamento</strong> (<em>Before the funds can be disbursed, however, two revisions are required</em>), como aponta (B). A opção (D) distorce o texto, que pede apenas a licença para os parques municipais, e não a troca de local.",
+    "hint": null,
+    "trap_codes": [],
+    "tags": [],
+    "status": "rascunho",
+    "source": {
+      "kind": "migrado",
+      "file": "app/drills_data.py",
+      "ref": "MOD1_ACTION_DRILLS_B:mod1-bn8#B13.1",
+      "live_on_site": true,
+      "answer_letter": "origem",
+      "build_map": {
+        "A": "D",
+        "B": "A",
+        "C": "C",
+        "D": "B"
+      }
+    }
+  },
+  {
+    "id": "mod1-bn8.b13.2",
+    "section": "reading",
+    "task_type": "Read in Daily Life",
+    "exam_format": true,
+    "format": "mcq",
+    "skill": null,
+    "cefr_min": "B2",
+    "cefr_max": "C1",
+    "stimulus": {
+      "kind": "text",
+      "format": "html",
+      "title": "Exercício B13: e-mail formal (meta de 3 min)",
+      "content": "<p><strong>TEXT: Email from the Undergraduate Research Grant Committee</strong></p>\n<blockquote><p><strong>Subject: Conditional Approval — Summer Fieldwork Grant (#UG-409)</strong></p>\n<p>Dear Lucas,</p>\n<p>The committee was impressed by your proposal to survey native pollinators in urban community gardens and is pleased to offer conditional funding of $2,400. Before the funds can be disbursed, however, two revisions are required.</p>\n<p>First, because three of your proposed study sites lie on municipal park land, you must attach either a city research permit or a signed note from your faculty advisor confirming that the biology department's blanket permit covers your fieldwork. Second, your budget allocates $600 for a digital camera; under university policy, grant funds may purchase equipment only if it remains departmental property after the project concludes.</p>\n<p>Please upload your revised packet by April 14 so we can release the award.</p>\n<p>Sincerely,<br>Prof. Elena Vance, Committee Chair</p></blockquote>",
+      "audio_ref": null
+    },
+    "group": "mod1-bn8",
+    "prompt": "How can Lucas satisfy the committee's first requirement without applying for a new city permit?",
+    "text_format": "html",
+    "options": {
+      "A": "By surveying fewer community gardens in the city",
+      "B": "By agreeing not to collect any insect specimens",
+      "C": "By moving his fieldwork from summer to fall",
+      "D": "By having his advisor confirm the department permit applies"
+    },
+    "answer": "D",
+    "explanation": "O segundo parágrafo oferece dois caminhos: anexar uma licença municipal ou apresentar <strong>declaração do orientador confirmando a cobertura da licença do departamento</strong> (<em>a signed note from your faculty advisor confirming that the biology department's blanket permit covers your fieldwork</em>), o que valida (D). A opção (A) não resolve a exigência para os locais remanescentes.",
+    "hint": null,
+    "trap_codes": [],
+    "tags": [],
+    "status": "rascunho",
+    "source": {
+      "kind": "migrado",
+      "file": "app/drills_data.py",
+      "ref": "MOD1_ACTION_DRILLS_B:mod1-bn8#B13.2",
+      "live_on_site": true,
+      "answer_letter": "origem",
+      "build_map": {
+        "A": "C",
+        "B": "D",
+        "C": "A",
+        "D": "B"
+      }
+    }
+  },
+  {
+    "id": "mod1-bn8.b13.3",
+    "section": "reading",
+    "task_type": "Read in Daily Life",
+    "exam_format": true,
+    "format": "mcq",
+    "skill": null,
+    "cefr_min": "B2",
+    "cefr_max": "C1",
+    "stimulus": {
+      "kind": "text",
+      "format": "html",
+      "title": "Exercício B13: e-mail formal (meta de 3 min)",
+      "content": "<p><strong>TEXT: Email from the Undergraduate Research Grant Committee</strong></p>\n<blockquote><p><strong>Subject: Conditional Approval — Summer Fieldwork Grant (#UG-409)</strong></p>\n<p>Dear Lucas,</p>\n<p>The committee was impressed by your proposal to survey native pollinators in urban community gardens and is pleased to offer conditional funding of $2,400. Before the funds can be disbursed, however, two revisions are required.</p>\n<p>First, because three of your proposed study sites lie on municipal park land, you must attach either a city research permit or a signed note from your faculty advisor confirming that the biology department's blanket permit covers your fieldwork. Second, your budget allocates $600 for a digital camera; under university policy, grant funds may purchase equipment only if it remains departmental property after the project concludes.</p>\n<p>Please upload your revised packet by April 14 so we can release the award.</p>\n<p>Sincerely,<br>Prof. Elena Vance, Committee Chair</p></blockquote>",
+      "audio_ref": null
+    },
+    "group": "mod1-bn8",
+    "prompt": "What does university policy state about the $600 camera listed in Lucas's budget?",
+    "text_format": "html",
+    "options": {
+      "A": "It is allowed only if the department keeps it afterward",
+      "B": "It must be rented from the media center instead",
+      "C": "It costs more than the equipment price limit",
+      "D": "It is approved because photos are essential"
+    },
+    "answer": "A",
+    "explanation": "Pela regra da universidade, a verba da bolsa só pode comprar equipamentos que <strong>permaneçam como patrimônio do departamento</strong> após o término do projeto (<em>only if it remains departmental property after the project concludes</em>), confirmando (A). A alternativa (C) inventa um teto de preço que o e-mail não menciona.",
+    "hint": null,
+    "trap_codes": [],
+    "tags": [],
+    "status": "rascunho",
+    "source": {
+      "kind": "migrado",
+      "file": "app/drills_data.py",
+      "ref": "MOD1_ACTION_DRILLS_B:mod1-bn8#B13.3",
+      "live_on_site": true,
+      "answer_letter": "origem",
+      "build_map": {
+        "A": "C",
+        "B": "D",
+        "C": "B",
+        "D": "A"
+      }
+    }
+  },
+  {
+    "id": "mod1-bn9.b14.1",
+    "section": "reading",
+    "task_type": "Read in Daily Life",
+    "exam_format": true,
+    "format": "mcq",
+    "skill": null,
+    "cefr_min": "B2",
+    "cefr_max": "C1",
+    "stimulus": {
+      "kind": "text",
+      "format": "html",
+      "title": "Exercício B14: anúncio de campus (meta de 3 min)",
+      "content": "<p><strong>TEXT: Notice from the University Health Center</strong></p>\n<blockquote><p><strong>IMMUNIZATION COMPLIANCE AND SPRING REGISTRATION HOLDS</strong></p>\n<p>While incoming first-year undergraduates must submit complete immunization records prior to dorm move-in, transfer and graduate students are granted a 30-day grace period from the first day of fall classes to upload missing documentation. Our records show that roughly 300 students in this latter group still have provisional status.</p>\n<p>Any student whose file remains incomplete after October 25 will have an administrative hold placed on their account. This hold does not affect current fall courses, dining plans, or library privileges, but it will block spring course registration until the Health Center verifies the uploaded records — a review that takes up to three business days. Students awaiting the second dose of a two-part vaccine series may request a temporary medical extension at Window 3.</p></blockquote>",
+      "audio_ref": null
+    },
+    "group": "mod1-bn9",
+    "prompt": "Which group of students is the primary target of this warning?",
+    "text_format": "html",
+    "options": {
+      "A": "Incoming first-year students who have not yet moved into their dorms",
+      "B": "All undergraduates who plan to use the campus health clinic this fall",
+      "C": "Transfer and graduate students who have not finished submitting vaccine records",
+      "D": "Faculty members who need to verify class rosters for the spring term"
+    },
+    "answer": "C",
+    "explanation": "O primeiro parágrafo contrasta os calouros com os alunos de transferência e de pós-graduação e foca nos cerca de 300 estudantes desse segundo grupo (<em>this latter group</em>) que ainda têm <strong>documentação de vacina pendente</strong>, como diz (C). A opção (A) confunde a referência de <em>latter group</em> (o último citado) com o primeiro grupo mencionado na frase.",
+    "hint": null,
+    "trap_codes": [],
+    "tags": [],
+    "status": "rascunho",
+    "source": {
+      "kind": "migrado",
+      "file": "app/drills_data.py",
+      "ref": "MOD1_ACTION_DRILLS_B:mod1-bn9#B14.1",
+      "live_on_site": true,
+      "answer_letter": "origem",
+      "build_map": {
+        "A": "A",
+        "B": "D",
+        "C": "C",
+        "D": "B"
+      }
+    }
+  },
+  {
+    "id": "mod1-bn9.b14.2",
+    "section": "reading",
+    "task_type": "Read in Daily Life",
+    "exam_format": true,
+    "format": "mcq",
+    "skill": null,
+    "cefr_min": "B2",
+    "cefr_max": "C1",
+    "stimulus": {
+      "kind": "text",
+      "format": "html",
+      "title": "Exercício B14: anúncio de campus (meta de 3 min)",
+      "content": "<p><strong>TEXT: Notice from the University Health Center</strong></p>\n<blockquote><p><strong>IMMUNIZATION COMPLIANCE AND SPRING REGISTRATION HOLDS</strong></p>\n<p>While incoming first-year undergraduates must submit complete immunization records prior to dorm move-in, transfer and graduate students are granted a 30-day grace period from the first day of fall classes to upload missing documentation. Our records show that roughly 300 students in this latter group still have provisional status.</p>\n<p>Any student whose file remains incomplete after October 25 will have an administrative hold placed on their account. This hold does not affect current fall courses, dining plans, or library privileges, but it will block spring course registration until the Health Center verifies the uploaded records — a review that takes up to three business days. Students awaiting the second dose of a two-part vaccine series may request a temporary medical extension at Window 3.</p></blockquote>",
+      "audio_ref": null
+    },
+    "group": "mod1-bn9",
+    "prompt": "What is the immediate consequence of having an administrative hold placed on an account after October 25?",
+    "text_format": "html",
+    "options": {
+      "A": "The student is dropped from their current fall semester classes",
+      "B": "The student is prevented from enrolling in spring semester courses",
+      "C": "The student loses borrowing privileges at the university library",
+      "D": "The student is charged a daily fine until the records are verified"
+    },
+    "answer": "B",
+    "explanation": "O segundo parágrafo esclarece que o bloqueio não afeta as aulas atuais nem a biblioteca, mas <strong>impede a matrícula nas disciplinas da primavera</strong> (<em>it will block spring course registration</em>), tornando (B) correta. As alternativas (A) e (C) citam exatamente o que o aviso diz que não será afetado (<em>does not affect</em>).",
+    "hint": null,
+    "trap_codes": [],
+    "tags": [],
+    "status": "rascunho",
+    "source": {
+      "kind": "migrado",
+      "file": "app/drills_data.py",
+      "ref": "MOD1_ACTION_DRILLS_B:mod1-bn9#B14.2",
+      "live_on_site": true,
+      "answer_letter": "origem",
+      "build_map": {
+        "A": "B",
+        "B": "A",
+        "C": "C",
+        "D": "D"
+      }
+    }
+  },
+  {
+    "id": "mod1-bn9.b14.3",
+    "section": "reading",
+    "task_type": "Read in Daily Life",
+    "exam_format": true,
+    "format": "mcq",
+    "skill": null,
+    "cefr_min": "B2",
+    "cefr_max": "C1",
+    "stimulus": {
+      "kind": "text",
+      "format": "html",
+      "title": "Exercício B14: anúncio de campus (meta de 3 min)",
+      "content": "<p><strong>TEXT: Notice from the University Health Center</strong></p>\n<blockquote><p><strong>IMMUNIZATION COMPLIANCE AND SPRING REGISTRATION HOLDS</strong></p>\n<p>While incoming first-year undergraduates must submit complete immunization records prior to dorm move-in, transfer and graduate students are granted a 30-day grace period from the first day of fall classes to upload missing documentation. Our records show that roughly 300 students in this latter group still have provisional status.</p>\n<p>Any student whose file remains incomplete after October 25 will have an administrative hold placed on their account. This hold does not affect current fall courses, dining plans, or library privileges, but it will block spring course registration until the Health Center verifies the uploaded records — a review that takes up to three business days. Students awaiting the second dose of a two-part vaccine series may request a temporary medical extension at Window 3.</p></blockquote>",
+      "audio_ref": null
+    },
+    "group": "mod1-bn9",
+    "prompt": "What can be inferred about a student who uploads missing records on the morning of spring registration?",
+    "text_format": "html",
+    "options": {
+      "A": "Their hold will be removed by the portal right away",
+      "B": "They must register in person at Window 3",
+      "C": "Their records will be rejected as too late",
+      "D": "They may wait up to three days to register"
+    },
+    "answer": "D",
+    "explanation": "Como o bloqueio só sai depois que o centro de saúde confere os documentos e essa análise leva <strong>até três dias úteis</strong> (<em>a review that takes up to three business days</em>), enviar os papéis na manhã da matrícula pode atrasar a inscrição, como infere (D). A opção (A) ignora esse prazo de conferência.",
+    "hint": null,
+    "trap_codes": [],
+    "tags": [],
+    "status": "rascunho",
+    "source": {
+      "kind": "migrado",
+      "file": "app/drills_data.py",
+      "ref": "MOD1_ACTION_DRILLS_B:mod1-bn9#B14.3",
+      "live_on_site": true,
+      "answer_letter": "origem",
+      "build_map": {
+        "A": "A",
+        "B": "D",
+        "C": "C",
+        "D": "B"
+      }
+    }
+  },
+  {
+    "id": "mod1-bn10.b15.1",
+    "section": "reading",
+    "task_type": "Read in Daily Life",
+    "exam_format": true,
+    "format": "mcq",
+    "skill": null,
+    "cefr_min": "C1",
+    "cefr_max": "C1",
+    "stimulus": {
+      "kind": "text",
+      "format": "html",
+      "title": "Exercício B15: aviso de biblioteca (meta de 4 min)",
+      "content": "<p><strong>TEXT: Policy notice from the University Archives and Special Collections</strong></p>\n<blockquote><p><strong>RESEARCHER ACCESS AND REPRODUCTION GUIDELINES</strong></p>\n<p>Unlike the main library's general holdings, materials housed in Special Collections are non-circulating and may be consulted only in the Reading Room by appointment. Requests for archival boxes should be submitted through the online catalog at least two business days prior to your visit, as nearly half of our holdings are kept in a climate-controlled off-site facility from which deliveries arrive only on Tuesday and Thursday mornings.</p>\n<p>Researchers are welcome to take reference photographs using handheld devices with the flash turned off. However, high-resolution digital scans intended for publication or public display require a formal reproduction request and written permission from the copyright holder, unless the work has entered the public domain. To protect fragile manuscripts, fountain pens, highlighters, and coats are prohibited at the reading tables; lockers and pencils are supplied in the entry hall.</p></blockquote>",
+      "audio_ref": null
+    },
+    "group": "mod1-bn10",
+    "prompt": "Why does the archive ask researchers to request materials at least two business days in advance?",
+    "text_format": "html",
+    "options": {
+      "A": "Many items are stored off campus and are transported only twice a week",
+      "B": "Archivists must inspect every manuscript for damage before each appointment",
+      "C": "The Reading Room has seating for only a small number of visitors each day",
+      "D": "Copyright permission must be verified before any archival box is opened"
+    },
+    "answer": "A",
+    "explanation": "O primeiro parágrafo explica o motivo da antecedência com o conector <em>as</em>: quase metade do acervo fica em uma instalação externa e <strong>as entregas ocorrem apenas às terças e quintas</strong> (<em>deliveries arrive only on Tuesday and Thursday mornings</em>), confirmando (A). A opção (D) mistura a regra de publicação do segundo parágrafo com a consulta local.",
+    "hint": null,
+    "trap_codes": [],
+    "tags": [],
+    "status": "rascunho",
+    "source": {
+      "kind": "migrado",
+      "file": "app/drills_data.py",
+      "ref": "MOD1_ACTION_DRILLS_B:mod1-bn10#B15.1",
+      "live_on_site": true,
+      "answer_letter": "origem",
+      "build_map": {
+        "A": "A",
+        "B": "B",
+        "C": "C",
+        "D": "D"
+      }
+    }
+  },
+  {
+    "id": "mod1-bn10.b15.2",
+    "section": "reading",
+    "task_type": "Read in Daily Life",
+    "exam_format": true,
+    "format": "mcq",
+    "skill": null,
+    "cefr_min": "C1",
+    "cefr_max": "C1",
+    "stimulus": {
+      "kind": "text",
+      "format": "html",
+      "title": "Exercício B15: aviso de biblioteca (meta de 4 min)",
+      "content": "<p><strong>TEXT: Policy notice from the University Archives and Special Collections</strong></p>\n<blockquote><p><strong>RESEARCHER ACCESS AND REPRODUCTION GUIDELINES</strong></p>\n<p>Unlike the main library's general holdings, materials housed in Special Collections are non-circulating and may be consulted only in the Reading Room by appointment. Requests for archival boxes should be submitted through the online catalog at least two business days prior to your visit, as nearly half of our holdings are kept in a climate-controlled off-site facility from which deliveries arrive only on Tuesday and Thursday mornings.</p>\n<p>Researchers are welcome to take reference photographs using handheld devices with the flash turned off. However, high-resolution digital scans intended for publication or public display require a formal reproduction request and written permission from the copyright holder, unless the work has entered the public domain. To protect fragile manuscripts, fountain pens, highlighters, and coats are prohibited at the reading tables; lockers and pencils are supplied in the entry hall.</p></blockquote>",
+      "audio_ref": null
+    },
+    "group": "mod1-bn10",
+    "prompt": "Under what condition may a researcher publish a high-resolution scan without contacting a copyright holder?",
+    "text_format": "html",
+    "options": {
+      "A": "When the image is taken with a personal phone and no flash",
+      "B": "When the scan is used only for a university thesis or dissertation",
+      "C": "When the material being reproduced is already in the public domain",
+      "D": "When the item is stored in the main library rather than off-site"
+    },
+    "answer": "C",
+    "explanation": "O segundo parágrafo exige autorização por escrito do detentor dos direitos autorais, <strong>a menos que a obra esteja em domínio público</strong> (<em>unless the work has entered the public domain</em>), o que valida (C). A alternativa (A) descreve fotos de referência para estudo, e não digitalizações para publicação.",
+    "hint": null,
+    "trap_codes": [],
+    "tags": [],
+    "status": "rascunho",
+    "source": {
+      "kind": "migrado",
+      "file": "app/drills_data.py",
+      "ref": "MOD1_ACTION_DRILLS_B:mod1-bn10#B15.2",
+      "live_on_site": true,
+      "answer_letter": "origem",
+      "build_map": {
+        "A": "D",
+        "B": "A",
+        "C": "B",
+        "D": "C"
+      }
+    }
+  },
+  {
+    "id": "mod1-bn10.b15.3",
+    "section": "reading",
+    "task_type": "Read in Daily Life",
+    "exam_format": true,
+    "format": "mcq",
+    "skill": null,
+    "cefr_min": "C1",
+    "cefr_max": "C1",
+    "stimulus": {
+      "kind": "text",
+      "format": "html",
+      "title": "Exercício B15: aviso de biblioteca (meta de 4 min)",
+      "content": "<p><strong>TEXT: Policy notice from the University Archives and Special Collections</strong></p>\n<blockquote><p><strong>RESEARCHER ACCESS AND REPRODUCTION GUIDELINES</strong></p>\n<p>Unlike the main library's general holdings, materials housed in Special Collections are non-circulating and may be consulted only in the Reading Room by appointment. Requests for archival boxes should be submitted through the online catalog at least two business days prior to your visit, as nearly half of our holdings are kept in a climate-controlled off-site facility from which deliveries arrive only on Tuesday and Thursday mornings.</p>\n<p>Researchers are welcome to take reference photographs using handheld devices with the flash turned off. However, high-resolution digital scans intended for publication or public display require a formal reproduction request and written permission from the copyright holder, unless the work has entered the public domain. To protect fragile manuscripts, fountain pens, highlighters, and coats are prohibited at the reading tables; lockers and pencils are supplied in the entry hall.</p></blockquote>",
+      "audio_ref": null
+    },
+    "group": "mod1-bn10",
+    "prompt": "Which of the following is a researcher allowed to bring to a Reading Room table?",
+    "text_format": "html",
+    "options": {
+      "A": "A fountain pen for taking detailed notes",
+      "B": "A winter coat draped over the chair",
+      "C": "A yellow highlighter for marking photocopies",
+      "D": "A smartphone with its camera flash disabled"
+    },
+    "answer": "D",
+    "explanation": "O texto autoriza o uso de <strong>dispositivos portáteis com o flash desligado</strong> para fotos de referência (<em>handheld devices with the flash turned off</em>), confirmando (D). Já canetas-tinteiro (A), casacos (B) e marca-textos (C) são explicitamente proibidos nas mesas de leitura (<em>prohibited at the reading tables</em>).",
+    "hint": null,
+    "trap_codes": [],
+    "tags": [],
+    "status": "rascunho",
+    "source": {
+      "kind": "migrado",
+      "file": "app/drills_data.py",
+      "ref": "MOD1_ACTION_DRILLS_B:mod1-bn10#B15.3",
+      "live_on_site": true,
+      "answer_letter": "origem",
+      "build_map": {
+        "A": "D",
+        "B": "B",
+        "C": "A",
+        "D": "C"
+      }
+    }
+  },
+  {
     "id": "mod7-b2.1",
     "section": "reading",
     "task_type": "Read in Daily Life",

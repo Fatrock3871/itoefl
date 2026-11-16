@@ -675,6 +675,1356 @@
     }
   },
   {
+    "id": "mod1-cn1.c4.1",
+    "section": "reading",
+    "task_type": "Read an Academic Passage",
+    "exam_format": true,
+    "format": "mcq",
+    "skill": null,
+    "cefr_min": "A2",
+    "cefr_max": "B1",
+    "stimulus": {
+      "kind": "text",
+      "format": "html",
+      "title": "Exercício C4: ecologia urbana (meta de 5 min)",
+      "content": "<p><strong>PASSAGE: Green Roofs in Modern Cities</strong></p>\n<p>Many modern cities are replacing dark, flat building roofs with \"green roofs\" covered in soil and low-growing plants. Unlike traditional dark roofs, which absorb sunlight and make buildings very hot, green roofs use living plants to shade the surface and cool the air through evaporation.</p>\n<p>This simple design brings two main benefits to urban neighborhoods. First, it lowers indoor temperatures during the summer, so people inside the building use less electricity for air conditioning. Second, the layer of soil acts like a sponge during heavy rain, holding water that would otherwise flood city streets and storm drains.</p>\n<p>However, not every building can support a green roof right away. Wet soil is heavy, so engineers must first check the strength of the roof structure. For older buildings, owners often choose thin layers of hardy succulent plants called sedums, which need very little soil or watering to survive.</p>",
+      "audio_ref": null
+    },
+    "group": "mod1-cn1",
+    "prompt": "Ideia principal. What is the main idea of the passage?",
+    "text_format": "html",
+    "options": {
+      "A": "Green roofs help cool buildings and manage rainwater, though their weight requires careful planning.",
+      "B": "Traditional dark roofs are cheaper to build and last much longer than modern green roofs.",
+      "C": "City engineers want to remove all plants from older buildings to prevent roof damage.",
+      "D": "Succulent plants called sedums are the only plants that can grow on city roofs."
+    },
+    "answer": "A",
+    "explanation": "A passagem apresenta o que são os telhados verdes, seus dois benefícios principais no calor e na chuva, e o cuidado com o peso na estrutura, o que resume a <strong>visão geral dos telhados verdes</strong> na opção (A). A alternativa (D) pega um exemplo específico do último parágrafo e o transforma em regra única.",
+    "hint": null,
+    "trap_codes": [],
+    "tags": [],
+    "status": "rascunho",
+    "source": {
+      "kind": "migrado",
+      "file": "app/drills_data.py",
+      "ref": "MOD1_ACTION_DRILLS_C:mod1-cn1#C4.1",
+      "live_on_site": true,
+      "answer_letter": "origem",
+      "build_map": {
+        "A": "A",
+        "B": "B",
+        "C": "C",
+        "D": "D"
+      }
+    }
+  },
+  {
+    "id": "mod1-cn1.c4.2",
+    "section": "reading",
+    "task_type": "Read an Academic Passage",
+    "exam_format": true,
+    "format": "mcq",
+    "skill": null,
+    "cefr_min": "A2",
+    "cefr_max": "B1",
+    "stimulus": {
+      "kind": "text",
+      "format": "html",
+      "title": "Exercício C4: ecologia urbana (meta de 5 min)",
+      "content": "<p><strong>PASSAGE: Green Roofs in Modern Cities</strong></p>\n<p>Many modern cities are replacing dark, flat building roofs with \"green roofs\" covered in soil and low-growing plants. Unlike traditional dark roofs, which absorb sunlight and make buildings very hot, green roofs use living plants to shade the surface and cool the air through evaporation.</p>\n<p>This simple design brings two main benefits to urban neighborhoods. First, it lowers indoor temperatures during the summer, so people inside the building use less electricity for air conditioning. Second, the layer of soil acts like a sponge during heavy rain, holding water that would otherwise flood city streets and storm drains.</p>\n<p>However, not every building can support a green roof right away. Wet soil is heavy, so engineers must first check the strength of the roof structure. For older buildings, owners often choose thin layers of hardy succulent plants called sedums, which need very little soil or watering to survive.</p>",
+      "audio_ref": null
+    },
+    "group": "mod1-cn1",
+    "prompt": "Detalhe. According to paragraph 2, how do green roofs help cities during heavy rain?",
+    "text_format": "html",
+    "options": {
+      "A": "They heat the rainwater so that it evaporates before reaching the ground.",
+      "B": "They send extra water directly into the building's air conditioning system.",
+      "C": "They absorb rainwater in the soil and reduce flooding in the streets.",
+      "D": "They block rain clouds from forming above tall urban buildings."
+    },
+    "answer": "C",
+    "explanation": "O segundo parágrafo explica que a terra funciona como uma esponja na chuva forte, promovendo a <strong>retenção da água para evitar alagamentos</strong> (<em>holding water that would otherwise flood city streets</em>), como diz (C). A opção (A) mistura a evaporação citada no primeiro parágrafo com o controle de enchentes.",
+    "hint": null,
+    "trap_codes": [],
+    "tags": [],
+    "status": "rascunho",
+    "source": {
+      "kind": "migrado",
+      "file": "app/drills_data.py",
+      "ref": "MOD1_ACTION_DRILLS_C:mod1-cn1#C4.2",
+      "live_on_site": true,
+      "answer_letter": "origem",
+      "build_map": {
+        "A": "C",
+        "B": "A",
+        "C": "B",
+        "D": "D"
+      }
+    }
+  },
+  {
+    "id": "mod1-cn1.c4.3",
+    "section": "reading",
+    "task_type": "Read an Academic Passage",
+    "exam_format": true,
+    "format": "mcq",
+    "skill": null,
+    "cefr_min": "A2",
+    "cefr_max": "B1",
+    "stimulus": {
+      "kind": "text",
+      "format": "html",
+      "title": "Exercício C4: ecologia urbana (meta de 5 min)",
+      "content": "<p><strong>PASSAGE: Green Roofs in Modern Cities</strong></p>\n<p>Many modern cities are replacing dark, flat building roofs with \"green roofs\" covered in soil and low-growing plants. Unlike traditional dark roofs, which absorb sunlight and make buildings very hot, green roofs use living plants to shade the surface and cool the air through evaporation.</p>\n<p>This simple design brings two main benefits to urban neighborhoods. First, it lowers indoor temperatures during the summer, so people inside the building use less electricity for air conditioning. Second, the layer of soil acts like a sponge during heavy rain, holding water that would otherwise flood city streets and storm drains.</p>\n<p>However, not every building can support a green roof right away. Wet soil is heavy, so engineers must first check the strength of the roof structure. For older buildings, owners often choose thin layers of hardy succulent plants called sedums, which need very little soil or watering to survive.</p>",
+      "audio_ref": null
+    },
+    "group": "mod1-cn1",
+    "prompt": "Detalhe negativo. Which of the following is NOT mentioned as a feature or benefit of green roofs?",
+    "text_format": "html",
+    "options": {
+      "A": "Shading the roof surface from sunlight",
+      "B": "Lowering electricity use for air conditioning",
+      "C": "Holding rainwater during heavy storms",
+      "D": "Growing fresh vegetables for local restaurants"
+    },
+    "answer": "D",
+    "explanation": "O texto menciona sombra na superfície (A), economia de ar-condicionado (B) e absorção de chuva (C), mas em nenhum momento fala em <strong>produzir vegetais para restaurantes</strong>, o que marca (D). Cuidado para não trazer conhecimentos externos sobre hortas urbanas que não aparecem na passagem.",
+    "hint": null,
+    "trap_codes": [],
+    "tags": [],
+    "status": "rascunho",
+    "source": {
+      "kind": "migrado",
+      "file": "app/drills_data.py",
+      "ref": "MOD1_ACTION_DRILLS_C:mod1-cn1#C4.3",
+      "live_on_site": true,
+      "answer_letter": "origem",
+      "build_map": {
+        "A": "B",
+        "B": "D",
+        "C": "A",
+        "D": "C"
+      }
+    }
+  },
+  {
+    "id": "mod1-cn1.c4.4",
+    "section": "reading",
+    "task_type": "Read an Academic Passage",
+    "exam_format": true,
+    "format": "mcq",
+    "skill": null,
+    "cefr_min": "A2",
+    "cefr_max": "B1",
+    "stimulus": {
+      "kind": "text",
+      "format": "html",
+      "title": "Exercício C4: ecologia urbana (meta de 5 min)",
+      "content": "<p><strong>PASSAGE: Green Roofs in Modern Cities</strong></p>\n<p>Many modern cities are replacing dark, flat building roofs with \"green roofs\" covered in soil and low-growing plants. Unlike traditional dark roofs, which absorb sunlight and make buildings very hot, green roofs use living plants to shade the surface and cool the air through evaporation.</p>\n<p>This simple design brings two main benefits to urban neighborhoods. First, it lowers indoor temperatures during the summer, so people inside the building use less electricity for air conditioning. Second, the layer of soil acts like a sponge during heavy rain, holding water that would otherwise flood city streets and storm drains.</p>\n<p>However, not every building can support a green roof right away. Wet soil is heavy, so engineers must first check the strength of the roof structure. For older buildings, owners often choose thin layers of hardy succulent plants called sedums, which need very little soil or watering to survive.</p>",
+      "audio_ref": null
+    },
+    "group": "mod1-cn1",
+    "prompt": "Propósito retórico. Why does the author mention \"sedums\" in paragraph 3?",
+    "text_format": "html",
+    "options": {
+      "A": "To explain why wet soil is too heavy for modern steel roofs",
+      "B": "To give an example of plants that work well in thin soil on older roofs",
+      "C": "To show that succulents cannot survive in rainy city climates",
+      "D": "To argue that building owners should avoid planting on flat roofs"
+    },
+    "answer": "B",
+    "explanation": "O autor cita os <em>sedums</em> logo depois de explicar o limite de peso em prédios antigos para dar um <strong>exemplo de planta que exige pouca terra</strong> (<em>need very little soil or watering to survive</em>), confirmando (B). A alternativa (A) confunde o problema do peso com a solução usada nos prédios antigos.",
+    "hint": null,
+    "trap_codes": [],
+    "tags": [],
+    "status": "rascunho",
+    "source": {
+      "kind": "migrado",
+      "file": "app/drills_data.py",
+      "ref": "MOD1_ACTION_DRILLS_C:mod1-cn1#C4.4",
+      "live_on_site": true,
+      "answer_letter": "origem",
+      "build_map": {
+        "A": "A",
+        "B": "D",
+        "C": "C",
+        "D": "B"
+      }
+    }
+  },
+  {
+    "id": "mod1-cn1.c4.5",
+    "section": "reading",
+    "task_type": "Read an Academic Passage",
+    "exam_format": true,
+    "format": "mcq",
+    "skill": null,
+    "cefr_min": "A2",
+    "cefr_max": "B1",
+    "stimulus": {
+      "kind": "text",
+      "format": "html",
+      "title": "Exercício C4: ecologia urbana (meta de 5 min)",
+      "content": "<p><strong>PASSAGE: Green Roofs in Modern Cities</strong></p>\n<p>Many modern cities are replacing dark, flat building roofs with \"green roofs\" covered in soil and low-growing plants. Unlike traditional dark roofs, which absorb sunlight and make buildings very hot, green roofs use living plants to shade the surface and cool the air through evaporation.</p>\n<p>This simple design brings two main benefits to urban neighborhoods. First, it lowers indoor temperatures during the summer, so people inside the building use less electricity for air conditioning. Second, the layer of soil acts like a sponge during heavy rain, holding water that would otherwise flood city streets and storm drains.</p>\n<p>However, not every building can support a green roof right away. Wet soil is heavy, so engineers must first check the strength of the roof structure. For older buildings, owners often choose thin layers of hardy succulent plants called sedums, which need very little soil or watering to survive.</p>",
+      "audio_ref": null
+    },
+    "group": "mod1-cn1",
+    "prompt": "Vocabulário em contexto. The word \"hardy\" in paragraph 3 is closest in meaning to:",
+    "text_format": "html",
+    "options": {
+      "A": "tough",
+      "B": "rare",
+      "C": "tall",
+      "D": "bright"
+    },
+    "answer": "A",
+    "explanation": "No trecho, plantas <em>hardy</em> são aquelas que sobrevivem com pouca terra e quase sem rega, ou seja, <strong>plantas resistentes e fortes</strong> (<em>tough</em>), validando (A). A opção (C) contradiz o primeiro parágrafo, que fala em plantas baixas (<em>low-growing plants</em>).",
+    "hint": null,
+    "trap_codes": [],
+    "tags": [],
+    "status": "rascunho",
+    "source": {
+      "kind": "migrado",
+      "file": "app/drills_data.py",
+      "ref": "MOD1_ACTION_DRILLS_C:mod1-cn1#C4.5",
+      "live_on_site": true,
+      "answer_letter": "origem",
+      "build_map": {
+        "A": "A",
+        "B": "C",
+        "C": "B",
+        "D": "D"
+      }
+    }
+  },
+  {
+    "id": "mod1-cn2.c5.1",
+    "section": "reading",
+    "task_type": "Read an Academic Passage",
+    "exam_format": true,
+    "format": "mcq",
+    "skill": null,
+    "cefr_min": "A2",
+    "cefr_max": "B1",
+    "stimulus": {
+      "kind": "text",
+      "format": "html",
+      "title": "Exercício C5: zoologia (meta de 5 min)",
+      "content": "<p><strong>PASSAGE: How Sea Otters Protect Kelp Forests</strong></p>\n<p>Along the cool coast of the North Pacific, giant kelp grows from the ocean floor toward the sunlight, forming thick underwater forests. These kelp forests provide food and shelter for hundreds of marine species, including young fish, crabs, and seals.</p>\n<p>Sea otters play a central role in keeping these forests healthy. Otters eat large numbers of sea urchins, which are small, spiny animals that crawl along the rocks and feed on the base of kelp stems. When sea otters are present, they keep the urchin population small, allowing the kelp to grow tall and dense.</p>\n<p>When sea otters disappear from an area, the natural balance changes quickly. Without their main predator, sea urchins multiply and chew through the kelp until almost nothing is left. Biologists call this empty seafloor an \"urchin barren,\" and it shows how a single predator can protect an entire ecosystem.</p>",
+      "audio_ref": null
+    },
+    "group": "mod1-cn2",
+    "prompt": "Ideia principal. The passage is mainly about:",
+    "text_format": "html",
+    "options": {
+      "A": "how giant kelp uses sunlight to grow in the cold waters of the North Pacific",
+      "B": "how sea otters keep kelp forests healthy by controlling sea urchin numbers",
+      "C": "why young fish and seals leave the coast during the winter months",
+      "D": "why biologists are trying to move sea urchins to deeper ocean waters"
+    },
+    "answer": "B",
+    "explanation": "O fio condutor do texto mostra como as lontras-marinhas comem ouriços-do-mar e garantem a <strong>proteção das florestas de kelp</strong>, exatamente como resume (B). A opção (A) fica restrita à abertura do primeiro parágrafo e deixa de fora a relação entre lontras e ouriços.",
+    "hint": null,
+    "trap_codes": [],
+    "tags": [],
+    "status": "rascunho",
+    "source": {
+      "kind": "migrado",
+      "file": "app/drills_data.py",
+      "ref": "MOD1_ACTION_DRILLS_C:mod1-cn2#C5.1",
+      "live_on_site": true,
+      "answer_letter": "origem",
+      "build_map": {
+        "A": "A",
+        "B": "B",
+        "C": "D",
+        "D": "C"
+      }
+    }
+  },
+  {
+    "id": "mod1-cn2.c5.2",
+    "section": "reading",
+    "task_type": "Read an Academic Passage",
+    "exam_format": true,
+    "format": "mcq",
+    "skill": null,
+    "cefr_min": "A2",
+    "cefr_max": "B1",
+    "stimulus": {
+      "kind": "text",
+      "format": "html",
+      "title": "Exercício C5: zoologia (meta de 5 min)",
+      "content": "<p><strong>PASSAGE: How Sea Otters Protect Kelp Forests</strong></p>\n<p>Along the cool coast of the North Pacific, giant kelp grows from the ocean floor toward the sunlight, forming thick underwater forests. These kelp forests provide food and shelter for hundreds of marine species, including young fish, crabs, and seals.</p>\n<p>Sea otters play a central role in keeping these forests healthy. Otters eat large numbers of sea urchins, which are small, spiny animals that crawl along the rocks and feed on the base of kelp stems. When sea otters are present, they keep the urchin population small, allowing the kelp to grow tall and dense.</p>\n<p>When sea otters disappear from an area, the natural balance changes quickly. Without their main predator, sea urchins multiply and chew through the kelp until almost nothing is left. Biologists call this empty seafloor an \"urchin barren,\" and it shows how a single predator can protect an entire ecosystem.</p>",
+      "audio_ref": null
+    },
+    "group": "mod1-cn2",
+    "prompt": "Detalhe. According to paragraph 2, how do sea urchins harm giant kelp?",
+    "text_format": "html",
+    "options": {
+      "A": "They block sunlight from reaching the top of the kelp forest.",
+      "B": "They chase away the fish and crabs that clean the kelp leaves.",
+      "C": "They poison the water around the roots of the kelp plants.",
+      "D": "They eat the lower part of the kelp stems along the rocks."
+    },
+    "answer": "D",
+    "explanation": "O segundo parágrafo diz que os ouriços rastejam pelas pedras e <strong>comem a base dos caules de kelp</strong> (<em>feed on the base of kelp stems</em>), o que corresponde a (D). As demais opções inventam formas de dano que não aparecem no texto.",
+    "hint": null,
+    "trap_codes": [],
+    "tags": [],
+    "status": "rascunho",
+    "source": {
+      "kind": "migrado",
+      "file": "app/drills_data.py",
+      "ref": "MOD1_ACTION_DRILLS_C:mod1-cn2#C5.2",
+      "live_on_site": true,
+      "answer_letter": "origem",
+      "build_map": {
+        "A": "B",
+        "B": "C",
+        "C": "D",
+        "D": "A"
+      }
+    }
+  },
+  {
+    "id": "mod1-cn2.c5.3",
+    "section": "reading",
+    "task_type": "Read an Academic Passage",
+    "exam_format": true,
+    "format": "mcq",
+    "skill": null,
+    "cefr_min": "A2",
+    "cefr_max": "B1",
+    "stimulus": {
+      "kind": "text",
+      "format": "html",
+      "title": "Exercício C5: zoologia (meta de 5 min)",
+      "content": "<p><strong>PASSAGE: How Sea Otters Protect Kelp Forests</strong></p>\n<p>Along the cool coast of the North Pacific, giant kelp grows from the ocean floor toward the sunlight, forming thick underwater forests. These kelp forests provide food and shelter for hundreds of marine species, including young fish, crabs, and seals.</p>\n<p>Sea otters play a central role in keeping these forests healthy. Otters eat large numbers of sea urchins, which are small, spiny animals that crawl along the rocks and feed on the base of kelp stems. When sea otters are present, they keep the urchin population small, allowing the kelp to grow tall and dense.</p>\n<p>When sea otters disappear from an area, the natural balance changes quickly. Without their main predator, sea urchins multiply and chew through the kelp until almost nothing is left. Biologists call this empty seafloor an \"urchin barren,\" and it shows how a single predator can protect an entire ecosystem.</p>",
+      "audio_ref": null
+    },
+    "group": "mod1-cn2",
+    "prompt": "Inferência. What can be inferred from the passage about young fish and crabs in an \"urchin barren\"?",
+    "text_format": "html",
+    "options": {
+      "A": "They learn to hunt sea urchins when the sea otters disappear.",
+      "B": "They grow faster because there is more open space on the rocks.",
+      "C": "They lose the food and shelter that the kelp forest once provided.",
+      "D": "They help the giant kelp grow back within a few weeks."
+    },
+    "answer": "C",
+    "explanation": "O primeiro parágrafo afirma que a floresta de kelp dá alimento e abrigo a peixes jovens e caranguejos; logo, quando os ouriços destroem tudo no <em>urchin barren</em>, esses animais sofrem a <strong>perda de alimento e refúgio</strong>, confirmando (C). A opção (B) ignora que o fundo vazio deixa essas espécies desprotegidas.",
+    "hint": null,
+    "trap_codes": [],
+    "tags": [],
+    "status": "rascunho",
+    "source": {
+      "kind": "migrado",
+      "file": "app/drills_data.py",
+      "ref": "MOD1_ACTION_DRILLS_C:mod1-cn2#C5.3",
+      "live_on_site": true,
+      "answer_letter": "origem",
+      "build_map": {
+        "A": "C",
+        "B": "B",
+        "C": "D",
+        "D": "A"
+      }
+    }
+  },
+  {
+    "id": "mod1-cn2.c5.4",
+    "section": "reading",
+    "task_type": "Read an Academic Passage",
+    "exam_format": true,
+    "format": "mcq",
+    "skill": null,
+    "cefr_min": "A2",
+    "cefr_max": "B1",
+    "stimulus": {
+      "kind": "text",
+      "format": "html",
+      "title": "Exercício C5: zoologia (meta de 5 min)",
+      "content": "<p><strong>PASSAGE: How Sea Otters Protect Kelp Forests</strong></p>\n<p>Along the cool coast of the North Pacific, giant kelp grows from the ocean floor toward the sunlight, forming thick underwater forests. These kelp forests provide food and shelter for hundreds of marine species, including young fish, crabs, and seals.</p>\n<p>Sea otters play a central role in keeping these forests healthy. Otters eat large numbers of sea urchins, which are small, spiny animals that crawl along the rocks and feed on the base of kelp stems. When sea otters are present, they keep the urchin population small, allowing the kelp to grow tall and dense.</p>\n<p>When sea otters disappear from an area, the natural balance changes quickly. Without their main predator, sea urchins multiply and chew through the kelp until almost nothing is left. Biologists call this empty seafloor an \"urchin barren,\" and it shows how a single predator can protect an entire ecosystem.</p>",
+      "audio_ref": null
+    },
+    "group": "mod1-cn2",
+    "prompt": "Propósito retórico. Why does the author describe what happens when sea otters disappear in paragraph 3?",
+    "text_format": "html",
+    "options": {
+      "A": "To show how important sea otters are to the survival of the ecosystem",
+      "B": "To prove that sea urchins can live without eating giant kelp",
+      "C": "To explain why sea otters prefer warm water over the North Pacific",
+      "D": "To argue that predators have very little effect on ocean plants"
+    },
+    "answer": "A",
+    "explanation": "Ao mostrar a destruição do kelp na ausência das lontras, o autor comprova na prática a <strong>importância desse predador para todo o ecossistema</strong> (<em>how a single predator can protect an entire ecosystem</em>), validando (A). A alternativa (D) afirma o oposto da conclusão do parágrafo.",
+    "hint": null,
+    "trap_codes": [],
+    "tags": [],
+    "status": "rascunho",
+    "source": {
+      "kind": "migrado",
+      "file": "app/drills_data.py",
+      "ref": "MOD1_ACTION_DRILLS_C:mod1-cn2#C5.4",
+      "live_on_site": true,
+      "answer_letter": "origem",
+      "build_map": {
+        "A": "A",
+        "B": "D",
+        "C": "C",
+        "D": "B"
+      }
+    }
+  },
+  {
+    "id": "mod1-cn2.c5.5",
+    "section": "reading",
+    "task_type": "Read an Academic Passage",
+    "exam_format": true,
+    "format": "mcq",
+    "skill": null,
+    "cefr_min": "A2",
+    "cefr_max": "B1",
+    "stimulus": {
+      "kind": "text",
+      "format": "html",
+      "title": "Exercício C5: zoologia (meta de 5 min)",
+      "content": "<p><strong>PASSAGE: How Sea Otters Protect Kelp Forests</strong></p>\n<p>Along the cool coast of the North Pacific, giant kelp grows from the ocean floor toward the sunlight, forming thick underwater forests. These kelp forests provide food and shelter for hundreds of marine species, including young fish, crabs, and seals.</p>\n<p>Sea otters play a central role in keeping these forests healthy. Otters eat large numbers of sea urchins, which are small, spiny animals that crawl along the rocks and feed on the base of kelp stems. When sea otters are present, they keep the urchin population small, allowing the kelp to grow tall and dense.</p>\n<p>When sea otters disappear from an area, the natural balance changes quickly. Without their main predator, sea urchins multiply and chew through the kelp until almost nothing is left. Biologists call this empty seafloor an \"urchin barren,\" and it shows how a single predator can protect an entire ecosystem.</p>",
+      "audio_ref": null
+    },
+    "group": "mod1-cn2",
+    "prompt": "Vocabulário em contexto. The word \"multiply\" in paragraph 3 is closest in meaning to:",
+    "text_format": "html",
+    "options": {
+      "A": "hide",
+      "B": "travel",
+      "C": "shrink",
+      "D": "increase"
+    },
+    "answer": "D",
+    "explanation": "Sem seu predador principal, a população de ouriços passa a <em>multiply</em>, ou seja, a <strong>aumentar em quantidade</strong> (<em>increase</em>), o que torna (D) correta. A opção (C) tem o sentido contrário, de encolher ou diminuir.",
+    "hint": null,
+    "trap_codes": [],
+    "tags": [],
+    "status": "rascunho",
+    "source": {
+      "kind": "migrado",
+      "file": "app/drills_data.py",
+      "ref": "MOD1_ACTION_DRILLS_C:mod1-cn2#C5.5",
+      "live_on_site": true,
+      "answer_letter": "origem",
+      "build_map": {
+        "A": "D",
+        "B": "A",
+        "C": "B",
+        "D": "C"
+      }
+    }
+  },
+  {
+    "id": "mod1-cn3.c6.1",
+    "section": "reading",
+    "task_type": "Read an Academic Passage",
+    "exam_format": true,
+    "format": "mcq",
+    "skill": null,
+    "cefr_min": "B1",
+    "cefr_max": "B2",
+    "stimulus": {
+      "kind": "text",
+      "format": "html",
+      "title": "Exercício C6: arqueologia (meta de 6 min)",
+      "content": "<p><strong>PASSAGE: Roman Concrete and Volcanic Ash</strong></p>\n<p>Modern steel-reinforced concrete is strong, yet harbor walls made with it often begin to crack and crumble after only a few decades in saltwater. By contrast, concrete piers and breakwaters built by Roman engineers more than two thousand years ago still stand intact along the Mediterranean coast, battered daily by waves.</p>\n<p>For a long time, researchers knew that the Roman recipe mixed lime and volcanic rock with a powdery volcanic ash called pozzolana, taken from the region around the Bay of Naples. Only recently, however, did mineralogists discover what happens inside this mixture over time. As seawater filters through tiny pores in the concrete, it dissolves part of the volcanic ash and reacts with the lime to grow rare, interlocking crystal plates.</p>\n<p>Instead of weakening the structure, seawater actually reinforces it: whenever a microscopic crack opens, new crystals form and seal the gap before it can spread. Material scientists are now studying this self-healing chemistry in hopes of designing modern marine concrete that lasts longer and requires fewer costly repairs.</p>",
+      "audio_ref": null
+    },
+    "group": "mod1-cn3",
+    "prompt": "Ideia principal. What is the main idea of the passage?",
+    "text_format": "html",
+    "options": {
+      "A": "Roman engineers avoided building harbors where Mediterranean waves were strong.",
+      "B": "Volcanic ash from the Bay of Naples can no longer be used in construction.",
+      "C": "Roman marine concrete endures because seawater reacts with its volcanic ash.",
+      "D": "Modern steel-reinforced concrete lasts longer in saltwater than ancient materials."
+    },
+    "answer": "C",
+    "explanation": "A passagem inteira explica por que o concreto marítimo romano dura milênios, destacando a <strong>reação entre cinza vulcânica e água do mar</strong> que fortalece a estrutura, como resume (C). A opção (D) inverte a comparação feita logo no primeiro parágrafo.",
+    "hint": null,
+    "trap_codes": [],
+    "tags": [],
+    "status": "rascunho",
+    "source": {
+      "kind": "migrado",
+      "file": "app/drills_data.py",
+      "ref": "MOD1_ACTION_DRILLS_C:mod1-cn3#C6.1",
+      "live_on_site": true,
+      "answer_letter": "origem",
+      "build_map": {
+        "A": "B",
+        "B": "C",
+        "C": "A",
+        "D": "D"
+      }
+    }
+  },
+  {
+    "id": "mod1-cn3.c6.2",
+    "section": "reading",
+    "task_type": "Read an Academic Passage",
+    "exam_format": true,
+    "format": "mcq",
+    "skill": null,
+    "cefr_min": "B1",
+    "cefr_max": "B2",
+    "stimulus": {
+      "kind": "text",
+      "format": "html",
+      "title": "Exercício C6: arqueologia (meta de 6 min)",
+      "content": "<p><strong>PASSAGE: Roman Concrete and Volcanic Ash</strong></p>\n<p>Modern steel-reinforced concrete is strong, yet harbor walls made with it often begin to crack and crumble after only a few decades in saltwater. By contrast, concrete piers and breakwaters built by Roman engineers more than two thousand years ago still stand intact along the Mediterranean coast, battered daily by waves.</p>\n<p>For a long time, researchers knew that the Roman recipe mixed lime and volcanic rock with a powdery volcanic ash called pozzolana, taken from the region around the Bay of Naples. Only recently, however, did mineralogists discover what happens inside this mixture over time. As seawater filters through tiny pores in the concrete, it dissolves part of the volcanic ash and reacts with the lime to grow rare, interlocking crystal plates.</p>\n<p>Instead of weakening the structure, seawater actually reinforces it: whenever a microscopic crack opens, new crystals form and seal the gap before it can spread. Material scientists are now studying this self-healing chemistry in hopes of designing modern marine concrete that lasts longer and requires fewer costly repairs.</p>",
+      "audio_ref": null
+    },
+    "group": "mod1-cn3",
+    "prompt": "Detalhe. According to paragraph 2, what happens when seawater enters the tiny pores of Roman concrete?",
+    "text_format": "html",
+    "options": {
+      "A": "It triggers a chemical reaction that forms interlocking crystals.",
+      "B": "It washes away the lime and leaves large empty spaces inside the rock.",
+      "C": "It rusts the internal steel bars that hold the piers together.",
+      "D": "It cools the volcanic ash so the mixture can dry more quickly."
+    },
+    "answer": "A",
+    "explanation": "O segundo parágrafo detalha que a água do mar dissolve parte da cinza e reage com a cal para produzir <strong>placas cristalinas entrelaçadas</strong> (<em>reacts with the lime to grow rare, interlocking crystal plates</em>), confirmando (A). A alternativa (C) confunde o concreto romano com o concreto moderno armado com aço.",
+    "hint": null,
+    "trap_codes": [],
+    "tags": [],
+    "status": "rascunho",
+    "source": {
+      "kind": "migrado",
+      "file": "app/drills_data.py",
+      "ref": "MOD1_ACTION_DRILLS_C:mod1-cn3#C6.2",
+      "live_on_site": true,
+      "answer_letter": "origem",
+      "build_map": {
+        "A": "D",
+        "B": "C",
+        "C": "A",
+        "D": "B"
+      }
+    }
+  },
+  {
+    "id": "mod1-cn3.c6.3",
+    "section": "reading",
+    "task_type": "Read an Academic Passage",
+    "exam_format": true,
+    "format": "mcq",
+    "skill": null,
+    "cefr_min": "B1",
+    "cefr_max": "B2",
+    "stimulus": {
+      "kind": "text",
+      "format": "html",
+      "title": "Exercício C6: arqueologia (meta de 6 min)",
+      "content": "<p><strong>PASSAGE: Roman Concrete and Volcanic Ash</strong></p>\n<p>Modern steel-reinforced concrete is strong, yet harbor walls made with it often begin to crack and crumble after only a few decades in saltwater. By contrast, concrete piers and breakwaters built by Roman engineers more than two thousand years ago still stand intact along the Mediterranean coast, battered daily by waves.</p>\n<p>For a long time, researchers knew that the Roman recipe mixed lime and volcanic rock with a powdery volcanic ash called pozzolana, taken from the region around the Bay of Naples. Only recently, however, did mineralogists discover what happens inside this mixture over time. As seawater filters through tiny pores in the concrete, it dissolves part of the volcanic ash and reacts with the lime to grow rare, interlocking crystal plates.</p>\n<p>Instead of weakening the structure, seawater actually reinforces it: whenever a microscopic crack opens, new crystals form and seal the gap before it can spread. Material scientists are now studying this self-healing chemistry in hopes of designing modern marine concrete that lasts longer and requires fewer costly repairs.</p>",
+      "audio_ref": null
+    },
+    "group": "mod1-cn3",
+    "prompt": "Inferência. It can be inferred from the passage that modern marine concrete differs from Roman concrete in that modern concrete:",
+    "text_format": "html",
+    "options": {
+      "A": "contains larger amounts of volcanic rock from southern Italy",
+      "B": "is gradually damaged by saltwater rather than strengthened by it",
+      "C": "takes more than two thousand years to harden completely",
+      "D": "can seal its own microscopic cracks without human repair"
+    },
+    "answer": "B",
+    "explanation": "Enquanto o concreto romano fica mais forte em contato com a água salgada, o primeiro parágrafo mostra que o concreto moderno sofre <strong>degradação gradual na água do mar</strong> (<em>crack and crumble after only a few decades in saltwater</em>), validando (B). A opção (D) descreve uma qualidade do concreto romano, e não do moderno.",
+    "hint": null,
+    "trap_codes": [],
+    "tags": [],
+    "status": "rascunho",
+    "source": {
+      "kind": "migrado",
+      "file": "app/drills_data.py",
+      "ref": "MOD1_ACTION_DRILLS_C:mod1-cn3#C6.3",
+      "live_on_site": true,
+      "answer_letter": "origem",
+      "build_map": {
+        "A": "C",
+        "B": "A",
+        "C": "D",
+        "D": "B"
+      }
+    }
+  },
+  {
+    "id": "mod1-cn3.c6.4",
+    "section": "reading",
+    "task_type": "Read an Academic Passage",
+    "exam_format": true,
+    "format": "mcq",
+    "skill": null,
+    "cefr_min": "B1",
+    "cefr_max": "B2",
+    "stimulus": {
+      "kind": "text",
+      "format": "html",
+      "title": "Exercício C6: arqueologia (meta de 6 min)",
+      "content": "<p><strong>PASSAGE: Roman Concrete and Volcanic Ash</strong></p>\n<p>Modern steel-reinforced concrete is strong, yet harbor walls made with it often begin to crack and crumble after only a few decades in saltwater. By contrast, concrete piers and breakwaters built by Roman engineers more than two thousand years ago still stand intact along the Mediterranean coast, battered daily by waves.</p>\n<p>For a long time, researchers knew that the Roman recipe mixed lime and volcanic rock with a powdery volcanic ash called pozzolana, taken from the region around the Bay of Naples. Only recently, however, did mineralogists discover what happens inside this mixture over time. As seawater filters through tiny pores in the concrete, it dissolves part of the volcanic ash and reacts with the lime to grow rare, interlocking crystal plates.</p>\n<p>Instead of weakening the structure, seawater actually reinforces it: whenever a microscopic crack opens, new crystals form and seal the gap before it can spread. Material scientists are now studying this self-healing chemistry in hopes of designing modern marine concrete that lasts longer and requires fewer costly repairs.</p>",
+      "audio_ref": null
+    },
+    "group": "mod1-cn3",
+    "prompt": "Propósito retórico. Why does the author mention in paragraph 3 that new crystals seal microscopic cracks?",
+    "text_format": "html",
+    "options": {
+      "A": "To explain why Roman harbors were more expensive to build than modern ones",
+      "B": "To show that seawater prevents volcanic ash from mixing with lime",
+      "C": "To argue that ancient structures still need frequent repairs by engineers",
+      "D": "To explain how the self-healing process keeps the concrete from breaking apart"
+    },
+    "answer": "D",
+    "explanation": "O autor descreve o fechamento das fendas pelos cristais para explicar na prática o <strong>mecanismo de autorreparo do concreto romano</strong> (<em>seal the gap before it can spread</em>), como aponta (D). A alternativa (C) contradiz o final do parágrafo, que busca justamente reduzir reparos caros.",
+    "hint": null,
+    "trap_codes": [],
+    "tags": [],
+    "status": "rascunho",
+    "source": {
+      "kind": "migrado",
+      "file": "app/drills_data.py",
+      "ref": "MOD1_ACTION_DRILLS_C:mod1-cn3#C6.4",
+      "live_on_site": true,
+      "answer_letter": "origem",
+      "build_map": {
+        "A": "D",
+        "B": "A",
+        "C": "C",
+        "D": "B"
+      }
+    }
+  },
+  {
+    "id": "mod1-cn3.c6.5",
+    "section": "reading",
+    "task_type": "Read an Academic Passage",
+    "exam_format": true,
+    "format": "mcq",
+    "skill": null,
+    "cefr_min": "B1",
+    "cefr_max": "B2",
+    "stimulus": {
+      "kind": "text",
+      "format": "html",
+      "title": "Exercício C6: arqueologia (meta de 6 min)",
+      "content": "<p><strong>PASSAGE: Roman Concrete and Volcanic Ash</strong></p>\n<p>Modern steel-reinforced concrete is strong, yet harbor walls made with it often begin to crack and crumble after only a few decades in saltwater. By contrast, concrete piers and breakwaters built by Roman engineers more than two thousand years ago still stand intact along the Mediterranean coast, battered daily by waves.</p>\n<p>For a long time, researchers knew that the Roman recipe mixed lime and volcanic rock with a powdery volcanic ash called pozzolana, taken from the region around the Bay of Naples. Only recently, however, did mineralogists discover what happens inside this mixture over time. As seawater filters through tiny pores in the concrete, it dissolves part of the volcanic ash and reacts with the lime to grow rare, interlocking crystal plates.</p>\n<p>Instead of weakening the structure, seawater actually reinforces it: whenever a microscopic crack opens, new crystals form and seal the gap before it can spread. Material scientists are now studying this self-healing chemistry in hopes of designing modern marine concrete that lasts longer and requires fewer costly repairs.</p>",
+      "audio_ref": null
+    },
+    "group": "mod1-cn3",
+    "prompt": "Vocabulário em contexto. The word \"intact\" in paragraph 1 is closest in meaning to:",
+    "text_format": "html",
+    "options": {
+      "A": "underwater",
+      "B": "unfinished",
+      "C": "undamaged",
+      "D": "unnoticed"
+    },
+    "answer": "C",
+    "explanation": "Em contraste com os muros modernos que racham e se desfazem, os píeres romanos permanecem <em>intact</em>, isto é, <strong>intactos e sem danos</strong> (<em>undamaged</em>), tornando (C) a resposta certa. A opção (A) é tentadora pelo contexto marítimo, mas não traduz o sentido de conservação.",
+    "hint": null,
+    "trap_codes": [],
+    "tags": [],
+    "status": "rascunho",
+    "source": {
+      "kind": "migrado",
+      "file": "app/drills_data.py",
+      "ref": "MOD1_ACTION_DRILLS_C:mod1-cn3#C6.5",
+      "live_on_site": true,
+      "answer_letter": "origem",
+      "build_map": {
+        "A": "A",
+        "B": "B",
+        "C": "C",
+        "D": "D"
+      }
+    }
+  },
+  {
+    "id": "mod1-cn4.c7.1",
+    "section": "reading",
+    "task_type": "Read an Academic Passage",
+    "exam_format": true,
+    "format": "mcq",
+    "skill": null,
+    "cefr_min": "B1",
+    "cefr_max": "B2",
+    "stimulus": {
+      "kind": "text",
+      "format": "html",
+      "title": "Exercício C7: psicologia cognitiva (meta de 6 min)",
+      "content": "<p><strong>PASSAGE: The Testing Effect in Memory Retention</strong></p>\n<p>When preparing for an exam, most students rely on rereading their notes or textbook chapters until the material feels familiar. Although this habit builds confidence in the short term, cognitive psychologists have repeatedly shown that passive review is one of the least effective ways to store information for the long run.</p>\n<p>A far stronger strategy is retrieval practice, often called the \"testing effect.\" In classic experiments, students who read a passage once and then practiced recalling its key points from memory without looking at the text scored much higher on a test a week later than students who spent the same amount of time rereading the passage four times.</p>\n<p>Researchers explain that the act of pulling a memory out of storage alters the memory trace itself, strengthening the neural pathways connected to that knowledge. Even when a student struggles or fails to recall an answer at first, the effort makes the subsequent correction stick more firmly. Because rereading feels smooth and effortless, learners often mistake temporary fluency for lasting mastery.</p>",
+      "audio_ref": null
+    },
+    "group": "mod1-cn4",
+    "prompt": "Ideia principal. The main idea of the passage is that:",
+    "text_format": "html",
+    "options": {
+      "A": "students should read a textbook chapter at least four times before taking any practice test",
+      "B": "feeling confident while studying is the most reliable sign of long-term memory retention",
+      "C": "written exams should be replaced with classroom discussions because tests cause anxiety",
+      "D": "actively recalling information from memory produces stronger long-term learning than rereading"
+    },
+    "answer": "D",
+    "explanation": "A tese central contrasta a revisão passiva com a prática de recordação e mostra que <strong>recuperar a informação na memória gera aprendizado duradouro</strong>, validando (D). As opções (A) e (B) defendem justamente a releitura passiva que o estudo refuta.",
+    "hint": null,
+    "trap_codes": [],
+    "tags": [],
+    "status": "rascunho",
+    "source": {
+      "kind": "migrado",
+      "file": "app/drills_data.py",
+      "ref": "MOD1_ACTION_DRILLS_C:mod1-cn4#C7.1",
+      "live_on_site": true,
+      "answer_letter": "origem",
+      "build_map": {
+        "A": "A",
+        "B": "D",
+        "C": "B",
+        "D": "C"
+      }
+    }
+  },
+  {
+    "id": "mod1-cn4.c7.2",
+    "section": "reading",
+    "task_type": "Read an Academic Passage",
+    "exam_format": true,
+    "format": "mcq",
+    "skill": null,
+    "cefr_min": "B1",
+    "cefr_max": "B2",
+    "stimulus": {
+      "kind": "text",
+      "format": "html",
+      "title": "Exercício C7: psicologia cognitiva (meta de 6 min)",
+      "content": "<p><strong>PASSAGE: The Testing Effect in Memory Retention</strong></p>\n<p>When preparing for an exam, most students rely on rereading their notes or textbook chapters until the material feels familiar. Although this habit builds confidence in the short term, cognitive psychologists have repeatedly shown that passive review is one of the least effective ways to store information for the long run.</p>\n<p>A far stronger strategy is retrieval practice, often called the \"testing effect.\" In classic experiments, students who read a passage once and then practiced recalling its key points from memory without looking at the text scored much higher on a test a week later than students who spent the same amount of time rereading the passage four times.</p>\n<p>Researchers explain that the act of pulling a memory out of storage alters the memory trace itself, strengthening the neural pathways connected to that knowledge. Even when a student struggles or fails to recall an answer at first, the effort makes the subsequent correction stick more firmly. Because rereading feels smooth and effortless, learners often mistake temporary fluency for lasting mastery.</p>",
+      "audio_ref": null
+    },
+    "group": "mod1-cn4",
+    "prompt": "Detalhe. In the experiments described in paragraph 2, which group performed better on the test given a week later?",
+    "text_format": "html",
+    "options": {
+      "A": "Students who reread the passage four times without taking notes",
+      "B": "Students who read the passage once and practiced recalling it from memory",
+      "C": "Students who waited until the morning of the test to read the passage",
+      "D": "Students who copied the entire passage by hand while looking at the book"
+    },
+    "answer": "B",
+    "explanation": "O segundo parágrafo relata que os alunos que leram uma vez e treinaram lembrar sem olhar o texto tiveram <strong>nota muito maior uma semana depois</strong> (<em>scored much higher on a test a week later</em>), confirmando (B). A alternativa (A) cita o grupo que teve desempenho inferior no experimento.",
+    "hint": null,
+    "trap_codes": [],
+    "tags": [],
+    "status": "rascunho",
+    "source": {
+      "kind": "migrado",
+      "file": "app/drills_data.py",
+      "ref": "MOD1_ACTION_DRILLS_C:mod1-cn4#C7.2",
+      "live_on_site": true,
+      "answer_letter": "origem",
+      "build_map": {
+        "A": "C",
+        "B": "A",
+        "C": "D",
+        "D": "B"
+      }
+    }
+  },
+  {
+    "id": "mod1-cn4.c7.3",
+    "section": "reading",
+    "task_type": "Read an Academic Passage",
+    "exam_format": true,
+    "format": "mcq",
+    "skill": null,
+    "cefr_min": "B1",
+    "cefr_max": "B2",
+    "stimulus": {
+      "kind": "text",
+      "format": "html",
+      "title": "Exercício C7: psicologia cognitiva (meta de 6 min)",
+      "content": "<p><strong>PASSAGE: The Testing Effect in Memory Retention</strong></p>\n<p>When preparing for an exam, most students rely on rereading their notes or textbook chapters until the material feels familiar. Although this habit builds confidence in the short term, cognitive psychologists have repeatedly shown that passive review is one of the least effective ways to store information for the long run.</p>\n<p>A far stronger strategy is retrieval practice, often called the \"testing effect.\" In classic experiments, students who read a passage once and then practiced recalling its key points from memory without looking at the text scored much higher on a test a week later than students who spent the same amount of time rereading the passage four times.</p>\n<p>Researchers explain that the act of pulling a memory out of storage alters the memory trace itself, strengthening the neural pathways connected to that knowledge. Even when a student struggles or fails to recall an answer at first, the effort makes the subsequent correction stick more firmly. Because rereading feels smooth and effortless, learners often mistake temporary fluency for lasting mastery.</p>",
+      "audio_ref": null
+    },
+    "group": "mod1-cn4",
+    "prompt": "Inferência. What can be inferred from paragraph 3 about a student who answers a practice question incorrectly before checking the right answer?",
+    "text_format": "html",
+    "options": {
+      "A": "The attempt to remember still helps the student retain the correct answer afterward.",
+      "B": "The mistake permanently weakens the neural pathways connected to that topic.",
+      "C": "The student would have learned more by rereading the chapter instead of guessing.",
+      "D": "The student will inevitably repeat the same error on the final exam a week later."
+    },
+    "answer": "A",
+    "explanation": "O terceiro parágrafo afirma que, mesmo quando o aluno falha ao tentar lembrar de início, o esforço faz a correção seguinte fixar melhor (<em>the effort makes the subsequent correction stick more firmly</em>), o que sustenta a <strong>retenção fortalecida após a tentativa</strong> em (A). A opção (B) diz o oposto do que ocorre nas vias neurais.",
+    "hint": null,
+    "trap_codes": [],
+    "tags": [],
+    "status": "rascunho",
+    "source": {
+      "kind": "migrado",
+      "file": "app/drills_data.py",
+      "ref": "MOD1_ACTION_DRILLS_C:mod1-cn4#C7.3",
+      "live_on_site": true,
+      "answer_letter": "origem",
+      "build_map": {
+        "A": "B",
+        "B": "D",
+        "C": "C",
+        "D": "A"
+      }
+    }
+  },
+  {
+    "id": "mod1-cn4.c7.4",
+    "section": "reading",
+    "task_type": "Read an Academic Passage",
+    "exam_format": true,
+    "format": "mcq",
+    "skill": null,
+    "cefr_min": "B1",
+    "cefr_max": "B2",
+    "stimulus": {
+      "kind": "text",
+      "format": "html",
+      "title": "Exercício C7: psicologia cognitiva (meta de 6 min)",
+      "content": "<p><strong>PASSAGE: The Testing Effect in Memory Retention</strong></p>\n<p>When preparing for an exam, most students rely on rereading their notes or textbook chapters until the material feels familiar. Although this habit builds confidence in the short term, cognitive psychologists have repeatedly shown that passive review is one of the least effective ways to store information for the long run.</p>\n<p>A far stronger strategy is retrieval practice, often called the \"testing effect.\" In classic experiments, students who read a passage once and then practiced recalling its key points from memory without looking at the text scored much higher on a test a week later than students who spent the same amount of time rereading the passage four times.</p>\n<p>Researchers explain that the act of pulling a memory out of storage alters the memory trace itself, strengthening the neural pathways connected to that knowledge. Even when a student struggles or fails to recall an answer at first, the effort makes the subsequent correction stick more firmly. Because rereading feels smooth and effortless, learners often mistake temporary fluency for lasting mastery.</p>",
+      "audio_ref": null
+    },
+    "group": "mod1-cn4",
+    "prompt": "Propósito retórico. Why does the author state that \"rereading feels smooth and effortless\" in paragraph 3?",
+    "text_format": "html",
+    "options": {
+      "A": "To recommend rereading for subjects that require very little memorization",
+      "B": "To prove that textbook authors now write in a simpler style than in the past",
+      "C": "To explain why students often believe rereading is more effective than it really is",
+      "D": "To show that retrieval practice takes less mental energy than passive review"
+    },
+    "answer": "C",
+    "explanation": "A frase explica a ilusão de competência: como reler parece fácil e fluido, os estudantes caem na armadilha de <strong>confundir familiaridade passageira com domínio real</strong> (<em>mistake temporary fluency for lasting mastery</em>), como resume (C). A alternativa (D) inverte qual método exige menos esforço.",
+    "hint": null,
+    "trap_codes": [],
+    "tags": [],
+    "status": "rascunho",
+    "source": {
+      "kind": "migrado",
+      "file": "app/drills_data.py",
+      "ref": "MOD1_ACTION_DRILLS_C:mod1-cn4#C7.4",
+      "live_on_site": true,
+      "answer_letter": "origem",
+      "build_map": {
+        "A": "C",
+        "B": "B",
+        "C": "A",
+        "D": "D"
+      }
+    }
+  },
+  {
+    "id": "mod1-cn4.c7.5",
+    "section": "reading",
+    "task_type": "Read an Academic Passage",
+    "exam_format": true,
+    "format": "mcq",
+    "skill": null,
+    "cefr_min": "B1",
+    "cefr_max": "B2",
+    "stimulus": {
+      "kind": "text",
+      "format": "html",
+      "title": "Exercício C7: psicologia cognitiva (meta de 6 min)",
+      "content": "<p><strong>PASSAGE: The Testing Effect in Memory Retention</strong></p>\n<p>When preparing for an exam, most students rely on rereading their notes or textbook chapters until the material feels familiar. Although this habit builds confidence in the short term, cognitive psychologists have repeatedly shown that passive review is one of the least effective ways to store information for the long run.</p>\n<p>A far stronger strategy is retrieval practice, often called the \"testing effect.\" In classic experiments, students who read a passage once and then practiced recalling its key points from memory without looking at the text scored much higher on a test a week later than students who spent the same amount of time rereading the passage four times.</p>\n<p>Researchers explain that the act of pulling a memory out of storage alters the memory trace itself, strengthening the neural pathways connected to that knowledge. Even when a student struggles or fails to recall an answer at first, the effort makes the subsequent correction stick more firmly. Because rereading feels smooth and effortless, learners often mistake temporary fluency for lasting mastery.</p>",
+      "audio_ref": null
+    },
+    "group": "mod1-cn4",
+    "prompt": "Vocabulário em contexto. The word \"subsequent\" in paragraph 3 is closest in meaning to:",
+    "text_format": "html",
+    "options": {
+      "A": "previous",
+      "B": "following",
+      "C": "partial",
+      "D": "sudden"
+    },
+    "answer": "B",
+    "explanation": "Depois que o aluno tenta lembrar e erra, a correção <em>subsequent</em> é a que vem em seguida, ou seja, a <strong>correção posterior ou seguinte</strong> (<em>following</em>), confirmando (B). A opção (A) significa anterior, invertendo a ordem dos fatos.",
+    "hint": null,
+    "trap_codes": [],
+    "tags": [],
+    "status": "rascunho",
+    "source": {
+      "kind": "migrado",
+      "file": "app/drills_data.py",
+      "ref": "MOD1_ACTION_DRILLS_C:mod1-cn4#C7.5",
+      "live_on_site": true,
+      "answer_letter": "origem",
+      "build_map": {
+        "A": "B",
+        "B": "D",
+        "C": "A",
+        "D": "C"
+      }
+    }
+  },
+  {
+    "id": "mod1-cn5.c8.1",
+    "section": "reading",
+    "task_type": "Read an Academic Passage",
+    "exam_format": true,
+    "format": "mcq",
+    "skill": null,
+    "cefr_min": "B2",
+    "cefr_max": "C1",
+    "stimulus": {
+      "kind": "text",
+      "format": "html",
+      "title": "Exercício C8: astronomia (meta de 6 min)",
+      "content": "<p><strong>PASSAGE: Subsurface Oceans on Icy Moons</strong></p>\n<p>For decades, astronomers searching for liquid water beyond Earth focused on the \"habitable zone,\" the orbital band around a star where a planet's surface is warm enough for liquid water but not so hot that it boils away. By that standard, the outer solar system seemed far too cold to host liquid oceans, since sunlight at the distance of Jupiter and Saturn is a tiny fraction of what reaches Earth.</p>\n<p>Space probe missions forced scientists to revise that view. Beneath the fractured ice crusts of moons such as Jupiter's Europa and Saturn's Enceladus lie global oceans of liquid saltwater. The heat that keeps these oceans from freezing solid does not come from the Sun, but from tidal flexing: as a moon travels along a slightly oval orbit, the immense gravitational pull of its giant planet stretches and compresses the moon's interior, generating friction and warmth.</p>\n<p>At Enceladus, the Cassini spacecraft even flew through plumes of water vapor erupting from cracks near the south pole, detecting salts, organic molecules, and molecular hydrogen, a gas that on Earth forms around deep-sea hydrothermal vents. Such findings suggest that habitable environments may not require a warm planetary surface at all, greatly expanding the number of worlds where microbial life might arise.</p>",
+      "audio_ref": null
+    },
+    "group": "mod1-cn5",
+    "prompt": "Ideia principal. What is the main idea of the passage?",
+    "text_format": "html",
+    "options": {
+      "A": "Tidal heating maintains liquid oceans beneath the ice of outer-planet moons, broadening where scientists look for habitable worlds.",
+      "B": "The Sun has gradually grown warmer, allowing frozen moons around Jupiter and Saturn to melt into surface oceans.",
+      "C": "The Cassini spacecraft proved that Enceladus is the only body in the solar system with deep-sea hydrothermal vents.",
+      "D": "Astronomers have abandoned the search for water on planets outside our solar system to focus solely on Europa."
+    },
+    "answer": "A",
+    "explanation": "O texto mostra como o aquecimento de maré mantém oceanos líquidos sob o gelo de luas distantes e provoca a <strong>ampliação da busca por ambientes habitáveis</strong>, exatamente como em (A). A opção (B) atribui o calor ao Sol, quando o segundo parágrafo diz <em>does not come from the Sun</em>.",
+    "hint": null,
+    "trap_codes": [],
+    "tags": [],
+    "status": "rascunho",
+    "source": {
+      "kind": "migrado",
+      "file": "app/drills_data.py",
+      "ref": "MOD1_ACTION_DRILLS_C:mod1-cn5#C8.1",
+      "live_on_site": true,
+      "answer_letter": "origem",
+      "build_map": {
+        "A": "B",
+        "B": "A",
+        "C": "C",
+        "D": "D"
+      }
+    }
+  },
+  {
+    "id": "mod1-cn5.c8.2",
+    "section": "reading",
+    "task_type": "Read an Academic Passage",
+    "exam_format": true,
+    "format": "mcq",
+    "skill": null,
+    "cefr_min": "B2",
+    "cefr_max": "C1",
+    "stimulus": {
+      "kind": "text",
+      "format": "html",
+      "title": "Exercício C8: astronomia (meta de 6 min)",
+      "content": "<p><strong>PASSAGE: Subsurface Oceans on Icy Moons</strong></p>\n<p>For decades, astronomers searching for liquid water beyond Earth focused on the \"habitable zone,\" the orbital band around a star where a planet's surface is warm enough for liquid water but not so hot that it boils away. By that standard, the outer solar system seemed far too cold to host liquid oceans, since sunlight at the distance of Jupiter and Saturn is a tiny fraction of what reaches Earth.</p>\n<p>Space probe missions forced scientists to revise that view. Beneath the fractured ice crusts of moons such as Jupiter's Europa and Saturn's Enceladus lie global oceans of liquid saltwater. The heat that keeps these oceans from freezing solid does not come from the Sun, but from tidal flexing: as a moon travels along a slightly oval orbit, the immense gravitational pull of its giant planet stretches and compresses the moon's interior, generating friction and warmth.</p>\n<p>At Enceladus, the Cassini spacecraft even flew through plumes of water vapor erupting from cracks near the south pole, detecting salts, organic molecules, and molecular hydrogen, a gas that on Earth forms around deep-sea hydrothermal vents. Such findings suggest that habitable environments may not require a warm planetary surface at all, greatly expanding the number of worlds where microbial life might arise.</p>",
+      "audio_ref": null
+    },
+    "group": "mod1-cn5",
+    "prompt": "Detalhe. According to paragraph 2, what prevents the subsurface oceans of Europa and Enceladus from freezing?",
+    "text_format": "html",
+    "options": {
+      "A": "Thick clouds of water vapor that trap solar heat above the ice crust",
+      "B": "Radioactive metals floating near the surface of the saltwater oceans",
+      "C": "Warm ocean currents flowing from the equator toward the south pole",
+      "D": "Internal friction caused by the gravitational pull of their giant planets"
+    },
+    "answer": "D",
+    "explanation": "O segundo parágrafo explica que a gravidade do planeta gigante estica e comprime o interior da lua em órbita oval, gerando <strong>atrito interno e calor por flexão de maré</strong> (<em>stretches and compresses the moon's interior, generating friction and warmth</em>), confirmando (D). A alternativa (A) contradiz a ausência de calor solar suficiente.",
+    "hint": null,
+    "trap_codes": [],
+    "tags": [],
+    "status": "rascunho",
+    "source": {
+      "kind": "migrado",
+      "file": "app/drills_data.py",
+      "ref": "MOD1_ACTION_DRILLS_C:mod1-cn5#C8.2",
+      "live_on_site": true,
+      "answer_letter": "origem",
+      "build_map": {
+        "A": "A",
+        "B": "B",
+        "C": "D",
+        "D": "C"
+      }
+    }
+  },
+  {
+    "id": "mod1-cn5.c8.3",
+    "section": "reading",
+    "task_type": "Read an Academic Passage",
+    "exam_format": true,
+    "format": "mcq",
+    "skill": null,
+    "cefr_min": "B2",
+    "cefr_max": "C1",
+    "stimulus": {
+      "kind": "text",
+      "format": "html",
+      "title": "Exercício C8: astronomia (meta de 6 min)",
+      "content": "<p><strong>PASSAGE: Subsurface Oceans on Icy Moons</strong></p>\n<p>For decades, astronomers searching for liquid water beyond Earth focused on the \"habitable zone,\" the orbital band around a star where a planet's surface is warm enough for liquid water but not so hot that it boils away. By that standard, the outer solar system seemed far too cold to host liquid oceans, since sunlight at the distance of Jupiter and Saturn is a tiny fraction of what reaches Earth.</p>\n<p>Space probe missions forced scientists to revise that view. Beneath the fractured ice crusts of moons such as Jupiter's Europa and Saturn's Enceladus lie global oceans of liquid saltwater. The heat that keeps these oceans from freezing solid does not come from the Sun, but from tidal flexing: as a moon travels along a slightly oval orbit, the immense gravitational pull of its giant planet stretches and compresses the moon's interior, generating friction and warmth.</p>\n<p>At Enceladus, the Cassini spacecraft even flew through plumes of water vapor erupting from cracks near the south pole, detecting salts, organic molecules, and molecular hydrogen, a gas that on Earth forms around deep-sea hydrothermal vents. Such findings suggest that habitable environments may not require a warm planetary surface at all, greatly expanding the number of worlds where microbial life might arise.</p>",
+      "audio_ref": null
+    },
+    "group": "mod1-cn5",
+    "prompt": "Detalhe negativo. Which of the following was NOT detected by the Cassini spacecraft in the plumes of Enceladus?",
+    "text_format": "html",
+    "options": {
+      "A": "Salts from the subsurface water",
+      "B": "Organic molecules in the vapor",
+      "C": "Living microbial cells from the ocean floor",
+      "D": "Molecular hydrogen gas"
+    },
+    "answer": "C",
+    "explanation": "No terceiro parágrafo, a sonda Cassini detectou sais (A), moléculas orgânicas (B) e hidrogênio molecular (D), mas não encontrou <strong>células microbianas vivas</strong>, o que marca (C). Repare que o texto fala apenas que a vida microbiana <em>might arise</em> (poderia surgir) nesses mundos.",
+    "hint": null,
+    "trap_codes": [],
+    "tags": [],
+    "status": "rascunho",
+    "source": {
+      "kind": "migrado",
+      "file": "app/drills_data.py",
+      "ref": "MOD1_ACTION_DRILLS_C:mod1-cn5#C8.3",
+      "live_on_site": true,
+      "answer_letter": "origem",
+      "build_map": {
+        "A": "D",
+        "B": "C",
+        "C": "A",
+        "D": "B"
+      }
+    }
+  },
+  {
+    "id": "mod1-cn5.c8.4",
+    "section": "reading",
+    "task_type": "Read an Academic Passage",
+    "exam_format": true,
+    "format": "mcq",
+    "skill": null,
+    "cefr_min": "B2",
+    "cefr_max": "C1",
+    "stimulus": {
+      "kind": "text",
+      "format": "html",
+      "title": "Exercício C8: astronomia (meta de 6 min)",
+      "content": "<p><strong>PASSAGE: Subsurface Oceans on Icy Moons</strong></p>\n<p>For decades, astronomers searching for liquid water beyond Earth focused on the \"habitable zone,\" the orbital band around a star where a planet's surface is warm enough for liquid water but not so hot that it boils away. By that standard, the outer solar system seemed far too cold to host liquid oceans, since sunlight at the distance of Jupiter and Saturn is a tiny fraction of what reaches Earth.</p>\n<p>Space probe missions forced scientists to revise that view. Beneath the fractured ice crusts of moons such as Jupiter's Europa and Saturn's Enceladus lie global oceans of liquid saltwater. The heat that keeps these oceans from freezing solid does not come from the Sun, but from tidal flexing: as a moon travels along a slightly oval orbit, the immense gravitational pull of its giant planet stretches and compresses the moon's interior, generating friction and warmth.</p>\n<p>At Enceladus, the Cassini spacecraft even flew through plumes of water vapor erupting from cracks near the south pole, detecting salts, organic molecules, and molecular hydrogen, a gas that on Earth forms around deep-sea hydrothermal vents. Such findings suggest that habitable environments may not require a warm planetary surface at all, greatly expanding the number of worlds where microbial life might arise.</p>",
+      "audio_ref": null
+    },
+    "group": "mod1-cn5",
+    "prompt": "Propósito retórico. Why does the author discuss the traditional \"habitable zone\" in paragraph 1?",
+    "text_format": "html",
+    "options": {
+      "A": "To explain why Jupiter and Saturn receive more sunlight than Earth",
+      "B": "To present an older assumption that later discoveries called into question",
+      "C": "To argue that liquid water cannot exist anywhere inside our solar system",
+      "D": "To show how astronomers calculate the exact distance between a star and its moons"
+    },
+    "answer": "B",
+    "explanation": "O primeiro parágrafo apresenta a visão clássica da zona habitável para criar um contraste com o segundo parágrafo, servindo para <strong>introduzir uma premissa antiga superada pelas sondas espaciais</strong> (<em>Space probe missions forced scientists to revise that view</em>), como diz (B). A opção (A) inverte a quantidade de luz solar citada.",
+    "hint": null,
+    "trap_codes": [],
+    "tags": [],
+    "status": "rascunho",
+    "source": {
+      "kind": "migrado",
+      "file": "app/drills_data.py",
+      "ref": "MOD1_ACTION_DRILLS_C:mod1-cn5#C8.4",
+      "live_on_site": true,
+      "answer_letter": "origem",
+      "build_map": {
+        "A": "B",
+        "B": "D",
+        "C": "C",
+        "D": "A"
+      }
+    }
+  },
+  {
+    "id": "mod1-cn5.c8.5",
+    "section": "reading",
+    "task_type": "Read an Academic Passage",
+    "exam_format": true,
+    "format": "mcq",
+    "skill": null,
+    "cefr_min": "B2",
+    "cefr_max": "C1",
+    "stimulus": {
+      "kind": "text",
+      "format": "html",
+      "title": "Exercício C8: astronomia (meta de 6 min)",
+      "content": "<p><strong>PASSAGE: Subsurface Oceans on Icy Moons</strong></p>\n<p>For decades, astronomers searching for liquid water beyond Earth focused on the \"habitable zone,\" the orbital band around a star where a planet's surface is warm enough for liquid water but not so hot that it boils away. By that standard, the outer solar system seemed far too cold to host liquid oceans, since sunlight at the distance of Jupiter and Saturn is a tiny fraction of what reaches Earth.</p>\n<p>Space probe missions forced scientists to revise that view. Beneath the fractured ice crusts of moons such as Jupiter's Europa and Saturn's Enceladus lie global oceans of liquid saltwater. The heat that keeps these oceans from freezing solid does not come from the Sun, but from tidal flexing: as a moon travels along a slightly oval orbit, the immense gravitational pull of its giant planet stretches and compresses the moon's interior, generating friction and warmth.</p>\n<p>At Enceladus, the Cassini spacecraft even flew through plumes of water vapor erupting from cracks near the south pole, detecting salts, organic molecules, and molecular hydrogen, a gas that on Earth forms around deep-sea hydrothermal vents. Such findings suggest that habitable environments may not require a warm planetary surface at all, greatly expanding the number of worlds where microbial life might arise.</p>",
+      "audio_ref": null
+    },
+    "group": "mod1-cn5",
+    "prompt": "Vocabulário em contexto. The word \"revise\" in paragraph 2 is closest in meaning to:",
+    "text_format": "html",
+    "options": {
+      "A": "defend",
+      "B": "ignore",
+      "C": "confirm",
+      "D": "modify"
+    },
+    "answer": "D",
+    "explanation": "Diante da descoberta de oceanos subterrâneos, os cientistas tiveram de <em>revise that view</em>, isto é, <strong>modificar ou ajustar aquela visão anterior</strong> (<em>modify</em>), validando (D). Cuidado com (A) e (C), que sugerem manter a ideia antiga sem mudança.",
+    "hint": null,
+    "trap_codes": [],
+    "tags": [],
+    "status": "rascunho",
+    "source": {
+      "kind": "migrado",
+      "file": "app/drills_data.py",
+      "ref": "MOD1_ACTION_DRILLS_C:mod1-cn5#C8.5",
+      "live_on_site": true,
+      "answer_letter": "origem",
+      "build_map": {
+        "A": "C",
+        "B": "D",
+        "C": "B",
+        "D": "A"
+      }
+    }
+  },
+  {
+    "id": "mod1-cn6.c9.1",
+    "section": "reading",
+    "task_type": "Read an Academic Passage",
+    "exam_format": true,
+    "format": "mcq",
+    "skill": null,
+    "cefr_min": "C1",
+    "cefr_max": "C1",
+    "stimulus": {
+      "kind": "text",
+      "format": "html",
+      "title": "Exercício C9: economia e energia (meta de 6 min)",
+      "content": "<p><strong>PASSAGE: The Jevons Paradox and Energy Efficiency</strong></p>\n<p>Intuitively, technological improvements that make machines more fuel-efficient should reduce overall fuel consumption. In 1865, however, the English economist William Stanley Jevons observed that the introduction of James Watt's far more efficient steam engine had produced the opposite result: Britain's total coal consumption soared rather than declined.</p>\n<p>Jevons argued that efficiency lowers the effective cost of using a resource. Because Watt's engine burned much less coal per unit of work, operating steam power became profitable in industries and factories where it had previously been too expensive. As steam engines spread into textiles, mining, and railways, the surge in new uses more than offset the fuel saved by each individual machine, a rebound effect now known as the Jevons paradox.</p>\n<p>Contemporary energy economists point out that the paradox does not occur with identical force in every sector. When demand for a service is already largely saturated, such as home refrigeration in wealthy countries, efficiency gains genuinely cut total electricity use. Where lower operating costs unlock substantial new demand, however, engineers and policymakers cannot rely on efficiency alone to curb resource depletion, and must pair technical advances with conservation policies or pricing limits.</p>",
+      "audio_ref": null
+    },
+    "group": "mod1-cn6",
+    "prompt": "Ideia principal. The passage is mainly about:",
+    "text_format": "html",
+    "options": {
+      "A": "how nineteenth-century British railways replaced coal with cheaper fuels",
+      "B": "why modern engineers have stopped improving household appliances",
+      "C": "how greater energy efficiency can raise total fuel use by making a resource cheaper",
+      "D": "why Jevons opposed the use of Watt's steam engine in textile mills"
+    },
+    "answer": "C",
+    "explanation": "A passagem apresenta o paradoxo de Jevons, explicando como <strong>ganhos de eficiência podem elevar o consumo total de energia</strong> ao baratear seu uso e quando esse efeito ocorre hoje, como sintetiza (C). A opção (A) distorce o texto, pois as ferrovias aumentaram o uso de carvão.",
+    "hint": null,
+    "trap_codes": [],
+    "tags": [],
+    "status": "rascunho",
+    "source": {
+      "kind": "migrado",
+      "file": "app/drills_data.py",
+      "ref": "MOD1_ACTION_DRILLS_C:mod1-cn6#C9.1",
+      "live_on_site": true,
+      "answer_letter": "origem",
+      "build_map": {
+        "A": "D",
+        "B": "A",
+        "C": "B",
+        "D": "C"
+      }
+    }
+  },
+  {
+    "id": "mod1-cn6.c9.2",
+    "section": "reading",
+    "task_type": "Read an Academic Passage",
+    "exam_format": true,
+    "format": "mcq",
+    "skill": null,
+    "cefr_min": "C1",
+    "cefr_max": "C1",
+    "stimulus": {
+      "kind": "text",
+      "format": "html",
+      "title": "Exercício C9: economia e energia (meta de 6 min)",
+      "content": "<p><strong>PASSAGE: The Jevons Paradox and Energy Efficiency</strong></p>\n<p>Intuitively, technological improvements that make machines more fuel-efficient should reduce overall fuel consumption. In 1865, however, the English economist William Stanley Jevons observed that the introduction of James Watt's far more efficient steam engine had produced the opposite result: Britain's total coal consumption soared rather than declined.</p>\n<p>Jevons argued that efficiency lowers the effective cost of using a resource. Because Watt's engine burned much less coal per unit of work, operating steam power became profitable in industries and factories where it had previously been too expensive. As steam engines spread into textiles, mining, and railways, the surge in new uses more than offset the fuel saved by each individual machine, a rebound effect now known as the Jevons paradox.</p>\n<p>Contemporary energy economists point out that the paradox does not occur with identical force in every sector. When demand for a service is already largely saturated, such as home refrigeration in wealthy countries, efficiency gains genuinely cut total electricity use. Where lower operating costs unlock substantial new demand, however, engineers and policymakers cannot rely on efficiency alone to curb resource depletion, and must pair technical advances with conservation policies or pricing limits.</p>",
+      "audio_ref": null
+    },
+    "group": "mod1-cn6",
+    "prompt": "Detalhe. According to paragraph 2, why did Britain's total coal use rise after Watt's improved steam engine was introduced?",
+    "text_format": "html",
+    "options": {
+      "A": "Lower fuel costs per unit of work made steam power economical for many new industries.",
+      "B": "Each individual Watt engine burned more coal per hour than earlier steam engines.",
+      "C": "The British government lowered taxes on coal mines to encourage railway construction.",
+      "D": "Factories had to run their engines twice as long because the new machines were slower."
+    },
+    "answer": "A",
+    "explanation": "O segundo parágrafo explica que, como a máquina de Watt gastava menos carvão por unidade de trabalho, o vapor ficou mais barato e houve <strong>expansão lucrativa para novos setores industriais</strong> (<em>operating steam power became profitable in industries and factories where it had previously been too expensive</em>), confirmando (A). A alternativa (B) contradiz o fato de que cada máquina individual economizava combustível.",
+    "hint": null,
+    "trap_codes": [],
+    "tags": [],
+    "status": "rascunho",
+    "source": {
+      "kind": "migrado",
+      "file": "app/drills_data.py",
+      "ref": "MOD1_ACTION_DRILLS_C:mod1-cn6#C9.2",
+      "live_on_site": true,
+      "answer_letter": "origem",
+      "build_map": {
+        "A": "A",
+        "B": "C",
+        "C": "D",
+        "D": "B"
+      }
+    }
+  },
+  {
+    "id": "mod1-cn6.c9.3",
+    "section": "reading",
+    "task_type": "Read an Academic Passage",
+    "exam_format": true,
+    "format": "mcq",
+    "skill": null,
+    "cefr_min": "C1",
+    "cefr_max": "C1",
+    "stimulus": {
+      "kind": "text",
+      "format": "html",
+      "title": "Exercício C9: economia e energia (meta de 6 min)",
+      "content": "<p><strong>PASSAGE: The Jevons Paradox and Energy Efficiency</strong></p>\n<p>Intuitively, technological improvements that make machines more fuel-efficient should reduce overall fuel consumption. In 1865, however, the English economist William Stanley Jevons observed that the introduction of James Watt's far more efficient steam engine had produced the opposite result: Britain's total coal consumption soared rather than declined.</p>\n<p>Jevons argued that efficiency lowers the effective cost of using a resource. Because Watt's engine burned much less coal per unit of work, operating steam power became profitable in industries and factories where it had previously been too expensive. As steam engines spread into textiles, mining, and railways, the surge in new uses more than offset the fuel saved by each individual machine, a rebound effect now known as the Jevons paradox.</p>\n<p>Contemporary energy economists point out that the paradox does not occur with identical force in every sector. When demand for a service is already largely saturated, such as home refrigeration in wealthy countries, efficiency gains genuinely cut total electricity use. Where lower operating costs unlock substantial new demand, however, engineers and policymakers cannot rely on efficiency alone to curb resource depletion, and must pair technical advances with conservation policies or pricing limits.</p>",
+      "audio_ref": null
+    },
+    "group": "mod1-cn6",
+    "prompt": "Inferência. It can be inferred from paragraph 3 that if household refrigerators become 30 percent more energy-efficient in a wealthy country, most households will:",
+    "text_format": "html",
+    "options": {
+      "A": "buy a second refrigerator to spend the money they save",
+      "B": "use less electricity overall than they did before",
+      "C": "spend more on electricity each month than before",
+      "D": "need pricing limits to keep their energy use down"
+    },
+    "answer": "B",
+    "explanation": "O terceiro parágrafo usa a refrigeração doméstica em países ricos como exemplo de demanda já saturada, em que a maior eficiência gera <strong>redução real no consumo total de eletricidade</strong> (<em>efficiency gains genuinely cut total electricity use</em>), validando (B). A opção (C) aplica o efeito rebote a um setor onde o próprio texto diz que ele não ocorre.",
+    "hint": null,
+    "trap_codes": [],
+    "tags": [],
+    "status": "rascunho",
+    "source": {
+      "kind": "migrado",
+      "file": "app/drills_data.py",
+      "ref": "MOD1_ACTION_DRILLS_C:mod1-cn6#C9.3",
+      "live_on_site": true,
+      "answer_letter": "origem",
+      "build_map": {
+        "A": "A",
+        "B": "C",
+        "C": "D",
+        "D": "B"
+      }
+    }
+  },
+  {
+    "id": "mod1-cn6.c9.4",
+    "section": "reading",
+    "task_type": "Read an Academic Passage",
+    "exam_format": true,
+    "format": "mcq",
+    "skill": null,
+    "cefr_min": "C1",
+    "cefr_max": "C1",
+    "stimulus": {
+      "kind": "text",
+      "format": "html",
+      "title": "Exercício C9: economia e energia (meta de 6 min)",
+      "content": "<p><strong>PASSAGE: The Jevons Paradox and Energy Efficiency</strong></p>\n<p>Intuitively, technological improvements that make machines more fuel-efficient should reduce overall fuel consumption. In 1865, however, the English economist William Stanley Jevons observed that the introduction of James Watt's far more efficient steam engine had produced the opposite result: Britain's total coal consumption soared rather than declined.</p>\n<p>Jevons argued that efficiency lowers the effective cost of using a resource. Because Watt's engine burned much less coal per unit of work, operating steam power became profitable in industries and factories where it had previously been too expensive. As steam engines spread into textiles, mining, and railways, the surge in new uses more than offset the fuel saved by each individual machine, a rebound effect now known as the Jevons paradox.</p>\n<p>Contemporary energy economists point out that the paradox does not occur with identical force in every sector. When demand for a service is already largely saturated, such as home refrigeration in wealthy countries, efficiency gains genuinely cut total electricity use. Where lower operating costs unlock substantial new demand, however, engineers and policymakers cannot rely on efficiency alone to curb resource depletion, and must pair technical advances with conservation policies or pricing limits.</p>",
+      "audio_ref": null
+    },
+    "group": "mod1-cn6",
+    "prompt": "Propósito retórico. Why does the author mention home refrigeration in paragraph 3?",
+    "text_format": "html",
+    "options": {
+      "A": "To show that home appliances waste more energy than railways",
+      "B": "To prove that the paradox applies equally to every industry",
+      "C": "To criticize wealthy countries for using too much electricity",
+      "D": "To give an example where efficiency really lowers total use"
+    },
+    "answer": "D",
+    "explanation": "O exemplo da geladeira entra logo após a afirmação de que o paradoxo não age com a mesma força em todo setor, servindo para <strong>ilustrar um mercado de demanda saturada</strong> em que a eficiência reduz o gasto total, como diz (D). A alternativa (B) afirma exatamente o oposto da frase de abertura do parágrafo.",
+    "hint": null,
+    "trap_codes": [],
+    "tags": [],
+    "status": "rascunho",
+    "source": {
+      "kind": "migrado",
+      "file": "app/drills_data.py",
+      "ref": "MOD1_ACTION_DRILLS_C:mod1-cn6#C9.4",
+      "live_on_site": true,
+      "answer_letter": "origem",
+      "build_map": {
+        "A": "C",
+        "B": "D",
+        "C": "B",
+        "D": "A"
+      }
+    }
+  },
+  {
+    "id": "mod1-cn6.c9.5",
+    "section": "reading",
+    "task_type": "Read an Academic Passage",
+    "exam_format": true,
+    "format": "mcq",
+    "skill": null,
+    "cefr_min": "C1",
+    "cefr_max": "C1",
+    "stimulus": {
+      "kind": "text",
+      "format": "html",
+      "title": "Exercício C9: economia e energia (meta de 6 min)",
+      "content": "<p><strong>PASSAGE: The Jevons Paradox and Energy Efficiency</strong></p>\n<p>Intuitively, technological improvements that make machines more fuel-efficient should reduce overall fuel consumption. In 1865, however, the English economist William Stanley Jevons observed that the introduction of James Watt's far more efficient steam engine had produced the opposite result: Britain's total coal consumption soared rather than declined.</p>\n<p>Jevons argued that efficiency lowers the effective cost of using a resource. Because Watt's engine burned much less coal per unit of work, operating steam power became profitable in industries and factories where it had previously been too expensive. As steam engines spread into textiles, mining, and railways, the surge in new uses more than offset the fuel saved by each individual machine, a rebound effect now known as the Jevons paradox.</p>\n<p>Contemporary energy economists point out that the paradox does not occur with identical force in every sector. When demand for a service is already largely saturated, such as home refrigeration in wealthy countries, efficiency gains genuinely cut total electricity use. Where lower operating costs unlock substantial new demand, however, engineers and policymakers cannot rely on efficiency alone to curb resource depletion, and must pair technical advances with conservation policies or pricing limits.</p>",
+      "audio_ref": null
+    },
+    "group": "mod1-cn6",
+    "prompt": "Vocabulário em contexto. The word \"offset\" in paragraph 2 is closest in meaning to:",
+    "text_format": "html",
+    "options": {
+      "A": "counterbalance",
+      "B": "accelerate",
+      "C": "measure",
+      "D": "restrict"
+    },
+    "answer": "A",
+    "explanation": "Na frase, a explosão de novos usos <em>more than offset</em> a economia de cada máquina, ou seja, mais do que <strong>compensou ou contrabalançou</strong> (<em>counterbalance</em>) o combustível poupado, tornando (A) correta. A opção (D) significa restringir, o que não encaixa na relação entre novos usos e economia unitária.",
+    "hint": null,
+    "trap_codes": [],
+    "tags": [],
+    "status": "rascunho",
+    "source": {
+      "kind": "migrado",
+      "file": "app/drills_data.py",
+      "ref": "MOD1_ACTION_DRILLS_C:mod1-cn6#C9.5",
+      "live_on_site": true,
+      "answer_letter": "origem",
+      "build_map": {
+        "A": "D",
+        "B": "A",
+        "C": "C",
+        "D": "B"
+      }
+    }
+  },
+  {
     "id": "mod7-b4.1",
     "section": "reading",
     "task_type": "Read an Academic Passage",

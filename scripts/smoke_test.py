@@ -1117,7 +1117,8 @@ try { (function(){
   var withVocab = {};
   window.__toeflWeak().forEach(function(a){ withVocab[a.key] = a; });
   check("flashcards_and_vocab_items_feed_vocabulary", function(){
-    return document.querySelectorAll('.quiz-drill .qcard[data-weak="vocabulario"]').length === 3 &&
+    // 3 passagens acadêmicas antigas do M1 e 6 novas (2026-11-16), uma questão cada
+    return document.querySelectorAll('.quiz-drill .qcard[data-weak="vocabulario"]').length === 9 &&
       document.querySelectorAll('.exam .exam-item[data-weak="vocabulario"]').length === 3 &&
       withVocab.vocabulario.n === areas.vocabulario.n + 4 && withVocab.vocabulario.ok === areas.vocabulario.ok + 3 &&
       withVocab.vocabulario.enough && withVocab.reading.n === areas.reading.n + 4;
@@ -1161,10 +1162,18 @@ try { (function(){
     return w1.registro.n === w0.registro.n + 5 && w1.registro.ok === w0.registro.ok + 5 &&
       w1.vocabulario.n === w0.vocabulario.n + 8 && w1.vocabulario.ok === w0.vocabulario.ok + 2;
   });
-  check("drill_round_shows_four_at_a_time", function(){
-    return Array.prototype.every.call(document.querySelectorAll(".drill-round"), function(r){
-      return r.querySelectorAll(".drill-pick:not([hidden])").length === 4 && /^Nesta rodada: 4 de 1[24] exercícios\./.test(r.querySelector(".drill-round-status").textContent);
+  // cada grupo mostra o número fixo da rodada dele (data-round): 4 no M5 e
+  // no M6, 2 ou 3 no M1 e no M2 (2026-11-16)
+  check("drill_round_shows_a_fixed_number", function(){
+    var sizes = {};
+    var ok = Array.prototype.every.call(document.querySelectorAll(".drill-round"), function(r){
+      var k = parseInt(r.dataset.round, 10), n = r.querySelectorAll(".drill-pick").length;
+      sizes[r.dataset.roundGroup] = k;
+      return r.querySelectorAll(".drill-pick:not([hidden])").length === k &&
+        r.querySelector(".drill-round-status").textContent.indexOf("Nesta rodada: " + k + " de " + n + " exercícios.") === 0;
     });
+    return ok && JSON.stringify(sizes) === JSON.stringify({ "mod1-daily": 3, "mod1-academic": 2, "mod2-response": 2,
+      "mod2-conversa": 3, "mod2-anuncio": 3, "mod2-palestra": 2, "mod5-registro": 4, "mod6-vocabulario": 4 });
   });
   check("question_order_changes_between_openings", function(){
     var S = window.ToeflSorteio, list = ["1", "2", "3", "4", "5"], last = list, ok = true;
@@ -1204,6 +1213,77 @@ try { (function(){
   });
   KEYS.forEach(function(k){ if(keep[k] !== null) localStorage.setItem(k, keep[k]); else localStorage.removeItem(k); });
 })(); } catch(ex){ check("m5_m6_and_order_checks_ran", function(){ throw ex; }); }
+
+// M1 e M2 (2026-11-16): as 133 questões novas revisadas entram nos grupos que
+// já existiam, que viraram rodadas sorteadas. No Listening a transcrição (e a
+// fala do Grupo A) só aparece depois da resposta. O estado de antes volta no fim.
+try { (function(){
+  var snap = {};
+  for(var i = 0; i < localStorage.length; i++){ var key = localStorage.key(i); snap[key] = localStorage.getItem(key); }
+  // grupo: [exercícios, questões, prefixo dos novos, quantos novos]
+  var G = { "mod1-daily": [15, 40, "mod1-bn", 10], "mod1-academic": [9, 45, "mod1-cn", 6], "mod2-response": [5, 36, "mod2-an", 4],
+            "mod2-conversa": [11, 22, "mod2-bn", 8], "mod2-anuncio": [11, 22, "mod2-cn", 8], "mod2-palestra": [8, 32, "mod2-dn", 5] };
+  check("m1_m2_groups_have_the_new_exercises", function(){
+    return Object.keys(G).every(function(gid){
+      var r = document.querySelector('.drill-round[data-round-group="' + gid + '"]'), g = G[gid];
+      if(!r || !r.closest(gid.indexOf("mod1") === 0 ? "#panel-mod1" : "#panel-mod2")) return false;
+      var drills = r.querySelectorAll(".quiz-drill");
+      var fresh = Array.prototype.filter.call(drills, function(d){ return d.dataset.drill.indexOf(g[2]) === 0; });
+      return drills.length === g[0] && r.querySelectorAll(".qcard").length === g[1] && fresh.length === g[3];
+    });
+  });
+  check("m1_m2_round_never_repeats_before_group_is_done", function(){
+    // Grupo D do M2: 8 palestras, 2 por rodada. Faz as duas à mostra e pede
+    // outra rodada, 4 vezes: aparecem as 8, nenhuma duas vezes
+    var r = document.querySelector('.drill-round[data-round-group="mod2-palestra"]'), seen = [], dup = false;
+    var all = JSON.parse(localStorage.getItem("toefl_sorteio_v1") || "{}");
+    delete all["mod2-palestra"];
+    localStorage.setItem("toefl_sorteio_v1", JSON.stringify(all));
+    r.querySelector(".drill-round-next").click();
+    for(var t = 0; t < 4; t++){
+      Array.prototype.forEach.call(r.querySelectorAll(".drill-pick:not([hidden])"), function(p){
+        if(seen.indexOf(p.dataset.pick) !== -1) dup = true;
+        seen.push(p.dataset.pick);
+        p.querySelector(".quiz-drill").dispatchEvent(new CustomEvent("toefl-drill-done", { bubbles: true, detail: { id: p.dataset.pick } }));
+      });
+      r.querySelector(".drill-round-next").click();
+    }
+    var g = JSON.parse(localStorage.getItem("toefl_sorteio_v1") || "{}")["mod2-palestra"] || {};
+    return !dup && seen.length === 8 && (g.cycle || []).length === 8 && r.querySelectorAll(".drill-pick:not([hidden])").length === 2;
+  });
+  check("listening_transcript_hidden_until_answered", function(){
+    var gone = function(el){ return getComputedStyle(el).display === "none"; };
+    var answer = function(c){ c.querySelector('.opt[data-letter="' + c.dataset.correct + '"]').click(); c.querySelector(".qconfirm").click(); };
+    var passages = document.querySelectorAll("#panel-mod2 .quiz-passage");
+    var everyPassage = passages.length === 30 && Array.prototype.every.call(passages, function(p){
+      return p.hasAttribute("data-listen-hide") && !!p.querySelector(".quiz-passage-speak") && p.querySelector(".quiz-passage-body").hidden;
+    });
+    var everyPrompt = document.querySelectorAll('#panel-mod2 .qprompt-text[data-listen-hide]').length === 36 &&
+      document.querySelectorAll('#panel-mod2 [data-drill^="mod2-a"] .qcard .quiz-item-speak').length === 36;
+    // conversa: escondida até a segunda (última) resposta; "Refazer" esconde de novo
+    var d = document.querySelector('[data-drill="mod2-bn1"]'), p = document.querySelector('.quiz-passage[data-for="mod2-bn1"]');
+    var body = p.querySelector(".quiz-passage-body"), note = p.querySelector(".quiz-transcript-note");
+    d.querySelector(".quiz-retry").click();
+    var cards = d.querySelectorAll(".qcard"), before = gone(body) && !gone(note);
+    answer(cards[0]);
+    var mid = gone(body);
+    answer(cards[1]);
+    var after = !gone(body) && gone(note) && body.textContent.indexOf("Narrator:") !== -1;
+    d.querySelector(".quiz-retry").click();
+    var again = gone(body);
+    // Listen and Choose a Response: a fala aparece só no item respondido
+    var a = document.querySelector('[data-drill="mod2-an1"]');
+    a.querySelector(".quiz-retry").click();
+    var ac = a.querySelectorAll(".qcard"), pt = function(c){ return c.querySelector(".qprompt-text"); };
+    var aBefore = gone(pt(ac[0])) && !gone(ac[0].querySelector(".qprompt-hint"));
+    answer(ac[0]);
+    var aAfter = !gone(pt(ac[0])) && gone(ac[0].querySelector(".qprompt-hint")) && gone(pt(ac[1]));
+    a.querySelector(".quiz-retry").click();
+    return everyPassage && everyPrompt && before && mid && after && again && aBefore && aAfter && gone(pt(ac[0]));
+  });
+  localStorage.clear();
+  Object.keys(snap).forEach(function(k){ localStorage.setItem(k, snap[k]); });
+})(); } catch(ex){ check("m1_m2_rounds_and_listening_checks_ran", function(){ throw ex; }); }
 check("m7_says_what_the_diagnostic_measures", function(){
   var t = document.getElementById("panel-mod7").textContent;
   return t.indexOf("Ele não dá nota por seção.") !== -1 && t.indexOf("banda CEFR (1–6) por seção") === -1;
@@ -2460,6 +2540,14 @@ def build_fixture(work):
     m3.write_text(text.replace(FIXTURE_DEEP_ANCHOR, FIXTURE_DEEP_BLOCK + FIXTURE_DEEP_ANCHOR), encoding="utf-8", newline="\n")
     drills = work / "app" / "drills_data.py"
     drills.write_text(drills.read_text(encoding="utf-8") + FIXTURE_INSERTION_DRILL, encoding="utf-8")
+    # o Grupo C do M1 é uma rodada com contagem conferida no build: +1 exercício, +1 questão
+    pipe = work / "app" / "build_pipeline.py"
+    ptext = pipe.read_text(encoding="utf-8")
+    m = re.search(r'"mod1-academic": \((\d+), (\d+), (\d+)\)', ptext)
+    if not m:
+        raise SystemExit('Fixture: nao achei "mod1-academic" em ROUNDS no build_pipeline.py.')
+    pipe.write_text(ptext.replace(m.group(0), f'"mod1-academic": ({int(m.group(1)) + 1}, {int(m.group(2)) + 1}, {m.group(3)})'),
+                    encoding="utf-8")
     # o exemplo builda com a faixa de teste desligada (beta_checks confere)
     env = {**os.environ, "BETA": "0"}
     for script in ("build_pipeline.py", "build.py"):

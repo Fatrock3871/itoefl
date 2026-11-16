@@ -410,21 +410,15 @@ def build_mod1():
         + widgets_a
     )
 
-    # PARTE 5, Grupo B: troca os 5 textos curtos pelos widgets
+    # PARTE 5, Grupos B e C: os textos viraram widgets e, desde 2026-11-16
+    # (exercícios novos), rodadas sorteadas como no M5 e no M6
     before_b, rest = slice_lines(rest, "### GRUPO B: READ IN DAILY LIFE", "### GRUPO C: READ AN ACADEMIC PASSAGE")
-    widgets_b = "".join(
-        render_quiz_drill(d["id"], d["title"], d["objective"], d.get("passage_html"), rebalance_items(d["items"], d["id"]), level=d.get("level"))
-        for d in MOD1_ACTION_DRILLS_B
-    )
-    html_b = to_html(before_b) + "<h3>Grupo B: Read in Daily Life, exercícios interativos</h3>" + widgets_b
+    html_b = (to_html(before_b) + "<h3>Grupo B: Read in Daily Life, exercícios interativos</h3>"
+              + render_drill_round("mod1-daily", MOD1_ACTION_DRILLS_B, ROUNDS["mod1-daily"]))
 
-    # PARTE 5, Grupo C: troca as 3 passagens acadêmicas pelos widgets
     before_c, rest = slice_lines(rest, "### GRUPO C: READ AN ACADEMIC PASSAGE", "## PARTE 6: GABARITO COMENTADO")
-    widgets_c = "".join(
-        render_quiz_drill(d["id"], d["title"], d["objective"], d.get("passage_html"), rebalance_items(d["items"], d["id"]), level=d.get("level"))
-        for d in MOD1_ACTION_DRILLS_C
-    )
-    html_c = to_html(before_c) + "<h3>Grupo C: Read an Academic Passage, exercícios interativos</h3>" + widgets_c
+    html_c = (to_html(before_c) + "<h3>Grupo C: Read an Academic Passage, exercícios interativos</h3>"
+              + render_drill_round("mod1-academic", MOD1_ACTION_DRILLS_C, ROUNDS["mod1-academic"]))
 
     # PARTE 6: remove as 3 tabelas de gabarito redundantes (a explicação já
     # aparece inline em cada widget acima); mantém o Score Consolidado
@@ -449,19 +443,18 @@ def build_mod2():
     raw = open(f"{SRC}/modulo_2_listening.md", encoding="utf-8").read()
     raw = strip_title_banner(raw)
 
-    def swap_group(rest, start_marker, end_marker, label, drills):
+    # cada grupo é uma rodada sorteada (2026-11-16); listen=True põe o botão
+    # de ouvir e esconde a transcrição (e a fala do Grupo A) até a resposta
+    def swap_group(rest, start_marker, end_marker, label, group_id, drills):
         before, rest = slice_lines(rest, start_marker, end_marker)
-        widgets = "".join(
-            render_quiz_drill(d["id"], d["title"], d["objective"], d.get("passage_html"), rebalance_items(d["items"], d["id"]), listen=True, level=d.get("level"))
-            for d in drills
-        )
+        widgets = render_drill_round(group_id, drills, ROUNDS[group_id], listen=True)
         return to_html(before) + f"<h3>{label}, exercícios interativos</h3>" + widgets, rest
 
     rest = raw
-    html_a, rest = swap_group(rest, "### GRUPO A: LISTEN AND CHOOSE A RESPONSE", "### GRUPO B: LISTEN TO A CONVERSATION", "Grupo A: Listen and Choose a Response", MOD2_ACTION_DRILLS_A)
-    html_b, rest = swap_group(rest, "### GRUPO B: LISTEN TO A CONVERSATION", "### GRUPO C: LISTEN TO AN ANNOUNCEMENT", "Grupo B: Listen to a Conversation", MOD2_ACTION_DRILLS_B)
-    html_c, rest = swap_group(rest, "### GRUPO C: LISTEN TO AN ANNOUNCEMENT", "### GRUPO D: LISTEN TO AN ACADEMIC TALK", "Grupo C: Listen to an Announcement", MOD2_ACTION_DRILLS_C)
-    html_d, rest = swap_group(rest, "### GRUPO D: LISTEN TO AN ACADEMIC TALK", "## PARTE 6: GABARITO COMENTADO", "Grupo D: Listen to an Academic Talk", MOD2_ACTION_DRILLS_D)
+    html_a, rest = swap_group(rest, "### GRUPO A: LISTEN AND CHOOSE A RESPONSE", "### GRUPO B: LISTEN TO A CONVERSATION", "Grupo A: Listen and Choose a Response", "mod2-response", MOD2_ACTION_DRILLS_A)
+    html_b, rest = swap_group(rest, "### GRUPO B: LISTEN TO A CONVERSATION", "### GRUPO C: LISTEN TO AN ANNOUNCEMENT", "Grupo B: Listen to a Conversation", "mod2-conversa", MOD2_ACTION_DRILLS_B)
+    html_c, rest = swap_group(rest, "### GRUPO C: LISTEN TO AN ANNOUNCEMENT", "### GRUPO D: LISTEN TO AN ACADEMIC TALK", "Grupo C: Listen to an Announcement", "mod2-anuncio", MOD2_ACTION_DRILLS_C)
+    html_d, rest = swap_group(rest, "### GRUPO D: LISTEN TO AN ACADEMIC TALK", "## PARTE 6: GABARITO COMENTADO", "Grupo D: Listen to an Academic Talk", "mod2-palestra", MOD2_ACTION_DRILLS_D)
 
     # PARTE 6: remove as 4 tabelas de gabarito redundantes (a explicação já
     # aparece inline em cada widget acima); mantém o Score Consolidado
@@ -663,25 +656,43 @@ def build_mod7():
 ROUND_SIZE = 4
 M5_EXPECTED = (14, 73)  # exercícios, questões
 M6_EXPECTED = (12, 81)
+# M1 e M2 (2026-11-16, exercícios novos revisados): (exercícios, questões,
+# exercícios por rodada). O tamanho da rodada acompanha o tempo de cada
+# exercício: passagem acadêmica e palestra são longas, vão 2 por vez.
+ROUNDS = {
+    "mod1-daily": (15, 40, 3),
+    "mod1-academic": (9, 45, 2),
+    "mod2-response": (5, 36, 2),
+    "mod2-conversa": (11, 22, 3),
+    "mod2-anuncio": (11, 22, 3),
+    "mod2-palestra": (8, 32, 2),
+}
 
 
-def render_drill_round(group_id, drills, expected):
+def render_drill_round(group_id, drills, expected, listen=False):
+    """expected = (exercícios, questões) ou (exercícios, questões, por rodada).
+    listen=True (M2): botão de ouvir e transcrição escondida até a resposta."""
+    size = expected[2] if len(expected) > 2 else ROUND_SIZE
     got = (len(drills), sum(len(d["items"]) for d in drills))
-    if got != expected:
+    if got != tuple(expected[:2]):
         raise ValueError(f"{group_id}: esperava {expected[0]} exercícios e {expected[1]} questões, achei {got}")
+    ids = [d["id"] for d in drills]
+    if len(set(ids)) != len(ids):
+        raise ValueError(f"{group_id}: id repetido no grupo")
     for d in drills:
         if not d["id"].startswith(group_id.split("-")[0] + "-"):
             raise ValueError(f"{group_id}: id {d['id']} fora do prefixo do módulo (os pontos fracos dependem dele)")
     picks = "".join(
         f'<div class="drill-pick" data-pick="{d["id"]}">'
         + render_quiz_drill(d["id"], d["title"], d["objective"], d.get("passage_html"),
-                            rebalance_items(d["items"], d["id"]), level=d.get("level"))
+                            rebalance_items(d["items"], d["id"]), level=d.get("level"),
+                            listen=listen, hide_transcript=listen)
         + "</div>"
         for d in drills
     )
-    return (f'<div class="drill-round" data-round-group="{group_id}" data-round="{ROUND_SIZE}">'
+    return (f'<div class="drill-round" data-round-group="{group_id}" data-round="{size}">'
             f'<div class="drill-round-bar"><p class="drill-round-status" role="status">'
-            f'{len(drills)} exercícios, {ROUND_SIZE} por rodada.</p>'
+            f'{len(drills)} exercícios, {size} por rodada.</p>'
             f'<button type="button" class="drill-round-next">Sortear outra rodada</button></div>'
             f'{picks}</div>')
 
