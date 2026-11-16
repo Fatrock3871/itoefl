@@ -7,6 +7,22 @@ falta" do `ROADMAP.md`. Sessão nova entra no topo.
 
 ---
 
+## Sessão 2026-11-16: M1 e M2 com exercícios novos e rodadas
+
+Branch `claude/m1m2-novos`. O Gemini escreveu 142 questões em 42 exercícios
+(Read in Daily Life, Read an Academic Passage e os 4 tipos de Listening); o
+Claude revisou item a item: 102 aceitas, 31 corrigidas, 9 descartadas
+(relatório em `itoefl-gerencia/m1m2/REVISAO-claude.md`, aplicado por
+`aplicar_revisao.py` na mesma pasta). Os problemas mais comuns foram pista de
+tamanho na certa, conversa com 3 questões (a prova tem 2) e três erros de
+fato. No site: os 41 exercícios entram nos grupos existentes, que viraram
+rodadas sorteadas (2 ou 3 por vez); no M2 a transcrição só aparece depois da
+resposta, inclusive nos exercícios antigos. Áudio segue com a voz do
+navegador; os 45 textos que pedem áudio gravado estão em
+`itoefl-gerencia/m1m2/AUDIOS.md`. Smoke: 403 checagens. Nenhuma mudança de banco.
+
+---
+
 ## Sessão 2026-11-07: M5 e M6 interativos, sorteio sem repetir
 
 Branch `claude/m5m6-interativo`. Exercícios do M5 e do M6 convertidos pelo
