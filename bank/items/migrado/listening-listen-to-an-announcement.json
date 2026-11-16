@@ -270,6 +270,726 @@
     }
   },
   {
+    "id": "mod2-cn1.c4.1",
+    "section": "listening",
+    "task_type": "Listen to an Announcement",
+    "exam_format": true,
+    "format": "mcq",
+    "skill": null,
+    "cefr_min": "A2",
+    "cefr_max": "B1",
+    "stimulus": {
+      "kind": "audio",
+      "format": "html",
+      "title": "Exercício C4: Biology Lab (meta de 1 min)",
+      "content": "<p><em>Narrator: Listen to an announcement at the end of a biology class.</em></p>\n<p><strong>Instructor:</strong> Okay, everyone, before you pack up, just a quick change for Friday's lab. We're not meeting in Room 204 this week. Instead, we'll meet directly at the campus greenhouse, right behind the science building. Because we're only observing plant samples and sketching them, you don't need to bring your lab coats or safety goggles this time. Just bring your field notebook and a pencil. Oh, and please be there by ten o'clock sharp, because the greenhouse staff will lock the side door right after we start.</p>",
+      "audio_ref": null
+    },
+    "group": "mod2-cn1",
+    "prompt": "Detail. What should students bring to Friday's class?",
+    "text_format": "html",
+    "options": {
+      "A": "A field notebook and a pencil for sketching",
+      "B": "A white lab coat and a pair of safety goggles",
+      "C": "A set of plant samples from the science building",
+      "D": "A key card to unlock the greenhouse side door"
+    },
+    "answer": "A",
+    "explanation": "O instrutor avisa que a atividade será observar e desenhar plantas, por isso pede apenas caderno de campo e lápis: \"Just bring your field notebook and a pencil.\" Um ponto de atenção é (B), que junta dois itens citados no áudio, mas o professor diz justamente que você <strong>não precisa</strong> trazê-los desta vez.",
+    "hint": null,
+    "trap_codes": [],
+    "tags": [],
+    "status": "rascunho",
+    "source": {
+      "kind": "migrado",
+      "file": "app/drills_data.py",
+      "ref": "MOD2_ACTION_DRILLS_C:mod2-cn1#C4.1",
+      "live_on_site": true,
+      "answer_letter": "origem",
+      "build_map": {
+        "A": "A",
+        "B": "B",
+        "C": "D",
+        "D": "C"
+      }
+    }
+  },
+  {
+    "id": "mod2-cn1.c4.2",
+    "section": "listening",
+    "task_type": "Listen to an Announcement",
+    "exam_format": true,
+    "format": "mcq",
+    "skill": null,
+    "cefr_min": "A2",
+    "cefr_max": "B1",
+    "stimulus": {
+      "kind": "audio",
+      "format": "html",
+      "title": "Exercício C4: Biology Lab (meta de 1 min)",
+      "content": "<p><em>Narrator: Listen to an announcement at the end of a biology class.</em></p>\n<p><strong>Instructor:</strong> Okay, everyone, before you pack up, just a quick change for Friday's lab. We're not meeting in Room 204 this week. Instead, we'll meet directly at the campus greenhouse, right behind the science building. Because we're only observing plant samples and sketching them, you don't need to bring your lab coats or safety goggles this time. Just bring your field notebook and a pencil. Oh, and please be there by ten o'clock sharp, because the greenhouse staff will lock the side door right after we start.</p>",
+      "audio_ref": null
+    },
+    "group": "mod2-cn1",
+    "prompt": "Function. Why does the instructor mention the greenhouse staff?",
+    "text_format": "html",
+    "options": {
+      "A": "To introduce the guest speakers for Friday's class",
+      "B": "To tell students who will grade their field sketches",
+      "C": "To explain why students need to arrive right on time",
+      "D": "To remind students where to pick up their lab coats"
+    },
+    "answer": "C",
+    "explanation": "O professor menciona a equipe da estufa para justificar por que você precisa chegar pontualmente às dez horas: \"please be there by ten o'clock sharp, because the greenhouse staff will lock the side door right after we start.\" A alternativa (A) é uma armadilha comum: a equipe trabalha no local, mas o áudio não diz que ela dará uma <strong>palestra</strong>.",
+    "hint": null,
+    "trap_codes": [],
+    "tags": [],
+    "status": "rascunho",
+    "source": {
+      "kind": "migrado",
+      "file": "app/drills_data.py",
+      "ref": "MOD2_ACTION_DRILLS_C:mod2-cn1#C4.2",
+      "live_on_site": true,
+      "answer_letter": "origem",
+      "build_map": {
+        "A": "A",
+        "B": "C",
+        "C": "B",
+        "D": "D"
+      }
+    }
+  },
+  {
+    "id": "mod2-cn2.c5.1",
+    "section": "listening",
+    "task_type": "Listen to an Announcement",
+    "exam_format": true,
+    "format": "mcq",
+    "skill": null,
+    "cefr_min": "A2",
+    "cefr_max": "B1",
+    "stimulus": {
+      "kind": "audio",
+      "format": "html",
+      "title": "Exercício C5: Dormitory Laundry Room (meta de 1 min)",
+      "content": "<p><em>Narrator: Listen to an announcement from a resident advisor in a student dormitory.</em></p>\n<p><strong>Resident Advisor:</strong> Hi, everyone. I just wanted to let you know that our basement laundry room will be closed all weekend, starting Friday at six p.m. Facilities is installing new card readers on the machines, so you won't need coins anymore starting Monday. If you need to wash clothes on Saturday or Sunday, you can use the laundry room in Maple Hall next door. Your student ID card will open their side entrance. Also, please clear out any clothes left in the basement before Friday evening, or the crew will move them to the front desk.</p>",
+      "audio_ref": null
+    },
+    "group": "mod2-cn2",
+    "prompt": "Gist-purpose. What is the main purpose of the announcement?",
+    "text_format": "html",
+    "options": {
+      "A": "To explain a permanent increase in dormitory laundry prices",
+      "B": "To welcome new residents moving into Maple Hall this week",
+      "C": "To remind students to pick up their new student ID cards",
+      "D": "To inform residents about a temporary laundry room closure"
+    },
+    "answer": "D",
+    "explanation": "O objetivo central do aviso é informar que a lavanderia do prédio ficará fechada no fim de semana para uma atualização: \"our basement laundry room will be closed all weekend.\" A opção (C) pode atrair porque o cartão de estudante é citado, mas ele serve apenas para abrir a porta do prédio vizinho, sem emissão de um <strong>cartão novo</strong>.",
+    "hint": null,
+    "trap_codes": [],
+    "tags": [],
+    "status": "rascunho",
+    "source": {
+      "kind": "migrado",
+      "file": "app/drills_data.py",
+      "ref": "MOD2_ACTION_DRILLS_C:mod2-cn2#C5.1",
+      "live_on_site": true,
+      "answer_letter": "origem",
+      "build_map": {
+        "A": "B",
+        "B": "C",
+        "C": "D",
+        "D": "A"
+      }
+    }
+  },
+  {
+    "id": "mod2-cn2.c5.2",
+    "section": "listening",
+    "task_type": "Listen to an Announcement",
+    "exam_format": true,
+    "format": "mcq",
+    "skill": null,
+    "cefr_min": "A2",
+    "cefr_max": "B1",
+    "stimulus": {
+      "kind": "audio",
+      "format": "html",
+      "title": "Exercício C5: Dormitory Laundry Room (meta de 1 min)",
+      "content": "<p><em>Narrator: Listen to an announcement from a resident advisor in a student dormitory.</em></p>\n<p><strong>Resident Advisor:</strong> Hi, everyone. I just wanted to let you know that our basement laundry room will be closed all weekend, starting Friday at six p.m. Facilities is installing new card readers on the machines, so you won't need coins anymore starting Monday. If you need to wash clothes on Saturday or Sunday, you can use the laundry room in Maple Hall next door. Your student ID card will open their side entrance. Also, please clear out any clothes left in the basement before Friday evening, or the crew will move them to the front desk.</p>",
+      "audio_ref": null
+    },
+    "group": "mod2-cn2",
+    "prompt": "Detail. What will happen to clothes left in the basement after Friday at 6 p.m.?",
+    "text_format": "html",
+    "options": {
+      "A": "They will be sent to the laundry room in Maple Hall",
+      "B": "They will be taken to the front desk by the work crew",
+      "C": "They will be locked inside the basement until Monday",
+      "D": "They will be washed for free on the new card machines"
+    },
+    "answer": "B",
+    "explanation": "O aviso final é direto sobre as roupas esquecidas na lavanderia: \"please clear out any clothes left in the basement before Friday evening, or the crew will move them to the front desk.\" Cuidado com (A), que mistura o destino das roupas esquecidas com a <strong>alternativa de uso</strong> em Maple Hall durante o fim de semana.",
+    "hint": null,
+    "trap_codes": [],
+    "tags": [],
+    "status": "rascunho",
+    "source": {
+      "kind": "migrado",
+      "file": "app/drills_data.py",
+      "ref": "MOD2_ACTION_DRILLS_C:mod2-cn2#C5.2",
+      "live_on_site": true,
+      "answer_letter": "origem",
+      "build_map": {
+        "A": "C",
+        "B": "B",
+        "C": "A",
+        "D": "D"
+      }
+    }
+  },
+  {
+    "id": "mod2-cn3.c6.1",
+    "section": "listening",
+    "task_type": "Listen to an Announcement",
+    "exam_format": true,
+    "format": "mcq",
+    "skill": null,
+    "cefr_min": "A2",
+    "cefr_max": "B1",
+    "stimulus": {
+      "kind": "audio",
+      "format": "html",
+      "title": "Exercício C6: Intramural Soccer Sign-Ups (meta de 1 min)",
+      "content": "<p><em>Narrator: Listen to an announcement at the campus recreation center.</em></p>\n<p><strong>Coordinator:</strong> Attention, everyone! If you're planning to play in the campus soccer league this fall, remember that registration closes this Friday at five p.m. Each team needs at least seven players on its roster. Now, if you want to play but don't have a full group of friends to form a team, don't worry. You can still sign up by yourself as an individual player on the rec center website, and we'll place you on a team that needs extra people. The game schedule comes out on Monday morning, and matches start next Wednesday evening.</p>",
+      "audio_ref": null
+    },
+    "group": "mod2-cn3",
+    "prompt": "Detail. What should a student without a full team do to join the league?",
+    "text_format": "html",
+    "options": {
+      "A": "Wait until the game schedule comes out on Monday morning",
+      "B": "Register as an individual player on the rec center website",
+      "C": "Show up at the soccer field on Wednesday evening at five",
+      "D": "Ask the coordinator to lower the seven-player requirement"
+    },
+    "answer": "B",
+    "explanation": "Para quem não tem um grupo completo, a solução está no meio da fala: \"You can still sign up by yourself as an individual player on the rec center website, and we'll place you on a team.\" A alternativa (A) traz um horário real do áudio, mas esperar até segunda faria você <strong>perder o prazo</strong> de inscrição na sexta-feira.",
+    "hint": null,
+    "trap_codes": [],
+    "tags": [],
+    "status": "rascunho",
+    "source": {
+      "kind": "migrado",
+      "file": "app/drills_data.py",
+      "ref": "MOD2_ACTION_DRILLS_C:mod2-cn3#C6.1",
+      "live_on_site": true,
+      "answer_letter": "origem",
+      "build_map": {
+        "A": "B",
+        "B": "A",
+        "C": "D",
+        "D": "C"
+      }
+    }
+  },
+  {
+    "id": "mod2-cn3.c6.2",
+    "section": "listening",
+    "task_type": "Listen to an Announcement",
+    "exam_format": true,
+    "format": "mcq",
+    "skill": null,
+    "cefr_min": "A2",
+    "cefr_max": "B1",
+    "stimulus": {
+      "kind": "audio",
+      "format": "html",
+      "title": "Exercício C6: Intramural Soccer Sign-Ups (meta de 1 min)",
+      "content": "<p><em>Narrator: Listen to an announcement at the campus recreation center.</em></p>\n<p><strong>Coordinator:</strong> Attention, everyone! If you're planning to play in the campus soccer league this fall, remember that registration closes this Friday at five p.m. Each team needs at least seven players on its roster. Now, if you want to play but don't have a full group of friends to form a team, don't worry. You can still sign up by yourself as an individual player on the rec center website, and we'll place you on a team that needs extra people. The game schedule comes out on Monday morning, and matches start next Wednesday evening.</p>",
+      "audio_ref": null
+    },
+    "group": "mod2-cn3",
+    "prompt": "Detail. When will the first soccer matches take place?",
+    "text_format": "html",
+    "options": {
+      "A": "On Wednesday evening of next week",
+      "B": "On Friday afternoon at five o'clock",
+      "C": "On Monday morning before classes",
+      "D": "On Saturday afternoon at the gym"
+    },
+    "answer": "A",
+    "explanation": "Ao final do aviso, a coordenadora separa a divulgação da tabela e o início das partidas: \"The game schedule comes out on Monday morning, and matches start next Wednesday evening.\" Repare que (B) e (C) são <strong>armadilhas de datas</strong> comuns no Listening, pois trocam o dia do jogo pelo fim das inscrições ou pela saída da tabela.",
+    "hint": null,
+    "trap_codes": [],
+    "tags": [],
+    "status": "rascunho",
+    "source": {
+      "kind": "migrado",
+      "file": "app/drills_data.py",
+      "ref": "MOD2_ACTION_DRILLS_C:mod2-cn3#C6.2",
+      "live_on_site": true,
+      "answer_letter": "origem",
+      "build_map": {
+        "A": "B",
+        "B": "C",
+        "C": "D",
+        "D": "A"
+      }
+    }
+  },
+  {
+    "id": "mod2-cn4.c7.1",
+    "section": "listening",
+    "task_type": "Listen to an Announcement",
+    "exam_format": true,
+    "format": "mcq",
+    "skill": null,
+    "cefr_min": "B1",
+    "cefr_max": "B2",
+    "stimulus": {
+      "kind": "audio",
+      "format": "html",
+      "title": "Exercício C7: Geology Field Trip (meta de 2 min)",
+      "content": "<p><em>Narrator: Listen to an announcement in an introductory geology class.</em></p>\n<p><strong>Professor:</strong> Before we dive into today's lecture on sediment transport, let's go over the logistics for Saturday's field trip to the Miller River Basin. The department buses will leave from the North Parking Lot at 7:30 a.m. sharp, and we should be back on campus by four. The trip counts for fifteen percent of your course grade, so attendance is expected. That said, I know a few of you work weekend shifts off campus. If you have a documented work conflict, you need to email our teaching assistant, David, by Wednesday afternoon. He'll set you up with an alternative assignment analyzing river-flow datasets from last year's survey, which carries the exact same weight. Just don't wait until Friday to tell us, or we won't be able to excuse the absence.</p>",
+      "audio_ref": null
+    },
+    "group": "mod2-cn4",
+    "prompt": "Detail. What must students with a weekend work conflict do by Wednesday?",
+    "text_format": "html",
+    "options": {
+      "A": "Reserve a seat on the late bus leaving from the North Parking Lot",
+      "B": "Collect sediment samples from the river basin on their own time",
+      "C": "Contact the teaching assistant to request an alternative project",
+      "D": "Submit last year's river-flow survey before the Friday lecture"
+    },
+    "answer": "C",
+    "explanation": "Se você trabalha no fim de semana, o professor orienta a avisar o monitor até quarta-feira para receber a atividade substitutiva: \"you need to email our teaching assistant, David, by Wednesday afternoon. He'll set you up with an alternative assignment.\" A opção (D) confunde o prazo de <strong>avisar a ausência</strong> com a entrega da análise de dados.",
+    "hint": null,
+    "trap_codes": [],
+    "tags": [],
+    "status": "rascunho",
+    "source": {
+      "kind": "migrado",
+      "file": "app/drills_data.py",
+      "ref": "MOD2_ACTION_DRILLS_C:mod2-cn4#C7.1",
+      "live_on_site": true,
+      "answer_letter": "origem",
+      "build_map": {
+        "A": "C",
+        "B": "B",
+        "C": "A",
+        "D": "D"
+      }
+    }
+  },
+  {
+    "id": "mod2-cn4.c7.2",
+    "section": "listening",
+    "task_type": "Listen to an Announcement",
+    "exam_format": true,
+    "format": "mcq",
+    "skill": null,
+    "cefr_min": "B1",
+    "cefr_max": "B2",
+    "stimulus": {
+      "kind": "audio",
+      "format": "html",
+      "title": "Exercício C7: Geology Field Trip (meta de 2 min)",
+      "content": "<p><em>Narrator: Listen to an announcement in an introductory geology class.</em></p>\n<p><strong>Professor:</strong> Before we dive into today's lecture on sediment transport, let's go over the logistics for Saturday's field trip to the Miller River Basin. The department buses will leave from the North Parking Lot at 7:30 a.m. sharp, and we should be back on campus by four. The trip counts for fifteen percent of your course grade, so attendance is expected. That said, I know a few of you work weekend shifts off campus. If you have a documented work conflict, you need to email our teaching assistant, David, by Wednesday afternoon. He'll set you up with an alternative assignment analyzing river-flow datasets from last year's survey, which carries the exact same weight. Just don't wait until Friday to tell us, or we won't be able to excuse the absence.</p>",
+      "audio_ref": null
+    },
+    "group": "mod2-cn4",
+    "prompt": "Inference. What can be inferred about students who report a conflict on Friday?",
+    "text_format": "html",
+    "options": {
+      "A": "They will have to drive their own cars to the Miller River Basin",
+      "B": "They will receive partial credit for the river-flow dataset paper",
+      "C": "They will be reassigned to a different geology lecture section",
+      "D": "They will not be allowed to replace the trip with the data project"
+    },
+    "answer": "D",
+    "explanation": "O professor encerra deixando claro que avisos na sexta-feira não serão aceitos para abonar a falta: \"Just don't wait until Friday to tell us, or we won't be able to excuse the absence.\" Daí você infere que quem deixar para sexta <strong>perderá o direito</strong> de trocar a saída de campo pelo projeto de dados, enquanto (B) inventa um crédito parcial que o áudio não menciona.",
+    "hint": null,
+    "trap_codes": [],
+    "tags": [],
+    "status": "rascunho",
+    "source": {
+      "kind": "migrado",
+      "file": "app/drills_data.py",
+      "ref": "MOD2_ACTION_DRILLS_C:mod2-cn4#C7.2",
+      "live_on_site": true,
+      "answer_letter": "origem",
+      "build_map": {
+        "A": "C",
+        "B": "A",
+        "C": "D",
+        "D": "B"
+      }
+    }
+  },
+  {
+    "id": "mod2-cn5.c8.1",
+    "section": "listening",
+    "task_type": "Listen to an Announcement",
+    "exam_format": true,
+    "format": "mcq",
+    "skill": null,
+    "cefr_min": "B1",
+    "cefr_max": "B2",
+    "stimulus": {
+      "kind": "audio",
+      "format": "html",
+      "title": "Exercício C8: Campus Flu Clinic (meta de 2 min)",
+      "content": "<p><em>Narrator: Listen to an announcement from Student Health Services.</em></p>\n<p><strong>Speaker:</strong> Hi, everyone. Next Tuesday and Wednesday, Student Health Services will be hosting our annual flu shot clinic in the Student Union Ballroom, from nine a.m. to four p.m. both days. Notice that we've split the schedule this year to cut down on long lines: between nine and noon, anyone can walk in without an appointment, but from one to four p.m., we're only taking students who booked a time slot online through the health portal. The vaccine is free if you're covered by the university health plan, though you still need to bring your student ID card. If you're on a private family insurance plan instead, please upload a photo of your insurance card to the portal at least twenty-four hours before you come in, so our staff doesn't have to process paperwork at the door.</p>",
+      "audio_ref": null
+    },
+    "group": "mod2-cn5",
+    "prompt": "Detail. Why did Student Health Services divide the clinic schedule into two parts?",
+    "text_format": "html",
+    "options": {
+      "A": "To reduce waiting times at the Student Union Ballroom",
+      "B": "To separate undergraduate students from graduate staff",
+      "C": "To reserve morning hours for private insurance holders",
+      "D": "To give the nursing staff a three-hour break for lunch"
+    },
+    "answer": "A",
+    "explanation": "O motivo de dividir o atendimento entre manhã livre e tarde agendada aparece logo no início: \"we've split the schedule this year to cut down on long lines.\" A expressão <em>cut down on long lines</em> equivale a <strong>reduzir o tempo de fila</strong>. Já (C) mistura a regra da manhã com a exigência do plano de saúde privado, que vem só no final.",
+    "hint": null,
+    "trap_codes": [],
+    "tags": [],
+    "status": "rascunho",
+    "source": {
+      "kind": "migrado",
+      "file": "app/drills_data.py",
+      "ref": "MOD2_ACTION_DRILLS_C:mod2-cn5#C8.1",
+      "live_on_site": true,
+      "answer_letter": "origem",
+      "build_map": {
+        "A": "A",
+        "B": "C",
+        "C": "B",
+        "D": "D"
+      }
+    }
+  },
+  {
+    "id": "mod2-cn5.c8.2",
+    "section": "listening",
+    "task_type": "Listen to an Announcement",
+    "exam_format": true,
+    "format": "mcq",
+    "skill": null,
+    "cefr_min": "B1",
+    "cefr_max": "B2",
+    "stimulus": {
+      "kind": "audio",
+      "format": "html",
+      "title": "Exercício C8: Campus Flu Clinic (meta de 2 min)",
+      "content": "<p><em>Narrator: Listen to an announcement from Student Health Services.</em></p>\n<p><strong>Speaker:</strong> Hi, everyone. Next Tuesday and Wednesday, Student Health Services will be hosting our annual flu shot clinic in the Student Union Ballroom, from nine a.m. to four p.m. both days. Notice that we've split the schedule this year to cut down on long lines: between nine and noon, anyone can walk in without an appointment, but from one to four p.m., we're only taking students who booked a time slot online through the health portal. The vaccine is free if you're covered by the university health plan, though you still need to bring your student ID card. If you're on a private family insurance plan instead, please upload a photo of your insurance card to the portal at least twenty-four hours before you come in, so our staff doesn't have to process paperwork at the door.</p>",
+      "audio_ref": null
+    },
+    "group": "mod2-cn5",
+    "prompt": "Connecting content. What must a student with private insurance do to get vaccinated at 2 p.m.?",
+    "text_format": "html",
+    "options": {
+      "A": "Walk in without an appointment and pay the fee at the door",
+      "B": "Book a slot online and upload their insurance card in advance",
+      "C": "Switch to the university health plan before Tuesday morning",
+      "D": "Bring a paper copy of their family medical records at noon"
+    },
+    "answer": "B",
+    "explanation": "Para esse caso, você junta duas condições do áudio. Às 14h é preciso agendar online, como diz o trecho \"from one to four p.m., we're only taking students who booked a time slot online\", e quem tem plano privado precisa enviar foto do cartão um dia antes. A opção (A) falha porque à tarde <strong>não há encaixe</strong> sem hora marcada.",
+    "hint": null,
+    "trap_codes": [],
+    "tags": [],
+    "status": "rascunho",
+    "source": {
+      "kind": "migrado",
+      "file": "app/drills_data.py",
+      "ref": "MOD2_ACTION_DRILLS_C:mod2-cn5#C8.2",
+      "live_on_site": true,
+      "answer_letter": "origem",
+      "build_map": {
+        "A": "D",
+        "B": "B",
+        "C": "A",
+        "D": "C"
+      }
+    }
+  },
+  {
+    "id": "mod2-cn6.c9.1",
+    "section": "listening",
+    "task_type": "Listen to an Announcement",
+    "exam_format": true,
+    "format": "mcq",
+    "skill": null,
+    "cefr_min": "B1",
+    "cefr_max": "B2",
+    "stimulus": {
+      "kind": "audio",
+      "format": "html",
+      "title": "Exercício C9: Midterm Review Session (meta de 2 min)",
+      "content": "<p><em>Narrator: Listen to an announcement at the beginning of a political science lecture.</em></p>\n<p><strong>Professor:</strong> Good morning, everyone. Before we start, I need to make two adjustments to this week's schedule. I'm flying to Chicago on Thursday morning to present a paper at a conference, which means I won't be in my office for my usual Thursday afternoon hours. Instead, I'll hold extended office hours tomorrow — that's Wednesday — from two to five p.m. on Zoom; the link is already on the course page. As for Friday's class, we're still meeting in this room at our regular time, because my teaching assistant, Clara, will run a midterm review session. She'll walk you through two sample essay questions from past exams and show you how we use the grading rubric. Keep in mind, though, that she won't be reviewing individual study outlines during class, so save specific questions like that for my Zoom hours tomorrow.</p>",
+      "audio_ref": null
+    },
+    "group": "mod2-cn6",
+    "prompt": "Detail. How can students meet with the professor this week?",
+    "text_format": "html",
+    "options": {
+      "A": "By visiting her office on Thursday afternoon as usual",
+      "B": "By staying in the lecture hall after Friday's review",
+      "C": "By booking a private meeting with Clara on Wednesday",
+      "D": "By joining her online office hours on Wednesday afternoon"
+    },
+    "answer": "D",
+    "explanation": "Como a professora viajará na quinta, ela antecipou o atendimento para quarta à tarde, pela internet: \"Instead, I'll hold extended office hours tomorrow, that's Wednesday, from two to five p.m. on Zoom.\" Um ponto de atenção é (A), que repete o <strong>horário habitual</strong> de quinta justamente quando ela avisa que não estará lá.",
+    "hint": null,
+    "trap_codes": [],
+    "tags": [],
+    "status": "rascunho",
+    "source": {
+      "kind": "migrado",
+      "file": "app/drills_data.py",
+      "ref": "MOD2_ACTION_DRILLS_C:mod2-cn6#C9.1",
+      "live_on_site": true,
+      "answer_letter": "origem",
+      "build_map": {
+        "A": "C",
+        "B": "B",
+        "C": "D",
+        "D": "A"
+      }
+    }
+  },
+  {
+    "id": "mod2-cn6.c9.2",
+    "section": "listening",
+    "task_type": "Listen to an Announcement",
+    "exam_format": true,
+    "format": "mcq",
+    "skill": null,
+    "cefr_min": "B1",
+    "cefr_max": "B2",
+    "stimulus": {
+      "kind": "audio",
+      "format": "html",
+      "title": "Exercício C9: Midterm Review Session (meta de 2 min)",
+      "content": "<p><em>Narrator: Listen to an announcement at the beginning of a political science lecture.</em></p>\n<p><strong>Professor:</strong> Good morning, everyone. Before we start, I need to make two adjustments to this week's schedule. I'm flying to Chicago on Thursday morning to present a paper at a conference, which means I won't be in my office for my usual Thursday afternoon hours. Instead, I'll hold extended office hours tomorrow — that's Wednesday — from two to five p.m. on Zoom; the link is already on the course page. As for Friday's class, we're still meeting in this room at our regular time, because my teaching assistant, Clara, will run a midterm review session. She'll walk you through two sample essay questions from past exams and show you how we use the grading rubric. Keep in mind, though, that she won't be reviewing individual study outlines during class, so save specific questions like that for my Zoom hours tomorrow.</p>",
+      "audio_ref": null
+    },
+    "group": "mod2-cn6",
+    "prompt": "Detail. What will the teaching assistant do during Friday's class?",
+    "text_format": "html",
+    "options": {
+      "A": "Present the professor's conference paper on Chicago politics",
+      "B": "Give feedback on each student's individual study outline",
+      "C": "Explain the grading rubric using past exam essay questions",
+      "D": "Administer the first part of the political science midterm"
+    },
+    "answer": "C",
+    "explanation": "Na aula de sexta, a monitora Clara vai analisar questões antigas e mostrar como o critério de correção funciona: \"She'll walk you through two sample essay questions from past exams and show you how we use the grading rubric.\" Cuidado com (B), que traz exatamente o que a professora diz que a monitora <strong>não fará</strong> em aula.",
+    "hint": null,
+    "trap_codes": [],
+    "tags": [],
+    "status": "rascunho",
+    "source": {
+      "kind": "migrado",
+      "file": "app/drills_data.py",
+      "ref": "MOD2_ACTION_DRILLS_C:mod2-cn6#C9.2",
+      "live_on_site": true,
+      "answer_letter": "origem",
+      "build_map": {
+        "A": "C",
+        "B": "A",
+        "C": "B",
+        "D": "D"
+      }
+    }
+  },
+  {
+    "id": "mod2-cn7.c10.1",
+    "section": "listening",
+    "task_type": "Listen to an Announcement",
+    "exam_format": true,
+    "format": "mcq",
+    "skill": null,
+    "cefr_min": "B2",
+    "cefr_max": "C1",
+    "stimulus": {
+      "kind": "audio",
+      "format": "html",
+      "title": "Exercício C10: Research Poster Symposium (meta de 2 min)",
+      "content": "<p><em>Narrator: Listen to an announcement for students participating in the Undergraduate Research Symposium.</em></p>\n<p><strong>Speaker:</strong> Thanks for coming to this brief orientation, everyone. With the Undergraduate Research Symposium just two weeks away, I want to highlight a critical deadline regarding your posters. The university print shop is covering the cost of printing one large-format poster per presenter, provided you upload your final PDF to the symposium portal by this Friday at five p.m. Now, make sure your faculty advisor signs off on the layout before you upload it, because the print shop won't accept revised files once a job is in the queue. If you miss Friday's cutoff, you aren't disqualified from presenting, but you'll have to have your poster printed at a commercial shop at your own expense. Finally, on the day of the symposium, you're only required to stand by your board during your assigned one-hour judging window; the rest of the afternoon, you're free to view other students' work.</p>",
+      "audio_ref": null
+    },
+    "group": "mod2-cn7",
+    "prompt": "Function. Why does the speaker urge students to get their advisor's approval before uploading their file?",
+    "text_format": "html",
+    "options": {
+      "A": "Because faculty advisors must upload the PDF files through their own accounts",
+      "B": "Because the print shop does not allow replacement files after submission",
+      "C": "Because the symposium judges grade the advisor's comments on the layout",
+      "D": "Because commercial print shops charge extra for unapproved poster designs"
+    },
+    "answer": "B",
+    "explanation": "O orientador precisa aprovar a versão antes do envio porque a gráfica universitária não aceita trocar o arquivo depois que ele entra na fila: \"make sure your faculty advisor signs off on the layout before you upload it, because the print shop won't accept revised files once a job is in the queue.\" A alternativa (A) distorce o processo, pois quem envia o arquivo no portal é <strong>você mesmo</strong>, não o orientador.",
+    "hint": null,
+    "trap_codes": [],
+    "tags": [],
+    "status": "rascunho",
+    "source": {
+      "kind": "migrado",
+      "file": "app/drills_data.py",
+      "ref": "MOD2_ACTION_DRILLS_C:mod2-cn7#C10.1",
+      "live_on_site": true,
+      "answer_letter": "origem",
+      "build_map": {
+        "A": "C",
+        "B": "B",
+        "C": "D",
+        "D": "A"
+      }
+    }
+  },
+  {
+    "id": "mod2-cn7.c10.2",
+    "section": "listening",
+    "task_type": "Listen to an Announcement",
+    "exam_format": true,
+    "format": "mcq",
+    "skill": null,
+    "cefr_min": "B2",
+    "cefr_max": "C1",
+    "stimulus": {
+      "kind": "audio",
+      "format": "html",
+      "title": "Exercício C10: Research Poster Symposium (meta de 2 min)",
+      "content": "<p><em>Narrator: Listen to an announcement for students participating in the Undergraduate Research Symposium.</em></p>\n<p><strong>Speaker:</strong> Thanks for coming to this brief orientation, everyone. With the Undergraduate Research Symposium just two weeks away, I want to highlight a critical deadline regarding your posters. The university print shop is covering the cost of printing one large-format poster per presenter, provided you upload your final PDF to the symposium portal by this Friday at five p.m. Now, make sure your faculty advisor signs off on the layout before you upload it, because the print shop won't accept revised files once a job is in the queue. If you miss Friday's cutoff, you aren't disqualified from presenting, but you'll have to have your poster printed at a commercial shop at your own expense. Finally, on the day of the symposium, you're only required to stand by your board during your assigned one-hour judging window; the rest of the afternoon, you're free to view other students' work.</p>",
+      "audio_ref": null
+    },
+    "group": "mod2-cn7",
+    "prompt": "Detail. What happens if a presenter submits their poster file after Friday at 5 p.m.?",
+    "text_format": "html",
+    "options": {
+      "A": "They are automatically removed from the symposium judging schedule",
+      "B": "They must give a short oral presentation instead of showing a poster",
+      "C": "They are assigned to the last one-hour judging window of the afternoon",
+      "D": "They can still participate if they pay to print the poster elsewhere"
+    },
+    "answer": "D",
+    "explanation": "Perder o prazo de sexta não elimina você do simpósio, mas faz você perder a impressão gratuita e precisar pagar por fora: \"If you miss Friday's cutoff, you aren't disqualified from presenting, but you'll have to have your poster printed at a commercial shop at your own expense.\" A opção (A) é uma <strong>armadilha de extremismo</strong>, que o próprio falante descarta ao dizer <em>you aren't disqualified</em>.",
+    "hint": null,
+    "trap_codes": [],
+    "tags": [],
+    "status": "rascunho",
+    "source": {
+      "kind": "migrado",
+      "file": "app/drills_data.py",
+      "ref": "MOD2_ACTION_DRILLS_C:mod2-cn7#C10.2",
+      "live_on_site": true,
+      "answer_letter": "origem",
+      "build_map": {
+        "A": "D",
+        "B": "C",
+        "C": "B",
+        "D": "A"
+      }
+    }
+  },
+  {
+    "id": "mod2-cn8.c11.1",
+    "section": "listening",
+    "task_type": "Listen to an Announcement",
+    "exam_format": true,
+    "format": "mcq",
+    "skill": null,
+    "cefr_min": "C1",
+    "cefr_max": "C1",
+    "stimulus": {
+      "kind": "audio",
+      "format": "html",
+      "title": "Exercício C11: Honors Thesis Deposit (meta de 2 min)",
+      "content": "<p><em>Narrator: Listen to an announcement from the director of the senior honors program.</em></p>\n<p><strong>Director:</strong> Congratulations on reaching the final stretch of your senior honors theses. As you prepare for next month's oral defenses, please take note of an important policy update from the university archives. Starting this term, the library has phased out physical bound copies altogether; your final deposit will consist solely of a PDF submitted to the institutional repository. By default, every thesis uploaded to that repository becomes publicly searchable worldwide as soon as degrees are conferred in June. For most of you, having your work openly accessible is a plus. However, if your thesis incorporates unpublished data from your advisor's lab that is slated for submission to a peer-reviewed journal, premature public release could jeopardize that publication, since some journals consider an open thesis a prior publication. In that case, you and your advisor must file an embargo form at the time of upload, which restricts public access for up to two years.</p>",
+      "audio_ref": null
+    },
+    "group": "mod2-cn8",
+    "prompt": "Detail. How has the library's thesis submission policy changed this term?",
+    "text_format": "html",
+    "options": {
+      "A": "Students must now schedule their oral defense before June graduation",
+      "B": "The institutional repository now restricts all theses for two years",
+      "C": "Printed bound volumes have been replaced by a digital-only deposit",
+      "D": "Faculty advisors are no longer required to sign the final upload form"
+    },
+    "answer": "C",
+    "explanation": "A mudança deste semestre é o fim das cópias impressas encadernadas, substituídas pelo envio apenas em PDF: \"Starting this term, the library has phased out physical bound copies altogether; your final deposit will consist solely of a PDF.\" O phrasal verb <em>phase out</em> quer dizer extinguir gradualmente. Já (B) generaliza a restrição de dois anos, que vale só para quem <strong>pede o embargo</strong>.",
+    "hint": null,
+    "trap_codes": [],
+    "tags": [],
+    "status": "rascunho",
+    "source": {
+      "kind": "migrado",
+      "file": "app/drills_data.py",
+      "ref": "MOD2_ACTION_DRILLS_C:mod2-cn8#C11.1",
+      "live_on_site": true,
+      "answer_letter": "origem",
+      "build_map": {
+        "A": "C",
+        "B": "A",
+        "C": "B",
+        "D": "D"
+      }
+    }
+  },
+  {
+    "id": "mod2-cn8.c11.2",
+    "section": "listening",
+    "task_type": "Listen to an Announcement",
+    "exam_format": true,
+    "format": "mcq",
+    "skill": null,
+    "cefr_min": "C1",
+    "cefr_max": "C1",
+    "stimulus": {
+      "kind": "audio",
+      "format": "html",
+      "title": "Exercício C11: Honors Thesis Deposit (meta de 2 min)",
+      "content": "<p><em>Narrator: Listen to an announcement from the director of the senior honors program.</em></p>\n<p><strong>Director:</strong> Congratulations on reaching the final stretch of your senior honors theses. As you prepare for next month's oral defenses, please take note of an important policy update from the university archives. Starting this term, the library has phased out physical bound copies altogether; your final deposit will consist solely of a PDF submitted to the institutional repository. By default, every thesis uploaded to that repository becomes publicly searchable worldwide as soon as degrees are conferred in June. For most of you, having your work openly accessible is a plus. However, if your thesis incorporates unpublished data from your advisor's lab that is slated for submission to a peer-reviewed journal, premature public release could jeopardize that publication, since some journals consider an open thesis a prior publication. In that case, you and your advisor must file an embargo form at the time of upload, which restricts public access for up to two years.</p>",
+      "audio_ref": null
+    },
+    "group": "mod2-cn8",
+    "prompt": "Function. Why does the director mention peer-reviewed journals?",
+    "text_format": "html",
+    "options": {
+      "A": "To explain why some students may need to delay public access to their thesis",
+      "B": "To encourage seniors to publish their theses before degrees are conferred",
+      "C": "To clarify that articles already published in journals cannot be archived",
+      "D": "To show that the institutional repository is ranked alongside top journals"
+    },
+    "answer": "A",
+    "explanation": "O diretor cita os periódicos científicos para explicar em que situação vale pedir o embargo e adiar o acesso público à tese: \"premature public release could jeopardize that publication, since some journals consider an open thesis a prior publication.\" A opção (B) inverte a lógica, pois o alerta serve para <strong>proteger dados inéditos</strong> que ainda serão enviados a uma revista.",
+    "hint": null,
+    "trap_codes": [],
+    "tags": [],
+    "status": "rascunho",
+    "source": {
+      "kind": "migrado",
+      "file": "app/drills_data.py",
+      "ref": "MOD2_ACTION_DRILLS_C:mod2-cn8#C11.2",
+      "live_on_site": true,
+      "answer_letter": "origem",
+      "build_map": {
+        "A": "A",
+        "B": "B",
+        "C": "C",
+        "D": "D"
+      }
+    }
+  },
+  {
     "id": "mod7-b8.1",
     "section": "listening",
     "task_type": "Listen to an Announcement",
