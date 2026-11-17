@@ -238,6 +238,36 @@ check("refund_mailto_carries_name_email_plan_and_date", function(){
     body.indexOf("90 dias") > -1 && /\d{2}\/\d{2}\/\d{4}/.test(body);
 });
 
+// faixas dos exercícios: Base (até A2–B1), Intermediária (B1 a B2), Avançada (B2–C1 em diante)
+check("faixa_levels_map_to_three_bands", function(){
+  var f = window.__toeflFaixa.ofLevel;
+  return f("A2–B1") === "base" && f("B1") === "inter" && f("B1–B2") === "inter" && f("B2") === "inter" &&
+    f("B2–C1") === "avancada" && f("C1") === "avancada" && f("C1–C2") === "avancada" && f("A2–C2") === "inter";
+});
+check("faixa_follows_diagnostic_band", function(){
+  var b = window.__toeflFaixa.ofBand;
+  return b("A1") === "base" && b("A2") === "base" && b("B1") === "inter" && b("B2") === "inter" && b("C1") === "avancada" && b("C2") === "avancada";
+});
+check("faixa_round_picks_students_faixa_first_without_losing_the_cycle", function(){
+  var ids = ["a", "b", "c", "d", "e", "f"], ok = true;
+  for(var t = 0; t < 30; t++){
+    var g = {};
+    var r = window.ToeflSorteio.pickRound(ids, g, 2, [], ["c", "d"]);
+    if(r.length !== 2 || r.indexOf("c") === -1 || r.indexOf("d") === -1) ok = false;
+    var r2 = window.ToeflSorteio.pickRound(ids, { cycle: ["c", "d"] }, 2, [], ["c", "d"]);
+    if(r2.indexOf("c") !== -1 || r2.indexOf("d") !== -1) ok = false; // já feitos nesta volta: ficam para depois
+  }
+  return ok;
+});
+check("faixa_badge_on_every_leveled_exercise", function(){
+  var levels = document.querySelectorAll(".drill-level[data-level-badge-for]").length;
+  return levels >= 40 && document.querySelectorAll(".drill-faixa").length === levels;
+});
+check("faixa_round_bar_has_see_all_and_starts_on_the_round", function(){
+  var r = document.querySelector(".drill-round");
+  return !!r && !!r.querySelector(".drill-round-all") && /^Ver todos \(\d+\)$/.test(r.querySelector(".drill-round-all").textContent);
+});
+
 // ---- exercicios no formato da prova (2026-10-07) ----
 function typeInto(input, value){ input.value = value; input.dispatchEvent(new Event("input")); }
 

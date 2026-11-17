@@ -1181,6 +1181,42 @@ def run():
                           where == {"sem_sessao": "/apresentacao.html", "com_sessao": "/redirect_test.html",
                                     "entrar": "/redirect_test.html", "pagamento": "/redirect_test.html"}, where)
 
+            # faixas dos exercicios: a rodada traz primeiro os da faixa do aluno,
+            # e a ordem muda com a faixa (aqui escolhida; sem escolha ela vem do
+            # nivel do diagnostico)
+            FAIXA_ROUNDS = ('(function(){ var out = { groups: 0, bad: [] };'
+                            ' Array.prototype.forEach.call(document.querySelectorAll(".drill-round"), function(r){'
+                            '  var k = parseInt(r.dataset.round, 10), want = %s;'
+                            '  var all = Array.prototype.map.call(r.querySelectorAll(".drill-pick"), function(p){ return { id: p.dataset.pick, hidden: p.hidden,'
+                            '   f: (document.querySelector(".quiz-drill[data-drill=\\"" + p.dataset.pick + "\\"]").dataset.level || "") }; });'
+                            '  var tag = function(l){ var o = ["A1","A2","B1","B2","C1","C2"], p = l.split(/[–-]/), lo = o.indexOf(p[0]), hi = o.indexOf(p[p.length-1]);'
+                            '   return (hi <= 2 && lo <= 1) ? "base" : ((lo >= 3 && hi >= 4) ? "avancada" : "inter"); };'
+                            '  var mine = all.filter(function(x){ return tag(x.f) === want; });'
+                            '  if(!mine.length) return;'
+                            '  out.groups++;'
+                            '  all.filter(function(x){ return !x.hidden; }).slice(0, Math.min(k, mine.length)).forEach(function(x){ if(tag(x.f) !== want) out.bad.push(r.dataset.roundGroup + ":" + x.id + ":" + x.f); });'
+                            ' }); return out; })()')
+            with Browser() as b:
+                b.goto(page, settle=0.5)
+                faixa_ok = {}
+                for want in ("base", "inter", "avancada"):
+                    b.eval('localStorage.setItem("toefl_cookies_v1", "ok"); localStorage.setItem("toefl_faixa_v1", "%s");'
+                           ' localStorage.removeItem("toefl_qorder_v1"); localStorage.removeItem("toefl_sorteio_v1")' % want)
+                    b.reload(settle=1)
+                    faixa_ok[want] = b.eval(FAIXA_ROUNDS % json.dumps(want))
+                check("faixas_round_shows_students_faixa_first_and_order_changes",
+                      # a Base só tem exercício em rodada depois que o M1 e o M2 em
+                      # rodadas entram (hoje M5 e M6, que são Intermediária e Avançada)
+                      all(v and (v["groups"] >= 1 or want == "base") and not v["bad"] for want, v in faixa_ok.items()),
+                      faixa_ok)
+                b.eval('localStorage.setItem("toefl_faixa_v1", "base")')
+                b.reload(settle=1)
+                path = b.eval('(function(){ var b = document.querySelector(".drill-faixa-go"); return !!b && !b.hidden; })()')
+                b.eval('localStorage.setItem("toefl_faixa_v1", "avancada")')
+                b.reload(settle=1)
+                path_off = b.eval('(function(){ var b = document.querySelector(".drill-faixa-go"); return !!b && b.hidden; })()')
+                check("faixa_base_always_shows_path_to_intermediate", path and path_off, {"base": path, "avancada": path_off})
+                b.eval('localStorage.removeItem("toefl_faixa_v1")')
             # tela de apresentacao: pagina publica, antes do login
             with Browser() as b:
                 b.goto(base + "/apresentacao.html", settle=0.5)

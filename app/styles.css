@@ -1473,6 +1473,21 @@ main{max-width:1320px; margin:0 auto; padding:0 30px 120px; min-width:0;}
   font-family:'Plus Jakarta Sans',sans-serif; font-size:10.5px; font-weight:700;
   vertical-align:middle;
 }
+/* faixa do exercício (Base, Intermediária, Avançada), calculada no app.js a
+   partir do nível CEFR; a barra da rodada mostra a faixa do aluno primeiro */
+.drill-faixa{
+  display:inline-block; margin-left:6px; padding:2px 9px; border-radius:99px;
+  border:1.5px solid var(--accent-strong); background:var(--accent-wash); color:var(--accent-strong);
+  font-family:'Plus Jakarta Sans',sans-serif; font-size:10.5px; font-weight:700; vertical-align:middle;
+}
+.drill-faixa-line{margin:0 !important; flex:1 1 100%; font-size:13.5px; line-height:1.5; color:var(--ink);}
+.drill-faixa-btns{display:flex; flex:1 1 100%; flex-wrap:wrap; gap:8px;}
+.drill-faixa-btns button{
+  min-height:40px; padding:6px 14px; border-radius:99px; cursor:pointer; font:inherit; font-size:13px; font-weight:700;
+  color:var(--accent-strong); background:var(--paper); border:1.5px solid var(--accent-strong);
+}
+.drill-faixa-btns button:hover{background:var(--accent-wash);}
+.drill-faixa-btns button[hidden]{display:none;}
 .quiz-level-standalone{margin:0 0 10px !important;}
 .quiz-drill.level-recommended{
   border-left:4px solid var(--accent); padding-left:14px; margin-left:-14px;

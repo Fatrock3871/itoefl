@@ -1106,6 +1106,47 @@
     return null;
   }
 
+  // Faixas dos exercícios (2026-11-17): o "level" de cada exercício (ex.
+  // "B1–B2") vira uma de três faixas. Base: começa em A1 ou A2 e vai até B1.
+  // Intermediária: de B1 a B2. Avançada: de B2–C1 em diante. A faixa do aluno
+  // vem do nível do diagnóstico (A1 e A2 Base, B1 e B2 Intermediária, C1 e C2
+  // Avançada), a não ser que ele escolha outra (toefl_faixa_v1, só neste
+  // aparelho). A faixa só muda a ordem: nenhum exercício some.
+  var FAIXA_LEVELS = ["A1", "A2", "B1", "B2", "C1", "C2"];
+  var FAIXA_NAMES = { base: "Base", inter: "Intermediária", avancada: "Avançada" };
+  var LS_FAIXA = "toefl_faixa_v1";
+  function faixaOfLevel(str){
+    var p = String(str || "").split(/[–-]/).map(function(s){ return s.trim(); });
+    var lo = FAIXA_LEVELS.indexOf(p[0]), hi = FAIXA_LEVELS.indexOf(p[p.length - 1]);
+    if(lo < 0 || hi < 0) return "";
+    if(hi <= 2 && lo <= 1) return "base";
+    if(lo >= 3 && hi >= 4) return "avancada";
+    return "inter";
+  }
+  function faixaOfBand(label){
+    var i = FAIXA_LEVELS.indexOf(label);
+    return i < 0 ? "" : (i <= 1 ? "base" : (i <= 3 ? "inter" : "avancada"));
+  }
+  // { faixa, chosen }: chosen = o aluno escolheu; faixa vazia = sem nível ainda
+  function faixaPref(){
+    var saved = safeGet(LS_FAIXA);
+    if(FAIXA_NAMES[saved]) return { faixa: saved, chosen: true };
+    var est = computeBandEstimate();
+    return { faixa: est ? faixaOfBand(cefrBandFromPct(est.pct).label) : "", chosen: false };
+  }
+  window.__toeflFaixa = { ofLevel: faixaOfLevel, ofBand: faixaOfBand, pref: faixaPref }; // gancho do smoke test
+  // selo da faixa ao lado do "Nível X" de cada exercício
+  Array.prototype.forEach.call(document.querySelectorAll(".drill-level[data-level-badge-for]"), function(badge){
+    var d = document.querySelector('.quiz-drill[data-drill="' + badge.dataset.levelBadgeFor + '"]');
+    var f = d ? faixaOfLevel(d.dataset.level) : "";
+    if(!f) return;
+    var tag = document.createElement("span");
+    tag.className = "drill-faixa";
+    tag.dataset.faixa = f;
+    tag.textContent = "Faixa " + FAIXA_NAMES[f];
+    badge.insertAdjacentElement("afterend", tag);
+  });
+
   // Action Drills de nível diferente para cada aluno: cada drill de M1/M2 tem
   // um nível CEFR (ver "level" em drills_data.py, ex. "B2–C1"). Marca como
   // "recomendado para você" os que incluem a banda estimada atual do aluno,
@@ -1230,7 +1271,10 @@
     // k exercícios entre os que ainda não foram feitos nesta volta (cycle),
     // os menos feitos primeiro; "avoid" (a rodada atual) só entra se faltar.
     // Volta completa (todos feitos): cycle zera e começa outra.
-    pickRound: function(ids, g, k, avoid){
+    // "prefer" (a faixa do aluno): dentro de cada grupo (não feitos, depois os
+    // repetidos), os preferidos vêm antes. A volta continua completa: nenhum
+    // exercício se repete antes de o grupo inteiro ter sido feito.
+    pickRound: function(ids, g, k, avoid, prefer){
       g.cycle = (g.cycle || []).filter(function(id){ return ids.indexOf(id) !== -1; });
       g.n = g.n || {};
       var pool = ids.filter(function(id){ return g.cycle.indexOf(id) === -1; });
@@ -1239,8 +1283,13 @@
         return ToeflSorteio.permute(list).sort(function(x, y){ return (g.n[x] || 0) - (g.n[y] || 0); });
       };
       avoid = avoid || [];
-      var fresh = rank(pool.filter(function(id){ return avoid.indexOf(id) === -1; }));
-      var again = rank(pool.filter(function(id){ return avoid.indexOf(id) !== -1; }));
+      prefer = prefer || [];
+      var first = function(list){
+        return list.filter(function(id){ return prefer.indexOf(id) !== -1; })
+          .concat(list.filter(function(id){ return prefer.indexOf(id) === -1; }));
+      };
+      var fresh = first(rank(pool.filter(function(id){ return avoid.indexOf(id) === -1; })));
+      var again = first(rank(pool.filter(function(id){ return avoid.indexOf(id) !== -1; })));
       return fresh.concat(again).slice(0, k);
     },
     // exercício terminado: conta na volta e no total. Volta já completa
@@ -1507,22 +1556,65 @@
       s.all[gid] = { cycle: s.g.cycle || [], n: s.g.n || {} };
       safeSet(LS_SORTEIO, JSON.stringify(s.all));
     }
+    // faixa do aluno: os exercícios dela entram primeiro na rodada. "Ver todos"
+    // mostra o grupo inteiro, sem mudar a rodada guardada.
+    var faixaOf = function(p){ var d = p.querySelector(".quiz-drill"); return d ? faixaOfLevel(d.dataset.level) : ""; };
+    var showAll = false;
+    var faixaLine = document.createElement("p"); faixaLine.className = "drill-faixa-line";
+    var faixaBtns = document.createElement("div"); faixaBtns.className = "drill-faixa-btns";
+    var allBtn = document.createElement("button"); allBtn.type = "button"; allBtn.className = "drill-round-all";
+    var pathBtn = document.createElement("button"); pathBtn.type = "button"; pathBtn.className = "drill-faixa-go";
+    var autoBtn = document.createElement("button"); autoBtn.type = "button"; autoBtn.className = "drill-faixa-auto";
+    faixaBtns.appendChild(allBtn); faixaBtns.appendChild(pathBtn); faixaBtns.appendChild(autoBtn);
+    var bar = root.querySelector(".drill-round-bar");
+    bar.appendChild(faixaLine); bar.appendChild(faixaBtns);
+    function preferred(){
+      var pref = faixaPref().faixa;
+      if(!pref) return [];
+      var got = picks.filter(function(p){ return faixaOf(p) === pref; }).map(function(p){ return p.dataset.pick; });
+      return got;
+    }
+    function drawFaixa(){
+      var pref = faixaPref();
+      allBtn.textContent = showAll ? "Voltar à rodada" : "Ver todos (" + ids.length + ")";
+      pathBtn.hidden = pref.faixa !== "base";
+      pathBtn.textContent = "Ir para a faixa Intermediária";
+      autoBtn.hidden = !pref.chosen;
+      autoBtn.textContent = "Usar a faixa do meu diagnóstico";
+      if(!pref.faixa){
+        faixaLine.textContent = "Faça o diagnóstico do Módulo 0 e os exercícios da sua faixa passam a vir primeiro.";
+      } else {
+        faixaLine.textContent = "Os exercícios da faixa " + FAIXA_NAMES[pref.faixa] + " vêm primeiro" +
+          (pref.chosen ? ", pela faixa que você escolheu." : ", pelo nível do seu diagnóstico.") +
+          (pref.faixa === "base" ? " Quando terminar a faixa Base, o próximo degrau é a Intermediária." : "");
+      }
+    }
     function show(s){
       var round = s.g.round || [];
-      picks.forEach(function(p){ p.hidden = round.indexOf(p.dataset.pick) === -1; });
-      round.forEach(function(id){
+      picks.forEach(function(p){ p.hidden = !showAll && round.indexOf(p.dataset.pick) === -1; });
+      round.slice().reverse().forEach(function(id){
         var p = picks[ids.indexOf(id)];
-        if(p) root.appendChild(p);
+        if(p) bar.insertAdjacentElement("afterend", p);
       });
       var done = (s.g.cycle || []).length;
-      statusEl.textContent = "Nesta rodada: " + round.length + " de " + ids.length + " exercícios. Você já fez " + done +
-        " de " + ids.length + " nesta volta, e os que faltam vêm primeiro.";
+      statusEl.textContent = (showAll ? "Todos os " + ids.length + " exercícios do grupo. " : "Nesta rodada: " + round.length + " de " + ids.length + " exercícios. ") +
+        "Você já fez " + done + " de " + ids.length + " nesta volta, e os que faltam vêm primeiro.";
+      drawFaixa();
     }
-    function newRound(s, avoid){ s.g.round = ToeflSorteio.pickRound(ids, s.g, k, avoid); saveRound(s); }
+    function newRound(s, avoid){ s.g.round = ToeflSorteio.pickRound(ids, s.g, k, avoid, preferred()); saveRound(s); }
     var s = load();
     var valid = Array.isArray(s.g.round) && s.g.round.length > 0 && s.g.round.every(function(id){ return ids.indexOf(id) !== -1; });
     if(!valid || s.g.round.every(function(id){ return (s.g.cycle || []).indexOf(id) !== -1; })) newRound(s, valid ? s.g.round : null);
     show(s);
+    allBtn.addEventListener("click", function(){ showAll = !showAll; show(load()); });
+    function changeFaixa(value){
+      try { if(value) localStorage.setItem(LS_FAIXA, value); else localStorage.removeItem(LS_FAIXA); } catch(e){}
+      var s2 = load();
+      newRound(s2, s2.g.round);
+      show(s2);
+    }
+    pathBtn.addEventListener("click", function(){ changeFaixa("inter"); });
+    autoBtn.addEventListener("click", function(){ changeFaixa(""); });
     nextBtn.addEventListener("click", function(){
       var s2 = load();
       newRound(s2, s2.g.round);
