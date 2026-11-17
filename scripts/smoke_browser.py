@@ -746,7 +746,7 @@ def run():
 
             with Browser() as b:
                 b.goto(page, settle=0.5)
-                b.eval('localStorage.setItem("toefl_theme_v1", "light")')
+                b.eval('localStorage.setItem("toefl_theme_v1", "light"); localStorage.setItem("toefl_cookies_v1", "ok")')
                 b.reload(settle=1.2)
                 check("real_no_js_errors_on_load", not b.errors, b.errors)
                 bad = b.eval(IBT_CASE)
@@ -1186,6 +1186,15 @@ def run():
                 b.goto(base + "/apresentacao.html", settle=0.5)
                 b.eval('localStorage.clear(); localStorage.setItem("toefl_theme_v1", "light")')
                 b.reload(settle=1.2)
+                # aviso de cookies: aparece na primeira visita, some com "Entendi"
+                # e não volta depois de recarregar
+                ck = 'document.getElementById("cookieBar") && !document.getElementById("cookieBar").hidden'
+                first = b.eval(ck)
+                b.eval('document.getElementById("cookieOk").click()')
+                gone = not b.eval(ck)
+                b.reload(settle=1)
+                check("cookies_bar_shows_once_and_stays_gone", first and gone and not b.eval(ck),
+                      {"first": first, "gone": gone})
                 lp = b.eval(LANDING_STATE)
                 check("landing_desktop_has_all_sections",
                       lp["h1"] == 1 and lp["sections"] == ["por-que-existe", "como-funciona", "diagnostico", "gratis", "planos", "duvidas"]

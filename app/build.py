@@ -95,6 +95,25 @@ LEGAL_LINKS = (
     '<a href="termos.html" target="_blank" rel="noopener">Termos de Uso</a>'
     '<span aria-hidden="true"> · </span>'
     '<a href="privacidade.html" target="_blank" rel="noopener">Política de Privacidade</a>'
+    '<span aria-hidden="true"> · </span>'
+    '<a href="ajuda.html" target="_blank" rel="noopener">Ajuda</a>'
+)
+
+# aviso de cookies (LGPD, 2026-11-16): barra discreta no rodapé de todas as
+# páginas, na primeira visita. A escolha fica em toefl_cookies_v1 (só local,
+# não sincroniza). Não bloqueia nada: o site só guarda o essencial.
+COOKIE_BAR = (
+    '<div class="cookie-bar" id="cookieBar" role="region" aria-label="Aviso de cookies" hidden>'
+    '<p>Guardamos no seu aparelho só o essencial: login, progresso e preferências. '
+    'Não usamos cookies de propaganda. Veja os detalhes na '
+    '<a href="privacidade.html" target="_blank" rel="noopener">Política de Privacidade</a>.</p>'
+    '<button type="button" id="cookieOk">Entendi</button>'
+    '</div>'
+    '<script>(function(){var b=document.getElementById("cookieBar");if(!b)return;'
+    'var ok=false;try{ok=localStorage.getItem("toefl_cookies_v1")==="ok";}catch(e){}'
+    'if(ok)return;b.hidden=false;'
+    'document.getElementById("cookieOk").addEventListener("click",function(){'
+    'try{localStorage.setItem("toefl_cookies_v1","ok");}catch(e){}b.hidden=true;});})();</script>'
 )
 
 # fontes do Google: preconnect abre a conexão cedo e o <link> deixa o
@@ -1138,6 +1157,7 @@ html = f'''<!DOCTYPE html>
 <script>
 {JS}
 </script>
+{COOKIE_BAR}
 </body>
 </html>
 '''
@@ -1199,6 +1219,7 @@ for _slug, _title in LEGAL_PAGES:
 {_body}
 </main>
 <footer class="legal-foot"><a class="legal-brand foot-brand" href="index.html" aria-label="iTOEFL, início"><span class="logo">{LOGO_SVG}</span><span class="name">iTOEFL</span></a>{LEGAL_LINKS}<p class="ets-notice">{ETS_NOTICE}</p></footer>
+{COOKIE_BAR}
 </body>
 </html>
 '''
@@ -1507,6 +1528,7 @@ _landing = f'''<!DOCTYPE html>
 <script>
 {LANDING_JS}
 </script>
+{COOKIE_BAR}
 </body>
 </html>
 '''
