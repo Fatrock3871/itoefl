@@ -1977,7 +1977,7 @@ def portuguese_dash_checks():
     entre aspas (fala, transcrição, frase citada), onde o travessão é pontuação
     correta (decisão de 2026-10-13)."""
     bad = []
-    for name in ("index.html", "apresentacao.html", "termos.html", "privacidade.html"):
+    for name in ("index.html", "apresentacao.html", "termos.html", "privacidade.html", "ajuda.html"):
         page = ARTIFACT.parent / name
         if not page.exists():
             bad.append(f"{name} não existe")
@@ -1993,6 +1993,32 @@ def portuguese_dash_checks():
                     bad.append(f"{name}: {text[:90]}")
                     break
     return {"html_portuguese_has_no_dash": not bad, "html_portuguese_has_no_dash__error": " | ".join(bad[:6])}
+
+
+def help_and_cookie_checks():
+    """Item 1 e 3 de 2026-11-17: página de ajuda e aviso de cookies. A parte que
+    precisa de navegador (aparece uma vez, some com "Entendi") está em
+    smoke_browser.py; aqui se lê o HTML pronto."""
+    art = ARTIFACT.parent
+    read = lambda n: (art / n).read_text(encoding="utf-8") if (art / n).exists() else ""
+    pages = ("index.html", "apresentacao.html", "termos.html", "privacidade.html", "ajuda.html")
+    ajuda = read("ajuda.html")
+    topics = ["Conta e login", "Pagamento e Pix", "Reembolso de 7 dias", "Correção de redação",
+              "Progresso e sincronização", "Diagnóstico", "App instalável", "Falar com a gente"]
+    missing_topics = [t for t in topics if f"<h2>{t}</h2>" not in ajuda]
+    no_link = [n for n in pages if 'href="ajuda.html"' not in read(n)]
+    no_bar = [n for n in pages if 'id="cookieBar"' not in read(n) or "Entendi" not in read(n)]
+    return {
+        "help_page_exists_with_all_topics": not missing_topics and ajuda.count("<details") >= 14,
+        "help_page_exists_with_all_topics__error": f"faltam: {missing_topics}",
+        "help_link_in_every_footer_and_menu": not no_link,
+        "help_link_in_every_footer_and_menu__error": f"sem link: {no_link}",
+        "help_page_states_3_business_days_and_7_days": "Até 3 dias úteis" in ajuda and "até 7 dias corridos" in ajuda,
+        "cookie_bar_in_every_page": not no_bar,
+        "cookie_bar_in_every_page__error": f"sem aviso: {no_bar}",
+        "cookie_bar_links_privacy_and_has_no_ads_cookies": 'href="privacidade.html"' in read("index.html")
+            and "Não usamos cookies de propaganda" in read("index.html"),
+    }
 
 
 PT_WORD = re.compile(r"[ãõçáéíóúâêôà]|\b(?:não|você|que|para|com|uma|dos|das|pelo|pela|são|os|em|de|da|do)\b", re.I)
@@ -2592,6 +2618,7 @@ def main():
     results.update(answer_option_checks())
     results.update(english_dot_checks())
     results.update(portuguese_dash_checks())
+    results.update(help_and_cookie_checks())
     results.update(etapa3_text_checks())
     results.update(passage_checks())
 
