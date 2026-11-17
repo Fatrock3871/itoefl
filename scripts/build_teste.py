@@ -25,7 +25,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 OUT = ROOT / "_teste"
-PAGES = ["index.html", "termos.html", "privacidade.html"]
+PAGES = ["index.html", "termos.html", "privacidade.html", "ajuda.html"]
 
 
 def build(out=OUT):

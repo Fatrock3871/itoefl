@@ -1106,6 +1106,47 @@
     return null;
   }
 
+  // Faixas dos exercícios (2026-11-17): o "level" de cada exercício (ex.
+  // "B1–B2") vira uma de três faixas. Base: começa em A1 ou A2 e vai até B1.
+  // Intermediária: de B1 a B2. Avançada: de B2–C1 em diante. A faixa do aluno
+  // vem do nível do diagnóstico (A1 e A2 Base, B1 e B2 Intermediária, C1 e C2
+  // Avançada), a não ser que ele escolha outra (toefl_faixa_v1, só neste
+  // aparelho). A faixa só muda a ordem: nenhum exercício some.
+  var FAIXA_LEVELS = ["A1", "A2", "B1", "B2", "C1", "C2"];
+  var FAIXA_NAMES = { base: "Base", inter: "Intermediária", avancada: "Avançada" };
+  var LS_FAIXA = "toefl_faixa_v1";
+  function faixaOfLevel(str){
+    var p = String(str || "").split(/[–-]/).map(function(s){ return s.trim(); });
+    var lo = FAIXA_LEVELS.indexOf(p[0]), hi = FAIXA_LEVELS.indexOf(p[p.length - 1]);
+    if(lo < 0 || hi < 0) return "";
+    if(hi <= 2 && lo <= 1) return "base";
+    if(lo >= 3 && hi >= 4) return "avancada";
+    return "inter";
+  }
+  function faixaOfBand(label){
+    var i = FAIXA_LEVELS.indexOf(label);
+    return i < 0 ? "" : (i <= 1 ? "base" : (i <= 3 ? "inter" : "avancada"));
+  }
+  // { faixa, chosen }: chosen = o aluno escolheu; faixa vazia = sem nível ainda
+  function faixaPref(){
+    var saved = safeGet(LS_FAIXA);
+    if(FAIXA_NAMES[saved]) return { faixa: saved, chosen: true };
+    var est = computeBandEstimate();
+    return { faixa: est ? faixaOfBand(cefrBandFromPct(est.pct).label) : "", chosen: false };
+  }
+  window.__toeflFaixa = { ofLevel: faixaOfLevel, ofBand: faixaOfBand, pref: faixaPref }; // gancho do smoke test
+  // selo da faixa ao lado do "Nível X" de cada exercício
+  Array.prototype.forEach.call(document.querySelectorAll(".drill-level[data-level-badge-for]"), function(badge){
+    var d = document.querySelector('.quiz-drill[data-drill="' + badge.dataset.levelBadgeFor + '"]');
+    var f = d ? faixaOfLevel(d.dataset.level) : "";
+    if(!f) return;
+    var tag = document.createElement("span");
+    tag.className = "drill-faixa";
+    tag.dataset.faixa = f;
+    tag.textContent = "Faixa " + FAIXA_NAMES[f];
+    badge.insertAdjacentElement("afterend", tag);
+  });
+
   // Action Drills de nível diferente para cada aluno: cada drill de M1/M2 tem
   // um nível CEFR (ver "level" em drills_data.py, ex. "B2–C1"). Marca como
   // "recomendado para você" os que incluem a banda estimada atual do aluno,
@@ -1230,7 +1271,10 @@
     // k exercícios entre os que ainda não foram feitos nesta volta (cycle),
     // os menos feitos primeiro; "avoid" (a rodada atual) só entra se faltar.
     // Volta completa (todos feitos): cycle zera e começa outra.
-    pickRound: function(ids, g, k, avoid){
+    // "prefer" (a faixa do aluno): dentro de cada grupo (não feitos, depois os
+    // repetidos), os preferidos vêm antes. A volta continua completa: nenhum
+    // exercício se repete antes de o grupo inteiro ter sido feito.
+    pickRound: function(ids, g, k, avoid, prefer){
       g.cycle = (g.cycle || []).filter(function(id){ return ids.indexOf(id) !== -1; });
       g.n = g.n || {};
       var pool = ids.filter(function(id){ return g.cycle.indexOf(id) === -1; });
@@ -1239,8 +1283,13 @@
         return ToeflSorteio.permute(list).sort(function(x, y){ return (g.n[x] || 0) - (g.n[y] || 0); });
       };
       avoid = avoid || [];
-      var fresh = rank(pool.filter(function(id){ return avoid.indexOf(id) === -1; }));
-      var again = rank(pool.filter(function(id){ return avoid.indexOf(id) !== -1; }));
+      prefer = prefer || [];
+      var first = function(list){
+        return list.filter(function(id){ return prefer.indexOf(id) !== -1; })
+          .concat(list.filter(function(id){ return prefer.indexOf(id) === -1; }));
+      };
+      var fresh = first(rank(pool.filter(function(id){ return avoid.indexOf(id) === -1; })));
+      var again = first(rank(pool.filter(function(id){ return avoid.indexOf(id) !== -1; })));
       return fresh.concat(again).slice(0, k);
     },
     // exercício terminado: conta na volta e no total. Volta já completa
@@ -1507,22 +1556,65 @@
       s.all[gid] = { cycle: s.g.cycle || [], n: s.g.n || {} };
       safeSet(LS_SORTEIO, JSON.stringify(s.all));
     }
+    // faixa do aluno: os exercícios dela entram primeiro na rodada. "Ver todos"
+    // mostra o grupo inteiro, sem mudar a rodada guardada.
+    var faixaOf = function(p){ var d = p.querySelector(".quiz-drill"); return d ? faixaOfLevel(d.dataset.level) : ""; };
+    var showAll = false;
+    var faixaLine = document.createElement("p"); faixaLine.className = "drill-faixa-line";
+    var faixaBtns = document.createElement("div"); faixaBtns.className = "drill-faixa-btns";
+    var allBtn = document.createElement("button"); allBtn.type = "button"; allBtn.className = "drill-round-all";
+    var pathBtn = document.createElement("button"); pathBtn.type = "button"; pathBtn.className = "drill-faixa-go";
+    var autoBtn = document.createElement("button"); autoBtn.type = "button"; autoBtn.className = "drill-faixa-auto";
+    faixaBtns.appendChild(allBtn); faixaBtns.appendChild(pathBtn); faixaBtns.appendChild(autoBtn);
+    var bar = root.querySelector(".drill-round-bar");
+    bar.appendChild(faixaLine); bar.appendChild(faixaBtns);
+    function preferred(){
+      var pref = faixaPref().faixa;
+      if(!pref) return [];
+      var got = picks.filter(function(p){ return faixaOf(p) === pref; }).map(function(p){ return p.dataset.pick; });
+      return got;
+    }
+    function drawFaixa(){
+      var pref = faixaPref();
+      allBtn.textContent = showAll ? "Voltar à rodada" : "Ver todos (" + ids.length + ")";
+      pathBtn.hidden = pref.faixa !== "base";
+      pathBtn.textContent = "Ir para a faixa Intermediária";
+      autoBtn.hidden = !pref.chosen;
+      autoBtn.textContent = "Usar a faixa do meu diagnóstico";
+      if(!pref.faixa){
+        faixaLine.textContent = "Faça o diagnóstico do Módulo 0 e os exercícios da sua faixa passam a vir primeiro.";
+      } else {
+        faixaLine.textContent = "Os exercícios da faixa " + FAIXA_NAMES[pref.faixa] + " vêm primeiro" +
+          (pref.chosen ? ", pela faixa que você escolheu." : ", pelo nível do seu diagnóstico.") +
+          (pref.faixa === "base" ? " Quando terminar a faixa Base, o próximo degrau é a Intermediária." : "");
+      }
+    }
     function show(s){
       var round = s.g.round || [];
-      picks.forEach(function(p){ p.hidden = round.indexOf(p.dataset.pick) === -1; });
-      round.forEach(function(id){
+      picks.forEach(function(p){ p.hidden = !showAll && round.indexOf(p.dataset.pick) === -1; });
+      round.slice().reverse().forEach(function(id){
         var p = picks[ids.indexOf(id)];
-        if(p) root.appendChild(p);
+        if(p) bar.insertAdjacentElement("afterend", p);
       });
       var done = (s.g.cycle || []).length;
-      statusEl.textContent = "Nesta rodada: " + round.length + " de " + ids.length + " exercícios. Você já fez " + done +
-        " de " + ids.length + " nesta volta, e os que faltam vêm primeiro.";
+      statusEl.textContent = (showAll ? "Todos os " + ids.length + " exercícios do grupo. " : "Nesta rodada: " + round.length + " de " + ids.length + " exercícios. ") +
+        "Você já fez " + done + " de " + ids.length + " nesta volta, e os que faltam vêm primeiro.";
+      drawFaixa();
     }
-    function newRound(s, avoid){ s.g.round = ToeflSorteio.pickRound(ids, s.g, k, avoid); saveRound(s); }
+    function newRound(s, avoid){ s.g.round = ToeflSorteio.pickRound(ids, s.g, k, avoid, preferred()); saveRound(s); }
     var s = load();
     var valid = Array.isArray(s.g.round) && s.g.round.length > 0 && s.g.round.every(function(id){ return ids.indexOf(id) !== -1; });
     if(!valid || s.g.round.every(function(id){ return (s.g.cycle || []).indexOf(id) !== -1; })) newRound(s, valid ? s.g.round : null);
     show(s);
+    allBtn.addEventListener("click", function(){ showAll = !showAll; show(load()); });
+    function changeFaixa(value){
+      try { if(value) localStorage.setItem(LS_FAIXA, value); else localStorage.removeItem(LS_FAIXA); } catch(e){}
+      var s2 = load();
+      newRound(s2, s2.g.round);
+      show(s2);
+    }
+    pathBtn.addEventListener("click", function(){ changeFaixa("inter"); });
+    autoBtn.addEventListener("click", function(){ changeFaixa(""); });
     nextBtn.addEventListener("click", function(){
       var s2 = load();
       newRound(s2, s2.g.round);
@@ -2817,6 +2909,28 @@
     return { text: FREE ? "Conta grátis: você tem " + FREE.resumo + ". Os simulados, a correção de redação e o resto do curso são liberados por um plano."
                         : "Sem acesso: esta conta ainda não tem compra confirmada.", cls: "is-free" };
   }
+  // Reembolso de 7 dias (direito de arrependimento). rows: o extrato `payments`
+  // da própria conta (RLS). Vale a última compra aprovada, e só se ela estiver
+  // dentro do prazo. Renovação do Mensal (já havia cobrança aprovada do mesmo
+  // plano antes) não entra, como dizem os Termos. Quem decide e devolve o
+  // dinheiro é a equipe, pelo e-mail: aqui só se mostra o botão certo.
+  function refundState(rows, nowMs, days, monthlyId){
+    var list = (rows || []).filter(function(r){ return r && r.status !== "refunded" && !isNaN(new Date(r.approved_at).getTime()); })
+      .sort(function(a, b){ return new Date(a.approved_at) - new Date(b.approved_at); });
+    if(!list.length) return { eligible:false, last:null };
+    var last = list[list.length - 1], when = new Date(last.approved_at);
+    var renewal = last.plan === monthlyId && list.slice(0, -1).some(function(r){ return r.plan === monthlyId; });
+    var left = Math.ceil((when.getTime() + days * DAY_MS - nowMs) / DAY_MS);
+    return { eligible: !renewal && left > 0 && when.getTime() <= nowMs, renewal: renewal, last: when, plan: last.plan, daysLeft: left };
+  }
+  // pedido pronto para o e-mail de contato: nome, e-mail, plano e data da compra
+  function refundMailto(contact, info){
+    var body = "Olá! Quero desistir da compra e pedir o reembolso (direito de arrependimento de " + info.days + " dias).\n\n" +
+      "Nome: " + (info.name || "") + "\nE-mail da conta: " + (info.email || "") + "\nPlano: " + (info.planName || info.plan || "") +
+      "\nData da compra: " + fmtDate(info.when) + "\n";
+    return "mailto:" + contact + "?subject=" + encodeURIComponent("Pedido de reembolso (" + info.days + " dias)") +
+      "&body=" + encodeURIComponent(body);
+  }
   // título e parágrafo da tela de compra, conforme a situação da conta
   function gateCopy(st){
     if(st.expired){
@@ -2931,6 +3045,7 @@
     if(window.__toeflRefreshLevelPractice) window.__toeflRefreshLevelPractice(true);
   }
   window.__toeflAccess = { state: accessState, text: accessText, gateCopy: gateCopy, setLevel: setAccessLevel, openPlans: openPlans,
+    refund: refundState, refundMailto: refundMailto,
     subText: subscriptionText, payRetryMs: PAY_RETRY_MS * PAY_RETRY_TRIES }; // gancho do smoke test
 
   // ---------- Contas + sincronização (Supabase) ----------
@@ -3590,11 +3705,67 @@
           });
         });
       }
+      // reembolso de 7 dias: lê o extrato (`payments`, só da própria conta) e
+      // mostra o botão só para quem comprou dentro do prazo. Depois do prazo,
+      // mostra o que dizem os Termos. O pedido sai por e-mail; não mexe em
+      // pagamento nem em acesso.
+      var refundBox = document.getElementById("accountRefund");
+      var refundBtn = document.getElementById("accountRefundBtn");
+      var refundInfo = document.getElementById("accountRefundInfo");
+      var refundConfirm = document.getElementById("accountRefundConfirm");
+      function loadRefund(user){
+        if(!refundBox) return;
+        refundBox.hidden = true; refundBtn.hidden = true; refundInfo.hidden = true; refundConfirm.hidden = true;
+        client.from("payments").select("plan, approved_at, status").eq("user_id", user.id)
+          .then(function(res){
+            if(res.error || !res.data || !res.data.length) return;
+            var days = parseInt(refundBox.dataset.days, 10) || 7;
+            var rs = refundState(res.data, Date.now(), days, refundBox.dataset.monthly);
+            if(!rs.last) return;
+            refundBox.hidden = false;
+            if(rs.eligible){
+              refundBtn.hidden = false;
+              refundBtn.onclick = function(){ openRefund(user, rs, days); };
+              return;
+            }
+            refundInfo.textContent = rs.renewal
+              ? "As cobranças mensais depois da primeira não são reembolsadas. Você pode cancelar a assinatura quando quiser, e nada mais é cobrado."
+              : "O prazo de " + days + " dias para desistir da compra já passou. Depois dele não há reembolso proporcional aos dias não usados, como explicam os Termos de Uso.";
+            refundInfo.hidden = false;
+          }).catch(function(){});
+      }
+      function openRefund(user, rs, days){
+        var contact = refundBox.dataset.contact || "";
+        var send = document.getElementById("accountRefundSend");
+        var text = document.getElementById("accountRefundText");
+        var meta = user.user_metadata || {};
+        text.textContent = "Você pode desistir da compra em até " + days + " dias corridos, sem precisar justificar. " +
+          "Sua compra foi em " + fmtDate(rs.last) + ", então ainda " + daysLeftText(rs.daysLeft) + " para pedir. " +
+          "O pedido sai pelo seu e-mail, já com nome, plano e data da compra. Quando a devolução é confirmada, " +
+          "os dias dessa compra saem do seu acesso (no Mensal, a assinatura também é cancelada) e o valor volta pelo mesmo meio de pagamento.";
+        if(contact){
+          send.textContent = "Enviar pedido por e-mail";
+          send.removeAttribute("target");
+          send.href = refundMailto(contact, { days: days, name: meta.full_name || meta.name || "", email: user.email || "",
+            plan: rs.plan, planName: planName(rs.plan), when: rs.last });
+        } else {
+          text.textContent += " O e-mail de contato está nos Termos de Uso, seção 15.";
+          send.textContent = "Ver o contato nos Termos";
+          send.href = "termos.html";
+          send.target = "_blank";
+        }
+        refundBtn.hidden = true;
+        refundConfirm.hidden = false;
+      }
+      var refundBack = document.getElementById("accountRefundBack");
+      if(refundBack) refundBack.addEventListener("click", function(){ refundConfirm.hidden = true; refundBtn.hidden = false; });
+
       // mostra o que a tabela `entitlements` diz desta conta. É só leitura:
       // quem libera ou bloqueia o conteúdo continua sendo checkEntitlement().
       function loadAccess(user){
         if(!accessEl) return;
         if(renewBtn) renewBtn.hidden = true;
+        if(refundBox) refundBox.hidden = true;
         if(!user){ setAccess("Não consegui verificar agora.", ""); return; }
         if(isAdmin({ user: user })){ setAccess("Conta de administrador: acesso liberado, sem cobrança.", "is-paid"); return; }
         setAccess("Verificando…", "");
@@ -3605,6 +3776,7 @@
             var line = accessText(st, res.data && res.data.paid_at);
             setAccess(line.text, line.cls);
             loadSubscription(user);
+            loadRefund(user);
             // comprar mais dias para quem tem prazo correndo (somam ao fim);
             // ver os planos para a conta grátis (nunca comprou ou venceu).
             // Compra antiga sem prazo não tem o que comprar.

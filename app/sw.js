@@ -26,6 +26,7 @@ var PRECACHE = [
   "./index.html",
   "./termos.html",
   "./privacidade.html",
+  "./ajuda.html",
   "./manifest.json",
   "./icons/icon-192.png",
   "./icons/icon-512.png"
