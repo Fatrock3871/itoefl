@@ -209,6 +209,34 @@ check("account_renew_button_starts_hidden", function(){
   var b = document.getElementById("accountRenew");
   return !!b && b.hidden === true;
 });
+// reembolso de 7 dias: o botão só vale até 7 dias da última compra aprovada;
+// renovação do Mensal e compra já devolvida não entram
+check("refund_button_exists_and_starts_hidden", function(){
+  var b = document.getElementById("accountRefundBtn"), box = document.getElementById("accountRefund");
+  return !!b && b.hidden === true && !!box && box.hidden === true && /^Pedir reembolso \(7 dias\)$/.test(b.textContent);
+});
+check("refund_window_is_7_days_from_last_purchase", function(){
+  var d = function(n){ return new Date(NOW - n * DAY).toISOString(); };
+  var r = function(rows){ return ACC.refund(rows, NOW, 7, "mensal"); };
+  return r([{ plan: "90dias", approved_at: d(2), status: "approved" }]).eligible === true &&
+    r([{ plan: "90dias", approved_at: d(6.5), status: "approved" }]).eligible === true &&
+    r([{ plan: "90dias", approved_at: d(7.5), status: "approved" }]).eligible === false &&
+    r([{ plan: "90dias", approved_at: d(30), status: "approved" }]).eligible === false &&
+    r([]).eligible === false &&
+    r([{ plan: "90dias", approved_at: d(2), status: "refunded" }]).eligible === false;
+});
+check("refund_ignores_monthly_renewals", function(){
+  var d = function(n){ return new Date(NOW - n * DAY).toISOString(); };
+  var first = ACC.refund([{ plan: "mensal", approved_at: d(3), status: "approved" }], NOW, 7, "mensal");
+  var renewal = ACC.refund([{ plan: "mensal", approved_at: d(33), status: "approved" }, { plan: "mensal", approved_at: d(3), status: "approved" }], NOW, 7, "mensal");
+  return first.eligible === true && renewal.eligible === false && renewal.renewal === true;
+});
+check("refund_mailto_carries_name_email_plan_and_date", function(){
+  var u = ACC.refundMailto("contato@exemplo.com", { days: 7, name: "Ana Souza", email: "ana@exemplo.com", plan: "90dias", planName: "90 dias", when: new Date(NOW - 2 * DAY) });
+  var body = decodeURIComponent(u.split("body=")[1]);
+  return u.indexOf("mailto:contato@exemplo.com?subject=") === 0 && body.indexOf("Ana Souza") > -1 && body.indexOf("ana@exemplo.com") > -1 &&
+    body.indexOf("90 dias") > -1 && /\d{2}\/\d{2}\/\d{4}/.test(body);
+});
 
 // ---- exercicios no formato da prova (2026-10-07) ----
 function typeInto(input, value){ input.value = value; input.dispatchEvent(new Event("input")); }

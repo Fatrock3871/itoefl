@@ -2010,6 +2010,11 @@ li > .reveal{margin:6px 0 4px;}
 .cookie-bar button:hover{background:var(--accent-fill-hover); border-color:var(--accent-strong);}
 @media(max-width:520px){ .cookie-bar{flex-direction:column; align-items:stretch; gap:8px;} }
 @media print{ .cookie-bar{display:none !important;} }
+.account-refund{margin-top:8px;}
+.refund-confirm{margin-top:8px; padding:12px; border-radius:var(--radius); border:1.5px solid var(--hair); background:var(--bg); color:var(--ink);}
+.refund-confirm p{margin:0 0 10px; font-size:13px; line-height:1.5;}
+.refund-actions{display:flex; flex-wrap:wrap; gap:8px;}
+.refund-actions > *{flex:1 1 auto; min-height:44px; display:inline-flex; align-items:center; justify-content:center; margin:0; text-align:center; text-decoration:none;}
 .lp-refund{max-width:76ch; margin:22px 0 0; font-size:15px; line-height:1.6; color:var(--ink);}
 .lp-faq{max-width:820px; display:flex; flex-direction:column; gap:10px;}
 .lp-faq-item{background:var(--paper); border:2px solid var(--edge); border-radius:var(--radius);}

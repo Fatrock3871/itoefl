@@ -545,6 +545,7 @@ with open("../supabase/functions/_shared/plans.json", encoding="utf-8") as _f:
     _plans_cfg = json.load(_f)
 PLANS = _plans_cfg["plans"]
 REFUND_DAYS = _plans_cfg["refund_days"]
+_MONTHLY_ID = next(p["id"] for p in _plans_cfg["plans"] if p.get("interval") == "month")
 PIX_MP = bool(_plans_cfg.get("pix_mercado_pago"))
 HIGHLIGHT_LABEL = _plans_cfg["highlight_label"]
 if len([p for p in PLANS if p.get("highlight")]) != 1:
@@ -816,6 +817,18 @@ account_modal = (
     '<p class="account-access" id="accountSub" hidden></p>'
     '<button type="button" class="account-renew" id="accountManage" hidden>Gerenciar ou cancelar a assinatura</button>'
     '<button type="button" class="account-renew" id="accountRenew" hidden>Comprar mais dias</button>'
+    # reembolso de 7 dias (direito de arrependimento): o botão só aparece para
+    # quem comprou dentro do prazo; o pedido sai pelo e-mail de contato do site
+    f'<div class="account-refund" id="accountRefund" data-days="{REFUND_DAYS}" data-monthly="{_MONTHLY_ID}" '
+    f'data-contact="{FEEDBACK_EMAIL}" hidden>'
+    f'<button type="button" class="account-renew" id="accountRefundBtn" hidden>Pedir reembolso ({REFUND_DAYS} dias)</button>'
+    '<p class="account-access" id="accountRefundInfo" hidden></p>'
+    '<div class="refund-confirm" id="accountRefundConfirm" role="alertdialog" aria-labelledby="accountRefundText" hidden>'
+    '<p id="accountRefundText"></p>'
+    '<div class="refund-actions">'
+    '<button type="button" id="accountRefundBack">Voltar</button>'
+    '<a class="account-renew" id="accountRefundSend" href="termos.html" target="_blank" rel="noopener">Enviar pedido por e-mail</a>'
+    '</div></div></div>'
     '</div>'
 
     # redações para correção (app/redacao.js): o selo aparece quando há
