@@ -540,6 +540,906 @@
     }
   },
   {
+    "id": "mod2-dn2.d4.1",
+    "section": "listening",
+    "task_type": "Listen to an Academic Talk",
+    "exam_format": true,
+    "format": "mcq",
+    "skill": null,
+    "cefr_min": "A2",
+    "cefr_max": "B1",
+    "stimulus": {
+      "kind": "audio",
+      "format": "html",
+      "title": "Exercício D4: zoologia (meta de 3 min)",
+      "content": "<p><em>Narrator: Listen to part of a talk in an introductory zoology class.</em></p>\n<p><strong>Professor:</strong> All right, let's continue our unit on marine mammals. Last time we talked about whales, which spend their whole lives in deep water. Today, I want to look at a much smaller animal that lives right along the rocky coast: the sea otter.</p>\n<p>Unlike seals, which come onto the beach to rest, sea otters do almost everything in the water. They hunt there, they eat there, and, believe it or not, they even sleep floating on their backs. Now, that creates a pretty obvious problem. The ocean is always moving. If you fall asleep floating on the surface, the waves and currents can easily push you out into the open sea, away from your food and your group.</p>\n<p>So how do sea otters solve this? Well, they use a clever trick. Before going to sleep, an otter swims into a bed of giant kelp, which is a tall kind of seaweed anchored to the ocean floor. The otter wraps a few long strands of kelp around its body like a blanket. That keeps it in one place while it naps.</p>\n<p>And if there's no kelp nearby, otters sometimes hold paws with another otter so they don't drift apart. It looks cute to us, of course, but for the otters, it's really a practical survival habit.</p>",
+      "audio_ref": null
+    },
+    "group": "mod2-dn2",
+    "prompt": "Gist-content. What is the main topic of the talk?",
+    "text_format": "html",
+    "options": {
+      "A": "How sea otters hunt for food along rocky coastlines",
+      "B": "How sea otters avoid drifting away while sleeping in the ocean",
+      "C": "Why giant kelp forests are disappearing from coastal waters",
+      "D": "Why sea otters spend more time on beaches than seals do"
+    },
+    "answer": "B",
+    "explanation": "O foco da aula é mostrar como as lontras-marinhas <strong>dormem na água</strong> sem serem levadas pela correnteza: \"If you fall asleep floating on the surface, the waves and currents can easily push you out... So how do sea otters solve this?\" A opção (A) pega uma palavra isolada do começo, mas a caça não é desenvolvida na explicação.",
+    "hint": null,
+    "trap_codes": [],
+    "tags": [],
+    "status": "rascunho",
+    "source": {
+      "kind": "migrado",
+      "file": "app/drills_data.py",
+      "ref": "MOD2_ACTION_DRILLS_D:mod2-dn2#D4.1",
+      "live_on_site": true,
+      "answer_letter": "origem",
+      "build_map": {
+        "A": "A",
+        "B": "B",
+        "C": "C",
+        "D": "D"
+      }
+    }
+  },
+  {
+    "id": "mod2-dn2.d4.2",
+    "section": "listening",
+    "task_type": "Listen to an Academic Talk",
+    "exam_format": true,
+    "format": "mcq",
+    "skill": null,
+    "cefr_min": "A2",
+    "cefr_max": "B1",
+    "stimulus": {
+      "kind": "audio",
+      "format": "html",
+      "title": "Exercício D4: zoologia (meta de 3 min)",
+      "content": "<p><em>Narrator: Listen to part of a talk in an introductory zoology class.</em></p>\n<p><strong>Professor:</strong> All right, let's continue our unit on marine mammals. Last time we talked about whales, which spend their whole lives in deep water. Today, I want to look at a much smaller animal that lives right along the rocky coast: the sea otter.</p>\n<p>Unlike seals, which come onto the beach to rest, sea otters do almost everything in the water. They hunt there, they eat there, and, believe it or not, they even sleep floating on their backs. Now, that creates a pretty obvious problem. The ocean is always moving. If you fall asleep floating on the surface, the waves and currents can easily push you out into the open sea, away from your food and your group.</p>\n<p>So how do sea otters solve this? Well, they use a clever trick. Before going to sleep, an otter swims into a bed of giant kelp, which is a tall kind of seaweed anchored to the ocean floor. The otter wraps a few long strands of kelp around its body like a blanket. That keeps it in one place while it naps.</p>\n<p>And if there's no kelp nearby, otters sometimes hold paws with another otter so they don't drift apart. It looks cute to us, of course, but for the otters, it's really a practical survival habit.</p>",
+      "audio_ref": null
+    },
+    "group": "mod2-dn2",
+    "prompt": "Function. Why does the professor compare sea otters to seals?",
+    "text_format": "html",
+    "options": {
+      "A": "To show that both animals eat the same types of fish",
+      "B": "To explain why seals are better swimmers in deep water",
+      "C": "To argue that sea otters evolved from coastal seals",
+      "D": "To point out that sea otters rest in the water rather than on land"
+    },
+    "answer": "D",
+    "explanation": "A comparação serve para mostrar a você que as lontras <strong>descansam na água</strong>, ao contrário das focas que vão para a areia: \"Unlike seals, which come onto the beach to rest, sea otters do almost everything in the water.\" A opção (B) mistura as focas com as baleias citadas na frase anterior.",
+    "hint": null,
+    "trap_codes": [],
+    "tags": [],
+    "status": "rascunho",
+    "source": {
+      "kind": "migrado",
+      "file": "app/drills_data.py",
+      "ref": "MOD2_ACTION_DRILLS_D:mod2-dn2#D4.2",
+      "live_on_site": true,
+      "answer_letter": "origem",
+      "build_map": {
+        "A": "C",
+        "B": "D",
+        "C": "B",
+        "D": "A"
+      }
+    }
+  },
+  {
+    "id": "mod2-dn2.d4.3",
+    "section": "listening",
+    "task_type": "Listen to an Academic Talk",
+    "exam_format": true,
+    "format": "mcq",
+    "skill": null,
+    "cefr_min": "A2",
+    "cefr_max": "B1",
+    "stimulus": {
+      "kind": "audio",
+      "format": "html",
+      "title": "Exercício D4: zoologia (meta de 3 min)",
+      "content": "<p><em>Narrator: Listen to part of a talk in an introductory zoology class.</em></p>\n<p><strong>Professor:</strong> All right, let's continue our unit on marine mammals. Last time we talked about whales, which spend their whole lives in deep water. Today, I want to look at a much smaller animal that lives right along the rocky coast: the sea otter.</p>\n<p>Unlike seals, which come onto the beach to rest, sea otters do almost everything in the water. They hunt there, they eat there, and, believe it or not, they even sleep floating on their backs. Now, that creates a pretty obvious problem. The ocean is always moving. If you fall asleep floating on the surface, the waves and currents can easily push you out into the open sea, away from your food and your group.</p>\n<p>So how do sea otters solve this? Well, they use a clever trick. Before going to sleep, an otter swims into a bed of giant kelp, which is a tall kind of seaweed anchored to the ocean floor. The otter wraps a few long strands of kelp around its body like a blanket. That keeps it in one place while it naps.</p>\n<p>And if there's no kelp nearby, otters sometimes hold paws with another otter so they don't drift apart. It looks cute to us, of course, but for the otters, it's really a practical survival habit.</p>",
+      "audio_ref": null
+    },
+    "group": "mod2-dn2",
+    "prompt": "Detail. How does giant kelp help a sleeping sea otter?",
+    "text_format": "html",
+    "options": {
+      "A": "It acts like an anchor because it is attached to the ocean floor",
+      "B": "It hides the otter from sharks swimming near the surface",
+      "C": "It provides a snack if the otter wakes up hungry at night",
+      "D": "It keeps the water around the otter several degrees warmer"
+    },
+    "answer": "A",
+    "explanation": "Como a alga gigante é presa ao fundo do mar, ela funciona como uma <strong>âncora natural</strong> quando a lontra se enrola nela: \"a tall kind of seaweed anchored to the ocean floor... That keeps it in one place while it naps.\" Repare que (D) é uma armadilha comum por causa da palavra <em>blanket</em>, usada só para ilustrar o gesto de se enrolar.",
+    "hint": null,
+    "trap_codes": [],
+    "tags": [],
+    "status": "rascunho",
+    "source": {
+      "kind": "migrado",
+      "file": "app/drills_data.py",
+      "ref": "MOD2_ACTION_DRILLS_D:mod2-dn2#D4.3",
+      "live_on_site": true,
+      "answer_letter": "origem",
+      "build_map": {
+        "A": "C",
+        "B": "A",
+        "C": "D",
+        "D": "B"
+      }
+    }
+  },
+  {
+    "id": "mod2-dn2.d4.4",
+    "section": "listening",
+    "task_type": "Listen to an Academic Talk",
+    "exam_format": true,
+    "format": "mcq",
+    "skill": null,
+    "cefr_min": "A2",
+    "cefr_max": "B1",
+    "stimulus": {
+      "kind": "audio",
+      "format": "html",
+      "title": "Exercício D4: zoologia (meta de 3 min)",
+      "content": "<p><em>Narrator: Listen to part of a talk in an introductory zoology class.</em></p>\n<p><strong>Professor:</strong> All right, let's continue our unit on marine mammals. Last time we talked about whales, which spend their whole lives in deep water. Today, I want to look at a much smaller animal that lives right along the rocky coast: the sea otter.</p>\n<p>Unlike seals, which come onto the beach to rest, sea otters do almost everything in the water. They hunt there, they eat there, and, believe it or not, they even sleep floating on their backs. Now, that creates a pretty obvious problem. The ocean is always moving. If you fall asleep floating on the surface, the waves and currents can easily push you out into the open sea, away from your food and your group.</p>\n<p>So how do sea otters solve this? Well, they use a clever trick. Before going to sleep, an otter swims into a bed of giant kelp, which is a tall kind of seaweed anchored to the ocean floor. The otter wraps a few long strands of kelp around its body like a blanket. That keeps it in one place while it naps.</p>\n<p>And if there's no kelp nearby, otters sometimes hold paws with another otter so they don't drift apart. It looks cute to us, of course, but for the otters, it's really a practical survival habit.</p>",
+      "audio_ref": null
+    },
+    "group": "mod2-dn2",
+    "prompt": "Attitude. What is the professor's attitude toward otters holding paws?",
+    "text_format": "html",
+    "options": {
+      "A": "She doubts that this behavior actually happens in the wild",
+      "B": "She worries that tourists disturb the otters to take photos of it",
+      "C": "She views it as a useful behavior rather than just a charming habit",
+      "D": "She thinks scientists have studied this behavior too much"
+    },
+    "answer": "C",
+    "explanation": "A professora comenta que o gesto parece fofo, mas ressalta seu <strong>valor prático</strong> para a sobrevivência: \"It looks cute to us, of course, but for the otters, it's really a practical survival habit.\" A alternativa (A) contradiz o tom seguro com que ela descreve esse comportamento.",
+    "hint": null,
+    "trap_codes": [],
+    "tags": [],
+    "status": "rascunho",
+    "source": {
+      "kind": "migrado",
+      "file": "app/drills_data.py",
+      "ref": "MOD2_ACTION_DRILLS_D:mod2-dn2#D4.4",
+      "live_on_site": true,
+      "answer_letter": "origem",
+      "build_map": {
+        "A": "B",
+        "B": "A",
+        "C": "D",
+        "D": "C"
+      }
+    }
+  },
+  {
+    "id": "mod2-dn3.d5.1",
+    "section": "listening",
+    "task_type": "Listen to an Academic Talk",
+    "exam_format": true,
+    "format": "mcq",
+    "skill": null,
+    "cefr_min": "B1",
+    "cefr_max": "B2",
+    "stimulus": {
+      "kind": "audio",
+      "format": "html",
+      "title": "Exercício D5: história da arquitetura (meta de 4 min)",
+      "content": "<p><em>Narrator: Listen to part of a talk in an architectural history class.</em></p>\n<p><strong>Professor:</strong> When we think about keeping buildings cool in desert climates, we usually picture modern air-conditioning units humming away on every wall. But people have lived comfortably in hot, dry regions for thousands of years without electricity. A great example of how they did it is the windcatcher, or badgir, a tower structure perfected in ancient Persia.</p>\n<p>If you look at the skyline of an old desert city like Yazd, in modern-day Iran, you'll see dozens of these rectangular towers rising above the flat roofs. At the top of each tower, there are vertical openings facing the prevailing wind. Even a light breeze high above the street gets caught by these openings and funneled straight down into the living spaces below.</p>\n<p>Now, what happens when there's no wind at all? Well, that's where the design gets really clever. Without a breeze, the tower works like a chimney. Engineers call this a solar chimney. The sun heats the south side of the tower, warming the air inside it. Because warm air rises, it flows up and out through the top of the tower. That pulls cooler air from shaded courtyards or underground water channels into the rooms downstairs.</p>\n<p>Today, contemporary architects are taking a fresh look at windcatchers. By combining these traditional towers with modern sensors and dampers, new campus buildings and offices can cut their cooling energy use dramatically. Sometimes the smartest technology is centuries old.</p>",
+      "audio_ref": null
+    },
+    "group": "mod2-dn3",
+    "prompt": "Gist-content. What is the talk mainly about?",
+    "text_format": "html",
+    "options": {
+      "A": "How a traditional architectural feature cools buildings without electricity",
+      "B": "Why ancient Persian cities were built near underground rivers",
+      "C": "How modern air conditioning replaced traditional desert housing",
+      "D": "Why tall rectangular towers were used as watchtowers in Yazd"
+    },
+    "answer": "A",
+    "explanation": "A palestra inteira explica como os captadores de vento persas fazem o <strong>resfriamento passivo</strong> de construções sem usar eletricidade: \"people have lived comfortably in hot, dry regions for thousands of years without electricity. A great example of how they did it is the windcatcher.\" A opção (B) toma um detalhe secundário do terceiro parágrafo como se fosse o tema principal.",
+    "hint": null,
+    "trap_codes": [],
+    "tags": [],
+    "status": "rascunho",
+    "source": {
+      "kind": "migrado",
+      "file": "app/drills_data.py",
+      "ref": "MOD2_ACTION_DRILLS_D:mod2-dn3#D5.1",
+      "live_on_site": true,
+      "answer_letter": "origem",
+      "build_map": {
+        "A": "D",
+        "B": "B",
+        "C": "A",
+        "D": "C"
+      }
+    }
+  },
+  {
+    "id": "mod2-dn3.d5.2",
+    "section": "listening",
+    "task_type": "Listen to an Academic Talk",
+    "exam_format": true,
+    "format": "mcq",
+    "skill": null,
+    "cefr_min": "B1",
+    "cefr_max": "B2",
+    "stimulus": {
+      "kind": "audio",
+      "format": "html",
+      "title": "Exercício D5: história da arquitetura (meta de 4 min)",
+      "content": "<p><em>Narrator: Listen to part of a talk in an architectural history class.</em></p>\n<p><strong>Professor:</strong> When we think about keeping buildings cool in desert climates, we usually picture modern air-conditioning units humming away on every wall. But people have lived comfortably in hot, dry regions for thousands of years without electricity. A great example of how they did it is the windcatcher, or badgir, a tower structure perfected in ancient Persia.</p>\n<p>If you look at the skyline of an old desert city like Yazd, in modern-day Iran, you'll see dozens of these rectangular towers rising above the flat roofs. At the top of each tower, there are vertical openings facing the prevailing wind. Even a light breeze high above the street gets caught by these openings and funneled straight down into the living spaces below.</p>\n<p>Now, what happens when there's no wind at all? Well, that's where the design gets really clever. Without a breeze, the tower works like a chimney. Engineers call this a solar chimney. The sun heats the south side of the tower, warming the air inside it. Because warm air rises, it flows up and out through the top of the tower. That pulls cooler air from shaded courtyards or underground water channels into the rooms downstairs.</p>\n<p>Today, contemporary architects are taking a fresh look at windcatchers. By combining these traditional towers with modern sensors and dampers, new campus buildings and offices can cut their cooling energy use dramatically. Sometimes the smartest technology is centuries old.</p>",
+      "audio_ref": null
+    },
+    "group": "mod2-dn3",
+    "prompt": "Detail. How does a windcatcher work on a day with no breeze?",
+    "text_format": "html",
+    "options": {
+      "A": "Residents pour water down the inside of the tower to cool the bricks",
+      "B": "Large fabric fans inside the tower push warm air down to the floor",
+      "C": "Rising warm air exits the tower and draws cooler air into the house",
+      "D": "Heavy wooden shutters close automatically to trap cold night air inside"
+    },
+    "answer": "C",
+    "explanation": "Sem vento, o calor do sol faz o <strong>ar quente subir</strong> e sair pelo topo, puxando ar fresco para dentro: \"Because warm air rises, it flows up and out through the top of the tower. That pulls cooler air from shaded courtyards or underground water channels into the rooms downstairs.\" Cuidado com (A), que distorce a menção aos canais subterrâneos de água.",
+    "hint": null,
+    "trap_codes": [],
+    "tags": [],
+    "status": "rascunho",
+    "source": {
+      "kind": "migrado",
+      "file": "app/drills_data.py",
+      "ref": "MOD2_ACTION_DRILLS_D:mod2-dn3#D5.2",
+      "live_on_site": true,
+      "answer_letter": "origem",
+      "build_map": {
+        "A": "A",
+        "B": "D",
+        "C": "B",
+        "D": "C"
+      }
+    }
+  },
+  {
+    "id": "mod2-dn3.d5.3",
+    "section": "listening",
+    "task_type": "Listen to an Academic Talk",
+    "exam_format": true,
+    "format": "mcq",
+    "skill": null,
+    "cefr_min": "B1",
+    "cefr_max": "B2",
+    "stimulus": {
+      "kind": "audio",
+      "format": "html",
+      "title": "Exercício D5: história da arquitetura (meta de 4 min)",
+      "content": "<p><em>Narrator: Listen to part of a talk in an architectural history class.</em></p>\n<p><strong>Professor:</strong> When we think about keeping buildings cool in desert climates, we usually picture modern air-conditioning units humming away on every wall. But people have lived comfortably in hot, dry regions for thousands of years without electricity. A great example of how they did it is the windcatcher, or badgir, a tower structure perfected in ancient Persia.</p>\n<p>If you look at the skyline of an old desert city like Yazd, in modern-day Iran, you'll see dozens of these rectangular towers rising above the flat roofs. At the top of each tower, there are vertical openings facing the prevailing wind. Even a light breeze high above the street gets caught by these openings and funneled straight down into the living spaces below.</p>\n<p>Now, what happens when there's no wind at all? Well, that's where the design gets really clever. Without a breeze, the tower works like a chimney. Engineers call this a solar chimney. The sun heats the south side of the tower, warming the air inside it. Because warm air rises, it flows up and out through the top of the tower. That pulls cooler air from shaded courtyards or underground water channels into the rooms downstairs.</p>\n<p>Today, contemporary architects are taking a fresh look at windcatchers. By combining these traditional towers with modern sensors and dampers, new campus buildings and offices can cut their cooling energy use dramatically. Sometimes the smartest technology is centuries old.</p>",
+      "audio_ref": null
+    },
+    "group": "mod2-dn3",
+    "prompt": "Organization. Why does the professor mention contemporary architects at the end of the talk?",
+    "text_format": "html",
+    "options": {
+      "A": "To criticize modern builders for ignoring local building codes",
+      "B": "To show that this ancient design is still relevant and adaptable today",
+      "C": "To explain why historic towers in Yazd need urgent restoration",
+      "D": "To argue that modern sensors are too expensive for most offices"
+    },
+    "answer": "B",
+    "explanation": "Ao mostrar o uso das torres em prédios novos com sensores modernos, o professor prova que a técnica antiga continua <strong>atual e aplicável</strong>: \"contemporary architects are taking a fresh look at windcatchers... new campus buildings and offices can cut their cooling energy use dramatically.\" A opção (D) inventa uma crítica de custo que não está no áudio.",
+    "hint": null,
+    "trap_codes": [],
+    "tags": [],
+    "status": "rascunho",
+    "source": {
+      "kind": "migrado",
+      "file": "app/drills_data.py",
+      "ref": "MOD2_ACTION_DRILLS_D:mod2-dn3#D5.3",
+      "live_on_site": true,
+      "answer_letter": "origem",
+      "build_map": {
+        "A": "B",
+        "B": "A",
+        "C": "D",
+        "D": "C"
+      }
+    }
+  },
+  {
+    "id": "mod2-dn3.d5.4",
+    "section": "listening",
+    "task_type": "Listen to an Academic Talk",
+    "exam_format": true,
+    "format": "mcq",
+    "skill": null,
+    "cefr_min": "B1",
+    "cefr_max": "B2",
+    "stimulus": {
+      "kind": "audio",
+      "format": "html",
+      "title": "Exercício D5: história da arquitetura (meta de 4 min)",
+      "content": "<p><em>Narrator: Listen to part of a talk in an architectural history class.</em></p>\n<p><strong>Professor:</strong> When we think about keeping buildings cool in desert climates, we usually picture modern air-conditioning units humming away on every wall. But people have lived comfortably in hot, dry regions for thousands of years without electricity. A great example of how they did it is the windcatcher, or badgir, a tower structure perfected in ancient Persia.</p>\n<p>If you look at the skyline of an old desert city like Yazd, in modern-day Iran, you'll see dozens of these rectangular towers rising above the flat roofs. At the top of each tower, there are vertical openings facing the prevailing wind. Even a light breeze high above the street gets caught by these openings and funneled straight down into the living spaces below.</p>\n<p>Now, what happens when there's no wind at all? Well, that's where the design gets really clever. Without a breeze, the tower works like a chimney. Engineers call this a solar chimney. The sun heats the south side of the tower, warming the air inside it. Because warm air rises, it flows up and out through the top of the tower. That pulls cooler air from shaded courtyards or underground water channels into the rooms downstairs.</p>\n<p>Today, contemporary architects are taking a fresh look at windcatchers. By combining these traditional towers with modern sensors and dampers, new campus buildings and offices can cut their cooling energy use dramatically. Sometimes the smartest technology is centuries old.</p>",
+      "audio_ref": null
+    },
+    "group": "mod2-dn3",
+    "prompt": "Meaning in context. Why does the professor say \"Sometimes the smartest technology is centuries old\"?",
+    "text_format": "html",
+    "options": {
+      "A": "To suggest that students should study ancient history instead of engineering",
+      "B": "To claim that ancient builders had secret tools that have been lost",
+      "C": "To complain that modern appliances break down too easily",
+      "D": "To emphasize that historical solutions can solve modern environmental problems"
+    },
+    "answer": "D",
+    "explanation": "A frase final resume a ideia de que <strong>soluções históricas</strong> inteligentes podem resolver desafios atuais de economia de energia: \"new campus buildings and offices can cut their cooling energy use dramatically. Sometimes the smartest technology is centuries old.\" A opção (B) trata o elogio como se houvesse um segredo perdido, mas o professor acabou de explicar toda a física da torre.",
+    "hint": null,
+    "trap_codes": [],
+    "tags": [],
+    "status": "rascunho",
+    "source": {
+      "kind": "migrado",
+      "file": "app/drills_data.py",
+      "ref": "MOD2_ACTION_DRILLS_D:mod2-dn3#D5.4",
+      "live_on_site": true,
+      "answer_letter": "origem",
+      "build_map": {
+        "A": "D",
+        "B": "B",
+        "C": "A",
+        "D": "C"
+      }
+    }
+  },
+  {
+    "id": "mod2-dn4.d6.1",
+    "section": "listening",
+    "task_type": "Listen to an Academic Talk",
+    "exam_format": true,
+    "format": "mcq",
+    "skill": null,
+    "cefr_min": "B1",
+    "cefr_max": "B2",
+    "stimulus": {
+      "kind": "audio",
+      "format": "html",
+      "title": "Exercício D6: psicologia cognitiva (meta de 4 min)",
+      "content": "<p><em>Narrator: Listen to part of a talk in a cognitive psychology class.</em></p>\n<p><strong>Professor:</strong> Have you ever noticed that when you're studying for an exam, the one practice problem you couldn't finish keeps popping into your head at dinner, while the ten problems you solved easily just fade away? There's actually a name for that: the Zeigarnik effect.</p>\n<p>It goes back to the 1920s. A psychologist named Bluma Zeigarnik was sitting in a busy Berlin restaurant with her professor and some classmates. She noticed something odd about the waiters. A waiter could remember a long, complicated order for a big table without writing anything down. But the moment the food was served and the bill was paid, if you asked that same waiter what the table had ordered, he had no idea. He'd wiped it clean from his memory.</p>\n<p>Curious, Zeigarnik went back to her lab and gave volunteers a series of simple tasks, like solving puzzles or stringing beads. Here's the catch: she interrupted them halfway through some of the tasks and let them finish the others. Later, when she asked them to list all the tasks they'd worked on, people were about twice as likely to remember the ones they hadn't finished.</p>\n<p>Her explanation was that starting a task creates a kind of mental tension, almost like an open tab on your computer browser. That tension keeps the information active and easy to recall until the job is done. Once you finish, the tab closes, and your brain lets go.</p>",
+      "audio_ref": null
+    },
+    "group": "mod2-dn4",
+    "prompt": "Gist-content. What is the main idea of the talk?",
+    "text_format": "html",
+    "options": {
+      "A": "Waiters have better short-term memory than most university students",
+      "B": "Interruptions during study sessions permanently damage long-term recall",
+      "C": "Writing down tasks is less effective than memorizing them mentally",
+      "D": "People tend to remember unfinished tasks better than completed ones"
+    },
+    "answer": "D",
+    "explanation": "A aula gira em torno do <strong>efeito Zeigarnik</strong>, segundo o qual lembramos melhor de tarefas inacabadas do que das já concluídas: \"people were about twice as likely to remember the ones they hadn't finished.\" A alternativa (A) foca apenas na história dos garçons, que serve para mostrar como a psicóloga teve a ideia inicial.",
+    "hint": null,
+    "trap_codes": [],
+    "tags": [],
+    "status": "rascunho",
+    "source": {
+      "kind": "migrado",
+      "file": "app/drills_data.py",
+      "ref": "MOD2_ACTION_DRILLS_D:mod2-dn4#D6.1",
+      "live_on_site": true,
+      "answer_letter": "origem",
+      "build_map": {
+        "A": "B",
+        "B": "A",
+        "C": "D",
+        "D": "C"
+      }
+    }
+  },
+  {
+    "id": "mod2-dn4.d6.2",
+    "section": "listening",
+    "task_type": "Listen to an Academic Talk",
+    "exam_format": true,
+    "format": "mcq",
+    "skill": null,
+    "cefr_min": "B1",
+    "cefr_max": "B2",
+    "stimulus": {
+      "kind": "audio",
+      "format": "html",
+      "title": "Exercício D6: psicologia cognitiva (meta de 4 min)",
+      "content": "<p><em>Narrator: Listen to part of a talk in a cognitive psychology class.</em></p>\n<p><strong>Professor:</strong> Have you ever noticed that when you're studying for an exam, the one practice problem you couldn't finish keeps popping into your head at dinner, while the ten problems you solved easily just fade away? There's actually a name for that: the Zeigarnik effect.</p>\n<p>It goes back to the 1920s. A psychologist named Bluma Zeigarnik was sitting in a busy Berlin restaurant with her professor and some classmates. She noticed something odd about the waiters. A waiter could remember a long, complicated order for a big table without writing anything down. But the moment the food was served and the bill was paid, if you asked that same waiter what the table had ordered, he had no idea. He'd wiped it clean from his memory.</p>\n<p>Curious, Zeigarnik went back to her lab and gave volunteers a series of simple tasks, like solving puzzles or stringing beads. Here's the catch: she interrupted them halfway through some of the tasks and let them finish the others. Later, when she asked them to list all the tasks they'd worked on, people were about twice as likely to remember the ones they hadn't finished.</p>\n<p>Her explanation was that starting a task creates a kind of mental tension, almost like an open tab on your computer browser. That tension keeps the information active and easy to recall until the job is done. Once you finish, the tab closes, and your brain lets go.</p>",
+      "audio_ref": null
+    },
+    "group": "mod2-dn4",
+    "prompt": "Detail. What did Bluma Zeigarnik observe about the waiters in the Berlin restaurant?",
+    "text_format": "html",
+    "options": {
+      "A": "They wrote down every order carefully to avoid making mistakes",
+      "B": "They forgot customer orders right after the meal was paid for",
+      "C": "They remembered regular customers better than first-time visitors",
+      "D": "They made more mistakes when the café was quiet than when it was busy"
+    },
+    "answer": "B",
+    "explanation": "Assim que a conta era paga e a tarefa acabava, os garçons <strong>esqueciam o pedido</strong>: \"the moment the food was served and the bill was paid, if you asked that same waiter what the table had ordered, he had no idea.\" A opção (A) diz o contrário do áudio, que afirma <em>without writing anything down</em>.",
+    "hint": null,
+    "trap_codes": [],
+    "tags": [],
+    "status": "rascunho",
+    "source": {
+      "kind": "migrado",
+      "file": "app/drills_data.py",
+      "ref": "MOD2_ACTION_DRILLS_D:mod2-dn4#D6.2",
+      "live_on_site": true,
+      "answer_letter": "origem",
+      "build_map": {
+        "A": "A",
+        "B": "D",
+        "C": "C",
+        "D": "B"
+      }
+    }
+  },
+  {
+    "id": "mod2-dn4.d6.3",
+    "section": "listening",
+    "task_type": "Listen to an Academic Talk",
+    "exam_format": true,
+    "format": "mcq",
+    "skill": null,
+    "cefr_min": "B1",
+    "cefr_max": "B2",
+    "stimulus": {
+      "kind": "audio",
+      "format": "html",
+      "title": "Exercício D6: psicologia cognitiva (meta de 4 min)",
+      "content": "<p><em>Narrator: Listen to part of a talk in a cognitive psychology class.</em></p>\n<p><strong>Professor:</strong> Have you ever noticed that when you're studying for an exam, the one practice problem you couldn't finish keeps popping into your head at dinner, while the ten problems you solved easily just fade away? There's actually a name for that: the Zeigarnik effect.</p>\n<p>It goes back to the 1920s. A psychologist named Bluma Zeigarnik was sitting in a busy Berlin restaurant with her professor and some classmates. She noticed something odd about the waiters. A waiter could remember a long, complicated order for a big table without writing anything down. But the moment the food was served and the bill was paid, if you asked that same waiter what the table had ordered, he had no idea. He'd wiped it clean from his memory.</p>\n<p>Curious, Zeigarnik went back to her lab and gave volunteers a series of simple tasks, like solving puzzles or stringing beads. Here's the catch: she interrupted them halfway through some of the tasks and let them finish the others. Later, when she asked them to list all the tasks they'd worked on, people were about twice as likely to remember the ones they hadn't finished.</p>\n<p>Her explanation was that starting a task creates a kind of mental tension, almost like an open tab on your computer browser. That tension keeps the information active and easy to recall until the job is done. Once you finish, the tab closes, and your brain lets go.</p>",
+      "audio_ref": null
+    },
+    "group": "mod2-dn4",
+    "prompt": "Function. Why does the professor compare an unfinished task to an open browser tab?",
+    "text_format": "html",
+    "options": {
+      "A": "To warn students against using laptops while studying for exams",
+      "B": "To explain how computer scientists modeled early memory software",
+      "C": "To illustrate how the brain keeps incomplete tasks active in memory",
+      "D": "To show that digital multitasking reduces attention span in class"
+    },
+    "answer": "C",
+    "explanation": "A imagem da aba aberta no navegador ajuda você a visualizar a <strong>tensão mental</strong> que mantém a tarefa ativa na memória até ser concluída: \"almost like an open tab on your computer browser. That tension keeps the information active and easy to recall until the job is done.\" A opção (D) traz um tema comum sobre tecnologia, mas que não foi discutido na aula.",
+    "hint": null,
+    "trap_codes": [],
+    "tags": [],
+    "status": "rascunho",
+    "source": {
+      "kind": "migrado",
+      "file": "app/drills_data.py",
+      "ref": "MOD2_ACTION_DRILLS_D:mod2-dn4#D6.3",
+      "live_on_site": true,
+      "answer_letter": "origem",
+      "build_map": {
+        "A": "D",
+        "B": "C",
+        "C": "A",
+        "D": "B"
+      }
+    }
+  },
+  {
+    "id": "mod2-dn4.d6.4",
+    "section": "listening",
+    "task_type": "Listen to an Academic Talk",
+    "exam_format": true,
+    "format": "mcq",
+    "skill": null,
+    "cefr_min": "B1",
+    "cefr_max": "B2",
+    "stimulus": {
+      "kind": "audio",
+      "format": "html",
+      "title": "Exercício D6: psicologia cognitiva (meta de 4 min)",
+      "content": "<p><em>Narrator: Listen to part of a talk in a cognitive psychology class.</em></p>\n<p><strong>Professor:</strong> Have you ever noticed that when you're studying for an exam, the one practice problem you couldn't finish keeps popping into your head at dinner, while the ten problems you solved easily just fade away? There's actually a name for that: the Zeigarnik effect.</p>\n<p>It goes back to the 1920s. A psychologist named Bluma Zeigarnik was sitting in a busy Berlin restaurant with her professor and some classmates. She noticed something odd about the waiters. A waiter could remember a long, complicated order for a big table without writing anything down. But the moment the food was served and the bill was paid, if you asked that same waiter what the table had ordered, he had no idea. He'd wiped it clean from his memory.</p>\n<p>Curious, Zeigarnik went back to her lab and gave volunteers a series of simple tasks, like solving puzzles or stringing beads. Here's the catch: she interrupted them halfway through some of the tasks and let them finish the others. Later, when she asked them to list all the tasks they'd worked on, people were about twice as likely to remember the ones they hadn't finished.</p>\n<p>Her explanation was that starting a task creates a kind of mental tension, almost like an open tab on your computer browser. That tension keeps the information active and easy to recall until the job is done. Once you finish, the tab closes, and your brain lets go.</p>",
+      "audio_ref": null
+    },
+    "group": "mod2-dn4",
+    "prompt": "Detail. In Zeigarnik's lab experiment, how did she test her idea?",
+    "text_format": "html",
+    "options": {
+      "A": "She stopped participants during some tasks and allowed them to finish others",
+      "B": "She asked professional waiters to solve puzzles in a noisy restaurant",
+      "C": "She timed how fast volunteers could memorize a list of restaurant menu items",
+      "D": "She rewarded participants who remembered all of their completed tasks"
+    },
+    "answer": "A",
+    "explanation": "No laboratório, ela <strong>interrompeu algumas tarefas</strong> na metade e deixou que os voluntários terminassem outras: \"she interrupted them halfway through some of the tasks and let them finish the others.\" Repare que (B) mistura a observação inicial no restaurante de Berlim com o experimento feito depois no laboratório.",
+    "hint": null,
+    "trap_codes": [],
+    "tags": [],
+    "status": "rascunho",
+    "source": {
+      "kind": "migrado",
+      "file": "app/drills_data.py",
+      "ref": "MOD2_ACTION_DRILLS_D:mod2-dn4#D6.4",
+      "live_on_site": true,
+      "answer_letter": "origem",
+      "build_map": {
+        "A": "B",
+        "B": "D",
+        "C": "A",
+        "D": "C"
+      }
+    }
+  },
+  {
+    "id": "mod2-dn5.d7.1",
+    "section": "listening",
+    "task_type": "Listen to an Academic Talk",
+    "exam_format": true,
+    "format": "mcq",
+    "skill": null,
+    "cefr_min": "B2",
+    "cefr_max": "C1",
+    "stimulus": {
+      "kind": "audio",
+      "format": "html",
+      "title": "Exercício D7: economia comportamental (meta de 4 min)",
+      "content": "<p><em>Narrator: Listen to part of a talk in a behavioral economics class.</em></p>\n<p><strong>Professor:</strong> In standard economic theory, rational decision-makers look only at future costs and benefits. Whatever money, time, or effort you've already spent and can't recover is called a sunk cost, and logically, it shouldn't influence what you do next. Yet in real life, we let sunk costs drive our choices all the time.</p>\n<p>Picture this: you buy a nonrefundable twenty-dollar ticket to an outdoor concert. The evening of the show, a freezing rainstorm rolls in. You're miserable just thinking about going. If the ticket had been free, you'd stay home on the couch without a second thought. But because you paid twenty dollars, you drag yourself out into the rain so you don't \"waste\" the ticket. See the flaw? The twenty dollars is gone either way. By going, you haven't saved your money; you've just traded a dry evening for a wet, miserable one.</p>\n<p>And it's not just individuals who fall into this trap. Governments and corporations do too. In fact, economists sometimes call this the Concorde fallacy, after the supersonic passenger jet developed jointly by Britain and France. Long before the plane entered service, both governments realized it would never make back its massive development costs. Walking away would have saved billions. Instead, neither side wanted to admit that the money already spent was lost, so they kept pouring funds into the project for years.</p>\n<p>Why is it so hard to walk away? Partly because of loss aversion: we hate admitting a loss more than we enjoy an equivalent gain. Once we recognize that bias, though, we can ask a simpler question: if I were starting from scratch today, would I still invest in this?</p>",
+      "audio_ref": null
+    },
+    "group": "mod2-dn5",
+    "prompt": "Gist-content. What is the talk mainly about?",
+    "text_format": "html",
+    "options": {
+      "A": "How airline companies calculate ticket prices for international flights",
+      "B": "Why people and organizations continue investing in losing endeavors",
+      "C": "Why outdoor events should always offer refundable tickets to buyers",
+      "D": "How Britain and France competed to build the fastest passenger aircraft"
+    },
+    "answer": "B",
+    "explanation": "A palestra analisa a falácia dos <strong>custos irrecuperáveis</strong>, mostrando por que pessoas e governos insistem em escolhas ou projetos que já deram prejuízo: \"Whatever money, time, or effort you've already spent and can't recover is called a sunk cost... we let sunk costs drive our choices all the time.\" A opção (D) foca apenas no exemplo do avião Concorde e ainda troca cooperação, indicada em <em>developed jointly</em>, por competição.",
+    "hint": null,
+    "trap_codes": [],
+    "tags": [],
+    "status": "rascunho",
+    "source": {
+      "kind": "migrado",
+      "file": "app/drills_data.py",
+      "ref": "MOD2_ACTION_DRILLS_D:mod2-dn5#D7.1",
+      "live_on_site": true,
+      "answer_letter": "origem",
+      "build_map": {
+        "A": "B",
+        "B": "C",
+        "C": "A",
+        "D": "D"
+      }
+    }
+  },
+  {
+    "id": "mod2-dn5.d7.2",
+    "section": "listening",
+    "task_type": "Listen to an Academic Talk",
+    "exam_format": true,
+    "format": "mcq",
+    "skill": null,
+    "cefr_min": "B2",
+    "cefr_max": "C1",
+    "stimulus": {
+      "kind": "audio",
+      "format": "html",
+      "title": "Exercício D7: economia comportamental (meta de 4 min)",
+      "content": "<p><em>Narrator: Listen to part of a talk in a behavioral economics class.</em></p>\n<p><strong>Professor:</strong> In standard economic theory, rational decision-makers look only at future costs and benefits. Whatever money, time, or effort you've already spent and can't recover is called a sunk cost, and logically, it shouldn't influence what you do next. Yet in real life, we let sunk costs drive our choices all the time.</p>\n<p>Picture this: you buy a nonrefundable twenty-dollar ticket to an outdoor concert. The evening of the show, a freezing rainstorm rolls in. You're miserable just thinking about going. If the ticket had been free, you'd stay home on the couch without a second thought. But because you paid twenty dollars, you drag yourself out into the rain so you don't \"waste\" the ticket. See the flaw? The twenty dollars is gone either way. By going, you haven't saved your money; you've just traded a dry evening for a wet, miserable one.</p>\n<p>And it's not just individuals who fall into this trap. Governments and corporations do too. In fact, economists sometimes call this the Concorde fallacy, after the supersonic passenger jet developed jointly by Britain and France. Long before the plane entered service, both governments realized it would never make back its massive development costs. Walking away would have saved billions. Instead, neither side wanted to admit that the money already spent was lost, so they kept pouring funds into the project for years.</p>\n<p>Why is it so hard to walk away? Partly because of loss aversion: we hate admitting a loss more than we enjoy an equivalent gain. Once we recognize that bias, though, we can ask a simpler question: if I were starting from scratch today, would I still invest in this?</p>",
+      "audio_ref": null
+    },
+    "group": "mod2-dn5",
+    "prompt": "Organization. Why does the professor discuss the concert ticket scenario?",
+    "text_format": "html",
+    "options": {
+      "A": "To show how an everyday decision violates rational economic logic",
+      "B": "To argue that concert venues charge unfair prices for admission",
+      "C": "To contrast weather forecasts with economic forecasting models",
+      "D": "To prove that consumers care more about comfort than about money"
+    },
+    "answer": "A",
+    "explanation": "O exemplo do ingresso mostra como uma decisão comum do dia a dia contraria a <strong>lógica econômica</strong> racional anunciada na abertura: \"See the flaw? The twenty dollars is gone either way.\" A opção (D) inverte a situação, pois a pessoa abre mão do conforto justamente por apego ao dinheiro já gasto.",
+    "hint": null,
+    "trap_codes": [],
+    "tags": [],
+    "status": "rascunho",
+    "source": {
+      "kind": "migrado",
+      "file": "app/drills_data.py",
+      "ref": "MOD2_ACTION_DRILLS_D:mod2-dn5#D7.2",
+      "live_on_site": true,
+      "answer_letter": "origem",
+      "build_map": {
+        "A": "A",
+        "B": "B",
+        "C": "C",
+        "D": "D"
+      }
+    }
+  },
+  {
+    "id": "mod2-dn5.d7.3",
+    "section": "listening",
+    "task_type": "Listen to an Academic Talk",
+    "exam_format": true,
+    "format": "mcq",
+    "skill": null,
+    "cefr_min": "B2",
+    "cefr_max": "C1",
+    "stimulus": {
+      "kind": "audio",
+      "format": "html",
+      "title": "Exercício D7: economia comportamental (meta de 4 min)",
+      "content": "<p><em>Narrator: Listen to part of a talk in a behavioral economics class.</em></p>\n<p><strong>Professor:</strong> In standard economic theory, rational decision-makers look only at future costs and benefits. Whatever money, time, or effort you've already spent and can't recover is called a sunk cost, and logically, it shouldn't influence what you do next. Yet in real life, we let sunk costs drive our choices all the time.</p>\n<p>Picture this: you buy a nonrefundable twenty-dollar ticket to an outdoor concert. The evening of the show, a freezing rainstorm rolls in. You're miserable just thinking about going. If the ticket had been free, you'd stay home on the couch without a second thought. But because you paid twenty dollars, you drag yourself out into the rain so you don't \"waste\" the ticket. See the flaw? The twenty dollars is gone either way. By going, you haven't saved your money; you've just traded a dry evening for a wet, miserable one.</p>\n<p>And it's not just individuals who fall into this trap. Governments and corporations do too. In fact, economists sometimes call this the Concorde fallacy, after the supersonic passenger jet developed jointly by Britain and France. Long before the plane entered service, both governments realized it would never make back its massive development costs. Walking away would have saved billions. Instead, neither side wanted to admit that the money already spent was lost, so they kept pouring funds into the project for years.</p>\n<p>Why is it so hard to walk away? Partly because of loss aversion: we hate admitting a loss more than we enjoy an equivalent gain. Once we recognize that bias, though, we can ask a simpler question: if I were starting from scratch today, would I still invest in this?</p>",
+      "audio_ref": null
+    },
+    "group": "mod2-dn5",
+    "prompt": "Detail. Why is the phenomenon also known as the Concorde fallacy?",
+    "text_format": "html",
+    "options": {
+      "A": "The jet was canceled before its first flight despite public support",
+      "B": "Passengers refused to fly on the plane because tickets were too costly",
+      "C": "Engineers hid the true cost of the aircraft from government officials",
+      "D": "Two governments kept funding the jet even after knowing it would lose money"
+    },
+    "answer": "D",
+    "explanation": "O nome vem do fato de Reino Unido e França terem continuado a <strong>financiar o jato</strong> mesmo sabendo que ele nunca daria retorno: \"both governments realized it would never make back its massive development costs... so they kept pouring funds into the project for years.\" A opção (A) erra porque o projeto não foi cancelado antes de entrar em serviço.",
+    "hint": null,
+    "trap_codes": [],
+    "tags": [],
+    "status": "rascunho",
+    "source": {
+      "kind": "migrado",
+      "file": "app/drills_data.py",
+      "ref": "MOD2_ACTION_DRILLS_D:mod2-dn5#D7.3",
+      "live_on_site": true,
+      "answer_letter": "origem",
+      "build_map": {
+        "A": "A",
+        "B": "D",
+        "C": "C",
+        "D": "B"
+      }
+    }
+  },
+  {
+    "id": "mod2-dn5.d7.4",
+    "section": "listening",
+    "task_type": "Listen to an Academic Talk",
+    "exam_format": true,
+    "format": "mcq",
+    "skill": null,
+    "cefr_min": "B2",
+    "cefr_max": "C1",
+    "stimulus": {
+      "kind": "audio",
+      "format": "html",
+      "title": "Exercício D7: economia comportamental (meta de 4 min)",
+      "content": "<p><em>Narrator: Listen to part of a talk in a behavioral economics class.</em></p>\n<p><strong>Professor:</strong> In standard economic theory, rational decision-makers look only at future costs and benefits. Whatever money, time, or effort you've already spent and can't recover is called a sunk cost, and logically, it shouldn't influence what you do next. Yet in real life, we let sunk costs drive our choices all the time.</p>\n<p>Picture this: you buy a nonrefundable twenty-dollar ticket to an outdoor concert. The evening of the show, a freezing rainstorm rolls in. You're miserable just thinking about going. If the ticket had been free, you'd stay home on the couch without a second thought. But because you paid twenty dollars, you drag yourself out into the rain so you don't \"waste\" the ticket. See the flaw? The twenty dollars is gone either way. By going, you haven't saved your money; you've just traded a dry evening for a wet, miserable one.</p>\n<p>And it's not just individuals who fall into this trap. Governments and corporations do too. In fact, economists sometimes call this the Concorde fallacy, after the supersonic passenger jet developed jointly by Britain and France. Long before the plane entered service, both governments realized it would never make back its massive development costs. Walking away would have saved billions. Instead, neither side wanted to admit that the money already spent was lost, so they kept pouring funds into the project for years.</p>\n<p>Why is it so hard to walk away? Partly because of loss aversion: we hate admitting a loss more than we enjoy an equivalent gain. Once we recognize that bias, though, we can ask a simpler question: if I were starting from scratch today, would I still invest in this?</p>",
+      "audio_ref": null
+    },
+    "group": "mod2-dn5",
+    "prompt": "Detail. According to the professor, what should a decision-maker do when facing a sunk cost?",
+    "text_format": "html",
+    "options": {
+      "A": "Try to recover the initial investment by doubling the project budget",
+      "B": "Share the financial responsibility equally with another partner",
+      "C": "Evaluate the choice as if starting fresh, ignoring past spending",
+      "D": "Avoid starting any long-term project that carries financial risk"
+    },
+    "answer": "C",
+    "explanation": "No fechamento, o professor sugere que você avalie a decisão <strong>partindo do zero</strong>, sem levar em conta o que já foi gasto: \"if I were starting from scratch today, would I still invest in this?\" A opção (B) é uma armadilha porque lembra a parceria entre dois países no caso do Concorde, que justamente não impediu o erro.",
+    "hint": null,
+    "trap_codes": [],
+    "tags": [],
+    "status": "rascunho",
+    "source": {
+      "kind": "migrado",
+      "file": "app/drills_data.py",
+      "ref": "MOD2_ACTION_DRILLS_D:mod2-dn5#D7.4",
+      "live_on_site": true,
+      "answer_letter": "origem",
+      "build_map": {
+        "A": "B",
+        "B": "C",
+        "C": "D",
+        "D": "A"
+      }
+    }
+  },
+  {
+    "id": "mod2-dn6.d8.1",
+    "section": "listening",
+    "task_type": "Listen to an Academic Talk",
+    "exam_format": true,
+    "format": "mcq",
+    "skill": null,
+    "cefr_min": "C1",
+    "cefr_max": "C1",
+    "stimulus": {
+      "kind": "audio",
+      "format": "html",
+      "title": "Exercício D8: linguística histórica (meta de 4 min)",
+      "content": "<p><em>Narrator: Listen to part of a talk in a historical linguistics class.</em></p>\n<p><strong>Professor:</strong> We often treat dictionary definitions as if they were carved in stone, and people love to complain when a word starts being used in a new way. But to a linguist, semantic shift—the gradual change in a word's meaning over time—isn't a corruption of language; it's one of its most predictable features. Today I want to focus on two opposite directions this shift can take: amelioration, where a word's meaning becomes more positive, and pejoration, where it becomes more negative.</p>\n<p>Take the ordinary English word \"nice.\" If someone calls your essay \"nice\" today, it's a mild compliment. But if we trace \"nice\" back to its Latin root, nescius, it meant \"ignorant\" or \"unaware.\" When it entered Middle English through French, it meant \"foolish\" or \"silly.\" Over the next few centuries, though, its meaning softened: from foolish to shy, then to fussy or fastidious, then to precise and delicate, and finally to pleasant and agreeable. That upward climb from \"ignorant\" to \"pleasant\" is a classic case of amelioration.</p>\n<p>Now look at the reverse trajectory: pejoration. Consider the word \"silly.\" In Old English, its ancestor, saelig, meant \"blessed\" or \"happy.\" Over time, because blessed, innocent people were seen as harmless and defenseless, the word shifted to mean \"deserving of pity,\" then \"weak,\" and eventually \"foolish\" or \"lacking common sense.\" So while \"nice\" climbed the social ladder, \"silly\" slid down it.</p>\n<p>Notice what drives both shifts. Words don't change meaning in a vacuum; they shift because speakers stretch them in everyday conversation—through irony, politeness, or exaggeration—until the new implication replaces the old core meaning entirely.</p>",
+      "audio_ref": null
+    },
+    "group": "mod2-dn6",
+    "prompt": "Gist-content. What is the main purpose of the lecture?",
+    "text_format": "html",
+    "options": {
+      "A": "To argue that modern dictionaries should preserve original Latin meanings",
+      "B": "To explain how French grammar reshaped Middle English sentence structure",
+      "C": "To illustrate how words can shift toward more positive or negative meanings",
+      "D": "To show why formal academic writing avoids informal adjectives like \"nice\""
+    },
+    "answer": "C",
+    "explanation": "O objetivo da aula é explicar e exemplificar duas direções da <strong>mudança semântica</strong>, para sentidos mais positivos ou mais negativos: \"amelioration, where a word's meaning becomes more positive, and pejoration, where it becomes more negative.\" A opção (A) vai contra a visão da professora logo no primeiro parágrafo.",
+    "hint": null,
+    "trap_codes": [],
+    "tags": [],
+    "status": "rascunho",
+    "source": {
+      "kind": "migrado",
+      "file": "app/drills_data.py",
+      "ref": "MOD2_ACTION_DRILLS_D:mod2-dn6#D8.1",
+      "live_on_site": true,
+      "answer_letter": "origem",
+      "build_map": {
+        "A": "D",
+        "B": "B",
+        "C": "C",
+        "D": "A"
+      }
+    }
+  },
+  {
+    "id": "mod2-dn6.d8.2",
+    "section": "listening",
+    "task_type": "Listen to an Academic Talk",
+    "exam_format": true,
+    "format": "mcq",
+    "skill": null,
+    "cefr_min": "C1",
+    "cefr_max": "C1",
+    "stimulus": {
+      "kind": "audio",
+      "format": "html",
+      "title": "Exercício D8: linguística histórica (meta de 4 min)",
+      "content": "<p><em>Narrator: Listen to part of a talk in a historical linguistics class.</em></p>\n<p><strong>Professor:</strong> We often treat dictionary definitions as if they were carved in stone, and people love to complain when a word starts being used in a new way. But to a linguist, semantic shift—the gradual change in a word's meaning over time—isn't a corruption of language; it's one of its most predictable features. Today I want to focus on two opposite directions this shift can take: amelioration, where a word's meaning becomes more positive, and pejoration, where it becomes more negative.</p>\n<p>Take the ordinary English word \"nice.\" If someone calls your essay \"nice\" today, it's a mild compliment. But if we trace \"nice\" back to its Latin root, nescius, it meant \"ignorant\" or \"unaware.\" When it entered Middle English through French, it meant \"foolish\" or \"silly.\" Over the next few centuries, though, its meaning softened: from foolish to shy, then to fussy or fastidious, then to precise and delicate, and finally to pleasant and agreeable. That upward climb from \"ignorant\" to \"pleasant\" is a classic case of amelioration.</p>\n<p>Now look at the reverse trajectory: pejoration. Consider the word \"silly.\" In Old English, its ancestor, saelig, meant \"blessed\" or \"happy.\" Over time, because blessed, innocent people were seen as harmless and defenseless, the word shifted to mean \"deserving of pity,\" then \"weak,\" and eventually \"foolish\" or \"lacking common sense.\" So while \"nice\" climbed the social ladder, \"silly\" slid down it.</p>\n<p>Notice what drives both shifts. Words don't change meaning in a vacuum; they shift because speakers stretch them in everyday conversation—through irony, politeness, or exaggeration—until the new implication replaces the old core meaning entirely.</p>",
+      "audio_ref": null
+    },
+    "group": "mod2-dn6",
+    "prompt": "Detail. What did the word \"nice\" originally mean in its Latin root?",
+    "text_format": "html",
+    "options": {
+      "A": "Blessed or fortunate",
+      "B": "Precise and delicate",
+      "C": "Pleasant and agreeable",
+      "D": "Ignorant or unaware"
+    },
+    "answer": "D",
+    "explanation": "Na raiz latina <em>nescius</em>, a palavra significava <strong>ignorante ou desatento</strong>: \"if we trace 'nice' back to its Latin root, nescius, it meant 'ignorant' or 'unaware'.\" Cuidado com (A), que traz o sentido antigo de <em>silly</em>, enquanto (B) e (C) mostram etapas posteriores da evolução de <em>nice</em>.",
+    "hint": null,
+    "trap_codes": [],
+    "tags": [],
+    "status": "rascunho",
+    "source": {
+      "kind": "migrado",
+      "file": "app/drills_data.py",
+      "ref": "MOD2_ACTION_DRILLS_D:mod2-dn6#D8.2",
+      "live_on_site": true,
+      "answer_letter": "origem",
+      "build_map": {
+        "A": "A",
+        "B": "C",
+        "C": "D",
+        "D": "B"
+      }
+    }
+  },
+  {
+    "id": "mod2-dn6.d8.3",
+    "section": "listening",
+    "task_type": "Listen to an Academic Talk",
+    "exam_format": true,
+    "format": "mcq",
+    "skill": null,
+    "cefr_min": "C1",
+    "cefr_max": "C1",
+    "stimulus": {
+      "kind": "audio",
+      "format": "html",
+      "title": "Exercício D8: linguística histórica (meta de 4 min)",
+      "content": "<p><em>Narrator: Listen to part of a talk in a historical linguistics class.</em></p>\n<p><strong>Professor:</strong> We often treat dictionary definitions as if they were carved in stone, and people love to complain when a word starts being used in a new way. But to a linguist, semantic shift—the gradual change in a word's meaning over time—isn't a corruption of language; it's one of its most predictable features. Today I want to focus on two opposite directions this shift can take: amelioration, where a word's meaning becomes more positive, and pejoration, where it becomes more negative.</p>\n<p>Take the ordinary English word \"nice.\" If someone calls your essay \"nice\" today, it's a mild compliment. But if we trace \"nice\" back to its Latin root, nescius, it meant \"ignorant\" or \"unaware.\" When it entered Middle English through French, it meant \"foolish\" or \"silly.\" Over the next few centuries, though, its meaning softened: from foolish to shy, then to fussy or fastidious, then to precise and delicate, and finally to pleasant and agreeable. That upward climb from \"ignorant\" to \"pleasant\" is a classic case of amelioration.</p>\n<p>Now look at the reverse trajectory: pejoration. Consider the word \"silly.\" In Old English, its ancestor, saelig, meant \"blessed\" or \"happy.\" Over time, because blessed, innocent people were seen as harmless and defenseless, the word shifted to mean \"deserving of pity,\" then \"weak,\" and eventually \"foolish\" or \"lacking common sense.\" So while \"nice\" climbed the social ladder, \"silly\" slid down it.</p>\n<p>Notice what drives both shifts. Words don't change meaning in a vacuum; they shift because speakers stretch them in everyday conversation—through irony, politeness, or exaggeration—until the new implication replaces the old core meaning entirely.</p>",
+      "audio_ref": null
+    },
+    "group": "mod2-dn6",
+    "prompt": "Detail. How did the word \"silly\" change over time?",
+    "text_format": "html",
+    "options": {
+      "A": "It moved from meaning blessed and happy to meaning foolish",
+      "B": "It was borrowed from French to replace an older English word",
+      "C": "It shifted from a strong insult to a polite compliment",
+      "D": "It kept its original Old English meaning until the twentieth century"
+    },
+    "answer": "A",
+    "explanation": "A palavra <em>silly</em> sofreu <strong>pejoração</strong>, passando de abençoado ou feliz no inglês antigo para tolo: \"In Old English, its ancestor, saelig, meant 'blessed' or 'happy'... and eventually 'foolish' or 'lacking common sense'.\" A alternativa (C) descreve o caminho inverso, que foi o da palavra <em>nice</em>.",
+    "hint": null,
+    "trap_codes": [],
+    "tags": [],
+    "status": "rascunho",
+    "source": {
+      "kind": "migrado",
+      "file": "app/drills_data.py",
+      "ref": "MOD2_ACTION_DRILLS_D:mod2-dn6#D8.3",
+      "live_on_site": true,
+      "answer_letter": "origem",
+      "build_map": {
+        "A": "A",
+        "B": "D",
+        "C": "B",
+        "D": "C"
+      }
+    }
+  },
+  {
+    "id": "mod2-dn6.d8.4",
+    "section": "listening",
+    "task_type": "Listen to an Academic Talk",
+    "exam_format": true,
+    "format": "mcq",
+    "skill": null,
+    "cefr_min": "C1",
+    "cefr_max": "C1",
+    "stimulus": {
+      "kind": "audio",
+      "format": "html",
+      "title": "Exercício D8: linguística histórica (meta de 4 min)",
+      "content": "<p><em>Narrator: Listen to part of a talk in a historical linguistics class.</em></p>\n<p><strong>Professor:</strong> We often treat dictionary definitions as if they were carved in stone, and people love to complain when a word starts being used in a new way. But to a linguist, semantic shift—the gradual change in a word's meaning over time—isn't a corruption of language; it's one of its most predictable features. Today I want to focus on two opposite directions this shift can take: amelioration, where a word's meaning becomes more positive, and pejoration, where it becomes more negative.</p>\n<p>Take the ordinary English word \"nice.\" If someone calls your essay \"nice\" today, it's a mild compliment. But if we trace \"nice\" back to its Latin root, nescius, it meant \"ignorant\" or \"unaware.\" When it entered Middle English through French, it meant \"foolish\" or \"silly.\" Over the next few centuries, though, its meaning softened: from foolish to shy, then to fussy or fastidious, then to precise and delicate, and finally to pleasant and agreeable. That upward climb from \"ignorant\" to \"pleasant\" is a classic case of amelioration.</p>\n<p>Now look at the reverse trajectory: pejoration. Consider the word \"silly.\" In Old English, its ancestor, saelig, meant \"blessed\" or \"happy.\" Over time, because blessed, innocent people were seen as harmless and defenseless, the word shifted to mean \"deserving of pity,\" then \"weak,\" and eventually \"foolish\" or \"lacking common sense.\" So while \"nice\" climbed the social ladder, \"silly\" slid down it.</p>\n<p>Notice what drives both shifts. Words don't change meaning in a vacuum; they shift because speakers stretch them in everyday conversation—through irony, politeness, or exaggeration—until the new implication replaces the old core meaning entirely.</p>",
+      "audio_ref": null
+    },
+    "group": "mod2-dn6",
+    "prompt": "Idiom in context. What does the professor mean by saying that words do not change meaning \"in a vacuum\"?",
+    "text_format": "html",
+    "options": {
+      "A": "Written texts preserve older meanings longer than spoken dialects do",
+      "B": "Shifts in meaning are driven by how people actually use words socially",
+      "C": "Linguists cannot study dead languages without historical records",
+      "D": "Scientific terms change meaning less often than everyday words do"
+    },
+    "answer": "B",
+    "explanation": "Dizer que as palavras não mudam <em>in a vacuum</em> significa que a mudança não acontece isolada, mas sim pelo <strong>uso social</strong> nas conversas do dia a dia: \"they shift because speakers stretch them in everyday conversation.\" A opção (D) faz uma associação literal com a palavra <em>vacuum</em> como termo da física, sem relação com o contexto.",
+    "hint": null,
+    "trap_codes": [],
+    "tags": [],
+    "status": "rascunho",
+    "source": {
+      "kind": "migrado",
+      "file": "app/drills_data.py",
+      "ref": "MOD2_ACTION_DRILLS_D:mod2-dn6#D8.4",
+      "live_on_site": true,
+      "answer_letter": "origem",
+      "build_map": {
+        "A": "A",
+        "B": "D",
+        "C": "C",
+        "D": "B"
+      }
+    }
+  },
+  {
     "id": "mod7-b9.1",
     "section": "listening",
     "task_type": "Listen to an Academic Talk",

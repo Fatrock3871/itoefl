@@ -128,6 +128,15 @@
         speakText(body.textContent);
       });
     });
+  } else {
+    // sem voz sintética e ainda sem áudio gravado: o botão fica à vista,
+    // desabilitado, e a transcrição continua escondida até a resposta
+    Array.prototype.forEach.call(document.querySelectorAll(".quiz-item-speak, .quiz-passage-speak"), function(btn){
+      btn.disabled = true;
+      btn.classList.add("speak-soon");
+      btn.setAttribute("aria-label", "Áudio em breve");
+      btn.innerHTML = toeflIcon("volume") + " Áudio em breve";
+    });
   }
 
   // agrupa o conteudo de cada modulo em cards por secao (um card por H2),
@@ -239,6 +248,16 @@
           var top = w;
           while(top.parentNode !== card) top = top.parentNode;
           keep.push(top);
+          // dentro de uma rodada sorteada (M1, M2, M5, M6): só a amostra fica
+          // aberta, sempre à vista, e os outros exercícios do grupo trancam
+          var pick = w.closest(".drill-pick"), round = pick && pick.closest(".drill-round");
+          if(round){
+            pick.setAttribute("data-fs-keep", "");
+            round.setAttribute("data-fs-pin", "");
+            Array.prototype.forEach.call(round.querySelectorAll(".drill-pick"), function(p){
+              if(p !== pick) p.setAttribute("data-locked", "");
+            });
+          }
           // leva junto o título e a instrução logo acima, até o h3 anterior
           for(var prev = top.previousElementSibling; prev && prev.tagName !== "H2" && !isWidget(prev); prev = prev.previousElementSibling){
             keep.push(prev);
@@ -1253,8 +1272,8 @@
   // cada abertura de um exercício ainda não começado e a cada "Refazer",
   // sempre diferente da última vista. Começado ou entregue, fica a ordem
   // guardada. A ordem é do aparelho (toefl_qorder_v1, não sincroniza).
-  // Rodada (grupos com mais exercícios do que uma rodada, hoje M5 e M6): o
-  // que já foi feito vai em toefl_sorteio_v1, que sincroniza com a conta.
+  // Rodada (grupos com mais exercícios do que uma rodada: M1 B e C, M2 A a D,
+  // M5 e M6): o que já foi feito vai em toefl_sorteio_v1, que sincroniza.
   var LS_QORDER = "toefl_qorder_v1", LS_SORTEIO = "toefl_sorteio_v1";
   function readObj(key){ try { var o = JSON.parse(safeGet(key) || "{}"); return (o && typeof o === "object") ? o : {}; } catch(e){ return {}; } }
   var ToeflSorteio = {
@@ -1356,7 +1375,28 @@
 
     function saveState(){ safeSet(lsKey, JSON.stringify(state)); }
 
+    // Listening (M2, data-listen-hide): ouvir antes de ler. A transcrição da
+    // passagem aparece com todas as questões respondidas; a fala de cada item
+    // do Grupo A, com aquele item respondido. "Refazer" esconde de novo.
+    var listenPassage = document.querySelector('.quiz-passage[data-listen-hide][data-for="' + drillId + '"]');
+    function syncTranscript(){
+      if(!listenPassage) return;
+      var done = allConfirmed();
+      var body = listenPassage.querySelector(".quiz-passage-body"), note = listenPassage.querySelector(".quiz-transcript-note");
+      if(body) body.hidden = !done;
+      if(note) note.hidden = done;
+    }
+    function syncPrompt(card){
+      var text = card.querySelector(".qprompt-text[data-listen-hide]");
+      if(!text) return;
+      var s = state[card.dataset.num], shown = !!(s && s.confirmed);
+      text.hidden = !shown;
+      var hint = card.querySelector(".qprompt-hint");
+      if(hint) hint.hidden = shown;
+    }
+
     function renderSummary(){
+      syncTranscript();
       var total = qcards.length, confirmed = 0, correct = 0;
       qcards.forEach(function(card){
         var num = card.dataset.num;
@@ -1395,6 +1435,7 @@
     }
 
     function applyCardState(card){
+      syncPrompt(card);
       var num = card.dataset.num;
       var s = state[num];
       var multi = isMultiCard(card);
@@ -1528,8 +1569,9 @@
     renderSummary();
   });
 
-  // ---------- Rodada sorteada de exercícios (M5 e M6) ----------
-  // Todos os exercícios do grupo estão na página; só os da rodada aparecem.
+  // ---------- Rodada sorteada de exercícios (M1, M2, M5 e M6) ----------
+  // Todos os exercícios do grupo estão na página; só os da rodada aparecem
+  // (data-round, o tamanho de cada grupo, vem do build_pipeline.py).
   // A rodada fica guardada até ser toda feita (aí a próxima abertura traz
   // outra) ou até o aluno pedir outra. Nenhum exercício volta antes de o
   // grupo inteiro ter sido feito (ToeflSorteio.pickRound).

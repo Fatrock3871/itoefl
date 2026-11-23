@@ -400,10 +400,24 @@ do banco de questões, porque define o formato de dois tipos de item.
       M1, M2, M5 e M6 e dos blocos do M7 é sorteada a cada abertura, diferente
       da última (`toefl_qorder_v1`, do aparelho). Sem SQL.
 - [ ] (U) Passar as 154 questões do M5 e do M6 por um professor.
-- [ ] (D) M1 e M2 mostram todos os exercícios de cada grupo, sem rodada,
-      porque cada grupo tem no máximo 5 textos. Se quiser rodada também ali
-      (ex.: 2 textos de Read in Daily Life por vez, como na prova), é só
-      envolver o grupo em `render_drill_round` no `build_pipeline.py`.
+- [x] (D) M1 e M2 com rodada (Claude, 2026-11-16, branch
+      `claude/m1m2-novos`). Feito junto com os exercícios novos, abaixo.
+- [x] (C) M1 e M2 com 41 exercícios novos e rodadas (Claude, 2026-11-16,
+      branch `claude/m1m2-novos`). Rascunho do Gemini (142 questões em 42
+      exercícios) revisado item a item: 102 aceitas, 31 corrigidas, 9
+      descartadas (relatório em `itoefl-gerencia/m1m2/REVISAO-claude.md`).
+      As 133 que ficaram entram nos grupos que já existiam: M1 B 15
+      exercícios, M1 C 9, M2 A 5, B 11, C 11 e D 8. Cada grupo virou rodada
+      sorteada como no M5 e no M6 (3 por vez em Daily Life, conversa e
+      anúncio; 2 em passagem acadêmica, Choose a Response e palestra), com a
+      contagem conferida no build (`ROUNDS` no `build_pipeline.py`). No M2 a
+      transcrição só aparece depois da resposta, também nos 10 exercícios
+      antigos. O áudio continua sendo a voz do navegador. Sem SQL.
+- [ ] (U) Passar as 133 questões novas do M1 e do M2 por um professor.
+- [ ] (U) Gerar os 45 áudios dos exercícios novos do M2 no ElevenLabs (lista
+      com ids e transcrições em `itoefl-gerencia/m1m2/AUDIOS.md`). O site
+      ainda não toca arquivo de áudio no M2: quando os arquivos existirem,
+      falta o player (ver o item "Áudio de Listening com voz neural").
 - [ ] (C) `bank/tools/migrate.py` ainda não leva os exercícios do M5 e do M6
       para `bank/items/migrado/`.
 

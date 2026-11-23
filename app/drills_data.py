@@ -343,7 +343,7 @@ MOD2_ACTION_DRILLS_A = [
         "id": "mod2-a",
         "title": None,
         "level": "B1–B2",
-        "objective": "Escolha a resposta mais natural e pragmaticamente adequada a cada fala. Tempo-alvo: 12 segundos por item.",
+        "objective": "Ouça cada fala e escolha a resposta mais natural. A fala aparece escrita depois que você responde. Tempo-alvo: 12 segundos por item.",
         "passage_html": None,
         "items": [
             {"num": "A1", "prompt": "\"I was going to grab lunch before the seminar, but there's no time now.\"",
@@ -393,7 +393,7 @@ MOD2_ACTION_DRILLS_B = [
         "id": "mod2-b1",
         "title": "Exercício B1: Advising Office (meta de 3 min)",
         "level": "B1–B2",
-        "objective": "Leia o diálogo (ou peça para alguém ler em voz alta) e responda às 2 questões. Tempo-alvo: 3 minutos.",
+        "objective": "Ouça a conversa e responda às 2 questões. A transcrição aparece depois que você responder a todas. Tempo-alvo: 3 minutos.",
         "passage_html": """<p><em>Narrator: Listen to a conversation between a student and an academic advisor.</em></p>
 <p><strong>Student:</strong> Hi, I wanted to ask about switching one of my electives. I'm in Intro to Statistics, but I'd rather take Data Visualization this term.</p>
 <p><strong>Advisor:</strong> Let me check... okay, Data Visualization has space. But it has Statistics as a prerequisite — have you completed that?</p>
@@ -416,7 +416,7 @@ MOD2_ACTION_DRILLS_B = [
         "id": "mod2-b2",
         "title": "Exercício B2: Library Reserve Desk (meta de 3 min)",
         "level": "B1–B2",
-        "objective": "Leia o diálogo (ou peça para alguém ler em voz alta) e responda às 2 questões. Tempo-alvo: 3 minutos.",
+        "objective": "Ouça a conversa e responda às 2 questões. A transcrição aparece depois que você responder a todas. Tempo-alvo: 3 minutos.",
         "passage_html": """<p><em>Narrator: Listen to a conversation between a student and a librarian.</em></p>
 <p><strong>Student:</strong> Hi — I'm looking for a book my professor put on reserve for the history seminar. It's <em>The Making of the Atlantic World</em>.</p>
 <p><strong>Librarian:</strong> Let me look... yes, we have two copies on reserve. Reserve items are two-hour loans, in-library use only. You can't take them out of the building.</p>
@@ -438,7 +438,7 @@ MOD2_ACTION_DRILLS_B = [
         "id": "mod2-b3",
         "title": "Exercício B3: After Class (meta de 3 min)",
         "level": "B1–B2",
-        "objective": "Leia o diálogo (ou peça para alguém ler em voz alta) e responda às 2 questões. Tempo-alvo: 3 minutos.",
+        "objective": "Ouça a conversa e responda às 2 questões. A transcrição aparece depois que você responder a todas. Tempo-alvo: 3 minutos.",
         "passage_html": """<p><em>Narrator: Listen to a conversation between a student and a professor.</em></p>
 <p><strong>Student:</strong> Professor, do you have a minute? I'm a bit lost on the second essay prompt.</p>
 <p><strong>Professor:</strong> Of course. Which part?</p>
@@ -466,7 +466,7 @@ MOD2_ACTION_DRILLS_C = [
         "id": "mod2-c1",
         "title": "Exercício C1: Library Services (meta de 2 min)",
         "level": "B1",
-        "objective": "Leia o anúncio (ou peça para alguém ler em voz alta) e responda às 2 questões. Tempo-alvo: 2 minutos.",
+        "objective": "Ouça o anúncio e responda às 2 questões. A transcrição aparece depois que você responder a todas. Tempo-alvo: 2 minutos.",
         "passage_html": """<p><em>Narrator: Listen to an announcement about a change to library services.</em></p>
 <p><strong>Speaker:</strong> Attention, students. Starting next Monday, the Main Library's third-floor reading room will be closed for renovation through the end of the month. During this period you can use the East Wing reading room instead, which keeps its regular hours. Reserved study rooms originally booked for the third floor have already been transferred automatically to the East Wing — you don't need to rebook. However, if your reservation was for a room with audiovisual equipment, please double-check availability, since not all East Wing rooms are equipped. Questions go to the circulation desk.</p>""",
         "items": [
@@ -482,7 +482,7 @@ MOD2_ACTION_DRILLS_C = [
         "id": "mod2-c2",
         "title": "Exercício C2: Course Registration (meta de 2 min)",
         "level": "B1",
-        "objective": "Leia o anúncio (ou peça para alguém ler em voz alta) e responda às 2 questões. Tempo-alvo: 2 minutos.",
+        "objective": "Ouça o anúncio e responda às 2 questões. A transcrição aparece depois que você responder a todas. Tempo-alvo: 2 minutos.",
         "passage_html": """<p><em>Narrator: Listen to an announcement about course registration.</em></p>
 <p><strong>Speaker:</strong> A reminder to all second-year students: registration for spring courses opens this Thursday at 8 a.m. and closes the following Wednesday at midnight. Register early — popular courses fill within hours. If a course you need is full, add yourself to the waitlist rather than emailing the instructor; the system releases spots automatically as students drop, and it works strictly in waitlist order. One change this year: the add/drop period after classes begin has been shortened from two weeks to one, so finalize your schedule before the term starts, not after.</p>""",
         "items": [
@@ -498,7 +498,7 @@ MOD2_ACTION_DRILLS_C = [
         "id": "mod2-c3",
         "title": "Exercício C3: Campus Event (meta de 2 min)",
         "level": "B1",
-        "objective": "Leia o anúncio (ou peça para alguém ler em voz alta) e responda às 2 questões. Tempo-alvo: 2 minutos.",
+        "objective": "Ouça o anúncio e responda às 2 questões. A transcrição aparece depois que você responder a todas. Tempo-alvo: 2 minutos.",
         "passage_html": """<p><em>Narrator: Listen to an announcement about a career event.</em></p>
 <p><strong>Speaker:</strong> The annual Career Fair takes place next Wednesday from 10 to 4 in the main gymnasium. Over eighty employers will attend, mostly in engineering, healthcare, and education. A few reminders. Bring several printed copies of your résumé — most recruiters still expect a paper copy. Business-casual dress is recommended, not required. The résumé-review station near the entrance will be open from 9, an hour before the fair, and it operates first-come, first-served, so arrive early if you want feedback before talking to employers. Finally, the 9:30 workshop on interview skills is now full; a recording will be posted next week for those who missed it.</p>""",
         "items": [
@@ -519,7 +519,7 @@ MOD2_ACTION_DRILLS_D = [
         "id": "mod2-d1",
         "title": "Exercício D1: psicologia (meta de 4 min)",
         "level": "B2–C1",
-        "objective": "Leia a palestra (ou peça para alguém ler em voz alta) e responda às 4 questões. Tempo-alvo: 4 minutos.",
+        "objective": "Ouça a palestra e responda às 4 questões. A transcrição aparece depois que você responder a todas. Tempo-alvo: 4 minutos.",
         "passage_html": """<p><em>Narrator: Listen to part of a talk in a psychology class.</em></p>
 <p><strong>Professor:</strong> We've been discussing decision-making, and today I want to bring up something researchers call the paradox of choice. The idea is counterintuitive: you'd think more options would always make us happier, but past a certain point it does the opposite.</p>
 <p>A classic example. In one well-known study, researchers set up a tasting table in a grocery store: first with six varieties of jam, then with twenty-four. You'd expect the bigger display to sell more. Actually, the smaller display generated significantly more purchases. The larger one attracted more browsers, but far fewer of them bought anything.</p>
@@ -544,7 +544,7 @@ MOD2_ACTION_DRILLS_D = [
         "id": "mod2-d2",
         "title": "Exercício D2: biologia (meta de 4 min)",
         "level": "B2–C1",
-        "objective": "Leia a palestra (ou peça para alguém ler em voz alta) e responda às 4 questões. Tempo-alvo: 4 minutos.",
+        "objective": "Ouça a palestra e responda às 4 questões. A transcrição aparece depois que você responder a todas. Tempo-alvo: 4 minutos.",
         "passage_html": """<p><em>Narrator: Listen to part of a talk in a biology class.</em></p>
 <p><strong>Professor:</strong> When we picture a forest, we tend to see individual trees competing — for light, for water, for space. And that's real. But over the last thirty years, research has revealed something the old picture missed: the trees are also <strong>connected</strong>, underground, through fungi.</p>
 <p>Here's how. The roots of most trees are wrapped in a network of fungal threads; this partnership between root and fungus is called a mycorrhiza. The fungi pull in water and minerals the tree's roots can't reach efficiently, and hand them to the tree. In return, the tree gives the fungi sugars it makes through photosynthesis. So far, a simple trade.</p>
@@ -569,7 +569,7 @@ MOD2_ACTION_DRILLS_D = [
         "id": "mod2-d3",
         "title": "Exercício D3: história da tecnologia (meta de 4 min)",
         "level": "B2–C1",
-        "objective": "Leia a palestra (ou peça para alguém ler em voz alta) e responda às 4 questões. Tempo-alvo: 4 minutos.",
+        "objective": "Ouça a palestra e responda às 4 questões. A transcrição aparece depois que você responder a todas. Tempo-alvo: 4 minutos.",
         "passage_html": """<p><em>Narrator: Listen to part of a talk in a history of technology class.</em></p>
 <p><strong>Professor:</strong> Look at your keyboard. The top row of letters spells Q-W-E-R-T-Y. It's an odd arrangement — the most common letters aren't under your strongest fingers. So why has it survived, essentially unchanged, for a hundred and fifty years?</p>
 <p>The layout dates from the 1870s, from early mechanical typewriters. The common story is that QWERTY was designed to <em>slow typists down</em> so the metal type-bars wouldn't jam. That's probably an oversimplification (the real design pressures were more mixed), but the key point is that the layout was shaped by the constraints of 1870s <strong>machinery</strong>, constraints that vanished decades ago.</p>
@@ -2449,3 +2449,2249 @@ MOD6_DRILLS = [{'id': 'mod6-x-1',
                             '<em>emphasizes the second mechanism</em>, sem preposição). Repare que a opção (B) erra ao '
                             'colocar <em>on</em> depois do verbo <em>emphasizes</em>.',
              'fonte': 'Parte 9, Exercício 9, item 8 (linhas 666 e 677)'}]}]
+
+
+# >>> EXERCÍCIOS NOVOS DO M1 E DO M2 (gerado por itoefl-gerencia/m1m2/aplicar_revisao.py)
+# Rascunho do Gemini revisado pelo Claude em 2026-11-16 (itoefl-gerencia/m1m2/REVISAO-claude.md).
+# Entram nos grupos existentes do M1 (B e C) e do M2 (A a D), que viraram rodadas sorteadas.
+# Para mudar uma questão, editar aqui mesmo e rodar bank/tools/migrate.py.
+MOD1_NOVOS_B = [{'id': 'mod1-bn1',
+  'title': 'Exercício B6: placa ou aviso (meta de 2 min)',
+  'level': 'A2–B1',
+  'objective': 'Leia o texto e responda às questões de compreensão. Tempo-alvo: 2 minutos.',
+  'passage_html': '<p><strong>TEXT: Sign in a dormitory laundry room</strong></p>\n'
+                  '<blockquote><p><strong>NORTH HALL LAUNDRY ROOM: RULES FOR RESIDENTS</strong></p>\n'
+                  '<p>• Open daily from 6:00 a.m. to 11:00 p.m. The door locks automatically at 11:00 p.m.<br>\n'
+                  '• All machines use your student ID card. Cash and coins are not accepted.<br>\n'
+                  '• Please remove your clothes within 30 minutes after your cycle ends so others can use the '
+                  'machines.<br>\n'
+                  '• Forgotten items are placed in the blue basket by the door and donated every Friday '
+                  'afternoon.</p></blockquote>',
+  'items': [{'num': 'B6.1',
+             'prompt': 'How do students pay to use the washing machines?',
+             'options': {'A': 'With coins at the machine',
+                         'B': 'With cash at the front desk',
+                         'C': 'With their student ID card',
+                         'D': 'With a mobile banking app'},
+             'correct': 'C',
+             'explanation': 'O aviso informa diretamente que <em>All machines use your student ID card</em>, '
+                            'confirmando a opção (C) como <strong>pagamento pelo cartão de estudante</strong>. A '
+                            'alternativa (A) é uma armadilha comum porque lavanderias costumam aceitar moedas, mas o '
+                            'texto avisa que <em>Cash and coins are not accepted</em>.'},
+            {'num': 'B6.2',
+             'prompt': 'On Friday afternoon, what happens to forgotten items in the blue basket?',
+             'options': {'A': 'They are given away as donations',
+                         'B': 'They are washed again by the staff',
+                         'C': 'They are locked inside the machines',
+                         'D': "They are sent to the resident's room"},
+             'correct': 'A',
+             'explanation': 'A última linha explica que os itens esquecidos vão para o cesto azul e são '
+                            '<strong>doados na sexta-feira à tarde</strong> (<em>donated every Friday '
+                            'afternoon</em>), o que corresponde a <em>given away as donations</em> em (A). A opção '
+                            '(C) confunde o trancamento automático da porta às 23h com o destino das roupas.'}]},
+ {'id': 'mod1-bn2',
+  'title': 'Exercício B7: cardápio (meta de 2 min)',
+  'level': 'A2–B1',
+  'objective': 'Leia o texto e responda às questões de compreensão. Tempo-alvo: 2 minutos.',
+  'passage_html': '<p><strong>TEXT: Student Union Coffee Cart menu</strong></p>\n'
+                  '<blockquote><p><strong>HOT AND ICED DRINKS</strong> (oat or almond milk +$0.50; bring your own '
+                  'mug for $0.50 off)</p>\n'
+                  '<p>• <strong>House Coffee</strong> — medium roast, hot or iced — $3.00<br>\n'
+                  '• <strong>Café Latte</strong> — espresso with steamed milk — $4.50<br>\n'
+                  '• <strong>Matcha Green Tea</strong> — sweetened or unsweetened — $4.00</p>\n'
+                  '<p><strong>MORNING PASTRIES</strong> — $3.50 each, or $2.00 when ordered with any drink before '
+                  '10:00 a.m.<br>\n'
+                  '• <strong>Blueberry Muffin</strong> (vegetarian) • <strong>Banana Bread</strong> (contains '
+                  'walnuts) • <strong>Cinnamon Roll</strong> (vegan)</p></blockquote>',
+  'items': [{'num': 'B7.1',
+             'prompt': 'A student orders a House Coffee and a Cinnamon Roll at 9:15 a.m. without bringing a mug. '
+                       'What is the total price?',
+             'options': {'A': '$3.50', 'B': '$4.50', 'C': '$6.50', 'D': '$5.00'},
+             'correct': 'D',
+             'explanation': 'O café custa $3.00 e, como o pedido é feito antes das 10h junto com uma bebida, o doce '
+                            'sai pelo <strong>preço promocional de $2.00</strong>, somando $5.00 na opção (D). A '
+                            'alternativa (C) é a armadilha mais próxima porque soma o valor cheio do doce ($3.50) e '
+                            'esquece o desconto da manhã.'},
+            {'num': 'B7.2',
+             'prompt': 'Which item should a customer with a nut allergy avoid?',
+             'options': {'A': 'The Blueberry Muffin',
+                         'B': 'The Banana Bread',
+                         'C': 'The Cinnamon Roll',
+                         'D': 'The Matcha Green Tea'},
+             'correct': 'B',
+             'explanation': 'No fim do cardápio, o aviso ao lado de <em>Banana Bread</em> indica <em>contains '
+                            'walnuts</em> (nozes), apontando a opção (B) como <strong>item com oleaginosas</strong>. '
+                            'A alternativa (C) traz apenas a marcação <em>vegan</em>, sem menção a nozes ou '
+                            'castanhas.'}]},
+ {'id': 'mod1-bn3',
+  'title': 'Exercício B8: anúncio de campus (meta de 2 min)',
+  'level': 'A2–B1',
+  'objective': 'Leia o texto e responda às questões de compreensão. Tempo-alvo: 2 minutos.',
+  'passage_html': '<p><strong>TEXT: Notice on a residence hall bulletin board</strong></p>\n'
+                  '<blockquote><p><strong>BASEMENT BIKE ROOM CLEANUP — NOVEMBER 18</strong></p>\n'
+                  '<p>Next Monday, Campus Security will clear old bicycles from the basement storage room. If you '
+                  'keep a bike downstairs, please pick up a free yellow tag at the front desk and attach it to your '
+                  'handlebars by Sunday at 8:00 p.m.</p>\n'
+                  '<p>Any bike without a yellow tag on Monday morning will be moved to the main storage shed behind '
+                  'the gym. You can still claim it there during office hours by showing your student '
+                  'ID.</p></blockquote>',
+  'items': [{'num': 'B8.1',
+             'prompt': 'What is the main purpose of the notice?',
+             'options': {'A': 'To tell residents how to keep their bikes from being moved',
+                         'B': 'To announce that the basement bike room is closing forever',
+                         'C': 'To sell old bicycles to students at a low price',
+                         'D': 'To ask students to park their bikes behind the gym'},
+             'correct': 'A',
+             'explanation': 'O objetivo do aviso é orientar os moradores a colocarem a etiqueta amarela para '
+                            '<strong>manter a bicicleta no subsolo</strong>, como resume a opção (A). A alternativa '
+                            '(B) exagera ao dizer que a sala fechará para sempre, quando haverá apenas uma limpeza '
+                            '(<em>cleanup</em>).'},
+            {'num': 'B8.2',
+             'prompt': 'What must a resident do by Sunday at 8:00 p.m.?',
+             'options': {'A': 'Pay a storage fee at the front desk',
+                         'B': 'Move their bicycle to the main gym',
+                         'C': 'Put a yellow tag on their bicycle',
+                         'D': 'Show their student ID to security'},
+             'correct': 'C',
+             'explanation': 'O primeiro parágrafo pede que o morador pegue a etiqueta gratuita na recepção e faça a '
+                            '<strong>identificação no guidão até domingo às 20h</strong> (<em>attach it to your '
+                            'handlebars by Sunday at 8:00 p.m.</em>), confirmando (C). A opção (A) inventa uma taxa, '
+                            'mas o texto diz <em>free yellow tag</em>.'},
+            {'num': 'B8.3',
+             'prompt': 'What will happen to a bicycle that has no tag on Monday morning?',
+             'options': {'A': 'It will be thrown away immediately',
+                         'B': 'It will be locked in the front office',
+                         'C': 'It will be given to another student',
+                         'D': 'It will be taken to a shed behind the gym'},
+             'correct': 'D',
+             'explanation': 'O segundo parágrafo explica que a bicicleta sem etiqueta será <strong>levada ao galpão '
+                            'atrás do ginásio</strong> (<em>moved to the main storage shed behind the gym</em>), '
+                            'onde o dono ainda pode recuperá-la, validando (D). A opção (A) erra porque nenhuma '
+                            'bicicleta é jogada fora na segunda-feira.'}]},
+ {'id': 'mod1-bn4',
+  'title': 'Exercício B9: horário ou tabela (meta de 2 min)',
+  'level': 'B1–B2',
+  'objective': 'Leia o texto e responda às questões de compreensão. Tempo-alvo: 2 minutos.',
+  'passage_html': '<p><strong>TEXT: Campus Writing Center schedule</strong></p>\n'
+                  '<blockquote><p><strong>WRITING CENTER HOURS (FALL SEMESTER)</strong></p>\n'
+                  '<p>• <strong>Monday–Thursday, 9:00 a.m.–1:00 p.m.:</strong> 45-minute appointments only (book '
+                  'online).<br>\n'
+                  '• <strong>Monday–Thursday, 1:00 p.m.–5:00 p.m.:</strong> 20-minute drop-in sessions (no booking '
+                  'needed).<br>\n'
+                  '• <strong>Friday, 10:00 a.m.–2:00 p.m.:</strong> Online consultations only.</p>\n'
+                  '<p><em>Note: During final exam week, drop-in hours are suspended. All in-person and online '
+                  'sessions require an appointment booked at least 24 hours in advance, with a limit of one session '
+                  'per student.</em></p></blockquote>',
+  'items': [{'num': 'B9.1',
+             'prompt': 'During a regular week, a student who wants help in person without an appointment should '
+                       'visit on:',
+             'options': {'A': 'Tuesday at 10:30 a.m.',
+                         'B': 'Wednesday at 2:30 p.m.',
+                         'C': 'Friday at 11:00 a.m.',
+                         'D': 'Thursday at 9:30 a.m.'},
+             'correct': 'B',
+             'explanation': 'O atendimento presencial sem hora marcada (<em>drop-in sessions</em>) funciona de '
+                            'segunda a quinta, das 13h às 17h, faixa em que se encaixa a <strong>quarta-feira às '
+                            '14h30</strong> na opção (B). As alternativas (A) e (D) caem no turno da manhã, que '
+                            'exige agendamento, e a (C) é na sexta, quando o atendimento é só on-line.'},
+            {'num': 'B9.2',
+             'prompt': 'How does the schedule change during final exam week?',
+             'options': {'A': 'Every session must be reserved a day ahead',
+                         'B': 'Students may attend up to two drop-in sessions',
+                         'C': 'The center closes completely on Fridays',
+                         'D': 'Appointments are offered only in the morning'},
+             'correct': 'A',
+             'explanation': 'A nota de rodapé avisa que, na semana de provas finais, o atendimento sem hora marcada '
+                            'é suspenso e todas as sessões exigem <strong>reserva com 24 horas de '
+                            'antecedência</strong> (<em>booked at least 24 hours in advance</em>), como diz (A). '
+                            'Quem marca (B) deixou passar que os horários de <em>drop-in</em> ficam suspensos nessa '
+                            'semana.'}]},
+ {'id': 'mod1-bn5',
+  'title': 'Exercício B10: e-mail formal (meta de 3 min)',
+  'level': 'B1–B2',
+  'objective': 'Leia o texto e responda às questões de compreensão. Tempo-alvo: 3 minutos.',
+  'passage_html': '<p><strong>TEXT: Email from the University Housing Office</strong></p>\n'
+                  '<blockquote><p><strong>Subject: Winter Break Residence Hall Closing</strong></p>\n'
+                  '<p>Dear Residents,</p>\n'
+                  '<p>All campus residence halls will close for winter break on Friday, December 20, at 6:00 p.m. '
+                  'and reopen on Saturday, January 11, at 9:00 a.m.</p>\n'
+                  '<p>International students and varsity athletes who need to remain on campus during the break may '
+                  'apply for temporary housing in Maple Court. This accommodation is free of charge if you submit '
+                  'the online form by December 6. Applications received after December 6 will still be accepted '
+                  'until December 13, but a $35 late processing fee will apply.</p>\n'
+                  '<p>Before leaving on December 20, all residents — including those moving temporarily to Maple '
+                  'Court — must unplug mini-fridges and lamps in their regular rooms.</p>\n'
+                  '<p>Sincerely,<br>Office of Residential Life</p></blockquote>',
+  'items': [{'num': 'B10.1',
+             'prompt': 'What is required of an international student who applies for winter break housing on '
+                       'December 9?',
+             'options': {'A': 'Finding housing off campus for the whole break',
+                         'B': 'Moving into Maple Court before December 13',
+                         'C': 'Paying a $35 fee for applying after December 6',
+                         'D': 'Getting a signature from a varsity sports coach'},
+             'correct': 'C',
+             'explanation': 'A inscrição até 6 de dezembro é gratuita, mas pedidos enviados entre 6 e 13 de dezembro '
+                            'pagam <strong>taxa de processamento de $35</strong> (<em>a $35 late processing fee will '
+                            'apply</em>), o que torna (C) correta. A opção (A) ignora que o formulário ainda é '
+                            'aceito até o dia 13.'},
+            {'num': 'B10.2',
+             'prompt': 'According to the email, who must unplug appliances in their regular rooms before December '
+                       '20?',
+             'options': {'A': 'Students who are leaving campus for the break',
+                         'B': 'Students who are moving to Maple Court',
+                         'C': 'Students who missed the December 6 deadline',
+                         'D': 'All residents, whether or not they stay on campus'},
+             'correct': 'D',
+             'explanation': 'O último parágrafo destaca que "all residents — including those moving temporarily to '
+                            'Maple Court — must unplug mini-fridges and lamps", ou seja, <strong>todos os moradores '
+                            'sem exceção</strong>, confirmando (D). A alternativa (A) é a armadilha clássica de quem '
+                            'acha que a regra só vale para quem viaja.'},
+            {'num': 'B10.3',
+             'prompt': 'When can students return to their regular residence hall rooms?',
+             'options': {'A': 'On December 13 at 6:00 p.m.',
+                         'B': 'On January 11 at 9:00 a.m.',
+                         'C': 'On December 20 at 6:00 p.m.',
+                         'D': 'On January 6 at 9:00 a.m.'},
+             'correct': 'B',
+             'explanation': 'O primeiro parágrafo informa que os prédios reabrem no <strong>sábado, 11 de janeiro, '
+                            'às 9h</strong> (<em>reopen on Saturday, January 11, at 9:00 a.m.</em>), exatamente como '
+                            'em (B). A opção (C) traz a data em que os alojamentos fecham, e não a de reabertura.'}]},
+ {'id': 'mod1-bn6',
+  'title': 'Exercício B11: post de rede social (meta de 3 min)',
+  'level': 'B1–B2',
+  'objective': 'Leia o texto e responda às questões de compreensão. Tempo-alvo: 3 minutos.',
+  'passage_html': '<p><strong>TEXT: A social media post from a campus club</strong></p>\n'
+                  '<blockquote><p>🥾 <strong>Pinecrest Outdoor Club</strong> · Posted 4 hours ago</p>\n'
+                  "<p>Quick update about tomorrow's Saturday hike! With heavy rain in the forecast for tonight, the "
+                  'river crossing on the Lower Canyon Trail will almost certainly be flooded. Instead of canceling '
+                  "the trip, we're switching to the East Crest Trail, which stays on higher ground and gives us "
+                  'great views of the valley.</p>\n'
+                  '<p>Our departure time from the Student Union parking lot is still 7:30 a.m. sharp, but because '
+                  "the East Crest route is about two miles shorter, we'll be back on campus around 2:00 p.m. instead "
+                  "of 4:00 p.m. Waterproof hiking boots are required for the muddy sections — if you don't own a "
+                  'pair, stop by the club gear shed before 5:00 p.m. today to borrow a pair for '
+                  'free!</p></blockquote>',
+  'items': [{'num': 'B11.1',
+             'prompt': 'What is the main purpose of this social media post?',
+             'options': {'A': 'To inform club members about a change of trail and return time',
+                         'B': 'To cancel a weekend hiking trip because of dangerous weather',
+                         'C': 'To advertise a sale on waterproof boots at the club gear shed',
+                         'D': 'To ask students to vote on two possible routes for Saturday'},
+             'correct': 'A',
+             'explanation': 'A publicação avisa que o passeio foi mantido, mas com <strong>mudança de trilha e de '
+                            'horário de volta</strong> por causa da chuva, como resume (A). A opção (B) cai na '
+                            'armadilha da palavra <em>canceling</em>, embora o texto diga explicitamente <em>Instead '
+                            'of canceling the trip</em>.'},
+            {'num': 'B11.2',
+             'prompt': 'Why will the group return to campus earlier than originally planned?',
+             'options': {'A': 'They are leaving the parking lot two hours earlier',
+                         'B': 'The replacement trail is shorter than the original one',
+                         'C': 'Another storm is expected at 2:00 p.m. on Saturday',
+                         'D': 'The club van has to be returned by mid-afternoon'},
+             'correct': 'B',
+             'explanation': 'O segundo parágrafo explica a volta mais cedo ao dizer que <em>because the East Crest '
+                            "route is about two miles shorter, we'll be back on campus around 2:00 p.m.</em>, ou "
+                            'seja, <strong>o novo percurso é mais curto</strong>, confirmando (B). A opção (A) '
+                            'contradiz o trecho que mantém a saída às 7h30.'},
+            {'num': 'B11.3',
+             'prompt': 'What should a participant without waterproof boots do?',
+             'options': {'A': 'Rent a pair at the trailhead on Saturday morning',
+                         'B': 'Wear regular running shoes and stay on higher ground',
+                         'C': 'Borrow a pair from the club shed by 5:00 p.m. today',
+                         'D': 'Wait until the next hike on the Lower Canyon Trail'},
+             'correct': 'C',
+             'explanation': 'A frase final orienta quem não tem botas impermeáveis a <strong>pegar um par emprestado '
+                            'gratuitamente no galpão do clube</strong> até as 17h de hoje (<em>stop by the club gear '
+                            'shed before 5:00 p.m. today to borrow a pair for free</em>), como está em (C). A '
+                            'alternativa (A) inventa um aluguel no início da trilha.'}]},
+ {'id': 'mod1-bn7',
+  'title': 'Exercício B12: instruções de laboratório (meta de 3 min)',
+  'level': 'B1–B2',
+  'objective': 'Leia o texto e responda às questões de compreensão. Tempo-alvo: 3 minutos.',
+  'passage_html': '<p><strong>TEXT: Guidelines at the Engineering Makerspace</strong></p>\n'
+                  '<blockquote><p><strong>3D PRINTING QUEUE — UNDERGRADUATE GUIDELINES</strong></p>\n'
+                  '<p>1. <strong>Safety Orientation:</strong> Before submitting your first print job, you must pass '
+                  'the 20-minute online safety quiz on the student portal with a score of 100%.</p>\n'
+                  '<p>2. <strong>Scheduling:</strong> Upload your file to the lab queue. Print jobs estimated at '
+                  'under 3 hours run during daytime hours (9:00 a.m.–6:00 p.m.). Any job requiring 3 hours or more '
+                  'is automatically scheduled for the overnight batch and will be ready the next morning.</p>\n'
+                  '<p>3. <strong>Cost and Pickup:</strong> Filament is billed at $0.08 per gram. Each student '
+                  'receives a $10.00 credit per semester for required coursework; personal projects do not qualify '
+                  'for this credit. Completed prints not picked up within 5 business days are '
+                  'recycled.</p></blockquote>',
+  'items': [{'num': 'B12.1',
+             'prompt': 'A student uploads a print job at 11:00 a.m. that the system estimates will take 4 hours. '
+                       'When will it be printed?',
+             'options': {'A': 'Immediately, finishing around 3:00 p.m. that afternoon',
+                         'B': 'Only after the student retakes the online safety quiz',
+                         'C': 'After 5 business days, once shorter jobs are finished',
+                         'D': 'Overnight, becoming available the following morning'},
+             'correct': 'D',
+             'explanation': 'A regra 2 estabelece que qualquer impressão de 3 horas ou mais entra no <strong>lote '
+                            'noturno para entrega na manhã seguinte</strong> (<em>automatically scheduled for the '
+                            'overnight batch and will be ready the next morning</em>), validando (D). A opção (A) '
+                            'aplica a regra de projetos com menos de 3 horas.'},
+            {'num': 'B12.2',
+             'prompt': 'When can a student use the $10.00 semester credit?',
+             'options': {'A': 'When printing an item for an assigned university course',
+                         'B': 'When printing a personal gift that weighs under 100 grams',
+                         'C': 'When picking up a completed print within 24 hours',
+                         'D': 'When volunteering to recycle unclaimed prints in the lab'},
+             'correct': 'A',
+             'explanation': 'O item 3 especifica que o crédito de $10.00 por semestre vale para <strong>trabalhos '
+                            'exigidos em disciplinas</strong> (<em>for required coursework</em>) e exclui projetos '
+                            'pessoais, confirmando (A). A alternativa (B) é uma armadilha direta porque o texto diz '
+                            '<em>personal projects do not qualify</em>.'},
+            {'num': 'B12.3',
+             'prompt': 'What happens to a finished print that is left in the Makerspace for two weeks?',
+             'options': {'A': "It is mailed to the student's campus address",
+                         'B': 'It is kept at the desk for a storage fee',
+                         'C': 'It is sent to be recycled by the lab',
+                         'D': 'It is displayed in the engineering showcase'},
+             'correct': 'C',
+             'explanation': 'A última frase informa que peças prontas não retiradas em até 5 dias úteis são '
+                            '<strong>enviadas para reciclagem</strong> (<em>Completed prints not picked up within 5 '
+                            'business days are recycled</em>), o que leva à opção (C). As demais alternativas trazem '
+                            'procedimentos que não existem no aviso.'}]},
+ {'id': 'mod1-bn8',
+  'title': 'Exercício B13: e-mail formal (meta de 3 min)',
+  'level': 'B2–C1',
+  'objective': 'Leia o texto e responda às questões de compreensão. Tempo-alvo: 3 minutos.',
+  'passage_html': '<p><strong>TEXT: Email from the Undergraduate Research Grant Committee</strong></p>\n'
+                  '<blockquote><p><strong>Subject: Conditional Approval — Summer Fieldwork Grant '
+                  '(#UG-409)</strong></p>\n'
+                  '<p>Dear Lucas,</p>\n'
+                  '<p>The committee was impressed by your proposal to survey native pollinators in urban community '
+                  'gardens and is pleased to offer conditional funding of $2,400. Before the funds can be disbursed, '
+                  'however, two revisions are required.</p>\n'
+                  '<p>First, because three of your proposed study sites lie on municipal park land, you must attach '
+                  'either a city research permit or a signed note from your faculty advisor confirming that the '
+                  "biology department's blanket permit covers your fieldwork. Second, your budget allocates $600 for "
+                  'a digital camera; under university policy, grant funds may purchase equipment only if it remains '
+                  'departmental property after the project concludes.</p>\n'
+                  '<p>Please upload your revised packet by April 14 so we can release the award.</p>\n'
+                  '<p>Sincerely,<br>Prof. Elena Vance, Committee Chair</p></blockquote>',
+  'items': [{'num': 'B13.1',
+             'prompt': 'Why is the committee withholding the $2,400 grant for now?',
+             'options': {'A': 'Lucas submitted his initial research proposal after the deadline',
+                         'B': 'Two permit and budget issues must be resolved before payment',
+                         'C': 'The biology department has run out of funding for summer fieldwork',
+                         'D': 'The committee wants Lucas to choose sites outside the city'},
+             'correct': 'B',
+             'explanation': 'A aprovação é condicional (<em>conditional funding</em>) e o pagamento depende de '
+                            '<strong>duas revisões de licença e orçamento</strong> (<em>Before the funds can be '
+                            'disbursed, however, two revisions are required</em>), como aponta (B). A opção (D) '
+                            'distorce o texto, que pede apenas a licença para os parques municipais, e não a troca '
+                            'de local.'},
+            {'num': 'B13.2',
+             'prompt': "How can Lucas satisfy the committee's first requirement without applying for a new city "
+                       'permit?',
+             'options': {'A': 'By surveying fewer community gardens in the city',
+                         'B': 'By agreeing not to collect any insect specimens',
+                         'C': 'By moving his fieldwork from summer to fall',
+                         'D': 'By having his advisor confirm the department permit applies'},
+             'correct': 'D',
+             'explanation': 'O segundo parágrafo oferece dois caminhos: anexar uma licença municipal ou apresentar '
+                            '<strong>declaração do orientador confirmando a cobertura da licença do '
+                            'departamento</strong> (<em>a signed note from your faculty advisor confirming that the '
+                            "biology department's blanket permit covers your fieldwork</em>), o que valida (D). A "
+                            'opção (A) não resolve a exigência para os locais remanescentes.'},
+            {'num': 'B13.3',
+             'prompt': "What does university policy state about the $600 camera listed in Lucas's budget?",
+             'options': {'A': 'It is allowed only if the department keeps it afterward',
+                         'B': 'It must be rented from the media center instead',
+                         'C': 'It costs more than the equipment price limit',
+                         'D': 'It is approved because photos are essential'},
+             'correct': 'A',
+             'explanation': 'Pela regra da universidade, a verba da bolsa só pode comprar equipamentos que '
+                            '<strong>permaneçam como patrimônio do departamento</strong> após o término do projeto '
+                            '(<em>only if it remains departmental property after the project concludes</em>), '
+                            'confirmando (A). A alternativa (C) inventa um teto de preço que o e-mail não '
+                            'menciona.'}]},
+ {'id': 'mod1-bn9',
+  'title': 'Exercício B14: anúncio de campus (meta de 3 min)',
+  'level': 'B2–C1',
+  'objective': 'Leia o texto e responda às questões de compreensão. Tempo-alvo: 3 minutos.',
+  'passage_html': '<p><strong>TEXT: Notice from the University Health Center</strong></p>\n'
+                  '<blockquote><p><strong>IMMUNIZATION COMPLIANCE AND SPRING REGISTRATION HOLDS</strong></p>\n'
+                  '<p>While incoming first-year undergraduates must submit complete immunization records prior to '
+                  'dorm move-in, transfer and graduate students are granted a 30-day grace period from the first day '
+                  'of fall classes to upload missing documentation. Our records show that roughly 300 students in '
+                  'this latter group still have provisional status.</p>\n'
+                  '<p>Any student whose file remains incomplete after October 25 will have an administrative hold '
+                  'placed on their account. This hold does not affect current fall courses, dining plans, or library '
+                  'privileges, but it will block spring course registration until the Health Center verifies the '
+                  'uploaded records — a review that takes up to three business days. Students awaiting the second '
+                  'dose of a two-part vaccine series may request a temporary medical extension at Window '
+                  '3.</p></blockquote>',
+  'items': [{'num': 'B14.1',
+             'prompt': 'Which group of students is the primary target of this warning?',
+             'options': {'A': 'Incoming first-year students who have not yet moved into their dorms',
+                         'B': 'All undergraduates who plan to use the campus health clinic this fall',
+                         'C': 'Transfer and graduate students who have not finished submitting vaccine records',
+                         'D': 'Faculty members who need to verify class rosters for the spring term'},
+             'correct': 'C',
+             'explanation': 'O primeiro parágrafo contrasta os calouros com os alunos de transferência e de '
+                            'pós-graduação e foca nos cerca de 300 estudantes desse segundo grupo (<em>this latter '
+                            'group</em>) que ainda têm <strong>documentação de vacina pendente</strong>, como diz '
+                            '(C). A opção (A) confunde a referência de <em>latter group</em> (o último citado) com o '
+                            'primeiro grupo mencionado na frase.'},
+            {'num': 'B14.2',
+             'prompt': 'What is the immediate consequence of having an administrative hold placed on an account '
+                       'after October 25?',
+             'options': {'A': 'The student is dropped from their current fall semester classes',
+                         'B': 'The student is prevented from enrolling in spring semester courses',
+                         'C': 'The student loses borrowing privileges at the university library',
+                         'D': 'The student is charged a daily fine until the records are verified'},
+             'correct': 'B',
+             'explanation': 'O segundo parágrafo esclarece que o bloqueio não afeta as aulas atuais nem a '
+                            'biblioteca, mas <strong>impede a matrícula nas disciplinas da primavera</strong> '
+                            '(<em>it will block spring course registration</em>), tornando (B) correta. As '
+                            'alternativas (A) e (C) citam exatamente o que o aviso diz que não será afetado '
+                            '(<em>does not affect</em>).'},
+            {'num': 'B14.3',
+             'prompt': 'What can be inferred about a student who uploads missing records on the morning of spring '
+                       'registration?',
+             'options': {'A': 'Their hold will be removed by the portal right away',
+                         'B': 'They must register in person at Window 3',
+                         'C': 'Their records will be rejected as too late',
+                         'D': 'They may wait up to three days to register'},
+             'correct': 'D',
+             'explanation': 'Como o bloqueio só sai depois que o centro de saúde confere os documentos e essa '
+                            'análise leva <strong>até três dias úteis</strong> (<em>a review that takes up to three '
+                            'business days</em>), enviar os papéis na manhã da matrícula pode atrasar a inscrição, '
+                            'como infere (D). A opção (A) ignora esse prazo de conferência.'}]},
+ {'id': 'mod1-bn10',
+  'title': 'Exercício B15: aviso de biblioteca (meta de 4 min)',
+  'level': 'C1',
+  'objective': 'Leia o texto e responda às questões de compreensão. Tempo-alvo: 4 minutos.',
+  'passage_html': '<p><strong>TEXT: Policy notice from the University Archives and Special Collections</strong></p>\n'
+                  '<blockquote><p><strong>RESEARCHER ACCESS AND REPRODUCTION GUIDELINES</strong></p>\n'
+                  "<p>Unlike the main library's general holdings, materials housed in Special Collections are "
+                  'non-circulating and may be consulted only in the Reading Room by appointment. Requests for '
+                  'archival boxes should be submitted through the online catalog at least two business days prior to '
+                  'your visit, as nearly half of our holdings are kept in a climate-controlled off-site facility '
+                  'from which deliveries arrive only on Tuesday and Thursday mornings.</p>\n'
+                  '<p>Researchers are welcome to take reference photographs using handheld devices with the flash '
+                  'turned off. However, high-resolution digital scans intended for publication or public display '
+                  'require a formal reproduction request and written permission from the copyright holder, unless '
+                  'the work has entered the public domain. To protect fragile manuscripts, fountain pens, '
+                  'highlighters, and coats are prohibited at the reading tables; lockers and pencils are supplied in '
+                  'the entry hall.</p></blockquote>',
+  'items': [{'num': 'B15.1',
+             'prompt': 'Why does the archive ask researchers to request materials at least two business days in '
+                       'advance?',
+             'options': {'A': 'Many items are stored off campus and are transported only twice a week',
+                         'B': 'Archivists must inspect every manuscript for damage before each appointment',
+                         'C': 'The Reading Room has seating for only a small number of visitors each day',
+                         'D': 'Copyright permission must be verified before any archival box is opened'},
+             'correct': 'A',
+             'explanation': 'O primeiro parágrafo explica o motivo da antecedência com o conector <em>as</em>: quase '
+                            'metade do acervo fica em uma instalação externa e <strong>as entregas ocorrem apenas às '
+                            'terças e quintas</strong> (<em>deliveries arrive only on Tuesday and Thursday '
+                            'mornings</em>), confirmando (A). A opção (D) mistura a regra de publicação do segundo '
+                            'parágrafo com a consulta local.'},
+            {'num': 'B15.2',
+             'prompt': 'Under what condition may a researcher publish a high-resolution scan without contacting a '
+                       'copyright holder?',
+             'options': {'A': 'When the image is taken with a personal phone and no flash',
+                         'B': 'When the scan is used only for a university thesis or dissertation',
+                         'C': 'When the material being reproduced is already in the public domain',
+                         'D': 'When the item is stored in the main library rather than off-site'},
+             'correct': 'C',
+             'explanation': 'O segundo parágrafo exige autorização por escrito do detentor dos direitos autorais, '
+                            '<strong>a menos que a obra esteja em domínio público</strong> (<em>unless the work has '
+                            'entered the public domain</em>), o que valida (C). A alternativa (A) descreve fotos de '
+                            'referência para estudo, e não digitalizações para publicação.'},
+            {'num': 'B15.3',
+             'prompt': 'Which of the following is a researcher allowed to bring to a Reading Room table?',
+             'options': {'A': 'A fountain pen for taking detailed notes',
+                         'B': 'A winter coat draped over the chair',
+                         'C': 'A yellow highlighter for marking photocopies',
+                         'D': 'A smartphone with its camera flash disabled'},
+             'correct': 'D',
+             'explanation': 'O texto autoriza o uso de <strong>dispositivos portáteis com o flash desligado</strong> '
+                            'para fotos de referência (<em>handheld devices with the flash turned off</em>), '
+                            'confirmando (D). Já canetas-tinteiro (A), casacos (B) e marca-textos (C) são '
+                            'explicitamente proibidos nas mesas de leitura (<em>prohibited at the reading '
+                            'tables</em>).'}]}]
+MOD1_ACTION_DRILLS_B = MOD1_ACTION_DRILLS_B + MOD1_NOVOS_B
+MOD1_NOVOS_C = [{'id': 'mod1-cn1',
+  'title': 'Exercício C4: ecologia urbana (meta de 5 min)',
+  'level': 'A2–B1',
+  'objective': 'Leia a passagem completa uma vez. Responda às 5 questões. Tempo-alvo: 5 minutos.',
+  'passage_html': '<p><strong>PASSAGE: Green Roofs in Modern Cities</strong></p>\n'
+                  '<p>Many modern cities are replacing dark, flat building roofs with "green roofs" covered in soil '
+                  'and low-growing plants. Unlike traditional dark roofs, which absorb sunlight and make buildings '
+                  'very hot, green roofs use living plants to shade the surface and cool the air through '
+                  'evaporation.</p>\n'
+                  '<p>This simple design brings two main benefits to urban neighborhoods. First, it lowers indoor '
+                  'temperatures during the summer, so people inside the building use less electricity for air '
+                  'conditioning. Second, the layer of soil acts like a sponge during heavy rain, holding water that '
+                  'would otherwise flood city streets and storm drains.</p>\n'
+                  '<p>However, not every building can support a green roof right away. Wet soil is heavy, so '
+                  'engineers must first check the strength of the roof structure. For older buildings, owners often '
+                  'choose thin layers of hardy succulent plants called sedums, which need very little soil or '
+                  'watering to survive.</p>',
+  'items': [{'num': 'C4.1',
+             'prompt': 'Ideia principal. What is the main idea of the passage?',
+             'options': {'A': 'Green roofs help cool buildings and manage rainwater, though their weight requires '
+                              'careful planning.',
+                         'B': 'Traditional dark roofs are cheaper to build and last much longer than modern green '
+                              'roofs.',
+                         'C': 'City engineers want to remove all plants from older buildings to prevent roof damage.',
+                         'D': 'Succulent plants called sedums are the only plants that can grow on city roofs.'},
+             'correct': 'A',
+             'explanation': 'A passagem apresenta o que são os telhados verdes, seus dois benefícios principais no '
+                            'calor e na chuva, e o cuidado com o peso na estrutura, o que resume a <strong>visão '
+                            'geral dos telhados verdes</strong> na opção (A). A alternativa (D) pega um exemplo '
+                            'específico do último parágrafo e o transforma em regra única.'},
+            {'num': 'C4.2',
+             'prompt': 'Detalhe. According to paragraph 2, how do green roofs help cities during heavy rain?',
+             'options': {'A': 'They heat the rainwater so that it evaporates before reaching the ground.',
+                         'B': "They send extra water directly into the building's air conditioning system.",
+                         'C': 'They absorb rainwater in the soil and reduce flooding in the streets.',
+                         'D': 'They block rain clouds from forming above tall urban buildings.'},
+             'correct': 'C',
+             'explanation': 'O segundo parágrafo explica que a terra funciona como uma esponja na chuva forte, '
+                            'promovendo a <strong>retenção da água para evitar alagamentos</strong> (<em>holding '
+                            'water that would otherwise flood city streets</em>), como diz (C). A opção (A) mistura '
+                            'a evaporação citada no primeiro parágrafo com o controle de enchentes.'},
+            {'num': 'C4.3',
+             'prompt': 'Detalhe negativo. Which of the following is NOT mentioned as a feature or benefit of green '
+                       'roofs?',
+             'options': {'A': 'Shading the roof surface from sunlight',
+                         'B': 'Lowering electricity use for air conditioning',
+                         'C': 'Holding rainwater during heavy storms',
+                         'D': 'Growing fresh vegetables for local restaurants'},
+             'correct': 'D',
+             'explanation': 'O texto menciona sombra na superfície (A), economia de ar-condicionado (B) e absorção '
+                            'de chuva (C), mas em nenhum momento fala em <strong>produzir vegetais para '
+                            'restaurantes</strong>, o que marca (D). Cuidado para não trazer conhecimentos externos '
+                            'sobre hortas urbanas que não aparecem na passagem.'},
+            {'num': 'C4.4',
+             'prompt': 'Propósito retórico. Why does the author mention "sedums" in paragraph 3?',
+             'options': {'A': 'To explain why wet soil is too heavy for modern steel roofs',
+                         'B': 'To give an example of plants that work well in thin soil on older roofs',
+                         'C': 'To show that succulents cannot survive in rainy city climates',
+                         'D': 'To argue that building owners should avoid planting on flat roofs'},
+             'correct': 'B',
+             'explanation': 'O autor cita os <em>sedums</em> logo depois de explicar o limite de peso em prédios '
+                            'antigos para dar um <strong>exemplo de planta que exige pouca terra</strong> (<em>need '
+                            'very little soil or watering to survive</em>), confirmando (B). A alternativa (A) '
+                            'confunde o problema do peso com a solução usada nos prédios antigos.'},
+            {'num': 'C4.5',
+             'prompt': 'Vocabulário em contexto. The word "hardy" in paragraph 3 is closest in meaning to:',
+             'options': {'A': 'tough', 'B': 'rare', 'C': 'tall', 'D': 'bright'},
+             'correct': 'A',
+             'explanation': 'No trecho, plantas <em>hardy</em> são aquelas que sobrevivem com pouca terra e quase '
+                            'sem rega, ou seja, <strong>plantas resistentes e fortes</strong> (<em>tough</em>), '
+                            'validando (A). A opção (C) contradiz o primeiro parágrafo, que fala em plantas baixas '
+                            '(<em>low-growing plants</em>).'}]},
+ {'id': 'mod1-cn2',
+  'title': 'Exercício C5: zoologia (meta de 5 min)',
+  'level': 'A2–B1',
+  'objective': 'Leia a passagem completa uma vez. Responda às 5 questões. Tempo-alvo: 5 minutos.',
+  'passage_html': '<p><strong>PASSAGE: How Sea Otters Protect Kelp Forests</strong></p>\n'
+                  '<p>Along the cool coast of the North Pacific, giant kelp grows from the ocean floor toward the '
+                  'sunlight, forming thick underwater forests. These kelp forests provide food and shelter for '
+                  'hundreds of marine species, including young fish, crabs, and seals.</p>\n'
+                  '<p>Sea otters play a central role in keeping these forests healthy. Otters eat large numbers of '
+                  'sea urchins, which are small, spiny animals that crawl along the rocks and feed on the base of '
+                  'kelp stems. When sea otters are present, they keep the urchin population small, allowing the kelp '
+                  'to grow tall and dense.</p>\n'
+                  '<p>When sea otters disappear from an area, the natural balance changes quickly. Without their '
+                  'main predator, sea urchins multiply and chew through the kelp until almost nothing is left. '
+                  'Biologists call this empty seafloor an "urchin barren," and it shows how a single predator can '
+                  'protect an entire ecosystem.</p>',
+  'items': [{'num': 'C5.1',
+             'prompt': 'Ideia principal. The passage is mainly about:',
+             'options': {'A': 'how giant kelp uses sunlight to grow in the cold waters of the North Pacific',
+                         'B': 'how sea otters keep kelp forests healthy by controlling sea urchin numbers',
+                         'C': 'why young fish and seals leave the coast during the winter months',
+                         'D': 'why biologists are trying to move sea urchins to deeper ocean waters'},
+             'correct': 'B',
+             'explanation': 'O fio condutor do texto mostra como as lontras-marinhas comem ouriços-do-mar e garantem '
+                            'a <strong>proteção das florestas de kelp</strong>, exatamente como resume (B). A opção '
+                            '(A) fica restrita à abertura do primeiro parágrafo e deixa de fora a relação entre '
+                            'lontras e ouriços.'},
+            {'num': 'C5.2',
+             'prompt': 'Detalhe. According to paragraph 2, how do sea urchins harm giant kelp?',
+             'options': {'A': 'They block sunlight from reaching the top of the kelp forest.',
+                         'B': 'They chase away the fish and crabs that clean the kelp leaves.',
+                         'C': 'They poison the water around the roots of the kelp plants.',
+                         'D': 'They eat the lower part of the kelp stems along the rocks.'},
+             'correct': 'D',
+             'explanation': 'O segundo parágrafo diz que os ouriços rastejam pelas pedras e <strong>comem a base dos '
+                            'caules de kelp</strong> (<em>feed on the base of kelp stems</em>), o que corresponde a '
+                            '(D). As demais opções inventam formas de dano que não aparecem no texto.'},
+            {'num': 'C5.3',
+             'prompt': 'Inferência. What can be inferred from the passage about young fish and crabs in an "urchin '
+                       'barren"?',
+             'options': {'A': 'They learn to hunt sea urchins when the sea otters disappear.',
+                         'B': 'They grow faster because there is more open space on the rocks.',
+                         'C': 'They lose the food and shelter that the kelp forest once provided.',
+                         'D': 'They help the giant kelp grow back within a few weeks.'},
+             'correct': 'C',
+             'explanation': 'O primeiro parágrafo afirma que a floresta de kelp dá alimento e abrigo a peixes jovens '
+                            'e caranguejos; logo, quando os ouriços destroem tudo no <em>urchin barren</em>, esses '
+                            'animais sofrem a <strong>perda de alimento e refúgio</strong>, confirmando (C). A opção '
+                            '(B) ignora que o fundo vazio deixa essas espécies desprotegidas.'},
+            {'num': 'C5.4',
+             'prompt': 'Propósito retórico. Why does the author describe what happens when sea otters disappear in '
+                       'paragraph 3?',
+             'options': {'A': 'To show how important sea otters are to the survival of the ecosystem',
+                         'B': 'To prove that sea urchins can live without eating giant kelp',
+                         'C': 'To explain why sea otters prefer warm water over the North Pacific',
+                         'D': 'To argue that predators have very little effect on ocean plants'},
+             'correct': 'A',
+             'explanation': 'Ao mostrar a destruição do kelp na ausência das lontras, o autor comprova na prática a '
+                            '<strong>importância desse predador para todo o ecossistema</strong> (<em>how a single '
+                            'predator can protect an entire ecosystem</em>), validando (A). A alternativa (D) afirma '
+                            'o oposto da conclusão do parágrafo.'},
+            {'num': 'C5.5',
+             'prompt': 'Vocabulário em contexto. The word "multiply" in paragraph 3 is closest in meaning to:',
+             'options': {'A': 'hide', 'B': 'travel', 'C': 'shrink', 'D': 'increase'},
+             'correct': 'D',
+             'explanation': 'Sem seu predador principal, a população de ouriços passa a <em>multiply</em>, ou seja, '
+                            'a <strong>aumentar em quantidade</strong> (<em>increase</em>), o que torna (D) correta. '
+                            'A opção (C) tem o sentido contrário, de encolher ou diminuir.'}]},
+ {'id': 'mod1-cn3',
+  'title': 'Exercício C6: arqueologia (meta de 6 min)',
+  'level': 'B1–B2',
+  'objective': 'Leia a passagem completa uma vez. Responda às 5 questões. Tempo-alvo: 6 minutos.',
+  'passage_html': '<p><strong>PASSAGE: Roman Concrete and Volcanic Ash</strong></p>\n'
+                  '<p>Modern steel-reinforced concrete is strong, yet harbor walls made with it often begin to crack '
+                  'and crumble after only a few decades in saltwater. By contrast, concrete piers and breakwaters '
+                  'built by Roman engineers more than two thousand years ago still stand intact along the '
+                  'Mediterranean coast, battered daily by waves.</p>\n'
+                  '<p>For a long time, researchers knew that the Roman recipe mixed lime and volcanic rock with a '
+                  'powdery volcanic ash called pozzolana, taken from the region around the Bay of Naples. Only '
+                  'recently, however, did mineralogists discover what happens inside this mixture over time. As '
+                  'seawater filters through tiny pores in the concrete, it dissolves part of the volcanic ash and '
+                  'reacts with the lime to grow rare, interlocking crystal plates.</p>\n'
+                  '<p>Instead of weakening the structure, seawater actually reinforces it: whenever a microscopic '
+                  'crack opens, new crystals form and seal the gap before it can spread. Material scientists are now '
+                  'studying this self-healing chemistry in hopes of designing modern marine concrete that lasts '
+                  'longer and requires fewer costly repairs.</p>',
+  'items': [{'num': 'C6.1',
+             'prompt': 'Ideia principal. What is the main idea of the passage?',
+             'options': {'A': 'Roman engineers avoided building harbors where Mediterranean waves were strong.',
+                         'B': 'Volcanic ash from the Bay of Naples can no longer be used in construction.',
+                         'C': 'Roman marine concrete endures because seawater reacts with its volcanic ash.',
+                         'D': 'Modern steel-reinforced concrete lasts longer in saltwater than ancient materials.'},
+             'correct': 'C',
+             'explanation': 'A passagem inteira explica por que o concreto marítimo romano dura milênios, destacando '
+                            'a <strong>reação entre cinza vulcânica e água do mar</strong> que fortalece a '
+                            'estrutura, como resume (C). A opção (D) inverte a comparação feita logo no primeiro '
+                            'parágrafo.'},
+            {'num': 'C6.2',
+             'prompt': 'Detalhe. According to paragraph 2, what happens when seawater enters the tiny pores of Roman '
+                       'concrete?',
+             'options': {'A': 'It triggers a chemical reaction that forms interlocking crystals.',
+                         'B': 'It washes away the lime and leaves large empty spaces inside the rock.',
+                         'C': 'It rusts the internal steel bars that hold the piers together.',
+                         'D': 'It cools the volcanic ash so the mixture can dry more quickly.'},
+             'correct': 'A',
+             'explanation': 'O segundo parágrafo detalha que a água do mar dissolve parte da cinza e reage com a cal '
+                            'para produzir <strong>placas cristalinas entrelaçadas</strong> (<em>reacts with the '
+                            'lime to grow rare, interlocking crystal plates</em>), confirmando (A). A alternativa '
+                            '(C) confunde o concreto romano com o concreto moderno armado com aço.'},
+            {'num': 'C6.3',
+             'prompt': 'Inferência. It can be inferred from the passage that modern marine concrete differs from '
+                       'Roman concrete in that modern concrete:',
+             'options': {'A': 'contains larger amounts of volcanic rock from southern Italy',
+                         'B': 'is gradually damaged by saltwater rather than strengthened by it',
+                         'C': 'takes more than two thousand years to harden completely',
+                         'D': 'can seal its own microscopic cracks without human repair'},
+             'correct': 'B',
+             'explanation': 'Enquanto o concreto romano fica mais forte em contato com a água salgada, o primeiro '
+                            'parágrafo mostra que o concreto moderno sofre <strong>degradação gradual na água do '
+                            'mar</strong> (<em>crack and crumble after only a few decades in saltwater</em>), '
+                            'validando (B). A opção (D) descreve uma qualidade do concreto romano, e não do '
+                            'moderno.'},
+            {'num': 'C6.4',
+             'prompt': 'Propósito retórico. Why does the author mention in paragraph 3 that new crystals seal '
+                       'microscopic cracks?',
+             'options': {'A': 'To explain why Roman harbors were more expensive to build than modern ones',
+                         'B': 'To show that seawater prevents volcanic ash from mixing with lime',
+                         'C': 'To argue that ancient structures still need frequent repairs by engineers',
+                         'D': 'To explain how the self-healing process keeps the concrete from breaking apart'},
+             'correct': 'D',
+             'explanation': 'O autor descreve o fechamento das fendas pelos cristais para explicar na prática o '
+                            '<strong>mecanismo de autorreparo do concreto romano</strong> (<em>seal the gap before '
+                            'it can spread</em>), como aponta (D). A alternativa (C) contradiz o final do parágrafo, '
+                            'que busca justamente reduzir reparos caros.'},
+            {'num': 'C6.5',
+             'prompt': 'Vocabulário em contexto. The word "intact" in paragraph 1 is closest in meaning to:',
+             'options': {'A': 'underwater', 'B': 'unfinished', 'C': 'undamaged', 'D': 'unnoticed'},
+             'correct': 'C',
+             'explanation': 'Em contraste com os muros modernos que racham e se desfazem, os píeres romanos '
+                            'permanecem <em>intact</em>, isto é, <strong>intactos e sem danos</strong> '
+                            '(<em>undamaged</em>), tornando (C) a resposta certa. A opção (A) é tentadora pelo '
+                            'contexto marítimo, mas não traduz o sentido de conservação.'}]},
+ {'id': 'mod1-cn4',
+  'title': 'Exercício C7: psicologia cognitiva (meta de 6 min)',
+  'level': 'B1–B2',
+  'objective': 'Leia a passagem completa uma vez. Responda às 5 questões. Tempo-alvo: 6 minutos.',
+  'passage_html': '<p><strong>PASSAGE: The Testing Effect in Memory Retention</strong></p>\n'
+                  '<p>When preparing for an exam, most students rely on rereading their notes or textbook chapters '
+                  'until the material feels familiar. Although this habit builds confidence in the short term, '
+                  'cognitive psychologists have repeatedly shown that passive review is one of the least effective '
+                  'ways to store information for the long run.</p>\n'
+                  '<p>A far stronger strategy is retrieval practice, often called the "testing effect." In classic '
+                  'experiments, students who read a passage once and then practiced recalling its key points from '
+                  'memory without looking at the text scored much higher on a test a week later than students who '
+                  'spent the same amount of time rereading the passage four times.</p>\n'
+                  '<p>Researchers explain that the act of pulling a memory out of storage alters the memory trace '
+                  'itself, strengthening the neural pathways connected to that knowledge. Even when a student '
+                  'struggles or fails to recall an answer at first, the effort makes the subsequent correction stick '
+                  'more firmly. Because rereading feels smooth and effortless, learners often mistake temporary '
+                  'fluency for lasting mastery.</p>',
+  'items': [{'num': 'C7.1',
+             'prompt': 'Ideia principal. The main idea of the passage is that:',
+             'options': {'A': 'students should read a textbook chapter at least four times before taking any '
+                              'practice test',
+                         'B': 'feeling confident while studying is the most reliable sign of long-term memory '
+                              'retention',
+                         'C': 'written exams should be replaced with classroom discussions because tests cause '
+                              'anxiety',
+                         'D': 'actively recalling information from memory produces stronger long-term learning than '
+                              'rereading'},
+             'correct': 'D',
+             'explanation': 'A tese central contrasta a revisão passiva com a prática de recordação e mostra que '
+                            '<strong>recuperar a informação na memória gera aprendizado duradouro</strong>, '
+                            'validando (D). As opções (A) e (B) defendem justamente a releitura passiva que o estudo '
+                            'refuta.'},
+            {'num': 'C7.2',
+             'prompt': 'Detalhe. In the experiments described in paragraph 2, which group performed better on the '
+                       'test given a week later?',
+             'options': {'A': 'Students who reread the passage four times without taking notes',
+                         'B': 'Students who read the passage once and practiced recalling it from memory',
+                         'C': 'Students who waited until the morning of the test to read the passage',
+                         'D': 'Students who copied the entire passage by hand while looking at the book'},
+             'correct': 'B',
+             'explanation': 'O segundo parágrafo relata que os alunos que leram uma vez e treinaram lembrar sem '
+                            'olhar o texto tiveram <strong>nota muito maior uma semana depois</strong> (<em>scored '
+                            'much higher on a test a week later</em>), confirmando (B). A alternativa (A) cita o '
+                            'grupo que teve desempenho inferior no experimento.'},
+            {'num': 'C7.3',
+             'prompt': 'Inferência. What can be inferred from paragraph 3 about a student who answers a practice '
+                       'question incorrectly before checking the right answer?',
+             'options': {'A': 'The attempt to remember still helps the student retain the correct answer afterward.',
+                         'B': 'The mistake permanently weakens the neural pathways connected to that topic.',
+                         'C': 'The student would have learned more by rereading the chapter instead of guessing.',
+                         'D': 'The student will inevitably repeat the same error on the final exam a week later.'},
+             'correct': 'A',
+             'explanation': 'O terceiro parágrafo afirma que, mesmo quando o aluno falha ao tentar lembrar de '
+                            'início, o esforço faz a correção seguinte fixar melhor (<em>the effort makes the '
+                            'subsequent correction stick more firmly</em>), o que sustenta a <strong>retenção '
+                            'fortalecida após a tentativa</strong> em (A). A opção (B) diz o oposto do que ocorre '
+                            'nas vias neurais.'},
+            {'num': 'C7.4',
+             'prompt': 'Propósito retórico. Why does the author state that "rereading feels smooth and effortless" '
+                       'in paragraph 3?',
+             'options': {'A': 'To recommend rereading for subjects that require very little memorization',
+                         'B': 'To prove that textbook authors now write in a simpler style than in the past',
+                         'C': 'To explain why students often believe rereading is more effective than it really is',
+                         'D': 'To show that retrieval practice takes less mental energy than passive review'},
+             'correct': 'C',
+             'explanation': 'A frase explica a ilusão de competência: como reler parece fácil e fluido, os '
+                            'estudantes caem na armadilha de <strong>confundir familiaridade passageira com domínio '
+                            'real</strong> (<em>mistake temporary fluency for lasting mastery</em>), como resume '
+                            '(C). A alternativa (D) inverte qual método exige menos esforço.'},
+            {'num': 'C7.5',
+             'prompt': 'Vocabulário em contexto. The word "subsequent" in paragraph 3 is closest in meaning to:',
+             'options': {'A': 'previous', 'B': 'following', 'C': 'partial', 'D': 'sudden'},
+             'correct': 'B',
+             'explanation': 'Depois que o aluno tenta lembrar e erra, a correção <em>subsequent</em> é a que vem em '
+                            'seguida, ou seja, a <strong>correção posterior ou seguinte</strong> '
+                            '(<em>following</em>), confirmando (B). A opção (A) significa anterior, invertendo a '
+                            'ordem dos fatos.'}]},
+ {'id': 'mod1-cn5',
+  'title': 'Exercício C8: astronomia (meta de 6 min)',
+  'level': 'B2–C1',
+  'objective': 'Leia a passagem completa uma vez. Responda às 5 questões. Tempo-alvo: 6 minutos.',
+  'passage_html': '<p><strong>PASSAGE: Subsurface Oceans on Icy Moons</strong></p>\n'
+                  '<p>For decades, astronomers searching for liquid water beyond Earth focused on the "habitable '
+                  'zone," the orbital band around a star where a planet\'s surface is warm enough for liquid water '
+                  'but not so hot that it boils away. By that standard, the outer solar system seemed far too cold '
+                  'to host liquid oceans, since sunlight at the distance of Jupiter and Saturn is a tiny fraction of '
+                  'what reaches Earth.</p>\n'
+                  '<p>Space probe missions forced scientists to revise that view. Beneath the fractured ice crusts '
+                  "of moons such as Jupiter's Europa and Saturn's Enceladus lie global oceans of liquid saltwater. "
+                  'The heat that keeps these oceans from freezing solid does not come from the Sun, but from tidal '
+                  'flexing: as a moon travels along a slightly oval orbit, the immense gravitational pull of its '
+                  "giant planet stretches and compresses the moon's interior, generating friction and warmth.</p>\n"
+                  '<p>At Enceladus, the Cassini spacecraft even flew through plumes of water vapor erupting from '
+                  'cracks near the south pole, detecting salts, organic molecules, and molecular hydrogen, a gas '
+                  'that on Earth forms around deep-sea hydrothermal vents. Such findings suggest that habitable '
+                  'environments may not require a warm planetary surface at all, greatly expanding the number of '
+                  'worlds where microbial life might arise.</p>',
+  'items': [{'num': 'C8.1',
+             'prompt': 'Ideia principal. What is the main idea of the passage?',
+             'options': {'A': 'Tidal heating maintains liquid oceans beneath the ice of outer-planet moons, '
+                              'broadening where scientists look for habitable worlds.',
+                         'B': 'The Sun has gradually grown warmer, allowing frozen moons around Jupiter and Saturn '
+                              'to melt into surface oceans.',
+                         'C': 'The Cassini spacecraft proved that Enceladus is the only body in the solar system '
+                              'with deep-sea hydrothermal vents.',
+                         'D': 'Astronomers have abandoned the search for water on planets outside our solar system '
+                              'to focus solely on Europa.'},
+             'correct': 'A',
+             'explanation': 'O texto mostra como o aquecimento de maré mantém oceanos líquidos sob o gelo de luas '
+                            'distantes e provoca a <strong>ampliação da busca por ambientes habitáveis</strong>, '
+                            'exatamente como em (A). A opção (B) atribui o calor ao Sol, quando o segundo parágrafo '
+                            'diz <em>does not come from the Sun</em>.'},
+            {'num': 'C8.2',
+             'prompt': 'Detalhe. According to paragraph 2, what prevents the subsurface oceans of Europa and '
+                       'Enceladus from freezing?',
+             'options': {'A': 'Thick clouds of water vapor that trap solar heat above the ice crust',
+                         'B': 'Radioactive metals floating near the surface of the saltwater oceans',
+                         'C': 'Warm ocean currents flowing from the equator toward the south pole',
+                         'D': 'Internal friction caused by the gravitational pull of their giant planets'},
+             'correct': 'D',
+             'explanation': 'O segundo parágrafo explica que a gravidade do planeta gigante estica e comprime o '
+                            'interior da lua em órbita oval, gerando <strong>atrito interno e calor por flexão de '
+                            "maré</strong> (<em>stretches and compresses the moon's interior, generating friction "
+                            'and warmth</em>), confirmando (D). A alternativa (A) contradiz a ausência de calor '
+                            'solar suficiente.'},
+            {'num': 'C8.3',
+             'prompt': 'Detalhe negativo. Which of the following was NOT detected by the Cassini spacecraft in the '
+                       'plumes of Enceladus?',
+             'options': {'A': 'Salts from the subsurface water',
+                         'B': 'Organic molecules in the vapor',
+                         'C': 'Living microbial cells from the ocean floor',
+                         'D': 'Molecular hydrogen gas'},
+             'correct': 'C',
+             'explanation': 'No terceiro parágrafo, a sonda Cassini detectou sais (A), moléculas orgânicas (B) e '
+                            'hidrogênio molecular (D), mas não encontrou <strong>células microbianas vivas</strong>, '
+                            'o que marca (C). Repare que o texto fala apenas que a vida microbiana <em>might '
+                            'arise</em> (poderia surgir) nesses mundos.'},
+            {'num': 'C8.4',
+             'prompt': 'Propósito retórico. Why does the author discuss the traditional "habitable zone" in '
+                       'paragraph 1?',
+             'options': {'A': 'To explain why Jupiter and Saturn receive more sunlight than Earth',
+                         'B': 'To present an older assumption that later discoveries called into question',
+                         'C': 'To argue that liquid water cannot exist anywhere inside our solar system',
+                         'D': 'To show how astronomers calculate the exact distance between a star and its moons'},
+             'correct': 'B',
+             'explanation': 'O primeiro parágrafo apresenta a visão clássica da zona habitável para criar um '
+                            'contraste com o segundo parágrafo, servindo para <strong>introduzir uma premissa antiga '
+                            'superada pelas sondas espaciais</strong> (<em>Space probe missions forced scientists to '
+                            'revise that view</em>), como diz (B). A opção (A) inverte a quantidade de luz solar '
+                            'citada.'},
+            {'num': 'C8.5',
+             'prompt': 'Vocabulário em contexto. The word "revise" in paragraph 2 is closest in meaning to:',
+             'options': {'A': 'defend', 'B': 'ignore', 'C': 'confirm', 'D': 'modify'},
+             'correct': 'D',
+             'explanation': 'Diante da descoberta de oceanos subterrâneos, os cientistas tiveram de <em>revise that '
+                            'view</em>, isto é, <strong>modificar ou ajustar aquela visão anterior</strong> '
+                            '(<em>modify</em>), validando (D). Cuidado com (A) e (C), que sugerem manter a ideia '
+                            'antiga sem mudança.'}]},
+ {'id': 'mod1-cn6',
+  'title': 'Exercício C9: economia e energia (meta de 6 min)',
+  'level': 'C1',
+  'objective': 'Leia a passagem completa uma vez. Responda às 5 questões. Tempo-alvo: 6 minutos.',
+  'passage_html': '<p><strong>PASSAGE: The Jevons Paradox and Energy Efficiency</strong></p>\n'
+                  '<p>Intuitively, technological improvements that make machines more fuel-efficient should reduce '
+                  'overall fuel consumption. In 1865, however, the English economist William Stanley Jevons observed '
+                  "that the introduction of James Watt's far more efficient steam engine had produced the opposite "
+                  "result: Britain's total coal consumption soared rather than declined.</p>\n"
+                  "<p>Jevons argued that efficiency lowers the effective cost of using a resource. Because Watt's "
+                  'engine burned much less coal per unit of work, operating steam power became profitable in '
+                  'industries and factories where it had previously been too expensive. As steam engines spread into '
+                  'textiles, mining, and railways, the surge in new uses more than offset the fuel saved by each '
+                  'individual machine, a rebound effect now known as the Jevons paradox.</p>\n'
+                  '<p>Contemporary energy economists point out that the paradox does not occur with identical force '
+                  'in every sector. When demand for a service is already largely saturated, such as home '
+                  'refrigeration in wealthy countries, efficiency gains genuinely cut total electricity use. Where '
+                  'lower operating costs unlock substantial new demand, however, engineers and policymakers cannot '
+                  'rely on efficiency alone to curb resource depletion, and must pair technical advances with '
+                  'conservation policies or pricing limits.</p>',
+  'items': [{'num': 'C9.1',
+             'prompt': 'Ideia principal. The passage is mainly about:',
+             'options': {'A': 'how nineteenth-century British railways replaced coal with cheaper fuels',
+                         'B': 'why modern engineers have stopped improving household appliances',
+                         'C': 'how greater energy efficiency can raise total fuel use by making a resource cheaper',
+                         'D': "why Jevons opposed the use of Watt's steam engine in textile mills"},
+             'correct': 'C',
+             'explanation': 'A passagem apresenta o paradoxo de Jevons, explicando como <strong>ganhos de eficiência '
+                            'podem elevar o consumo total de energia</strong> ao baratear seu uso e quando esse '
+                            'efeito ocorre hoje, como sintetiza (C). A opção (A) distorce o texto, pois as ferrovias '
+                            'aumentaram o uso de carvão.'},
+            {'num': 'C9.2',
+             'prompt': "Detalhe. According to paragraph 2, why did Britain's total coal use rise after Watt's "
+                       'improved steam engine was introduced?',
+             'options': {'A': 'Lower fuel costs per unit of work made steam power economical for many new '
+                              'industries.',
+                         'B': 'Each individual Watt engine burned more coal per hour than earlier steam engines.',
+                         'C': 'The British government lowered taxes on coal mines to encourage railway construction.',
+                         'D': 'Factories had to run their engines twice as long because the new machines were '
+                              'slower.'},
+             'correct': 'A',
+             'explanation': 'O segundo parágrafo explica que, como a máquina de Watt gastava menos carvão por '
+                            'unidade de trabalho, o vapor ficou mais barato e houve <strong>expansão lucrativa para '
+                            'novos setores industriais</strong> (<em>operating steam power became profitable in '
+                            'industries and factories where it had previously been too expensive</em>), confirmando '
+                            '(A). A alternativa (B) contradiz o fato de que cada máquina individual economizava '
+                            'combustível.'},
+            {'num': 'C9.3',
+             'prompt': 'Inferência. It can be inferred from paragraph 3 that if household refrigerators become 30 '
+                       'percent more energy-efficient in a wealthy country, most households will:',
+             'options': {'A': 'buy a second refrigerator to spend the money they save',
+                         'B': 'use less electricity overall than they did before',
+                         'C': 'spend more on electricity each month than before',
+                         'D': 'need pricing limits to keep their energy use down'},
+             'correct': 'B',
+             'explanation': 'O terceiro parágrafo usa a refrigeração doméstica em países ricos como exemplo de '
+                            'demanda já saturada, em que a maior eficiência gera <strong>redução real no consumo '
+                            'total de eletricidade</strong> (<em>efficiency gains genuinely cut total electricity '
+                            'use</em>), validando (B). A opção (C) aplica o efeito rebote a um setor onde o próprio '
+                            'texto diz que ele não ocorre.'},
+            {'num': 'C9.4',
+             'prompt': 'Propósito retórico. Why does the author mention home refrigeration in paragraph 3?',
+             'options': {'A': 'To show that home appliances waste more energy than railways',
+                         'B': 'To prove that the paradox applies equally to every industry',
+                         'C': 'To criticize wealthy countries for using too much electricity',
+                         'D': 'To give an example where efficiency really lowers total use'},
+             'correct': 'D',
+             'explanation': 'O exemplo da geladeira entra logo após a afirmação de que o paradoxo não age com a '
+                            'mesma força em todo setor, servindo para <strong>ilustrar um mercado de demanda '
+                            'saturada</strong> em que a eficiência reduz o gasto total, como diz (D). A alternativa '
+                            '(B) afirma exatamente o oposto da frase de abertura do parágrafo.'},
+            {'num': 'C9.5',
+             'prompt': 'Vocabulário em contexto. The word "offset" in paragraph 2 is closest in meaning to:',
+             'options': {'A': 'counterbalance', 'B': 'accelerate', 'C': 'measure', 'D': 'restrict'},
+             'correct': 'A',
+             'explanation': 'Na frase, a explosão de novos usos <em>more than offset</em> a economia de cada '
+                            'máquina, ou seja, mais do que <strong>compensou ou contrabalançou</strong> '
+                            '(<em>counterbalance</em>) o combustível poupado, tornando (A) correta. A opção (D) '
+                            'significa restringir, o que não encaixa na relação entre novos usos e economia '
+                            'unitária.'}]}]
+MOD1_ACTION_DRILLS_C = MOD1_ACTION_DRILLS_C + MOD1_NOVOS_C
+MOD2_NOVOS_A = [{'id': 'mod2-an1',
+  'title': 'Exercício A2: rotina e espaços do campus (meta de 1 min)',
+  'level': 'A2–B1',
+  'objective': 'Ouça cada fala e escolha a resposta mais natural. A fala aparece escrita depois que você responde. '
+               'Tempo-alvo: 12 segundos por item.',
+  'passage_html': None,
+  'items': [{'num': 'A13',
+             'prompt': '"Excuse me, is this seat next to you taken?"',
+             'options': {'A': 'No, go right ahead and sit down.',
+                         'B': 'Yes, I took the exam yesterday.',
+                         'C': 'The seats in the back are blue.',
+                         'D': 'I usually sit near the window.'},
+             'correct': 'A',
+             'explanation': 'Quando alguém pergunta <em>is this seat next to you taken?</em>, quer saber se o lugar '
+                            'está livre para sentar, por isso (A) responde com naturalidade ao <strong>liberar o '
+                            'assento</strong>. Se você pensou em (B), repare que ela usa o verbo <em>took</em>, mas '
+                            'fala de uma prova de ontem e não do lugar ao lado.'},
+            {'num': 'A14',
+             'prompt': '"Oh, wait, I left my student ID card in my dorm room."',
+             'options': {'A': 'My dorm room is on the third floor.',
+                         'B': 'We can wait here while you grab it.',
+                         'C': 'The student center closes at eight.',
+                         'D': 'I got my new card last September.'},
+             'correct': 'B',
+             'explanation': 'Ao dizer <em>I left my student ID card in my dorm room</em>, quem fala percebe que '
+                            'esqueceu o cartão agora, e (B) traz a <strong>reação prática de esperar</strong> '
+                            'enquanto a pessoa busca o documento. A opção (A) é uma armadilha comum porque repete '
+                            '<em>dorm room</em>, mas só informa o andar do quarto sem ajudar na situação.'},
+            {'num': 'A15',
+             'prompt': '"Do you know what time the campus bookstore closes today?"',
+             'options': {'A': 'I bought two notebooks there yesterday.',
+                         'B': 'The bookstore is right across the quad.',
+                         'C': 'I think it closes at five today.',
+                         'D': 'Yes, the textbooks are pretty expensive.'},
+             'correct': 'C',
+             'explanation': 'A pergunta <em>what time the campus bookstore closes today</em> pede o <strong>horário '
+                            'de fechamento da livraria</strong>, que (C) informa de modo natural. Já a alternativa '
+                            '(B) fala da localização da loja no campus, respondendo a onde ela fica e não a que '
+                            'horas fecha.'},
+            {'num': 'A16',
+             'prompt': '"It\'s a bit cold in this classroom, don\'t you think?"',
+             'options': {'A': 'Class starts at ten every Monday.',
+                         'B': 'Winter is my favorite season here.',
+                         'C': 'I think the professor is outside.',
+                         'D': "Yeah, I'll go shut the window now."},
+             'correct': 'D',
+             'explanation': "O comentário <em>It's a bit cold in this classroom, don't you think?</em> busca "
+                            'concordância sobre o frio na sala, e (D) <strong>concorda e oferece uma '
+                            'solução</strong> fechando a janela. A opção (B) puxa o assunto para o inverno em geral '
+                            'e ignora o desconforto da sala agora.'},
+            {'num': 'A17',
+             'prompt': '"I can\'t find the biology lab on this campus map."',
+             'options': {'A': "I'm heading there now, so follow me.",
+                         'B': 'Biology is a required class for me.',
+                         'C': 'The campus map is free for students.',
+                         'D': 'Our lab partner finished the chart.'},
+             'correct': 'A',
+             'explanation': "Diante da dificuldade em <em>I can't find the biology lab on this campus map</em>, quem "
+                            'fala precisa de ajuda para chegar ao local, e (A) resolve isso ao <strong>convidar para '
+                            'ir junto</strong>. A alternativa (C) repete <em>campus map</em>, mas fala do preço do '
+                            'mapa em vez de indicar o caminho.'},
+            {'num': 'A18',
+             'prompt': '"Are you still using that dictionary, or can I borrow it?"',
+             'options': {'A': 'I looked up three new words today.',
+                         'B': "It's all yours, I'm done with it.",
+                         'C': 'The library has a lot of computers.',
+                         'D': 'You can buy one at the main store.'},
+             'correct': 'B',
+             'explanation': 'A pergunta <em>Are you still using that dictionary, or can I borrow it?</em> é um '
+                            'pedido para usar o dicionário agora, e (B) responde de forma direta ao <strong>avisar '
+                            'que já terminou de usar</strong>. A opção (A) fala de palavras pesquisadas no dia, mas '
+                            'não diz se o livro está livre.'}]},
+ {'id': 'mod2-an2',
+  'title': 'Exercício A3: aulas, biblioteca e estudos (meta de 1 min)',
+  'level': 'B1–B2',
+  'objective': 'Ouça cada fala e escolha a resposta mais natural. A fala aparece escrita depois que você responde. '
+               'Tempo-alvo: 12 segundos por item.',
+  'passage_html': None,
+  'items': [{'num': 'A19',
+             'prompt': '"I\'m swamped with readings this week, so I might skip the club meeting."',
+             'options': {'A': 'The reading room on the second floor is quiet.',
+                         'B': 'Our club meets every Wednesday in the lounge.',
+                         'C': "No worries, I'll fill you in on what you miss.",
+                         'D': 'I finished reading that chapter last weekend.'},
+             'correct': 'C',
+             'explanation': "Quando quem fala avisa <em>I'm swamped with readings this week, so I might skip the "
+                            'club meeting</em>, está explicando que deve faltar à reunião por excesso de leitura, e '
+                            '(C) acolhe a ausência e <strong>promete passar o resumo depois</strong>. A opção (B) '
+                            'apenas informa o dia fixo do encontro, sem reagir ao aviso de falta.'},
+            {'num': 'A20',
+             'prompt': '"Did you manage to get a seat in Professor Patel\'s seminar for next term?"',
+             'options': {'A': 'Her office hours are on Tuesday afternoons.',
+                         'B': 'The seminar room is in the history building.',
+                         'C': 'I took an introductory class with her once.',
+                         'D': "No, it filled up fast, so I'm on the waitlist."},
+             'correct': 'D',
+             'explanation': "A pergunta <em>Did you manage to get a seat in Professor Patel's seminar</em> trata de "
+                            'conseguir vaga na matrícula, e (D) responde diretamente ao contar que a turma lotou e '
+                            'restou a <strong>lista de espera da disciplina</strong>. A alternativa (B) confunde '
+                            '<em>get a seat</em> na matéria com a localização física da sala.'},
+            {'num': 'A21',
+             'prompt': '"Wait, didn\'t the teaching assistant say the quiz would only cover chapter four?"',
+             'options': {'A': 'Actually, she added chapter five in an email.',
+                         'B': 'The teaching assistant grades all our papers.',
+                         'C': 'Chapter four was much shorter than the others.',
+                         'D': 'We have a short quiz every other Friday morning.'},
+             'correct': 'A',
+             'explanation': "Ao perguntar <em>didn't the teaching assistant say the quiz would only cover chapter "
+                            'four?</em>, quem fala quer confirmar a matéria do teste, e (A) esclarece a dúvida com a '
+                            '<strong>atualização enviada por e-mail</strong>. A opção (C) comenta o tamanho do '
+                            'capítulo quatro, mas não confirma o conteúdo cobrado na avaliação.'},
+            {'num': 'A22',
+             'prompt': '"If we don\'t reserve a group study room soon, they\'ll all be booked for finals."',
+             'options': {'A': 'The library bought new tables last month.',
+                         'B': "Good point, I'll log in and book one now.",
+                         'C': 'Final exams always last for a whole week.',
+                         'D': 'Our study group has four people this term.'},
+             'correct': 'B',
+             'explanation': "O alerta <em>If we don't reserve a group study room soon, they'll all be booked</em> "
+                            'aponta a urgência de garantir uma sala antes que acabe, e (B) reage na hora ao '
+                            '<strong>fazer a reserva no sistema</strong>. A alternativa (D) fala do tamanho do grupo '
+                            'de estudo, mas deixa de lado o risco de ficar sem sala.'},
+            {'num': 'A23',
+             'prompt': '"I was hoping to talk to my advisor today, but her door\'s closed."',
+             'options': {'A': 'My advisor helped me pick my major last year.',
+                         'B': 'The door to the main building locks at nine.',
+                         'C': "She's usually back from lunch around one-thirty.",
+                         'D': 'Advising appointments take about twenty minutes.'},
+             'correct': 'C',
+             'explanation': "Diante da frustração em <em>I was hoping to talk to my advisor today, but her door's "
+                            'closed</em>, a resposta mais prestativa é informar quando ela deve voltar, como faz (C) '
+                            'ao indicar o <strong>horário de retorno do almoço</strong>. A opção (B) repete a '
+                            'palavra <em>door</em>, mas fala da porta do prédio à noite.'},
+            {'num': 'A24',
+             'prompt': '"How come you\'re printing your slides here instead of at the computer lab?"',
+             'options': {'A': 'I need about fifteen slides for my talk.',
+                         'B': 'The computer lab is in the north wing.',
+                         'C': 'Printing costs five cents a page there.',
+                         'D': 'Both printers over there are jammed again.'},
+             'correct': 'D',
+             'explanation': "Em <em>How come you're printing your slides here instead of at the computer lab?</em>, "
+                            'a expressão <em>how come</em> pede o motivo da escolha, e (D) apresenta a <strong>causa '
+                            'prática do problema</strong> nas impressoras do laboratório. A alternativa (B) apenas '
+                            'diz onde fica o laboratório, sem explicar a troca de lugar.'}]},
+ {'id': 'mod2-an3',
+  'title': 'Exercício A4: secretaria, projetos e laboratório (meta de 1 min)',
+  'level': 'B2–C1',
+  'objective': 'Ouça cada fala e escolha a resposta mais natural. A fala aparece escrita depois que você responde. '
+               'Tempo-alvo: 12 segundos por item.',
+  'passage_html': None,
+  'items': [{'num': 'A25',
+             'prompt': '"I\'d double-check those survey numbers before sending the file to Dr. Evans, if I were '
+                       'you."',
+             'options': {'A': 'Dr. Evans teaches the advanced research methods course.',
+                         'B': 'Did you spot an error in one of the spreadsheet columns?',
+                         'C': 'How many students ended up responding to the survey?',
+                         'D': 'The file was saved in the shared folder yesterday.'},
+             'correct': 'B',
+             'explanation': "A estrutura <em>I'd double-check those survey numbers... if I were you</em> funciona "
+                            'como um alerta indireto de que algo parece errado nos dados, por isso (B) reage na hora '
+                            'perguntando se houve um <strong>erro específico na planilha</strong>. A opção (C) '
+                            'também faz uma pergunta sobre a pesquisa, mas ignora completamente o aviso de revisão.'},
+            {'num': 'A26',
+             'prompt': '"Wait, so our funding proposal for the robotics project is still up in the air?"',
+             'options': {'A': "The robotics team won second place at last year's fair.",
+                         'B': 'Our project focuses on small aerial drones for mapping.',
+                         'C': 'Yeah, the committee postponed its final vote until Monday.',
+                         'D': 'The funding form needs to be signed in blue or black ink.'},
+             'correct': 'C',
+             'explanation': 'Na pergunta <em>so our funding proposal for the robotics project is still up in the '
+                            'air?</em>, a expressão <em>up in the air</em> significa indefinido, o que (C) confirma '
+                            'ao explicar o <strong>adiamento da votação final</strong>. A alternativa (B) é uma '
+                            'armadilha clássica porque leva <em>in the air</em> ao pé da letra e fala de drones '
+                            'aéreos.'},
+            {'num': 'A27',
+             'prompt': '"I was under the impression that the internship required a letter from the dean."',
+             'options': {'A': "The dean's office moved to the administration building.",
+                         'B': 'Internships are a great way to build work experience.',
+                         'C': 'I wrote a cover letter for that position last night.',
+                         'D': 'Actually, they dropped that requirement this year.'},
+             'correct': 'D',
+             'explanation': 'A abertura <em>I was under the impression that...</em> indica uma suposição que pede '
+                            'confirmação ou correção, e (D) corrige a suposição ao contar que <strong>a exigência '
+                            'caiu</strong> este ano. A opção (C) repete a palavra <em>letter</em>, mas troca a carta '
+                            'da direção por uma carta de apresentação pessoal.'},
+            {'num': 'A28',
+             'prompt': '"We\'d better iron out the timeline for our lab experiment before we meet with the TA."',
+             'options': {'A': "Agreed, let's sit down after lunch and map out each step.",
+                         'B': 'The lab equipment is made of stainless steel and iron.',
+                         'C': 'Our teaching assistant holds office hours on Wednesdays.',
+                         'D': 'The experiment took much longer than anyone expected.'},
+             'correct': 'A',
+             'explanation': "Em <em>We'd better iron out the timeline for our lab experiment</em>, o phrasal verb "
+                            '<em>iron out</em> quer dizer acertar os detalhes pendentes, e (A) concorda propondo '
+                            '<strong>definir cada etapa depois do almoço</strong>. A alternativa (B) cai na '
+                            'armadilha literal de <em>iron</em> como ferro ou metal do equipamento.'},
+            {'num': 'A29',
+             'prompt': '"You didn\'t happen to pick up an extra copy of the syllabus on your way out, did you?"',
+             'options': {'A': 'The syllabus lists three major papers for this semester.',
+                         'B': 'I dropped that class during the first week of the term.',
+                         'C': 'No, sorry, but the professor posted the PDF online too.',
+                         'D': 'The copy machine in the department lounge is working.'},
+             'correct': 'C',
+             'explanation': "A pergunta <em>You didn't happen to pick up an extra copy of the syllabus... did "
+                            'you?</em> é um jeito educado de pedir uma cópia caso a pessoa tenha pego uma a mais, e '
+                            '(C) responde e <strong>indica a versão em PDF online</strong>. A opção (D) aproveita a '
+                            'palavra <em>copy</em> para falar da copiadora, sem responder ao pedido.'},
+            {'num': 'A30',
+             'prompt': '"Getting a summer research grant as a first-year student is a bit of a long shot, isn\'t '
+                       'it?"',
+             'options': {'A': 'Maybe, but a couple of freshmen got funded last summer.',
+                         'B': 'The photography club is taking shots of the campus quad.',
+                         'C': 'Summer classes run from early June through mid-August.',
+                         'D': 'Grant applications must be submitted to the main office.'},
+             'correct': 'A',
+             'explanation': 'Quando quem fala diz que conseguir a bolsa no primeiro ano é <em>a bit of a long '
+                            'shot</em>, quer dizer que a chance parece baixa, e (A) reconhece a dificuldade mas '
+                            '<strong>anima com exemplos reais</strong> do verão passado. A alternativa (B) '
+                            'interpreta <em>shot</em> ao pé da letra como foto, fugindo do assunto.'}]},
+ {'id': 'mod2-an4',
+  'title': 'Exercício A5: pesquisa, orientação e seminários (meta de 1 min)',
+  'level': 'C1',
+  'objective': 'Ouça cada fala e escolha a resposta mais natural. A fala aparece escrita depois que você responde. '
+               'Tempo-alvo: 12 segundos por item.',
+  'passage_html': None,
+  'items': [{'num': 'A31',
+             'prompt': '"Well, the peer reviewers didn\'t exactly jump for joy over our methodology section."',
+             'options': {'A': 'The methodology section comes right after the introduction.',
+                         'B': "I'm glad the reviewers were so enthusiastic about our work.",
+                         'C': 'Peer review for that journal usually takes about six weeks.',
+                         'D': "That's rough, but hopefully their comments are easy to fix."},
+             'correct': 'D',
+             'explanation': "Ao dizer que os pareceristas <em>didn't exactly jump for joy over our methodology "
+                            'section</em>, quem fala usa uma atenuação irônica para contar que a seção recebeu '
+                            'críticas, e (D) capta esse tom ao <strong>lamentar o revés e focar nos '
+                            "ajustes</strong>. A opção (B) perde a ironia do <em>didn't exactly</em> e acha que o "
+                            'retorno foi entusiasmado.'},
+            {'num': 'A32',
+             'prompt': '"Since our archive access was denied, I guess we\'re back to square one on the thesis '
+                       'topic."',
+             'options': {'A': 'Not necessarily, we could use the digitized collection instead.',
+                         'B': 'The main archive is located in the basement of the old library.',
+                         'C': 'Square tables work best when we have a large seminar discussion.',
+                         'D': 'Our thesis advisor approved the initial outline two months ago.'},
+             'correct': 'A',
+             'explanation': "Em <em>I guess we're back to square one on the thesis topic</em>, a expressão <em>back "
+                            'to square one</em> indica a sensação de ter de recomeçar do zero, e (A) responde '
+                            'propondo uma <strong>alternativa viável com o acervo digitalizado</strong>. A opção (D) '
+                            'cita a aprovação antiga do esboço e ignora o bloqueio atual ao arquivo.'},
+            {'num': 'A33',
+             'prompt': '"Had I known Professor Kim\'s seminar was this heavy on econometrics, I\'d have audited it '
+                       'instead."',
+             'options': {'A': 'Professor Kim earned her doctorate in economics ten years ago.',
+                         'B': "The add-drop window's still open if you want to switch status.",
+                         'C': "Auditing a course means you don't receive a letter grade for it.",
+                         'D': 'The seminar meets twice a week in the graduate wing downstairs.'},
+             'correct': 'B',
+             'explanation': "A inversão condicional <em>Had I known... I'd have audited it instead</em> expressa "
+                            'arrependimento por não cursar a disciplina apenas como ouvinte, e (B) traz uma saída '
+                            'prática lembrando que o <strong>prazo de ajuste ainda permite mudar</strong> a '
+                            'modalidade. A alternativa (C) explica o que é <em>audit</em>, algo que quem fala já '
+                            'domina.'},
+            {'num': 'A34',
+             'prompt': '"Look, far be it from me to tell you how to structure your talk, but ten case studies in '
+                       'fifteen minutes?"',
+             'options': {'A': 'The conference panel allots fifteen minutes to each presenter.',
+                         'B': 'Case studies are widely used in qualitative social research.',
+                         'C': 'Fair point, I should probably trim it down to two or three.',
+                         'D': 'Your presentation last semester was really well structured.'},
+             'correct': 'C',
+             'explanation': 'Mesmo suavizada por <em>far be it from me</em>, a pergunta final <em>but ten case '
+                            'studies in fifteen minutes?</em> é uma crítica educada ao excesso de exemplos para '
+                            'pouco tempo, e (C) entende o recado ao <strong>reduzir a quantidade de casos</strong>. '
+                            'A opção (A) apenas repete a regra dos quinze minutos sem resolver a sobrecarga.'},
+            {'num': 'A35',
+             'prompt': '"Take what the department chair said about next year\'s teaching fellowships with a grain of '
+                       'salt."',
+             'options': {'A': "The department chair's term ends after the spring semester.",
+                         'B': 'Teaching fellowships cover full tuition plus a small stipend.',
+                         'C': 'The campus dining hall cut back on salt in most of its meals.',
+                         'D': "Right, nothing's official until the budget is signed in May."},
+             'correct': 'D',
+             'explanation': 'A expressão <em>take... with a grain of salt</em> recomenda cautela diante do que foi '
+                            'dito sobre as bolsas de monitoria, e (D) acompanha esse cuidado lembrando que '
+                            '<strong>nada é oficial antes da assinatura do orçamento</strong>. A alternativa (B) '
+                            'descreve os benefícios da bolsa, mas ignora o alerta de incerteza.'},
+            {'num': 'A36',
+             'prompt': '"I wouldn\'t put off booking the spectrometer if you want your samples analyzed before the '
+                       'colloquium."',
+             'options': {'A': 'The annual colloquium features speakers from three universities.',
+                         'B': 'True, the lab sign-up sheet always fills up weeks in advance.',
+                         'C': 'I put the spectrometer manual back on the top shelf yesterday.',
+                         'D': 'The rock samples were collected during our field trip in June.'},
+             'correct': 'B',
+             'explanation': "Em <em>I wouldn't put off booking the spectrometer</em>, o phrasal verb <em>put "
+                            'off</em> significa adiar, então a fala aconselha a reservar o aparelho logo, e (B) '
+                            'concorda lembrando que a <strong>agenda do equipamento lota semanas antes</strong>. A '
+                            'opção (C) confunde <em>put off</em> com guardar um manual na estante.'}]}]
+MOD2_ACTION_DRILLS_A = MOD2_ACTION_DRILLS_A + MOD2_NOVOS_A
+MOD2_NOVOS_B = [{'id': 'mod2-bn1',
+  'title': 'Exercício B4: Campus Health Clinic (meta de 2 min)',
+  'level': 'A2–B1',
+  'objective': 'Ouça a conversa e responda às 2 questões. A transcrição aparece depois que você responder a todas. '
+               'Tempo-alvo: 2 minutos.',
+  'passage_html': '<p><em>Narrator: Listen to a conversation between a student and a receptionist at the campus '
+                  'health clinic.</em></p>\n'
+                  '<p><strong>Student:</strong> Hi, um, I need a nurse to sign this health form for my summer '
+                  'volunteer program. Can I do that today?</p>\n'
+                  "<p><strong>Receptionist:</strong> Let's see. Have you uploaded your vaccination record to the "
+                  'student health portal yet?</p>\n'
+                  '<p><strong>Student:</strong> Oh, no, I brought the paper copy with me right here.</p>\n'
+                  "<p><strong>Receptionist:</strong> Well, our nurses can't sign the form until the file is in the "
+                  'system. You can scan it with your phone and upload it tonight.</p>\n'
+                  "<p><strong>Student:</strong> Okay, that's easy enough. Do I need an appointment after I upload "
+                  'it?</p>\n'
+                  '<p><strong>Receptionist:</strong> No, just come back during walk-in hours tomorrow morning '
+                  'between nine and eleven, and a nurse will sign it at the front desk.</p>',
+  'items': [{'num': 'B4.1',
+             'prompt': 'Gist-purpose. Why does the student go to the campus health clinic?',
+             'options': {'A': 'To get a signature on a required health form',
+                         'B': 'To schedule a vaccination before summer break',
+                         'C': 'To pick up a paper copy of her medical record',
+                         'D': 'To apply for a part-time job at the front desk'},
+             'correct': 'A',
+             'explanation': 'Logo no começo, a estudante explica que precisa que alguém assine o formulário do '
+                            'programa de voluntariado (<em>I need a nurse to sign this health form</em>), o que '
+                            'confirma a opção (A) como <strong>pedido de assinatura no documento</strong>. Se você '
+                            'pensou em (B), repare que ela já tomou as vacinas e trouxe o comprovante impresso, sem '
+                            'pedir aplicação nova.'},
+            {'num': 'B4.2',
+             'prompt': 'Detail. What must the student do before a nurse can sign her form?',
+             'options': {'A': 'Pay a processing fee at the main office',
+                         'B': 'Book an afternoon appointment with a doctor',
+                         'C': 'Upload her vaccination record to the online portal',
+                         'D': 'Request a new paper form from her program director'},
+             'correct': 'C',
+             'explanation': 'O recepcionista avisa que a assinatura só é feita depois que o comprovante estiver no '
+                            'sistema (<em>until the file is in the system</em> e <em>upload it tonight</em>), '
+                            'validando (C) como <strong>envio digital na plataforma</strong>. A alternativa (B) é '
+                            'uma armadilha porque fala em agendar horário, mas o funcionário diz claramente <em>No, '
+                            'just come back during walk-in hours</em>.'}]},
+ {'id': 'mod2-bn2',
+  'title': 'Exercício B5: Dining Services Office (meta de 2 min)',
+  'level': 'A2–B1',
+  'objective': 'Ouça a conversa e responda às 2 questões. A transcrição aparece depois que você responder a todas. '
+               'Tempo-alvo: 2 minutos.',
+  'passage_html': '<p><em>Narrator: Listen to a conversation between a student and a staff member at the dining '
+                  'services office.</em></p>\n'
+                  '<p><strong>Student:</strong> Excuse me, I have a question about my campus meal plan. The semester '
+                  'ends in two weeks, and I still have fifteen lunches left.</p>\n'
+                  '<p><strong>Staff Member:</strong> Are you on the weekly plan or the semester block plan?</p>\n'
+                  '<p><strong>Student:</strong> Um, the semester block plan, I think. I paid for a hundred meals at '
+                  'the start of the term.</p>\n'
+                  "<p><strong>Staff Member:</strong> Good news, then. Unused block meals don't expire until the last "
+                  'day of final exams, and you can also trade up to ten of them for coffee shop points.</p>\n'
+                  '<p><strong>Student:</strong> Oh, nice! I use the library café every morning anyway. How do I make '
+                  'that switch?</p>\n'
+                  '<p><strong>Staff Member:</strong> Just tap the transfer button in the campus dining app, and the '
+                  'points show up on your ID card right away.</p>',
+  'items': [{'num': 'B5.1',
+             'prompt': "Detail. What does the staff member say about the student's unused meals?",
+             'options': {'A': 'They can be refunded for cash at the end of the term',
+                         'B': 'They expire two weeks before final exams begin',
+                         'C': "They are automatically moved to next semester's balance",
+                         'D': 'They can be partly converted into coffee shop points'},
+             'correct': 'D',
+             'explanation': 'A funcionária explica que o aluno pode trocar até dez refeições restantes por pontos de '
+                            'cafeteria (<em>you can also trade up to ten of them for coffee shop points</em>), o que '
+                            'torna (D) a <strong>conversão parcial em pontos</strong>. A opção (B) confunde o prazo '
+                            'de duas semanas citado pelo aluno com a regra real, que vale até o último dia de provas '
+                            'finais.'},
+            {'num': 'B5.2',
+             'prompt': 'Inference. What will the student probably do next?',
+             'options': {'A': 'Cancel his meal plan for the rest of the semester',
+                         'B': 'Use the campus dining app to convert some meals',
+                         'C': 'Buy a new student ID card at the library café',
+                         'D': 'Switch from the block plan to the weekly plan'},
+             'correct': 'B',
+             'explanation': 'O estudante se anima porque usa a cafeteria da biblioteca toda manhã e pergunta como '
+                            'fazer a troca, e a funcionária orienta <em>Just tap the transfer button in the campus '
+                            'dining app</em>, indicando em (B) o <strong>uso do aplicativo para converter '
+                            'refeições</strong>. A alternativa (C) mistura termos do áudio, pois os pontos caem no '
+                            'cartão que ele já tem.'}]},
+ {'id': 'mod2-bn3',
+  'title': 'Exercício B6: Media Equipment Desk (meta de 2 min)',
+  'level': 'A2–B1',
+  'objective': 'Ouça a conversa e responda às 2 questões. A transcrição aparece depois que você responder a todas. '
+               'Tempo-alvo: 2 minutos.',
+  'passage_html': '<p><em>Narrator: Listen to a conversation between a student and an assistant at the media '
+                  'equipment desk.</em></p>\n'
+                  "<p><strong>Student:</strong> Hi, I'm recording an interview for my sociology class this "
+                  'afternoon. Do you have a small clip-on microphone I can borrow?</p>\n'
+                  '<p><strong>Assistant:</strong> Let me check the shelf... sorry, all our clip-on mics are checked '
+                  'out until tomorrow. We do have a handheld digital recorder, though.</p>\n'
+                  "<p><strong>Student:</strong> Hmm, we're meeting on a bench outside the student union, so I'm "
+                  'worried about wind noise.</p>\n'
+                  '<p><strong>Assistant:</strong> Actually, this recorder comes with a foam cover that blocks the '
+                  'wind pretty well. You just set it down on the bench between you and your guest.</p>\n'
+                  "<p><strong>Student:</strong> Oh, great, that'll work. How long can I keep it?</p>\n"
+                  "<p><strong>Assistant:</strong> It's due back by four p.m. tomorrow. Make sure you check the "
+                  'battery icon on the screen before you start recording.</p>',
+  'items': [{'num': 'B6.1',
+             'prompt': "Detail. Why can't the student borrow a clip-on microphone today?",
+             'options': {'A': 'They are reserved for sociology professors only',
+                         'B': 'They are broken and waiting for repair parts',
+                         'C': 'They have all been borrowed by other people',
+                         'D': 'They cannot be used outside the library building'},
+             'correct': 'C',
+             'explanation': 'O atendente confere a prateleira e avisa que todos os microfones de lapela estão '
+                            'emprestados até o dia seguinte (<em>all our clip-on mics are checked out until '
+                            'tomorrow</em>), confirmando (C) como <strong>equipamentos já retirados</strong>. A '
+                            'opção (A) usa a aula de sociologia mencionada pelo aluno para criar uma restrição que '
+                            'não existe no diálogo.'},
+            {'num': 'B6.2',
+             'prompt': 'Function. Why does the assistant mention the foam cover?',
+             'options': {'A': 'To explain why the rental costs a few dollars extra',
+                         'B': 'To warn the student not to drop the recorder on the ground',
+                         'C': 'To show how to tell two similar models apart on the shelf',
+                         'D': 'To reassure the student that the recorder will handle the wind'},
+             'correct': 'D',
+             'explanation': 'O assistente cita a proteção de espuma (<em>this recorder comes with a foam cover that '
+                            'blocks the wind pretty well</em>) justamente para responder à preocupação do aluno e '
+                            '<strong>mostrar que o aparelho reduz o vento</strong>, como diz (D). A alternativa (B) '
+                            'pensa em proteção física contra queda, mas o foco ali é a qualidade do som.'}]},
+ {'id': 'mod2-bn4',
+  'title': 'Exercício B7: Undergraduate Research Symposium (meta de 3 min)',
+  'level': 'B1–B2',
+  'objective': 'Ouça a conversa e responda às 2 questões. A transcrição aparece depois que você responder a todas. '
+               'Tempo-alvo: 3 minutos.',
+  'passage_html': '<p><em>Narrator: Listen to a conversation between a student and the coordinator of a campus '
+                  'research event.</em></p>\n'
+                  '<p><strong>Student:</strong> Hi, Dr. Patel. My lab partner and I were accepted to present our '
+                  "chemistry poster at next month's research symposium, but we just ran into a scheduling "
+                  'issue.</p>\n'
+                  '<p><strong>Coordinator:</strong> Oh? What happened?</p>\n'
+                  '<p><strong>Student:</strong> Well, my partner was invited to a regional debate tournament that '
+                  "same weekend, so she won't be on campus. Do we have to withdraw our poster if only one of us can "
+                  'attend?</p>\n'
+                  '<p><strong>Coordinator:</strong> Not at all. Plenty of co-authored posters are presented by a '
+                  "single student. As long as her name stays on the printed header and the abstract, you're fine to "
+                  'present solo.</p>\n'
+                  "<p><strong>Student:</strong> That's a huge relief. One more thing, though. I have a Friday "
+                  "afternoon lab that I can't miss. Can I request a morning presentation slot?</p>\n"
+                  "<p><strong>Coordinator:</strong> Sure, we haven't finalized the room assignments yet. Send me an "
+                  'email by Wednesday so I can put you in the nine-to-eleven session before the program goes to '
+                  'print.</p>',
+  'items': [{'num': 'B7.1',
+             'prompt': 'Gist-purpose. Why did the student go to see the coordinator?',
+             'options': {'A': 'To ask for extra time to finish a chemistry experiment',
+                         'B': 'To find out if she can present a joint poster by herself',
+                         'C': 'To add a new co-author to her research abstract',
+                         'D': "To reserve a larger display board for her team's graphs"},
+             'correct': 'B',
+             'explanation': 'A aluna procura o coordenador porque a parceira viajará no fim de semana do evento e '
+                            'quer saber se precisa cancelar o pôster ou se pode apresentar sozinha (<em>Do we have '
+                            'to withdraw our poster if only one of us can attend?</em>), confirmando (B) como '
+                            '<strong>dúvida sobre apresentação individual</strong>. A opção (C) fala em incluir '
+                            'coautor, mas o nome da colega já estava no trabalho.'},
+            {'num': 'B7.2',
+             'prompt': 'Detail. Why does the coordinator ask the student to email him by Wednesday?',
+             'options': {'A': 'So the chemistry department can approve her lab absence',
+                         'B': 'So her partner can receive a travel grant for the tournament',
+                         'C': 'So the print shop has time to enlarge her poster header',
+                         'D': 'So he can give her a morning slot before the program is printed'},
+             'correct': 'D',
+             'explanation': 'No final da conversa, o coordenador pede o e-mail até quarta-feira para colocá-la no '
+                            'turno da manhã antes da impressão do folheto (<em>so I can put you in the '
+                            'nine-to-eleven session before the program goes to print</em>), o que corresponde a (D) '
+                            'sobre <strong>garantir o horário matutino no programa</strong>. A alternativa (C) '
+                            'mistura a palavra <em>print</em> com o cabeçalho do pôster citado antes.'}]},
+ {'id': 'mod2-bn5',
+  'title': 'Exercício B8: Environmental Science Office Hours (meta de 3 min)',
+  'level': 'B1–B2',
+  'objective': 'Ouça a conversa e responda às 2 questões. A transcrição aparece depois que você responder a todas. '
+               'Tempo-alvo: 3 minutos.',
+  'passage_html': '<p><em>Narrator: Listen to a conversation between a student and an environmental science '
+                  'professor.</em></p>\n'
+                  "<p><strong>Student:</strong> Professor Morales, do you have a minute? I'm worried about my field "
+                  'report on creek water quality.</p>\n'
+                  "<p><strong>Professor:</strong> Come on in, Leo. Didn't you plan to compare water samples from the "
+                  'wooded bend and the downstream bridge?</p>\n'
+                  "<p><strong>Student:</strong> That was the plan, yeah, but after Tuesday's heavy rain, the trail "
+                  'to the wooded bend was completely flooded. Park rangers closed it for the rest of the month, so I '
+                  'only have data from the bridge.</p>\n'
+                  "<p><strong>Professor:</strong> Ah, I heard the creek rose quite a bit. Well, you don't need two "
+                  'locations to write a strong paper. Why not pivot to a before-and-after study at the bridge site '
+                  'alone?</p>\n'
+                  '<p><strong>Student:</strong> Wait, how would that work? I only started collecting samples there '
+                  'last week.</p>\n'
+                  '<p><strong>Professor:</strong> The county water board has an automated sensor right under that '
+                  'bridge. Their website posts hourly turbidity and oxygen readings going back five years, so you '
+                  'can compare your post-storm samples with the baseline data from earlier this autumn.</p>\n'
+                  '<p><strong>Student:</strong> Oh, I had no idea that archive was public! That actually gives me a '
+                  'much clearer research question.</p>',
+  'items': [{'num': 'B8.1',
+             'prompt': 'Detail. What problem prevented the student from carrying out his original plan?',
+             'options': {'A': 'Heavy rain flooded the path and closed one of his sampling sites',
+                         'B': 'The testing equipment at the downstream bridge stopped working',
+                         'C': 'The county water board restricted student access to the creek',
+                         'D': 'His initial water samples were lost in the laboratory freezer'},
+             'correct': 'A',
+             'explanation': 'O estudante conta que a chuva forte alagou a trilha e levou os guardas-parque a '
+                            "fecharem um dos pontos de coleta (<em>after Tuesday's heavy rain, the trail to the "
+                            'wooded bend was completely flooded</em>), confirmando (A) como <strong>interdição da '
+                            'trilha pela chuva</strong>. A opção (C) usa o nome do órgão municipal citado depois '
+                            'pela professora para criar uma proibição inexistente.'},
+            {'num': 'B8.2',
+             'prompt': 'Detail. How does the professor suggest the student complete his report?',
+             'options': {'A': 'By waiting until next month when the wooded trail reopens',
+                         'B': "By borrowing water samples collected by last year's class",
+                         'C': 'By combining his bridge samples with online county sensor records',
+                         'D': 'By switching his topic from water quality to forest soil erosion'},
+             'correct': 'C',
+             'explanation': 'A professora sugere focar na ponte e cruzar as amostras pós-tempestade com os dados '
+                            'públicos do sensor do condado (<em>compare your post-storm samples with the baseline '
+                            'data from earlier this autumn</em>), o que valida (C) como <strong>uso complementar do '
+                            'arquivo online</strong>. Se você pensou em (A), repare que a professora propõe '
+                            'trabalhar com o que já existe, sem esperar a trilha reabrir.'}]},
+ {'id': 'mod2-bn6',
+  'title': 'Exercício B9: Study Abroad Office (meta de 3 min)',
+  'level': 'B1–B2',
+  'objective': 'Ouça a conversa e responda às 2 questões. A transcrição aparece depois que você responder a todas. '
+               'Tempo-alvo: 3 minutos.',
+  'passage_html': '<p><em>Narrator: Listen to a conversation between a student and a study-abroad advisor.</em></p>\n'
+                  "<p><strong>Student:</strong> Hi, I'm applying for the six-week tropical ecology program in Costa "
+                  'Rica this summer, and I wanted to check how the credits transfer back here.</p>\n'
+                  '<p><strong>Advisor:</strong> Sure. Because that program is run by one of our partner '
+                  'universities, the six credits transfer automatically as general elective hours.</p>\n'
+                  '<p><strong>Student:</strong> Oh, wait. I was counting on using it to fulfill my upper-level '
+                  'biology lab requirement so I can graduate on time next spring.</p>\n'
+                  "<p><strong>Advisor:</strong> In that case, automatic transfer won't be enough. You'll need a "
+                  'course-equivalency approval from the chair of our biology department, Dr. Lindqvist.</p>\n'
+                  '<p><strong>Student:</strong> Okay, what does she usually ask to see? The short course description '
+                  'on the brochure?</p>\n'
+                  "<p><strong>Advisor:</strong> Actually, she's pretty thorough. A brochure blurb won't cut it. "
+                  "She'll want the full weekly syllabus showing the exact number of field and lab hours, plus how "
+                  'students are graded.</p>\n'
+                  "<p><strong>Student:</strong> Good to know. The program deposit isn't due until next Friday, so "
+                  "I'll request the detailed syllabus from the host coordinator today.</p>",
+  'items': [{'num': 'B9.1',
+             'prompt': 'Meaning of an expression. What does the advisor mean when he says "A brochure blurb won\'t '
+                       'cut it"?',
+             'options': {'A': 'A brief summary from the brochure will not be detailed enough',
+                         'B': 'The printed brochure contains outdated information about the lab',
+                         'C': 'The student should not clip pages out of the official catalog',
+                         'D': 'The biology department no longer accepts summer field courses'},
+             'correct': 'A',
+             'explanation': "A expressão coloquial <em>won't cut it</em> significa que algo não basta, e o "
+                            'orientador explica logo depois que a chefe do departamento exige o cronograma completo '
+                            "de horas práticas (<em>She'll want the full weekly syllabus</em>), validando (A) como "
+                            '<strong>insuficiência do resumo do folheto</strong>. A alternativa (C) leva o verbo '
+                            '<em>cut</em> ao pé da letra, como recortar papel.'},
+            {'num': 'B9.2',
+             'prompt': 'Inference. What will the student probably do before paying the program deposit?',
+             'options': {'A': 'Switch to a domestic summer course offered on campus',
+                         'B': 'Ask the financial aid office to waive the deposit fee',
+                         'C': 'Take an extra biology lab during the current semester',
+                         'D': "Get the detailed syllabus and seek Dr. Lindqvist's approval"},
+             'correct': 'D',
+             'explanation': 'Como o depósito só vence na sexta-feira seguinte, o aluno decide pedir a ementa '
+                            "detalhada imediatamente (<em>I'll request the detailed syllabus from the host "
+                            'coordinator today</em>) para submeter à chefe do departamento, o que aponta para (D) '
+                            'como <strong>obtenção da ementa e aprovação prévia</strong>. A opção (A) desiste do '
+                            'intercâmbio sem que o aluno demonstre essa intenção.'}]},
+ {'id': 'mod2-bn7',
+  'title': 'Exercício B10: Architecture Studio Critique (meta de 3 min)',
+  'level': 'B2–C1',
+  'objective': 'Ouça a conversa e responda às 2 questões. A transcrição aparece depois que você responder a todas. '
+               'Tempo-alvo: 3 minutos.',
+  'passage_html': '<p><em>Narrator: Listen to a conversation between a student and an architecture professor after a '
+                  'studio review.</em></p>\n'
+                  '<p><strong>Student:</strong> Professor Vance, thanks for staying a few minutes. After the guest '
+                  "panel's critique of my community center model, I'm torn about how to revise the central atrium "
+                  'for the final portfolio.</p>\n'
+                  "<p><strong>Professor:</strong> You shouldn't feel discouraged, Maya. The visiting architects were "
+                  'genuinely impressed by how your sawtooth roof brings diffused northern light deep into the '
+                  'building.</p>\n'
+                  '<p><strong>Student:</strong> Right, they liked the daylighting, but they pointed out that placing '
+                  'the quiet reading lounge directly off the open atrium would create an acoustic nightmare whenever '
+                  'groups gather downstairs.</p>\n'
+                  "<p><strong>Professor:</strong> And that's a fair critique. Concrete floors and glass balustrades "
+                  "bounce sound around. But you don't have to wall off the reading lounge and lose the visual "
+                  'openness that makes your design work.</p>\n'
+                  '<p><strong>Student:</strong> You mean I can keep the sightlines without enclosing the second '
+                  'floor in glass partitions?</p>\n'
+                  '<p><strong>Professor:</strong> Exactly. Look into suspended timber baffles along the atrium '
+                  'ceiling and a recessed alcove with fabric wall panels for the reading area. They absorb mid-range '
+                  'chatter before it travels upward, so the space stays visually connected without functioning like '
+                  'an echo chamber.</p>',
+  'items': [{'num': 'B10.1',
+             'prompt': 'Function. Why does the professor mention concrete floors and glass balustrades?',
+             'options': {'A': 'To encourage the student to replace all glass with brick walls',
+                         'B': "To explain why the panel's concern about noise was reasonable",
+                         'C': 'To show that the building meets local fire safety regulations',
+                         'D': 'To suggest materials that would make the model easier to build'},
+             'correct': 'B',
+             'explanation': "Logo após dizer <em>And that's a fair critique</em>, o professor cita o piso de "
+                            'concreto e os guarda-corpos de vidro porque esses materiais refletem o som (<em>bounce '
+                            'sound around</em>), justificando em (B) <strong>por que a crítica acústica fazia '
+                            'sentido</strong>. Se você marcou (A), repare que ele desaconselha fechar o espaço com '
+                            'paredes logo na frase seguinte.'},
+            {'num': 'B10.2',
+             'prompt': "Detail. How will the timber baffles and fabric panels solve the student's dilemma?",
+             'options': {'A': 'They will dampen noise while preserving the open view across the atrium',
+                         'B': 'They will reflect additional sunlight into the downstairs gathering area',
+                         'C': 'They will divide the reading lounge into private individual study cubicles',
+                         'D': 'They will support the weight of the sawtooth roof without steel columns'},
+             'correct': 'A',
+             'explanation': 'O professor propõe os defletores de madeira e painéis de tecido porque absorvem as '
+                            'vozes mantendo o espaço integrado visualmente (<em>absorb mid-range chatter... so the '
+                            'space stays visually connected</em>), validando (A) como <strong>redução de ruído sem '
+                            'perder a amplitude visual</strong>. A alternativa (C) sugere fechar a área em cabines, '
+                            'exatamente o que a aluna queria evitar.'}]},
+ {'id': 'mod2-bn8',
+  'title': 'Exercício B11: Economic History Seminar (meta de 3 min)',
+  'level': 'C1',
+  'objective': 'Ouça a conversa e responda às 2 questões. A transcrição aparece depois que você responder a todas. '
+               'Tempo-alvo: 3 minutos.',
+  'passage_html': '<p><em>Narrator: Listen to a conversation between a student and an economic history '
+                  'professor.</em></p>\n'
+                  "<p><strong>Student:</strong> Professor Calloway, I've been going through the digitized county tax "
+                  "rolls from the 1880s for my senior thesis on New England textile towns, and the numbers aren't "
+                  'lining up with what we read in seminar.</p>\n'
+                  "<p><strong>Professor:</strong> Let me guess. The tax assessments make mill workers' household "
+                  'incomes look surprisingly stable, even during the downturn of 1884?</p>\n'
+                  '<p><strong>Student:</strong> Exactly! Contemporary newspaper accounts describe widespread '
+                  'layoffs, yet the municipal tax records barely register a dip. Was the press exaggerating?</p>\n'
+                  '<p><strong>Professor:</strong> Not necessarily. Think about who actually appears on a '
+                  'nineteenth-century property and poll-tax roll. Long-term residents who owned modest cottages or '
+                  'stayed at the same address year-round were recorded, whereas transient operatives and seasonal '
+                  "spinners who left town when looms shut down simply vanished from the assessor's ledger.</p>\n"
+                  "<p><strong>Student:</strong> Oh, I see. So by relying solely on the tax rolls, I'm only looking "
+                  'at the best-off segment of the workforce that weathered the slump.</p>\n'
+                  "<p><strong>Professor:</strong> Precisely, it's a classic survivorship bias. If you want to "
+                  'capture the full picture, pair those municipal rolls with the Abbott Mill weekly payroll books in '
+                  "our library's special collections. Those list every piece-rate worker by week, including the ones "
+                  'who disappeared mid-season.</p>',
+  'items': [{'num': 'B11.1',
+             'prompt': 'Detail. According to the professor, why do the county tax rolls make incomes appear stable '
+                       'in 1884?',
+             'options': {'A': 'Town officials inflated wage figures to attract outside factory investment',
+                         'B': 'Mill owners continued paying full wages to workers during temporary shutdowns',
+                         'C': 'Seasonal workers who lost their jobs left town and were omitted from the rolls',
+                         'D': 'Tax assessors combined factory wages with agricultural earnings from nearby farms'},
+             'correct': 'C',
+             'explanation': 'A professora esclarece que os registros municipais incluíam moradores fixos, enquanto '
+                            'trabalhadores temporários que partiam na crise ficavam de fora (<em>transient '
+                            'operatives and seasonal spinners who left town when looms shut down simply vanished '
+                            "from the assessor's ledger</em>), validando (C) como <strong>omissão dos trabalhadores "
+                            'sazonais nos impostos</strong>. A alternativa (B) contradiz as demissões relatadas nos '
+                            'jornais.'},
+            {'num': 'B11.2',
+             'prompt': 'Function. Why does the professor recommend examining the Abbott Mill payroll books?',
+             'options': {'A': 'To prove that nineteenth-century newspapers fabricated stories about strikes',
+                         'B': 'To provide weekly records that include short-term workers missing from tax rolls',
+                         'C': 'To show how factory managers calculated property taxes for mill cottages',
+                         'D': 'To replace primary archival sources with modern economic commentary'},
+             'correct': 'B',
+             'explanation': 'Para corrigir o viés de seleção, a professora recomenda os livros de pagamento da '
+                            'fábrica porque eles registram todos os operários semana a semana, inclusive quem saía '
+                            'no meio da estação (<em>Those list every piece-rate worker by week, including the ones '
+                            'who disappeared mid-season</em>), confirmando (B) como <strong>fonte que inclui a mão '
+                            'de obra temporária</strong>. A opção (A) inverte o argumento, já que os livros '
+                            'confirmam a crise.'}]}]
+MOD2_ACTION_DRILLS_B = MOD2_ACTION_DRILLS_B + MOD2_NOVOS_B
+MOD2_NOVOS_C = [{'id': 'mod2-cn1',
+  'title': 'Exercício C4: Biology Lab (meta de 1 min)',
+  'level': 'A2–B1',
+  'objective': 'Ouça o anúncio e responda às 2 questões. A transcrição aparece depois que você responder a todas. '
+               'Tempo-alvo: 1 minuto.',
+  'passage_html': '<p><em>Narrator: Listen to an announcement at the end of a biology class.</em></p>\n'
+                  '<p><strong>Instructor:</strong> Okay, everyone, before you pack up, just a quick change for '
+                  "Friday's lab. We're not meeting in Room 204 this week. Instead, we'll meet directly at the campus "
+                  "greenhouse, right behind the science building. Because we're only observing plant samples and "
+                  "sketching them, you don't need to bring your lab coats or safety goggles this time. Just bring "
+                  "your field notebook and a pencil. Oh, and please be there by ten o'clock sharp, because the "
+                  'greenhouse staff will lock the side door right after we start.</p>',
+  'items': [{'num': 'C4.1',
+             'prompt': "Detail. What should students bring to Friday's class?",
+             'options': {'A': 'A field notebook and a pencil for sketching',
+                         'B': 'A white lab coat and a pair of safety goggles',
+                         'C': 'A set of plant samples from the science building',
+                         'D': 'A key card to unlock the greenhouse side door'},
+             'correct': 'A',
+             'explanation': 'O instrutor avisa que a atividade será observar e desenhar plantas, por isso pede '
+                            'apenas caderno de campo e lápis: "Just bring your field notebook and a pencil." Um '
+                            'ponto de atenção é (B), que junta dois itens citados no áudio, mas o professor diz '
+                            'justamente que você <strong>não precisa</strong> trazê-los desta vez.'},
+            {'num': 'C4.2',
+             'prompt': 'Function. Why does the instructor mention the greenhouse staff?',
+             'options': {'A': "To introduce the guest speakers for Friday's class",
+                         'B': 'To tell students who will grade their field sketches',
+                         'C': 'To explain why students need to arrive right on time',
+                         'D': 'To remind students where to pick up their lab coats'},
+             'correct': 'C',
+             'explanation': 'O professor menciona a equipe da estufa para justificar por que você precisa chegar '
+                            'pontualmente às dez horas: "please be there by ten o\'clock sharp, because the '
+                            'greenhouse staff will lock the side door right after we start." A alternativa (A) é uma '
+                            'armadilha comum: a equipe trabalha no local, mas o áudio não diz que ela dará uma '
+                            '<strong>palestra</strong>.'}]},
+ {'id': 'mod2-cn2',
+  'title': 'Exercício C5: Dormitory Laundry Room (meta de 1 min)',
+  'level': 'A2–B1',
+  'objective': 'Ouça o anúncio e responda às 2 questões. A transcrição aparece depois que você responder a todas. '
+               'Tempo-alvo: 1 minuto.',
+  'passage_html': '<p><em>Narrator: Listen to an announcement from a resident advisor in a student '
+                  'dormitory.</em></p>\n'
+                  '<p><strong>Resident Advisor:</strong> Hi, everyone. I just wanted to let you know that our '
+                  'basement laundry room will be closed all weekend, starting Friday at six p.m. Facilities is '
+                  "installing new card readers on the machines, so you won't need coins anymore starting Monday. If "
+                  'you need to wash clothes on Saturday or Sunday, you can use the laundry room in Maple Hall next '
+                  'door. Your student ID card will open their side entrance. Also, please clear out any clothes left '
+                  'in the basement before Friday evening, or the crew will move them to the front desk.</p>',
+  'items': [{'num': 'C5.1',
+             'prompt': 'Gist-purpose. What is the main purpose of the announcement?',
+             'options': {'A': 'To explain a permanent increase in dormitory laundry prices',
+                         'B': 'To welcome new residents moving into Maple Hall this week',
+                         'C': 'To remind students to pick up their new student ID cards',
+                         'D': 'To inform residents about a temporary laundry room closure'},
+             'correct': 'D',
+             'explanation': 'O objetivo central do aviso é informar que a lavanderia do prédio ficará fechada no fim '
+                            'de semana para uma atualização: "our basement laundry room will be closed all weekend." '
+                            'A opção (C) pode atrair porque o cartão de estudante é citado, mas ele serve apenas '
+                            'para abrir a porta do prédio vizinho, sem emissão de um <strong>cartão novo</strong>.'},
+            {'num': 'C5.2',
+             'prompt': 'Detail. What will happen to clothes left in the basement after Friday at 6 p.m.?',
+             'options': {'A': 'They will be sent to the laundry room in Maple Hall',
+                         'B': 'They will be taken to the front desk by the work crew',
+                         'C': 'They will be locked inside the basement until Monday',
+                         'D': 'They will be washed for free on the new card machines'},
+             'correct': 'B',
+             'explanation': 'O aviso final é direto sobre as roupas esquecidas na lavanderia: "please clear out any '
+                            'clothes left in the basement before Friday evening, or the crew will move them to the '
+                            'front desk." Cuidado com (A), que mistura o destino das roupas esquecidas com a '
+                            '<strong>alternativa de uso</strong> em Maple Hall durante o fim de semana.'}]},
+ {'id': 'mod2-cn3',
+  'title': 'Exercício C6: Intramural Soccer Sign-Ups (meta de 1 min)',
+  'level': 'A2–B1',
+  'objective': 'Ouça o anúncio e responda às 2 questões. A transcrição aparece depois que você responder a todas. '
+               'Tempo-alvo: 1 minuto.',
+  'passage_html': '<p><em>Narrator: Listen to an announcement at the campus recreation center.</em></p>\n'
+                  "<p><strong>Coordinator:</strong> Attention, everyone! If you're planning to play in the campus "
+                  'soccer league this fall, remember that registration closes this Friday at five p.m. Each team '
+                  "needs at least seven players on its roster. Now, if you want to play but don't have a full group "
+                  "of friends to form a team, don't worry. You can still sign up by yourself as an individual player "
+                  "on the rec center website, and we'll place you on a team that needs extra people. The game "
+                  'schedule comes out on Monday morning, and matches start next Wednesday evening.</p>',
+  'items': [{'num': 'C6.1',
+             'prompt': 'Detail. What should a student without a full team do to join the league?',
+             'options': {'A': 'Wait until the game schedule comes out on Monday morning',
+                         'B': 'Register as an individual player on the rec center website',
+                         'C': 'Show up at the soccer field on Wednesday evening at five',
+                         'D': 'Ask the coordinator to lower the seven-player requirement'},
+             'correct': 'B',
+             'explanation': 'Para quem não tem um grupo completo, a solução está no meio da fala: "You can still '
+                            "sign up by yourself as an individual player on the rec center website, and we'll place "
+                            'you on a team." A alternativa (A) traz um horário real do áudio, mas esperar até '
+                            'segunda faria você <strong>perder o prazo</strong> de inscrição na sexta-feira.'},
+            {'num': 'C6.2',
+             'prompt': 'Detail. When will the first soccer matches take place?',
+             'options': {'A': 'On Wednesday evening of next week',
+                         'B': "On Friday afternoon at five o'clock",
+                         'C': 'On Monday morning before classes',
+                         'D': 'On Saturday afternoon at the gym'},
+             'correct': 'A',
+             'explanation': 'Ao final do aviso, a coordenadora separa a divulgação da tabela e o início das '
+                            'partidas: "The game schedule comes out on Monday morning, and matches start next '
+                            'Wednesday evening." Repare que (B) e (C) são <strong>armadilhas de datas</strong> '
+                            'comuns no Listening, pois trocam o dia do jogo pelo fim das inscrições ou pela saída da '
+                            'tabela.'}]},
+ {'id': 'mod2-cn4',
+  'title': 'Exercício C7: Geology Field Trip (meta de 2 min)',
+  'level': 'B1–B2',
+  'objective': 'Ouça o anúncio e responda às 2 questões. A transcrição aparece depois que você responder a todas. '
+               'Tempo-alvo: 2 minutos.',
+  'passage_html': '<p><em>Narrator: Listen to an announcement in an introductory geology class.</em></p>\n'
+                  "<p><strong>Professor:</strong> Before we dive into today's lecture on sediment transport, let's "
+                  "go over the logistics for Saturday's field trip to the Miller River Basin. The department buses "
+                  'will leave from the North Parking Lot at 7:30 a.m. sharp, and we should be back on campus by '
+                  'four. The trip counts for fifteen percent of your course grade, so attendance is expected. That '
+                  'said, I know a few of you work weekend shifts off campus. If you have a documented work conflict, '
+                  "you need to email our teaching assistant, David, by Wednesday afternoon. He'll set you up with an "
+                  "alternative assignment analyzing river-flow datasets from last year's survey, which carries the "
+                  "exact same weight. Just don't wait until Friday to tell us, or we won't be able to excuse the "
+                  'absence.</p>',
+  'items': [{'num': 'C7.1',
+             'prompt': 'Detail. What must students with a weekend work conflict do by Wednesday?',
+             'options': {'A': 'Reserve a seat on the late bus leaving from the North Parking Lot',
+                         'B': 'Collect sediment samples from the river basin on their own time',
+                         'C': 'Contact the teaching assistant to request an alternative project',
+                         'D': "Submit last year's river-flow survey before the Friday lecture"},
+             'correct': 'C',
+             'explanation': 'Se você trabalha no fim de semana, o professor orienta a avisar o monitor até '
+                            'quarta-feira para receber a atividade substitutiva: "you need to email our teaching '
+                            "assistant, David, by Wednesday afternoon. He'll set you up with an alternative "
+                            'assignment." A opção (D) confunde o prazo de <strong>avisar a ausência</strong> com a '
+                            'entrega da análise de dados.'},
+            {'num': 'C7.2',
+             'prompt': 'Inference. What can be inferred about students who report a conflict on Friday?',
+             'options': {'A': 'They will have to drive their own cars to the Miller River Basin',
+                         'B': 'They will receive partial credit for the river-flow dataset paper',
+                         'C': 'They will be reassigned to a different geology lecture section',
+                         'D': 'They will not be allowed to replace the trip with the data project'},
+             'correct': 'D',
+             'explanation': 'O professor encerra deixando claro que avisos na sexta-feira não serão aceitos para '
+                            'abonar a falta: "Just don\'t wait until Friday to tell us, or we won\'t be able to '
+                            'excuse the absence." Daí você infere que quem deixar para sexta <strong>perderá o '
+                            'direito</strong> de trocar a saída de campo pelo projeto de dados, enquanto (B) inventa '
+                            'um crédito parcial que o áudio não menciona.'}]},
+ {'id': 'mod2-cn5',
+  'title': 'Exercício C8: Campus Flu Clinic (meta de 2 min)',
+  'level': 'B1–B2',
+  'objective': 'Ouça o anúncio e responda às 2 questões. A transcrição aparece depois que você responder a todas. '
+               'Tempo-alvo: 2 minutos.',
+  'passage_html': '<p><em>Narrator: Listen to an announcement from Student Health Services.</em></p>\n'
+                  '<p><strong>Speaker:</strong> Hi, everyone. Next Tuesday and Wednesday, Student Health Services '
+                  'will be hosting our annual flu shot clinic in the Student Union Ballroom, from nine a.m. to four '
+                  "p.m. both days. Notice that we've split the schedule this year to cut down on long lines: between "
+                  "nine and noon, anyone can walk in without an appointment, but from one to four p.m., we're only "
+                  'taking students who booked a time slot online through the health portal. The vaccine is free if '
+                  "you're covered by the university health plan, though you still need to bring your student ID "
+                  "card. If you're on a private family insurance plan instead, please upload a photo of your "
+                  "insurance card to the portal at least twenty-four hours before you come in, so our staff doesn't "
+                  'have to process paperwork at the door.</p>',
+  'items': [{'num': 'C8.1',
+             'prompt': 'Detail. Why did Student Health Services divide the clinic schedule into two parts?',
+             'options': {'A': 'To reduce waiting times at the Student Union Ballroom',
+                         'B': 'To separate undergraduate students from graduate staff',
+                         'C': 'To reserve morning hours for private insurance holders',
+                         'D': 'To give the nursing staff a three-hour break for lunch'},
+             'correct': 'A',
+             'explanation': 'O motivo de dividir o atendimento entre manhã livre e tarde agendada aparece logo no '
+                            'início: "we\'ve split the schedule this year to cut down on long lines." A expressão '
+                            '<em>cut down on long lines</em> equivale a <strong>reduzir o tempo de fila</strong>. Já '
+                            '(C) mistura a regra da manhã com a exigência do plano de saúde privado, que vem só no '
+                            'final.'},
+            {'num': 'C8.2',
+             'prompt': 'Connecting content. What must a student with private insurance do to get vaccinated at 2 '
+                       'p.m.?',
+             'options': {'A': 'Walk in without an appointment and pay the fee at the door',
+                         'B': 'Book a slot online and upload their insurance card in advance',
+                         'C': 'Switch to the university health plan before Tuesday morning',
+                         'D': 'Bring a paper copy of their family medical records at noon'},
+             'correct': 'B',
+             'explanation': 'Para esse caso, você junta duas condições do áudio. Às 14h é preciso agendar online, '
+                            'como diz o trecho "from one to four p.m., we\'re only taking students who booked a time '
+                            'slot online", e quem tem plano privado precisa enviar foto do cartão um dia antes. A '
+                            'opção (A) falha porque à tarde <strong>não há encaixe</strong> sem hora marcada.'}]},
+ {'id': 'mod2-cn6',
+  'title': 'Exercício C9: Midterm Review Session (meta de 2 min)',
+  'level': 'B1–B2',
+  'objective': 'Ouça o anúncio e responda às 2 questões. A transcrição aparece depois que você responder a todas. '
+               'Tempo-alvo: 2 minutos.',
+  'passage_html': '<p><em>Narrator: Listen to an announcement at the beginning of a political science '
+                  'lecture.</em></p>\n'
+                  '<p><strong>Professor:</strong> Good morning, everyone. Before we start, I need to make two '
+                  "adjustments to this week's schedule. I'm flying to Chicago on Thursday morning to present a paper "
+                  "at a conference, which means I won't be in my office for my usual Thursday afternoon hours. "
+                  "Instead, I'll hold extended office hours tomorrow — that's Wednesday — from two to five p.m. on "
+                  "Zoom; the link is already on the course page. As for Friday's class, we're still meeting in this "
+                  'room at our regular time, because my teaching assistant, Clara, will run a midterm review '
+                  "session. She'll walk you through two sample essay questions from past exams and show you how we "
+                  "use the grading rubric. Keep in mind, though, that she won't be reviewing individual study "
+                  'outlines during class, so save specific questions like that for my Zoom hours tomorrow.</p>',
+  'items': [{'num': 'C9.1',
+             'prompt': 'Detail. How can students meet with the professor this week?',
+             'options': {'A': 'By visiting her office on Thursday afternoon as usual',
+                         'B': "By staying in the lecture hall after Friday's review",
+                         'C': 'By booking a private meeting with Clara on Wednesday',
+                         'D': 'By joining her online office hours on Wednesday afternoon'},
+             'correct': 'D',
+             'explanation': 'Como a professora viajará na quinta, ela antecipou o atendimento para quarta à tarde, '
+                            'pela internet: "Instead, I\'ll hold extended office hours tomorrow, that\'s Wednesday, '
+                            'from two to five p.m. on Zoom." Um ponto de atenção é (A), que repete o <strong>horário '
+                            'habitual</strong> de quinta justamente quando ela avisa que não estará lá.'},
+            {'num': 'C9.2',
+             'prompt': "Detail. What will the teaching assistant do during Friday's class?",
+             'options': {'A': "Present the professor's conference paper on Chicago politics",
+                         'B': "Give feedback on each student's individual study outline",
+                         'C': 'Explain the grading rubric using past exam essay questions',
+                         'D': 'Administer the first part of the political science midterm'},
+             'correct': 'C',
+             'explanation': 'Na aula de sexta, a monitora Clara vai analisar questões antigas e mostrar como o '
+                            'critério de correção funciona: "She\'ll walk you through two sample essay questions '
+                            'from past exams and show you how we use the grading rubric." Cuidado com (B), que traz '
+                            'exatamente o que a professora diz que a monitora <strong>não fará</strong> em aula.'}]},
+ {'id': 'mod2-cn7',
+  'title': 'Exercício C10: Research Poster Symposium (meta de 2 min)',
+  'level': 'B2–C1',
+  'objective': 'Ouça o anúncio e responda às 2 questões. A transcrição aparece depois que você responder a todas. '
+               'Tempo-alvo: 2 minutos.',
+  'passage_html': '<p><em>Narrator: Listen to an announcement for students participating in the Undergraduate '
+                  'Research Symposium.</em></p>\n'
+                  '<p><strong>Speaker:</strong> Thanks for coming to this brief orientation, everyone. With the '
+                  'Undergraduate Research Symposium just two weeks away, I want to highlight a critical deadline '
+                  'regarding your posters. The university print shop is covering the cost of printing one '
+                  'large-format poster per presenter, provided you upload your final PDF to the symposium portal by '
+                  'this Friday at five p.m. Now, make sure your faculty advisor signs off on the layout before you '
+                  "upload it, because the print shop won't accept revised files once a job is in the queue. If you "
+                  "miss Friday's cutoff, you aren't disqualified from presenting, but you'll have to have your "
+                  'poster printed at a commercial shop at your own expense. Finally, on the day of the symposium, '
+                  "you're only required to stand by your board during your assigned one-hour judging window; the "
+                  "rest of the afternoon, you're free to view other students' work.</p>",
+  'items': [{'num': 'C10.1',
+             'prompt': "Function. Why does the speaker urge students to get their advisor's approval before "
+                       'uploading their file?',
+             'options': {'A': 'Because faculty advisors must upload the PDF files through their own accounts',
+                         'B': 'Because the print shop does not allow replacement files after submission',
+                         'C': "Because the symposium judges grade the advisor's comments on the layout",
+                         'D': 'Because commercial print shops charge extra for unapproved poster designs'},
+             'correct': 'B',
+             'explanation': 'O orientador precisa aprovar a versão antes do envio porque a gráfica universitária não '
+                            'aceita trocar o arquivo depois que ele entra na fila: "make sure your faculty advisor '
+                            "signs off on the layout before you upload it, because the print shop won't accept "
+                            'revised files once a job is in the queue." A alternativa (A) distorce o processo, pois '
+                            'quem envia o arquivo no portal é <strong>você mesmo</strong>, não o orientador.'},
+            {'num': 'C10.2',
+             'prompt': 'Detail. What happens if a presenter submits their poster file after Friday at 5 p.m.?',
+             'options': {'A': 'They are automatically removed from the symposium judging schedule',
+                         'B': 'They must give a short oral presentation instead of showing a poster',
+                         'C': 'They are assigned to the last one-hour judging window of the afternoon',
+                         'D': 'They can still participate if they pay to print the poster elsewhere'},
+             'correct': 'D',
+             'explanation': 'Perder o prazo de sexta não elimina você do simpósio, mas faz você perder a impressão '
+                            'gratuita e precisar pagar por fora: "If you miss Friday\'s cutoff, you aren\'t '
+                            "disqualified from presenting, but you'll have to have your poster printed at a "
+                            'commercial shop at your own expense." A opção (A) é uma <strong>armadilha de '
+                            "extremismo</strong>, que o próprio falante descarta ao dizer <em>you aren't "
+                            'disqualified</em>.'}]},
+ {'id': 'mod2-cn8',
+  'title': 'Exercício C11: Honors Thesis Deposit (meta de 2 min)',
+  'level': 'C1',
+  'objective': 'Ouça o anúncio e responda às 2 questões. A transcrição aparece depois que você responder a todas. '
+               'Tempo-alvo: 2 minutos.',
+  'passage_html': '<p><em>Narrator: Listen to an announcement from the director of the senior honors '
+                  'program.</em></p>\n'
+                  '<p><strong>Director:</strong> Congratulations on reaching the final stretch of your senior honors '
+                  "theses. As you prepare for next month's oral defenses, please take note of an important policy "
+                  'update from the university archives. Starting this term, the library has phased out physical '
+                  'bound copies altogether; your final deposit will consist solely of a PDF submitted to the '
+                  'institutional repository. By default, every thesis uploaded to that repository becomes publicly '
+                  'searchable worldwide as soon as degrees are conferred in June. For most of you, having your work '
+                  'openly accessible is a plus. However, if your thesis incorporates unpublished data from your '
+                  "advisor's lab that is slated for submission to a peer-reviewed journal, premature public release "
+                  'could jeopardize that publication, since some journals consider an open thesis a prior '
+                  'publication. In that case, you and your advisor must file an embargo form at the time of upload, '
+                  'which restricts public access for up to two years.</p>',
+  'items': [{'num': 'C11.1',
+             'prompt': "Detail. How has the library's thesis submission policy changed this term?",
+             'options': {'A': 'Students must now schedule their oral defense before June graduation',
+                         'B': 'The institutional repository now restricts all theses for two years',
+                         'C': 'Printed bound volumes have been replaced by a digital-only deposit',
+                         'D': 'Faculty advisors are no longer required to sign the final upload form'},
+             'correct': 'C',
+             'explanation': 'A mudança deste semestre é o fim das cópias impressas encadernadas, substituídas pelo '
+                            'envio apenas em PDF: "Starting this term, the library has phased out physical bound '
+                            'copies altogether; your final deposit will consist solely of a PDF." O phrasal verb '
+                            '<em>phase out</em> quer dizer extinguir gradualmente. Já (B) generaliza a restrição de '
+                            'dois anos, que vale só para quem <strong>pede o embargo</strong>.'},
+            {'num': 'C11.2',
+             'prompt': 'Function. Why does the director mention peer-reviewed journals?',
+             'options': {'A': 'To explain why some students may need to delay public access to their thesis',
+                         'B': 'To encourage seniors to publish their theses before degrees are conferred',
+                         'C': 'To clarify that articles already published in journals cannot be archived',
+                         'D': 'To show that the institutional repository is ranked alongside top journals'},
+             'correct': 'A',
+             'explanation': 'O diretor cita os periódicos científicos para explicar em que situação vale pedir o '
+                            'embargo e adiar o acesso público à tese: "premature public release could jeopardize '
+                            'that publication, since some journals consider an open thesis a prior publication." A '
+                            'opção (B) inverte a lógica, pois o alerta serve para <strong>proteger dados '
+                            'inéditos</strong> que ainda serão enviados a uma revista.'}]}]
+MOD2_ACTION_DRILLS_C = MOD2_ACTION_DRILLS_C + MOD2_NOVOS_C
+MOD2_NOVOS_D = [{'id': 'mod2-dn2',
+  'title': 'Exercício D4: zoologia (meta de 3 min)',
+  'level': 'A2–B1',
+  'objective': 'Ouça a palestra e responda às 4 questões. A transcrição aparece depois que você responder a todas. '
+               'Tempo-alvo: 3 minutos.',
+  'passage_html': '<p><em>Narrator: Listen to part of a talk in an introductory zoology class.</em></p>\n'
+                  "<p><strong>Professor:</strong> All right, let's continue our unit on marine mammals. Last time we "
+                  'talked about whales, which spend their whole lives in deep water. Today, I want to look at a much '
+                  'smaller animal that lives right along the rocky coast: the sea otter.</p>\n'
+                  '<p>Unlike seals, which come onto the beach to rest, sea otters do almost everything in the water. '
+                  'They hunt there, they eat there, and, believe it or not, they even sleep floating on their backs. '
+                  'Now, that creates a pretty obvious problem. The ocean is always moving. If you fall asleep '
+                  'floating on the surface, the waves and currents can easily push you out into the open sea, away '
+                  'from your food and your group.</p>\n'
+                  '<p>So how do sea otters solve this? Well, they use a clever trick. Before going to sleep, an '
+                  'otter swims into a bed of giant kelp, which is a tall kind of seaweed anchored to the ocean '
+                  'floor. The otter wraps a few long strands of kelp around its body like a blanket. That keeps it '
+                  'in one place while it naps.</p>\n'
+                  "<p>And if there's no kelp nearby, otters sometimes hold paws with another otter so they don't "
+                  "drift apart. It looks cute to us, of course, but for the otters, it's really a practical survival "
+                  'habit.</p>',
+  'items': [{'num': 'D4.1',
+             'prompt': 'Gist-content. What is the main topic of the talk?',
+             'options': {'A': 'How sea otters hunt for food along rocky coastlines',
+                         'B': 'How sea otters avoid drifting away while sleeping in the ocean',
+                         'C': 'Why giant kelp forests are disappearing from coastal waters',
+                         'D': 'Why sea otters spend more time on beaches than seals do'},
+             'correct': 'B',
+             'explanation': 'O foco da aula é mostrar como as lontras-marinhas <strong>dormem na água</strong> sem '
+                            'serem levadas pela correnteza: "If you fall asleep floating on the surface, the waves '
+                            'and currents can easily push you out... So how do sea otters solve this?" A opção (A) '
+                            'pega uma palavra isolada do começo, mas a caça não é desenvolvida na explicação.'},
+            {'num': 'D4.2',
+             'prompt': 'Function. Why does the professor compare sea otters to seals?',
+             'options': {'A': 'To show that both animals eat the same types of fish',
+                         'B': 'To explain why seals are better swimmers in deep water',
+                         'C': 'To argue that sea otters evolved from coastal seals',
+                         'D': 'To point out that sea otters rest in the water rather than on land'},
+             'correct': 'D',
+             'explanation': 'A comparação serve para mostrar a você que as lontras <strong>descansam na '
+                            'água</strong>, ao contrário das focas que vão para a areia: "Unlike seals, which come '
+                            'onto the beach to rest, sea otters do almost everything in the water." A opção (B) '
+                            'mistura as focas com as baleias citadas na frase anterior.'},
+            {'num': 'D4.3',
+             'prompt': 'Detail. How does giant kelp help a sleeping sea otter?',
+             'options': {'A': 'It acts like an anchor because it is attached to the ocean floor',
+                         'B': 'It hides the otter from sharks swimming near the surface',
+                         'C': 'It provides a snack if the otter wakes up hungry at night',
+                         'D': 'It keeps the water around the otter several degrees warmer'},
+             'correct': 'A',
+             'explanation': 'Como a alga gigante é presa ao fundo do mar, ela funciona como uma <strong>âncora '
+                            'natural</strong> quando a lontra se enrola nela: "a tall kind of seaweed anchored to '
+                            'the ocean floor... That keeps it in one place while it naps." Repare que (D) é uma '
+                            'armadilha comum por causa da palavra <em>blanket</em>, usada só para ilustrar o gesto '
+                            'de se enrolar.'},
+            {'num': 'D4.4',
+             'prompt': "Attitude. What is the professor's attitude toward otters holding paws?",
+             'options': {'A': 'She doubts that this behavior actually happens in the wild',
+                         'B': 'She worries that tourists disturb the otters to take photos of it',
+                         'C': 'She views it as a useful behavior rather than just a charming habit',
+                         'D': 'She thinks scientists have studied this behavior too much'},
+             'correct': 'C',
+             'explanation': 'A professora comenta que o gesto parece fofo, mas ressalta seu <strong>valor '
+                            'prático</strong> para a sobrevivência: "It looks cute to us, of course, but for the '
+                            'otters, it\'s really a practical survival habit." A alternativa (A) contradiz o tom '
+                            'seguro com que ela descreve esse comportamento.'}]},
+ {'id': 'mod2-dn3',
+  'title': 'Exercício D5: história da arquitetura (meta de 4 min)',
+  'level': 'B1–B2',
+  'objective': 'Ouça a palestra e responda às 4 questões. A transcrição aparece depois que você responder a todas. '
+               'Tempo-alvo: 4 minutos.',
+  'passage_html': '<p><em>Narrator: Listen to part of a talk in an architectural history class.</em></p>\n'
+                  '<p><strong>Professor:</strong> When we think about keeping buildings cool in desert climates, we '
+                  'usually picture modern air-conditioning units humming away on every wall. But people have lived '
+                  'comfortably in hot, dry regions for thousands of years without electricity. A great example of '
+                  'how they did it is the windcatcher, or badgir, a tower structure perfected in ancient '
+                  'Persia.</p>\n'
+                  "<p>If you look at the skyline of an old desert city like Yazd, in modern-day Iran, you'll see "
+                  'dozens of these rectangular towers rising above the flat roofs. At the top of each tower, there '
+                  'are vertical openings facing the prevailing wind. Even a light breeze high above the street gets '
+                  'caught by these openings and funneled straight down into the living spaces below.</p>\n'
+                  "<p>Now, what happens when there's no wind at all? Well, that's where the design gets really "
+                  'clever. Without a breeze, the tower works like a chimney. Engineers call this a solar chimney. '
+                  'The sun heats the south side of the tower, warming the air inside it. Because warm air rises, it '
+                  'flows up and out through the top of the tower. That pulls cooler air from shaded courtyards or '
+                  'underground water channels into the rooms downstairs.</p>\n'
+                  '<p>Today, contemporary architects are taking a fresh look at windcatchers. By combining these '
+                  'traditional towers with modern sensors and dampers, new campus buildings and offices can cut '
+                  'their cooling energy use dramatically. Sometimes the smartest technology is centuries old.</p>',
+  'items': [{'num': 'D5.1',
+             'prompt': 'Gist-content. What is the talk mainly about?',
+             'options': {'A': 'How a traditional architectural feature cools buildings without electricity',
+                         'B': 'Why ancient Persian cities were built near underground rivers',
+                         'C': 'How modern air conditioning replaced traditional desert housing',
+                         'D': 'Why tall rectangular towers were used as watchtowers in Yazd'},
+             'correct': 'A',
+             'explanation': 'A palestra inteira explica como os captadores de vento persas fazem o '
+                            '<strong>resfriamento passivo</strong> de construções sem usar eletricidade: "people '
+                            'have lived comfortably in hot, dry regions for thousands of years without electricity. '
+                            'A great example of how they did it is the windcatcher." A opção (B) toma um detalhe '
+                            'secundário do terceiro parágrafo como se fosse o tema principal.'},
+            {'num': 'D5.2',
+             'prompt': 'Detail. How does a windcatcher work on a day with no breeze?',
+             'options': {'A': 'Residents pour water down the inside of the tower to cool the bricks',
+                         'B': 'Large fabric fans inside the tower push warm air down to the floor',
+                         'C': 'Rising warm air exits the tower and draws cooler air into the house',
+                         'D': 'Heavy wooden shutters close automatically to trap cold night air inside'},
+             'correct': 'C',
+             'explanation': 'Sem vento, o calor do sol faz o <strong>ar quente subir</strong> e sair pelo topo, '
+                            'puxando ar fresco para dentro: "Because warm air rises, it flows up and out through the '
+                            'top of the tower. That pulls cooler air from shaded courtyards or underground water '
+                            'channels into the rooms downstairs." Cuidado com (A), que distorce a menção aos canais '
+                            'subterrâneos de água.'},
+            {'num': 'D5.3',
+             'prompt': 'Organization. Why does the professor mention contemporary architects at the end of the talk?',
+             'options': {'A': 'To criticize modern builders for ignoring local building codes',
+                         'B': 'To show that this ancient design is still relevant and adaptable today',
+                         'C': 'To explain why historic towers in Yazd need urgent restoration',
+                         'D': 'To argue that modern sensors are too expensive for most offices'},
+             'correct': 'B',
+             'explanation': 'Ao mostrar o uso das torres em prédios novos com sensores modernos, o professor prova '
+                            'que a técnica antiga continua <strong>atual e aplicável</strong>: "contemporary '
+                            'architects are taking a fresh look at windcatchers... new campus buildings and offices '
+                            'can cut their cooling energy use dramatically." A opção (D) inventa uma crítica de '
+                            'custo que não está no áudio.'},
+            {'num': 'D5.4',
+             'prompt': 'Meaning in context. Why does the professor say "Sometimes the smartest technology is '
+                       'centuries old"?',
+             'options': {'A': 'To suggest that students should study ancient history instead of engineering',
+                         'B': 'To claim that ancient builders had secret tools that have been lost',
+                         'C': 'To complain that modern appliances break down too easily',
+                         'D': 'To emphasize that historical solutions can solve modern environmental problems'},
+             'correct': 'D',
+             'explanation': 'A frase final resume a ideia de que <strong>soluções históricas</strong> inteligentes '
+                            'podem resolver desafios atuais de economia de energia: "new campus buildings and '
+                            'offices can cut their cooling energy use dramatically. Sometimes the smartest '
+                            'technology is centuries old." A opção (B) trata o elogio como se houvesse um segredo '
+                            'perdido, mas o professor acabou de explicar toda a física da torre.'}]},
+ {'id': 'mod2-dn4',
+  'title': 'Exercício D6: psicologia cognitiva (meta de 4 min)',
+  'level': 'B1–B2',
+  'objective': 'Ouça a palestra e responda às 4 questões. A transcrição aparece depois que você responder a todas. '
+               'Tempo-alvo: 4 minutos.',
+  'passage_html': '<p><em>Narrator: Listen to part of a talk in a cognitive psychology class.</em></p>\n'
+                  "<p><strong>Professor:</strong> Have you ever noticed that when you're studying for an exam, the "
+                  "one practice problem you couldn't finish keeps popping into your head at dinner, while the ten "
+                  "problems you solved easily just fade away? There's actually a name for that: the Zeigarnik "
+                  'effect.</p>\n'
+                  '<p>It goes back to the 1920s. A psychologist named Bluma Zeigarnik was sitting in a busy Berlin '
+                  'restaurant with her professor and some classmates. She noticed something odd about the waiters. A '
+                  'waiter could remember a long, complicated order for a big table without writing anything down. '
+                  'But the moment the food was served and the bill was paid, if you asked that same waiter what the '
+                  "table had ordered, he had no idea. He'd wiped it clean from his memory.</p>\n"
+                  '<p>Curious, Zeigarnik went back to her lab and gave volunteers a series of simple tasks, like '
+                  "solving puzzles or stringing beads. Here's the catch: she interrupted them halfway through some "
+                  'of the tasks and let them finish the others. Later, when she asked them to list all the tasks '
+                  "they'd worked on, people were about twice as likely to remember the ones they hadn't "
+                  'finished.</p>\n'
+                  '<p>Her explanation was that starting a task creates a kind of mental tension, almost like an open '
+                  'tab on your computer browser. That tension keeps the information active and easy to recall until '
+                  'the job is done. Once you finish, the tab closes, and your brain lets go.</p>',
+  'items': [{'num': 'D6.1',
+             'prompt': 'Gist-content. What is the main idea of the talk?',
+             'options': {'A': 'Waiters have better short-term memory than most university students',
+                         'B': 'Interruptions during study sessions permanently damage long-term recall',
+                         'C': 'Writing down tasks is less effective than memorizing them mentally',
+                         'D': 'People tend to remember unfinished tasks better than completed ones'},
+             'correct': 'D',
+             'explanation': 'A aula gira em torno do <strong>efeito Zeigarnik</strong>, segundo o qual lembramos '
+                            'melhor de tarefas inacabadas do que das já concluídas: "people were about twice as '
+                            'likely to remember the ones they hadn\'t finished." A alternativa (A) foca apenas na '
+                            'história dos garçons, que serve para mostrar como a psicóloga teve a ideia inicial.'},
+            {'num': 'D6.2',
+             'prompt': 'Detail. What did Bluma Zeigarnik observe about the waiters in the Berlin restaurant?',
+             'options': {'A': 'They wrote down every order carefully to avoid making mistakes',
+                         'B': 'They forgot customer orders right after the meal was paid for',
+                         'C': 'They remembered regular customers better than first-time visitors',
+                         'D': 'They made more mistakes when the café was quiet than when it was busy'},
+             'correct': 'B',
+             'explanation': 'Assim que a conta era paga e a tarefa acabava, os garçons <strong>esqueciam o '
+                            'pedido</strong>: "the moment the food was served and the bill was paid, if you asked '
+                            'that same waiter what the table had ordered, he had no idea." A opção (A) diz o '
+                            'contrário do áudio, que afirma <em>without writing anything down</em>.'},
+            {'num': 'D6.3',
+             'prompt': 'Function. Why does the professor compare an unfinished task to an open browser tab?',
+             'options': {'A': 'To warn students against using laptops while studying for exams',
+                         'B': 'To explain how computer scientists modeled early memory software',
+                         'C': 'To illustrate how the brain keeps incomplete tasks active in memory',
+                         'D': 'To show that digital multitasking reduces attention span in class'},
+             'correct': 'C',
+             'explanation': 'A imagem da aba aberta no navegador ajuda você a visualizar a <strong>tensão '
+                            'mental</strong> que mantém a tarefa ativa na memória até ser concluída: "almost like an '
+                            'open tab on your computer browser. That tension keeps the information active and easy '
+                            'to recall until the job is done." A opção (D) traz um tema comum sobre tecnologia, mas '
+                            'que não foi discutido na aula.'},
+            {'num': 'D6.4',
+             'prompt': "Detail. In Zeigarnik's lab experiment, how did she test her idea?",
+             'options': {'A': 'She stopped participants during some tasks and allowed them to finish others',
+                         'B': 'She asked professional waiters to solve puzzles in a noisy restaurant',
+                         'C': 'She timed how fast volunteers could memorize a list of restaurant menu items',
+                         'D': 'She rewarded participants who remembered all of their completed tasks'},
+             'correct': 'A',
+             'explanation': 'No laboratório, ela <strong>interrompeu algumas tarefas</strong> na metade e deixou que '
+                            'os voluntários terminassem outras: "she interrupted them halfway through some of the '
+                            'tasks and let them finish the others." Repare que (B) mistura a observação inicial no '
+                            'restaurante de Berlim com o experimento feito depois no laboratório.'}]},
+ {'id': 'mod2-dn5',
+  'title': 'Exercício D7: economia comportamental (meta de 4 min)',
+  'level': 'B2–C1',
+  'objective': 'Ouça a palestra e responda às 4 questões. A transcrição aparece depois que você responder a todas. '
+               'Tempo-alvo: 4 minutos.',
+  'passage_html': '<p><em>Narrator: Listen to part of a talk in a behavioral economics class.</em></p>\n'
+                  '<p><strong>Professor:</strong> In standard economic theory, rational decision-makers look only at '
+                  "future costs and benefits. Whatever money, time, or effort you've already spent and can't recover "
+                  "is called a sunk cost, and logically, it shouldn't influence what you do next. Yet in real life, "
+                  'we let sunk costs drive our choices all the time.</p>\n'
+                  '<p>Picture this: you buy a nonrefundable twenty-dollar ticket to an outdoor concert. The evening '
+                  "of the show, a freezing rainstorm rolls in. You're miserable just thinking about going. If the "
+                  "ticket had been free, you'd stay home on the couch without a second thought. But because you paid "
+                  'twenty dollars, you drag yourself out into the rain so you don\'t "waste" the ticket. See the '
+                  "flaw? The twenty dollars is gone either way. By going, you haven't saved your money; you've just "
+                  'traded a dry evening for a wet, miserable one.</p>\n'
+                  "<p>And it's not just individuals who fall into this trap. Governments and corporations do too. In "
+                  'fact, economists sometimes call this the Concorde fallacy, after the supersonic passenger jet '
+                  'developed jointly by Britain and France. Long before the plane entered service, both governments '
+                  'realized it would never make back its massive development costs. Walking away would have saved '
+                  'billions. Instead, neither side wanted to admit that the money already spent was lost, so they '
+                  'kept pouring funds into the project for years.</p>\n'
+                  '<p>Why is it so hard to walk away? Partly because of loss aversion: we hate admitting a loss more '
+                  'than we enjoy an equivalent gain. Once we recognize that bias, though, we can ask a simpler '
+                  'question: if I were starting from scratch today, would I still invest in this?</p>',
+  'items': [{'num': 'D7.1',
+             'prompt': 'Gist-content. What is the talk mainly about?',
+             'options': {'A': 'How airline companies calculate ticket prices for international flights',
+                         'B': 'Why people and organizations continue investing in losing endeavors',
+                         'C': 'Why outdoor events should always offer refundable tickets to buyers',
+                         'D': 'How Britain and France competed to build the fastest passenger aircraft'},
+             'correct': 'B',
+             'explanation': 'A palestra analisa a falácia dos <strong>custos irrecuperáveis</strong>, mostrando por '
+                            'que pessoas e governos insistem em escolhas ou projetos que já deram prejuízo: '
+                            '"Whatever money, time, or effort you\'ve already spent and can\'t recover is called a '
+                            'sunk cost... we let sunk costs drive our choices all the time." A opção (D) foca apenas '
+                            'no exemplo do avião Concorde e ainda troca cooperação, indicada em <em>developed '
+                            'jointly</em>, por competição.'},
+            {'num': 'D7.2',
+             'prompt': 'Organization. Why does the professor discuss the concert ticket scenario?',
+             'options': {'A': 'To show how an everyday decision violates rational economic logic',
+                         'B': 'To argue that concert venues charge unfair prices for admission',
+                         'C': 'To contrast weather forecasts with economic forecasting models',
+                         'D': 'To prove that consumers care more about comfort than about money'},
+             'correct': 'A',
+             'explanation': 'O exemplo do ingresso mostra como uma decisão comum do dia a dia contraria a '
+                            '<strong>lógica econômica</strong> racional anunciada na abertura: "See the flaw? The '
+                            'twenty dollars is gone either way." A opção (D) inverte a situação, pois a pessoa abre '
+                            'mão do conforto justamente por apego ao dinheiro já gasto.'},
+            {'num': 'D7.3',
+             'prompt': 'Detail. Why is the phenomenon also known as the Concorde fallacy?',
+             'options': {'A': 'The jet was canceled before its first flight despite public support',
+                         'B': 'Passengers refused to fly on the plane because tickets were too costly',
+                         'C': 'Engineers hid the true cost of the aircraft from government officials',
+                         'D': 'Two governments kept funding the jet even after knowing it would lose money'},
+             'correct': 'D',
+             'explanation': 'O nome vem do fato de Reino Unido e França terem continuado a <strong>financiar o '
+                            'jato</strong> mesmo sabendo que ele nunca daria retorno: "both governments realized it '
+                            'would never make back its massive development costs... so they kept pouring funds into '
+                            'the project for years." A opção (A) erra porque o projeto não foi cancelado antes de '
+                            'entrar em serviço.'},
+            {'num': 'D7.4',
+             'prompt': 'Detail. According to the professor, what should a decision-maker do when facing a sunk cost?',
+             'options': {'A': 'Try to recover the initial investment by doubling the project budget',
+                         'B': 'Share the financial responsibility equally with another partner',
+                         'C': 'Evaluate the choice as if starting fresh, ignoring past spending',
+                         'D': 'Avoid starting any long-term project that carries financial risk'},
+             'correct': 'C',
+             'explanation': 'No fechamento, o professor sugere que você avalie a decisão <strong>partindo do '
+                            'zero</strong>, sem levar em conta o que já foi gasto: "if I were starting from scratch '
+                            'today, would I still invest in this?" A opção (B) é uma armadilha porque lembra a '
+                            'parceria entre dois países no caso do Concorde, que justamente não impediu o erro.'}]},
+ {'id': 'mod2-dn6',
+  'title': 'Exercício D8: linguística histórica (meta de 4 min)',
+  'level': 'C1',
+  'objective': 'Ouça a palestra e responda às 4 questões. A transcrição aparece depois que você responder a todas. '
+               'Tempo-alvo: 4 minutos.',
+  'passage_html': '<p><em>Narrator: Listen to part of a talk in a historical linguistics class.</em></p>\n'
+                  '<p><strong>Professor:</strong> We often treat dictionary definitions as if they were carved in '
+                  'stone, and people love to complain when a word starts being used in a new way. But to a linguist, '
+                  "semantic shift—the gradual change in a word's meaning over time—isn't a corruption of language; "
+                  "it's one of its most predictable features. Today I want to focus on two opposite directions this "
+                  "shift can take: amelioration, where a word's meaning becomes more positive, and pejoration, where "
+                  'it becomes more negative.</p>\n'
+                  '<p>Take the ordinary English word "nice." If someone calls your essay "nice" today, it\'s a mild '
+                  'compliment. But if we trace "nice" back to its Latin root, nescius, it meant "ignorant" or '
+                  '"unaware." When it entered Middle English through French, it meant "foolish" or "silly." Over the '
+                  'next few centuries, though, its meaning softened: from foolish to shy, then to fussy or '
+                  'fastidious, then to precise and delicate, and finally to pleasant and agreeable. That upward '
+                  'climb from "ignorant" to "pleasant" is a classic case of amelioration.</p>\n'
+                  '<p>Now look at the reverse trajectory: pejoration. Consider the word "silly." In Old English, its '
+                  'ancestor, saelig, meant "blessed" or "happy." Over time, because blessed, innocent people were '
+                  'seen as harmless and defenseless, the word shifted to mean "deserving of pity," then "weak," and '
+                  'eventually "foolish" or "lacking common sense." So while "nice" climbed the social ladder, '
+                  '"silly" slid down it.</p>\n'
+                  "<p>Notice what drives both shifts. Words don't change meaning in a vacuum; they shift because "
+                  'speakers stretch them in everyday conversation—through irony, politeness, or exaggeration—until '
+                  'the new implication replaces the old core meaning entirely.</p>',
+  'items': [{'num': 'D8.1',
+             'prompt': 'Gist-content. What is the main purpose of the lecture?',
+             'options': {'A': 'To argue that modern dictionaries should preserve original Latin meanings',
+                         'B': 'To explain how French grammar reshaped Middle English sentence structure',
+                         'C': 'To illustrate how words can shift toward more positive or negative meanings',
+                         'D': 'To show why formal academic writing avoids informal adjectives like "nice"'},
+             'correct': 'C',
+             'explanation': 'O objetivo da aula é explicar e exemplificar duas direções da <strong>mudança '
+                            'semântica</strong>, para sentidos mais positivos ou mais negativos: "amelioration, '
+                            "where a word's meaning becomes more positive, and pejoration, where it becomes more "
+                            'negative." A opção (A) vai contra a visão da professora logo no primeiro parágrafo.'},
+            {'num': 'D8.2',
+             'prompt': 'Detail. What did the word "nice" originally mean in its Latin root?',
+             'options': {'A': 'Blessed or fortunate',
+                         'B': 'Precise and delicate',
+                         'C': 'Pleasant and agreeable',
+                         'D': 'Ignorant or unaware'},
+             'correct': 'D',
+             'explanation': 'Na raiz latina <em>nescius</em>, a palavra significava <strong>ignorante ou '
+                            'desatento</strong>: "if we trace \'nice\' back to its Latin root, nescius, it meant '
+                            '\'ignorant\' or \'unaware\'." Cuidado com (A), que traz o sentido antigo de '
+                            '<em>silly</em>, enquanto (B) e (C) mostram etapas posteriores da evolução de '
+                            '<em>nice</em>.'},
+            {'num': 'D8.3',
+             'prompt': 'Detail. How did the word "silly" change over time?',
+             'options': {'A': 'It moved from meaning blessed and happy to meaning foolish',
+                         'B': 'It was borrowed from French to replace an older English word',
+                         'C': 'It shifted from a strong insult to a polite compliment',
+                         'D': 'It kept its original Old English meaning until the twentieth century'},
+             'correct': 'A',
+             'explanation': 'A palavra <em>silly</em> sofreu <strong>pejoração</strong>, passando de abençoado ou '
+                            'feliz no inglês antigo para tolo: "In Old English, its ancestor, saelig, meant '
+                            '\'blessed\' or \'happy\'... and eventually \'foolish\' or \'lacking common sense\'." A '
+                            'alternativa (C) descreve o caminho inverso, que foi o da palavra <em>nice</em>.'},
+            {'num': 'D8.4',
+             'prompt': 'Idiom in context. What does the professor mean by saying that words do not change meaning '
+                       '"in a vacuum"?',
+             'options': {'A': 'Written texts preserve older meanings longer than spoken dialects do',
+                         'B': 'Shifts in meaning are driven by how people actually use words socially',
+                         'C': 'Linguists cannot study dead languages without historical records',
+                         'D': 'Scientific terms change meaning less often than everyday words do'},
+             'correct': 'B',
+             'explanation': 'Dizer que as palavras não mudam <em>in a vacuum</em> significa que a mudança não '
+                            'acontece isolada, mas sim pelo <strong>uso social</strong> nas conversas do dia a dia: '
+                            '"they shift because speakers stretch them in everyday conversation." A opção (D) faz '
+                            'uma associação literal com a palavra <em>vacuum</em> como termo da física, sem relação '
+                            'com o contexto.'}]}]
+MOD2_ACTION_DRILLS_D = MOD2_ACTION_DRILLS_D + MOD2_NOVOS_D
+# <<< FIM DOS EXERCÍCIOS NOVOS DO M1 E DO M2

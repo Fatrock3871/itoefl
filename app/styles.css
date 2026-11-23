@@ -1438,7 +1438,7 @@ main{max-width:1320px; margin:0 auto; padding:0 30px 120px; min-width:0;}
 .qconfirm:not(:disabled):hover{transform:translate(-2px,-2px); box-shadow:6px 6px 0 var(--edge);}
 
 .quiz-drill{margin:20px 0 34px;}
-/* rodada sorteada (M5 e M6): só os exercícios da rodada aparecem */
+/* rodada sorteada (M1, M2, M5 e M6): só os exercícios da rodada aparecem */
 .drill-pick[hidden]{display:none !important;}
 .drill-round-bar{
   display:flex; flex-wrap:wrap; align-items:center; gap:10px 16px; margin:8px 0 18px;
@@ -1462,6 +1462,15 @@ main{max-width:1320px; margin:0 auto; padding:0 30px 120px; min-width:0;}
   box-shadow:2px 2px 0 var(--edge);
 }
 .quiz-passage-speak:hover{background:var(--accent-fill-hover);}
+/* Listening (M2): ouvir antes de ler. Sem voz no navegador, o botão fica
+   desabilitado ("Áudio em breve") e a transcrição segue escondida */
+.speak-btn.speak-soon, .speak-btn.speak-soon:hover{background:var(--paper); color:var(--ink-2); cursor:not-allowed; box-shadow:none;}
+.quiz-passage .quiz-transcript-note{font-size:13.5px !important; color:var(--ink-2); font-style:italic;}
+.qprompt-hint{font-style:italic; color:var(--ink-2); margin-right:6px;}
+/* conta grátis: a amostra dentro de uma rodada fica sempre à vista, sem a
+   barra de sortear (os outros exercícios do grupo estão trancados) */
+body.acc-free .drill-pick[data-fs-keep][hidden]{display:block !important;}
+body.acc-free .drill-round[data-fs-pin] .drill-round-bar{display:none !important;}
 .qprompt-text{margin-right:2px;}
 .quiz-objective{font-size:13.5px; color:var(--ink-2); margin:0 0 14px !important; font-style:italic;}
 /* nível CEFR do Action Drill (ver "level" em drills_data.py) + destaque de

@@ -110,7 +110,15 @@ _snapshots/               Cópias com timestamp antes de mudanças estruturais
   distratores[4] com "correta" na posição da certa). O build para se sair de
   180 itens, 30 por nível, ou se tiver mais de uma correta.
 - **Tipo e tempo de cada Parte** → `app/partes.json`.
-- **Drills de Reading/Listening** → `app/drills_data.py`.
+- **Drills de Reading/Listening** → `app/drills_data.py`. Os 41 exercícios
+  novos de 2026-11-16 ficam no bloco gerado do fim do arquivo
+  (`MOD1_NOVOS_B`, `MOD1_NOVOS_C`, `MOD2_NOVOS_A` a `MOD2_NOVOS_D`), somados
+  às listas `MOD1_ACTION_DRILLS_B/C` e `MOD2_ACTION_DRILLS_A..D`. Pode
+  editar ali mesmo. Os grupos B e C do M1 e A a D do M2 são rodadas: o
+  build falha se a contagem mudar sem atualizar `ROUNDS` em
+  `build_pipeline.py` (exercícios, questões, por rodada; hoje M1 B 15, 40,
+  3; M1 C 9, 45, 2; M2 A 5, 36, 2; B 11, 22, 3; C 11, 22, 3; D 8, 32, 2).
+  O id começa com `mod1-` ou `mod2-`, que é como os pontos fracos sabem a área.
 - **Exercícios do M5 (Registro) e do M6 (Vocabulário)** → `MOD5_DRILLS` e
   `MOD6_DRILLS` em `app/drills_data.py` (2026-11-07). No `.md` o lugar é o
   parágrafo `%%%M5_DRILLS%%%` ou `%%%M6_DRILLS%%%`. O build falha se a
@@ -209,7 +217,20 @@ Listen and Choose a Response vai dentro dela (`.exam-pre`, `render_exam.py`)
 para acompanhar a questão. M5 e M6 mostram 4 exercícios por rodada
 (`render_drill_round`, `ToeflSorteio.pickRound`): primeiro os que o aluno
 ainda não fez nesta volta e, entre eles, os menos feitos; nenhum volta antes
-de o grupo inteiro ter sido feito. "Sortear outra rodada" troca os 4.
+de o grupo inteiro ter sido feito. "Sortear outra rodada" troca a rodada.
+Desde 2026-11-16 os grupos B e C do M1 e A a D do M2 também são rodadas,
+com 2 ou 3 por vez (`ROUNDS`, vira `data-round`), e o feito vai na mesma
+`toefl_sorteio_v1`. Na conta grátis, o `mod2-a` fica sempre à vista dentro
+da rodada dele e os outros do grupo trancam (`data-fs-keep`).
+
+**Listening: ouvir antes de ler (2026-11-16):** todo exercício do M2 sai com
+`hide_transcript` (`render_quiz.py`, `data-listen-hide`). A transcrição só
+aparece com todas as questões do exercício respondidas, e a fala de cada
+item do Grupo A só com aquele item respondido; "Refazer" esconde de novo.
+O som é a voz do navegador (`speakText`, o mesmo de antes): não há arquivo de
+áudio no M2. Sem voz no navegador, o botão fica desabilitado com "Áudio em
+breve". A lista do que precisa de áudio gravado está em
+`itoefl-gerencia/m1m2/AUDIOS.md`.
 Cronômetro, gravador e
 export/import ficam no shell (`build.py`) e valem para todas as abas.
 - Depois de qualquer edição de fonte, rodar as duas builds e conferir
@@ -286,8 +307,8 @@ Implicações que o conteúdo deve respeitar:
 | ID | Módulo | Estado |
 |---|---|---|
 | M0 | Embarque & Diagnóstico | ✅ formato 2026, 10 questões, calculadora de score, treino por nível |
-| M1 | Reading | ✅ formato 2026: 8 textos de Complete the Words de digitar (80 lacunas) + 60 itens de múltipla escolha (3 passagens acadêmicas de até 220 palavras, 5 perguntas cada) |
-| M2 | Listening | ✅ formato 2026, 4 drills |
+| M1 | Reading | ✅ formato 2026: 8 textos de Complete the Words de digitar (80 lacunas) + Grupo A2 (5 textos de lacuna com alternativas) + 15 textos de Read in Daily Life (40 questões) e 9 passagens acadêmicas (45 questões), em rodadas sorteadas |
+| M2 | Listening | ✅ formato 2026: 5 conjuntos de Choose a Response (36 falas), 11 conversas, 11 anúncios e 8 palestras, em rodadas; transcrição só depois da resposta |
 | M3 | Speaking | ✅ formato 2026: 5 cenários de Listen and Repeat e 4 entrevistas, com áudio |
 | M4 | Writing | ✅ formato 2026: 30 itens de Build a Sentence no molde da prova + 12 caixas de escrita |
 | M5 | Registro & Sofisticação Retórica | ✅ reescrito para 2026 — camada transversal de elevação de banda (Atlas Linguístico em bandas CEFR + 10 marcadores + aplicação por task); 14 exercícios interativos (73 questões), 4 por rodada |
