@@ -43,16 +43,8 @@
   --sp-section:var(--sp-6);
   --mono:ui-monospace,'SF Mono','Cascadia Mono',Menlo,Consolas,monospace;
 }
-@media (prefers-color-scheme:dark){
-  :root:not([data-theme="light"]){
-    --bg:#120d09; --paper:#241a10; --sand:#2f2317; --ink:#f4eadd; --ink-2:#ab9d8b;
-    --hair:#42311f; --edge:#000000;
-    --accent:#f97a3d; --accent-2:#f7b733; --accent-strong:#ff9256; --logo-deep:#ff9256; --brand-from:#f97a3d; --brand-to:#ffc46b; --accent-wash:#3a2414; --accent-ink:#160f09;
-    --danger:#e07d67; --danger-wash:#301711; --th-bg:var(--edge);
-    --rail:#0f0b08; --rail-ink:#f4eadd; --rail-dim:rgba(244,234,221,0.68); --rail-line:rgba(255,255,255,0.08);
-    --shadow-hard:4px 4px 0 var(--accent); --shadow-soft:0 2px 4px rgba(0,0,0,0.4), 0 20px 44px -22px rgba(0,0,0,0.7);
-  }
-}
+/* tema padrão: claro (creme). Escuro só com data-theme="dark", que o script do
+   <head> aplica a partir de toefl_theme_v1; o modo escuro do sistema não conta. */
 :root[data-theme="dark"]{
   --bg:#120d09; --paper:#241a10; --sand:#2f2317; --ink:#f4eadd; --ink-2:#ab9d8b;
   --hair:#42311f; --edge:#000000;
@@ -75,7 +67,7 @@ body::after{
   content:""; position:fixed; inset:0; pointer-events:none; z-index:2000; opacity:0.22; mix-blend-mode:multiply;
   background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='140' height='140' filter='url(%23n)' opacity='0.05'/%3E%3C/svg%3E");
 }
-:root[data-theme="dark"] body::after, :root:not([data-theme="light"]) body::after{mix-blend-mode:screen; opacity:0.18;}
+:root[data-theme="dark"] body::after{mix-blend-mode:screen; opacity:0.18;}
 
 h1,h2,h3,h4{font-family:'Bricolage Grotesque','Plus Jakarta Sans',sans-serif; font-weight:800; line-height:1.08; letter-spacing:-0.02em;}
 a{color:var(--accent-strong); text-decoration-thickness:2px; text-underline-offset:3px; text-decoration-color:var(--accent);}
@@ -814,9 +806,7 @@ nav.modnav{display:flex; flex-direction:column; gap:1px;}
 }
 .dash-stat-a{background:var(--accent-wash);}
 .dash-stat-b{background:rgba(247,183,51,0.16);}
-:root[data-theme="dark"] .dash-stat-b{background:rgba(247,183,51,0.1);}
-@media (prefers-color-scheme:dark){ :root:not([data-theme="light"]) .dash-stat-b{background:rgba(247,183,51,0.1);} }
-.dash-stat-icon{display:flex; color:var(--accent-strong);} .dash-stat-icon .ico{width:20px; height:20px;}
+:root[data-theme="dark"] .dash-stat-b{background:rgba(247,183,51,0.1);}.dash-stat-icon{display:flex; color:var(--accent-strong);} .dash-stat-icon .ico{width:20px; height:20px;}
 .dash-stat-label{
   font-family:'Bricolage Grotesque',sans-serif; font-size:10px; font-weight:800;
   text-transform:uppercase; letter-spacing:0.06em; color:var(--ink-2);
@@ -2327,9 +2317,7 @@ body.acc-free .part-pager.is-locked .part-pager-title::before{content:"🔒 ";}
    Leves: fio de cor à esquerda, ícone e título curto, sem fundo pesado. A
    cor fica no fio e no ícone; o texto continua na cor de leitura. */
 :root{--c-dica:#d08a00; --c-atencao:#bd3722; --c-exemplo:#2f6f8f; --c-erro:#a3245b; --c-resumo:#6b5c4b; --c-ets:#2e6b45; --c-modelo:#cc4610;}
-:root[data-theme="dark"]{--c-dica:#f7b733; --c-atencao:#ef7d63; --c-exemplo:#6fb3d2; --c-erro:#e67aa6; --c-resumo:#c7b8a4; --c-ets:#6cc08f; --c-modelo:#ff9256;}
-@media (prefers-color-scheme:dark){ :root:not([data-theme="light"]){--c-dica:#f7b733; --c-atencao:#ef7d63; --c-exemplo:#6fb3d2; --c-erro:#e67aa6; --c-resumo:#c7b8a4; --c-ets:#6cc08f; --c-modelo:#ff9256;} }
-.panel blockquote.callout{background:none; border:0; border-left:4px solid var(--c, var(--hair)); border-radius:0;
+:root[data-theme="dark"]{--c-dica:#f7b733; --c-atencao:#ef7d63; --c-exemplo:#6fb3d2; --c-erro:#e67aa6; --c-resumo:#c7b8a4; --c-ets:#6cc08f; --c-modelo:#ff9256;}.panel blockquote.callout{background:none; border:0; border-left:4px solid var(--c, var(--hair)); border-radius:0;
   padding:2px 0 2px 18px; margin:0 0 20px;}
 .panel blockquote.callout p{font-size:17px;}
 .callout-head{display:flex; align-items:center; gap:7px; margin:0 0 6px !important; font-family:'Bricolage Grotesque',sans-serif;

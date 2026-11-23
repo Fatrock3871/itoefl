@@ -425,6 +425,15 @@ if not (supa_url and supa_key):
     supa_url = _os.environ.get("SUPABASE_URL", "").strip()
     supa_key = _os.environ.get("SUPABASE_PUBLISHABLE_KEY", "").strip()
 
+# Tema estável: todas as páginas (app, apresentação, ajuda, termos, privacidade)
+# aplicam data-theme no <head>, antes do CSS pintar. Padrão CLARO (creme); escuro
+# só se o aluno escolheu (toefl_theme_v1). O modo escuro do sistema não conta.
+THEME_BOOT_JS = (
+    '<script>(function(){var t="light";try{var s=localStorage.getItem("toefl_theme_v1");'
+    'if(s==="dark")t="dark";}catch(e){}'
+    'document.documentElement.setAttribute("data-theme",t);})();</script>'
+)
+
 # Apresentação antes do login (itens 22 e 23 de 2026-10-25): quem abre o app
 # (site ou instalado) sem sessão do Supabase guardada vai para a tela de
 # apresentação; quem tem sessão segue direto para o curso. Fica no <head>,
@@ -964,6 +973,7 @@ html = f'''<!DOCTYPE html>
 <meta name="mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-title" content="iTOEFL">
 <meta name="apple-mobile-web-app-status-bar-style" content="default">
+{THEME_BOOT_JS}
 {LANDING_REDIRECT_JS if (supa_url and supa_key) else ""}
 {FONT_LINKS}
 <style>
@@ -1192,10 +1202,7 @@ LEGAL_PAGES = [
     ("privacidade", "Política de Privacidade"),
 ]
 # aplica o tema salvo antes de pintar a página, igual ao app (mesma chave)
-_LEGAL_THEME_JS = (
-    '(function(){try{var t=localStorage.getItem("toefl_theme_v1");'
-    'if(t==="dark"||t==="light")document.documentElement.setAttribute("data-theme",t);}catch(e){}})();'
-)
+_LEGAL_THEME_JS = THEME_BOOT_JS[len("<script>"):-len("</script>")]
 for _slug, _title in LEGAL_PAGES:
     _src = open(f"../legal/{_slug}.md", encoding="utf-8").read()
     _pending = _src.count("[PREENCHER")
@@ -1374,13 +1381,13 @@ LANDING_JS = LEVEL_JS + "\n" + open("landing.js", encoding="utf-8").read()
 LANDING_VIDEO = render_video.render_landing_video(render_video.load_landing_video())
 _lp_desc = ("Preparação em português para o exame TOEFL iBT® no formato 2026: 10 módulos, exercícios no molde da prova e simulados. "
             "Faça o diagnóstico grátis, sem criar conta.")
-# tema fixo creme (item 35, decisão do dono em 2026-10-26): data-theme="light"
-# na raiz e nenhum script de tema, então a escolha claro/escuro feita dentro
-# do app (toefl_theme_v1) e o modo escuro do sistema não chegam aqui
+# tema igual ao do app: creme por padrão, escuro só se o aluno escolheu
+# (THEME_BOOT_JS no <head>); o modo escuro do sistema não conta
 _landing = f'''<!DOCTYPE html>
 <html lang="pt-BR" data-theme="light">
 <head>
 <meta charset="UTF-8">
+{THEME_BOOT_JS}
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>iTOEFL: preparação para o exame TOEFL iBT® no formato 2026</title>
 <meta name="description" content="{_lp_desc}">
@@ -1392,7 +1399,6 @@ _landing = f'''<!DOCTYPE html>
 <link rel="icon" type="image/png" sizes="192x192" href="icons/icon-192.png">
 <meta name="theme-color" content="#ef5a1f">
 {FONT_LINKS}
-<meta name="color-scheme" content="light">
 <style>
 {CSS}
 </style>
