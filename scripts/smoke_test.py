@@ -1938,11 +1938,12 @@ def landing_checks():
         re.search(r'<details class="lp-diag" id="lpDiag">\s*<summary>', page) is not None
         and "Cerca de 12 min, grátis, sem cadastro" in page and 'id="lpKey" hidden' in page
     )
-    # tema próprio e fixo creme (item 35): raiz travada em claro e nenhum
-    # script que leia a escolha de tema do app
+    # tema estável: creme por padrão e o mesmo script de tema do app no <head>
+    # (escuro só se o aluno escolheu); o sistema em modo escuro não conta
     out["landing_theme_fixed_cream"] = (
-        '<html lang="pt-BR" data-theme="light">' in page and "toefl_theme_v1" not in page
-        and '<meta name="color-scheme" content="light">' in page
+        '<html lang="pt-BR" data-theme="light">' in page
+        and page.index('localStorage.getItem("toefl_theme_v1")') < page.index("<style>")
+        and "prefers-color-scheme" not in page
     )
     out["landing_linked_from_login"] = 'href="apresentacao.html"' in index or "ITOEFL_SUPABASE" not in index
     # conta grátis: a seção, o botão no resultado do diagnóstico e a pergunta

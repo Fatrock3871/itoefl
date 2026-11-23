@@ -1348,13 +1348,14 @@ def run():
                 pick = b.eval('(function(){ var a = document.querySelector(\'.lp-plan[data-plan="60dias"] a\'); a.addEventListener("click", function(e){ e.preventDefault(); });'
                               ' a.click(); return { href: a.getAttribute("href"), saved: localStorage.getItem("toefl_plan_pick_v1") }; })()')
                 check("landing_plan_click_carries_choice", pick == {"href": "index.html#criar-conta", "saved": "60dias"}, pick)
-                # tema fixo creme (item 35): quem escolheu o escuro dentro do app
-                # continua vendo a apresentação creme
+                # tema estável: a apresentação segue a mesma escolha do app
+                # (escuro só se o aluno escolheu); o padrão creme é testado em _theme_checks
                 b.eval('localStorage.setItem("toefl_theme_v1", "dark")')
                 b.reload(settle=1)
                 theme = b.eval('({ attr: document.documentElement.getAttribute("data-theme"),'
                                ' bg: getComputedStyle(document.body).backgroundColor })')
-                check("landing_theme_ignores_app_dark_choice", theme == {"attr": "light", "bg": "rgb(251, 244, 234)"}, theme)
+                check("landing_theme_follows_app_dark_choice",
+                      theme["attr"] == "dark" and theme["bg"] != "rgb(251, 244, 234)", theme)
                 b.eval('localStorage.setItem("toefl_theme_v1", "light")')
                 low = b.eval(CONTRAST)
                 check("landing_contrast_aa_light", not low, low)
@@ -1435,7 +1436,65 @@ def run():
                     b.offline(False)
         finally:
             srv.shutdown()
+        _theme_checks(check)
     return out, why
+
+
+# Tema estavel: fundo igual em todas as paginas e telas, padrao creme mesmo com o
+# sistema em modo escuro; escuro so se o aluno escolheu (toefl_theme_v1).
+_THEME_PAGES = ["apresentacao.html", "index.html", "ajuda.html", "termos.html", "privacidade.html"]
+_THEME_PROBE = ('(function(){return {t: document.documentElement.getAttribute("data-theme"), '
+                'bg: getComputedStyle(document.body).backgroundColor};})()')
+_CREAM = "rgb(251, 244, 234)"
+
+
+def _theme_checks(check):
+    art = ROOT / "artifact"
+    if not (art / "index.html").exists():
+        check("theme_pages_built", False, "artifact/ sem index.html")
+        return
+    srv, base = _serve(art)
+    try:
+        with Browser() as b:
+            b.call("Emulation.setEmulatedMedia", {"features": [{"name": "prefers-color-scheme", "value": "dark"}]})
+            b.goto(base + "/ajuda.html", settle=0.3)
+            b.eval('localStorage.clear(); localStorage.setItem("toefl_cookies_v1", "ok")')
+            seen = {}
+            for p in _THEME_PAGES:
+                b.goto(f"{base}/{p}", settle=0.8)
+                seen[p] = b.eval(_THEME_PROBE)
+            check("theme_default_cream_with_system_dark",
+                  all(v["t"] == "light" and v["bg"] == _CREAM for v in seen.values()), seen)
+
+            # entre telas e etapas do app: o fundo nao muda
+            b.goto(base + "/index.html#criar-conta", settle=0.8)
+            tabs = b.eval('Array.prototype.map.call(document.querySelectorAll(".tabbtn"), function(x){return x.dataset.tab;})') or []
+            bgs = set()
+            for t in tabs[:10]:
+                b.eval('(document.querySelector(\'.tabbtn[data-tab="%s"]\')||{click:function(){}}).click()' % t)
+                b.pump(0.15)
+                bgs.add(b.eval(_THEME_PROBE)["bg"])
+            check("theme_background_same_across_app_tabs", bgs == {_CREAM}, bgs)
+
+            # apresentacao -> app -> voltar (bfcache): continua creme
+            b.goto(base + "/apresentacao.html", settle=0.6)
+            b.goto(base + "/index.html#criar-conta", settle=0.6)
+            b.eval("history.back()")
+            b.pump(1.0)
+            back = b.eval(_THEME_PROBE)
+            check("theme_background_same_after_back", back["t"] == "light" and back["bg"] == _CREAM, back)
+
+            # tema escuro salvo: todas as paginas abrem escuras e iguais
+            b.eval('localStorage.setItem("toefl_theme_v1", "dark")')
+            seen = {}
+            for p in _THEME_PAGES:
+                b.goto(f"{base}/{p}", settle=0.8)
+                seen[p] = b.eval(_THEME_PROBE)
+            bgs = {v["bg"] for v in seen.values()}
+            check("theme_saved_dark_applies_to_all_pages",
+                  all(v["t"] == "dark" for v in seen.values()) and len(bgs) == 1 and _CREAM not in bgs, seen)
+    finally:
+        srv.shutdown()
 
 
 if __name__ == "__main__":

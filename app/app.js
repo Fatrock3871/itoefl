@@ -587,8 +587,8 @@
       accountThemeDark.classList.toggle("is-active", mode === "dark");
     }
   }
-  var prefersDark = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches;
-  var savedTheme = safeGet(LS_THEME) || (prefersDark ? "dark" : "light");
+  // padrão claro (creme) em todas as páginas; o modo escuro do sistema não conta
+  var savedTheme = safeGet(LS_THEME) === "dark" ? "dark" : "light";
   applyTheme(savedTheme);
   if(themeBtn) themeBtn.addEventListener("click", function(){
     var cur = safeGet(LS_THEME) || savedTheme;
