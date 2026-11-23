@@ -270,6 +270,726 @@
     }
   },
   {
+    "id": "mod2-bn1.b4.1",
+    "section": "listening",
+    "task_type": "Listen to a Conversation",
+    "exam_format": true,
+    "format": "mcq",
+    "skill": null,
+    "cefr_min": "A2",
+    "cefr_max": "B1",
+    "stimulus": {
+      "kind": "audio",
+      "format": "html",
+      "title": "Exercício B4: Campus Health Clinic (meta de 2 min)",
+      "content": "<p><em>Narrator: Listen to a conversation between a student and a receptionist at the campus health clinic.</em></p>\n<p><strong>Student:</strong> Hi, um, I need a nurse to sign this health form for my summer volunteer program. Can I do that today?</p>\n<p><strong>Receptionist:</strong> Let's see. Have you uploaded your vaccination record to the student health portal yet?</p>\n<p><strong>Student:</strong> Oh, no, I brought the paper copy with me right here.</p>\n<p><strong>Receptionist:</strong> Well, our nurses can't sign the form until the file is in the system. You can scan it with your phone and upload it tonight.</p>\n<p><strong>Student:</strong> Okay, that's easy enough. Do I need an appointment after I upload it?</p>\n<p><strong>Receptionist:</strong> No, just come back during walk-in hours tomorrow morning between nine and eleven, and a nurse will sign it at the front desk.</p>",
+      "audio_ref": null
+    },
+    "group": "mod2-bn1",
+    "prompt": "Gist-purpose. Why does the student go to the campus health clinic?",
+    "text_format": "html",
+    "options": {
+      "A": "To get a signature on a required health form",
+      "B": "To schedule a vaccination before summer break",
+      "C": "To pick up a paper copy of her medical record",
+      "D": "To apply for a part-time job at the front desk"
+    },
+    "answer": "A",
+    "explanation": "Logo no começo, a estudante explica que precisa que alguém assine o formulário do programa de voluntariado (<em>I need a nurse to sign this health form</em>), o que confirma a opção (A) como <strong>pedido de assinatura no documento</strong>. Se você pensou em (B), repare que ela já tomou as vacinas e trouxe o comprovante impresso, sem pedir aplicação nova.",
+    "hint": null,
+    "trap_codes": [],
+    "tags": [],
+    "status": "rascunho",
+    "source": {
+      "kind": "migrado",
+      "file": "app/drills_data.py",
+      "ref": "MOD2_ACTION_DRILLS_B:mod2-bn1#B4.1",
+      "live_on_site": true,
+      "answer_letter": "origem",
+      "build_map": {
+        "A": "B",
+        "B": "D",
+        "C": "C",
+        "D": "A"
+      }
+    }
+  },
+  {
+    "id": "mod2-bn1.b4.2",
+    "section": "listening",
+    "task_type": "Listen to a Conversation",
+    "exam_format": true,
+    "format": "mcq",
+    "skill": null,
+    "cefr_min": "A2",
+    "cefr_max": "B1",
+    "stimulus": {
+      "kind": "audio",
+      "format": "html",
+      "title": "Exercício B4: Campus Health Clinic (meta de 2 min)",
+      "content": "<p><em>Narrator: Listen to a conversation between a student and a receptionist at the campus health clinic.</em></p>\n<p><strong>Student:</strong> Hi, um, I need a nurse to sign this health form for my summer volunteer program. Can I do that today?</p>\n<p><strong>Receptionist:</strong> Let's see. Have you uploaded your vaccination record to the student health portal yet?</p>\n<p><strong>Student:</strong> Oh, no, I brought the paper copy with me right here.</p>\n<p><strong>Receptionist:</strong> Well, our nurses can't sign the form until the file is in the system. You can scan it with your phone and upload it tonight.</p>\n<p><strong>Student:</strong> Okay, that's easy enough. Do I need an appointment after I upload it?</p>\n<p><strong>Receptionist:</strong> No, just come back during walk-in hours tomorrow morning between nine and eleven, and a nurse will sign it at the front desk.</p>",
+      "audio_ref": null
+    },
+    "group": "mod2-bn1",
+    "prompt": "Detail. What must the student do before a nurse can sign her form?",
+    "text_format": "html",
+    "options": {
+      "A": "Pay a processing fee at the main office",
+      "B": "Book an afternoon appointment with a doctor",
+      "C": "Upload her vaccination record to the online portal",
+      "D": "Request a new paper form from her program director"
+    },
+    "answer": "C",
+    "explanation": "O recepcionista avisa que a assinatura só é feita depois que o comprovante estiver no sistema (<em>until the file is in the system</em> e <em>upload it tonight</em>), validando (C) como <strong>envio digital na plataforma</strong>. A alternativa (B) é uma armadilha porque fala em agendar horário, mas o funcionário diz claramente <em>No, just come back during walk-in hours</em>.",
+    "hint": null,
+    "trap_codes": [],
+    "tags": [],
+    "status": "rascunho",
+    "source": {
+      "kind": "migrado",
+      "file": "app/drills_data.py",
+      "ref": "MOD2_ACTION_DRILLS_B:mod2-bn1#B4.2",
+      "live_on_site": true,
+      "answer_letter": "origem",
+      "build_map": {
+        "A": "D",
+        "B": "C",
+        "C": "A",
+        "D": "B"
+      }
+    }
+  },
+  {
+    "id": "mod2-bn2.b5.1",
+    "section": "listening",
+    "task_type": "Listen to a Conversation",
+    "exam_format": true,
+    "format": "mcq",
+    "skill": null,
+    "cefr_min": "A2",
+    "cefr_max": "B1",
+    "stimulus": {
+      "kind": "audio",
+      "format": "html",
+      "title": "Exercício B5: Dining Services Office (meta de 2 min)",
+      "content": "<p><em>Narrator: Listen to a conversation between a student and a staff member at the dining services office.</em></p>\n<p><strong>Student:</strong> Excuse me, I have a question about my campus meal plan. The semester ends in two weeks, and I still have fifteen lunches left.</p>\n<p><strong>Staff Member:</strong> Are you on the weekly plan or the semester block plan?</p>\n<p><strong>Student:</strong> Um, the semester block plan, I think. I paid for a hundred meals at the start of the term.</p>\n<p><strong>Staff Member:</strong> Good news, then. Unused block meals don't expire until the last day of final exams, and you can also trade up to ten of them for coffee shop points.</p>\n<p><strong>Student:</strong> Oh, nice! I use the library café every morning anyway. How do I make that switch?</p>\n<p><strong>Staff Member:</strong> Just tap the transfer button in the campus dining app, and the points show up on your ID card right away.</p>",
+      "audio_ref": null
+    },
+    "group": "mod2-bn2",
+    "prompt": "Detail. What does the staff member say about the student's unused meals?",
+    "text_format": "html",
+    "options": {
+      "A": "They can be refunded for cash at the end of the term",
+      "B": "They expire two weeks before final exams begin",
+      "C": "They are automatically moved to next semester's balance",
+      "D": "They can be partly converted into coffee shop points"
+    },
+    "answer": "D",
+    "explanation": "A funcionária explica que o aluno pode trocar até dez refeições restantes por pontos de cafeteria (<em>you can also trade up to ten of them for coffee shop points</em>), o que torna (D) a <strong>conversão parcial em pontos</strong>. A opção (B) confunde o prazo de duas semanas citado pelo aluno com a regra real, que vale até o último dia de provas finais.",
+    "hint": null,
+    "trap_codes": [],
+    "tags": [],
+    "status": "rascunho",
+    "source": {
+      "kind": "migrado",
+      "file": "app/drills_data.py",
+      "ref": "MOD2_ACTION_DRILLS_B:mod2-bn2#B5.1",
+      "live_on_site": true,
+      "answer_letter": "origem",
+      "build_map": {
+        "A": "D",
+        "B": "A",
+        "C": "C",
+        "D": "B"
+      }
+    }
+  },
+  {
+    "id": "mod2-bn2.b5.2",
+    "section": "listening",
+    "task_type": "Listen to a Conversation",
+    "exam_format": true,
+    "format": "mcq",
+    "skill": null,
+    "cefr_min": "A2",
+    "cefr_max": "B1",
+    "stimulus": {
+      "kind": "audio",
+      "format": "html",
+      "title": "Exercício B5: Dining Services Office (meta de 2 min)",
+      "content": "<p><em>Narrator: Listen to a conversation between a student and a staff member at the dining services office.</em></p>\n<p><strong>Student:</strong> Excuse me, I have a question about my campus meal plan. The semester ends in two weeks, and I still have fifteen lunches left.</p>\n<p><strong>Staff Member:</strong> Are you on the weekly plan or the semester block plan?</p>\n<p><strong>Student:</strong> Um, the semester block plan, I think. I paid for a hundred meals at the start of the term.</p>\n<p><strong>Staff Member:</strong> Good news, then. Unused block meals don't expire until the last day of final exams, and you can also trade up to ten of them for coffee shop points.</p>\n<p><strong>Student:</strong> Oh, nice! I use the library café every morning anyway. How do I make that switch?</p>\n<p><strong>Staff Member:</strong> Just tap the transfer button in the campus dining app, and the points show up on your ID card right away.</p>",
+      "audio_ref": null
+    },
+    "group": "mod2-bn2",
+    "prompt": "Inference. What will the student probably do next?",
+    "text_format": "html",
+    "options": {
+      "A": "Cancel his meal plan for the rest of the semester",
+      "B": "Use the campus dining app to convert some meals",
+      "C": "Buy a new student ID card at the library café",
+      "D": "Switch from the block plan to the weekly plan"
+    },
+    "answer": "B",
+    "explanation": "O estudante se anima porque usa a cafeteria da biblioteca toda manhã e pergunta como fazer a troca, e a funcionária orienta <em>Just tap the transfer button in the campus dining app</em>, indicando em (B) o <strong>uso do aplicativo para converter refeições</strong>. A alternativa (C) mistura termos do áudio, pois os pontos caem no cartão que ele já tem.",
+    "hint": null,
+    "trap_codes": [],
+    "tags": [],
+    "status": "rascunho",
+    "source": {
+      "kind": "migrado",
+      "file": "app/drills_data.py",
+      "ref": "MOD2_ACTION_DRILLS_B:mod2-bn2#B5.2",
+      "live_on_site": true,
+      "answer_letter": "origem",
+      "build_map": {
+        "A": "B",
+        "B": "A",
+        "C": "C",
+        "D": "D"
+      }
+    }
+  },
+  {
+    "id": "mod2-bn3.b6.1",
+    "section": "listening",
+    "task_type": "Listen to a Conversation",
+    "exam_format": true,
+    "format": "mcq",
+    "skill": null,
+    "cefr_min": "A2",
+    "cefr_max": "B1",
+    "stimulus": {
+      "kind": "audio",
+      "format": "html",
+      "title": "Exercício B6: Media Equipment Desk (meta de 2 min)",
+      "content": "<p><em>Narrator: Listen to a conversation between a student and an assistant at the media equipment desk.</em></p>\n<p><strong>Student:</strong> Hi, I'm recording an interview for my sociology class this afternoon. Do you have a small clip-on microphone I can borrow?</p>\n<p><strong>Assistant:</strong> Let me check the shelf... sorry, all our clip-on mics are checked out until tomorrow. We do have a handheld digital recorder, though.</p>\n<p><strong>Student:</strong> Hmm, we're meeting on a bench outside the student union, so I'm worried about wind noise.</p>\n<p><strong>Assistant:</strong> Actually, this recorder comes with a foam cover that blocks the wind pretty well. You just set it down on the bench between you and your guest.</p>\n<p><strong>Student:</strong> Oh, great, that'll work. How long can I keep it?</p>\n<p><strong>Assistant:</strong> It's due back by four p.m. tomorrow. Make sure you check the battery icon on the screen before you start recording.</p>",
+      "audio_ref": null
+    },
+    "group": "mod2-bn3",
+    "prompt": "Detail. Why can't the student borrow a clip-on microphone today?",
+    "text_format": "html",
+    "options": {
+      "A": "They are reserved for sociology professors only",
+      "B": "They are broken and waiting for repair parts",
+      "C": "They have all been borrowed by other people",
+      "D": "They cannot be used outside the library building"
+    },
+    "answer": "C",
+    "explanation": "O atendente confere a prateleira e avisa que todos os microfones de lapela estão emprestados até o dia seguinte (<em>all our clip-on mics are checked out until tomorrow</em>), confirmando (C) como <strong>equipamentos já retirados</strong>. A opção (A) usa a aula de sociologia mencionada pelo aluno para criar uma restrição que não existe no diálogo.",
+    "hint": null,
+    "trap_codes": [],
+    "tags": [],
+    "status": "rascunho",
+    "source": {
+      "kind": "migrado",
+      "file": "app/drills_data.py",
+      "ref": "MOD2_ACTION_DRILLS_B:mod2-bn3#B6.1",
+      "live_on_site": true,
+      "answer_letter": "origem",
+      "build_map": {
+        "A": "C",
+        "B": "D",
+        "C": "A",
+        "D": "B"
+      }
+    }
+  },
+  {
+    "id": "mod2-bn3.b6.2",
+    "section": "listening",
+    "task_type": "Listen to a Conversation",
+    "exam_format": true,
+    "format": "mcq",
+    "skill": null,
+    "cefr_min": "A2",
+    "cefr_max": "B1",
+    "stimulus": {
+      "kind": "audio",
+      "format": "html",
+      "title": "Exercício B6: Media Equipment Desk (meta de 2 min)",
+      "content": "<p><em>Narrator: Listen to a conversation between a student and an assistant at the media equipment desk.</em></p>\n<p><strong>Student:</strong> Hi, I'm recording an interview for my sociology class this afternoon. Do you have a small clip-on microphone I can borrow?</p>\n<p><strong>Assistant:</strong> Let me check the shelf... sorry, all our clip-on mics are checked out until tomorrow. We do have a handheld digital recorder, though.</p>\n<p><strong>Student:</strong> Hmm, we're meeting on a bench outside the student union, so I'm worried about wind noise.</p>\n<p><strong>Assistant:</strong> Actually, this recorder comes with a foam cover that blocks the wind pretty well. You just set it down on the bench between you and your guest.</p>\n<p><strong>Student:</strong> Oh, great, that'll work. How long can I keep it?</p>\n<p><strong>Assistant:</strong> It's due back by four p.m. tomorrow. Make sure you check the battery icon on the screen before you start recording.</p>",
+      "audio_ref": null
+    },
+    "group": "mod2-bn3",
+    "prompt": "Function. Why does the assistant mention the foam cover?",
+    "text_format": "html",
+    "options": {
+      "A": "To explain why the rental costs a few dollars extra",
+      "B": "To warn the student not to drop the recorder on the ground",
+      "C": "To show how to tell two similar models apart on the shelf",
+      "D": "To reassure the student that the recorder will handle the wind"
+    },
+    "answer": "D",
+    "explanation": "O assistente cita a proteção de espuma (<em>this recorder comes with a foam cover that blocks the wind pretty well</em>) justamente para responder à preocupação do aluno e <strong>mostrar que o aparelho reduz o vento</strong>, como diz (D). A alternativa (B) pensa em proteção física contra queda, mas o foco ali é a qualidade do som.",
+    "hint": null,
+    "trap_codes": [],
+    "tags": [],
+    "status": "rascunho",
+    "source": {
+      "kind": "migrado",
+      "file": "app/drills_data.py",
+      "ref": "MOD2_ACTION_DRILLS_B:mod2-bn3#B6.2",
+      "live_on_site": true,
+      "answer_letter": "origem",
+      "build_map": {
+        "A": "D",
+        "B": "C",
+        "C": "A",
+        "D": "B"
+      }
+    }
+  },
+  {
+    "id": "mod2-bn4.b7.1",
+    "section": "listening",
+    "task_type": "Listen to a Conversation",
+    "exam_format": true,
+    "format": "mcq",
+    "skill": null,
+    "cefr_min": "B1",
+    "cefr_max": "B2",
+    "stimulus": {
+      "kind": "audio",
+      "format": "html",
+      "title": "Exercício B7: Undergraduate Research Symposium (meta de 3 min)",
+      "content": "<p><em>Narrator: Listen to a conversation between a student and the coordinator of a campus research event.</em></p>\n<p><strong>Student:</strong> Hi, Dr. Patel. My lab partner and I were accepted to present our chemistry poster at next month's research symposium, but we just ran into a scheduling issue.</p>\n<p><strong>Coordinator:</strong> Oh? What happened?</p>\n<p><strong>Student:</strong> Well, my partner was invited to a regional debate tournament that same weekend, so she won't be on campus. Do we have to withdraw our poster if only one of us can attend?</p>\n<p><strong>Coordinator:</strong> Not at all. Plenty of co-authored posters are presented by a single student. As long as her name stays on the printed header and the abstract, you're fine to present solo.</p>\n<p><strong>Student:</strong> That's a huge relief. One more thing, though. I have a Friday afternoon lab that I can't miss. Can I request a morning presentation slot?</p>\n<p><strong>Coordinator:</strong> Sure, we haven't finalized the room assignments yet. Send me an email by Wednesday so I can put you in the nine-to-eleven session before the program goes to print.</p>",
+      "audio_ref": null
+    },
+    "group": "mod2-bn4",
+    "prompt": "Gist-purpose. Why did the student go to see the coordinator?",
+    "text_format": "html",
+    "options": {
+      "A": "To ask for extra time to finish a chemistry experiment",
+      "B": "To find out if she can present a joint poster by herself",
+      "C": "To add a new co-author to her research abstract",
+      "D": "To reserve a larger display board for her team's graphs"
+    },
+    "answer": "B",
+    "explanation": "A aluna procura o coordenador porque a parceira viajará no fim de semana do evento e quer saber se precisa cancelar o pôster ou se pode apresentar sozinha (<em>Do we have to withdraw our poster if only one of us can attend?</em>), confirmando (B) como <strong>dúvida sobre apresentação individual</strong>. A opção (C) fala em incluir coautor, mas o nome da colega já estava no trabalho.",
+    "hint": null,
+    "trap_codes": [],
+    "tags": [],
+    "status": "rascunho",
+    "source": {
+      "kind": "migrado",
+      "file": "app/drills_data.py",
+      "ref": "MOD2_ACTION_DRILLS_B:mod2-bn4#B7.1",
+      "live_on_site": true,
+      "answer_letter": "origem",
+      "build_map": {
+        "A": "D",
+        "B": "A",
+        "C": "B",
+        "D": "C"
+      }
+    }
+  },
+  {
+    "id": "mod2-bn4.b7.2",
+    "section": "listening",
+    "task_type": "Listen to a Conversation",
+    "exam_format": true,
+    "format": "mcq",
+    "skill": null,
+    "cefr_min": "B1",
+    "cefr_max": "B2",
+    "stimulus": {
+      "kind": "audio",
+      "format": "html",
+      "title": "Exercício B7: Undergraduate Research Symposium (meta de 3 min)",
+      "content": "<p><em>Narrator: Listen to a conversation between a student and the coordinator of a campus research event.</em></p>\n<p><strong>Student:</strong> Hi, Dr. Patel. My lab partner and I were accepted to present our chemistry poster at next month's research symposium, but we just ran into a scheduling issue.</p>\n<p><strong>Coordinator:</strong> Oh? What happened?</p>\n<p><strong>Student:</strong> Well, my partner was invited to a regional debate tournament that same weekend, so she won't be on campus. Do we have to withdraw our poster if only one of us can attend?</p>\n<p><strong>Coordinator:</strong> Not at all. Plenty of co-authored posters are presented by a single student. As long as her name stays on the printed header and the abstract, you're fine to present solo.</p>\n<p><strong>Student:</strong> That's a huge relief. One more thing, though. I have a Friday afternoon lab that I can't miss. Can I request a morning presentation slot?</p>\n<p><strong>Coordinator:</strong> Sure, we haven't finalized the room assignments yet. Send me an email by Wednesday so I can put you in the nine-to-eleven session before the program goes to print.</p>",
+      "audio_ref": null
+    },
+    "group": "mod2-bn4",
+    "prompt": "Detail. Why does the coordinator ask the student to email him by Wednesday?",
+    "text_format": "html",
+    "options": {
+      "A": "So the chemistry department can approve her lab absence",
+      "B": "So her partner can receive a travel grant for the tournament",
+      "C": "So the print shop has time to enlarge her poster header",
+      "D": "So he can give her a morning slot before the program is printed"
+    },
+    "answer": "D",
+    "explanation": "No final da conversa, o coordenador pede o e-mail até quarta-feira para colocá-la no turno da manhã antes da impressão do folheto (<em>so I can put you in the nine-to-eleven session before the program goes to print</em>), o que corresponde a (D) sobre <strong>garantir o horário matutino no programa</strong>. A alternativa (C) mistura a palavra <em>print</em> com o cabeçalho do pôster citado antes.",
+    "hint": null,
+    "trap_codes": [],
+    "tags": [],
+    "status": "rascunho",
+    "source": {
+      "kind": "migrado",
+      "file": "app/drills_data.py",
+      "ref": "MOD2_ACTION_DRILLS_B:mod2-bn4#B7.2",
+      "live_on_site": true,
+      "answer_letter": "origem",
+      "build_map": {
+        "A": "D",
+        "B": "A",
+        "C": "C",
+        "D": "B"
+      }
+    }
+  },
+  {
+    "id": "mod2-bn5.b8.1",
+    "section": "listening",
+    "task_type": "Listen to a Conversation",
+    "exam_format": true,
+    "format": "mcq",
+    "skill": null,
+    "cefr_min": "B1",
+    "cefr_max": "B2",
+    "stimulus": {
+      "kind": "audio",
+      "format": "html",
+      "title": "Exercício B8: Environmental Science Office Hours (meta de 3 min)",
+      "content": "<p><em>Narrator: Listen to a conversation between a student and an environmental science professor.</em></p>\n<p><strong>Student:</strong> Professor Morales, do you have a minute? I'm worried about my field report on creek water quality.</p>\n<p><strong>Professor:</strong> Come on in, Leo. Didn't you plan to compare water samples from the wooded bend and the downstream bridge?</p>\n<p><strong>Student:</strong> That was the plan, yeah, but after Tuesday's heavy rain, the trail to the wooded bend was completely flooded. Park rangers closed it for the rest of the month, so I only have data from the bridge.</p>\n<p><strong>Professor:</strong> Ah, I heard the creek rose quite a bit. Well, you don't need two locations to write a strong paper. Why not pivot to a before-and-after study at the bridge site alone?</p>\n<p><strong>Student:</strong> Wait, how would that work? I only started collecting samples there last week.</p>\n<p><strong>Professor:</strong> The county water board has an automated sensor right under that bridge. Their website posts hourly turbidity and oxygen readings going back five years, so you can compare your post-storm samples with the baseline data from earlier this autumn.</p>\n<p><strong>Student:</strong> Oh, I had no idea that archive was public! That actually gives me a much clearer research question.</p>",
+      "audio_ref": null
+    },
+    "group": "mod2-bn5",
+    "prompt": "Detail. What problem prevented the student from carrying out his original plan?",
+    "text_format": "html",
+    "options": {
+      "A": "Heavy rain flooded the path and closed one of his sampling sites",
+      "B": "The testing equipment at the downstream bridge stopped working",
+      "C": "The county water board restricted student access to the creek",
+      "D": "His initial water samples were lost in the laboratory freezer"
+    },
+    "answer": "A",
+    "explanation": "O estudante conta que a chuva forte alagou a trilha e levou os guardas-parque a fecharem um dos pontos de coleta (<em>after Tuesday's heavy rain, the trail to the wooded bend was completely flooded</em>), confirmando (A) como <strong>interdição da trilha pela chuva</strong>. A opção (C) usa o nome do órgão municipal citado depois pela professora para criar uma proibição inexistente.",
+    "hint": null,
+    "trap_codes": [],
+    "tags": [],
+    "status": "rascunho",
+    "source": {
+      "kind": "migrado",
+      "file": "app/drills_data.py",
+      "ref": "MOD2_ACTION_DRILLS_B:mod2-bn5#B8.1",
+      "live_on_site": true,
+      "answer_letter": "origem",
+      "build_map": {
+        "A": "A",
+        "B": "D",
+        "C": "C",
+        "D": "B"
+      }
+    }
+  },
+  {
+    "id": "mod2-bn5.b8.2",
+    "section": "listening",
+    "task_type": "Listen to a Conversation",
+    "exam_format": true,
+    "format": "mcq",
+    "skill": null,
+    "cefr_min": "B1",
+    "cefr_max": "B2",
+    "stimulus": {
+      "kind": "audio",
+      "format": "html",
+      "title": "Exercício B8: Environmental Science Office Hours (meta de 3 min)",
+      "content": "<p><em>Narrator: Listen to a conversation between a student and an environmental science professor.</em></p>\n<p><strong>Student:</strong> Professor Morales, do you have a minute? I'm worried about my field report on creek water quality.</p>\n<p><strong>Professor:</strong> Come on in, Leo. Didn't you plan to compare water samples from the wooded bend and the downstream bridge?</p>\n<p><strong>Student:</strong> That was the plan, yeah, but after Tuesday's heavy rain, the trail to the wooded bend was completely flooded. Park rangers closed it for the rest of the month, so I only have data from the bridge.</p>\n<p><strong>Professor:</strong> Ah, I heard the creek rose quite a bit. Well, you don't need two locations to write a strong paper. Why not pivot to a before-and-after study at the bridge site alone?</p>\n<p><strong>Student:</strong> Wait, how would that work? I only started collecting samples there last week.</p>\n<p><strong>Professor:</strong> The county water board has an automated sensor right under that bridge. Their website posts hourly turbidity and oxygen readings going back five years, so you can compare your post-storm samples with the baseline data from earlier this autumn.</p>\n<p><strong>Student:</strong> Oh, I had no idea that archive was public! That actually gives me a much clearer research question.</p>",
+      "audio_ref": null
+    },
+    "group": "mod2-bn5",
+    "prompt": "Detail. How does the professor suggest the student complete his report?",
+    "text_format": "html",
+    "options": {
+      "A": "By waiting until next month when the wooded trail reopens",
+      "B": "By borrowing water samples collected by last year's class",
+      "C": "By combining his bridge samples with online county sensor records",
+      "D": "By switching his topic from water quality to forest soil erosion"
+    },
+    "answer": "C",
+    "explanation": "A professora sugere focar na ponte e cruzar as amostras pós-tempestade com os dados públicos do sensor do condado (<em>compare your post-storm samples with the baseline data from earlier this autumn</em>), o que valida (C) como <strong>uso complementar do arquivo online</strong>. Se você pensou em (A), repare que a professora propõe trabalhar com o que já existe, sem esperar a trilha reabrir.",
+    "hint": null,
+    "trap_codes": [],
+    "tags": [],
+    "status": "rascunho",
+    "source": {
+      "kind": "migrado",
+      "file": "app/drills_data.py",
+      "ref": "MOD2_ACTION_DRILLS_B:mod2-bn5#B8.2",
+      "live_on_site": true,
+      "answer_letter": "origem",
+      "build_map": {
+        "A": "D",
+        "B": "C",
+        "C": "B",
+        "D": "A"
+      }
+    }
+  },
+  {
+    "id": "mod2-bn6.b9.1",
+    "section": "listening",
+    "task_type": "Listen to a Conversation",
+    "exam_format": true,
+    "format": "mcq",
+    "skill": null,
+    "cefr_min": "B1",
+    "cefr_max": "B2",
+    "stimulus": {
+      "kind": "audio",
+      "format": "html",
+      "title": "Exercício B9: Study Abroad Office (meta de 3 min)",
+      "content": "<p><em>Narrator: Listen to a conversation between a student and a study-abroad advisor.</em></p>\n<p><strong>Student:</strong> Hi, I'm applying for the six-week tropical ecology program in Costa Rica this summer, and I wanted to check how the credits transfer back here.</p>\n<p><strong>Advisor:</strong> Sure. Because that program is run by one of our partner universities, the six credits transfer automatically as general elective hours.</p>\n<p><strong>Student:</strong> Oh, wait. I was counting on using it to fulfill my upper-level biology lab requirement so I can graduate on time next spring.</p>\n<p><strong>Advisor:</strong> In that case, automatic transfer won't be enough. You'll need a course-equivalency approval from the chair of our biology department, Dr. Lindqvist.</p>\n<p><strong>Student:</strong> Okay, what does she usually ask to see? The short course description on the brochure?</p>\n<p><strong>Advisor:</strong> Actually, she's pretty thorough. A brochure blurb won't cut it. She'll want the full weekly syllabus showing the exact number of field and lab hours, plus how students are graded.</p>\n<p><strong>Student:</strong> Good to know. The program deposit isn't due until next Friday, so I'll request the detailed syllabus from the host coordinator today.</p>",
+      "audio_ref": null
+    },
+    "group": "mod2-bn6",
+    "prompt": "Meaning of an expression. What does the advisor mean when he says \"A brochure blurb won't cut it\"?",
+    "text_format": "html",
+    "options": {
+      "A": "A brief summary from the brochure will not be detailed enough",
+      "B": "The printed brochure contains outdated information about the lab",
+      "C": "The student should not clip pages out of the official catalog",
+      "D": "The biology department no longer accepts summer field courses"
+    },
+    "answer": "A",
+    "explanation": "A expressão coloquial <em>won't cut it</em> significa que algo não basta, e o orientador explica logo depois que a chefe do departamento exige o cronograma completo de horas práticas (<em>She'll want the full weekly syllabus</em>), validando (A) como <strong>insuficiência do resumo do folheto</strong>. A alternativa (C) leva o verbo <em>cut</em> ao pé da letra, como recortar papel.",
+    "hint": null,
+    "trap_codes": [],
+    "tags": [],
+    "status": "rascunho",
+    "source": {
+      "kind": "migrado",
+      "file": "app/drills_data.py",
+      "ref": "MOD2_ACTION_DRILLS_B:mod2-bn6#B9.1",
+      "live_on_site": true,
+      "answer_letter": "origem",
+      "build_map": {
+        "A": "A",
+        "B": "D",
+        "C": "B",
+        "D": "C"
+      }
+    }
+  },
+  {
+    "id": "mod2-bn6.b9.2",
+    "section": "listening",
+    "task_type": "Listen to a Conversation",
+    "exam_format": true,
+    "format": "mcq",
+    "skill": null,
+    "cefr_min": "B1",
+    "cefr_max": "B2",
+    "stimulus": {
+      "kind": "audio",
+      "format": "html",
+      "title": "Exercício B9: Study Abroad Office (meta de 3 min)",
+      "content": "<p><em>Narrator: Listen to a conversation between a student and a study-abroad advisor.</em></p>\n<p><strong>Student:</strong> Hi, I'm applying for the six-week tropical ecology program in Costa Rica this summer, and I wanted to check how the credits transfer back here.</p>\n<p><strong>Advisor:</strong> Sure. Because that program is run by one of our partner universities, the six credits transfer automatically as general elective hours.</p>\n<p><strong>Student:</strong> Oh, wait. I was counting on using it to fulfill my upper-level biology lab requirement so I can graduate on time next spring.</p>\n<p><strong>Advisor:</strong> In that case, automatic transfer won't be enough. You'll need a course-equivalency approval from the chair of our biology department, Dr. Lindqvist.</p>\n<p><strong>Student:</strong> Okay, what does she usually ask to see? The short course description on the brochure?</p>\n<p><strong>Advisor:</strong> Actually, she's pretty thorough. A brochure blurb won't cut it. She'll want the full weekly syllabus showing the exact number of field and lab hours, plus how students are graded.</p>\n<p><strong>Student:</strong> Good to know. The program deposit isn't due until next Friday, so I'll request the detailed syllabus from the host coordinator today.</p>",
+      "audio_ref": null
+    },
+    "group": "mod2-bn6",
+    "prompt": "Inference. What will the student probably do before paying the program deposit?",
+    "text_format": "html",
+    "options": {
+      "A": "Switch to a domestic summer course offered on campus",
+      "B": "Ask the financial aid office to waive the deposit fee",
+      "C": "Take an extra biology lab during the current semester",
+      "D": "Get the detailed syllabus and seek Dr. Lindqvist's approval"
+    },
+    "answer": "D",
+    "explanation": "Como o depósito só vence na sexta-feira seguinte, o aluno decide pedir a ementa detalhada imediatamente (<em>I'll request the detailed syllabus from the host coordinator today</em>) para submeter à chefe do departamento, o que aponta para (D) como <strong>obtenção da ementa e aprovação prévia</strong>. A opção (A) desiste do intercâmbio sem que o aluno demonstre essa intenção.",
+    "hint": null,
+    "trap_codes": [],
+    "tags": [],
+    "status": "rascunho",
+    "source": {
+      "kind": "migrado",
+      "file": "app/drills_data.py",
+      "ref": "MOD2_ACTION_DRILLS_B:mod2-bn6#B9.2",
+      "live_on_site": true,
+      "answer_letter": "origem",
+      "build_map": {
+        "A": "D",
+        "B": "A",
+        "C": "C",
+        "D": "B"
+      }
+    }
+  },
+  {
+    "id": "mod2-bn7.b10.1",
+    "section": "listening",
+    "task_type": "Listen to a Conversation",
+    "exam_format": true,
+    "format": "mcq",
+    "skill": null,
+    "cefr_min": "B2",
+    "cefr_max": "C1",
+    "stimulus": {
+      "kind": "audio",
+      "format": "html",
+      "title": "Exercício B10: Architecture Studio Critique (meta de 3 min)",
+      "content": "<p><em>Narrator: Listen to a conversation between a student and an architecture professor after a studio review.</em></p>\n<p><strong>Student:</strong> Professor Vance, thanks for staying a few minutes. After the guest panel's critique of my community center model, I'm torn about how to revise the central atrium for the final portfolio.</p>\n<p><strong>Professor:</strong> You shouldn't feel discouraged, Maya. The visiting architects were genuinely impressed by how your sawtooth roof brings diffused northern light deep into the building.</p>\n<p><strong>Student:</strong> Right, they liked the daylighting, but they pointed out that placing the quiet reading lounge directly off the open atrium would create an acoustic nightmare whenever groups gather downstairs.</p>\n<p><strong>Professor:</strong> And that's a fair critique. Concrete floors and glass balustrades bounce sound around. But you don't have to wall off the reading lounge and lose the visual openness that makes your design work.</p>\n<p><strong>Student:</strong> You mean I can keep the sightlines without enclosing the second floor in glass partitions?</p>\n<p><strong>Professor:</strong> Exactly. Look into suspended timber baffles along the atrium ceiling and a recessed alcove with fabric wall panels for the reading area. They absorb mid-range chatter before it travels upward, so the space stays visually connected without functioning like an echo chamber.</p>",
+      "audio_ref": null
+    },
+    "group": "mod2-bn7",
+    "prompt": "Function. Why does the professor mention concrete floors and glass balustrades?",
+    "text_format": "html",
+    "options": {
+      "A": "To encourage the student to replace all glass with brick walls",
+      "B": "To explain why the panel's concern about noise was reasonable",
+      "C": "To show that the building meets local fire safety regulations",
+      "D": "To suggest materials that would make the model easier to build"
+    },
+    "answer": "B",
+    "explanation": "Logo após dizer <em>And that's a fair critique</em>, o professor cita o piso de concreto e os guarda-corpos de vidro porque esses materiais refletem o som (<em>bounce sound around</em>), justificando em (B) <strong>por que a crítica acústica fazia sentido</strong>. Se você marcou (A), repare que ele desaconselha fechar o espaço com paredes logo na frase seguinte.",
+    "hint": null,
+    "trap_codes": [],
+    "tags": [],
+    "status": "rascunho",
+    "source": {
+      "kind": "migrado",
+      "file": "app/drills_data.py",
+      "ref": "MOD2_ACTION_DRILLS_B:mod2-bn7#B10.1",
+      "live_on_site": true,
+      "answer_letter": "origem",
+      "build_map": {
+        "A": "C",
+        "B": "B",
+        "C": "A",
+        "D": "D"
+      }
+    }
+  },
+  {
+    "id": "mod2-bn7.b10.2",
+    "section": "listening",
+    "task_type": "Listen to a Conversation",
+    "exam_format": true,
+    "format": "mcq",
+    "skill": null,
+    "cefr_min": "B2",
+    "cefr_max": "C1",
+    "stimulus": {
+      "kind": "audio",
+      "format": "html",
+      "title": "Exercício B10: Architecture Studio Critique (meta de 3 min)",
+      "content": "<p><em>Narrator: Listen to a conversation between a student and an architecture professor after a studio review.</em></p>\n<p><strong>Student:</strong> Professor Vance, thanks for staying a few minutes. After the guest panel's critique of my community center model, I'm torn about how to revise the central atrium for the final portfolio.</p>\n<p><strong>Professor:</strong> You shouldn't feel discouraged, Maya. The visiting architects were genuinely impressed by how your sawtooth roof brings diffused northern light deep into the building.</p>\n<p><strong>Student:</strong> Right, they liked the daylighting, but they pointed out that placing the quiet reading lounge directly off the open atrium would create an acoustic nightmare whenever groups gather downstairs.</p>\n<p><strong>Professor:</strong> And that's a fair critique. Concrete floors and glass balustrades bounce sound around. But you don't have to wall off the reading lounge and lose the visual openness that makes your design work.</p>\n<p><strong>Student:</strong> You mean I can keep the sightlines without enclosing the second floor in glass partitions?</p>\n<p><strong>Professor:</strong> Exactly. Look into suspended timber baffles along the atrium ceiling and a recessed alcove with fabric wall panels for the reading area. They absorb mid-range chatter before it travels upward, so the space stays visually connected without functioning like an echo chamber.</p>",
+      "audio_ref": null
+    },
+    "group": "mod2-bn7",
+    "prompt": "Detail. How will the timber baffles and fabric panels solve the student's dilemma?",
+    "text_format": "html",
+    "options": {
+      "A": "They will dampen noise while preserving the open view across the atrium",
+      "B": "They will reflect additional sunlight into the downstairs gathering area",
+      "C": "They will divide the reading lounge into private individual study cubicles",
+      "D": "They will support the weight of the sawtooth roof without steel columns"
+    },
+    "answer": "A",
+    "explanation": "O professor propõe os defletores de madeira e painéis de tecido porque absorvem as vozes mantendo o espaço integrado visualmente (<em>absorb mid-range chatter... so the space stays visually connected</em>), validando (A) como <strong>redução de ruído sem perder a amplitude visual</strong>. A alternativa (C) sugere fechar a área em cabines, exatamente o que a aluna queria evitar.",
+    "hint": null,
+    "trap_codes": [],
+    "tags": [],
+    "status": "rascunho",
+    "source": {
+      "kind": "migrado",
+      "file": "app/drills_data.py",
+      "ref": "MOD2_ACTION_DRILLS_B:mod2-bn7#B10.2",
+      "live_on_site": true,
+      "answer_letter": "origem",
+      "build_map": {
+        "A": "A",
+        "B": "D",
+        "C": "B",
+        "D": "C"
+      }
+    }
+  },
+  {
+    "id": "mod2-bn8.b11.1",
+    "section": "listening",
+    "task_type": "Listen to a Conversation",
+    "exam_format": true,
+    "format": "mcq",
+    "skill": null,
+    "cefr_min": "C1",
+    "cefr_max": "C1",
+    "stimulus": {
+      "kind": "audio",
+      "format": "html",
+      "title": "Exercício B11: Economic History Seminar (meta de 3 min)",
+      "content": "<p><em>Narrator: Listen to a conversation between a student and an economic history professor.</em></p>\n<p><strong>Student:</strong> Professor Calloway, I've been going through the digitized county tax rolls from the 1880s for my senior thesis on New England textile towns, and the numbers aren't lining up with what we read in seminar.</p>\n<p><strong>Professor:</strong> Let me guess. The tax assessments make mill workers' household incomes look surprisingly stable, even during the downturn of 1884?</p>\n<p><strong>Student:</strong> Exactly! Contemporary newspaper accounts describe widespread layoffs, yet the municipal tax records barely register a dip. Was the press exaggerating?</p>\n<p><strong>Professor:</strong> Not necessarily. Think about who actually appears on a nineteenth-century property and poll-tax roll. Long-term residents who owned modest cottages or stayed at the same address year-round were recorded, whereas transient operatives and seasonal spinners who left town when looms shut down simply vanished from the assessor's ledger.</p>\n<p><strong>Student:</strong> Oh, I see. So by relying solely on the tax rolls, I'm only looking at the best-off segment of the workforce that weathered the slump.</p>\n<p><strong>Professor:</strong> Precisely, it's a classic survivorship bias. If you want to capture the full picture, pair those municipal rolls with the Abbott Mill weekly payroll books in our library's special collections. Those list every piece-rate worker by week, including the ones who disappeared mid-season.</p>",
+      "audio_ref": null
+    },
+    "group": "mod2-bn8",
+    "prompt": "Detail. According to the professor, why do the county tax rolls make incomes appear stable in 1884?",
+    "text_format": "html",
+    "options": {
+      "A": "Town officials inflated wage figures to attract outside factory investment",
+      "B": "Mill owners continued paying full wages to workers during temporary shutdowns",
+      "C": "Seasonal workers who lost their jobs left town and were omitted from the rolls",
+      "D": "Tax assessors combined factory wages with agricultural earnings from nearby farms"
+    },
+    "answer": "C",
+    "explanation": "A professora esclarece que os registros municipais incluíam moradores fixos, enquanto trabalhadores temporários que partiam na crise ficavam de fora (<em>transient operatives and seasonal spinners who left town when looms shut down simply vanished from the assessor's ledger</em>), validando (C) como <strong>omissão dos trabalhadores sazonais nos impostos</strong>. A alternativa (B) contradiz as demissões relatadas nos jornais.",
+    "hint": null,
+    "trap_codes": [],
+    "tags": [],
+    "status": "rascunho",
+    "source": {
+      "kind": "migrado",
+      "file": "app/drills_data.py",
+      "ref": "MOD2_ACTION_DRILLS_B:mod2-bn8#B11.1",
+      "live_on_site": true,
+      "answer_letter": "origem",
+      "build_map": {
+        "A": "C",
+        "B": "A",
+        "C": "B",
+        "D": "D"
+      }
+    }
+  },
+  {
+    "id": "mod2-bn8.b11.2",
+    "section": "listening",
+    "task_type": "Listen to a Conversation",
+    "exam_format": true,
+    "format": "mcq",
+    "skill": null,
+    "cefr_min": "C1",
+    "cefr_max": "C1",
+    "stimulus": {
+      "kind": "audio",
+      "format": "html",
+      "title": "Exercício B11: Economic History Seminar (meta de 3 min)",
+      "content": "<p><em>Narrator: Listen to a conversation between a student and an economic history professor.</em></p>\n<p><strong>Student:</strong> Professor Calloway, I've been going through the digitized county tax rolls from the 1880s for my senior thesis on New England textile towns, and the numbers aren't lining up with what we read in seminar.</p>\n<p><strong>Professor:</strong> Let me guess. The tax assessments make mill workers' household incomes look surprisingly stable, even during the downturn of 1884?</p>\n<p><strong>Student:</strong> Exactly! Contemporary newspaper accounts describe widespread layoffs, yet the municipal tax records barely register a dip. Was the press exaggerating?</p>\n<p><strong>Professor:</strong> Not necessarily. Think about who actually appears on a nineteenth-century property and poll-tax roll. Long-term residents who owned modest cottages or stayed at the same address year-round were recorded, whereas transient operatives and seasonal spinners who left town when looms shut down simply vanished from the assessor's ledger.</p>\n<p><strong>Student:</strong> Oh, I see. So by relying solely on the tax rolls, I'm only looking at the best-off segment of the workforce that weathered the slump.</p>\n<p><strong>Professor:</strong> Precisely, it's a classic survivorship bias. If you want to capture the full picture, pair those municipal rolls with the Abbott Mill weekly payroll books in our library's special collections. Those list every piece-rate worker by week, including the ones who disappeared mid-season.</p>",
+      "audio_ref": null
+    },
+    "group": "mod2-bn8",
+    "prompt": "Function. Why does the professor recommend examining the Abbott Mill payroll books?",
+    "text_format": "html",
+    "options": {
+      "A": "To prove that nineteenth-century newspapers fabricated stories about strikes",
+      "B": "To provide weekly records that include short-term workers missing from tax rolls",
+      "C": "To show how factory managers calculated property taxes for mill cottages",
+      "D": "To replace primary archival sources with modern economic commentary"
+    },
+    "answer": "B",
+    "explanation": "Para corrigir o viés de seleção, a professora recomenda os livros de pagamento da fábrica porque eles registram todos os operários semana a semana, inclusive quem saía no meio da estação (<em>Those list every piece-rate worker by week, including the ones who disappeared mid-season</em>), confirmando (B) como <strong>fonte que inclui a mão de obra temporária</strong>. A opção (A) inverte o argumento, já que os livros confirmam a crise.",
+    "hint": null,
+    "trap_codes": [],
+    "tags": [],
+    "status": "rascunho",
+    "source": {
+      "kind": "migrado",
+      "file": "app/drills_data.py",
+      "ref": "MOD2_ACTION_DRILLS_B:mod2-bn8#B11.2",
+      "live_on_site": true,
+      "answer_letter": "origem",
+      "build_map": {
+        "A": "B",
+        "B": "A",
+        "C": "D",
+        "D": "C"
+      }
+    }
+  },
+  {
     "id": "mod7-b7.1",
     "section": "listening",
     "task_type": "Listen to a Conversation",

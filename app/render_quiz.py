@@ -13,7 +13,16 @@ def weak_area(prompt):
     return "vocabulario" if "closest in meaning" in prompt else None
 
 
-def render_quiz_drill(drill_id, title, objective, passage_html, items, listen=False, level=None, reveal_at_end=False):
+def render_quiz_drill(drill_id, title, objective, passage_html, items, listen=False, level=None, reveal_at_end=False,
+                      hide_transcript=False):
+    # hide_transcript=True (M2 desde 2026-11-16): ouvir antes de ler. A
+    # transcrição da passagem só aparece com todas as questões respondidas, e
+    # a fala de cada item do Listen and Choose a Response, com aquele item
+    # respondido (o app.js tira o hidden). Sem voz no navegador, o botão de
+    # ouvir fica desabilitado com "Áudio em breve".
+    hide_attr = " data-listen-hide" if hide_transcript else ""
+    prompt_hint = '<span class="qprompt-hint">Ouça a fala e escolha a resposta.</span>' if (hide_transcript and not passage_html) else ""
+    prompt_hidden = " hidden" if (hide_transcript and not passage_html) else ""
     # reveal_at_end=True (diagnóstico do M0): cada resposta confirmada fica
     # guardada sem correção; o gabarito e as explicações aparecem juntos
     # depois da última questão (app.js lê data-reveal="end"). O item pode
@@ -45,7 +54,7 @@ def render_quiz_drill(drill_id, title, objective, passage_html, items, listen=Fa
         cards.append(f'''
 <div class="qcard" data-correct="{it['correct']}" data-num="{it['num']}"{multi_attr}>
   <div class="qhead"><span class="qnum">{it['num']}</span></div>
-  <p class="qprompt"><span class="qprompt-text">{tag_refs(it['prompt'])}</span>{item_listen_btn}</p>
+  <p class="qprompt">{prompt_hint}<span class="qprompt-text"{hide_attr if prompt_hidden else ""}{prompt_hidden}>{tag_refs(it['prompt'])}</span>{item_listen_btn}</p>
   <div class="qopts">{opts}</div>
   <button class="qconfirm" type="button" hidden>Confirmar resposta</button>
   <div class="qfeedback" hidden>
@@ -56,10 +65,16 @@ def render_quiz_drill(drill_id, title, objective, passage_html, items, listen=Fa
         '<button type="button" class="speak-btn quiz-passage-speak">' + icon("volume") + ' Ouvir áudio</button>'
         if (listen and passage_html) else ""
     )
-    passage_block = (
-        f'<div class="quiz-passage">{passage_listen_btn}<div class="quiz-passage-body">{passage_html}</div></div>'
-        if passage_html else ""
-    )
+    if passage_html and hide_transcript:
+        passage_block = (
+            f'<div class="quiz-passage" data-for="{drill_id}"{hide_attr}>{passage_listen_btn}'
+            f'<p class="quiz-transcript-note">A transcrição aparece aqui depois que você responder a todas as questões.</p>'
+            f'<div class="quiz-passage-body" hidden>{passage_html}</div></div>'
+        )
+    elif passage_html:
+        passage_block = f'<div class="quiz-passage">{passage_listen_btn}<div class="quiz-passage-body">{passage_html}</div></div>'
+    else:
+        passage_block = ""
     # nível CEFR do drill (ver "level" em drills_data.py): badge visível +
     # data-level no widget, para JS marcar "recomendado para o seu nível" com
     # base na banda estimada do aluno (diagnóstico do M0 ou Action Drills

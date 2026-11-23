@@ -540,6 +540,1086 @@
     }
   },
   {
+    "id": "mod2-an1.a13",
+    "section": "listening",
+    "task_type": "Listen and Choose a Response",
+    "exam_format": true,
+    "format": "mcq",
+    "skill": null,
+    "cefr_min": "A2",
+    "cefr_max": "B1",
+    "stimulus": {
+      "kind": "audio",
+      "format": "html",
+      "title": null,
+      "content": "\"Excuse me, is this seat next to you taken?\"",
+      "audio_ref": null
+    },
+    "group": "mod2-an1",
+    "prompt": "Choose the best response.",
+    "text_format": "html",
+    "options": {
+      "A": "No, go right ahead and sit down.",
+      "B": "Yes, I took the exam yesterday.",
+      "C": "The seats in the back are blue.",
+      "D": "I usually sit near the window."
+    },
+    "answer": "A",
+    "explanation": "Quando alguém pergunta <em>is this seat next to you taken?</em>, quer saber se o lugar está livre para sentar, por isso (A) responde com naturalidade ao <strong>liberar o assento</strong>. Se você pensou em (B), repare que ela usa o verbo <em>took</em>, mas fala de uma prova de ontem e não do lugar ao lado.",
+    "hint": null,
+    "trap_codes": [],
+    "tags": [],
+    "status": "rascunho",
+    "source": {
+      "kind": "migrado",
+      "file": "app/drills_data.py",
+      "ref": "MOD2_ACTION_DRILLS_A:mod2-an1#A13",
+      "live_on_site": true,
+      "answer_letter": "origem",
+      "build_map": {
+        "A": "A",
+        "B": "B",
+        "C": "D",
+        "D": "C"
+      }
+    }
+  },
+  {
+    "id": "mod2-an1.a14",
+    "section": "listening",
+    "task_type": "Listen and Choose a Response",
+    "exam_format": true,
+    "format": "mcq",
+    "skill": null,
+    "cefr_min": "A2",
+    "cefr_max": "B1",
+    "stimulus": {
+      "kind": "audio",
+      "format": "html",
+      "title": null,
+      "content": "\"Oh, wait, I left my student ID card in my dorm room.\"",
+      "audio_ref": null
+    },
+    "group": "mod2-an1",
+    "prompt": "Choose the best response.",
+    "text_format": "html",
+    "options": {
+      "A": "My dorm room is on the third floor.",
+      "B": "We can wait here while you grab it.",
+      "C": "The student center closes at eight.",
+      "D": "I got my new card last September."
+    },
+    "answer": "B",
+    "explanation": "Ao dizer <em>I left my student ID card in my dorm room</em>, quem fala percebe que esqueceu o cartão agora, e (B) traz a <strong>reação prática de esperar</strong> enquanto a pessoa busca o documento. A opção (A) é uma armadilha comum porque repete <em>dorm room</em>, mas só informa o andar do quarto sem ajudar na situação.",
+    "hint": null,
+    "trap_codes": [],
+    "tags": [],
+    "status": "rascunho",
+    "source": {
+      "kind": "migrado",
+      "file": "app/drills_data.py",
+      "ref": "MOD2_ACTION_DRILLS_A:mod2-an1#A14",
+      "live_on_site": true,
+      "answer_letter": "origem",
+      "build_map": {
+        "A": "C",
+        "B": "D",
+        "C": "B",
+        "D": "A"
+      }
+    }
+  },
+  {
+    "id": "mod2-an1.a15",
+    "section": "listening",
+    "task_type": "Listen and Choose a Response",
+    "exam_format": true,
+    "format": "mcq",
+    "skill": null,
+    "cefr_min": "A2",
+    "cefr_max": "B1",
+    "stimulus": {
+      "kind": "audio",
+      "format": "html",
+      "title": null,
+      "content": "\"Do you know what time the campus bookstore closes today?\"",
+      "audio_ref": null
+    },
+    "group": "mod2-an1",
+    "prompt": "Choose the best response.",
+    "text_format": "html",
+    "options": {
+      "A": "I bought two notebooks there yesterday.",
+      "B": "The bookstore is right across the quad.",
+      "C": "I think it closes at five today.",
+      "D": "Yes, the textbooks are pretty expensive."
+    },
+    "answer": "C",
+    "explanation": "A pergunta <em>what time the campus bookstore closes today</em> pede o <strong>horário de fechamento da livraria</strong>, que (C) informa de modo natural. Já a alternativa (B) fala da localização da loja no campus, respondendo a onde ela fica e não a que horas fecha.",
+    "hint": null,
+    "trap_codes": [],
+    "tags": [],
+    "status": "rascunho",
+    "source": {
+      "kind": "migrado",
+      "file": "app/drills_data.py",
+      "ref": "MOD2_ACTION_DRILLS_A:mod2-an1#A15",
+      "live_on_site": true,
+      "answer_letter": "origem",
+      "build_map": {
+        "A": "C",
+        "B": "A",
+        "C": "B",
+        "D": "D"
+      }
+    }
+  },
+  {
+    "id": "mod2-an1.a16",
+    "section": "listening",
+    "task_type": "Listen and Choose a Response",
+    "exam_format": true,
+    "format": "mcq",
+    "skill": null,
+    "cefr_min": "A2",
+    "cefr_max": "B1",
+    "stimulus": {
+      "kind": "audio",
+      "format": "html",
+      "title": null,
+      "content": "\"It's a bit cold in this classroom, don't you think?\"",
+      "audio_ref": null
+    },
+    "group": "mod2-an1",
+    "prompt": "Choose the best response.",
+    "text_format": "html",
+    "options": {
+      "A": "Class starts at ten every Monday.",
+      "B": "Winter is my favorite season here.",
+      "C": "I think the professor is outside.",
+      "D": "Yeah, I'll go shut the window now."
+    },
+    "answer": "D",
+    "explanation": "O comentário <em>It's a bit cold in this classroom, don't you think?</em> busca concordância sobre o frio na sala, e (D) <strong>concorda e oferece uma solução</strong> fechando a janela. A opção (B) puxa o assunto para o inverno em geral e ignora o desconforto da sala agora.",
+    "hint": null,
+    "trap_codes": [],
+    "tags": [],
+    "status": "rascunho",
+    "source": {
+      "kind": "migrado",
+      "file": "app/drills_data.py",
+      "ref": "MOD2_ACTION_DRILLS_A:mod2-an1#A16",
+      "live_on_site": true,
+      "answer_letter": "origem",
+      "build_map": {
+        "A": "A",
+        "B": "D",
+        "C": "C",
+        "D": "B"
+      }
+    }
+  },
+  {
+    "id": "mod2-an1.a17",
+    "section": "listening",
+    "task_type": "Listen and Choose a Response",
+    "exam_format": true,
+    "format": "mcq",
+    "skill": null,
+    "cefr_min": "A2",
+    "cefr_max": "B1",
+    "stimulus": {
+      "kind": "audio",
+      "format": "html",
+      "title": null,
+      "content": "\"I can't find the biology lab on this campus map.\"",
+      "audio_ref": null
+    },
+    "group": "mod2-an1",
+    "prompt": "Choose the best response.",
+    "text_format": "html",
+    "options": {
+      "A": "I'm heading there now, so follow me.",
+      "B": "Biology is a required class for me.",
+      "C": "The campus map is free for students.",
+      "D": "Our lab partner finished the chart."
+    },
+    "answer": "A",
+    "explanation": "Diante da dificuldade em <em>I can't find the biology lab on this campus map</em>, quem fala precisa de ajuda para chegar ao local, e (A) resolve isso ao <strong>convidar para ir junto</strong>. A alternativa (C) repete <em>campus map</em>, mas fala do preço do mapa em vez de indicar o caminho.",
+    "hint": null,
+    "trap_codes": [],
+    "tags": [],
+    "status": "rascunho",
+    "source": {
+      "kind": "migrado",
+      "file": "app/drills_data.py",
+      "ref": "MOD2_ACTION_DRILLS_A:mod2-an1#A17",
+      "live_on_site": true,
+      "answer_letter": "origem",
+      "build_map": {
+        "A": "C",
+        "B": "A",
+        "C": "D",
+        "D": "B"
+      }
+    }
+  },
+  {
+    "id": "mod2-an1.a18",
+    "section": "listening",
+    "task_type": "Listen and Choose a Response",
+    "exam_format": true,
+    "format": "mcq",
+    "skill": null,
+    "cefr_min": "A2",
+    "cefr_max": "B1",
+    "stimulus": {
+      "kind": "audio",
+      "format": "html",
+      "title": null,
+      "content": "\"Are you still using that dictionary, or can I borrow it?\"",
+      "audio_ref": null
+    },
+    "group": "mod2-an1",
+    "prompt": "Choose the best response.",
+    "text_format": "html",
+    "options": {
+      "A": "I looked up three new words today.",
+      "B": "It's all yours, I'm done with it.",
+      "C": "The library has a lot of computers.",
+      "D": "You can buy one at the main store."
+    },
+    "answer": "B",
+    "explanation": "A pergunta <em>Are you still using that dictionary, or can I borrow it?</em> é um pedido para usar o dicionário agora, e (B) responde de forma direta ao <strong>avisar que já terminou de usar</strong>. A opção (A) fala de palavras pesquisadas no dia, mas não diz se o livro está livre.",
+    "hint": null,
+    "trap_codes": [],
+    "tags": [],
+    "status": "rascunho",
+    "source": {
+      "kind": "migrado",
+      "file": "app/drills_data.py",
+      "ref": "MOD2_ACTION_DRILLS_A:mod2-an1#A18",
+      "live_on_site": true,
+      "answer_letter": "origem",
+      "build_map": {
+        "A": "C",
+        "B": "A",
+        "C": "D",
+        "D": "B"
+      }
+    }
+  },
+  {
+    "id": "mod2-an2.a19",
+    "section": "listening",
+    "task_type": "Listen and Choose a Response",
+    "exam_format": true,
+    "format": "mcq",
+    "skill": null,
+    "cefr_min": "B1",
+    "cefr_max": "B2",
+    "stimulus": {
+      "kind": "audio",
+      "format": "html",
+      "title": null,
+      "content": "\"I'm swamped with readings this week, so I might skip the club meeting.\"",
+      "audio_ref": null
+    },
+    "group": "mod2-an2",
+    "prompt": "Choose the best response.",
+    "text_format": "html",
+    "options": {
+      "A": "The reading room on the second floor is quiet.",
+      "B": "Our club meets every Wednesday in the lounge.",
+      "C": "No worries, I'll fill you in on what you miss.",
+      "D": "I finished reading that chapter last weekend."
+    },
+    "answer": "C",
+    "explanation": "Quando quem fala avisa <em>I'm swamped with readings this week, so I might skip the club meeting</em>, está explicando que deve faltar à reunião por excesso de leitura, e (C) acolhe a ausência e <strong>promete passar o resumo depois</strong>. A opção (B) apenas informa o dia fixo do encontro, sem reagir ao aviso de falta.",
+    "hint": null,
+    "trap_codes": [],
+    "tags": [],
+    "status": "rascunho",
+    "source": {
+      "kind": "migrado",
+      "file": "app/drills_data.py",
+      "ref": "MOD2_ACTION_DRILLS_A:mod2-an2#A19",
+      "live_on_site": true,
+      "answer_letter": "origem",
+      "build_map": {
+        "A": "C",
+        "B": "A",
+        "C": "B",
+        "D": "D"
+      }
+    }
+  },
+  {
+    "id": "mod2-an2.a20",
+    "section": "listening",
+    "task_type": "Listen and Choose a Response",
+    "exam_format": true,
+    "format": "mcq",
+    "skill": null,
+    "cefr_min": "B1",
+    "cefr_max": "B2",
+    "stimulus": {
+      "kind": "audio",
+      "format": "html",
+      "title": null,
+      "content": "\"Did you manage to get a seat in Professor Patel's seminar for next term?\"",
+      "audio_ref": null
+    },
+    "group": "mod2-an2",
+    "prompt": "Choose the best response.",
+    "text_format": "html",
+    "options": {
+      "A": "Her office hours are on Tuesday afternoons.",
+      "B": "The seminar room is in the history building.",
+      "C": "I took an introductory class with her once.",
+      "D": "No, it filled up fast, so I'm on the waitlist."
+    },
+    "answer": "D",
+    "explanation": "A pergunta <em>Did you manage to get a seat in Professor Patel's seminar</em> trata de conseguir vaga na matrícula, e (D) responde diretamente ao contar que a turma lotou e restou a <strong>lista de espera da disciplina</strong>. A alternativa (B) confunde <em>get a seat</em> na matéria com a localização física da sala.",
+    "hint": null,
+    "trap_codes": [],
+    "tags": [],
+    "status": "rascunho",
+    "source": {
+      "kind": "migrado",
+      "file": "app/drills_data.py",
+      "ref": "MOD2_ACTION_DRILLS_A:mod2-an2#A20",
+      "live_on_site": true,
+      "answer_letter": "origem",
+      "build_map": {
+        "A": "A",
+        "B": "C",
+        "C": "D",
+        "D": "B"
+      }
+    }
+  },
+  {
+    "id": "mod2-an2.a21",
+    "section": "listening",
+    "task_type": "Listen and Choose a Response",
+    "exam_format": true,
+    "format": "mcq",
+    "skill": null,
+    "cefr_min": "B1",
+    "cefr_max": "B2",
+    "stimulus": {
+      "kind": "audio",
+      "format": "html",
+      "title": null,
+      "content": "\"Wait, didn't the teaching assistant say the quiz would only cover chapter four?\"",
+      "audio_ref": null
+    },
+    "group": "mod2-an2",
+    "prompt": "Choose the best response.",
+    "text_format": "html",
+    "options": {
+      "A": "Actually, she added chapter five in an email.",
+      "B": "The teaching assistant grades all our papers.",
+      "C": "Chapter four was much shorter than the others.",
+      "D": "We have a short quiz every other Friday morning."
+    },
+    "answer": "A",
+    "explanation": "Ao perguntar <em>didn't the teaching assistant say the quiz would only cover chapter four?</em>, quem fala quer confirmar a matéria do teste, e (A) esclarece a dúvida com a <strong>atualização enviada por e-mail</strong>. A opção (C) comenta o tamanho do capítulo quatro, mas não confirma o conteúdo cobrado na avaliação.",
+    "hint": null,
+    "trap_codes": [],
+    "tags": [],
+    "status": "rascunho",
+    "source": {
+      "kind": "migrado",
+      "file": "app/drills_data.py",
+      "ref": "MOD2_ACTION_DRILLS_A:mod2-an2#A21",
+      "live_on_site": true,
+      "answer_letter": "origem",
+      "build_map": {
+        "A": "A",
+        "B": "B",
+        "C": "C",
+        "D": "D"
+      }
+    }
+  },
+  {
+    "id": "mod2-an2.a22",
+    "section": "listening",
+    "task_type": "Listen and Choose a Response",
+    "exam_format": true,
+    "format": "mcq",
+    "skill": null,
+    "cefr_min": "B1",
+    "cefr_max": "B2",
+    "stimulus": {
+      "kind": "audio",
+      "format": "html",
+      "title": null,
+      "content": "\"If we don't reserve a group study room soon, they'll all be booked for finals.\"",
+      "audio_ref": null
+    },
+    "group": "mod2-an2",
+    "prompt": "Choose the best response.",
+    "text_format": "html",
+    "options": {
+      "A": "The library bought new tables last month.",
+      "B": "Good point, I'll log in and book one now.",
+      "C": "Final exams always last for a whole week.",
+      "D": "Our study group has four people this term."
+    },
+    "answer": "B",
+    "explanation": "O alerta <em>If we don't reserve a group study room soon, they'll all be booked</em> aponta a urgência de garantir uma sala antes que acabe, e (B) reage na hora ao <strong>fazer a reserva no sistema</strong>. A alternativa (D) fala do tamanho do grupo de estudo, mas deixa de lado o risco de ficar sem sala.",
+    "hint": null,
+    "trap_codes": [],
+    "tags": [],
+    "status": "rascunho",
+    "source": {
+      "kind": "migrado",
+      "file": "app/drills_data.py",
+      "ref": "MOD2_ACTION_DRILLS_A:mod2-an2#A22",
+      "live_on_site": true,
+      "answer_letter": "origem",
+      "build_map": {
+        "A": "D",
+        "B": "A",
+        "C": "C",
+        "D": "B"
+      }
+    }
+  },
+  {
+    "id": "mod2-an2.a23",
+    "section": "listening",
+    "task_type": "Listen and Choose a Response",
+    "exam_format": true,
+    "format": "mcq",
+    "skill": null,
+    "cefr_min": "B1",
+    "cefr_max": "B2",
+    "stimulus": {
+      "kind": "audio",
+      "format": "html",
+      "title": null,
+      "content": "\"I was hoping to talk to my advisor today, but her door's closed.\"",
+      "audio_ref": null
+    },
+    "group": "mod2-an2",
+    "prompt": "Choose the best response.",
+    "text_format": "html",
+    "options": {
+      "A": "My advisor helped me pick my major last year.",
+      "B": "The door to the main building locks at nine.",
+      "C": "She's usually back from lunch around one-thirty.",
+      "D": "Advising appointments take about twenty minutes."
+    },
+    "answer": "C",
+    "explanation": "Diante da frustração em <em>I was hoping to talk to my advisor today, but her door's closed</em>, a resposta mais prestativa é informar quando ela deve voltar, como faz (C) ao indicar o <strong>horário de retorno do almoço</strong>. A opção (B) repete a palavra <em>door</em>, mas fala da porta do prédio à noite.",
+    "hint": null,
+    "trap_codes": [],
+    "tags": [],
+    "status": "rascunho",
+    "source": {
+      "kind": "migrado",
+      "file": "app/drills_data.py",
+      "ref": "MOD2_ACTION_DRILLS_A:mod2-an2#A23",
+      "live_on_site": true,
+      "answer_letter": "origem",
+      "build_map": {
+        "A": "D",
+        "B": "A",
+        "C": "C",
+        "D": "B"
+      }
+    }
+  },
+  {
+    "id": "mod2-an2.a24",
+    "section": "listening",
+    "task_type": "Listen and Choose a Response",
+    "exam_format": true,
+    "format": "mcq",
+    "skill": null,
+    "cefr_min": "B1",
+    "cefr_max": "B2",
+    "stimulus": {
+      "kind": "audio",
+      "format": "html",
+      "title": null,
+      "content": "\"How come you're printing your slides here instead of at the computer lab?\"",
+      "audio_ref": null
+    },
+    "group": "mod2-an2",
+    "prompt": "Choose the best response.",
+    "text_format": "html",
+    "options": {
+      "A": "I need about fifteen slides for my talk.",
+      "B": "The computer lab is in the north wing.",
+      "C": "Printing costs five cents a page there.",
+      "D": "Both printers over there are jammed again."
+    },
+    "answer": "D",
+    "explanation": "Em <em>How come you're printing your slides here instead of at the computer lab?</em>, a expressão <em>how come</em> pede o motivo da escolha, e (D) apresenta a <strong>causa prática do problema</strong> nas impressoras do laboratório. A alternativa (B) apenas diz onde fica o laboratório, sem explicar a troca de lugar.",
+    "hint": null,
+    "trap_codes": [],
+    "tags": [],
+    "status": "rascunho",
+    "source": {
+      "kind": "migrado",
+      "file": "app/drills_data.py",
+      "ref": "MOD2_ACTION_DRILLS_A:mod2-an2#A24",
+      "live_on_site": true,
+      "answer_letter": "origem",
+      "build_map": {
+        "A": "C",
+        "B": "B",
+        "C": "A",
+        "D": "D"
+      }
+    }
+  },
+  {
+    "id": "mod2-an3.a25",
+    "section": "listening",
+    "task_type": "Listen and Choose a Response",
+    "exam_format": true,
+    "format": "mcq",
+    "skill": null,
+    "cefr_min": "B2",
+    "cefr_max": "C1",
+    "stimulus": {
+      "kind": "audio",
+      "format": "html",
+      "title": null,
+      "content": "\"I'd double-check those survey numbers before sending the file to Dr. Evans, if I were you.\"",
+      "audio_ref": null
+    },
+    "group": "mod2-an3",
+    "prompt": "Choose the best response.",
+    "text_format": "html",
+    "options": {
+      "A": "Dr. Evans teaches the advanced research methods course.",
+      "B": "Did you spot an error in one of the spreadsheet columns?",
+      "C": "How many students ended up responding to the survey?",
+      "D": "The file was saved in the shared folder yesterday."
+    },
+    "answer": "B",
+    "explanation": "A estrutura <em>I'd double-check those survey numbers... if I were you</em> funciona como um alerta indireto de que algo parece errado nos dados, por isso (B) reage na hora perguntando se houve um <strong>erro específico na planilha</strong>. A opção (C) também faz uma pergunta sobre a pesquisa, mas ignora completamente o aviso de revisão.",
+    "hint": null,
+    "trap_codes": [],
+    "tags": [],
+    "status": "rascunho",
+    "source": {
+      "kind": "migrado",
+      "file": "app/drills_data.py",
+      "ref": "MOD2_ACTION_DRILLS_A:mod2-an3#A25",
+      "live_on_site": true,
+      "answer_letter": "origem",
+      "build_map": {
+        "A": "D",
+        "B": "A",
+        "C": "B",
+        "D": "C"
+      }
+    }
+  },
+  {
+    "id": "mod2-an3.a26",
+    "section": "listening",
+    "task_type": "Listen and Choose a Response",
+    "exam_format": true,
+    "format": "mcq",
+    "skill": null,
+    "cefr_min": "B2",
+    "cefr_max": "C1",
+    "stimulus": {
+      "kind": "audio",
+      "format": "html",
+      "title": null,
+      "content": "\"Wait, so our funding proposal for the robotics project is still up in the air?\"",
+      "audio_ref": null
+    },
+    "group": "mod2-an3",
+    "prompt": "Choose the best response.",
+    "text_format": "html",
+    "options": {
+      "A": "The robotics team won second place at last year's fair.",
+      "B": "Our project focuses on small aerial drones for mapping.",
+      "C": "Yeah, the committee postponed its final vote until Monday.",
+      "D": "The funding form needs to be signed in blue or black ink."
+    },
+    "answer": "C",
+    "explanation": "Na pergunta <em>so our funding proposal for the robotics project is still up in the air?</em>, a expressão <em>up in the air</em> significa indefinido, o que (C) confirma ao explicar o <strong>adiamento da votação final</strong>. A alternativa (B) é uma armadilha clássica porque leva <em>in the air</em> ao pé da letra e fala de drones aéreos.",
+    "hint": null,
+    "trap_codes": [],
+    "tags": [],
+    "status": "rascunho",
+    "source": {
+      "kind": "migrado",
+      "file": "app/drills_data.py",
+      "ref": "MOD2_ACTION_DRILLS_A:mod2-an3#A26",
+      "live_on_site": true,
+      "answer_letter": "origem",
+      "build_map": {
+        "A": "B",
+        "B": "C",
+        "C": "A",
+        "D": "D"
+      }
+    }
+  },
+  {
+    "id": "mod2-an3.a27",
+    "section": "listening",
+    "task_type": "Listen and Choose a Response",
+    "exam_format": true,
+    "format": "mcq",
+    "skill": null,
+    "cefr_min": "B2",
+    "cefr_max": "C1",
+    "stimulus": {
+      "kind": "audio",
+      "format": "html",
+      "title": null,
+      "content": "\"I was under the impression that the internship required a letter from the dean.\"",
+      "audio_ref": null
+    },
+    "group": "mod2-an3",
+    "prompt": "Choose the best response.",
+    "text_format": "html",
+    "options": {
+      "A": "The dean's office moved to the administration building.",
+      "B": "Internships are a great way to build work experience.",
+      "C": "I wrote a cover letter for that position last night.",
+      "D": "Actually, they dropped that requirement this year."
+    },
+    "answer": "D",
+    "explanation": "A abertura <em>I was under the impression that...</em> indica uma suposição que pede confirmação ou correção, e (D) corrige a suposição ao contar que <strong>a exigência caiu</strong> este ano. A opção (C) repete a palavra <em>letter</em>, mas troca a carta da direção por uma carta de apresentação pessoal.",
+    "hint": null,
+    "trap_codes": [],
+    "tags": [],
+    "status": "rascunho",
+    "source": {
+      "kind": "migrado",
+      "file": "app/drills_data.py",
+      "ref": "MOD2_ACTION_DRILLS_A:mod2-an3#A27",
+      "live_on_site": true,
+      "answer_letter": "origem",
+      "build_map": {
+        "A": "D",
+        "B": "A",
+        "C": "C",
+        "D": "B"
+      }
+    }
+  },
+  {
+    "id": "mod2-an3.a28",
+    "section": "listening",
+    "task_type": "Listen and Choose a Response",
+    "exam_format": true,
+    "format": "mcq",
+    "skill": null,
+    "cefr_min": "B2",
+    "cefr_max": "C1",
+    "stimulus": {
+      "kind": "audio",
+      "format": "html",
+      "title": null,
+      "content": "\"We'd better iron out the timeline for our lab experiment before we meet with the TA.\"",
+      "audio_ref": null
+    },
+    "group": "mod2-an3",
+    "prompt": "Choose the best response.",
+    "text_format": "html",
+    "options": {
+      "A": "Agreed, let's sit down after lunch and map out each step.",
+      "B": "The lab equipment is made of stainless steel and iron.",
+      "C": "Our teaching assistant holds office hours on Wednesdays.",
+      "D": "The experiment took much longer than anyone expected."
+    },
+    "answer": "A",
+    "explanation": "Em <em>We'd better iron out the timeline for our lab experiment</em>, o phrasal verb <em>iron out</em> quer dizer acertar os detalhes pendentes, e (A) concorda propondo <strong>definir cada etapa depois do almoço</strong>. A alternativa (B) cai na armadilha literal de <em>iron</em> como ferro ou metal do equipamento.",
+    "hint": null,
+    "trap_codes": [],
+    "tags": [],
+    "status": "rascunho",
+    "source": {
+      "kind": "migrado",
+      "file": "app/drills_data.py",
+      "ref": "MOD2_ACTION_DRILLS_A:mod2-an3#A28",
+      "live_on_site": true,
+      "answer_letter": "origem",
+      "build_map": {
+        "A": "C",
+        "B": "D",
+        "C": "B",
+        "D": "A"
+      }
+    }
+  },
+  {
+    "id": "mod2-an3.a29",
+    "section": "listening",
+    "task_type": "Listen and Choose a Response",
+    "exam_format": true,
+    "format": "mcq",
+    "skill": null,
+    "cefr_min": "B2",
+    "cefr_max": "C1",
+    "stimulus": {
+      "kind": "audio",
+      "format": "html",
+      "title": null,
+      "content": "\"You didn't happen to pick up an extra copy of the syllabus on your way out, did you?\"",
+      "audio_ref": null
+    },
+    "group": "mod2-an3",
+    "prompt": "Choose the best response.",
+    "text_format": "html",
+    "options": {
+      "A": "The syllabus lists three major papers for this semester.",
+      "B": "I dropped that class during the first week of the term.",
+      "C": "No, sorry, but the professor posted the PDF online too.",
+      "D": "The copy machine in the department lounge is working."
+    },
+    "answer": "C",
+    "explanation": "A pergunta <em>You didn't happen to pick up an extra copy of the syllabus... did you?</em> é um jeito educado de pedir uma cópia caso a pessoa tenha pego uma a mais, e (C) responde e <strong>indica a versão em PDF online</strong>. A opção (D) aproveita a palavra <em>copy</em> para falar da copiadora, sem responder ao pedido.",
+    "hint": null,
+    "trap_codes": [],
+    "tags": [],
+    "status": "rascunho",
+    "source": {
+      "kind": "migrado",
+      "file": "app/drills_data.py",
+      "ref": "MOD2_ACTION_DRILLS_A:mod2-an3#A29",
+      "live_on_site": true,
+      "answer_letter": "origem",
+      "build_map": {
+        "A": "A",
+        "B": "D",
+        "C": "B",
+        "D": "C"
+      }
+    }
+  },
+  {
+    "id": "mod2-an3.a30",
+    "section": "listening",
+    "task_type": "Listen and Choose a Response",
+    "exam_format": true,
+    "format": "mcq",
+    "skill": null,
+    "cefr_min": "B2",
+    "cefr_max": "C1",
+    "stimulus": {
+      "kind": "audio",
+      "format": "html",
+      "title": null,
+      "content": "\"Getting a summer research grant as a first-year student is a bit of a long shot, isn't it?\"",
+      "audio_ref": null
+    },
+    "group": "mod2-an3",
+    "prompt": "Choose the best response.",
+    "text_format": "html",
+    "options": {
+      "A": "Maybe, but a couple of freshmen got funded last summer.",
+      "B": "The photography club is taking shots of the campus quad.",
+      "C": "Summer classes run from early June through mid-August.",
+      "D": "Grant applications must be submitted to the main office."
+    },
+    "answer": "A",
+    "explanation": "Quando quem fala diz que conseguir a bolsa no primeiro ano é <em>a bit of a long shot</em>, quer dizer que a chance parece baixa, e (A) reconhece a dificuldade mas <strong>anima com exemplos reais</strong> do verão passado. A alternativa (B) interpreta <em>shot</em> ao pé da letra como foto, fugindo do assunto.",
+    "hint": null,
+    "trap_codes": [],
+    "tags": [],
+    "status": "rascunho",
+    "source": {
+      "kind": "migrado",
+      "file": "app/drills_data.py",
+      "ref": "MOD2_ACTION_DRILLS_A:mod2-an3#A30",
+      "live_on_site": true,
+      "answer_letter": "origem",
+      "build_map": {
+        "A": "D",
+        "B": "A",
+        "C": "B",
+        "D": "C"
+      }
+    }
+  },
+  {
+    "id": "mod2-an4.a31",
+    "section": "listening",
+    "task_type": "Listen and Choose a Response",
+    "exam_format": true,
+    "format": "mcq",
+    "skill": null,
+    "cefr_min": "C1",
+    "cefr_max": "C1",
+    "stimulus": {
+      "kind": "audio",
+      "format": "html",
+      "title": null,
+      "content": "\"Well, the peer reviewers didn't exactly jump for joy over our methodology section.\"",
+      "audio_ref": null
+    },
+    "group": "mod2-an4",
+    "prompt": "Choose the best response.",
+    "text_format": "html",
+    "options": {
+      "A": "The methodology section comes right after the introduction.",
+      "B": "I'm glad the reviewers were so enthusiastic about our work.",
+      "C": "Peer review for that journal usually takes about six weeks.",
+      "D": "That's rough, but hopefully their comments are easy to fix."
+    },
+    "answer": "D",
+    "explanation": "Ao dizer que os pareceristas <em>didn't exactly jump for joy over our methodology section</em>, quem fala usa uma atenuação irônica para contar que a seção recebeu críticas, e (D) capta esse tom ao <strong>lamentar o revés e focar nos ajustes</strong>. A opção (B) perde a ironia do <em>didn't exactly</em> e acha que o retorno foi entusiasmado.",
+    "hint": null,
+    "trap_codes": [],
+    "tags": [],
+    "status": "rascunho",
+    "source": {
+      "kind": "migrado",
+      "file": "app/drills_data.py",
+      "ref": "MOD2_ACTION_DRILLS_A:mod2-an4#A31",
+      "live_on_site": true,
+      "answer_letter": "origem",
+      "build_map": {
+        "A": "C",
+        "B": "D",
+        "C": "A",
+        "D": "B"
+      }
+    }
+  },
+  {
+    "id": "mod2-an4.a32",
+    "section": "listening",
+    "task_type": "Listen and Choose a Response",
+    "exam_format": true,
+    "format": "mcq",
+    "skill": null,
+    "cefr_min": "C1",
+    "cefr_max": "C1",
+    "stimulus": {
+      "kind": "audio",
+      "format": "html",
+      "title": null,
+      "content": "\"Since our archive access was denied, I guess we're back to square one on the thesis topic.\"",
+      "audio_ref": null
+    },
+    "group": "mod2-an4",
+    "prompt": "Choose the best response.",
+    "text_format": "html",
+    "options": {
+      "A": "Not necessarily, we could use the digitized collection instead.",
+      "B": "The main archive is located in the basement of the old library.",
+      "C": "Square tables work best when we have a large seminar discussion.",
+      "D": "Our thesis advisor approved the initial outline two months ago."
+    },
+    "answer": "A",
+    "explanation": "Em <em>I guess we're back to square one on the thesis topic</em>, a expressão <em>back to square one</em> indica a sensação de ter de recomeçar do zero, e (A) responde propondo uma <strong>alternativa viável com o acervo digitalizado</strong>. A opção (D) cita a aprovação antiga do esboço e ignora o bloqueio atual ao arquivo.",
+    "hint": null,
+    "trap_codes": [],
+    "tags": [],
+    "status": "rascunho",
+    "source": {
+      "kind": "migrado",
+      "file": "app/drills_data.py",
+      "ref": "MOD2_ACTION_DRILLS_A:mod2-an4#A32",
+      "live_on_site": true,
+      "answer_letter": "origem",
+      "build_map": {
+        "A": "A",
+        "B": "C",
+        "C": "B",
+        "D": "D"
+      }
+    }
+  },
+  {
+    "id": "mod2-an4.a33",
+    "section": "listening",
+    "task_type": "Listen and Choose a Response",
+    "exam_format": true,
+    "format": "mcq",
+    "skill": null,
+    "cefr_min": "C1",
+    "cefr_max": "C1",
+    "stimulus": {
+      "kind": "audio",
+      "format": "html",
+      "title": null,
+      "content": "\"Had I known Professor Kim's seminar was this heavy on econometrics, I'd have audited it instead.\"",
+      "audio_ref": null
+    },
+    "group": "mod2-an4",
+    "prompt": "Choose the best response.",
+    "text_format": "html",
+    "options": {
+      "A": "Professor Kim earned her doctorate in economics ten years ago.",
+      "B": "The add-drop window's still open if you want to switch status.",
+      "C": "Auditing a course means you don't receive a letter grade for it.",
+      "D": "The seminar meets twice a week in the graduate wing downstairs."
+    },
+    "answer": "B",
+    "explanation": "A inversão condicional <em>Had I known... I'd have audited it instead</em> expressa arrependimento por não cursar a disciplina apenas como ouvinte, e (B) traz uma saída prática lembrando que o <strong>prazo de ajuste ainda permite mudar</strong> a modalidade. A alternativa (C) explica o que é <em>audit</em>, algo que quem fala já domina.",
+    "hint": null,
+    "trap_codes": [],
+    "tags": [],
+    "status": "rascunho",
+    "source": {
+      "kind": "migrado",
+      "file": "app/drills_data.py",
+      "ref": "MOD2_ACTION_DRILLS_A:mod2-an4#A33",
+      "live_on_site": true,
+      "answer_letter": "origem",
+      "build_map": {
+        "A": "D",
+        "B": "C",
+        "C": "A",
+        "D": "B"
+      }
+    }
+  },
+  {
+    "id": "mod2-an4.a34",
+    "section": "listening",
+    "task_type": "Listen and Choose a Response",
+    "exam_format": true,
+    "format": "mcq",
+    "skill": null,
+    "cefr_min": "C1",
+    "cefr_max": "C1",
+    "stimulus": {
+      "kind": "audio",
+      "format": "html",
+      "title": null,
+      "content": "\"Look, far be it from me to tell you how to structure your talk, but ten case studies in fifteen minutes?\"",
+      "audio_ref": null
+    },
+    "group": "mod2-an4",
+    "prompt": "Choose the best response.",
+    "text_format": "html",
+    "options": {
+      "A": "The conference panel allots fifteen minutes to each presenter.",
+      "B": "Case studies are widely used in qualitative social research.",
+      "C": "Fair point, I should probably trim it down to two or three.",
+      "D": "Your presentation last semester was really well structured."
+    },
+    "answer": "C",
+    "explanation": "Mesmo suavizada por <em>far be it from me</em>, a pergunta final <em>but ten case studies in fifteen minutes?</em> é uma crítica educada ao excesso de exemplos para pouco tempo, e (C) entende o recado ao <strong>reduzir a quantidade de casos</strong>. A opção (A) apenas repete a regra dos quinze minutos sem resolver a sobrecarga.",
+    "hint": null,
+    "trap_codes": [],
+    "tags": [],
+    "status": "rascunho",
+    "source": {
+      "kind": "migrado",
+      "file": "app/drills_data.py",
+      "ref": "MOD2_ACTION_DRILLS_A:mod2-an4#A34",
+      "live_on_site": true,
+      "answer_letter": "origem",
+      "build_map": {
+        "A": "D",
+        "B": "B",
+        "C": "A",
+        "D": "C"
+      }
+    }
+  },
+  {
+    "id": "mod2-an4.a35",
+    "section": "listening",
+    "task_type": "Listen and Choose a Response",
+    "exam_format": true,
+    "format": "mcq",
+    "skill": null,
+    "cefr_min": "C1",
+    "cefr_max": "C1",
+    "stimulus": {
+      "kind": "audio",
+      "format": "html",
+      "title": null,
+      "content": "\"Take what the department chair said about next year's teaching fellowships with a grain of salt.\"",
+      "audio_ref": null
+    },
+    "group": "mod2-an4",
+    "prompt": "Choose the best response.",
+    "text_format": "html",
+    "options": {
+      "A": "The department chair's term ends after the spring semester.",
+      "B": "Teaching fellowships cover full tuition plus a small stipend.",
+      "C": "The campus dining hall cut back on salt in most of its meals.",
+      "D": "Right, nothing's official until the budget is signed in May."
+    },
+    "answer": "D",
+    "explanation": "A expressão <em>take... with a grain of salt</em> recomenda cautela diante do que foi dito sobre as bolsas de monitoria, e (D) acompanha esse cuidado lembrando que <strong>nada é oficial antes da assinatura do orçamento</strong>. A alternativa (B) descreve os benefícios da bolsa, mas ignora o alerta de incerteza.",
+    "hint": null,
+    "trap_codes": [],
+    "tags": [],
+    "status": "rascunho",
+    "source": {
+      "kind": "migrado",
+      "file": "app/drills_data.py",
+      "ref": "MOD2_ACTION_DRILLS_A:mod2-an4#A35",
+      "live_on_site": true,
+      "answer_letter": "origem",
+      "build_map": {
+        "A": "A",
+        "B": "D",
+        "C": "C",
+        "D": "B"
+      }
+    }
+  },
+  {
+    "id": "mod2-an4.a36",
+    "section": "listening",
+    "task_type": "Listen and Choose a Response",
+    "exam_format": true,
+    "format": "mcq",
+    "skill": null,
+    "cefr_min": "C1",
+    "cefr_max": "C1",
+    "stimulus": {
+      "kind": "audio",
+      "format": "html",
+      "title": null,
+      "content": "\"I wouldn't put off booking the spectrometer if you want your samples analyzed before the colloquium.\"",
+      "audio_ref": null
+    },
+    "group": "mod2-an4",
+    "prompt": "Choose the best response.",
+    "text_format": "html",
+    "options": {
+      "A": "The annual colloquium features speakers from three universities.",
+      "B": "True, the lab sign-up sheet always fills up weeks in advance.",
+      "C": "I put the spectrometer manual back on the top shelf yesterday.",
+      "D": "The rock samples were collected during our field trip in June."
+    },
+    "answer": "B",
+    "explanation": "Em <em>I wouldn't put off booking the spectrometer</em>, o phrasal verb <em>put off</em> significa adiar, então a fala aconselha a reservar o aparelho logo, e (B) concorda lembrando que a <strong>agenda do equipamento lota semanas antes</strong>. A opção (C) confunde <em>put off</em> com guardar um manual na estante.",
+    "hint": null,
+    "trap_codes": [],
+    "tags": [],
+    "status": "rascunho",
+    "source": {
+      "kind": "migrado",
+      "file": "app/drills_data.py",
+      "ref": "MOD2_ACTION_DRILLS_A:mod2-an4#A36",
+      "live_on_site": true,
+      "answer_letter": "origem",
+      "build_map": {
+        "A": "B",
+        "B": "D",
+        "C": "C",
+        "D": "A"
+      }
+    }
+  },
+  {
     "id": "mod7-b6.1",
     "section": "listening",
     "task_type": "Listen and Choose a Response",
