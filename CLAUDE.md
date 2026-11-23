@@ -68,6 +68,7 @@ artifact/index.html       Site final (gerado; não editar)
 legal/*.md                Termos de Uso e Política de Privacidade (fonte)
 artifact/termos.html      Páginas legais (geradas pelo build.py; não editar)
 artifact/privacidade.html
+artifact/ajuda.html         Página de ajuda (FAQ curto, gerada pelo build.py a partir de `HELP_SECTIONS`; não editar). Link no rodapé e no menu (`LEGAL_LINKS`)
 artifact/apresentacao.html  Tela de apresentação, pública, antes do login (gerada pelo build.py; não editar)
 artifact/manifest.json, sw.js, icons/   PWA (gerados pelo build.py; não editar)
 app/free_sample.json      Amostra da conta grátis (Partes e exercícios abertos sem plano). Ver docs/versao-gratuita.md, seção 11
@@ -472,6 +473,8 @@ Sempre locais, por aparelho: `toefl_theme_v1`, `toefl_active_tab`,
 `toefl_welcome_v1` (cartão "Comece aqui" do M0 dispensado),
 `toefl_tr_v1` (interruptor "Traduções": `off` desliga o balão),
 `toefl_plan_pick_v1` (plano clicado na tela de apresentação),
+`toefl_cookies_v1` (`ok` depois do "Entendi" do aviso de cookies, `COOKIE_BAR` no `build.py`, em todas as páginas),
+`toefl_faixa_v1` (faixa escolhida pelo aluno: `base`, `inter` ou `avancada`; sem ela, a faixa vem do nível do diagnóstico),
 `toefl_qorder_v1` (ordem das questões de cada exercício e a rodada à mostra
 no M5 e no M6: abrir a página não marca nada para sincronizar). `toefl_sync_at` e
 `toefl_dirty` são internos do sync.

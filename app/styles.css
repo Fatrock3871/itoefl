@@ -1482,6 +1482,21 @@ body.acc-free .drill-round[data-fs-pin] .drill-round-bar{display:none !important
   font-family:'Plus Jakarta Sans',sans-serif; font-size:10.5px; font-weight:700;
   vertical-align:middle;
 }
+/* faixa do exercício (Base, Intermediária, Avançada), calculada no app.js a
+   partir do nível CEFR; a barra da rodada mostra a faixa do aluno primeiro */
+.drill-faixa{
+  display:inline-block; margin-left:6px; padding:2px 9px; border-radius:99px;
+  border:1.5px solid var(--accent-strong); background:var(--accent-wash); color:var(--accent-strong);
+  font-family:'Plus Jakarta Sans',sans-serif; font-size:10.5px; font-weight:700; vertical-align:middle;
+}
+.drill-faixa-line{margin:0 !important; flex:1 1 100%; font-size:13.5px; line-height:1.5; color:var(--ink);}
+.drill-faixa-btns{display:flex; flex:1 1 100%; flex-wrap:wrap; gap:8px;}
+.drill-faixa-btns button{
+  min-height:40px; padding:6px 14px; border-radius:99px; cursor:pointer; font:inherit; font-size:13px; font-weight:700;
+  color:var(--accent-strong); background:var(--paper); border:1.5px solid var(--accent-strong);
+}
+.drill-faixa-btns button:hover{background:var(--accent-wash);}
+.drill-faixa-btns button[hidden]{display:none;}
 .quiz-level-standalone{margin:0 0 10px !important;}
 .quiz-drill.level-recommended{
   border-left:4px solid var(--accent); padding-left:14px; margin-left:-14px;
@@ -2002,6 +2017,28 @@ li > .reveal{margin:6px 0 4px;}
   color:var(--ink); background:var(--accent-wash); border-bottom:1px solid var(--hair);
 }
 .beta-bar a{color:var(--accent-strong); font-weight:700; margin-left:6px;}
+/* aviso de cookies (LGPD): barra discreta no pé da página, sem bloquear o uso */
+.cookie-bar{
+  position:fixed; left:12px; right:12px; bottom:12px; z-index:1100; max-width:760px; margin:0 auto;
+  display:flex; align-items:center; gap:14px; padding:10px 14px; font-size:13px; line-height:1.5;
+  color:var(--ink); background:var(--paper); border:1px solid var(--hair); border-radius:var(--radius);
+  box-shadow:0 6px 24px rgba(0,0,0,.18);
+}
+.cookie-bar[hidden]{display:none;}
+.cookie-bar p{margin:0; flex:1;}
+.cookie-bar a{color:var(--accent-strong); text-decoration:underline;}
+.cookie-bar button{
+  flex:none; min-height:40px; padding:8px 18px; font:inherit; font-weight:700; cursor:pointer;
+  color:#fff; background:var(--accent-fill); border:2px solid var(--accent-fill); border-radius:var(--radius);
+}
+.cookie-bar button:hover{background:var(--accent-fill-hover); border-color:var(--accent-strong);}
+@media(max-width:520px){ .cookie-bar{flex-direction:column; align-items:stretch; gap:8px;} }
+@media print{ .cookie-bar{display:none !important;} }
+.account-refund{margin-top:8px;}
+.refund-confirm{margin-top:8px; padding:12px; border-radius:var(--radius); border:1.5px solid var(--hair); background:var(--bg); color:var(--ink);}
+.refund-confirm p{margin:0 0 10px; font-size:13px; line-height:1.5;}
+.refund-actions{display:flex; flex-wrap:wrap; gap:8px;}
+.refund-actions > *{flex:1 1 auto; min-height:44px; display:inline-flex; align-items:center; justify-content:center; margin:0; text-align:center; text-decoration:none;}
 .lp-refund{max-width:76ch; margin:22px 0 0; font-size:15px; line-height:1.6; color:var(--ink);}
 .lp-faq{max-width:820px; display:flex; flex-direction:column; gap:10px;}
 .lp-faq-item{background:var(--paper); border:2px solid var(--edge); border-radius:var(--radius);}

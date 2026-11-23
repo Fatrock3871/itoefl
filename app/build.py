@@ -95,6 +95,25 @@ LEGAL_LINKS = (
     '<a href="termos.html" target="_blank" rel="noopener">Termos de Uso</a>'
     '<span aria-hidden="true"> · </span>'
     '<a href="privacidade.html" target="_blank" rel="noopener">Política de Privacidade</a>'
+    '<span aria-hidden="true"> · </span>'
+    '<a href="ajuda.html" target="_blank" rel="noopener">Ajuda</a>'
+)
+
+# aviso de cookies (LGPD, 2026-11-16): barra discreta no rodapé de todas as
+# páginas, na primeira visita. A escolha fica em toefl_cookies_v1 (só local,
+# não sincroniza). Não bloqueia nada: o site só guarda o essencial.
+COOKIE_BAR = (
+    '<div class="cookie-bar" id="cookieBar" role="region" aria-label="Aviso de cookies" hidden>'
+    '<p>Guardamos no seu aparelho só o essencial: login, progresso e preferências. '
+    'Não usamos cookies de propaganda. Veja os detalhes na '
+    '<a href="privacidade.html" target="_blank" rel="noopener">Política de Privacidade</a>.</p>'
+    '<button type="button" id="cookieOk">Entendi</button>'
+    '</div>'
+    '<script>(function(){var b=document.getElementById("cookieBar");if(!b)return;'
+    'var ok=false;try{ok=localStorage.getItem("toefl_cookies_v1")==="ok";}catch(e){}'
+    'if(ok)return;b.hidden=false;'
+    'document.getElementById("cookieOk").addEventListener("click",function(){'
+    'try{localStorage.setItem("toefl_cookies_v1","ok");}catch(e){}b.hidden=true;});})();</script>'
 )
 
 # fontes do Google: preconnect abre a conexão cedo e o <link> deixa o
@@ -526,6 +545,7 @@ with open("../supabase/functions/_shared/plans.json", encoding="utf-8") as _f:
     _plans_cfg = json.load(_f)
 PLANS = _plans_cfg["plans"]
 REFUND_DAYS = _plans_cfg["refund_days"]
+_MONTHLY_ID = next(p["id"] for p in _plans_cfg["plans"] if p.get("interval") == "month")
 PIX_MP = bool(_plans_cfg.get("pix_mercado_pago"))
 HIGHLIGHT_LABEL = _plans_cfg["highlight_label"]
 if len([p for p in PLANS if p.get("highlight")]) != 1:
@@ -797,6 +817,18 @@ account_modal = (
     '<p class="account-access" id="accountSub" hidden></p>'
     '<button type="button" class="account-renew" id="accountManage" hidden>Gerenciar ou cancelar a assinatura</button>'
     '<button type="button" class="account-renew" id="accountRenew" hidden>Comprar mais dias</button>'
+    # reembolso de 7 dias (direito de arrependimento): o botão só aparece para
+    # quem comprou dentro do prazo; o pedido sai pelo e-mail de contato do site
+    f'<div class="account-refund" id="accountRefund" data-days="{REFUND_DAYS}" data-monthly="{_MONTHLY_ID}" '
+    f'data-contact="{FEEDBACK_EMAIL}" hidden>'
+    f'<button type="button" class="account-renew" id="accountRefundBtn" hidden>Pedir reembolso ({REFUND_DAYS} dias)</button>'
+    '<p class="account-access" id="accountRefundInfo" hidden></p>'
+    '<div class="refund-confirm" id="accountRefundConfirm" role="alertdialog" aria-labelledby="accountRefundText" hidden>'
+    '<p id="accountRefundText"></p>'
+    '<div class="refund-actions">'
+    '<button type="button" id="accountRefundBack">Voltar</button>'
+    '<a class="account-renew" id="accountRefundSend" href="termos.html" target="_blank" rel="noopener">Enviar pedido por e-mail</a>'
+    '</div></div></div>'
     '</div>'
 
     # redações para correção (app/redacao.js): o selo aparece quando há
@@ -1138,6 +1170,7 @@ html = f'''<!DOCTYPE html>
 <script>
 {JS}
 </script>
+{COOKIE_BAR}
 </body>
 </html>
 '''
@@ -1199,6 +1232,7 @@ for _slug, _title in LEGAL_PAGES:
 {_body}
 </main>
 <footer class="legal-foot"><a class="legal-brand foot-brand" href="index.html" aria-label="iTOEFL, início"><span class="logo">{LOGO_SVG}</span><span class="name">iTOEFL</span></a>{LEGAL_LINKS}<p class="ets-notice">{ETS_NOTICE}</p></footer>
+{COOKIE_BAR}
 </body>
 </html>
 '''
@@ -1502,16 +1536,133 @@ _landing = f'''<!DOCTYPE html>
   <a class="legal-brand foot-brand" href="apresentacao.html" aria-label="iTOEFL, início"><span class="logo">{LOGO_SVG}</span><span class="name">iTOEFL</span></a>
   <p>Preparação independente, baseada nas especificações públicas da prova.</p>
   <p class="ets-notice">{ETS_NOTICE}</p>
-  <p><a href="termos.html">Termos de Uso</a><span aria-hidden="true"> · </span><a href="privacidade.html">Política de Privacidade</a><span aria-hidden="true"> · </span><a href="termos.html">Contato (nos Termos de Uso)</a><span aria-hidden="true"> · </span><a href="index.html#entrar">Entrar</a></p>
+  <p><a href="termos.html">Termos de Uso</a><span aria-hidden="true"> · </span><a href="privacidade.html">Política de Privacidade</a><span aria-hidden="true"> · </span><a href="ajuda.html">Ajuda</a><span aria-hidden="true"> · </span><a href="termos.html">Contato (nos Termos de Uso)</a><span aria-hidden="true"> · </span><a href="index.html#entrar">Entrar</a></p>
 </footer>
 <script>
 {LANDING_JS}
 </script>
+{COOKIE_BAR}
 </body>
 </html>
 '''
 open("../artifact/apresentacao.html", "w", encoding="utf-8").write(_brand(_landing))
 print("written apresentacao.html", len(_landing))
+
+# ---- página de ajuda: artifact/ajuda.html ----
+# Perguntas curtas, públicas (abrem sem login). Só repete o que já está nas
+# perguntas frequentes da apresentação e nos Termos de Uso: nenhum prazo ou
+# regra nova nasce aqui. Prazo de reembolso e preços vêm dos mesmos números.
+if FEEDBACK_EMAIL:
+    _help_contact = (f'Escreva para <a href="mailto:{FEEDBACK_EMAIL}">{FEEDBACK_EMAIL}</a>. '
+                     'O contato oficial também está na seção 15 dos <a href="termos.html">Termos de Uso</a>.')
+else:
+    _help_contact = ('O e-mail de contato está na seção 15 dos <a href="termos.html">Termos de Uso</a>. '
+                     'Use o mesmo e-mail da sua conta, para a gente achar o seu cadastro mais rápido.')
+HELP_SECTIONS = [
+    ("Conta e login", [
+        ("Como eu entro?",
+         'Com e-mail e senha ou com a sua conta Google, na tela de entrada. Se esquecer a senha, toque em '
+         '"Esqueci minha senha" e siga o link que chega no seu e-mail.'),
+        ("Posso estudar sem pagar?",
+         f"Sim. A conta grátis não tem prazo e não pede cartão. Ela dá acesso a {FREE_SUMMARY}. Os simulados, a correção "
+         "de redação e o resto do curso são liberados por um plano."),
+        ("Como troco o e-mail ou a senha, ou excluo a conta?",
+         'No ícone de engrenagem, em "Minha conta". Trocar o e-mail pede a confirmação do link enviado ao endereço novo.'),
+    ]),
+    ("Pagamento e Pix", [
+        ("Como funciona o pagamento?",
+         f"O {_monthly['name']} é uma assinatura no cartão: {brl(_monthly['price_cents'])} por mês, com renovação automática, "
+         f"até você cancelar em 1 clique em Minha conta. Os planos {_one_time_names} são pagos uma vez só"
+         + (", no cartão ou no Pix," if PIX_MP else ", no cartão,") + " e não renovam sozinhos."),
+        ("E se eu comprar outro plano antes de vencer?",
+         "Você não perde nenhum dia: os dias do plano novo somam ao fim do acesso que você já tem."),
+        ("O que acontece quando o acesso termina?",
+         "O curso completo volta a ficar trancado, mas a conta, o progresso e a amostra da conta grátis continuam. "
+         "Com um plano novo, você retoma de onde parou."),
+    ]),
+    (f"Reembolso de {REFUND_DAYS} dias", [
+        ("Posso desistir da compra?",
+         f"Sim. Na primeira cobrança de cada compra, você pode desistir em até {REFUND_DAYS} dias corridos e receber o valor "
+         "inteiro de volta, sem justificar. É o direito de arrependimento do artigo 49 do Código de Defesa do Consumidor."),
+        ("Como eu peço?",
+         f'Dentro dos {REFUND_DAYS} dias, o botão "Pedir reembolso ({REFUND_DAYS} dias)" aparece em Minha conta e prepara o '
+         'pedido por e-mail, com o seu nome, o plano e a data da compra. Os dias daquela compra saem do seu acesso, e no '
+         'Mensal a assinatura também é cancelada.'),
+        (f"E depois dos {REFUND_DAYS} dias?",
+         "Não há reembolso proporcional aos dias não usados. As renovações do Mensal não são reembolsadas, mas você cancela "
+         "quando quiser e não é cobrado de novo. Os detalhes estão na seção 8 dos "
+         '<a href="termos.html">Termos de Uso</a>.'),
+    ]),
+    ("Correção de redação", [
+        ("Em quanto tempo recebo a correção?",
+         "Até 3 dias úteis (de segunda a sexta, sem feriados nacionais) depois do dia do envio. A data prevista aparece "
+         "na hora do envio."),
+        ("Quem pode enviar, e com que frequência?",
+         "Quem tem um plano com acesso em dia, uma redação a cada 4 dias, contados do seu último envio. A nota é uma "
+         "estimativa de treino, não a nota oficial da ETS."),
+    ]),
+    ("Progresso e sincronização", [
+        ("Meu progresso fica salvo?",
+         "Com conta, sim: ele é salvo sozinho e acompanha você em outro aparelho. Sem conta, fica só neste navegador."),
+        ("Posso fazer uma cópia do progresso?",
+         'Sim. Em Configurações, no menu, use "Exportar progresso" para baixar um arquivo e "Importar progresso" para '
+         'trazê-lo de volta.'),
+    ]),
+    ("Diagnóstico", [
+        ("Qual a diferença entre o rápido e o adaptativo?",
+         "O rápido tem 10 questões fixas. O adaptativo começa no nível B1 e muda a dificuldade conforme você acerta ou erra, "
+         "com 12 a 15 questões. Os dois mostram o seu nível estimado e o cronograma indicado, e vale o último que você "
+         "completou."),
+        ("O diagnóstico é uma nota oficial?",
+         "Não. É uma estimativa de treino para orientar o seu estudo."),
+    ]),
+    ("App instalável", [
+        ("Dá para instalar no celular ou no computador?",
+         'Sim. Quando o navegador permite, aparece o botão "Instalar app" no menu. No iPhone ou iPad, toque em '
+         '"Compartilhar" e depois em "Adicionar à Tela de Início".'),
+    ]),
+    ("Falar com a gente", [
+        ("Como entro em contato?", _help_contact),
+    ]),
+]
+_help_body = "".join(
+    f'<h2>{title}</h2><div class="lp-faq">'
+    + "".join(f'<details class="lp-faq-item"><summary>{q}</summary><p>{a}</p></details>' for q, a in items)
+    + "</div>"
+    for title, items in HELP_SECTIONS)
+_help_page = f"""<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ajuda · iTOEFL</title>
+<meta name="description" content="Perguntas frequentes sobre conta, pagamento, reembolso, correção de redação, progresso e instalação.">
+<link rel="canonical" href="{SITE_URL}/ajuda">
+<link rel="icon" type="image/png" sizes="192x192" href="icons/icon-192.png">
+<meta name="theme-color" content="#ef5a1f">
+{FONT_LINKS}
+<script>{_LEGAL_THEME_JS}</script>
+<style>
+{CSS}
+</style>
+</head>
+<body class="legal-page">
+<header class="legal-head">
+  <a class="legal-brand" href="index.html"><span class="logo">{LOGO_SVG}</span><span class="name">iTOEFL</span></a>
+  <a class="legal-back" href="index.html">Voltar para a plataforma</a>
+</header>
+<main class="legal-doc">
+<h1>Ajuda</h1>
+<p>Respostas curtas para as dúvidas mais comuns. Se a sua não estiver aqui, a última seção mostra como falar com a gente.</p>
+{_help_body}
+</main>
+<footer class="legal-foot"><a class="legal-brand foot-brand" href="index.html" aria-label="iTOEFL, início"><span class="logo">{LOGO_SVG}</span><span class="name">iTOEFL</span></a>{LEGAL_LINKS}<p class="ets-notice">{ETS_NOTICE}</p></footer>
+{COOKIE_BAR}
+</body>
+</html>
+"""
+open("../artifact/ajuda.html", "w", encoding="utf-8").write(_brand(_help_page))
+print("written ajuda.html", len(_help_page))
 
 # ---- PWA: manifesto, ícones e service worker com versão carimbada ----
 # A versão é um hash de tudo que o service worker guarda em cache. Build com
@@ -1529,7 +1680,7 @@ for _icon in sorted(_os.listdir("icons")):
         _shutil.copyfile(f"icons/{_icon}", f"../artifact/icons/{_icon}")
 
 _h = _hashlib.sha256()
-for _f in ["index.html", "termos.html", "privacidade.html", "manifest.json"] + \
+for _f in ["index.html", "termos.html", "privacidade.html", "ajuda.html", "manifest.json"] + \
         [f"icons/{i}" for i in sorted(_os.listdir("../artifact/icons"))]:
     _h.update(open(f"../artifact/{_f}", "rb").read())
 _h.update(open("sw.js", "rb").read())  # mudou a lógica do service worker: versão nova também
@@ -1587,6 +1738,6 @@ open("../artifact/robots.txt", "w", encoding="utf-8", newline="\n").write(
 open("../artifact/sitemap.xml", "w", encoding="utf-8", newline="\n").write(
     '<?xml version="1.0" encoding="UTF-8"?>\n'
     '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
-    + "".join(f"  <url><loc>{SITE_URL}{_p}</loc></url>\n" for _p in ["/apresentacao", "/termos", "/privacidade"])
+    + "".join(f"  <url><loc>{SITE_URL}{_p}</loc></url>\n" for _p in ["/apresentacao", "/termos", "/privacidade", "/ajuda"])
     + "</urlset>\n")
 print("written _headers, robots.txt, sitemap.xml")
